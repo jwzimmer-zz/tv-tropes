@@ -79,13 +79,14 @@ class IndexTree():
             structure_dict[headerlink.text]=innertext
         self.urdict = structure_dict
         return structure_dict
-    def write_dict(self):
+    def write_dict(self, dict1):
         try:
             self.newname = self.filename.split("/")[-1]
         except:
             self.newname = self.filename
+        self.newname = self.newname.name
         with open("dict_from_"+self.newname+".pickle", 'wb') as outfile:
-            pickle.dump(self.urdict, outfile, protocol=pickle.HIGHEST_PROTOCOL)
+            pickle.dump(dict1, outfile, protocol=pickle.HIGHEST_PROTOCOL)
         return None
     def get_df(self):
         self.dictdf = pd.DataFrame.from_dict(self.urdict)
@@ -99,8 +100,8 @@ class IndexTree():
         for entry in os.scandir(foldername):
             if entry.path.endswith(".htm"):
                 try:
-                    print(self.get_lists_tropes(entry))
-                    self.write_dict()
+                    dict1 = self.get_lists_tropes(entry)
+                    self.write_dict(dict1)
                 except: pass
                 #self.write_dict()
             else: pass
