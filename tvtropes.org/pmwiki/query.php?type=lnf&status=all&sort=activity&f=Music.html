@@ -1,0 +1,1514 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Trope Finder - TV Tropes</title>
+<meta name="description" content="" />
+<link rel="shortcut icon" href="/img/icons/favicon.ico" type="image/x-icon" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@tvtropes" />
+<meta name="twitter:owner" content="@tvtropes" />
+<meta name="twitter:title" content="Trope Finder - TV Tropes" />
+<meta name="twitter:description" content="" />
+<meta name="twitter:image:src" content="https://static.tvtropes.org/logo_blue_small.png" />
+<meta property="og:site_name" content="TV Tropes" />
+<meta property="og:locale" content="en_US" />
+<meta property="article:publisher" content="https://www.facebook.com/tvtropes" />
+<meta property="og:title" content="Trope Finder - TV Tropes" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://tvtropes.org/pmwiki/query.php?type=lnf&status=all&sort=activity&f=Music" />
+<meta property="og:image" content="https://static.tvtropes.org/logo_blue_small.png" />
+<meta property="og:description" content="" />
+<link rel="apple-touch-icon" sizes="57x57" href="/img/icons/apple-icon-57x57.png" type="image/png">
+<link rel="apple-touch-icon" sizes="60x60" href="/img/icons/apple-icon-60x60.png" type="image/png">
+<link rel="apple-touch-icon" sizes="72x72" href="/img/icons/apple-icon-72x72.png" type="image/png">
+<link rel="apple-touch-icon" sizes="76x76" href="/img/icons/apple-icon-76x76.png" type="image/png">
+<link rel="apple-touch-icon" sizes="114x114" href="/img/icons/apple-icon-114x114.png" type="image/png">
+<link rel="apple-touch-icon" sizes="120x120" href="/img/icons/apple-icon-120x120.png" type="image/png">
+<link rel="apple-touch-icon" sizes="144x144" href="/img/icons/apple-icon-144x144.png" type="image/png">
+<link rel="apple-touch-icon" sizes="152x152" href="/img/icons/apple-icon-152x152.png" type="image/png">
+<link rel="apple-touch-icon" sizes="180x180" href="/img/icons/apple-icon-180x180.png" type="image/png">
+<link rel="icon" sizes="16x16" href="/img/icons/favicon-16x16.png" type="image/png">
+<link rel="icon" sizes="32x32" href="/img/icons/favicon-32x32.png" type="image/png">
+<link rel="icon" sizes="96x96" href="/img/icons/favicon-96x96.png" type="image/png">
+<link rel="icon" sizes="192x192" href="/img/icons/favicon-192x192.png" type="image/png">
+<meta id="viewport" name="viewport" content="width=device-width, initial-scale=1">
+<script>
+                var propertag = {};
+                propertag.cmd = [];
+            </script>
+<link rel="stylesheet" href="/design/assets/bundle.css?rev=af8ba6c84175c5d092329028e16c8941231c5eba" />
+<script>
+                function object(objectId) {
+                    if (document.getElementById && document.getElementById(objectId)) {
+                        return document.getElementById(objectId);
+                    } else if (document.all && document.all(objectId)) {
+                        return document.all(objectId);
+                    } else if (document.layers && document.layers[objectId]) {
+                        return document.layers[objectId];
+                    } else {
+                        return false;
+                    }
+                }
+
+                // JAVASCRIPT COOKIES CODE: for getting and setting user viewing preferences
+                var cookies = {
+                    create: function (name, value, days2expire, path) {
+                        var date = new Date();
+                        date.setTime(date.getTime() + (days2expire * 24 * 60 * 60 * 1000));
+                        var expires = date.toUTCString();
+                        document.cookie = name + '=' + value + ';' + 'expires=' + expires + ';' + 'path=' + path + ';';
+                    },
+                    read: function (name) {
+                        var cookie_value = "",
+                            current_cookie = "",
+                            name_expr = name + "=",
+                            all_cookies = document.cookie.split(';'),
+                            n = all_cookies.length;
+
+                        for (var i = 0; i < n; i++) {
+                            current_cookie = all_cookies[i].trim();
+                            if (current_cookie.indexOf(name_expr) === 0) {
+                                cookie_value = current_cookie.substring(name_expr.length, current_cookie.length);
+                                break;
+                            }
+                        }
+                        return cookie_value;
+                    },
+                    update: function (name, val) {
+                        this.create(name, val, 300, "/");
+                    },
+                    remove: function (name) {
+                        document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
+                    }
+                };
+
+                function updateUserPrefs() {
+                    //GENERAL: detect and set browser, if not cookied (will be treated like a user-preference and added to the #user-pref element)
+                    if( !cookies.read('user-browser') ){
+                        var broswer = '';
+
+                        if(navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPod/i) ){
+                            browser = 'iOS';
+                        } else if (/Opera[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'opera';
+                        } else if (/MSIE (\d+\.\d+);/.test(navigator.userAgent)) {
+                            browser = 'MSIE';
+                        } else if (/Navigator[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'netscape';
+                        } else if (/Chrome[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'chrome';
+                        } else if (/Safari[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'safari';
+                            /Version[\/\s](\d+\.\d+)/.test(navigator.userAgent);
+                            browserVersion = new Number(RegExp.$1);
+                        } else if (/Firefox[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'firefox';
+                        } else {
+                            browser = 'internet_explorer';
+                        }
+                        cookies.create('user-browser',browser,1,'/');
+                        document.getElementById('user-prefs').classList.add('browser-' + browser);
+                    } else {
+                        document.getElementById('user-prefs').classList.add('browser-' + cookies.read('user-browser'));
+                    }
+
+                    //update user preference settings
+                    if (cookies.read('wide-load') !== '') document.getElementById('user-prefs').classList.add('wide-load');
+                    if (cookies.read('night-vision') !== '') document.getElementById('user-prefs').classList.add('night-vision');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('user-prefs').classList.add('sticky-header');
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('user-prefs').classList.add('show-spoilers');
+                    if (cookies.read('folders-open') !== '') document.getElementById('user-prefs').classList.add('folders-open');
+                    if (cookies.read('lefthand-sidebar') !== '') document.getElementById('user-prefs').classList.add('lefthand-sidebar');
+                    if (cookies.read('highlight-links') !== '') document.getElementById('user-prefs').classList.add('highlight-links');
+                    if (cookies.read('forum-gingerbread') !== '') document.getElementById('user-prefs').classList.add('forum-gingerbread');
+                    if (cookies.read('shared-avatars') !== '') document.getElementById('user-prefs').classList.add('shared-avatars');
+                    if (cookies.read('new-search') !== '') document.getElementById('user-prefs').classList.add('new-search');
+                    if (cookies.read('stop-auto-play-video') !== '') document.getElementById('user-prefs').classList.add('stop-auto-play-video');
+
+                    //desktop view on mobile
+                    if (cookies.read('desktop-on-mobile') !== ''){
+                        document.getElementById('user-prefs').classList.add('desktop-on-mobile');
+
+                        var viewport = document.querySelector("meta[name=viewport]");
+                        viewport.setAttribute('content', 'width=1000');
+                    }
+
+                }
+
+                function updateDesktopPrefs() {
+                    if (cookies.read('wide-load') !== '') document.getElementById('sidebar-toggle-wideload').classList.add('active');
+                    if (cookies.read('night-vision') !== '') document.getElementById('sidebar-toggle-nightvision').classList.add('active');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('sidebar-toggle-stickyheader').classList.add('active');
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('sidebar-toggle-showspoilers').classList.add('active');
+
+                }
+
+                function updateMobilePrefs() {
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('mobile-toggle-showspoilers').classList.add('active');
+                    if (cookies.read('night-vision') !== '') document.getElementById('mobile-toggle-nightvision').classList.add('active');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('mobile-toggle-stickyheader').classList.add('active');
+                    if (cookies.read('highlight-links') !== '') document.getElementById('mobile-toggle-highlightlinks').classList.add('active');
+
+                }
+
+
+                if (document.cookie.indexOf("scroll0=") < 0) {
+                    // do nothing
+                } else {
+                    console.log('ads removed by scroll.com');
+                    var adsRemovedWith = 'scroll';
+                    var style = document.createElement('style');
+                    style.innerHTML = '#header-ad, .proper-ad-unit, .square_ad, .sb-ad-unit { display: none !important; } ';
+                    document.head.appendChild(style);
+                }
+            </script>
+<script type="text/javascript">
+
+                var tvtropes_config = {
+                    astri_stream_enabled : "",
+                    is_logged_in         : "",
+                    handle               : "",
+                    get_astri_stream     : "",
+										revnum               : "af8ba6c84175c5d092329028e16c8941231c5eba",
+										img_domain           : "https://static.tvtropes.org",
+										adblock              : "1",
+										adblock_url          : "propermessage.io",
+										pause_editing        : "0",
+										pause_editing_msg    : "",
+										pause_site_changes   : ""
+                };
+            </script>
+</head>
+<body class="">
+<i id="user-prefs"></i>
+<script>updateUserPrefs();</script>
+<div id="fb-root"></div>
+<div id="modal-box"></div>
+<header id="main-header-bar" class="headroom-element ">
+<div id="main-header-bar-inner">
+<span id="header-spacer-left" class="header-spacer"></span>
+<a href="#mobile-menu" id="main-mobile-toggle" class="mobile-menu-toggle-button tablet-on"><span></span><span></span><span></span></a>
+<a href="/" id="main-header-logoButton" class="no-dev"></a>
+<span id="header-spacer-right" class="header-spacer"></span>
+<nav id="main-header-nav" class="tablet-off">
+<a href="/pmwiki/pmwiki.php/Main/Tropes">Tropes</a>
+<a href="/pmwiki/pmwiki.php/Main/Media">Media</a>
+<a href="/pmwiki/browse.php" class="nav-browse">Browse</a>
+<a href="/pmwiki/index_report.php">Indexes</a>
+<a href="/pmwiki/topics.php">Forums</a>
+<a href="/pmwiki/recent_videos.php" class="nav-browse">Videos</a>
+</nav>
+<div id="main-header-bar-right">
+<div id="signup-login-box" class="font-xs mobile-off">
+<a href="/pmwiki/login.php" class="hover-underline bold" data-modal-target="signup">Join</a>
+<a href="/pmwiki/login.php" class="hover-underline bold" data-modal-target="login">Login</a>
+</div>
+<div id="signup-login-mobileToggle" class="mobile-on inline">
+<a href="/pmwiki/login.php" data-modal-target="login"><i class="fa fa-user"></i></a>
+</div>
+<div id="search-box">
+<form class="search" action="/pmwiki/search_result.php">
+<input type="text" name="q" class="search-box" placeholder="Search" value="" required>
+<input type="submit" class="submit-button" value="&#xf002;" />
+<input type="hidden" name="search_type" value="article">
+<input type="hidden" name="page_type" value="all">
+<input type="hidden" name="cx" value="partner-pub-6610802604051523:amzitfn8e7v">
+<input type="hidden" name="cof" value="FORID:10">
+<input type="hidden" name="ie" value="ISO-8859-1">
+<input name="siteurl" type="hidden" value="">
+<input name="ref" type="hidden" value="">
+<input name="ss" type="hidden" value="">
+</form>
+<a href="#close-search" class="mobile-on mobile-search-toggle close-x"><i class="fa fa-close"></i></a>
+</div>
+<div id="random-box">
+<a href="/pmwiki/pmwiki.php/Main/ItWontTurnOff" class="button-random-trope" rel="nofollow" onclick="ga('send', 'event', 'button', 'click', 'random trope');"></a>
+<a href="/pmwiki/pmwiki.php/Blog/AskPokemonNerds" class="button-random-media" rel="nofollow" onclick="ga('send', 'event', 'button', 'click', 'random media');"></a>
+</div>
+</div>
+</div>
+<div id="mobile-menu" class="tablet-on"><div class="mobile-menu-options">
+<div class="nav-wrapper">
+<a href="/pmwiki/pmwiki.php/Main/Tropes" class="xl">Tropes</a>
+<a href="/pmwiki/pmwiki.php/Main/Media" class="xl">Media</a>
+<a href="/pmwiki/browse.php" class="xl">Browse</a>
+<a href="/pmwiki/index_report.php" class="xl">Indexes</a>
+<a href="/pmwiki/topics.php" class="xl">Forums</a>
+<a href="/pmwiki/recent_videos.php" class="xl">Videos</a>
+<a href="/pmwiki/query.php?type=att">Ask The Tropers</a>
+<a href="/pmwiki/query.php?type=tf">Trope Finder</a>
+<a href="/pmwiki/query.php?type=ykts">You Know That Show...</a>
+<a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a>
+<a href="#tools" data-click-toggle="active">Tools <i class="fa fa-chevron-down"></i></a>
+<div class="tools-dropdown mobile-dropdown-linkList">
+<a href="/pmwiki/cutlist.php">Cut List</a>
+<a href="/pmwiki/changes.php">New Edits</a>
+<a href="/pmwiki/recent_edit_reasons.php">Edit Reasons</a>
+<a href="/pmwiki/launches.php">Launches</a>
+<a href="/pmwiki/img_list.php">Images List</a>
+<a href="/pmwiki/crown_activity.php">Crowner Activity</a>
+<a href="/pmwiki/no_types.php">Un-typed Pages</a>
+<a href="/pmwiki/page_type_audit.php">Recent Page Type Changes</a>
+</div>
+<a href="#hq" data-click-toggle="active">Tropes HQ <i class="fa fa-chevron-down"></i></a>
+<div class="tools-dropdown mobile-dropdown-linkList">
+<a href="/pmwiki/about.php">About Us</a>
+<a href="/pmwiki/contact.php">Contact Us</a>
+<a href="mailto:advertising@proper.io">Advertise</a>
+<a href="/pmwiki/dmca.php">DMCA Notice</a>
+<a href="/pmwiki/privacypolicy.php">Privacy Policy</a>
+</div>
+<a href="/pmwiki/ad-free-subscribe.php">Go Ad-Free</a>
+<div class="toggle-switches">
+<ul class="mobile-menu display-toggles">
+<li>Show Spoilers <div id="mobile-toggle-showspoilers" class="display-toggle show-spoilers"></div></li>
+<li>Night Vision <div id="mobile-toggle-nightvision" class="display-toggle night-vision"></div></li>
+<li>Sticky Header <div id="mobile-toggle-stickyheader" class="display-toggle sticky-header"></div></li>
+<li>Highlight Links <div id="mobile-toggle-highlightlinks" class="display-toggle highlight-links"></div></li>
+</ul>
+<script>updateMobilePrefs();</script>
+</div>
+</div>
+</div>
+</div>
+</header>
+<div id="homepage-introBox-mobile" class="mobile-on">
+<a href="/"><img src="/images/logo-white-big.png" class="logo-small" /></a>
+<form class="search" action="/pmwiki/search_result.php" style="margin:10px -5px -6px -5px;">
+<input type="text" name="q" class="search-box" placeholder="Search" value="" required>
+<input type="submit" class="submit-button" value="&#xf002;" />
+<input type="hidden" name="search_type" value="article">
+<input type="hidden" name="page_type" value="all">
+<input type="hidden" name="cx" value="partner-pub-6610802604051523:amzitfn8e7v">
+<input type="hidden" name="cof" value="FORID:10">
+<input type="hidden" name="ie" value="ISO-8859-1">
+<input name="siteurl" type="hidden" value="">
+<input name="ref" type="hidden" value="">
+<input name="ss" type="hidden" value="">
+</form>
+</div>
+<div id="header-ad-wrapper" class="ad">
+<div id="header-ad">
+<div class="ad-size-970x90 atf_banner">
+<div class='proper-ad-unit '>
+<div id='proper-ad-tvtropes_ad_1'> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_1'); });</script> </div>
+</div> </div>
+</div>
+</div>
+<div id="main-container">
+<div id="action-bar-top" class="action-bar mobile-off">
+<div class="action-bar-right">
+<p>Follow TV Tropes</p>
+<a href="https://www.facebook.com/TVTropes" class="button-fb">
+<i class="fa fa-facebook"></i></a>
+<a href="https://www.twitter.com/TVTropes" class="button-tw">
+<i class="fa fa-twitter"></i></a>
+<a href="https://www.reddit.com/r/TVTropes" class="button-re">
+<i class="fa fa-reddit-alien"></i></a>
+</div>
+<nav class="actions-wrapper" itemscope itemtype="http://schema.org/SiteNavigationElement">
+<ul id="top_main_list" class="page-actions">
+<li class="link-att"><a href="/pmwiki/query.php?type=att">
+<i class="io icon-question"></i> Ask Tropers</a></li><li class="link-lnf"><a href="/pmwiki/query.php?type=tf">
+<i class="io icon-bin2"></i> Trope Finder</a></li><li class="link-ykts"><a href="/pmwiki/query.php?type=ykts">
+<i class="io icon-tv"></i> YKTS</a></li><li class="link-wishlist"><a href="/pmwiki/query.php?type=wl">
+<i class="io icon-magic-wand"></i> Wishlist</a></li><li class="link-bugs"><a href="/pmwiki/query.php?type=bug">
+<i class="io icon-bug"></i> Bugs</a></li> </ul>
+<ul id="top_more_list" class="more_menu hidden_more_list">
+<li class="link-bugs more_list_item"><a href="/pmwiki/query.php?type=bug">
+<i class="io icon-bug"></i> Bugs</a></li> </ul>
+</nav>
+<div class="WikiWordModalStub"></div>
+<div class="ImgUploadModalStub" data-page-type="Query"></div>
+<div class="login-alert" style="display: none;">
+You need to <a href="/pmwiki/login.php" style="color:#21A0E8">login</a> to do this. <a href="/pmwiki/login.php?tab=register_account" style="color:#21A0E8">Get Known</a> if you don't have an account
+</div>
+</div>
+<div id="main-content" class="page-Query class-query-page">
+<div id="main-entry" class="with-sidebar">
+
+
+<input type="hidden" id="groupname-hidden" value="Main" />
+<input type="hidden" id="title-hidden" value="TropeFinder" />
+<h1 itemprop="headline" class="entry-title">Trope Finder</h1>
+<a href="#mobile-actions-toggle" id="mobile-actionbar-toggle" class="mobile-actionbar-toggle mobile-on" data-click-toggle="active">
+<p class="tiny-off">Go To</p><span></span><span></span><span></span><i class="fa fa-pencil"></i></a>
+<nav id="mobile-actions-bar" class="mobile-actions-wrapper mobile-on"></nav>
+<div id="main-article" class="article-content">
+<p>The TVTropes Trope Finder is where you can come to ask questions like "Do we have this one?" and "What's the trope about...?" Trying to rediscover a long lost show or other medium but need a little help? Head to <a href="/pmwiki/query.php?type=ykts">You Know That Show</a> and try your luck there. Want to propose a new trope? You should be over at <a href="/pmwiki/yk_activity.php">You Know, That Thing Where.</a></p>
+<div class="two-column gutter-top">
+<div class="column-box left">
+<a href="#" class="button blue full-width text-center create-post-btn" data-modal-target="login">
+Find a Trope </a>
+</div>
+<div class="column-box right">
+<form class="search-threads" method="POST" action="query.php">
+<input type="hidden" name="qtype" value="lnf" />
+<input type="hidden" name="sort" value="activity" />
+<input type="hidden" name="status" value="all" />
+<input type="hidden" name="f" value="Music" />
+<input type="text" class="form-control" id="thread-search-query" name="sparam" placeholder="Search Questions" value="">
+<button type="submit" class="search-submit"><i class="fa fa-search"></i></button>
+</form>
+</div>
+</div>
+<div id="create-post-form" class="two-column section-block hidden-until-active gutter-top">
+<p class="separator font-s text-light">Find a Trope:</p>
+<form class="no-style" method="post" action="/ajax/query-handler.php">
+<div class="column-box left">
+<input type="text" class="form-control" id="discussion-title" name="title" placeholder="Title">
+</div>
+<div class="column-box right">
+<select name="category" class="form-control">
+<option value="">Select Medium</option>
+<option value="Anime">Anime</option>
+<option value="Film">Film</option>
+<option value="Literature">Literature</option>
+<option value="Live Action TV">Live Action TV</option>
+<option value="Music">Music</option>
+<option value="Print Comic">Print Comic</option>
+<option value="Radio">Radio</option>
+<option value="Videogame">Videogame</option>
+<option value="Web Original">Web Original</option>
+<option value="Webcomic">Webcomic</option>
+<option value="Western Animation">Western Animation</option>
+</select>
+</div>
+<div class="column-box">
+<p class="font-s text-light">Describe the Trope:</p>
+<textarea class="form-control auto-height" id="discussion-text" name="remark" style="margin-top:3px;"></textarea>
+</div>
+<div class="column-box text-center">
+<button type="submit" class="btn-submit blue">Submit</button>
+</div>
+<input type="hidden" name="action" value="postNewQuery">
+<input type="hidden" name="qtype" value="lnf">
+</form>
+</div>
+<hr class="solid gutter-top" />
+<div class="list-controls two-column gutter-top text-right">
+<span class="inline-block position-relative">
+<a href="#" class=" font-s button skinny" data-hover-menu-target="filter-menu">Music <i class="fa fa-angle-down"></i></a>
+<div id="filter-menu" class="hover-menu text-left right" data-arrow="right" style="margin-top:4px;">
+<a href="/pmwiki/query.php?type=lnf&status=all&sort=activity&f=all">All</a>
+<a href="/pmwiki/query.php?type=lnf&status=all&sort=activity&f=Anime">Anime</a>
+<a href="/pmwiki/query.php?type=lnf&status=all&sort=activity&f=Film">Film</a>
+<a href="/pmwiki/query.php?type=lnf&status=all&sort=activity&f=Literature">Literature</a>
+<a href="/pmwiki/query.php?type=lnf&status=all&sort=activity&f=Live Action TV">Live Action TV</a>
+<a href="/pmwiki/query.php?type=lnf&status=all&sort=activity&f=Music">Music</a>
+<a href="/pmwiki/query.php?type=lnf&status=all&sort=activity&f=Print Comic">Print Comic</a>
+<a href="/pmwiki/query.php?type=lnf&status=all&sort=activity&f=Radio">Radio</a>
+<a href="/pmwiki/query.php?type=lnf&status=all&sort=activity&f=Videogame">Videogame</a>
+<a href="/pmwiki/query.php?type=lnf&status=all&sort=activity&f=Web Original">Web Original</a>
+<a href="/pmwiki/query.php?type=lnf&status=all&sort=activity&f=Webcomic">Webcomic</a>
+<a href="/pmwiki/query.php?type=lnf&status=all&sort=activity&f=Western Animation">Western Animation</a>
+</div>
+</span>
+<span class="inline-block gutter-left position-relative">
+<a href="#" class=" font-s button skinny" data-hover-menu-target="sort-menu">
+By Recent Activity <i class="fa fa-angle-down"></i></a>
+<div id="sort-menu" class="hover-menu text-left right" data-arrow="right" style="margin-top:4px;">
+<a href="/pmwiki/query.php?type=lnf&status=all&sort=date_asc&f=Music"><i class="fa fa-sort-numeric-asc"></i> Date Ascending</a>
+<a href="/pmwiki/query.php?type=lnf&status=all&sort=date_desc&f=Music"><i class="fa fa-sort-numeric-desc"></i> Date Descending</a>
+<a href="/pmwiki/query.php?type=lnf&status=all&sort=pop&f=Music"><i class="fa fa-sort-amount-desc"></i> Popularity</a>
+<a href="/pmwiki/query.php?type=lnf&status=all&sort=activity&f=Music"><i class="fa fa-commenting"></i> Recent Activity</a>
+</div>
+</span>
+</div>
+<a name="93330"></a>
+<div id="comment-93330" class="comment-box  has-footer  ">
+<div class="comment-head">
+<span class="troper-handle-wrapper ">
+<a href="pmwiki.php/Tropers/Betoniarz" class="troper-name">Betoniarz</a>
+<span class="troper-avatar-tagline mobile-on"></span> </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/Betoniarz">
+<img src="https://static.tvtropes.org/user-lamp-160x160.png" />
+</a>
+</span>
+</div>
+<div class="troper-comment has-title">
+<a href="#comment-93330" class="troper-post-time">18th Oct, 2020 02:39:11 PM</a>
+<div class="comment">
+<h2 class='comment-title'><a href='/pmwiki/query.php?parent_id=93330&type=lnf' class='title bold'>Technical limitations turn into staple of genre or a classic</a> <a href='/pmwiki/query.php?type=lnf&status=all&sort=activity&f=Music' class='bubble blue'>Music</a></h2>
+<p>I'm not sure this is going to have a trope, but let's try:
+</p><p>During the 80s, we've got the explosion of synthesisers and MIDI format. For various reasons, music that got present in late 80s/early 90s video games heavily utilised MIDI, because there was literally all they could use with given file sizes and memory capacity, rather than the intention being to make it like that. The notes for each piece can be easily put on any given instrument, or even orchiestrated. Years later, audience consider the original MIDI formatting to be some sort of staple or desired intention of how the music was "supposed" to sound, rather than the technical limitation.
+</p><p>Any trope to cover this? Yes, I know <a class='twikilink' href='/pmwiki/pmwiki.php/Main/FanDumb' title='/pmwiki/pmwiki.php/Main/FanDumb'>Fan Dumb</a> exists, but that's not what I'm asking, plus that's a flame bait trope.
+</p>
+<div class='footer'><div class='button-group skinny font-s float-right'><a href="#upvote" data-modal-target="login" data-query-id="93330"><i class="fa fa-thumbs-up"></i> <span class="count">0</span></a><a href='/pmwiki/query.php?parent_id=93330&type=lnf'>2 replies <i class='fa fa-chevron-right font-xs'></i></a></div></div>
+</div>
+</div>
+</div>
+</div>
+<a name="93261"></a>
+<div id="comment-93261" class="comment-box  has-footer  ">
+<div class="comment-head">
+<span class="troper-handle-wrapper ">
+<a href="pmwiki.php/Tropers/r4d6" class="troper-name">r4d6</a>
+<span class="troper-avatar-tagline mobile-on"></span> </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/r4d6">
+<img src="https://static.tvtropes.org/pmwiki/pub/images/abridged_anderson_quote.jpg" />
+</a>
+</span>
+</div>
+<div class="troper-comment has-title">
+<a href="#comment-93261" class="troper-post-time">16th Oct, 2020 08:40:01 PM</a>
+<div class="comment">
+<h2 class='comment-title'><a href='/pmwiki/query.php?parent_id=93261&type=lnf' class='title bold'>A Kind of music </a> <a href='/pmwiki/query.php?type=lnf&status=all&sort=activity&f=Music' class='bubble blue'>Music</a></h2>
+<p>What is the name of the kind of music that use different sfx to make a song?
+</p><p>Like those videos : Among Us Song : <a class='urllink' href='https://www.youtube.com/watch?v=z5LS4kqJjKo'>https://www.youtube.com/watch?v=z5LS4kqJjKo<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a> Why is the Rum gone : <a class='urllink' href='https://www.youtube.com/watch?v=JImcvtJzIK8'>https://www.youtube.com/watch?v=JImcvtJzIK8<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a>
+</p>
+<div class='footer'><div class='button-group skinny font-s float-right'><a href="#upvote" data-modal-target="login" data-query-id="93261"><i class="fa fa-thumbs-up"></i> <span class="count">1</span></a><a href='/pmwiki/query.php?parent_id=93261&type=lnf'>3 replies <i class='fa fa-chevron-right font-xs'></i></a></div></div>
+</div>
+</div>
+</div>
+</div>
+<a name="93127"></a>
+<div id="comment-93127" class="comment-box  has-footer  ">
+<div class="comment-head">
+<span class="troper-handle-wrapper ">
+<a href="pmwiki.php/Tropers/naturalironist" class="troper-name">naturalironist</a>
+<span class="troper-avatar-tagline mobile-on"></span> </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/naturalironist">
+<img src="https://static.tvtropes.org/pmwiki/pub/images/iron1.jpg" />
+</a>
+</span>
+</div>
+<div class="troper-comment has-title">
+<a href="#comment-93127" class="troper-post-time">12th Oct, 2020 03:41:44 PM</a>
+<div class="comment">
+<h2 class='comment-title'><a href='/pmwiki/query.php?parent_id=93127&type=lnf' class='title bold'>Hot Girl Bassist</a> <a href='/pmwiki/query.php?type=lnf&status=all&sort=activity&f=Music' class='bubble blue'>Music</a></h2>
+<p>The stereotype, most prevalent in the 80's and 90's, that the <a class='twikilink' href='/pmwiki/pmwiki.php/Main/TokenGirl' title='/pmwiki/pmwiki.php/Main/TokenGirl'>Token Girl</a> in a rock band is always the bassist. Goes along with <a class='twikilink' href='/pmwiki/pmwiki.php/Main/NobodyLovesTheBassist' title='/pmwiki/pmwiki.php/Main/NobodyLovesTheBassist'>Nobody Loves the Bassist</a>, as there's often the assumption that the girl bassist is purely there for sex appeal, as the bass is supposedly easier and less essential than other instruments.
+</p>
+<div class='footer'><div class='button-group skinny font-s float-right'><a href="#upvote" data-modal-target="login" data-query-id="93127"><i class="fa fa-thumbs-up"></i> <span class="count">0</span></a><a href='/pmwiki/query.php?parent_id=93127&type=lnf'>2 replies <i class='fa fa-chevron-right font-xs'></i></a></div></div>
+</div>
+</div>
+</div>
+</div>
+<a name="93096"></a>
+<div id="comment-93096" class="comment-box  has-footer  ">
+<div class="comment-head">
+<span class="troper-handle-wrapper ">
+<a href="pmwiki.php/Tropers/iwantedtoaddsomething" class="troper-name">iwantedtoaddsomething</a>
+<span class="troper-avatar-tagline mobile-on"></span> </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/iwantedtoaddsomething">
+<img src="https://static.tvtropes.org/user-lamp-160x160.png" />
+</a>
+</span>
+</div>
+<div class="troper-comment has-title">
+<a href="#comment-93096" class="troper-post-time">11th Oct, 2020 01:55:21 PM</a>
+<div class="comment">
+<h2 class='comment-title'><a href='/pmwiki/query.php?parent_id=93096&type=lnf' class='title bold'>Creator reuses material from another project they were co-creator on (or vice-versa)</a> <a href='/pmwiki/query.php?type=lnf&status=all&sort=activity&f=Music' class='bubble blue'>Music</a></h2>
+<p>E.g. "Down In It" by <a class='twikilink' href='/pmwiki/pmwiki.php/Music/NineInchNails' title='/pmwiki/pmwiki.php/Music/NineInchNails'>Nine Inch Nails</a> contains some reshuffled, pitch-shifted material from "Mechanical Movements" by Keith LeBlanc (released earlier in the same year), who was a producer on Down In It and its associated album.
+</p><p>Thinking mostly music but this could be for any medium - <a class='twikilink' href='/pmwiki/pmwiki.php/JustForFun/RobbyTheRobot' title='/pmwiki/pmwiki.php/JustForFun/RobbyTheRobot'>Robby The Robot</a> would probably count.
+</p>
+<span class="edited-by">Edited by iwantedtoaddsomething</span>
+<div class='footer'><div class='button-group skinny font-s float-right'><a href="#upvote" data-modal-target="login" data-query-id="93096"><i class="fa fa-thumbs-up"></i> <span class="count">1</span></a><a href='/pmwiki/query.php?parent_id=93096&type=lnf'>6 replies <i class='fa fa-chevron-right font-xs'></i></a></div></div>
+</div>
+</div>
+</div>
+</div>
+<a name="92167"></a>
+<div id="comment-92167" class="comment-box  has-footer  ">
+<div class="comment-head">
+<span class="troper-handle-wrapper ">
+<a href="pmwiki.php/Tropers/audgetrouble" class="troper-name">audgetrouble</a>
+<span class="troper-avatar-tagline mobile-on"></span> </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/audgetrouble">
+<img src="https://static.tvtropes.org/pmwiki/pub/images/c5327295_82e7_4024_9ca2_9141f17cdcf6.png" />
+</a>
+</span>
+</div>
+<div class="troper-comment has-title">
+<a href="#comment-92167" class="troper-post-time">13th Sep, 2020 08:03:46 PM</a>
+<div class="comment">
+<h2 class='comment-title'><a href='/pmwiki/query.php?parent_id=92167&type=lnf' class='title bold'>Can't Be With You Song</a> <a href='/pmwiki/query.php?type=lnf&status=all&sort=activity&f=Music' class='bubble blue'>Music</a></h2>
+<p>Songs like Jessie's Girl, about being in love with someone who's taken or otherwise unavailable.
+</p><p><a class='twikilink' href='/pmwiki/pmwiki.php/Administrivia/DoWeHaveThisOne' title='/pmwiki/pmwiki.php/Administrivia/DoWeHaveThisOne'>Do We Have This One?</a>
+</p>
+<div class='footer'><div class='button-group skinny font-s float-right'><a href="#upvote" data-modal-target="login" data-query-id="92167"><i class="fa fa-thumbs-up"></i> <span class="count">1</span></a><a href='/pmwiki/query.php?parent_id=92167&type=lnf'>2 replies <i class='fa fa-chevron-right font-xs'></i></a></div></div>
+</div>
+</div>
+</div>
+</div>
+<a name="91976"></a>
+<div id="comment-91976" class="comment-box  has-footer  ">
+<div class="comment-head">
+<span class="troper-handle-wrapper ">
+<a href="pmwiki.php/Tropers/MetaFour" class="troper-name">MetaFour</a>
+<span class="bubble blue">MOD</span> <span class="troper-avatar-tagline mobile-on"></span> </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/MetaFour">
+<img src="https://static.tvtropes.org/pmwiki/pub/images/night_glider_id_s5e2_1.png" />
+</a>
+</span>
+</div>
+<div class="troper-comment has-title">
+<a href="#comment-91976" class="troper-post-time">8th Sep, 2020 12:39:43 AM</a>
+<div class="comment">
+<h2 class='comment-title'><a href='/pmwiki/query.php?parent_id=91976&type=lnf' class='title bold'>Inversion of Self-Titled Album</a> <a href='/pmwiki/query.php?type=lnf&status=all&sort=activity&f=Music' class='bubble blue'>Music</a></h2>
+<p><a class='twikilink' href='/pmwiki/pmwiki.php/Main/SelfTitledAlbum' title='/pmwiki/pmwiki.php/Main/SelfTitledAlbum'>Self-Titled Album</a> is about music albums named after the musician(s) who created them. So I'm wondering about cases where the musicians took their name from one of their own albums.
+</p><p>Usually this happens when a group collaborates on an album that's supposed to be a one-time thing, so they don't bother to come up with a band name. Then for whatever reason the same group does make a followup, and find they do actually need a band name after all. So to establish continuity, they use the previous album title as the name of the band.
+</p><p>All the examples I can think of are from <a class='twikilink' href='/pmwiki/pmwiki.php/Music/JohnZorn' title='/pmwiki/pmwiki.php/Music/JohnZorn'>the extended Zorniverse</a>:
+<ul><li> <a class='twikilink' href='/pmwiki/pmwiki.php/Music/JohnZorn' title='/pmwiki/pmwiki.php/Music/JohnZorn'>John Zorn</a> recorded an exotica/surf album with a bunch of his musical friends and titled it <em>The Gift</em>, then did a followup with the same musicians titled <em>The Dreamers</em>. Both of those albums were big hits, so Zorn named that ensemble The Dreamers, and they released a few more albums under that name.
+</li><li> Cyro Baptista did this twice. He put out the album <em>Beat the Donkey</em> in 2002, and his extended ensemble from that album played a bunch of live shows as "Cyro Baptista &amp; Beat the Donkey". Then Cyro put out <em>Banquet of the Spirits</em> in 2008, where he stripped his ensemble down to a quartet. That quartet took Banquet of the Spirits as their own name, and released several more albums.
+</li><li> Guitarist Jon Madof recorded an <a class='twikilink' href='/pmwiki/pmwiki.php/Main/AfroBeat' title='/pmwiki/pmwiki.php/Main/AfroBeat'>Afro Beat</a>-inspired album and titled it <em>Zion80</em> (as a nod to <a class='twikilink' href='/pmwiki/pmwiki.php/Music/FelaKuti' title='/pmwiki/pmwiki.php/Music/FelaKuti'>Fela Kuti</a>'s backing band, Egypt80). That ensemble put out a few followup albums, credited to the band Zion80 rather than to Madof specifically.
+</li></ul></p><p>...but there have to be some others I'm not aware of.
+</p><p>I'm wondering if this should be a new sub-folder under <a class='twikilink' href='/pmwiki/pmwiki.php/Main/SelfTitledAlbum' title='/pmwiki/pmwiki.php/Main/SelfTitledAlbum'>Self-Titled Album</a>, or if some other page is a better fit, or if it's worth making a new trope page.
+</p>
+<div class='footer'><div class='button-group skinny font-s float-right'><a href="#upvote" data-modal-target="login" data-query-id="91976"><i class="fa fa-thumbs-up"></i> <span class="count">0</span></a><a href='/pmwiki/query.php?parent_id=91976&type=lnf'>0 replies <i class='fa fa-chevron-right font-xs'></i></a></div></div>
+</div>
+</div>
+</div>
+</div>
+<a name="91635"></a>
+<div id="comment-91635" class="comment-box  has-footer  ">
+<div class="comment-head">
+<span class="troper-handle-wrapper ">
+<a href="pmwiki.php/Tropers/naturalironist" class="troper-name">naturalironist</a>
+<span class="troper-avatar-tagline mobile-on"></span> </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/naturalironist">
+<img src="https://static.tvtropes.org/pmwiki/pub/images/iron1.jpg" />
+</a>
+</span>
+</div>
+<div class="troper-comment has-title">
+<a href="#comment-91635" class="troper-post-time">29th Aug, 2020 03:27:09 PM</a>
+<div class="comment">
+<h2 class='comment-title'><a href='/pmwiki/query.php?parent_id=91635&type=lnf' class='title bold'>Fully clothed in the bathtub</a> <a href='/pmwiki/query.php?type=lnf&status=all&sort=activity&f=Music' class='bubble blue'>Music</a></h2>
+<p>A lot of Music videos feature people/the singer singing in a bathtub while fully clothed, to the point where it feels like a convention like <a class='twikilink' href='/pmwiki/pmwiki.php/Main/FightFurYourRightToParty' title='/pmwiki/pmwiki.php/Main/FightFurYourRightToParty'>Fight Fur Your Right to Party</a>. <a class='urllink' href='https://www.youtube.com/watch?v=WJ9-xN6dCW4'>Example<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a>. Do we have this and is it common enough to trope?
+</p>
+<div class='footer'><div class='button-group skinny font-s float-right'><a href="#upvote" data-modal-target="login" data-query-id="91635"><i class="fa fa-thumbs-up"></i> <span class="count">0</span></a><a href='/pmwiki/query.php?parent_id=91635&type=lnf'>1 reply <i class='fa fa-chevron-right font-xs'></i></a></div></div>
+</div>
+</div>
+</div>
+</div>
+<a name="91596"></a>
+<div id="comment-91596" class="comment-box  has-footer  ">
+<div class="comment-head">
+<span class="troper-handle-wrapper ">
+<a href="pmwiki.php/Tropers/TheGreatDuck2" class="troper-name">TheGreatDuck2</a>
+<span class="troper-avatar-tagline mobile-on"></span> </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/TheGreatDuck2">
+<img src="https://static.tvtropes.org/user-lamp-160x160.png" />
+</a>
+</span>
+</div>
+<div class="troper-comment has-title">
+<a href="#comment-91596" class="troper-post-time">28th Aug, 2020 03:02:01 PM</a>
+<div class="comment">
+<h2 class='comment-title'><a href='/pmwiki/query.php?parent_id=91596&type=lnf' class='title bold'>One-hit-duet-with-famous- musician wonder?</a> <a href='/pmwiki/query.php?type=lnf&status=all&sort=activity&f=Music' class='bubble blue'>Music</a></h2>
+<p>The idea is basically that the musician in question is mostly (or only) known for recording a duet with a much better known musician - sometimes even being the sole recorded piece of music by the lesser known musician. Do we have this trope on the site? I expecte to find it as a subtrope of OHW, but there seems to be nothing there...
+</p>
+<div class='footer'><div class='button-group skinny font-s float-right'><a href="#upvote" data-modal-target="login" data-query-id="91596"><i class="fa fa-thumbs-up"></i> <span class="count">0</span></a><a href='/pmwiki/query.php?parent_id=91596&type=lnf'>2 replies <i class='fa fa-chevron-right font-xs'></i></a></div></div>
+</div>
+</div>
+</div>
+</div>
+<a name="91272"></a>
+<div id="comment-91272" class="comment-box  has-footer  ">
+<div class="comment-head">
+<span class="troper-handle-wrapper ">
+<a href="pmwiki.php/Tropers/Exxolon" class="troper-name">Exxolon</a>
+<span class="troper-avatar-tagline mobile-on"></span> </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/Exxolon">
+<img src="https://static.tvtropes.org/pmwiki/pub/images/exolon.jpg" />
+</a>
+</span>
+</div>
+<div class="troper-comment has-title">
+<a href="#comment-91272" class="troper-post-time">19th Aug, 2020 05:49:21 PM</a>
+<div class="comment">
+<h2 class='comment-title'><a href='/pmwiki/query.php?parent_id=91272&type=lnf' class='title bold'>Late Bloomer Trope?</a> <a href='/pmwiki/query.php?type=lnf&status=all&sort=activity&f=Music' class='bubble blue'>Music</a></h2>
+<p>Do we have a <a class='createlink' href='/pmwiki/pmwiki.php/Main/LateBloomer' title='/pmwiki/pmwiki.php/Main/LateBloomer'>Late Bloomer</a> trope? For anyone unfamiliar with the phrase it's someone who achieves success in a field later in life than would be considered normal. For example <a class='twikilink' href='/pmwiki/pmwiki.php/Music/SherylCrow' title='/pmwiki/pmwiki.php/Music/SherylCrow'>Sheryl Crow</a> had her first big hit at the age of 29 - not old per se, but considering most musicians who "make it" tend to have their first hit in their late teens or early 20s it's older than normal (possibly because musicians who reach their late 20s without breaking through often transition into regular careers out of necessity). Another example is Billy Bob Thornton who didn't have an acting credit till he was past 40.
+</p>
+<div class='footer'><div class='button-group skinny font-s float-right'><a href="#upvote" data-modal-target="login" data-query-id="91272"><i class="fa fa-thumbs-up"></i> <span class="count">0</span></a><a href='/pmwiki/query.php?parent_id=91272&type=lnf'>1 reply <i class='fa fa-chevron-right font-xs'></i></a></div></div>
+</div>
+</div>
+</div>
+</div>
+<a name="90323"></a>
+<div id="comment-90323" class="comment-box  has-footer  ">
+<div class="comment-head">
+<span class="troper-handle-wrapper ">
+<a href="pmwiki.php/Tropers/BradyLady" class="troper-name">BradyLady</a>
+<span class="troper-avatar-tagline mobile-on"></span> </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/BradyLady">
+<img src="https://static.tvtropes.org/pmwiki/pub/images/generictroper.gif" />
+</a>
+</span>
+</div>
+<div class="troper-comment has-title">
+<a href="#comment-90323" class="troper-post-time">26th Jul, 2020 09:21:31 AM</a>
+<div class="comment">
+<h2 class='comment-title'><a href='/pmwiki/query.php?parent_id=90323&type=lnf' class='title bold'>Spoken verses, sung choruses</a> <a href='/pmwiki/query.php?type=lnf&status=all&sort=activity&f=Music' class='bubble blue'>Music</a></h2>
+<p>I know a song that is spoken rather than sung is called a recitation. What do you call a hybrid, where verses are spoken and choruses are sung? Charlie Daniels with "The Devil Went Down to Georgia" being one notable example.
+</p>
+<div class='footer'><div class='button-group skinny font-s float-right'><a href="#upvote" data-modal-target="login" data-query-id="90323"><i class="fa fa-thumbs-up"></i> <span class="count">1</span></a><a href='/pmwiki/query.php?parent_id=90323&type=lnf'>1 reply <i class='fa fa-chevron-right font-xs'></i></a></div></div>
+</div>
+</div>
+</div>
+</div>
+<a name="90248"></a>
+<div id="comment-90248" class="comment-box  has-footer  ">
+<div class="comment-head">
+<span class="troper-handle-wrapper ">
+<a href="pmwiki.php/Tropers/Lyendith" class="troper-name">Lyendith</a>
+<span class="troper-avatar-tagline mobile-on"></span> </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/Lyendith">
+<img src="https://static.tvtropes.org/pmwiki/pub/images/capture_sakukallen_2.png" />
+</a>
+</span>
+</div>
+<div class="troper-comment has-title">
+<a href="#comment-90248" class="troper-post-time">24th Jul, 2020 05:07:50 AM</a>
+<div class="comment">
+<h2 class='comment-title'><a href='/pmwiki/query.php?parent_id=90248&type=lnf' class='title bold'>One verse and a half</a> <a href='/pmwiki/query.php?type=lnf&status=all&sort=activity&f=Music' class='bubble blue'>Music</a></h2>
+<p>That standard song structure where the second verse is half the length of the first… is there a trope for it?
+</p>
+<div class='footer'><div class='button-group skinny font-s float-right'><a href="#upvote" data-modal-target="login" data-query-id="90248"><i class="fa fa-thumbs-up"></i> <span class="count">0</span></a><a href='/pmwiki/query.php?parent_id=90248&type=lnf'>2 replies <i class='fa fa-chevron-right font-xs'></i></a></div></div>
+</div>
+</div>
+</div>
+</div>
+<a name="89890"></a>
+<div id="comment-89890" class="comment-box  has-footer  ">
+<div class="comment-head">
+<span class="troper-handle-wrapper ">
+<a href="pmwiki.php/Tropers/Afterword" class="troper-name">Afterword</a>
+<span class="troper-avatar-tagline mobile-on"></span> </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/Afterword">
+<img src="https://static.tvtropes.org/pmwiki/pub/images/jpeg_20181226_013244.jpg" />
+</a>
+</span>
+</div>
+<div class="troper-comment has-title">
+<a href="#comment-89890" class="troper-post-time">13th Jul, 2020 04:35:15 PM</a>
+<div class="comment">
+<h2 class='comment-title'><a href='/pmwiki/query.php?parent_id=89890&type=lnf' class='title bold'>Dramatic Key Change</a> <a href='/pmwiki/query.php?type=lnf&status=all&sort=activity&f=Music' class='bubble blue'>Music</a></h2>
+<p>When a song hits a climax (usually in the last or second-to-last chorus if it's a verse-chorus structure) and indicates it with a key change.
+</p>
+<div class='footer'><div class='button-group skinny font-s float-right'><a href="#upvote" data-modal-target="login" data-query-id="89890"><i class="fa fa-thumbs-up"></i> <span class="count">0</span></a><a href='/pmwiki/query.php?parent_id=89890&type=lnf'>2 replies <i class='fa fa-chevron-right font-xs'></i></a></div></div>
+</div>
+</div>
+</div>
+</div>
+<a name="89868"></a>
+<div id="comment-89868" class="comment-box  has-footer  ">
+<div class="comment-head">
+<span class="troper-handle-wrapper ">
+<a href="pmwiki.php/Tropers/shokoshu" class="troper-name">shokoshu</a>
+<span class="troper-avatar-tagline mobile-on"></span> </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/shokoshu">
+<img src="https://static.tvtropes.org/user-lamp-160x160.png" />
+</a>
+</span>
+</div>
+<div class="troper-comment has-title">
+<a href="#comment-89868" class="troper-post-time">13th Jul, 2020 02:27:33 AM</a>
+<div class="comment">
+<h2 class='comment-title'><a href='/pmwiki/query.php?parent_id=89868&type=lnf' class='title bold'>Instantly Recognized</a> <a href='/pmwiki/query.php?type=lnf&status=all&sort=activity&f=Music' class='bubble blue'>Music</a></h2>
+<p><a class='twikilink' href='/pmwiki/pmwiki.php/Main/EpicRiff' title='/pmwiki/pmwiki.php/Main/EpicRiff'>Epic Riff</a> meets <a class='twikilink' href='/pmwiki/pmwiki.php/Main/AllThereIsToKnowAboutTheCryingGame' title='/pmwiki/pmwiki.php/Main/AllThereIsToKnowAboutTheCryingGame'>All There Is to Know About "The Crying Game"</a>, so to say. Music titles you can recognize by hearing literarily only the first note. Or maybe two. (Some offhand examples: Satisfaction, Supervixen, Amateur Hour, Action...)
+Not <em>necessarily</em> limited to music (bet you know the beginning of Moby Dick or The Metamorphosis, so add some <a class='twikilink' href='/pmwiki/pmwiki.php/Main/WhamLine' title='/pmwiki/pmwiki.php/Main/WhamLine'>Wham Line</a> to the mixture), so in general: Any work that is instantly recognizable from its start.
+</p>
+<div class='footer'><div class='button-group skinny font-s float-right'><a href="#upvote" data-modal-target="login" data-query-id="89868"><i class="fa fa-thumbs-up"></i> <span class="count">0</span></a><a href='/pmwiki/query.php?parent_id=89868&type=lnf'>2 replies <i class='fa fa-chevron-right font-xs'></i></a></div></div>
+</div>
+</div>
+</div>
+</div>
+<a name="89632"></a>
+<div id="comment-89632" class="comment-box  has-footer  ">
+<div class="comment-head">
+<span class="troper-handle-wrapper ">
+<a href="pmwiki.php/Tropers/FriedBaka" class="troper-name">FriedBaka</a>
+<span class="troper-avatar-tagline mobile-on"></span> </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/FriedBaka">
+<img src="https://static.tvtropes.org/pmwiki/pub/images/ezgif_7_9a636c4afec8.png" />
+</a>
+</span>
+</div>
+<div class="troper-comment has-title">
+<a href="#comment-89632" class="troper-post-time">5th Jul, 2020 05:14:19 PM</a>
+<div class="comment">
+<h2 class='comment-title'><a href='/pmwiki/query.php?parent_id=89632&type=lnf' class='title bold'>Villain Music, but not exactly.</a> <a href='/pmwiki/query.php?type=lnf&status=all&sort=activity&f=Music' class='bubble blue'>Music</a></h2>
+<p>Hi, I'm searching for some genres of music to start up a Villain Music but Not Exactly playlist (or, not exactly Disney villain music due to sheer lack of Disney). I'm seeking music similar to the following, and I would like help finding similar genres/songs/musicians. When I look up "villain songs" all I get are Disney songs, and while they encapsulate the vibes I want from these songs, they are certainly not the songs I want. I want new things, for my cravings for these songs has become almost like a <a class='twikilink' href='/pmwiki/pmwiki.php/Main/MadScientist' title='/pmwiki/pmwiki.php/Main/MadScientist'>Mad Scientist</a> seeking forbidden knowledge... or rather, what the Youtube algorithms don't think I want but I absolutely do. Now, behold, the Examples List!
+</p><p>Villainous Thing by Shayfer James - Genre unknown to me. Love the vibes and direct villainous references. Any song with direct villainy within is a bonus.
+</p><p>When You're Evil by Aurelio Voltaire - Definitely some kind of tango. Is very nice.
+Stalker's Tango by Autoheart - Another dark tango thing. Very enjoyable.
+</p><p>Birth to my Creation from Frankenstein, A New Musical - Genre unknown; I'd love to know this genre, as it gives me immaculate <a class='twikilink' href='/pmwiki/pmwiki.php/Main/MadScientist' title='/pmwiki/pmwiki.php/Main/MadScientist'>Mad Scientist</a> vibes.
+</p><p>That's... all I have. I just need more villainous-vibed songs, if anyone has them. I don't know genres very well at all, but these seem to almost surpass those... Any help for improving this villainous endeavor of absolute jams would be much appreciated.
+</p>
+<div class='footer'><div class='button-group skinny font-s float-right'><a href="#upvote" data-modal-target="login" data-query-id="89632"><i class="fa fa-thumbs-up"></i> <span class="count">0</span></a><a href='/pmwiki/query.php?parent_id=89632&type=lnf'>5 replies <i class='fa fa-chevron-right font-xs'></i></a></div></div>
+</div>
+</div>
+</div>
+</div>
+<a name="89681"></a>
+<div id="comment-89681" class="comment-box  has-footer  ">
+<div class="comment-head">
+<span class="troper-handle-wrapper ">
+<a href="pmwiki.php/Tropers/shokoshu" class="troper-name">shokoshu</a>
+<span class="troper-avatar-tagline mobile-on"></span> </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/shokoshu">
+<img src="https://static.tvtropes.org/user-lamp-160x160.png" />
+</a>
+</span>
+</div>
+<div class="troper-comment has-title">
+<a href="#comment-89681" class="troper-post-time">8th Jul, 2020 11:28:02 AM</a>
+<div class="comment">
+<h2 class='comment-title'><a href='/pmwiki/query.php?parent_id=89681&type=lnf' class='title bold'>Backwards Music</a> <a href='/pmwiki/query.php?type=lnf&status=all&sort=activity&f=Music' class='bubble blue'>Music</a></h2>
+<p>Music played backwards, <em>not</em> for backmasking/speech-related, and <em>not</em> note-by-note (e.g. Bach's Crab Canon). I even know a few examples offhand: the beginning of "Hooligan" by the Heart Throbs; bit of the Charlatans; the Beatles used it either. Immediately spottable by the somewhat eerie sound.
+Tropable?
+</p>
+<div class='footer'><div class='button-group skinny font-s float-right'><a href="#upvote" data-modal-target="login" data-query-id="89681"><i class="fa fa-thumbs-up"></i> <span class="count">1</span></a><a href='/pmwiki/query.php?parent_id=89681&type=lnf'>2 replies <i class='fa fa-chevron-right font-xs'></i></a></div></div>
+</div>
+</div>
+</div>
+</div>
+<a name="89093"></a>
+<div id="comment-89093" class="comment-box  has-footer  ">
+<div class="comment-head">
+<span class="troper-handle-wrapper ">
+<a href="pmwiki.php/Tropers/Merseyuser1" class="troper-name">Merseyuser1</a>
+<span class="troper-avatar-tagline mobile-on"></span> </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/Merseyuser1">
+<img src="https://static.tvtropes.org/pmwiki/pub/images/generictroper.gif" />
+</a>
+</span>
+</div>
+<div class="troper-comment has-title">
+<a href="#comment-89093" class="troper-post-time">20th Jun, 2020 03:43:58 PM</a>
+<div class="comment">
+<h2 class='comment-title'><a href='/pmwiki/query.php?parent_id=89093&type=lnf' class='title bold'>Geographical error?</a> <a href='/pmwiki/query.php?type=lnf&status=all&sort=activity&f=Music' class='bubble blue'>Music</a></h2>
+<p>Trying to find a trope for <a class='twikilink' href='/pmwiki/pmwiki.php/Music/LittleMix' title='/pmwiki/pmwiki.php/Music/LittleMix'>Music.Little Mix</a>:
+</p><p><ul><li> On a radio station website's interview with Little Mix, one of the members said they'd done an arduous road trip to Nottingham, 100 miles away from London. But the math says that, by road, Nottingham is either 130 or 148 miles away by road, contradicting what one of their members said.
+</li></ul></p><p>and also would this be an example of <a class='twikilink' href='/pmwiki/pmwiki.php/Main/WritersCannotDoMath' title='/pmwiki/pmwiki.php/Main/WritersCannotDoMath'>Writers Cannot Do Math</a> or another trope entirely:
+</p><p><ul><li> If you put your postcode on the Auto Trader UK website, the distance quoted is "as the crow flies" rather than by road. <a class='twikilink' href='/pmwiki/pmwiki.php/Main/BrokenBase' title='/pmwiki/pmwiki.php/Main/BrokenBase'>This has proven controversial on some car websites</a>.
+</li></ul></p><p>Is this a case of <a class='twikilink' href='/pmwiki/pmwiki.php/Main/WritersCannotDoMath' title='/pmwiki/pmwiki.php/Main/WritersCannotDoMath'>Writers Cannot Do Math</a>, <a class='twikilink' href='/pmwiki/pmwiki.php/Main/ArtisticLicenseGeography' title='/pmwiki/pmwiki.php/Main/ArtisticLicenseGeography'>Artistic License – Geography</a>, <a class='twikilink' href='/pmwiki/pmwiki.php/Main/ArtisticLicenseStatistics' title='/pmwiki/pmwiki.php/Main/ArtisticLicenseStatistics'>Artistic License – Statistics</a>, <a class='twikilink' href='/pmwiki/pmwiki.php/Main/NotDrawnToScale' title='/pmwiki/pmwiki.php/Main/NotDrawnToScale'>Not Drawn to Scale</a> or an entirely different trope before I put this on the work page itself?
+</p>
+<span class="edited-by">Edited by Merseyuser1</span>
+<div class='footer'><div class='button-group skinny font-s float-right'><a href="#upvote" data-modal-target="login" data-query-id="89093"><i class="fa fa-thumbs-up"></i> <span class="count">0</span></a><a href='/pmwiki/query.php?parent_id=89093&type=lnf'>1 reply <i class='fa fa-chevron-right font-xs'></i></a></div></div>
+</div>
+</div>
+</div>
+</div>
+<a name="88624"></a>
+<div id="comment-88624" class="comment-box  has-footer  ">
+<div class="comment-head">
+<span class="troper-handle-wrapper ">
+<a href="pmwiki.php/Tropers/Mac_R" class="troper-name">Mac_R</a>
+<span class="troper-avatar-tagline mobile-on"></span> </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/Mac_R">
+<img src="https://static.tvtropes.org/pmwiki/pub/images/g1168.png" />
+</a>
+</span>
+</div>
+<div class="troper-comment has-title">
+<a href="#comment-88624" class="troper-post-time">6th Jun, 2020 07:51:56 PM</a>
+<div class="comment">
+<h2 class='comment-title'><a href='/pmwiki/query.php?parent_id=88624&type=lnf' class='title bold'>&quot;Purple People&quot; Eater (SOLVED)</a> <a href='/pmwiki/query.php?type=lnf&status=all&sort=activity&f=Music' class='bubble blue'>Music</a></h2>
+ <p>Is there a trope about the joke format wherein an adjective doesn't refer to what the viewer thinks it does? Like, a Great White Hunter is just someone who hunts great whites, a man who shot an elephant in his pyjamas wasn't wearing pyjamas (the elephant was) and so on
+</p>
+<span class="edited-by">Edited by Mac_R</span>
+<div class='footer'><div class='button-group skinny font-s float-right'><a href="#upvote" data-modal-target="login" data-query-id="88624"><i class="fa fa-thumbs-up"></i> <span class="count">0</span></a><a href='/pmwiki/query.php?parent_id=88624&type=lnf'>2 replies <i class='fa fa-chevron-right font-xs'></i></a></div></div>
+</div>
+</div>
+</div>
+</div>
+<a name="87882"></a>
+<div id="comment-87882" class="comment-box  has-footer  ">
+<div class="comment-head">
+<span class="troper-handle-wrapper ">
+<a href="pmwiki.php/Tropers/TheGreatDuck2" class="troper-name">TheGreatDuck2</a>
+<span class="troper-avatar-tagline mobile-on"></span> </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/TheGreatDuck2">
+<img src="https://static.tvtropes.org/user-lamp-160x160.png" />
+</a>
+</span>
+</div>
+<div class="troper-comment has-title">
+<a href="#comment-87882" class="troper-post-time">16th May, 2020 05:42:45 PM</a>
+<div class="comment">
+<h2 class='comment-title'><a href='/pmwiki/query.php?parent_id=87882&type=lnf' class='title bold'>Friendly band saves the day! (Music video-related)</a> <a href='/pmwiki/query.php?type=lnf&status=all&sort=activity&f=Music' class='bubble blue'>Music</a></h2>
+<p>A trope I tend to associate with '80s hard rock and metal videos, it features a down on his luck protagonist - a nerdy high school kid being picked on by jocks, who also court his love interest, a not-so-nerdy kid getting a hard time from his teacher, or a rock-loving worker getting the same from his boss; magically, the band appears, kicks the villains' butts, and helps the protagonist get out of his problems, possibly also winning the affection of the girl he desired; a variation might include the band transporting the protagonist to another dimension, where he usually gets starry eyed and has a great time.
+</p><p>Twisted Sister's I Wanna Rock and We're Not Gonna Take It are prime examples:
+</p><p><a class='urllink' href='https://www.youtube.com/watch?v=SRwrg0db_zY'>https://www.youtube.com/watch?v=SRwrg0db_zY<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a>
+<a class='urllink' href='https://www.youtube.com/watch?v=V9AbeALNVkk'>https://www.youtube.com/watch?v=V9AbeALNVkk<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a>
+</p><p>ZZ Top's Sharp Dressed Man and Legs are also good examples:
+</p><p><a class='urllink' href='https://www.youtube.com/watch?v=eUDcTLaWJuo'>https://www.youtube.com/watch?v=eUDcTLaWJuo<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a>
+</p><p><a class='urllink' href='https://www.youtube.com/watch?v=7wRHBLwpASw'>https://www.youtube.com/watch?v=7wRHBLwpASw<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a>
+</p><p>Also Madam X - High in High School
+</p><p><a class='urllink' href='https://www.youtube.com/watch?v=bo3uMMge8uA'>https://www.youtube.com/watch?v=bo3uMMge8uA<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a>
+</p><p>Nelson's After the Rain is an example of the "transporting to a different dimension" variation: <a class='urllink' href='https://www.youtube.com/watch?v=dFLggqjddKM'>https://www.youtube.com/watch?v=dFLggqjddKM<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a>
+</p>
+<div class='footer'><div class='button-group skinny font-s float-right'><a href="#upvote" data-modal-target="login" data-query-id="87882"><i class="fa fa-thumbs-up"></i> <span class="count">0</span></a><a href='/pmwiki/query.php?parent_id=87882&type=lnf'>1 reply <i class='fa fa-chevron-right font-xs'></i></a></div></div>
+</div>
+</div>
+</div>
+</div>
+<a name="87881"></a>
+<div id="comment-87881" class="comment-box  has-footer  ">
+<div class="comment-head">
+<span class="troper-handle-wrapper ">
+<a href="pmwiki.php/Tropers/TheGreatDuck2" class="troper-name">TheGreatDuck2</a>
+<span class="troper-avatar-tagline mobile-on"></span> </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/TheGreatDuck2">
+<img src="https://static.tvtropes.org/user-lamp-160x160.png" />
+</a>
+</span>
+</div>
+<div class="troper-comment has-title">
+<a href="#comment-87881" class="troper-post-time">16th May, 2020 05:21:53 PM</a>
+<div class="comment">
+<h2 class='comment-title'><a href='/pmwiki/query.php?parent_id=87881&type=lnf' class='title bold'>Part of a different song at the beginning of the studio track</a> <a href='/pmwiki/query.php?type=lnf&status=all&sort=activity&f=Music' class='bubble blue'>Music</a></h2>
+<p>I thought this might be a supertrope of Spoken Word, or that the two may be subtropes of the same supertrope, but I couldn't find anything.
+</p><p>Anything, as the title implies, it's about a part of a different song being tacked at the beginning of the track - it might be a song by a different artist (Accept's Fast as a Shark is a good example of that <a class='urllink' href='https://www.youtube.com/watch?v=tTeXBTStek0'>https://www.youtube.com/watch?v=tTeXBTStek0<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a> ), but is often also an earlier song by the same artist - in that case, it is often a song considered to be the artist's signature song; it might also be accompanied by gramophone or radio noises (which could actually have a trope of its own...).
+</p><p>Do we have this trope?
+</p>
+<div class='footer'><div class='button-group skinny font-s float-right'><a href="#upvote" data-modal-target="login" data-query-id="87881"><i class="fa fa-thumbs-up"></i> <span class="count">0</span></a><a href='/pmwiki/query.php?parent_id=87881&type=lnf'>1 reply <i class='fa fa-chevron-right font-xs'></i></a></div></div>
+</div>
+</div>
+</div>
+</div>
+<a name="87884"></a>
+<div id="comment-87884" class="comment-box  has-footer  ">
+<div class="comment-head">
+<span class="troper-handle-wrapper ">
+<a href="pmwiki.php/Tropers/TheGreatDuck2" class="troper-name">TheGreatDuck2</a>
+<span class="troper-avatar-tagline mobile-on"></span> </span>
+</div>
+ <div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/TheGreatDuck2">
+<img src="https://static.tvtropes.org/user-lamp-160x160.png" />
+</a>
+</span>
+</div>
+<div class="troper-comment has-title">
+<a href="#comment-87884" class="troper-post-time">16th May, 2020 06:20:00 PM</a>
+<div class="comment">
+<h2 class='comment-title'><a href='/pmwiki/query.php?parent_id=87884&type=lnf' class='title bold'>Album cover reference in music video</a> <a href='/pmwiki/query.php?type=lnf&status=all&sort=activity&f=Music' class='bubble blue'>Music</a></h2>
+<p>When the music video features an object, a place or a person (not a band member) that's also on the cover, has the band dressed the same as they are on the album cover, or features a scene that is a de facto reenactment (or possibly the source) of the cover art.
+</p><p>An example would be the car from the cover of ZZ Top's Eliminator also appearing in the video for Sharp Dressed Man: <a class='urllink' href='https://www.youtube.com/watch?v=7wRHBLwpASw&amp;list=TLPQMTcwNTIwMjCpid3-jYdBaA&amp;index=4'>https://www.youtube.com/watch?v=7wRHBLwpASw&amp;list=TLPQMTcwNTIwMjCpid3-jYdBaA&amp;index=4<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a>
+</p><p>The old man on the cover of Fates Warning's Parallels appearing in the music video for Through Different Eyes:
+</p><p><a class='urllink' href='https://www.youtube.com/watch?v=XDf04d-vTfQ'>https://www.youtube.com/watch?v=XDf04d-vTfQ<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a>
+</p><p>Mountain king from The Hall of the Mountain King by Savatage, featured both on the album cover and the music video of the title track: <a class='urllink' href='https://www.youtube.com/watch?v=mOKoLiOkWWQ'>https://www.youtube.com/watch?v=mOKoLiOkWWQ<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a>
+</p><p>Rush's Roll the Bones beginning with the scene from the cover art coming to life:
+</p><p><a class='urllink' href='https://www.youtube.com/watch?v=mmIynF-59YE'>https://www.youtube.com/watch?v=mmIynF-59YE<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a>
+</p><p>Quiet Riot's mascot from the cover of Metal Health, also featured in the video for the title track:
+<a class='urllink' href='https://www.youtube.com/watch?v=O_1ruZWJigo'>https://www.youtube.com/watch?v=O_1ruZWJigo<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a>
+</p><p>The same guy would then appear on the cover of the follow up album, and the mask he's wearing was featured in the video for Twilight Hotel: <a class='urllink' href='https://www.youtube.com/watch?v=Lq-vnMUxM6k'>https://www.youtube.com/watch?v=Lq-vnMUxM6k<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a>
+</p><p>David Lee Roth appearing in the same face paint he's wearing on the cover of Eat 'em and Smile in the video for Yankee Rose, around the 1:30 mark or so:
+<a class='urllink' href='https://www.youtube.com/watch?v=RgLWTrWgDTI'>https://www.youtube.com/watch?v=RgLWTrWgDTI<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a>
+</p><p>Two years later, in the video for Just Like Paradise, DLR is climbing a mountain, just as on the cover of the Skyscraper album:
+<a class='urllink' href='https://www.youtube.com/watch?v=I4qh_9vH1Ww'>https://www.youtube.com/watch?v=I4qh_9vH1Ww<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a>
+</p><p>The old guy from the cover of Damn Yankees' s/t album appearing at the start of the video for Don't Tread on Me: <a class='urllink' href='https://www.youtube.com/watch?v=EkEbqgbSqs8'>https://www.youtube.com/watch?v=EkEbqgbSqs8<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a>
+</p><p>Mr. Big's music video for Addicted to That Rush ending with Eric Martin dissappearing and leaving only his boots, hat and staff behind, effectively (re?)creating the picture used as the album cover <a class='urllink' href='https://www.youtube.com/watch?v=GoSD0DLQII0'>https://www.youtube.com/watch?v=GoSD0DLQII0<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a>
+</p><p>Etc. etc.
+</p>
+<span class="edited-by">Edited by TheGreatDuck2</span>
+<div class='footer'><div class='button-group skinny font-s float-right'><a href="#upvote" data-modal-target="login" data-query-id="87884"><i class="fa fa-thumbs-up"></i> <span class="count">0</span></a><a href='/pmwiki/query.php?parent_id=87884&type=lnf'>2 replies <i class='fa fa-chevron-right font-xs'></i></a></div></div>
+</div>
+</div>
+</div>
+</div>
+<a name="87663"></a>
+<div id="comment-87663" class="comment-box  has-footer  ">
+<div class="comment-head">
+<span class="troper-handle-wrapper ">
+<a href="pmwiki.php/Tropers/Bootlebat" class="troper-name">Bootlebat</a>
+<span class="troper-avatar-tagline mobile-on"></span> </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/Bootlebat">
+<img src="https://static.tvtropes.org/user-lamp-160x160.png" />
+</a>
+</span>
+</div>
+<div class="troper-comment has-title">
+<a href="#comment-87663" class="troper-post-time">9th May, 2020 01:23:56 PM</a>
+<div class="comment">
+<h2 class='comment-title'><a href='/pmwiki/query.php?parent_id=87663&type=lnf' class='title bold'>Alternate Song Interpretation?</a> <a href='/pmwiki/query.php?type=lnf&status=all&sort=activity&f=Music' class='bubble blue'>Music</a></h2>
+<p>Is there a trope similar to <a class='twikilink' href='/pmwiki/pmwiki.php/Main/AlternateCharacterInterpretation' title='/pmwiki/pmwiki.php/Main/AlternateCharacterInterpretation'>Alternate Character Interpretation</a> but where a song that's generally thought to mean a certain thing is though by a small minority to be something different? For a personal example: I always found the song <em>missing</em> by <em><a class='twikilink' href='/pmwiki/pmwiki.php/Music/EverythingButTheGirl' title='/pmwiki/pmwiki.php/Music/EverythingButTheGirl'>Everything but the Girl</a></em> to be a major <a class='twikilink' href='/pmwiki/pmwiki.php/Main/TearJerker' title='/pmwiki/pmwiki.php/Main/TearJerker'>Tear Jerker</a>, till I read on some thread someone suggested the protagonist could be intended as a <a class='twikilink' href='/pmwiki/pmwiki.php/Main/StalkerWithACrush' title='/pmwiki/pmwiki.php/Main/StalkerWithACrush'>Stalker with a Crush</a>, and the reason they can't find the person is they are actively trying to hide from them, which puts it in quite a different light.
+</p>
+<span class="edited-by">Edited by Bootlebat</span>
+<div class='footer'><div class='button-group skinny font-s float-right'><a href="#upvote" data-modal-target="login" data-query-id="87663"><i class="fa fa-thumbs-up"></i> <span class="count">0</span></a><a href='/pmwiki/query.php?parent_id=87663&type=lnf'>3 replies <i class='fa fa-chevron-right font-xs'></i></a></div></div>
+</div>
+</div>
+</div>
+</div>
+<a name="87328"></a>
+<div id="comment-87328" class="comment-box  has-footer  ">
+<div class="comment-head">
+<span class="troper-handle-wrapper ">
+<a href="pmwiki.php/Tropers/Pichu-kun" class="troper-name">Pichu-kun</a>
+<span class="troper-avatar-tagline mobile-on"></span> </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/Pichu-kun">
+<img src="https://static.tvtropes.org/pmwiki/pub/images/keirena.jpg_100.jpeg" />
+</a>
+</span>
+</div>
+<div class="troper-comment has-title">
+<a href="#comment-87328" class="troper-post-time">29th Apr, 2020 10:04:50 AM</a>
+<div class="comment">
+<h2 class='comment-title'><a href='/pmwiki/query.php?parent_id=87328&type=lnf' class='title bold'>Splitting the collab?</a> <a href='/pmwiki/query.php?type=lnf&status=all&sort=activity&f=Music' class='bubble blue'>Music</a></h2>
+<p>Is there a trope for when artists collab together but one of the artists also has a full song based on their verse? For example Jay Z and Alicia Keys have song named "Empire State of Mind", but Alicia Keys also has a song based on her chorus. Mackelmore and Mary Lambert have "Same Love", but Mary Lambert also has "She Keeps Me Warm".
+</p>
+<div class='footer'><div class='button-group skinny font-s float-right'><a href="#upvote" data-modal-target="login" data-query-id="87328"><i class="fa fa-thumbs-up"></i> <span class="count">0</span></a><a href='/pmwiki/query.php?parent_id=87328&type=lnf'>0 replies <i class='fa fa-chevron-right font-xs'></i></a></div></div>
+</div>
+</div>
+</div>
+</div>
+<a name="86875"></a>
+<div id="comment-86875" class="comment-box  has-footer  ">
+<div class="comment-head">
+<span class="troper-handle-wrapper ">
+<a href="pmwiki.php/Tropers/JMQwilleran" class="troper-name">JMQwilleran</a>
+<span class="troper-avatar-tagline mobile-on"></span> </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/JMQwilleran">
+<img src="https://static.tvtropes.org/pmwiki/pub/images/peter_rabbit_benjamin1600.jpg" />
+</a>
+</span>
+</div>
+<div class="troper-comment has-title">
+<a href="#comment-86875" class="troper-post-time">15th Apr, 2020 04:23:43 PM</a>
+<div class="comment">
+<h2 class='comment-title'><a href='/pmwiki/query.php?parent_id=86875&type=lnf' class='title bold'>Everybody Singing in a Splitscreen Box</a> <a href='/pmwiki/query.php?type=lnf&status=all&sort=activity&f=Music' class='bubble blue'>Music</a></h2>
+<p>Is there a trope for a this? <a class='twikilink' href='/pmwiki/pmwiki.php/Administrivia/SeenItAMillionTimes' title='/pmwiki/pmwiki.php/Administrivia/SeenItAMillionTimes'>Seen It a Million Times</a> - the characters are all singing a song together, or at least appear in a song sequence even if they aren't actually singing, and they are shown in a series of boxes together. <a class='urllink' href='https://www.youtube.com/watch?v=gHDBq85J37g'>https://www.youtube.com/watch?v=gHDBq85J37g<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a> - great example starting at 0:50.
+</p>
+<div class='footer'><div class='button-group skinny font-s float-right'><a href="#upvote" data-modal-target="login" data-query-id="86875"><i class="fa fa-thumbs-up"></i> <span class="count">0</span></a><a href='/pmwiki/query.php?parent_id=86875&type=lnf'>1 reply <i class='fa fa-chevron-right font-xs'></i></a></div></div>
+</div>
+</div>
+</div>
+</div>
+<a name="85394"></a>
+<div id="comment-85394" class="comment-box  has-footer  ">
+<div class="comment-head">
+<span class="troper-handle-wrapper ">
+<a href="pmwiki.php/Tropers/FriedBaka" class="troper-name">FriedBaka</a>
+<span class="troper-avatar-tagline mobile-on"></span> </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/FriedBaka">
+<img src="https://static.tvtropes.org/pmwiki/pub/images/ezgif_7_9a636c4afec8.png" />
+</a>
+</span>
+</div>
+<div class="troper-comment has-title">
+<a href="#comment-85394" class="troper-post-time">2nd Mar, 2020 07:37:59 AM</a>
+<div class="comment">
+<h2 class='comment-title'><a href='/pmwiki/query.php?parent_id=85394&type=lnf' class='title bold'>Musical genres</a> <a href='/pmwiki/query.php?type=lnf&status=all&sort=activity&f=Music' class='bubble blue'>Music</a></h2>
+<p>Was directed here from <a class='urllink' href='https://tvtropes.org/pmwiki/query.php?parent_id=85338&amp;type=ykts'>here<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a>, so here's a copy and paste.
+</p><p>. A genre of hectic, chaotic, and energetic music that feels potentially villainous or mad science-y. Examples: Nasty Habits by <a class='twikilink' href='/pmwiki/pmwiki.php/Music/OingoBoingo' title='/pmwiki/pmwiki.php/Music/OingoBoingo'>Oingo Boingo</a> is the most prominent and "genre-defining" of these, I feel. Some more downplayed (at least, energy-wise? Something wise? I cannot pinpoint it) would be like The Cat With Two Heads by <a class='twikilink' href='/pmwiki/pmwiki.php/Music/TheAquabats' title='/pmwiki/pmwiki.php/Music/TheAquabats'>The Aquabats!</a>, though the lyrics help it a lot in that case. I don't think it has the franticness as much but the vocals works in the favor of the lyrics and vibes. <a class='twikilink' href='/pmwiki/pmwiki.php/Music/TheB52s' title='/pmwiki/pmwiki.php/Music/TheB52s'>The B-52s</a>'s Rock Lobster wouldn't count, it doesn't have that energy and franticness except during maybe one part.
+</p><p>2. Whatever genre <a class='twikilink' href='/pmwiki/pmwiki.php/Music/Devo' title='/pmwiki/pmwiki.php/Music/Devo'>Devo</a> is. I legitimately have no clue and I want to find more songs that sound like their's other than <a class='twikilink' href='/pmwiki/pmwiki.php/Music/WeirdAlYankovic' title='/pmwiki/pmwiki.php/Music/WeirdAlYankovic'>"Weird Al" Yankovic</a>'s Dare to be Stupid.
+</p><p>If anyone has the genres of these and/or songs similar to these, you would be making my day(s)!
+</p>
+<div class='footer'><div class='button-group skinny font-s float-right'><a href="#upvote" data-modal-target="login" data-query-id="85394"><i class="fa fa-thumbs-up"></i> <span class="count">1</span></a><a href='/pmwiki/query.php?parent_id=85394&type=lnf'>7 replies <i class='fa fa-chevron-right font-xs'></i></a></div></div>
+</div>
+</div>
+</div>
+</div>
+<a name="85035"></a>
+<div id="comment-85035" class="comment-box  has-footer  ">
+<div class="comment-head">
+<span class="troper-handle-wrapper ">
+<a href="pmwiki.php/Tropers/civetcatcoffee" class="troper-name">civetcatcoffee</a>
+<span class="troper-avatar-tagline mobile-on"></span> </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/civetcatcoffee">
+<img src="https://static.tvtropes.org/user-lamp-160x160.png" />
+</a>
+</span>
+</div>
+<div class="troper-comment has-title">
+<a href="#comment-85035" class="troper-post-time">19th Feb, 2020 05:47:30 PM</a>
+<div class="comment">
+<h2 class='comment-title'><a href='/pmwiki/query.php?parent_id=85035&type=lnf' class='title bold'>Band member leaves but isn't replaced</a> <a href='/pmwiki/query.php?type=lnf&status=all&sort=activity&f=Music' class='bubble blue'>Music</a></h2>
+<p>Is there a trope to describe when someone like Bill Wyman from <a class='twikilink' href='/pmwiki/pmwiki.php/Music/TheRollingStones' title='/pmwiki/pmwiki.php/Music/TheRollingStones'>The Rolling Stones</a> departs a group but the remaining members decide not to replace that person?
+</p>
+<span class="edited-by">Edited by civetcatcoffee</span>
+<div class='footer'><div class='button-group skinny font-s float-right'><a href="#upvote" data-modal-target="login" data-query-id="85035"><i class="fa fa-thumbs-up"></i> <span class="count">2</span></a><a href='/pmwiki/query.php?parent_id=85035&type=lnf'>2 replies <i class='fa fa-chevron-right font-xs'></i></a></div></div>
+</div>
+</div>
+</div>
+</div>
+<nav class="pagination-box button-group text-center gutter-topx2" data-total-pages="9" data-url-prefix="/pmwiki/query.php?type=lnf&status=all&sparam=&sort=activity&f=Music&page=">
+<span class="pagination-jump-box-wrapper mobile-on">
+<form class="pagination-jump-box hidden-until-active font-m">
+<input value="1" type="tel">
+<a href="#jump-to-page" title="Jump to page" class="color-white dead-button" onClick="activate_jump_menu(this);return false;">GO <i class="fa fa-angle-right"></i></a>
+</form>
+</span>
+<a href="/pmwiki/query.php?type=lnf&status=all&sparam=&sort=activity&f=Music&page=1" class="mobile-off ">
+<span class="current-page"> 1 </span> </a>
+<a href="/pmwiki/query.php?type=lnf&status=all&sparam=&sort=activity&f=Music&page=2" class="mobile-off ">
+2 </a>
+<a href="/pmwiki/query.php?type=lnf&status=all&sparam=&sort=activity&f=Music&page=3" class="mobile-off ">
+3 </a>
+<a href="#jump-to-page" title="Jump to page" class="pagination-jump-box-toggle mobile-on dead-button" onClick="toggle_jump_menu(this);return false;">
+<span class="font-s">page 1 of 9</span>
+</a>
+<a href="/pmwiki/query.php?type=lnf&status=all&sparam=&sort=activity&f=Music&page=2">
+<span class="mobile-on"><i class="fa fa-angle-right"></i></span>
+<span class="mobile-off">Next</span>
+</a>
+<a href="/pmwiki/query.php?type=lnf&status=all&sparam=&sort=activity&f=Music&page=9">
+<i class="fa fa-angle-double-right"></i>
+</a>
+</nav>
+<script type="text/javascript">
+
+	function toggle_jump_menu(e){
+		$(e).siblings('.pagination-jump-box-wrapper').children('.pagination-jump-box').toggle('active');
+	}
+
+	function activate_jump_menu(e){
+			var p = $(e).siblings('input').val();
+			var t = $(e).closest('.pagination-box').data('total-pages');
+
+			if(p > 0 && p <= t){
+					window.location.href = $(e).closest('.pagination-box').data('url-prefix') + p;
+			}else{
+					show_modal('alert',encodeURIComponent('Whoops, that page might be out of range.'));
+			}
+	}
+
+</script>
+</div>
+</div>
+<div id="main-content-sidebar"><div class="sidebar-item display-options">
+<ul class="sidebar display-toggles">
+<li>Show Spoilers <div id="sidebar-toggle-showspoilers" class="display-toggle show-spoilers"></div></li>
+<li>Night Vision <div id="sidebar-toggle-nightvision" class="display-toggle night-vision"></div></li>
+<li>Sticky Header <div id="sidebar-toggle-stickyheader" class="display-toggle sticky-header"></div></li>
+<li>Wide Load <div id="sidebar-toggle-wideload" class="display-toggle wide-load"></div></li>
+</ul>
+<script>updateDesktopPrefs();</script>
+</div>
+<div class="sidebar-item ad sb-ad-unit">
+<div class='proper-ad-unit '>
+<div id='proper-ad-tvtropes_ad_2'> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_2'); });</script> </div>
+</div></div>
+<div class="sidebar-item quick-links" itemtype="http://schema.org/SiteNavigationElement">
+<p class="sidebar-item-title" data-title="Important Links">Important Links</p>
+<div class="padded">
+<a href="/pmwiki/query.php?type=att">Ask The Tropers</a>
+<a href="/pmwiki/query.php?type=tf">Trope Finder</a>
+<a href="/pmwiki/query.php?type=ykts">You Know That Show...</a>
+<a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a>
+<a href="/pmwiki/review_activity.php">Reviews</a>
+<a href="/pmwiki/lbs.php" data-modal-target="login">Live Blogs</a>
+<a href="/pmwiki/ad-free-subscribe.php">Go Ad Free!</a> </div>
+</div>
+<div class="sidebar-item sb-ad-unit">
+<div class="sidebar-section">
+<div class="square_ad ad-size-300x600 ad-section text-center">
+<div class='proper-ad-unit '>
+<div id='proper-ad-tvtropes_ad_3'> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_3'); });</script> </div>
+</div> </div>
+</div>
+</div>
+<div class="sidebar-item">
+<p class="sidebar-item-title" data-title="Crucial Browsing">Crucial Browsing</p>
+<ul class="padded font-s" itemscope itemtype="http://schema.org/SiteNavigationElement">
+<li><a href="javascript:void(0);" data-click-toggle="active">Genre</a>
+<ul>
+<li><a href='/pmwiki/pmwiki.php/Main/ActionAdventureTropes' title='Main/ActionAdventureTropes'>Action Adventure</a></li>
+<li><a href='/pmwiki/pmwiki.php/Main/ComedyTropes' title='Main/ComedyTropes'>Comedy</a></li>
+<li><a href='/pmwiki/pmwiki.php/Main/CommercialsTropes' title='Main/CommercialsTropes'>Commercials</a></li>
+<li><a href='/pmwiki/pmwiki.php/Main/CrimeAndPunishmentTropes' title='Main/CrimeAndPunishmentTropes'>Crime &amp; Punishment</a></li>
+<li><a href='/pmwiki/pmwiki.php/Main/DramaTropes' title='Main/DramaTropes'>Drama</a></li>
+<li><a href='/pmwiki/pmwiki.php/Main/HorrorTropes' title='Main/HorrorTropes'>Horror</a></li>
+<li><a href='/pmwiki/pmwiki.php/Main/LoveTropes' title='Main/LoveTropes'>Love</a></li>
+<li><a href='/pmwiki/pmwiki.php/Main/NewsTropes' title='Main/NewsTropes'>News</a></li>
+<li><a href='/pmwiki/pmwiki.php/Main/ProfessionalWrestling' title='Main/ProfessionalWrestling'>Professional Wrestling</a></li>
+<li><a href='/pmwiki/pmwiki.php/Main/SpeculativeFictionTropes' title='Main/SpeculativeFictionTropes'>Speculative Fiction</a></li>
+<li><a href='/pmwiki/pmwiki.php/Main/SportsStoryTropes' title='Main/SportsStoryTropes'>Sports Story</a></li>
+ <li><a href='/pmwiki/pmwiki.php/Main/WarTropes' title='Main/WarTropes'>War</a></li>
+</ul>
+</li>
+<li><a href="javascript:void(0);" data-click-toggle="active">Media</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/Media" title="Main/Media">All Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/AnimationTropes" title="Main/AnimationTropes">Animation (Western)</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Anime" title="Main/Anime">Anime</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ComicBookTropes" title="Main/ComicBookTropes">Comic Book</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FanFic" title="FanFic/FanFics">Fan Fics</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Film" title="Main/Film">Film</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/GameTropes" title="Main/GameTropes">Game</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Literature" title="Main/Literature">Literature</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MusicAndSoundEffects" title="Main/MusicAndSoundEffects">Music And Sound Effects</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NewMediaTropes" title="Main/NewMediaTropes">New Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/PrintMediaTropes" title="Main/PrintMediaTropes">Print Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Radio" title="Main/Radio">Radio</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SequentialArt" title="Main/SequentialArt">Sequential Art</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TabletopGames" title="Main/TabletopGames">Tabletop Games</a></li>
+<li><a href="/pmwiki/pmwiki.php/UsefulNotes/Television" title="Main/Television">Television</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Theater" title="Main/Theater">Theater</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/VideogameTropes" title="Main/VideogameTropes">Videogame</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Webcomics" title="Main/Webcomics">Webcomics</a></li>
+</ul>
+</li>
+<li><a href="javascript:void(0);" data-click-toggle="active">Narrative</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/UniversalTropes" title="Main/UniversalTropes">Universal</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/AppliedPhlebotinum" title="Main/AppliedPhlebotinum">Applied Phlebotinum</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CharacterizationTropes" title="Main/CharacterizationTropes">Characterization</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Characters" title="Main/Characters">Characters</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CharactersAsDevice" title="Main/CharactersAsDevice">Characters As Device</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Dialogue" title="Main/Dialogue">Dialogue</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Motifs" title="Main/Motifs">Motifs</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NarrativeDevices" title="Main/NarrativeDevices">Narrative Devices</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Paratext" title="Main/Paratext">Paratext</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Plots" title="Main/Plots">Plots</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Settings" title="Main/Settings">Settings</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Spectacle" title="Main/Spectacle">Spectacle</a></li>
+</ul>
+</li>
+<li><a href="javascript:void(0);" data-click-toggle="active">Other Categories</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/BritishTellyTropes" title="Main/BritishTellyTropes">British Telly</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TheContributors" title="Main/TheContributors">The Contributors</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CreatorSpeak" title="Main/CreatorSpeak">Creator Speak</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Creators" title="Main/Creators">Creators</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DerivativeWorks" title="Main/DerivativeWorks">Derivative Works</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LanguageTropes" title="Main/LanguageTropes">Language</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LawsAndFormulas" title="Main/LawsAndFormulas">Laws And Formulas</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ShowBusiness" title="Main/ShowBusiness">Show Business</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SplitPersonalityTropes" title="Main/SplitPersonalityTropes">Split Personality</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/StockRoom" title="Main/StockRoom">Stock Room</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TropeTropes" title="Main/TropeTropes">Trope</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Tropes" title="Main/Tropes">Tropes</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TruthAndLies" title="Main/TruthAndLies">Truth And Lies</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TruthInTelevision" title="Main/TruthInTelevision">Truth In Television</a></li>
+</ul>
+</li>
+<li><a href="javascript:void(0);" data-click-toggle="active">Topical Tropes</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/BetrayalTropes" title="Main/BetrayalTropes">Betrayal</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CensorshipTropes" title="Main/CensorshipTropes">Censorship</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CombatTropes" title="Main/CombatTropes">Combat</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DeathTropes" title="Main/DeathTropes">Death</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FamilyTropes" title="Main/FamilyTropes">Family</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FateAndProphecyTropes" title="Main/FateAndProphecyTropes">Fate And Prophecy</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FoodTropes" title="Main/FoodTropes">Food</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/HolidayTropes" title="Main/HolidayTropes">Holiday</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MemoryTropes" title="Main/MemoryTropes">Memory</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MoneyTropes" title="Main/MoneyTropes">Money</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MoralityTropes" title="Main/MoralityTropes">Morality</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/PoliticsTropes" title="Main/PoliticsTropes">Politics</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ReligionTropes" title="Main/ReligionTropes">Religion</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SchoolTropes" title="Main/SchoolTropes">School</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="sidebar-item showcase">
+<p class="sidebar-item-title" data-title="Community&nbsp;Showcase">Community Showcase <a href="/pmwiki/showcase.php" class="bubble float-right hover-blue">More</a></p>
+<p class="community-showcase">
+<a href="https://sharetv.com/shows/echo_chamber" target="_blank" onclick="trackOutboundLink('https://sharetv.com/shows/echo_chamber');">
+<img data-src="/images/communityShowcase-echochamber.jpg" class="lazy-image" alt=""></a>
+<a href="/pmwiki/pmwiki.php/Webcomic/TwistedTropes">
+<img data-src="/img/howlandsc-side.jpg" class="lazy-image" alt=""></a>
+</p>
+</div>
+<div id="stick-cont" class="sidebar-item sb-ad-unit">
+<div id="stick-bar" class="sidebar-section">
+<div class="square_ad ad-size-300x600 ad-section text-center">
+<div class='proper-ad-unit '>
+<div id='proper-ad-tvtropes_ad_4'> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_4'); });</script> </div>
+</div> </div>
+</div>
+</div>
+</div>
+</div>
+<div id="action-bar-bottom" class="action-bar tablet-off">
+<a href="#top-of-page" class="scroll-to-top dead-button" onclick="$('html, body').animate({scrollTop : 0},500);">Top</a>
+</div>
+</div>
+<div class='proper-ad-unit ad-sticky'>
+<div id='proper-ad-tvtropes_sticky_ad'> <script>propertag.cmd.push(function() { proper_display('tvtropes_sticky_ad'); });</script> </div>
+</div>
+<footer id="main-footer">
+<div id="main-footer-inner">
+<div class="footer-left">
+<a href="/" class="img-link"><img data-src="/img/tvtropes-footer-logo.png" alt="TV Tropes" class="lazy-image" title="TV Tropes" /></a>
+<form action="index.html" id="cse-search-box-mobile" class="navbar-form newsletter-signup validate modal-replies" name="" role="" data-ajax-get="/ajax/subscribe_email.php">
+<button class="btn-submit newsletter-signup-submit-button" type="submit" id="subscribe-btn"><i class="fa fa-paper-plane"></i></button>
+<input id="subscription-email" type="text" class="form-control" name="q" size="31" placeholder="Subscribe" value="" validate-type="email">
+</form>
+<ul class="social-buttons">
+<li><a class="btn fb" target="_blank" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-facebook']);" href="https://www.facebook.com/tvtropes"><i class="fa fa-facebook"></i></a></li>
+<li><a class="btn tw" target="_blank" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-twitter']);" href="https://www.twitter.com/tvtropes"><i class="fa fa-twitter"></i></a> </li>
+<li><a class="btn rd" target="_blank" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-reddit']);" href="https://www.reddit.com/r/tvtropes"><i class="fa fa-reddit-alien"></i></a></li>
+</ul>
+</div>
+<hr />
+<ul class="footer-menu" itemscope itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">TVTropes</h4></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Administrivia">About TVTropes</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TheGoalsOfTVTropes">TVTropes Goals</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TheTropingCode">Troping Code</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TVTropesCustoms">TVTropes Customs</a></li>
+<li><a href="/pmwiki/pmwiki.php/JustForFun/TropesOfLegend">Tropes of Legend</a></li>
+<li><a href="/pmwiki/ad-free-subscribe.php">Go Ad-Free</a></li>
+</ul>
+<hr />
+<ul class="footer-menu" itemscope itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">Community</h4></li>
+<li><a href="/pmwiki/query.php?type=att">Ask The Tropers</a></li>
+<li><a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a></li>
+<li><a href="/pmwiki/query.php?type=tf">Trope Finder</a></li>
+<li><a href="/pmwiki/query.php?type=ykts">You Know That Show</a></li>
+<li><a href="/pmwiki/lbs.php" data-modal-target="login">Live Blogs</a></li>
+<li><a href="/pmwiki/review_activity.php">Reviews</a></li>
+<li><a href="/pmwiki/topics.php">Forum</a></li>
+</ul>
+<hr />
+<ul class="footer-menu" itemscope itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">Tropes HQ</h4></li>
+<li><a href="/pmwiki/about.php">About Us</a></li>
+<li><a href="/pmwiki/contact.php">Contact Us</a></li>
+<li><a href="/pmwiki/dmca.php">DMCA Notice</a></li>
+<li><a href="/pmwiki/privacypolicy.php">Privacy Policy</a></li>
+</ul>
+</div>
+<div id="desktop-on-mobile-toggle" class="text-center gutter-top gutter-bottom tablet-on">
+<a href="/pmwiki/switchDeviceCss.php?mobileVersion=1" rel="nofollow">Switch to <span class="txt-desktop">Desktop</span><span class="txt-mobile">Mobile</span> Version</a>
+</div>
+<div class="legal">
+<p>TVTropes is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License. <br>Permissions beyond the scope of this license may be available from <a xmlns:cc="http://creativecommons.org/ns#" href="mailto:thestaff@tvtropes.org" rel="cc:morePermissions"> thestaff@tvtropes.org</a>.</p>
+<br>
+<div class="privacy_wrapper">
+</div>
+</div>
+</footer>
+<style>
+      div.fc-ccpa-root {
+        position: absolute !important;
+        bottom: 93px !important;
+        margin: auto !important;
+        width: 100% !important;
+        z-index: 9999 !important;
+      }
+      .fc-ccpa-root .fc-dns-dialog .fc-dns-link p{
+        outline: none !important;
+        text-decoration: underline !important;
+        font-size: .7em !important;
+        font-family: sans-serif !important;
+      }
+      .fc-ccpa-root .fc-dns-dialog .fc-dns-link .fc-button-background {
+        background: none !important;
+      }
+    </style>
+<div id="_pm_videoViewer" class="full-screen">
+<a href="#close" class="close" id="_pm_videoViewer-close"></a>
+<div class="_pmvv-body">
+<div class="_pmvv-vidbox">
+<video id='overlay-video-player-box' data-video-id="" class='video-js vjs-default-skin vjs-16-9'>
+</video>
+<div class="_pmvv-vidbox-desc">
+<h1 id="overlay-title"></h1>
+<p id="overlay-descrip" class="_pmvv-vidbox-descTxt">
+</p>
+<div class="rating-row" data-video-id="">
+<input type="hidden" name="is_logged_in" value="0">
+<p>How well does it match the trope?</p>
+<div id="star-rating-group">
+<div class="trope-rate">
+<input type="radio" id="lamp5" name="rate" value="5" />
+<label for="lamp5" title="Absolutely"></label>
+<input type="radio" id="lamp4" name="rate" value="4" />
+<label for="lamp4" title="Yes"></label>
+<input type="radio" id="lamp3" name="rate" value="3" />
+<label for="lamp3" title="Kind of"></label>
+<input type="radio" id="lamp2" name="rate" value="2" />
+<label for="lamp2" title="Not really"></label>
+<input type="radio" id="lamp1" name="rate" value="1" />
+<label for="lamp1" title="No"></label>
+</div>
+<div id="star-rating-total">
+</div>
+</div>
+</div>
+<div class="example-media-row">
+<div class="example-overlay">
+<p>Example of:</p>
+<div id="overlay-trope"> / </div>
+</div>
+<div class="media-sources-overlay example-overlay">
+<p>Media sources:</p>
+<div id="overlay-media"> / </div>
+</div>
+</div>
+<p class="_pmvv-vidbox-stats text-right font-s" style="padding-top:8px; border-top: solid 1px rgba(255,255,255,0.2)">
+
+<a href="#video-feedback" class="float-right" data-modal-target="login">Report</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<script type='text/javascript'>
+        window.special_ops =  {
+            member : 'no',
+            isolated : 0,
+            tags : ['unknown']
+        };
+    </script>
+<script type="text/javascript">
+
+        var cleanCreativeEnabled = "";
+        var donation = "";
+        var live_ads = "1";
+        var img_domain = "https://static.tvtropes.org";
+        var snoozed = cookies.read('snoozedabm');
+        var snoozable = "";
+
+        if (adsRemovedWith) {
+            live_ads = 0;
+        }
+
+        var elem = document.createElement('script');
+        elem.async = true;
+
+        elem.src = '/design/assets/bundle.js?rev=af8ba6c84175c5d092329028e16c8941231c5eba';
+
+        elem.onload = function() {
+                            var elem2 = document.createElement('script');
+                elem2.async = false;
+                elem2.src = "/design/js/query-page.js?rev=af8ba6c84175c5d092329028e16c8941231c5eba";
+                document.getElementsByTagName('head')[0].appendChild(elem2);
+                                 }
+        document.getElementsByTagName('head')[0].appendChild(elem);
+
+    </script>
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-3821842-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<script type="text/javascript">
+      function send_analytics_event(user_type, donation){
+          // if(user_type == 'uncached' || user_type == 'cached'){
+          //   ga('send', 'event', 'caching', 'load', user_type, {'nonInteraction': 1});
+          //   return;
+          // }
+          var event_name = user_type;
+
+          if(donation == 'true'){
+              event_name += "_donation"
+          }else if(typeof(valid_user) == 'undefined'){
+              event_name += "_blocked"
+          }else if(valid_user == true){
+              event_name += "_unblocked";
+          }else{
+              event_name = "_unknown"
+          }
+          ga('send', 'event', 'ads', 'load', event_name, {'nonInteraction': 1});
+      }
+
+    
+    send_analytics_event("guest", "false");
+      </script>
+</body>
+</html>

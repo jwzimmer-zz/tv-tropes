@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Naamruimte / Nl Administratie - TV Tropes</title>
+<meta name="description" content="In wiki-technisch jargon betekent &quot;naamruimte&quot; een gedeelte van de organisatiestructuur van de Wiki. Het moet voldoende duidelijk worden bij het lezen van &hellip;" />
+<link rel="canonical" href="https://tvtropes.org/pmwiki/pmwiki.php/NlAdministratie/Naamruimte" />
+<link rel="shortcut icon" href="/img/icons/favicon.ico" type="image/x-icon" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@tvtropes" />
+<meta name="twitter:owner" content="@tvtropes" />
+<meta name="twitter:title" content="Naamruimte / Nl Administratie - TV Tropes" />
+<meta name="twitter:description" content="In wiki-technisch jargon betekent &quot;naamruimte&quot; een gedeelte van de organisatiestructuur van de Wiki. Het moet voldoende duidelijk worden bij het lezen van &hellip;" />
+<meta name="twitter:image:src" content="https://static.tvtropes.org/logo_blue_small.png" />
+<meta property="og:site_name" content="TV Tropes" />
+<meta property="og:locale" content="en_US" />
+<meta property="article:publisher" content="https://www.facebook.com/tvtropes" />
+<meta property="og:title" content="Naamruimte / Nl Administratie - TV Tropes" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://tvtropes.org/pmwiki/pmwiki.php/NlAdministratie/Naamruimte" />
+<meta property="og:image" content="https://static.tvtropes.org/logo_blue_small.png" />
+<meta property="og:description" content="In wiki-technisch jargon betekent &quot;naamruimte&quot; een gedeelte van de organisatiestructuur van de Wiki. Het moet voldoende duidelijk worden bij het lezen van de URL van de huidige pagina waar je zich op dat moment bevindt. De URL van deze pagina is &hellip;" />
+<link rel="apple-touch-icon" sizes="57x57" href="/img/icons/apple-icon-57x57.png" type="image/png">
+<link rel="apple-touch-icon" sizes="60x60" href="/img/icons/apple-icon-60x60.png" type="image/png">
+<link rel="apple-touch-icon" sizes="72x72" href="/img/icons/apple-icon-72x72.png" type="image/png">
+<link rel="apple-touch-icon" sizes="76x76" href="/img/icons/apple-icon-76x76.png" type="image/png">
+<link rel="apple-touch-icon" sizes="114x114" href="/img/icons/apple-icon-114x114.png" type="image/png">
+<link rel="apple-touch-icon" sizes="120x120" href="/img/icons/apple-icon-120x120.png" type="image/png">
+<link rel="apple-touch-icon" sizes="144x144" href="/img/icons/apple-icon-144x144.png" type="image/png">
+<link rel="apple-touch-icon" sizes="152x152" href="/img/icons/apple-icon-152x152.png" type="image/png">
+<link rel="apple-touch-icon" sizes="180x180" href="/img/icons/apple-icon-180x180.png" type="image/png">
+<link rel="icon" sizes="16x16" href="/img/icons/favicon-16x16.png" type="image/png">
+<link rel="icon" sizes="32x32" href="/img/icons/favicon-32x32.png" type="image/png">
+<link rel="icon" sizes="96x96" href="/img/icons/favicon-96x96.png" type="image/png">
+<link rel="icon" sizes="192x192" href="/img/icons/favicon-192x192.png" type="image/png">
+<meta id="viewport" name="viewport" content="width=device-width, initial-scale=1">
+<script>
+                var propertag = {};
+                propertag.cmd = [];
+            </script>
+<link rel="stylesheet" href="/design/assets/bundle.css?rev=af8ba6c84175c5d092329028e16c8941231c5eba" />
+<script>
+                function object(objectId) {
+                    if (document.getElementById && document.getElementById(objectId)) {
+                        return document.getElementById(objectId);
+                    } else if (document.all && document.all(objectId)) {
+                        return document.all(objectId);
+                    } else if (document.layers && document.layers[objectId]) {
+                        return document.layers[objectId];
+                    } else {
+                        return false;
+                    }
+                }
+
+                // JAVASCRIPT COOKIES CODE: for getting and setting user viewing preferences
+                var cookies = {
+                    create: function (name, value, days2expire, path) {
+                        var date = new Date();
+                        date.setTime(date.getTime() + (days2expire * 24 * 60 * 60 * 1000));
+                        var expires = date.toUTCString();
+                        document.cookie = name + '=' + value + ';' + 'expires=' + expires + ';' + 'path=' + path + ';';
+                    },
+                    read: function (name) {
+                        var cookie_value = "",
+                            current_cookie = "",
+                            name_expr = name + "=",
+                            all_cookies = document.cookie.split(';'),
+                            n = all_cookies.length;
+
+                        for (var i = 0; i < n; i++) {
+                            current_cookie = all_cookies[i].trim();
+                            if (current_cookie.indexOf(name_expr) === 0) {
+                                cookie_value = current_cookie.substring(name_expr.length, current_cookie.length);
+                                break;
+                            }
+                        }
+                        return cookie_value;
+                    },
+                    update: function (name, val) {
+                        this.create(name, val, 300, "/");
+                    },
+                    remove: function (name) {
+                        document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
+                    }
+                };
+
+                function updateUserPrefs() {
+                    //GENERAL: detect and set browser, if not cookied (will be treated like a user-preference and added to the #user-pref element)
+                    if( !cookies.read('user-browser') ){
+                        var broswer = '';
+
+                        if(navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPod/i) ){
+                            browser = 'iOS';
+                        } else if (/Opera[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'opera';
+                        } else if (/MSIE (\d+\.\d+);/.test(navigator.userAgent)) {
+                            browser = 'MSIE';
+                        } else if (/Navigator[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'netscape';
+                        } else if (/Chrome[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'chrome';
+                        } else if (/Safari[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'safari';
+                            /Version[\/\s](\d+\.\d+)/.test(navigator.userAgent);
+                            browserVersion = new Number(RegExp.$1);
+                        } else if (/Firefox[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'firefox';
+                        } else {
+                            browser = 'internet_explorer';
+                        }
+                        cookies.create('user-browser',browser,1,'/');
+                        document.getElementById('user-prefs').classList.add('browser-' + browser);
+                    } else {
+                        document.getElementById('user-prefs').classList.add('browser-' + cookies.read('user-browser'));
+                    }
+
+                    //update user preference settings
+                    if (cookies.read('wide-load') !== '') document.getElementById('user-prefs').classList.add('wide-load');
+                    if (cookies.read('night-vision') !== '') document.getElementById('user-prefs').classList.add('night-vision');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('user-prefs').classList.add('sticky-header');
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('user-prefs').classList.add('show-spoilers');
+                    if (cookies.read('folders-open') !== '') document.getElementById('user-prefs').classList.add('folders-open');
+                    if (cookies.read('lefthand-sidebar') !== '') document.getElementById('user-prefs').classList.add('lefthand-sidebar');
+                    if (cookies.read('highlight-links') !== '') document.getElementById('user-prefs').classList.add('highlight-links');
+                    if (cookies.read('forum-gingerbread') !== '') document.getElementById('user-prefs').classList.add('forum-gingerbread');
+                    if (cookies.read('shared-avatars') !== '') document.getElementById('user-prefs').classList.add('shared-avatars');
+                    if (cookies.read('new-search') !== '') document.getElementById('user-prefs').classList.add('new-search');
+                    if (cookies.read('stop-auto-play-video') !== '') document.getElementById('user-prefs').classList.add('stop-auto-play-video');
+
+                    //desktop view on mobile
+                    if (cookies.read('desktop-on-mobile') !== ''){
+                        document.getElementById('user-prefs').classList.add('desktop-on-mobile');
+
+                        var viewport = document.querySelector("meta[name=viewport]");
+                        viewport.setAttribute('content', 'width=1000');
+                    }
+
+                }
+
+                function updateDesktopPrefs() {
+                    if (cookies.read('wide-load') !== '') document.getElementById('sidebar-toggle-wideload').classList.add('active');
+                    if (cookies.read('night-vision') !== '') document.getElementById('sidebar-toggle-nightvision').classList.add('active');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('sidebar-toggle-stickyheader').classList.add('active');
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('sidebar-toggle-showspoilers').classList.add('active');
+
+                }
+
+                function updateMobilePrefs() {
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('mobile-toggle-showspoilers').classList.add('active');
+                    if (cookies.read('night-vision') !== '') document.getElementById('mobile-toggle-nightvision').classList.add('active');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('mobile-toggle-stickyheader').classList.add('active');
+                    if (cookies.read('highlight-links') !== '') document.getElementById('mobile-toggle-highlightlinks').classList.add('active');
+
+                }
+
+
+                if (document.cookie.indexOf("scroll0=") < 0) {
+                    // do nothing
+                } else {
+                    console.log('ads removed by scroll.com');
+                    var adsRemovedWith = 'scroll';
+                    var style = document.createElement('style');
+                    style.innerHTML = '#header-ad, .proper-ad-unit, .square_ad, .sb-ad-unit { display: none !important; } ';
+                    document.head.appendChild(style);
+                }
+            </script>
+<script type="text/javascript">
+
+                var tvtropes_config = {
+                    astri_stream_enabled : "",
+                    is_logged_in         : "",
+                    handle               : "",
+                    get_astri_stream     : "",
+										revnum               : "af8ba6c84175c5d092329028e16c8941231c5eba",
+										img_domain           : "https://static.tvtropes.org",
+										adblock              : "1",
+										adblock_url          : "propermessage.io",
+										pause_editing        : "0",
+										pause_editing_msg    : "",
+										pause_site_changes   : ""
+                };
+            </script>
+</head>
+<body class="">
+<i id="user-prefs"></i>
+<script>updateUserPrefs();</script>
+<div id="fb-root"></div>
+<div id="modal-box"></div>
+<header id="main-header-bar" class="headroom-element ">
+<div id="main-header-bar-inner">
+<span id="header-spacer-left" class="header-spacer"></span>
+<a href="#mobile-menu" id="main-mobile-toggle" class="mobile-menu-toggle-button tablet-on"><span></span><span></span><span></span></a>
+<a href="/" id="main-header-logoButton" class="no-dev"></a>
+<span id="header-spacer-right" class="header-spacer"></span>
+<nav id="main-header-nav" class="tablet-off">
+<a href="/pmwiki/pmwiki.php/Main/Tropes">Tropes</a>
+<a href="/pmwiki/pmwiki.php/Main/Media">Media</a>
+<a href="/pmwiki/browse.php" class="nav-browse">Browse</a>
+<a href="/pmwiki/index_report.php">Indexes</a>
+<a href="/pmwiki/topics.php">Forums</a>
+<a href="/pmwiki/recent_videos.php" class="nav-browse">Videos</a>
+</nav>
+<div id="main-header-bar-right">
+<div id="signup-login-box" class="font-xs mobile-off">
+<a href="/pmwiki/login.php" class="hover-underline bold" data-modal-target="signup">Join</a>
+<a href="/pmwiki/login.php" class="hover-underline bold" data-modal-target="login">Login</a>
+</div>
+<div id="signup-login-mobileToggle" class="mobile-on inline">
+<a href="/pmwiki/login.php" data-modal-target="login"><i class="fa fa-user"></i></a>
+</div>
+<div id="search-box">
+<form class="search" action="/pmwiki/search_result.php">
+<input type="text" name="q" class="search-box" placeholder="Search" value="" required>
+<input type="submit" class="submit-button" value="&#xf002;" />
+<input type="hidden" name="search_type" value="article">
+<input type="hidden" name="page_type" value="all">
+<input type="hidden" name="cx" value="partner-pub-6610802604051523:amzitfn8e7v">
+<input type="hidden" name="cof" value="FORID:10">
+<input type="hidden" name="ie" value="ISO-8859-1">
+<input name="siteurl" type="hidden" value="">
+<input name="ref" type="hidden" value="">
+<input name="ss" type="hidden" value="">
+</form>
+<a href="#close-search" class="mobile-on mobile-search-toggle close-x"><i class="fa fa-close"></i></a>
+</div>
+<div id="random-box">
+<a href="/pmwiki/pmwiki.php/Main/BabyPlanet" class="button-random-trope" rel="nofollow" onclick="ga('send', 'event', 'button', 'click', 'random trope');"></a>
+<a href="/pmwiki/pmwiki.php/Music/SteelWheels" class="button-random-media" rel="nofollow" onclick="ga('send', 'event', 'button', 'click', 'random media');"></a>
+</div>
+</div>
+</div>
+<div id="mobile-menu" class="tablet-on"><div class="mobile-menu-options">
+<div class="nav-wrapper">
+<a href="/pmwiki/pmwiki.php/Main/Tropes" class="xl">Tropes</a>
+<a href="/pmwiki/pmwiki.php/Main/Media" class="xl">Media</a>
+<a href="/pmwiki/browse.php" class="xl">Browse</a>
+<a href="/pmwiki/index_report.php" class="xl">Indexes</a>
+<a href="/pmwiki/topics.php" class="xl">Forums</a>
+<a href="/pmwiki/recent_videos.php" class="xl">Videos</a>
+<a href="/pmwiki/query.php?type=att">Ask The Tropers</a>
+<a href="/pmwiki/query.php?type=tf">Trope Finder</a>
+<a href="/pmwiki/query.php?type=ykts">You Know That Show...</a>
+<a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a>
+<a href="#tools" data-click-toggle="active">Tools <i class="fa fa-chevron-down"></i></a>
+<div class="tools-dropdown mobile-dropdown-linkList">
+<a href="/pmwiki/cutlist.php">Cut List</a>
+<a href="/pmwiki/changes.php">New Edits</a>
+<a href="/pmwiki/recent_edit_reasons.php">Edit Reasons</a>
+<a href="/pmwiki/launches.php">Launches</a>
+<a href="/pmwiki/img_list.php">Images List</a>
+<a href="/pmwiki/crown_activity.php">Crowner Activity</a>
+<a href="/pmwiki/no_types.php">Un-typed Pages</a>
+<a href="/pmwiki/page_type_audit.php">Recent Page Type Changes</a>
+</div>
+<a href="#hq" data-click-toggle="active">Tropes HQ <i class="fa fa-chevron-down"></i></a>
+<div class="tools-dropdown mobile-dropdown-linkList">
+<a href="/pmwiki/about.php">About Us</a>
+<a href="/pmwiki/contact.php">Contact Us</a>
+<a href="mailto:advertising@proper.io">Advertise</a>
+<a href="/pmwiki/dmca.php">DMCA Notice</a>
+<a href="/pmwiki/privacypolicy.php">Privacy Policy</a>
+</div>
+<a href="/pmwiki/ad-free-subscribe.php">Go Ad-Free</a>
+<div class="toggle-switches">
+<ul class="mobile-menu display-toggles">
+<li>Show Spoilers <div id="mobile-toggle-showspoilers" class="display-toggle show-spoilers"></div></li>
+<li>Night Vision <div id="mobile-toggle-nightvision" class="display-toggle night-vision"></div></li>
+<li>Sticky Header <div id="mobile-toggle-stickyheader" class="display-toggle sticky-header"></div></li>
+<li>Highlight Links <div id="mobile-toggle-highlightlinks" class="display-toggle highlight-links"></div></li>
+</ul>
+<script>updateMobilePrefs();</script>
+</div>
+</div>
+</div>
+</div>
+</header>
+<div id="homepage-introBox-mobile" class="mobile-on">
+<a href="/"><img src="/images/logo-white-big.png" class="logo-small" /></a>
+<form class="search" action="/pmwiki/search_result.php" style="margin:10px -5px -6px -5px;">
+<input type="text" name="q" class="search-box" placeholder="Search" value="" required>
+<input type="submit" class="submit-button" value="&#xf002;" />
+<input type="hidden" name="search_type" value="article">
+<input type="hidden" name="page_type" value="all">
+<input type="hidden" name="cx" value="partner-pub-6610802604051523:amzitfn8e7v">
+<input type="hidden" name="cof" value="FORID:10">
+<input type="hidden" name="ie" value="ISO-8859-1">
+<input name="siteurl" type="hidden" value="">
+<input name="ref" type="hidden" value="">
+<input name="ss" type="hidden" value="">
+</form>
+</div>
+<div id="header-ad-wrapper" class="ad">
+<div id="header-ad">
+<div class="ad-size-970x90 atf_banner">
+<div class='proper-ad-unit '>
+<div id='proper-ad-tvtropes_ad_1'> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_1'); });</script> </div>
+</div> </div>
+</div>
+</div>
+<div id="main-container">
+<div id="action-bar-top" class="action-bar mobile-off">
+<div class="action-bar-right">
+<p>Follow TV Tropes</p>
+<a href="https://www.facebook.com/TVTropes" class="button-fb">
+<i class="fa fa-facebook"></i></a>
+<a href="https://www.twitter.com/TVTropes" class="button-tw">
+<i class="fa fa-twitter"></i></a>
+<a href="https://www.reddit.com/r/TVTropes" class="button-re">
+<i class="fa fa-reddit-alien"></i></a>
+</div>
+<nav class="actions-wrapper" itemscope itemtype="http://schema.org/SiteNavigationElement">
+<ul id="top_main_list" class="page-actions">
+<li class="link-edit">
+<a rel="nofollow" class="article-edit-button" data-modal-target="login" href="/pmwiki/pmwiki.php/NlAdministratie/Naamruimte?action=edit">
+<i class="fa fa-pencil"></i> Edit Page</a></li><li class="link-related"><a href="/pmwiki/relatedsearch.php?term=NlAdministratie/Naamruimte">
+<i class="fa fa-share-alt"></i> Related</a></li><li class="link-history"><a href="/pmwiki/article_history.php?article=NlAdministratie.Naamruimte">
+<i class="fa fa-history"></i> History</a></li><li class="link-discussion"><a href="/pmwiki/remarks.php?trope=NlAdministratie.Naamruimte">
+<i class="fa fa-comment"></i> Discussion</a></li> </ul>
+<button id="top_more_button" onclick="toggle_more_menu('top');" type="button" class="nav__dropdown-toggle">More</button>
+<ul id="top_more_list" class="more_menu hidden_more_list">
+<li class="link-todo tuck-always more_list_item"><a href="#todo" data-modal-target="login"><i class="fa fa-check-circle"></i> To Do</a></li><li class="link-pageSource tuck-always more_list_item"><a href="/pmwiki/pmwiki.php/NlAdministratie/Naamruimte?action=source" target="_blank" rel="nofollow" data-modal-target="login"><i class="fa fa-code"></i> Page Source</a></li> </ul>
+</nav>
+<div class="WikiWordModalStub"></div>
+<div class="ImgUploadModalStub" data-page-type="Article"></div>
+<div class="login-alert" style="display: none;">
+You need to <a href="/pmwiki/login.php" style="color:#21A0E8">login</a> to do this. <a href="/pmwiki/login.php?tab=register_account" style="color:#21A0E8">Get Known</a> if you don't have an account
+</div>
+</div>
+<div id="main-content" class="page-Article ">
+<article id="main-entry" class="with-sidebar">
+
+<input type="hidden" id="groupname-hidden" value="NlAdministratie" />
+<input type="hidden" id="title-hidden" value="Naamruimte" />
+<input type="hidden" id="article_id" value="667220" />
+<input type="hidden" id="logged_in" value="false" />
+<p id="current_url" class="hidden">http://tvtropes.org/pmwiki/pmwiki.php/NlAdministratie/Naamruimte</p>
+<meta itemprop="datePublished" content="" />
+<meta itemprop="articleSection" content="" />
+<meta itemprop="image" content="">
+<a href="#watch" class="watch-button " data-modal-target="login">Follow<span>ing</span></a>
+<h1 itemprop="headline" class="entry-title">
+<strong>Nl Administratie / </strong>
+Naamruimte
+</h1>
+<script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+                "@type": "ListItem",
+                "position": 1,
+                "name": "tvtropes.org",
+                "item": "https://tvtropes.org"
+            },{
+                "@type": "ListItem",
+                "position": 2,
+                "name": "NlAdministratie",
+                "item": "https://tvtropes.org/pmwiki/index_report.php?groupname=NlAdministratie"
+            },{
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Naamruimte"            }]
+        }
+    </script>
+<a href="#mobile-actions-toggle" id="mobile-actionbar-toggle" class="mobile-actionbar-toggle mobile-on" data-click-toggle="active">
+<p class="tiny-off">Go To</p><span></span><span></span><span></span><i class="fa fa-pencil"></i></a>
+<nav id="mobile-actions-bar" class="mobile-actions-wrapper mobile-on"></nav>
+<div id="editLockModal" class="modal fade hidden-until-active">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span></button>
+<h4 class="modal-title">Edit Locked</h4>
+</div>
+<div class="modal-body">
+<div class="row">
+<div class="body">
+<div class="danger troper_locked_message"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<nav class="body-options" itemscope itemtype="http://schema.org/SiteNavigationElement">
+<ul class="subpage-links">
+<li>
+<a href="/pmwiki/pmwiki.php/NlAdministratie/Naamruimte" class="subpage-link curr-subpage" title="The NlAdministratie page">
+<span class="wrapper">NlAdministrati&#8230;</span></a>
+</li>
+<li class="create-subpage dropdown">
+<a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+<span class="wrapper">Create New <i class="fa fa-plus-circle"></i></span>
+</a>
+<select onchange="this.options[this.selectedIndex].value && (window.location = this.options[this.selectedIndex].value);">
+<option value="">- Create New -</option>
+<option value="/pmwiki/pmwiki.php/Analysis/Naamruimte?action=edit">Analysis</option>
+<option value="/pmwiki/pmwiki.php/Characters/Naamruimte?action=edit">Characters</option>
+<option value="/pmwiki/pmwiki.php/FanficRecs/Naamruimte?action=edit">FanficRecs</option>
+<option value="/pmwiki/pmwiki.php/FanWorks/Naamruimte?action=edit">FanWorks</option>
+<option value="/pmwiki/pmwiki.php/Fridge/Naamruimte?action=edit">Fridge</option>
+<option value="/pmwiki/pmwiki.php/Haiku/Naamruimte?action=edit">Haiku</option>
+<option value="/pmwiki/pmwiki.php/Headscratchers/Naamruimte?action=edit">Headscratchers</option>
+<option value="/pmwiki/pmwiki.php/ImageLinks/Naamruimte?action=edit">ImageLinks</option>
+<option value="/pmwiki/pmwiki.php/Laconic/Naamruimte?action=edit">Laconic</option>
+<option value="/pmwiki/pmwiki.php/PlayingWith/Naamruimte?action=edit">PlayingWith</option>
+<option value="/pmwiki/pmwiki.php/Quotes/Naamruimte?action=edit">Quotes</option>
+<option value="/pmwiki/pmwiki.php/Recap/Naamruimte?action=edit">Recap</option>
+<option value="/pmwiki/pmwiki.php/ReferencedBy/Naamruimte?action=edit">ReferencedBy</option>
+<option value="/pmwiki/pmwiki.php/Synopsis/Naamruimte?action=edit">Synopsis</option>
+<option value="/pmwiki/pmwiki.php/Timeline/Naamruimte?action=edit">Timeline</option>
+<option value="/pmwiki/pmwiki.php/Trivia/Naamruimte?action=edit">Trivia</option>
+<option value="/pmwiki/pmwiki.php/WMG/Naamruimte?action=edit">WMG</option>
+<option value="/pmwiki/pmwiki.php/YMMV/Naamruimte?action=edit">YMMV</option>
+</select>
+</li>
+</ul>
+</nav>
+<div id="main-article" class="article-content retro-folders">
+<p>In wiki-technisch jargon betekent "naamruimte" een gedeelte van de organisatiestructuur van de Wiki. Het moet voldoende duidelijk worden bij het lezen van de URL van de huidige pagina waar je zich op dat moment bevindt. De URL van deze pagina is bijvoorbeeld <strong>https://tvtropes.org/pmwiki/pmwiki.php/NlAdministratie/Naamruimte </strong>. Het bevindt zich in de <strong>NlAdministratie</strong> naamruimte.
+</p><p>Tropes horen in de <strong>Main</strong> naamruimte. Omdat Main de standaardnaamruimte is, hoeft je niets bijzonders te doen wanneer je <a class="twikilink" href="/pmwiki/pmwiki.php/Main/WikiWord" title="/pmwiki/pmwiki.php/Main/WikiWord">Wiki Words</a> schrijft om ernaar te linken. Voor Nederlandse vertalingen van tropes, gebruik je de <strong>Nl</strong> naamruimte, waarvoor je het volgende moet doen om naar te linken:
+</p><div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_1"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_1'); })</script></div></div><p>Als je naar pagina's in een andere naamruimte wilt linken, moet je ze als volgt opmaken:
+</p><div class="indent"> Namespace/PageTitle
+</div><p>of voor titels met &eacute;&eacute;n woord:
+</p><div class="indent"> Namespace/{{Title}} bijv. <a class="twikilink" href="/pmwiki/pmwiki.php/Film/Avatar" title="/pmwiki/pmwiki.php/Film/Avatar">Avatar</a>.
+</div><p>De pagina <a class="urllink" href="https://tvtropes.org/pmwiki/articlecount.php">Article Count<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a> vermeldt de momenteel gebruikte naamruimten en het aantal pagina's in elk ervan. Moderators kunnen bepaalde naamruimte-specifieke functies instellen op <a class="urllink" href="https://tvtropes.org/pmwiki/mod_namespace_config.php">Namespace Config<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a>, reguliere tropers kunnen de instellingen zien. Wat volgt is een algemene uiteenzetting.
+</p><p>Nederlandse toevoeging: deze naamruimtes zijn voor Engelse pagina's. Achter een aantal van deze staat de Nederlandse variant of een <em>voorgestelde</em> Nederlandse variant die nog niet gebruikt is. Voor alle varianten staat "Nl", wat voor anderen aangeeft dat het een Nederlandse pagina betreft.
+</p><hr><p></p><div class="folderlabel" onclick="toggleAllFolders();">&nbsp;&nbsp;&nbsp;&nbsp;open/close all folders&nbsp; </div>
+<div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_2"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_2'); })</script></div></div><p></p><div class="folderlabel" onclick="togglefolder('folder0');">&nbsp;&nbsp;&nbsp;&nbsp;Media-naamruimtes&nbsp;</div><div id="folder0" class="folder" isfolder="true" style="display:block;">
+In een perfecte wereld zou elk werk op <a class="twikilink" href="/pmwiki/pmwiki.php/NlWiki/TVTropes" title="/pmwiki/pmwiki.php/NlWiki/TVTropes">TV Tropes</a> zich in de bijbehorende naamruimte bevinden. Maar in de woorden van <a class="twikilink" href="/pmwiki/pmwiki.php/Tropers/FastEddie" title="/pmwiki/pmwiki.php/Tropers/FastEddie">Fast Eddie</a>: <em> "Als we meer hadden nagedacht, is dat de manier waarop we vijf jaar geleden zouden zijn begonnen." </em>
+<p>We vertrouwen op toenemende verandering om werken te migreren naar naamruimten voor hun respectievelijke <a class="twikilink" href="/pmwiki/pmwiki.php/Administrivia/MediaCategories" title="/pmwiki/pmwiki.php/Administrivia/MediaCategories">Media Categories</a>: live action tv-series naar de <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Series" title="/pmwiki/pmwiki.php/Main/Series">Series</a> naamruimte, comicbooks naar <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ComicBook" title="/pmwiki/pmwiki.php/Main/ComicBook">Comic Book</a>, films naar <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Film" title="/pmwiki/pmwiki.php/Main/Film">Film</a>, enz. U kunt helpen door het verplaatsen van een werkartikel dat je toevallig tegenkomt en dat op de verkeerde plaats staat. (Zie <a class="twikilink" href="/pmwiki/pmwiki.php/Administrivia/HowToMoveAPage" title="/pmwiki/pmwiki.php/Administrivia/HowToMoveAPage">How to Move a Page</a> voor stapsgewijze instructies.)
+</p><p>
+
+</p><p>The media namespaces currently used include:
+</p><ul><li> <a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=Advertising">Advertising/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a> [<a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=NlAdvertentie">NlAdvertentie/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a>]
+</li><li> <a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=Animation">Animation/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a> [<a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=NlAnimatie">NLAnimatie/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a>](Een allesvanger voor animatie dat niet past in <a class="createlink" href="/pmwiki/pmwiki.php/Main/NlAnime" title="/pmwiki/pmwiki.php/Main/NlAnime">Nl Anime</a>/)
+<p></p></li><li> <a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=Anime">Anime/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a> [<a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=NlAnime">NlAnime/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a>](Voor zowel films als series; als een werk <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AnimeFirst" title="/pmwiki/pmwiki.php/Main/AnimeFirst">Anime First</a> is, of als de anime genoeg verschilt van de originele bron dat het een aparte pagina kan krijgen &mdash; bijv. <em><a class="twikilink" href="/pmwiki/pmwiki.php/Manga/ExcelSaga" title="/pmwiki/pmwiki.php/Manga/ExcelSaga">Excel</a> <a class="twikilink" href="/pmwiki/pmwiki.php/Anime/ExcelSaga" title="/pmwiki/pmwiki.php/Anime/ExcelSaga">Saga</a></em>&mdash; dan hoort het hier.)
+</li><li> <a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=ARG">ARG/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a> [<a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=NlARG">NlARG/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a>]
+</li><li> <a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=Art">Art/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a> [<a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=NlKunst">NlKunst/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a>](Werken van de klassieke vorm van kunst.)
+</li><li> <a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=AudioPlay">AudioPlay/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a> [<a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=NlHoorspel">NlHoorspel<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a>](Alles wat niet past onder Radio/ of Podcast/.)
+</li><li> <a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=Blog">Blog/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a> [<a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=NlBlog">NlBlog/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a>]
+</li><li> <a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=Bollywood">Bollywood/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a> [<a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=NlBollywood">NlBollywood/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a>]
+</li><li> <a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=ComicBook">ComicBook/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a> [<a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=NlStripboek">NlStripboek/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a>]
+</li><li> <a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=ComicStrip">ComicStrip/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a> [<a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=NlKrantenstrip">NlKrantenstrip/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a>]
+</li><li> <a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=Creator">Creator/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a> [<a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=NlMaker">NlMaker/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a>] (Een allesvanger voor acteurs, schrijvers, regisseurs, artiesten, netwerken, studio's, distributeurs, bedrijven, videospel-ontwikkelaars, etc. Werk pagina's voor musici en muziekgroepen horen bij NlMuziek/. Daar komt bij dat alleen pagina's met deze naamruimte de NlMaker-type pagina hebben.)
+</li><li> <a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=Fanfic">Fanfic/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a> [<a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=NlFanfic">NlFanfic/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a>] (Voor fanfictie in letterlijke zin; andere werken van fans gaan in de specifieke formats van hun media)
+</li><li> <a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=Film">Film/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a> [<a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=NlFilm">NlFilm/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a>] (Voor live-action films; animatiefilms horen bij NlAnimatie of NlAnime.)
+</li><li> <a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=Franchise">Franchise/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a> [<a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=NlFranchise">NlFranchise/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a>] (Een multimedia-naamruimte voor series met minstens drie werkpagina's in verschillende naamruimtes.)
+</li><li> <a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=LARP">LARP/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a> [<a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=NlLARP">NlLARP/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a>] (Live-Action Role-Playing games.)
+</li><li> <a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=LetsPlay">LetsPlay/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a> [<a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=NlLetsPlay">NlLetsPlay/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a>] (Bevat zowel Let's Players als individuele Let's Plays.) <span class="notelabel" onclick="togglenote('note0nutw');"><sup>Uitzonderingen&nbsp;</sup></span><span id="note0nutw" class="inlinefolder" isnote="true" onclick="togglenote('note0nutw');" style="cursor:pointer;font-size:smaller;display:none;">Hoewel het geen traditionele LP is, hoort <em><a class="twikilink" href="/pmwiki/pmwiki.php/LetsPlay/TwitchPlaysPokemon" title="/pmwiki/pmwiki.php/LetsPlay/TwitchPlaysPokemon">Twitch Plays Pok&eacute;mon</a></em> hierbij omdat er geen betere optie is. <em><a class="twikilink" href="/pmwiki/pmwiki.php/WebVideo/GameGrumps" title="/pmwiki/pmwiki.php/WebVideo/GameGrumps">Game Grumps</a></em> en zijn spin-offs horen bij WebVideo/, niet hier.</span>
+</li><li> <a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=LightNovel">LightNovel/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a> [<a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=NlLightNovel">NlLightNovel/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a>]
+</li><li> <a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=Literature">Literature/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a> [<a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=NlLiteratuur">NlLiteratuur/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a>] (Inclusief eBooks en <a class="twikilink" href="/pmwiki/pmwiki.php/Main/WebSerialNovel" title="/pmwiki/pmwiki.php/Main/WebSerialNovel">Web Serial Novels</a>.)
+</li><li> <a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=Machinima">Machinima/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a> [<a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=NlMachinima">NlMachinima/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a>]
+</li><li> <a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=Magazine">Magazine/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a> [<a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=NlTijdschrift">NlTijdschrift/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a>]
+</li><li> <a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=Manga">Manga/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a> [<a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=NlManga">NlManga/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a>
+</li><li> <a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=Manhua">Manhua/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a> [<a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=NlManhua">NlManhua/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a>]
+</li><li> <a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=Manhwa">Manhwa/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a> [<a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=NlManhwa">NlManhwa/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a>]
+</li><li> <a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=Music">Music/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a> [<a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=NlMuziek">NlMuziek/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a>](Voor bands, individuele artiesten, muziekalbums en bepaalde liedjes, muziekvideo's.)
+</li><li> <a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=Myth">Myth/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a> [<a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=NlMythe">NlMythe/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a>] (mythologie&euml;n, legendes en orale tradities.)
+</li><li> <a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=Pinball">Pinball/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a>[<a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=NlFlipperen">NlFlipperen/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a>] (Voor fysieke flipperkasten en flipper-gerelateerde doorverwijspagina's; videospellen gebaseerd op flipperen moeten onder NlVideospel/)
+</li><li> <a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=Podcast">Podcast/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a> [<a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=NlPodcast">NlPodcast/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a>]
+</li><li> <a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=Radio">Radio/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a> [<a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=NlRadio">NlRadio/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a>]
+</li><li> <a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=Ride">Ride/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a>[<a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=NlAttractie">NlAttractie/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a>] (Zowel attracties als attractieparken horen hierbij.) <a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=Roleplay">Roleplay/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a>[<a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=NlRollenspel">NlRollenspel/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a>] (Gebruikt voor online RPGs.)
+</li><li> <a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=Script">Script/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a> [<a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=NlScript">NlScript/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a>] (Voor tekst in scriptformaat of ongebruikte filmscripts.)
+</li><li> <a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=Series">Series/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a> [<a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=NlSeries">NlSeries/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a>] (Wordt voornamelijk gebruikt voor liveaction-TV, maar is ook voor andere series die niet behoren tot een NlFranchise.)
+</li><li> <a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=TabletopGame">TabletopGame/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a> [[<a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=NlTafelSpel">NlTafelSpel/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a>]
+</li><li> <a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=Theatre">Theatre/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a> [<a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=NlTheater">NlTheater/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a>]
+</li><li> <a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=Toys">Toys/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a> [<a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=NlSpeelgoed">NlSpeelgoed/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a>]
+</li><li> <a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=VideoGame">VideoGame/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a> [<a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=NlVideospel">NlVideospel/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a>]
+</li><li> <a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=VisualNovel">VisualNovel/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a> [<a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=NlVisueleNovelle">NlVisueleNovelle/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a>]
+</li><li> <a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=WebAnimation">WebAnimation/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a> [<a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=NlWebAnimatie">NlWebAnimatie/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a>]
+</li><li> <a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=Webcomic">Webcomic/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a> [<a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=NlWebComic">NlWebComic/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a>]
+</li><li> <a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=Website">Website/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a> [<a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=NlWebsite">NlWebsite/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a>]
+</li><li> <a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=WebOriginal">WebOriginal/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a> (Deze naamruimte wordt niet meer gebruikt. Er zitten vooral memes in, hetgeen we niet meer willen en overblijfselen uit de tijd dat er voor bepaalde werken nog geen goede naamruimte was.)
+</li><li> <a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=WebVideo">WebVideo/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a> [<a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=NlWebVideo">NlWebVideo/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a>] (Omvat zowel <a class="createlink" href="/pmwiki/pmwiki.php/Website/YouTubd" title="/pmwiki/pmwiki.php/Website/YouTubd">You Tubd</a>-video's als web-exclusieve series. Voor series met een groot budget en exclusief voor streamingdiensten zoals <a class="twikilink" href="/pmwiki/pmwiki.php/Creator/Netflix" title="/pmwiki/pmwiki.php/Creator/Netflix">Netflix</a>, wordt NlSeries/ of de bijbehorende animatie-naamruimte gebruikt.)
+</li><li> <a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=WesternAnimation">WesternAnimation/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a> [<a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=NlWesterseAnimatie">NlWesterseAnimatie/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a>] (Voor zowel films als series)
+</li><li> <a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=Wiki">Wiki/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a> [<a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=NlWiki">NlWiki/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a>]
+</li><li> <a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=Wrestling">Wrestling/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a> [<a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=NlWorstelen">NlWorstelen/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a>]
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder1');">&nbsp;&nbsp;&nbsp;&nbsp;Subpagina-Naamruimtes&nbsp;</div><div id="folder1" class="folder" isfolder="true" style="display:block;">
+Dit zijn de naamruimtes waarvan de pagina's gerelateerd zijn aan of direct linken naar een Main of Media pagina. Ze bevatten informatie over een trope of werk die te veel zou zijn om in de hoofdpagina te passen en worden naar elkaar gelinkt door de icoontjes bovenaan de pagina onder de zoekbalk.
+<ul><li> <a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=Analysis">Analysis/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a> [<a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=NlAnalyse">NlAnalyse/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a>] &mdash; Complexe <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Analysis" title="/pmwiki/pmwiki.php/Main/Analysis">analyses</a> van een werk die niet goed passen in een paragraaf of uitwerkingen die een tropebeschrijving zouden laten afdwalen.
+</li><li> <a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=Characters">Characters/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a> [<a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=NlPersonages">NlPersonages/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a>] &mdash; <a class="twikilink" href="/pmwiki/pmwiki.php/Main/CharacterSheets" title="/pmwiki/pmwiki.php/Main/CharacterSheets">Lijsten van personages</a> in een werk en de bijbehorende tropes. Zo kun je een werk met een lading aan personages in meerdere subpagina's splitsen. (De naamruimte voor [<a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=NNlPersonagevellen">NlPersonagevellen/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a>] (<a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=CharacterSheets">CharacterSheets/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a>) wordt gebruikt voor lijsten van deze pagina's, ingedeeld op genres.)
+</li><li> <a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=FanficRecs">FanficRecs/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a> [<a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=NlFanficAanbev">NlFanficAanbev/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a>] &mdash; Door tropers aanbevolen fanficties van een serie, indien je daar iets mee hebt. Niet dat dat erg is, ofzo.
+</li><li> <a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=FanWorks">FanWorks/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a> [<a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=NlFanwerken">NlFanwerken/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a>] &mdash; ge&iuml;ndexeerde subpagina's voor fanwerken van bepaalde... werken.
+</li><li> <a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=Fridge">Fridge/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a> [<a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=NlKoelkast">NlKoelkast/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a>] &mdash; Pagina's voor <a class="twikilink" href="/pmwiki/pmwiki.php/Nl/Koelkastgenialiteit" title="/pmwiki/pmwiki.php/Nl/Koelkastgenialiteit">Koelkastgenialiteit</a>-, <a class="twikilink" href="/pmwiki/pmwiki.php/Nl/Koelkastlogica" title="/pmwiki/pmwiki.php/Nl/Koelkastlogica">Koelkastlogica</a>- en <a class="twikilink" href="/pmwiki/pmwiki.php/Nl/Koelkasthorror" title="/pmwiki/pmwiki.php/Nl/Koelkasthorror">Koelkasthorror-voorbeelden</a>.
+</li><li> <a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=Haiku">Haiku/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a> [<a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=NlHaiku">NlHaiku/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a>] &mdash; <a class="twikilink" href="/pmwiki/pmwiki.php/Nl/HaikuWiki" title="/pmwiki/pmwiki.php/Nl/HaikuWiki">Po&euml;zie in tropes / Snap je het nut er niet van? / Regel der Cool heerst</a>.
+</li><li> <a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=Headscratchers">Headscratchers/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a> [<a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=NlOrenkrabbers">NlOrenkrabbers/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a>] &mdash; Dingen over een werk die je verwarren en je <a class="twikilink" href="/pmwiki/pmwiki.php/Headscratchers/HomePage" title="/pmwiki/pmwiki.php/Headscratchers/HomePage">achter je oren laten krabben</a>.
+</li><li> <a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=ImageLinks">ImageLinks/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a> [<a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=NlAfbeeldinglinks">NlAfbeeldinglinks/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a>]&mdash; Links van extra afbeeldingen die niet passen op de hoofdpagina kunnen op de <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ImageLinksWiki" title="/pmwiki/pmwiki.php/Main/ImageLinksWiki">Afbeeldinglinks</a>-pagina's.
+</li><li> <a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=Laconic">Laconic/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a> [<a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=NlLaconisch">NlLaconisch/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a>]&mdash; <a class="twikilink" href="/pmwiki/pmwiki.php/Nl/LaconischeWiki" title="/pmwiki/pmwiki.php/Nl/LaconischeWiki">Deze naamruimte</a> definieert tropes en werken zo kort en duidelijk mogelijk. "Slimme" zinnen bedenken is leuk, maar duidelijkheid is <em>essentieel</em>.
+</li><li> <a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=MadmanEntertainment">MadmanEntertainment/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a> [<a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=NlMadmanEntertainment">NlMadmanEntertainment/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a>] &mdash; Index van de werken van de Australische distributeur <a class="twikilink" href="/pmwiki/pmwiki.php/Creator/MadmanEntertainment" title="/pmwiki/pmwiki.php/Creator/MadmanEntertainment">Madman Entertainment</a>.
+</li><li> <a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=PlayingWith">PlayingWith/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a> [<a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=NlSpelenMet">NlSpelenMet/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a>] &mdash; Korte voorbeelden van manieren om met de trope '<a class="twikilink" href="/pmwiki/pmwiki.php/Main/PlayingWithWiki" title="/pmwiki/pmwiki.php/Main/PlayingWithWiki">te spelen</a>' (<a class="twikilink" href="/pmwiki/pmwiki.php/Main/SubvertedTrope" title="/pmwiki/pmwiki.php/Main/SubvertedTrope">subversies</a>, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/InvertedTrope" title="/pmwiki/pmwiki.php/Main/InvertedTrope">inversies</a>, etcetera).
+</li><li> <a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=Quotes">Quotes/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a> [<a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=NlCitaten">NlCitaten/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a>] &mdash; Elke pagina mag &eacute;&eacute;n, hooguit twee citaten hebben bovenaan. Om ervoor te zorgen dat citaten niet telkens vervangen worden door concurrerende, is de <a class="twikilink" href="/pmwiki/pmwiki.php/Main/QuotesWiki" title="/pmwiki/pmwiki.php/Main/QuotesWiki">Citaten</a>-naamruimte in het leven geroepen, voor alle overige quotes.
+</li><li> <a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=Recap">Recap/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a> [<a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=NlOpfrissertje">NlOpfrissertje/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a>] &mdash; Fans van bepaalde shows gebruiken deze naamruimte om <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Recap" title="/pmwiki/pmwiki.php/Main/Recap">opfrissertjes van afleveringen te geven</a>.
+</li><li> <a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=ReferencedBy">ReferencedBy/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a> [<a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=NlNaarVerwezenDoor">NlNaarVerwezenDoor/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a>] &mdash; Lijsten van <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ShoutOut" title="/pmwiki/pmwiki.php/Main/ShoutOut">Shout Outs</a> aan een bepaald werk in andere werken.
+</li><li> <a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=ShoutOut">ShoutOut/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a> [<a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=NlShoutOut">NlShoutOut/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a>] &mdash; Lijsten van <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ShoutOut" title="/pmwiki/pmwiki.php/Main/ShoutOut">Shout Outs</a> door een bepaald werk aan andere werken.
+</li><li> <a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=Synopsis">Synopsis/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a> [<a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=NlSamenvatting">NlSamenvatting/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a>] &mdash; Een beknopt overzicht van het verhaal van een boek, film, toneelstuk, etc.
+</li><li> <a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=Timeline">Timeline/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a> [<a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=NlTijdlijn">NlTijdlijn/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a>] &mdash; Wanneer een werk een erg verwarrende tijdlijn heeft is het wellicht nuttig om een subpagina aan te maken waarin je 't uitlegt.
+</li><li> <a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=Trivia">Trivia/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a> [<a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=NlTrivia">NlTrivia/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a>] &mdash; Hetzelfde idee als bij de Citaten-naamruimte, maar dan voor dingen over de productie van een werk die <em>in</em> het werk <em>zelf</em> geen tropes zijn. Een verhaal over een film die tijdens het maken superlange opstartproblemen had, bijvoorbeeld, is interessant als <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Trivia" title="/pmwiki/pmwiki.php/Main/Trivia">trivia</a>, maar niet als trope.
+</li><li> <a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=WMG">WMG/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a> [<a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=NlRondRaden">NlRondRaden/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a>] (<a class="createlink" href="/pmwiki/pmwiki.php/Nl/InHetRondRaden" title="/pmwiki/pmwiki.php/Nl/InHetRondRaden">In Het Rond Raden</a>) &mdash; D&eacute; plek waar wilde fantheorie&euml;n gedeeld kunnen worden.
+</li><li> <a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=YMMV">YMMV/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a> [<a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=NlYMMV">NlYMMV/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a>] &mdash; <a class="twikilink" href="/pmwiki/pmwiki.php/YMMV/HomePage" title="/pmwiki/pmwiki.php/YMMV/HomePage">YMMV</a> (Jouw Ervaring Kan Anders Zijn): Hierbij horen dingen als meningen van het algemene publiek, iets dat kan verschillen van troper tot troper.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder2');">&nbsp;&nbsp;&nbsp;&nbsp;Momenten-Naamruimtes&nbsp;</div><div id="folder2" class="folder" isfolder="true" style="display:block;">
+Dit zijn de subgroepen van subpagina's die speciale momenten van een bepaalde show opsommen.
+<ul><li> <a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=Awesome">Awesome/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a> [<a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=NlGeweldig">NlGeweldig/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a>] &mdash; Geweldige momenten: de momenten uit een show waar fans nog dagen over napraten.
+</li><li> <a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=Funny">Funny/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a> [<a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=NlGrappig">NlGrappig/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a>] &mdash; Grappige momenten: de momenten uit een show waarbij fans het in hun broek doen van het lachen.
+</li><li> <a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=Heartwarming">Heartwarming/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a> [<a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=NlHartverwarmend">NlHartverwarmend/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a>] &mdash; Hartverwarmende momenten: de momenten uit een show die fans een warm, kietelend gevoel geven.
+</li><li> <a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=NightmareFuel">NightmareFuel/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a> [<a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=NlNachtmerrie">NlNachtmerrie/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a>] &mdash; Nachtmerriemateriaal: de momenten uit een show waarvan fans de kriebels krijgen.
+</li><li> <a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=TearJerker">TearJerker/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a> [<a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=NlTranenTrekker">NlTranenTrekker/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a>] &mdash; Tranentrekkende momenten: de momenten uit een show waarbij fans een doosje tissues bij de hand moeten houden.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder3');">&nbsp;&nbsp;&nbsp;&nbsp;Voor De Lol en andere Naamruimtes&nbsp;</div><div id="folder3" class="folder" isfolder="true" style="display:block;">
+<ul><li> <a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=AATAFOVS">AATAFOVS/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a> [<a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=NlAATAFOVS">NlAATAFOVS/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a>] &mdash; De door <a class="twikilink" href="/pmwiki/pmwiki.php/NlWiki/TVTropes" title="/pmwiki/pmwiki.php/NlWiki/TVTropes">TV Tropes</a> ge&iuml;nspireerde <a class="twikilink" href="/pmwiki/pmwiki.php/JustForFun/AvatarAndTheAirbendingFellowshipOfVampireSlayers" title="/pmwiki/pmwiki.php/JustForFun/AvatarAndTheAirbendingFellowshipOfVampireSlayers">show</a>.
+</li><li> <a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=Administrivia">Administrivia/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a> [<a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=NlAdministratie">NlAdministratie/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a>] &mdash; Wordt gebruikt voor <a class="twikilink" href="/pmwiki/pmwiki.php/Nl/Administratie" title="/pmwiki/pmwiki.php/Nl/Administratie">Administratie</a>, pagina's over de regels van de wiki, richtlijnen en dergelijke.
+</li><li> <a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=CompletedMigrations">CompletedMigrations/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a> [<a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=NlVoltooideMigraties">NlVoltooideMigraties/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a>] &mdash; Voor werken en makers waarvan hun <a class="twikilink" href="/pmwiki/pmwiki.php/Administrivia/WickNamespaceMigration" title="/pmwiki/pmwiki.php/Administrivia/WickNamespaceMigration">Naamruimte-migraties</a> gelukt en afgerond zijn.
+</li><li> <a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=DarthWiki">DarthWiki/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a> [<a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=NlDonkereWiki">NlDonkereWiki/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a>] &mdash; <a class="createlink" href="/pmwiki/pmwiki.php/NlDonkereWiki/DitBestaat" title="/pmwiki/pmwiki.php/NlDonkereWiki/DitBestaat">De Donkere Kant van de wiki</a>. Ze hebben cookies, en zijn in het algemeen heel onaangenaam. Gebruik niks hiervan als voorbeeld, en gebruik ook geen <a class="twikilink" href="/pmwiki/pmwiki.php/Nl/Pothole" title="/pmwiki/pmwiki.php/Nl/Pothole">Potholes</a> die hiernaar lijden, behalve in beschrijvingen.
+</li><li> <a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=JustForFun">JustForFun/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a> [<a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=NlVoorDeLol">NlVoorDeLol/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a>] &mdash; Voor pagina's die misschien niet passen bij het doel van deze wiki, maar te leuk zijn om <em>niet</em> te hebben.
+</li><li> <a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=Pantheon">Pantheon/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a> [<a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=NlPantheon">NlPantheon/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a>] &mdash; Als Goden de belichaming waren van <a class="twikilink" href="/pmwiki/pmwiki.php/Nl/Trope" title="/pmwiki/pmwiki.php/Nl/Trope">tropes</a>...
+</li><li> <a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=RealLife">RealLife/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a> [<a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=NlEchteLeven">NlEchteLeven/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a>] &mdash; Voor <em>echte</em> voorbeelden van tropes.
+</li><li> <a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=SelfDemonstrating">SelfDemonstrating/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a> [<a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=NlZelfdemonstrerend">NlZelfdemonstrerend/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a>] &mdash; Voor <a class="twikilink" href="/pmwiki/pmwiki.php/Nl/ZelfdemonstrerendArtikel" title="/pmwiki/pmwiki.php/Nl/ZelfdemonstrerendArtikel">zelfdemonstrerende artikelen</a>, samen met personagepagina's die in de eerste persoon geschreven zijn, alsof het personage in kwestie zelf de pagina schrijft.
+</li><li> <a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=SoYouWantTo">SoYouWantTo/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a> [<a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=NlJeWiltDus">NlJeWiltDus/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a>] &mdash; Voor <a class="twikilink" href="/pmwiki/pmwiki.php/SoYouWantTo/SeeTheIndex" title="/pmwiki/pmwiki.php/SoYouWantTo/SeeTheIndex">geschreven handleidingen</a> door tropers voor tropers.
+</li><li> <a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=SugarWiki">SugarWiki/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a> [<a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=NlZoeteWiki">NlZoeteWiki/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a>] &mdash; <a class="createlink" href="/pmwiki/pmwiki.php/NlZoeteWiki/DitBestaat" title="/pmwiki/pmwiki.php/NlZoeteWiki/DitBestaat">Zoete Wiki is de Lichtere En Zachtere kant van de wiki</a>. Hier kun je <a class="twikilink" href="/pmwiki/pmwiki.php/SugarWiki/GushingAboutShowsYouLike" title="/pmwiki/pmwiki.php/SugarWiki/GushingAboutShowsYouLike">Tomeloos Praten Over Shows Die Je Leuk Vindt</a> en meer. Onze cookies zijn trouwens ook beter.
+</li><li> <a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=TropeCo">TropeCo/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a> [<a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=NlTropeCo">NlTropeCo/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a>] &mdash; De <a class="twikilink" href="/pmwiki/pmwiki.php/TropeCo/TropeCo" title="/pmwiki/pmwiki.php/TropeCo/TropeCo">TV Tropes-catalogus</a>!
+</li><li> <a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=Tropers">Tropers/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a> &mdash; De persoonlijke pagina van de tropers. Heeft daarom ook geen Nl-variant.
+</li><li> <a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=TroperWall">TroperWall/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a> &mdash; Een plek voor andere gebruikers om iets te schrijven aan of over een troper. Nl-variant overbodig omdat dit specifiek voor individuele tropers is.
+</li><li> <a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=UsefulNotes">UsefulNotes/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a> [<a class="urllink" href="https://tvtropes.org/pmwiki/namespace_index.php?ns=NlHandigeNotities">NlHandigeNotities/<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a>] &mdash; <a class="twikilink" href="/pmwiki/pmwiki.php/Main/UsefulNotes" title="/pmwiki/pmwiki.php/Main/UsefulNotes">Informatie over culturele, regionale en andere informatie die kunnen verschijnen in tropes en werken</a>. Wordt tevens gebruikt voor mensen en bedrijven die niet vallen onder NlMaker, NlPolitici, NlHistorischeFiguren, NlAtleten (behalve worstelaars), etc.
+</li></ul></div>
+<p>
+
+
+
+</p><p>
+
+</p><p></p><div class="folderlabel" onclick="togglefolder('folder5');">&nbsp;&nbsp;&nbsp;&nbsp;Overig&nbsp;</div><div id="folder5" class="folder" isfolder="true" style="display:block;">
+<h2>Vertalingen-naamruumtes</h2>
+Gedeeltelijke vertalingen van de wiki naar andere talen, waarvan de compleetheid varieert. Zie <a class="twikilink" href="/pmwiki/pmwiki.php/Main/HomePages" title="/pmwiki/pmwiki.php/Main/HomePages">Home Pages</a> voor een lijst.
+<p></p><h2>Forum-onderwerpen over naamruimtes</h2>
+Natuurlijk hebben naamruimtes wat onderhoud nodig, wat gegeven wordt door drie forum-onderwerpen: <a class="urllink" href="https://tvtropes.org/pmwiki/posts.php?discussion=13292464700A22187400">Media namespaces -- a battery of questions<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a> wanneer je niet zeker weet in welke naamruimte een pagina moet, <a class="urllink" href="https://tvtropes.org/pmwiki/posts.php?discussion=13089408750A90860100">Wick Migration<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a> voor hulp met het verplaatsen van <a class="twikilink" href="/pmwiki/pmwiki.php/Administrivia/Wick" title="/pmwiki/pmwiki.php/Administrivia/Wick">wicks</a> tussen naamruimtes en <a class="urllink" href="https://tvtropes.org/pmwiki/posts.php?discussion=13345901180A51310200">Suggesting new namespaces<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a> om nieuwe naamruimtes voor te stellen. Mocht je idee&euml;n of vragen hebben over Nederlandse naamruimtes, kun je naar de forum <a class="urllink" href="https://tvtropes.org/pmwiki/posts.php?discussion=15409204750A99967200">Nederlandse Vertaling (Dutch Translation)<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;"></a> gaan.
+</div>
+<div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_3"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_3'); })</script></div></div><hr><p>[Engels: <a class="twikilink" href="/pmwiki/pmwiki.php/Administrivia/Namespace" title="/pmwiki/pmwiki.php/Administrivia/Namespace">Namespace</a>]
+</p>
+</div>
+<div class="alt-titles section section-fact">
+<h3>
+<strong>Alternative Title(s):</strong>
+<span>Namespace</span> </h3>
+</div>
+<div class="square_ad footer-article-ad main_2" data-isolated="0"></div>
+<div class="section-links" itemscope itemtype="http://schema.org/SiteNavigationElement">
+<div class="titles">
+<div><h3 class="text-center text-uppercase">Previous</h3></div>
+<div><h3 class="text-center text-uppercase">Index</h3></div>
+<div><h3 class="text-center text-uppercase">Next</h3></div>
+</div>
+<div class="links">
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Nl/Pothole">Pothole</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Nl/Administratie">Nl/Administratie</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Administrivia/HowIndexingWorks">How Indexing Works</a>
+</li>
+</ul>
+</div>
+</div>
+</article>
+<div id="main-content-sidebar"><div class="sidebar-item display-options">
+<ul class="sidebar display-toggles">
+<li>Show Spoilers <div id="sidebar-toggle-showspoilers" class="display-toggle show-spoilers"></div></li>
+<li>Night Vision <div id="sidebar-toggle-nightvision" class="display-toggle night-vision"></div></li>
+<li>Sticky Header <div id="sidebar-toggle-stickyheader" class="display-toggle sticky-header"></div></li>
+<li>Wide Load <div id="sidebar-toggle-wideload" class="display-toggle wide-load"></div></li>
+</ul>
+<script>updateDesktopPrefs();</script>
+</div>
+<div class="sidebar-item ad sb-ad-unit">
+<div class='proper-ad-unit '>
+<div id='proper-ad-tvtropes_ad_2'> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_2'); });</script> </div>
+</div></div>
+<div class="sidebar-item quick-links" itemtype="http://schema.org/SiteNavigationElement">
+<p class="sidebar-item-title" data-title="Important Links">Important Links</p>
+<div class="padded">
+<a href="/pmwiki/query.php?type=att">Ask The Tropers</a>
+<a href="/pmwiki/query.php?type=tf">Trope Finder</a>
+<a href="/pmwiki/query.php?type=ykts">You Know That Show...</a>
+<a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a>
+<a href="/pmwiki/review_activity.php">Reviews</a>
+<a href="/pmwiki/lbs.php" data-modal-target="login">Live Blogs</a>
+<a href="/pmwiki/ad-free-subscribe.php">Go Ad Free!</a> </div>
+</div>
+<div class="sidebar-item sb-ad-unit">
+<div class="sidebar-section">
+<div class="square_ad ad-size-300x600 ad-section text-center">
+<div class='proper-ad-unit '>
+<div id='proper-ad-tvtropes_ad_3'> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_3'); });</script> </div>
+</div> </div>
+</div>
+</div>
+<div class="sidebar-item">
+<p class="sidebar-item-title" data-title="Crucial Browsing">Crucial Browsing</p>
+<ul class="padded font-s" itemscope itemtype="http://schema.org/SiteNavigationElement">
+<li><a href="javascript:void(0);" data-click-toggle="active">Genre</a>
+<ul>
+<li><a href='/pmwiki/pmwiki.php/Main/ActionAdventureTropes' title='Main/ActionAdventureTropes'>Action Adventure</a></li>
+<li><a href='/pmwiki/pmwiki.php/Main/ComedyTropes' title='Main/ComedyTropes'>Comedy</a></li>
+<li><a href='/pmwiki/pmwiki.php/Main/CommercialsTropes' title='Main/CommercialsTropes'>Commercials</a></li>
+<li><a href='/pmwiki/pmwiki.php/Main/CrimeAndPunishmentTropes' title='Main/CrimeAndPunishmentTropes'>Crime &amp; Punishment</a></li>
+<li><a href='/pmwiki/pmwiki.php/Main/DramaTropes' title='Main/DramaTropes'>Drama</a></li>
+<li><a href='/pmwiki/pmwiki.php/Main/HorrorTropes' title='Main/HorrorTropes'>Horror</a></li>
+<li><a href='/pmwiki/pmwiki.php/Main/LoveTropes' title='Main/LoveTropes'>Love</a></li>
+<li><a href='/pmwiki/pmwiki.php/Main/NewsTropes' title='Main/NewsTropes'>News</a></li>
+<li><a href='/pmwiki/pmwiki.php/Main/ProfessionalWrestling' title='Main/ProfessionalWrestling'>Professional Wrestling</a></li>
+<li><a href='/pmwiki/pmwiki.php/Main/SpeculativeFictionTropes' title='Main/SpeculativeFictionTropes'>Speculative Fiction</a></li>
+<li><a href='/pmwiki/pmwiki.php/Main/SportsStoryTropes' title='Main/SportsStoryTropes'>Sports Story</a></li>
+<li><a href='/pmwiki/pmwiki.php/Main/WarTropes' title='Main/WarTropes'>War</a></li>
+</ul>
+</li>
+<li><a href="javascript:void(0);" data-click-toggle="active">Media</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/Media" title="Main/Media">All Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/AnimationTropes" title="Main/AnimationTropes">Animation (Western)</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Anime" title="Main/Anime">Anime</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ComicBookTropes" title="Main/ComicBookTropes">Comic Book</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FanFic" title="FanFic/FanFics">Fan Fics</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Film" title="Main/Film">Film</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/GameTropes" title="Main/GameTropes">Game</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Literature" title="Main/Literature">Literature</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MusicAndSoundEffects" title="Main/MusicAndSoundEffects">Music And Sound Effects</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NewMediaTropes" title="Main/NewMediaTropes">New Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/PrintMediaTropes" title="Main/PrintMediaTropes">Print Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Radio" title="Main/Radio">Radio</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SequentialArt" title="Main/SequentialArt">Sequential Art</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TabletopGames" title="Main/TabletopGames">Tabletop Games</a></li>
+<li><a href="/pmwiki/pmwiki.php/UsefulNotes/Television" title="Main/Television">Television</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Theater" title="Main/Theater">Theater</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/VideogameTropes" title="Main/VideogameTropes">Videogame</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Webcomics" title="Main/Webcomics">Webcomics</a></li>
+</ul>
+</li>
+<li><a href="javascript:void(0);" data-click-toggle="active">Narrative</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/UniversalTropes" title="Main/UniversalTropes">Universal</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/AppliedPhlebotinum" title="Main/AppliedPhlebotinum">Applied Phlebotinum</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CharacterizationTropes" title="Main/CharacterizationTropes">Characterization</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Characters" title="Main/Characters">Characters</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CharactersAsDevice" title="Main/CharactersAsDevice">Characters As Device</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Dialogue" title="Main/Dialogue">Dialogue</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Motifs" title="Main/Motifs">Motifs</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NarrativeDevices" title="Main/NarrativeDevices">Narrative Devices</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Paratext" title="Main/Paratext">Paratext</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Plots" title="Main/Plots">Plots</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Settings" title="Main/Settings">Settings</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Spectacle" title="Main/Spectacle">Spectacle</a></li>
+</ul>
+</li>
+<li><a href="javascript:void(0);" data-click-toggle="active">Other Categories</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/BritishTellyTropes" title="Main/BritishTellyTropes">British Telly</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TheContributors" title="Main/TheContributors">The Contributors</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CreatorSpeak" title="Main/CreatorSpeak">Creator Speak</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Creators" title="Main/Creators">Creators</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DerivativeWorks" title="Main/DerivativeWorks">Derivative Works</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LanguageTropes" title="Main/LanguageTropes">Language</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LawsAndFormulas" title="Main/LawsAndFormulas">Laws And Formulas</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ShowBusiness" title="Main/ShowBusiness">Show Business</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SplitPersonalityTropes" title="Main/SplitPersonalityTropes">Split Personality</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/StockRoom" title="Main/StockRoom">Stock Room</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TropeTropes" title="Main/TropeTropes">Trope</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Tropes" title="Main/Tropes">Tropes</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TruthAndLies" title="Main/TruthAndLies">Truth And Lies</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TruthInTelevision" title="Main/TruthInTelevision">Truth In Television</a></li>
+</ul>
+</li>
+<li><a href="javascript:void(0);" data-click-toggle="active">Topical Tropes</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/BetrayalTropes" title="Main/BetrayalTropes">Betrayal</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CensorshipTropes" title="Main/CensorshipTropes">Censorship</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CombatTropes" title="Main/CombatTropes">Combat</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DeathTropes" title="Main/DeathTropes">Death</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FamilyTropes" title="Main/FamilyTropes">Family</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FateAndProphecyTropes" title="Main/FateAndProphecyTropes">Fate And Prophecy</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FoodTropes" title="Main/FoodTropes">Food</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/HolidayTropes" title="Main/HolidayTropes">Holiday</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MemoryTropes" title="Main/MemoryTropes">Memory</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MoneyTropes" title="Main/MoneyTropes">Money</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MoralityTropes" title="Main/MoralityTropes">Morality</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/PoliticsTropes" title="Main/PoliticsTropes">Politics</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ReligionTropes" title="Main/ReligionTropes">Religion</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SchoolTropes" title="Main/SchoolTropes">School</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="sidebar-item showcase">
+<p class="sidebar-item-title" data-title="Community&nbsp;Showcase">Community Showcase <a href="/pmwiki/showcase.php" class="bubble float-right hover-blue">More</a></p>
+<p class="community-showcase">
+<a href="https://sharetv.com/shows/echo_chamber" target="_blank" onclick="trackOutboundLink('https://sharetv.com/shows/echo_chamber');">
+<img data-src="/images/communityShowcase-echochamber.jpg" class="lazy-image" alt=""></a>
+<a href="/pmwiki/pmwiki.php/Webcomic/TwistedTropes">
+<img data-src="/img/howlandsc-side.jpg" class="lazy-image" alt=""></a>
+</p>
+</div>
+<div id="stick-cont" class="sidebar-item sb-ad-unit">
+<div id="stick-bar" class="sidebar-section">
+<div class="square_ad ad-size-300x600 ad-section text-center">
+<div class='proper-ad-unit '>
+<div id='proper-ad-tvtropes_ad_4'> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_4'); });</script> </div>
+</div> </div>
+</div>
+</div>
+</div>
+</div>
+<div id="action-bar-bottom" class="action-bar tablet-off">
+<a href="#top-of-page" class="scroll-to-top dead-button" onclick="$('html, body').animate({scrollTop : 0},500);">Top</a>
+</div>
+</div>
+<div class='proper-ad-unit ad-sticky'>
+<div id='proper-ad-tvtropes_sticky_ad'> <script>propertag.cmd.push(function() { proper_display('tvtropes_sticky_ad'); });</script> </div>
+</div>
+<footer id="main-footer">
+<div id="main-footer-inner">
+<div class="footer-left">
+<a href="/" class="img-link"><img data-src="/img/tvtropes-footer-logo.png" alt="TV Tropes" class="lazy-image" title="TV Tropes" /></a>
+<form action="index.html" id="cse-search-box-mobile" class="navbar-form newsletter-signup validate modal-replies" name="" role="" data-ajax-get="/ajax/subscribe_email.php">
+<button class="btn-submit newsletter-signup-submit-button" type="submit" id="subscribe-btn"><i class="fa fa-paper-plane"></i></button>
+<input id="subscription-email" type="text" class="form-control" name="q" size="31" placeholder="Subscribe" value="" validate-type="email">
+</form>
+<ul class="social-buttons">
+<li><a class="btn fb" target="_blank" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-facebook']);" href="https://www.facebook.com/tvtropes"><i class="fa fa-facebook"></i></a></li>
+<li><a class="btn tw" target="_blank" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-twitter']);" href="https://www.twitter.com/tvtropes"><i class="fa fa-twitter"></i></a> </li>
+<li><a class="btn rd" target="_blank" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-reddit']);" href="https://www.reddit.com/r/tvtropes"><i class="fa fa-reddit-alien"></i></a></li>
+</ul>
+</div>
+<hr />
+<ul class="footer-menu" itemscope itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">TVTropes</h4></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Administrivia">About TVTropes</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TheGoalsOfTVTropes">TVTropes Goals</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TheTropingCode">Troping Code</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TVTropesCustoms">TVTropes Customs</a></li>
+<li><a href="/pmwiki/pmwiki.php/JustForFun/TropesOfLegend">Tropes of Legend</a></li>
+<li><a href="/pmwiki/ad-free-subscribe.php">Go Ad-Free</a></li>
+</ul>
+<hr />
+<ul class="footer-menu" itemscope itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">Community</h4></li>
+<li><a href="/pmwiki/query.php?type=att">Ask The Tropers</a></li>
+<li><a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a></li>
+<li><a href="/pmwiki/query.php?type=tf">Trope Finder</a></li>
+<li><a href="/pmwiki/query.php?type=ykts">You Know That Show</a></li>
+<li><a href="/pmwiki/lbs.php" data-modal-target="login">Live Blogs</a></li>
+<li><a href="/pmwiki/review_activity.php">Reviews</a></li>
+<li><a href="/pmwiki/topics.php">Forum</a></li>
+</ul>
+<hr />
+<ul class="footer-menu" itemscope itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">Tropes HQ</h4></li>
+<li><a href="/pmwiki/about.php">About Us</a></li>
+<li><a href="/pmwiki/contact.php">Contact Us</a></li>
+<li><a href="/pmwiki/dmca.php">DMCA Notice</a></li>
+<li><a href="/pmwiki/privacypolicy.php">Privacy Policy</a></li>
+</ul>
+</div>
+<div id="desktop-on-mobile-toggle" class="text-center gutter-top gutter-bottom tablet-on">
+<a href="/pmwiki/switchDeviceCss.php?mobileVersion=1" rel="nofollow">Switch to <span class="txt-desktop">Desktop</span><span class="txt-mobile">Mobile</span> Version</a>
+</div>
+<div class="legal">
+<p>TVTropes is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License. <br>Permissions beyond the scope of this license may be available from <a xmlns:cc="http://creativecommons.org/ns#" href="mailto:thestaff@tvtropes.org" rel="cc:morePermissions"> thestaff@tvtropes.org</a>.</p>
+<br>
+<div class="privacy_wrapper">
+</div>
+</div>
+</footer>
+<style>
+      div.fc-ccpa-root {
+        position: absolute !important;
+        bottom: 93px !important;
+        margin: auto !important;
+        width: 100% !important;
+        z-index: 9999 !important;
+      }
+      .fc-ccpa-root .fc-dns-dialog .fc-dns-link p{
+        outline: none !important;
+        text-decoration: underline !important;
+        font-size: .7em !important;
+        font-family: sans-serif !important;
+      }
+      .fc-ccpa-root .fc-dns-dialog .fc-dns-link .fc-button-background {
+        background: none !important;
+      }
+    </style>
+<div id="_pm_videoViewer" class="full-screen">
+<a href="#close" class="close" id="_pm_videoViewer-close"></a>
+<div class="_pmvv-body">
+<div class="_pmvv-vidbox">
+<video id='overlay-video-player-box' data-video-id="" class='video-js vjs-default-skin vjs-16-9'>
+</video>
+<div class="_pmvv-vidbox-desc">
+<h1 id="overlay-title"></h1>
+<p id="overlay-descrip" class="_pmvv-vidbox-descTxt">
+</p>
+<div class="rating-row" data-video-id="">
+<input type="hidden" name="is_logged_in" value="0">
+<p>How well does it match the trope?</p>
+<div id="star-rating-group">
+<div class="trope-rate">
+<input type="radio" id="lamp5" name="rate" value="5" />
+<label for="lamp5" title="Absolutely"></label>
+<input type="radio" id="lamp4" name="rate" value="4" />
+<label for="lamp4" title="Yes"></label>
+<input type="radio" id="lamp3" name="rate" value="3" />
+<label for="lamp3" title="Kind of"></label>
+<input type="radio" id="lamp2" name="rate" value="2" />
+<label for="lamp2" title="Not really"></label>
+<input type="radio" id="lamp1" name="rate" value="1" />
+<label for="lamp1" title="No"></label>
+</div>
+<div id="star-rating-total">
+</div>
+</div>
+</div>
+<div class="example-media-row">
+<div class="example-overlay">
+<p>Example of:</p>
+<div id="overlay-trope"> / </div>
+</div>
+<div class="media-sources-overlay example-overlay">
+<p>Media sources:</p>
+<div id="overlay-media"> / </div>
+</div>
+</div>
+<p class="_pmvv-vidbox-stats text-right font-s" style="padding-top:8px; border-top: solid 1px rgba(255,255,255,0.2)">
+
+<a href="#video-feedback" class="float-right" data-modal-target="login">Report</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<script type='text/javascript'>
+        window.special_ops =  {
+            member : 'no',
+            isolated : 0,
+            tags : ['unknown']
+        };
+    </script>
+<script type="text/javascript">
+
+        var cleanCreativeEnabled = "";
+        var donation = "";
+        var live_ads = "1";
+        var img_domain = "https://static.tvtropes.org";
+        var snoozed = cookies.read('snoozedabm');
+        var snoozable = "";
+
+        if (adsRemovedWith) {
+            live_ads = 0;
+        }
+
+        var elem = document.createElement('script');
+        elem.async = true;
+
+        elem.src = '/design/assets/bundle.js?rev=af8ba6c84175c5d092329028e16c8941231c5eba';
+
+        elem.onload = function() {
+                                 }
+        document.getElementsByTagName('head')[0].appendChild(elem);
+
+    </script>
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-3821842-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<script type="text/javascript">
+      function send_analytics_event(user_type, donation){
+          // if(user_type == 'uncached' || user_type == 'cached'){
+          //   ga('send', 'event', 'caching', 'load', user_type, {'nonInteraction': 1});
+          //   return;
+          // }
+          var event_name = user_type;
+
+          if(donation == 'true'){
+              event_name += "_donation"
+          }else if(typeof(valid_user) == 'undefined'){
+              event_name += "_blocked"
+          }else if(valid_user == true){
+              event_name += "_unblocked";
+          }else{
+              event_name = "_unknown"
+          }
+          ga('send', 'event', 'ads', 'load', event_name, {'nonInteraction': 1});
+      }
+
+    
+    send_analytics_event("guest", "false");
+      </script>
+</body>
+</html>

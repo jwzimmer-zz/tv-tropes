@@ -1,0 +1,1604 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Advertising and Computer Security Issues on TV Tropes - TV Tropes Forum</title>
+<meta name="description" content="" />
+<link rel="shortcut icon" href="/img/icons/favicon.ico" type="image/x-icon" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@tvtropes" />
+<meta name="twitter:owner" content="@tvtropes" />
+<meta name="twitter:title" content="Advertising and Computer Security Issues on TV Tropes - TV Tropes Forum" />
+<meta name="twitter:description" content="" />
+<meta name="twitter:image:src" content="https://static.tvtropes.org/logo_blue_small.png" />
+<meta property="og:site_name" content="TV Tropes" />
+<meta property="og:locale" content="en_US" />
+<meta property="article:publisher" content="https://www.facebook.com/tvtropes" />
+<meta property="og:title" content="Advertising and Computer Security Issues on TV Tropes" />
+<meta property="og:type" content="" />
+<meta property="og:url" content="https://tvtropes.org/pmwiki/posts.php?discussion=13223684920A10189100" />
+<meta property="og:image" content="https://static.tvtropes.org/logo_blue_small.png" />
+<meta property="og:description" content="" />
+<link rel="apple-touch-icon" sizes="57x57" href="/img/icons/apple-icon-57x57.png" type="image/png">
+<link rel="apple-touch-icon" sizes="60x60" href="/img/icons/apple-icon-60x60.png" type="image/png">
+<link rel="apple-touch-icon" sizes="72x72" href="/img/icons/apple-icon-72x72.png" type="image/png">
+<link rel="apple-touch-icon" sizes="76x76" href="/img/icons/apple-icon-76x76.png" type="image/png">
+<link rel="apple-touch-icon" sizes="114x114" href="/img/icons/apple-icon-114x114.png" type="image/png">
+<link rel="apple-touch-icon" sizes="120x120" href="/img/icons/apple-icon-120x120.png" type="image/png">
+<link rel="apple-touch-icon" sizes="144x144" href="/img/icons/apple-icon-144x144.png" type="image/png">
+<link rel="apple-touch-icon" sizes="152x152" href="/img/icons/apple-icon-152x152.png" type="image/png">
+<link rel="apple-touch-icon" sizes="180x180" href="/img/icons/apple-icon-180x180.png" type="image/png">
+<link rel="icon" sizes="16x16" href="/img/icons/favicon-16x16.png" type="image/png">
+<link rel="icon" sizes="32x32" href="/img/icons/favicon-32x32.png" type="image/png">
+<link rel="icon" sizes="96x96" href="/img/icons/favicon-96x96.png" type="image/png">
+<link rel="icon" sizes="192x192" href="/img/icons/favicon-192x192.png" type="image/png">
+<meta id="viewport" name="viewport" content="width=device-width, initial-scale=1">
+<script>
+                var propertag = {};
+                propertag.cmd = [];
+            </script>
+<link rel="stylesheet" href="/design/assets/bundle.css?rev=af8ba6c84175c5d092329028e16c8941231c5eba" />
+<style type="text/css">
+
+$forumreplybody
+</style>
+<script>
+                function object(objectId) {
+                    if (document.getElementById && document.getElementById(objectId)) {
+                        return document.getElementById(objectId);
+                    } else if (document.all && document.all(objectId)) {
+                        return document.all(objectId);
+                    } else if (document.layers && document.layers[objectId]) {
+                        return document.layers[objectId];
+                    } else {
+                        return false;
+                    }
+                }
+
+                // JAVASCRIPT COOKIES CODE: for getting and setting user viewing preferences
+                var cookies = {
+                    create: function (name, value, days2expire, path) {
+                        var date = new Date();
+                        date.setTime(date.getTime() + (days2expire * 24 * 60 * 60 * 1000));
+                        var expires = date.toUTCString();
+                        document.cookie = name + '=' + value + ';' + 'expires=' + expires + ';' + 'path=' + path + ';';
+                    },
+                    read: function (name) {
+                        var cookie_value = "",
+                            current_cookie = "",
+                            name_expr = name + "=",
+                            all_cookies = document.cookie.split(';'),
+                            n = all_cookies.length;
+
+                        for (var i = 0; i < n; i++) {
+                            current_cookie = all_cookies[i].trim();
+                            if (current_cookie.indexOf(name_expr) === 0) {
+                                cookie_value = current_cookie.substring(name_expr.length, current_cookie.length);
+                                break;
+                            }
+                        }
+                        return cookie_value;
+                    },
+                    update: function (name, val) {
+                        this.create(name, val, 300, "/");
+                    },
+                    remove: function (name) {
+                        document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
+                    }
+                };
+
+                function updateUserPrefs() {
+                    //GENERAL: detect and set browser, if not cookied (will be treated like a user-preference and added to the #user-pref element)
+                    if( !cookies.read('user-browser') ){
+                        var broswer = '';
+
+                        if(navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPod/i) ){
+                            browser = 'iOS';
+                        } else if (/Opera[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'opera';
+                        } else if (/MSIE (\d+\.\d+);/.test(navigator.userAgent)) {
+                            browser = 'MSIE';
+                        } else if (/Navigator[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'netscape';
+                        } else if (/Chrome[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'chrome';
+                        } else if (/Safari[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'safari';
+                            /Version[\/\s](\d+\.\d+)/.test(navigator.userAgent);
+                            browserVersion = new Number(RegExp.$1);
+                        } else if (/Firefox[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'firefox';
+                        } else {
+                            browser = 'internet_explorer';
+                        }
+                        cookies.create('user-browser',browser,1,'/');
+                        document.getElementById('user-prefs').classList.add('browser-' + browser);
+                    } else {
+                        document.getElementById('user-prefs').classList.add('browser-' + cookies.read('user-browser'));
+                    }
+
+                    //update user preference settings
+                    if (cookies.read('wide-load') !== '') document.getElementById('user-prefs').classList.add('wide-load');
+                    if (cookies.read('night-vision') !== '') document.getElementById('user-prefs').classList.add('night-vision');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('user-prefs').classList.add('sticky-header');
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('user-prefs').classList.add('show-spoilers');
+                    if (cookies.read('folders-open') !== '') document.getElementById('user-prefs').classList.add('folders-open');
+                    if (cookies.read('lefthand-sidebar') !== '') document.getElementById('user-prefs').classList.add('lefthand-sidebar');
+                    if (cookies.read('highlight-links') !== '') document.getElementById('user-prefs').classList.add('highlight-links');
+                    if (cookies.read('forum-gingerbread') !== '') document.getElementById('user-prefs').classList.add('forum-gingerbread');
+                    if (cookies.read('shared-avatars') !== '') document.getElementById('user-prefs').classList.add('shared-avatars');
+                    if (cookies.read('new-search') !== '') document.getElementById('user-prefs').classList.add('new-search');
+                    if (cookies.read('stop-auto-play-video') !== '') document.getElementById('user-prefs').classList.add('stop-auto-play-video');
+
+                    //desktop view on mobile
+                    if (cookies.read('desktop-on-mobile') !== ''){
+                        document.getElementById('user-prefs').classList.add('desktop-on-mobile');
+
+                        var viewport = document.querySelector("meta[name=viewport]");
+                        viewport.setAttribute('content', 'width=1000');
+                    }
+
+                }
+
+                function updateDesktopPrefs() {
+                    if (cookies.read('wide-load') !== '') document.getElementById('sidebar-toggle-wideload').classList.add('active');
+                    if (cookies.read('night-vision') !== '') document.getElementById('sidebar-toggle-nightvision').classList.add('active');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('sidebar-toggle-stickyheader').classList.add('active');
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('sidebar-toggle-showspoilers').classList.add('active');
+
+                }
+
+                function updateMobilePrefs() {
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('mobile-toggle-showspoilers').classList.add('active');
+                    if (cookies.read('night-vision') !== '') document.getElementById('mobile-toggle-nightvision').classList.add('active');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('mobile-toggle-stickyheader').classList.add('active');
+                    if (cookies.read('highlight-links') !== '') document.getElementById('mobile-toggle-highlightlinks').classList.add('active');
+
+                }
+
+
+                if (document.cookie.indexOf("scroll0=") < 0) {
+                    // do nothing
+                } else {
+                    console.log('ads removed by scroll.com');
+                    var adsRemovedWith = 'scroll';
+                    var style = document.createElement('style');
+                    style.innerHTML = '#header-ad, .proper-ad-unit, .square_ad, .sb-ad-unit { display: none !important; } ';
+                    document.head.appendChild(style);
+                }
+            </script>
+<script type="text/javascript">
+
+                var tvtropes_config = {
+                    astri_stream_enabled : "",
+                    is_logged_in         : "",
+                    handle               : "",
+                    get_astri_stream     : "",
+										revnum               : "af8ba6c84175c5d092329028e16c8941231c5eba",
+										img_domain           : "https://static.tvtropes.org",
+										adblock              : "1",
+										adblock_url          : "propermessage.io",
+										pause_editing        : "0",
+										pause_editing_msg    : "",
+										pause_site_changes   : ""
+                };
+            </script>
+</head>
+<body class="">
+<i id="user-prefs"></i>
+<script>updateUserPrefs();</script>
+<div id="fb-root"></div>
+<div id="modal-box"></div>
+<header id="main-header-bar" class="headroom-element ">
+<div id="main-header-bar-inner">
+<span id="header-spacer-left" class="header-spacer"></span>
+<a href="#mobile-menu" id="main-mobile-toggle" class="mobile-menu-toggle-button tablet-on"><span></span><span></span><span></span></a>
+<a href="/" id="main-header-logoButton" class="no-dev"></a>
+<span id="header-spacer-right" class="header-spacer"></span>
+<nav id="main-header-nav" class="tablet-off">
+<a href="/pmwiki/pmwiki.php/Main/Tropes">Tropes</a>
+<a href="/pmwiki/pmwiki.php/Main/Media">Media</a>
+<a href="/pmwiki/browse.php" class="nav-browse">Browse</a>
+<a href="/pmwiki/index_report.php">Indexes</a>
+<a href="/pmwiki/topics.php">Forums</a>
+<a href="/pmwiki/recent_videos.php" class="nav-browse">Videos</a>
+</nav>
+<div id="main-header-bar-right">
+<div id="signup-login-box" class="font-xs mobile-off">
+<a href="/pmwiki/login.php" class="hover-underline bold" data-modal-target="signup">Join</a>
+<a href="/pmwiki/login.php" class="hover-underline bold" data-modal-target="login">Login</a>
+</div>
+<div id="signup-login-mobileToggle" class="mobile-on inline">
+<a href="/pmwiki/login.php" data-modal-target="login"><i class="fa fa-user"></i></a>
+</div>
+<div id="search-box">
+<form class="search" action="/pmwiki/search_result.php">
+<input type="text" name="q" class="search-box" placeholder="Search" value="" required>
+<input type="submit" class="submit-button" value="&#xf002;" />
+<input type="hidden" name="search_type" value="article">
+<input type="hidden" name="page_type" value="all">
+<input type="hidden" name="cx" value="partner-pub-6610802604051523:amzitfn8e7v">
+<input type="hidden" name="cof" value="FORID:10">
+<input type="hidden" name="ie" value="ISO-8859-1">
+<input name="siteurl" type="hidden" value="">
+<input name="ref" type="hidden" value="">
+<input name="ss" type="hidden" value="">
+</form>
+<a href="#close-search" class="mobile-on mobile-search-toggle close-x"><i class="fa fa-close"></i></a>
+</div>
+<div id="random-box">
+<a href="/pmwiki/pmwiki.php/Main/ImTakingHerHomeWithMe" class="button-random-trope" rel="nofollow" onclick="ga('send', 'event', 'button', 'click', 'random trope');"></a>
+<a href="/pmwiki/pmwiki.php/VideoGame/FinalFantasyThe4HeroesOfLight" class="button-random-media" rel="nofollow" onclick="ga('send', 'event', 'button', 'click', 'random media');"></a>
+</div>
+</div>
+</div>
+<div id="mobile-menu" class="tablet-on"><div class="mobile-menu-options">
+<div class="nav-wrapper">
+<a href="/pmwiki/pmwiki.php/Main/Tropes" class="xl">Tropes</a>
+<a href="/pmwiki/pmwiki.php/Main/Media" class="xl">Media</a>
+<a href="/pmwiki/browse.php" class="xl">Browse</a>
+<a href="/pmwiki/index_report.php" class="xl">Indexes</a>
+<a href="/pmwiki/topics.php" class="xl">Forums</a>
+<a href="/pmwiki/recent_videos.php" class="xl">Videos</a>
+<a href="/pmwiki/query.php?type=att">Ask The Tropers</a>
+<a href="/pmwiki/query.php?type=tf">Trope Finder</a>
+<a href="/pmwiki/query.php?type=ykts">You Know That Show...</a>
+<a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a>
+<a href="#tools" data-click-toggle="active">Tools <i class="fa fa-chevron-down"></i></a>
+<div class="tools-dropdown mobile-dropdown-linkList">
+<a href="/pmwiki/cutlist.php">Cut List</a>
+<a href="/pmwiki/changes.php">New Edits</a>
+<a href="/pmwiki/recent_edit_reasons.php">Edit Reasons</a>
+<a href="/pmwiki/launches.php">Launches</a>
+<a href="/pmwiki/img_list.php">Images List</a>
+<a href="/pmwiki/crown_activity.php">Crowner Activity</a>
+<a href="/pmwiki/no_types.php">Un-typed Pages</a>
+<a href="/pmwiki/page_type_audit.php">Recent Page Type Changes</a>
+</div>
+<a href="#hq" data-click-toggle="active">Tropes HQ <i class="fa fa-chevron-down"></i></a>
+<div class="tools-dropdown mobile-dropdown-linkList">
+<a href="/pmwiki/about.php">About Us</a>
+<a href="/pmwiki/contact.php">Contact Us</a>
+<a href="mailto:advertising@proper.io">Advertise</a>
+<a href="/pmwiki/dmca.php">DMCA Notice</a>
+<a href="/pmwiki/privacypolicy.php">Privacy Policy</a>
+</div>
+<a href="/pmwiki/ad-free-subscribe.php">Go Ad-Free</a>
+<div class="toggle-switches">
+<ul class="mobile-menu display-toggles">
+<li>Show Spoilers <div id="mobile-toggle-showspoilers" class="display-toggle show-spoilers"></div></li>
+<li>Night Vision <div id="mobile-toggle-nightvision" class="display-toggle night-vision"></div></li>
+<li>Sticky Header <div id="mobile-toggle-stickyheader" class="display-toggle sticky-header"></div></li>
+<li>Highlight Links <div id="mobile-toggle-highlightlinks" class="display-toggle highlight-links"></div></li>
+</ul>
+<script>updateMobilePrefs();</script>
+</div>
+</div>
+</div>
+</div>
+</header>
+<div id="homepage-introBox-mobile" class="mobile-on">
+<a href="/"><img src="/images/logo-white-big.png" class="logo-small" /></a>
+<form class="search" action="/pmwiki/search_result.php" style="margin:10px -5px -6px -5px;">
+<input type="text" name="q" class="search-box" placeholder="Search" value="" required>
+<input type="submit" class="submit-button" value="&#xf002;" />
+<input type="hidden" name="search_type" value="article">
+<input type="hidden" name="page_type" value="all">
+<input type="hidden" name="cx" value="partner-pub-6610802604051523:amzitfn8e7v">
+<input type="hidden" name="cof" value="FORID:10">
+<input type="hidden" name="ie" value="ISO-8859-1">
+<input name="siteurl" type="hidden" value="">
+<input name="ref" type="hidden" value="">
+<input name="ss" type="hidden" value="">
+</form>
+</div>
+<div id="header-ad-wrapper" class="ad">
+<div id="header-ad">
+<div class="ad-size-970x90 atf_banner">
+<div class='proper-ad-unit '>
+<div id='proper-ad-tvtropes_ad_1'> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_1'); });</script> </div>
+</div> </div>
+</div>
+</div>
+<div id="main-container">
+<div id="action-bar-top" class="action-bar mobile-off">
+<div class="action-bar-right">
+<p>Follow TV Tropes</p>
+<a href="https://www.facebook.com/TVTropes" class="button-fb">
+<i class="fa fa-facebook"></i></a>
+<a href="https://www.twitter.com/TVTropes" class="button-tw">
+<i class="fa fa-twitter"></i></a>
+<a href="https://www.reddit.com/r/TVTropes" class="button-re">
+<i class="fa fa-reddit-alien"></i></a>
+</div>
+<nav class="actions-wrapper" itemscope itemtype="http://schema.org/SiteNavigationElement">
+<ul id="top_main_list" class="page-actions">
+<li class="link-back"><a href="/pmwiki/conversations.php?topic=0000000000000000000000dg">
+<i class="fa fa-arrow-left"></i> Back</a></li> </ul>
+<ul id="top_more_list" class="more_menu hidden_more_list">
+</ul>
+</nav>
+<div class="WikiWordModalStub"></div>
+<div class="ImgUploadModalStub" data-page-type="Thread"></div>
+<div class="login-alert" style="display: none;">
+You need to <a href="/pmwiki/login.php" style="color:#21A0E8">login</a> to do this. <a href="/pmwiki/login.php?tab=register_account" style="color:#21A0E8">Get Known</a> if you don't have an account
+</div>
+</div>
+<div id="main-content" class="page-Thread class-discussion-page">
+<div id="main-entry" class="with-sidebar">
+
+<input type="hidden" id="groupname-hidden" value="" />
+<input type="hidden" id="title-hidden" value="" />
+<a href="#watch" class="watch-button " data-modal-target="login" data-watch-thread-id="13223684920A10189100">Follow<span>ing</span></a>
+<h1 itemprop="headline" class="entry-title">Advertising and Computer Security Issues on TV Tropes</h1>
+<a href="#mobile-actions-toggle" id="mobile-actionbar-toggle" class="mobile-actionbar-toggle mobile-on" data-click-toggle="active">
+<p class="tiny-off">Go To</p><span></span><span></span><span></span><i class="fa fa-pencil"></i></a>
+<nav id="mobile-actions-bar" class="mobile-actions-wrapper mobile-on"></nav>
+<div id="main-article" class="article-content retro-folders" itemprop="mainContentOfPage">
+<ul class="thread-breadcrumbs">
+<li><a href="/pmwiki/topics.php">Forums</a></li>
+<li><a href="/pmwiki/conversations.php?topic=0000000000000000000000dg">Frequently Asked Questions</a></li>
+</ul>
+<div class="options-wrapper hover-menu-wrapper gutter-top two-column no-media-query">
+<div class="column-box left">
+</div>
+<div class="column-box right button-group skinny text-right">
+</div>
+</div>
+<a name="firstpost"></a><div class="rounded sticky-post-header"><p>We occasionally get reports of ads that trigger antivirus warnings or infect computers that are browsing the wiki. This FAQ is an attempt to consolidate all the information about such things into one thread. Please read the below before reporting any incidents.
+</p><p>This thread may also be used to report ads that violate our policies in other ways, such as being too "adult" or NSFW, automatically playing audio/video, etc.
+</p><p><hr />
+</p><p><div class="folderlabel" onclick="toggleAllFolders();">&nbsp;&nbsp;&nbsp;&nbsp;open/close all folders&nbsp; </div>
+<div class="folderlabel" onclick="togglefolder('folder0');">&nbsp;&nbsp;&nbsp;&nbsp;The basics&nbsp;</div><div id="folder0" class="folder" isfolder="true" style="display:block;">
+<ul><li> TV Tropes, as a site, does not contain malware. We are a text-and-image wiki; viruses and malware cannot be uploaded to or embedded in the articles. As always, however, beware of any external link that you don't recognize, since we cannot automatically screen edits or posts for malicious links.
+</li><li> 99.99% of the time, any suspected malware will be related to the wiki advertising.
+</li><li> TV Tropes does not directly control the ads that are displayed. We use third-party ad providers and we determine things like the size and placement.
+<ul><li> We instruct our providers not to serve ads that redirect your browser, take control of the screen from you, forcibly scroll your screen, play audio without being clicked on, install malware, "pop up" or "pop over" your screen, or in any other way interfere with your browsing experience.
+</li><li> We have custom software designed to detect ads that do these things and automatically block them.
+</li><li> Malicious entities are constantly trying to sneak ads through the providers' networks in violation of these instructions. As providers have little incentive to proactively detect and block them, it's up to websites to report these sorts of problems.
+</li><li> We rely on our users to report ads that get through these measures.
+</li></ul></li><li> Just because you see a particular ad doesn't mean everyone else sees it. Ads are customized by the ad providers to your location (by IP address), the content of the page you're viewing, and your browsing profile, which is tracking data accumulated by third parties over the course of all your internet browsing.
+</li><li> Just because you get a malware warning or infection that seems related to an ad on TV Tropes does not necessarily mean that it is caused by one of our ads. Pre-existing malware on your computer can intercept ads and replace them with malicious ones.
+</li></ul></div>
+</p><p><div class="folderlabel" onclick="togglefolder('folder1');">&nbsp;&nbsp;&nbsp;&nbsp;What can be reported to our provider&nbsp;</div><div id="folder1" class="folder" isfolder="true" style="display:block;">
+<ul><li> Ads containing malware, obviously.
+</li><li> Misbehaving ads, such as ones that load a pop-up or pop-under, redirect your browser to another page, hijack your screen or automatically scroll it.
+</li><li> "Adult" or NSFW ads. Scantily clad women alone may or may not qualify, depending on context, but we want this site to be work-safe.
+</li><li> Ads that automatically play audio &#8212; that is, the audio starts without you clicking on the ad first. Video ads are acceptable.
+</li><li> Note: Political content is not grounds for rejecting an ad. However, an ad that contains or implies hate speech, disinformation, or outright falsehoods may be objectionable enough to be blocked.
+</li></ul></div>
+</p><p><div class="folderlabel" onclick="togglefolder('folder2');">&nbsp;&nbsp;&nbsp;&nbsp;How to protect yourself&nbsp;</div><div id="folder2" class="folder" isfolder="true" style="display:block;">
+<ul><li> First and foremost, maintain current, updated antivirus software, and keep your operating system and browser up to date with all patches offered by the software vendors. This includes Adobe Flash, Java, and other rich media plug-ins. Turn on your software's automatic updates if they are not already on and act immediately when prompted to install them.
+</li><li> Never click on pop-ups purporting to have detected a virus, offering to "tune up" your PC, or otherwise inducing you to click on a link that you were not expecting. Any genuine message of this nature would come from your antivirus software and not from a web page.
+</li><li> Be careful clicking on external links. These are identified with a small icon next to them. Example: <a class='urllink' href='https://www.google.com'>Google<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a>. TV Tropes does not endorse or control the content of external links and you open them at your own risk.
+</li><li> Never respond to any email or web page that asks for personal or financial information, including passwords, unless you have verified its identity. No reputable company will <em>ever</em> ask you for your password(s), other than to log in.
+</li><li> You may choose to opt out of having tracking information collected by ad providers. This does not stop malware but helps you maintain your online privacy. See <a class='urllink' href='https://www.google.com/ads/preferences/plugin/index.html'>here<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a> for additional information.
+</li><li> TV Tropes requests that you do not use ad blocking software while visiting us, as this site depends on advertising revenue to operate. If you do run an ad blocker, please add tvtropes.org to its exception list, or consider donating to the site to have certain ads removed.
+</li></ul></div>
+</p><p><div class="folderlabel" onclick="togglefolder('folder3');">&nbsp;&nbsp;&nbsp;&nbsp;What to do if you suspect a malicious ad&nbsp;</div><div id="folder3" class="folder" isfolder="true" style="display:block;">
+<ul><li> We (or the ad provider) place a "Report advertisement" link next to most advertising frames. Clicking on this will generate an automatic report and is the best way to do so. If you cannot click on this link or do not see it, continue for more advice.
+</li><li> Try to identify the source URL of the suspect ad (see below). You can also use the target URL (if you are redirected), but note that this may be intentionally obfuscated by the ad provider to hide the source.
+</li><li> Identify the ad provider. Some ads have a small area that links to the ad provider's page (like Google or AOL). In other cases, you can tell from the referral URL or you can look it up in a search.
+</li><li> Go to the ad provider's contact/abuse page and fill out their form. Below are some links to common providers' abuse pages:
+<ul><li> <a class='urllink' href='https://adwords.google.com/support/aw/bin/request.py?hl=en&amp;contact_type=feedback&amp;origin=cluster&amp;rd=1'>Google AdSense<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a>
+</li></ul></li><li> Scan your computer for viruses. If your antivirus software will not operate (many malicious programs attempt to disable your antivirus software), you can download a scanning tool on a known clean system and run it on your infected machine from a read-only CD-R or flash drive.
+</li><li> If you suspect that you've been tricked into divulging personal information to a phishing attempt or other fraud, change your passwords to affected sites immediately and contact your bank, credit card companies, and the credit bureaus to request a fraud alert.
+</li><li> Please note that TV Tropes cannot assist you with the specifics of maintaining your computer. That's your responsibility. You may request general help in the appropriate forums, but please don't post new threads in the forums dedicated to wiki operation (Wiki Talk, Frequently Asked Questions, etc.).
+</li><li> Sometimes, the wiki administration can get better results from the ad providers in dealing with malicious ads. If you can identify a malicious ad by referral URL, you can post the link in this thread, but please omit the "http" component so it doesn't create a hyperlink that someone might click on inadvertently.
+</li></ul></div>
+</p><p><div class="folderlabel" onclick="togglefolder('folder4');">&nbsp;&nbsp;&nbsp;&nbsp;Identifying the source of an ad&nbsp;</div><div id="folder4" class="folder" isfolder="true" style="display:block;">
+<ul><li> For image ads, right-clicking (or a long tap on mobile devices) should give you the option to view and copy the URL that clicking on it will send you to.
+</li><li> For Flash, Java, or HTML 5.0 ads, it may be difficult to identify the source or the URL by right-clicking. In these cases, you need to view the page source to identify the ad so we can report it.
+</li><li> In Internet Explorer, you can right-click in a blank or text area of any web page, and choose View Source from the context menu. Firefox also has this option. In Chrome, you can use the Inspect Element menu option, which interactively highlights the portion of the page whose code you are hovering over. You can use this to identify the ad frame and its source URL.
+</li><li> For embedded ads, there will be a "frame" element with a "src" parameter. Drill down until you get to the lowest level. All we need to identify the ad is the "src" URL from that frame.
+</li></ul></div>
+</p><p><div class="folderlabel" onclick="togglefolder('folder5');">&nbsp;&nbsp;&nbsp;&nbsp;Ad-free subscription&nbsp;</div><div id="folder5" class="folder" isfolder="true" style="display:block;">
+As of May 21, 2019, users have the option of purchasing a subscription to use TV Tropes without third-party ads (ads that we create and serve ourselves may still appear). Please see <a class='urllink' href='https://tvtropes.org/pmwiki/posts.php?discussion=15374859790A10773600'>this thread<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a> for more information or to discuss the service.
+</div>
+<p class='font-xs text-light'>Edited by Fighteer on Mar 22nd 2019 <span>at</span> 7:36:16 AM<p></p></div>
+<nav class="pagination-box button-group text-center " data-total-pages="113" data-url-prefix="/pmwiki/posts.php?discussion=13223684920A10189100&page=">
+<span class="pagination-jump-box-wrapper mobile-on">
+<form class="pagination-jump-box hidden-until-active font-m">
+<input value="1" type="tel">
+<a href="#jump-to-page" title="Jump to page" class="color-white dead-button" onClick="activate_jump_menu(this);return false;">GO <i class="fa fa-angle-right"></i></a>
+</form>
+</span>
+<a href="/pmwiki/posts.php?discussion=13223684920A10189100&page=1" class="mobile-off ">
+<span class="current-page"> 1 </span> </a>
+<a href="/pmwiki/posts.php?discussion=13223684920A10189100&page=2" class="mobile-off ">
+2 </a>
+<a href="/pmwiki/posts.php?discussion=13223684920A10189100&page=3" class="mobile-off ">
+3 </a>
+<a href="#jump-to-page" title="Jump to page" class="pagination-jump-box-toggle mobile-on dead-button" onClick="toggle_jump_menu(this);return false;">
+<span class="font-s">page 1 of 113</span>
+</a>
+<a href="/pmwiki/posts.php?discussion=13223684920A10189100&page=2">
+<span class="mobile-on"><i class="fa fa-angle-right"></i></span>
+<span class="mobile-off">Next</span>
+</a>
+<a href="/pmwiki/posts.php?discussion=13223684920A10189100&page=113">
+<i class="fa fa-angle-double-right"></i>
+</a>
+</nav>
+<script type="text/javascript">
+
+	function toggle_jump_menu(e){
+		$(e).siblings('.pagination-jump-box-wrapper').children('.pagination-jump-box').toggle('active');
+	}
+
+	function activate_jump_menu(e){
+			var p = $(e).siblings('input').val();
+			var t = $(e).closest('.pagination-box').data('total-pages');
+
+			if(p > 0 && p <= t){
+					window.location.href = $(e).closest('.pagination-box').data('url-prefix') + p;
+			}else{
+					show_modal('alert',encodeURIComponent('Whoops, that page might be out of range.'));
+			}
+	}
+
+</script>
+<a name="1"></a>
+<div id="comment-1" class="comment-box    mod-mode">
+<div class="comment-head">
+<span class="troper-handle-wrapper has-tag">
+<a href="pmwiki.php/Tropers/Fighteer" class="troper-name">Fighteer</a>
+<span class="bubble blue">MOD</span> <span class="troper-avatar-tagline mobile-on">Would you shut up, man?
+</span> </span>
+<span class="troper-location">from political anxiety
+</span>
+<span class="troper-relationship-status">
+<strong>Relationship Status:</strong> Dancing with Captain Jack Harkness </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/Fighteer">
+<img src="https://static.tvtropes.org/pmwiki/pub/images/galactic_black_hole_Forum9846_jpg_100.png" />
+</a>
+</span>
+<span class="troper-avatar-tagline text-center mobile-off">Would you shut up, man?
+</span>
+</div>
+<div class="troper-comment ">
+<a href="#comment-1" class="troper-post-time">Nov 26th 2011 <span>at</span> 9:10:12 PM</a>
+<div class="comment">
+<p>We occasionally get reports of ads that trigger antivirus warnings or infect computers that are browsing the wiki. This FAQ is an attempt to consolidate all the information about such things into one thread. Please read the below before reporting any incidents.
+</p><p>This thread may also be used to report ads that violate our policies in other ways, such as being too "adult" or NSFW, automatically playing audio/video, etc.
+</p><p><hr />
+</p><p><div class="folderlabel" onclick="toggleAllFolders();">&nbsp;&nbsp;&nbsp;&nbsp;open/close all folders&nbsp; </div>
+<div class="folderlabel" onclick="togglefolder('folder0');">&nbsp;&nbsp;&nbsp;&nbsp;The basics&nbsp;</div><div id="folder0" class="folder" isfolder="true" style="display:block;">
+<ul><li> TV Tropes, as a site, does not contain malware. We are a text-and-image wiki; viruses and malware cannot be uploaded to or embedded in the articles. As always, however, beware of any external link that you don't recognize, since we cannot automatically screen edits or posts for malicious links.
+</li><li> 99.99% of the time, any suspected malware will be related to the wiki advertising.
+</li><li> TV Tropes does not directly control the ads that are displayed. We use third-party ad providers and we determine things like the size and placement.
+<ul><li> We instruct our providers not to serve ads that redirect your browser, take control of the screen from you, forcibly scroll your screen, play audio without being clicked on, install malware, "pop up" or "pop over" your screen, or in any other way interfere with your browsing experience.
+</li><li> We have custom software designed to detect ads that do these things and automatically block them.
+</li><li> Malicious entities are constantly trying to sneak ads through the providers' networks in violation of these instructions. As providers have little incentive to proactively detect and block them, it's up to websites to report these sorts of problems.
+</li><li> We rely on our users to report ads that get through these measures.
+</li></ul></li><li> Just because you see a particular ad doesn't mean everyone else sees it. Ads are customized by the ad providers to your location (by IP address), the content of the page you're viewing, and your browsing profile, which is tracking data accumulated by third parties over the course of all your internet browsing.
+</li><li> Just because you get a malware warning or infection that seems related to an ad on TV Tropes does not necessarily mean that it is caused by one of our ads. Pre-existing malware on your computer can intercept ads and replace them with malicious ones.
+</li></ul></div>
+</p><p><div class="folderlabel" onclick="togglefolder('folder1');">&nbsp;&nbsp;&nbsp;&nbsp;What can be reported to our provider&nbsp;</div><div id="folder1" class="folder" isfolder="true" style="display:block;">
+<ul><li> Ads containing malware, obviously.
+</li><li> Misbehaving ads, such as ones that load a pop-up or pop-under, redirect your browser to another page, hijack your screen or automatically scroll it.
+</li><li> "Adult" or NSFW ads. Scantily clad women alone may or may not qualify, depending on context, but we want this site to be work-safe.
+</li><li> Ads that automatically play audio &#8212; that is, the audio starts without you clicking on the ad first. Video ads are acceptable.
+</li><li> Note: Political content is not grounds for rejecting an ad. However, an ad that contains or implies hate speech, disinformation, or outright falsehoods may be objectionable enough to be blocked.
+</li></ul></div>
+</p><p><div class="folderlabel" onclick="togglefolder('folder2');">&nbsp;&nbsp;&nbsp;&nbsp;How to protect yourself&nbsp;</div><div id="folder2" class="folder" isfolder="true" style="display:block;">
+<ul><li> First and foremost, maintain current, updated antivirus software, and keep your operating system and browser up to date with all patches offered by the software vendors. This includes Adobe Flash, Java, and other rich media plug-ins. Turn on your software's automatic updates if they are not already on and act immediately when prompted to install them.
+</li><li> Never click on pop-ups purporting to have detected a virus, offering to "tune up" your PC, or otherwise inducing you to click on a link that you were not expecting. Any genuine message of this nature would come from your antivirus software and not from a web page.
+</li><li> Be careful clicking on external links. These are identified with a small icon next to them. Example: <a class='urllink' href='https://www.google.com'>Google<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a>. TV Tropes does not endorse or control the content of external links and you open them at your own risk.
+</li><li> Never respond to any email or web page that asks for personal or financial information, including passwords, unless you have verified its identity. No reputable company will <em>ever</em> ask you for your password(s), other than to log in.
+</li><li> You may choose to opt out of having tracking information collected by ad providers. This does not stop malware but helps you maintain your online privacy. See <a class='urllink' href='https://www.google.com/ads/preferences/plugin/index.html'>here<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a> for additional information.
+</li><li> TV Tropes requests that you do not use ad blocking software while visiting us, as this site depends on advertising revenue to operate. If you do run an ad blocker, please add tvtropes.org to its exception list, or consider donating to the site to have certain ads removed.
+</li></ul></div>
+</p><p><div class="folderlabel" onclick="togglefolder('folder3');">&nbsp;&nbsp;&nbsp;&nbsp;What to do if you suspect a malicious ad&nbsp;</div><div id="folder3" class="folder" isfolder="true" style="display:block;">
+<ul><li> We (or the ad provider) place a "Report advertisement" link next to most advertising frames. Clicking on this will generate an automatic report and is the best way to do so. If you cannot click on this link or do not see it, continue for more advice.
+</li><li> Try to identify the source URL of the suspect ad (see below). You can also use the target URL (if you are redirected), but note that this may be intentionally obfuscated by the ad provider to hide the source.
+</li><li> Identify the ad provider. Some ads have a small area that links to the ad provider's page (like Google or AOL). In other cases, you can tell from the referral URL or you can look it up in a search.
+</li><li> Go to the ad provider's contact/abuse page and fill out their form. Below are some links to common providers' abuse pages:
+<ul><li> <a class='urllink' href='https://adwords.google.com/support/aw/bin/request.py?hl=en&amp;contact_type=feedback&amp;origin=cluster&amp;rd=1'>Google AdSense<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a>
+</li></ul></li><li> Scan your computer for viruses. If your antivirus software will not operate (many malicious programs attempt to disable your antivirus software), you can download a scanning tool on a known clean system and run it on your infected machine from a read-only CD-R or flash drive.
+</li><li> If you suspect that you've been tricked into divulging personal information to a phishing attempt or other fraud, change your passwords to affected sites immediately and contact your bank, credit card companies, and the credit bureaus to request a fraud alert.
+</li><li> Please note that TV Tropes cannot assist you with the specifics of maintaining your computer. That's your responsibility. You may request general help in the appropriate forums, but please don't post new threads in the forums dedicated to wiki operation (Wiki Talk, Frequently Asked Questions, etc.).
+</li><li> Sometimes, the wiki administration can get better results from the ad providers in dealing with malicious ads. If you can identify a malicious ad by referral URL, you can post the link in this thread, but please omit the "http" component so it doesn't create a hyperlink that someone might click on inadvertently.
+</li></ul></div>
+</p><p><div class="folderlabel" onclick="togglefolder('folder4');">&nbsp;&nbsp;&nbsp;&nbsp;Identifying the source of an ad&nbsp;</div><div id="folder4" class="folder" isfolder="true" style="display:block;">
+<ul><li> For image ads, right-clicking (or a long tap on mobile devices) should give you the option to view and copy the URL that clicking on it will send you to.
+</li><li> For Flash, Java, or HTML 5.0 ads, it may be difficult to identify the source or the URL by right-clicking. In these cases, you need to view the page source to identify the ad so we can report it.
+</li><li> In Internet Explorer, you can right-click in a blank or text area of any web page, and choose View Source from the context menu. Firefox also has this option. In Chrome, you can use the Inspect Element menu option, which interactively highlights the portion of the page whose code you are hovering over. You can use this to identify the ad frame and its source URL.
+</li><li> For embedded ads, there will be a "frame" element with a "src" parameter. Drill down until you get to the lowest level. All we need to identify the ad is the "src" URL from that frame.
+</li></ul></div>
+</p><p><div class="folderlabel" onclick="togglefolder('folder5');">&nbsp;&nbsp;&nbsp;&nbsp;Ad-free subscription&nbsp;</div><div id="folder5" class="folder" isfolder="true" style="display:block;">
+As of May 21, 2019, users have the option of purchasing a subscription to use TV Tropes without third-party ads (ads that we create and serve ourselves may still appear). Please see <a class='urllink' href='https://tvtropes.org/pmwiki/posts.php?discussion=15374859790A10773600'>this thread<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a> for more information or to discuss the service.
+</div>
+<p class='font-xs text-light'>Edited by Fighteer on Mar 22nd 2019 <span>at</span> 7:36:16 AM<p></p>
+</div>
+<span class="troper-signature text-center"><a class='urllink' href='https://tvtropes.org/pmwiki/posts.php?discussion=15374859790A10773600'>TV Tropes Changelog -- keep track of updates to the site!</a>
+</span>
+</div>
+</div>
+</div>
+<a name="2"></a>
+<div id="comment-2" class="comment-box    ">
+<div class="comment-head">
+<span class="troper-handle-wrapper ">
+<a href="pmwiki.php/Tropers/NardoTIcarus" class="troper-name">NardoTIcarus</a>
+<span class="troper-avatar-tagline mobile-on"></span> </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/NardoTIcarus">
+<img src="https://static.tvtropes.org/pmwiki/pub/images/The_Glowing_Eyes_Trick_Even_Smaller8349.jpg" />
+</a>
+</span>
+</div>
+<div class="troper-comment ">
+<a href="#comment-2" class="troper-post-time">Dec 8th 2011 <span>at</span> 10:30:06 AM</a>
+<div class="comment">
+<p>Okay, thank you.
+</p>
+</div>
+</div>
+</div>
+</div>
+<a name="3"></a>
+<div id="comment-3" class="comment-box    ">
+<div class="comment-head">
+<span class="troper-handle-wrapper has-tag">
+<a href="pmwiki.php/Tropers/0dd1" class="troper-name">0dd1</a>
+<span class="troper-avatar-tagline mobile-on">Just awesome like that
+</span> </span>
+<span class="troper-location">from Nowhere Land
+</span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/0dd1">
+<img src="https://static.tvtropes.org/pmwiki/pub/images/_hatdreavus_9721.png" />
+</a>
+</span>
+<span class="troper-avatar-tagline text-center mobile-off">Just awesome like that
+</span>
+</div>
+<div class="troper-comment ">
+<a href="#comment-3" class="troper-post-time">Dec 11th 2011 <span>at</span> 12:52:29 AM</a>
+<div class="comment">
+<p>Well, regarding that last point you said, there's one that keeps recurring for me that triggers the Microsoft <a class='createlink' href='https://tvtropes.org/pmwiki/pmwiki.php/Main/SmartScreen' title='https://tvtropes.org/pmwiki/pmwiki.php/Main/SmartScreen'>Smart Screen</a> filter on my Internet Explorer. Here's what IE keeps saying:
+</p><p><div class="quoteblock">
+Content on this website has been reported as unsafe <br />0bp65a.com <br />Hosted by: tvtropes.org
+</p><p>We recommend that you do not continue to this website.
+</p><p>This website has been reported to Microsoft for containing threats to your computer that might reveal personal or financial information.
+</p><p>This website has been reported to contain the following threats:
+Malicious software threat: This site contains links to viruses or other software programs that can reveal personal information stored or typed on your computer to malicious persons.
+</div>
+</p>
+</div>
+<span class="troper-signature text-center">Insert witty and clever quip here.
+<a class='twikilink' href='http://tvtropes.org/pmwiki/pmwiki.php/Tropers/Odd1' title='http://tvtropes.org/pmwiki/pmwiki.php/Tropers/Odd1'>My page</a>, as the database hates my handle.
+<a class='urllink' href='http://bit.ly/WbYjy2'>My music.</a>
+</span>
+</div>
+</div>
+</div>
+<a name="4"></a>
+<div id="comment-4" class="comment-box    ">
+<div class="comment-head">
+<span class="troper-handle-wrapper has-tag">
+<a href="pmwiki.php/Tropers/Fighteer" class="troper-name">Fighteer</a>
+<span class="troper-avatar-tagline mobile-on">Would you shut up, man?
+</span> </span>
+<span class="troper-location">from political anxiety
+</span>
+<span class="troper-relationship-status">
+<strong>Relationship Status:</strong> Dancing with Captain Jack Harkness </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/Fighteer">
+<img src="https://static.tvtropes.org/pmwiki/pub/images/biden_harris_profile.jpeg" />
+</a>
+</span>
+<span class="troper-avatar-tagline text-center mobile-off">Would you shut up, man?
+</span>
+</div>
+<div class="troper-comment ">
+<a href="#comment-4" class="troper-post-time">Dec 11th 2011 <span>at</span> 8:30:58 AM</a>
+<div class="comment">
+<p>According to <a class='urllink' href='http://windows.microsoft.com/en-US/windows7/SmartScreen-Filter-frequently-asked-questions-IE9'>this article<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a>, there should be a link on the SmartScreen filter report allowing you to report <a class='twikilink' href='https://tvtropes.org/pmwiki/pmwiki.php/Main/TVTropes' title='https://tvtropes.org/pmwiki/pmwiki.php/Main/TVTropes'>TV Tropes</a> as a safe site.
+</p><p>However, I just tried loading tvtropes.org in IE9 and checked its SmartScreen rating, and it reported no threats. That other site is definitely a malware site but a quick search revealed no useful information about it.
+</p><p>We have yet to get anyone reporting a site-related infection who can give us any details about where it came from. That's the only way any of these issues will get resolved.
+<p style="font-size:x-small;font-style:italic;">edited 13th Dec '11 4:41:32 PM by Fighteer<p></p>
+</div>
+<span class="troper-signature text-center"><a class='urllink' href='https://tvtropes.org/pmwiki/posts.php?discussion=15374859790A10773600'>TV Tropes Changelog -- keep track of updates to the site!</a>
+</span>
+</div>
+</div>
+</div>
+<a name="5"></a>
+<div id="comment-5" class="comment-box    ">
+<div class="comment-head">
+<span class="troper-handle-wrapper has-tag">
+<a href="pmwiki.php/Tropers/arks" class="troper-name">arks</a>
+<span class="troper-avatar-tagline mobile-on">Boiled and Mashed
+</span> </span>
+<span class="troper-relationship-status">
+<strong>Relationship Status:</strong> Mu </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/arks">
+<img src="https://static.tvtropes.org/pmwiki/pub/images/experiencedpotato4393.jpg" />
+</a>
+</span>
+<span class="troper-avatar-tagline text-center mobile-off">Boiled and Mashed
+</span>
+</div>
+<div class="troper-comment ">
+<a href="#comment-5" class="troper-post-time">Dec 13th 2011 <span>at</span> 1:38:34 AM</a>
+<div class="comment">
+<p>Here's one that set off my antivirus: mlleld.com/xmltree.jar|[end angle bracket]xmltree[slash. the actual punctuation mark refuses to show up on these forums.]kondar.class
+<p style="font-size:x-small;font-style:italic;">edited 13th Dec '11 1:41:53 AM by arks<p></p>
+</div>
+<span class="troper-signature text-center"><a class='urllink' href='http://tvtropes.org/pmwiki/posts.php?discussion=13749689770A55893300'>Video Game Census</a>. Please contribute.
+</span>
+</div>
+</div>
+</div>
+<a name="6"></a>
+<div id="comment-6" class="comment-box    ">
+<div class="comment-head">
+<span class="troper-handle-wrapper ">
+<a href="pmwiki.php/Tropers/punkreader" class="troper-name">punkreader</a>
+<span class="troper-avatar-tagline mobile-on"></span> </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/punkreader">
+<img src="https://static.tvtropes.org/pmwiki/pub/images/generictroper14.gif" />
+</a>
+</span>
+</div>
+<div class="troper-comment ">
+<a href="#comment-6" class="troper-post-time">Dec 13th 2011 <span>at</span> 4:53:07 AM</a>
+<div class="comment">
+<p>I've gotten The Windows XP Antivirus 2012 virus from the site thrice recently, but I wasn't able to pin it to a specific ad or address.
+</p><p>Avast!Antivirus blocked an attack on my computer the first time I went to the site's homepage after installing it. Unfortunately, I don't remember the address it gave. I'll see if I can look through logs to find it. If I do, I'll post it.
+</p>
+</div>
+</div>
+</div>
+</div>
+<a name="7"></a>
+<div id="comment-7" class="comment-box    ">
+<div class="comment-head">
+<span class="troper-handle-wrapper ">
+<a href="pmwiki.php/Tropers/Zyffyr" class="troper-name">Zyffyr</a>
+<span class="troper-avatar-tagline mobile-on"></span> </span>
+<span class="troper-location">from Portland, Oregon
+</span>
+<span class="troper-relationship-status">
+<strong>Relationship Status:</strong> Complex: I'm real, they are imaginary </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/Zyffyr">
+<img src="https://static.tvtropes.org/pmwiki/pub/images/redz.jpg" />
+</a>
+</span>
+</div>
+<div class="troper-comment ">
+<a href="#comment-7" class="troper-post-time">Dec 13th 2011 <span>at</span> 3:31:12 PM</a>
+<div class="comment">
+<p>Address of the advertisement itself : media2.rubricgroup.com/?fhVEAw4RFgJdCloCEmgDVgMDdjIlVwlBQlULFwdDEhtaW1QkQVQcGycnOx1QAgULQFRfAFFABFxN
+</p><p>Warning message from my Antivirus : murouk.com/xmltree.jar|&gt;xmltreekondar.jar
+</p><p>I've had others, but I didn't think to get the info.
+<p style="font-size:x-small;font-style:italic;">edited 13th Dec '11 3:32:42 PM by Zyffyr<p></p>
+</div>
+</div>
+</div>
+</div>
+<a name="8"></a>
+<div id="comment-8" class="comment-box    ">
+<div class="comment-head">
+<span class="troper-handle-wrapper ">
+<a href="pmwiki.php/Tropers/FastEddie" class="troper-name">FastEddie</a>
+<span class="troper-avatar-tagline mobile-on"></span> </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/FastEddie">
+<img src="https://static.tvtropes.org/pmwiki/pub/images/gort2.png_100.jpeg" />
+</a>
+</span>
+</div>
+<div class="troper-comment ">
+<a href="#comment-8" class="troper-post-time">Dec 13th 2011 <span>at</span> 4:40:18 PM</a>
+<div class="comment">
+<p>Thanks. I've forwarded these to our ad provider to see what action we can get.
+</p>
+</div>
+<span class="troper-signature text-center">Goal: Clear, Concise and Witty
+</span>
+</div>
+</div>
+</div>
+<a name="9"></a>
+<div id="comment-9" class="comment-box    ">
+<div class="comment-head">
+<span class="troper-handle-wrapper ">
+<a href="pmwiki.php/Tropers/FastEddie" class="troper-name">FastEddie</a>
+<span class="troper-avatar-tagline mobile-on"></span> </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/FastEddie">
+<img src="https://static.tvtropes.org/pmwiki/pub/images/gort2.png_100.jpeg" />
+</a>
+</span>
+</div>
+<div class="troper-comment ">
+<a href="#comment-9" class="troper-post-time">Dec 14th 2011 <span>at</span> 9:57:22 AM</a>
+<div class="comment">
+<p>Update from the ad provider:
+</p><p><div class="quoteblock">
+On Wed, Dec 14, 2011 at 11:50 AM, Bethany Patterson &lt;bpatterson@rubiconproject.com&gt; wrote:
+</p><p>Hi Eddie.
+</p><p>I did some digging in our <a class='createlink' href='https://tvtropes.org/pmwiki/pmwiki.php/Main/SiteScout' title='https://tvtropes.org/pmwiki/pmwiki.php/Main/SiteScout'>Site Scout</a> technology this morning and was able to confirm that the information you provided us was linked to an issue that we flagged and resolved yesterday morning. We found this issue coming through three different networks (<a class='createlink' href='https://tvtropes.org/pmwiki/pmwiki.php/Main/BannerConnect' title='https://tvtropes.org/pmwiki/pmwiki.php/Main/BannerConnect'>Banner Connect</a>, Meta Network, Redux Media) Monday night/Tuesday morning. This problem was stemming from a specific advertiser within <a class='createlink' href='https://tvtropes.org/pmwiki/pmwiki.php/Main/AppNexus' title='https://tvtropes.org/pmwiki/pmwiki.php/Main/AppNexus'>App Nexus</a>. We reached out internally to <a class='createlink' href='https://tvtropes.org/pmwiki/pmwiki.php/Main/AppNexus' title='https://tvtropes.org/pmwiki/pmwiki.php/Main/AppNexus'>App Nexus</a> yesterday morning and helped them remove the advertiser. We have not seen the issue on our end since it was resolved.
+</div>
+</p><p></p>
+</div>
+<span class="troper-signature text-center">Goal: Clear, Concise and Witty
+</span>
+</div>
+</div>
+</div>
+<a name="10"></a>
+<div id="comment-10" class="comment-box    ">
+<div class="comment-head">
+<span class="troper-handle-wrapper has-tag">
+<a href="pmwiki.php/Tropers/Madrugada" class="troper-name">Madrugada</a>
+<span class="troper-avatar-tagline mobile-on">Zzzzzzzzzz
+</span> </span>
+<span class="troper-relationship-status">
+<strong>Relationship Status:</strong> In season </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/Madrugada">
+<img src="https://static.tvtropes.org/pmwiki/pub/images/Vulpes_vulpes_laying_in_snow.jpg_100.jpeg" />
+</a>
+</span>
+<span class="troper-avatar-tagline text-center mobile-off">Zzzzzzzzzz
+</span>
+</div>
+<div class="troper-comment ">
+<a href="#comment-10" class="troper-post-time">Dec 14th 2011 <span>at</span> 10:08:21 AM</a>
+<div class="comment">
+<p>Hey, cool. An actual response from an actual person. Is that allowed?<img src="https://static.tvtropes.org/pmwiki/pub/smiles/emoticon_tongue.png" height="16" width="16" alt="tongue" title="tongue" />
+<p style="font-size:x-small;font-style:italic;">edited 14th Dec '11 10:09:21 AM by Madrugada<p></p>
+</div>
+<span class="troper-signature text-center">...if you don’t love you’re dead, and if you do, they’ll kill you for it.
+</span>
+</div>
+</div>
+</div>
+<a name="11"></a>
+<div id="comment-11" class="comment-box    ">
+<div class="comment-head">
+<span class="troper-handle-wrapper has-tag">
+<a href="pmwiki.php/Tropers/Nohbody" class="troper-name">Nohbody</a>
+<span class="troper-avatar-tagline mobile-on">"In distress", my ass.
+</span> </span>
+<span class="troper-location">from Somewhere in Dixie
+</span>
+<span class="troper-relationship-status">
+<strong>Relationship Status:</strong> Mu </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/Nohbody">
+<img src="https://static.tvtropes.org/pmwiki/pub/images/us_flag_100x100_px.jpg" />
+</a>
+</span>
+<span class="troper-avatar-tagline text-center mobile-off">"In distress", my ass.
+</span>
+</div>
+<div class="troper-comment ">
+<a href="#comment-11" class="troper-post-time">Dec 14th 2011 <span>at</span> 10:21:04 AM</a>
+<div class="comment">
+<p>'Tis the season, and all that, I guess. <img src="https://static.tvtropes.org/pmwiki/pub/smiles/emoticon_tongue.png" height="16" width="16" alt="tongue" title="tongue" />
+</p>
+</div>
+<span class="troper-signature text-center"><a class='urllink' href='https://www.youtube.com/watch?v=Kn9Xsmj942E'>All your safe space are belong to Trump</a>
+</span>
+</div>
+</div>
+</div>
+<a name="12"></a>
+<div id="comment-12" class="comment-box    ">
+<div class="comment-head">
+<span class="troper-handle-wrapper ">
+<a href="pmwiki.php/Tropers/FastEddie" class="troper-name">FastEddie</a>
+<span class="troper-avatar-tagline mobile-on"></span> </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/FastEddie">
+<img src="https://static.tvtropes.org/pmwiki/pub/images/gort2.png_100.jpeg" />
+</a>
+</span>
+</div>
+<div class="troper-comment ">
+<a href="#comment-12" class="troper-post-time">Dec 14th 2011 <span>at</span> 10:30:51 AM</a>
+<div class="comment">
+<p>Maddy: It is allowed now that we have a service between us and Google. Google is not in the human-to-publisher support business in any way you might notice.
+<p style="font-size:x-small;font-style:italic;">edited 14th Dec '11 10:32:21 AM by FastEddie<p></p>
+</div>
+<span class="troper-signature text-center">Goal: Clear, Concise and Witty
+</span>
+</div>
+</div>
+</div>
+<a name="13"></a>
+<div id="comment-13" class="comment-box    ">
+<div class="comment-head">
+<span class="troper-handle-wrapper ">
+<a href="pmwiki.php/Tropers/Darkaros" class="troper-name">Darkaros</a>
+<span class="troper-avatar-tagline mobile-on"></span> </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/Darkaros">
+<img src="https://static.tvtropes.org/pmwiki/pub/images/Wraith17901.jpg" />
+</a>
+</span>
+</div>
+<div class="troper-comment ">
+<a href="#comment-13" class="troper-post-time">Dec 14th 2011 <span>at</span> 2:18:32 PM</a>
+<div class="comment">
+<p>Got one today a few minutes ago from http://nisivy.com/xmltree.jar|&amp;gt;xmltree/kondar.class. At least that's the URL given by Avast.
+</p><p>Edit: There's some gibberish-text that doesn't display properly between "jar" and "xmltree". It's |&gt;. Hopefully it doesn't affect the report Eddie.<img src="https://static.tvtropes.org/pmwiki/pub/smiles/arrow_down.png" alt="[down]" title="[down]" height="16" width="16" />
+<p style="font-size:x-small;font-style:italic;">edited 14th Dec '11 5:58:59 PM by Darkaros<p></p>
+</div>
+</div>
+</div>
+</div>
+<a name="14"></a>
+<div id="comment-14" class="comment-box    ">
+<div class="comment-head">
+<span class="troper-handle-wrapper ">
+<a href="pmwiki.php/Tropers/FastEddie" class="troper-name">FastEddie</a>
+<span class="troper-avatar-tagline mobile-on"></span> </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/FastEddie">
+<img src="https://static.tvtropes.org/pmwiki/pub/images/gort2.png_100.jpeg" />
+</a>
+</span>
+</div>
+<div class="troper-comment ">
+<a href="#comment-14" class="troper-post-time">Dec 14th 2011 <span>at</span> 4:46:13 PM</a>
+<div class="comment">
+<p>Thanks. Will report.
+</p>
+</div>
+<span class="troper-signature text-center">Goal: Clear, Concise and Witty
+</span>
+</div>
+</div>
+</div>
+<a name="15"></a>
+<div id="comment-15" class="comment-box    ">
+<div class="comment-head">
+<span class="troper-handle-wrapper ">
+<a href="pmwiki.php/Tropers/punkreader" class="troper-name">punkreader</a>
+<span class="troper-avatar-tagline mobile-on"></span> </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/punkreader">
+<img src="https://static.tvtropes.org/pmwiki/pub/images/generictroper14.gif" />
+</a>
+</span>
+</div>
+<div class="troper-comment ">
+<a href="#comment-15" class="troper-post-time">Dec 15th 2011 <span>at</span> 8:04:33 AM</a>
+<div class="comment">
+<p><img src="https://static.tvtropes.org/pmwiki/pub/smiles/arrow_up.png" alt="[up]" title="[up]" height="16" width="16" /><img src="https://static.tvtropes.org/pmwiki/pub/smiles/arrow_up.png" alt="[up]" title="[up]" height="16" width="16" /> That looks like what Avast blocked for me, too.
+</p><p>Mine also said that it had to do with "java" and "Email.Trojan," if that's any help.
+</p>
+</div>
+</div>
+</div>
+</div>
+<a name="16"></a>
+<div id="comment-16" class="comment-box    ">
+<div class="comment-head">
+<span class="troper-handle-wrapper ">
+<a href="pmwiki.php/Tropers/Ramidel" class="troper-name">Ramidel</a>
+<span class="troper-avatar-tagline mobile-on"></span> </span>
+<span class="troper-relationship-status">
+<strong>Relationship Status:</strong> Above such petty unnecessities </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/Ramidel">
+<img src="https://static.tvtropes.org/pmwiki/pub/images/generictroper14.gif" />
+</a>
+</span>
+</div>
+<div class="troper-comment ">
+<a href="#comment-16" class="troper-post-time">Dec 17th 2011 <span>at</span> 8:28:30 PM</a>
+<div class="comment">
+<p>As a related question:
+</p><p>Sometimes, when I right-click a flash ad, it grayscales the "Settings" option. How do I find that ad's URL?
+</p>
+</div>
+<span class="troper-signature text-center">Fiat justitia ruat caelum.
+</span>
+</div>
+</div>
+</div>
+<a name="17"></a>
+<div id="comment-17" class="comment-box    ">
+<div class="comment-head">
+<span class="troper-handle-wrapper ">
+<a href="pmwiki.php/Tropers/FastEddie" class="troper-name">FastEddie</a>
+<span class="troper-avatar-tagline mobile-on"></span> </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/FastEddie">
+<img src="https://static.tvtropes.org/pmwiki/pub/images/gort2.png_100.jpeg" />
+</a>
+</span>
+</div>
+<div class="troper-comment ">
+<a href="#comment-17" class="troper-post-time">Dec 18th 2011 <span>at</span> 1:42:19 AM</a>
+<div class="comment">
+<p>If you run Firefox or Chrome, install <a class='urllink' href='https://getfirebug.com/downloads/'>Firebug<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a>, then use the 'inspect element' feature.
+</p>
+</div>
+<span class="troper-signature text-center">Goal: Clear, Concise and Witty
+</span>
+</div>
+</div>
+</div>
+<a name="18"></a>
+<div id="comment-18" class="comment-box    ">
+<div class="comment-head">
+<span class="troper-handle-wrapper ">
+<a href="pmwiki.php/Tropers/punkreader" class="troper-name">punkreader</a>
+<span class="troper-avatar-tagline mobile-on"></span> </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/punkreader">
+<img src="https://static.tvtropes.org/pmwiki/pub/images/generictroper14.gif" />
+</a>
+</span>
+</div>
+<div class="troper-comment ">
+<a href="#comment-18" class="troper-post-time">Dec 19th 2011 <span>at</span> 4:42:11 PM</a>
+<div class="comment">
+<p>I just caught the exploit, which Avast! blocked.
+</p><p>It's: peteic.com/xmltree.jar|&gt;xmltree\spager.class
+</p>
+</div>
+</div>
+</div>
+</div>
+<a name="19"></a>
+<div id="comment-19" class="comment-box    ">
+ <div class="comment-head">
+<span class="troper-handle-wrapper ">
+<a href="pmwiki.php/Tropers/FastEddie" class="troper-name">FastEddie</a>
+<span class="troper-avatar-tagline mobile-on"></span> </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/FastEddie">
+<img src="https://static.tvtropes.org/pmwiki/pub/images/gort2.png_100.jpeg" />
+</a>
+</span>
+</div>
+<div class="troper-comment ">
+<a href="#comment-19" class="troper-post-time">Dec 19th 2011 <span>at</span> 4:50:19 PM</a>
+<div class="comment">
+<p>Thanks!
+</p>
+</div>
+<span class="troper-signature text-center">Goal: Clear, Concise and Witty
+</span>
+</div>
+</div>
+</div>
+<a name="20"></a>
+<div id="comment-20" class="comment-box    ">
+<div class="comment-head">
+<span class="troper-handle-wrapper ">
+<a href="pmwiki.php/Tropers/FastEddie" class="troper-name">FastEddie</a>
+<span class="troper-avatar-tagline mobile-on"></span> </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/FastEddie">
+<img src="https://static.tvtropes.org/pmwiki/pub/images/gort2.png_100.jpeg" />
+</a>
+</span>
+</div>
+<div class="troper-comment ">
+<a href="#comment-20" class="troper-post-time">Dec 19th 2011 <span>at</span> 4:54:40 PM</a>
+<div class="comment">
+<p>Request from ad server folks:
+</p><p><div class="quoteblock">
+Do you have any additional information about who saw it, where it served, what time of day, geographic location, advertiser name, ad size, ANYTHING else would be helpful
+</div>
+</p>
+</div>
+<span class="troper-signature text-center">Goal: Clear, Concise and Witty
+</span>
+</div>
+</div>
+</div>
+<a name="21"></a>
+<div id="comment-21" class="comment-box    ">
+<div class="comment-head">
+<span class="troper-handle-wrapper ">
+<a href="pmwiki.php/Tropers/Zyffyr" class="troper-name">Zyffyr</a>
+<span class="troper-avatar-tagline mobile-on"></span> </span>
+<span class="troper-location">from Portland, Oregon
+</span>
+<span class="troper-relationship-status">
+<strong>Relationship Status:</strong> Complex: I'm real, they are imaginary </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/Zyffyr">
+<img src="https://static.tvtropes.org/pmwiki/pub/images/redz.jpg" />
+</a>
+</span>
+</div>
+<div class="troper-comment ">
+<a href="#comment-21" class="troper-post-time">Dec 19th 2011 <span>at</span> 6:10:38 PM</a>
+<div class="comment">
+<p>I just got the one from peteic.com, URL of the ad was :
+</p><p>d3.purebluemedia.com/?<a class='createlink' href='https://tvtropes.org/pmwiki/pmwiki.php/Main/QgQcUQIGQBtQU1YBEGIHXgcSMjkoDgVCSVQEFwFUQVMPR1QgC0EcQycnYldGBRcfR09CFxoNCF4' title='https://tvtropes.org/pmwiki/pmwiki.php/Main/QgQcUQIGQBtQU1YBEGIHXgcSMjkoDgVCSVQEFwFUQVMPR1QgC0EcQycnYldGBRcfR09CFxoNCF4'>Qg Qc UQIGQ Bt QU 1 YBEGIH Xgc S Mjko Dg VCSVQE Fw FUQVMPR 1 Qg C 0 Ec Qycn Yld GB Rcf R 09 C Fxo NCF 4</a>=
+</p><p>No clue on the content, as my AV blocked it.
+West Coast USA, ~2 minutes ago.
+Ad was served on the Excessive Categorization thread (Wiki Talk), top ad.
+</p>
+</div>
+</div>
+</div>
+</div>
+<a name="22"></a>
+<div id="comment-22" class="comment-box    ">
+<div class="comment-head">
+<span class="troper-handle-wrapper has-tag">
+<a href="pmwiki.php/Tropers/Joaqs" class="troper-name">Joaqs</a>
+<span class="troper-avatar-tagline mobile-on">Técnico Electromecánico
+</span> </span>
+<span class="troper-location">from Argentina
+</span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/Joaqs">
+<img src="https://static.tvtropes.org/pmwiki/pub/images/Avatar 1PNG8932_png_100.png" />
+</a>
+</span>
+<span class="troper-avatar-tagline text-center mobile-off">Técnico Electromecánico
+</span>
+</div>
+<div class="troper-comment ">
+<a href="#comment-22" class="troper-post-time">Dec 19th 2011 <span>at</span> 7:35:08 PM</a>
+<div class="comment">
+<p>Internet explorer has being activating site filtering script (xss)<span class="tiptag" onclick="toggleinline(this);"><u>*</u> <div class="inlinefolder" style="display:none;"> <sup>Or however it's called in English</sup> </div></span> to the add left side off forum now, the URL is:
+</p><p>ib. adnxs. com / if?enc=exSuR-<a class='createlink' href='https://tvtropes.org/pmwiki/pmwiki.php/Main/F6hD97FK5H4XqEPwAAAOBRuM4' title='https://tvtropes.org/pmwiki/pmwiki.php/Main/F6hD97FK5H4XqEPwAAAOBRuM4'>F6h D 97 FK 5 H 4 Xq E Pw AAAOB Ru M 4</a>_ exSuR-<a class='createlink' href='https://tvtropes.org/pmwiki/pmwiki.php/Main/F6hD97FK5H4XqEP3NZCMib' title='https://tvtropes.org/pmwiki/pmwiki.php/Main/F6hD97FK5H4XqEP3NZCMib'>F6h D 97 FK 5 H 4 Xq EP 3 NZC Mib</a>-9FcR1TLCvo0i0u9_u9OAAAAAJ2lCgA2AQAANgEAAAIAAABQTw0AkdgAAAEAAABVU0QAVVNEAKAAWAKdMQAARRIAAgQCAQUAAIIAoySR7wAAAAA.&amp;udj=uf%28%27a%27%2C+35986%2C+1324351165%29%3Buf%28%27r%27%2C+872272%2C+1324351165%29%3B&amp;cnd=!<a class='createlink' href='https://tvtropes.org/pmwiki/pmwiki.php/Main/GCNPKQjh2gsQ0J41GAAgkbEDMAA4neMEQARItgJQncsqWABglwJoAHCECHgCgAGMC4gBApABAZgBAaABAagBALABALkBexSuR' title='https://tvtropes.org/pmwiki/pmwiki.php/Main/GCNPKQjh2gsQ0J41GAAgkbEDMAA4neMEQARItgJQncsqWABglwJoAHCECHgCgAGMC4gBApABAZgBAaABAagBALABALkBexSuR'>GCNPK Qjh2gs Q 0 J 41 GA Agkb EDMA A4ne MEQAR Itg J Qncsq WA Bglw Jo AHCEC Hg Cg AGM C4g B Ap ABA Zg B Aa AB Aag BALABA Lk Bex Su R</a>-<a class='createlink' href='https://tvtropes.org/pmwiki/pmwiki.php/Main/F6hD' title='https://tvtropes.org/pmwiki/pmwiki.php/Main/F6hD'>F6h D</a>_BAXsUrkfheoQ_yQGkmZmZmZm5P9kBAAAAAAAA8D_gAQA.&amp;ccd=! <a class='createlink' href='https://tvtropes.org/pmwiki/pmwiki.php/Main/AwVlKwjh2gsQ0J41GJGxAyAE' title='https://tvtropes.org/pmwiki/pmwiki.php/Main/AwVlKwjh2gsQ0J41GJGxAyAE'>Aw Vl Kwjh2gs Q 0 J 41 GJ Gx Ay AE</a>&amp;vpid=47&amp;referrer= htt p: // optimized-by.rubiconproject. com/ a/8777/ 14415/29991-9.html%3F&amp;media_subtypes=1
+</p><p>Region South America (Argentina), no idea what it was about, time, around this hour.
+<p style="font-size:x-small;font-style:italic;">edited 19th Dec '11 7:35:50 PM by Joaqs<p></p>
+</div>
+</div>
+</div>
+</div>
+<a name="23"></a>
+<div id="comment-23" class="comment-box    ">
+<div class="comment-head">
+<span class="troper-handle-wrapper ">
+<a href="pmwiki.php/Tropers/FastEddie" class="troper-name">FastEddie</a>
+<span class="troper-avatar-tagline mobile-on"></span> </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/FastEddie">
+<img src="https://static.tvtropes.org/pmwiki/pub/images/gort2.png_100.jpeg" />
+</a>
+</span>
+</div>
+<div class="troper-comment ">
+<a href="#comment-23" class="troper-post-time">Dec 19th 2011 <span>at</span> 11:01:43 PM</a>
+<div class="comment">
+<p>Fantastic information. Will forward to ad provider.
+</p>
+</div>
+<span class="troper-signature text-center">Goal: Clear, Concise and Witty
+</span>
+</div>
+</div>
+</div>
+<a name="24"></a>
+<div id="comment-24" class="comment-box    ">
+<div class="comment-head">
+<span class="troper-handle-wrapper ">
+<a href="pmwiki.php/Tropers/punkreader" class="troper-name">punkreader</a>
+<span class="troper-avatar-tagline mobile-on"></span> </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/punkreader">
+<img src="https://static.tvtropes.org/pmwiki/pub/images/generictroper14.gif" />
+</a>
+</span>
+</div>
+<div class="troper-comment ">
+<a href="#comment-24" class="troper-post-time">Dec 21st 2011 <span>at</span> 5:30:54 AM</a>
+<div class="comment">
+<p>Here's my timestamp (I took a screenshot):
+</p><p>7:39 PM Eastern Time (4:39 Pacific), on the Writer's Block forum. Pennsylvania, USA.
+</p>
+</div>
+</div>
+</div>
+</div>
+<a name="25"></a>
+<div id="comment-25" class="comment-box    ">
+<div class="comment-head">
+<span class="troper-handle-wrapper ">
+<a href="pmwiki.php/Tropers/FastEddie" class="troper-name">FastEddie</a>
+<span class="troper-avatar-tagline mobile-on"></span> </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/FastEddie">
+<img src="https://static.tvtropes.org/pmwiki/pub/images/gort2.png_100.jpeg" />
+</a>
+</span>
+</div>
+<div class="troper-comment ">
+<a href="#comment-25" class="troper-post-time">Dec 21st 2011 <span>at</span> 5:36:42 AM</a>
+<div class="comment">
+<p>Ooh! That screen shot would be handy.
+</p>
+</div>
+<span class="troper-signature text-center">Goal: Clear, Concise and Witty
+</span>
+</div>
+</div>
+</div>
+<a name="postbutton"> </a>
+<div id="mobile-quicknav-buttons" class="tablet-on">
+<a id="mobile-back-button" href="/pmwiki/conversations.php?topic=0000000000000000000000dg" class="float-left button">
+<i class="fa fa-chevron-left"></i> Back
+</a>
+<a id="mobile-to-top-button" href="#top-of-page" class="dead-button float-right button-top scroll-to-top">
+Top <i class="fa fa-chevron-up"></i>
+</a>
+</div>
+<div style="text-align:center;"><br />
+<div class='alphalist'>
+<div>
+Total posts: 2,816 </div>
+<nav class="pagination-box button-group text-center " data-total-pages="113" data-url-prefix="/pmwiki/posts.php?discussion=13223684920A10189100&page=">
+<span class="pagination-jump-box-wrapper mobile-on">
+<form class="pagination-jump-box hidden-until-active font-m">
+<input value="1" type="tel">
+<a href="#jump-to-page" title="Jump to page" class="color-white dead-button" onClick="activate_jump_menu(this);return false;">GO <i class="fa fa-angle-right"></i></a>
+</form>
+</span>
+<a href="/pmwiki/posts.php?discussion=13223684920A10189100&page=1" class="mobile-off ">
+<span class="current-page"> 1 </span> </a>
+<a href="/pmwiki/posts.php?discussion=13223684920A10189100&page=2" class="mobile-off ">
+2 </a>
+<a href="/pmwiki/posts.php?discussion=13223684920A10189100&page=3" class="mobile-off ">
+3 </a>
+<a href="#jump-to-page" title="Jump to page" class="pagination-jump-box-toggle mobile-on dead-button" onClick="toggle_jump_menu(this);return false;">
+<span class="font-s">page 1 of 113</span>
+</a>
+<a href="/pmwiki/posts.php?discussion=13223684920A10189100&page=2">
+<span class="mobile-on"><i class="fa fa-angle-right"></i></span>
+<span class="mobile-off">Next</span>
+</a>
+<a href="/pmwiki/posts.php?discussion=13223684920A10189100&page=113">
+<i class="fa fa-angle-double-right"></i>
+</a>
+</nav>
+<script type="text/javascript">
+
+	function toggle_jump_menu(e){
+		$(e).siblings('.pagination-jump-box-wrapper').children('.pagination-jump-box').toggle('active');
+	}
+
+	function activate_jump_menu(e){
+			var p = $(e).siblings('input').val();
+			var t = $(e).closest('.pagination-box').data('total-pages');
+
+			if(p > 0 && p <= t){
+					window.location.href = $(e).closest('.pagination-box').data('url-prefix') + p;
+			}else{
+					show_modal('alert',encodeURIComponent('Whoops, that page might be out of range.'));
+			}
+	}
+
+</script>
+</div>
+</div>
+</div>
+<div class="ImgUploadModalStub" data-page-type="Article"></div>
+</div>
+<div id="main-content-sidebar"><div class="sidebar-item display-options">
+<ul class="sidebar display-toggles">
+<li>Show Spoilers <div id="sidebar-toggle-showspoilers" class="display-toggle show-spoilers"></div></li>
+<li>Night Vision <div id="sidebar-toggle-nightvision" class="display-toggle night-vision"></div></li>
+<li>Sticky Header <div id="sidebar-toggle-stickyheader" class="display-toggle sticky-header"></div></li>
+<li>Wide Load <div id="sidebar-toggle-wideload" class="display-toggle wide-load"></div></li>
+</ul>
+<script>updateDesktopPrefs();</script>
+</div>
+<div class="sidebar-item ad sb-ad-unit">
+<div class='proper-ad-unit '>
+<div id='proper-ad-tvtropes_ad_2'> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_2'); });</script> </div>
+</div></div>
+<div class="sidebar-item quick-links" itemtype="http://schema.org/SiteNavigationElement">
+<p class="sidebar-item-title" data-title="Important Links">Important Links</p>
+<div class="padded">
+<a href="/pmwiki/query.php?type=att">Ask The Tropers</a>
+<a href="/pmwiki/query.php?type=tf">Trope Finder</a>
+<a href="/pmwiki/query.php?type=ykts">You Know That Show...</a>
+<a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a>
+<a href="/pmwiki/review_activity.php">Reviews</a>
+<a href="/pmwiki/lbs.php" data-modal-target="login">Live Blogs</a>
+<a href="/pmwiki/ad-free-subscribe.php">Go Ad Free!</a> </div>
+</div>
+<div class="sidebar-item sb-ad-unit">
+<div class="sidebar-section">
+<div class="square_ad ad-size-300x600 ad-section text-center">
+<div class='proper-ad-unit '>
+<div id='proper-ad-tvtropes_ad_3'> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_3'); });</script> </div>
+</div> </div>
+</div>
+</div>
+<div class="sidebar-item">
+<p class="sidebar-item-title" data-title="Crucial Browsing">Crucial Browsing</p>
+<ul class="padded font-s" itemscope itemtype="http://schema.org/SiteNavigationElement">
+<li><a href="javascript:void(0);" data-click-toggle="active">Genre</a>
+<ul>
+<li><a href='/pmwiki/pmwiki.php/Main/ActionAdventureTropes' title='Main/ActionAdventureTropes'>Action Adventure</a></li>
+<li><a href='/pmwiki/pmwiki.php/Main/ComedyTropes' title='Main/ComedyTropes'>Comedy</a></li>
+<li><a href='/pmwiki/pmwiki.php/Main/CommercialsTropes' title='Main/CommercialsTropes'>Commercials</a></li>
+<li><a href='/pmwiki/pmwiki.php/Main/CrimeAndPunishmentTropes' title='Main/CrimeAndPunishmentTropes'>Crime &amp; Punishment</a></li>
+<li><a href='/pmwiki/pmwiki.php/Main/DramaTropes' title='Main/DramaTropes'>Drama</a></li>
+<li><a href='/pmwiki/pmwiki.php/Main/HorrorTropes' title='Main/HorrorTropes'>Horror</a></li>
+<li><a href='/pmwiki/pmwiki.php/Main/LoveTropes' title='Main/LoveTropes'>Love</a></li>
+<li><a href='/pmwiki/pmwiki.php/Main/NewsTropes' title='Main/NewsTropes'>News</a></li>
+<li><a href='/pmwiki/pmwiki.php/Main/ProfessionalWrestling' title='Main/ProfessionalWrestling'>Professional Wrestling</a></li>
+<li><a href='/pmwiki/pmwiki.php/Main/SpeculativeFictionTropes' title='Main/SpeculativeFictionTropes'>Speculative Fiction</a></li>
+<li><a href='/pmwiki/pmwiki.php/Main/SportsStoryTropes' title='Main/SportsStoryTropes'>Sports Story</a></li>
+<li><a href='/pmwiki/pmwiki.php/Main/WarTropes' title='Main/WarTropes'>War</a></li>
+</ul>
+</li>
+<li><a href="javascript:void(0);" data-click-toggle="active">Media</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/Media" title="Main/Media">All Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/AnimationTropes" title="Main/AnimationTropes">Animation (Western)</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Anime" title="Main/Anime">Anime</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ComicBookTropes" title="Main/ComicBookTropes">Comic Book</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FanFic" title="FanFic/FanFics">Fan Fics</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Film" title="Main/Film">Film</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/GameTropes" title="Main/GameTropes">Game</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Literature" title="Main/Literature">Literature</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MusicAndSoundEffects" title="Main/MusicAndSoundEffects">Music And Sound Effects</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NewMediaTropes" title="Main/NewMediaTropes">New Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/PrintMediaTropes" title="Main/PrintMediaTropes">Print Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Radio" title="Main/Radio">Radio</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SequentialArt" title="Main/SequentialArt">Sequential Art</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TabletopGames" title="Main/TabletopGames">Tabletop Games</a></li>
+<li><a href="/pmwiki/pmwiki.php/UsefulNotes/Television" title="Main/Television">Television</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Theater" title="Main/Theater">Theater</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/VideogameTropes" title="Main/VideogameTropes">Videogame</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Webcomics" title="Main/Webcomics">Webcomics</a></li>
+</ul>
+</li>
+<li><a href="javascript:void(0);" data-click-toggle="active">Narrative</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/UniversalTropes" title="Main/UniversalTropes">Universal</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/AppliedPhlebotinum" title="Main/AppliedPhlebotinum">Applied Phlebotinum</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CharacterizationTropes" title="Main/CharacterizationTropes">Characterization</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Characters" title="Main/Characters">Characters</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CharactersAsDevice" title="Main/CharactersAsDevice">Characters As Device</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Dialogue" title="Main/Dialogue">Dialogue</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Motifs" title="Main/Motifs">Motifs</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NarrativeDevices" title="Main/NarrativeDevices">Narrative Devices</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Paratext" title="Main/Paratext">Paratext</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Plots" title="Main/Plots">Plots</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Settings" title="Main/Settings">Settings</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Spectacle" title="Main/Spectacle">Spectacle</a></li>
+</ul>
+</li>
+<li><a href="javascript:void(0);" data-click-toggle="active">Other Categories</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/BritishTellyTropes" title="Main/BritishTellyTropes">British Telly</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TheContributors" title="Main/TheContributors">The Contributors</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CreatorSpeak" title="Main/CreatorSpeak">Creator Speak</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Creators" title="Main/Creators">Creators</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DerivativeWorks" title="Main/DerivativeWorks">Derivative Works</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LanguageTropes" title="Main/LanguageTropes">Language</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LawsAndFormulas" title="Main/LawsAndFormulas">Laws And Formulas</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ShowBusiness" title="Main/ShowBusiness">Show Business</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SplitPersonalityTropes" title="Main/SplitPersonalityTropes">Split Personality</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/StockRoom" title="Main/StockRoom">Stock Room</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TropeTropes" title="Main/TropeTropes">Trope</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Tropes" title="Main/Tropes">Tropes</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TruthAndLies" title="Main/TruthAndLies">Truth And Lies</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TruthInTelevision" title="Main/TruthInTelevision">Truth In Television</a></li>
+</ul>
+</li>
+<li><a href="javascript:void(0);" data-click-toggle="active">Topical Tropes</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/BetrayalTropes" title="Main/BetrayalTropes">Betrayal</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CensorshipTropes" title="Main/CensorshipTropes">Censorship</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CombatTropes" title="Main/CombatTropes">Combat</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DeathTropes" title="Main/DeathTropes">Death</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FamilyTropes" title="Main/FamilyTropes">Family</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FateAndProphecyTropes" title="Main/FateAndProphecyTropes">Fate And Prophecy</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FoodTropes" title="Main/FoodTropes">Food</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/HolidayTropes" title="Main/HolidayTropes">Holiday</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MemoryTropes" title="Main/MemoryTropes">Memory</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MoneyTropes" title="Main/MoneyTropes">Money</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MoralityTropes" title="Main/MoralityTropes">Morality</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/PoliticsTropes" title="Main/PoliticsTropes">Politics</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ReligionTropes" title="Main/ReligionTropes">Religion</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SchoolTropes" title="Main/SchoolTropes">School</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="sidebar-item showcase">
+<p class="sidebar-item-title" data-title="Community&nbsp;Showcase">Community Showcase <a href="/pmwiki/showcase.php" class="bubble float-right hover-blue">More</a></p>
+<p class="community-showcase">
+<a href="https://sharetv.com/shows/echo_chamber" target="_blank" onclick="trackOutboundLink('https://sharetv.com/shows/echo_chamber');">
+<img data-src="/images/communityShowcase-echochamber.jpg" class="lazy-image" alt=""></a>
+<a href="/pmwiki/pmwiki.php/Webcomic/TwistedTropes">
+<img data-src="/img/howlandsc-side.jpg" class="lazy-image" alt=""></a>
+</p>
+</div>
+<div id="stick-cont" class="sidebar-item sb-ad-unit">
+<div id="stick-bar" class="sidebar-section">
+<div class="square_ad ad-size-300x600 ad-section text-center">
+<div class='proper-ad-unit '>
+<div id='proper-ad-tvtropes_ad_4'> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_4'); });</script> </div>
+</div> </div>
+</div>
+</div>
+</div>
+</div>
+<div id="action-bar-bottom" class="action-bar tablet-off">
+<a href="#top-of-page" class="scroll-to-top dead-button" onclick="$('html, body').animate({scrollTop : 0},500);">Top</a>
+</div>
+</div>
+<div class='proper-ad-unit ad-sticky'>
+<div id='proper-ad-tvtropes_sticky_ad'> <script>propertag.cmd.push(function() { proper_display('tvtropes_sticky_ad'); });</script> </div>
+</div>
+<footer id="main-footer">
+<div id="main-footer-inner">
+<div class="footer-left">
+<a href="/" class="img-link"><img data-src="/img/tvtropes-footer-logo.png" alt="TV Tropes" class="lazy-image" title="TV Tropes" /></a>
+<form action="index.html" id="cse-search-box-mobile" class="navbar-form newsletter-signup validate modal-replies" name="" role="" data-ajax-get="/ajax/subscribe_email.php">
+<button class="btn-submit newsletter-signup-submit-button" type="submit" id="subscribe-btn"><i class="fa fa-paper-plane"></i></button>
+<input id="subscription-email" type="text" class="form-control" name="q" size="31" placeholder="Subscribe" value="" validate-type="email">
+</form>
+<ul class="social-buttons">
+<li><a class="btn fb" target="_blank" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-facebook']);" href="https://www.facebook.com/tvtropes"><i class="fa fa-facebook"></i></a></li>
+<li><a class="btn tw" target="_blank" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-twitter']);" href="https://www.twitter.com/tvtropes"><i class="fa fa-twitter"></i></a> </li>
+<li><a class="btn rd" target="_blank" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-reddit']);" href="https://www.reddit.com/r/tvtropes"><i class="fa fa-reddit-alien"></i></a></li>
+</ul>
+</div>
+<hr />
+<ul class="footer-menu" itemscope itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">TVTropes</h4></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Administrivia">About TVTropes</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TheGoalsOfTVTropes">TVTropes Goals</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TheTropingCode">Troping Code</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TVTropesCustoms">TVTropes Customs</a></li>
+<li><a href="/pmwiki/pmwiki.php/JustForFun/TropesOfLegend">Tropes of Legend</a></li>
+<li><a href="/pmwiki/ad-free-subscribe.php">Go Ad-Free</a></li>
+</ul>
+<hr />
+<ul class="footer-menu" itemscope itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">Community</h4></li>
+<li><a href="/pmwiki/query.php?type=att">Ask The Tropers</a></li>
+<li><a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a></li>
+<li><a href="/pmwiki/query.php?type=tf">Trope Finder</a></li>
+<li><a href="/pmwiki/query.php?type=ykts">You Know That Show</a></li>
+<li><a href="/pmwiki/lbs.php" data-modal-target="login">Live Blogs</a></li>
+<li><a href="/pmwiki/review_activity.php">Reviews</a></li>
+<li><a href="/pmwiki/topics.php">Forum</a></li>
+</ul>
+<hr />
+<ul class="footer-menu" itemscope itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">Tropes HQ</h4></li>
+<li><a href="/pmwiki/about.php">About Us</a></li>
+<li><a href="/pmwiki/contact.php">Contact Us</a></li>
+<li><a href="/pmwiki/dmca.php">DMCA Notice</a></li>
+<li><a href="/pmwiki/privacypolicy.php">Privacy Policy</a></li>
+</ul>
+</div>
+<div id="desktop-on-mobile-toggle" class="text-center gutter-top gutter-bottom tablet-on">
+<a href="/pmwiki/switchDeviceCss.php?mobileVersion=1" rel="nofollow">Switch to <span class="txt-desktop">Desktop</span><span class="txt-mobile">Mobile</span> Version</a>
+</div>
+<div class="legal">
+<p>TVTropes is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License. <br>Permissions beyond the scope of this license may be available from <a xmlns:cc="http://creativecommons.org/ns#" href="mailto:thestaff@tvtropes.org" rel="cc:morePermissions"> thestaff@tvtropes.org</a>.</p>
+<br>
+<div class="privacy_wrapper">
+</div>
+</div>
+</footer>
+<style>
+      div.fc-ccpa-root {
+        position: absolute !important;
+        bottom: 93px !important;
+        margin: auto !important;
+        width: 100% !important;
+        z-index: 9999 !important;
+      }
+      .fc-ccpa-root .fc-dns-dialog .fc-dns-link p{
+        outline: none !important;
+        text-decoration: underline !important;
+        font-size: .7em !important;
+        font-family: sans-serif !important;
+      }
+      .fc-ccpa-root .fc-dns-dialog .fc-dns-link .fc-button-background {
+        background: none !important;
+      }
+    </style>
+<div id="_pm_videoViewer" class="full-screen">
+<a href="#close" class="close" id="_pm_videoViewer-close"></a>
+<div class="_pmvv-body">
+<div class="_pmvv-vidbox">
+<video id='overlay-video-player-box' data-video-id="" class='video-js vjs-default-skin vjs-16-9'>
+</video>
+<div class="_pmvv-vidbox-desc">
+<h1 id="overlay-title"></h1>
+<p id="overlay-descrip" class="_pmvv-vidbox-descTxt">
+</p>
+<div class="rating-row" data-video-id="">
+<input type="hidden" name="is_logged_in" value="0">
+<p>How well does it match the trope?</p>
+<div id="star-rating-group">
+<div class="trope-rate">
+<input type="radio" id="lamp5" name="rate" value="5" />
+<label for="lamp5" title="Absolutely"></label>
+<input type="radio" id="lamp4" name="rate" value="4" />
+<label for="lamp4" title="Yes"></label>
+<input type="radio" id="lamp3" name="rate" value="3" />
+<label for="lamp3" title="Kind of"></label>
+<input type="radio" id="lamp2" name="rate" value="2" />
+<label for="lamp2" title="Not really"></label>
+<input type="radio" id="lamp1" name="rate" value="1" />
+<label for="lamp1" title="No"></label>
+</div>
+<div id="star-rating-total">
+</div>
+</div>
+</div>
+<div class="example-media-row">
+<div class="example-overlay">
+<p>Example of:</p>
+<div id="overlay-trope"> / </div>
+</div>
+<div class="media-sources-overlay example-overlay">
+<p>Media sources:</p>
+<div id="overlay-media"> / </div>
+</div>
+</div>
+<p class="_pmvv-vidbox-stats text-right font-s" style="padding-top:8px; border-top: solid 1px rgba(255,255,255,0.2)">
+
+<a href="#video-feedback" class="float-right" data-modal-target="login">Report</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<script type='text/javascript'>
+        window.special_ops =  {
+            member : 'no',
+            isolated : 0,
+            tags : ['forum']
+        };
+    </script>
+<script type="text/javascript">
+
+        var cleanCreativeEnabled = "";
+        var donation = "";
+        var live_ads = "1";
+        var img_domain = "https://static.tvtropes.org";
+        var snoozed = cookies.read('snoozedabm');
+        var snoozable = "";
+
+        if (adsRemovedWith) {
+            live_ads = 0;
+        }
+
+        var elem = document.createElement('script');
+        elem.async = true;
+
+        elem.src = '/design/assets/bundle.js?rev=af8ba6c84175c5d092329028e16c8941231c5eba';
+
+        elem.onload = function() {
+                                 }
+        document.getElementsByTagName('head')[0].appendChild(elem);
+
+    </script>
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-3821842-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<script type="text/javascript">
+      function send_analytics_event(user_type, donation){
+          // if(user_type == 'uncached' || user_type == 'cached'){
+          //   ga('send', 'event', 'caching', 'load', user_type, {'nonInteraction': 1});
+          //   return;
+          // }
+          var event_name = user_type;
+
+          if(donation == 'true'){
+              event_name += "_donation"
+          }else if(typeof(valid_user) == 'undefined'){
+              event_name += "_blocked"
+          }else if(valid_user == true){
+              event_name += "_unblocked";
+          }else{
+              event_name = "_unknown"
+          }
+          ga('send', 'event', 'ads', 'load', event_name, {'nonInteraction': 1});
+      }
+
+    
+    send_analytics_event("guest", "false");
+      </script>
+</body>
+</html>

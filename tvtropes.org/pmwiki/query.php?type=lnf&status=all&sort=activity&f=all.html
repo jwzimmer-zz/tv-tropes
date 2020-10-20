@@ -1,0 +1,1479 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Trope Finder - TV Tropes</title>
+<meta name="description" content="" />
+<link rel="shortcut icon" href="/img/icons/favicon.ico" type="image/x-icon" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@tvtropes" />
+<meta name="twitter:owner" content="@tvtropes" />
+<meta name="twitter:title" content="Trope Finder - TV Tropes" />
+<meta name="twitter:description" content="" />
+<meta name="twitter:image:src" content="https://static.tvtropes.org/logo_blue_small.png" />
+<meta property="og:site_name" content="TV Tropes" />
+<meta property="og:locale" content="en_US" />
+<meta property="article:publisher" content="https://www.facebook.com/tvtropes" />
+<meta property="og:title" content="Trope Finder - TV Tropes" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://tvtropes.org/pmwiki/query.php?type=lnf&status=all&sort=activity&f=all" />
+<meta property="og:image" content="https://static.tvtropes.org/logo_blue_small.png" />
+<meta property="og:description" content="" />
+<link rel="apple-touch-icon" sizes="57x57" href="/img/icons/apple-icon-57x57.png" type="image/png">
+<link rel="apple-touch-icon" sizes="60x60" href="/img/icons/apple-icon-60x60.png" type="image/png">
+<link rel="apple-touch-icon" sizes="72x72" href="/img/icons/apple-icon-72x72.png" type="image/png">
+<link rel="apple-touch-icon" sizes="76x76" href="/img/icons/apple-icon-76x76.png" type="image/png">
+<link rel="apple-touch-icon" sizes="114x114" href="/img/icons/apple-icon-114x114.png" type="image/png">
+<link rel="apple-touch-icon" sizes="120x120" href="/img/icons/apple-icon-120x120.png" type="image/png">
+<link rel="apple-touch-icon" sizes="144x144" href="/img/icons/apple-icon-144x144.png" type="image/png">
+<link rel="apple-touch-icon" sizes="152x152" href="/img/icons/apple-icon-152x152.png" type="image/png">
+<link rel="apple-touch-icon" sizes="180x180" href="/img/icons/apple-icon-180x180.png" type="image/png">
+<link rel="icon" sizes="16x16" href="/img/icons/favicon-16x16.png" type="image/png">
+<link rel="icon" sizes="32x32" href="/img/icons/favicon-32x32.png" type="image/png">
+<link rel="icon" sizes="96x96" href="/img/icons/favicon-96x96.png" type="image/png">
+<link rel="icon" sizes="192x192" href="/img/icons/favicon-192x192.png" type="image/png">
+<meta id="viewport" name="viewport" content="width=device-width, initial-scale=1">
+<script>
+                var propertag = {};
+                propertag.cmd = [];
+            </script>
+<link rel="stylesheet" href="/design/assets/bundle.css?rev=af8ba6c84175c5d092329028e16c8941231c5eba" />
+<script>
+                function object(objectId) {
+                    if (document.getElementById && document.getElementById(objectId)) {
+                        return document.getElementById(objectId);
+                    } else if (document.all && document.all(objectId)) {
+                        return document.all(objectId);
+                    } else if (document.layers && document.layers[objectId]) {
+                        return document.layers[objectId];
+                    } else {
+                        return false;
+                    }
+                }
+
+                // JAVASCRIPT COOKIES CODE: for getting and setting user viewing preferences
+                var cookies = {
+                    create: function (name, value, days2expire, path) {
+                        var date = new Date();
+                        date.setTime(date.getTime() + (days2expire * 24 * 60 * 60 * 1000));
+                        var expires = date.toUTCString();
+                        document.cookie = name + '=' + value + ';' + 'expires=' + expires + ';' + 'path=' + path + ';';
+                    },
+                    read: function (name) {
+                        var cookie_value = "",
+                            current_cookie = "",
+                            name_expr = name + "=",
+                            all_cookies = document.cookie.split(';'),
+                            n = all_cookies.length;
+
+                        for (var i = 0; i < n; i++) {
+                            current_cookie = all_cookies[i].trim();
+                            if (current_cookie.indexOf(name_expr) === 0) {
+                                cookie_value = current_cookie.substring(name_expr.length, current_cookie.length);
+                                break;
+                            }
+                        }
+                        return cookie_value;
+                    },
+                    update: function (name, val) {
+                        this.create(name, val, 300, "/");
+                    },
+                    remove: function (name) {
+                        document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
+                    }
+                };
+
+                function updateUserPrefs() {
+                    //GENERAL: detect and set browser, if not cookied (will be treated like a user-preference and added to the #user-pref element)
+                    if( !cookies.read('user-browser') ){
+                        var broswer = '';
+
+                        if(navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPod/i) ){
+                            browser = 'iOS';
+                        } else if (/Opera[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'opera';
+                        } else if (/MSIE (\d+\.\d+);/.test(navigator.userAgent)) {
+                            browser = 'MSIE';
+                        } else if (/Navigator[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'netscape';
+                        } else if (/Chrome[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'chrome';
+                        } else if (/Safari[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'safari';
+                            /Version[\/\s](\d+\.\d+)/.test(navigator.userAgent);
+                            browserVersion = new Number(RegExp.$1);
+                        } else if (/Firefox[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'firefox';
+                        } else {
+                            browser = 'internet_explorer';
+                        }
+                        cookies.create('user-browser',browser,1,'/');
+                        document.getElementById('user-prefs').classList.add('browser-' + browser);
+                    } else {
+                        document.getElementById('user-prefs').classList.add('browser-' + cookies.read('user-browser'));
+                    }
+
+                    //update user preference settings
+                    if (cookies.read('wide-load') !== '') document.getElementById('user-prefs').classList.add('wide-load');
+                    if (cookies.read('night-vision') !== '') document.getElementById('user-prefs').classList.add('night-vision');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('user-prefs').classList.add('sticky-header');
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('user-prefs').classList.add('show-spoilers');
+                    if (cookies.read('folders-open') !== '') document.getElementById('user-prefs').classList.add('folders-open');
+                    if (cookies.read('lefthand-sidebar') !== '') document.getElementById('user-prefs').classList.add('lefthand-sidebar');
+                    if (cookies.read('highlight-links') !== '') document.getElementById('user-prefs').classList.add('highlight-links');
+                    if (cookies.read('forum-gingerbread') !== '') document.getElementById('user-prefs').classList.add('forum-gingerbread');
+                    if (cookies.read('shared-avatars') !== '') document.getElementById('user-prefs').classList.add('shared-avatars');
+                    if (cookies.read('new-search') !== '') document.getElementById('user-prefs').classList.add('new-search');
+                    if (cookies.read('stop-auto-play-video') !== '') document.getElementById('user-prefs').classList.add('stop-auto-play-video');
+
+                    //desktop view on mobile
+                    if (cookies.read('desktop-on-mobile') !== ''){
+                        document.getElementById('user-prefs').classList.add('desktop-on-mobile');
+
+                        var viewport = document.querySelector("meta[name=viewport]");
+                        viewport.setAttribute('content', 'width=1000');
+                    }
+
+                }
+
+                function updateDesktopPrefs() {
+                    if (cookies.read('wide-load') !== '') document.getElementById('sidebar-toggle-wideload').classList.add('active');
+                    if (cookies.read('night-vision') !== '') document.getElementById('sidebar-toggle-nightvision').classList.add('active');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('sidebar-toggle-stickyheader').classList.add('active');
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('sidebar-toggle-showspoilers').classList.add('active');
+
+                }
+
+                function updateMobilePrefs() {
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('mobile-toggle-showspoilers').classList.add('active');
+                    if (cookies.read('night-vision') !== '') document.getElementById('mobile-toggle-nightvision').classList.add('active');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('mobile-toggle-stickyheader').classList.add('active');
+                    if (cookies.read('highlight-links') !== '') document.getElementById('mobile-toggle-highlightlinks').classList.add('active');
+
+                }
+
+
+                if (document.cookie.indexOf("scroll0=") < 0) {
+                    // do nothing
+                } else {
+                    console.log('ads removed by scroll.com');
+                    var adsRemovedWith = 'scroll';
+                    var style = document.createElement('style');
+                    style.innerHTML = '#header-ad, .proper-ad-unit, .square_ad, .sb-ad-unit { display: none !important; } ';
+                    document.head.appendChild(style);
+                }
+            </script>
+<script type="text/javascript">
+
+                var tvtropes_config = {
+                    astri_stream_enabled : "",
+                    is_logged_in         : "",
+                    handle               : "",
+                    get_astri_stream     : "",
+										revnum               : "af8ba6c84175c5d092329028e16c8941231c5eba",
+										img_domain           : "https://static.tvtropes.org",
+										adblock              : "1",
+										adblock_url          : "propermessage.io",
+										pause_editing        : "0",
+										pause_editing_msg    : "",
+										pause_site_changes   : ""
+                };
+            </script>
+</head>
+<body class="">
+<i id="user-prefs"></i>
+<script>updateUserPrefs();</script>
+<div id="fb-root"></div>
+<div id="modal-box"></div>
+<header id="main-header-bar" class="headroom-element ">
+<div id="main-header-bar-inner">
+<span id="header-spacer-left" class="header-spacer"></span>
+<a href="#mobile-menu" id="main-mobile-toggle" class="mobile-menu-toggle-button tablet-on"><span></span><span></span><span></span></a>
+<a href="/" id="main-header-logoButton" class="no-dev"></a>
+<span id="header-spacer-right" class="header-spacer"></span>
+<nav id="main-header-nav" class="tablet-off">
+<a href="/pmwiki/pmwiki.php/Main/Tropes">Tropes</a>
+<a href="/pmwiki/pmwiki.php/Main/Media">Media</a>
+<a href="/pmwiki/browse.php" class="nav-browse">Browse</a>
+<a href="/pmwiki/index_report.php">Indexes</a>
+<a href="/pmwiki/topics.php">Forums</a>
+<a href="/pmwiki/recent_videos.php" class="nav-browse">Videos</a>
+</nav>
+<div id="main-header-bar-right">
+<div id="signup-login-box" class="font-xs mobile-off">
+<a href="/pmwiki/login.php" class="hover-underline bold" data-modal-target="signup">Join</a>
+<a href="/pmwiki/login.php" class="hover-underline bold" data-modal-target="login">Login</a>
+</div>
+<div id="signup-login-mobileToggle" class="mobile-on inline">
+<a href="/pmwiki/login.php" data-modal-target="login"><i class="fa fa-user"></i></a>
+</div>
+<div id="search-box">
+<form class="search" action="/pmwiki/search_result.php">
+<input type="text" name="q" class="search-box" placeholder="Search" value="" required>
+<input type="submit" class="submit-button" value="&#xf002;" />
+<input type="hidden" name="search_type" value="article">
+<input type="hidden" name="page_type" value="all">
+<input type="hidden" name="cx" value="partner-pub-6610802604051523:amzitfn8e7v">
+<input type="hidden" name="cof" value="FORID:10">
+<input type="hidden" name="ie" value="ISO-8859-1">
+<input name="siteurl" type="hidden" value="">
+<input name="ref" type="hidden" value="">
+<input name="ss" type="hidden" value="">
+</form>
+<a href="#close-search" class="mobile-on mobile-search-toggle close-x"><i class="fa fa-close"></i></a>
+</div>
+<div id="random-box">
+<a href="/pmwiki/pmwiki.php/Main/AlcoholHic" class="button-random-trope" rel="nofollow" onclick="ga('send', 'event', 'button', 'click', 'random trope');"></a>
+<a href="/pmwiki/pmwiki.php/LetsPlay/Northernlion" class="button-random-media" rel="nofollow" onclick="ga('send', 'event', 'button', 'click', 'random media');"></a>
+</div>
+</div>
+</div>
+<div id="mobile-menu" class="tablet-on"><div class="mobile-menu-options">
+<div class="nav-wrapper">
+<a href="/pmwiki/pmwiki.php/Main/Tropes" class="xl">Tropes</a>
+<a href="/pmwiki/pmwiki.php/Main/Media" class="xl">Media</a>
+<a href="/pmwiki/browse.php" class="xl">Browse</a>
+<a href="/pmwiki/index_report.php" class="xl">Indexes</a>
+<a href="/pmwiki/topics.php" class="xl">Forums</a>
+<a href="/pmwiki/recent_videos.php" class="xl">Videos</a>
+<a href="/pmwiki/query.php?type=att">Ask The Tropers</a>
+<a href="/pmwiki/query.php?type=tf">Trope Finder</a>
+<a href="/pmwiki/query.php?type=ykts">You Know That Show...</a>
+<a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a>
+<a href="#tools" data-click-toggle="active">Tools <i class="fa fa-chevron-down"></i></a>
+<div class="tools-dropdown mobile-dropdown-linkList">
+<a href="/pmwiki/cutlist.php">Cut List</a>
+<a href="/pmwiki/changes.php">New Edits</a>
+<a href="/pmwiki/recent_edit_reasons.php">Edit Reasons</a>
+<a href="/pmwiki/launches.php">Launches</a>
+<a href="/pmwiki/img_list.php">Images List</a>
+<a href="/pmwiki/crown_activity.php">Crowner Activity</a>
+<a href="/pmwiki/no_types.php">Un-typed Pages</a>
+<a href="/pmwiki/page_type_audit.php">Recent Page Type Changes</a>
+</div>
+<a href="#hq" data-click-toggle="active">Tropes HQ <i class="fa fa-chevron-down"></i></a>
+<div class="tools-dropdown mobile-dropdown-linkList">
+<a href="/pmwiki/about.php">About Us</a>
+<a href="/pmwiki/contact.php">Contact Us</a>
+<a href="mailto:advertising@proper.io">Advertise</a>
+<a href="/pmwiki/dmca.php">DMCA Notice</a>
+<a href="/pmwiki/privacypolicy.php">Privacy Policy</a>
+</div>
+<a href="/pmwiki/ad-free-subscribe.php">Go Ad-Free</a>
+<div class="toggle-switches">
+<ul class="mobile-menu display-toggles">
+<li>Show Spoilers <div id="mobile-toggle-showspoilers" class="display-toggle show-spoilers"></div></li>
+<li>Night Vision <div id="mobile-toggle-nightvision" class="display-toggle night-vision"></div></li>
+<li>Sticky Header <div id="mobile-toggle-stickyheader" class="display-toggle sticky-header"></div></li>
+<li>Highlight Links <div id="mobile-toggle-highlightlinks" class="display-toggle highlight-links"></div></li>
+</ul>
+<script>updateMobilePrefs();</script>
+</div>
+</div>
+</div>
+</div>
+</header>
+<div id="homepage-introBox-mobile" class="mobile-on">
+<a href="/"><img src="/images/logo-white-big.png" class="logo-small" /></a>
+<form class="search" action="/pmwiki/search_result.php" style="margin:10px -5px -6px -5px;">
+<input type="text" name="q" class="search-box" placeholder="Search" value="" required>
+<input type="submit" class="submit-button" value="&#xf002;" />
+<input type="hidden" name="search_type" value="article">
+<input type="hidden" name="page_type" value="all">
+<input type="hidden" name="cx" value="partner-pub-6610802604051523:amzitfn8e7v">
+<input type="hidden" name="cof" value="FORID:10">
+<input type="hidden" name="ie" value="ISO-8859-1">
+<input name="siteurl" type="hidden" value="">
+<input name="ref" type="hidden" value="">
+<input name="ss" type="hidden" value="">
+</form>
+</div>
+<div id="header-ad-wrapper" class="ad">
+<div id="header-ad">
+<div class="ad-size-970x90 atf_banner">
+<div class='proper-ad-unit '>
+<div id='proper-ad-tvtropes_ad_1'> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_1'); });</script> </div>
+</div> </div>
+</div>
+</div>
+<div id="main-container">
+<div id="action-bar-top" class="action-bar mobile-off">
+<div class="action-bar-right">
+<p>Follow TV Tropes</p>
+<a href="https://www.facebook.com/TVTropes" class="button-fb">
+<i class="fa fa-facebook"></i></a>
+<a href="https://www.twitter.com/TVTropes" class="button-tw">
+<i class="fa fa-twitter"></i></a>
+<a href="https://www.reddit.com/r/TVTropes" class="button-re">
+<i class="fa fa-reddit-alien"></i></a>
+</div>
+<nav class="actions-wrapper" itemscope itemtype="http://schema.org/SiteNavigationElement">
+<ul id="top_main_list" class="page-actions">
+<li class="link-att"><a href="/pmwiki/query.php?type=att">
+<i class="io icon-question"></i> Ask Tropers</a></li><li class="link-lnf"><a href="/pmwiki/query.php?type=tf">
+<i class="io icon-bin2"></i> Trope Finder</a></li><li class="link-ykts"><a href="/pmwiki/query.php?type=ykts">
+<i class="io icon-tv"></i> YKTS</a></li><li class="link-wishlist"><a href="/pmwiki/query.php?type=wl">
+<i class="io icon-magic-wand"></i> Wishlist</a></li><li class="link-bugs"><a href="/pmwiki/query.php?type=bug">
+<i class="io icon-bug"></i> Bugs</a></li> </ul>
+<ul id="top_more_list" class="more_menu hidden_more_list">
+<li class="link-bugs more_list_item"><a href="/pmwiki/query.php?type=bug">
+<i class="io icon-bug"></i> Bugs</a></li> </ul>
+</nav>
+<div class="WikiWordModalStub"></div>
+<div class="ImgUploadModalStub" data-page-type="Query"></div>
+<div class="login-alert" style="display: none;">
+You need to <a href="/pmwiki/login.php" style="color:#21A0E8">login</a> to do this. <a href="/pmwiki/login.php?tab=register_account" style="color:#21A0E8">Get Known</a> if you don't have an account
+</div>
+</div>
+<div id="main-content" class="page-Query class-query-page">
+<div id="main-entry" class="with-sidebar">
+
+
+<input type="hidden" id="groupname-hidden" value="Main" />
+<input type="hidden" id="title-hidden" value="TropeFinder" />
+<h1 itemprop="headline" class="entry-title">Trope Finder</h1>
+<a href="#mobile-actions-toggle" id="mobile-actionbar-toggle" class="mobile-actionbar-toggle mobile-on" data-click-toggle="active">
+<p class="tiny-off">Go To</p><span></span><span></span><span></span><i class="fa fa-pencil"></i></a>
+<nav id="mobile-actions-bar" class="mobile-actions-wrapper mobile-on"></nav>
+<div id="main-article" class="article-content">
+<p>The TVTropes Trope Finder is where you can come to ask questions like "Do we have this one?" and "What's the trope about...?" Trying to rediscover a long lost show or other medium but need a little help? Head to <a href="/pmwiki/query.php?type=ykts">You Know That Show</a> and try your luck there. Want to propose a new trope? You should be over at <a href="/pmwiki/yk_activity.php">You Know, That Thing Where.</a></p>
+<div class="two-column gutter-top">
+<div class="column-box left">
+<a href="#" class="button blue full-width text-center create-post-btn" data-modal-target="login">
+Find a Trope </a>
+</div>
+<div class="column-box right">
+<form class="search-threads" method="POST" action="query.php">
+<input type="hidden" name="qtype" value="lnf" />
+<input type="hidden" name="sort" value="activity" />
+<input type="hidden" name="status" value="all" />
+<input type="hidden" name="f" value="all" />
+<input type="text" class="form-control" id="thread-search-query" name="sparam" placeholder="Search Questions" value="">
+<button type="submit" class="search-submit"><i class="fa fa-search"></i></button>
+</form>
+</div>
+</div>
+<div id="create-post-form" class="two-column section-block hidden-until-active gutter-top">
+<p class="separator font-s text-light">Find a Trope:</p>
+<form class="no-style" method="post" action="/ajax/query-handler.php">
+<div class="column-box left">
+<input type="text" class="form-control" id="discussion-title" name="title" placeholder="Title">
+</div>
+<div class="column-box right">
+<select name="category" class="form-control">
+<option value="">Select Medium</option>
+<option value="Anime">Anime</option>
+<option value="Film">Film</option>
+<option value="Literature">Literature</option>
+<option value="Live Action TV">Live Action TV</option>
+<option value="Music">Music</option>
+<option value="Print Comic">Print Comic</option>
+<option value="Radio">Radio</option>
+<option value="Videogame">Videogame</option>
+<option value="Web Original">Web Original</option>
+<option value="Webcomic">Webcomic</option>
+<option value="Western Animation">Western Animation</option>
+</select>
+</div>
+<div class="column-box">
+<p class="font-s text-light">Describe the Trope:</p>
+<textarea class="form-control auto-height" id="discussion-text" name="remark" style="margin-top:3px;"></textarea>
+</div>
+<div class="column-box text-center">
+<button type="submit" class="btn-submit blue">Submit</button>
+</div>
+<input type="hidden" name="action" value="postNewQuery">
+<input type="hidden" name="qtype" value="lnf">
+</form>
+</div>
+<hr class="solid gutter-top" />
+<div class="list-controls two-column gutter-top text-right">
+<span class="inline-block position-relative">
+<a href="#" class=" font-s button skinny" data-hover-menu-target="filter-menu">Filter By Medium <i class="fa fa-angle-down"></i></a>
+<div id="filter-menu" class="hover-menu text-left right" data-arrow="right" style="margin-top:4px;">
+<a href="/pmwiki/query.php?type=lnf&status=all&sort=activity&f=all">All</a>
+<a href="/pmwiki/query.php?type=lnf&status=all&sort=activity&f=Anime">Anime</a>
+<a href="/pmwiki/query.php?type=lnf&status=all&sort=activity&f=Film">Film</a>
+<a href="/pmwiki/query.php?type=lnf&status=all&sort=activity&f=Literature">Literature</a>
+<a href="/pmwiki/query.php?type=lnf&status=all&sort=activity&f=Live Action TV">Live Action TV</a>
+<a href="/pmwiki/query.php?type=lnf&status=all&sort=activity&f=Music">Music</a>
+<a href="/pmwiki/query.php?type=lnf&status=all&sort=activity&f=Print Comic">Print Comic</a>
+<a href="/pmwiki/query.php?type=lnf&status=all&sort=activity&f=Radio">Radio</a>
+<a href="/pmwiki/query.php?type=lnf&status=all&sort=activity&f=Videogame">Videogame</a>
+<a href="/pmwiki/query.php?type=lnf&status=all&sort=activity&f=Web Original">Web Original</a>
+<a href="/pmwiki/query.php?type=lnf&status=all&sort=activity&f=Webcomic">Webcomic</a>
+<a href="/pmwiki/query.php?type=lnf&status=all&sort=activity&f=Western Animation">Western Animation</a>
+</div>
+</span>
+<span class="inline-block gutter-left position-relative">
+<a href="#" class=" font-s button skinny" data-hover-menu-target="sort-menu">
+By Recent Activity <i class="fa fa-angle-down"></i></a>
+<div id="sort-menu" class="hover-menu text-left right" data-arrow="right" style="margin-top:4px;">
+<a href="/pmwiki/query.php?type=lnf&status=all&sort=date_asc&f=all"><i class="fa fa-sort-numeric-asc"></i> Date Ascending</a>
+<a href="/pmwiki/query.php?type=lnf&status=all&sort=date_desc&f=all"><i class="fa fa-sort-numeric-desc"></i> Date Descending</a>
+<a href="/pmwiki/query.php?type=lnf&status=all&sort=pop&f=all"><i class="fa fa-sort-amount-desc"></i> Popularity</a>
+<a href="/pmwiki/query.php?type=lnf&status=all&sort=activity&f=all"><i class="fa fa-commenting"></i> Recent Activity</a>
+</div>
+</span>
+</div>
+<a name="93369"></a>
+<div id="comment-93369" class="comment-box  has-footer  ">
+<div class="comment-head">
+<span class="troper-handle-wrapper ">
+<a href="pmwiki.php/Tropers/JC96" class="troper-name">JC96</a>
+<span class="troper-avatar-tagline mobile-on"></span> </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/JC96">
+<img src="https://static.tvtropes.org/user-lamp-160x160.png" />
+</a>
+</span>
+</div>
+<div class="troper-comment has-title">
+<a href="#comment-93369" class="troper-post-time">19th Oct, 2020 02:17:03 PM</a>
+<div class="comment">
+<h2 class='comment-title'><a href='/pmwiki/query.php?parent_id=93369&type=lnf' class='title bold'>Disillusioned Patriot </a></h2>
+<p>Bob was known for being one of the uber-patriotic people who blindly showcases an "America is the greatest country in the world" mentality until later on, he's more disillusioned by how America clearly hasn't aspired to what he was taught that he ends up more open-minded and rightfully critical of America.
+</p>
+<div class='footer'><div class='button-group skinny font-s float-right'><a href="#upvote" data-modal-target="login" data-query-id="93369"><i class="fa fa-thumbs-up"></i> <span class="count">0</span></a><a href='/pmwiki/query.php?parent_id=93369&type=lnf'>2 replies <i class='fa fa-chevron-right font-xs'></i></a></div></div>
+</div>
+</div>
+</div>
+</div>
+<a name="93373"></a>
+<div id="comment-93373" class="comment-box  has-footer  ">
+<div class="comment-head">
+<span class="troper-handle-wrapper ">
+<a href="pmwiki.php/Tropers/Moondragon8" class="troper-name">Moondragon8</a>
+<span class="troper-avatar-tagline mobile-on"></span> </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/Moondragon8">
+<img src="https://static.tvtropes.org/user-lamp-160x160.png" />
+</a>
+</span>
+</div>
+<div class="troper-comment has-title">
+<a href="#comment-93373" class="troper-post-time">19th Oct, 2020 04:34:17 PM</a>
+<div class="comment">
+<h2 class='comment-title'><a href='/pmwiki/query.php?parent_id=93373&type=lnf' class='title bold'>“WHEEEEEEE”/“AAAAAAAA”</a></h2>
+<p>Usually found in Western Animation, to my knowledge. Two characters are experiencing some kind of event, probably falling or sliding somewhere unexpectedly, and one character is having the time of their life while the other is terrified.
+</p>
+<div class='footer'><div class='button-group skinny font-s float-right'><a href="#upvote" data-modal-target="login" data-query-id="93373"><i class="fa fa-thumbs-up"></i> <span class="count">0</span></a><a href='/pmwiki/query.php?parent_id=93373&type=lnf'>0 replies <i class='fa fa-chevron-right font-xs'></i></a></div></div>
+</div>
+</div>
+</div>
+</div>
+<a name="93372"></a>
+<div id="comment-93372" class="comment-box  has-footer  ">
+<div class="comment-head">
+<span class="troper-handle-wrapper ">
+<a href="pmwiki.php/Tropers/Bootlebat" class="troper-name">Bootlebat</a>
+<span class="troper-avatar-tagline mobile-on"></span> </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/Bootlebat">
+<img src="https://static.tvtropes.org/user-lamp-160x160.png" />
+</a>
+</span>
+</div>
+<div class="troper-comment has-title">
+<a href="#comment-93372" class="troper-post-time">19th Oct, 2020 04:25:04 PM</a>
+<div class="comment">
+<h2 class='comment-title'><a href='/pmwiki/query.php?parent_id=93372&type=lnf' class='title bold'>Opposite of moral event horizon</a></h2>
+<p>Is there an opposite of <a class='twikilink' href='/pmwiki/pmwiki.php/Main/MoralEventHorizon' title='/pmwiki/pmwiki.php/Main/MoralEventHorizon'>Moral Event Horizon</a> i.e an act so good it automatically redeems the person? Example: in <em><a class='twikilink' href='/pmwiki/pmwiki.php/Film/LittleNicky' title='/pmwiki/pmwiki.php/Film/LittleNicky'>Little Nicky</a></em> Nicky preforms a <a class='twikilink' href='/pmwiki/pmwiki.php/Main/HeroicSacrifice' title='/pmwiki/pmwiki.php/Main/HeroicSacrifice'>Heroic Sacrifice</a> and ends up in Heaven despite being the son of Satan himself. When he asks how this is possible, the angels tell him self sacrifice means a person automatically goes to Heaven.
+</p>
+<div class='footer'><div class='button-group skinny font-s float-right'><a href="#upvote" data-modal-target="login" data-query-id="93372"><i class="fa fa-thumbs-up"></i> <span class="count">0</span></a><a href='/pmwiki/query.php?parent_id=93372&type=lnf'>0 replies <i class='fa fa-chevron-right font-xs'></i></a></div></div>
+</div>
+</div>
+</div>
+</div>
+<a name="93368"></a>
+<div id="comment-93368" class="comment-box  has-footer  ">
+<div class="comment-head">
+<span class="troper-handle-wrapper ">
+<a href="pmwiki.php/Tropers/JC96" class="troper-name">JC96</a>
+<span class="troper-avatar-tagline mobile-on"></span> </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/JC96">
+<img src="https://static.tvtropes.org/user-lamp-160x160.png" />
+</a>
+</span>
+</div>
+<div class="troper-comment has-title">
+<a href="#comment-93368" class="troper-post-time">19th Oct, 2020 02:11:43 PM</a>
+<div class="comment">
+<h2 class='comment-title'><a href='/pmwiki/query.php?parent_id=93368&type=lnf' class='title bold'>Blackmail Backfire</a></h2>
+<p>A villain was originally going to blackmail one of the characters over a matter that could potentially cause a headache but can't because it wouldn't stick due to the circumstances surrounding it.
+</p><p></p>
+<div class='footer'><div class='button-group skinny font-s float-right'><a href="#upvote" data-modal-target="login" data-query-id="93368"><i class="fa fa-thumbs-up"></i> <span class="count">0</span></a><a href='/pmwiki/query.php?parent_id=93368&type=lnf'>0 replies <i class='fa fa-chevron-right font-xs'></i></a></div></div>
+</div>
+</div>
+</div>
+</div>
+<a name="93348"></a>
+<div id="comment-93348" class="comment-box  has-footer  ">
+<div class="comment-head">
+<span class="troper-handle-wrapper ">
+<a href="pmwiki.php/Tropers/Adept" class="troper-name">Adept</a>
+<span class="troper-avatar-tagline mobile-on"></span> </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/Adept">
+<img src="https://static.tvtropes.org/pmwiki/pub/images/plated8649.jpg" />
+</a>
+</span>
+</div>
+<div class="troper-comment has-title">
+<a href="#comment-93348" class="troper-post-time">19th Oct, 2020 02:37:16 AM</a>
+<div class="comment">
+<h2 class='comment-title'><a href='/pmwiki/query.php?parent_id=93348&type=lnf' class='title bold'>Sugar is brain food</a></h2>
+<p>Do we have a trope where a character (or the author) claims that they need sugar to help them think?
+</p>
+<div class='footer'><div class='button-group skinny font-s float-right'><a href="#upvote" data-modal-target="login" data-query-id="93348"><i class="fa fa-thumbs-up"></i> <span class="count">0</span></a><a href='/pmwiki/query.php?parent_id=93348&type=lnf'>2 replies <i class='fa fa-chevron-right font-xs'></i></a></div></div>
+</div>
+</div>
+</div>
+</div>
+<a name="93350"></a>
+<div id="comment-93350" class="comment-box  has-footer  ">
+<div class="comment-head">
+<span class="troper-handle-wrapper ">
+<a href="pmwiki.php/Tropers/BlackFaithStar" class="troper-name">BlackFaithStar</a>
+<span class="troper-avatar-tagline mobile-on"></span> </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/BlackFaithStar">
+<img src="https://static.tvtropes.org/pmwiki/pub/images/20200813_222131.jpg" />
+</a>
+</span>
+</div>
+<div class="troper-comment has-title">
+<a href="#comment-93350" class="troper-post-time">19th Oct, 2020 05:06:18 AM</a>
+<div class="comment">
+<h2 class='comment-title'><a href='/pmwiki/query.php?parent_id=93350&type=lnf' class='title bold'>Stumbled into the plot, while coincidentally having ties to the plot already</a></h2>
+<p>May or may not be obvious, but I'd really appreciate the help.
+</p><p>I've started making contributions to pages for media local to me, and a trope that I see fit to add to one of them hasn't been added yet. However, there's another aspect in this show's use of this trope that makes me wonder if there's others that would also fall into it or if a more precise one I'm looking for exists.
+I suppose I want to <a class='twikilink' href='/pmwiki/pmwiki.php/Administrivia/CrossWicking' title='/pmwiki/pmwiki.php/Administrivia/CrossWicking'>share the word around for this page</a> to support it since that's how I understand about how it works, but I'll also be giving spoilers too so be wary of that.
+</p><p>The show is <a class='twikilink' href='/pmwiki/pmwiki.php/Animation/EjenAli' title='/pmwiki/pmwiki.php/Animation/EjenAli'>Ejen Ali</a> and I won't be naming names, just the important details.
+</p><p>The protagonist <a class='twikilink' href='/pmwiki/pmwiki.php/Main/StumbledIntoThePlot' title='/pmwiki/pmwiki.php/Main/StumbledIntoThePlot'>Stumbled Into the Plot</a> by accidentally receiving a gadget that was to be sent to another evil operative with a food stall vendor being the middle person. The password told to the vendor happened to be the exact words of what the protagonist wanted to buy from the vendor for lunch, since the password was a food product. It wasn't until his next customer that he realised he had given the gadget to the wrong 'operative'.
+</p><p>After the course of the pilot's events, the agency the gadget formerly belonged to recruited him since the gadget was now only functional to the protagonist and they figured he would be useful in missions with the gadget. <strong>Now here's where the big fat spoiler comes in</strong> <span class="spoiler" title="you can set spoilers visible by default on your profile">We later learn that the protagonist's <a class='twikilink' href='/pmwiki/pmwiki.php/Main/MissingMom' title='/pmwiki/pmwiki.php/Main/MissingMom'>deceased mother</a> was a secret agent of that agency and made the very gadget that happened to fall into her son's hands.</span>
+</p><p>So with that being said, he stumbled into the plot, but he was always meant to?
+</p>
+<span class="edited-by">Edited by BlackFaithStar</span>
+<div class='footer'><div class='button-group skinny font-s float-right'><a href="#upvote" data-modal-target="login" data-query-id="93350"><i class="fa fa-thumbs-up"></i> <span class="count">0</span></a><a href='/pmwiki/query.php?parent_id=93350&type=lnf'>3 replies <i class='fa fa-chevron-right font-xs'></i></a></div></div>
+</div>
+</div>
+</div>
+</div>
+<a name="93358"></a>
+<div id="comment-93358" class="comment-box  has-footer  ">
+<div class="comment-head">
+<span class="troper-handle-wrapper ">
+<a href="pmwiki.php/Tropers/hjk321" class="troper-name">hjk321</a>
+<span class="troper-avatar-tagline mobile-on"></span> </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/hjk321">
+<img src="https://static.tvtropes.org/pmwiki/pub/images/profileicon_w7ermev2w5n01.png" />
+</a>
+</span>
+</div>
+<div class="troper-comment has-title">
+<a href="#comment-93358" class="troper-post-time">19th Oct, 2020 09:21:38 AM</a>
+<div class="comment">
+<h2 class='comment-title'><a href='/pmwiki/query.php?parent_id=93358&type=lnf' class='title bold'>You did, sir.</a> <a href='/pmwiki/query.php?type=lnf&status=all&sort=activity&f=Film' class='bubble blue'>Film</a></h2>
+<p>This usually appears in any medium, but usually movies. It's essentially where the big boss of something (usually quite inept at his job) tries to use something or ask about current plans. When the machine doesn't work or the boss is informed about some weird thing that causes his plans to fail, he usually asks "What idiot came up with that idea?!" or "What moron designed this thing?!" to which the underling responds "You did, sir."
+</p>
+<div class='footer'><div class='button-group skinny font-s float-right'><a href="#upvote" data-modal-target="login" data-query-id="93358"><i class="fa fa-thumbs-up"></i> <span class="count">1</span></a><a href='/pmwiki/query.php?parent_id=93358&type=lnf'>2 replies <i class='fa fa-chevron-right font-xs'></i></a></div></div>
+</div>
+</div>
+</div>
+</div>
+<a name="93364"></a>
+<div id="comment-93364" class="comment-box  has-footer  ">
+<div class="comment-head">
+<span class="troper-handle-wrapper ">
+<a href="pmwiki.php/Tropers/Mac_R" class="troper-name">Mac_R</a>
+<span class="troper-avatar-tagline mobile-on"></span> </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/Mac_R">
+<img src="https://static.tvtropes.org/pmwiki/pub/images/g1168.png" />
+</a>
+</span>
+</div>
+<div class="troper-comment has-title">
+<a href="#comment-93364" class="troper-post-time">19th Oct, 2020 12:52:12 PM</a>
+<div class="comment">
+<h2 class='comment-title'><a href='/pmwiki/query.php?parent_id=93364&type=lnf' class='title bold'>Obvious joke nobody makes</a> <a href='/pmwiki/query.php?type=lnf&status=all&sort=activity&f=Western Animation' class='bubble blue'>Western Animation</a></h2>
+<p>Something lends itself to an obvious joke or pun (such as a character's name or appearance), but nobody makes the joke in-universe. That's either because the joke is too dirty for the show's rating, because the characters are too dumb, or because the creators want to <a class='twikilink' href='/pmwiki/pmwiki.php/Main/Troll' title='/pmwiki/pmwiki.php/Main/Troll'>Troll</a> the audience.
+</p><p>For example, in <em><a class='twikilink' href='/pmwiki/pmwiki.php/WesternAnimation/SouthPark' title='/pmwiki/pmwiki.php/WesternAnimation/SouthPark'>South Park</a></em>, nobody calls Ms. Choksondic "Chokes-on-Dick" despite the obvious wordplay. Cartman's nickname for her is "Ms. Makes-me-Sick".
+</p>
+<div class='footer'><div class='button-group skinny font-s float-right'><a href="#upvote" data-modal-target="login" data-query-id="93364"><i class="fa fa-thumbs-up"></i> <span class="count">0</span></a><a href='/pmwiki/query.php?parent_id=93364&type=lnf'>0 replies <i class='fa fa-chevron-right font-xs'></i></a></div></div>
+</div>
+</div>
+</div>
+</div>
+<a name="93279"></a>
+<div id="comment-93279" class="comment-box  has-footer  ">
+<div class="comment-head">
+<span class="troper-handle-wrapper ">
+<a href="pmwiki.php/Tropers/RoundRobin" class="troper-name">RoundRobin</a>
+<span class="troper-avatar-tagline mobile-on"></span> </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/RoundRobin">
+<img src="https://static.tvtropes.org/pmwiki/pub/images/round_robin.jpg" />
+</a>
+</span>
+</div>
+<div class="troper-comment has-title">
+<a href="#comment-93279" class="troper-post-time">17th Oct, 2020 02:22:42 PM</a>
+<div class="comment">
+<h2 class='comment-title'><a href='/pmwiki/query.php?parent_id=93279&type=lnf' class='title bold'>In universe Moral Event Horizon?</a></h2>
+<p>Just as the title says: can <a class='twikilink' href='/pmwiki/pmwiki.php/Main/MoralEventHorizon' title='/pmwiki/pmwiki.php/Main/MoralEventHorizon'>Moral Event Horizon</a> apply in-universe? Or it there another trope that's eluding me right now that describes a moment where one character thinks that another has done something unforgivable?
+</p><p>I understand that <a class='twikilink' href='/pmwiki/pmwiki.php/Main/ThisIsUnforgivable' title='/pmwiki/pmwiki.php/Main/ThisIsUnforgivable'>This Is Unforgivable!</a> is the obvious answer, but I don't think it's what I'm looking for. IIRC, TIU applies when the offended party pledges some form of punishment on the one who has crossed the moral event horizon.
+</p><p>What I'm looking for amounts to this: "Alice has done something I consider terrible, so I'm not going to stand by her any more".
+</p>
+<span class="edited-by">Edited by RoundRobin</span>
+<div class='footer'><div class='button-group skinny font-s float-right'><a href="#upvote" data-modal-target="login" data-query-id="93279"><i class="fa fa-thumbs-up"></i> <span class="count">0</span></a><a href='/pmwiki/query.php?parent_id=93279&type=lnf'>6 replies <i class='fa fa-chevron-right font-xs'></i></a></div></div>
+</div>
+</div>
+</div>
+</div>
+<a name="93363"></a>
+<div id="comment-93363" class="comment-box  has-footer  ">
+<div class="comment-head">
+<span class="troper-handle-wrapper ">
+<a href="pmwiki.php/Tropers/BrunoPowrozniksStepdad" class="troper-name">BrunoPowrozniksStepdad</a>
+<span class="troper-avatar-tagline mobile-on"></span> </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/BrunoPowrozniksStepdad">
+<img src="https://static.tvtropes.org/pmwiki/pub/images/bruno_powroznik.jpg" />
+</a>
+</span>
+</div>
+<div class="troper-comment has-title">
+<a href="#comment-93363" class="troper-post-time">19th Oct, 2020 12:14:50 PM</a>
+<div class="comment">
+<h2 class='comment-title'><a href='/pmwiki/query.php?parent_id=93363&type=lnf' class='title bold'>Overly gay character</a></h2>
+<p>When the writers go way too far with the gay character. He has a lisp, loves all feminine hobbies, dresses in pink dresses, sounds sassy and loves sex.
+</p>
+<span class="edited-by">Edited by BrunoPowrozniksStepdad</span>
+<div class='footer'><div class='button-group skinny font-s float-right'><a href="#upvote" data-modal-target="login" data-query-id="93363"><i class="fa fa-thumbs-up"></i> <span class="count">0</span></a><a href='/pmwiki/query.php?parent_id=93363&type=lnf'>1 reply <i class='fa fa-chevron-right font-xs'></i></a></div></div>
+</div>
+</div>
+</div>
+</div>
+<a name="93362"></a>
+<div id="comment-93362" class="comment-box  has-footer  ">
+<div class="comment-head">
+<span class="troper-handle-wrapper ">
+<a href="pmwiki.php/Tropers/Bootlebat" class="troper-name">Bootlebat</a>
+<span class="troper-avatar-tagline mobile-on"></span> </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/Bootlebat">
+<img src="https://static.tvtropes.org/user-lamp-160x160.png" />
+</a>
+</span>
+</div>
+<div class="troper-comment has-title">
+<a href="#comment-93362" class="troper-post-time">19th Oct, 2020 12:06:46 PM</a>
+<div class="comment">
+<h2 class='comment-title'><a href='/pmwiki/query.php?parent_id=93362&type=lnf' class='title bold'>phlebotinum is too expensive to harvest</a></h2>
+<p>Is there a trope for this? For example: in real life there are some areas that are known to contain oil, but have never been drilled since it would cost more to extract the oil than they would make from selling/using it, so it would basically just be throwing away money.
+</p>
+<div class='footer'><div class='button-group skinny font-s float-right'><a href="#upvote" data-modal-target="login" data-query-id="93362"><i class="fa fa-thumbs-up"></i> <span class="count">0</span></a><a href='/pmwiki/query.php?parent_id=93362&type=lnf'>0 replies <i class='fa fa-chevron-right font-xs'></i></a></div></div>
+</div>
+</div>
+</div>
+</div>
+<a name="93361"></a>
+<div id="comment-93361" class="comment-box  has-footer  ">
+<div class="comment-head">
+<span class="troper-handle-wrapper ">
+<a href="pmwiki.php/Tropers/Bootlebat" class="troper-name">Bootlebat</a>
+<span class="troper-avatar-tagline mobile-on"></span> </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/Bootlebat">
+<img src="https://static.tvtropes.org/user-lamp-160x160.png" />
+</a>
+</span>
+</div>
+<div class="troper-comment has-title">
+<a href="#comment-93361" class="troper-post-time">19th Oct, 2020 11:33:41 AM</a>
+<div class="comment">
+<h2 class='comment-title'><a href='/pmwiki/query.php?parent_id=93361&type=lnf' class='title bold'>Person is terrified of innocuous &quot;threats&quot;, but just shrugs off obvious dangers</a></h2>
+<p>What trope would this be? The only examples I can think of are real life (and rather controversial), so I'd prefer not to say them.
+</p>
+<div class='footer'><div class='button-group skinny font-s float-right'><a href="#upvote" data-modal-target="login" data-query-id="93361"><i class="fa fa-thumbs-up"></i> <span class="count">0</span></a><a href='/pmwiki/query.php?parent_id=93361&type=lnf'>1 reply <i class='fa fa-chevron-right font-xs'></i></a></div></div>
+</div>
+</div>
+</div>
+</div>
+<a name="93360"></a>
+<div id="comment-93360" class="comment-box  has-footer  ">
+<div class="comment-head">
+<span class="troper-handle-wrapper ">
+<a href="pmwiki.php/Tropers/Chabal2" class="troper-name">Chabal2</a>
+<span class="troper-avatar-tagline mobile-on"></span> </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/Chabal2">
+<img src="https://static.tvtropes.org/pmwiki/pub/images/boss_god2.jpg_100.jpeg" />
+</a>
+</span>
+</div>
+<div class="troper-comment has-title">
+<a href="#comment-93360" class="troper-post-time">19th Oct, 2020 10:59:56 AM</a>
+<div class="comment">
+<h2 class='comment-title'><a href='/pmwiki/query.php?parent_id=93360&type=lnf' class='title bold'>Meeting Mobile Goalposts</a></h2>
+<p>Bob keeps <a class='twikilink' href='/pmwiki/pmwiki.php/Main/MovingTheGoalposts' title='/pmwiki/pmwiki.php/Main/MovingTheGoalposts'>Moving the Goalposts</a> when asking something of Alice, but Alice keeps effortlessly complying with it no matter how obviously farfetched Bob's demands are. Usually culminates in Bob <a class='createlink' href='/pmwiki/pmwiki.php/Main/RageQuitting' title='/pmwiki/pmwiki.php/Main/RageQuitting'>Rage Quitting</a>.
+</p><p></p>
+<div class='footer'><div class='button-group skinny font-s float-right'><a href="#upvote" data-modal-target="login" data-query-id="93360"><i class="fa fa-thumbs-up"></i> <span class="count">0</span></a><a href='/pmwiki/query.php?parent_id=93360&type=lnf'>0 replies <i class='fa fa-chevron-right font-xs'></i></a></div></div>
+</div>
+</div>
+</div>
+</div>
+<a name="93355"></a>
+<div id="comment-93355" class="comment-box  has-footer  ">
+<div class="comment-head">
+<span class="troper-handle-wrapper ">
+<a href="pmwiki.php/Tropers/BabClayton" class="troper-name">BabClayton</a>
+<span class="troper-avatar-tagline mobile-on"></span> </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/BabClayton">
+<img src="https://static.tvtropes.org/user-lamp-160x160.png" />
+</a>
+</span>
+</div>
+<div class="troper-comment has-title">
+<a href="#comment-93355" class="troper-post-time">19th Oct, 2020 08:04:51 AM</a>
+<div class="comment">
+<h2 class='comment-title'><a href='/pmwiki/query.php?parent_id=93355&type=lnf' class='title bold'>Villain Team Branding</a></h2>
+<p>To check; Is there a Trope for when an Antagonist Team in Comics, Films or Shows, shall often plaster their logo on to their Uniforms or Vehicles?
+</p>
+<div class='footer'><div class='button-group skinny font-s float-right'><a href="#upvote" data-modal-target="login" data-query-id="93355"><i class="fa fa-thumbs-up"></i> <span class="count">0</span></a><a href='/pmwiki/query.php?parent_id=93355&type=lnf'>1 reply <i class='fa fa-chevron-right font-xs'></i></a></div></div>
+</div>
+</div>
+</div>
+</div>
+<a name="93357"></a>
+<div id="comment-93357" class="comment-box  has-footer  ">
+<div class="comment-head">
+<span class="troper-handle-wrapper ">
+<a href="pmwiki.php/Tropers/Lghn4life" class="troper-name">Lghn4life</a>
+<span class="troper-avatar-tagline mobile-on"></span> </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/Lghn4life">
+<img src="https://static.tvtropes.org/user-lamp-160x160.png" />
+</a>
+</span>
+</div>
+<div class="troper-comment has-title">
+<a href="#comment-93357" class="troper-post-time">19th Oct, 2020 08:22:47 AM</a>
+<div class="comment">
+<h2 class='comment-title'><a href='/pmwiki/query.php?parent_id=93357&type=lnf' class='title bold'>Origin of common Tv filler plot </a> <a href='/pmwiki/query.php?type=lnf&status=all&sort=activity&f=Live Action TV' class='bubble blue'>Live Action TV</a></h2>
+<p>Two or more of main cast split for plot reasons end up embedded with two opposing factions. Conflict ensues with the main cast joining in on the opposing sides only for it to be resolved non-violently when protagonists bring everyone together. I've seen it time and again in anime, live action TV and movies, as well as western animation. Anyone know came up with it?
+</p>
+<span class="edited-by">Edited by Lghn4life</span>
+<div class='footer'><div class='button-group skinny font-s float-right'><a href="#upvote" data-modal-target="login" data-query-id="93357"><i class="fa fa-thumbs-up"></i> <span class="count">0</span></a><a href='/pmwiki/query.php?parent_id=93357&type=lnf'>4 replies <i class='fa fa-chevron-right font-xs'></i></a></div></div>
+</div>
+</div>
+</div>
+</div>
+<a name="93344"></a>
+<div id="comment-93344" class="comment-box  has-footer  ">
+<div class="comment-head">
+<span class="troper-handle-wrapper ">
+<a href="pmwiki.php/Tropers/peroyomas" class="troper-name">peroyomas</a>
+<span class="troper-avatar-tagline mobile-on"></span> </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/peroyomas">
+<img src="https://static.tvtropes.org/pmwiki/pub/images/tab8989_png_100.png" />
+</a>
+</span>
+</div>
+<div class="troper-comment has-title">
+<a href="#comment-93344" class="troper-post-time">19th Oct, 2020 12:33:32 AM</a>
+<div class="comment">
+<h2 class='comment-title'><a href='/pmwiki/query.php?parent_id=93344&type=lnf' class='title bold'>Alien misunderstanding life on Earth</a></h2>
+<p>When an alien go to the Earth and misinterprets how life on Earth actually works (like thinking that cars are the actual "humans"). Can also happens with humans analyzing aliens.
+</p>
+<div class='footer'><div class='button-group skinny font-s float-right'><a href="#upvote" data-modal-target="login" data-query-id="93344"><i class="fa fa-thumbs-up"></i> <span class="count">0</span></a><a href='/pmwiki/query.php?parent_id=93344&type=lnf'>2 replies <i class='fa fa-chevron-right font-xs'></i></a></div></div>
+</div>
+</div>
+</div>
+</div>
+<a name="93359"></a>
+<div id="comment-93359" class="comment-box  has-footer  ">
+<div class="comment-head">
+<span class="troper-handle-wrapper ">
+<a href="pmwiki.php/Tropers/presh" class="troper-name">presh</a>
+<span class="troper-avatar-tagline mobile-on"></span> </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/presh">
+<img src="https://static.tvtropes.org/user-lamp-160x160.png" />
+</a>
+</span>
+</div>
+<div class="troper-comment has-title">
+<a href="#comment-93359" class="troper-post-time">19th Oct, 2020 09:26:49 AM</a>
+<div class="comment">
+<h2 class='comment-title'><a href='/pmwiki/query.php?parent_id=93359&type=lnf' class='title bold'>Getting sick from magic of another world?</a></h2>
+<p>I'd like to ask for help, please!
+</p><p>In a fanfic, a character from a wholly different universe is sharing currently the body of Byleth in FE:3H. Is it Wrong Context Magic if said character gets sick and falls unconscious whenever Byleth or Sothis use a Divine Pulse (turning back time)? It's implied that the character performed some kind of time travel, too, which is the reason he traversed universes in the first place.
+</p><p>That said, more information is lacking because the story is still ongoing.
+</p><p>Edit: I've found the trope! It's Temporal Sickness!
+</p>
+<span class="edited-by">Edited by presh</span>
+<div class='footer'><div class='button-group skinny font-s float-right'><a href="#upvote" data-modal-target="login" data-query-id="93359"><i class="fa fa-thumbs-up"></i> <span class="count">0</span></a><a href='/pmwiki/query.php?parent_id=93359&type=lnf'>0 replies <i class='fa fa-chevron-right font-xs'></i></a></div></div>
+</div>
+</div>
+</div>
+</div>
+<a name="93352"></a>
+<div id="comment-93352" class="comment-box  has-footer  ">
+<div class="comment-head">
+<span class="troper-handle-wrapper ">
+<a href="pmwiki.php/Tropers/Glutentog" class="troper-name">Glutentog</a>
+<span class="troper-avatar-tagline mobile-on"></span> </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/Glutentog">
+<img src="https://static.tvtropes.org/user-lamp-160x160.png" />
+</a>
+</span>
+</div>
+<div class="troper-comment has-title">
+<a href="#comment-93352" class="troper-post-time">19th Oct, 2020 06:24:22 AM</a>
+<div class="comment">
+<h2 class='comment-title'><a href='/pmwiki/query.php?parent_id=93352&type=lnf' class='title bold'>Does Toy Ship apply to teenagers?</a></h2>
+<p>It's made clear that it's a trope centered around children, but that begs the question of whether ships involving teenagers would count as well because it's not otherwise specified in the trope. Most of the trope description entails childhood innocence and naivety, which aren't traits we associate with teenage characters unless they're a <a class='twikilink' href='/pmwiki/pmwiki.php/Main/TheCutie' title='/pmwiki/pmwiki.php/Main/TheCutie'>Cutie</a> or <a class='twikilink' href='/pmwiki/pmwiki.php/Main/GenkiGirl' title='/pmwiki/pmwiki.php/Main/GenkiGirl'>Genki Girl</a>. Do teens who at least fall under the childlike and cutesy category like those two other tropes qualify as examples of Toy Ship?
+</p><p>Either way, if <a class='twikilink' href='/pmwiki/pmwiki.php/Main/ToyShip' title='/pmwiki/pmwiki.php/Main/ToyShip'>Toy Ship</a> doesn't apply to teenagers regardless, then I don't see how setting age 12 as the cut-off point is accurate, because it's literally only a year away from the teens and so many preteens are entering middle school and puberty and have left behind the naive sense of wonder and curiosity associated with early childhood in favor of sexual experimentation. I'm not saying that 12-year-olds can't be childlike, but then again, teenagers aren't exempt from childlike qualities either, and those in their early teens seem like a fair game for this trope because they're in the same early stage of puberty and junior high education that preteens are in and are far behind from post-pubescent late teens almost leaving high school. For further proof, it obviously wouldn't be a case of <a class='twikilink' href='/pmwiki/pmwiki.php/Main/PrecociousCrush' title='/pmwiki/pmwiki.php/Main/PrecociousCrush'>Precocious Crush</a> for a 12-year-old to have a crush on a 13-year-old because it's just one year and both of them are in middle school together.
+</p><p>...so, what age range is <a class='twikilink' href='/pmwiki/pmwiki.php/Main/ToyShip' title='/pmwiki/pmwiki.php/Main/ToyShip'>Toy Ship</a> cut-off at?
+</p>
+<span class="edited-by">Edited by Glutentog</span>
+<div class='footer'><div class='button-group skinny font-s float-right'><a href="#upvote" data-modal-target="login" data-query-id="93352"><i class="fa fa-thumbs-up"></i> <span class="count">0</span></a><a href='/pmwiki/query.php?parent_id=93352&type=lnf'>1 reply <i class='fa fa-chevron-right font-xs'></i></a></div></div>
+</div>
+</div>
+</div>
+</div>
+<a name="93353"></a>
+<div id="comment-93353" class="comment-box  has-footer  ">
+<div class="comment-head">
+<span class="troper-handle-wrapper ">
+<a href="pmwiki.php/Tropers/Hello83433" class="troper-name">Hello83433</a>
+<span class="troper-avatar-tagline mobile-on"></span> </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/Hello83433">
+<img src="https://static.tvtropes.org/user-lamp-160x160.png" />
+</a>
+</span>
+</div>
+<div class="troper-comment has-title">
+<a href="#comment-93353" class="troper-post-time">19th Oct, 2020 06:53:25 AM</a>
+<div class="comment">
+<h2 class='comment-title'><a href='/pmwiki/query.php?parent_id=93353&type=lnf' class='title bold'>Running Gag, but actually serious </a></h2>
+<p>Say you have something occurring repeatedly, either in universe or out, that almost seems like a running gag at this point, except it's not a joke. It's completely serious, maybe just a coincidence that this keeps happening, but X keeps happening under certain conditions, to the point the audience/fanbase can predict this exact thing happening later (possibly years if its an out of universe thing) down the line.
+</p><p></p>
+<span class="edited-by">Edited by Hello83433</span>
+<div class='footer'><div class='button-group skinny font-s float-right'><a href="#upvote" data-modal-target="login" data-query-id="93353"><i class="fa fa-thumbs-up"></i> <span class="count">0</span></a><a href='/pmwiki/query.php?parent_id=93353&type=lnf'>1 reply <i class='fa fa-chevron-right font-xs'></i></a></div></div>
+</div>
+</div>
+</div>
+</div>
+<a name="93331"></a>
+<div id="comment-93331" class="comment-box  has-footer  ">
+<div class="comment-head">
+<span class="troper-handle-wrapper ">
+<a href="pmwiki.php/Tropers/Kirby0189" class="troper-name">Kirby0189</a>
+<span class="troper-avatar-tagline mobile-on"></span> </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/Kirby0189">
+<img src="https://static.tvtropes.org/pmwiki/pub/images/kirby_play_nintendo.jpg" />
+</a>
+</span>
+</div>
+<div class="troper-comment has-title">
+<a href="#comment-93331" class="troper-post-time">18th Oct, 2020 03:30:58 PM</a>
+<div class="comment">
+<h2 class='comment-title'><a href='/pmwiki/query.php?parent_id=93331&type=lnf' class='title bold'>Unrealistic Gift Request</a></h2>
+<p>Someone, usually a child, makes a request for a gift that is absurd or flat-out impossible. Like <em><a class='twikilink' href='/pmwiki/pmwiki.php/Webcomic/LearningWithMangaFGO' title='/pmwiki/pmwiki.php/Webcomic/LearningWithMangaFGO'>Learning with Manga! FGO</a></em> has a chapter where Altera takes requests for Christmas gifts from several children and among the requests are land (from Eurasia) and a return to the womb (<a class='twikilink' href='/pmwiki/pmwiki.php/Main/SkewedPriorities' title='/pmwiki/pmwiki.php/Main/SkewedPriorities'>although Altera is most worried about a request for a Nintendo Switch</a>).
+</p>
+<div class='footer'><div class='button-group skinny font-s float-right'><a href="#upvote" data-modal-target="login" data-query-id="93331"><i class="fa fa-thumbs-up"></i> <span class="count">0</span></a><a href='/pmwiki/query.php?parent_id=93331&type=lnf'>2 replies <i class='fa fa-chevron-right font-xs'></i></a></div></div>
+</div>
+</div>
+</div>
+</div>
+<a name="93354"></a>
+<div id="comment-93354" class="comment-box  has-footer  ">
+<div class="comment-head">
+<span class="troper-handle-wrapper ">
+<a href="pmwiki.php/Tropers/DrNoPuma" class="troper-name">DrNoPuma</a>
+<span class="troper-avatar-tagline mobile-on"></span> </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/DrNoPuma">
+<img src="https://static.tvtropes.org/pmwiki/pub/images/klonoaisgoodboy.jpg" />
+</a>
+</span>
+</div>
+<div class="troper-comment has-title">
+<a href="#comment-93354" class="troper-post-time">19th Oct, 2020 07:50:25 AM</a>
+<div class="comment">
+<h2 class='comment-title'><a href='/pmwiki/query.php?parent_id=93354&type=lnf' class='title bold'>Fear Song</a></h2>
+<p>Someone sings about how they're afraid, or how they're stuck in a scary situation. Do we have this?
+</p>
+<div class='footer'><div class='button-group skinny font-s float-right'><a href="#upvote" data-modal-target="login" data-query-id="93354"><i class="fa fa-thumbs-up"></i> <span class="count">0</span></a><a href='/pmwiki/query.php?parent_id=93354&type=lnf'>0 replies <i class='fa fa-chevron-right font-xs'></i></a></div></div>
+</div>
+</div>
+</div>
+</div>
+<a name="93347"></a>
+<div id="comment-93347" class="comment-box  has-footer  ">
+<div class="comment-head">
+<span class="troper-handle-wrapper ">
+<a href="pmwiki.php/Tropers/Florestan" class="troper-name">Florestan</a>
+<span class="troper-avatar-tagline mobile-on"></span> </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/Florestan">
+<img src="https://static.tvtropes.org/pmwiki/pub/images/tes2_copy_8.png" />
+</a>
+</span>
+</div>
+<div class="troper-comment has-title">
+<a href="#comment-93347" class="troper-post-time">19th Oct, 2020 02:12:53 AM</a>
+<div class="comment">
+<h2 class='comment-title'><a href='/pmwiki/query.php?parent_id=93347&type=lnf' class='title bold'>Dropping a stone into a well that takes a long time to reach the bottom</a></h2>
+<p>A character stands next to a well/chasm/pit and drops an object, such a stone, to gauge the depth; it takes a <em>really</em> long time (like half a minute) before we hear the splash or the sound of the object hitting the bottom, which shows just how really deep that well/chasm/etc. goes. Even better, a character drops a stone and we <em>never</em> hear it hit the bottom.
+</p><p>Seems related to <a class='twikilink' href='/pmwiki/pmwiki.php/Main/PlummetPerspective' title='/pmwiki/pmwiki.php/Main/PlummetPerspective'>Plummet Perspective</a>, but somewhat different...
+</p>
+<div class='footer'><div class='button-group skinny font-s float-right'><a href="#upvote" data-modal-target="login" data-query-id="93347"><i class="fa fa-thumbs-up"></i> <span class="count">1</span></a><a href='/pmwiki/query.php?parent_id=93347&type=lnf'>0 replies <i class='fa fa-chevron-right font-xs'></i></a></div></div>
+</div>
+</div>
+</div>
+</div>
+<a name="93343"></a>
+<div id="comment-93343" class="comment-box  has-footer  ">
+<div class="comment-head">
+<span class="troper-handle-wrapper ">
+<a href="pmwiki.php/Tropers/peroyomas" class="troper-name">peroyomas</a>
+<span class="troper-avatar-tagline mobile-on"></span> </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/peroyomas">
+<img src="https://static.tvtropes.org/pmwiki/pub/images/tab8989_png_100.png" />
+</a>
+</span>
+</div>
+<div class="troper-comment has-title">
+<a href="#comment-93343" class="troper-post-time">19th Oct, 2020 12:26:23 AM</a>
+<div class="comment">
+<h2 class='comment-title'><a href='/pmwiki/query.php?parent_id=93343&type=lnf' class='title bold'>Like &quot;I Ate What&quot;, but without knowing what the character actually eats</a></h2>
+<p>Related to <a class='twikilink' href='/pmwiki/pmwiki.php/Main/IAteWhat' title='/pmwiki/pmwiki.php/Main/IAteWhat'>I Ate WHAT?!</a>, but not sure if fits: A character eats something, then another character reveals that what was he/she eating wasn't what he/she (or WE) thought it was, and said character goes Squick. The catch is that nor the character nor the audience know what he/she is actually eating. It can be implied (like if the character is eating a brown Ice Cream or a yellow juice and also is eating next to a bathroom), but there's still no actual confirmation. Is more around the idea that "if something isn't food, it can be ANYTHING else".
+</p>
+<div class='footer'><div class='button-group skinny font-s float-right'><a href="#upvote" data-modal-target="login" data-query-id="93343"><i class="fa fa-thumbs-up"></i> <span class="count">0</span></a><a href='/pmwiki/query.php?parent_id=93343&type=lnf'>0 replies <i class='fa fa-chevron-right font-xs'></i></a></div></div>
+</div>
+</div>
+</div>
+</div>
+<a name="93310"></a>
+<div id="comment-93310" class="comment-box  has-footer  ">
+<div class="comment-head">
+<span class="troper-handle-wrapper ">
+<a href="pmwiki.php/Tropers/Lermis" class="troper-name">Lermis</a>
+<span class="troper-avatar-tagline mobile-on"></span> </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/Lermis">
+<img src="https://static.tvtropes.org/user-lamp-160x160.png" />
+</a>
+</span>
+</div>
+<div class="troper-comment has-title">
+<a href="#comment-93310" class="troper-post-time">18th Oct, 2020 01:57:14 AM</a>
+<div class="comment">
+<h2 class='comment-title'><a href='/pmwiki/query.php?parent_id=93310&type=lnf' class='title bold'>Apocalypse How</a></h2>
+<p>OK, I have two questions relating to this trope.
+</p><p>1. I added an example in Class X, but then I discovered the same example in Class 6. It goes as following: Humanity and all life on Earth goes extinct because Earth suddenly stopped rotating and inertia did the rest. The cutscene goes out of its way to show how absolutely everything - for example, infrastructure - is affected by this, and Earth is shown covered in so much debris dust that it basically took over the atmosphere. Is this a Class 6 or Class X example?
+</p><p>2. A freak lab accident results in almost the entire surrounding population (save two people) vanish without a trace, and the place is transformed from relatively normal to a <a class='twikilink' href='/pmwiki/pmwiki.php/Main/BizarroUniverse' title='/pmwiki/pmwiki.php/Main/BizarroUniverse'>Bizarro Universe</a>. There's no way of knowing if the lab accident affected just the surrounding area, or had a greater range. Is there a specific trope for this? And if not, what Class is it?
+</p>
+<div class='footer'><div class='button-group skinny font-s float-right'><a href="#upvote" data-modal-target="login" data-query-id="93310"><i class="fa fa-thumbs-up"></i> <span class="count">0</span></a><a href='/pmwiki/query.php?parent_id=93310&type=lnf'>3 replies <i class='fa fa-chevron-right font-xs'></i></a></div></div>
+</div>
+</div>
+</div>
+</div>
+<a name="93340"></a>
+<div id="comment-93340" class="comment-box  has-footer  ">
+<div class="comment-head">
+<span class="troper-handle-wrapper ">
+<a href="pmwiki.php/Tropers/DrunkenRockLee" class="troper-name">DrunkenRockLee</a>
+<span class="troper-avatar-tagline mobile-on"></span> </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/DrunkenRockLee">
+<img src="https://static.tvtropes.org/pmwiki/pub/images/imagesCAHQP2558675_jpg_100.png" />
+</a>
+</span>
+</div>
+<div class="troper-comment has-title">
+<a href="#comment-93340" class="troper-post-time">18th Oct, 2020 09:57:22 PM</a>
+<div class="comment">
+<h2 class='comment-title'><a href='/pmwiki/query.php?parent_id=93340&type=lnf' class='title bold'>Literal Self Love</a></h2>
+<p>Basically, <a class='twikilink' href='/pmwiki/pmwiki.php/Main/ScrewYourself' title='/pmwiki/pmwiki.php/Main/ScrewYourself'>Screw Yourself</a> as symbolism for acceptance of yourself or all the various bits of personality that make up you - like you embrace your Jungian Shadow or a way to illustrate <a class='createlink' href='/pmwiki/pmwiki.php/Main/SplitPersonalityMerger' title='/pmwiki/pmwiki.php/Main/SplitPersonalityMerger'>Split Personality Merger</a> or something. Is this a thing?
+</p>
+<div class='footer'><div class='button-group skinny font-s float-right'><a href="#upvote" data-modal-target="login" data-query-id="93340"><i class="fa fa-thumbs-up"></i> <span class="count">0</span></a><a href='/pmwiki/query.php?parent_id=93340&type=lnf'>2 replies <i class='fa fa-chevron-right font-xs'></i></a></div></div>
+</div>
+</div>
+</div>
+</div>
+<nav class="pagination-box button-group text-center gutter-topx2" data-total-pages="1442" data-url-prefix="/pmwiki/query.php?type=lnf&status=all&sparam=&sort=activity&f=all&page=">
+<span class="pagination-jump-box-wrapper mobile-on">
+<form class="pagination-jump-box hidden-until-active font-m">
+<input value="1" type="tel">
+<a href="#jump-to-page" title="Jump to page" class="color-white dead-button" onClick="activate_jump_menu(this);return false;">GO <i class="fa fa-angle-right"></i></a>
+</form>
+</span>
+<a href="/pmwiki/query.php?type=lnf&status=all&sparam=&sort=activity&f=all&page=1" class="mobile-off ">
+<span class="current-page"> 1 </span> </a>
+<a href="/pmwiki/query.php?type=lnf&status=all&sparam=&sort=activity&f=all&page=2" class="mobile-off ">
+2 </a>
+<a href="/pmwiki/query.php?type=lnf&status=all&sparam=&sort=activity&f=all&page=3" class="mobile-off ">
+3 </a>
+<a href="#jump-to-page" title="Jump to page" class="pagination-jump-box-toggle mobile-on dead-button" onClick="toggle_jump_menu(this);return false;">
+<span class="font-s">page 1 of 1442</span>
+</a>
+<a href="/pmwiki/query.php?type=lnf&status=all&sparam=&sort=activity&f=all&page=2">
+<span class="mobile-on"><i class="fa fa-angle-right"></i></span>
+<span class="mobile-off">Next</span>
+</a>
+<a href="/pmwiki/query.php?type=lnf&status=all&sparam=&sort=activity&f=all&page=1442">
+<i class="fa fa-angle-double-right"></i>
+</a>
+</nav>
+<script type="text/javascript">
+
+	function toggle_jump_menu(e){
+		$(e).siblings('.pagination-jump-box-wrapper').children('.pagination-jump-box').toggle('active');
+	}
+
+	function activate_jump_menu(e){
+			var p = $(e).siblings('input').val();
+			var t = $(e).closest('.pagination-box').data('total-pages');
+
+			if(p > 0 && p <= t){
+					window.location.href = $(e).closest('.pagination-box').data('url-prefix') + p;
+			}else{
+					show_modal('alert',encodeURIComponent('Whoops, that page might be out of range.'));
+			}
+	}
+
+</script>
+</div>
+</div>
+<div id="main-content-sidebar"><div class="sidebar-item display-options">
+<ul class="sidebar display-toggles">
+<li>Show Spoilers <div id="sidebar-toggle-showspoilers" class="display-toggle show-spoilers"></div></li>
+<li>Night Vision <div id="sidebar-toggle-nightvision" class="display-toggle night-vision"></div></li>
+<li>Sticky Header <div id="sidebar-toggle-stickyheader" class="display-toggle sticky-header"></div></li>
+<li>Wide Load <div id="sidebar-toggle-wideload" class="display-toggle wide-load"></div></li>
+</ul>
+<script>updateDesktopPrefs();</script>
+</div>
+<div class="sidebar-item ad sb-ad-unit">
+<div class='proper-ad-unit '>
+<div id='proper-ad-tvtropes_ad_2'> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_2'); });</script> </div>
+</div></div>
+<div class="sidebar-item quick-links" itemtype="http://schema.org/SiteNavigationElement">
+<p class="sidebar-item-title" data-title="Important Links">Important Links</p>
+<div class="padded">
+<a href="/pmwiki/query.php?type=att">Ask The Tropers</a>
+<a href="/pmwiki/query.php?type=tf">Trope Finder</a>
+<a href="/pmwiki/query.php?type=ykts">You Know That Show...</a>
+<a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a>
+<a href="/pmwiki/review_activity.php">Reviews</a>
+<a href="/pmwiki/lbs.php" data-modal-target="login">Live Blogs</a>
+<a href="/pmwiki/ad-free-subscribe.php">Go Ad Free!</a> </div>
+</div>
+<div class="sidebar-item sb-ad-unit">
+<div class="sidebar-section">
+<div class="square_ad ad-size-300x600 ad-section text-center">
+<div class='proper-ad-unit '>
+<div id='proper-ad-tvtropes_ad_3'> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_3'); });</script> </div>
+</div> </div>
+</div>
+</div>
+<div class="sidebar-item">
+<p class="sidebar-item-title" data-title="Crucial Browsing">Crucial Browsing</p>
+<ul class="padded font-s" itemscope itemtype="http://schema.org/SiteNavigationElement">
+<li><a href="javascript:void(0);" data-click-toggle="active">Genre</a>
+<ul>
+<li><a href='/pmwiki/pmwiki.php/Main/ActionAdventureTropes' title='Main/ActionAdventureTropes'>Action Adventure</a></li>
+<li><a href='/pmwiki/pmwiki.php/Main/ComedyTropes' title='Main/ComedyTropes'>Comedy</a></li>
+<li><a href='/pmwiki/pmwiki.php/Main/CommercialsTropes' title='Main/CommercialsTropes'>Commercials</a></li>
+<li><a href='/pmwiki/pmwiki.php/Main/CrimeAndPunishmentTropes' title='Main/CrimeAndPunishmentTropes'>Crime &amp; Punishment</a></li>
+<li><a href='/pmwiki/pmwiki.php/Main/DramaTropes' title='Main/DramaTropes'>Drama</a></li>
+<li><a href='/pmwiki/pmwiki.php/Main/HorrorTropes' title='Main/HorrorTropes'>Horror</a></li>
+<li><a href='/pmwiki/pmwiki.php/Main/LoveTropes' title='Main/LoveTropes'>Love</a></li>
+<li><a href='/pmwiki/pmwiki.php/Main/NewsTropes' title='Main/NewsTropes'>News</a></li>
+<li><a href='/pmwiki/pmwiki.php/Main/ProfessionalWrestling' title='Main/ProfessionalWrestling'>Professional Wrestling</a></li>
+<li><a href='/pmwiki/pmwiki.php/Main/SpeculativeFictionTropes' title='Main/SpeculativeFictionTropes'>Speculative Fiction</a></li>
+<li><a href='/pmwiki/pmwiki.php/Main/SportsStoryTropes' title='Main/SportsStoryTropes'>Sports Story</a></li>
+<li><a href='/pmwiki/pmwiki.php/Main/WarTropes' title='Main/WarTropes'>War</a></li>
+</ul>
+</li>
+<li><a href="javascript:void(0);" data-click-toggle="active">Media</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/Media" title="Main/Media">All Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/AnimationTropes" title="Main/AnimationTropes">Animation (Western)</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Anime" title="Main/Anime">Anime</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ComicBookTropes" title="Main/ComicBookTropes">Comic Book</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FanFic" title="FanFic/FanFics">Fan Fics</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Film" title="Main/Film">Film</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/GameTropes" title="Main/GameTropes">Game</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Literature" title="Main/Literature">Literature</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MusicAndSoundEffects" title="Main/MusicAndSoundEffects">Music And Sound Effects</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NewMediaTropes" title="Main/NewMediaTropes">New Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/PrintMediaTropes" title="Main/PrintMediaTropes">Print Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Radio" title="Main/Radio">Radio</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SequentialArt" title="Main/SequentialArt">Sequential Art</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TabletopGames" title="Main/TabletopGames">Tabletop Games</a></li>
+<li><a href="/pmwiki/pmwiki.php/UsefulNotes/Television" title="Main/Television">Television</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Theater" title="Main/Theater">Theater</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/VideogameTropes" title="Main/VideogameTropes">Videogame</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Webcomics" title="Main/Webcomics">Webcomics</a></li>
+</ul>
+</li>
+<li><a href="javascript:void(0);" data-click-toggle="active">Narrative</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/UniversalTropes" title="Main/UniversalTropes">Universal</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/AppliedPhlebotinum" title="Main/AppliedPhlebotinum">Applied Phlebotinum</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CharacterizationTropes" title="Main/CharacterizationTropes">Characterization</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Characters" title="Main/Characters">Characters</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CharactersAsDevice" title="Main/CharactersAsDevice">Characters As Device</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Dialogue" title="Main/Dialogue">Dialogue</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Motifs" title="Main/Motifs">Motifs</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NarrativeDevices" title="Main/NarrativeDevices">Narrative Devices</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Paratext" title="Main/Paratext">Paratext</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Plots" title="Main/Plots">Plots</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Settings" title="Main/Settings">Settings</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Spectacle" title="Main/Spectacle">Spectacle</a></li>
+</ul>
+</li>
+<li><a href="javascript:void(0);" data-click-toggle="active">Other Categories</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/BritishTellyTropes" title="Main/BritishTellyTropes">British Telly</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TheContributors" title="Main/TheContributors">The Contributors</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CreatorSpeak" title="Main/CreatorSpeak">Creator Speak</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Creators" title="Main/Creators">Creators</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DerivativeWorks" title="Main/DerivativeWorks">Derivative Works</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LanguageTropes" title="Main/LanguageTropes">Language</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LawsAndFormulas" title="Main/LawsAndFormulas">Laws And Formulas</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ShowBusiness" title="Main/ShowBusiness">Show Business</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SplitPersonalityTropes" title="Main/SplitPersonalityTropes">Split Personality</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/StockRoom" title="Main/StockRoom">Stock Room</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TropeTropes" title="Main/TropeTropes">Trope</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Tropes" title="Main/Tropes">Tropes</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TruthAndLies" title="Main/TruthAndLies">Truth And Lies</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TruthInTelevision" title="Main/TruthInTelevision">Truth In Television</a></li>
+</ul>
+</li>
+<li><a href="javascript:void(0);" data-click-toggle="active">Topical Tropes</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/BetrayalTropes" title="Main/BetrayalTropes">Betrayal</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CensorshipTropes" title="Main/CensorshipTropes">Censorship</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CombatTropes" title="Main/CombatTropes">Combat</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DeathTropes" title="Main/DeathTropes">Death</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FamilyTropes" title="Main/FamilyTropes">Family</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FateAndProphecyTropes" title="Main/FateAndProphecyTropes">Fate And Prophecy</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FoodTropes" title="Main/FoodTropes">Food</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/HolidayTropes" title="Main/HolidayTropes">Holiday</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MemoryTropes" title="Main/MemoryTropes">Memory</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MoneyTropes" title="Main/MoneyTropes">Money</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MoralityTropes" title="Main/MoralityTropes">Morality</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/PoliticsTropes" title="Main/PoliticsTropes">Politics</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ReligionTropes" title="Main/ReligionTropes">Religion</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SchoolTropes" title="Main/SchoolTropes">School</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="sidebar-item showcase">
+<p class="sidebar-item-title" data-title="Community&nbsp;Showcase">Community Showcase <a href="/pmwiki/showcase.php" class="bubble float-right hover-blue">More</a></p>
+<p class="community-showcase">
+<a href="https://sharetv.com/shows/echo_chamber" target="_blank" onclick="trackOutboundLink('https://sharetv.com/shows/echo_chamber');">
+<img data-src="/images/communityShowcase-echochamber.jpg" class="lazy-image" alt=""></a>
+<a href="/pmwiki/pmwiki.php/Webcomic/TwistedTropes">
+<img data-src="/img/howlandsc-side.jpg" class="lazy-image" alt=""></a>
+</p>
+</div>
+<div id="stick-cont" class="sidebar-item sb-ad-unit">
+<div id="stick-bar" class="sidebar-section">
+<div class="square_ad ad-size-300x600 ad-section text-center">
+<div class='proper-ad-unit '>
+<div id='proper-ad-tvtropes_ad_4'> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_4'); });</script> </div>
+</div> </div>
+</div>
+</div>
+</div>
+</div>
+<div id="action-bar-bottom" class="action-bar tablet-off">
+<a href="#top-of-page" class="scroll-to-top dead-button" onclick="$('html, body').animate({scrollTop : 0},500);">Top</a>
+</div>
+</div>
+<div class='proper-ad-unit ad-sticky'>
+<div id='proper-ad-tvtropes_sticky_ad'> <script>propertag.cmd.push(function() { proper_display('tvtropes_sticky_ad'); });</script> </div>
+</div>
+<footer id="main-footer">
+<div id="main-footer-inner">
+<div class="footer-left">
+<a href="/" class="img-link"><img data-src="/img/tvtropes-footer-logo.png" alt="TV Tropes" class="lazy-image" title="TV Tropes" /></a>
+<form action="index.html" id="cse-search-box-mobile" class="navbar-form newsletter-signup validate modal-replies" name="" role="" data-ajax-get="/ajax/subscribe_email.php">
+<button class="btn-submit newsletter-signup-submit-button" type="submit" id="subscribe-btn"><i class="fa fa-paper-plane"></i></button>
+<input id="subscription-email" type="text" class="form-control" name="q" size="31" placeholder="Subscribe" value="" validate-type="email">
+</form>
+<ul class="social-buttons">
+<li><a class="btn fb" target="_blank" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-facebook']);" href="https://www.facebook.com/tvtropes"><i class="fa fa-facebook"></i></a></li>
+<li><a class="btn tw" target="_blank" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-twitter']);" href="https://www.twitter.com/tvtropes"><i class="fa fa-twitter"></i></a> </li>
+<li><a class="btn rd" target="_blank" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-reddit']);" href="https://www.reddit.com/r/tvtropes"><i class="fa fa-reddit-alien"></i></a></li>
+</ul>
+</div>
+<hr />
+<ul class="footer-menu" itemscope itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">TVTropes</h4></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Administrivia">About TVTropes</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TheGoalsOfTVTropes">TVTropes Goals</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TheTropingCode">Troping Code</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TVTropesCustoms">TVTropes Customs</a></li>
+<li><a href="/pmwiki/pmwiki.php/JustForFun/TropesOfLegend">Tropes of Legend</a></li>
+<li><a href="/pmwiki/ad-free-subscribe.php">Go Ad-Free</a></li>
+</ul>
+<hr />
+<ul class="footer-menu" itemscope itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">Community</h4></li>
+<li><a href="/pmwiki/query.php?type=att">Ask The Tropers</a></li>
+<li><a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a></li>
+<li><a href="/pmwiki/query.php?type=tf">Trope Finder</a></li>
+<li><a href="/pmwiki/query.php?type=ykts">You Know That Show</a></li>
+<li><a href="/pmwiki/lbs.php" data-modal-target="login">Live Blogs</a></li>
+<li><a href="/pmwiki/review_activity.php">Reviews</a></li>
+<li><a href="/pmwiki/topics.php">Forum</a></li>
+</ul>
+<hr />
+<ul class="footer-menu" itemscope itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">Tropes HQ</h4></li>
+<li><a href="/pmwiki/about.php">About Us</a></li>
+<li><a href="/pmwiki/contact.php">Contact Us</a></li>
+<li><a href="/pmwiki/dmca.php">DMCA Notice</a></li>
+<li><a href="/pmwiki/privacypolicy.php">Privacy Policy</a></li>
+</ul>
+</div>
+<div id="desktop-on-mobile-toggle" class="text-center gutter-top gutter-bottom tablet-on">
+<a href="/pmwiki/switchDeviceCss.php?mobileVersion=1" rel="nofollow">Switch to <span class="txt-desktop">Desktop</span><span class="txt-mobile">Mobile</span> Version</a>
+</div>
+<div class="legal">
+<p>TVTropes is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License. <br>Permissions beyond the scope of this license may be available from <a xmlns:cc="http://creativecommons.org/ns#" href="mailto:thestaff@tvtropes.org" rel="cc:morePermissions"> thestaff@tvtropes.org</a>.</p>
+<br>
+<div class="privacy_wrapper">
+</div>
+</div>
+</footer>
+<style>
+      div.fc-ccpa-root {
+        position: absolute !important;
+        bottom: 93px !important;
+        margin: auto !important;
+        width: 100% !important;
+        z-index: 9999 !important;
+      }
+      .fc-ccpa-root .fc-dns-dialog .fc-dns-link p{
+        outline: none !important;
+        text-decoration: underline !important;
+        font-size: .7em !important;
+        font-family: sans-serif !important;
+      }
+      .fc-ccpa-root .fc-dns-dialog .fc-dns-link .fc-button-background {
+        background: none !important;
+      }
+    </style>
+<div id="_pm_videoViewer" class="full-screen">
+<a href="#close" class="close" id="_pm_videoViewer-close"></a>
+<div class="_pmvv-body">
+<div class="_pmvv-vidbox">
+<video id='overlay-video-player-box' data-video-id="" class='video-js vjs-default-skin vjs-16-9'>
+</video>
+<div class="_pmvv-vidbox-desc">
+<h1 id="overlay-title"></h1>
+<p id="overlay-descrip" class="_pmvv-vidbox-descTxt">
+</p>
+<div class="rating-row" data-video-id="">
+<input type="hidden" name="is_logged_in" value="0">
+<p>How well does it match the trope?</p>
+<div id="star-rating-group">
+<div class="trope-rate">
+<input type="radio" id="lamp5" name="rate" value="5" />
+<label for="lamp5" title="Absolutely"></label>
+<input type="radio" id="lamp4" name="rate" value="4" />
+<label for="lamp4" title="Yes"></label>
+<input type="radio" id="lamp3" name="rate" value="3" />
+<label for="lamp3" title="Kind of"></label>
+<input type="radio" id="lamp2" name="rate" value="2" />
+<label for="lamp2" title="Not really"></label>
+<input type="radio" id="lamp1" name="rate" value="1" />
+<label for="lamp1" title="No"></label>
+</div>
+<div id="star-rating-total">
+</div>
+</div>
+</div>
+<div class="example-media-row">
+<div class="example-overlay">
+<p>Example of:</p>
+<div id="overlay-trope"> / </div>
+</div>
+<div class="media-sources-overlay example-overlay">
+<p>Media sources:</p>
+<div id="overlay-media"> / </div>
+</div>
+</div>
+<p class="_pmvv-vidbox-stats text-right font-s" style="padding-top:8px; border-top: solid 1px rgba(255,255,255,0.2)">
+
+<a href="#video-feedback" class="float-right" data-modal-target="login">Report</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<script type='text/javascript'>
+        window.special_ops =  {
+            member : 'no',
+            isolated : 0,
+            tags : ['unknown']
+        };
+    </script>
+<script type="text/javascript">
+
+        var cleanCreativeEnabled = "";
+        var donation = "";
+        var live_ads = "1";
+        var img_domain = "https://static.tvtropes.org";
+        var snoozed = cookies.read('snoozedabm');
+        var snoozable = "";
+
+        if (adsRemovedWith) {
+            live_ads = 0;
+        }
+
+        var elem = document.createElement('script');
+        elem.async = true;
+
+        elem.src = '/design/assets/bundle.js?rev=af8ba6c84175c5d092329028e16c8941231c5eba';
+
+        elem.onload = function() {
+                            var elem2 = document.createElement('script');
+                elem2.async = false;
+                elem2.src = "/design/js/query-page.js?rev=af8ba6c84175c5d092329028e16c8941231c5eba";
+                document.getElementsByTagName('head')[0].appendChild(elem2);
+                                 }
+        document.getElementsByTagName('head')[0].appendChild(elem);
+
+    </script>
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-3821842-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<script type="text/javascript">
+      function send_analytics_event(user_type, donation){
+          // if(user_type == 'uncached' || user_type == 'cached'){
+          //   ga('send', 'event', 'caching', 'load', user_type, {'nonInteraction': 1});
+          //   return;
+          // }
+          var event_name = user_type;
+
+          if(donation == 'true'){
+              event_name += "_donation"
+          }else if(typeof(valid_user) == 'undefined'){
+              event_name += "_blocked"
+          }else if(valid_user == true){
+              event_name += "_unblocked";
+          }else{
+              event_name = "_unknown"
+          }
+          ga('send', 'event', 'ads', 'load', event_name, {'nonInteraction': 1});
+      }
+
+    
+    send_analytics_event("guest", "false");
+      </script>
+</body>
+</html>

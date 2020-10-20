@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Forum Games - TV Tropes</title>
+<meta name="description" content="" />
+<link rel="shortcut icon" href="/img/icons/favicon.ico" type="image/x-icon" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@tvtropes" />
+<meta name="twitter:owner" content="@tvtropes" />
+<meta name="twitter:title" content="Forum Games - TV Tropes" />
+<meta name="twitter:description" content="" />
+<meta name="twitter:image:src" content="https://static.tvtropes.org/logo_blue_small.png" />
+<meta property="og:site_name" content="TV Tropes" />
+<meta property="og:locale" content="en_US" />
+<meta property="article:publisher" content="https://www.facebook.com/tvtropes" />
+<meta property="og:title" content="Forum Games" />
+<meta property="og:type" content="" />
+<meta property="og:url" content="https://tvtropes.org/pmwiki/conversations.php?topic=fgames&pagenum=1" />
+<meta property="og:image" content="https://static.tvtropes.org/logo_blue_small.png" />
+<meta property="og:description" content="" />
+<link rel="apple-touch-icon" sizes="57x57" href="/img/icons/apple-icon-57x57.png" type="image/png">
+<link rel="apple-touch-icon" sizes="60x60" href="/img/icons/apple-icon-60x60.png" type="image/png">
+<link rel="apple-touch-icon" sizes="72x72" href="/img/icons/apple-icon-72x72.png" type="image/png">
+<link rel="apple-touch-icon" sizes="76x76" href="/img/icons/apple-icon-76x76.png" type="image/png">
+<link rel="apple-touch-icon" sizes="114x114" href="/img/icons/apple-icon-114x114.png" type="image/png">
+<link rel="apple-touch-icon" sizes="120x120" href="/img/icons/apple-icon-120x120.png" type="image/png">
+<link rel="apple-touch-icon" sizes="144x144" href="/img/icons/apple-icon-144x144.png" type="image/png">
+<link rel="apple-touch-icon" sizes="152x152" href="/img/icons/apple-icon-152x152.png" type="image/png">
+<link rel="apple-touch-icon" sizes="180x180" href="/img/icons/apple-icon-180x180.png" type="image/png">
+<link rel="icon" sizes="16x16" href="/img/icons/favicon-16x16.png" type="image/png">
+<link rel="icon" sizes="32x32" href="/img/icons/favicon-32x32.png" type="image/png">
+<link rel="icon" sizes="96x96" href="/img/icons/favicon-96x96.png" type="image/png">
+<link rel="icon" sizes="192x192" href="/img/icons/favicon-192x192.png" type="image/png">
+<meta id="viewport" name="viewport" content="width=device-width, initial-scale=1">
+<script>
+                var propertag = {};
+                propertag.cmd = [];
+            </script>
+<link rel="stylesheet" href="/design/assets/bundle.css?rev=af8ba6c84175c5d092329028e16c8941231c5eba" />
+<style>
+
+</style>
+<script type="text/javascript">
+function getSelectionText(pulldown){
+	var st='';
+	for(var i=0;i<pulldown.options.length;i++)
+		if(pulldown.options[i].selected){
+			if(pulldown.options[i].value)
+				st=pulldown.options[i].text;
+			break;
+		}
+	return st;
+}
+function filtershop(select, shop){
+	var item=""+getSelectionText(select, shop);
+	if (item.indexOf('Any')!=-1)
+		window.location.href='/pmwiki/conversations.php?topic='+shop;
+	else
+		window.location.href='/pmwiki/conversations.php?topic='+shop+'&filter='+item;
+}
+</script>
+<script>
+                function object(objectId) {
+                    if (document.getElementById && document.getElementById(objectId)) {
+                        return document.getElementById(objectId);
+                    } else if (document.all && document.all(objectId)) {
+                        return document.all(objectId);
+                    } else if (document.layers && document.layers[objectId]) {
+                        return document.layers[objectId];
+                    } else {
+                        return false;
+                    }
+                }
+
+                // JAVASCRIPT COOKIES CODE: for getting and setting user viewing preferences
+                var cookies = {
+                    create: function (name, value, days2expire, path) {
+                        var date = new Date();
+                        date.setTime(date.getTime() + (days2expire * 24 * 60 * 60 * 1000));
+                        var expires = date.toUTCString();
+                        document.cookie = name + '=' + value + ';' + 'expires=' + expires + ';' + 'path=' + path + ';';
+                    },
+                    read: function (name) {
+                        var cookie_value = "",
+                            current_cookie = "",
+                            name_expr = name + "=",
+                            all_cookies = document.cookie.split(';'),
+                            n = all_cookies.length;
+
+                        for (var i = 0; i < n; i++) {
+                            current_cookie = all_cookies[i].trim();
+                            if (current_cookie.indexOf(name_expr) === 0) {
+                                cookie_value = current_cookie.substring(name_expr.length, current_cookie.length);
+                                break;
+                            }
+                        }
+                        return cookie_value;
+                    },
+                    update: function (name, val) {
+                        this.create(name, val, 300, "/");
+                    },
+                    remove: function (name) {
+                        document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
+                    }
+                };
+
+                function updateUserPrefs() {
+                    //GENERAL: detect and set browser, if not cookied (will be treated like a user-preference and added to the #user-pref element)
+                    if( !cookies.read('user-browser') ){
+                        var broswer = '';
+
+                        if(navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPod/i) ){
+                            browser = 'iOS';
+                        } else if (/Opera[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'opera';
+                        } else if (/MSIE (\d+\.\d+);/.test(navigator.userAgent)) {
+                            browser = 'MSIE';
+                        } else if (/Navigator[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'netscape';
+                        } else if (/Chrome[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'chrome';
+                        } else if (/Safari[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'safari';
+                            /Version[\/\s](\d+\.\d+)/.test(navigator.userAgent);
+                            browserVersion = new Number(RegExp.$1);
+                        } else if (/Firefox[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'firefox';
+                        } else {
+                            browser = 'internet_explorer';
+                        }
+                        cookies.create('user-browser',browser,1,'/');
+                        document.getElementById('user-prefs').classList.add('browser-' + browser);
+                    } else {
+                        document.getElementById('user-prefs').classList.add('browser-' + cookies.read('user-browser'));
+                    }
+
+                    //update user preference settings
+                    if (cookies.read('wide-load') !== '') document.getElementById('user-prefs').classList.add('wide-load');
+                    if (cookies.read('night-vision') !== '') document.getElementById('user-prefs').classList.add('night-vision');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('user-prefs').classList.add('sticky-header');
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('user-prefs').classList.add('show-spoilers');
+                    if (cookies.read('folders-open') !== '') document.getElementById('user-prefs').classList.add('folders-open');
+                    if (cookies.read('lefthand-sidebar') !== '') document.getElementById('user-prefs').classList.add('lefthand-sidebar');
+                    if (cookies.read('highlight-links') !== '') document.getElementById('user-prefs').classList.add('highlight-links');
+                    if (cookies.read('forum-gingerbread') !== '') document.getElementById('user-prefs').classList.add('forum-gingerbread');
+                    if (cookies.read('shared-avatars') !== '') document.getElementById('user-prefs').classList.add('shared-avatars');
+                    if (cookies.read('new-search') !== '') document.getElementById('user-prefs').classList.add('new-search');
+                    if (cookies.read('stop-auto-play-video') !== '') document.getElementById('user-prefs').classList.add('stop-auto-play-video');
+
+                    //desktop view on mobile
+                    if (cookies.read('desktop-on-mobile') !== ''){
+                        document.getElementById('user-prefs').classList.add('desktop-on-mobile');
+
+                        var viewport = document.querySelector("meta[name=viewport]");
+                        viewport.setAttribute('content', 'width=1000');
+                    }
+
+                }
+
+                function updateDesktopPrefs() {
+                    if (cookies.read('wide-load') !== '') document.getElementById('sidebar-toggle-wideload').classList.add('active');
+                    if (cookies.read('night-vision') !== '') document.getElementById('sidebar-toggle-nightvision').classList.add('active');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('sidebar-toggle-stickyheader').classList.add('active');
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('sidebar-toggle-showspoilers').classList.add('active');
+
+                }
+
+                function updateMobilePrefs() {
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('mobile-toggle-showspoilers').classList.add('active');
+                    if (cookies.read('night-vision') !== '') document.getElementById('mobile-toggle-nightvision').classList.add('active');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('mobile-toggle-stickyheader').classList.add('active');
+                    if (cookies.read('highlight-links') !== '') document.getElementById('mobile-toggle-highlightlinks').classList.add('active');
+
+                }
+
+
+                if (document.cookie.indexOf("scroll0=") < 0) {
+                    // do nothing
+                } else {
+                    console.log('ads removed by scroll.com');
+                    var adsRemovedWith = 'scroll';
+                    var style = document.createElement('style');
+                    style.innerHTML = '#header-ad, .proper-ad-unit, .square_ad, .sb-ad-unit { display: none !important; } ';
+                    document.head.appendChild(style);
+                }
+            </script>
+<script type="text/javascript">
+
+                var tvtropes_config = {
+                    astri_stream_enabled : "",
+                    is_logged_in         : "",
+                    handle               : "",
+                    get_astri_stream     : "",
+										revnum               : "af8ba6c84175c5d092329028e16c8941231c5eba",
+										img_domain           : "https://static.tvtropes.org",
+										adblock              : "1",
+										adblock_url          : "propermessage.io",
+										pause_editing        : "0",
+										pause_editing_msg    : "",
+										pause_site_changes   : ""
+                };
+            </script>
+</head>
+<body class="">
+<i id="user-prefs"></i>
+<script>updateUserPrefs();</script>
+<div id="fb-root"></div>
+<div id="modal-box"></div>
+<header id="main-header-bar" class="headroom-element ">
+<div id="main-header-bar-inner">
+<span id="header-spacer-left" class="header-spacer"></span>
+<a href="#mobile-menu" id="main-mobile-toggle" class="mobile-menu-toggle-button tablet-on"><span></span><span></span><span></span></a>
+<a href="/" id="main-header-logoButton" class="no-dev"></a>
+<span id="header-spacer-right" class="header-spacer"></span>
+<nav id="main-header-nav" class="tablet-off">
+<a href="/pmwiki/pmwiki.php/Main/Tropes">Tropes</a>
+<a href="/pmwiki/pmwiki.php/Main/Media">Media</a>
+<a href="/pmwiki/browse.php" class="nav-browse">Browse</a>
+<a href="/pmwiki/index_report.php">Indexes</a>
+<a href="/pmwiki/topics.php">Forums</a>
+<a href="/pmwiki/recent_videos.php" class="nav-browse">Videos</a>
+</nav>
+<div id="main-header-bar-right">
+<div id="signup-login-box" class="font-xs mobile-off">
+<a href="/pmwiki/login.php" class="hover-underline bold" data-modal-target="signup">Join</a>
+<a href="/pmwiki/login.php" class="hover-underline bold" data-modal-target="login">Login</a>
+</div>
+<div id="signup-login-mobileToggle" class="mobile-on inline">
+<a href="/pmwiki/login.php" data-modal-target="login"><i class="fa fa-user"></i></a>
+</div>
+<div id="search-box">
+<form class="search" action="/pmwiki/search_result.php">
+<input type="text" name="q" class="search-box" placeholder="Search" value="" required>
+<input type="submit" class="submit-button" value="&#xf002;" />
+<input type="hidden" name="search_type" value="article">
+<input type="hidden" name="page_type" value="all">
+<input type="hidden" name="cx" value="partner-pub-6610802604051523:amzitfn8e7v">
+<input type="hidden" name="cof" value="FORID:10">
+<input type="hidden" name="ie" value="ISO-8859-1">
+<input name="siteurl" type="hidden" value="">
+<input name="ref" type="hidden" value="">
+<input name="ss" type="hidden" value="">
+</form>
+<a href="#close-search" class="mobile-on mobile-search-toggle close-x"><i class="fa fa-close"></i></a>
+</div>
+<div id="random-box">
+<a href="/pmwiki/pmwiki.php/Main/SculptedPhysique" class="button-random-trope" rel="nofollow" onclick="ga('send', 'event', 'button', 'click', 'random trope');"></a>
+<a href="/pmwiki/pmwiki.php/Film/BartonFink" class="button-random-media" rel="nofollow" onclick="ga('send', 'event', 'button', 'click', 'random media');"></a>
+</div>
+</div>
+</div>
+<div id="mobile-menu" class="tablet-on"><div class="mobile-menu-options">
+<div class="nav-wrapper">
+<a href="/pmwiki/pmwiki.php/Main/Tropes" class="xl">Tropes</a>
+<a href="/pmwiki/pmwiki.php/Main/Media" class="xl">Media</a>
+<a href="/pmwiki/browse.php" class="xl">Browse</a>
+<a href="/pmwiki/index_report.php" class="xl">Indexes</a>
+<a href="/pmwiki/topics.php" class="xl">Forums</a>
+<a href="/pmwiki/recent_videos.php" class="xl">Videos</a>
+<a href="/pmwiki/query.php?type=att">Ask The Tropers</a>
+<a href="/pmwiki/query.php?type=tf">Trope Finder</a>
+<a href="/pmwiki/query.php?type=ykts">You Know That Show...</a>
+<a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a>
+<a href="#tools" data-click-toggle="active">Tools <i class="fa fa-chevron-down"></i></a>
+<div class="tools-dropdown mobile-dropdown-linkList">
+<a href="/pmwiki/cutlist.php">Cut List</a>
+<a href="/pmwiki/changes.php">New Edits</a>
+<a href="/pmwiki/recent_edit_reasons.php">Edit Reasons</a>
+<a href="/pmwiki/launches.php">Launches</a>
+<a href="/pmwiki/img_list.php">Images List</a>
+<a href="/pmwiki/crown_activity.php">Crowner Activity</a>
+<a href="/pmwiki/no_types.php">Un-typed Pages</a>
+<a href="/pmwiki/page_type_audit.php">Recent Page Type Changes</a>
+</div>
+<a href="#hq" data-click-toggle="active">Tropes HQ <i class="fa fa-chevron-down"></i></a>
+<div class="tools-dropdown mobile-dropdown-linkList">
+<a href="/pmwiki/about.php">About Us</a>
+<a href="/pmwiki/contact.php">Contact Us</a>
+<a href="mailto:advertising@proper.io">Advertise</a>
+<a href="/pmwiki/dmca.php">DMCA Notice</a>
+<a href="/pmwiki/privacypolicy.php">Privacy Policy</a>
+</div>
+<a href="/pmwiki/ad-free-subscribe.php">Go Ad-Free</a>
+<div class="toggle-switches">
+<ul class="mobile-menu display-toggles">
+<li>Show Spoilers <div id="mobile-toggle-showspoilers" class="display-toggle show-spoilers"></div></li>
+<li>Night Vision <div id="mobile-toggle-nightvision" class="display-toggle night-vision"></div></li>
+<li>Sticky Header <div id="mobile-toggle-stickyheader" class="display-toggle sticky-header"></div></li>
+<li>Highlight Links <div id="mobile-toggle-highlightlinks" class="display-toggle highlight-links"></div></li>
+</ul>
+<script>updateMobilePrefs();</script>
+</div>
+</div>
+</div>
+</div>
+</header>
+<div id="homepage-introBox-mobile" class="mobile-on">
+<a href="/"><img src="/images/logo-white-big.png" class="logo-small" /></a>
+<form class="search" action="/pmwiki/search_result.php" style="margin:10px -5px -6px -5px;">
+<input type="text" name="q" class="search-box" placeholder="Search" value="" required>
+<input type="submit" class="submit-button" value="&#xf002;" />
+<input type="hidden" name="search_type" value="article">
+<input type="hidden" name="page_type" value="all">
+<input type="hidden" name="cx" value="partner-pub-6610802604051523:amzitfn8e7v">
+<input type="hidden" name="cof" value="FORID:10">
+<input type="hidden" name="ie" value="ISO-8859-1">
+<input name="siteurl" type="hidden" value="">
+<input name="ref" type="hidden" value="">
+<input name="ss" type="hidden" value="">
+</form>
+</div>
+<div id="header-ad-wrapper" class="ad">
+<div id="header-ad">
+<div class="ad-size-970x90 atf_banner">
+<div class='proper-ad-unit '>
+<div id='proper-ad-tvtropes_ad_1'> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_1'); });</script> </div>
+</div> </div>
+</div>
+</div>
+<div id="main-container">
+<div id="action-bar-top" class="action-bar mobile-off">
+<div class="action-bar-right">
+<p>Follow TV Tropes</p>
+<a href="https://www.facebook.com/TVTropes" class="button-fb">
+<i class="fa fa-facebook"></i></a>
+<a href="https://www.twitter.com/TVTropes" class="button-tw">
+<i class="fa fa-twitter"></i></a>
+<a href="https://www.reddit.com/r/TVTropes" class="button-re">
+<i class="fa fa-reddit-alien"></i></a>
+</div>
+<nav class="actions-wrapper" itemscope itemtype="http://schema.org/SiteNavigationElement">
+<ul id="top_main_list" class="page-actions">
+<li class="link-newPosts"><a href="/pmwiki/factivity2.php">
+<i class="fa fa-commenting"></i> New Posts</a></li><li class="link-watchlist"><a href="#following" data-modal-target="login"><i class="fa fa-thumb-tack"></i> Followed Threads</a></li><li class="link-searchForums"><a href="/pmwiki/elastic_search_result.php?search_type=forum_post">
+<i class="fa fa-search"></i> Search Forums</a></li> </ul>
+<ul id="top_more_list" class="more_menu hidden_more_list">
+</ul>
+</nav>
+<div class="WikiWordModalStub"></div>
+<div class="ImgUploadModalStub" data-page-type="ForumConversations"></div>
+<div class="login-alert" style="display: none;">
+You need to <a href="/pmwiki/login.php" style="color:#21A0E8">login</a> to do this. <a href="/pmwiki/login.php?tab=register_account" style="color:#21A0E8">Get Known</a> if you don't have an account
+</div>
+</div>
+<div id="main-content" class="page-ForumConversations class-forum-conversations">
+<div id="main-entry" class="with-sidebar">
+<h1 itemprop="headline" class="entry-title">
+<strong><a href="/pmwiki/topics.php">Forums</a> / </strong>Forum Games</h1>
+<a href="#mobile-actions-toggle" id="mobile-actionbar-toggle" class="mobile-actionbar-toggle mobile-on" data-click-toggle="active">
+<p class="tiny-off">Go To</p><span></span><span></span><span></span><i class="fa fa-pencil"></i></a>
+<nav id="mobile-actions-bar" class="mobile-actions-wrapper mobile-on"></nav>
+<div id="main-article" class="article-content">
+<div class="section-block gutter-top gutter-bottom two-column">
+<p class="font-s text-light separator">Search Forums</p>
+<form class="column-box left" action="/pmwiki/elastic_search_result.php" method="GET">
+<input type="hidden" name="search_type" value="forum_post" />
+<input type="hidden" name="topic" value="all" />
+<input type="text" name="q" placeholder="Search Forums" />
+<button class="search-submit"><i class="fa fa-search"></i></button>
+</form>
+<form action="forum_troper_posts.php" method="post" class="column-box right">
+<input type="text" id="fortroper" name="fortroper" value="" placeholder="Find Posts by Troper" />
+<button class="search-submit"><i class="fa fa-search"></i></button>
+</form>
+</div>
+<table id='thread-list' class='mobile-flexbox gutter-top tall-rows solid-color line-height-fix'><thead class='font-s bold'><tr class='extra_css_flex'><th class='extra_css_100' data-mobile-order='1'>Thread</th><th class='extra_css_40' data-mobile-order='2' data-align='right' data-font-size='s'>Posts</th><th class='extra_css_60 text-center' data-mobile-order='3' data-align='right' data-font-size='s' data-mobile-align='right' data-word-wrap='nowrap'>Latest</th></tr></thead><tbody><tr class='extra_css_flex'><td class='extra_css_100'><a class='thread-link' href="/pmwiki/posts.php?discussion=13657573680A59700100&page=1">The above avatar just hugged you...</a><div class='thread-list-pagination font-xs tablet-off'><a href='/pmwiki/posts.php?discussion=13657573680A59700100&page=1'>1</a><a href='/pmwiki/posts.php?discussion=13657573680A59700100&page=2'>2</a><a href='/pmwiki/posts.php?discussion=13657573680A59700100&page=3'>3</a>&hellip; <a href='/pmwiki/posts.php?discussion=13657573680A59700100&page=194'>194</a><a href='/pmwiki/posts.php?discussion=13657573680A59700100&page=195'>195</a></div></td><td class="mid extra_css_40 extra_css_font extra_css_text_center" style=""><span class='mobile-on inline'>Posts:</span> 4,853</td><td class="mid extra_css_60 extra_css_font extra_css_text_right" style=""><a href="/pmwiki/posts.php?discussion=13657573680A59700100&page=195#comment-4853" class='date-time'>Oct 18th 2020 <span>at</span> 2:04:50 PM</a></td></tr><tr class='extra_css_flex'><td class='extra_css_100'><a class='thread-link' href="/pmwiki/posts.php?discussion=14914248370A02012900&page=1">ITT: We Have All Become Pokémon</a><div class='thread-list-pagination font-xs tablet-off'><a href='/pmwiki/posts.php?discussion=14914248370A02012900&page=1'>1</a><a href='/pmwiki/posts.php?discussion=14914248370A02012900&page=2'>2</a><a href='/pmwiki/posts.php?discussion=14914248370A02012900&page=3'>3</a>&hellip; <a href='/pmwiki/posts.php?discussion=14914248370A02012900&page=1736'>1736</a><a href='/pmwiki/posts.php?discussion=14914248370A02012900&page=1737'>1737</a></div></td><td class="mid extra_css_40 extra_css_font extra_css_text_center" style=""><span class='mobile-on inline'>Posts:</span> 43,402</td><td class="mid extra_css_60 extra_css_font extra_css_text_right" style=""><a href="/pmwiki/posts.php?discussion=14914248370A02012900&page=1737#comment-43402" class='date-time'>Oct 18th 2020 <span>at</span> 1:36:22 PM</a></td></tr><tr class='extra_css_flex'><td class='extra_css_100'><a class='thread-link' href="/pmwiki/posts.php?discussion=15591347890A16682900&page=1">TVTropes Skyscraper</a><div class='thread-list-pagination font-xs tablet-off'><a href='/pmwiki/posts.php?discussion=15591347890A16682900&page=1'>1</a><a href='/pmwiki/posts.php?discussion=15591347890A16682900&page=2'>2</a><a href='/pmwiki/posts.php?discussion=15591347890A16682900&page=3'>3</a>&hellip; <a href='/pmwiki/posts.php?discussion=15591347890A16682900&page=37'>37</a><a href='/pmwiki/posts.php?discussion=15591347890A16682900&page=38'>38</a></div></td><td class="mid extra_css_40 extra_css_font extra_css_text_center" style=""><span class='mobile-on inline'>Posts:</span> 944</td><td class="mid extra_css_60 extra_css_font extra_css_text_right" style=""><a href="/pmwiki/posts.php?discussion=15591347890A16682900&page=38#comment-944" class='date-time'>Oct 18th 2020 <span>at</span> 12:25:31 PM</a></td></tr><tr class='extra_css_flex'><td class='extra_css_100'><a class='thread-link' href="/pmwiki/posts.php?discussion=14995713340A84195000&page=1">The Above Avatar Becomes a Video Game Boss</a><div class='thread-list-pagination font-xs tablet-off'><a href='/pmwiki/posts.php?discussion=14995713340A84195000&page=1'>1</a><a href='/pmwiki/posts.php?discussion=14995713340A84195000&page=2'>2</a><a href='/pmwiki/posts.php?discussion=14995713340A84195000&page=3'>3</a>&hellip; <a href='/pmwiki/posts.php?discussion=14995713340A84195000&page=37'>37</a><a href='/pmwiki/posts.php?discussion=14995713340A84195000&page=38'>38</a></div></td><td class="mid extra_css_40 extra_css_font extra_css_text_center" style=""><span class='mobile-on inline'>Posts:</span> 940</td><td class="mid extra_css_60 extra_css_font extra_css_text_right" style=""><a href="/pmwiki/posts.php?discussion=14995713340A84195000&page=38#comment-940" class='date-time'>Oct 18th 2020 <span>at</span> 12:23:17 PM</a></td></tr><tr class='extra_css_flex'><td class='extra_css_100'><a class='thread-link' href="/pmwiki/posts.php?discussion=15985578940A62190500&page=1">Audience Alienating Premise: The Game</a><div class='thread-list-pagination font-xs tablet-off'><a href='/pmwiki/posts.php?discussion=15985578940A62190500&page=1'>1</a><a href='/pmwiki/posts.php?discussion=15985578940A62190500&page=2'>2</a><a href='/pmwiki/posts.php?discussion=15985578940A62190500&page=3'>3</a><a href='/pmwiki/posts.php?discussion=15985578940A62190500&page=4'>4</a></div></td><td class="mid extra_css_40 extra_css_font extra_css_text_center" style=""><span class='mobile-on inline'>Posts:</span> 80</td><td class="mid extra_css_60 extra_css_font extra_css_text_right" style=""><a href="/pmwiki/posts.php?discussion=15985578940A62190500&page=4#comment-80" class='date-time'>Oct 18th 2020 <span>at</span> 12:12:34 PM</a></td></tr><tr class='extra_css_flex'><td class='extra_css_100'><a class='thread-link' href="/pmwiki/posts.php?discussion=14313161730A89851300&page=1">Something The Above Avatar Would Never Say</a><div class='thread-list-pagination font-xs tablet-off'><a href='/pmwiki/posts.php?discussion=14313161730A89851300&page=1'>1</a><a href='/pmwiki/posts.php?discussion=14313161730A89851300&page=2'>2</a><a href='/pmwiki/posts.php?discussion=14313161730A89851300&page=3'>3</a>&hellip; <a href='/pmwiki/posts.php?discussion=14313161730A89851300&page=39'>39</a><a href='/pmwiki/posts.php?discussion=14313161730A89851300&page=40'>40</a></div></td><td class="mid extra_css_40 extra_css_font extra_css_text_center" style=""><span class='mobile-on inline'>Posts:</span> 981</td><td class="mid extra_css_60 extra_css_font extra_css_text_right" style=""><a href="/pmwiki/posts.php?discussion=14313161730A89851300&page=40#comment-981" class='date-time'>Oct 18th 2020 <span>at</span> 11:51:54 AM</a></td></tr><tr class='extra_css_flex'><td class='extra_css_100'><a class='thread-link' href="/pmwiki/posts.php?discussion=15986486240A98489800&page=1">Mystery Game Sign-Up/Discussion Thread</a><div class='thread-list-pagination font-xs tablet-off'><a href='/pmwiki/posts.php?discussion=15986486240A98489800&page=1'>1</a><a href='/pmwiki/posts.php?discussion=15986486240A98489800&page=2'>2</a><a href='/pmwiki/posts.php?discussion=15986486240A98489800&page=3'>3</a>&hellip; <a href='/pmwiki/posts.php?discussion=15986486240A98489800&page=8'>8</a><a href='/pmwiki/posts.php?discussion=15986486240A98489800&page=9'>9</a></div></td><td class="mid extra_css_40 extra_css_font extra_css_text_center" style=""><span class='mobile-on inline'>Posts:</span> 224</td><td class="mid extra_css_60 extra_css_font extra_css_text_right" style=""><a href="/pmwiki/posts.php?discussion=15986486240A98489800&page=9#comment-224" class='date-time'>Oct 18th 2020 <span>at</span> 11:50:01 AM</a></td></tr><tr class='extra_css_flex'><td class='extra_css_100'><a class='thread-link' href="/pmwiki/posts.php?discussion=14245400310A84151000&page=1">Which of your avatars best fits the above description?</a><div class='thread-list-pagination font-xs tablet-off'><a href='/pmwiki/posts.php?discussion=14245400310A84151000&page=1'>1</a><a href='/pmwiki/posts.php?discussion=14245400310A84151000&page=2'>2</a><a href='/pmwiki/posts.php?discussion=14245400310A84151000&page=3'>3</a>&hellip; <a href='/pmwiki/posts.php?discussion=14245400310A84151000&page=183'>183</a><a href='/pmwiki/posts.php?discussion=14245400310A84151000&page=184'>184</a></div></td><td class="mid extra_css_40 extra_css_font extra_css_text_center" style=""><span class='mobile-on inline'>Posts:</span> 4,593</td><td class="mid extra_css_60 extra_css_font extra_css_text_right" style=""><a href="/pmwiki/posts.php?discussion=14245400310A84151000&page=184#comment-4593" class='date-time'>Oct 18th 2020 <span>at</span> 10:56:35 AM</a></td></tr><tr class='extra_css_flex'><td class='extra_css_100'><a class='thread-link' href="/pmwiki/posts.php?discussion=15730990380A26423600&page=1">Two Truths and a Lie: Avatar Edition</a><div class='thread-list-pagination font-xs tablet-off'><a href='/pmwiki/posts.php?discussion=15730990380A26423600&page=1'>1</a><a href='/pmwiki/posts.php?discussion=15730990380A26423600&page=2'>2</a><a href='/pmwiki/posts.php?discussion=15730990380A26423600&page=3'>3</a>&hellip; <a href='/pmwiki/posts.php?discussion=15730990380A26423600&page=9'>9</a><a href='/pmwiki/posts.php?discussion=15730990380A26423600&page=10'>10</a></div></td><td class="mid extra_css_40 extra_css_font extra_css_text_center" style=""><span class='mobile-on inline'>Posts:</span> 244</td><td class="mid extra_css_60 extra_css_font extra_css_text_right" style=""><a href="/pmwiki/posts.php?discussion=15730990380A26423600&page=10#comment-244" class='date-time'>Oct 18th 2020 <span>at</span> 10:48:02 AM</a></td></tr><tr class='extra_css_flex'><td class='extra_css_100'><a class='thread-link' href="/pmwiki/posts.php?discussion=14977740810A74411400&page=1">Google search the Above Avatar</a><div class='thread-list-pagination font-xs tablet-off'><a href='/pmwiki/posts.php?discussion=14977740810A74411400&page=1'>1</a><a href='/pmwiki/posts.php?discussion=14977740810A74411400&page=2'>2</a><a href='/pmwiki/posts.php?discussion=14977740810A74411400&page=3'>3</a>&hellip; <a href='/pmwiki/posts.php?discussion=14977740810A74411400&page=66'>66</a><a href='/pmwiki/posts.php?discussion=14977740810A74411400&page=67'>67</a></div></td><td class="mid extra_css_40 extra_css_font extra_css_text_center" style=""><span class='mobile-on inline'>Posts:</span> 1,668</td><td class="mid extra_css_60 extra_css_font extra_css_text_right" style=""><a href="/pmwiki/posts.php?discussion=14977740810A74411400&page=67#comment-1668" class='date-time'>Oct 18th 2020 <span>at</span> 10:23:30 AM</a></td></tr><tr class='extra_css_flex'><td class='extra_css_100'><a class='thread-link' href="/pmwiki/posts.php?discussion=15750783270A56399800&page=1">Which of the above two avatars would you rather hug?</a><div class='thread-list-pagination font-xs tablet-off'><a href='/pmwiki/posts.php?discussion=15750783270A56399800&page=1'>1</a><a href='/pmwiki/posts.php?discussion=15750783270A56399800&page=2'>2</a><a href='/pmwiki/posts.php?discussion=15750783270A56399800&page=3'>3</a>&hellip; <a href='/pmwiki/posts.php?discussion=15750783270A56399800&page=62'>62</a><a href='/pmwiki/posts.php?discussion=15750783270A56399800&page=63'>63</a></div></td><td class="mid extra_css_40 extra_css_font extra_css_text_center" style=""><span class='mobile-on inline'>Posts:</span> 1,572</td><td class="mid extra_css_60 extra_css_font extra_css_text_right" style=""><a href="/pmwiki/posts.php?discussion=15750783270A56399800&page=63#comment-1572" class='date-time'>Oct 18th 2020 <span>at</span> 10:14:28 AM</a></td></tr><tr class='extra_css_flex'><td class='extra_css_100'><a class='thread-link' href="/pmwiki/posts.php?discussion=13389575770A00529200&page=1">Wold you agree for the above avatar to babysit your children?</a><div class='thread-list-pagination font-xs tablet-off'><a href='/pmwiki/posts.php?discussion=13389575770A00529200&page=1'>1</a><a href='/pmwiki/posts.php?discussion=13389575770A00529200&page=2'>2</a><a href='/pmwiki/posts.php?discussion=13389575770A00529200&page=3'>3</a>&hellip; <a href='/pmwiki/posts.php?discussion=13389575770A00529200&page=446'>446</a><a href='/pmwiki/posts.php?discussion=13389575770A00529200&page=447'>447</a></div></td><td class="mid extra_css_40 extra_css_font extra_css_text_center" style=""><span class='mobile-on inline'>Posts:</span> 11,165</td><td class="mid extra_css_60 extra_css_font extra_css_text_right" style=""><a href="/pmwiki/posts.php?discussion=13389575770A00529200&page=447#comment-11165" class='date-time'>Oct 18th 2020 <span>at</span> 10:09:54 AM</a></td></tr><tr class='extra_css_flex'><td class='extra_css_100'><a class='thread-link' href="/pmwiki/posts.php?discussion=14883831220A05370200&page=1">Mad Libs 2.0</a><div class='thread-list-pagination font-xs tablet-off'><a href='/pmwiki/posts.php?discussion=14883831220A05370200&page=1'>1</a><a href='/pmwiki/posts.php?discussion=14883831220A05370200&page=2'>2</a><a href='/pmwiki/posts.php?discussion=14883831220A05370200&page=3'>3</a>&hellip; <a href='/pmwiki/posts.php?discussion=14883831220A05370200&page=764'>764</a><a href='/pmwiki/posts.php?discussion=14883831220A05370200&page=765'>765</a></div></td><td class="mid extra_css_40 extra_css_font extra_css_text_center" style=""><span class='mobile-on inline'>Posts:</span> 19,112</td><td class="mid extra_css_60 extra_css_font extra_css_text_right" style=""><a href="/pmwiki/posts.php?discussion=14883831220A05370200&page=765#comment-19112" class='date-time'>Oct 18th 2020 <span>at</span> 8:35:30 AM</a></td></tr><tr class='extra_css_flex'><td class='extra_css_100'><a class='thread-link' href="/pmwiki/posts.php?discussion=15592328510A67127700&page=1">Which avatar in the above gallery would you most want to be?</a><div class='thread-list-pagination font-xs tablet-off'><a href='/pmwiki/posts.php?discussion=15592328510A67127700&page=1'>1</a><a href='/pmwiki/posts.php?discussion=15592328510A67127700&page=2'>2</a><a href='/pmwiki/posts.php?discussion=15592328510A67127700&page=3'>3</a>&hellip; <a href='/pmwiki/posts.php?discussion=15592328510A67127700&page=22'>22</a><a href='/pmwiki/posts.php?discussion=15592328510A67127700&page=23'>23</a></div></td><td class="mid extra_css_40 extra_css_font extra_css_text_center" style=""><span class='mobile-on inline'>Posts:</span> 558</td><td class="mid extra_css_60 extra_css_font extra_css_text_right" style=""><a href="/pmwiki/posts.php?discussion=15592328510A67127700&page=23#comment-558" class='date-time'>Oct 18th 2020 <span>at</span> 8:29:43 AM</a></td></tr><tr class='extra_css_flex'><td class='extra_css_100'><a class='thread-link' href="/pmwiki/posts.php?discussion=14284133160A79352600&page=1">Make a Fake Smash Bros Fighter!!!</a><div class='thread-list-pagination font-xs tablet-off'><a href='/pmwiki/posts.php?discussion=14284133160A79352600&page=1'>1</a><a href='/pmwiki/posts.php?discussion=14284133160A79352600&page=2'>2</a><a href='/pmwiki/posts.php?discussion=14284133160A79352600&page=3'>3</a>&hellip; <a href='/pmwiki/posts.php?discussion=14284133160A79352600&page=8'>8</a><a href='/pmwiki/posts.php?discussion=14284133160A79352600&page=9'>9</a></div></td><td class="mid extra_css_40 extra_css_font extra_css_text_center" style=""><span class='mobile-on inline'>Posts:</span> 208</td><td class="mid extra_css_60 extra_css_font extra_css_text_right" style=""><a href="/pmwiki/posts.php?discussion=14284133160A79352600&page=9#comment-208" class='date-time'>Oct 18th 2020 <span>at</span> 8:08:06 AM</a></td></tr><tr class='extra_css_flex'><td class='extra_css_100'><a class='thread-link' href="/pmwiki/posts.php?discussion=15093469300A14964300&page=1">You're Now Wearing The Above Avatar's Clothes</a><div class='thread-list-pagination font-xs tablet-off'><a href='/pmwiki/posts.php?discussion=15093469300A14964300&page=1'>1</a><a href='/pmwiki/posts.php?discussion=15093469300A14964300&page=2'>2</a><a href='/pmwiki/posts.php?discussion=15093469300A14964300&page=3'>3</a>&hellip; <a href='/pmwiki/posts.php?discussion=15093469300A14964300&page=43'>43</a><a href='/pmwiki/posts.php?discussion=15093469300A14964300&page=44'>44</a></div></td><td class="mid extra_css_40 extra_css_font extra_css_text_center" style=""><span class='mobile-on inline'>Posts:</span> 1,084</td><td class="mid extra_css_60 extra_css_font extra_css_text_right" style=""><a href="/pmwiki/posts.php?discussion=15093469300A14964300&page=44#comment-1084" class='date-time'>Oct 18th 2020 <span>at</span> 6:43:58 AM</a></td></tr><tr class='extra_css_flex'><td class='extra_css_100'><a class='thread-link' href="/pmwiki/posts.php?discussion=13535522940A86200100&page=1">What type of Pokemon is the above avatar?</a><div class='thread-list-pagination font-xs tablet-off'><a href='/pmwiki/posts.php?discussion=13535522940A86200100&page=1'>1</a><a href='/pmwiki/posts.php?discussion=13535522940A86200100&page=2'>2</a><a href='/pmwiki/posts.php?discussion=13535522940A86200100&page=3'>3</a>&hellip; <a href='/pmwiki/posts.php?discussion=13535522940A86200100&page=364'>364</a><a href='/pmwiki/posts.php?discussion=13535522940A86200100&page=365'>365</a></div></td><td class="mid extra_css_40 extra_css_font extra_css_text_center" style=""><span class='mobile-on inline'>Posts:</span> 9,116</td><td class="mid extra_css_60 extra_css_font extra_css_text_right" style=""><a href="/pmwiki/posts.php?discussion=13535522940A86200100&page=365#comment-9116" class='date-time'>Oct 18th 2020 <span>at</span> 6:27:13 AM</a></td></tr><tr class='extra_css_flex'><td class='extra_css_100'><a class='thread-link' href="/pmwiki/posts.php?discussion=14931931800A34907500&page=1">The above avatar is now a plushie!</a><div class='thread-list-pagination font-xs tablet-off'><a href='/pmwiki/posts.php?discussion=14931931800A34907500&page=1'>1</a><a href='/pmwiki/posts.php?discussion=14931931800A34907500&page=2'>2</a><a href='/pmwiki/posts.php?discussion=14931931800A34907500&page=3'>3</a>&hellip; <a href='/pmwiki/posts.php?discussion=14931931800A34907500&page=42'>42</a><a href='/pmwiki/posts.php?discussion=14931931800A34907500&page=43'>43</a></div></td><td class="mid extra_css_40 extra_css_font extra_css_text_center" style=""><span class='mobile-on inline'>Posts:</span> 1,068</td><td class="mid extra_css_60 extra_css_font extra_css_text_right" style=""><a href="/pmwiki/posts.php?discussion=14931931800A34907500&page=43#comment-1068" class='date-time'>Oct 18th 2020 <span>at</span> 6:12:44 AM</a></td></tr><tr class='extra_css_flex'><td class='extra_css_100'><a class='thread-link' href="/pmwiki/posts.php?discussion=15969123270A67143200&page=1">Create a work based on X meets Y and Recycled IN SPACE! </a><div class='thread-list-pagination font-xs tablet-off'><a href='/pmwiki/posts.php?discussion=15969123270A67143200&page=1'>1</a><a href='/pmwiki/posts.php?discussion=15969123270A67143200&page=2'>2</a></div></td><td class="mid extra_css_40 extra_css_font extra_css_text_center" style=""><span class='mobile-on inline'>Posts:</span> 31</td><td class="mid extra_css_60 extra_css_font extra_css_text_right" style=""><a href="/pmwiki/posts.php?discussion=15969123270A67143200&page=2#comment-31" class='date-time'>Oct 18th 2020 <span>at</span> 5:21:07 AM</a></td></tr><tr class='extra_css_flex'><td class='extra_css_100'><a class='thread-link' href="/pmwiki/posts.php?discussion=15438706540A63338800&page=1">What kind of villain would the above troper be?</a><div class='thread-list-pagination font-xs tablet-off'><a href='/pmwiki/posts.php?discussion=15438706540A63338800&page=1'>1</a><a href='/pmwiki/posts.php?discussion=15438706540A63338800&page=2'>2</a><a href='/pmwiki/posts.php?discussion=15438706540A63338800&page=3'>3</a>&hellip; <a href='/pmwiki/posts.php?discussion=15438706540A63338800&page=9'>9</a><a href='/pmwiki/posts.php?discussion=15438706540A63338800&page=10'>10</a></div></td><td class="mid extra_css_40 extra_css_font extra_css_text_center" style=""><span class='mobile-on inline'>Posts:</span> 249</td><td class="mid extra_css_60 extra_css_font extra_css_text_right" style=""><a href="/pmwiki/posts.php?discussion=15438706540A63338800&page=10#comment-249" class='date-time'>Oct 18th 2020 <span>at</span> 4:34:40 AM</a></td></tr><tr class='extra_css_flex'><td class='extra_css_100'><a class='thread-link' href="/pmwiki/posts.php?discussion=12966865530A70102800&page=1">Would You Hug The Above Avatar?</a><div class='thread-list-pagination font-xs tablet-off'><a href='/pmwiki/posts.php?discussion=12966865530A70102800&page=1'>1</a><a href='/pmwiki/posts.php?discussion=12966865530A70102800&page=2'>2</a><a href='/pmwiki/posts.php?discussion=12966865530A70102800&page=3'>3</a>&hellip; <a href='/pmwiki/posts.php?discussion=12966865530A70102800&page=1014'>1014</a><a href='/pmwiki/posts.php?discussion=12966865530A70102800&page=1015'>1015</a></div></td><td class="mid extra_css_40 extra_css_font extra_css_text_center" style=""><span class='mobile-on inline'>Posts:</span> 25,362</td><td class="mid extra_css_60 extra_css_font extra_css_text_right" style=""><a href="/pmwiki/posts.php?discussion=12966865530A70102800&page=1015#comment-25362" class='date-time'>Oct 18th 2020 <span>at</span> 4:26:46 AM</a></td></tr><tr class='extra_css_flex'><td class='extra_css_100'><a class='thread-link' href="/pmwiki/posts.php?discussion=14751867600A28862900&page=1">How will your avatar spend the day with the above avatar? (Seconds Game)</a><div class='thread-list-pagination font-xs tablet-off'><a href='/pmwiki/posts.php?discussion=14751867600A28862900&page=1'>1</a><a href='/pmwiki/posts.php?discussion=14751867600A28862900&page=2'>2</a><a href='/pmwiki/posts.php?discussion=14751867600A28862900&page=3'>3</a>&hellip; <a href='/pmwiki/posts.php?discussion=14751867600A28862900&page=237'>237</a><a href='/pmwiki/posts.php?discussion=14751867600A28862900&page=238'>238</a></div></td><td class="mid extra_css_40 extra_css_font extra_css_text_center" style=""><span class='mobile-on inline'>Posts:</span> 5,929</td><td class="mid extra_css_60 extra_css_font extra_css_text_right" style=""><a href="/pmwiki/posts.php?discussion=14751867600A28862900&page=238#comment-5929" class='date-time'>Oct 18th 2020 <span>at</span> 3:58:02 AM</a></td></tr><tr class='extra_css_flex'><td class='extra_css_100'><a class='thread-link' href="/pmwiki/posts.php?discussion=14896872220A97790300&page=1">Is the above avatar tol or smol?</a><div class='thread-list-pagination font-xs tablet-off'><a href='/pmwiki/posts.php?discussion=14896872220A97790300&page=1'>1</a><a href='/pmwiki/posts.php?discussion=14896872220A97790300&page=2'>2</a><a href='/pmwiki/posts.php?discussion=14896872220A97790300&page=3'>3</a>&hellip; <a href='/pmwiki/posts.php?discussion=14896872220A97790300&page=101'>101</a><a href='/pmwiki/posts.php?discussion=14896872220A97790300&page=102'>102</a></div></td><td class="mid extra_css_40 extra_css_font extra_css_text_center" style=""><span class='mobile-on inline'>Posts:</span> 2,546</td><td class="mid extra_css_60 extra_css_font extra_css_text_right" style=""><a href="/pmwiki/posts.php?discussion=14896872220A97790300&page=102#comment-2546" class='date-time'>Oct 18th 2020 <span>at</span> 3:53:47 AM</a></td></tr><tr class='extra_css_flex'><td class='extra_css_100'><a class='thread-link' href="/pmwiki/posts.php?discussion=w7ok9tyuau513zsjo54aoyyv&page=1">Tropefy The Above Avatar</a><div class='thread-list-pagination font-xs tablet-off'><a href='/pmwiki/posts.php?discussion=w7ok9tyuau513zsjo54aoyyv&page=1'>1</a><a href='/pmwiki/posts.php?discussion=w7ok9tyuau513zsjo54aoyyv&page=2'>2</a><a href='/pmwiki/posts.php?discussion=w7ok9tyuau513zsjo54aoyyv&page=3'>3</a>&hellip; <a href='/pmwiki/posts.php?discussion=w7ok9tyuau513zsjo54aoyyv&page=743'>743</a><a href='/pmwiki/posts.php?discussion=w7ok9tyuau513zsjo54aoyyv&page=744'>744</a></div></td><td class="mid extra_css_40 extra_css_font extra_css_text_center" style=""><span class='mobile-on inline'>Posts:</span> 18,591</td><td class="mid extra_css_60 extra_css_font extra_css_text_right" style=""><a href="/pmwiki/posts.php?discussion=w7ok9tyuau513zsjo54aoyyv&page=744#comment-18591" class='date-time'>Oct 18th 2020 <span>at</span> 1:43:10 AM</a></td></tr><tr class='extra_css_flex'><td class='extra_css_100'><a class='thread-link' href="/pmwiki/posts.php?discussion=14681222380A13100100&page=1">Avatar Association Game</a><div class='thread-list-pagination font-xs tablet-off'><a href='/pmwiki/posts.php?discussion=14681222380A13100100&page=1'>1</a><a href='/pmwiki/posts.php?discussion=14681222380A13100100&page=2'>2</a><a href='/pmwiki/posts.php?discussion=14681222380A13100100&page=3'>3</a>&hellip; <a href='/pmwiki/posts.php?discussion=14681222380A13100100&page=143'>143</a><a href='/pmwiki/posts.php?discussion=14681222380A13100100&page=144'>144</a></div></td><td class="mid extra_css_40 extra_css_font extra_css_text_center" style=""><span class='mobile-on inline'>Posts:</span> 3,579</td><td class="mid extra_css_60 extra_css_font extra_css_text_right" style=""><a href="/pmwiki/posts.php?discussion=14681222380A13100100&page=144#comment-3579" class='date-time'>Oct 17th 2020 <span>at</span> 11:33:52 PM</a></td></tr><tr class='extra_css_flex'><td class='extra_css_100'><a class='thread-link' href="/pmwiki/posts.php?discussion=15966420460A47218400&page=1">Radio Music Game</a><div class='thread-list-pagination font-xs tablet-off'><a href='/pmwiki/posts.php?discussion=15966420460A47218400&page=1'>1</a><a href='/pmwiki/posts.php?discussion=15966420460A47218400&page=2'>2</a><a href='/pmwiki/posts.php?discussion=15966420460A47218400&page=3'>3</a><a href='/pmwiki/posts.php?discussion=15966420460A47218400&page=4'>4</a></div></td><td class="mid extra_css_40 extra_css_font extra_css_text_center" style=""><span class='mobile-on inline'>Posts:</span> 95</td><td class="mid extra_css_60 extra_css_font extra_css_text_right" style=""><a href="/pmwiki/posts.php?discussion=15966420460A47218400&page=4#comment-95" class='date-time'>Oct 17th 2020 <span>at</span> 11:09:16 PM</a></td></tr><tr class='extra_css_flex'><td class='extra_css_100'><a class='thread-link' href="/pmwiki/posts.php?discussion=15064826170A80247200&page=1">What do you know about the work above?</a><div class='thread-list-pagination font-xs tablet-off'><a href='/pmwiki/posts.php?discussion=15064826170A80247200&page=1'>1</a><a href='/pmwiki/posts.php?discussion=15064826170A80247200&page=2'>2</a><a href='/pmwiki/posts.php?discussion=15064826170A80247200&page=3'>3</a>&hellip; <a href='/pmwiki/posts.php?discussion=15064826170A80247200&page=16'>16</a><a href='/pmwiki/posts.php?discussion=15064826170A80247200&page=17'>17</a></div></td><td class="mid extra_css_40 extra_css_font extra_css_text_center" style=""><span class='mobile-on inline'>Posts:</span> 418</td><td class="mid extra_css_60 extra_css_font extra_css_text_right" style=""><a href="/pmwiki/posts.php?discussion=15064826170A80247200&page=17#comment-418" class='date-time'>Oct 17th 2020 <span>at</span> 9:35:50 PM</a></td></tr><tr class='extra_css_flex'><td class='extra_css_100'><a class='thread-link' href="/pmwiki/posts.php?discussion=13974085720A65978500&page=1">Welcome to the Salty Spittoon</a><div class='thread-list-pagination font-xs tablet-off'><a href='/pmwiki/posts.php?discussion=13974085720A65978500&page=1'>1</a><a href='/pmwiki/posts.php?discussion=13974085720A65978500&page=2'>2</a><a href='/pmwiki/posts.php?discussion=13974085720A65978500&page=3'>3</a>&hellip; <a href='/pmwiki/posts.php?discussion=13974085720A65978500&page=89'>89</a><a href='/pmwiki/posts.php?discussion=13974085720A65978500&page=90'>90</a></div></td><td class="mid extra_css_40 extra_css_font extra_css_text_center" style=""><span class='mobile-on inline'>Posts:</span> 2,237</td><td class="mid extra_css_60 extra_css_font extra_css_text_right" style=""><a href="/pmwiki/posts.php?discussion=13974085720A65978500&page=90#comment-2237" class='date-time'>Oct 17th 2020 <span>at</span> 8:58:25 PM</a></td></tr><tr class='extra_css_flex'><td class='extra_css_100'><a class='thread-link' href="/pmwiki/posts.php?discussion=izt5avkktdqfkw52t9fegqr5&page=1">Post what you have copied and add "because of the blood"</a><div class='thread-list-pagination font-xs tablet-off'><a href='/pmwiki/posts.php?discussion=izt5avkktdqfkw52t9fegqr5&page=1'>1</a><a href='/pmwiki/posts.php?discussion=izt5avkktdqfkw52t9fegqr5&page=2'>2</a><a href='/pmwiki/posts.php?discussion=izt5avkktdqfkw52t9fegqr5&page=3'>3</a>&hellip; <a href='/pmwiki/posts.php?discussion=izt5avkktdqfkw52t9fegqr5&page=22'>22</a><a href='/pmwiki/posts.php?discussion=izt5avkktdqfkw52t9fegqr5&page=23'>23</a></div></td><td class="mid extra_css_40 extra_css_font extra_css_text_center" style=""><span class='mobile-on inline'>Posts:</span> 563</td><td class="mid extra_css_60 extra_css_font extra_css_text_right" style=""><a href="/pmwiki/posts.php?discussion=izt5avkktdqfkw52t9fegqr5&page=23#comment-563" class='date-time'>Oct 17th 2020 <span>at</span> 8:56:00 PM</a></td></tr><tr class='extra_css_flex'><td class='extra_css_100'><a class='thread-link' href="/pmwiki/posts.php?discussion=12933069380A89107900&page=1">Vandalize the above troper's page.</a><div class='thread-list-pagination font-xs tablet-off'><a href='/pmwiki/posts.php?discussion=12933069380A89107900&page=1'>1</a><a href='/pmwiki/posts.php?discussion=12933069380A89107900&page=2'>2</a><a href='/pmwiki/posts.php?discussion=12933069380A89107900&page=3'>3</a>&hellip; <a href='/pmwiki/posts.php?discussion=12933069380A89107900&page=341'>341</a><a href='/pmwiki/posts.php?discussion=12933069380A89107900&page=342'>342</a></div></td><td class="mid extra_css_40 extra_css_font extra_css_text_center" style=""><span class='mobile-on inline'>Posts:</span> 8,550</td><td class="mid extra_css_60 extra_css_font extra_css_text_right" style=""><a href="/pmwiki/posts.php?discussion=12933069380A89107900&page=342#comment-8550" class='date-time'>Oct 17th 2020 <span>at</span> 7:47:04 PM</a></td></tr><tr class='extra_css_flex'><td class='extra_css_100'><a class='thread-link' href="/pmwiki/posts.php?discussion=yxi52xk9td0oiasbapzm6bv5&page=1">Compliment the Above Troper</a><div class='thread-list-pagination font-xs tablet-off'><a href='/pmwiki/posts.php?discussion=yxi52xk9td0oiasbapzm6bv5&page=1'>1</a><a href='/pmwiki/posts.php?discussion=yxi52xk9td0oiasbapzm6bv5&page=2'>2</a><a href='/pmwiki/posts.php?discussion=yxi52xk9td0oiasbapzm6bv5&page=3'>3</a>&hellip; <a href='/pmwiki/posts.php?discussion=yxi52xk9td0oiasbapzm6bv5&page=1005'>1005</a><a href='/pmwiki/posts.php?discussion=yxi52xk9td0oiasbapzm6bv5&page=1006'>1006</a></div></td><td class="mid extra_css_40 extra_css_font extra_css_text_center" style=""><span class='mobile-on inline'>Posts:</span> 25,129</td><td class="mid extra_css_60 extra_css_font extra_css_text_right" style=""><a href="/pmwiki/posts.php?discussion=yxi52xk9td0oiasbapzm6bv5&page=1006#comment-25129" class='date-time'>Oct 17th 2020 <span>at</span> 7:15:55 PM</a></td></tr><tr class='extra_css_flex'><td class='extra_css_100'><a class='thread-link' href="/pmwiki/posts.php?discussion=15804640590A64335400&page=1">ENVOYS: A Dumb Crossover Text Adventure</a><div class='thread-list-pagination font-xs tablet-off'><a href='/pmwiki/posts.php?discussion=15804640590A64335400&page=1'>1</a><a href='/pmwiki/posts.php?discussion=15804640590A64335400&page=2'>2</a><a href='/pmwiki/posts.php?discussion=15804640590A64335400&page=3'>3</a>&hellip; <a href='/pmwiki/posts.php?discussion=15804640590A64335400&page=20'>20</a><a href='/pmwiki/posts.php?discussion=15804640590A64335400&page=21'>21</a></div></td><td class="mid extra_css_40 extra_css_font extra_css_text_center" style=""><span class='mobile-on inline'>Posts:</span> 518</td><td class="mid extra_css_60 extra_css_font extra_css_text_right" style=""><a href="/pmwiki/posts.php?discussion=15804640590A64335400&page=21#comment-518" class='date-time'>Oct 17th 2020 <span>at</span> 6:14:58 PM</a></td></tr><tr class='extra_css_flex'><td class='extra_css_100'><a class='thread-link' href="/pmwiki/posts.php?discussion=15975903840A73887500&page=1">Song Maker</a><div class='thread-list-pagination font-xs tablet-off'><a href='/pmwiki/posts.php?discussion=15975903840A73887500&page=1'>1</a><a href='/pmwiki/posts.php?discussion=15975903840A73887500&page=2'>2</a><a href='/pmwiki/posts.php?discussion=15975903840A73887500&page=3'>3</a></div></td><td class="mid extra_css_40 extra_css_font extra_css_text_center" style=""><span class='mobile-on inline'>Posts:</span> 67</td><td class="mid extra_css_60 extra_css_font extra_css_text_right" style=""><a href="/pmwiki/posts.php?discussion=15975903840A73887500&page=3#comment-67" class='date-time'>Oct 17th 2020 <span>at</span> 3:57:48 PM</a></td></tr><tr class='extra_css_flex'><td class='extra_css_100'><a class='thread-link' href="/pmwiki/posts.php?discussion=o41a4pusqtqkoho6o9o37fhc&page=1">Pick an avatar you want the above poster to share with you</a><div class='thread-list-pagination font-xs tablet-off'><a href='/pmwiki/posts.php?discussion=o41a4pusqtqkoho6o9o37fhc&page=1'>1</a><a href='/pmwiki/posts.php?discussion=o41a4pusqtqkoho6o9o37fhc&page=2'>2</a><a href='/pmwiki/posts.php?discussion=o41a4pusqtqkoho6o9o37fhc&page=3'>3</a>&hellip; <a href='/pmwiki/posts.php?discussion=o41a4pusqtqkoho6o9o37fhc&page=601'>601</a><a href='/pmwiki/posts.php?discussion=o41a4pusqtqkoho6o9o37fhc&page=602'>602</a></div></td><td class="mid extra_css_40 extra_css_font extra_css_text_center" style=""><span class='mobile-on inline'>Posts:</span> 15,031</td><td class="mid extra_css_60 extra_css_font extra_css_text_right" style=""><a href="/pmwiki/posts.php?discussion=o41a4pusqtqkoho6o9o37fhc&page=602#comment-15031" class='date-time'>Oct 17th 2020 <span>at</span> 2:16:27 PM</a></td></tr><tr class='extra_css_flex'><td class='extra_css_100'><a class='thread-link' href="/pmwiki/posts.php?discussion=15884206560A23019500&page=1">What is the above avatar's associated Kirby Copy Ability?</a><div class='thread-list-pagination font-xs tablet-off'><a href='/pmwiki/posts.php?discussion=15884206560A23019500&page=1'>1</a><a href='/pmwiki/posts.php?discussion=15884206560A23019500&page=2'>2</a><a href='/pmwiki/posts.php?discussion=15884206560A23019500&page=3'>3</a><a href='/pmwiki/posts.php?discussion=15884206560A23019500&page=4'>4</a></div></td><td class="mid extra_css_40 extra_css_font extra_css_text_center" style=""><span class='mobile-on inline'>Posts:</span> 90</td><td class="mid extra_css_60 extra_css_font extra_css_text_right" style=""><a href="/pmwiki/posts.php?discussion=15884206560A23019500&page=4#comment-90" class='date-time'>Oct 17th 2020 <span>at</span> 7:09:18 AM</a></td></tr><tr class='extra_css_flex'><td class='extra_css_100'><a class='thread-link' href="/pmwiki/posts.php?discussion=jtrfdbsepr8bu1586dmungzp&page=1">Your Avatar Vs. The Above Avatar: Who Would Win?</a><div class='thread-list-pagination font-xs tablet-off'><a href='/pmwiki/posts.php?discussion=jtrfdbsepr8bu1586dmungzp&page=1'>1</a><a href='/pmwiki/posts.php?discussion=jtrfdbsepr8bu1586dmungzp&page=2'>2</a><a href='/pmwiki/posts.php?discussion=jtrfdbsepr8bu1586dmungzp&page=3'>3</a>&hellip; <a href='/pmwiki/posts.php?discussion=jtrfdbsepr8bu1586dmungzp&page=934'>934</a><a href='/pmwiki/posts.php?discussion=jtrfdbsepr8bu1586dmungzp&page=935'>935</a></div></td><td class="mid extra_css_40 extra_css_font extra_css_text_center" style=""><span class='mobile-on inline'>Posts:</span> 23,361</td><td class="mid extra_css_60 extra_css_font extra_css_text_right" style=""><a href="/pmwiki/posts.php?discussion=jtrfdbsepr8bu1586dmungzp&page=935#comment-23361" class='date-time'>Oct 17th 2020 <span>at</span> 6:40:26 AM</a></td></tr><tr class='extra_css_flex'><td class='extra_css_100'><a class='thread-link' href="/pmwiki/posts.php?discussion=14766313140A33948400&page=1">Create a rainbow from the above poster's gallery</a><div class='thread-list-pagination font-xs tablet-off'><a href='/pmwiki/posts.php?discussion=14766313140A33948400&page=1'>1</a><a href='/pmwiki/posts.php?discussion=14766313140A33948400&page=2'>2</a><a href='/pmwiki/posts.php?discussion=14766313140A33948400&page=3'>3</a>&hellip; <a href='/pmwiki/posts.php?discussion=14766313140A33948400&page=7'>7</a><a href='/pmwiki/posts.php?discussion=14766313140A33948400&page=8'>8</a></div></td><td class="mid extra_css_40 extra_css_font extra_css_text_center" style=""><span class='mobile-on inline'>Posts:</span> 184</td><td class="mid extra_css_60 extra_css_font extra_css_text_right" style=""><a href="/pmwiki/posts.php?discussion=14766313140A33948400&page=8#comment-184" class='date-time'>Oct 17th 2020 <span>at</span> 3:00:18 AM</a></td></tr><tr class='extra_css_flex'><td class='extra_css_100'><a class='thread-link' href="/pmwiki/posts.php?discussion=15491245560A48667100&page=1">Name a Similarity Between You and the Above Avatar</a><div class='thread-list-pagination font-xs tablet-off'><a href='/pmwiki/posts.php?discussion=15491245560A48667100&page=1'>1</a><a href='/pmwiki/posts.php?discussion=15491245560A48667100&page=2'>2</a><a href='/pmwiki/posts.php?discussion=15491245560A48667100&page=3'>3</a>&hellip; <a href='/pmwiki/posts.php?discussion=15491245560A48667100&page=6'>6</a><a href='/pmwiki/posts.php?discussion=15491245560A48667100&page=7'>7</a></div></td><td class="mid extra_css_40 extra_css_font extra_css_text_center" style=""><span class='mobile-on inline'>Posts:</span> 170</td><td class="mid extra_css_60 extra_css_font extra_css_text_right" style=""><a href="/pmwiki/posts.php?discussion=15491245560A48667100&page=7#comment-170" class='date-time'>Oct 17th 2020 <span>at</span> 2:27:19 AM</a></td></tr><tr class='extra_css_flex'><td class='extra_css_100'><a class='thread-link' href="/pmwiki/posts.php?discussion=13863139280A37533200&page=1">What is the similarity between your avatar and the above avatar?</a><div class='thread-list-pagination font-xs tablet-off'><a href='/pmwiki/posts.php?discussion=13863139280A37533200&page=1'>1</a><a href='/pmwiki/posts.php?discussion=13863139280A37533200&page=2'>2</a><a href='/pmwiki/posts.php?discussion=13863139280A37533200&page=3'>3</a>&hellip; <a href='/pmwiki/posts.php?discussion=13863139280A37533200&page=220'>220</a><a href='/pmwiki/posts.php?discussion=13863139280A37533200&page=221'>221</a></div></td><td class="mid extra_css_40 extra_css_font extra_css_text_center" style=""><span class='mobile-on inline'>Posts:</span> 5,518</td><td class="mid extra_css_60 extra_css_font extra_css_text_right" style=""><a href="/pmwiki/posts.php?discussion=13863139280A37533200&page=221#comment-5518" class='date-time'>Oct 16th 2020 <span>at</span> 11:41:20 PM</a></td></tr><tr class='extra_css_flex'><td class='extra_css_100'><a class='thread-link' href="/pmwiki/posts.php?discussion=14284284320A88357600&page=1">Good Idea, Bad Idea</a><div class='thread-list-pagination font-xs tablet-off'><a href='/pmwiki/posts.php?discussion=14284284320A88357600&page=1'>1</a><a href='/pmwiki/posts.php?discussion=14284284320A88357600&page=2'>2</a><a href='/pmwiki/posts.php?discussion=14284284320A88357600&page=3'>3</a>&hellip; <a href='/pmwiki/posts.php?discussion=14284284320A88357600&page=37'>37</a><a href='/pmwiki/posts.php?discussion=14284284320A88357600&page=38'>38</a></div></td><td class="mid extra_css_40 extra_css_font extra_css_text_center" style=""><span class='mobile-on inline'>Posts:</span> 944</td><td class="mid extra_css_60 extra_css_font extra_css_text_right" style=""><a href="/pmwiki/posts.php?discussion=14284284320A88357600&page=38#comment-944" class='date-time'>Oct 16th 2020 <span>at</span> 9:53:56 PM</a></td></tr><tr class='extra_css_flex'><td class='extra_css_100'><a class='thread-link' href="/pmwiki/posts.php?discussion=15814430410A56130400&page=1">Avatar Scavenger Hunt!</a><div class='thread-list-pagination font-xs tablet-off'><a href='/pmwiki/posts.php?discussion=15814430410A56130400&page=1'>1</a><a href='/pmwiki/posts.php?discussion=15814430410A56130400&page=2'>2</a><a href='/pmwiki/posts.php?discussion=15814430410A56130400&page=3'>3</a>&hellip; <a href='/pmwiki/posts.php?discussion=15814430410A56130400&page=7'>7</a><a href='/pmwiki/posts.php?discussion=15814430410A56130400&page=8'>8</a></div></td><td class="mid extra_css_40 extra_css_font extra_css_text_center" style=""><span class='mobile-on inline'>Posts:</span> 195</td><td class="mid extra_css_60 extra_css_font extra_css_text_right" style=""><a href="/pmwiki/posts.php?discussion=15814430410A56130400&page=8#comment-195" class='date-time'>Oct 16th 2020 <span>at</span> 6:51:31 PM</a></td></tr><tr class='extra_css_flex'><td class='extra_css_100'><a class='thread-link' href="/pmwiki/posts.php?discussion=d6jes5zg2z8k43knalht7oyt&page=1">VG Music Game</a><div class='thread-list-pagination font-xs tablet-off'><a href='/pmwiki/posts.php?discussion=d6jes5zg2z8k43knalht7oyt&page=1'>1</a><a href='/pmwiki/posts.php?discussion=d6jes5zg2z8k43knalht7oyt&page=2'>2</a><a href='/pmwiki/posts.php?discussion=d6jes5zg2z8k43knalht7oyt&page=3'>3</a>&hellip; <a href='/pmwiki/posts.php?discussion=d6jes5zg2z8k43knalht7oyt&page=1067'>1067</a><a href='/pmwiki/posts.php?discussion=d6jes5zg2z8k43knalht7oyt&page=1068'>1068</a></div></td><td class="mid extra_css_40 extra_css_font extra_css_text_center" style=""><span class='mobile-on inline'>Posts:</span> 26,681</td><td class="mid extra_css_60 extra_css_font extra_css_text_right" style=""><a href="/pmwiki/posts.php?discussion=d6jes5zg2z8k43knalht7oyt&page=1068#comment-26681" class='date-time'>Oct 16th 2020 <span>at</span> 5:42:54 PM</a></td></tr><tr class='extra_css_flex'><td class='extra_css_100'><a class='thread-link' href="/pmwiki/posts.php?discussion=15620946130A99664800&page=1">What's the above Avatar's Pokemon form?</a><div class='thread-list-pagination font-xs tablet-off'><a href='/pmwiki/posts.php?discussion=15620946130A99664800&page=1'>1</a><a href='/pmwiki/posts.php?discussion=15620946130A99664800&page=2'>2</a><a href='/pmwiki/posts.php?discussion=15620946130A99664800&page=3'>3</a>&hellip; <a href='/pmwiki/posts.php?discussion=15620946130A99664800&page=6'>6</a><a href='/pmwiki/posts.php?discussion=15620946130A99664800&page=7'>7</a></div></td><td class="mid extra_css_40 extra_css_font extra_css_text_center" style=""><span class='mobile-on inline'>Posts:</span> 167</td><td class="mid extra_css_60 extra_css_font extra_css_text_right" style=""><a href="/pmwiki/posts.php?discussion=15620946130A99664800&page=7#comment-167" class='date-time'>Oct 16th 2020 <span>at</span> 5:28:50 PM</a></td></tr><tr class='extra_css_flex'><td class='extra_css_100'><a class='thread-link' href="/pmwiki/posts.php?discussion=12961040510A77482800&page=1">Our avatars are posting on a forum thread.</a><div class='thread-list-pagination font-xs tablet-off'><a href='/pmwiki/posts.php?discussion=12961040510A77482800&page=1'>1</a><a href='/pmwiki/posts.php?discussion=12961040510A77482800&page=2'>2</a><a href='/pmwiki/posts.php?discussion=12961040510A77482800&page=3'>3</a>&hellip; <a href='/pmwiki/posts.php?discussion=12961040510A77482800&page=1906'>1906</a><a href='/pmwiki/posts.php?discussion=12961040510A77482800&page=1907'>1907</a></div></td><td class="mid extra_css_40 extra_css_font extra_css_text_center" style=""><span class='mobile-on inline'>Posts:</span> 47,658</td><td class="mid extra_css_60 extra_css_font extra_css_text_right" style=""><a href="/pmwiki/posts.php?discussion=12961040510A77482800&page=1907#comment-47658" class='date-time'>Oct 16th 2020 <span>at</span> 5:04:43 PM</a></td></tr><tr class='extra_css_flex'><td class='extra_css_100'><a class='thread-link' href="/pmwiki/posts.php?discussion=12926674280A75780100&page=1">GAME OVER: PRESS 'R' TO TRY AGAIN</a><div class='thread-list-pagination font-xs tablet-off'><a href='/pmwiki/posts.php?discussion=12926674280A75780100&page=1'>1</a><a href='/pmwiki/posts.php?discussion=12926674280A75780100&page=2'>2</a><a href='/pmwiki/posts.php?discussion=12926674280A75780100&page=3'>3</a>&hellip; <a href='/pmwiki/posts.php?discussion=12926674280A75780100&page=118'>118</a><a href='/pmwiki/posts.php?discussion=12926674280A75780100&page=119'>119</a></div></td><td class="mid extra_css_40 extra_css_font extra_css_text_center" style=""><span class='mobile-on inline'>Posts:</span> 2,972</td><td class="mid extra_css_60 extra_css_font extra_css_text_right" style=""><a href="/pmwiki/posts.php?discussion=12926674280A75780100&page=119#comment-2972" class='date-time'>Oct 16th 2020 <span>at</span> 4:20:27 PM</a></td></tr><tr class='extra_css_flex'><td class='extra_css_100'><a class='thread-link' href="/pmwiki/posts.php?discussion=as1q8m3nrv330gva4j3gf4fy&page=1">Pretend you're playing the game 3 threads below this one.</a><div class='thread-list-pagination font-xs tablet-off'><a href='/pmwiki/posts.php?discussion=as1q8m3nrv330gva4j3gf4fy&page=1'>1</a><a href='/pmwiki/posts.php?discussion=as1q8m3nrv330gva4j3gf4fy&page=2'>2</a><a href='/pmwiki/posts.php?discussion=as1q8m3nrv330gva4j3gf4fy&page=3'>3</a>&hellip; <a href='/pmwiki/posts.php?discussion=as1q8m3nrv330gva4j3gf4fy&page=339'>339</a><a href='/pmwiki/posts.php?discussion=as1q8m3nrv330gva4j3gf4fy&page=340'>340</a></div></td><td class="mid extra_css_40 extra_css_font extra_css_text_center" style=""><span class='mobile-on inline'>Posts:</span> 8,483</td><td class="mid extra_css_60 extra_css_font extra_css_text_right" style=""><a href="/pmwiki/posts.php?discussion=as1q8m3nrv330gva4j3gf4fy&page=340#comment-8483" class='date-time'>Oct 16th 2020 <span>at</span> 1:00:17 PM</a></td></tr><tr class='extra_css_flex'><td class='extra_css_100'><a class='thread-link' href="/pmwiki/posts.php?discussion=mkk7hj0re3dzqt9djdkvtr4i&page=1">Pick the cutest avatar in the gallery above you</a><div class='thread-list-pagination font-xs tablet-off'><a href='/pmwiki/posts.php?discussion=mkk7hj0re3dzqt9djdkvtr4i&page=1'>1</a><a href='/pmwiki/posts.php?discussion=mkk7hj0re3dzqt9djdkvtr4i&page=2'>2</a><a href='/pmwiki/posts.php?discussion=mkk7hj0re3dzqt9djdkvtr4i&page=3'>3</a>&hellip; <a href='/pmwiki/posts.php?discussion=mkk7hj0re3dzqt9djdkvtr4i&page=557'>557</a><a href='/pmwiki/posts.php?discussion=mkk7hj0re3dzqt9djdkvtr4i&page=558'>558</a></div></td><td class="mid extra_css_40 extra_css_font extra_css_text_center" style=""><span class='mobile-on inline'>Posts:</span> 13,945</td><td class="mid extra_css_60 extra_css_font extra_css_text_right" style=""><a href="/pmwiki/posts.php?discussion=mkk7hj0re3dzqt9djdkvtr4i&page=558#comment-13945" class='date-time'>Oct 16th 2020 <span>at</span> 9:55:01 AM</a></td></tr><tr class='extra_css_flex'><td class='extra_css_100'><a class='thread-link' href="/pmwiki/posts.php?discussion=12928625730A97716700&page=1">Your avatar just DOMINATED the above avatar</a><div class='thread-list-pagination font-xs tablet-off'><a href='/pmwiki/posts.php?discussion=12928625730A97716700&page=1'>1</a><a href='/pmwiki/posts.php?discussion=12928625730A97716700&page=2'>2</a><a href='/pmwiki/posts.php?discussion=12928625730A97716700&page=3'>3</a>&hellip; <a href='/pmwiki/posts.php?discussion=12928625730A97716700&page=267'>267</a><a href='/pmwiki/posts.php?discussion=12928625730A97716700&page=268'>268</a></div></td><td class="mid extra_css_40 extra_css_font extra_css_text_center" style=""><span class='mobile-on inline'>Posts:</span> 6,681</td><td class="mid extra_css_60 extra_css_font extra_css_text_right" style=""><a href="/pmwiki/posts.php?discussion=12928625730A97716700&page=268#comment-6681" class='date-time'>Oct 16th 2020 <span>at</span> 9:49:16 AM</a></td></tr><tr class='extra_css_flex'><td class='extra_css_100'><a class='thread-link' href="/pmwiki/posts.php?discussion=8izhward9hxaz5cihbmrw5q1&page=1">Corrupt-a-wish.</a><div class='thread-list-pagination font-xs tablet-off'><a href='/pmwiki/posts.php?discussion=8izhward9hxaz5cihbmrw5q1&page=1'>1</a><a href='/pmwiki/posts.php?discussion=8izhward9hxaz5cihbmrw5q1&page=2'>2</a><a href='/pmwiki/posts.php?discussion=8izhward9hxaz5cihbmrw5q1&page=3'>3</a>&hellip; <a href='/pmwiki/posts.php?discussion=8izhward9hxaz5cihbmrw5q1&page=1594'>1594</a><a href='/pmwiki/posts.php?discussion=8izhward9hxaz5cihbmrw5q1&page=1595'>1595</a></div></td><td class="mid extra_css_40 extra_css_font extra_css_text_center" style=""><span class='mobile-on inline'>Posts:</span> 39,857</td><td class="mid extra_css_60 extra_css_font extra_css_text_right" style=""><a href="/pmwiki/posts.php?discussion=8izhward9hxaz5cihbmrw5q1&page=1595#comment-39857" class='date-time'>Oct 16th 2020 <span>at</span> 8:48:50 AM</a></td></tr><tr class='extra_css_flex'><td class='extra_css_100'><a class='thread-link' href="/pmwiki/posts.php?discussion=6pswc5oj3xfv5jryme3ygx0h&page=1">Tropefy the troper above</a><div class='thread-list-pagination font-xs tablet-off'><a href='/pmwiki/posts.php?discussion=6pswc5oj3xfv5jryme3ygx0h&page=1'>1</a><a href='/pmwiki/posts.php?discussion=6pswc5oj3xfv5jryme3ygx0h&page=2'>2</a><a href='/pmwiki/posts.php?discussion=6pswc5oj3xfv5jryme3ygx0h&page=3'>3</a>&hellip; <a href='/pmwiki/posts.php?discussion=6pswc5oj3xfv5jryme3ygx0h&page=906'>906</a><a href='/pmwiki/posts.php?discussion=6pswc5oj3xfv5jryme3ygx0h&page=907'>907</a></div></td><td class="mid extra_css_40 extra_css_font extra_css_text_center" style=""><span class='mobile-on inline'>Posts:</span> 22,663</td><td class="mid extra_css_60 extra_css_font extra_css_text_right" style=""><a href="/pmwiki/posts.php?discussion=6pswc5oj3xfv5jryme3ygx0h&page=907#comment-22663" class='date-time'>Oct 16th 2020 <span>at</span> 7:17:31 AM</a></td></tr><tr class='extra_css_flex'><td class='extra_css_100'><a class='thread-link' href="/pmwiki/posts.php?discussion=15698345570A70118300&page=1">Big Brother Simulator</a><div class='thread-list-pagination font-xs tablet-off'><a href='/pmwiki/posts.php?discussion=15698345570A70118300&page=1'>1</a><a href='/pmwiki/posts.php?discussion=15698345570A70118300&page=2'>2</a><a href='/pmwiki/posts.php?discussion=15698345570A70118300&page=3'>3</a>&hellip; <a href='/pmwiki/posts.php?discussion=15698345570A70118300&page=9'>9</a><a href='/pmwiki/posts.php?discussion=15698345570A70118300&page=10'>10</a></div></td><td class="mid extra_css_40 extra_css_font extra_css_text_center" style=""><span class='mobile-on inline'>Posts:</span> 231</td><td class="mid extra_css_60 extra_css_font extra_css_text_right" style=""><a href="/pmwiki/posts.php?discussion=15698345570A70118300&page=10#comment-231" class='date-time'>Oct 16th 2020 <span>at</span> 6:17:05 AM</a></td></tr><tr class='extra_css_flex'><td class='extra_css_100'><a class='thread-link' href="/pmwiki/posts.php?discussion=13036645040A20805000&page=1">Choose appropriate musical score.</a><div class='thread-list-pagination font-xs tablet-off'><a href='/pmwiki/posts.php?discussion=13036645040A20805000&page=1'>1</a><a href='/pmwiki/posts.php?discussion=13036645040A20805000&page=2'>2</a><a href='/pmwiki/posts.php?discussion=13036645040A20805000&page=3'>3</a>&hellip; <a href='/pmwiki/posts.php?discussion=13036645040A20805000&page=39'>39</a><a href='/pmwiki/posts.php?discussion=13036645040A20805000&page=40'>40</a></div></td><td class="mid extra_css_40 extra_css_font extra_css_text_center" style=""><span class='mobile-on inline'>Posts:</span> 987</td><td class="mid extra_css_60 extra_css_font extra_css_text_right" style=""><a href="/pmwiki/posts.php?discussion=13036645040A20805000&page=40#comment-987" class='date-time'>Oct 16th 2020 <span>at</span> 5:16:15 AM</a></td></tr><tr class='extra_css_flex'><td class='extra_css_100'><a class='thread-link' href="/pmwiki/posts.php?discussion=16028412530A59670400&page=1">The Sinister Ruins: A forum adventure game</a><div class='thread-list-pagination font-xs tablet-off'><a href='/pmwiki/posts.php?discussion=16028412530A59670400&page=1'>1</a></div></td><td class="mid extra_css_40 extra_css_font extra_css_text_center" style=""><span class='mobile-on inline'>Posts:</span> 3</td><td class="mid extra_css_60 extra_css_font extra_css_text_right" style=""><a href="/pmwiki/posts.php?discussion=16028412530A59670400&page=1#comment-3" class='date-time'>Oct 16th 2020 <span>at</span> 4:44:07 AM</a></td></tr><tr class='extra_css_flex'><td class='extra_css_100'><a class='thread-link' href="/pmwiki/posts.php?discussion=15449848070A35012000&page=1">What would the above avatar's Spirit Battle be like?</a><div class='thread-list-pagination font-xs tablet-off'><a href='/pmwiki/posts.php?discussion=15449848070A35012000&page=1'>1</a><a href='/pmwiki/posts.php?discussion=15449848070A35012000&page=2'>2</a><a href='/pmwiki/posts.php?discussion=15449848070A35012000&page=3'>3</a>&hellip; <a href='/pmwiki/posts.php?discussion=15449848070A35012000&page=5'>5</a><a href='/pmwiki/posts.php?discussion=15449848070A35012000&page=6'>6</a></div></td><td class="mid extra_css_40 extra_css_font extra_css_text_center" style=""><span class='mobile-on inline'>Posts:</span> 146</td><td class="mid extra_css_60 extra_css_font extra_css_text_right" style=""><a href="/pmwiki/posts.php?discussion=15449848070A35012000&page=6#comment-146" class='date-time'>Oct 16th 2020 <span>at</span> 4:42:28 AM</a></td></tr><tr class='extra_css_flex'><td class='extra_css_100'><a class='thread-link' href="/pmwiki/posts.php?discussion=15950313680A64919100&page=1">How do we make a worse sequel to [Insert Bad Work Here]?</a><div class='thread-list-pagination font-xs tablet-off'><a href='/pmwiki/posts.php?discussion=15950313680A64919100&page=1'>1</a><a href='/pmwiki/posts.php?discussion=15950313680A64919100&page=2'>2</a><a href='/pmwiki/posts.php?discussion=15950313680A64919100&page=3'>3</a>&hellip; <a href='/pmwiki/posts.php?discussion=15950313680A64919100&page=5'>5</a><a href='/pmwiki/posts.php?discussion=15950313680A64919100&page=6'>6</a></div></td><td class="mid extra_css_40 extra_css_font extra_css_text_center" style=""><span class='mobile-on inline'>Posts:</span> 141</td><td class="mid extra_css_60 extra_css_font extra_css_text_right" style=""><a href="/pmwiki/posts.php?discussion=15950313680A64919100&page=6#comment-141" class='date-time'>Oct 15th 2020 <span>at</span> 7:58:39 PM</a></td></tr><tr class='extra_css_flex'><td class='extra_css_100'><a class='thread-link' href="/pmwiki/posts.php?discussion=15970054110A67122700&page=1">Nomic</a><div class='thread-list-pagination font-xs tablet-off'><a href='/pmwiki/posts.php?discussion=15970054110A67122700&page=1'>1</a><a href='/pmwiki/posts.php?discussion=15970054110A67122700&page=2'>2</a><a href='/pmwiki/posts.php?discussion=15970054110A67122700&page=3'>3</a><a href='/pmwiki/posts.php?discussion=15970054110A67122700&page=4'>4</a></div></td><td class="mid extra_css_40 extra_css_font extra_css_text_center" style=""><span class='mobile-on inline'>Posts:</span> 96</td><td class="mid extra_css_60 extra_css_font extra_css_text_right" style=""><a href="/pmwiki/posts.php?discussion=15970054110A67122700&page=4#comment-96" class='date-time'>Oct 15th 2020 <span>at</span> 6:14:33 PM</a></td></tr><tr class='extra_css_flex'><td class='extra_css_100'><a class='thread-link' href="/pmwiki/posts.php?discussion=15486370390A93646100&page=1">3 things you have/don't have in common with the character the below poster selects</a><div class='thread-list-pagination font-xs tablet-off'><a href='/pmwiki/posts.php?discussion=15486370390A93646100&page=1'>1</a><a href='/pmwiki/posts.php?discussion=15486370390A93646100&page=2'>2</a><a href='/pmwiki/posts.php?discussion=15486370390A93646100&page=3'>3</a>&hellip; <a href='/pmwiki/posts.php?discussion=15486370390A93646100&page=44'>44</a><a href='/pmwiki/posts.php?discussion=15486370390A93646100&page=45'>45</a></div></td><td class="mid extra_css_40 extra_css_font extra_css_text_center" style=""><span class='mobile-on inline'>Posts:</span> 1,123</td><td class="mid extra_css_60 extra_css_font extra_css_text_right" style=""><a href="/pmwiki/posts.php?discussion=15486370390A93646100&page=45#comment-1123" class='date-time'>Oct 15th 2020 <span>at</span> 4:29:17 PM</a></td></tr><tr class='extra_css_flex'><td class='extra_css_100'><a class='thread-link' href="/pmwiki/posts.php?discussion=15381801460A24731100&page=1">The Avatar Chain Game</a><div class='thread-list-pagination font-xs tablet-off'><a href='/pmwiki/posts.php?discussion=15381801460A24731100&page=1'>1</a><a href='/pmwiki/posts.php?discussion=15381801460A24731100&page=2'>2</a><a href='/pmwiki/posts.php?discussion=15381801460A24731100&page=3'>3</a>&hellip; <a href='/pmwiki/posts.php?discussion=15381801460A24731100&page=67'>67</a><a href='/pmwiki/posts.php?discussion=15381801460A24731100&page=68'>68</a></div></td><td class="mid extra_css_40 extra_css_font extra_css_text_center" style=""><span class='mobile-on inline'>Posts:</span> 1,697</td><td class="mid extra_css_60 extra_css_font extra_css_text_right" style=""><a href="/pmwiki/posts.php?discussion=15381801460A24731100&page=68#comment-1697" class='date-time'>Oct 15th 2020 <span>at</span> 3:45:54 PM</a></td></tr><tr class='extra_css_flex'><td class='extra_css_100'><a class='thread-link' href="/pmwiki/posts.php?discussion=15643397480A30259800&page=1">ITT: We're Animals in a Post-Apocalyptic Town</a><div class='thread-list-pagination font-xs tablet-off'><a href='/pmwiki/posts.php?discussion=15643397480A30259800&page=1'>1</a><a href='/pmwiki/posts.php?discussion=15643397480A30259800&page=2'>2</a><a href='/pmwiki/posts.php?discussion=15643397480A30259800&page=3'>3</a>&hellip; <a href='/pmwiki/posts.php?discussion=15643397480A30259800&page=39'>39</a><a href='/pmwiki/posts.php?discussion=15643397480A30259800&page=40'>40</a></div></td><td class="mid extra_css_40 extra_css_font extra_css_text_center" style=""><span class='mobile-on inline'>Posts:</span> 994</td><td class="mid extra_css_60 extra_css_font extra_css_text_right" style=""><a href="/pmwiki/posts.php?discussion=15643397480A30259800&page=40#comment-994" class='date-time'>Oct 15th 2020 <span>at</span> 2:24:07 PM</a></td></tr><tr class='extra_css_flex'><td class='extra_css_100'><a class='thread-link' href="/pmwiki/posts.php?discussion=13716993220A37517000&page=1">Waiter! There is a [insert here] in my soup!</a><div class='thread-list-pagination font-xs tablet-off'><a href='/pmwiki/posts.php?discussion=13716993220A37517000&page=1'>1</a><a href='/pmwiki/posts.php?discussion=13716993220A37517000&page=2'>2</a><a href='/pmwiki/posts.php?discussion=13716993220A37517000&page=3'>3</a>&hellip; <a href='/pmwiki/posts.php?discussion=13716993220A37517000&page=98'>98</a><a href='/pmwiki/posts.php?discussion=13716993220A37517000&page=99'>99</a></div></td><td class="mid extra_css_40 extra_css_font extra_css_text_center" style=""><span class='mobile-on inline'>Posts:</span> 2,467</td><td class="mid extra_css_60 extra_css_font extra_css_text_right" style=""><a href="/pmwiki/posts.php?discussion=13716993220A37517000&page=99#comment-2467" class='date-time'>Oct 15th 2020 <span>at</span> 11:56:27 AM</a></td></tr><tr class='extra_css_flex'><td class='extra_css_100'><a class='thread-link' href="/pmwiki/posts.php?discussion=12986824770A73140100&page=1">Would you cuddle the above avatar?</a><div class='thread-list-pagination font-xs tablet-off'><a href='/pmwiki/posts.php?discussion=12986824770A73140100&page=1'>1</a><a href='/pmwiki/posts.php?discussion=12986824770A73140100&page=2'>2</a><a href='/pmwiki/posts.php?discussion=12986824770A73140100&page=3'>3</a>&hellip; <a href='/pmwiki/posts.php?discussion=12986824770A73140100&page=270'>270</a><a href='/pmwiki/posts.php?discussion=12986824770A73140100&page=271'>271</a></div></td><td class="mid extra_css_40 extra_css_font extra_css_text_center" style=""><span class='mobile-on inline'>Posts:</span> 6,773</td><td class="mid extra_css_60 extra_css_font extra_css_text_right" style=""><a href="/pmwiki/posts.php?discussion=12986824770A73140100&page=271#comment-6773" class='date-time'>Oct 15th 2020 <span>at</span> 10:24:26 AM</a></td></tr><tr class='extra_css_flex'><td class='extra_css_100'><a class='thread-link' href="/pmwiki/posts.php?discussion=13636472650A64560400&page=1">Order vs Chaos</a><div class='thread-list-pagination font-xs tablet-off'><a href='/pmwiki/posts.php?discussion=13636472650A64560400&page=1'>1</a><a href='/pmwiki/posts.php?discussion=13636472650A64560400&page=2'>2</a><a href='/pmwiki/posts.php?discussion=13636472650A64560400&page=3'>3</a>&hellip; <a href='/pmwiki/posts.php?discussion=13636472650A64560400&page=2184'>2184</a><a href='/pmwiki/posts.php?discussion=13636472650A64560400&page=2185'>2185</a></div></td><td class="mid extra_css_40 extra_css_font extra_css_text_center" style=""><span class='mobile-on inline'>Posts:</span> 54,606</td><td class="mid extra_css_60 extra_css_font extra_css_text_right" style=""><a href="/pmwiki/posts.php?discussion=13636472650A64560400&page=2185#comment-54606" class='date-time'>Oct 15th 2020 <span>at</span> 3:23:59 AM</a></td></tr><tr class='extra_css_flex'><td class='extra_css_100'><a class='thread-link' href="/pmwiki/posts.php?discussion=14833191420A53503300&page=1">The above avatar is in your bed.</a><div class='thread-list-pagination font-xs tablet-off'><a href='/pmwiki/posts.php?discussion=14833191420A53503300&page=1'>1</a><a href='/pmwiki/posts.php?discussion=14833191420A53503300&page=2'>2</a><a href='/pmwiki/posts.php?discussion=14833191420A53503300&page=3'>3</a>&hellip; <a href='/pmwiki/posts.php?discussion=14833191420A53503300&page=28'>28</a><a href='/pmwiki/posts.php?discussion=14833191420A53503300&page=29'>29</a></div></td><td class="mid extra_css_40 extra_css_font extra_css_text_center" style=""><span class='mobile-on inline'>Posts:</span> 701</td><td class="mid extra_css_60 extra_css_font extra_css_text_right" style=""><a href="/pmwiki/posts.php?discussion=14833191420A53503300&page=29#comment-701" class='date-time'>Oct 15th 2020 <span>at</span> 1:43:35 AM</a></td></tr><tr class='extra_css_flex'><td class='extra_css_100'><a class='thread-link' href="/pmwiki/posts.php?discussion=12916341230A65417300&page=1">That's a HORRIBLE adaptation!</a><div class='thread-list-pagination font-xs tablet-off'><a href='/pmwiki/posts.php?discussion=12916341230A65417300&page=1'>1</a><a href='/pmwiki/posts.php?discussion=12916341230A65417300&page=2'>2</a><a href='/pmwiki/posts.php?discussion=12916341230A65417300&page=3'>3</a>&hellip; <a href='/pmwiki/posts.php?discussion=12916341230A65417300&page=111'>111</a><a href='/pmwiki/posts.php?discussion=12916341230A65417300&page=112'>112</a></div></td><td class="mid extra_css_40 extra_css_font extra_css_text_center" style=""><span class='mobile-on inline'>Posts:</span> 2,793</td><td class="mid extra_css_60 extra_css_font extra_css_text_right" style=""><a href="/pmwiki/posts.php?discussion=12916341230A65417300&page=112#comment-2793" class='date-time'>Oct 14th 2020 <span>at</span> 11:26:19 PM</a></td></tr><tr class='extra_css_flex'><td class='extra_css_100'><a class='thread-link' href="/pmwiki/posts.php?discussion=15736841190A73013300&page=1">your avatar..</a><div class='thread-list-pagination font-xs tablet-off'><a href='/pmwiki/posts.php?discussion=15736841190A73013300&page=1'>1</a></div></td><td class="mid extra_css_40 extra_css_font extra_css_text_center" style=""><span class='mobile-on inline'>Posts:</span> 22</td><td class="mid extra_css_60 extra_css_font extra_css_text_right" style=""><a href="/pmwiki/posts.php?discussion=15736841190A73013300&page=1#comment-22" class='date-time'>Oct 14th 2020 <span>at</span> 7:17:19 PM</a></td></tr><tr class='extra_css_flex'><td class='extra_css_100'><a class='thread-link' href="/pmwiki/posts.php?discussion=13174340370A42020100&page=1">Pick the most badass avatar in the gallery above you.</a><div class='thread-list-pagination font-xs tablet-off'><a href='/pmwiki/posts.php?discussion=13174340370A42020100&page=1'>1</a><a href='/pmwiki/posts.php?discussion=13174340370A42020100&page=2'>2</a><a href='/pmwiki/posts.php?discussion=13174340370A42020100&page=3'>3</a>&hellip; <a href='/pmwiki/posts.php?discussion=13174340370A42020100&page=84'>84</a><a href='/pmwiki/posts.php?discussion=13174340370A42020100&page=85'>85</a></div></td><td class="mid extra_css_40 extra_css_font extra_css_text_center" style=""><span class='mobile-on inline'>Posts:</span> 2,120</td><td class="mid extra_css_60 extra_css_font extra_css_text_right" style=""><a href="/pmwiki/posts.php?discussion=13174340370A42020100&page=85#comment-2120" class='date-time'>Oct 14th 2020 <span>at</span> 6:32:21 PM</a></td></tr><tr class='extra_css_flex'><td class='extra_css_100'><a class='thread-link' href="/pmwiki/posts.php?discussion=14420872150A98294400&page=1">That&#039;s a HORRIBLE crossover!</a><div class='thread-list-pagination font-xs tablet-off'><a href='/pmwiki/posts.php?discussion=14420872150A98294400&page=1'>1</a><a href='/pmwiki/posts.php?discussion=14420872150A98294400&page=2'>2</a><a href='/pmwiki/posts.php?discussion=14420872150A98294400&page=3'>3</a>&hellip; <a href='/pmwiki/posts.php?discussion=14420872150A98294400&page=41'>41</a><a href='/pmwiki/posts.php?discussion=14420872150A98294400&page=42'>42</a></div></td><td class="mid extra_css_40 extra_css_font extra_css_text_center" style=""><span class='mobile-on inline'>Posts:</span> 1,042</td><td class="mid extra_css_60 extra_css_font extra_css_text_right" style=""><a href="/pmwiki/posts.php?discussion=14420872150A98294400&page=42#comment-1042" class='date-time'>Oct 14th 2020 <span>at</span> 12:09:31 PM</a></td></tr><tr class='extra_css_flex'><td class='extra_css_100'><a class='thread-link' href="/pmwiki/posts.php?discussion=15493716370A53851000&page=1">Make The Above Signature Verbose</a><div class='thread-list-pagination font-xs tablet-off'><a href='/pmwiki/posts.php?discussion=15493716370A53851000&page=1'>1</a><a href='/pmwiki/posts.php?discussion=15493716370A53851000&page=2'>2</a><a href='/pmwiki/posts.php?discussion=15493716370A53851000&page=3'>3</a>&hellip; <a href='/pmwiki/posts.php?discussion=15493716370A53851000&page=16'>16</a><a href='/pmwiki/posts.php?discussion=15493716370A53851000&page=17'>17</a></div></td><td class="mid extra_css_40 extra_css_font extra_css_text_center" style=""><span class='mobile-on inline'>Posts:</span> 409</td><td class="mid extra_css_60 extra_css_font extra_css_text_right" style=""><a href="/pmwiki/posts.php?discussion=15493716370A53851000&page=17#comment-409" class='date-time'>Oct 14th 2020 <span>at</span> 11:10:13 AM</a></td></tr><tr class='extra_css_flex'><td class='extra_css_100'><a class='thread-link' href="/pmwiki/posts.php?discussion=14849464200A55169600&page=1">You Bed The Avatar That The Below Poster Selects From Your Gallery</a><div class='thread-list-pagination font-xs tablet-off'><a href='/pmwiki/posts.php?discussion=14849464200A55169600&page=1'>1</a><a href='/pmwiki/posts.php?discussion=14849464200A55169600&page=2'>2</a><a href='/pmwiki/posts.php?discussion=14849464200A55169600&page=3'>3</a>&hellip; <a href='/pmwiki/posts.php?discussion=14849464200A55169600&page=206'>206</a><a href='/pmwiki/posts.php?discussion=14849464200A55169600&page=207'>207</a></div></td><td class="mid extra_css_40 extra_css_font extra_css_text_center" style=""><span class='mobile-on inline'>Posts:</span> 5,152</td><td class="mid extra_css_60 extra_css_font extra_css_text_right" style=""><a href="/pmwiki/posts.php?discussion=14849464200A55169600&page=207#comment-5152" class='date-time'>Oct 14th 2020 <span>at</span> 10:13:37 AM</a></td></tr><tr class='extra_css_flex'><td class='extra_css_100'><a class='thread-link' href="/pmwiki/posts.php?discussion=13258022690A59360100&page=1">Your avatar is responding to the above signature.</a><div class='thread-list-pagination font-xs tablet-off'><a href='/pmwiki/posts.php?discussion=13258022690A59360100&page=1'>1</a><a href='/pmwiki/posts.php?discussion=13258022690A59360100&page=2'>2</a><a href='/pmwiki/posts.php?discussion=13258022690A59360100&page=3'>3</a>&hellip; <a href='/pmwiki/posts.php?discussion=13258022690A59360100&page=591'>591</a><a href='/pmwiki/posts.php?discussion=13258022690A59360100&page=592'>592</a></div></td><td class="mid extra_css_40 extra_css_font extra_css_text_center" style=""><span class='mobile-on inline'>Posts:</span> 14,783</td><td class="mid extra_css_60 extra_css_font extra_css_text_right" style=""><a href="/pmwiki/posts.php?discussion=13258022690A59360100&page=592#comment-14783" class='date-time'>Oct 14th 2020 <span>at</span> 8:22:40 AM</a></td></tr><tr class='extra_css_flex'><td class='extra_css_100'><a class='thread-link' href="/pmwiki/posts.php?discussion=13733763590A26238600&page=1">How Will You Spend The Day With The Above Avatar? (Seconds Game)</a><div class='thread-list-pagination font-xs tablet-off'><a href='/pmwiki/posts.php?discussion=13733763590A26238600&page=1'>1</a><a href='/pmwiki/posts.php?discussion=13733763590A26238600&page=2'>2</a><a href='/pmwiki/posts.php?discussion=13733763590A26238600&page=3'>3</a>&hellip; <a href='/pmwiki/posts.php?discussion=13733763590A26238600&page=540'>540</a><a href='/pmwiki/posts.php?discussion=13733763590A26238600&page=541'>541</a></div></td><td class="mid extra_css_40 extra_css_font extra_css_text_center" style=""><span class='mobile-on inline'>Posts:</span> 13,509</td><td class="mid extra_css_60 extra_css_font extra_css_text_right" style=""><a href="/pmwiki/posts.php?discussion=13733763590A26238600&page=541#comment-13509" class='date-time'>Oct 14th 2020 <span>at</span> 7:16:32 AM</a></td></tr><tr class='extra_css_flex'><td class='extra_css_100'><a class='thread-link' href="/pmwiki/posts.php?discussion=16019947870A46051700&page=1">Tropemon I: Journey Tendency</a><div class='thread-list-pagination font-xs tablet-off'><a href='/pmwiki/posts.php?discussion=16019947870A46051700&page=1'>1</a><a href='/pmwiki/posts.php?discussion=16019947870A46051700&page=2'>2</a><a href='/pmwiki/posts.php?discussion=16019947870A46051700&page=3'>3</a>&hellip; <a href='/pmwiki/posts.php?discussion=16019947870A46051700&page=36'>36</a><a href='/pmwiki/posts.php?discussion=16019947870A46051700&page=37'>37</a></div></td><td class="mid extra_css_40 extra_css_font extra_css_text_center" style=""><span class='mobile-on inline'>Posts:</span> 924</td><td class="mid extra_css_60 extra_css_font extra_css_text_right" style=""><a href="/pmwiki/posts.php?discussion=16019947870A46051700&page=37#comment-924" class='date-time'>Oct 14th 2020 <span>at</span> 5:31:05 AM</a></td></tr><tr class='extra_css_flex'><td class='extra_css_100'><a class='thread-link' href="/pmwiki/posts.php?discussion=0iq1ad6wg1655luks4320a8k&page=1">Compliment The Avatar Above You</a><div class='thread-list-pagination font-xs tablet-off'><a href='/pmwiki/posts.php?discussion=0iq1ad6wg1655luks4320a8k&page=1'>1</a><a href='/pmwiki/posts.php?discussion=0iq1ad6wg1655luks4320a8k&page=2'>2</a><a href='/pmwiki/posts.php?discussion=0iq1ad6wg1655luks4320a8k&page=3'>3</a>&hellip; <a href='/pmwiki/posts.php?discussion=0iq1ad6wg1655luks4320a8k&page=164'>164</a><a href='/pmwiki/posts.php?discussion=0iq1ad6wg1655luks4320a8k&page=165'>165</a></div></td><td class="mid extra_css_40 extra_css_font extra_css_text_center" style=""><span class='mobile-on inline'>Posts:</span> 4,122</td><td class="mid extra_css_60 extra_css_font extra_css_text_right" style=""><a href="/pmwiki/posts.php?discussion=0iq1ad6wg1655luks4320a8k&page=165#comment-4122" class='date-time'>Oct 14th 2020 <span>at</span> 4:40:47 AM</a></td></tr><tr class='extra_css_flex'><td class='extra_css_100'><a class='thread-link' href="/pmwiki/posts.php?discussion=15987635320A14374100&page=1">The Forum Games King For a Day Tournament!</a><div class='thread-list-pagination font-xs tablet-off'><a href='/pmwiki/posts.php?discussion=15987635320A14374100&page=1'>1</a><a href='/pmwiki/posts.php?discussion=15987635320A14374100&page=2'>2</a><a href='/pmwiki/posts.php?discussion=15987635320A14374100&page=3'>3</a>&hellip; <a href='/pmwiki/posts.php?discussion=15987635320A14374100&page=26'>26</a><a href='/pmwiki/posts.php?discussion=15987635320A14374100&page=27'>27</a></div></td><td class="mid extra_css_40 extra_css_font extra_css_text_center" style=""><span class='mobile-on inline'>Posts:</span> 660</td><td class="mid extra_css_60 extra_css_font extra_css_text_right" style=""><a href="/pmwiki/posts.php?discussion=15987635320A14374100&page=27#comment-660" class='date-time'>Oct 13th 2020 <span>at</span> 9:50:21 PM</a></td></tr><tr class='extra_css_flex'><td class='extra_css_100'><a class='thread-link' href="/pmwiki/posts.php?discussion=12978892030A88080100&page=1">You get an achievement for killing the above avatar</a><div class='thread-list-pagination font-xs tablet-off'><a href='/pmwiki/posts.php?discussion=12978892030A88080100&page=1'>1</a><a href='/pmwiki/posts.php?discussion=12978892030A88080100&page=2'>2</a><a href='/pmwiki/posts.php?discussion=12978892030A88080100&page=3'>3</a>&hellip; <a href='/pmwiki/posts.php?discussion=12978892030A88080100&page=199'>199</a><a href='/pmwiki/posts.php?discussion=12978892030A88080100&page=200'>200</a></div></td><td class="mid extra_css_40 extra_css_font extra_css_text_center" style=""><span class='mobile-on inline'>Posts:</span> 4,982</td><td class="mid extra_css_60 extra_css_font extra_css_text_right" style=""><a href="/pmwiki/posts.php?discussion=12978892030A88080100&page=200#comment-4982" class='date-time'>Oct 13th 2020 <span>at</span> 9:31:14 PM</a></td></tr><tr class='extra_css_flex'><td class='extra_css_100'><a class='thread-link' href="/pmwiki/posts.php?discussion=14567703440A79329600&page=1">Mini-Scenario Game</a><div class='thread-list-pagination font-xs tablet-off'><a href='/pmwiki/posts.php?discussion=14567703440A79329600&page=1'>1</a><a href='/pmwiki/posts.php?discussion=14567703440A79329600&page=2'>2</a><a href='/pmwiki/posts.php?discussion=14567703440A79329600&page=3'>3</a>&hellip; <a href='/pmwiki/posts.php?discussion=14567703440A79329600&page=8'>8</a><a href='/pmwiki/posts.php?discussion=14567703440A79329600&page=9'>9</a></div></td><td class="mid extra_css_40 extra_css_font extra_css_text_center" style=""><span class='mobile-on inline'>Posts:</span> 222</td><td class="mid extra_css_60 extra_css_font extra_css_text_right" style=""><a href="/pmwiki/posts.php?discussion=14567703440A79329600&page=9#comment-222" class='date-time'>Oct 13th 2020 <span>at</span> 8:49:47 PM</a></td></tr><tr class='extra_css_flex'><td class='extra_css_100'><a class='thread-link' href="/pmwiki/posts.php?discussion=16024666090A83943700&page=1">Roll to Dodge X: Invaders From The Stars</a><div class='thread-list-pagination font-xs tablet-off'><a href='/pmwiki/posts.php?discussion=16024666090A83943700&page=1'>1</a><a href='/pmwiki/posts.php?discussion=16024666090A83943700&page=2'>2</a><a href='/pmwiki/posts.php?discussion=16024666090A83943700&page=3'>3</a>&hellip; <a href='/pmwiki/posts.php?discussion=16024666090A83943700&page=21'>21</a><a href='/pmwiki/posts.php?discussion=16024666090A83943700&page=22'>22</a></div></td><td class="mid extra_css_40 extra_css_font extra_css_text_center" style=""><span class='mobile-on inline'>Posts:</span> 536</td><td class="mid extra_css_60 extra_css_font extra_css_text_right" style=""><a href="/pmwiki/posts.php?discussion=16024666090A83943700&page=22#comment-536" class='date-time'>Oct 13th 2020 <span>at</span> 8:45:04 PM</a></td></tr><tr class='extra_css_flex'><td class='extra_css_100'><a class='thread-link' href="/pmwiki/posts.php?discussion=16014707670A20014100&page=1">Answer with a Meme</a><div class='thread-list-pagination font-xs tablet-off'><a href='/pmwiki/posts.php?discussion=16014707670A20014100&page=1'>1</a></div></td><td class="mid extra_css_40 extra_css_font extra_css_text_center" style=""><span class='mobile-on inline'>Posts:</span> 15</td><td class="mid extra_css_60 extra_css_font extra_css_text_right" style=""><a href="/pmwiki/posts.php?discussion=16014707670A20014100&page=1#comment-15" class='date-time'>Oct 13th 2020 <span>at</span> 8:13:25 PM</a></td></tr><tr class='extra_css_flex'><td class='extra_css_100'><a class='thread-link' href="/pmwiki/posts.php?discussion=14694470880A77750500&page=1">Ask the Above Avatar a Question</a><div class='thread-list-pagination font-xs tablet-off'><a href='/pmwiki/posts.php?discussion=14694470880A77750500&page=1'>1</a><a href='/pmwiki/posts.php?discussion=14694470880A77750500&page=2'>2</a><a href='/pmwiki/posts.php?discussion=14694470880A77750500&page=3'>3</a>&hellip; <a href='/pmwiki/posts.php?discussion=14694470880A77750500&page=338'>338</a><a href='/pmwiki/posts.php?discussion=14694470880A77750500&page=339'>339</a></div></td><td class="mid extra_css_40 extra_css_font extra_css_text_center" style=""><span class='mobile-on inline'>Posts:</span> 8,470</td><td class="mid extra_css_60 extra_css_font extra_css_text_right" style=""><a href="/pmwiki/posts.php?discussion=14694470880A77750500&page=339#comment-8470" class='date-time'>Oct 13th 2020 <span>at</span> 5:39:35 PM</a></td></tr><tr class='extra_css_flex'><td class='extra_css_100'><a class='thread-link' href="/pmwiki/posts.php?discussion=16023699820A10128500&page=1">Backwards Movies</a><div class='thread-list-pagination font-xs tablet-off'><a href='/pmwiki/posts.php?discussion=16023699820A10128500&page=1'>1</a><a href='/pmwiki/posts.php?discussion=16023699820A10128500&page=2'>2</a></div></td><td class="mid extra_css_40 extra_css_font extra_css_text_center" style=""><span class='mobile-on inline'>Posts:</span> 30</td><td class="mid extra_css_60 extra_css_font extra_css_text_right" style=""><a href="/pmwiki/posts.php?discussion=16023699820A10128500&page=2#comment-30" class='date-time'>Oct 13th 2020 <span>at</span> 3:04:22 PM</a></td></tr><tr class='extra_css_flex'><td class='extra_css_100'><a class='thread-link' href="/pmwiki/posts.php?discussion=14864614000A22664000&page=1">Which avatar in the above gallery would you most want to hug?</a><div class='thread-list-pagination font-xs tablet-off'><a href='/pmwiki/posts.php?discussion=14864614000A22664000&page=1'>1</a><a href='/pmwiki/posts.php?discussion=14864614000A22664000&page=2'>2</a><a href='/pmwiki/posts.php?discussion=14864614000A22664000&page=3'>3</a>&hellip; <a href='/pmwiki/posts.php?discussion=14864614000A22664000&page=49'>49</a><a href='/pmwiki/posts.php?discussion=14864614000A22664000&page=50'>50</a></div></td><td class="mid extra_css_40 extra_css_font extra_css_text_center" style=""><span class='mobile-on inline'>Posts:</span> 1,231</td><td class="mid extra_css_60 extra_css_font extra_css_text_right" style=""><a href="/pmwiki/posts.php?discussion=14864614000A22664000&page=50#comment-1231" class='date-time'>Oct 13th 2020 <span>at</span> 2:35:52 PM</a></td></tr><tr class='extra_css_flex'><td class='extra_css_100'><a class='thread-link' href="/pmwiki/posts.php?discussion=13087084120A81100100&page=1">Ask the next poster a question</a><div class='thread-list-pagination font-xs tablet-off'><a href='/pmwiki/posts.php?discussion=13087084120A81100100&page=1'>1</a><a href='/pmwiki/posts.php?discussion=13087084120A81100100&page=2'>2</a><a href='/pmwiki/posts.php?discussion=13087084120A81100100&page=3'>3</a>&hellip; <a href='/pmwiki/posts.php?discussion=13087084120A81100100&page=1515'>1515</a><a href='/pmwiki/posts.php?discussion=13087084120A81100100&page=1516'>1516</a></div></td><td class="mid extra_css_40 extra_css_font extra_css_text_center" style=""><span class='mobile-on inline'>Posts:</span> 37,899</td><td class="mid extra_css_60 extra_css_font extra_css_text_right" style=""><a href="/pmwiki/posts.php?discussion=13087084120A81100100&page=1516#comment-37899" class='date-time'>Oct 13th 2020 <span>at</span> 2:26:27 PM</a></td></tr><tr class='extra_css_flex'><td class='extra_css_100'><a class='thread-link' href="/pmwiki/posts.php?discussion=14757595680A53711300&page=1">Pick the purest avatar in the above gallery</a><div class='thread-list-pagination font-xs tablet-off'><a href='/pmwiki/posts.php?discussion=14757595680A53711300&page=1'>1</a><a href='/pmwiki/posts.php?discussion=14757595680A53711300&page=2'>2</a><a href='/pmwiki/posts.php?discussion=14757595680A53711300&page=3'>3</a>&hellip; <a href='/pmwiki/posts.php?discussion=14757595680A53711300&page=53'>53</a><a href='/pmwiki/posts.php?discussion=14757595680A53711300&page=54'>54</a></div></td><td class="mid extra_css_40 extra_css_font extra_css_text_center" style=""><span class='mobile-on inline'>Posts:</span> 1,333</td><td class="mid extra_css_60 extra_css_font extra_css_text_right" style=""><a href="/pmwiki/posts.php?discussion=14757595680A53711300&page=54#comment-1333" class='date-time'>Oct 13th 2020 <span>at</span> 1:34:17 PM</a></td></tr><tr class='extra_css_flex'><td class='extra_css_100'><a class='thread-link' href="/pmwiki/posts.php?discussion=16025221290A12454600&page=1">Roll To Dodge XI: Titanium Fist!!!</a><div class='thread-list-pagination font-xs tablet-off'><a href='/pmwiki/posts.php?discussion=16025221290A12454600&page=1'>1</a></div></td><td class="mid extra_css_40 extra_css_font extra_css_text_center" style=""><span class='mobile-on inline'>Posts:</span> 16</td><td class="mid extra_css_60 extra_css_font extra_css_text_right" style=""><a href="/pmwiki/posts.php?discussion=16025221290A12454600&page=1#comment-16" class='date-time'>Oct 13th 2020 <span>at</span> 11:27:32 AM</a></td></tr><tr class='extra_css_flex'><td class='extra_css_100'><a class='thread-link' href="/pmwiki/posts.php?discussion=gd7fvtx6dgbdalhpc70cntbp&page=1">Use Noodle Implements.</a><div class='thread-list-pagination font-xs tablet-off'><a href='/pmwiki/posts.php?discussion=gd7fvtx6dgbdalhpc70cntbp&page=1'>1</a><a href='/pmwiki/posts.php?discussion=gd7fvtx6dgbdalhpc70cntbp&page=2'>2</a><a href='/pmwiki/posts.php?discussion=gd7fvtx6dgbdalhpc70cntbp&page=3'>3</a>&hellip; <a href='/pmwiki/posts.php?discussion=gd7fvtx6dgbdalhpc70cntbp&page=20'>20</a><a href='/pmwiki/posts.php?discussion=gd7fvtx6dgbdalhpc70cntbp&page=21'>21</a></div></td><td class="mid extra_css_40 extra_css_font extra_css_text_center" style=""><span class='mobile-on inline'>Posts:</span> 515</td><td class="mid extra_css_60 extra_css_font extra_css_text_right" style=""><a href="/pmwiki/posts.php?discussion=gd7fvtx6dgbdalhpc70cntbp&page=21#comment-515" class='date-time'>Oct 13th 2020 <span>at</span> 7:31:59 AM</a></td></tr><tr class='extra_css_flex'><td class='extra_css_100'><a class='thread-link' href="/pmwiki/posts.php?discussion=14532688150A12467900&page=1">What was the first avatar you&#039;ve ever seen the above poster use?</a><div class='thread-list-pagination font-xs tablet-off'><a href='/pmwiki/posts.php?discussion=14532688150A12467900&page=1'>1</a><a href='/pmwiki/posts.php?discussion=14532688150A12467900&page=2'>2</a><a href='/pmwiki/posts.php?discussion=14532688150A12467900&page=3'>3</a>&hellip; <a href='/pmwiki/posts.php?discussion=14532688150A12467900&page=17'>17</a><a href='/pmwiki/posts.php?discussion=14532688150A12467900&page=18'>18</a></div></td><td class="mid extra_css_40 extra_css_font extra_css_text_center" style=""><span class='mobile-on inline'>Posts:</span> 440</td><td class="mid extra_css_60 extra_css_font extra_css_text_right" style=""><a href="/pmwiki/posts.php?discussion=14532688150A12467900&page=18#comment-440" class='date-time'>Oct 13th 2020 <span>at</span> 6:47:19 AM</a></td></tr><tr class='extra_css_flex'><td class='extra_css_100'><a class='thread-link' href="/pmwiki/posts.php?discussion=15991657900A14060700&page=1">The 10 Movie Marathon Game</a><div class='thread-list-pagination font-xs tablet-off'><a href='/pmwiki/posts.php?discussion=15991657900A14060700&page=1'>1</a><a href='/pmwiki/posts.php?discussion=15991657900A14060700&page=2'>2</a><a href='/pmwiki/posts.php?discussion=15991657900A14060700&page=3'>3</a>&hellip; <a href='/pmwiki/posts.php?discussion=15991657900A14060700&page=7'>7</a><a href='/pmwiki/posts.php?discussion=15991657900A14060700&page=8'>8</a></div></td><td class="mid extra_css_40 extra_css_font extra_css_text_center" style=""><span class='mobile-on inline'>Posts:</span> 187</td><td class="mid extra_css_60 extra_css_font extra_css_text_right" style=""><a href="/pmwiki/posts.php?discussion=15991657900A14060700&page=8#comment-187" class='date-time'>Oct 13th 2020 <span>at</span> 4:50:55 AM</a></td></tr><tr class='extra_css_flex'><td class='extra_css_100'><a class='thread-link' href="/pmwiki/posts.php?discussion=16025160170A09377900&page=1">TRS renamings nobody would like game</a><div class='thread-list-pagination font-xs tablet-off'><a href='/pmwiki/posts.php?discussion=16025160170A09377900&page=1'>1</a></div></td><td class="mid extra_css_40 extra_css_font extra_css_text_center" style=""><span class='mobile-on inline'>Posts:</span> 2</td><td class="mid extra_css_60 extra_css_font extra_css_text_right" style=""><a href="/pmwiki/posts.php?discussion=16025160170A09377900&page=1#comment-2" class='date-time'>Oct 13th 2020 <span>at</span> 1:17:01 AM</a></td></tr><tr class='extra_css_flex'><td class='extra_css_100'><a class='thread-link' href="/pmwiki/posts.php?discussion=14892654990A70313800&page=1">The Above Avatar Saved Your Life</a><div class='thread-list-pagination font-xs tablet-off'><a href='/pmwiki/posts.php?discussion=14892654990A70313800&page=1'>1</a><a href='/pmwiki/posts.php?discussion=14892654990A70313800&page=2'>2</a><a href='/pmwiki/posts.php?discussion=14892654990A70313800&page=3'>3</a>&hellip; <a href='/pmwiki/posts.php?discussion=14892654990A70313800&page=18'>18</a><a href='/pmwiki/posts.php?discussion=14892654990A70313800&page=19'>19</a></div></td><td class="mid extra_css_40 extra_css_font extra_css_text_center" style=""><span class='mobile-on inline'>Posts:</span> 458</td><td class="mid extra_css_60 extra_css_font extra_css_text_right" style=""><a href="/pmwiki/posts.php?discussion=14892654990A70313800&page=19#comment-458" class='date-time'>Oct 12th 2020 <span>at</span> 8:47:26 PM</a></td></tr><tr class='extra_css_flex'><td class='extra_css_100'><a class='thread-link' href="/pmwiki/posts.php?discussion=14883518010A51712600&page=1">Avatar Alphabet Game</a><div class='thread-list-pagination font-xs tablet-off'><a href='/pmwiki/posts.php?discussion=14883518010A51712600&page=1'>1</a><a href='/pmwiki/posts.php?discussion=14883518010A51712600&page=2'>2</a><a href='/pmwiki/posts.php?discussion=14883518010A51712600&page=3'>3</a>&hellip; <a href='/pmwiki/posts.php?discussion=14883518010A51712600&page=46'>46</a><a href='/pmwiki/posts.php?discussion=14883518010A51712600&page=47'>47</a></div></td><td class="mid extra_css_40 extra_css_font extra_css_text_center" style=""><span class='mobile-on inline'>Posts:</span> 1,173</td><td class="mid extra_css_60 extra_css_font extra_css_text_right" style=""><a href="/pmwiki/posts.php?discussion=14883518010A51712600&page=47#comment-1173" class='date-time'>Oct 12th 2020 <span>at</span> 5:26:50 PM</a></td></tr><tr class='extra_css_flex'><td class='extra_css_100'><a class='thread-link' href="/pmwiki/posts.php?discussion=14059785450A07684800&page=1">The Two Avatars Above You Are On The Brink of Death</a><div class='thread-list-pagination font-xs tablet-off'><a href='/pmwiki/posts.php?discussion=14059785450A07684800&page=1'>1</a><a href='/pmwiki/posts.php?discussion=14059785450A07684800&page=2'>2</a><a href='/pmwiki/posts.php?discussion=14059785450A07684800&page=3'>3</a>&hellip; <a href='/pmwiki/posts.php?discussion=14059785450A07684800&page=180'>180</a><a href='/pmwiki/posts.php?discussion=14059785450A07684800&page=181'>181</a></div></td><td class="mid extra_css_40 extra_css_font extra_css_text_center" style=""><span class='mobile-on inline'>Posts:</span> 4,514</td><td class="mid extra_css_60 extra_css_font extra_css_text_right" style=""><a href="/pmwiki/posts.php?discussion=14059785450A07684800&page=181#comment-4514" class='date-time'>Oct 12th 2020 <span>at</span> 5:11:58 PM</a></td></tr><tr class='extra_css_flex'><td class='extra_css_100'><a class='thread-link' href="/pmwiki/posts.php?discussion=12930989760A43804800&page=1">Troper Cuddlepile</a><div class='thread-list-pagination font-xs tablet-off'><a href='/pmwiki/posts.php?discussion=12930989760A43804800&page=1'>1</a><a href='/pmwiki/posts.php?discussion=12930989760A43804800&page=2'>2</a><a href='/pmwiki/posts.php?discussion=12930989760A43804800&page=3'>3</a>&hellip; <a href='/pmwiki/posts.php?discussion=12930989760A43804800&page=11876'>11876</a><a href='/pmwiki/posts.php?discussion=12930989760A43804800&page=11877'>11877</a></div></td><td class="mid extra_css_40 extra_css_font extra_css_text_center" style=""><span class='mobile-on inline'>Posts:</span> 296,915</td><td class="mid extra_css_60 extra_css_font extra_css_text_right" style=""><a href="/pmwiki/posts.php?discussion=12930989760A43804800&page=11877#comment-296915" class='date-time'>Oct 12th 2020 <span>at</span> 4:56:34 PM</a></td></tr><tr class='extra_css_flex'><td class='extra_css_100'><a class='thread-link' href="/pmwiki/posts.php?discussion=14860969920A07830300&page=1">Would the above two avatars make a good couple?</a><div class='thread-list-pagination font-xs tablet-off'><a href='/pmwiki/posts.php?discussion=14860969920A07830300&page=1'>1</a><a href='/pmwiki/posts.php?discussion=14860969920A07830300&page=2'>2</a><a href='/pmwiki/posts.php?discussion=14860969920A07830300&page=3'>3</a>&hellip; <a href='/pmwiki/posts.php?discussion=14860969920A07830300&page=54'>54</a><a href='/pmwiki/posts.php?discussion=14860969920A07830300&page=55'>55</a></div></td><td class="mid extra_css_40 extra_css_font extra_css_text_center" style=""><span class='mobile-on inline'>Posts:</span> 1,352</td><td class="mid extra_css_60 extra_css_font extra_css_text_right" style=""><a href="/pmwiki/posts.php?discussion=14860969920A07830300&page=55#comment-1352" class='date-time'>Oct 12th 2020 <span>at</span> 4:55:22 PM</a></td></tr><tr class='extra_css_flex'><td class='extra_css_100'><a class='thread-link' href="/pmwiki/posts.php?discussion=14566351330A45300000&page=1">The above avatar tries to seduce you</a><div class='thread-list-pagination font-xs tablet-off'><a href='/pmwiki/posts.php?discussion=14566351330A45300000&page=1'>1</a><a href='/pmwiki/posts.php?discussion=14566351330A45300000&page=2'>2</a><a href='/pmwiki/posts.php?discussion=14566351330A45300000&page=3'>3</a>&hellip; <a href='/pmwiki/posts.php?discussion=14566351330A45300000&page=115'>115</a><a href='/pmwiki/posts.php?discussion=14566351330A45300000&page=116'>116</a></div></td><td class="mid extra_css_40 extra_css_font extra_css_text_center" style=""><span class='mobile-on inline'>Posts:</span> 2,893</td><td class="mid extra_css_60 extra_css_font extra_css_text_right" style=""><a href="/pmwiki/posts.php?discussion=14566351330A45300000&page=116#comment-2893" class='date-time'>Oct 12th 2020 <span>at</span> 4:28:18 PM</a></td></tr><tr class='extra_css_flex'><td class='extra_css_100'><a class='thread-link' href="/pmwiki/posts.php?discussion=16025203680A70059700&page=1">Avatar Cuddlepile</a><div class='thread-list-pagination font-xs tablet-off'><a href='/pmwiki/posts.php?discussion=16025203680A70059700&page=1'>1</a></div></td><td class="mid extra_css_40 extra_css_font extra_css_text_center" style=""><span class='mobile-on inline'>Posts:</span> 6</td><td class="mid extra_css_60 extra_css_font extra_css_text_right" style=""><a href="/pmwiki/posts.php?discussion=16025203680A70059700&page=1#comment-6" class='date-time'>Oct 12th 2020 <span>at</span> 1:16:49 PM</a></td></tr><tr class='extra_css_flex'><td class='extra_css_100'><a class='thread-link' href="/pmwiki/posts.php?discussion=15340411620A60905300&page=1">You and the random avatar from your gallery...</a><div class='thread-list-pagination font-xs tablet-off'><a href='/pmwiki/posts.php?discussion=15340411620A60905300&page=1'>1</a><a href='/pmwiki/posts.php?discussion=15340411620A60905300&page=2'>2</a><a href='/pmwiki/posts.php?discussion=15340411620A60905300&page=3'>3</a>&hellip; <a href='/pmwiki/posts.php?discussion=15340411620A60905300&page=23'>23</a><a href='/pmwiki/posts.php?discussion=15340411620A60905300&page=24'>24</a></div></td><td class="mid extra_css_40 extra_css_font extra_css_text_center" style=""><span class='mobile-on inline'>Posts:</span> 586</td><td class="mid extra_css_60 extra_css_font extra_css_text_right" style=""><a href="/pmwiki/posts.php?discussion=15340411620A60905300&page=24#comment-586" class='date-time'>Oct 12th 2020 <span>at</span> 1:02:17 PM</a></td></tr><tr class='extra_css_flex'><td class='extra_css_100'><a class='thread-link' href="/pmwiki/posts.php?discussion=16025250130A53647500&page=1">Tropemon Discussion Thread</a><div class='thread-list-pagination font-xs tablet-off'><a href='/pmwiki/posts.php?discussion=16025250130A53647500&page=1'>1</a></div></td><td class="mid extra_css_40 extra_css_font extra_css_text_center" style=""><span class='mobile-on inline'>Posts:</span> 1</td><td class="mid extra_css_60 extra_css_font extra_css_text_right" style=""><a href="/pmwiki/posts.php?discussion=16025250130A53647500&page=1#comment-1" class='date-time'>Oct 12th 2020 <span>at</span> 10:50:58 AM</a></td></tr><tr class='extra_css_flex'><td class='extra_css_100'><a class='thread-link' href="/pmwiki/posts.php?discussion=14516697930A17225900&page=1">You respond to the above title.</a><div class='thread-list-pagination font-xs tablet-off'><a href='/pmwiki/posts.php?discussion=14516697930A17225900&page=1'>1</a><a href='/pmwiki/posts.php?discussion=14516697930A17225900&page=2'>2</a><a href='/pmwiki/posts.php?discussion=14516697930A17225900&page=3'>3</a>&hellip; <a href='/pmwiki/posts.php?discussion=14516697930A17225900&page=78'>78</a><a href='/pmwiki/posts.php?discussion=14516697930A17225900&page=79'>79</a></div></td><td class="mid extra_css_40 extra_css_font extra_css_text_center" style=""><span class='mobile-on inline'>Posts:</span> 1,967</td><td class="mid extra_css_60 extra_css_font extra_css_text_right" style=""><a href="/pmwiki/posts.php?discussion=14516697930A17225900&page=79#comment-1967" class='date-time'>Oct 12th 2020 <span>at</span> 3:50:50 AM</a></td></tr><tr class='extra_css_flex'><td class='extra_css_100'><a class='thread-link' href="/pmwiki/posts.php?discussion=15455196410A70721300&page=1">Would You Shake The Above Avatar's Hand?</a><div class='thread-list-pagination font-xs tablet-off'><a href='/pmwiki/posts.php?discussion=15455196410A70721300&page=1'>1</a><a href='/pmwiki/posts.php?discussion=15455196410A70721300&page=2'>2</a><a href='/pmwiki/posts.php?discussion=15455196410A70721300&page=3'>3</a>&hellip; <a href='/pmwiki/posts.php?discussion=15455196410A70721300&page=10'>10</a><a href='/pmwiki/posts.php?discussion=15455196410A70721300&page=11'>11</a></div></td><td class="mid extra_css_40 extra_css_font extra_css_text_center" style=""><span class='mobile-on inline'>Posts:</span> 272</td><td class="mid extra_css_60 extra_css_font extra_css_text_right" style=""><a href="/pmwiki/posts.php?discussion=15455196410A70721300&page=11#comment-272" class='date-time'>Oct 12th 2020 <span>at</span> 1:05:38 AM</a></td></tr><tr class='extra_css_flex'><td class='extra_css_100'><a class='thread-link' href="/pmwiki/posts.php?discussion=15769876750A74870400&page=1">The Above Avatar Asks To Be Your Kids' Teacher</a><div class='thread-list-pagination font-xs tablet-off'><a href='/pmwiki/posts.php?discussion=15769876750A74870400&page=1'>1</a><a href='/pmwiki/posts.php?discussion=15769876750A74870400&page=2'>2</a><a href='/pmwiki/posts.php?discussion=15769876750A74870400&page=3'>3</a><a href='/pmwiki/posts.php?discussion=15769876750A74870400&page=4'>4</a><a href='/pmwiki/posts.php?discussion=15769876750A74870400&page=5'>5</a></div></td><td class="mid extra_css_40 extra_css_font extra_css_text_center" style=""><span class='mobile-on inline'>Posts:</span> 106</td><td class="mid extra_css_60 extra_css_font extra_css_text_right" style=""><a href="/pmwiki/posts.php?discussion=15769876750A74870400&page=5#comment-106" class='date-time'>Oct 12th 2020 <span>at</span> 12:56:19 AM</a></td></tr></tbody></table>
+<div class="gutter-top clear-both text-center">
+Total Threads: 4167</div>
+<nav class="pagination-box button-group text-center " data-total-pages="42" data-url-prefix="/pmwiki/conversations.php?topic=fgames&pagenum=">
+<span class="pagination-jump-box-wrapper mobile-on">
+<form class="pagination-jump-box hidden-until-active font-m">
+<input value="2" type="tel">
+<a href="#jump-to-page" title="Jump to page" class="color-white dead-button" onClick="activate_jump_menu(this);return false;">GO <i class="fa fa-angle-right"></i></a>
+</form>
+</span>
+<a href="/pmwiki/conversations.php?topic=fgames&pagenum=0">
+<i class="fa fa-angle-double-left"></i>
+</a>
+<a href="/pmwiki/conversations.php?topic=fgames&pagenum=0">
+<span class="mobile-on"><i class="fa fa-angle-left"></i></span>
+<span class="mobile-off">Prev</span>
+</a>
+<a href="/pmwiki/conversations.php?topic=fgames&pagenum=0" class="mobile-off ">
+1 </a>
+<a href="/pmwiki/conversations.php?topic=fgames&pagenum=1" class="mobile-off ">
+<span class="current-page"> 2 </span> </a>
+<a href="/pmwiki/conversations.php?topic=fgames&pagenum=2" class="mobile-off ">
+3 </a>
+<a href="/pmwiki/conversations.php?topic=fgames&pagenum=3" class="mobile-off ">
+4 </a>
+<a href="#jump-to-page" title="Jump to page" class="pagination-jump-box-toggle mobile-on dead-button" onClick="toggle_jump_menu(this);return false;">
+<span class="font-s">page 2 of 42</span>
+</a>
+<a href="/pmwiki/conversations.php?topic=fgames&pagenum=2">
+<span class="mobile-on"><i class="fa fa-angle-right"></i></span>
+<span class="mobile-off">Next</span>
+</a>
+<a href="/pmwiki/conversations.php?topic=fgames&pagenum=41">
+<i class="fa fa-angle-double-right"></i>
+</a>
+</nav>
+<script type="text/javascript">
+
+	function toggle_jump_menu(e){
+		$(e).siblings('.pagination-jump-box-wrapper').children('.pagination-jump-box').toggle('active');
+	}
+
+	function activate_jump_menu(e){
+			var p = $(e).siblings('input').val();
+			var t = $(e).closest('.pagination-box').data('total-pages');
+
+			if(p > 0 && p <= t){
+					window.location.href = $(e).closest('.pagination-box').data('url-prefix') + p;
+			}else{
+					show_modal('alert',encodeURIComponent('Whoops, that page might be out of range.'));
+			}
+	}
+
+</script>
+<div class="two-column text-center">
+<a class="button blue" href="/pmwiki/createconversation.php?topic=fgames" data-modal-target="login"><i class='fa fa-plus'></i> Start a Thread</a>
+<br /><br /></div>
+<div style="clear:both;"> </div>
+</div>
+</div>
+<div id="main-content-sidebar"><div class="sidebar-item display-options">
+<ul class="sidebar display-toggles">
+<li>Show Spoilers <div id="sidebar-toggle-showspoilers" class="display-toggle show-spoilers"></div></li>
+<li>Night Vision <div id="sidebar-toggle-nightvision" class="display-toggle night-vision"></div></li>
+<li>Sticky Header <div id="sidebar-toggle-stickyheader" class="display-toggle sticky-header"></div></li>
+<li>Wide Load <div id="sidebar-toggle-wideload" class="display-toggle wide-load"></div></li>
+</ul>
+<script>updateDesktopPrefs();</script>
+</div>
+<div class="sidebar-item ad sb-ad-unit">
+<div class='proper-ad-unit '>
+<div id='proper-ad-tvtropes_ad_2'> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_2'); });</script> </div>
+</div></div>
+<div class="sidebar-item quick-links" itemtype="http://schema.org/SiteNavigationElement">
+<p class="sidebar-item-title" data-title="Important Links">Important Links</p>
+<div class="padded">
+<a href="/pmwiki/query.php?type=att">Ask The Tropers</a>
+<a href="/pmwiki/query.php?type=tf">Trope Finder</a>
+<a href="/pmwiki/query.php?type=ykts">You Know That Show...</a>
+<a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a>
+<a href="/pmwiki/review_activity.php">Reviews</a>
+<a href="/pmwiki/lbs.php" data-modal-target="login">Live Blogs</a>
+<a href="/pmwiki/ad-free-subscribe.php">Go Ad Free!</a> </div>
+</div>
+<div class="sidebar-item sb-ad-unit">
+<div class="sidebar-section">
+<div class="square_ad ad-size-300x600 ad-section text-center">
+<div class='proper-ad-unit '>
+<div id='proper-ad-tvtropes_ad_3'> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_3'); });</script> </div>
+</div> </div>
+</div>
+</div>
+<div class="sidebar-item">
+<p class="sidebar-item-title" data-title="Crucial Browsing">Crucial Browsing</p>
+<ul class="padded font-s" itemscope itemtype="http://schema.org/SiteNavigationElement">
+<li><a href="javascript:void(0);" data-click-toggle="active">Genre</a>
+<ul>
+<li><a href='/pmwiki/pmwiki.php/Main/ActionAdventureTropes' title='Main/ActionAdventureTropes'>Action Adventure</a></li>
+<li><a href='/pmwiki/pmwiki.php/Main/ComedyTropes' title='Main/ComedyTropes'>Comedy</a></li>
+<li><a href='/pmwiki/pmwiki.php/Main/CommercialsTropes' title='Main/CommercialsTropes'>Commercials</a></li>
+<li><a href='/pmwiki/pmwiki.php/Main/CrimeAndPunishmentTropes' title='Main/CrimeAndPunishmentTropes'>Crime &amp; Punishment</a></li>
+<li><a href='/pmwiki/pmwiki.php/Main/DramaTropes' title='Main/DramaTropes'>Drama</a></li>
+<li><a href='/pmwiki/pmwiki.php/Main/HorrorTropes' title='Main/HorrorTropes'>Horror</a></li>
+<li><a href='/pmwiki/pmwiki.php/Main/LoveTropes' title='Main/LoveTropes'>Love</a></li>
+<li><a href='/pmwiki/pmwiki.php/Main/NewsTropes' title='Main/NewsTropes'>News</a></li>
+<li><a href='/pmwiki/pmwiki.php/Main/ProfessionalWrestling' title='Main/ProfessionalWrestling'>Professional Wrestling</a></li>
+<li><a href='/pmwiki/pmwiki.php/Main/SpeculativeFictionTropes' title='Main/SpeculativeFictionTropes'>Speculative Fiction</a></li>
+<li><a href='/pmwiki/pmwiki.php/Main/SportsStoryTropes' title='Main/SportsStoryTropes'>Sports Story</a></li>
+<li><a href='/pmwiki/pmwiki.php/Main/WarTropes' title='Main/WarTropes'>War</a></li>
+</ul>
+</li>
+<li><a href="javascript:void(0);" data-click-toggle="active">Media</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/Media" title="Main/Media">All Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/AnimationTropes" title="Main/AnimationTropes">Animation (Western)</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Anime" title="Main/Anime">Anime</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ComicBookTropes" title="Main/ComicBookTropes">Comic Book</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FanFic" title="FanFic/FanFics">Fan Fics</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Film" title="Main/Film">Film</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/GameTropes" title="Main/GameTropes">Game</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Literature" title="Main/Literature">Literature</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MusicAndSoundEffects" title="Main/MusicAndSoundEffects">Music And Sound Effects</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NewMediaTropes" title="Main/NewMediaTropes">New Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/PrintMediaTropes" title="Main/PrintMediaTropes">Print Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Radio" title="Main/Radio">Radio</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SequentialArt" title="Main/SequentialArt">Sequential Art</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TabletopGames" title="Main/TabletopGames">Tabletop Games</a></li>
+<li><a href="/pmwiki/pmwiki.php/UsefulNotes/Television" title="Main/Television">Television</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Theater" title="Main/Theater">Theater</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/VideogameTropes" title="Main/VideogameTropes">Videogame</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Webcomics" title="Main/Webcomics">Webcomics</a></li>
+</ul>
+</li>
+<li><a href="javascript:void(0);" data-click-toggle="active">Narrative</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/UniversalTropes" title="Main/UniversalTropes">Universal</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/AppliedPhlebotinum" title="Main/AppliedPhlebotinum">Applied Phlebotinum</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CharacterizationTropes" title="Main/CharacterizationTropes">Characterization</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Characters" title="Main/Characters">Characters</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CharactersAsDevice" title="Main/CharactersAsDevice">Characters As Device</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Dialogue" title="Main/Dialogue">Dialogue</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Motifs" title="Main/Motifs">Motifs</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NarrativeDevices" title="Main/NarrativeDevices">Narrative Devices</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Paratext" title="Main/Paratext">Paratext</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Plots" title="Main/Plots">Plots</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Settings" title="Main/Settings">Settings</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Spectacle" title="Main/Spectacle">Spectacle</a></li>
+</ul>
+</li>
+<li><a href="javascript:void(0);" data-click-toggle="active">Other Categories</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/BritishTellyTropes" title="Main/BritishTellyTropes">British Telly</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TheContributors" title="Main/TheContributors">The Contributors</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CreatorSpeak" title="Main/CreatorSpeak">Creator Speak</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Creators" title="Main/Creators">Creators</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DerivativeWorks" title="Main/DerivativeWorks">Derivative Works</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LanguageTropes" title="Main/LanguageTropes">Language</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LawsAndFormulas" title="Main/LawsAndFormulas">Laws And Formulas</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ShowBusiness" title="Main/ShowBusiness">Show Business</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SplitPersonalityTropes" title="Main/SplitPersonalityTropes">Split Personality</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/StockRoom" title="Main/StockRoom">Stock Room</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TropeTropes" title="Main/TropeTropes">Trope</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Tropes" title="Main/Tropes">Tropes</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TruthAndLies" title="Main/TruthAndLies">Truth And Lies</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TruthInTelevision" title="Main/TruthInTelevision">Truth In Television</a></li>
+</ul>
+</li>
+<li><a href="javascript:void(0);" data-click-toggle="active">Topical Tropes</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/BetrayalTropes" title="Main/BetrayalTropes">Betrayal</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CensorshipTropes" title="Main/CensorshipTropes">Censorship</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CombatTropes" title="Main/CombatTropes">Combat</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DeathTropes" title="Main/DeathTropes">Death</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FamilyTropes" title="Main/FamilyTropes">Family</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FateAndProphecyTropes" title="Main/FateAndProphecyTropes">Fate And Prophecy</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FoodTropes" title="Main/FoodTropes">Food</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/HolidayTropes" title="Main/HolidayTropes">Holiday</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MemoryTropes" title="Main/MemoryTropes">Memory</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MoneyTropes" title="Main/MoneyTropes">Money</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MoralityTropes" title="Main/MoralityTropes">Morality</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/PoliticsTropes" title="Main/PoliticsTropes">Politics</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ReligionTropes" title="Main/ReligionTropes">Religion</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SchoolTropes" title="Main/SchoolTropes">School</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="sidebar-item showcase">
+<p class="sidebar-item-title" data-title="Community&nbsp;Showcase">Community Showcase <a href="/pmwiki/showcase.php" class="bubble float-right hover-blue">More</a></p>
+<p class="community-showcase">
+<a href="https://sharetv.com/shows/echo_chamber" target="_blank" onclick="trackOutboundLink('https://sharetv.com/shows/echo_chamber');">
+<img data-src="/images/communityShowcase-echochamber.jpg" class="lazy-image" alt=""></a>
+<a href="/pmwiki/pmwiki.php/Webcomic/TwistedTropes">
+<img data-src="/img/howlandsc-side.jpg" class="lazy-image" alt=""></a>
+</p>
+</div>
+<div id="stick-cont" class="sidebar-item sb-ad-unit">
+<div id="stick-bar" class="sidebar-section">
+<div class="square_ad ad-size-300x600 ad-section text-center">
+<div class='proper-ad-unit '>
+<div id='proper-ad-tvtropes_ad_4'> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_4'); });</script> </div>
+</div> </div>
+</div>
+</div>
+</div>
+</div>
+<div id="action-bar-bottom" class="action-bar tablet-off">
+<a href="#top-of-page" class="scroll-to-top dead-button" onclick="$('html, body').animate({scrollTop : 0},500);">Top</a>
+</div>
+</div>
+<div class='proper-ad-unit ad-sticky'>
+<div id='proper-ad-tvtropes_sticky_ad'> <script>propertag.cmd.push(function() { proper_display('tvtropes_sticky_ad'); });</script> </div>
+</div>
+<footer id="main-footer">
+<div id="main-footer-inner">
+<div class="footer-left">
+<a href="/" class="img-link"><img data-src="/img/tvtropes-footer-logo.png" alt="TV Tropes" class="lazy-image" title="TV Tropes" /></a>
+<form action="index.html" id="cse-search-box-mobile" class="navbar-form newsletter-signup validate modal-replies" name="" role="" data-ajax-get="/ajax/subscribe_email.php">
+<button class="btn-submit newsletter-signup-submit-button" type="submit" id="subscribe-btn"><i class="fa fa-paper-plane"></i></button>
+<input id="subscription-email" type="text" class="form-control" name="q" size="31" placeholder="Subscribe" value="" validate-type="email">
+</form>
+<ul class="social-buttons">
+<li><a class="btn fb" target="_blank" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-facebook']);" href="https://www.facebook.com/tvtropes"><i class="fa fa-facebook"></i></a></li>
+<li><a class="btn tw" target="_blank" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-twitter']);" href="https://www.twitter.com/tvtropes"><i class="fa fa-twitter"></i></a> </li>
+<li><a class="btn rd" target="_blank" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-reddit']);" href="https://www.reddit.com/r/tvtropes"><i class="fa fa-reddit-alien"></i></a></li>
+</ul>
+</div>
+<hr />
+<ul class="footer-menu" itemscope itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">TVTropes</h4></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Administrivia">About TVTropes</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TheGoalsOfTVTropes">TVTropes Goals</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TheTropingCode">Troping Code</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TVTropesCustoms">TVTropes Customs</a></li>
+<li><a href="/pmwiki/pmwiki.php/JustForFun/TropesOfLegend">Tropes of Legend</a></li>
+<li><a href="/pmwiki/ad-free-subscribe.php">Go Ad-Free</a></li>
+</ul>
+<hr />
+<ul class="footer-menu" itemscope itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">Community</h4></li>
+<li><a href="/pmwiki/query.php?type=att">Ask The Tropers</a></li>
+<li><a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a></li>
+<li><a href="/pmwiki/query.php?type=tf">Trope Finder</a></li>
+<li><a href="/pmwiki/query.php?type=ykts">You Know That Show</a></li>
+<li><a href="/pmwiki/lbs.php" data-modal-target="login">Live Blogs</a></li>
+<li><a href="/pmwiki/review_activity.php">Reviews</a></li>
+<li><a href="/pmwiki/topics.php">Forum</a></li>
+</ul>
+<hr />
+<ul class="footer-menu" itemscope itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">Tropes HQ</h4></li>
+<li><a href="/pmwiki/about.php">About Us</a></li>
+<li><a href="/pmwiki/contact.php">Contact Us</a></li>
+<li><a href="/pmwiki/dmca.php">DMCA Notice</a></li>
+<li><a href="/pmwiki/privacypolicy.php">Privacy Policy</a></li>
+</ul>
+</div>
+<div id="desktop-on-mobile-toggle" class="text-center gutter-top gutter-bottom tablet-on">
+<a href="/pmwiki/switchDeviceCss.php?mobileVersion=1" rel="nofollow">Switch to <span class="txt-desktop">Desktop</span><span class="txt-mobile">Mobile</span> Version</a>
+</div>
+<div class="legal">
+<p>TVTropes is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License. <br>Permissions beyond the scope of this license may be available from <a xmlns:cc="http://creativecommons.org/ns#" href="mailto:thestaff@tvtropes.org" rel="cc:morePermissions"> thestaff@tvtropes.org</a>.</p>
+<br>
+<div class="privacy_wrapper">
+</div>
+</div>
+</footer>
+<style>
+      div.fc-ccpa-root {
+        position: absolute !important;
+        bottom: 93px !important;
+        margin: auto !important;
+        width: 100% !important;
+        z-index: 9999 !important;
+      }
+      .fc-ccpa-root .fc-dns-dialog .fc-dns-link p{
+        outline: none !important;
+        text-decoration: underline !important;
+        font-size: .7em !important;
+        font-family: sans-serif !important;
+      }
+      .fc-ccpa-root .fc-dns-dialog .fc-dns-link .fc-button-background {
+        background: none !important;
+      }
+    </style>
+<div id="_pm_videoViewer" class="full-screen">
+<a href="#close" class="close" id="_pm_videoViewer-close"></a>
+<div class="_pmvv-body">
+<div class="_pmvv-vidbox">
+<video id='overlay-video-player-box' data-video-id="" class='video-js vjs-default-skin vjs-16-9'>
+</video>
+<div class="_pmvv-vidbox-desc">
+<h1 id="overlay-title"></h1>
+<p id="overlay-descrip" class="_pmvv-vidbox-descTxt">
+</p>
+<div class="rating-row" data-video-id="">
+<input type="hidden" name="is_logged_in" value="0">
+<p>How well does it match the trope?</p>
+<div id="star-rating-group">
+<div class="trope-rate">
+<input type="radio" id="lamp5" name="rate" value="5" />
+<label for="lamp5" title="Absolutely"></label>
+<input type="radio" id="lamp4" name="rate" value="4" />
+<label for="lamp4" title="Yes"></label>
+<input type="radio" id="lamp3" name="rate" value="3" />
+<label for="lamp3" title="Kind of"></label>
+<input type="radio" id="lamp2" name="rate" value="2" />
+<label for="lamp2" title="Not really"></label>
+<input type="radio" id="lamp1" name="rate" value="1" />
+<label for="lamp1" title="No"></label>
+</div>
+<div id="star-rating-total">
+</div>
+</div>
+</div>
+<div class="example-media-row">
+<div class="example-overlay">
+<p>Example of:</p>
+<div id="overlay-trope"> / </div>
+</div>
+<div class="media-sources-overlay example-overlay">
+<p>Media sources:</p>
+<div id="overlay-media"> / </div>
+</div>
+</div>
+<p class="_pmvv-vidbox-stats text-right font-s" style="padding-top:8px; border-top: solid 1px rgba(255,255,255,0.2)">
+
+<a href="#video-feedback" class="float-right" data-modal-target="login">Report</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<script type='text/javascript'>
+        window.special_ops =  {
+            member : 'no',
+            isolated : 0,
+            tags : ['forum']
+        };
+    </script>
+<script type="text/javascript">
+
+        var cleanCreativeEnabled = "";
+        var donation = "";
+        var live_ads = "1";
+        var img_domain = "https://static.tvtropes.org";
+        var snoozed = cookies.read('snoozedabm');
+        var snoozable = "";
+
+        if (adsRemovedWith) {
+            live_ads = 0;
+        }
+
+        var elem = document.createElement('script');
+        elem.async = true;
+
+        elem.src = '/design/assets/bundle.js?rev=af8ba6c84175c5d092329028e16c8941231c5eba';
+
+        elem.onload = function() {
+                                 }
+        document.getElementsByTagName('head')[0].appendChild(elem);
+
+    </script>
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-3821842-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<script type="text/javascript">
+      function send_analytics_event(user_type, donation){
+          // if(user_type == 'uncached' || user_type == 'cached'){
+          //   ga('send', 'event', 'caching', 'load', user_type, {'nonInteraction': 1});
+          //   return;
+          // }
+          var event_name = user_type;
+
+          if(donation == 'true'){
+              event_name += "_donation"
+          }else if(typeof(valid_user) == 'undefined'){
+              event_name += "_blocked"
+          }else if(valid_user == true){
+              event_name += "_unblocked";
+          }else{
+              event_name = "_unknown"
+          }
+          ga('send', 'event', 'ads', 'load', event_name, {'nonInteraction': 1});
+      }
+
+    
+    send_analytics_event("guest", "false");
+      </script>
+</body>
+</html>

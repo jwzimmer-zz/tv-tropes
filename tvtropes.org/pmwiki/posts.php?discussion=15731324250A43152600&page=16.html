@@ -1,0 +1,1824 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Survivor Simulator - TV Tropes Forum</title>
+<meta name="description" content="" />
+<link rel="shortcut icon" href="/img/icons/favicon.ico" type="image/x-icon" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@tvtropes" />
+<meta name="twitter:owner" content="@tvtropes" />
+<meta name="twitter:title" content="Survivor Simulator - TV Tropes Forum" />
+<meta name="twitter:description" content="" />
+<meta name="twitter:image:src" content="https://static.tvtropes.org/logo_blue_small.png" />
+<meta property="og:site_name" content="TV Tropes" />
+<meta property="og:locale" content="en_US" />
+<meta property="article:publisher" content="https://www.facebook.com/tvtropes" />
+<meta property="og:title" content="Survivor Simulator" />
+<meta property="og:type" content="" />
+<meta property="og:url" content="https://tvtropes.org/pmwiki/posts.php?discussion=15731324250A43152600&page=16" />
+<meta property="og:image" content="https://static.tvtropes.org/logo_blue_small.png" />
+<meta property="og:description" content="" />
+<link rel="apple-touch-icon" sizes="57x57" href="/img/icons/apple-icon-57x57.png" type="image/png">
+<link rel="apple-touch-icon" sizes="60x60" href="/img/icons/apple-icon-60x60.png" type="image/png">
+<link rel="apple-touch-icon" sizes="72x72" href="/img/icons/apple-icon-72x72.png" type="image/png">
+<link rel="apple-touch-icon" sizes="76x76" href="/img/icons/apple-icon-76x76.png" type="image/png">
+<link rel="apple-touch-icon" sizes="114x114" href="/img/icons/apple-icon-114x114.png" type="image/png">
+<link rel="apple-touch-icon" sizes="120x120" href="/img/icons/apple-icon-120x120.png" type="image/png">
+<link rel="apple-touch-icon" sizes="144x144" href="/img/icons/apple-icon-144x144.png" type="image/png">
+<link rel="apple-touch-icon" sizes="152x152" href="/img/icons/apple-icon-152x152.png" type="image/png">
+<link rel="apple-touch-icon" sizes="180x180" href="/img/icons/apple-icon-180x180.png" type="image/png">
+<link rel="icon" sizes="16x16" href="/img/icons/favicon-16x16.png" type="image/png">
+<link rel="icon" sizes="32x32" href="/img/icons/favicon-32x32.png" type="image/png">
+<link rel="icon" sizes="96x96" href="/img/icons/favicon-96x96.png" type="image/png">
+<link rel="icon" sizes="192x192" href="/img/icons/favicon-192x192.png" type="image/png">
+<meta id="viewport" name="viewport" content="width=device-width, initial-scale=1">
+<script>
+                var propertag = {};
+                propertag.cmd = [];
+            </script>
+<link rel="stylesheet" href="/design/assets/bundle.css?rev=af8ba6c84175c5d092329028e16c8941231c5eba" />
+<style type="text/css">
+
+$forumreplybody
+</style>
+<script>
+                function object(objectId) {
+                    if (document.getElementById && document.getElementById(objectId)) {
+                        return document.getElementById(objectId);
+                    } else if (document.all && document.all(objectId)) {
+                        return document.all(objectId);
+                    } else if (document.layers && document.layers[objectId]) {
+                        return document.layers[objectId];
+                    } else {
+                        return false;
+                    }
+                }
+
+                // JAVASCRIPT COOKIES CODE: for getting and setting user viewing preferences
+                var cookies = {
+                    create: function (name, value, days2expire, path) {
+                        var date = new Date();
+                        date.setTime(date.getTime() + (days2expire * 24 * 60 * 60 * 1000));
+                        var expires = date.toUTCString();
+                        document.cookie = name + '=' + value + ';' + 'expires=' + expires + ';' + 'path=' + path + ';';
+                    },
+                    read: function (name) {
+                        var cookie_value = "",
+                            current_cookie = "",
+                            name_expr = name + "=",
+                            all_cookies = document.cookie.split(';'),
+                            n = all_cookies.length;
+
+                        for (var i = 0; i < n; i++) {
+                            current_cookie = all_cookies[i].trim();
+                            if (current_cookie.indexOf(name_expr) === 0) {
+                                cookie_value = current_cookie.substring(name_expr.length, current_cookie.length);
+                                break;
+                            }
+                        }
+                        return cookie_value;
+                    },
+                    update: function (name, val) {
+                        this.create(name, val, 300, "/");
+                    },
+                    remove: function (name) {
+                        document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
+                    }
+                };
+
+                function updateUserPrefs() {
+                    //GENERAL: detect and set browser, if not cookied (will be treated like a user-preference and added to the #user-pref element)
+                    if( !cookies.read('user-browser') ){
+                        var broswer = '';
+
+                        if(navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPod/i) ){
+                            browser = 'iOS';
+                        } else if (/Opera[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'opera';
+                        } else if (/MSIE (\d+\.\d+);/.test(navigator.userAgent)) {
+                            browser = 'MSIE';
+                        } else if (/Navigator[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'netscape';
+                        } else if (/Chrome[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'chrome';
+                        } else if (/Safari[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'safari';
+                            /Version[\/\s](\d+\.\d+)/.test(navigator.userAgent);
+                            browserVersion = new Number(RegExp.$1);
+                        } else if (/Firefox[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'firefox';
+                        } else {
+                            browser = 'internet_explorer';
+                        }
+                        cookies.create('user-browser',browser,1,'/');
+                        document.getElementById('user-prefs').classList.add('browser-' + browser);
+                    } else {
+                        document.getElementById('user-prefs').classList.add('browser-' + cookies.read('user-browser'));
+                    }
+
+                    //update user preference settings
+                    if (cookies.read('wide-load') !== '') document.getElementById('user-prefs').classList.add('wide-load');
+                    if (cookies.read('night-vision') !== '') document.getElementById('user-prefs').classList.add('night-vision');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('user-prefs').classList.add('sticky-header');
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('user-prefs').classList.add('show-spoilers');
+                    if (cookies.read('folders-open') !== '') document.getElementById('user-prefs').classList.add('folders-open');
+                    if (cookies.read('lefthand-sidebar') !== '') document.getElementById('user-prefs').classList.add('lefthand-sidebar');
+                    if (cookies.read('highlight-links') !== '') document.getElementById('user-prefs').classList.add('highlight-links');
+                    if (cookies.read('forum-gingerbread') !== '') document.getElementById('user-prefs').classList.add('forum-gingerbread');
+                    if (cookies.read('shared-avatars') !== '') document.getElementById('user-prefs').classList.add('shared-avatars');
+                    if (cookies.read('new-search') !== '') document.getElementById('user-prefs').classList.add('new-search');
+                    if (cookies.read('stop-auto-play-video') !== '') document.getElementById('user-prefs').classList.add('stop-auto-play-video');
+
+                    //desktop view on mobile
+                    if (cookies.read('desktop-on-mobile') !== ''){
+                        document.getElementById('user-prefs').classList.add('desktop-on-mobile');
+
+                        var viewport = document.querySelector("meta[name=viewport]");
+                        viewport.setAttribute('content', 'width=1000');
+                    }
+
+                }
+
+                function updateDesktopPrefs() {
+                    if (cookies.read('wide-load') !== '') document.getElementById('sidebar-toggle-wideload').classList.add('active');
+                    if (cookies.read('night-vision') !== '') document.getElementById('sidebar-toggle-nightvision').classList.add('active');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('sidebar-toggle-stickyheader').classList.add('active');
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('sidebar-toggle-showspoilers').classList.add('active');
+
+                }
+
+                function updateMobilePrefs() {
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('mobile-toggle-showspoilers').classList.add('active');
+                    if (cookies.read('night-vision') !== '') document.getElementById('mobile-toggle-nightvision').classList.add('active');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('mobile-toggle-stickyheader').classList.add('active');
+                    if (cookies.read('highlight-links') !== '') document.getElementById('mobile-toggle-highlightlinks').classList.add('active');
+
+                }
+
+
+                if (document.cookie.indexOf("scroll0=") < 0) {
+                    // do nothing
+                } else {
+                    console.log('ads removed by scroll.com');
+                    var adsRemovedWith = 'scroll';
+                    var style = document.createElement('style');
+                    style.innerHTML = '#header-ad, .proper-ad-unit, .square_ad, .sb-ad-unit { display: none !important; } ';
+                    document.head.appendChild(style);
+                }
+            </script>
+<script type="text/javascript">
+
+                var tvtropes_config = {
+                    astri_stream_enabled : "",
+                    is_logged_in         : "",
+                    handle               : "",
+                    get_astri_stream     : "",
+										revnum               : "af8ba6c84175c5d092329028e16c8941231c5eba",
+										img_domain           : "https://static.tvtropes.org",
+										adblock              : "1",
+										adblock_url          : "propermessage.io",
+										pause_editing        : "0",
+										pause_editing_msg    : "",
+										pause_site_changes   : ""
+                };
+            </script>
+</head>
+<body class="">
+<i id="user-prefs"></i>
+<script>updateUserPrefs();</script>
+<div id="fb-root"></div>
+<div id="modal-box"></div>
+<header id="main-header-bar" class="headroom-element ">
+<div id="main-header-bar-inner">
+<span id="header-spacer-left" class="header-spacer"></span>
+<a href="#mobile-menu" id="main-mobile-toggle" class="mobile-menu-toggle-button tablet-on"><span></span><span></span><span></span></a>
+<a href="/" id="main-header-logoButton" class="no-dev"></a>
+<span id="header-spacer-right" class="header-spacer"></span>
+<nav id="main-header-nav" class="tablet-off">
+<a href="/pmwiki/pmwiki.php/Main/Tropes">Tropes</a>
+<a href="/pmwiki/pmwiki.php/Main/Media">Media</a>
+<a href="/pmwiki/browse.php" class="nav-browse">Browse</a>
+<a href="/pmwiki/index_report.php">Indexes</a>
+<a href="/pmwiki/topics.php">Forums</a>
+<a href="/pmwiki/recent_videos.php" class="nav-browse">Videos</a>
+</nav>
+<div id="main-header-bar-right">
+<div id="signup-login-box" class="font-xs mobile-off">
+<a href="/pmwiki/login.php" class="hover-underline bold" data-modal-target="signup">Join</a>
+<a href="/pmwiki/login.php" class="hover-underline bold" data-modal-target="login">Login</a>
+</div>
+<div id="signup-login-mobileToggle" class="mobile-on inline">
+<a href="/pmwiki/login.php" data-modal-target="login"><i class="fa fa-user"></i></a>
+</div>
+<div id="search-box">
+<form class="search" action="/pmwiki/search_result.php">
+<input type="text" name="q" class="search-box" placeholder="Search" value="" required>
+<input type="submit" class="submit-button" value="&#xf002;" />
+<input type="hidden" name="search_type" value="article">
+<input type="hidden" name="page_type" value="all">
+<input type="hidden" name="cx" value="partner-pub-6610802604051523:amzitfn8e7v">
+<input type="hidden" name="cof" value="FORID:10">
+<input type="hidden" name="ie" value="ISO-8859-1">
+<input name="siteurl" type="hidden" value="">
+<input name="ref" type="hidden" value="">
+<input name="ss" type="hidden" value="">
+</form>
+<a href="#close-search" class="mobile-on mobile-search-toggle close-x"><i class="fa fa-close"></i></a>
+</div>
+<div id="random-box">
+<a href="/pmwiki/pmwiki.php/Main/HellOnEarth" class="button-random-trope" rel="nofollow" onclick="ga('send', 'event', 'button', 'click', 'random trope');"></a>
+<a href="/pmwiki/pmwiki.php/WebComic/ALutaContraOsFentisseiros" class="button-random-media" rel="nofollow" onclick="ga('send', 'event', 'button', 'click', 'random media');"></a>
+</div>
+</div>
+</div>
+<div id="mobile-menu" class="tablet-on"><div class="mobile-menu-options">
+<div class="nav-wrapper">
+<a href="/pmwiki/pmwiki.php/Main/Tropes" class="xl">Tropes</a>
+<a href="/pmwiki/pmwiki.php/Main/Media" class="xl">Media</a>
+<a href="/pmwiki/browse.php" class="xl">Browse</a>
+<a href="/pmwiki/index_report.php" class="xl">Indexes</a>
+<a href="/pmwiki/topics.php" class="xl">Forums</a>
+<a href="/pmwiki/recent_videos.php" class="xl">Videos</a>
+<a href="/pmwiki/query.php?type=att">Ask The Tropers</a>
+<a href="/pmwiki/query.php?type=tf">Trope Finder</a>
+<a href="/pmwiki/query.php?type=ykts">You Know That Show...</a>
+<a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a>
+<a href="#tools" data-click-toggle="active">Tools <i class="fa fa-chevron-down"></i></a>
+<div class="tools-dropdown mobile-dropdown-linkList">
+<a href="/pmwiki/cutlist.php">Cut List</a>
+<a href="/pmwiki/changes.php">New Edits</a>
+<a href="/pmwiki/recent_edit_reasons.php">Edit Reasons</a>
+<a href="/pmwiki/launches.php">Launches</a>
+<a href="/pmwiki/img_list.php">Images List</a>
+<a href="/pmwiki/crown_activity.php">Crowner Activity</a>
+<a href="/pmwiki/no_types.php">Un-typed Pages</a>
+<a href="/pmwiki/page_type_audit.php">Recent Page Type Changes</a>
+</div>
+<a href="#hq" data-click-toggle="active">Tropes HQ <i class="fa fa-chevron-down"></i></a>
+<div class="tools-dropdown mobile-dropdown-linkList">
+<a href="/pmwiki/about.php">About Us</a>
+<a href="/pmwiki/contact.php">Contact Us</a>
+<a href="mailto:advertising@proper.io">Advertise</a>
+<a href="/pmwiki/dmca.php">DMCA Notice</a>
+<a href="/pmwiki/privacypolicy.php">Privacy Policy</a>
+</div>
+<a href="/pmwiki/ad-free-subscribe.php">Go Ad-Free</a>
+<div class="toggle-switches">
+<ul class="mobile-menu display-toggles">
+<li>Show Spoilers <div id="mobile-toggle-showspoilers" class="display-toggle show-spoilers"></div></li>
+<li>Night Vision <div id="mobile-toggle-nightvision" class="display-toggle night-vision"></div></li>
+<li>Sticky Header <div id="mobile-toggle-stickyheader" class="display-toggle sticky-header"></div></li>
+<li>Highlight Links <div id="mobile-toggle-highlightlinks" class="display-toggle highlight-links"></div></li>
+</ul>
+<script>updateMobilePrefs();</script>
+</div>
+</div>
+</div>
+</div>
+</header>
+<div id="homepage-introBox-mobile" class="mobile-on">
+<a href="/"><img src="/images/logo-white-big.png" class="logo-small" /></a>
+<form class="search" action="/pmwiki/search_result.php" style="margin:10px -5px -6px -5px;">
+<input type="text" name="q" class="search-box" placeholder="Search" value="" required>
+<input type="submit" class="submit-button" value="&#xf002;" />
+<input type="hidden" name="search_type" value="article">
+<input type="hidden" name="page_type" value="all">
+<input type="hidden" name="cx" value="partner-pub-6610802604051523:amzitfn8e7v">
+<input type="hidden" name="cof" value="FORID:10">
+<input type="hidden" name="ie" value="ISO-8859-1">
+<input name="siteurl" type="hidden" value="">
+<input name="ref" type="hidden" value="">
+<input name="ss" type="hidden" value="">
+</form>
+</div>
+<div id="header-ad-wrapper" class="ad">
+<div id="header-ad">
+<div class="ad-size-970x90 atf_banner">
+<div class='proper-ad-unit '>
+<div id='proper-ad-tvtropes_ad_1'> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_1'); });</script> </div>
+</div> </div>
+</div>
+</div>
+<div id="main-container">
+<div id="action-bar-top" class="action-bar mobile-off">
+<div class="action-bar-right">
+<p>Follow TV Tropes</p>
+<a href="https://www.facebook.com/TVTropes" class="button-fb">
+<i class="fa fa-facebook"></i></a>
+<a href="https://www.twitter.com/TVTropes" class="button-tw">
+<i class="fa fa-twitter"></i></a>
+<a href="https://www.reddit.com/r/TVTropes" class="button-re">
+<i class="fa fa-reddit-alien"></i></a>
+</div>
+<nav class="actions-wrapper" itemscope itemtype="http://schema.org/SiteNavigationElement">
+<ul id="top_main_list" class="page-actions">
+<li class="link-back"><a href="/pmwiki/conversations.php?topic=fgames">
+<i class="fa fa-arrow-left"></i> Back</a></li> </ul>
+<ul id="top_more_list" class="more_menu hidden_more_list">
+</ul>
+</nav>
+<div class="WikiWordModalStub"></div>
+<div class="ImgUploadModalStub" data-page-type="Thread"></div>
+<div class="login-alert" style="display: none;">
+You need to <a href="/pmwiki/login.php" style="color:#21A0E8">login</a> to do this. <a href="/pmwiki/login.php?tab=register_account" style="color:#21A0E8">Get Known</a> if you don't have an account
+</div>
+</div>
+<div id="main-content" class="page-Thread class-discussion-page">
+<div id="main-entry" class="with-sidebar">
+
+<input type="hidden" id="groupname-hidden" value="" />
+<input type="hidden" id="title-hidden" value="" />
+<a href="#watch" class="watch-button " data-modal-target="login" data-watch-thread-id="15731324250A43152600">Follow<span>ing</span></a>
+<h1 itemprop="headline" class="entry-title">Survivor Simulator</h1>
+<a href="#mobile-actions-toggle" id="mobile-actionbar-toggle" class="mobile-actionbar-toggle mobile-on" data-click-toggle="active">
+<p class="tiny-off">Go To</p><span></span><span></span><span></span><i class="fa fa-pencil"></i></a>
+<nav id="mobile-actions-bar" class="mobile-actions-wrapper mobile-on"></nav>
+<div id="main-article" class="article-content retro-folders" itemprop="mainContentOfPage">
+<ul class="thread-breadcrumbs">
+<li><a href="/pmwiki/topics.php">Forums</a></li>
+<li><a href="/pmwiki/conversations.php?topic=fgames">Forum Games</a></li>
+</ul>
+<div class="options-wrapper hover-menu-wrapper gutter-top two-column no-media-query">
+<div class="column-box left">
+</div>
+<div class="column-box right button-group skinny text-right">
+</div>
+</div>
+<a name="firstpost"></a>
+<nav class="pagination-box button-group text-center " data-total-pages="16" data-url-prefix="/pmwiki/posts.php?discussion=15731324250A43152600&page=">
+<span class="pagination-jump-box-wrapper mobile-on">
+<form class="pagination-jump-box hidden-until-active font-m">
+<input value="16" type="tel">
+<a href="#jump-to-page" title="Jump to page" class="color-white dead-button" onClick="activate_jump_menu(this);return false;">GO <i class="fa fa-angle-right"></i></a>
+</form>
+</span>
+<a href="/pmwiki/posts.php?discussion=15731324250A43152600&page=1">
+<i class="fa fa-angle-double-left"></i>
+</a>
+<a href="/pmwiki/posts.php?discussion=15731324250A43152600&page=15">
+<span class="mobile-on"><i class="fa fa-angle-left"></i></span>
+<span class="mobile-off">Prev</span>
+</a>
+<a href="/pmwiki/posts.php?discussion=15731324250A43152600&page=14" class="mobile-off ">
+14 </a>
+<a href="/pmwiki/posts.php?discussion=15731324250A43152600&page=15" class="mobile-off ">
+15 </a>
+<a href="/pmwiki/posts.php?discussion=15731324250A43152600&page=16" class="mobile-off cap-off">
+<span class="current-page"> 16 </span> </a>
+<a href="#jump-to-page" title="Jump to page" class="pagination-jump-box-toggle mobile-on dead-button" onClick="toggle_jump_menu(this);return false;">
+<span class="font-s">page 16 of 16</span>
+</a>
+</nav>
+<script type="text/javascript">
+
+	function toggle_jump_menu(e){
+		$(e).siblings('.pagination-jump-box-wrapper').children('.pagination-jump-box').toggle('active');
+	}
+
+	function activate_jump_menu(e){
+			var p = $(e).siblings('input').val();
+			var t = $(e).closest('.pagination-box').data('total-pages');
+
+			if(p > 0 && p <= t){
+					window.location.href = $(e).closest('.pagination-box').data('url-prefix') + p;
+			}else{
+					show_modal('alert',encodeURIComponent('Whoops, that page might be out of range.'));
+			}
+	}
+
+</script>
+<a name="376"></a>
+<div id="comment-376" class="comment-box    ">
+<div class="comment-head">
+<span class="troper-handle-wrapper has-tag">
+<a href="pmwiki.php/Tropers/DookieIdiotNimrod" class="troper-name">DookieIdiotNimrod</a>
+<span class="troper-avatar-tagline mobile-on">He died in the pool, with a screwdriver!
+</span> </span>
+<span class="troper-location">from Location
+</span>
+<span class="troper-relationship-status">
+<strong>Relationship Status:</strong> A teenager in love </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/DookieIdiotNimrod">
+<img src="https://static.tvtropes.org/pmwiki/pub/images/a109d36b_d777_4c7c_9b76_8d20b02f42d5.jpeg" />
+</a>
+</span>
+<span class="troper-avatar-tagline text-center mobile-off">He died in the pool, with a screwdriver!
+</span>
+</div>
+<div class="troper-comment ">
+<a href="#comment-376" class="troper-post-time">Oct 15th 2020 <span>at</span> 7:01:46 AM</a>
+<div class="comment">
+<p>“<span class="gold">...Is it weird that I’m a part of the pony alliance?</span>”
+</p><p></p>
+</div>
+<span class="troper-signature text-center">I am an orange
+People say that I’m annoying
+</span>
+</div>
+</div>
+</div>
+<a name="377"></a>
+<div id="comment-377" class="comment-box    ">
+<div class="comment-head">
+<span class="troper-handle-wrapper has-tag">
+<a href="pmwiki.php/Tropers/KungFuCutBug" class="troper-name">KungFuCutBug</a>
+<span class="troper-avatar-tagline mobile-on">Diagnosis: Severe Case of Dead
+</span> </span>
+<span class="troper-location">from the coldest freezers in Hell
+</span>
+<span class="troper-relationship-status">
+<strong>Relationship Status:</strong> Maxing my social links </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/KungFuCutBug">
+<img src="https://static.tvtropes.org/pmwiki/pub/images/avery_3.png" />
+</a>
+</span>
+<span class="troper-avatar-tagline text-center mobile-off">Diagnosis: Severe Case of Dead
+</span>
+</div>
+<div class="troper-comment ">
+<a href="#comment-377" class="troper-post-time">Oct 15th 2020 <span>at</span> 7:36:07 AM</a>
+<div class="comment">
+<p><h1>Amazing Avatars</h1>
+<span class="evil">&nbsp;&nbsp; <span class="purple">"That was</span> <em>decidedly</em> <span class="purple">not what I was anticipating. Hmph... <span class="font-s">I’ll get back at Ten for this.</span>"</span> &nbsp;&nbsp;</span>
+</p><p><h1>Awesome Avatars</h1>
+<span class="pink">"Being a marine creature definitely helps in swimming challenges. Somewhat... not as much as you’d think, though."</span>
+</p>
+</div>
+<span class="troper-signature text-center">"a faithful pet, waiting for its owner to return... <strong>a moment that shall never arrive</strong>..."
+</span>
+</div>
+</div>
+</div>
+<a name="378"></a>
+<div id="comment-378" class="comment-box    ">
+<div class="comment-head">
+<span class="troper-handle-wrapper has-tag">
+<a href="pmwiki.php/Tropers/TenOfSwords13" class="troper-name">TenOfSwords13</a>
+<span class="troper-avatar-tagline mobile-on">Coelasilat
+</span> </span>
+<span class="troper-location">from World Dino Wrestling
+</span>
+<span class="troper-relationship-status">
+<strong>Relationship Status:</strong> Hiding </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/TenOfSwords13">
+<img src="https://static.tvtropes.org/pmwiki/pub/images/coelasilat.png" />
+</a>
+</span>
+<span class="troper-avatar-tagline text-center mobile-off">Coelasilat
+</span>
+</div>
+<div class="troper-comment ">
+<a href="#comment-378" class="troper-post-time">Oct 15th 2020 <span>at</span> 11:19:16 AM</a>
+<div class="comment">
+<p><h2> EPISODE THREEEEEEEEEE</h2>
+</p><p><a class='urllink' href='https://media.discordapp.net/attachments/765919630404878416/766360646144622643/Episode_3_-_1.png'>The reamaining castaways<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a><small>&#9674;</small>
+</p><p><a class='urllink' href='https://media.discordapp.net/attachments/765919630404878416/766360869848219749/Episode_3_-_2.png'>Amazing Alliances<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a><small>&#9674;</small> and <a class='urllink' href='https://cdn.discordapp.com/attachments/765919630404878416/766361018922172506/Episode_3_-_3.png'>Awesome Alliances<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a><small>&#9674;</small>
+</p><p><h2> REWARD CHALLENGE</h2>
+</p><p>Our next Reward Challenge is called <em><strong>Pilfering Pirates</strong></em>, a race along a course over water. At the centre of the course is a zone in which players can try to knock each other into the water. The first Tribe to steal 10 baskets from their opponent wins. <span class="spoiler" title="you can set spoilers visible by default on your profile">Negotiating the track carefully and being ruthless enough in their attacks lands <a class='urllink' href='https://media.discordapp.net/attachments/765919630404878416/766361228595167282/Episode_3_-_4.png'>the Amazing Avatars<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a><small>&#9674;</small> in the winning spot. They win a visit from the Thai Special Forces, who help improve living conditions at their camp.</span>
+</p><p><h2> IMMUNITY CHALLENGE</h2>
+</p><p>This challenge is called <em><strong>Temple Transfer</strong></em>, which is basically a reskinned <a class='twikilink' href='/pmwiki/pmwiki.php/Main/TowersOfHanoi' title='/pmwiki/pmwiki.php/Main/TowersOfHanoi'>Towers of Hanoi</a>, but with temple-looking pieces. <span class="spoiler" title="you can set spoilers visible by default on your profile">Overseeing this task with cunning and intellect, <a class='urllink' href='https://media.discordapp.net/attachments/765919630404878416/766362090482565140/Episode_3_-_5.png'>The Awesome Avatars<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a><small>&#9674;</small> rebuild their temple and claim immunity.</span>
+</p><p><h2> EVENTS</h2>
+</p><p>After a collosal disagreement, the alliance between <a class='urllink' href='https://media.discordapp.net/attachments/765919630404878416/766362891682185216/Episode_3_-_6.png'>Lin, Ten, and Zanreo<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a><small>&#9674;</small> collapses.
+</p><p>In the Awesome Avatars Tribe, <a class='urllink' href='https://media.discordapp.net/attachments/765919630404878416/766363137158938624/Episode_3_-_7.png'>Pow-Pow and SPookie bond<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a><small>&#9674;</small> over common interests.
+</p><p><h2> VOTING</h2>
+</p><p><span class="spoiler" title="you can set spoilers visible by default on your profile">The Amazing Avatars vote amongst who should leave, and their decision, four to three, is that <a class='urllink' href='https://media.discordapp.net/attachments/765919630404878416/766363401945219132/Episode_3_-_8.png'>Lin is going to leave<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a><small>&#9674;</small>. <a class='urllink' href='https://media.discordapp.net/attachments/765919630404878416/766363884981714954/Episode_3_-_9.png'>Breakdown<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a><small>&#9674;</small>.</span>
+</p>
+</div>
+<span class="troper-signature text-center">I wanna set the universe on fire Feel it burn tonight Set the universe on fire There's no end in sight (I'd link song, but character limits)
+</span>
+</div>
+</div>
+</div>
+<a name="379"></a>
+<div id="comment-379" class="comment-box    ">
+<div class="comment-head">
+<span class="troper-handle-wrapper has-tag">
+<a href="pmwiki.php/Tropers/KungFuCutBug" class="troper-name">KungFuCutBug</a>
+<span class="troper-avatar-tagline mobile-on">Diagnosis: Severe Case of Dead
+</span> </span>
+<span class="troper-location">from the coldest freezers in Hell
+</span>
+<span class="troper-relationship-status">
+<strong>Relationship Status:</strong> Maxing my social links </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/KungFuCutBug">
+<img src="https://static.tvtropes.org/pmwiki/pub/images/avery_3.png" />
+</a>
+</span>
+<span class="troper-avatar-tagline text-center mobile-off">Diagnosis: Severe Case of Dead
+</span>
+</div>
+<div class="troper-comment ">
+<a href="#comment-379" class="troper-post-time">Oct 15th 2020 <span>at</span> 11:23:57 AM</a>
+<div class="comment">
+<p><h1>Amazing Avatars</h1>
+</p><p><span class="evil">&nbsp;&nbsp; <span class="purple">"The</span> <em>nerve</em> <span class="purple">of you fools... I’ll see to it that you earn a special place in the netherrealm."</span> &nbsp;&nbsp;</span> <em>[Shei Lin sulks off.]</em>
+</p>
+</div>
+<span class="troper-signature text-center">"a faithful pet, waiting for its owner to return... <strong>a moment that shall never arrive</strong>..."
+</span>
+</div>
+</div>
+</div>
+<a name="380"></a>
+<div id="comment-380" class="comment-box    ">
+<div class="comment-head">
+<span class="troper-handle-wrapper has-tag">
+<a href="pmwiki.php/Tropers/TroperNo9001" class="troper-name">TroperNo9001</a>
+<span class="troper-avatar-tagline mobile-on">King for 2 Days Candidate
+</span> </span>
+<span class="troper-location">from Beach City
+</span>
+<span class="troper-relationship-status">
+<strong>Relationship Status:</strong> Armed with the Power of Love </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/TroperNo9001">
+<img src="https://static.tvtropes.org/pmwiki/pub/images/186273555816_4.png" />
+</a>
+</span>
+<span class="troper-avatar-tagline text-center mobile-off">King for 2 Days Candidate
+</span>
+</div>
+<div class="troper-comment ">
+<a href="#comment-380" class="troper-post-time">Oct 15th 2020 <span>at</span> 1:16:05 PM</a>
+<div class="comment">
+<p><span class="blue"> There weren't any other ponies Spookie, so...</span>
+</p><p>(Reward Challenge)
+</p><p><span class="blue"> (is blindfolded) Okay Billy, lead the way! ... Great job! Now let's go fishing!</span>
+</p><p>(Immunity Challenge)
+</p><p><span class="blue"> I wore this swimsuit that Ichi sewed for me for a good reason! ... Alright, hoofbump, Cutbug!</span>
+</p><p>(Tribe Events)
+</p><p><span class="blue"> Hey guys, I hope you like this group painting!</span>
+</p><p>(after the Tribal Council...)
+</p><p><span class="purple"> Okay, Robucks <em>was</em> kind of lagging behind in the Immunity Challenge...</span>
+</p><p><hr />
+</p><p>(Reward Challenge)
+</p><p><span class="purple"> (punches out her opponents with her <a class='twikilink' href='/pmwiki/pmwiki.php/Series/AgentsOfShield' title='/pmwiki/pmwiki.php/Series/AgentsOfShield'>Transia Corporation Exoskeleton</a>)</span>
+</p><p><span class="blue"> (focuses on snagging the baskets)</span>
+</p><p><span class="purple"> (carefully high-fives everyone in her tribe after winning) Our camp could use some upgrades!</span>
+</p><p>(Immunity Challenge)
+</p><p><span class="blue"> Ooh, I know this puzzle! We just need someone strong to lift these pieces! ... Great job as always!</span>
+</p><p>(Tribe Events)
+</p><p><span class="blue"> You know, Spookie, this alliance isn't so bad! And I just wanna know more about you!</span>
+</p><p>(after the Tribal Council)
+</p><p><span class="purple"> That's what you get for trying to backstab Ten...</span>
+<p class='font-xs text-light'>Edited by TroperNo9001 on Oct 15th 2020 <span>at</span> 4:16:26 PM<p></p>
+</div>
+<span class="troper-signature text-center">Believe in Steven. Vote him for King.
+</span>
+</div>
+</div>
+</div>
+<a name="381"></a>
+<div id="comment-381" class="comment-box    ">
+<div class="comment-head">
+<span class="troper-handle-wrapper has-tag">
+<a href="pmwiki.php/Tropers/TenOfSwords13" class="troper-name">TenOfSwords13</a>
+<span class="troper-avatar-tagline mobile-on">Coelasilat
+</span> </span>
+<span class="troper-location">from World Dino Wrestling
+</span>
+<span class="troper-relationship-status">
+<strong>Relationship Status:</strong> Hiding </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/TenOfSwords13">
+<img src="https://static.tvtropes.org/pmwiki/pub/images/coelasilat.png" />
+</a>
+</span>
+<span class="troper-avatar-tagline text-center mobile-off">Coelasilat
+</span>
+</div>
+<div class="troper-comment ">
+<a href="#comment-381" class="troper-post-time">Oct 16th 2020 <span>at</span> 2:22:49 AM</a>
+<div class="comment">
+<p><h2> EPISODE FOUR</h2>
+</p><p><a class='urllink' href='https://media.discordapp.net/attachments/765919630404878416/766587950296334336/Episode_4_-_1.png'>Our current castaways<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a><small>&#9674;</small>.
+</p><p><a class='urllink' href='https://media.discordapp.net/attachments/765919630404878416/766587992118394920/Episode_4_-_2.png'>Amazing Alliances<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a><small>&#9674;</small> and <a class='urllink' href='https://media.discordapp.net/attachments/765919630404878416/766588028927868938/Episode_4_-_3.png'>Awesome Alliances<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a><small>&#9674;</small>.
+</p><p><h2> REWARD CHALLENGE</h2>
+</p><p><strong>''New Tribe Member</strong>' is the name of the challenge, in which each Tribe must navigate a very large manequin, their new Tribemate, across the island. The first one across wins.
+<span class="spoiler" title="you can set spoilers visible by default on your profile">With expert navigational skills and the abilities required to aid an incompetent giant, <a class='urllink' href='https://media.discordapp.net/attachments/765919630404878416/766588067757948938/Episode_4_-_4.png'>The Amazing Avatars<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a><small>&#9674;</small> claim their prize of bananas and chickens.</span>
+</p><p><h2> IMMUNITY CHALLENGE</h2>
+</p><p>Our next Immunity Challenge is <em><strong>Tan-dy Gram</strong></em>, which is a puzzle in which pieces need to be assembled to form the image shown to the castaways. <span class="spoiler" title="you can set spoilers visible by default on your profile">With sharp wit and perception, <a class='urllink' href='https://media.discordapp.net/attachments/765919630404878416/766588105242836992/Episode_4_-_5.png'>the Amazing Avatars<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a><small>&#9674;</small> win Immunity.</span>
+</p><p><h2> EVENTS</h2>
+</p><p>Having bonded over the previous events, <a class='urllink' href='https://media.discordapp.net/attachments/765919630404878416/766588140538298378/Episode_4_-_6.png'>the Alliance between 6K1, Alivia, and Glitchreo<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a><small>&#9674;</small> is now very strong.
+</p><p>Meanwhile, due to severe mistrust, <a class='urllink' href='https://cdn.discordapp.com/attachments/765919630404878416/766588174280425502/Episode_4_-_7.png'>the Alliance between Cutbug, Pow-Pow and SPookie<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a><small>&#9674;</small> is now very, very weak.
+</p><p><h2> VOTING</h2>
+</p><p><span class="spoiler" title="you can set spoilers visible by default on your profile">The Awesome Avatars join together and, in a 3 - 4 vote, <a class='urllink' href='https://media.discordapp.net/attachments/765919630404878416/766588223665078312/Episode_4_-_8.png'>they oust Cutbug<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a><small>&#9674;</small>. <a class='urllink' href='https://media.discordapp.net/attachments/765919630404878416/766588269906755594/Episode_4_-_9.png'>Breakdown<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a><small>&#9674;</small></span>
+</p>
+</div>
+<span class="troper-signature text-center">I wanna set the universe on fire Feel it burn tonight Set the universe on fire There's no end in sight (I'd link song, but character limits)
+</span>
+</div>
+</div>
+</div>
+<a name="382"></a>
+<div id="comment-382" class="comment-box    ">
+<div class="comment-head">
+<span class="troper-handle-wrapper has-tag">
+<a href="pmwiki.php/Tropers/TenOfSwords13" class="troper-name">TenOfSwords13</a>
+<span class="troper-avatar-tagline mobile-on">Coelasilat
+</span> </span>
+<span class="troper-location">from World Dino Wrestling
+</span>
+<span class="troper-relationship-status">
+<strong>Relationship Status:</strong> Hiding </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/TenOfSwords13">
+<img src="https://static.tvtropes.org/pmwiki/pub/images/coelasilat.png" />
+</a>
+</span>
+<span class="troper-avatar-tagline text-center mobile-off">Coelasilat
+</span>
+</div>
+<div class="troper-comment ">
+<a href="#comment-382" class="troper-post-time">Oct 16th 2020 <span>at</span> 5:13:25 AM</a>
+<div class="comment">
+<p><h2> EPISODE FIVE</h2>
+</p><p><a class='urllink' href='https://media.discordapp.net/attachments/765919630404878416/766631129355780096/Episode_5_-_1.png'>The current survivors.<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a><small>&#9674;</small>
+</p><p><h2> THE TWIST</h2>
+</p><p>Our contestants have been given an opportunity to defect from their Tribe and join the other Tribe. Four castaways do so:<a class='urllink' href='https://media.discordapp.net/attachments/765919630404878416/766631290090553364/Episode_5_-_2.png'>Glitchreo and Ten join the Awesome Avatars, and SPookie and Ugo join the Amazing Avatars<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a><small>&#9674;</small>.
+</p><p><a class='urllink' href='https://media.discordapp.net/attachments/765919630404878416/766631699102433310/Episode_5_-_3.png'>Here are the new Tribes.<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a><small>&#9674;</small>
+</p><p><a class='urllink' href='https://media.discordapp.net/attachments/765919630404878416/766632043937136660/Episode_5_-_4.png'>Amazing Alliances<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a><small>&#9674;</small>, and <a class='urllink' href='https://media.discordapp.net/attachments/765919630404878416/766632371813744640/Episode_5_-_5.png'>Awesome Alliances<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a><small>&#9674;</small>, missing castaways are greyed out.
+</p><p><h2> REWARD CHA-</h2>
+</p><p>It's just the <a class='urllink' href='https://media.discordapp.net/attachments/765919630404878416/766632625976377344/Episode_5_-_6.png'>Survivor Auction<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a><small>&#9674;</small>, nothing to get excited about.
+</p><p><h2> IMMUNITY CHALLENGE</h2>
+</p><p><em><strong>Catch of the Day</strong></em> is a Challenge in which the survivors need to sort various fish in a gigantic pile into four different bins. The first Tribe to complete this task shall gain Immunity. <span class="spoiler" title="you can set spoilers visible by default on your profile">With sharp eyes and the will to carry on with such a tedious task, <a class='urllink' href='https://media.discordapp.net/attachments/765919630404878416/766633227779178526/Episode_5_-_7.png'>The Amazing Avatars<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a><small>&#9674;</small> win Immunity.</span>
+</p><p><h2> EVENTS</h2>
+</p><p>At the Amazing Avatars Tribe, Zanreo <a class='urllink' href='https://media.discordapp.net/attachments/765919630404878416/766634034453151774/Episode_5_-_8.png'>is aiding the newcomers in settling down at their new camp.<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a><small>&#9674;</small>
+</p><p>Meanwhile, at the Awesome Avatars, <a class='urllink' href='https://media.discordapp.net/attachments/765919630404878416/766634237520117780/Episode_5_-_9.png'>Glitch Zanreo and Billy have a fight that can be heard from all around the island.<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a><small>&#9674;</small>
+</p><p><h2> VOTING</h2>
+</p><p><span class="spoiler" title="you can set spoilers visible by default on your profile">After that massive fight, it's no wonder that Glitchreo and Billy are the two favourites to go. The first round ends in a 3/3 tie between the two, but the revote makes it clear that <a class='urllink' href='https://media.discordapp.net/attachments/765919630404878416/766634428847357962/Episode_5_-_A.png'>Billy will be leaving.<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a><small>&#9674;</small> <a class='urllink' href='https://media.discordapp.net/attachments/765919630404878416/766634701708328980/Episode_5_-_B.png'>Breakdown<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a><small>&#9674;</small></span>
+</p>
+</div>
+<span class="troper-signature text-center">I wanna set the universe on fire Feel it burn tonight Set the universe on fire There's no end in sight (I'd link song, but character limits)
+</span>
+</div>
+</div>
+</div>
+<a name="383"></a>
+<div id="comment-383" class="comment-box    ">
+<div class="comment-head">
+<span class="troper-handle-wrapper has-tag">
+<a href="pmwiki.php/Tropers/Billy5545" class="troper-name">Billy5545</a>
+<span class="troper-avatar-tagline mobile-on">Diavolo
+</span> </span>
+<span class="troper-location">from Naples, Italy
+</span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/Billy5545">
+<img src="https://static.tvtropes.org/pmwiki/pub/images/download_1_00.jpeg" />
+</a>
+</span>
+<span class="troper-avatar-tagline text-center mobile-off">Diavolo
+</span>
+</div>
+<div class="troper-comment ">
+<a href="#comment-383" class="troper-post-time">Oct 16th 2020 <span>at</span> 5:36:30 AM</a>
+<div class="comment">
+<p>Oof at being eliminate
+</p>
+</div>
+<span class="troper-signature text-center">The secretive boss of Passion. Currently fighting in King for 2 Days (alongside Utsuho).
+</span>
+</div>
+</div>
+</div>
+<a name="384"></a>
+<div id="comment-384" class="comment-box    ">
+<div class="comment-head">
+<span class="troper-handle-wrapper has-tag">
+<a href="pmwiki.php/Tropers/TroperNo9001" class="troper-name">TroperNo9001</a>
+<span class="troper-avatar-tagline mobile-on">King for 2 Days Candidate
+</span> </span>
+<span class="troper-location">from Beach City
+</span>
+<span class="troper-relationship-status">
+<strong>Relationship Status:</strong> Armed with the Power of Love </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/TroperNo9001">
+<img src="https://static.tvtropes.org/pmwiki/pub/images/186273555816_4.png" />
+</a>
+</span>
+<span class="troper-avatar-tagline text-center mobile-off">King for 2 Days Candidate
+</span>
+</div>
+<div class="troper-comment ">
+<a href="#comment-384" class="troper-post-time">Oct 16th 2020 <span>at</span> 7:12:01 AM</a>
+<div class="comment">
+<p>(Reward Challenge)
+</p><p><span class="purple"> As always, great job on guiding our new friend! Now let's enjoy our meal!</span>
+</p><p>(Immunity Challenge)
+</p><p><span class="purple"> And just like my counterpart, I'm good at puzzles! Woohoo!</span>
+</p><p>(Tribe Events)
+</p><p><span class="purple"> You girls are awesome! Keep it up!</span>
+</p><p><span class="blue"> Spookie... I get that you don't fit in that way, but we need to stick together!</span>
+</p><p>(after the Tribal Council)
+</p><p><span class="blue"> I'm sorry Cutbug... I tried to save you by not voting for you...</span>
+</p><p><hr />
+</p><p>(Twist)
+</p><p><span class="purple"> Glitch!Zan... I just wish you luck in your new tribe.</span>
+</p><p><span class="blue"> Spookie! Noooooo!!!</span>
+</p><p>(Immunity Challenge)
+</p><p><span class="purple"> Helps that I'm obsessed with sorting things, like in the Database!</span>
+</p><p><span class="blue"> Oh, come on!</span>
+</p><p>(Tribe Events)
+</p><p><span class="purple"> Thanks for helping the newbies here!</span>
+</p><p><span class="blue"> Billy, I thought you can peacefully negotiate with our new member!</span>
+</p><p>(after the Tribal Council)
+</p><p><span class="blue"> Sorry... but please don't bite the newbies...</span>
+</p>
+</div>
+<span class="troper-signature text-center">Believe in Steven. Vote him for King.
+</span>
+</div>
+</div>
+</div>
+<a name="385"></a>
+<div id="comment-385" class="comment-box    ">
+<div class="comment-head">
+<span class="troper-handle-wrapper has-tag">
+<a href="pmwiki.php/Tropers/DookieIdiotNimrod" class="troper-name">DookieIdiotNimrod</a>
+<span class="troper-avatar-tagline mobile-on">He died in the pool, with a screwdriver!
+</span> </span>
+<span class="troper-location">from Location
+</span>
+<span class="troper-relationship-status">
+<strong>Relationship Status:</strong> A teenager in love </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/DookieIdiotNimrod">
+<img src="https://static.tvtropes.org/pmwiki/pub/images/a109d36b_d777_4c7c_9b76_8d20b02f42d5.jpeg" />
+</a>
+</span>
+<span class="troper-avatar-tagline text-center mobile-off">He died in the pool, with a screwdriver!
+</span>
+</div>
+<div class="troper-comment ">
+<a href="#comment-385" class="troper-post-time">Oct 16th 2020 <span>at</span> 7:14:53 AM</a>
+<div class="comment">
+<p>“<span class="gold">Sorry, guys.</span>”
+</p><p><h1></h1>
+</p><p>“Oof, Billy. Sorry.”
+<p class='font-xs text-light'>Edited by DookieIdiotNimrod on Oct 16th 2020 <span>at</span> 7:16:43 AM<p></p>
+</div>
+<span class="troper-signature text-center">I am an orange
+People say that I’m annoying
+</span>
+</div>
+</div>
+</div>
+<a name="386"></a>
+<div id="comment-386" class="comment-box    ">
+<div class="comment-head">
+<span class="troper-handle-wrapper has-tag">
+<a href="pmwiki.php/Tropers/TenOfSwords13" class="troper-name">TenOfSwords13</a>
+<span class="troper-avatar-tagline mobile-on">Coelasilat
+</span> </span>
+<span class="troper-location">from World Dino Wrestling
+</span>
+<span class="troper-relationship-status">
+<strong>Relationship Status:</strong> Hiding </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/TenOfSwords13">
+<img src="https://static.tvtropes.org/pmwiki/pub/images/coelasilat.png" />
+</a>
+</span>
+<span class="troper-avatar-tagline text-center mobile-off">Coelasilat
+</span>
+</div>
+<div class="troper-comment ">
+<a href="#comment-386" class="troper-post-time">Oct 16th 2020 <span>at</span> 11:36:33 AM</a>
+<div class="comment">
+<p><h2> EPISODE six</h2>
+</p><p><a class='urllink' href='https://media.discordapp.net/attachments/765919630404878416/766728422600474705/Episode_6_-_1.png'>Remaining Castaways<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a><small>&#9674;</small>, and their <a class='urllink' href='https://media.discordapp.net/attachments/765919630404878416/766728644743266354/Episode_6_-_2.png'>All<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a><small>&#9674;</small><a class='urllink' href='https://media.discordapp.net/attachments/765919630404878416/766728688875077632/Episode_6_-_3.png'>iances<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a><small>&#9674;</small>.
+</p><p><h2> REWARD CHALLENGE</h2>
+</p><p>The next Challenge is <em><strong>Wicker Flicker</strong></em>, in which Tribes need to catch balls thrown by one other Tribe member in wicker baskets. <span class="spoiler" title="you can set spoilers visible by default on your profile">With great dexterity and accuracy, <a class='urllink' href='https://media.discordapp.net/attachments/765919630404878416/766728919779901460/Episode_6_-_4.png'>the Awesome Avatars<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a><small>&#9674;</small> take the win</span>.
+</p><p><h2> IMMUNITY CHALLENGE</h2>
+</p><p>Our new Immunity Challenge is <em><strong>Thai 21</strong></em>, in which we have 21 flags arranged in a circle. Each Tribe takes turns taking one, two, or three flags at a time. The last Tribe to take a flag wins Immunity. <span class="spoiler" title="you can set spoilers visible by default on your profile">With great cunning an mathematical genius, <a class='urllink' href='https://media.discordapp.net/attachments/765919630404878416/766729409427931174/Episode_6_-_5.png'>The Amazing Avatars<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a><small>&#9674;</small> claim Immunity.</span>
+</p><p><h2> EVENTS</h2>
+</p><p>At the Amazing Avatars Tribe, <a class='urllink' href='https://media.discordapp.net/attachments/765919630404878416/766730149999411260/Episode_6_-_6.png'>Alivia and Zanreo<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a><small>&#9674;</small> find common ground for a friendship.
+</p><p>Meanwhile, at the Awesome Avatars, <a class='urllink' href='https://media.discordapp.net/attachments/765919630404878416/766730403582312498/Episode_6_-_7.png'>Dookie and Pow-Pow<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a><small>&#9674;</small> enter a horrifying argument between each other.
+</p><p><h2> VOTING</h2>
+</p><p><span class="spoiler" title="you can set spoilers visible by default on your profile">An unusaul occurance at voting today: the voting was in a three to one <em>to one</em> ratio. The two to receive one vote were Ten and Dookie, and the one getting voted off is... <a class='urllink' href='https://media.discordapp.net/attachments/765919630404878416/766730681333055538/Episode_6_-_8.png'>Power Stroke<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a><small>&#9674;</small>. <a class='urllink' href='https://media.discordapp.net/attachments/765919630404878416/766731123434455040/Episode_6_-_9.png'>Breakdown<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a><small>&#9674;</small></span>
+</p>
+</div>
+<span class="troper-signature text-center">I wanna set the universe on fire Feel it burn tonight Set the universe on fire There's no end in sight (I'd link song, but character limits)
+</span>
+</div>
+</div>
+</div>
+<a name="387"></a>
+<div id="comment-387" class="comment-box    ">
+<div class="comment-head">
+<span class="troper-handle-wrapper has-tag">
+<a href="pmwiki.php/Tropers/TroperNo9001" class="troper-name">TroperNo9001</a>
+<span class="troper-avatar-tagline mobile-on">King for 2 Days Candidate
+</span> </span>
+<span class="troper-location">from Beach City
+</span>
+<span class="troper-relationship-status">
+<strong>Relationship Status:</strong> Armed with the Power of Love </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/TroperNo9001">
+<img src="https://static.tvtropes.org/pmwiki/pub/images/186273555816_4.png" />
+</a>
+</span>
+<span class="troper-avatar-tagline text-center mobile-off">King for 2 Days Candidate
+</span>
+</div>
+<div class="troper-comment ">
+<a href="#comment-387" class="troper-post-time">Oct 16th 2020 <span>at</span> 11:48:23 AM</a>
+<div class="comment">
+<p>(Reward Challenge)
+</p><p><span class="blue"> Okay, I'll catch the balls, just like in Buckball! ... Woohoo! But I'll pass on the meal, too exotic.</span>
+</p><p>(Immunity Challenge)
+</p><p><span class="purple"> By my analysis, we should strategize our even and odd flags so the last one's ours! ... I knew it would work!</span>
+</p><p>(Tribe Events)
+</p><p><span class="blue"> Dookie, why did your counterpart leave for the other tribe?!</span>
+</p><p>(After the Tribal Council)
+</p><p><span class="blue"> (Sigh...) It's been fun hanging with you guys... but I guess I need more friendship lessons...</span>
+</p>
+</div>
+<span class="troper-signature text-center">Believe in Steven. Vote him for King.
+</span>
+</div>
+</div>
+</div>
+<a name="388"></a>
+<div id="comment-388" class="comment-box    ">
+<div class="comment-head">
+<span class="troper-handle-wrapper has-tag">
+<a href="pmwiki.php/Tropers/DookieIdiotNimrod" class="troper-name">DookieIdiotNimrod</a>
+<span class="troper-avatar-tagline mobile-on">He died in the pool, with a screwdriver!
+</span> </span>
+<span class="troper-location">from Location
+</span>
+<span class="troper-relationship-status">
+<strong>Relationship Status:</strong> A teenager in love </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/DookieIdiotNimrod">
+<img src="https://static.tvtropes.org/pmwiki/pub/images/a109d36b_d777_4c7c_9b76_8d20b02f42d5.jpeg" />
+</a>
+</span>
+<span class="troper-avatar-tagline text-center mobile-off">He died in the pool, with a screwdriver!
+</span>
+</div>
+<div class="troper-comment ">
+<a href="#comment-388" class="troper-post-time">Oct 16th 2020 <span>at</span> 12:08:07 PM</a>
+<div class="comment">
+<p>“Don’t ask me. Ask him.”
+</p>
+</div>
+<span class="troper-signature text-center">I am an orange
+People say that I’m annoying
+</span>
+</div>
+</div>
+</div>
+<a name="389"></a>
+<div id="comment-389" class="comment-box    ">
+<div class="comment-head">
+<span class="troper-handle-wrapper has-tag">
+<a href="pmwiki.php/Tropers/TenOfSwords13" class="troper-name">TenOfSwords13</a>
+<span class="troper-avatar-tagline mobile-on">Coelasilat
+</span> </span>
+<span class="troper-location">from World Dino Wrestling
+</span>
+<span class="troper-relationship-status">
+<strong>Relationship Status:</strong> Hiding </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/TenOfSwords13">
+<img src="https://static.tvtropes.org/pmwiki/pub/images/coelasilat.png" />
+</a>
+</span>
+<span class="troper-avatar-tagline text-center mobile-off">Coelasilat
+</span>
+</div>
+<div class="troper-comment ">
+<a href="#comment-389" class="troper-post-time">Oct 17th 2020 <span>at</span> 2:48:50 AM</a>
+<div class="comment">
+<p><h2> THE SEVENTH EPISODE</h2>
+</p><p><a class='urllink' href='https://media.discordapp.net/attachments/765919630404878416/766958480937975828/Episode_7_-_1.png'>Current Tribe Members<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a><small>&#9674;</small>
+</p><p><h2> TWIST</h2>
+</p><p><a class='urllink' href='https://media.discordapp.net/attachments/765919630404878416/766958642209488926/Episode_7_-_2.png'>Tribe Merge, heck yeah!<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a><small>&#9674;</small> <span class="spoiler" title="you can set spoilers visible by default on your profile">Don't tell these guys the merge is fake though, not until after the Immunity Challenge anyway...</span>
+</p><p><a class='urllink' href='https://media.discordapp.net/attachments/765919630404878416/766958901534130186/Episode_7_-_3.png'>Alli<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a><small>&#9674;</small><a class='urllink' href='https://media.discordapp.net/attachments/765919630404878416/766959019276894218/Episode_7_-_4.png'>ances<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a><small>&#9674;</small>.
+</p><p><h2> IMMUNITY CHALLENGE (No reward challenge today)</h2>
+</p><p><em><strong>Jail Break</strong></em>. This time, our castaways are locked up in a jail cell, with their legs (or reasonable equivelant) locked in shackles. Our castaways have been told that the one who unlocks the most chains and frees the most people will win Immunity. <span class="spoiler" title="you can set spoilers visible by default on your profile">In actuality, the first Tribe to have all its members escape first is the victor, and our victor this time is <a class='urllink' href='https://media.discordapp.net/attachments/765919630404878416/766959205235687444/Episode_7_-_5.png'>the Awesome Avatars<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a><small>&#9674;</small>.</span>
+</p><p><h2> EVENTS</h2>
+</p><p>Mutual distrust and paranoia collapses <a class='urllink' href='https://media.discordapp.net/attachments/765919630404878416/766959830715858954/Episode_7_-_6.png'>the Alliance between 6K1, Alivia, and Glitchreo<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a><small>&#9674;</small>, and slightly less severe mutual distrust and paranoia weakens <a class='urllink' href='https://media.discordapp.net/attachments/765919630404878416/766960083711164436/Episode_7_-_7.png'>the Alliance between Dookie, Tabby, and Ugo<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a><small>&#9674;</small>.
+</p><p><h2> VOTING</h2>
+</p><p><span class="spoiler" title="you can set spoilers visible by default on your profile">At the vote today, the Amazing Avatars vote to expel <a class='urllink' href='https://media.discordapp.net/attachments/765919630404878416/766960297709273109/Episode_7_-_8.png'>Ugo in a four to two vote.<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a><small>&#9674;</small><a class='urllink' href='https://media.discordapp.net/attachments/765919630404878416/766960534649831424/Episode_7_-_9.png'>Breakdown<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a><small>&#9674;</small></span>
+</p>
+</div>
+<span class="troper-signature text-center">I wanna set the universe on fire Feel it burn tonight Set the universe on fire There's no end in sight (I'd link song, but character limits)
+</span>
+</div>
+</div>
+</div>
+<a name="390"></a>
+<div id="comment-390" class="comment-box    ">
+<div class="comment-head">
+<span class="troper-handle-wrapper has-tag">
+<a href="pmwiki.php/Tropers/TenOfSwords13" class="troper-name">TenOfSwords13</a>
+<span class="troper-avatar-tagline mobile-on">Coelasilat
+</span> </span>
+<span class="troper-location">from World Dino Wrestling
+</span>
+<span class="troper-relationship-status">
+<strong>Relationship Status:</strong> Hiding </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/TenOfSwords13">
+<img src="https://static.tvtropes.org/pmwiki/pub/images/coelasilat.png" />
+</a>
+</span>
+<span class="troper-avatar-tagline text-center mobile-off">Coelasilat
+</span>
+</div>
+<div class="troper-comment ">
+<a href="#comment-390" class="troper-post-time">Oct 17th 2020 <span>at</span> 4:57:32 AM</a>
+<div class="comment">
+<p><h2> EPISODE 8</h2>
+</p><p><a class='urllink' href='https://media.discordapp.net/attachments/765919630404878416/766991483952693268/Episode_8_-_1.png'>Current castaways<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a><small>&#9674;</small>
+</p><p><a class='urllink' href='https://media.discordapp.net/attachments/765919630404878416/766991602794889226/Episode_8_-_2.png'>Alliance<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a><small>&#9674;</small>. Yep, there's only one alliance left.
+</p><p><h2> REWARD CHA-</h2>
+</p><p>Not this episode.
+</p><p><h2> IMMUNITY CHALLENGE</h2>
+</p><p>Our next Challenge is called <em><strong>Breathing Space</strong></em>, in which our Survivors need to remain underwater, breathing through a snorkel. The Tribe with the longest total time underwater wins Immunity. <span class="spoiler" title="you can set spoilers visible by default on your profile">With great lung capacity, and general endurance, <a class='urllink' href='https://media.discordapp.net/attachments/765919630404878416/766991914561306654/Episode_8_-_3.png'>the Amazing Avatars<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a><small>&#9674;</small> win Immunity.</span>
+</p><p><h2> EVENTS</h2>
+</p><p>At the Amazing Avatars Tribe, a conflict rises into a fight between <a class='urllink' href='https://media.discordapp.net/attachments/765919630404878416/766992468700299304/Episode_8_-_4.png'>Alivia and 6K1<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a><small>&#9674;</small>.
+</p><p>At the Awesome Avatars Tribe, <a class='urllink' href='https://media.discordapp.net/attachments/765919630404878416/766992720576643092/Episode_8_-_5.png'>Glitchreo hides from everyone and stops trying to form any alliances<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a><small>&#9674;</small>.
+</p><p><h2> VOTING</h2>
+</p><p><span class="spoiler" title="you can set spoilers visible by default on your profile">With a landslide three to one vote, <a class='urllink' href='https://media.discordapp.net/attachments/765919630404878416/766992923135836190/Episode_8_-_6.png'>Ten is thrown out<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a><small>&#9674;</small> from the Awesome Avatars. <a class='urllink' href='https://media.discordapp.net/attachments/765919630404878416/766993066766368788/Episode_8_-_7.png'>Breakdown<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a><small>&#9674;</small></span>
+</p>
+</div>
+<span class="troper-signature text-center">I wanna set the universe on fire Feel it burn tonight Set the universe on fire There's no end in sight (I'd link song, but character limits)
+</span>
+</div>
+</div>
+</div>
+<a name="391"></a>
+<div id="comment-391" class="comment-box    ">
+<div class="comment-head">
+<span class="troper-handle-wrapper has-tag">
+<a href="pmwiki.php/Tropers/TroperNo9001" class="troper-name">TroperNo9001</a>
+<span class="troper-avatar-tagline mobile-on">King for 2 Days Candidate
+</span> </span>
+<span class="troper-location">from Beach City
+</span>
+<span class="troper-relationship-status">
+<strong>Relationship Status:</strong> Armed with the Power of Love </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/TroperNo9001">
+<img src="https://static.tvtropes.org/pmwiki/pub/images/186273555816_4.png" />
+</a>
+</span>
+<span class="troper-avatar-tagline text-center mobile-off">King for 2 Days Candidate
+</span>
+</div>
+<div class="troper-comment ">
+<a href="#comment-391" class="troper-post-time">Oct 17th 2020 <span>at</span> 8:07:41 AM</a>
+<div class="comment">
+<p>(Twist)
+</p><p><span class="purple"> Hey Glitch Zan! Good to see you back!</span>
+</p><p>(Immunity Challenge)
+</p><p><span class="purple"> Alright, I'll just tinker with the locks here and we'll be out in no time! ... What?! We were never merged?</span>
+</p><p>(Tribe Events)
+</p><p><span class="purple"> I can't believe we were duped... I'm sorry, but I'll go by myself this time.</span>
+</p><p>(after the Tribal Council)
+</p><p><span class="purple"> Phew... that was a close call...</span>
+</p><p><hr />
+</p><p>(Immunity Challenge)
+</p><p><span class="purple"> (holds breath and patiently waits for the timer)</span>
+</p><p>(Tribe Events)
+</p><p><span class="purple"> Alivia, I said I want to be alone!</span>
+</p>
+</div>
+<span class="troper-signature text-center">Believe in Steven. Vote him for King.
+</span>
+</div>
+</div>
+</div>
+<a name="392"></a>
+<div id="comment-392" class="comment-box    ">
+<div class="comment-head">
+<span class="troper-handle-wrapper has-tag">
+<a href="pmwiki.php/Tropers/TenOfSwords13" class="troper-name">TenOfSwords13</a>
+<span class="troper-avatar-tagline mobile-on">Coelasilat
+</span> </span>
+<span class="troper-location">from World Dino Wrestling
+</span>
+<span class="troper-relationship-status">
+<strong>Relationship Status:</strong> Hiding </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/TenOfSwords13">
+<img src="https://static.tvtropes.org/pmwiki/pub/images/coelasilat.png" />
+</a>
+</span>
+<span class="troper-avatar-tagline text-center mobile-off">Coelasilat
+</span>
+</div>
+<div class="troper-comment ">
+<a href="#comment-392" class="troper-post-time">Oct 18th 2020 <span>at</span> 3:32:12 AM</a>
+<div class="comment">
+<p><h2> THE NINTH EPISODE</h2>
+</p><p><a class='urllink' href='https://media.discordapp.net/attachments/765919630404878416/767331598029946880/Episode_9_-_1.png'>The Current Tribes...<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a><small>&#9674;</small>
+</p><p><h2> MERGE</h2>
+</p><p>Yeah, for real this time!
+</p><p><a class='urllink' href='https://media.discordapp.net/attachments/765919630404878416/767331730871812126/Episode_9_-_2.png'>Here is the merged Tribe, the Awemazing Avatars<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a><small>&#9674;</small>.
+</p><p><a class='urllink' href='https://media.discordapp.net/attachments/765919630404878416/767332019750961162/Episode_9_-_3.png'>And here are the alliances.<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a><small>&#9674;</small>
+</p><p><h2> REWARD CHALLENGE</h2>
+</p><p>Our first Reward Challenge, as a merged Tribe, is <em><strong>Wicker Ball Relay</strong></em>, in which our Survivors compete against each other through an obstacle course. <span class="spoiler" title="you can set spoilers visible by default on your profile">With agility and mental acuity that outmaches any other contestant, <a class='urllink' href='https://media.discordapp.net/attachments/765919630404878416/767332210650906644/EPisode_9_-_4.png'>Zanreo<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a><small>&#9674;</small> wins a video of their loved ones at home</span>
+</p><p><h2> IMMUNITY CHALLENGE</h2>
+</p><p>The Immunity Challenge, <em><strong>Thai Numbers</strong></em>, is about Numbers (that are in Thai), matching them with English Numbers (which are not Thai Numbers), and then solving equations with Thai Numbers, and then using the Thai Numbers to go to specific coordinates. <span class="spoiler" title="you can set spoilers visible by default on your profile">With hightened mathematical knowlege, and a rapid learning of what the Thai Numbers mean, <a class='urllink' href='https://media.discordapp.net/attachments/765919630404878416/767332845752025108/Episode_9_-_5.png'>Tabby<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a><small>&#9674;</small> wins Immunity.</span>
+</p><p><h2> EVENTS</h2>
+</p><p><a class='urllink' href='https://media.discordapp.net/attachments/765919630404878416/767333351425572884/Episode_9_-_6.png'>Nothing Interesting Happened<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a><small>&#9674;</small>.
+</p><p><h2> VOTING</h2>
+</p><p><span class="spoiler" title="you can set spoilers visible by default on your profile">In a five to three vote, <a class='urllink' href='https://media.discordapp.net/attachments/765919630404878416/767333534541021184/Episode_9_-_7.png'>Dookie will be leaving us<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a><small>&#9674;</small>.<a class='urllink' href='https://media.discordapp.net/attachments/765919630404878416/767333732579016744/Episode_9_-_8.png'>Breakdown<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a><small>&#9674;</small>.</span>
+</p>
+</div>
+<span class="troper-signature text-center">I wanna set the universe on fire Feel it burn tonight Set the universe on fire There's no end in sight (I'd link song, but character limits)
+</span>
+</div>
+</div>
+</div>
+<a name="393"></a>
+<div id="comment-393" class="comment-box    ">
+<div class="comment-head">
+<span class="troper-handle-wrapper has-tag">
+<a href="pmwiki.php/Tropers/TroperNo9001" class="troper-name">TroperNo9001</a>
+<span class="troper-avatar-tagline mobile-on">King for 2 Days Candidate
+</span> </span>
+<span class="troper-location">from Beach City
+</span>
+<span class="troper-relationship-status">
+<strong>Relationship Status:</strong> Armed with the Power of Love </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/TroperNo9001">
+<img src="https://static.tvtropes.org/pmwiki/pub/images/186273555816_4.png" />
+</a>
+</span>
+<span class="troper-avatar-tagline text-center mobile-off">King for 2 Days Candidate
+</span>
+</div>
+<div class="troper-comment ">
+<a href="#comment-393" class="troper-post-time">Oct 18th 2020 <span>at</span> 5:44:29 AM</a>
+<div class="comment">
+<p>(Tribe Merge)
+</p><p><span class="purple"> Aw yeah, we're getting the band back together! Buuut it's now every nom&#8212; I mean <em>castaway</em> for themselves!</span>
+</p><p>(Reward Challenge)
+</p><p><span class="purple"> I could activate my Exoskeleton's wings, but that would be cheating, so I guess I'll just run! (runs out of breath halfway through) I need endurance training...</span>
+</p><p>(Immunity Challenge)
+</p><p><span class="purple"> Hmm... gotta memorize these Thai numerals and fast... Wow, Tabs...</span>
+</p><p>(after the Tribal Council)
+</p><p><span class="purple"> Hate to say this... but you live up to your name.</span>
+</p>
+</div>
+<span class="troper-signature text-center">Believe in Steven. Vote him for King.
+</span>
+</div>
+</div>
+</div>
+<a name="394"></a>
+<div id="comment-394" class="comment-box    ">
+<div class="comment-head">
+<span class="troper-handle-wrapper has-tag">
+<a href="pmwiki.php/Tropers/TenOfSwords13" class="troper-name">TenOfSwords13</a>
+<span class="troper-avatar-tagline mobile-on">Coelasilat
+</span> </span>
+<span class="troper-location">from World Dino Wrestling
+</span>
+<span class="troper-relationship-status">
+<strong>Relationship Status:</strong> Hiding </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/TenOfSwords13">
+<img src="https://static.tvtropes.org/pmwiki/pub/images/coelasilat.png" />
+</a>
+</span>
+<span class="troper-avatar-tagline text-center mobile-off">Coelasilat
+</span>
+</div>
+<div class="troper-comment ">
+<a href="#comment-394" class="troper-post-time">Oct 18th 2020 <span>at</span> 12:05:52 PM</a>
+<div class="comment">
+<p><h2> EPISODE TEN</h2>
+</p><p><a class='urllink' href='https://media.discordapp.net/attachments/765919630404878416/767461533658906654/Episode_A_-_1.png'>The Tribe<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a><small>&#9674;</small>.
+</p><p><a class='urllink' href='https://cdn.discordapp.com/attachments/765919630404878416/767461663468683284/Episode_A_-_2.png'>The Alliances<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a><small>&#9674;</small>.
+</p><p><h2> REWARD CHALLENGE</h2>
+</p><p><em><strong>Knock-Out</strong></em> is an obstacle course designed to eliminate our contestants one round at a time. The last one standing claims the Reward. <span class="spoiler" title="you can set spoilers visible by default on your profile">Through sheer determination and great endurance, <a class='urllink' href='https://media.discordapp.net/attachments/765919630404878416/767461774663352360/Episode_A_-_3.png'>Tabby claims the reward<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a><small>&#9674;</small> and shares it with Glitchreo.</span>
+</p><p><h2> IMMUNITY CHALLENGE</h2>
+</p><p><em><strong>Snuff It</strong></em> is a challenge about knowlege of Thai culture. Each time a survivor gets a question correct, they can snuff out a candle belonging to another survivor. The last survivor with candles lit wins! <span class="spoiler" title="you can set spoilers visible by default on your profile">Through genius tactics and versatile knowlege of Thai culture, <a class='urllink' href='https://media.discordapp.net/attachments/765919630404878416/767462295189716992/Episode_A_-_4.png'>SPDookie<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a><small>&#9674;</small> claims Immunity.</span>
+</p><p><h2> EVENT</h2>
+</p><p>Gigan <a class='urllink' href='https://media.discordapp.net/attachments/765919630404878416/767462721209237564/Episode_A_-_5.png'>does good deeds to get in everyone's good books<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a><small>&#9674;</small>.
+</p><p><h2> VOTING</h2>
+</p><p><span class="spoiler" title="you can set spoilers visible by default on your profile">At the voting today, a consensus was reached that , ina a four to two vote, <a class='urllink' href='https://media.discordapp.net/attachments/765919630404878416/767462895021719562/Episode_A_-_6.png'>Glitchreo<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a><small>&#9674;</small> is to be ejected. <a class='urllink' href='https://media.discordapp.net/attachments/765919630404878416/767463325885530162/Episode_A_-_7.png'>Breakdown<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a><small>&#9674;</small></span>
+</p>
+</div>
+<span class="troper-signature text-center">I wanna set the universe on fire Feel it burn tonight Set the universe on fire There's no end in sight (I'd link song, but character limits)
+</span>
+</div>
+</div>
+</div>
+<a name="395"></a>
+<div id="comment-395" class="comment-box    ">
+<div class="comment-head">
+<span class="troper-handle-wrapper has-tag">
+<a href="pmwiki.php/Tropers/TroperNo9001" class="troper-name">TroperNo9001</a>
+<span class="troper-avatar-tagline mobile-on">King for 2 Days Candidate
+</span> </span>
+<span class="troper-location">from Beach City
+</span>
+<span class="troper-relationship-status">
+<strong>Relationship Status:</strong> Armed with the Power of Love </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/TroperNo9001">
+<img src="https://static.tvtropes.org/pmwiki/pub/images/186273555816_4.png" />
+</a>
+</span>
+<span class="troper-avatar-tagline text-center mobile-off">King for 2 Days Candidate
+</span>
+</div>
+<div class="troper-comment ">
+<a href="#comment-395" class="troper-post-time">Oct 18th 2020 <span>at</span> 12:14:57 PM</a>
+<div class="comment">
+<p>(Reward Challenge)
+</p><p><span class="purple"> (catches several more breaths) This is physically challenging for me alright...</span>
+</p><p>(Immunity Challenge)
+</p><p><span class="purple"> Looks like I need to do more research about this country...</span>
+</p><p>(Tribe Events)
+</p><p><span class="purple"> Not bad, Gigan. Not bad.</span>
+</p><p>(after the Tribal Council)
+</p><p><span class="purple"> Sorry Glitch Zan, but your departure from my alliance still sours me...</span>
+</p>
+</div>
+<span class="troper-signature text-center">Believe in Steven. Vote him for King.
+</span>
+</div>
+</div>
+</div>
+<a name="396"></a>
+<div id="comment-396" class="comment-box    ">
+<div class="comment-head">
+<span class="troper-handle-wrapper has-tag">
+<a href="pmwiki.php/Tropers/TenOfSwords13" class="troper-name">TenOfSwords13</a>
+<span class="troper-avatar-tagline mobile-on">Coelasilat
+</span> </span>
+<span class="troper-location">from World Dino Wrestling
+</span>
+<span class="troper-relationship-status">
+<strong>Relationship Status:</strong> Hiding </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/TenOfSwords13">
+<img src="https://static.tvtropes.org/pmwiki/pub/images/coelasilat.png" />
+</a>
+</span>
+<span class="troper-avatar-tagline text-center mobile-off">Coelasilat
+</span>
+</div>
+<div class="troper-comment ">
+<a href="#comment-396" class="troper-post-time">Oct 19th 2020 <span>at</span> 3:29:40 AM</a>
+<div class="comment">
+<p><h2> EPIDOSE 11</h2>
+</p><p><a class='urllink' href='https://media.discordapp.net/attachments/765919630404878416/767691510920904724/Episode_B_-_1.png'>The Tribe<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a><small>&#9674;</small>.
+</p><p><a class='urllink' href='https://media.discordapp.net/attachments/765919630404878416/767691670522560523/Episode_B_-_2.png'>The Alliance<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a><small>&#9674;</small>.
+</p><p><h2> REWARD CHALLENGE</h2>
+</p><p>Our next "Challenge" is <em><strong>Thai Menu</strong></em>. This one is slightly different, in that it is not our Survivors doing the Challenge, but one of their loved ones. This challenge involves the not very challenging at all task of eating delicioius Thai bugs. The first one to finish eating those tasty insects will win the reward for their Loved One. <span class="spoiler" title="you can set spoilers visible by default on your profile">Through determination and bravery, probably, <a class='urllink' href='https://media.discordapp.net/attachments/765919630404878416/767691791243673640/Episode_B_-_3.png'>Alivia's Loved One<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a><small>&#9674;</small> wins the prize for Alivia.</span>
+</p><p><h2> IMMUNITY CHALLENGE</h2>
+</p><p><em><strong>Cube Crisis</strong></em> is a co-op challenge between our suvivors and their Loved Ones. They are tied together and told to construct a puzzle into a cube. First one to do so wins.
+<span class="spoiler" title="you can set spoilers visible by default on your profile">With great teamwork and communication skills, <a class='urllink' href='https://media.discordapp.net/attachments/765919630404878416/767694215969767434/Episode_B_-_4.png'>Zanreo and her Loved One<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a><small>&#9674;</small> win the challenge, granting Zanreo Immunity.</span>
+</p><p><h2> EVENT</h2>
+</p><p>You know the alliance? The big one without Tabby in it? Well, <em>someone</em> ruined it and now <a class='urllink' href='https://cdn.discordapp.com/attachments/765919630404878416/767694912103252008/Episode_B_-_5.png'>it's gone<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a><small>&#9674;</small>.
+</p><p><h2> VOTING</h2>
+</p><p><span class="spoiler" title="you can set spoilers visible by default on your profile">The first vote ends in a tie between Gigan and Tabby, but a revote shows that everyone wants to get rid of <a class='urllink' href='https://cdn.discordapp.com/attachments/765919630404878416/767695174708887562/Episode_B_-_6.png'>Gigan<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a><small>&#9674;</small>. <a class='urllink' href='https://cdn.discordapp.com/attachments/765919630404878416/767695659327029258/Episode_B_-_7.png'>Breakdown<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a><small>&#9674;</small></span>
+</p>
+</div>
+<span class="troper-signature text-center">I wanna set the universe on fire Feel it burn tonight Set the universe on fire There's no end in sight (I'd link song, but character limits)
+</span>
+</div>
+</div>
+</div>
+<a name="397"></a>
+<div id="comment-397" class="comment-box    ">
+<div class="comment-head">
+<span class="troper-handle-wrapper has-tag">
+<a href="pmwiki.php/Tropers/TroperNo9001" class="troper-name">TroperNo9001</a>
+<span class="troper-avatar-tagline mobile-on">King for 2 Days Candidate
+</span> </span>
+<span class="troper-location">from Beach City
+</span>
+<span class="troper-relationship-status">
+<strong>Relationship Status:</strong> Armed with the Power of Love </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/TroperNo9001">
+<img src="https://static.tvtropes.org/pmwiki/pub/images/186273555816_4.png" />
+</a>
+</span>
+<span class="troper-avatar-tagline text-center mobile-off">King for 2 Days Candidate
+</span>
+</div>
+<div class="troper-comment ">
+<a href="#comment-397" class="troper-post-time">Oct 19th 2020 <span>at</span> 3:49:23 AM</a>
+<div class="comment">
+<p>(Reward Challenge)
+</p><p><span class="purple"> <a class='twikilink' href='/pmwiki/pmwiki.php/VideoGame/Undertale' title='/pmwiki/pmwiki.php/VideoGame/Undertale'>Toriel...</a> you have to eat the bug so we can win!</span>
+</p><p><span class="gray"> I-I don't like it, but I'll do it for you, my child! (struggles to eat it in time)</span>
+</p><p>(Immunity Challenge)
+</p><p><span class="purple"> Okay mom, let's solve this puzzle together!</span>
+</p><p><span class="gray"> Reminds me of the puzzles back Home!</span>
+</p><p>(Tribe Events)
+</p><p><span class="purple"> I knew it! It really <em>is</em> every castaway for themselves!</span>
+</p><p>(after the Tribal Council)
+</p><p><span class="purple"> This is all your fault, Gigan! That good deed you did for us yesterday was a sham!</span>
+</p>
+</div>
+<span class="troper-signature text-center">Believe in Steven. Vote him for King.
+</span>
+</div>
+</div>
+</div>
+<a name="398"></a>
+<div id="comment-398" class="comment-box    ">
+<div class="comment-head">
+<span class="troper-handle-wrapper has-tag">
+<a href="pmwiki.php/Tropers/TenOfSwords13" class="troper-name">TenOfSwords13</a>
+<span class="troper-avatar-tagline mobile-on">Coelasilat
+</span> </span>
+<span class="troper-location">from World Dino Wrestling
+</span>
+<span class="troper-relationship-status">
+<strong>Relationship Status:</strong> Hiding </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/TenOfSwords13">
+<img src="https://static.tvtropes.org/pmwiki/pub/images/coelasilat.png" />
+</a>
+</span>
+<span class="troper-avatar-tagline text-center mobile-off">Coelasilat
+</span>
+</div>
+<div class="troper-comment ">
+<a href="#comment-398" class="troper-post-time">Oct 19th 2020 <span>at</span> 12:04:49 PM</a>
+<div class="comment">
+<p><h2> EPISODE TWELVE? i lost track</h2>
+</p><p><a class='urllink' href='https://media.discordapp.net/attachments/765919630404878416/767820548742053928/Episode_C_-_1.png'>The Survivors<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a><small>&#9674;</small>
+</p><p><a class='urllink' href='https://media.discordapp.net/attachments/765919630404878416/767820647568244776/Episode_C_-_2.png'>The extremely dissapointing lack of alliances.<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a><small>&#9674;</small>
+</p><p><h2> REWARD CHALLENGE</h2>
+</p><p>Our next challenge is <strong>''Letter Hunt</strong>', which is a word puzzle in which letters must be rearanged into words. <span class="spoiler" title="you can set spoilers visible by default on your profile">With knowlege of the English language and sharp eyes, <a class='urllink' href='https://media.discordapp.net/attachments/765919630404878416/767824329706569778/Episode_C_-_3.png'>Tabby wins the prize<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a><small>&#9674;</small> and shares it with 6K1</span>.
+</p><p><h2> IMMUNITY CHALLENGE</h2>
+</p><p><em><strong>Step on Up</strong></em> is <em>another puzzle wow guys we're running out of ideas fast, ain't we?</em> Well, this is a puzzle to make a ten-step staircase. First one to the top wins. <span class="spoiler" title="you can set spoilers visible by default on your profile">With speed and precision unmatched by the other survivors, <a class='urllink' href='https://media.discordapp.net/attachments/765919630404878416/767824757922988094/Episode_C_-_4.png'>Zanreo wins Immunity.<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a><small>&#9674;</small></span>
+</p><p><h2> EVENT</h2>
+</p><p><a class='urllink' href='https://media.discordapp.net/attachments/765919630404878416/767825150719688734/Episode_C_-_5.png'>Alivia and SPookie compliment each other.<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a><small>&#9674;</small>
+</p><p><h2> VOTING</h2>
+</p><p><span class="spoiler" title="you can set spoilers visible by default on your profile">With a three to two vote, <a class='urllink' href='https://media.discordapp.net/attachments/765919630404878416/767825327857991720/Episode_C_-_6.png'>Tabby has been yeeted.<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a><small>&#9674;</small> <a class='urllink' href='https://media.discordapp.net/attachments/765919630404878416/767825451292557322/Episode_C_-_7.png'>Breakdown.<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a><small>&#9674;</small></span>
+</p>
+</div>
+<span class="troper-signature text-center">I wanna set the universe on fire Feel it burn tonight Set the universe on fire There's no end in sight (I'd link song, but character limits)
+</span>
+</div>
+</div>
+</div>
+<a name="399"></a>
+<div id="comment-399" class="comment-box    ">
+<div class="comment-head">
+<span class="troper-handle-wrapper has-tag">
+<a href="pmwiki.php/Tropers/TroperNo9001" class="troper-name">TroperNo9001</a>
+<span class="troper-avatar-tagline mobile-on">King for 2 Days Candidate
+</span> </span>
+<span class="troper-location">from Beach City
+</span>
+<span class="troper-relationship-status">
+<strong>Relationship Status:</strong> Armed with the Power of Love </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/TroperNo9001">
+<img src="https://static.tvtropes.org/pmwiki/pub/images/186273555816_4.png" />
+</a>
+</span>
+<span class="troper-avatar-tagline text-center mobile-off">King for 2 Days Candidate
+</span>
+</div>
+<div class="troper-comment ">
+<a href="#comment-399" class="troper-post-time">Oct 19th 2020 <span>at</span> 12:14:03 PM</a>
+<div class="comment">
+<p>(Reward Challenge)
+</p><p><span class="purple"> More puzzles? Sure thing! ... Thanks Tabs, I'll just have the massage!</span>
+</p><p>(Immunity Challenge)
+</p><p><span class="purple"> Welp, I'll take more puzzles than pure physical challenges...</span>
+</p><p>(After the Tribal Council)
+</p><p><span class="purple"> Goodbye Spookie, hope you enjoy your early Halloween back home!</span>
+</p>
+</div>
+<span class="troper-signature text-center">Believe in Steven. Vote him for King.
+</span>
+</div>
+</div>
+</div>
+<a name="400"></a>
+<div id="comment-400" class="comment-box    ">
+<div class="comment-head">
+<span class="troper-handle-wrapper has-tag">
+<a href="pmwiki.php/Tropers/TabbyGirl4" class="troper-name">TabbyGirl4</a>
+<span class="troper-avatar-tagline mobile-on">Vote for Gonta (and Adeleine) in King For 2 Days
+</span> </span>
+<span class="troper-location">from The Nowhere Islands
+</span>
+<span class="troper-relationship-status">
+<strong>Relationship Status:</strong> watch?v=dQw4w9WgXcQ </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/TabbyGirl4">
+<img src="https://static.tvtropes.org/pmwiki/pub/images/a453a32d_fe4a_4f45_becd_9f071fdce29a.png" />
+</a>
+</span>
+<span class="troper-avatar-tagline text-center mobile-off">Vote for Gonta (and Adeleine) in King For 2 Days
+</span>
+</div>
+<div class="troper-comment ">
+<a href="#comment-400" class="troper-post-time">Oct 19th 2020 <span>at</span> 1:01:04 PM</a>
+<div class="comment">
+<p>Well GG everyone
+</p><p>I got 5th place cursed again.
+<p class='font-xs text-light'>Edited by TabbyGirl4 on Oct 19th 2020 <span>at</span> 4:01:25 AM<p></p>
+</div>
+<span class="troper-signature text-center">"I'm Mary Poppins, Y'all!" - Yondu,2017
+| <a class='urllink' href='https://discord.gg/cfjR32F'>My Discord Server</a>
+</span>
+</div>
+</div>
+</div>
+<div class="post-button-wrapper two-column text-center gutter-top">
+<a href="#login" class="button blue" data-modal-target="login"><i class="fa fa-plus"></i> Add Post</a>
+</div>
+<a name="postbutton"> </a>
+<div id="mobile-quicknav-buttons" class="tablet-on">
+<a id="mobile-back-button" href="/pmwiki/conversations.php?topic=fgames" class="float-left button">
+<i class="fa fa-chevron-left"></i> Back
+</a>
+<a id="mobile-to-top-button" href="#top-of-page" class="dead-button float-right button-top scroll-to-top">
+Top <i class="fa fa-chevron-up"></i>
+</a>
+</div>
+<div style="text-align:center;"><br />
+<div class='alphalist'>
+<div>
+Total posts: 400 </div>
+<nav class="pagination-box button-group text-center " data-total-pages="16" data-url-prefix="/pmwiki/posts.php?discussion=15731324250A43152600&page=">
+<span class="pagination-jump-box-wrapper mobile-on">
+<form class="pagination-jump-box hidden-until-active font-m">
+<input value="16" type="tel">
+<a href="#jump-to-page" title="Jump to page" class="color-white dead-button" onClick="activate_jump_menu(this);return false;">GO <i class="fa fa-angle-right"></i></a>
+</form>
+</span>
+<a href="/pmwiki/posts.php?discussion=15731324250A43152600&page=1">
+<i class="fa fa-angle-double-left"></i>
+</a>
+<a href="/pmwiki/posts.php?discussion=15731324250A43152600&page=15">
+<span class="mobile-on"><i class="fa fa-angle-left"></i></span>
+<span class="mobile-off">Prev</span>
+</a>
+<a href="/pmwiki/posts.php?discussion=15731324250A43152600&page=14" class="mobile-off ">
+14 </a>
+<a href="/pmwiki/posts.php?discussion=15731324250A43152600&page=15" class="mobile-off ">
+15 </a>
+<a href="/pmwiki/posts.php?discussion=15731324250A43152600&page=16" class="mobile-off cap-off">
+<span class="current-page"> 16 </span> </a>
+<a href="#jump-to-page" title="Jump to page" class="pagination-jump-box-toggle mobile-on dead-button" onClick="toggle_jump_menu(this);return false;">
+<span class="font-s">page 16 of 16</span>
+</a>
+</nav>
+<script type="text/javascript">
+
+	function toggle_jump_menu(e){
+		$(e).siblings('.pagination-jump-box-wrapper').children('.pagination-jump-box').toggle('active');
+	}
+
+	function activate_jump_menu(e){
+			var p = $(e).siblings('input').val();
+			var t = $(e).closest('.pagination-box').data('total-pages');
+
+			if(p > 0 && p <= t){
+					window.location.href = $(e).closest('.pagination-box').data('url-prefix') + p;
+			}else{
+					show_modal('alert',encodeURIComponent('Whoops, that page might be out of range.'));
+			}
+	}
+
+</script>
+</div>
+</div>
+</div>
+<div class="ImgUploadModalStub" data-page-type="Article"></div>
+</div>
+<div id="main-content-sidebar"><div class="sidebar-item display-options">
+<ul class="sidebar display-toggles">
+<li>Show Spoilers <div id="sidebar-toggle-showspoilers" class="display-toggle show-spoilers"></div></li>
+<li>Night Vision <div id="sidebar-toggle-nightvision" class="display-toggle night-vision"></div></li>
+<li>Sticky Header <div id="sidebar-toggle-stickyheader" class="display-toggle sticky-header"></div></li>
+<li>Wide Load <div id="sidebar-toggle-wideload" class="display-toggle wide-load"></div></li>
+</ul>
+<script>updateDesktopPrefs();</script>
+</div>
+<div class="sidebar-item ad sb-ad-unit">
+<div class='proper-ad-unit '>
+<div id='proper-ad-tvtropes_ad_2'> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_2'); });</script> </div>
+</div></div>
+<div class="sidebar-item quick-links" itemtype="http://schema.org/SiteNavigationElement">
+<p class="sidebar-item-title" data-title="Important Links">Important Links</p>
+<div class="padded">
+<a href="/pmwiki/query.php?type=att">Ask The Tropers</a>
+<a href="/pmwiki/query.php?type=tf">Trope Finder</a>
+<a href="/pmwiki/query.php?type=ykts">You Know That Show...</a>
+<a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a>
+<a href="/pmwiki/review_activity.php">Reviews</a>
+<a href="/pmwiki/lbs.php" data-modal-target="login">Live Blogs</a>
+<a href="/pmwiki/ad-free-subscribe.php">Go Ad Free!</a> </div>
+</div>
+<div class="sidebar-item sb-ad-unit">
+<div class="sidebar-section">
+<div class="square_ad ad-size-300x600 ad-section text-center">
+<div class='proper-ad-unit '>
+<div id='proper-ad-tvtropes_ad_3'> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_3'); });</script> </div>
+</div> </div>
+</div>
+</div>
+<div class="sidebar-item">
+<p class="sidebar-item-title" data-title="Crucial Browsing">Crucial Browsing</p>
+<ul class="padded font-s" itemscope itemtype="http://schema.org/SiteNavigationElement">
+<li><a href="javascript:void(0);" data-click-toggle="active">Genre</a>
+<ul>
+<li><a href='/pmwiki/pmwiki.php/Main/ActionAdventureTropes' title='Main/ActionAdventureTropes'>Action Adventure</a></li>
+<li><a href='/pmwiki/pmwiki.php/Main/ComedyTropes' title='Main/ComedyTropes'>Comedy</a></li>
+<li><a href='/pmwiki/pmwiki.php/Main/CommercialsTropes' title='Main/CommercialsTropes'>Commercials</a></li>
+<li><a href='/pmwiki/pmwiki.php/Main/CrimeAndPunishmentTropes' title='Main/CrimeAndPunishmentTropes'>Crime &amp; Punishment</a></li>
+<li><a href='/pmwiki/pmwiki.php/Main/DramaTropes' title='Main/DramaTropes'>Drama</a></li>
+<li><a href='/pmwiki/pmwiki.php/Main/HorrorTropes' title='Main/HorrorTropes'>Horror</a></li>
+<li><a href='/pmwiki/pmwiki.php/Main/LoveTropes' title='Main/LoveTropes'>Love</a></li>
+<li><a href='/pmwiki/pmwiki.php/Main/NewsTropes' title='Main/NewsTropes'>News</a></li>
+<li><a href='/pmwiki/pmwiki.php/Main/ProfessionalWrestling' title='Main/ProfessionalWrestling'>Professional Wrestling</a></li>
+<li><a href='/pmwiki/pmwiki.php/Main/SpeculativeFictionTropes' title='Main/SpeculativeFictionTropes'>Speculative Fiction</a></li>
+<li><a href='/pmwiki/pmwiki.php/Main/SportsStoryTropes' title='Main/SportsStoryTropes'>Sports Story</a></li>
+<li><a href='/pmwiki/pmwiki.php/Main/WarTropes' title='Main/WarTropes'>War</a></li>
+</ul>
+</li>
+<li><a href="javascript:void(0);" data-click-toggle="active">Media</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/Media" title="Main/Media">All Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/AnimationTropes" title="Main/AnimationTropes">Animation (Western)</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Anime" title="Main/Anime">Anime</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ComicBookTropes" title="Main/ComicBookTropes">Comic Book</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FanFic" title="FanFic/FanFics">Fan Fics</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Film" title="Main/Film">Film</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/GameTropes" title="Main/GameTropes">Game</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Literature" title="Main/Literature">Literature</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MusicAndSoundEffects" title="Main/MusicAndSoundEffects">Music And Sound Effects</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NewMediaTropes" title="Main/NewMediaTropes">New Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/PrintMediaTropes" title="Main/PrintMediaTropes">Print Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Radio" title="Main/Radio">Radio</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SequentialArt" title="Main/SequentialArt">Sequential Art</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TabletopGames" title="Main/TabletopGames">Tabletop Games</a></li>
+<li><a href="/pmwiki/pmwiki.php/UsefulNotes/Television" title="Main/Television">Television</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Theater" title="Main/Theater">Theater</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/VideogameTropes" title="Main/VideogameTropes">Videogame</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Webcomics" title="Main/Webcomics">Webcomics</a></li>
+</ul>
+</li>
+<li><a href="javascript:void(0);" data-click-toggle="active">Narrative</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/UniversalTropes" title="Main/UniversalTropes">Universal</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/AppliedPhlebotinum" title="Main/AppliedPhlebotinum">Applied Phlebotinum</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CharacterizationTropes" title="Main/CharacterizationTropes">Characterization</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Characters" title="Main/Characters">Characters</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CharactersAsDevice" title="Main/CharactersAsDevice">Characters As Device</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Dialogue" title="Main/Dialogue">Dialogue</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Motifs" title="Main/Motifs">Motifs</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NarrativeDevices" title="Main/NarrativeDevices">Narrative Devices</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Paratext" title="Main/Paratext">Paratext</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Plots" title="Main/Plots">Plots</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Settings" title="Main/Settings">Settings</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Spectacle" title="Main/Spectacle">Spectacle</a></li>
+</ul>
+</li>
+<li><a href="javascript:void(0);" data-click-toggle="active">Other Categories</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/BritishTellyTropes" title="Main/BritishTellyTropes">British Telly</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TheContributors" title="Main/TheContributors">The Contributors</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CreatorSpeak" title="Main/CreatorSpeak">Creator Speak</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Creators" title="Main/Creators">Creators</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DerivativeWorks" title="Main/DerivativeWorks">Derivative Works</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LanguageTropes" title="Main/LanguageTropes">Language</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LawsAndFormulas" title="Main/LawsAndFormulas">Laws And Formulas</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ShowBusiness" title="Main/ShowBusiness">Show Business</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SplitPersonalityTropes" title="Main/SplitPersonalityTropes">Split Personality</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/StockRoom" title="Main/StockRoom">Stock Room</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TropeTropes" title="Main/TropeTropes">Trope</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Tropes" title="Main/Tropes">Tropes</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TruthAndLies" title="Main/TruthAndLies">Truth And Lies</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TruthInTelevision" title="Main/TruthInTelevision">Truth In Television</a></li>
+</ul>
+</li>
+<li><a href="javascript:void(0);" data-click-toggle="active">Topical Tropes</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/BetrayalTropes" title="Main/BetrayalTropes">Betrayal</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CensorshipTropes" title="Main/CensorshipTropes">Censorship</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CombatTropes" title="Main/CombatTropes">Combat</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DeathTropes" title="Main/DeathTropes">Death</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FamilyTropes" title="Main/FamilyTropes">Family</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FateAndProphecyTropes" title="Main/FateAndProphecyTropes">Fate And Prophecy</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FoodTropes" title="Main/FoodTropes">Food</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/HolidayTropes" title="Main/HolidayTropes">Holiday</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MemoryTropes" title="Main/MemoryTropes">Memory</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MoneyTropes" title="Main/MoneyTropes">Money</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MoralityTropes" title="Main/MoralityTropes">Morality</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/PoliticsTropes" title="Main/PoliticsTropes">Politics</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ReligionTropes" title="Main/ReligionTropes">Religion</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SchoolTropes" title="Main/SchoolTropes">School</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="sidebar-item showcase">
+<p class="sidebar-item-title" data-title="Community&nbsp;Showcase">Community Showcase <a href="/pmwiki/showcase.php" class="bubble float-right hover-blue">More</a></p>
+<p class="community-showcase">
+<a href="https://sharetv.com/shows/echo_chamber" target="_blank" onclick="trackOutboundLink('https://sharetv.com/shows/echo_chamber');">
+<img data-src="/images/communityShowcase-echochamber.jpg" class="lazy-image" alt=""></a>
+<a href="/pmwiki/pmwiki.php/Webcomic/TwistedTropes">
+<img data-src="/img/howlandsc-side.jpg" class="lazy-image" alt=""></a>
+</p>
+</div>
+<div id="stick-cont" class="sidebar-item sb-ad-unit">
+<div id="stick-bar" class="sidebar-section">
+<div class="square_ad ad-size-300x600 ad-section text-center">
+<div class='proper-ad-unit '>
+<div id='proper-ad-tvtropes_ad_4'> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_4'); });</script> </div>
+</div> </div>
+ </div>
+</div>
+</div>
+</div>
+<div id="action-bar-bottom" class="action-bar tablet-off">
+<a href="#top-of-page" class="scroll-to-top dead-button" onclick="$('html, body').animate({scrollTop : 0},500);">Top</a>
+</div>
+</div>
+<div class='proper-ad-unit ad-sticky'>
+<div id='proper-ad-tvtropes_sticky_ad'> <script>propertag.cmd.push(function() { proper_display('tvtropes_sticky_ad'); });</script> </div>
+</div>
+<footer id="main-footer">
+<div id="main-footer-inner">
+<div class="footer-left">
+<a href="/" class="img-link"><img data-src="/img/tvtropes-footer-logo.png" alt="TV Tropes" class="lazy-image" title="TV Tropes" /></a>
+<form action="index.html" id="cse-search-box-mobile" class="navbar-form newsletter-signup validate modal-replies" name="" role="" data-ajax-get="/ajax/subscribe_email.php">
+<button class="btn-submit newsletter-signup-submit-button" type="submit" id="subscribe-btn"><i class="fa fa-paper-plane"></i></button>
+<input id="subscription-email" type="text" class="form-control" name="q" size="31" placeholder="Subscribe" value="" validate-type="email">
+</form>
+<ul class="social-buttons">
+<li><a class="btn fb" target="_blank" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-facebook']);" href="https://www.facebook.com/tvtropes"><i class="fa fa-facebook"></i></a></li>
+<li><a class="btn tw" target="_blank" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-twitter']);" href="https://www.twitter.com/tvtropes"><i class="fa fa-twitter"></i></a> </li>
+<li><a class="btn rd" target="_blank" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-reddit']);" href="https://www.reddit.com/r/tvtropes"><i class="fa fa-reddit-alien"></i></a></li>
+</ul>
+</div>
+<hr />
+<ul class="footer-menu" itemscope itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">TVTropes</h4></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Administrivia">About TVTropes</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TheGoalsOfTVTropes">TVTropes Goals</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TheTropingCode">Troping Code</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TVTropesCustoms">TVTropes Customs</a></li>
+<li><a href="/pmwiki/pmwiki.php/JustForFun/TropesOfLegend">Tropes of Legend</a></li>
+<li><a href="/pmwiki/ad-free-subscribe.php">Go Ad-Free</a></li>
+</ul>
+<hr />
+<ul class="footer-menu" itemscope itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">Community</h4></li>
+<li><a href="/pmwiki/query.php?type=att">Ask The Tropers</a></li>
+<li><a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a></li>
+<li><a href="/pmwiki/query.php?type=tf">Trope Finder</a></li>
+<li><a href="/pmwiki/query.php?type=ykts">You Know That Show</a></li>
+<li><a href="/pmwiki/lbs.php" data-modal-target="login">Live Blogs</a></li>
+<li><a href="/pmwiki/review_activity.php">Reviews</a></li>
+<li><a href="/pmwiki/topics.php">Forum</a></li>
+</ul>
+<hr />
+<ul class="footer-menu" itemscope itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">Tropes HQ</h4></li>
+<li><a href="/pmwiki/about.php">About Us</a></li>
+<li><a href="/pmwiki/contact.php">Contact Us</a></li>
+<li><a href="/pmwiki/dmca.php">DMCA Notice</a></li>
+<li><a href="/pmwiki/privacypolicy.php">Privacy Policy</a></li>
+</ul>
+</div>
+<div id="desktop-on-mobile-toggle" class="text-center gutter-top gutter-bottom tablet-on">
+<a href="/pmwiki/switchDeviceCss.php?mobileVersion=1" rel="nofollow">Switch to <span class="txt-desktop">Desktop</span><span class="txt-mobile">Mobile</span> Version</a>
+</div>
+<div class="legal">
+<p>TVTropes is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License. <br>Permissions beyond the scope of this license may be available from <a xmlns:cc="http://creativecommons.org/ns#" href="mailto:thestaff@tvtropes.org" rel="cc:morePermissions"> thestaff@tvtropes.org</a>.</p>
+<br>
+<div class="privacy_wrapper">
+</div>
+</div>
+</footer>
+<style>
+      div.fc-ccpa-root {
+        position: absolute !important;
+        bottom: 93px !important;
+        margin: auto !important;
+        width: 100% !important;
+        z-index: 9999 !important;
+      }
+      .fc-ccpa-root .fc-dns-dialog .fc-dns-link p{
+        outline: none !important;
+        text-decoration: underline !important;
+        font-size: .7em !important;
+        font-family: sans-serif !important;
+      }
+      .fc-ccpa-root .fc-dns-dialog .fc-dns-link .fc-button-background {
+        background: none !important;
+      }
+    </style>
+<div id="_pm_videoViewer" class="full-screen">
+<a href="#close" class="close" id="_pm_videoViewer-close"></a>
+<div class="_pmvv-body">
+<div class="_pmvv-vidbox">
+<video id='overlay-video-player-box' data-video-id="" class='video-js vjs-default-skin vjs-16-9'>
+</video>
+<div class="_pmvv-vidbox-desc">
+<h1 id="overlay-title"></h1>
+<p id="overlay-descrip" class="_pmvv-vidbox-descTxt">
+</p>
+<div class="rating-row" data-video-id="">
+<input type="hidden" name="is_logged_in" value="0">
+<p>How well does it match the trope?</p>
+<div id="star-rating-group">
+<div class="trope-rate">
+<input type="radio" id="lamp5" name="rate" value="5" />
+<label for="lamp5" title="Absolutely"></label>
+<input type="radio" id="lamp4" name="rate" value="4" />
+<label for="lamp4" title="Yes"></label>
+<input type="radio" id="lamp3" name="rate" value="3" />
+<label for="lamp3" title="Kind of"></label>
+<input type="radio" id="lamp2" name="rate" value="2" />
+<label for="lamp2" title="Not really"></label>
+<input type="radio" id="lamp1" name="rate" value="1" />
+<label for="lamp1" title="No"></label>
+</div>
+<div id="star-rating-total">
+</div>
+</div>
+</div>
+<div class="example-media-row">
+<div class="example-overlay">
+<p>Example of:</p>
+<div id="overlay-trope"> / </div>
+</div>
+<div class="media-sources-overlay example-overlay">
+<p>Media sources:</p>
+<div id="overlay-media"> / </div>
+</div>
+</div>
+<p class="_pmvv-vidbox-stats text-right font-s" style="padding-top:8px; border-top: solid 1px rgba(255,255,255,0.2)">
+
+<a href="#video-feedback" class="float-right" data-modal-target="login">Report</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<script type='text/javascript'>
+        window.special_ops =  {
+            member : 'no',
+            isolated : 0,
+            tags : ['forum']
+        };
+    </script>
+<script type="text/javascript">
+
+        var cleanCreativeEnabled = "";
+        var donation = "";
+        var live_ads = "1";
+        var img_domain = "https://static.tvtropes.org";
+        var snoozed = cookies.read('snoozedabm');
+        var snoozable = "";
+
+        if (adsRemovedWith) {
+            live_ads = 0;
+        }
+
+        var elem = document.createElement('script');
+        elem.async = true;
+
+        elem.src = '/design/assets/bundle.js?rev=af8ba6c84175c5d092329028e16c8941231c5eba';
+
+        elem.onload = function() {
+                                 }
+        document.getElementsByTagName('head')[0].appendChild(elem);
+
+    </script>
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-3821842-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<script type="text/javascript">
+      function send_analytics_event(user_type, donation){
+          // if(user_type == 'uncached' || user_type == 'cached'){
+          //   ga('send', 'event', 'caching', 'load', user_type, {'nonInteraction': 1});
+          //   return;
+          // }
+          var event_name = user_type;
+
+          if(donation == 'true'){
+              event_name += "_donation"
+          }else if(typeof(valid_user) == 'undefined'){
+              event_name += "_blocked"
+          }else if(valid_user == true){
+              event_name += "_unblocked";
+          }else{
+              event_name = "_unknown"
+          }
+          ga('send', 'event', 'ads', 'load', event_name, {'nonInteraction': 1});
+      }
+
+    
+    send_analytics_event("guest", "false");
+      </script>
+</body>
+</html>

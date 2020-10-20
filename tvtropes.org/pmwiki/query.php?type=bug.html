@@ -1,0 +1,1446 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Bugs - TV Tropes</title>
+<meta name="description" content="" />
+<link rel="shortcut icon" href="/img/icons/favicon.ico" type="image/x-icon" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@tvtropes" />
+<meta name="twitter:owner" content="@tvtropes" />
+<meta name="twitter:title" content="Bugs - TV Tropes" />
+<meta name="twitter:description" content="" />
+<meta name="twitter:image:src" content="https://static.tvtropes.org/logo_blue_small.png" />
+<meta property="og:site_name" content="TV Tropes" />
+<meta property="og:locale" content="en_US" />
+<meta property="article:publisher" content="https://www.facebook.com/tvtropes" />
+<meta property="og:title" content="Bugs - TV Tropes" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://tvtropes.org/pmwiki/query.php?type=bug" />
+<meta property="og:image" content="https://static.tvtropes.org/logo_blue_small.png" />
+<meta property="og:description" content="" />
+<link rel="apple-touch-icon" sizes="57x57" href="/img/icons/apple-icon-57x57.png" type="image/png">
+<link rel="apple-touch-icon" sizes="60x60" href="/img/icons/apple-icon-60x60.png" type="image/png">
+<link rel="apple-touch-icon" sizes="72x72" href="/img/icons/apple-icon-72x72.png" type="image/png">
+<link rel="apple-touch-icon" sizes="76x76" href="/img/icons/apple-icon-76x76.png" type="image/png">
+<link rel="apple-touch-icon" sizes="114x114" href="/img/icons/apple-icon-114x114.png" type="image/png">
+<link rel="apple-touch-icon" sizes="120x120" href="/img/icons/apple-icon-120x120.png" type="image/png">
+<link rel="apple-touch-icon" sizes="144x144" href="/img/icons/apple-icon-144x144.png" type="image/png">
+<link rel="apple-touch-icon" sizes="152x152" href="/img/icons/apple-icon-152x152.png" type="image/png">
+<link rel="apple-touch-icon" sizes="180x180" href="/img/icons/apple-icon-180x180.png" type="image/png">
+<link rel="icon" sizes="16x16" href="/img/icons/favicon-16x16.png" type="image/png">
+<link rel="icon" sizes="32x32" href="/img/icons/favicon-32x32.png" type="image/png">
+<link rel="icon" sizes="96x96" href="/img/icons/favicon-96x96.png" type="image/png">
+<link rel="icon" sizes="192x192" href="/img/icons/favicon-192x192.png" type="image/png">
+<meta id="viewport" name="viewport" content="width=device-width, initial-scale=1">
+<script>
+                var propertag = {};
+                propertag.cmd = [];
+            </script>
+<link rel="stylesheet" href="/design/assets/bundle.css?rev=af8ba6c84175c5d092329028e16c8941231c5eba" />
+<script>
+                function object(objectId) {
+                    if (document.getElementById && document.getElementById(objectId)) {
+                        return document.getElementById(objectId);
+                    } else if (document.all && document.all(objectId)) {
+                        return document.all(objectId);
+                    } else if (document.layers && document.layers[objectId]) {
+                        return document.layers[objectId];
+                    } else {
+                        return false;
+                    }
+                }
+
+                // JAVASCRIPT COOKIES CODE: for getting and setting user viewing preferences
+                var cookies = {
+                    create: function (name, value, days2expire, path) {
+                        var date = new Date();
+                        date.setTime(date.getTime() + (days2expire * 24 * 60 * 60 * 1000));
+                        var expires = date.toUTCString();
+                        document.cookie = name + '=' + value + ';' + 'expires=' + expires + ';' + 'path=' + path + ';';
+                    },
+                    read: function (name) {
+                        var cookie_value = "",
+                            current_cookie = "",
+                            name_expr = name + "=",
+                            all_cookies = document.cookie.split(';'),
+                            n = all_cookies.length;
+
+                        for (var i = 0; i < n; i++) {
+                            current_cookie = all_cookies[i].trim();
+                            if (current_cookie.indexOf(name_expr) === 0) {
+                                cookie_value = current_cookie.substring(name_expr.length, current_cookie.length);
+                                break;
+                            }
+                        }
+                        return cookie_value;
+                    },
+                    update: function (name, val) {
+                        this.create(name, val, 300, "/");
+                    },
+                    remove: function (name) {
+                        document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
+                    }
+                };
+
+                function updateUserPrefs() {
+                    //GENERAL: detect and set browser, if not cookied (will be treated like a user-preference and added to the #user-pref element)
+                    if( !cookies.read('user-browser') ){
+                        var broswer = '';
+
+                        if(navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPod/i) ){
+                            browser = 'iOS';
+                        } else if (/Opera[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'opera';
+                        } else if (/MSIE (\d+\.\d+);/.test(navigator.userAgent)) {
+                            browser = 'MSIE';
+                        } else if (/Navigator[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'netscape';
+                        } else if (/Chrome[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'chrome';
+                        } else if (/Safari[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'safari';
+                            /Version[\/\s](\d+\.\d+)/.test(navigator.userAgent);
+                            browserVersion = new Number(RegExp.$1);
+                        } else if (/Firefox[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'firefox';
+                        } else {
+                            browser = 'internet_explorer';
+                        }
+                        cookies.create('user-browser',browser,1,'/');
+                        document.getElementById('user-prefs').classList.add('browser-' + browser);
+                    } else {
+                        document.getElementById('user-prefs').classList.add('browser-' + cookies.read('user-browser'));
+                    }
+
+                    //update user preference settings
+                    if (cookies.read('wide-load') !== '') document.getElementById('user-prefs').classList.add('wide-load');
+                    if (cookies.read('night-vision') !== '') document.getElementById('user-prefs').classList.add('night-vision');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('user-prefs').classList.add('sticky-header');
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('user-prefs').classList.add('show-spoilers');
+                    if (cookies.read('folders-open') !== '') document.getElementById('user-prefs').classList.add('folders-open');
+                    if (cookies.read('lefthand-sidebar') !== '') document.getElementById('user-prefs').classList.add('lefthand-sidebar');
+                    if (cookies.read('highlight-links') !== '') document.getElementById('user-prefs').classList.add('highlight-links');
+                    if (cookies.read('forum-gingerbread') !== '') document.getElementById('user-prefs').classList.add('forum-gingerbread');
+                    if (cookies.read('shared-avatars') !== '') document.getElementById('user-prefs').classList.add('shared-avatars');
+                    if (cookies.read('new-search') !== '') document.getElementById('user-prefs').classList.add('new-search');
+                    if (cookies.read('stop-auto-play-video') !== '') document.getElementById('user-prefs').classList.add('stop-auto-play-video');
+
+                    //desktop view on mobile
+                    if (cookies.read('desktop-on-mobile') !== ''){
+                        document.getElementById('user-prefs').classList.add('desktop-on-mobile');
+
+                        var viewport = document.querySelector("meta[name=viewport]");
+                        viewport.setAttribute('content', 'width=1000');
+                    }
+
+                }
+
+                function updateDesktopPrefs() {
+                    if (cookies.read('wide-load') !== '') document.getElementById('sidebar-toggle-wideload').classList.add('active');
+                    if (cookies.read('night-vision') !== '') document.getElementById('sidebar-toggle-nightvision').classList.add('active');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('sidebar-toggle-stickyheader').classList.add('active');
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('sidebar-toggle-showspoilers').classList.add('active');
+
+                }
+
+                function updateMobilePrefs() {
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('mobile-toggle-showspoilers').classList.add('active');
+                    if (cookies.read('night-vision') !== '') document.getElementById('mobile-toggle-nightvision').classList.add('active');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('mobile-toggle-stickyheader').classList.add('active');
+                    if (cookies.read('highlight-links') !== '') document.getElementById('mobile-toggle-highlightlinks').classList.add('active');
+
+                }
+
+
+                if (document.cookie.indexOf("scroll0=") < 0) {
+                    // do nothing
+                } else {
+                    console.log('ads removed by scroll.com');
+                    var adsRemovedWith = 'scroll';
+                    var style = document.createElement('style');
+                    style.innerHTML = '#header-ad, .proper-ad-unit, .square_ad, .sb-ad-unit { display: none !important; } ';
+                    document.head.appendChild(style);
+                }
+            </script>
+<script type="text/javascript">
+
+                var tvtropes_config = {
+                    astri_stream_enabled : "",
+                    is_logged_in         : "",
+                    handle               : "",
+                    get_astri_stream     : "",
+										revnum               : "af8ba6c84175c5d092329028e16c8941231c5eba",
+										img_domain           : "https://static.tvtropes.org",
+										adblock              : "1",
+										adblock_url          : "propermessage.io",
+										pause_editing        : "0",
+										pause_editing_msg    : "",
+										pause_site_changes   : ""
+                };
+            </script>
+</head>
+<body class="">
+<i id="user-prefs"></i>
+<script>updateUserPrefs();</script>
+<div id="fb-root"></div>
+<div id="modal-box"></div>
+<header id="main-header-bar" class="headroom-element ">
+<div id="main-header-bar-inner">
+<span id="header-spacer-left" class="header-spacer"></span>
+<a href="#mobile-menu" id="main-mobile-toggle" class="mobile-menu-toggle-button tablet-on"><span></span><span></span><span></span></a>
+<a href="/" id="main-header-logoButton" class="no-dev"></a>
+<span id="header-spacer-right" class="header-spacer"></span>
+<nav id="main-header-nav" class="tablet-off">
+<a href="/pmwiki/pmwiki.php/Main/Tropes">Tropes</a>
+<a href="/pmwiki/pmwiki.php/Main/Media">Media</a>
+<a href="/pmwiki/browse.php" class="nav-browse">Browse</a>
+<a href="/pmwiki/index_report.php">Indexes</a>
+<a href="/pmwiki/topics.php">Forums</a>
+<a href="/pmwiki/recent_videos.php" class="nav-browse">Videos</a>
+</nav>
+<div id="main-header-bar-right">
+<div id="signup-login-box" class="font-xs mobile-off">
+<a href="/pmwiki/login.php" class="hover-underline bold" data-modal-target="signup">Join</a>
+<a href="/pmwiki/login.php" class="hover-underline bold" data-modal-target="login">Login</a>
+</div>
+<div id="signup-login-mobileToggle" class="mobile-on inline">
+<a href="/pmwiki/login.php" data-modal-target="login"><i class="fa fa-user"></i></a>
+</div>
+<div id="search-box">
+<form class="search" action="/pmwiki/search_result.php">
+<input type="text" name="q" class="search-box" placeholder="Search" value="" required>
+<input type="submit" class="submit-button" value="&#xf002;" />
+<input type="hidden" name="search_type" value="article">
+<input type="hidden" name="page_type" value="all">
+<input type="hidden" name="cx" value="partner-pub-6610802604051523:amzitfn8e7v">
+<input type="hidden" name="cof" value="FORID:10">
+<input type="hidden" name="ie" value="ISO-8859-1">
+<input name="siteurl" type="hidden" value="">
+<input name="ref" type="hidden" value="">
+<input name="ss" type="hidden" value="">
+</form>
+<a href="#close-search" class="mobile-on mobile-search-toggle close-x"><i class="fa fa-close"></i></a>
+</div>
+<div id="random-box">
+<a href="/pmwiki/pmwiki.php/Main/CanCrushingCranium" class="button-random-trope" rel="nofollow" onclick="ga('send', 'event', 'button', 'click', 'random trope');"></a>
+<a href="/pmwiki/pmwiki.php/Fanfic/DJINNWayToHome" class="button-random-media" rel="nofollow" onclick="ga('send', 'event', 'button', 'click', 'random media');"></a>
+</div>
+</div>
+</div>
+<div id="mobile-menu" class="tablet-on"><div class="mobile-menu-options">
+<div class="nav-wrapper">
+<a href="/pmwiki/pmwiki.php/Main/Tropes" class="xl">Tropes</a>
+<a href="/pmwiki/pmwiki.php/Main/Media" class="xl">Media</a>
+<a href="/pmwiki/browse.php" class="xl">Browse</a>
+<a href="/pmwiki/index_report.php" class="xl">Indexes</a>
+<a href="/pmwiki/topics.php" class="xl">Forums</a>
+<a href="/pmwiki/recent_videos.php" class="xl">Videos</a>
+<a href="/pmwiki/query.php?type=att">Ask The Tropers</a>
+<a href="/pmwiki/query.php?type=tf">Trope Finder</a>
+<a href="/pmwiki/query.php?type=ykts">You Know That Show...</a>
+<a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a>
+<a href="#tools" data-click-toggle="active">Tools <i class="fa fa-chevron-down"></i></a>
+<div class="tools-dropdown mobile-dropdown-linkList">
+<a href="/pmwiki/cutlist.php">Cut List</a>
+<a href="/pmwiki/changes.php">New Edits</a>
+<a href="/pmwiki/recent_edit_reasons.php">Edit Reasons</a>
+<a href="/pmwiki/launches.php">Launches</a>
+<a href="/pmwiki/img_list.php">Images List</a>
+<a href="/pmwiki/crown_activity.php">Crowner Activity</a>
+<a href="/pmwiki/no_types.php">Un-typed Pages</a>
+<a href="/pmwiki/page_type_audit.php">Recent Page Type Changes</a>
+</div>
+<a href="#hq" data-click-toggle="active">Tropes HQ <i class="fa fa-chevron-down"></i></a>
+<div class="tools-dropdown mobile-dropdown-linkList">
+<a href="/pmwiki/about.php">About Us</a>
+<a href="/pmwiki/contact.php">Contact Us</a>
+<a href="mailto:advertising@proper.io">Advertise</a>
+<a href="/pmwiki/dmca.php">DMCA Notice</a>
+<a href="/pmwiki/privacypolicy.php">Privacy Policy</a>
+</div>
+<a href="/pmwiki/ad-free-subscribe.php">Go Ad-Free</a>
+<div class="toggle-switches">
+<ul class="mobile-menu display-toggles">
+<li>Show Spoilers <div id="mobile-toggle-showspoilers" class="display-toggle show-spoilers"></div></li>
+<li>Night Vision <div id="mobile-toggle-nightvision" class="display-toggle night-vision"></div></li>
+<li>Sticky Header <div id="mobile-toggle-stickyheader" class="display-toggle sticky-header"></div></li>
+<li>Highlight Links <div id="mobile-toggle-highlightlinks" class="display-toggle highlight-links"></div></li>
+</ul>
+<script>updateMobilePrefs();</script>
+</div>
+</div>
+</div>
+</div>
+</header>
+<div id="homepage-introBox-mobile" class="mobile-on">
+<a href="/"><img src="/images/logo-white-big.png" class="logo-small" /></a>
+<form class="search" action="/pmwiki/search_result.php" style="margin:10px -5px -6px -5px;">
+<input type="text" name="q" class="search-box" placeholder="Search" value="" required>
+<input type="submit" class="submit-button" value="&#xf002;" />
+<input type="hidden" name="search_type" value="article">
+<input type="hidden" name="page_type" value="all">
+<input type="hidden" name="cx" value="partner-pub-6610802604051523:amzitfn8e7v">
+<input type="hidden" name="cof" value="FORID:10">
+<input type="hidden" name="ie" value="ISO-8859-1">
+<input name="siteurl" type="hidden" value="">
+<input name="ref" type="hidden" value="">
+<input name="ss" type="hidden" value="">
+</form>
+</div>
+<div id="header-ad-wrapper" class="ad">
+<div id="header-ad">
+<div class="ad-size-970x90 atf_banner">
+<div class='proper-ad-unit '>
+<div id='proper-ad-tvtropes_ad_1'> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_1'); });</script> </div>
+</div> </div>
+</div>
+</div>
+<div id="main-container">
+<div id="action-bar-top" class="action-bar mobile-off">
+<div class="action-bar-right">
+<p>Follow TV Tropes</p>
+<a href="https://www.facebook.com/TVTropes" class="button-fb">
+<i class="fa fa-facebook"></i></a>
+<a href="https://www.twitter.com/TVTropes" class="button-tw">
+<i class="fa fa-twitter"></i></a>
+<a href="https://www.reddit.com/r/TVTropes" class="button-re">
+<i class="fa fa-reddit-alien"></i></a>
+</div>
+<nav class="actions-wrapper" itemscope itemtype="http://schema.org/SiteNavigationElement">
+<ul id="top_main_list" class="page-actions">
+<li class="link-att"><a href="/pmwiki/query.php?type=att">
+<i class="io icon-question"></i> Ask Tropers</a></li><li class="link-lnf"><a href="/pmwiki/query.php?type=tf">
+<i class="io icon-bin2"></i> Trope Finder</a></li><li class="link-ykts"><a href="/pmwiki/query.php?type=ykts">
+<i class="io icon-tv"></i> YKTS</a></li><li class="link-wishlist"><a href="/pmwiki/query.php?type=wl">
+<i class="io icon-magic-wand"></i> Wishlist</a></li><li class="link-bugs"><a href="/pmwiki/query.php?type=bug">
+<i class="io icon-bug"></i> Bugs</a></li> </ul>
+<ul id="top_more_list" class="more_menu hidden_more_list">
+<li class="link-bugs more_list_item"><a href="/pmwiki/query.php?type=bug">
+<i class="io icon-bug"></i> Bugs</a></li> </ul>
+</nav>
+<div class="WikiWordModalStub"></div>
+<div class="ImgUploadModalStub" data-page-type="Query"></div>
+<div class="login-alert" style="display: none;">
+You need to <a href="/pmwiki/login.php" style="color:#21A0E8">login</a> to do this. <a href="/pmwiki/login.php?tab=register_account" style="color:#21A0E8">Get Known</a> if you don't have an account
+</div>
+</div>
+<div id="main-content" class="page-Query class-query-page">
+<div id="main-entry" class="with-sidebar">
+
+
+<input type="hidden" id="groupname-hidden" value="Main" />
+<input type="hidden" id="title-hidden" value="QueryBugs" />
+<h1 itemprop="headline" class="entry-title">Bugs</h1>
+<a href="#mobile-actions-toggle" id="mobile-actionbar-toggle" class="mobile-actionbar-toggle mobile-on" data-click-toggle="active">
+<p class="tiny-off">Go To</p><span></span><span></span><span></span><i class="fa fa-pencil"></i></a>
+<nav id="mobile-actions-bar" class="mobile-actions-wrapper mobile-on"></nav>
+<div id="main-article" class="article-content">
+<p>Your mama may have had eyes in the back of her head, but our admin team just can't see everything at once. It takes a village to make sure TVTropes is running the way it should, so when it comes to spotting tech snafus, dreaming up a better digital mousetrap, or just diagnosing plain old asshattery, the quicker you let us know something's up, the quicker we can address it. See a bug? Point to it and we'll squash it. Have idea for a new feature? Post in the <a href="/pmwiki/query.php?type=wl">Wishlist</a>.</p>
+<div class="two-column gutter-top">
+<div class="column-box left">
+<a href="#" class="button blue full-width text-center create-post-btn" data-modal-target="login">
+Submit a Bug </a>
+</div>
+<div class="column-box right">
+<form class="search-threads" method="POST" action="query.php">
+<input type="hidden" name="qtype" value="bug" />
+<input type="hidden" name="sort" value="activity" />
+<input type="hidden" name="status" value="all" />
+<input type="text" class="form-control" id="thread-search-query" name="sparam" placeholder="Search Questions" value="">
+<button type="submit" class="search-submit"><i class="fa fa-search"></i></button>
+</form>
+</div>
+</div>
+<div id="create-post-form" class="two-column section-block hidden-until-active gutter-top">
+<p class="separator font-s text-light">Submit a Bug:</p>
+<form class="no-style" method="post" action="/ajax/query-handler.php">
+<div class="column-box ">
+<input type="text" class="form-control" id="discussion-title" name="title" placeholder="Title">
+</div>
+<div class="column-box">
+<p class="font-s text-light">Describe the bug or issue:</p>
+<textarea class="form-control auto-height" id="discussion-text" name="remark" style="margin-top:3px;"></textarea>
+<div class="font-s text-light" style="padding-top:8px">
+<input type="checkbox" name="isPrivate"> Make Private (For security bugs or stuff only for moderators)
+</div>
+</div>
+<div class="column-box text-center">
+<button type="submit" class="btn-submit blue">Submit</button>
+</div>
+<input type="hidden" name="action" value="postNewQuery">
+<input type="hidden" name="qtype" value="bug">
+</form>
+</div>
+<hr class="solid gutter-top" />
+<div class="list-controls two-column gutter-top text-right">
+<span class="inline-block gutter-left position-relative">
+<a href="#" class=" font-s button skinny" data-hover-menu-target="filter-menu">All <i class="fa fa-angle-down"></i></a>
+<div id="filter-menu" class="hover-menu text-left right" data-arrow="right" style="margin-top:4px;">
+<a href="/pmwiki/query.php?type=bug&status=all&sort=activity">All</a>
+<a href="/pmwiki/query.php?type=bug&status=open&sort=activity">Open</a>
+<a href="/pmwiki/query.php?type=bug&status=working&sort=activity">Working</a>
+<a href="/pmwiki/query.php?type=bug&status=closed&sort=activity">Closed</a>
+</div>
+</span>
+<span class="inline-block gutter-left position-relative">
+<a href="#" class=" font-s button skinny" data-hover-menu-target="sort-menu">
+By Recent Activity <i class="fa fa-angle-down"></i></a>
+<div id="sort-menu" class="hover-menu text-left right" data-arrow="right" style="margin-top:4px;">
+<a href="/pmwiki/query.php?type=bug&status=all&sort=date_asc"><i class="fa fa-sort-numeric-asc"></i> Date Ascending</a>
+<a href="/pmwiki/query.php?type=bug&status=all&sort=date_desc"><i class="fa fa-sort-numeric-desc"></i> Date Descending</a>
+<a href="/pmwiki/query.php?type=bug&status=all&sort=pop"><i class="fa fa-sort-amount-desc"></i> Popularity</a>
+<a href="/pmwiki/query.php?type=bug&status=all&sort=activity"><i class="fa fa-commenting"></i> Recent Activity</a>
+</div>
+</span>
+</div>
+<a name="64763"></a>
+<div id="comment-64763" class="comment-box  has-footer  ">
+<div class="comment-head">
+<span class="troper-handle-wrapper ">
+<a href="pmwiki.php/Tropers/StevieG" class="troper-name">StevieG</a>
+<span class="troper-avatar-tagline mobile-on"></span> </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/StevieG">
+<img src="https://static.tvtropes.org/user-lamp-160x160.png" />
+</a>
+</span>
+</div>
+<div class="troper-comment has-title">
+<a href="#comment-64763" class="troper-post-time">6th Jun, 2018 06:29:19 AM</a>
+<div class="comment">
+<h2 class='comment-title'><div class='status-alert float-right bug-status working'>working</div><a href='/pmwiki/query.php?parent_id=64763&type=bug' class='title bold'>Cut Page turns up on Random Tropes button</a></h2>
+<p>The Cut Page "Complimentary Color Morality" is showing up when I click the Random Tropes button.
+</p>
+<div class='footer'><div class='button-group skinny font-s float-right'><a href="#upvote" data-modal-target="login" data-query-id="64763"><i class="fa fa-thumbs-up"></i> <span class="count">1</span></a><a href='/pmwiki/query.php?parent_id=64763&type=bug'>3 replies <i class='fa fa-chevron-right font-xs'></i></a></div></div>
+</div>
+</div>
+</div>
+</div>
+<a name="86605"></a>
+<div id="comment-86605" class="comment-box  has-footer  ">
+<div class="comment-head">
+<span class="troper-handle-wrapper ">
+<a href="pmwiki.php/Tropers/jandn2014" class="troper-name">jandn2014</a>
+<span class="troper-avatar-tagline mobile-on"></span> </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/jandn2014">
+<img src="https://static.tvtropes.org/pmwiki/pub/images/fb6eca56_8276_405b_8db3_3cb8087b8504.png" />
+</a>
+</span>
+</div>
+<div class="troper-comment has-title">
+<a href="#comment-86605" class="troper-post-time">7th Apr, 2020 12:58:42 PM</a>
+<div class="comment">
+<h2 class='comment-title'><div class='status-alert float-right bug-status open'>open</div><a href='/pmwiki/query.php?parent_id=86605&type=bug' class='title bold'>Stray cut tropes</a></h2>
+<p>Sometimes, using the "Random Trope" button will bring me to a trope that's been cut.
+</p>
+<div class='footer'><div class='button-group skinny font-s float-right'><a href="#upvote" data-modal-target="login" data-query-id="86605"><i class="fa fa-thumbs-up"></i> <span class="count">2</span></a><a href='/pmwiki/query.php?parent_id=86605&type=bug'>1 reply <i class='fa fa-chevron-right font-xs'></i></a></div></div>
+</div>
+</div>
+</div>
+</div>
+<a name="74612"></a>
+<div id="comment-74612" class="comment-box  has-footer  ">
+<div class="comment-head">
+<span class="troper-handle-wrapper ">
+<a href="pmwiki.php/Tropers/RamenChef" class="troper-name">RamenChef</a>
+<span class="troper-avatar-tagline mobile-on"></span> </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/RamenChef">
+<img src="https://static.tvtropes.org/pmwiki/pub/images/screenshot_2015_07_27_15111300png.jpeg" />
+</a>
+</span>
+</div>
+<div class="troper-comment has-title">
+<a href="#comment-74612" class="troper-post-time">6th Apr, 2019 05:04:46 PM</a>
+ <div class="comment">
+<h2 class='comment-title'><div class='status-alert float-right bug-status working'>working</div><a href='/pmwiki/query.php?parent_id=74612&type=bug' class='title bold'>Random button leading to a cut page</a></h2>
+<p>I have no idea what caused it, but I managed to click on the "random trope" button and land on <a class='createlink' href='/pmwiki/pmwiki.php/Main/PreAsskickingMutter' title='/pmwiki/pmwiki.php/Main/PreAsskickingMutter'>Pre Asskicking Mutter</a>, a page which was recently cut.
+</p>
+<div class='footer'><div class='button-group skinny font-s float-right'><a href="#upvote" data-modal-target="login" data-query-id="74612"><i class="fa fa-thumbs-up"></i> <span class="count">3</span></a><a href='/pmwiki/query.php?parent_id=74612&type=bug'>4 replies <i class='fa fa-chevron-right font-xs'></i></a></div></div>
+</div>
+</div>
+</div>
+</div>
+<a name="76900"></a>
+<div id="comment-76900" class="comment-box  has-footer  ">
+<div class="comment-head">
+<span class="troper-handle-wrapper ">
+<a href="pmwiki.php/Tropers/Lermis" class="troper-name">Lermis</a>
+<span class="troper-avatar-tagline mobile-on"></span> </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/Lermis">
+<img src="https://static.tvtropes.org/user-lamp-160x160.png" />
+</a>
+</span>
+</div>
+<div class="troper-comment has-title">
+<a href="#comment-76900" class="troper-post-time">10th Jun, 2019 09:54:36 AM</a>
+<div class="comment">
+<h2 class='comment-title'><div class='status-alert float-right bug-status open'>open</div><a href='/pmwiki/query.php?parent_id=76900&type=bug' class='title bold'>Random Trope button</a></h2>
+<p>Occasionally when clicking it, it will redirect to a page of a cut trope. Several users have noticed this.
+</p>
+<div class='footer'><div class='button-group skinny font-s float-right'><a href="#upvote" data-modal-target="login" data-query-id="76900"><i class="fa fa-thumbs-up"></i> <span class="count">11</span></a><a href='/pmwiki/query.php?parent_id=76900&type=bug'>2 replies <i class='fa fa-chevron-right font-xs'></i></a></div></div>
+</div>
+</div>
+</div>
+</div>
+<a name="82139"></a>
+<div id="comment-82139" class="comment-box  has-footer  ">
+<div class="comment-head">
+<span class="troper-handle-wrapper ">
+<a href="pmwiki.php/Tropers/ichigoare" class="troper-name">ichigoare</a>
+<span class="troper-avatar-tagline mobile-on"></span> </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/ichigoare">
+<img src="https://static.tvtropes.org/pmwiki/pub/images/generictroper.gif" />
+</a>
+</span>
+</div>
+<div class="troper-comment has-title">
+<a href="#comment-82139" class="troper-post-time">15th Nov, 2019 09:21:04 AM</a>
+<div class="comment">
+<h2 class='comment-title'><div class='status-alert float-right bug-status open'>open</div><a href='/pmwiki/query.php?parent_id=82139&type=bug' class='title bold'>Banner at page bottom covering content</a></h2>
+<p>The black banner with site info and contact stuff? On pages longer than an intro and a couple of tropes, it covers the bottom of the page. (For instance, on this page right now, I can see somebody made a post on this page titled "Teen Titans Go Recap Page" on October 5th, but the post itself- or anything below it- is covered.)
+</p><p></p>
+<div class='footer'><div class='button-group skinny font-s float-right'><a href="#upvote" data-modal-target="login" data-query-id="82139"><i class="fa fa-thumbs-up"></i> <span class="count">2</span></a><a href='/pmwiki/query.php?parent_id=82139&type=bug'>1 reply <i class='fa fa-chevron-right font-xs'></i></a></div></div>
+</div>
+</div>
+</div>
+</div>
+<a name="76968"></a>
+<div id="comment-76968" class="comment-box  has-footer  ">
+<div class="comment-head">
+<span class="troper-handle-wrapper ">
+<a href="pmwiki.php/Tropers/Zuxtron" class="troper-name">Zuxtron</a>
+<span class="troper-avatar-tagline mobile-on"></span> </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/Zuxtron">
+<img src="https://static.tvtropes.org/pmwiki/pub/images/2562530-tumblr_static_monokuma8029_jpg_100.png" />
+</a>
+</span>
+</div>
+<div class="troper-comment has-title">
+<a href="#comment-76968" class="troper-post-time">12th Jun, 2019 04:59:56 PM</a>
+<div class="comment">
+<h2 class='comment-title'><div class='status-alert float-right bug-status open'>open</div><a href='/pmwiki/query.php?parent_id=76968&type=bug' class='title bold'>TLP draft editor not working well</a></h2>
+<p>It seems like the text box for editing a TLP draft will automatically expand so nearly the entire text of the draft is shown without having to scroll. If the draft is longer than one page, this results in the text box stretching outside of the page layout, with the bottom part and the save button being hidden behind the footer at the end of every page on the site.
+</p><p><a class='urllink' href='https://prnt.sc/o14imf'>Here's a screenshot of what it looks like.<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a>
+</p><p>EDIT: I found a workaround by using Inspect Element to delete the footer. It's still annoying and should really be fixed.
+</p>
+<span class="edited-by">Edited by Zuxtron</span>
+<div class='footer'><div class='button-group skinny font-s float-right'><a href="#upvote" data-modal-target="login" data-query-id="76968"><i class="fa fa-thumbs-up"></i> <span class="count">2</span></a><a href='/pmwiki/query.php?parent_id=76968&type=bug'>1 reply <i class='fa fa-chevron-right font-xs'></i></a></div></div>
+</div>
+</div>
+</div>
+</div>
+<a name="93122"></a>
+<div id="comment-93122" class="comment-box  has-footer  ">
+<div class="comment-head">
+<span class="troper-handle-wrapper ">
+<a href="pmwiki.php/Tropers/mightymewtron" class="troper-name">mightymewtron</a>
+<span class="troper-avatar-tagline mobile-on"></span> </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/mightymewtron">
+<img src="https://static.tvtropes.org/pmwiki/pub/images/screen_shot_2017_09_30_at_43903_pm.png" />
+</a>
+</span>
+</div>
+<div class="troper-comment has-title">
+<a href="#comment-93122" class="troper-post-time">12th Oct, 2020 01:03:33 PM</a>
+<div class="comment">
+<h2 class='comment-title'><div class='status-alert float-right bug-status open'>open</div><a href='/pmwiki/query.php?parent_id=93122&type=bug' class='title bold'>TLP redirect not working</a></h2>
+<p><a class='twikilink' href='/pmwiki/pmwiki.php/Main/TropeLaunchPad' title='/pmwiki/pmwiki.php/Main/TropeLaunchPad'>Trope Launch Pad</a> doesn't redirect to the page but instead to a page that says "This page should automatically redirect to this URL; if it doesn't there is a bug." So...I guess there's a bug?
+</p>
+<div class='footer'><div class='button-group skinny font-s float-right'><a href="#upvote" data-modal-target="login" data-query-id="93122"><i class="fa fa-thumbs-up"></i> <span class="count">0</span></a><a href='/pmwiki/query.php?parent_id=93122&type=bug'>2 replies <i class='fa fa-chevron-right font-xs'></i></a></div></div>
+</div>
+</div>
+</div>
+</div>
+<a name="93148"></a>
+<div id="comment-93148" class="comment-box  has-footer  ">
+<div class="comment-head">
+<span class="troper-handle-wrapper ">
+<a href="pmwiki.php/Tropers/CurledUpWithDakka" class="troper-name">CurledUpWithDakka</a>
+<span class="troper-avatar-tagline mobile-on"></span> </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/CurledUpWithDakka">
+<img src="https://static.tvtropes.org/pmwiki/pub/images/sweetie_snub661_jpg_100.png" />
+</a>
+</span>
+</div>
+<div class="troper-comment has-title">
+<a href="#comment-93148" class="troper-post-time">13th Oct, 2020 07:42:41 AM</a>
+<div class="comment">
+<h2 class='comment-title'><div class='status-alert float-right bug-status open'>open</div><a href='/pmwiki/query.php?parent_id=93148&type=bug' class='title bold'>Is someone trying to DDOS?</a></h2>
+<p>Over the past couple of days (in Opera 60.2.3004.55409 for Android) when going to a new page I'll occasionally get a notice that "Your browser is being checked"; by Cloudflare's DDoS service (and with a RayID #).
+</p><p>Has there been a lot of inbound traffic lately, or is it just a bad Opera build?
+</p>
+<span class="edited-by">Edited by CurledUpWithDakka</span>
+<div class='footer'><div class='button-group skinny font-s float-right'><a href="#upvote" data-modal-target="login" data-query-id="93148"><i class="fa fa-thumbs-up"></i> <span class="count">3</span></a><a href='/pmwiki/query.php?parent_id=93148&type=bug'>4 replies <i class='fa fa-chevron-right font-xs'></i></a></div></div>
+</div>
+</div>
+</div>
+</div>
+<a name="90560"></a>
+<div id="comment-90560" class="comment-box  has-footer  ">
+<div class="comment-head">
+<span class="troper-handle-wrapper ">
+<a href="pmwiki.php/Tropers/iamconstantine" class="troper-name">iamconstantine</a>
+<span class="troper-avatar-tagline mobile-on"></span> </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/iamconstantine">
+<img src="https://static.tvtropes.org/pmwiki/pub/images/download20200201203214.png" />
+</a>
+</span>
+</div>
+<div class="troper-comment has-title">
+<a href="#comment-90560" class="troper-post-time">1st Aug, 2020 10:29:29 AM</a>
+<div class="comment">
+<h2 class='comment-title'><div class='status-alert float-right bug-status open'>open</div><a href='/pmwiki/query.php?parent_id=90560&type=bug' class='title bold'>Banners cutting off page?</a></h2>
+<p>So about half the time I go to a new page on the wiki, the banners at the top and bottom of the screen will cut off the top and bottom of the page itself. The only way to access the history, edit, etc buttons are to minimize the screen so the mini-menu will pop up, but I can't get to the bottom of the page at all. Anyone else having this issue?
+</p>
+<div class='footer'><div class='button-group skinny font-s float-right'><a href="#upvote" data-modal-target="login" data-query-id="90560"><i class="fa fa-thumbs-up"></i> <span class="count">2</span></a><a href='/pmwiki/query.php?parent_id=90560&type=bug'>1 reply <i class='fa fa-chevron-right font-xs'></i></a></div></div>
+</div>
+</div>
+</div>
+</div>
+<a name="93140"></a>
+<div id="comment-93140" class="comment-box  has-footer  ">
+<div class="comment-head">
+<span class="troper-handle-wrapper ">
+<a href="pmwiki.php/Tropers/danielxcutter" class="troper-name">danielxcutter</a>
+<span class="troper-avatar-tagline mobile-on"></span> </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/danielxcutter">
+<img src="https://static.tvtropes.org/user-lamp-160x160.png" />
+</a>
+</span>
+</div>
+<div class="troper-comment has-title">
+<a href="#comment-93140" class="troper-post-time">12th Oct, 2020 11:11:53 PM</a>
+<div class="comment">
+<h2 class='comment-title'><div class='status-alert float-right bug-status open'>open</div><a href='/pmwiki/query.php?parent_id=93140&type=bug' class='title bold'>Small caps are broken</a></h2>
+<p>When the all caps function for small caps is used, it ends up on a totally different line. For example, <span class="asscaps">like this,</span> you see. For the record no, I did not make that a different paragraph, it does it on its own. As the Emperor from <a class='twikilink' href='/pmwiki/pmwiki.php/WebAnimation/IfTheEmperorHadATextToSpeechDevice' title='/pmwiki/pmwiki.php/WebAnimation/IfTheEmperorHadATextToSpeechDevice'>If the Emperor Had a Text-to-Speech Device</a> and Death from <a class='twikilink' href='/pmwiki/pmwiki.php/Literature/Discworld' title='/pmwiki/pmwiki.php/Literature/Discworld'>Discworld</a> (among others I presume) speak like this, it makes their quotes look like an atomic space wedgie.
+</p>
+<span class="edited-by">Edited by danielxcutter</span>
+<div class='footer'><div class='button-group skinny font-s float-right'><a href="#upvote" data-modal-target="login" data-query-id="93140"><i class="fa fa-thumbs-up"></i> <span class="count">0</span></a><a href='/pmwiki/query.php?parent_id=93140&type=bug'>0 replies <i class='fa fa-chevron-right font-xs'></i></a></div></div>
+</div>
+</div>
+</div>
+</div>
+<a name="93019"></a>
+<div id="comment-93019" class="comment-box  has-footer  ">
+<div class="comment-head">
+<span class="troper-handle-wrapper ">
+<a href="pmwiki.php/Tropers/fasoman1996" class="troper-name">fasoman1996</a>
+<span class="troper-avatar-tagline mobile-on"></span> </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/fasoman1996">
+<img src="https://static.tvtropes.org/pmwiki/pub/images/henry_26.jpg" />
+</a>
+</span>
+</div>
+<div class="troper-comment has-title">
+<a href="#comment-93019" class="troper-post-time">9th Oct, 2020 06:58:18 AM</a>
+<div class="comment">
+<h2 class='comment-title'><div class='status-alert float-right bug-status open'>open</div><a href='/pmwiki/query.php?parent_id=93019&type=bug' class='title bold'>Labelnote not working on a page</a></h2>
+<p>Hello there, i noticed there was a broken labelnote in <a class='twikilink' href='/pmwiki/pmwiki.php/Pantheon/CharacterExpies' title='/pmwiki/pmwiki.php/Pantheon/CharacterExpies'>Character Expies</a> and i attempted to fix it but it was correctly written. I removed it and tried on other pages and it worked fine. Could the page be glitched by any chance?
+</p>
+<div class='footer'><div class='button-group skinny font-s float-right'><a href="#upvote" data-modal-target="login" data-query-id="93019"><i class="fa fa-thumbs-up"></i> <span class="count">1</span></a><a href='/pmwiki/query.php?parent_id=93019&type=bug'>0 replies <i class='fa fa-chevron-right font-xs'></i></a></div></div>
+</div>
+</div>
+</div>
+</div>
+<a name="93012"></a>
+<div id="comment-93012" class="comment-box  has-footer  ">
+<div class="comment-head">
+<span class="troper-handle-wrapper ">
+<a href="pmwiki.php/Tropers/Gadjiltron" class="troper-name">Gadjiltron</a>
+<span class="troper-avatar-tagline mobile-on"></span> </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/Gadjiltron">
+<img src="https://static.tvtropes.org/pmwiki/pub/images/agrd.png" />
+</a>
+</span>
+</div>
+<div class="troper-comment has-title">
+<a href="#comment-93012" class="troper-post-time">8th Oct, 2020 10:54:30 PM</a>
+<div class="comment">
+<h2 class='comment-title'><div class='status-alert float-right bug-status open'>open</div><a href='/pmwiki/query.php?parent_id=93012&type=bug' class='title bold'>Unable to upload images in Page Edit</a></h2>
+<p>After uploading and cropping an image, I click "Submit", see a brief loading circle over the image, but get stuck at the cropping menu without any progress.
+</p>
+<div class='footer'><div class='button-group skinny font-s float-right'><a href="#upvote" data-modal-target="login" data-query-id="93012"><i class="fa fa-thumbs-up"></i> <span class="count">1</span></a><a href='/pmwiki/query.php?parent_id=93012&type=bug'>0 replies <i class='fa fa-chevron-right font-xs'></i></a></div></div>
+</div>
+</div>
+</div>
+</div>
+<a name="92790"></a>
+<div id="comment-92790" class="comment-box  has-footer  ">
+<div class="comment-head">
+<span class="troper-handle-wrapper ">
+<a href="pmwiki.php/Tropers/Myskywarm" class="troper-name">Myskywarm</a>
+<span class="troper-avatar-tagline mobile-on"></span> </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/Myskywarm">
+<img src="https://static.tvtropes.org/pmwiki/pub/images/images_6_5406.jpeg" />
+</a>
+</span>
+</div>
+<div class="troper-comment has-title">
+<a href="#comment-92790" class="troper-post-time">1st Oct, 2020 08:37:57 PM</a>
+<div class="comment">
+<h2 class='comment-title'><div class='status-alert float-right bug-status open'>open</div><a href='/pmwiki/query.php?parent_id=92790&type=bug' class='title bold'>Broken image</a></h2>
+<p>I'm not sure if this is really the right place to ask(Or someone mentioned this already), but the image for <a class='twikilink' href='/pmwiki/pmwiki.php/Main/BeautyIsNeverTarnished' title='/pmwiki/pmwiki.php/Main/BeautyIsNeverTarnished'>Beauty Is Never Tarnished</a> appears to be broken.
+</p>
+<div class='footer'><div class='button-group skinny font-s float-right'><a href="#upvote" data-modal-target="login" data-query-id="92790"><i class="fa fa-thumbs-up"></i> <span class="count">3</span></a><a href='/pmwiki/query.php?parent_id=92790&type=bug'>2 replies <i class='fa fa-chevron-right font-xs'></i></a></div></div>
+</div>
+</div>
+</div>
+</div>
+<a name="92377"></a>
+<div id="comment-92377" class="comment-box  has-footer  ">
+<div class="comment-head">
+<span class="troper-handle-wrapper ">
+<a href="pmwiki.php/Tropers/alnair20aug93" class="troper-name">alnair20aug93</a>
+<span class="troper-avatar-tagline mobile-on"></span> </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/alnair20aug93">
+<img src="https://static.tvtropes.org/pmwiki/pub/images/outfitaugust2019_081230holidayfallhalloween.png" />
+</a>
+</span>
+</div>
+<div class="troper-comment has-title">
+<a href="#comment-92377" class="troper-post-time">20th Sep, 2020 01:05:00 AM</a>
+<div class="comment">
+<h2 class='comment-title'><div class='status-alert float-right bug-status open'>open</div><a href='/pmwiki/query.php?parent_id=92377&type=bug' class='title bold'>Elemental Powers: Vandalism or Bug?</a></h2>
+<p><a class='twikilink' href='/pmwiki/pmwiki.php/Main/ElementalPowers' title='/pmwiki/pmwiki.php/Main/ElementalPowers'>Elemental Powers</a> seems to be blank, yet the source code is still there. The last edit was a null edit.
+</p>
+<div class='footer'><div class='button-group skinny font-s float-right'><a href="#upvote" data-modal-target="login" data-query-id="92377"><i class="fa fa-thumbs-up"></i> <span class="count">5</span></a><a href='/pmwiki/query.php?parent_id=92377&type=bug'>2 replies <i class='fa fa-chevron-right font-xs'></i></a></div></div>
+</div>
+</div>
+</div>
+</div>
+<a name="92941"></a>
+<div id="comment-92941" class="comment-box  has-footer  ">
+<div class="comment-head">
+<span class="troper-handle-wrapper ">
+<a href="pmwiki.php/Tropers/LaundryPizza03" class="troper-name">LaundryPizza03</a>
+<span class="troper-avatar-tagline mobile-on"></span> </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/LaundryPizza03">
+<img src="https://static.tvtropes.org/pmwiki/pub/images/360px_mr_game_&_watch_ssbu.png" />
+</a>
+</span>
+</div>
+<div class="troper-comment has-title">
+<a href="#comment-92941" class="troper-post-time">6th Oct, 2020 03:27:57 PM</a>
+<div class="comment">
+<h2 class='comment-title'><div class='status-alert float-right bug-status open'>open</div><a href='/pmwiki/query.php?parent_id=92941&type=bug' class='title bold'>Unreadable Content Violation Reports</a></h2>
+<p>In Night Vision mode, the text in <a class='urllink' href='https://tvtropes.org/pmwiki/content_violation_reports.php'>Content Violation Reports<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a> changes to white, but the light-colored background does not. This makes the text hard to read.
+</p>
+<div class='footer'><div class='button-group skinny font-s float-right'><a href="#upvote" data-modal-target="login" data-query-id="92941"><i class="fa fa-thumbs-up"></i> <span class="count">0</span></a><a href='/pmwiki/query.php?parent_id=92941&type=bug'>0 replies <i class='fa fa-chevron-right font-xs'></i></a></div></div>
+</div>
+</div>
+</div>
+</div>
+<a name="92816"></a>
+<div id="comment-92816" class="comment-box  has-footer  ">
+<div class="comment-head">
+<span class="troper-handle-wrapper ">
+<a href="pmwiki.php/Tropers/GoosefromWikipedia" class="troper-name">GoosefromWikipedia</a>
+<span class="troper-avatar-tagline mobile-on"></span> </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/GoosefromWikipedia">
+<img src="https://static.tvtropes.org/pmwiki/pub/images/250px_392infernape.png" />
+</a>
+</span>
+</div>
+<div class="troper-comment has-title">
+<a href="#comment-92816" class="troper-post-time">2nd Oct, 2020 05:11:45 PM</a>
+<div class="comment">
+<h2 class='comment-title'><div class='status-alert float-right bug-status open'>open</div><a href='/pmwiki/query.php?parent_id=92816&type=bug' class='title bold'>Avatar uploading is broken for me</a></h2>
+<p>I am affected by the glitch in which you can't upload or change avatars unless you change your timezone. Unfortunately, I live in the default timezone (America/Los Angles), meaning I can't upload or change avatars at all.
+</p>
+<div class='footer'><div class='button-group skinny font-s float-right'><a href="#upvote" data-modal-target="login" data-query-id="92816"><i class="fa fa-thumbs-up"></i> <span class="count">3</span></a><a href='/pmwiki/query.php?parent_id=92816&type=bug'>8 replies <i class='fa fa-chevron-right font-xs'></i></a></div></div>
+</div>
+</div>
+</div>
+</div>
+<a name="92777"></a>
+<div id="comment-92777" class="comment-box  has-footer  ">
+<div class="comment-head">
+<span class="troper-handle-wrapper ">
+<a href="pmwiki.php/Tropers/Van-San" class="troper-name">Van-San</a>
+<span class="troper-avatar-tagline mobile-on"></span> </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/Van-San">
+<img src="https://static.tvtropes.org/pmwiki/pub/images/morgana_cat_7.jpg" />
+</a>
+</span>
+</div>
+<div class="troper-comment has-title">
+<a href="#comment-92777" class="troper-post-time">1st Oct, 2020 03:27:14 PM</a>
+<div class="comment">
+<h2 class='comment-title'><div class='status-alert float-right bug-status open'>open</div><a href='/pmwiki/query.php?parent_id=92777&type=bug' class='title bold'>Trope Finder Bug</a></h2>
+<p>I tried to make a post on Trope Finder, but the post didn't show up after I submitted it.
+</p><p>EDIT: Never mind, it's working now.
+</p>
+<span class="edited-by">Edited by Van-San</span>
+<div class='footer'><div class='button-group skinny font-s float-right'><a href="#upvote" data-modal-target="login" data-query-id="92777"><i class="fa fa-thumbs-up"></i> <span class="count">0</span></a><a href='/pmwiki/query.php?parent_id=92777&type=bug'>0 replies <i class='fa fa-chevron-right font-xs'></i></a></div></div>
+</div>
+</div>
+</div>
+</div>
+<a name="84546"></a>
+<div id="comment-84546" class="comment-box  has-footer  ">
+<div class="comment-head">
+<span class="troper-handle-wrapper ">
+<a href="pmwiki.php/Tropers/JMQwilleran" class="troper-name">JMQwilleran</a>
+<span class="troper-avatar-tagline mobile-on"></span> </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/JMQwilleran">
+<img src="https://static.tvtropes.org/pmwiki/pub/images/peter_rabbit_benjamin1600.jpg" />
+</a>
+</span>
+</div>
+<div class="troper-comment has-title">
+<a href="#comment-84546" class="troper-post-time">3rd Feb, 2020 09:30:27 PM</a>
+<div class="comment">
+<h2 class='comment-title'><div class='status-alert float-right bug-status open'>open</div><a href='/pmwiki/query.php?parent_id=84546&type=bug' class='title bold'>Audio / Video Out of Sync on Uploaded Video Examples</a></h2>
+<p>Loving the new video examples tool. However, twice now on stuff that I've uploaded, the audio is out of sync with the video. One example is the one for <a class='twikilink' href='/pmwiki/pmwiki.php/Main/StringOnFingerReminder' title='/pmwiki/pmwiki.php/Main/StringOnFingerReminder'>String-on-Finger Reminder</a> I uploaded from <em><a class='twikilink' href='/pmwiki/pmwiki.php/WesternAnimation/TimothyGoesToSchool' title='/pmwiki/pmwiki.php/WesternAnimation/TimothyGoesToSchool'>Timothy Goes to School</a></em>. Another is on one that I just uploaded but hasn't been approved yet for <a class='twikilink' href='/pmwiki/pmwiki.php/Main/HatesBeingTouched' title='/pmwiki/pmwiki.php/Main/HatesBeingTouched'>Hates Being Touched</a> from <em><a class='twikilink' href='/pmwiki/pmwiki.php/Series/TheMentalist' title='/pmwiki/pmwiki.php/Series/TheMentalist'>The Mentalist</a></em>. I've checked my local files and the problem definitely isn't on my end, so I can only assume something is going wrong during the upload/conversion process.
+</p>
+<div class='footer'><div class='button-group skinny font-s float-right'><a href="#upvote" data-modal-target="login" data-query-id="84546"><i class="fa fa-thumbs-up"></i> <span class="count">2</span></a><a href='/pmwiki/query.php?parent_id=84546&type=bug'>1 reply <i class='fa fa-chevron-right font-xs'></i></a></div></div>
+</div>
+</div>
+</div>
+</div>
+<a name="89960"></a>
+<div id="comment-89960" class="comment-box  has-footer  ">
+<div class="comment-head">
+<span class="troper-handle-wrapper ">
+<a href="pmwiki.php/Tropers/wingedcatgirl" class="troper-name">wingedcatgirl</a>
+<span class="troper-avatar-tagline mobile-on"></span> </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/wingedcatgirl">
+<img src="https://static.tvtropes.org/pmwiki/pub/images/picrew_robot_girl_gladtobeglados.png" />
+</a>
+</span>
+</div>
+<div class="troper-comment has-title">
+<a href="#comment-89960" class="troper-post-time">15th Jul, 2020 07:11:00 AM</a>
+<div class="comment">
+<h2 class='comment-title'><div class='status-alert float-right bug-status open'>open</div><a href='/pmwiki/query.php?parent_id=89960&type=bug' class='title bold'>Media source in video examples cuts off too early</a></h2>
+<p>The title in a video's media source cuts off at 48 characters when the length limit for a page title is in fact 64. See <a class='createlink' href='/pmwiki/pmwiki.php/VideoExamples/DonkeyKongCountryS1E17TheLegendOfTheCrystalCocon' title='/pmwiki/pmwiki.php/VideoExamples/DonkeyKongCountryS1E17TheLegendOfTheCrystalCocon'>VideoExamples.Donkey Kong Country S 1 E 17 The Legend Of The Crystal Cocon</a> (which <em>should</em> be <a class='createlink' href='/pmwiki/pmwiki.php/VideoExamples/DonkeyKongCountryS1E17TheLegendOfTheCrystalCoconut' title='/pmwiki/pmwiki.php/VideoExamples/DonkeyKongCountryS1E17TheLegendOfTheCrystalCoconut'>VideoExamples.Donkey Kong Country S 1 E 17 The Legend Of The Crystal Coconut</a>)
+</p><p>This might also apply to tropes, but I can't think of a trope offhand with more than 48 characters in its name.
+</p>
+<div class='footer'><div class='button-group skinny font-s float-right'><a href="#upvote" data-modal-target="login" data-query-id="89960"><i class="fa fa-thumbs-up"></i> <span class="count">2</span></a><a href='/pmwiki/query.php?parent_id=89960&type=bug'>1 reply <i class='fa fa-chevron-right font-xs'></i></a></div></div>
+</div>
+</div>
+</div>
+</div>
+<a name="92587"></a>
+<div id="comment-92587" class="comment-box  has-footer  ">
+<div class="comment-head">
+<span class="troper-handle-wrapper ">
+<a href="pmwiki.php/Tropers/onyhow" class="troper-name">onyhow</a>
+<span class="troper-avatar-tagline mobile-on"></span> </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/onyhow">
+<img src="https://static.tvtropes.org/pmwiki/pub/images/lilykyoukoavatar4958.jpg" />
+</a>
+</span>
+</div>
+<div class="troper-comment has-title">
+<a href="#comment-92587" class="troper-post-time">26th Sep, 2020 03:23:29 AM</a>
+<div class="comment">
+<h2 class='comment-title'><div class='status-alert float-right bug-status open'>open</div><a href='/pmwiki/query.php?parent_id=92587&type=bug' class='title bold'>Wiki has problem parsing some external URL</a></h2>
+<p>I was trying to parse <a class='urllink' href='https://en.wikipedia.org/wiki/A.E.I.O.U'>https://en.wikipedia.org/wiki/A.E.I.O.U<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a>. into an example over <a class='twikilink' href='/pmwiki/pmwiki.php/VideoGame/CrusaderKingsIII' title='/pmwiki/pmwiki.php/VideoGame/CrusaderKingsIII'>Crusader Kings III</a> page like this:
+</p><p>[[<a class='urllink' href='https://en.wikipedia.org/wiki/A.E.I.O.U'>https://en.wikipedia.org/wiki/A.E.I.O.U<img src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" height="12" width="12" style="border:none;" /></a>. the Habsburg's]]
+</p><p>You can see that it doesn't really work
+</p>
+<div class='footer'><div class='button-group skinny font-s float-right'><a href="#upvote" data-modal-target="login" data-query-id="92587"><i class="fa fa-thumbs-up"></i> <span class="count">1</span></a><a href='/pmwiki/query.php?parent_id=92587&type=bug'>1 reply <i class='fa fa-chevron-right font-xs'></i></a></div></div>
+</div>
+</div>
+</div>
+</div>
+<a name="92530"></a>
+<div id="comment-92530" class="comment-box  has-footer  ">
+<div class="comment-head">
+<span class="troper-handle-wrapper ">
+<a href="pmwiki.php/Tropers/gc10" class="troper-name">gc10</a>
+<span class="troper-avatar-tagline mobile-on"></span> </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/gc10">
+<img src="https://static.tvtropes.org/pmwiki/pub/images/carolus_rex.jpg" />
+</a>
+</span>
+</div>
+<div class="troper-comment has-title">
+<a href="#comment-92530" class="troper-post-time">24th Sep, 2020 03:01:29 AM</a>
+<div class="comment">
+<h2 class='comment-title'><div class='status-alert float-right bug-status open'>open</div><a href='/pmwiki/query.php?parent_id=92530&type=bug' class='title bold'>TvTropes already whitelisted</a></h2>
+<p>I received this pop up even though I whitelisted <a class='twikilink' href='/pmwiki/pmwiki.php/Main/TvTropes' title='/pmwiki/pmwiki.php/Main/TvTropes'>TV Tropes</a> months ago already:
+<div class="quoteblock">This is page #1 you have viewed this month without ads
+</p><p>We get it, ads aren't what you're here for, but they do pay for the hosting and maintenance of TV Tropes. Please whitelist us or purchase an ad-free pass to support TV Tropes.</div>
+</p>
+<div class='footer'><div class='button-group skinny font-s float-right'><a href="#upvote" data-modal-target="login" data-query-id="92530"><i class="fa fa-thumbs-up"></i> <span class="count">1</span></a><a href='/pmwiki/query.php?parent_id=92530&type=bug'>1 reply <i class='fa fa-chevron-right font-xs'></i></a></div></div>
+</div>
+</div>
+</div>
+</div>
+<a name="92541"></a>
+<div id="comment-92541" class="comment-box  has-footer  ">
+<div class="comment-head">
+<span class="troper-handle-wrapper ">
+<a href="pmwiki.php/Tropers/Aceina" class="troper-name">Aceina</a>
+<span class="troper-avatar-tagline mobile-on"></span> </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/Aceina">
+<img src="https://static.tvtropes.org/pmwiki/pub/images/daydream_shimmer.png" />
+</a>
+</span>
+</div>
+<div class="troper-comment has-title">
+<a href="#comment-92541" class="troper-post-time">24th Sep, 2020 01:10:24 PM</a>
+<div class="comment">
+<h2 class='comment-title'><div class='status-alert float-right bug-status open'>open</div><a href='/pmwiki/query.php?parent_id=92541&type=bug' class='title bold'>a strange white bar is apearing on the bottom of the webpage </a></h2>
+<p>only on this website a white see through bar is appearing on the bottom of the screen and ive turned off my a blocker
+</p><p></p>
+<div class='footer'><div class='button-group skinny font-s float-right'><a href="#upvote" data-modal-target="login" data-query-id="92541"><i class="fa fa-thumbs-up"></i> <span class="count">0</span></a><a href='/pmwiki/query.php?parent_id=92541&type=bug'>1 reply <i class='fa fa-chevron-right font-xs'></i></a></div></div>
+</div>
+</div>
+</div>
+</div>
+<a name="92511"></a>
+<div id="comment-92511" class="comment-box  has-footer  ">
+<div class="comment-head">
+<span class="troper-handle-wrapper ">
+<a href="pmwiki.php/Tropers/Hollywill06" class="troper-name">Hollywill06</a>
+<span class="troper-avatar-tagline mobile-on"></span> </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/Hollywill06">
+<img src="https://static.tvtropes.org/pmwiki/pub/images/e71a9d93_8e91_47a6_8f80_5df1d033f77e.jpeg" />
+</a>
+</span>
+</div>
+<div class="troper-comment has-title">
+<a href="#comment-92511" class="troper-post-time">23rd Sep, 2020 01:05:57 PM</a>
+<div class="comment">
+<h2 class='comment-title'><div class='status-alert float-right bug-status open'>open</div><a href='/pmwiki/query.php?parent_id=92511&type=bug' class='title bold'>i coded folder but it didnt work</a></h2>
+<p>i was typing a folder but it ended like this [[Folder: Anime and manga]] how can i fix it?
+</p>
+<div class='footer'><div class='button-group skinny font-s float-right'><a href="#upvote" data-modal-target="login" data-query-id="92511"><i class="fa fa-thumbs-up"></i> <span class="count">0</span></a><a href='/pmwiki/query.php?parent_id=92511&type=bug'>3 replies <i class='fa fa-chevron-right font-xs'></i></a></div></div>
+</div>
+</div>
+</div>
+</div>
+<a name="92528"></a>
+<div id="comment-92528" class="comment-box  has-footer  ">
+<div class="comment-head">
+<span class="troper-handle-wrapper ">
+<a href="pmwiki.php/Tropers/WarJay77" class="troper-name">WarJay77</a>
+<span class="troper-avatar-tagline mobile-on"></span> </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/WarJay77">
+<img src="https://static.tvtropes.org/pmwiki/pub/images/aec022ed697ff2272b94343980ecb5c0.png" />
+</a>
+</span>
+</div>
+<div class="troper-comment has-title">
+<a href="#comment-92528" class="troper-post-time">24th Sep, 2020 12:52:35 AM</a>
+<div class="comment">
+<h2 class='comment-title'><div class='status-alert float-right bug-status open'>open</div><a href='/pmwiki/query.php?parent_id=92528&type=bug' class='title bold'>Videos</a></h2>
+<p>Can't seem to get to the second page of my uploaded videos. When I click the button it just takes me to the general "recent videos" page.
+</p>
+<div class='footer'><div class='button-group skinny font-s float-right'><a href="#upvote" data-modal-target="login" data-query-id="92528"><i class="fa fa-thumbs-up"></i> <span class="count">0</span></a><a href='/pmwiki/query.php?parent_id=92528&type=bug'>0 replies <i class='fa fa-chevron-right font-xs'></i></a></div></div>
+</div>
+</div>
+</div>
+</div>
+<a name="92513"></a>
+<div id="comment-92513" class="comment-box  has-footer  ">
+<div class="comment-head">
+<span class="troper-handle-wrapper ">
+<a href="pmwiki.php/Tropers/Tomodachi" class="troper-name">Tomodachi</a>
+<span class="troper-avatar-tagline mobile-on"></span> </span>
+</div>
+<div class="comment-body">
+<div class="troper-avatar-wrapper">
+<span class="troper-avatar">
+<a href="pmwiki.php/Tropers/Tomodachi">
+<img src="https://static.tvtropes.org/pmwiki/pub/images/1592885368420.jpg" />
+</a>
+</span>
+</div>
+<div class="troper-comment has-title">
+<a href="#comment-92513" class="troper-post-time">23rd Sep, 2020 02:47:34 PM</a>
+<div class="comment">
+<h2 class='comment-title'><div class='status-alert float-right bug-status open'>open</div><a href='/pmwiki/query.php?parent_id=92513&type=bug' class='title bold'>I can't hide the ads</a></h2>
+<p>Suddenly the button to hide the ad is gone, leaving me an annoying ad for GEB Smx Galaxy Game as I read through an article.
+</p>
+<div class='footer'><div class='button-group skinny font-s float-right'><a href="#upvote" data-modal-target="login" data-query-id="92513"><i class="fa fa-thumbs-up"></i> <span class="count">4</span></a><a href='/pmwiki/query.php?parent_id=92513&type=bug'>0 replies <i class='fa fa-chevron-right font-xs'></i></a></div></div>
+</div>
+</div>
+</div>
+</div>
+<nav class="pagination-box button-group text-center gutter-topx2" data-total-pages="74" data-url-prefix="/pmwiki/query.php?type=bug&status=all&sparam=&sort=activity&page=">
+<span class="pagination-jump-box-wrapper mobile-on">
+<form class="pagination-jump-box hidden-until-active font-m">
+<input value="1" type="tel">
+<a href="#jump-to-page" title="Jump to page" class="color-white dead-button" onClick="activate_jump_menu(this);return false;">GO <i class="fa fa-angle-right"></i></a>
+</form>
+</span>
+<a href="/pmwiki/query.php?type=bug&status=all&sparam=&sort=activity&page=1" class="mobile-off ">
+<span class="current-page"> 1 </span> </a>
+<a href="/pmwiki/query.php?type=bug&status=all&sparam=&sort=activity&page=2" class="mobile-off ">
+2 </a>
+<a href="/pmwiki/query.php?type=bug&status=all&sparam=&sort=activity&page=3" class="mobile-off ">
+3 </a>
+<a href="#jump-to-page" title="Jump to page" class="pagination-jump-box-toggle mobile-on dead-button" onClick="toggle_jump_menu(this);return false;">
+<span class="font-s">page 1 of 74</span>
+</a>
+<a href="/pmwiki/query.php?type=bug&status=all&sparam=&sort=activity&page=2">
+<span class="mobile-on"><i class="fa fa-angle-right"></i></span>
+<span class="mobile-off">Next</span>
+</a>
+<a href="/pmwiki/query.php?type=bug&status=all&sparam=&sort=activity&page=74">
+<i class="fa fa-angle-double-right"></i>
+</a>
+</nav>
+<script type="text/javascript">
+
+	function toggle_jump_menu(e){
+		$(e).siblings('.pagination-jump-box-wrapper').children('.pagination-jump-box').toggle('active');
+	}
+
+	function activate_jump_menu(e){
+			var p = $(e).siblings('input').val();
+			var t = $(e).closest('.pagination-box').data('total-pages');
+
+			if(p > 0 && p <= t){
+					window.location.href = $(e).closest('.pagination-box').data('url-prefix') + p;
+			}else{
+					show_modal('alert',encodeURIComponent('Whoops, that page might be out of range.'));
+			}
+	}
+
+</script>
+</div>
+</div>
+<div id="main-content-sidebar"><div class="sidebar-item display-options">
+<ul class="sidebar display-toggles">
+<li>Show Spoilers <div id="sidebar-toggle-showspoilers" class="display-toggle show-spoilers"></div></li>
+<li>Night Vision <div id="sidebar-toggle-nightvision" class="display-toggle night-vision"></div></li>
+<li>Sticky Header <div id="sidebar-toggle-stickyheader" class="display-toggle sticky-header"></div></li>
+<li>Wide Load <div id="sidebar-toggle-wideload" class="display-toggle wide-load"></div></li>
+</ul>
+<script>updateDesktopPrefs();</script>
+</div>
+<div class="sidebar-item ad sb-ad-unit">
+<div class='proper-ad-unit '>
+<div id='proper-ad-tvtropes_ad_2'> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_2'); });</script> </div>
+</div></div>
+<div class="sidebar-item quick-links" itemtype="http://schema.org/SiteNavigationElement">
+<p class="sidebar-item-title" data-title="Important Links">Important Links</p>
+<div class="padded">
+<a href="/pmwiki/query.php?type=att">Ask The Tropers</a>
+<a href="/pmwiki/query.php?type=tf">Trope Finder</a>
+<a href="/pmwiki/query.php?type=ykts">You Know That Show...</a>
+<a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a>
+<a href="/pmwiki/review_activity.php">Reviews</a>
+<a href="/pmwiki/lbs.php" data-modal-target="login">Live Blogs</a>
+<a href="/pmwiki/ad-free-subscribe.php">Go Ad Free!</a> </div>
+</div>
+<div class="sidebar-item sb-ad-unit">
+<div class="sidebar-section">
+<div class="square_ad ad-size-300x600 ad-section text-center">
+<div class='proper-ad-unit '>
+<div id='proper-ad-tvtropes_ad_3'> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_3'); });</script> </div>
+</div> </div>
+</div>
+</div>
+<div class="sidebar-item">
+<p class="sidebar-item-title" data-title="Crucial Browsing">Crucial Browsing</p>
+<ul class="padded font-s" itemscope itemtype="http://schema.org/SiteNavigationElement">
+<li><a href="javascript:void(0);" data-click-toggle="active">Genre</a>
+<ul>
+<li><a href='/pmwiki/pmwiki.php/Main/ActionAdventureTropes' title='Main/ActionAdventureTropes'>Action Adventure</a></li>
+<li><a href='/pmwiki/pmwiki.php/Main/ComedyTropes' title='Main/ComedyTropes'>Comedy</a></li>
+<li><a href='/pmwiki/pmwiki.php/Main/CommercialsTropes' title='Main/CommercialsTropes'>Commercials</a></li>
+<li><a href='/pmwiki/pmwiki.php/Main/CrimeAndPunishmentTropes' title='Main/CrimeAndPunishmentTropes'>Crime &amp; Punishment</a></li>
+<li><a href='/pmwiki/pmwiki.php/Main/DramaTropes' title='Main/DramaTropes'>Drama</a></li>
+<li><a href='/pmwiki/pmwiki.php/Main/HorrorTropes' title='Main/HorrorTropes'>Horror</a></li>
+<li><a href='/pmwiki/pmwiki.php/Main/LoveTropes' title='Main/LoveTropes'>Love</a></li>
+<li><a href='/pmwiki/pmwiki.php/Main/NewsTropes' title='Main/NewsTropes'>News</a></li>
+<li><a href='/pmwiki/pmwiki.php/Main/ProfessionalWrestling' title='Main/ProfessionalWrestling'>Professional Wrestling</a></li>
+<li><a href='/pmwiki/pmwiki.php/Main/SpeculativeFictionTropes' title='Main/SpeculativeFictionTropes'>Speculative Fiction</a></li>
+<li><a href='/pmwiki/pmwiki.php/Main/SportsStoryTropes' title='Main/SportsStoryTropes'>Sports Story</a></li>
+<li><a href='/pmwiki/pmwiki.php/Main/WarTropes' title='Main/WarTropes'>War</a></li>
+</ul>
+</li>
+<li><a href="javascript:void(0);" data-click-toggle="active">Media</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/Media" title="Main/Media">All Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/AnimationTropes" title="Main/AnimationTropes">Animation (Western)</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Anime" title="Main/Anime">Anime</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ComicBookTropes" title="Main/ComicBookTropes">Comic Book</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FanFic" title="FanFic/FanFics">Fan Fics</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Film" title="Main/Film">Film</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/GameTropes" title="Main/GameTropes">Game</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Literature" title="Main/Literature">Literature</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MusicAndSoundEffects" title="Main/MusicAndSoundEffects">Music And Sound Effects</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NewMediaTropes" title="Main/NewMediaTropes">New Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/PrintMediaTropes" title="Main/PrintMediaTropes">Print Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Radio" title="Main/Radio">Radio</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SequentialArt" title="Main/SequentialArt">Sequential Art</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TabletopGames" title="Main/TabletopGames">Tabletop Games</a></li>
+<li><a href="/pmwiki/pmwiki.php/UsefulNotes/Television" title="Main/Television">Television</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Theater" title="Main/Theater">Theater</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/VideogameTropes" title="Main/VideogameTropes">Videogame</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Webcomics" title="Main/Webcomics">Webcomics</a></li>
+</ul>
+</li>
+<li><a href="javascript:void(0);" data-click-toggle="active">Narrative</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/UniversalTropes" title="Main/UniversalTropes">Universal</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/AppliedPhlebotinum" title="Main/AppliedPhlebotinum">Applied Phlebotinum</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CharacterizationTropes" title="Main/CharacterizationTropes">Characterization</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Characters" title="Main/Characters">Characters</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CharactersAsDevice" title="Main/CharactersAsDevice">Characters As Device</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Dialogue" title="Main/Dialogue">Dialogue</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Motifs" title="Main/Motifs">Motifs</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NarrativeDevices" title="Main/NarrativeDevices">Narrative Devices</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Paratext" title="Main/Paratext">Paratext</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Plots" title="Main/Plots">Plots</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Settings" title="Main/Settings">Settings</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Spectacle" title="Main/Spectacle">Spectacle</a></li>
+</ul>
+</li>
+<li><a href="javascript:void(0);" data-click-toggle="active">Other Categories</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/BritishTellyTropes" title="Main/BritishTellyTropes">British Telly</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TheContributors" title="Main/TheContributors">The Contributors</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CreatorSpeak" title="Main/CreatorSpeak">Creator Speak</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Creators" title="Main/Creators">Creators</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DerivativeWorks" title="Main/DerivativeWorks">Derivative Works</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LanguageTropes" title="Main/LanguageTropes">Language</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LawsAndFormulas" title="Main/LawsAndFormulas">Laws And Formulas</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ShowBusiness" title="Main/ShowBusiness">Show Business</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SplitPersonalityTropes" title="Main/SplitPersonalityTropes">Split Personality</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/StockRoom" title="Main/StockRoom">Stock Room</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TropeTropes" title="Main/TropeTropes">Trope</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Tropes" title="Main/Tropes">Tropes</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TruthAndLies" title="Main/TruthAndLies">Truth And Lies</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TruthInTelevision" title="Main/TruthInTelevision">Truth In Television</a></li>
+</ul>
+</li>
+<li><a href="javascript:void(0);" data-click-toggle="active">Topical Tropes</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/BetrayalTropes" title="Main/BetrayalTropes">Betrayal</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CensorshipTropes" title="Main/CensorshipTropes">Censorship</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CombatTropes" title="Main/CombatTropes">Combat</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DeathTropes" title="Main/DeathTropes">Death</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FamilyTropes" title="Main/FamilyTropes">Family</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FateAndProphecyTropes" title="Main/FateAndProphecyTropes">Fate And Prophecy</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FoodTropes" title="Main/FoodTropes">Food</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/HolidayTropes" title="Main/HolidayTropes">Holiday</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MemoryTropes" title="Main/MemoryTropes">Memory</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MoneyTropes" title="Main/MoneyTropes">Money</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MoralityTropes" title="Main/MoralityTropes">Morality</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/PoliticsTropes" title="Main/PoliticsTropes">Politics</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ReligionTropes" title="Main/ReligionTropes">Religion</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SchoolTropes" title="Main/SchoolTropes">School</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="sidebar-item showcase">
+<p class="sidebar-item-title" data-title="Community&nbsp;Showcase">Community Showcase <a href="/pmwiki/showcase.php" class="bubble float-right hover-blue">More</a></p>
+<p class="community-showcase">
+<a href="https://sharetv.com/shows/echo_chamber" target="_blank" onclick="trackOutboundLink('https://sharetv.com/shows/echo_chamber');">
+<img data-src="/images/communityShowcase-echochamber.jpg" class="lazy-image" alt=""></a>
+<a href="/pmwiki/pmwiki.php/Webcomic/TwistedTropes">
+<img data-src="/img/howlandsc-side.jpg" class="lazy-image" alt=""></a>
+</p>
+</div>
+<div id="stick-cont" class="sidebar-item sb-ad-unit">
+<div id="stick-bar" class="sidebar-section">
+<div class="square_ad ad-size-300x600 ad-section text-center">
+<div class='proper-ad-unit '>
+<div id='proper-ad-tvtropes_ad_4'> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_4'); });</script> </div>
+</div> </div>
+</div>
+</div>
+</div>
+</div>
+<div id="action-bar-bottom" class="action-bar tablet-off">
+<a href="#top-of-page" class="scroll-to-top dead-button" onclick="$('html, body').animate({scrollTop : 0},500);">Top</a>
+</div>
+</div>
+<div class='proper-ad-unit ad-sticky'>
+<div id='proper-ad-tvtropes_sticky_ad'> <script>propertag.cmd.push(function() { proper_display('tvtropes_sticky_ad'); });</script> </div>
+</div>
+<footer id="main-footer">
+<div id="main-footer-inner">
+<div class="footer-left">
+<a href="/" class="img-link"><img data-src="/img/tvtropes-footer-logo.png" alt="TV Tropes" class="lazy-image" title="TV Tropes" /></a>
+<form action="index.html" id="cse-search-box-mobile" class="navbar-form newsletter-signup validate modal-replies" name="" role="" data-ajax-get="/ajax/subscribe_email.php">
+<button class="btn-submit newsletter-signup-submit-button" type="submit" id="subscribe-btn"><i class="fa fa-paper-plane"></i></button>
+<input id="subscription-email" type="text" class="form-control" name="q" size="31" placeholder="Subscribe" value="" validate-type="email">
+</form>
+<ul class="social-buttons">
+<li><a class="btn fb" target="_blank" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-facebook']);" href="https://www.facebook.com/tvtropes"><i class="fa fa-facebook"></i></a></li>
+<li><a class="btn tw" target="_blank" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-twitter']);" href="https://www.twitter.com/tvtropes"><i class="fa fa-twitter"></i></a> </li>
+<li><a class="btn rd" target="_blank" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-reddit']);" href="https://www.reddit.com/r/tvtropes"><i class="fa fa-reddit-alien"></i></a></li>
+</ul>
+</div>
+<hr />
+<ul class="footer-menu" itemscope itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">TVTropes</h4></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Administrivia">About TVTropes</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TheGoalsOfTVTropes">TVTropes Goals</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TheTropingCode">Troping Code</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TVTropesCustoms">TVTropes Customs</a></li>
+<li><a href="/pmwiki/pmwiki.php/JustForFun/TropesOfLegend">Tropes of Legend</a></li>
+<li><a href="/pmwiki/ad-free-subscribe.php">Go Ad-Free</a></li>
+</ul>
+<hr />
+<ul class="footer-menu" itemscope itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">Community</h4></li>
+<li><a href="/pmwiki/query.php?type=att">Ask The Tropers</a></li>
+<li><a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a></li>
+<li><a href="/pmwiki/query.php?type=tf">Trope Finder</a></li>
+<li><a href="/pmwiki/query.php?type=ykts">You Know That Show</a></li>
+<li><a href="/pmwiki/lbs.php" data-modal-target="login">Live Blogs</a></li>
+<li><a href="/pmwiki/review_activity.php">Reviews</a></li>
+<li><a href="/pmwiki/topics.php">Forum</a></li>
+</ul>
+<hr />
+<ul class="footer-menu" itemscope itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">Tropes HQ</h4></li>
+<li><a href="/pmwiki/about.php">About Us</a></li>
+<li><a href="/pmwiki/contact.php">Contact Us</a></li>
+<li><a href="/pmwiki/dmca.php">DMCA Notice</a></li>
+<li><a href="/pmwiki/privacypolicy.php">Privacy Policy</a></li>
+</ul>
+</div>
+<div id="desktop-on-mobile-toggle" class="text-center gutter-top gutter-bottom tablet-on">
+<a href="/pmwiki/switchDeviceCss.php?mobileVersion=1" rel="nofollow">Switch to <span class="txt-desktop">Desktop</span><span class="txt-mobile">Mobile</span> Version</a>
+</div>
+<div class="legal">
+<p>TVTropes is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License. <br>Permissions beyond the scope of this license may be available from <a xmlns:cc="http://creativecommons.org/ns#" href="mailto:thestaff@tvtropes.org" rel="cc:morePermissions"> thestaff@tvtropes.org</a>.</p>
+<br>
+<div class="privacy_wrapper">
+</div>
+</div>
+</footer>
+<style>
+      div.fc-ccpa-root {
+        position: absolute !important;
+        bottom: 93px !important;
+        margin: auto !important;
+        width: 100% !important;
+        z-index: 9999 !important;
+      }
+      .fc-ccpa-root .fc-dns-dialog .fc-dns-link p{
+        outline: none !important;
+        text-decoration: underline !important;
+        font-size: .7em !important;
+        font-family: sans-serif !important;
+      }
+      .fc-ccpa-root .fc-dns-dialog .fc-dns-link .fc-button-background {
+        background: none !important;
+      }
+    </style>
+<div id="_pm_videoViewer" class="full-screen">
+<a href="#close" class="close" id="_pm_videoViewer-close"></a>
+<div class="_pmvv-body">
+<div class="_pmvv-vidbox">
+<video id='overlay-video-player-box' data-video-id="" class='video-js vjs-default-skin vjs-16-9'>
+</video>
+<div class="_pmvv-vidbox-desc">
+<h1 id="overlay-title"></h1>
+<p id="overlay-descrip" class="_pmvv-vidbox-descTxt">
+</p>
+<div class="rating-row" data-video-id="">
+<input type="hidden" name="is_logged_in" value="0">
+<p>How well does it match the trope?</p>
+<div id="star-rating-group">
+<div class="trope-rate">
+<input type="radio" id="lamp5" name="rate" value="5" />
+<label for="lamp5" title="Absolutely"></label>
+<input type="radio" id="lamp4" name="rate" value="4" />
+<label for="lamp4" title="Yes"></label>
+<input type="radio" id="lamp3" name="rate" value="3" />
+<label for="lamp3" title="Kind of"></label>
+<input type="radio" id="lamp2" name="rate" value="2" />
+<label for="lamp2" title="Not really"></label>
+<input type="radio" id="lamp1" name="rate" value="1" />
+<label for="lamp1" title="No"></label>
+</div>
+<div id="star-rating-total">
+</div>
+</div>
+</div>
+<div class="example-media-row">
+<div class="example-overlay">
+<p>Example of:</p>
+<div id="overlay-trope"> / </div>
+</div>
+<div class="media-sources-overlay example-overlay">
+<p>Media sources:</p>
+<div id="overlay-media"> / </div>
+</div>
+</div>
+<p class="_pmvv-vidbox-stats text-right font-s" style="padding-top:8px; border-top: solid 1px rgba(255,255,255,0.2)">
+
+<a href="#video-feedback" class="float-right" data-modal-target="login">Report</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<script type='text/javascript'>
+        window.special_ops =  {
+            member : 'no',
+            isolated : 0,
+            tags : ['unknown']
+        };
+    </script>
+<script type="text/javascript">
+
+        var cleanCreativeEnabled = "";
+        var donation = "";
+        var live_ads = "1";
+        var img_domain = "https://static.tvtropes.org";
+        var snoozed = cookies.read('snoozedabm');
+        var snoozable = "";
+
+        if (adsRemovedWith) {
+            live_ads = 0;
+        }
+
+        var elem = document.createElement('script');
+        elem.async = true;
+
+        elem.src = '/design/assets/bundle.js?rev=af8ba6c84175c5d092329028e16c8941231c5eba';
+
+        elem.onload = function() {
+                            var elem2 = document.createElement('script');
+                elem2.async = false;
+                elem2.src = "/design/js/query-page.js?rev=af8ba6c84175c5d092329028e16c8941231c5eba";
+                document.getElementsByTagName('head')[0].appendChild(elem2);
+                                 }
+        document.getElementsByTagName('head')[0].appendChild(elem);
+
+    </script>
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-3821842-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<script type="text/javascript">
+      function send_analytics_event(user_type, donation){
+          // if(user_type == 'uncached' || user_type == 'cached'){
+          //   ga('send', 'event', 'caching', 'load', user_type, {'nonInteraction': 1});
+          //   return;
+          // }
+          var event_name = user_type;
+
+          if(donation == 'true'){
+              event_name += "_donation"
+          }else if(typeof(valid_user) == 'undefined'){
+              event_name += "_blocked"
+          }else if(valid_user == true){
+              event_name += "_unblocked";
+          }else{
+              event_name = "_unknown"
+          }
+          ga('send', 'event', 'ads', 'load', event_name, {'nonInteraction': 1});
+      }
+
+    
+    send_analytics_event("guest", "false");
+      </script>
+</body>
+</html>
