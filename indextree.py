@@ -65,7 +65,7 @@ class IndexTree():
         self.urdict = {}
     def get_lists_tropes(self, filename):
         self.filename = filename
-        soup = BeautifulSoup(open(filename),features="lxml")
+        soup = BeautifulSoup(open(filename,encoding="ISO-8859-1"),features="lxml")
         # links = soup.find_all(['h2','a'])
         # #looks like the lists of tropes are organized alphabetically,
         # #so we could look at entries starting with A-Z?
@@ -99,11 +99,13 @@ class IndexTree():
     def go_thru_list_pages(self,foldername):
         for entry in os.scandir(foldername):
             if entry.path.endswith(".htm"):
-                try:
-                    dict1 = self.get_lists_tropes(entry)
-                    self.write_dict(dict1)
-                except: pass
-                #self.write_dict()
+                dict1 = self.get_lists_tropes(entry)
+                self.write_dict(dict1)
+                # try:
+                #     dict1 = self.get_lists_tropes(entry)
+                #     self.write_dict(dict1)
+                # except: pass
+                # #self.write_dict()
             else: pass
         return None
         
