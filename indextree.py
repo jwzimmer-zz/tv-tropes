@@ -152,7 +152,7 @@ class IndexTree():
         if len(mydivs) == 0:
             #print("different structure: ",filename)
             #there seems to be one more special case, 'Main Index Index - TV Tropes.htm'
-            self.handle_main_index(filename)
+            structure_dict = self.handle_main_index(filename)
         else:
             for div in mydivs:
                 nextul = div.find_next("ul")
