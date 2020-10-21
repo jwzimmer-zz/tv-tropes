@@ -58,18 +58,40 @@ import pandas as pd
 # {}
 # =============================================================================
 
+#these are the pages that seem to require special handling (different structure)
+# via handle_special_case:
+# =============================================================================
+# <DirEntry 'Main Index Index - TV Tropes.htm'>
+# <DirEntry 'Home Page _ YMMV - TV Tropes.htm'>
+# <DirEntry 'Tropes Of Legend _ Just For Fun - TV Tropes.htm'>
+# <DirEntry 'Audience Reactions - TV Tropes.htm'>
+# <DirEntry 'The Oldest Ones in the Book - TV Tropes.htm'>
+# <DirEntry 'Just For Fun - TV Tropes.htm'>
+# <DirEntry 'Information Desk - TV Tropes.htm'>
+# <DirEntry 'Contributors - TV Tropes.htm'>
+# <DirEntry 'Language Indices - TV Tropes.htm'>
+# <DirEntry 'Useful Notes - TV Tropes.htm'>
+# <DirEntry 'Genres - TV Tropes.htm'>
+# <DirEntry 'Media Tropes - TV Tropes.htm'>
+# <DirEntry 'Topical Tropes - TV Tropes.htm'>
+# <DirEntry 'Narrative Tropes - TV Tropes.htm'>
+# <DirEntry 'Works - TV Tropes.htm'>
+# <DirEntry 'Flame Bait - TV Tropes.htm'>
+# <DirEntry 'Overdosed Tropes - TV Tropes.htm'>
+# =============================================================================
+
 class IndexTree():
     def __init__(self):
         pass
         self.filename = ''
         self.urdict = {}
     def get_lists_tropes(self, filename):
+        # this looks like it works for most of the trope list pages, assuming
+        # they are similar to each other - i did not check that for all pages this works for,
+        # the structure is actually the same as the example page (Indices/Genre Tropes - TV Tropes.htm)
+        
         self.filename = filename
         soup = BeautifulSoup(open(filename,encoding="ISO-8859-1"),features="lxml")
-        # links = soup.find_all(['h2','a'])
-        # #looks like the lists of tropes are organized alphabetically,
-        # #so we could look at entries starting with A-Z?
-        # linktxt = [x.text for x in links]
         structure_dict = {}
         headerlinks = soup.find_all("h2")
         for headerlink in headerlinks:
@@ -100,14 +122,51 @@ class IndexTree():
         for entry in os.scandir(foldername):
             if entry.path.endswith(".htm"):
                 dict1 = self.get_lists_tropes(entry)
+                if dict1 == {}:
+                    dict1 = self.handle_special_cases_flatly(entry)
+                else:
+                    pass
                 self.write_dict(dict1)
-                # try:
-                #     dict1 = self.get_lists_tropes(entry)
-                #     self.write_dict(dict1)
-                # except: pass
-                # #self.write_dict()
             else: pass
         return None
+    
+    def handle_special_cases_flatly(self, filename):
+        structure_dict = {}
+        self.filename = filename
+        soup = BeautifulSoup(open(filename,encoding="ISO-8859-1"),features="lxml")
+        #<div id="main-article" class="article-content retro-folders">
+        mydivs = soup.find_all("div", class_="article-content retro-folders")
+        if len(mydivs) == 0:
+            #print("different structure: ",filename)
+            #there seems to be one more special case, 'Main Index Index - TV Tropes.htm'
+            self.handle_main_index(filename)
+        else:
+            for div in mydivs:
+                nextul = div.find_next("ul")
+                innertropes = nextul.find_all("a")
+                innertext = [x.text for x in innertropes]
+                structure_dict[div.text] = innertext
+        return structure_dict
+    
+    def handle_main_index(self, filename):
+        structure_dict = {}
+        self.filename = filename
+        soup = BeautifulSoup(open(filename,encoding="ISO-8859-1"),features="lxml")
+        mydivs = soup.find_all("div", class_="article-content")
+        if len(mydivs) == 0:
+            print("oh no")
+            return None
+        else:
+            for div in mydivs:
+                mycategories = div.find_all("div", class_="legend")
+                for category in mycategories:
+                    mylinks = category.find_next("div", class_="link-set")
+                    myas = mylinks.find_all("a")
+                    linktext = [x.text for x in myas]
+                    structure_dict[category.text] = linktext
+        #print(structure_dict)
+        return structure_dict
+                
         
 
 it = IndexTree()
