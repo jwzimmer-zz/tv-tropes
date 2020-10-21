@@ -11,6 +11,7 @@ import re
 import pickle
 import os
 import pandas as pd
+import json
 
 #this is the dictionary this script outputs for "Indices/Genre Tropes - TV Tropes.htm":
 # =============================================================================
@@ -117,8 +118,8 @@ class IndexTree():
         except:
             self.newname = self.filename
         self.newname = self.newname.name
-        with open("txt_dict_from_"+self.newname+".txt","w") as outfile:
-            outfile.write(str(dict1))
+        with open("txt_dict_from_"+self.newname+".json","w") as outfile:
+            json.dump(dict1, outfile)
         return None
         
     def get_df(self):
