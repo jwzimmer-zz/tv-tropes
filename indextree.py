@@ -110,6 +110,17 @@ class IndexTree():
         with open("dict_from_"+self.newname+".pickle", 'wb') as outfile:
             pickle.dump(dict1, outfile, protocol=pickle.HIGHEST_PROTOCOL)
         return None
+    
+    def write_dict_as_string(self, dict1):
+        try:
+            self.newname = self.filename.split("/")[-1]
+        except:
+            self.newname = self.filename
+        self.newname = self.newname.name
+        with open("txt_dict_from_"+self.newname+".txt","w") as outfile:
+            outfile.write(str(dict1))
+        return None
+        
     def get_df(self):
         self.dictdf = pd.DataFrame.from_dict(self.urdict)
         
@@ -127,6 +138,7 @@ class IndexTree():
                 else:
                     pass
                 self.write_dict(dict1)
+                self.write_dict_as_string(dict1)
             else: pass
         return None
     
