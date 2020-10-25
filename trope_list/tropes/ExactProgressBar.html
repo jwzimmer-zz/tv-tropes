@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Exact Progress Bar - TV Tropes</title>
+<meta content="The Exact Progress Bar trope as used in popular culture. In TV and movies, all computer operations take an exact, known amount of time to perform, and all …" name="description"/>
+<link href="https://tvtropes.org/pmwiki/pmwiki.php/Main/ExactProgressBar" rel="canonical"/>
+<link href="/img/icons/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="@tvtropes" name="twitter:site"/>
+<meta content="@tvtropes" name="twitter:owner"/>
+<meta content="Exact Progress Bar - TV Tropes" name="twitter:title"/>
+<meta content="The Exact Progress Bar trope as used in popular culture. In TV and movies, all computer operations take an exact, known amount of time to perform, and all …" name="twitter:description"/>
+<meta content="https://static.tvtropes.org/logo_blue_small.png" name="twitter:image:src"/>
+<meta content="TV Tropes" property="og:site_name"/>
+<meta content="en_US" property="og:locale"/>
+<meta content="https://www.facebook.com/tvtropes" property="article:publisher"/>
+<meta content="Exact Progress Bar - TV Tropes" property="og:title"/>
+<meta content="website" property="og:type"/>
+<meta content="https://tvtropes.org/pmwiki/pmwiki.php/Main/ExactProgressBar" property="og:url"/>
+<meta content="https://static.tvtropes.org/logo_blue_small.png" property="og:image"/>
+<meta content="In TV and movies, all computer operations take an exact, known amount of time to perform, and all progress bars move smoothly at a constant rate. This will always be 100% accurate. Generally, in Real Life, it's more complicated. Just try copying …" property="og:description"/>
+<link href="/img/icons/apple-icon-57x57.png" rel="apple-touch-icon" sizes="57x57" type="image/png"/>
+<link href="/img/icons/apple-icon-60x60.png" rel="apple-touch-icon" sizes="60x60" type="image/png"/>
+<link href="/img/icons/apple-icon-72x72.png" rel="apple-touch-icon" sizes="72x72" type="image/png"/>
+<link href="/img/icons/apple-icon-76x76.png" rel="apple-touch-icon" sizes="76x76" type="image/png"/>
+<link href="/img/icons/apple-icon-114x114.png" rel="apple-touch-icon" sizes="114x114" type="image/png"/>
+<link href="/img/icons/apple-icon-120x120.png" rel="apple-touch-icon" sizes="120x120" type="image/png"/>
+<link href="/img/icons/apple-icon-144x144.png" rel="apple-touch-icon" sizes="144x144" type="image/png"/>
+<link href="/img/icons/apple-icon-152x152.png" rel="apple-touch-icon" sizes="152x152" type="image/png"/>
+<link href="/img/icons/apple-icon-180x180.png" rel="apple-touch-icon" sizes="180x180" type="image/png"/>
+<link href="/img/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/img/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/img/icons/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png"/>
+<link href="/img/icons/favicon-192x192.png" rel="icon" sizes="192x192" type="image/png"/>
+<meta content="width=device-width, initial-scale=1" id="viewport" name="viewport"/>
+<script>
+                var propertag = {};
+                propertag.cmd = [];
+            </script>
+<link href="/design/assets/bundle.css?rev=c58d8df02f09262390bbd03db7921fc35c6af306" rel="stylesheet"/>
+<script>
+                function object(objectId) {
+                    if (document.getElementById && document.getElementById(objectId)) {
+                        return document.getElementById(objectId);
+                    } else if (document.all && document.all(objectId)) {
+                        return document.all(objectId);
+                    } else if (document.layers && document.layers[objectId]) {
+                        return document.layers[objectId];
+                    } else {
+                        return false;
+                    }
+                }
+
+                // JAVASCRIPT COOKIES CODE: for getting and setting user viewing preferences
+                var cookies = {
+                    create: function (name, value, days2expire, path) {
+                        var date = new Date();
+                        date.setTime(date.getTime() + (days2expire * 24 * 60 * 60 * 1000));
+                        var expires = date.toUTCString();
+                        document.cookie = name + '=' + value + ';' + 'expires=' + expires + ';' + 'path=' + path + ';';
+                    },
+										createWithExpire: function(name, value, expires, path) {
+												document.cookie = name + '=' + value + ';' + 'expires=' + expires + ';' + 'path=' + path + ';';
+										},
+                    read: function (name) {
+                        var cookie_value = "",
+                            current_cookie = "",
+                            name_expr = name + "=",
+                            all_cookies = document.cookie.split(';'),
+                            n = all_cookies.length;
+
+                        for (var i = 0; i < n; i++) {
+                            current_cookie = all_cookies[i].trim();
+                            if (current_cookie.indexOf(name_expr) === 0) {
+                                cookie_value = current_cookie.substring(name_expr.length, current_cookie.length);
+                                break;
+                            }
+                        }
+                        return cookie_value;
+                    },
+                    update: function (name, val) {
+                        this.create(name, val, 300, "/");
+                    },
+                    remove: function (name) {
+                        document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
+                    }
+                };
+
+                function updateUserPrefs() {
+                    //GENERAL: detect and set browser, if not cookied (will be treated like a user-preference and added to the #user-pref element)
+                    if( !cookies.read('user-browser') ){
+                        var broswer = '';
+
+                        if(navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPod/i) ){
+                            browser = 'iOS';
+                        } else if (/Opera[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'opera';
+                        } else if (/MSIE (\d+\.\d+);/.test(navigator.userAgent)) {
+                            browser = 'MSIE';
+                        } else if (/Navigator[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'netscape';
+                        } else if (/Chrome[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'chrome';
+                        } else if (/Safari[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'safari';
+                            /Version[\/\s](\d+\.\d+)/.test(navigator.userAgent);
+                            browserVersion = new Number(RegExp.$1);
+                        } else if (/Firefox[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'firefox';
+                        } else {
+                            browser = 'internet_explorer';
+                        }
+                        cookies.create('user-browser',browser,1,'/');
+                        document.getElementById('user-prefs').classList.add('browser-' + browser);
+                    } else {
+                        document.getElementById('user-prefs').classList.add('browser-' + cookies.read('user-browser'));
+                    }
+
+                    //update user preference settings
+                    if (cookies.read('wide-load') !== '') document.getElementById('user-prefs').classList.add('wide-load');
+                    if (cookies.read('night-vision') !== '') document.getElementById('user-prefs').classList.add('night-vision');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('user-prefs').classList.add('sticky-header');
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('user-prefs').classList.add('show-spoilers');
+                    if (cookies.read('folders-open') !== '') document.getElementById('user-prefs').classList.add('folders-open');
+                    if (cookies.read('lefthand-sidebar') !== '') document.getElementById('user-prefs').classList.add('lefthand-sidebar');
+                    if (cookies.read('highlight-links') !== '') document.getElementById('user-prefs').classList.add('highlight-links');
+                    if (cookies.read('forum-gingerbread') !== '') document.getElementById('user-prefs').classList.add('forum-gingerbread');
+                    if (cookies.read('shared-avatars') !== '') document.getElementById('user-prefs').classList.add('shared-avatars');
+                    if (cookies.read('new-search') !== '') document.getElementById('user-prefs').classList.add('new-search');
+                    if (cookies.read('stop-auto-play-video') !== '') document.getElementById('user-prefs').classList.add('stop-auto-play-video');
+
+                    //desktop view on mobile
+                    if (cookies.read('desktop-on-mobile') !== ''){
+                        document.getElementById('user-prefs').classList.add('desktop-on-mobile');
+
+                        var viewport = document.querySelector("meta[name=viewport]");
+                        viewport.setAttribute('content', 'width=1000');
+                    }
+
+                }
+
+                function updateDesktopPrefs() {
+                    if (cookies.read('wide-load') !== '') document.getElementById('sidebar-toggle-wideload').classList.add('active');
+                    if (cookies.read('night-vision') !== '') document.getElementById('sidebar-toggle-nightvision').classList.add('active');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('sidebar-toggle-stickyheader').classList.add('active');
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('sidebar-toggle-showspoilers').classList.add('active');
+
+                }
+
+                function updateMobilePrefs() {
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('mobile-toggle-showspoilers').classList.add('active');
+                    if (cookies.read('night-vision') !== '') document.getElementById('mobile-toggle-nightvision').classList.add('active');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('mobile-toggle-stickyheader').classList.add('active');
+                    if (cookies.read('highlight-links') !== '') document.getElementById('mobile-toggle-highlightlinks').classList.add('active');
+
+                }
+
+
+                if (document.cookie.indexOf("scroll0=") < 0) {
+                    // do nothing
+                } else {
+                    console.log('ads removed by scroll.com');
+                    var adsRemovedWith = 'scroll';
+                    var style = document.createElement('style');
+                    style.innerHTML = '#header-ad, .proper-ad-unit, .square_ad, .sb-ad-unit { display: none !important; } ';
+                    document.head.appendChild(style);
+                }
+            </script>
+<script type="text/javascript">
+
+                var tvtropes_config = {
+                    astri_stream_enabled : "",
+                    is_logged_in         : "",
+                    handle               : "",
+                    get_astri_stream     : "",
+										revnum               : "c58d8df02f09262390bbd03db7921fc35c6af306",
+										img_domain           : "https://static.tvtropes.org",
+										adblock              : "1",
+										adblock_url          : "propermessage.io",
+										pause_editing        : "0",
+										pause_editing_msg    : "",
+										pause_site_changes   : ""
+                };
+            </script>
+<script type="text/javascript">
+						  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+						  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+						  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+						  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+						  ga('create', 'UA-3821842-1', 'auto');
+						  ga('send', 'pageview');
+
+						</script>
+</head>
+<body class="">
+<i id="user-prefs"></i>
+<script>updateUserPrefs();</script>
+<div id="fb-root"></div>
+<div id="modal-box"></div>
+<header class="headroom-element" id="main-header-bar">
+<div id="main-header-bar-inner">
+<span class="header-spacer" id="header-spacer-left"></span>
+<a class="mobile-menu-toggle-button tablet-on" href="#mobile-menu" id="main-mobile-toggle"><span></span><span></span><span></span></a>
+<a class="no-dev" href="/" id="main-header-logoButton"></a>
+<span class="header-spacer" id="header-spacer-right"></span>
+<nav class="tablet-off" id="main-header-nav">
+<a href="/pmwiki/pmwiki.php/Main/Tropes">Tropes</a>
+<a href="/pmwiki/pmwiki.php/Main/Media">Media</a>
+<a class="nav-browse" href="/pmwiki/browse.php">Browse</a>
+<a href="/pmwiki/index_report.php">Indexes</a>
+<a href="/pmwiki/topics.php">Forums</a>
+<a class="nav-browse" href="/pmwiki/recent_videos.php">Videos</a>
+</nav>
+<div id="main-header-bar-right">
+<div class="font-xs mobile-off" id="signup-login-box">
+<a class="hover-underline bold" data-modal-target="signup" href="/pmwiki/login.php">Join</a>
+<a class="hover-underline bold" data-modal-target="login" href="/pmwiki/login.php">Login</a>
+</div>
+<div class="mobile-on inline" id="signup-login-mobileToggle">
+<a data-modal-target="login" href="/pmwiki/login.php"><i class="fa fa-user"></i></a>
+</div>
+<div id="search-box">
+<form action="/pmwiki/search_result.php" class="search">
+<input class="search-box" name="q" placeholder="Search" required="" type="text" value=""/>
+<input class="submit-button" type="submit" value=""/>
+<input name="search_type" type="hidden" value="article"/>
+<input name="page_type" type="hidden" value="all"/>
+<input name="cx" type="hidden" value="partner-pub-6610802604051523:amzitfn8e7v"/>
+<input name="cof" type="hidden" value="FORID:10"/>
+<input name="ie" type="hidden" value="ISO-8859-1"/>
+<input name="siteurl" type="hidden" value=""/>
+<input name="ref" type="hidden" value=""/>
+<input name="ss" type="hidden" value=""/>
+</form>
+<a class="mobile-on mobile-search-toggle close-x" href="#close-search"><i class="fa fa-close"></i></a>
+</div>
+<div id="random-box">
+<a class="button-random-trope" href="/pmwiki/pmwiki.php/Main/Parody" onclick="ga('send', 'event', 'button', 'click', 'random trope');" rel="nofollow"></a>
+<a class="button-random-media" href="/pmwiki/pmwiki.php/Series/HimitsuSentaiGoranger" onclick="ga('send', 'event', 'button', 'click', 'random media');" rel="nofollow"></a>
+</div>
+</div>
+</div>
+<div class="tablet-on" id="mobile-menu"><div class="mobile-menu-options">
+<div class="nav-wrapper">
+<a class="xl" href="/pmwiki/pmwiki.php/Main/Tropes">Tropes</a>
+<a class="xl" href="/pmwiki/pmwiki.php/Main/Media">Media</a>
+<a class="xl" href="/pmwiki/browse.php">Browse</a>
+<a class="xl" href="/pmwiki/index_report.php">Indexes</a>
+<a class="xl" href="/pmwiki/topics.php">Forums</a>
+<a class="xl" href="/pmwiki/recent_videos.php">Videos</a>
+<a href="/pmwiki/query.php?type=att">Ask The Tropers</a>
+<a href="/pmwiki/query.php?type=tf">Trope Finder</a>
+<a href="/pmwiki/query.php?type=ykts">You Know That Show...</a>
+<a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a>
+<a data-click-toggle="active" href="#tools">Tools <i class="fa fa-chevron-down"></i></a>
+<div class="tools-dropdown mobile-dropdown-linkList">
+<a href="/pmwiki/cutlist.php">Cut List</a>
+<a href="/pmwiki/changes.php">New Edits</a>
+<a href="/pmwiki/recent_edit_reasons.php">Edit Reasons</a>
+<a href="/pmwiki/launches.php">Launches</a>
+<a href="/pmwiki/img_list.php">Images List</a>
+<a href="/pmwiki/crown_activity.php">Crowner Activity</a>
+<a href="/pmwiki/no_types.php">Un-typed Pages</a>
+<a href="/pmwiki/page_type_audit.php">Recent Page Type Changes</a>
+</div>
+<a data-click-toggle="active" href="#hq">Tropes HQ <i class="fa fa-chevron-down"></i></a>
+<div class="tools-dropdown mobile-dropdown-linkList">
+<a href="/pmwiki/about.php">About Us</a>
+<a href="/pmwiki/contact.php">Contact Us</a>
+<a href="mailto:advertising@proper.io">Advertise</a>
+<a href="/pmwiki/dmca.php">DMCA Notice</a>
+<a href="/pmwiki/privacypolicy.php">Privacy Policy</a>
+</div>
+<a href="/pmwiki/ad-free-subscribe.php">Go Ad-Free</a>
+<div class="toggle-switches">
+<ul class="mobile-menu display-toggles">
+<li>Show Spoilers <div class="display-toggle show-spoilers" id="mobile-toggle-showspoilers"></div></li>
+<li>Night Vision <div class="display-toggle night-vision" id="mobile-toggle-nightvision"></div></li>
+<li>Sticky Header <div class="display-toggle sticky-header" id="mobile-toggle-stickyheader"></div></li>
+<li>Highlight Links <div class="display-toggle highlight-links" id="mobile-toggle-highlightlinks"></div></li>
+</ul>
+<script>updateMobilePrefs();</script>
+</div>
+</div>
+</div>
+</div>
+</header>
+<div class="mobile-on" id="homepage-introBox-mobile">
+<a href="/"><img class="logo-small" src="/images/logo-white-big.png"/></a>
+<form action="/pmwiki/search_result.php" class="search" style="margin:10px -5px -6px -5px;">
+<input class="search-box" name="q" placeholder="Search" required="" type="text" value=""/>
+<input class="submit-button" type="submit" value=""/>
+<input name="search_type" type="hidden" value="article"/>
+<input name="page_type" type="hidden" value="all"/>
+<input name="cx" type="hidden" value="partner-pub-6610802604051523:amzitfn8e7v"/>
+<input name="cof" type="hidden" value="FORID:10"/>
+<input name="ie" type="hidden" value="ISO-8859-1"/>
+<input name="siteurl" type="hidden" value=""/>
+<input name="ref" type="hidden" value=""/>
+<input name="ss" type="hidden" value=""/>
+</form>
+</div>
+<div class="ad" id="header-ad-wrapper">
+<div id="header-ad">
+<div class="ad-size-970x90 atf_banner">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_1"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_1'); });</script> </div>
+</div> </div>
+</div>
+</div>
+<div id="main-container">
+<div class="action-bar mobile-off" id="action-bar-top">
+<div class="action-bar-right">
+<p>Follow TV Tropes</p>
+<a class="button-fb" href="https://www.facebook.com/TVTropes">
+<i class="fa fa-facebook"></i></a>
+<a class="button-tw" href="https://www.twitter.com/TVTropes">
+<i class="fa fa-twitter"></i></a>
+<a class="button-re" href="https://www.reddit.com/r/TVTropes">
+<i class="fa fa-reddit-alien"></i></a>
+</div>
+<nav class="actions-wrapper" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<ul class="page-actions" id="top_main_list">
+<li class="link-edit">
+<a class="article-edit-button" data-modal-target="login" href="/pmwiki/pmwiki.php/Main/ExactProgressBar?action=edit" rel="nofollow">
+<i class="fa fa-pencil"></i> Edit Page</a></li><li class="link-related"><a href="/pmwiki/relatedsearch.php?term=Main/ExactProgressBar">
+<i class="fa fa-share-alt"></i> Related</a></li><li class="link-history"><a href="/pmwiki/article_history.php?article=Main.ExactProgressBar">
+<i class="fa fa-history"></i> History</a></li><li class="link-discussion"><a href="/pmwiki/remarks.php?trope=Main.ExactProgressBar">
+<i class="fa fa-comment"></i> Discussion</a></li> </ul>
+<button class="nav__dropdown-toggle" id="top_more_button" onclick="toggle_more_menu('top');" type="button">More</button>
+<ul class="more_menu hidden_more_list" id="top_more_list">
+<li class="link-todo tuck-always more_list_item"><a data-modal-target="login" href="#todo"><i class="fa fa-check-circle"></i> To Do</a></li><li class="link-pageSource tuck-always more_list_item"><a data-modal-target="login" href="/pmwiki/pmwiki.php/Main/ExactProgressBar?action=source" rel="nofollow" target="_blank"><i class="fa fa-code"></i> Page Source</a></li> </ul>
+</nav>
+<div class="WikiWordModalStub"></div>
+<div class="ImgUploadModalStub" data-page-type="Article"></div>
+<div class="login-alert" style="display: none;">
+You need to <a href="/pmwiki/login.php" style="color:#21A0E8">login</a> to do this. <a href="/pmwiki/login.php?tab=register_account" style="color:#21A0E8">Get Known</a> if you don't have an account
+</div>
+</div>
+<div class="page-Article" id="main-content">
+<article class="with-sidebar" id="main-entry">
+<input id="groupname-hidden" type="hidden" value="Main"/>
+<input id="title-hidden" type="hidden" value="ExactProgressBar"/>
+<input id="article_id" type="hidden" value="2117"/>
+<input id="logged_in" type="hidden" value="false"/>
+<p class="hidden" id="current_url">http://tvtropes.org/pmwiki/pmwiki.php/Main/ExactProgressBar</p>
+<meta content="" itemprop="datePublished"/>
+<meta content="" itemprop="articleSection"/>
+<meta content="" itemprop="image"/>
+<a class="watch-button" data-modal-target="login" href="#watch">Follow<span>ing</span></a>
+<h1 class="entry-title" itemprop="headline">
+Exact Progress Bar
+</h1>
+<script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+                "@type": "ListItem",
+                "position": 1,
+                "name": "tvtropes.org",
+                "item": "https://tvtropes.org"
+            },{
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Tropes",
+                "item": "https://tvtropes.org/pmwiki/pmwiki.php/Main/Tropes"
+            },{
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Exact Progress Bar"            }]
+        }
+    </script>
+<a class="mobile-actionbar-toggle mobile-on" data-click-toggle="active" href="#mobile-actions-toggle" id="mobile-actionbar-toggle">
+<p class="tiny-off">Go To</p><span></span><span></span><span></span><i class="fa fa-pencil"></i></a>
+<nav class="mobile-actions-wrapper mobile-on" id="mobile-actions-bar"></nav>
+<div class="modal fade hidden-until-active" id="editLockModal">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button aria-label="Close" class="close" data-dismiss="modal" type="button"> <span aria-hidden="true">×</span></button>
+<h4 class="modal-title">Edit Locked</h4>
+</div>
+<div class="modal-body">
+<div class="row">
+<div class="body">
+<div class="danger troper_locked_message"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<nav class="body-options" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<ul class="subpage-links">
+<li>
+<a class="subpage-link curr-subpage" href="/pmwiki/pmwiki.php/Main/ExactProgressBar" title="The Main page">
+<span class="wrapper"><span class="spi main-page"></span>Main</span></a>
+</li>
+<li class="create-subpage dropdown">
+<a aria-expanded="false" class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);" role="button">
+<span class="wrapper">Create New <i class="fa fa-plus-circle"></i></span>
+</a>
+<select onchange="this.options[this.selectedIndex].value &amp;&amp; (window.location = this.options[this.selectedIndex].value);">
+<option value="">- Create New -</option>
+<option value="/pmwiki/pmwiki.php/Analysis/ExactProgressBar?action=edit">Analysis</option>
+<option value="/pmwiki/pmwiki.php/Characters/ExactProgressBar?action=edit">Characters</option>
+<option value="/pmwiki/pmwiki.php/FanficRecs/ExactProgressBar?action=edit">FanficRecs</option>
+<option value="/pmwiki/pmwiki.php/FanWorks/ExactProgressBar?action=edit">FanWorks</option>
+<option value="/pmwiki/pmwiki.php/Fridge/ExactProgressBar?action=edit">Fridge</option>
+<option value="/pmwiki/pmwiki.php/Haiku/ExactProgressBar?action=edit">Haiku</option>
+<option value="/pmwiki/pmwiki.php/Headscratchers/ExactProgressBar?action=edit">Headscratchers</option>
+<option value="/pmwiki/pmwiki.php/ImageLinks/ExactProgressBar?action=edit">ImageLinks</option>
+<option value="/pmwiki/pmwiki.php/Laconic/ExactProgressBar?action=edit">Laconic</option>
+<option value="/pmwiki/pmwiki.php/PlayingWith/ExactProgressBar?action=edit">PlayingWith</option>
+<option value="/pmwiki/pmwiki.php/Quotes/ExactProgressBar?action=edit">Quotes</option>
+<option value="/pmwiki/pmwiki.php/Recap/ExactProgressBar?action=edit">Recap</option>
+<option value="/pmwiki/pmwiki.php/ReferencedBy/ExactProgressBar?action=edit">ReferencedBy</option>
+<option value="/pmwiki/pmwiki.php/Synopsis/ExactProgressBar?action=edit">Synopsis</option>
+<option value="/pmwiki/pmwiki.php/Timeline/ExactProgressBar?action=edit">Timeline</option>
+<option value="/pmwiki/pmwiki.php/Trivia/ExactProgressBar?action=edit">Trivia</option>
+<option value="/pmwiki/pmwiki.php/WMG/ExactProgressBar?action=edit">WMG</option>
+<option value="/pmwiki/pmwiki.php/YMMV/ExactProgressBar?action=edit">YMMV</option>
+</select>
+</li>
+</ul>
+</nav>
+<div class="article-content retro-folders" id="main-article">
+<p></p><div class="quoteright" style="width:300px;"><a class="twikilink" href="/pmwiki/pmwiki.php/Main/SelfReferentialHumor" title="/pmwiki/pmwiki.php/Main/SelfReferentialHumor"><div class="lazy_load_img_box" style="padding-top:43.33%"><img alt="https://static.tvtropes.org/pmwiki/pub/images/progress_bar_5536.jpg" border="0" class="embeddedimage" height="130" src="https://static.tvtropes.org/pmwiki/pub/images/progress_bar_5536.jpg" width="300"/></div></a></div>
+<p></p><div class="indent"><em>"The progress bar is moving, but the remaining time is going <strong>up</strong>!"</em>
+<div class="indent">— <strong>Cypher</strong> in <a class="twikilink" href="/pmwiki/pmwiki.php/Website/CollegeHumor" title="/pmwiki/pmwiki.php/Website/CollegeHumor">CollegeHumor</a>'s "<a class="twikilink" href="/pmwiki/pmwiki.php/Film/TheMatrix" title="/pmwiki/pmwiki.php/Film/TheMatrix">The Matrix</a> Runs on <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/MicrosoftWindows" title="/pmwiki/pmwiki.php/UsefulNotes/MicrosoftWindows">Windows XP</a>"
+</div></div><div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_1"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_1'); })</script></div></div><p>In TV and movies, all computer operations take an exact, known amount of time to perform, and all progress bars move smoothly at a constant rate. This will always be <a class="twikilink" href="/pmwiki/pmwiki.php/Main/LudicrousPrecision" title="/pmwiki/pmwiki.php/Main/LudicrousPrecision">100% accurate</a>. Generally, in <a class="twikilink" href="/pmwiki/pmwiki.php/Main/RealLife" title="/pmwiki/pmwiki.php/Main/RealLife">Real Life</a>, it's more complicated. Just try copying a large folder in Windows and see for yourself.
+</p><p>When the realistic style of progress bar shows up in fiction, it's an <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AvertedTrope" title="/pmwiki/pmwiki.php/Main/AvertedTrope">aversion</a> of this trope, which can be played for tension or laughs as the character reacts to every jump or freeze in progress.
+</p><p>In real life, some jobs are predictable and some are not, and this is always highly dependent on actual implementation details that are beyond this article.
+</p><p>See also <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BeepingComputers" title="/pmwiki/pmwiki.php/Main/BeepingComputers">Beeping Computers</a>, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ExactTimeToFailure" title="/pmwiki/pmwiki.php/Main/ExactTimeToFailure">Exact Time to Failure</a> and <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MagicCountdown" title="/pmwiki/pmwiki.php/Main/MagicCountdown">Magic Countdown</a>.
+</p><hr/><div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_2"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_2'); })</script></div></div><h2>Examples</h2>
+<p></p><div class="folderlabel" onclick="toggleAllFolders();">    open/close all folders  </div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder0');">    Anime and Manga </div><div class="folder" id="folder0" isfolder="true" style="display:block;">
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Anime/DigimonTamers" title="/pmwiki/pmwiki.php/Anime/DigimonTamers">Digimon Tamers</a></em>, which normally takes a tremendous amount of liberties with how computers and networks work, averts this at least once. Progress on a set of calculations is shown in the normal way a computer would display it...with a heavily chunked progress bar, the end segment blinking, and stuck at a certain percent. No estimated time is shown.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder1');">    Film </div><div class="folder" id="folder1" isfolder="true" style="display:block;">
+<ul><li> In the <em><a class="twikilink" href="/pmwiki/pmwiki.php/Film/IronMan" title="/pmwiki/pmwiki.php/Film/IronMan">Iron Man</a></em> movie, during the final upload to the Mark I suit, the progress bar very visibly speeds up and jumps toward the end.
+</li><li> Parodied in <em><a class="twikilink" href="/pmwiki/pmwiki.php/Film/OfficeSpace" title="/pmwiki/pmwiki.php/Film/OfficeSpace">Office Space</a></em>. When Peter tries to leave before Lumbergh catches him, it appears that his progress bar will finish in time. Then it restarts... and restarts again... and again...
+</li><li> In the film <em><a class="twikilink" href="/pmwiki/pmwiki.php/Film/DOADeadOrAlive" title="/pmwiki/pmwiki.php/Film/DOADeadOrAlive">DOA: Dead or Alive</a> </em>, the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BigBad" title="/pmwiki/pmwiki.php/Main/BigBad">Big Bad</a> is uploading the plans for his invention to a bunch of international buyers. Naturally, the progress bar is quickly filling up, despite the fact that these buyers are all, presumably, located in different locations. When Wetherby manages to stop the upload, the bar <em>reverses</em> and quickly goes back to 0. Just to be more ridiculous, Wetherby calls in the government by going to CIA.GOV on an internet browser and... not doing much else. Apparently, that's enough to call in the cavalry, and the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BigBad" title="/pmwiki/pmwiki.php/Main/BigBad">Big Bad</a> is immediately warned by a large blinking message on his screen "CIA Notified".
+</li><li> Any movie or TV show where an illicit financial transaction is carried out. Instead of a real banking website, which takes just as long to process each money transfer, the computer will show a progress bar - as if the computer is actually moving individual banknotes and counting them as it does so...
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder2');">    Literature </div><div class="folder" id="folder2" isfolder="true" style="display:block;">
+<ul><li> One of the <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/Alias" title="/pmwiki/pmwiki.php/Series/Alias">Alias</a></em> novels has Sydney trying to upload a virus to a computer while pretending to be one of the spies for the Russian organization. Most of the tension of the scene is caused by the progress bar jumping back and slowing down at random, while the biggest threat to her cover is on her way to check the computer.
+</li></ul></div>
+<div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_3"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_3'); })</script></div></div><p></p><div class="folderlabel" onclick="togglefolder('folder3');">    Live-Action TV </div><div class="folder" id="folder3" isfolder="true" style="display:block;">
+<ul><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/BuffyTheVampireSlayer" title="/pmwiki/pmwiki.php/Series/BuffyTheVampireSlayer">Buffy the Vampire Slayer</a></em>, Willow has to try doing research without magic after her brush with "addiction". When a progress bar stops about halfway, she reaches her hand up to speed it along with magic, but then it suddenly finishes loading.
+</li><li> Used and averted on <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/Caprica" title="/pmwiki/pmwiki.php/Series/Caprica">Caprica</a></em>. Several times characters get frustrated because a progress bar sticks at 95% or so before resuming and completing.
+</li><li> Apparently not even <a class="twikilink" href="/pmwiki/pmwiki.php/Main/HigherTechSpecies" title="/pmwiki/pmwiki.php/Main/HigherTechSpecies">Higher-Tech Species</a> are immune: at one point in <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/StargateSG1" title="/pmwiki/pmwiki.php/Series/StargateSG1">Stargate SG-1</a></em>, an Asgard progress bar is shown at around 75% for a few minutes, then abruptly increases to 100% in a couple of seconds.
+</li><li> Played straight in <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/KamenRiderExAid" title="/pmwiki/pmwiki.php/Series/KamenRiderExAid">Kamen Rider Ex-Aid</a></em>, when the heroes are developing a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TransformationTrinket" title="/pmwiki/pmwiki.php/Main/TransformationTrinket">Gashat</a> that they hope will let them defeat the seemingly immortal <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TheUndead" title="/pmwiki/pmwiki.php/Main/TheUndead">Genm</a>. Hiiro goes out to stall for time while Taiga guards the computer downloading the anti-virus program and waits on the progress bar.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder4');">    Video Games </div><div class="folder" id="folder4" isfolder="true" style="display:block;">
+<ul><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/ProgressQuest" title="/pmwiki/pmwiki.php/VideoGame/ProgressQuest">Progress Quest</a></em>, each and every progress bar moves straight from 0% to 100%. However, they're not actually representing progress, they are just fixed video effects.
+</li><li> Scan progress in the <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MetroidPrimeTrilogy" title="/pmwiki/pmwiki.php/VideoGame/MetroidPrimeTrilogy">Metroid Prime Trilogy</a></em> games is always smooth, most likely because the scan data <a class="twikilink" href="/pmwiki/pmwiki.php/Main/FakeLongevity" title="/pmwiki/pmwiki.php/Main/FakeLongevity">doesn't actually take quite that long</a> to load. and maybe because it's a fixed length animation that will always take <em>that long to run</em>.
+</li><li> Used hilariously in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/ModernWarfare" title="/pmwiki/pmwiki.php/VideoGame/ModernWarfare">Modern Warfare</a> 2</em>. On one mission you're tasked with defending a computer system as it downloads files, but the 'time remaining' jumps all over the place as the transfer rate fluctuates. It flits between seven seconds and <em>nine hours</em> in one extreme example - this is clearly a humorous 'replication' of the Microsoft file transfer progress bar - the worst known example of an actual progress bar.
+<ul><li> It gets more ridiculous in harder difficulties. In "recruit" (Easy) it's pretty close to the real version. In "Veteran" (Expert) it can reach up to several days <span class="notelabel" onclick="togglenote('note0ked8');"><sup>note </sup></span><span class="inlinefolder" id="note0ked8" isnote="true" onclick="togglenote('note0ked8');" style="cursor:pointer;font-size:smaller;display:none;">counted in hours</span> and work slowly downward from there (just to make fighting off a full army of guys who can kill you in a few shots that much harder).
+</li></ul></li><li> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ProductPlacement" title="/pmwiki/pmwiki.php/Main/ProductPlacement">Product Placement</a> in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Wipeout" title="/pmwiki/pmwiki.php/VideoGame/Wipeout">Wipeout</a></em> went overboard when the commercial videos introduced in a post-release update played during the loading screen...and the loading bar would <em>stop</em> near the end as the video finished, whereas the bar had been perfectly accurate beforehand. The ads were since removed because players noticed this detail and felt anger about it. The game has was later updated to support new advertisements.
+</li><li> The first <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/WarioWare" title="/pmwiki/pmwiki.php/VideoGame/WarioWare">WarioWare</a></em> had menus modeled on a typical computer interface (the story being that Wario was programming the games, and you were working as a tester). When unlocking things, a progress bar would appear, and slow down and speed up while the new objects "loaded". The one for the title screen (if you don't skip the intro) moved at a constant rate, though.
+</li><li> Every single program used in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Uplink" title="/pmwiki/pmwiki.php/VideoGame/Uplink">Uplink</a></em> does this, though just how fast they reach completion depends on the processor speed in your Gateway computer. The only indication of their processes stopping before completion is if the bar fills up and then reads, "Failed".
+</li><li> Averted in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SOMA" title="/pmwiki/pmwiki.php/VideoGame/SOMA">SOMA</a></em>. Most, if not all of the computer terminals in Pathos-II have realistic lag when executing or loading programs. <span class="spoiler" title="you can set spoilers visible by default on your profile"> This almost prevents Simon Jarret's mind from being copied onto the ARK at the end.</span>
+<div class="indent"> <strong>Simon:</strong> I thought you guys would have better bandwidth in the future!
+</div></li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Payday2" title="/pmwiki/pmwiki.php/VideoGame/Payday2">Payday2</a></em>, every single tool you have has one. Which includes: hacking interfaces for voting machines, computers you let <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MissionControl" title="/pmwiki/pmwiki.php/Main/MissionControl">Bain</a> access, and, inexplicably, the drills you use to open doors and safes.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder5');">    Web Comics </div><div class="folder" id="folder5" isfolder="true" style="display:block;">
+<ul><li> Parodied in <a class="urllink" href="http://xkcd.com/612/">this<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/Xkcd" title="/pmwiki/pmwiki.php/Webcomic/Xkcd">xkcd</a></em>.
+</li><li> Played straight and later lampshaded in <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/Homestuck" title="/pmwiki/pmwiki.php/Webcomic/Homestuck">Homestuck</a></em>. When Terezi's lusus hatches (and proceeds to be killed in a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BlatantLies" title="/pmwiki/pmwiki.php/Main/BlatantLies">totally surprising plot twist</a>) the doomsday timer activates, and it doesn't occur to Terezi at all to think about whether it brings about the apocalypse, or is simply the precisely calibrated timer to the end.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/UserFriendly" title="/pmwiki/pmwiki.php/Webcomic/UserFriendly">User Friendly</a></em>: <a class="urllink" href="http://www.userfriendly.org/cartoons/archives/99mar/19990318.html">The Microsoft Minute<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a>.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder6');">    Web Original </div><div class="folder" id="folder6" isfolder="true" style="display:block;">
+<ul><li> On MSN Games, you see an ad before and sometimes interrupting gameplay. Below the ad is a progress bar that says "x% complete" and progresses at a constant rate. If the ad is not a video, the game will begin exactly when the bar reaches 100%. Of course this is not a real progress bar but a fixed delay disguised as one. (In the case of videos, the game will begin when the video finishes playing.)
+<ul><li> There is a radio station named <a class="twikilink" href="/pmwiki/pmwiki.php/Main/NamesTheSame" title="/pmwiki/pmwiki.php/Main/NamesTheSame">Lite 96</a> whose site has this when <em>loading</em> the radio stream.
+</li></ul></li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/StarHarborNights" title="/pmwiki/pmwiki.php/Literature/StarHarborNights">Star Harbor Nights</a></em>, when an alien machine <a class="twikilink" href="/pmwiki/pmwiki.php/Main/HiveMind" title="/pmwiki/pmwiki.php/Main/HiveMind">Hive Mind</a> is trying to infiltrate a villainess's <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ElaborateUndergroundBase" title="/pmwiki/pmwiki.php/Main/ElaborateUndergroundBase">Elaborate Underground Base</a> full of <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Phlebotinum" title="/pmwiki/pmwiki.php/Main/Phlebotinum">Phlebotinum</a> waiting to be assimilated, the download progress bar keeps resetting and jumping around randomly, undermining her attempts to play <a class="twikilink" href="/pmwiki/pmwiki.php/Main/EnemyOfMyEnemy" title="/pmwiki/pmwiki.php/Main/EnemyOfMyEnemy">Enemy of My Enemy</a> with the government.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder7');">    Western Animation </div><div class="folder" id="folder7" isfolder="true" style="display:block;">
+<ul><li> Parodied in <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/TheFairlyOddParents" title="/pmwiki/pmwiki.php/WesternAnimation/TheFairlyOddParents">The Fairly OddParents</a></em> episode "Information Stupor Highway". While Mr. Crocker is uploading a file with a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TechnologyMarchesOn" title="/pmwiki/pmwiki.php/Main/TechnologyMarchesOn">1-month-old computer</a>, the progress bar actually drops to -1%, among other tortures.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/Futurama" title="/pmwiki/pmwiki.php/WesternAnimation/Futurama">Futurama</a></em>:
+<ul><li> Although the fake nose machine that also translates alien documents doesn't have a progress bar, it is stated that the exact process of translating a document could take anywhere from a few moments to a million years. The only indication of progress is the machine dinging. Two dings means it's done. Not like that, slightly more rapid.
+</li><li> On the other hand, downloading the entirety of a human being's personality into a robot is measurable with an exact progress bar and apparently only takes about one second, as seen when Fry dates a robot clone of Lucy Liu.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/StarTrekLowerDecks" title="/pmwiki/pmwiki.php/WesternAnimation/StarTrekLowerDecks">Star Trek: Lower Decks</a></em>: Averted in "Terminal Provocations" because Badgey's progress bar tends to lag or freeze.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder8');">    Real Life </div><div class="folder" id="folder8" isfolder="true" style="display:block;">
+<ul><li> You expected the bar to show you how <em>long</em> a process is going to take? Sorry, they tend to just show the amount of operations the program is going to perform. With no consideration of the order or complexity of those operations. Or how suited your computer is to performing any of them. It's a lot like watching someone build a Lego model: You can see the pieces adding up, and the picture tells you how it's going to look when it's finished, but those things do not give an accurate indication of the time involved.
+</li><li> Mac OS X 10.4 "Tiger" has a startup progress bar that moves at a constant rate, <a class="urllink" href="http://daringfireball.net/misc/2005/04/tiger_details#waitingforloginwindow">using information about the duration of the previous system boot to determine how quickly it should move<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a>. Though technically it isn't a progress bar at all since it doesn't indicate the progress of the current operation, but rather how long it took last time.
+<ul><li> 10.5 "Leopard" just tossed out this progress bar entirely, going straight from the gray Apple logo initially visible on boot to (after a couple of seconds) the login window.
+</li></ul></li><li> Some ATMs in Germany ("Postbank") show progress bars which move at a constant rate... And then, when they're full, start from the beginning. What's the purpose of a progress bar, when it doesn't give you any information at all?
+<ul><li> It does show that the system hasn't crashed. Without additional status text, though, it doesn't show the difference between "meaningful progress" and "stuck in an infinite loop".
+</li></ul></li><li> For the most part, one is more likely to see a <a class="urllink" href="http://xkcd.com/612/">hideous inversion<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a>. If copying a diverse enough set of files in Windows (XP and earlier in particular), it's not rare at all to see estimates of "5 seconds, 1 hour 34 minutes, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BlatantLies" title="/pmwiki/pmwiki.php/Main/BlatantLies">0 seconds</a>, 1 hour 56 minutes", etc, even if the transfer is halfway done.
+<ul><li> This has carried over into Windows Vista and 7, although it wasn't happened all the time anymore, and there is a reason behind why the estimates fluctuate. The estimated time remaining is based on the size of the file currently being copied, and assumes that all remaining files are the same size, meaning it is constantly changing.<span class="notelabel" onclick="togglenote('note02dhw');"><sup>Example </sup></span><span class="inlinefolder" id="note02dhw" isnote="true" onclick="togglenote('note02dhw');" style="cursor:pointer;font-size:smaller;display:none;">If one is copying one hundred 1KB .txt files, but also have an uncompressed three hour movie in between, the estimated time remaining will change from a few seconds to several hours when it starts copying the movie, and then back to a few seconds when it gets back to the .txt files.</span>
+</li><li> Some tools estimate progress based on the total sizes of the files being copied. This is equally inaccurate when file sizes vary, but in the opposite direction, because adding a file to a folder involves some overhead work.
+</li><li> Played straight in later versions of Windows with a much improved file copy algorithms, including a graph which shows the transfer rate.
+</li></ul></li><li> Sometimes the progress bar <em>is</em> exact but misleading. Linux has a tendency to aggressively cache files when transferring a large amount of data. When copying from a fast device to a slower device, files will appear to copy extremely quickly (the progress bar fills up quickly), then comes to a halt as the cache fills and becomes bottlenecked by the destination. Bonus points for when the progress bar fills up and disappears (or the cp/mv command you're running finishes), but the transfer isn't actually done (discovered when attempting to unmount the device) thanks to the write cache not being finished with its part.
+</li><li> The anti-piracy "You wouldn't steal a car" advert on many DVDs shows a girl downloading a movie. The progress bar is unrealistic, not just because it's completely smooth - but because it only takes about 20 seconds to complete. This may actually be enough to encourage people to use questionable download sites...
+</li><li> "Pacifiers" are an intentional aversion due to the difficulty of actually predicting the exact amount of time necessary to complete a given operation. Their primary purpose is to show the user that the computer is doing <em>something</em>, so that they know the system hasn't frozen or crashed. They come in two flavors:
+<ul><li> When doing something which might take a long time, but where the exact amount of time to complete is unknown, a fake progress bar is often used to show that something is happening. Such progress bars often start out at a slow but noticable speed at the beginning, but will keep slowing down towards the end. They usually stop filling around the 1/2 or 3/4 mark before suddenly filling up quickly when the system actually finishes.
+</li><li> Many applications and operating systems have decided to forego the progress bar entirely for a bar, or a circular indicator, that simply fills and re-empties, rotates, or scrolls at a constant rate. They may also slowly fade in from one side, then fade out on the other.
+</li></ul></li></ul></div>
+<hr/>
+</div>
+<div class="square_ad footer-article-ad main_2" data-isolated="0"></div>
+<div class="section-links" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<div class="titles">
+<div><h3 class="text-center text-uppercase">Previous</h3></div>
+<div><h3 class="text-center text-uppercase">Index</h3></div>
+<div><h3 class="text-center text-uppercase">Next</h3></div>
+</div>
+<div class="links">
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/EverythingSensor">Everything Sensor</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/MagicalComputer">Magical Computer</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/Expositron9000">Expositron 9000</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/ExactEavesdropping">Exact Eavesdropping</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/RuleOfPerception">Rule of Perception</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/ExtremeGraphicalRepresentation">Extreme Graphical Representation</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/ConfirmationBias">Confirmation Bias</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/QuoteSource/Internet">QuoteSource/Internet</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/GrammarNazi">Grammar Nazi</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/EveryoneLooksSexierIfFrench">Everyone Looks Sexier If French</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/ImageSource/OtherMedia">ImageSource/Other Media</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/FakeCharity">Fake Charity</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="outer_ads_by_salon_wrapper" id="exco_player_insert_div">
+</div>
+</article>
+<div id="main-content-sidebar"><div class="sidebar-item display-options">
+<ul class="sidebar display-toggles">
+<li>Show Spoilers <div class="display-toggle show-spoilers" id="sidebar-toggle-showspoilers"></div></li>
+<li>Night Vision <div class="display-toggle night-vision" id="sidebar-toggle-nightvision"></div></li>
+<li>Sticky Header <div class="display-toggle sticky-header" id="sidebar-toggle-stickyheader"></div></li>
+<li>Wide Load <div class="display-toggle wide-load" id="sidebar-toggle-wideload"></div></li>
+</ul>
+<script>updateDesktopPrefs();</script>
+</div>
+<div class="sidebar-item ad sb-ad-unit">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_2"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_2'); });</script> </div>
+</div></div>
+<div class="sidebar-item quick-links" itemtype="http://schema.org/SiteNavigationElement">
+<p class="sidebar-item-title" data-title="Important Links">Important Links</p>
+<div class="padded">
+<a href="/pmwiki/query.php?type=att">Ask The Tropers</a>
+<a href="/pmwiki/query.php?type=tf">Trope Finder</a>
+<a href="/pmwiki/query.php?type=ykts">You Know That Show...</a>
+<a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a>
+<a href="/pmwiki/review_activity.php">Reviews</a>
+<a data-modal-target="login" href="/pmwiki/lbs.php">Live Blogs</a>
+<a href="/pmwiki/ad-free-subscribe.php">Go Ad Free!</a> </div>
+</div>
+<div class="sidebar-item sb-ad-unit">
+<div class="sidebar-section">
+<div class="square_ad ad-size-300x600 ad-section text-center">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_3"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_3'); });</script> </div>
+</div> </div>
+</div>
+</div>
+<div class="sidebar-item">
+<p class="sidebar-item-title" data-title="Crucial Browsing">Crucial Browsing</p>
+<ul class="padded font-s" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><a data-click-toggle="active" href="javascript:void(0);">Genre</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/ActionAdventureTropes" title="Main/ActionAdventureTropes">Action Adventure</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ComedyTropes" title="Main/ComedyTropes">Comedy</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CommercialsTropes" title="Main/CommercialsTropes">Commercials</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CrimeAndPunishmentTropes" title="Main/CrimeAndPunishmentTropes">Crime &amp; Punishment</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DramaTropes" title="Main/DramaTropes">Drama</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/HorrorTropes" title="Main/HorrorTropes">Horror</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LoveTropes" title="Main/LoveTropes">Love</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NewsTropes" title="Main/NewsTropes">News</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ProfessionalWrestling" title="Main/ProfessionalWrestling">Professional Wrestling</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SpeculativeFictionTropes" title="Main/SpeculativeFictionTropes">Speculative Fiction</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SportsStoryTropes" title="Main/SportsStoryTropes">Sports Story</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/WarTropes" title="Main/WarTropes">War</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Media</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/Media" title="Main/Media">All Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/AnimationTropes" title="Main/AnimationTropes">Animation (Western)</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Anime" title="Main/Anime">Anime</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ComicBookTropes" title="Main/ComicBookTropes">Comic Book</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FanFic" title="FanFic/FanFics">Fan Fics</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Film" title="Main/Film">Film</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/GameTropes" title="Main/GameTropes">Game</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Literature" title="Main/Literature">Literature</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MusicAndSoundEffects" title="Main/MusicAndSoundEffects">Music And Sound Effects</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NewMediaTropes" title="Main/NewMediaTropes">New Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/PrintMediaTropes" title="Main/PrintMediaTropes">Print Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Radio" title="Main/Radio">Radio</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SequentialArt" title="Main/SequentialArt">Sequential Art</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TabletopGames" title="Main/TabletopGames">Tabletop Games</a></li>
+<li><a href="/pmwiki/pmwiki.php/UsefulNotes/Television" title="Main/Television">Television</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Theater" title="Main/Theater">Theater</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/VideogameTropes" title="Main/VideogameTropes">Videogame</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Webcomics" title="Main/Webcomics">Webcomics</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Narrative</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/UniversalTropes" title="Main/UniversalTropes">Universal</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/AppliedPhlebotinum" title="Main/AppliedPhlebotinum">Applied Phlebotinum</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CharacterizationTropes" title="Main/CharacterizationTropes">Characterization</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Characters" title="Main/Characters">Characters</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CharactersAsDevice" title="Main/CharactersAsDevice">Characters As Device</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Dialogue" title="Main/Dialogue">Dialogue</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Motifs" title="Main/Motifs">Motifs</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NarrativeDevices" title="Main/NarrativeDevices">Narrative Devices</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Paratext" title="Main/Paratext">Paratext</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Plots" title="Main/Plots">Plots</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Settings" title="Main/Settings">Settings</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Spectacle" title="Main/Spectacle">Spectacle</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Other Categories</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/BritishTellyTropes" title="Main/BritishTellyTropes">British Telly</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TheContributors" title="Main/TheContributors">The Contributors</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CreatorSpeak" title="Main/CreatorSpeak">Creator Speak</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Creators" title="Main/Creators">Creators</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DerivativeWorks" title="Main/DerivativeWorks">Derivative Works</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LanguageTropes" title="Main/LanguageTropes">Language</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LawsAndFormulas" title="Main/LawsAndFormulas">Laws And Formulas</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ShowBusiness" title="Main/ShowBusiness">Show Business</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SplitPersonalityTropes" title="Main/SplitPersonalityTropes">Split Personality</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/StockRoom" title="Main/StockRoom">Stock Room</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TropeTropes" title="Main/TropeTropes">Trope</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Tropes" title="Main/Tropes">Tropes</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TruthAndLies" title="Main/TruthAndLies">Truth And Lies</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TruthInTelevision" title="Main/TruthInTelevision">Truth In Television</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Topical Tropes</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/BetrayalTropes" title="Main/BetrayalTropes">Betrayal</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CensorshipTropes" title="Main/CensorshipTropes">Censorship</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CombatTropes" title="Main/CombatTropes">Combat</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DeathTropes" title="Main/DeathTropes">Death</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FamilyTropes" title="Main/FamilyTropes">Family</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FateAndProphecyTropes" title="Main/FateAndProphecyTropes">Fate And Prophecy</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FoodTropes" title="Main/FoodTropes">Food</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/HolidayTropes" title="Main/HolidayTropes">Holiday</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MemoryTropes" title="Main/MemoryTropes">Memory</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MoneyTropes" title="Main/MoneyTropes">Money</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MoralityTropes" title="Main/MoralityTropes">Morality</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/PoliticsTropes" title="Main/PoliticsTropes">Politics</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ReligionTropes" title="Main/ReligionTropes">Religion</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SchoolTropes" title="Main/SchoolTropes">School</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="sidebar-item showcase">
+<p class="sidebar-item-title" data-title="Community Showcase">Community Showcase <a class="bubble float-right hover-blue" href="/pmwiki/showcase.php">More</a></p>
+<p class="community-showcase">
+<a href="https://sharetv.com/shows/echo_chamber" onclick="trackOutboundLink('https://sharetv.com/shows/echo_chamber');" target="_blank">
+<img alt="" class="lazy-image" data-src="/images/communityShowcase-echochamber.jpg"/></a>
+<a href="/pmwiki/pmwiki.php/Webcomic/TwistedTropes">
+<img alt="" class="lazy-image" data-src="/img/howlandsc-side.jpg"/></a>
+</p>
+</div>
+<div class="sidebar-item sb-ad-unit" id="stick-cont">
+<div class="sidebar-section" id="stick-bar">
+<div class="square_ad ad-size-300x600 ad-section text-center">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_4"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_4'); });</script> </div>
+</div> </div>
+</div>
+</div>
+</div>
+</div>
+<div class="action-bar tablet-off" id="action-bar-bottom">
+<a class="scroll-to-top dead-button" href="#top-of-page" onclick="$('html, body').animate({scrollTop : 0},500);">Top</a>
+</div>
+</div>
+<div class="proper-ad-unit ad-sticky">
+<div id="proper-ad-tvtropes_sticky_ad"> <script>propertag.cmd.push(function() { proper_display('tvtropes_sticky_ad'); });</script> </div>
+</div>
+<footer id="main-footer">
+<div id="main-footer-inner">
+<div class="footer-left">
+<a class="img-link" href="/"><img alt="TV Tropes" class="lazy-image" data-src="/img/tvtropes-footer-logo.png" title="TV Tropes"/></a>
+<form action="index.html" class="navbar-form newsletter-signup validate modal-replies" data-ajax-get="/ajax/subscribe_email.php" id="cse-search-box-mobile" name="" role="">
+<button class="btn-submit newsletter-signup-submit-button" id="subscribe-btn" type="submit"><i class="fa fa-paper-plane"></i></button>
+<input class="form-control" id="subscription-email" name="q" placeholder="Subscribe" size="31" type="text" validate-type="email" value=""/>
+</form>
+<ul class="social-buttons">
+<li><a class="btn fb" href="https://www.facebook.com/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-facebook']);" target="_blank"><i class="fa fa-facebook"></i></a></li>
+<li><a class="btn tw" href="https://www.twitter.com/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-twitter']);" target="_blank"><i class="fa fa-twitter"></i></a> </li>
+<li><a class="btn rd" href="https://www.reddit.com/r/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-reddit']);" target="_blank"><i class="fa fa-reddit-alien"></i></a></li>
+</ul>
+</div>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">TVTropes</h4></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Administrivia">About TVTropes</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TheGoalsOfTVTropes">TVTropes Goals</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TheTropingCode">Troping Code</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TVTropesCustoms">TVTropes Customs</a></li>
+<li><a href="/pmwiki/pmwiki.php/JustForFun/TropesOfLegend">Tropes of Legend</a></li>
+<li><a href="/pmwiki/ad-free-subscribe.php">Go Ad-Free</a></li>
+</ul>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">Community</h4></li>
+<li><a href="/pmwiki/query.php?type=att">Ask The Tropers</a></li>
+<li><a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a></li>
+<li><a href="/pmwiki/query.php?type=tf">Trope Finder</a></li>
+<li><a href="/pmwiki/query.php?type=ykts">You Know That Show</a></li>
+<li><a data-modal-target="login" href="/pmwiki/lbs.php">Live Blogs</a></li>
+<li><a href="/pmwiki/review_activity.php">Reviews</a></li>
+<li><a href="/pmwiki/topics.php">Forum</a></li>
+</ul>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">Tropes HQ</h4></li>
+<li><a href="/pmwiki/about.php">About Us</a></li>
+<li><a href="/pmwiki/contact.php">Contact Us</a></li>
+<li><a href="/pmwiki/dmca.php">DMCA Notice</a></li>
+<li><a href="/pmwiki/privacypolicy.php">Privacy Policy</a></li>
+</ul>
+</div>
+<div class="text-center gutter-top gutter-bottom tablet-on" id="desktop-on-mobile-toggle">
+<a href="/pmwiki/switchDeviceCss.php?mobileVersion=1" rel="nofollow">Switch to <span class="txt-desktop">Desktop</span><span class="txt-mobile">Mobile</span> Version</a>
+</div>
+<div class="legal">
+<p>TVTropes is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License. <br/>Permissions beyond the scope of this license may be available from <a href="mailto:thestaff@tvtropes.org" rel="cc:morePermissions" xmlns:cc="http://creativecommons.org/ns#"> thestaff@tvtropes.org</a>.</p>
+<br/>
+<div class="privacy_wrapper">
+</div>
+</div>
+</footer>
+<style>
+      div.fc-ccpa-root {
+        position: absolute !important;
+        bottom: 93px !important;
+        margin: auto !important;
+        width: 100% !important;
+        z-index: 9999 !important;
+      }
+      .fc-ccpa-root .fc-dns-dialog .fc-dns-link p{
+        outline: none !important;
+        text-decoration: underline !important;
+        font-size: .7em !important;
+        font-family: sans-serif !important;
+      }
+      .fc-ccpa-root .fc-dns-dialog .fc-dns-link .fc-button-background {
+        background: none !important;
+      }
+    </style>
+<div class="full-screen" id="_pm_videoViewer">
+<a class="close" href="#close" id="_pm_videoViewer-close"></a>
+<div class="_pmvv-body">
+<div class="_pmvv-vidbox">
+<video class="video-js vjs-default-skin vjs-16-9" data-video-id="" id="overlay-video-player-box">
+</video>
+<div class="_pmvv-vidbox-desc">
+<h1 id="overlay-title"></h1>
+<p class="_pmvv-vidbox-descTxt" id="overlay-descrip">
+</p>
+<div class="rating-row" data-video-id="">
+<input name="is_logged_in" type="hidden" value="0"/>
+<p>How well does it match the trope?</p>
+<div id="star-rating-group">
+<div class="trope-rate">
+<input id="lamp5" name="rate" type="radio" value="5"/>
+<label for="lamp5" title="Absolutely"></label>
+<input id="lamp4" name="rate" type="radio" value="4"/>
+<label for="lamp4" title="Yes"></label>
+<input id="lamp3" name="rate" type="radio" value="3"/>
+<label for="lamp3" title="Kind of"></label>
+<input id="lamp2" name="rate" type="radio" value="2"/>
+<label for="lamp2" title="Not really"></label>
+<input id="lamp1" name="rate" type="radio" value="1"/>
+<label for="lamp1" title="No"></label>
+</div>
+<div id="star-rating-total">
+</div>
+</div>
+</div>
+<div class="example-media-row">
+<div class="example-overlay">
+<p>Example of:</p>
+<div id="overlay-trope"> / </div>
+</div>
+<div class="media-sources-overlay example-overlay">
+<p>Media sources:</p>
+<div id="overlay-media"> / </div>
+</div>
+</div>
+<p class="_pmvv-vidbox-stats text-right font-s" style="padding-top:8px; border-top: solid 1px rgba(255,255,255,0.2)">
+<a class="float-right" data-modal-target="login" href="#video-feedback">Report</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+        window.special_ops =  {
+            member : 'no',
+            isolated : 0,
+            tags : ['unknown']
+        };
+    </script>
+<script type="text/javascript">
+
+        var cleanCreativeEnabled = "";
+        var donation = "";
+        var live_ads = "1";
+        var img_domain = "https://static.tvtropes.org";
+        var snoozed = cookies.read('snoozedabm');
+        var snoozable = "";
+
+        if (adsRemovedWith) {
+            live_ads = 0;
+        }
+
+        var elem = document.createElement('script');
+        elem.async = true;
+
+        elem.src = '/design/assets/bundle.js?rev=c58d8df02f09262390bbd03db7921fc35c6af306';
+
+        elem.onload = function() {
+                                 }
+        document.getElementsByTagName('head')[0].appendChild(elem);
+
+    </script>
+<script type="text/javascript">
+      function send_analytics_event(user_type, donation){
+          // if(user_type == 'uncached' || user_type == 'cached'){
+          //   ga('send', 'event', 'caching', 'load', user_type, {'nonInteraction': 1});
+          //   return;
+          // }
+          var event_name = user_type;
+
+          if(donation == 'true'){
+              event_name += "_donation"
+          }else if(typeof(valid_user) == 'undefined'){
+              event_name += "_blocked"
+          }else if(valid_user == true){
+              event_name += "_unblocked";
+          }else{
+              event_name = "_unknown"
+          }
+          ga('send', 'event', 'ads', 'load', event_name, {'nonInteraction': 1});
+      }
+
+    
+    send_analytics_event("guest", "false");
+      </script>
+</body>
+</html>

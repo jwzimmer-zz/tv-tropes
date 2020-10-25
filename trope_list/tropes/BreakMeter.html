@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Break Meter - TV Tropes</title>
+<meta content="The Break Meter adds another layer to gameplay and strategy by allowing a new route to defeat other than merely depleting Hit Points. It fills as a …" name="description"/>
+<link href="https://tvtropes.org/pmwiki/pmwiki.php/Main/BreakMeter" rel="canonical"/>
+<link href="/img/icons/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="@tvtropes" name="twitter:site"/>
+<meta content="@tvtropes" name="twitter:owner"/>
+<meta content="Break Meter - TV Tropes" name="twitter:title"/>
+<meta content="The Break Meter adds another layer to gameplay and strategy by allowing a new route to defeat other than merely depleting Hit Points. It fills as a …" name="twitter:description"/>
+<meta content="https://static.tvtropes.org/pmwiki/pub/images/break.jpg" name="twitter:image:src"/>
+<meta content="TV Tropes" property="og:site_name"/>
+<meta content="en_US" property="og:locale"/>
+<meta content="https://www.facebook.com/tvtropes" property="article:publisher"/>
+<meta content="Break Meter - TV Tropes" property="og:title"/>
+<meta content="website" property="og:type"/>
+<meta content="https://tvtropes.org/pmwiki/pmwiki.php/Main/BreakMeter" property="og:url"/>
+<meta content="https://static.tvtropes.org/pmwiki/pub/images/break.jpg" property="og:image"/>
+<meta content='The Break Meter adds another layer to gameplay and strategy by allowing a new route to defeat other than merely depleting Hit Points. It fills as a character is damaged and, when full, the character is "broken" and will be more vulnerable to …' property="og:description"/>
+<link href="/img/icons/apple-icon-57x57.png" rel="apple-touch-icon" sizes="57x57" type="image/png"/>
+<link href="/img/icons/apple-icon-60x60.png" rel="apple-touch-icon" sizes="60x60" type="image/png"/>
+<link href="/img/icons/apple-icon-72x72.png" rel="apple-touch-icon" sizes="72x72" type="image/png"/>
+<link href="/img/icons/apple-icon-76x76.png" rel="apple-touch-icon" sizes="76x76" type="image/png"/>
+<link href="/img/icons/apple-icon-114x114.png" rel="apple-touch-icon" sizes="114x114" type="image/png"/>
+<link href="/img/icons/apple-icon-120x120.png" rel="apple-touch-icon" sizes="120x120" type="image/png"/>
+<link href="/img/icons/apple-icon-144x144.png" rel="apple-touch-icon" sizes="144x144" type="image/png"/>
+<link href="/img/icons/apple-icon-152x152.png" rel="apple-touch-icon" sizes="152x152" type="image/png"/>
+<link href="/img/icons/apple-icon-180x180.png" rel="apple-touch-icon" sizes="180x180" type="image/png"/>
+<link href="/img/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/img/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/img/icons/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png"/>
+<link href="/img/icons/favicon-192x192.png" rel="icon" sizes="192x192" type="image/png"/>
+<meta content="width=device-width, initial-scale=1" id="viewport" name="viewport"/>
+<script>
+                var propertag = {};
+                propertag.cmd = [];
+            </script>
+<link href="/design/assets/bundle.css?rev=c58d8df02f09262390bbd03db7921fc35c6af306" rel="stylesheet"/>
+<script>
+                function object(objectId) {
+                    if (document.getElementById && document.getElementById(objectId)) {
+                        return document.getElementById(objectId);
+                    } else if (document.all && document.all(objectId)) {
+                        return document.all(objectId);
+                    } else if (document.layers && document.layers[objectId]) {
+                        return document.layers[objectId];
+                    } else {
+                        return false;
+                    }
+                }
+
+                // JAVASCRIPT COOKIES CODE: for getting and setting user viewing preferences
+                var cookies = {
+                    create: function (name, value, days2expire, path) {
+                        var date = new Date();
+                        date.setTime(date.getTime() + (days2expire * 24 * 60 * 60 * 1000));
+                        var expires = date.toUTCString();
+                        document.cookie = name + '=' + value + ';' + 'expires=' + expires + ';' + 'path=' + path + ';';
+                    },
+										createWithExpire: function(name, value, expires, path) {
+												document.cookie = name + '=' + value + ';' + 'expires=' + expires + ';' + 'path=' + path + ';';
+										},
+                    read: function (name) {
+                        var cookie_value = "",
+                            current_cookie = "",
+                            name_expr = name + "=",
+                            all_cookies = document.cookie.split(';'),
+                            n = all_cookies.length;
+
+                        for (var i = 0; i < n; i++) {
+                            current_cookie = all_cookies[i].trim();
+                            if (current_cookie.indexOf(name_expr) === 0) {
+                                cookie_value = current_cookie.substring(name_expr.length, current_cookie.length);
+                                break;
+                            }
+                        }
+                        return cookie_value;
+                    },
+                    update: function (name, val) {
+                        this.create(name, val, 300, "/");
+                    },
+                    remove: function (name) {
+                        document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
+                    }
+                };
+
+                function updateUserPrefs() {
+                    //GENERAL: detect and set browser, if not cookied (will be treated like a user-preference and added to the #user-pref element)
+                    if( !cookies.read('user-browser') ){
+                        var broswer = '';
+
+                        if(navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPod/i) ){
+                            browser = 'iOS';
+                        } else if (/Opera[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'opera';
+                        } else if (/MSIE (\d+\.\d+);/.test(navigator.userAgent)) {
+                            browser = 'MSIE';
+                        } else if (/Navigator[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'netscape';
+                        } else if (/Chrome[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'chrome';
+                        } else if (/Safari[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'safari';
+                            /Version[\/\s](\d+\.\d+)/.test(navigator.userAgent);
+                            browserVersion = new Number(RegExp.$1);
+                        } else if (/Firefox[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'firefox';
+                        } else {
+                            browser = 'internet_explorer';
+                        }
+                        cookies.create('user-browser',browser,1,'/');
+                        document.getElementById('user-prefs').classList.add('browser-' + browser);
+                    } else {
+                        document.getElementById('user-prefs').classList.add('browser-' + cookies.read('user-browser'));
+                    }
+
+                    //update user preference settings
+                    if (cookies.read('wide-load') !== '') document.getElementById('user-prefs').classList.add('wide-load');
+                    if (cookies.read('night-vision') !== '') document.getElementById('user-prefs').classList.add('night-vision');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('user-prefs').classList.add('sticky-header');
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('user-prefs').classList.add('show-spoilers');
+                    if (cookies.read('folders-open') !== '') document.getElementById('user-prefs').classList.add('folders-open');
+                    if (cookies.read('lefthand-sidebar') !== '') document.getElementById('user-prefs').classList.add('lefthand-sidebar');
+                    if (cookies.read('highlight-links') !== '') document.getElementById('user-prefs').classList.add('highlight-links');
+                    if (cookies.read('forum-gingerbread') !== '') document.getElementById('user-prefs').classList.add('forum-gingerbread');
+                    if (cookies.read('shared-avatars') !== '') document.getElementById('user-prefs').classList.add('shared-avatars');
+                    if (cookies.read('new-search') !== '') document.getElementById('user-prefs').classList.add('new-search');
+                    if (cookies.read('stop-auto-play-video') !== '') document.getElementById('user-prefs').classList.add('stop-auto-play-video');
+
+                    //desktop view on mobile
+                    if (cookies.read('desktop-on-mobile') !== ''){
+                        document.getElementById('user-prefs').classList.add('desktop-on-mobile');
+
+                        var viewport = document.querySelector("meta[name=viewport]");
+                        viewport.setAttribute('content', 'width=1000');
+                    }
+
+                }
+
+                function updateDesktopPrefs() {
+                    if (cookies.read('wide-load') !== '') document.getElementById('sidebar-toggle-wideload').classList.add('active');
+                    if (cookies.read('night-vision') !== '') document.getElementById('sidebar-toggle-nightvision').classList.add('active');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('sidebar-toggle-stickyheader').classList.add('active');
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('sidebar-toggle-showspoilers').classList.add('active');
+
+                }
+
+                function updateMobilePrefs() {
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('mobile-toggle-showspoilers').classList.add('active');
+                    if (cookies.read('night-vision') !== '') document.getElementById('mobile-toggle-nightvision').classList.add('active');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('mobile-toggle-stickyheader').classList.add('active');
+                    if (cookies.read('highlight-links') !== '') document.getElementById('mobile-toggle-highlightlinks').classList.add('active');
+
+                }
+
+
+                if (document.cookie.indexOf("scroll0=") < 0) {
+                    // do nothing
+                } else {
+                    console.log('ads removed by scroll.com');
+                    var adsRemovedWith = 'scroll';
+                    var style = document.createElement('style');
+                    style.innerHTML = '#header-ad, .proper-ad-unit, .square_ad, .sb-ad-unit { display: none !important; } ';
+                    document.head.appendChild(style);
+                }
+            </script>
+<script type="text/javascript">
+
+                var tvtropes_config = {
+                    astri_stream_enabled : "",
+                    is_logged_in         : "",
+                    handle               : "",
+                    get_astri_stream     : "",
+										revnum               : "c58d8df02f09262390bbd03db7921fc35c6af306",
+										img_domain           : "https://static.tvtropes.org",
+										adblock              : "1",
+										adblock_url          : "propermessage.io",
+										pause_editing        : "0",
+										pause_editing_msg    : "",
+										pause_site_changes   : ""
+                };
+            </script>
+<script type="text/javascript">
+						  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+						  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+						  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+						  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+						  ga('create', 'UA-3821842-1', 'auto');
+						  ga('send', 'pageview');
+
+						</script>
+</head>
+<body class="">
+<i id="user-prefs"></i>
+<script>updateUserPrefs();</script>
+<div id="fb-root"></div>
+<div id="modal-box"></div>
+<header class="headroom-element" id="main-header-bar">
+<div id="main-header-bar-inner">
+<span class="header-spacer" id="header-spacer-left"></span>
+<a class="mobile-menu-toggle-button tablet-on" href="#mobile-menu" id="main-mobile-toggle"><span></span><span></span><span></span></a>
+<a class="no-dev" href="/" id="main-header-logoButton"></a>
+<span class="header-spacer" id="header-spacer-right"></span>
+<nav class="tablet-off" id="main-header-nav">
+<a href="/pmwiki/pmwiki.php/Main/Tropes">Tropes</a>
+<a href="/pmwiki/pmwiki.php/Main/Media">Media</a>
+<a class="nav-browse" href="/pmwiki/browse.php">Browse</a>
+<a href="/pmwiki/index_report.php">Indexes</a>
+<a href="/pmwiki/topics.php">Forums</a>
+<a class="nav-browse" href="/pmwiki/recent_videos.php">Videos</a>
+</nav>
+<div id="main-header-bar-right">
+<div class="font-xs mobile-off" id="signup-login-box">
+<a class="hover-underline bold" data-modal-target="signup" href="/pmwiki/login.php">Join</a>
+<a class="hover-underline bold" data-modal-target="login" href="/pmwiki/login.php">Login</a>
+</div>
+<div class="mobile-on inline" id="signup-login-mobileToggle">
+<a data-modal-target="login" href="/pmwiki/login.php"><i class="fa fa-user"></i></a>
+</div>
+<div id="search-box">
+<form action="/pmwiki/search_result.php" class="search">
+<input class="search-box" name="q" placeholder="Search" required="" type="text" value=""/>
+<input class="submit-button" type="submit" value=""/>
+<input name="search_type" type="hidden" value="article"/>
+<input name="page_type" type="hidden" value="all"/>
+<input name="cx" type="hidden" value="partner-pub-6610802604051523:amzitfn8e7v"/>
+<input name="cof" type="hidden" value="FORID:10"/>
+<input name="ie" type="hidden" value="ISO-8859-1"/>
+<input name="siteurl" type="hidden" value=""/>
+<input name="ref" type="hidden" value=""/>
+<input name="ss" type="hidden" value=""/>
+</form>
+<a class="mobile-on mobile-search-toggle close-x" href="#close-search"><i class="fa fa-close"></i></a>
+</div>
+<div id="random-box">
+<a class="button-random-trope" href="/pmwiki/pmwiki.php/Main/HiroshimaAsAUnitOfMeasure" onclick="ga('send', 'event', 'button', 'click', 'random trope');" rel="nofollow"></a>
+<a class="button-random-media" href="/pmwiki/pmwiki.php/Pinball/NoFearDangerousSports" onclick="ga('send', 'event', 'button', 'click', 'random media');" rel="nofollow"></a>
+</div>
+</div>
+</div>
+<div class="tablet-on" id="mobile-menu"><div class="mobile-menu-options">
+<div class="nav-wrapper">
+<a class="xl" href="/pmwiki/pmwiki.php/Main/Tropes">Tropes</a>
+<a class="xl" href="/pmwiki/pmwiki.php/Main/Media">Media</a>
+<a class="xl" href="/pmwiki/browse.php">Browse</a>
+<a class="xl" href="/pmwiki/index_report.php">Indexes</a>
+<a class="xl" href="/pmwiki/topics.php">Forums</a>
+<a class="xl" href="/pmwiki/recent_videos.php">Videos</a>
+<a href="/pmwiki/query.php?type=att">Ask The Tropers</a>
+<a href="/pmwiki/query.php?type=tf">Trope Finder</a>
+<a href="/pmwiki/query.php?type=ykts">You Know That Show...</a>
+<a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a>
+<a data-click-toggle="active" href="#tools">Tools <i class="fa fa-chevron-down"></i></a>
+<div class="tools-dropdown mobile-dropdown-linkList">
+<a href="/pmwiki/cutlist.php">Cut List</a>
+<a href="/pmwiki/changes.php">New Edits</a>
+<a href="/pmwiki/recent_edit_reasons.php">Edit Reasons</a>
+<a href="/pmwiki/launches.php">Launches</a>
+<a href="/pmwiki/img_list.php">Images List</a>
+<a href="/pmwiki/crown_activity.php">Crowner Activity</a>
+<a href="/pmwiki/no_types.php">Un-typed Pages</a>
+<a href="/pmwiki/page_type_audit.php">Recent Page Type Changes</a>
+</div>
+<a data-click-toggle="active" href="#hq">Tropes HQ <i class="fa fa-chevron-down"></i></a>
+<div class="tools-dropdown mobile-dropdown-linkList">
+<a href="/pmwiki/about.php">About Us</a>
+<a href="/pmwiki/contact.php">Contact Us</a>
+<a href="mailto:advertising@proper.io">Advertise</a>
+<a href="/pmwiki/dmca.php">DMCA Notice</a>
+<a href="/pmwiki/privacypolicy.php">Privacy Policy</a>
+</div>
+<a href="/pmwiki/ad-free-subscribe.php">Go Ad-Free</a>
+<div class="toggle-switches">
+<ul class="mobile-menu display-toggles">
+<li>Show Spoilers <div class="display-toggle show-spoilers" id="mobile-toggle-showspoilers"></div></li>
+<li>Night Vision <div class="display-toggle night-vision" id="mobile-toggle-nightvision"></div></li>
+<li>Sticky Header <div class="display-toggle sticky-header" id="mobile-toggle-stickyheader"></div></li>
+<li>Highlight Links <div class="display-toggle highlight-links" id="mobile-toggle-highlightlinks"></div></li>
+</ul>
+<script>updateMobilePrefs();</script>
+</div>
+</div>
+</div>
+</div>
+</header>
+<div class="mobile-on" id="homepage-introBox-mobile">
+<a href="/"><img class="logo-small" src="/images/logo-white-big.png"/></a>
+<form action="/pmwiki/search_result.php" class="search" style="margin:10px -5px -6px -5px;">
+<input class="search-box" name="q" placeholder="Search" required="" type="text" value=""/>
+<input class="submit-button" type="submit" value=""/>
+<input name="search_type" type="hidden" value="article"/>
+<input name="page_type" type="hidden" value="all"/>
+<input name="cx" type="hidden" value="partner-pub-6610802604051523:amzitfn8e7v"/>
+<input name="cof" type="hidden" value="FORID:10"/>
+<input name="ie" type="hidden" value="ISO-8859-1"/>
+<input name="siteurl" type="hidden" value=""/>
+<input name="ref" type="hidden" value=""/>
+<input name="ss" type="hidden" value=""/>
+</form>
+</div>
+<div class="ad" id="header-ad-wrapper">
+<div id="header-ad">
+<div class="ad-size-970x90 atf_banner">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_1"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_1'); });</script> </div>
+</div> </div>
+</div>
+</div>
+<div id="main-container">
+<div class="action-bar mobile-off" id="action-bar-top">
+<div class="action-bar-right">
+<p>Follow TV Tropes</p>
+<a class="button-fb" href="https://www.facebook.com/TVTropes">
+<i class="fa fa-facebook"></i></a>
+<a class="button-tw" href="https://www.twitter.com/TVTropes">
+<i class="fa fa-twitter"></i></a>
+<a class="button-re" href="https://www.reddit.com/r/TVTropes">
+<i class="fa fa-reddit-alien"></i></a>
+</div>
+<nav class="actions-wrapper" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<ul class="page-actions" id="top_main_list">
+<li class="link-edit">
+<a class="article-edit-button" data-modal-target="login" href="/pmwiki/pmwiki.php/Main/BreakMeter?action=edit" rel="nofollow">
+<i class="fa fa-pencil"></i> Edit Page</a></li><li class="link-related"><a href="/pmwiki/relatedsearch.php?term=Main/BreakMeter">
+<i class="fa fa-share-alt"></i> Related</a></li><li class="link-history"><a href="/pmwiki/article_history.php?article=Main.BreakMeter">
+<i class="fa fa-history"></i> History</a></li><li class="link-discussion"><a href="/pmwiki/remarks.php?trope=Main.BreakMeter">
+<i class="fa fa-comment"></i> Discussion</a></li> </ul>
+<button class="nav__dropdown-toggle" id="top_more_button" onclick="toggle_more_menu('top');" type="button">More</button>
+<ul class="more_menu hidden_more_list" id="top_more_list">
+<li class="link-todo tuck-always more_list_item"><a data-modal-target="login" href="#todo"><i class="fa fa-check-circle"></i> To Do</a></li><li class="link-pageSource tuck-always more_list_item"><a data-modal-target="login" href="/pmwiki/pmwiki.php/Main/BreakMeter?action=source" rel="nofollow" target="_blank"><i class="fa fa-code"></i> Page Source</a></li> </ul>
+</nav>
+<div class="WikiWordModalStub"></div>
+<div class="ImgUploadModalStub" data-page-type="Article"></div>
+<div class="login-alert" style="display: none;">
+You need to <a href="/pmwiki/login.php" style="color:#21A0E8">login</a> to do this. <a href="/pmwiki/login.php?tab=register_account" style="color:#21A0E8">Get Known</a> if you don't have an account
+</div>
+</div>
+<div class="page-Article" id="main-content">
+<article class="with-sidebar" id="main-entry">
+<input id="groupname-hidden" type="hidden" value="Main"/>
+<input id="title-hidden" type="hidden" value="BreakMeter"/>
+<input id="article_id" type="hidden" value="54448"/>
+<input id="logged_in" type="hidden" value="false"/>
+<p class="hidden" id="current_url">http://tvtropes.org/pmwiki/pmwiki.php/Main/BreakMeter</p>
+<meta content="" itemprop="datePublished"/>
+<meta content="" itemprop="articleSection"/>
+<meta content="" itemprop="image"/>
+<a class="watch-button" data-modal-target="login" href="#watch">Follow<span>ing</span></a>
+<h1 class="entry-title" itemprop="headline">
+Break Meter
+</h1>
+<script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+                "@type": "ListItem",
+                "position": 1,
+                "name": "tvtropes.org",
+                "item": "https://tvtropes.org"
+            },{
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Tropes",
+                "item": "https://tvtropes.org/pmwiki/pmwiki.php/Main/Tropes"
+            },{
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Break Meter"            }]
+        }
+    </script>
+<a class="mobile-actionbar-toggle mobile-on" data-click-toggle="active" href="#mobile-actions-toggle" id="mobile-actionbar-toggle">
+<p class="tiny-off">Go To</p><span></span><span></span><span></span><i class="fa fa-pencil"></i></a>
+<nav class="mobile-actions-wrapper mobile-on" id="mobile-actions-bar"></nav>
+<div class="modal fade hidden-until-active" id="editLockModal">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button aria-label="Close" class="close" data-dismiss="modal" type="button"> <span aria-hidden="true">×</span></button>
+<h4 class="modal-title">Edit Locked</h4>
+</div>
+<div class="modal-body">
+<div class="row">
+<div class="body">
+<div class="danger troper_locked_message"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<nav class="body-options" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<ul class="subpage-links">
+<li>
+<a class="subpage-link curr-subpage" href="/pmwiki/pmwiki.php/Main/BreakMeter" title="The Main page">
+<span class="wrapper"><span class="spi main-page"></span>Main</span></a>
+</li>
+<li>
+<a class="subpage-link" href="/pmwiki/pmwiki.php/ImageLinks/BreakMeter" title="The ImageLinks page">
+<span class="wrapper">ImageLinks</span></a>
+</li>
+<li class="create-subpage dropdown">
+<a aria-expanded="false" class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);" role="button">
+<span class="wrapper">Create New <i class="fa fa-plus-circle"></i></span>
+</a>
+<select onchange="this.options[this.selectedIndex].value &amp;&amp; (window.location = this.options[this.selectedIndex].value);">
+<option value="">- Create New -</option>
+<option value="/pmwiki/pmwiki.php/Analysis/BreakMeter?action=edit">Analysis</option>
+<option value="/pmwiki/pmwiki.php/Characters/BreakMeter?action=edit">Characters</option>
+<option value="/pmwiki/pmwiki.php/FanficRecs/BreakMeter?action=edit">FanficRecs</option>
+<option value="/pmwiki/pmwiki.php/FanWorks/BreakMeter?action=edit">FanWorks</option>
+<option value="/pmwiki/pmwiki.php/Fridge/BreakMeter?action=edit">Fridge</option>
+<option value="/pmwiki/pmwiki.php/Haiku/BreakMeter?action=edit">Haiku</option>
+<option value="/pmwiki/pmwiki.php/Headscratchers/BreakMeter?action=edit">Headscratchers</option>
+<option value="/pmwiki/pmwiki.php/Laconic/BreakMeter?action=edit">Laconic</option>
+<option value="/pmwiki/pmwiki.php/PlayingWith/BreakMeter?action=edit">PlayingWith</option>
+<option value="/pmwiki/pmwiki.php/Quotes/BreakMeter?action=edit">Quotes</option>
+<option value="/pmwiki/pmwiki.php/Recap/BreakMeter?action=edit">Recap</option>
+<option value="/pmwiki/pmwiki.php/ReferencedBy/BreakMeter?action=edit">ReferencedBy</option>
+<option value="/pmwiki/pmwiki.php/Synopsis/BreakMeter?action=edit">Synopsis</option>
+<option value="/pmwiki/pmwiki.php/Timeline/BreakMeter?action=edit">Timeline</option>
+<option value="/pmwiki/pmwiki.php/Trivia/BreakMeter?action=edit">Trivia</option>
+<option value="/pmwiki/pmwiki.php/WMG/BreakMeter?action=edit">WMG</option>
+<option value="/pmwiki/pmwiki.php/YMMV/BreakMeter?action=edit">YMMV</option>
+</select>
+</li>
+</ul>
+</nav>
+<div class="article-content retro-folders" id="main-article">
+<p>
+
+
+
+The Break Meter adds another layer to gameplay and strategy by allowing a new route to defeat other than merely depleting <a class="twikilink" href="/pmwiki/pmwiki.php/Main/HitPoint" title="/pmwiki/pmwiki.php/Main/HitPoint">Hit Points</a>. It fills as a character is damaged and, when full, the character is "broken" and will be more vulnerable to attacks, be hit with criticals more often, and/or be unable to act. Occasionally, attacks or skills will behave radically differently against a broken enemy, with popular changes including the skill knocking them into the air and/or smashing them to the ground. Sometimes, breaking a character does just that; the character flees the battle.
+</p><div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_1"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_1'); })</script></div></div><p>Sometimes, games will provide special skills or abilities that are geared for causing break damage directly rather than physical damage, and strategies can be made up of getting an enemy to the break point, then wailing away on it.
+</p><p>Arcade Rail Shooters, such as the <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/HouseOfTheDead" title="/pmwiki/pmwiki.php/VideoGame/HouseOfTheDead">House of the Dead</a></em> series, use a similar mechanic during boss fights: underneath the boss's health meter is a smaller meter that, when emptied, halts the boss's attack. Failure to empty the bar in time typically results in taking damage.
+</p><p>The inverse of <a class="twikilink" href="/pmwiki/pmwiki.php/Main/LimitBreak" title="/pmwiki/pmwiki.php/Main/LimitBreak">Limit Break</a>, and an aversion of <a class="twikilink" href="/pmwiki/pmwiki.php/Main/CriticalExistenceFailure" title="/pmwiki/pmwiki.php/Main/CriticalExistenceFailure">Critical Existence Failure</a>. Often goes hand-in-hand with a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MoraleMechanic" title="/pmwiki/pmwiki.php/Main/MoraleMechanic">Morale Mechanic</a>, which represents a unit's "fighting spirit." Compare <a class="twikilink" href="/pmwiki/pmwiki.php/Main/InjuredVulnerability" title="/pmwiki/pmwiki.php/Main/InjuredVulnerability">Injured Vulnerability</a>.
+</p><p></p><hr/><div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_2"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_2'); })</script></div></div><h2>Examples:</h2>
+<div class="folderlabel" onclick="toggleAllFolders();">    open/close all folders  </div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder0');">    Action Game </div><div class="folder" id="folder0" isfolder="true" style="display:block;">
+<ul><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Arcuz" title="/pmwiki/pmwiki.php/VideoGame/Arcuz">Arcuz</a> II</em>, depleting a boss' break meter by hitting them enough is the <em>only</em> way to deal any proper, reliable damage to a boss or champion Mook. They take <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ScratchDamage" title="/pmwiki/pmwiki.php/Main/ScratchDamage">Scratch Damage</a> from attacks otherwise.
+</li><li> The large Oni of <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Toukiden" title="/pmwiki/pmwiki.php/VideoGame/Toukiden">Toukiden</a></em> can only be damaged after "surface resistance" is depleted; this is a purple bar displayed above their health bar when <a class="twikilink" href="/pmwiki/pmwiki.php/Main/EnemyScan" title="/pmwiki/pmwiki.php/Main/EnemyScan">your Eye of Truth</a> is active. In addition, severing and then purifying a limb leaves that part permanently vulnerable.<span class="notelabel" onclick="togglenote('note0ksb5');"><sup>note </sup></span><span class="inlinefolder" id="note0ksb5" isnote="true" onclick="togglenote('note0ksb5');" style="cursor:pointer;font-size:smaller;display:none;">This does not count as Subsystem Damage because the Oni can fight just as well with non-physical limbs.</span>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DragonBallXenoverse" title="/pmwiki/pmwiki.php/VideoGame/DragonBallXenoverse">Dragon Ball Xenoverse</a></em> has a Break Meter for <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AttackOfThe50FootWhatever" title="/pmwiki/pmwiki.php/Main/AttackOfThe50FootWhatever">Oozaru/Great Ape</a> battles, which takes more "damage" if you attack while the opponent is attacking. Once emptied, the Oozaru enters a stunned state and you can deal real damage (especially if you <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AttackItsWeakPoint" title="/pmwiki/pmwiki.php/Main/AttackItsWeakPoint">grab their tails</a>).
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/TheLegendOfZelda" title="/pmwiki/pmwiki.php/Franchise/TheLegendOfZelda">The Legend of Zelda</a></em> game <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/HyruleWarriors" title="/pmwiki/pmwiki.php/VideoGame/HyruleWarriors">Hyrule Warriors</a></em>, depleting an enemy's Weak Point Gauge allows a warrior to deal major damage to that enemy and those surrounding it.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder1');">    Action-Adventure </div><div class="folder" id="folder1" isfolder="true" style="display:block;">
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SekiroShadowsDieTwice" title="/pmwiki/pmwiki.php/VideoGame/SekiroShadowsDieTwice">Sekiro: Shadows Die Twice</a></em> has the Vitality gauge (HP) and Posture gauge (break). Depleting either of these bars will open up an enemy for a deathblow that instantly kills them (or wipes out one of their health bars if they have multiple "lives"). Certain attacks target posture more than vitality and generally enemies have less of the former than the latter, but posture also regenerates if the enemy isn't attacking or guarding (quicker than sound at high vitality, slower than growing grass at low vitality). The player has these same gauges, but having your posture broken usually just staggers your character and opens him up to an attack if you don't immediately dodge; in fact, only one enemy in the game (a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MirrorBoss" title="/pmwiki/pmwiki.php/Main/MirrorBoss">Mirror Boss</a>, at that) will deal a Deathblow on you after breaking your posture.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder2');">    Eastern RPG </div><div class="folder" id="folder2" isfolder="true" style="display:block;">
+<ul><li> Appears in Episodes II and III of the <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Xenosaga" title="/pmwiki/pmwiki.php/VideoGame/Xenosaga">Xenosaga</a></em> series, where both player characters and enemies can be broken.
+<ul><li> In II, broken characters could be knocked into the air or knocked to the ground, and would take large amounts of damage when hit. They would recover on their next turn. Characters were broken by hitting their weak points consecutively.
+</li><li> In III, broken characters would be unable to act for two or three turns and would be more likely to be hit by critical hits. Only physical attacks and techniques fill the break gauge, with some techs focusing primarily on causing break damage.
+</li></ul></li><li> The <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FinalFantasyXIII" title="/pmwiki/pmwiki.php/VideoGame/FinalFantasyXIII">Final Fantasy XIII</a></em> trilogy features this as a crucial game mechanic called "Stagger". By stringing together attacks, characters raise an enemy's "Chain Bonus" (damage multiplier) while trying to keep the timer from running out (which will reset the Chain Gauge to 100%). Once the Gauge hits a certain threshold, the enemy becomes "staggered", at which point the Chain Gauge rises by 100% (and it can still be raised). Ravagers have the ability to fill the gauge faster, but Commandos make the gauge drop slower and also boot enemies into the air with "Launch". Certain enemies also lose resistances to certain types of attacks or may effectively be shut down. In addition, the percentage of Break Gauge also influence the damage it takes. Basically, a Chain gauge of 300%, say, will amplify your attacks by 3 times. Certain monsters that are nigh un-Staggerable (having 999% as its Stagger breakpoint) may not even need to be Staggered as long as the Chain gauge is high enough that you're doing almost ten times the damage.
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/LightningReturnsFinalFantasyXIII" title="/pmwiki/pmwiki.php/VideoGame/LightningReturnsFinalFantasyXIII">Lightning Returns: Final Fantasy XIII</a></em> has a variation on this. The Chain Gauge is no longer an explicit bar, instead being replaced by a Stagger Wave. The extent to which an enemy is close to being Staggered is represented by a wave; the closer it is to being Staggered, the wave will be larger and colored red. There are many different conditions for Stagger, and some enemies can be Staggered further for additional damage. However, some enemies can only be damaged after multiple Staggers, including the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BonusBoss" title="/pmwiki/pmwiki.php/Main/BonusBoss">Bonus Boss</a>. Also, the Chain Gauge-based damage boost mentioned above no longer applies.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/WorldOfFinalFantasy" title="/pmwiki/pmwiki.php/VideoGame/WorldOfFinalFantasy">World of Final Fantasy</a></em> has topple. You and your <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Mon" title="/pmwiki/pmwiki.php/Main/Mon">Mons</a> (as well as most enemies) sit atop each other's heads to create stacks of up to 3. While stacked the stats of all 3 characters are combined and extra combo attacks can be formed if like elements are stacked. Each stack has a stability rating dependent on the choice of stacking, and taking damage can cause a stack to start wobbling - higher stability means more damage needed to wobble. Continue taking damage and the wobbling gets worse until it topples, separating into its constituent weaker parts and briefly stunning them. Any of the component characters can then rebuild the stack with the Stack command. A wobbling stack can be stabilized with items or abilities, and there also exist attacks specifically designed to have a high topple chance - some of which virtually guarantee an enemy topple but also force the player to topple.
+</li><li> The Stagger meter ("Break" in Japan) in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FinalFantasyVIIRemake" title="/pmwiki/pmwiki.php/VideoGame/FinalFantasyVIIRemake">Final Fantasy VII Remake</a></em> is further refined from the <em>FFXIII</em> trilogy. The Stagger Gauge is below the Health bar, so when this is filled your enemy is knocked down and helpless, taking at least 160% more damage (this can be raised well beyond 400% with certain abilities). If they take too much damage, get hit by an attack they're weak to, or have a body part broken, a conscious enemy will get the "Pressured" status applied to their Stagger Gauge, where "Pressured" increases the rate that the Stagger Gauge fills.
+</li><li> The Stun Meter appears in some <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Atelier" title="/pmwiki/pmwiki.php/VideoGame/Atelier">Atelier</a></em> games, including <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/ManaKhemiaAlchemistsOfAlRevis" title="/pmwiki/pmwiki.php/VideoGame/ManaKhemiaAlchemistsOfAlRevis">Mana Khemia: Alchemists of Al-Revis</a></em> and <a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/ManaKhemia2FallOfAlchemy" title="/pmwiki/pmwiki.php/VideoGame/ManaKhemia2FallOfAlchemy">its sequel</a>, <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/AtelierShallie" title="/pmwiki/pmwiki.php/VideoGame/AtelierShallie">Atelier Shallie</a></em>, the <em>Mysterious</em> trilogy (<em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/AtelierSophie" title="/pmwiki/pmwiki.php/VideoGame/AtelierSophie">Atelier Sophie</a></em>, <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/AtelierFiris" title="/pmwiki/pmwiki.php/VideoGame/AtelierFiris">Atelier Firis</a></em>, and <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/AtelierLydieAndSuelle" title="/pmwiki/pmwiki.php/VideoGame/AtelierLydieAndSuelle">Atelier Lydie And Suelle</a></em>), and <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/AtelierLulua" title="/pmwiki/pmwiki.php/VideoGame/AtelierLulua">Atelier Lulua</a></em>. Both party members and enemies can be stunned, and effects generally include being forced to skip a turn (or multiple) and taking a guaranteed critical hit (though this may also remove the stun prematurely).
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Boktai" title="/pmwiki/pmwiki.php/VideoGame/Boktai">Lunar Knights</a></em> has shields as equippable items, so this comes into play. While it is possible to raise the limit for each shield <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GuideDangIt" title="/pmwiki/pmwiki.php/Main/GuideDangIt">in its own manner</a>, if you take too much abuse while blocking, you will be stunned. In the midst of a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ZergRush" title="/pmwiki/pmwiki.php/Main/ZergRush">Vorn rush</a>, this is the last thing you want.
+</li><li> Running out of Hero Gauge in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/ResonanceOfFate" title="/pmwiki/pmwiki.php/VideoGame/ResonanceOfFate">Resonance of Fate</a></em> does this to the player characters. Hero Gauge is consumed to perform a Hero Action, which bypasses the game's default <a class="twikilink" href="/pmwiki/pmwiki.php/Main/RealTimeWithPause" title="/pmwiki/pmwiki.php/Main/RealTimeWithPause">Real-Time with Pause</a> elements and replaces them with stylish aerial <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GunFu" title="/pmwiki/pmwiki.php/Main/GunFu">Gun Fu</a>. The problem is that the Hero Gauge is also used to replenish health when any one character's HP hits 0. Run out of Hero Gauge, and effects include: decreased accuracy, decreased firepower, takes extra damage, damage during this Mode cannot be healed, everyone cowers in fear, and <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MusicalSpoiler" title="/pmwiki/pmwiki.php/Main/MusicalSpoiler">the BGM changes</a>. Even worse, having the Gauge consumed to replenish health makes the maximum Gauge effectively smaller, albeit temporarily. In short, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/NintendoHard" title="/pmwiki/pmwiki.php/Main/NintendoHard">you do not want to screw things up</a>.
+<ul><li> A variation of the break mechanic also occurs here. Hero Gauge can be replenished by depleting an enemy's (or their <a class="twikilink" href="/pmwiki/pmwiki.php/Main/CognizantLimbs" title="/pmwiki/pmwiki.php/Main/CognizantLimbs">parts'</a>) HP. Dealing Direct Damage to an enemy has a chance to break its HP Gauge, which literally splits the HP bar in two, three, and maximum four smaller HP bars. Not only will this cause the enemy to be stunned for several seconds, emptying any one of the smaller HP bars will award a Hero Gauge back, even if the enemy or its part doesn't get destroyed yet.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TalesOfGraces" title="/pmwiki/pmwiki.php/VideoGame/TalesOfGraces">Tales of Graces</a></em> features Arles Rise (for the player party) and Arles Break (for enemies). Both states gives increased power, greater likelihood of staggering, and access to <a class="twikilink" href="/pmwiki/pmwiki.php/Main/LimitBreak" title="/pmwiki/pmwiki.php/Main/LimitBreak">Blast Calibers</a>.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MegaManXCommandMission" title="/pmwiki/pmwiki.php/VideoGame/MegaManXCommandMission">Mega Man X: Command Mission</a></em> has this as a gauge of the enemy's <em>initial</em> health at the start of a turn, divided into a yellow and a smaller orange part. It always starts out as full each time a character attacks them, however, it depletes quicker the more damage it takes. Once the health drops to the orange part, the enemy will "Break Down" and the party can use a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/CombinationAttack" title="/pmwiki/pmwiki.php/Main/CombinationAttack">Combination Attack</a> to finish it off.
+</li><li> Almost any video game coming from both <a class="twikilink" href="/pmwiki/pmwiki.php/Creator/IdeaFactory" title="/pmwiki/pmwiki.php/Creator/IdeaFactory">Idea Factory</a> and Compile Heart will feature this functionality.
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/BlazingSouls" title="/pmwiki/pmwiki.php/VideoGame/BlazingSouls">Blazing Souls</a></em>, from IF's flagship <em>Neverland</em> franchise, introduces this mechanic and it's even <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ExactlyWhatItSaysOnTheTin" title="/pmwiki/pmwiki.php/Main/ExactlyWhatItSaysOnTheTin">named as such</a>. Every enemy has a gauge that will take damage to a specific attack type (Destroy, Impact or Penetrate). Once a certain amount of that kind of damage is done to the Break Meter, the enemy will enter a "Broken/Break Over" status, and be completely susceptible to damage as if it had no defensive attributes. Some skills even get more hits against enemies in Broken status. Doing this is almost a must if you want to receive <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SurplusDamageBonus" title="/pmwiki/pmwiki.php/Main/SurplusDamageBonus">Surplus Damage Bonus</a> from Overkills.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/CrossEdge" title="/pmwiki/pmwiki.php/VideoGame/CrossEdge">Cross Edge</a></em> imports that mechanic from <em>Blazing Souls</em> and adds an extra spin at it. Aside from the HP bar, there were three other bars, each one colored green (Break), red (Burst), and blue (Down). Certain attacks from each character would deplete one of these three bars; if the red or blue bars emptied, the opponent was considered <em>Guard Broken</em>, and would take extra damage through the rest of the attack cycle. If the green bar was depleted, the opponent would be hit with an <em>Over Break</em>, and the attacker(s) got their full AP back. However, unlike in <em>Blazing Souls</em> due to <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ArtificialStupidity" title="/pmwiki/pmwiki.php/Main/ArtificialStupidity">Artificial Stupidity</a>, the enemy is fully capable of throwing these same tactics back at you.
+<ul><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TrinityUniverse" title="/pmwiki/pmwiki.php/VideoGame/TrinityUniverse">Trinity Universe</a></em>, as the Chapter 3 tutorial notes, certain bosses have a <em>Soul Barrier</em> which dramatically reduce damage taken from the players. If the bar was emptied through repeated attacks, the barrier would break and the enemy would enter <em>Soul Break</em>, which allows the player to deal more damage, but the boss would have increased offense as well. Some bosses would have a second barrier, which has lead to an exploit of double soul-breaking Lurker bosses to reap massive amounts of Experience.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Neptunia" title="/pmwiki/pmwiki.php/VideoGame/Neptunia">Neptunia</a></em> simplified it to a single break bar. Once it depleted, the attacker got full AP back, and the broken enemy took double damage.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/RecordOfAgarestWar" title="/pmwiki/pmwiki.php/VideoGame/RecordOfAgarestWar">Record of Agarest War</a></em> and <em>Zero</em> also had the Break meter but when you deplete it, you get an extended version of a Break Art. <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/RecordOfAgarestWar2" title="/pmwiki/pmwiki.php/VideoGame/RecordOfAgarestWar2">Record Of Agarest War 2</a></em> also had a Break meter but what it does is that it gives you an Up Orb to be able to use <a class="twikilink" href="/pmwiki/pmwiki.php/Main/LimitBreak" title="/pmwiki/pmwiki.php/Main/LimitBreak">Limit Breaks</a>.
+</li></ul></li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TalesOfVesperia" title="/pmwiki/pmwiki.php/VideoGame/TalesOfVesperia">Tales of Vesperia</a></em>, by wearing down one of an enemy's three different meters — each of which corresponds to different attack directions — you can perform a Fatal Strike, a move that instantly kills normal enemies, deals heavy damage to bosses and boosts the parties stats. Alternatively, you can hold off on using it to perform Fatal Chains, breaking the enemies' meters over and over again to get better grades.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/HybridHeaven" title="/pmwiki/pmwiki.php/VideoGame/HybridHeaven">Hybrid Heaven</a></em> has both the enemy and the player have body parts that can be attacked over and over again until that part gets heavily injured, resulting in the character having slower speed or weaker attacks. Attacking the head enough times can also cause the character to be dazed.
+</li><li> A large distinguishing feature of the <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/ChaosRings" title="/pmwiki/pmwiki.php/VideoGame/ChaosRings">Chaos Rings</a></em> series. Probably the second game to use the term "break gauge" to describe such a thing. Instead of having a break meter for each participant in battle, there is an overall one for the entire battle, which is filled or depleted as you attack enemies or take damage. When it swings towards the player, you get improved damage from your attacks and take less damage from the enemies. When it swings towards the enemies, the reverse happens.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DarkSouls" title="/pmwiki/pmwiki.php/VideoGame/DarkSouls">Dark Souls</a></em> uses a similar mechanic, known as "poise". Heavy armour and certain items or spells increase it, and it grants stagger resistance. Taking hits will stagger a target once its poise is broken, often leaving them vulnerable to a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/CriticalHit" title="/pmwiki/pmwiki.php/Main/CriticalHit">riposte</a>. This applies to enemies as well as the player.
+</li><li> Most of the bosses in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/GranblueFantasy" title="/pmwiki/pmwiki.php/VideoGame/GranblueFantasy">Granblue Fantasy</a></em> have a bar that when filled up from taking enough damage activates Overdrive mode. Bosses in Overdrive Mode become more aggressive, usually gaining new <a class="twikilink" href="/pmwiki/pmwiki.php/Main/LimitBreak" title="/pmwiki/pmwiki.php/Main/LimitBreak">Charge Attacks</a>. However, when the gauge is emptied again with sufficient damage or other means, bosses will enter Break Mode, which make attacks against them deal more damage, as well as preventing them from gaining any charge for their Charge Attacks.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheLegendOfHeroesTrailsOfColdSteel" title="/pmwiki/pmwiki.php/VideoGame/TheLegendOfHeroesTrailsOfColdSteel">The Legend of Heroes: Trails of Cold Steel</a> III</em> has a bar for bosses that if depleted, allows players to guarantee a critical hit which will automatically give players a follow-up link attack. If the players don't deplete this fast enough however, the enemies will use up a turn to refill the gauge and enter Awakening Mode where their defenses are buffed and in bosses, fills up their CP gauge to full, allowing them to use their <a class="twikilink" href="/pmwiki/pmwiki.php/Main/LimitBreak" title="/pmwiki/pmwiki.php/Main/LimitBreak">Limit Break</a> in their next turn.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/OctopathTraveler" title="/pmwiki/pmwiki.php/VideoGame/OctopathTraveler">Octopath Traveler</a></em> has this as a core game mechanic. Every enemy has a numbered shield icon that is reduced whenever it's hit by a damage type it's weak against. If the number reaches 0, this makes the target Break, causing it to receive more damage, lose its next turn, and even lose its current turn if it hasn't moved yet.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/XenobladeChronicles" title="/pmwiki/pmwiki.php/VideoGame/XenobladeChronicles">Xenoblade Chronicles</a></em>, being a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SpiritualSuccessor" title="/pmwiki/pmwiki.php/Main/SpiritualSuccessor">Spiritual Successor</a> to the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/VideoGame" title="/pmwiki/pmwiki.php/Main/VideoGame">Video Game</a>/Xenosaga series, brings back the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BreakMeter" title="/pmwiki/pmwiki.php/Main/BreakMeter">Break Meter</a>, but does it differently because its an ARPG. Here it appears in the form of the Break-Topple-Daze chain. Break does nothing outside of putting a debuff on the target, but Topple stops the enemy in it's tracks and attacks done to it have increased critical rates, and Daze can completely shatter <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Seers" title="/pmwiki/pmwiki.php/Main/Seers">Shulk's</a> visions of the future. Topple can also be extended by using additional Topple or Daze moves, effectively keeping an enemy from doing anything while you whale on them, although watch out for Topple spikes, where the enemy will do damage to the party while they are Toppled. Also there are moves that can force Topple or Daze (like Melia's Starlight Kick if used after her Spear Break) and Chain attacks can bypass enemy resistances to any portion of the chain. Finally, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/CombatMedic" title="/pmwiki/pmwiki.php/Main/CombatMedic">Sharla</a> has an Art that can cause <a class="twikilink" href="/pmwiki/pmwiki.php/Main/OneHitKill" title="/pmwiki/pmwiki.php/Main/OneHitKill">Instant Death</a> to an enemy if they are Dazed.
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/XenobladeChroniclesX" title="/pmwiki/pmwiki.php/VideoGame/XenobladeChroniclesX">X</a></em> uses a similar system, but with different names. Break is changed to Stagger and Daze is changed to Stun. The other major differences is Stagger also acts as an interrupt and Topple and Stun can be forced onto the opponent without the previous, but it becomes easier to do so if you follow the chain.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/XenobladeChronicles2" title="/pmwiki/pmwiki.php/VideoGame/XenobladeChronicles2">Xenoblade Chronicles 2</a></em> calls the system a Driver Combo and changes it up just a bit more. Daze is replaced by <a class="twikilink" href="/pmwiki/pmwiki.php/Main/LauncherMove" title="/pmwiki/pmwiki.php/Main/LauncherMove">Launch</a> and there's a fourth step in <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MeteorMove" title="/pmwiki/pmwiki.php/Main/MeteorMove">Smash</a>. Every step starting with Topple also allows the party to do more damage to the inflicted enemy and spawns an HP Potion. Smash also does a large amount of damage and can spawn items and money after the enemy hits the floor. Finally, it can be combined with a Blade Combo, a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SpecialAttack" title="/pmwiki/pmwiki.php/Main/SpecialAttack">Super Move</a> chain, to create a Fusion Combo and increase the duration of both and add more to the Party Gauge.
+</li></ul></li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/YsSeven" title="/pmwiki/pmwiki.php/VideoGame/YsSeven">Ys Seven</a></em>, <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/YsMemoriesOfCelceta" title="/pmwiki/pmwiki.php/VideoGame/YsMemoriesOfCelceta">Ys: Memories of Celceta</a></em>, and <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/YsVIIILacrimosaOfDana" title="/pmwiki/pmwiki.php/VideoGame/YsVIIILacrimosaOfDana">Ys VIII: Lacrimosa of Dana</a></em>, enemies that are hit with a large number of attacks at once can be stunned; the latter also has a separate weakness break, where striking enemies with their attack weakness will eventually render them vulnerable to all weapons.
+</li></ul></div>
+<div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_3"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_3'); })</script></div></div><p></p><div class="folderlabel" onclick="togglefolder('folder3');">    Fighting Game </div><div class="folder" id="folder3" isfolder="true" style="display:block;">
+<ul><li> Used in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SuperSmashBros" title="/pmwiki/pmwiki.php/VideoGame/SuperSmashBros">Super Smash Bros.</a></em>: Each character can use a shield to reduce damage, but it shrinks over time. If you keep shielding until it breaks, you are stunned for a short duration... which is more than enough for other players to brutalize you off the screen. A smash attack with <a class="twikilink" href="/pmwiki/pmwiki.php/Main/PaperFanOfDoom" title="/pmwiki/pmwiki.php/Main/PaperFanOfDoom">the fan</a> automatically breaks any shield, no matter how much is left. Breaking a shield may also send the character into the air, depending on their weight and damage. The effects range from barely noticeable (Bowser) to sky-high (Kirby). Jigglypuff will actually <em><a class="twikilink" href="/pmwiki/pmwiki.php/Main/TwinkleInTheSky" title="/pmwiki/pmwiki.php/Main/TwinkleInTheSky">Star K.O.</a> itself</em> if its shield breaks, regardless of damage.
+<ul><li> Most bosses can be stunned if they take enough damage. Rathalos is unique in that he is stunned by throwing Deku Seeds, Explosive Barrels, and Pitfall Traps at his head like in his home series.
+</li></ul></li><li> Featured in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DissidiaFinalFantasy" title="/pmwiki/pmwiki.php/VideoGame/DissidiaFinalFantasy">Dissidia Final Fantasy</a></em>, which is appropriate since it is both an Eastern RPG <em>and</em> a Fighting Game. Brave attacks may break the enemy, meaning you can get the stage Bravery, which is usually a <em>considerable</em> boost, often enough to make any subsequent HP attack a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/OneHitKill" title="/pmwiki/pmwiki.php/Main/OneHitKill">One-Hit Kill</a>. Meanwhile, your enemy's HP attacks won't do any damage while they're in Break. However, landing an HP attack will automatically end Break.
+</li><li> The Guard Libra gauge in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/BlazBlue" title="/pmwiki/pmwiki.php/VideoGame/BlazBlue">BlazBlue</a></em> fills up as a player guards attacks. If filled completely, that player suffers a Barrier Crush and is paralyzed for several seconds.
+<ul><li> Revised as the Guard Primer system in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/BlazBlueContinuumShift" title="/pmwiki/pmwiki.php/VideoGame/BlazBlueContinuumShift">Continuum Shift</a></em>. Every character has a personal number of primers, which disappear one by one as they block specialized guard break attacks. When you lose all of them, you are guard broken and helpless.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DragonBallZBudokai" title="/pmwiki/pmwiki.php/VideoGame/DragonBallZBudokai"> Dragon Ball Z: Budokai</a> 3</em> features a fatigue gauge, that, if filled will cause a character to be tired out if knocked down with less than one Ki gauge.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SoulCalibur" title="/pmwiki/pmwiki.php/VideoGame/SoulCalibur">SoulCalibur</a> IV</em> introduces the Soul Gauge, which decreases when attacks are blocked. If it breaks, the player is temporarily stunned and open to a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/OneHitKO" title="/pmwiki/pmwiki.php/Main/OneHitKO">One-Hit KO</a> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/FinishingMove" title="/pmwiki/pmwiki.php/Main/FinishingMove">Finishing Move</a>.
+<ul><li> <em>Soul Edge</em>, the first game of the series, had <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BreakableWeapons" title="/pmwiki/pmwiki.php/Main/BreakableWeapons">Breakable Weapons</a> that both reduced your offensive output <em>and</em> made you take chip damage when blocking.
+</li></ul></li><li> Taunting in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/ArtOfFighting" title="/pmwiki/pmwiki.php/VideoGame/ArtOfFighting">Art of Fighting</a></em> reduces the special move gauge, which leaves many characters without an offensive arsenal. Notable in that the computer is actually bound by this, unlike some games.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SamuraiShodown" title="/pmwiki/pmwiki.php/VideoGame/SamuraiShodown">Samurai Shodown</a></em> is probably the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TropeCodifier" title="/pmwiki/pmwiki.php/Main/TropeCodifier">Trope Codifier</a>. Blocking too much or trading hits with a counter swing may lead up to weapon loss.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/StreetFighterAlpha3" title="/pmwiki/pmwiki.php/VideoGame/StreetFighterAlpha3">Street Fighter Alpha 3</a></em> added a Guard meter that would stun you for three seconds if it was broken. You could also <a class="twikilink" href="/pmwiki/pmwiki.php/Main/CastFromHitPoints" title="/pmwiki/pmwiki.php/Main/CastFromHitPoints">sacrifice some</a> of it for an easy <a class="twikilink" href="/pmwiki/pmwiki.php/Main/CounterAttack" title="/pmwiki/pmwiki.php/Main/CounterAttack">Counter-Attack</a> if it was obvious you were going to lose it. This meter also appeared in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/CapcomVsSNK2MarkOfTheMillennium" title="/pmwiki/pmwiki.php/VideoGame/CapcomVsSNK2MarkOfTheMillennium">Capcom vs. SNK 2</a></em>.
+<ul><li> In <em>Alpha 3</em>, the Guard meter gets shorter with each successive Guard Break, to discourage turtling.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheKingOfFighters" title="/pmwiki/pmwiki.php/VideoGame/TheKingOfFighters">The King of Fighters</a></em> has had this for the last few games. In <em>Maximum Impact</em>, the final boss's most powerful Super Move <em>instantly</em> breaks the meter if you block it, regardless of how much is left.
+</li><li> In the levels of <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DragonBallAdvanceAdventure" title="/pmwiki/pmwiki.php/VideoGame/DragonBallAdvanceAdventure">Dragon Ball: Advance Adventure</a></em> where you battle one opponent in a fighting game engine, both you and your opponent have a Rush Gauge. As long as it's not empty, you won't flinch or take damage from attacks, but each attack that you don't block or parry will deplete it. If you empty the opponent's Rush Gauge through continued attacks or a single counterattack after parrying, you break their guard and knock them back for a significant amount of time, and your attacks will make them flinch until you knock them down to the ground. After getting knocked down, their Rush Gauge will reset. It also refills on its own if you're not being attacked. Scoring a hit with a chi blast will immediately empty their Rush Gauge.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/OneMustFall" title="/pmwiki/pmwiki.php/VideoGame/OneMustFall">One Must Fall</a></em> features an "energy bar" that depletes differently basing on different injuries sustained (quick weak blows deplete it faster than slow strong blows). Once empty, it causes the player's bot to become incapacitated for a few seconds and open for a devastating combo.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/JojosBizarreAdventureHeritageForTheFuture" title="/pmwiki/pmwiki.php/VideoGame/JojosBizarreAdventureHeritageForTheFuture">Jojos Bizarre Adventure Heritage For The Future</a></em> has the Stand Meter. If a character takes too many hits to their Stand, they are "Stand Crushed" - the Stand disappears and they are staggered. (For extra <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ContinuityNod" title="/pmwiki/pmwiki.php/Main/ContinuityNod">Continuity Nod</a> value, the Stone Mask flashes in the background when this happens.)
+</li><li> In the story mode of the <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Touhou" title="/pmwiki/pmwiki.php/VideoGame/Touhou">Touhou</a></em> spinoffs <em>Scarlet Weather Rhapsody</em> and <em>Hisoutensoku</em>, enemies using spellcards have break meters. If you deal enough damage to them, they're stunned until it refills.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Anime/DragonBallZ" title="/pmwiki/pmwiki.php/Anime/DragonBallZ">Dragon Ball Z</a>: Supersonic Warriors</em> has a single gauge on top of the screen between each character's health bars, with a mark in the center that moves closer towards each health bar as that player blocks attacks from the other. If the mark is not in the center, and one player fails to block a strong attack from the other, either the first player will be stunned until the mark can reset (if it was closer to his health bar), or it will just reset itself immediately (if it was closer to the attacker's health bar).
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/PunchOut" title="/pmwiki/pmwiki.php/VideoGame/PunchOut">Punch-Out!!</a></em>:
+<ul><li> The player has a stamina meter. Every time the player blocks or gets damaged, their stamina drops and once it is empty, the player becomes too tired to attack. This leaves the player open to attacks from the enemy boxer and the player can only regain their energy once they successfully dodged an attack or get knocked down to the mat and get up again.
+</li><li> <em>Super Punch-Out</em> on the SNES has an invisible dizziness meter for opponents. The easiest way to raise this meter is to repeatedly counter their attacks (punch them in the right spot during windup). Once the meter is filled, they start to slide around in a daze. Hit them with good timing as they slide back to you to score an instant knockdown.
+</li></ul></li><li> The <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ManaMeter" title="/pmwiki/pmwiki.php/Main/ManaMeter">Mana Meter</a> in the <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MagicalGirlLyricalNanohaAsPortable" title="/pmwiki/pmwiki.php/VideoGame/MagicalGirlLyricalNanohaAsPortable">Magical Girl Lyrical Nanoha A's Portable </a></em> fighting games doubles as this. Be wary of blocking after casting a barrage of spells, as having the character's <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DeflectorShields" title="/pmwiki/pmwiki.php/Main/DeflectorShields">Deflector Shields</a> broken will leave them stunned for a long time.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Persona4Arena" title="/pmwiki/pmwiki.php/VideoGame/Persona4Arena">Persona 4: Arena</a></em> uses a system similar to the aforementioned <em>JoJo</em> fighting games - each character has several Persona cards (usually four, but can range from two to six), which can be lost if his/her Persona is hit during an attack. If all cards are lost, the affected character enters a "Persona Break" state for the next few seconds and can't use any attack that would require a Persona.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/UminekoGoldenFantasia" title="/pmwiki/pmwiki.php/VideoGame/UminekoGoldenFantasia">Umineko: Golden Fantasia</a></em> has a break limit meter that fills up when blocking attacks, and briefly stuns your character when full. The bar only empties when you tag your partner, with the amount removed depending on what type of Touch you used to switch characters. Chiester 410's ability causes the enemy's break limit to fill up faster, and Lambdadelta's fully empties the meter upon activation.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder4');">    First Person Shooter </div><div class="folder" id="folder4" isfolder="true" style="display:block;">
+<ul><li> Enemies in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/BrothersInArms" title="/pmwiki/pmwiki.php/VideoGame/BrothersInArms">Brothers in Arms</a></em> have a red circle over their heads, which loses slices as you shoot at or near them. When emptied, they're <a class="twikilink" href="/pmwiki/pmwiki.php/Main/PinnedDown" title="/pmwiki/pmwiki.php/Main/PinnedDown">Pinned Down</a> and have difficulty attacking. On Authentic difficulty, this feature is gone.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder5');">    MMORPG </div><div class="folder" id="folder5" isfolder="true" style="display:block;">
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/EdenEternal" title="/pmwiki/pmwiki.php/VideoGame/EdenEternal">Eden Eternal</a></em> has a variant only seen on bosses and elites. Depleting it merely staggers the enemy and offers an extremely brief respite from attacks, but it <em>does</em> open up the lower portion of the enemy's <a class="twikilink" href="/pmwiki/pmwiki.php/Main/RandomlyDrops" title="/pmwiki/pmwiki.php/Main/RandomlyDrops">loot table</a> where the killer stuff usually is.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/GuildWars2" title="/pmwiki/pmwiki.php/VideoGame/GuildWars2">Guild Wars 2</a></em>, in an attempt to offset both <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AntiClimaxBoss" title="/pmwiki/pmwiki.php/Main/AntiClimaxBoss">Anti-Climax Boss</a> <em>and</em> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/UselessUsefulSpell" title="/pmwiki/pmwiki.php/Main/UselessUsefulSpell">Useless Useful Spells</a>, the game has a mechanic known as Defiance for tough enemies. Once part of an innate buff, the first expansion reworked it into a full secondary bar, sometimes known as the break bar. Instead of their usual effects, crowd control abilities will damage the break bar based on their relative effectiveness. Once the break bar is depleted, one or more things happen depending on the enemy, usually involving interrupting their current action, fully stunning them, or making them more vulnerable for a short time.
+<ul><li> The break bar is occasionally used in other specific circumstances, like weaker enemies who have the break bar as their main weakness (providing different effects for depleting it, including instant death), or enemies and major bosses who do not have it all the time, but it appears alongside specific mechanics.
+</li></ul></li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder6');">    Rail Shooter </div><div class="folder" id="folder6" isfolder="true" style="display:block;">
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/HouseOfTheDead" title="/pmwiki/pmwiki.php/VideoGame/HouseOfTheDead">House of the Dead</a></em> included these for its bosses in later games. More than just shooting at it to kill the thing, often times you'd have to shoot at it in order to get it to stop attacking you for that phase.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder7');">    Real Time Strategy </div><div class="folder" id="folder7" isfolder="true" style="display:block;">
+<ul><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DawnOfWar" title="/pmwiki/pmwiki.php/VideoGame/DawnOfWar">Dawn of War</a></em>, squads have a morale meter that goes down as the squad takes damage. If this meter is emptied, the squad breaks and its troops become less effective in combat.
+<ul><li> "Less effective" herein meaning "they die twice as quick and deal next to no damage". Can actually be quite amusing, because their animations don't change. Thus, you can have a whole Space Marine Squad unloading <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MoreDakka" title="/pmwiki/pmwiki.php/Main/MoreDakka">More Dakka</a> into a much weaker enemy squad and doing absolutely nothing.
+</li></ul></li><li> In <a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Pharaoh" title="/pmwiki/pmwiki.php/VideoGame/Pharaoh">Pharaoh</a>, your military units have a morale bar that steadily goes down the longer combat lasts, and causes them to run back to their fort when completely panicked, and only move back out when they stop panicking. Ships have a different one depending on how tired the crew is: if they're exhausted the ship doesn't move until they're back at full strength.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/XCOM2" title="/pmwiki/pmwiki.php/VideoGame/XCOM2">XCOM 2</a>: War of the Chosen</em>: If one of the eponymous Chosen has the Bewildered vulnerability, they'll take extra damage when attacked three times or more in the same turn, in any way (gunfire, psionics, explosives, you name it).
+</li><li> The <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TotalWar" title="/pmwiki/pmwiki.php/VideoGame/TotalWar">Total War</a></em> series have a morale meter for all units. When a unit's morale depletes (aside from units that are or were rendered unbreakable for whatever reason and so <em>cannot</em> lose morale, probably meaning either they're <a class="twikilink" href="/pmwiki/pmwiki.php/Main/NotAfraidToDie" title="/pmwiki/pmwiki.php/Main/NotAfraidToDie">Not Afraid to Die</a> or <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DeathSeeker" title="/pmwiki/pmwiki.php/Main/DeathSeeker">Death Seekers</a>), such as from being exhausted, being outnumbered or overpowered by the enemy, taking damage (especially a lot very quickly), being outflanked, being around <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TheDreaded" title="/pmwiki/pmwiki.php/Main/TheDreaded">very scary enemies</a>, or <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DecapitatedArmy" title="/pmwiki/pmwiki.php/Main/DecapitatedArmy">having their general killed or abandon the field</a> they will run for their lives toward some end of the map until they can run off the battlefield or they avoid enemy contact long enough for their morale to restore or possibly are "shattered" and will just do only the former action. Taking advantage of morale penalties will allow armies to defeat enemy armies far faster than simply trying to kill them all without any semblance of tactics, though even without considering it, usually at least some of the losing army will survive long enough to break and flee before all are killed unless for some reason the entire losing army is unbreakable.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder8');">    Wide Open Sandbox </div><div class="folder" id="folder8" isfolder="true" style="display:block;">
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Prototype" title="/pmwiki/pmwiki.php/VideoGame/Prototype">[PROTOTYPE]</a>'s</em> <span class="spoiler" title="you can set spoilers visible by default on your profile"><a class="twikilink" href="/pmwiki/pmwiki.php/Main/TheDragon" title="/pmwiki/pmwiki.php/Main/TheDragon">Supreme Hunter</a></span> goes into a "stunned" mode when you inflict a cascade of sufficiently damaging blows in rapid succession. <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ActionCommands" title="/pmwiki/pmwiki.php/Main/ActionCommands">This allows you to get literally up close and personal for</a> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ButtonMashing" title="/pmwiki/pmwiki.php/Main/ButtonMashing">free hits if you wish</a>.
+</li></ul></div>
+<hr/>
+</div>
+<div class="square_ad footer-article-ad main_2" data-isolated="0"></div>
+<div class="section-links" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<div class="titles">
+<div><h3 class="text-center text-uppercase">Previous</h3></div>
+<div><h3 class="text-center text-uppercase">Index</h3></div>
+<div><h3 class="text-center text-uppercase">Next</h3></div>
+</div>
+<div class="links">
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/AwesomenessMeter">Awesomeness Meter</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/StatMeters">Stat Meters</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/ChargeMeter">Charge Meter</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/BossWarningSiren">Boss Warning Siren</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/VideoGameInterfaceElements">Video Game Interface Elements</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/CharacterModelKarmaMeter">Character Model Karma Meter</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="outer_ads_by_salon_wrapper" id="exco_player_insert_div">
+</div>
+</article>
+<div id="main-content-sidebar"><div class="sidebar-item display-options">
+<ul class="sidebar display-toggles">
+<li>Show Spoilers <div class="display-toggle show-spoilers" id="sidebar-toggle-showspoilers"></div></li>
+<li>Night Vision <div class="display-toggle night-vision" id="sidebar-toggle-nightvision"></div></li>
+<li>Sticky Header <div class="display-toggle sticky-header" id="sidebar-toggle-stickyheader"></div></li>
+<li>Wide Load <div class="display-toggle wide-load" id="sidebar-toggle-wideload"></div></li>
+</ul>
+<script>updateDesktopPrefs();</script>
+</div>
+<div class="sidebar-item ad sb-ad-unit">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_2"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_2'); });</script> </div>
+</div></div>
+<div class="sidebar-item quick-links" itemtype="http://schema.org/SiteNavigationElement">
+<p class="sidebar-item-title" data-title="Important Links">Important Links</p>
+<div class="padded">
+<a href="/pmwiki/query.php?type=att">Ask The Tropers</a>
+<a href="/pmwiki/query.php?type=tf">Trope Finder</a>
+<a href="/pmwiki/query.php?type=ykts">You Know That Show...</a>
+<a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a>
+<a href="/pmwiki/review_activity.php">Reviews</a>
+<a data-modal-target="login" href="/pmwiki/lbs.php">Live Blogs</a>
+<a href="/pmwiki/ad-free-subscribe.php">Go Ad Free!</a> </div>
+</div>
+<div class="sidebar-item sb-ad-unit">
+<div class="sidebar-section">
+<div class="square_ad ad-size-300x600 ad-section text-center">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_3"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_3'); });</script> </div>
+</div> </div>
+</div>
+</div>
+<div class="sidebar-item">
+<p class="sidebar-item-title" data-title="Crucial Browsing">Crucial Browsing</p>
+<ul class="padded font-s" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><a data-click-toggle="active" href="javascript:void(0);">Genre</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/ActionAdventureTropes" title="Main/ActionAdventureTropes">Action Adventure</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ComedyTropes" title="Main/ComedyTropes">Comedy</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CommercialsTropes" title="Main/CommercialsTropes">Commercials</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CrimeAndPunishmentTropes" title="Main/CrimeAndPunishmentTropes">Crime &amp; Punishment</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DramaTropes" title="Main/DramaTropes">Drama</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/HorrorTropes" title="Main/HorrorTropes">Horror</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LoveTropes" title="Main/LoveTropes">Love</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NewsTropes" title="Main/NewsTropes">News</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ProfessionalWrestling" title="Main/ProfessionalWrestling">Professional Wrestling</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SpeculativeFictionTropes" title="Main/SpeculativeFictionTropes">Speculative Fiction</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SportsStoryTropes" title="Main/SportsStoryTropes">Sports Story</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/WarTropes" title="Main/WarTropes">War</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Media</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/Media" title="Main/Media">All Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/AnimationTropes" title="Main/AnimationTropes">Animation (Western)</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Anime" title="Main/Anime">Anime</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ComicBookTropes" title="Main/ComicBookTropes">Comic Book</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FanFic" title="FanFic/FanFics">Fan Fics</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Film" title="Main/Film">Film</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/GameTropes" title="Main/GameTropes">Game</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Literature" title="Main/Literature">Literature</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MusicAndSoundEffects" title="Main/MusicAndSoundEffects">Music And Sound Effects</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NewMediaTropes" title="Main/NewMediaTropes">New Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/PrintMediaTropes" title="Main/PrintMediaTropes">Print Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Radio" title="Main/Radio">Radio</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SequentialArt" title="Main/SequentialArt">Sequential Art</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TabletopGames" title="Main/TabletopGames">Tabletop Games</a></li>
+<li><a href="/pmwiki/pmwiki.php/UsefulNotes/Television" title="Main/Television">Television</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Theater" title="Main/Theater">Theater</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/VideogameTropes" title="Main/VideogameTropes">Videogame</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Webcomics" title="Main/Webcomics">Webcomics</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Narrative</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/UniversalTropes" title="Main/UniversalTropes">Universal</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/AppliedPhlebotinum" title="Main/AppliedPhlebotinum">Applied Phlebotinum</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CharacterizationTropes" title="Main/CharacterizationTropes">Characterization</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Characters" title="Main/Characters">Characters</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CharactersAsDevice" title="Main/CharactersAsDevice">Characters As Device</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Dialogue" title="Main/Dialogue">Dialogue</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Motifs" title="Main/Motifs">Motifs</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NarrativeDevices" title="Main/NarrativeDevices">Narrative Devices</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Paratext" title="Main/Paratext">Paratext</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Plots" title="Main/Plots">Plots</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Settings" title="Main/Settings">Settings</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Spectacle" title="Main/Spectacle">Spectacle</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Other Categories</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/BritishTellyTropes" title="Main/BritishTellyTropes">British Telly</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TheContributors" title="Main/TheContributors">The Contributors</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CreatorSpeak" title="Main/CreatorSpeak">Creator Speak</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Creators" title="Main/Creators">Creators</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DerivativeWorks" title="Main/DerivativeWorks">Derivative Works</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LanguageTropes" title="Main/LanguageTropes">Language</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LawsAndFormulas" title="Main/LawsAndFormulas">Laws And Formulas</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ShowBusiness" title="Main/ShowBusiness">Show Business</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SplitPersonalityTropes" title="Main/SplitPersonalityTropes">Split Personality</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/StockRoom" title="Main/StockRoom">Stock Room</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TropeTropes" title="Main/TropeTropes">Trope</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Tropes" title="Main/Tropes">Tropes</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TruthAndLies" title="Main/TruthAndLies">Truth And Lies</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TruthInTelevision" title="Main/TruthInTelevision">Truth In Television</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Topical Tropes</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/BetrayalTropes" title="Main/BetrayalTropes">Betrayal</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CensorshipTropes" title="Main/CensorshipTropes">Censorship</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CombatTropes" title="Main/CombatTropes">Combat</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DeathTropes" title="Main/DeathTropes">Death</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FamilyTropes" title="Main/FamilyTropes">Family</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FateAndProphecyTropes" title="Main/FateAndProphecyTropes">Fate And Prophecy</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FoodTropes" title="Main/FoodTropes">Food</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/HolidayTropes" title="Main/HolidayTropes">Holiday</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MemoryTropes" title="Main/MemoryTropes">Memory</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MoneyTropes" title="Main/MoneyTropes">Money</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MoralityTropes" title="Main/MoralityTropes">Morality</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/PoliticsTropes" title="Main/PoliticsTropes">Politics</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ReligionTropes" title="Main/ReligionTropes">Religion</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SchoolTropes" title="Main/SchoolTropes">School</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="sidebar-item showcase">
+<p class="sidebar-item-title" data-title="Community Showcase">Community Showcase <a class="bubble float-right hover-blue" href="/pmwiki/showcase.php">More</a></p>
+<p class="community-showcase">
+<a href="https://sharetv.com/shows/echo_chamber" onclick="trackOutboundLink('https://sharetv.com/shows/echo_chamber');" target="_blank">
+<img alt="" class="lazy-image" data-src="/images/communityShowcase-echochamber.jpg"/></a>
+<a href="/pmwiki/pmwiki.php/Webcomic/TwistedTropes">
+<img alt="" class="lazy-image" data-src="/img/howlandsc-side.jpg"/></a>
+</p>
+</div>
+<div class="sidebar-item sb-ad-unit" id="stick-cont">
+<div class="sidebar-section" id="stick-bar">
+<div class="square_ad ad-size-300x600 ad-section text-center">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_4"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_4'); });</script> </div>
+</div> </div>
+</div>
+</div>
+</div>
+</div>
+<div class="action-bar tablet-off" id="action-bar-bottom">
+<a class="scroll-to-top dead-button" href="#top-of-page" onclick="$('html, body').animate({scrollTop : 0},500);">Top</a>
+</div>
+</div>
+<div class="proper-ad-unit ad-sticky">
+<div id="proper-ad-tvtropes_sticky_ad"> <script>propertag.cmd.push(function() { proper_display('tvtropes_sticky_ad'); });</script> </div>
+</div>
+<footer id="main-footer">
+<div id="main-footer-inner">
+<div class="footer-left">
+<a class="img-link" href="/"><img alt="TV Tropes" class="lazy-image" data-src="/img/tvtropes-footer-logo.png" title="TV Tropes"/></a>
+<form action="index.html" class="navbar-form newsletter-signup validate modal-replies" data-ajax-get="/ajax/subscribe_email.php" id="cse-search-box-mobile" name="" role="">
+<button class="btn-submit newsletter-signup-submit-button" id="subscribe-btn" type="submit"><i class="fa fa-paper-plane"></i></button>
+<input class="form-control" id="subscription-email" name="q" placeholder="Subscribe" size="31" type="text" validate-type="email" value=""/>
+</form>
+<ul class="social-buttons">
+<li><a class="btn fb" href="https://www.facebook.com/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-facebook']);" target="_blank"><i class="fa fa-facebook"></i></a></li>
+<li><a class="btn tw" href="https://www.twitter.com/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-twitter']);" target="_blank"><i class="fa fa-twitter"></i></a> </li>
+<li><a class="btn rd" href="https://www.reddit.com/r/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-reddit']);" target="_blank"><i class="fa fa-reddit-alien"></i></a></li>
+</ul>
+</div>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">TVTropes</h4></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Administrivia">About TVTropes</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TheGoalsOfTVTropes">TVTropes Goals</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TheTropingCode">Troping Code</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TVTropesCustoms">TVTropes Customs</a></li>
+<li><a href="/pmwiki/pmwiki.php/JustForFun/TropesOfLegend">Tropes of Legend</a></li>
+<li><a href="/pmwiki/ad-free-subscribe.php">Go Ad-Free</a></li>
+</ul>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">Community</h4></li>
+<li><a href="/pmwiki/query.php?type=att">Ask The Tropers</a></li>
+<li><a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a></li>
+<li><a href="/pmwiki/query.php?type=tf">Trope Finder</a></li>
+<li><a href="/pmwiki/query.php?type=ykts">You Know That Show</a></li>
+<li><a data-modal-target="login" href="/pmwiki/lbs.php">Live Blogs</a></li>
+<li><a href="/pmwiki/review_activity.php">Reviews</a></li>
+<li><a href="/pmwiki/topics.php">Forum</a></li>
+</ul>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">Tropes HQ</h4></li>
+<li><a href="/pmwiki/about.php">About Us</a></li>
+<li><a href="/pmwiki/contact.php">Contact Us</a></li>
+<li><a href="/pmwiki/dmca.php">DMCA Notice</a></li>
+<li><a href="/pmwiki/privacypolicy.php">Privacy Policy</a></li>
+</ul>
+</div>
+<div class="text-center gutter-top gutter-bottom tablet-on" id="desktop-on-mobile-toggle">
+<a href="/pmwiki/switchDeviceCss.php?mobileVersion=1" rel="nofollow">Switch to <span class="txt-desktop">Desktop</span><span class="txt-mobile">Mobile</span> Version</a>
+</div>
+<div class="legal">
+<p>TVTropes is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License. <br/>Permissions beyond the scope of this license may be available from <a href="mailto:thestaff@tvtropes.org" rel="cc:morePermissions" xmlns:cc="http://creativecommons.org/ns#"> thestaff@tvtropes.org</a>.</p>
+<br/>
+<div class="privacy_wrapper">
+</div>
+</div>
+</footer>
+<style>
+      div.fc-ccpa-root {
+        position: absolute !important;
+        bottom: 93px !important;
+        margin: auto !important;
+        width: 100% !important;
+        z-index: 9999 !important;
+      }
+      .fc-ccpa-root .fc-dns-dialog .fc-dns-link p{
+        outline: none !important;
+        text-decoration: underline !important;
+        font-size: .7em !important;
+        font-family: sans-serif !important;
+      }
+      .fc-ccpa-root .fc-dns-dialog .fc-dns-link .fc-button-background {
+        background: none !important;
+      }
+    </style>
+<div class="full-screen" id="_pm_videoViewer">
+<a class="close" href="#close" id="_pm_videoViewer-close"></a>
+<div class="_pmvv-body">
+<div class="_pmvv-vidbox">
+<video class="video-js vjs-default-skin vjs-16-9" data-video-id="" id="overlay-video-player-box">
+</video>
+<div class="_pmvv-vidbox-desc">
+<h1 id="overlay-title"></h1>
+<p class="_pmvv-vidbox-descTxt" id="overlay-descrip">
+</p>
+<div class="rating-row" data-video-id="">
+<input name="is_logged_in" type="hidden" value="0"/>
+<p>How well does it match the trope?</p>
+<div id="star-rating-group">
+<div class="trope-rate">
+<input id="lamp5" name="rate" type="radio" value="5"/>
+<label for="lamp5" title="Absolutely"></label>
+<input id="lamp4" name="rate" type="radio" value="4"/>
+<label for="lamp4" title="Yes"></label>
+<input id="lamp3" name="rate" type="radio" value="3"/>
+<label for="lamp3" title="Kind of"></label>
+<input id="lamp2" name="rate" type="radio" value="2"/>
+<label for="lamp2" title="Not really"></label>
+<input id="lamp1" name="rate" type="radio" value="1"/>
+<label for="lamp1" title="No"></label>
+</div>
+<div id="star-rating-total">
+</div>
+</div>
+</div>
+<div class="example-media-row">
+<div class="example-overlay">
+<p>Example of:</p>
+<div id="overlay-trope"> / </div>
+</div>
+<div class="media-sources-overlay example-overlay">
+<p>Media sources:</p>
+<div id="overlay-media"> / </div>
+</div>
+</div>
+<p class="_pmvv-vidbox-stats text-right font-s" style="padding-top:8px; border-top: solid 1px rgba(255,255,255,0.2)">
+<a class="float-right" data-modal-target="login" href="#video-feedback">Report</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+        window.special_ops =  {
+            member : 'no',
+            isolated : 0,
+            tags : ['unknown']
+        };
+    </script>
+<script type="text/javascript">
+
+        var cleanCreativeEnabled = "";
+        var donation = "";
+        var live_ads = "1";
+        var img_domain = "https://static.tvtropes.org";
+        var snoozed = cookies.read('snoozedabm');
+        var snoozable = "";
+
+        if (adsRemovedWith) {
+            live_ads = 0;
+        }
+
+        var elem = document.createElement('script');
+        elem.async = true;
+
+        elem.src = '/design/assets/bundle.js?rev=c58d8df02f09262390bbd03db7921fc35c6af306';
+
+        elem.onload = function() {
+                                 }
+        document.getElementsByTagName('head')[0].appendChild(elem);
+
+    </script>
+<script type="text/javascript">
+      function send_analytics_event(user_type, donation){
+          // if(user_type == 'uncached' || user_type == 'cached'){
+          //   ga('send', 'event', 'caching', 'load', user_type, {'nonInteraction': 1});
+          //   return;
+          // }
+          var event_name = user_type;
+
+          if(donation == 'true'){
+              event_name += "_donation"
+          }else if(typeof(valid_user) == 'undefined'){
+              event_name += "_blocked"
+          }else if(valid_user == true){
+              event_name += "_unblocked";
+          }else{
+              event_name = "_unknown"
+          }
+          ga('send', 'event', 'ads', 'load', event_name, {'nonInteraction': 1});
+      }
+
+    
+    send_analytics_event("guest", "false");
+      </script>
+</body>
+</html>

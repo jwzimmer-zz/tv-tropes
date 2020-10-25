@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Asymmetric Multiplayer - TV Tropes</title>
+<meta content="Asymmetric Multiplayer is a multiplayer mode in which the different players have totally different roles and capabilities, unlike most multiplayer games, …" name="description"/>
+<link href="https://tvtropes.org/pmwiki/pmwiki.php/Main/AsymmetricMultiplayer" rel="canonical"/>
+<link href="/img/icons/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="@tvtropes" name="twitter:site"/>
+<meta content="@tvtropes" name="twitter:owner"/>
+<meta content="Asymmetric Multiplayer - TV Tropes" name="twitter:title"/>
+<meta content="Asymmetric Multiplayer is a multiplayer mode in which the different players have totally different roles and capabilities, unlike most multiplayer games, …" name="twitter:description"/>
+<meta content="https://static.tvtropes.org/pmwiki/pub/images/nautilus_in_game.png" name="twitter:image:src"/>
+<meta content="TV Tropes" property="og:site_name"/>
+<meta content="en_US" property="og:locale"/>
+<meta content="https://www.facebook.com/tvtropes" property="article:publisher"/>
+<meta content="Asymmetric Multiplayer - TV Tropes" property="og:title"/>
+<meta content="website" property="og:type"/>
+<meta content="https://tvtropes.org/pmwiki/pmwiki.php/Main/AsymmetricMultiplayer" property="og:url"/>
+<meta content="https://static.tvtropes.org/pmwiki/pub/images/nautilus_in_game.png" property="og:image"/>
+<meta content="Asymmetric Multiplayer is a multiplayer mode in which the different players have totally different roles and capabilities, unlike most multiplayer games, where all the players are generally doing the same thing and playing the game the same way." property="og:description"/>
+<link href="/img/icons/apple-icon-57x57.png" rel="apple-touch-icon" sizes="57x57" type="image/png"/>
+<link href="/img/icons/apple-icon-60x60.png" rel="apple-touch-icon" sizes="60x60" type="image/png"/>
+<link href="/img/icons/apple-icon-72x72.png" rel="apple-touch-icon" sizes="72x72" type="image/png"/>
+<link href="/img/icons/apple-icon-76x76.png" rel="apple-touch-icon" sizes="76x76" type="image/png"/>
+<link href="/img/icons/apple-icon-114x114.png" rel="apple-touch-icon" sizes="114x114" type="image/png"/>
+<link href="/img/icons/apple-icon-120x120.png" rel="apple-touch-icon" sizes="120x120" type="image/png"/>
+<link href="/img/icons/apple-icon-144x144.png" rel="apple-touch-icon" sizes="144x144" type="image/png"/>
+<link href="/img/icons/apple-icon-152x152.png" rel="apple-touch-icon" sizes="152x152" type="image/png"/>
+<link href="/img/icons/apple-icon-180x180.png" rel="apple-touch-icon" sizes="180x180" type="image/png"/>
+<link href="/img/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/img/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/img/icons/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png"/>
+<link href="/img/icons/favicon-192x192.png" rel="icon" sizes="192x192" type="image/png"/>
+<meta content="width=device-width, initial-scale=1" id="viewport" name="viewport"/>
+<script>
+                var propertag = {};
+                propertag.cmd = [];
+            </script>
+<link href="/design/assets/bundle.css?rev=c58d8df02f09262390bbd03db7921fc35c6af306" rel="stylesheet"/>
+<script>
+                function object(objectId) {
+                    if (document.getElementById && document.getElementById(objectId)) {
+                        return document.getElementById(objectId);
+                    } else if (document.all && document.all(objectId)) {
+                        return document.all(objectId);
+                    } else if (document.layers && document.layers[objectId]) {
+                        return document.layers[objectId];
+                    } else {
+                        return false;
+                    }
+                }
+
+                // JAVASCRIPT COOKIES CODE: for getting and setting user viewing preferences
+                var cookies = {
+                    create: function (name, value, days2expire, path) {
+                        var date = new Date();
+                        date.setTime(date.getTime() + (days2expire * 24 * 60 * 60 * 1000));
+                        var expires = date.toUTCString();
+                        document.cookie = name + '=' + value + ';' + 'expires=' + expires + ';' + 'path=' + path + ';';
+                    },
+										createWithExpire: function(name, value, expires, path) {
+												document.cookie = name + '=' + value + ';' + 'expires=' + expires + ';' + 'path=' + path + ';';
+										},
+                    read: function (name) {
+                        var cookie_value = "",
+                            current_cookie = "",
+                            name_expr = name + "=",
+                            all_cookies = document.cookie.split(';'),
+                            n = all_cookies.length;
+
+                        for (var i = 0; i < n; i++) {
+                            current_cookie = all_cookies[i].trim();
+                            if (current_cookie.indexOf(name_expr) === 0) {
+                                cookie_value = current_cookie.substring(name_expr.length, current_cookie.length);
+                                break;
+                            }
+                        }
+                        return cookie_value;
+                    },
+                    update: function (name, val) {
+                        this.create(name, val, 300, "/");
+                    },
+                    remove: function (name) {
+                        document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
+                    }
+                };
+
+                function updateUserPrefs() {
+                    //GENERAL: detect and set browser, if not cookied (will be treated like a user-preference and added to the #user-pref element)
+                    if( !cookies.read('user-browser') ){
+                        var broswer = '';
+
+                        if(navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPod/i) ){
+                            browser = 'iOS';
+                        } else if (/Opera[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'opera';
+                        } else if (/MSIE (\d+\.\d+);/.test(navigator.userAgent)) {
+                            browser = 'MSIE';
+                        } else if (/Navigator[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'netscape';
+                        } else if (/Chrome[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'chrome';
+                        } else if (/Safari[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'safari';
+                            /Version[\/\s](\d+\.\d+)/.test(navigator.userAgent);
+                            browserVersion = new Number(RegExp.$1);
+                        } else if (/Firefox[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'firefox';
+                        } else {
+                            browser = 'internet_explorer';
+                        }
+                        cookies.create('user-browser',browser,1,'/');
+                        document.getElementById('user-prefs').classList.add('browser-' + browser);
+                    } else {
+                        document.getElementById('user-prefs').classList.add('browser-' + cookies.read('user-browser'));
+                    }
+
+                    //update user preference settings
+                    if (cookies.read('wide-load') !== '') document.getElementById('user-prefs').classList.add('wide-load');
+                    if (cookies.read('night-vision') !== '') document.getElementById('user-prefs').classList.add('night-vision');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('user-prefs').classList.add('sticky-header');
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('user-prefs').classList.add('show-spoilers');
+                    if (cookies.read('folders-open') !== '') document.getElementById('user-prefs').classList.add('folders-open');
+                    if (cookies.read('lefthand-sidebar') !== '') document.getElementById('user-prefs').classList.add('lefthand-sidebar');
+                    if (cookies.read('highlight-links') !== '') document.getElementById('user-prefs').classList.add('highlight-links');
+                    if (cookies.read('forum-gingerbread') !== '') document.getElementById('user-prefs').classList.add('forum-gingerbread');
+                    if (cookies.read('shared-avatars') !== '') document.getElementById('user-prefs').classList.add('shared-avatars');
+                    if (cookies.read('new-search') !== '') document.getElementById('user-prefs').classList.add('new-search');
+                    if (cookies.read('stop-auto-play-video') !== '') document.getElementById('user-prefs').classList.add('stop-auto-play-video');
+
+                    //desktop view on mobile
+                    if (cookies.read('desktop-on-mobile') !== ''){
+                        document.getElementById('user-prefs').classList.add('desktop-on-mobile');
+
+                        var viewport = document.querySelector("meta[name=viewport]");
+                        viewport.setAttribute('content', 'width=1000');
+                    }
+
+                }
+
+                function updateDesktopPrefs() {
+                    if (cookies.read('wide-load') !== '') document.getElementById('sidebar-toggle-wideload').classList.add('active');
+                    if (cookies.read('night-vision') !== '') document.getElementById('sidebar-toggle-nightvision').classList.add('active');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('sidebar-toggle-stickyheader').classList.add('active');
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('sidebar-toggle-showspoilers').classList.add('active');
+
+                }
+
+                function updateMobilePrefs() {
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('mobile-toggle-showspoilers').classList.add('active');
+                    if (cookies.read('night-vision') !== '') document.getElementById('mobile-toggle-nightvision').classList.add('active');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('mobile-toggle-stickyheader').classList.add('active');
+                    if (cookies.read('highlight-links') !== '') document.getElementById('mobile-toggle-highlightlinks').classList.add('active');
+
+                }
+
+
+                if (document.cookie.indexOf("scroll0=") < 0) {
+                    // do nothing
+                } else {
+                    console.log('ads removed by scroll.com');
+                    var adsRemovedWith = 'scroll';
+                    var style = document.createElement('style');
+                    style.innerHTML = '#header-ad, .proper-ad-unit, .square_ad, .sb-ad-unit { display: none !important; } ';
+                    document.head.appendChild(style);
+                }
+            </script>
+<script type="text/javascript">
+
+                var tvtropes_config = {
+                    astri_stream_enabled : "",
+                    is_logged_in         : "",
+                    handle               : "",
+                    get_astri_stream     : "",
+										revnum               : "c58d8df02f09262390bbd03db7921fc35c6af306",
+										img_domain           : "https://static.tvtropes.org",
+										adblock              : "1",
+										adblock_url          : "propermessage.io",
+										pause_editing        : "0",
+										pause_editing_msg    : "",
+										pause_site_changes   : ""
+                };
+            </script>
+<script type="text/javascript">
+						  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+						  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+						  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+						  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+						  ga('create', 'UA-3821842-1', 'auto');
+						  ga('send', 'pageview');
+
+						</script>
+</head>
+<body class="">
+<i id="user-prefs"></i>
+<script>updateUserPrefs();</script>
+<div id="fb-root"></div>
+<div id="modal-box"></div>
+<header class="headroom-element" id="main-header-bar">
+<div id="main-header-bar-inner">
+<span class="header-spacer" id="header-spacer-left"></span>
+<a class="mobile-menu-toggle-button tablet-on" href="#mobile-menu" id="main-mobile-toggle"><span></span><span></span><span></span></a>
+<a class="no-dev" href="/" id="main-header-logoButton"></a>
+<span class="header-spacer" id="header-spacer-right"></span>
+<nav class="tablet-off" id="main-header-nav">
+<a href="/pmwiki/pmwiki.php/Main/Tropes">Tropes</a>
+<a href="/pmwiki/pmwiki.php/Main/Media">Media</a>
+<a class="nav-browse" href="/pmwiki/browse.php">Browse</a>
+<a href="/pmwiki/index_report.php">Indexes</a>
+<a href="/pmwiki/topics.php">Forums</a>
+<a class="nav-browse" href="/pmwiki/recent_videos.php">Videos</a>
+</nav>
+<div id="main-header-bar-right">
+<div class="font-xs mobile-off" id="signup-login-box">
+<a class="hover-underline bold" data-modal-target="signup" href="/pmwiki/login.php">Join</a>
+<a class="hover-underline bold" data-modal-target="login" href="/pmwiki/login.php">Login</a>
+</div>
+<div class="mobile-on inline" id="signup-login-mobileToggle">
+<a data-modal-target="login" href="/pmwiki/login.php"><i class="fa fa-user"></i></a>
+</div>
+<div id="search-box">
+<form action="/pmwiki/search_result.php" class="search">
+<input class="search-box" name="q" placeholder="Search" required="" type="text" value=""/>
+<input class="submit-button" type="submit" value=""/>
+<input name="search_type" type="hidden" value="article"/>
+<input name="page_type" type="hidden" value="all"/>
+<input name="cx" type="hidden" value="partner-pub-6610802604051523:amzitfn8e7v"/>
+<input name="cof" type="hidden" value="FORID:10"/>
+<input name="ie" type="hidden" value="ISO-8859-1"/>
+<input name="siteurl" type="hidden" value=""/>
+<input name="ref" type="hidden" value=""/>
+<input name="ss" type="hidden" value=""/>
+</form>
+<a class="mobile-on mobile-search-toggle close-x" href="#close-search"><i class="fa fa-close"></i></a>
+</div>
+<div id="random-box">
+<a class="button-random-trope" href="/pmwiki/pmwiki.php/Main/YourSoulIsMine" onclick="ga('send', 'event', 'button', 'click', 'random trope');" rel="nofollow"></a>
+<a class="button-random-media" href="/pmwiki/pmwiki.php/ComicBook/Wildsiderz" onclick="ga('send', 'event', 'button', 'click', 'random media');" rel="nofollow"></a>
+</div>
+</div>
+</div>
+<div class="tablet-on" id="mobile-menu"><div class="mobile-menu-options">
+<div class="nav-wrapper">
+<a class="xl" href="/pmwiki/pmwiki.php/Main/Tropes">Tropes</a>
+<a class="xl" href="/pmwiki/pmwiki.php/Main/Media">Media</a>
+<a class="xl" href="/pmwiki/browse.php">Browse</a>
+<a class="xl" href="/pmwiki/index_report.php">Indexes</a>
+<a class="xl" href="/pmwiki/topics.php">Forums</a>
+<a class="xl" href="/pmwiki/recent_videos.php">Videos</a>
+<a href="/pmwiki/query.php?type=att">Ask The Tropers</a>
+<a href="/pmwiki/query.php?type=tf">Trope Finder</a>
+<a href="/pmwiki/query.php?type=ykts">You Know That Show...</a>
+<a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a>
+<a data-click-toggle="active" href="#tools">Tools <i class="fa fa-chevron-down"></i></a>
+<div class="tools-dropdown mobile-dropdown-linkList">
+<a href="/pmwiki/cutlist.php">Cut List</a>
+<a href="/pmwiki/changes.php">New Edits</a>
+<a href="/pmwiki/recent_edit_reasons.php">Edit Reasons</a>
+<a href="/pmwiki/launches.php">Launches</a>
+<a href="/pmwiki/img_list.php">Images List</a>
+<a href="/pmwiki/crown_activity.php">Crowner Activity</a>
+<a href="/pmwiki/no_types.php">Un-typed Pages</a>
+<a href="/pmwiki/page_type_audit.php">Recent Page Type Changes</a>
+</div>
+<a data-click-toggle="active" href="#hq">Tropes HQ <i class="fa fa-chevron-down"></i></a>
+<div class="tools-dropdown mobile-dropdown-linkList">
+<a href="/pmwiki/about.php">About Us</a>
+<a href="/pmwiki/contact.php">Contact Us</a>
+<a href="mailto:advertising@proper.io">Advertise</a>
+<a href="/pmwiki/dmca.php">DMCA Notice</a>
+<a href="/pmwiki/privacypolicy.php">Privacy Policy</a>
+</div>
+<a href="/pmwiki/ad-free-subscribe.php">Go Ad-Free</a>
+<div class="toggle-switches">
+<ul class="mobile-menu display-toggles">
+<li>Show Spoilers <div class="display-toggle show-spoilers" id="mobile-toggle-showspoilers"></div></li>
+<li>Night Vision <div class="display-toggle night-vision" id="mobile-toggle-nightvision"></div></li>
+<li>Sticky Header <div class="display-toggle sticky-header" id="mobile-toggle-stickyheader"></div></li>
+<li>Highlight Links <div class="display-toggle highlight-links" id="mobile-toggle-highlightlinks"></div></li>
+</ul>
+<script>updateMobilePrefs();</script>
+</div>
+</div>
+</div>
+</div>
+</header>
+<div class="mobile-on" id="homepage-introBox-mobile">
+<a href="/"><img class="logo-small" src="/images/logo-white-big.png"/></a>
+<form action="/pmwiki/search_result.php" class="search" style="margin:10px -5px -6px -5px;">
+<input class="search-box" name="q" placeholder="Search" required="" type="text" value=""/>
+<input class="submit-button" type="submit" value=""/>
+<input name="search_type" type="hidden" value="article"/>
+<input name="page_type" type="hidden" value="all"/>
+<input name="cx" type="hidden" value="partner-pub-6610802604051523:amzitfn8e7v"/>
+<input name="cof" type="hidden" value="FORID:10"/>
+<input name="ie" type="hidden" value="ISO-8859-1"/>
+<input name="siteurl" type="hidden" value=""/>
+<input name="ref" type="hidden" value=""/>
+<input name="ss" type="hidden" value=""/>
+</form>
+</div>
+<div class="ad" id="header-ad-wrapper">
+<div id="header-ad">
+<div class="ad-size-970x90 atf_banner">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_1"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_1'); });</script> </div>
+</div> </div>
+</div>
+</div>
+<div id="main-container">
+<div class="action-bar mobile-off" id="action-bar-top">
+<div class="action-bar-right">
+<p>Follow TV Tropes</p>
+<a class="button-fb" href="https://www.facebook.com/TVTropes">
+<i class="fa fa-facebook"></i></a>
+<a class="button-tw" href="https://www.twitter.com/TVTropes">
+<i class="fa fa-twitter"></i></a>
+<a class="button-re" href="https://www.reddit.com/r/TVTropes">
+<i class="fa fa-reddit-alien"></i></a>
+</div>
+<nav class="actions-wrapper" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<ul class="page-actions" id="top_main_list">
+<li class="link-edit">
+<a class="article-edit-button" data-modal-target="login" href="/pmwiki/pmwiki.php/Main/AsymmetricMultiplayer?action=edit" rel="nofollow">
+<i class="fa fa-pencil"></i> Edit Page</a></li><li class="link-related"><a href="/pmwiki/relatedsearch.php?term=Main/AsymmetricMultiplayer">
+<i class="fa fa-share-alt"></i> Related</a></li><li class="link-history"><a href="/pmwiki/article_history.php?article=Main.AsymmetricMultiplayer">
+<i class="fa fa-history"></i> History</a></li><li class="link-discussion"><a href="/pmwiki/remarks.php?trope=Main.AsymmetricMultiplayer">
+<i class="fa fa-comment"></i> Discussion</a></li> </ul>
+<button class="nav__dropdown-toggle" id="top_more_button" onclick="toggle_more_menu('top');" type="button">More</button>
+<ul class="more_menu hidden_more_list" id="top_more_list">
+<li class="link-todo tuck-always more_list_item"><a data-modal-target="login" href="#todo"><i class="fa fa-check-circle"></i> To Do</a></li><li class="link-pageSource tuck-always more_list_item"><a data-modal-target="login" href="/pmwiki/pmwiki.php/Main/AsymmetricMultiplayer?action=source" rel="nofollow" target="_blank"><i class="fa fa-code"></i> Page Source</a></li> </ul>
+</nav>
+<div class="WikiWordModalStub"></div>
+<div class="ImgUploadModalStub" data-page-type="Article"></div>
+<div class="login-alert" style="display: none;">
+You need to <a href="/pmwiki/login.php" style="color:#21A0E8">login</a> to do this. <a href="/pmwiki/login.php?tab=register_account" style="color:#21A0E8">Get Known</a> if you don't have an account
+</div>
+</div>
+<div class="page-Article" id="main-content">
+<article class="with-sidebar" id="main-entry">
+<input id="groupname-hidden" type="hidden" value="Main"/>
+<input id="title-hidden" type="hidden" value="AsymmetricMultiplayer"/>
+<input id="article_id" type="hidden" value="393097"/>
+<input id="logged_in" type="hidden" value="false"/>
+<p class="hidden" id="current_url">http://tvtropes.org/pmwiki/pmwiki.php/Main/AsymmetricMultiplayer</p>
+<meta content="" itemprop="datePublished"/>
+<meta content="" itemprop="articleSection"/>
+<meta content="" itemprop="image"/>
+<a class="watch-button" data-modal-target="login" href="#watch">Follow<span>ing</span></a>
+<h1 class="entry-title" itemprop="headline">
+Asymmetric Multiplayer
+</h1>
+<script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+                "@type": "ListItem",
+                "position": 1,
+                "name": "tvtropes.org",
+                "item": "https://tvtropes.org"
+            },{
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Tropes",
+                "item": "https://tvtropes.org/pmwiki/pmwiki.php/Main/Tropes"
+            },{
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Asymmetric Multiplayer"            }]
+        }
+    </script>
+<a class="mobile-actionbar-toggle mobile-on" data-click-toggle="active" href="#mobile-actions-toggle" id="mobile-actionbar-toggle">
+<p class="tiny-off">Go To</p><span></span><span></span><span></span><i class="fa fa-pencil"></i></a>
+<nav class="mobile-actions-wrapper mobile-on" id="mobile-actions-bar"></nav>
+<div class="modal fade hidden-until-active" id="editLockModal">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button aria-label="Close" class="close" data-dismiss="modal" type="button"> <span aria-hidden="true">×</span></button>
+<h4 class="modal-title">Edit Locked</h4>
+</div>
+<div class="modal-body">
+<div class="row">
+<div class="body">
+<div class="danger troper_locked_message"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<nav class="body-options" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<ul class="subpage-links">
+<li>
+<a class="subpage-link curr-subpage" href="/pmwiki/pmwiki.php/Main/AsymmetricMultiplayer" title="The Main page">
+<span class="wrapper"><span class="spi main-page"></span>Main</span></a>
+</li>
+<li>
+<a class="subpage-link" href="/pmwiki/pmwiki.php/Laconic/AsymmetricMultiplayer" title="The Laconic page">
+<span class="wrapper"><span class="spi laconic-icon"></span>Laconic</span></a>
+</li>
+<li class="create-subpage dropdown">
+<a aria-expanded="false" class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);" role="button">
+<span class="wrapper">Create New <i class="fa fa-plus-circle"></i></span>
+</a>
+<select onchange="this.options[this.selectedIndex].value &amp;&amp; (window.location = this.options[this.selectedIndex].value);">
+<option value="">- Create New -</option>
+<option value="/pmwiki/pmwiki.php/Analysis/AsymmetricMultiplayer?action=edit">Analysis</option>
+<option value="/pmwiki/pmwiki.php/Characters/AsymmetricMultiplayer?action=edit">Characters</option>
+<option value="/pmwiki/pmwiki.php/FanficRecs/AsymmetricMultiplayer?action=edit">FanficRecs</option>
+<option value="/pmwiki/pmwiki.php/FanWorks/AsymmetricMultiplayer?action=edit">FanWorks</option>
+<option value="/pmwiki/pmwiki.php/Fridge/AsymmetricMultiplayer?action=edit">Fridge</option>
+<option value="/pmwiki/pmwiki.php/Haiku/AsymmetricMultiplayer?action=edit">Haiku</option>
+<option value="/pmwiki/pmwiki.php/Headscratchers/AsymmetricMultiplayer?action=edit">Headscratchers</option>
+<option value="/pmwiki/pmwiki.php/ImageLinks/AsymmetricMultiplayer?action=edit">ImageLinks</option>
+<option value="/pmwiki/pmwiki.php/PlayingWith/AsymmetricMultiplayer?action=edit">PlayingWith</option>
+<option value="/pmwiki/pmwiki.php/Quotes/AsymmetricMultiplayer?action=edit">Quotes</option>
+<option value="/pmwiki/pmwiki.php/Recap/AsymmetricMultiplayer?action=edit">Recap</option>
+<option value="/pmwiki/pmwiki.php/ReferencedBy/AsymmetricMultiplayer?action=edit">ReferencedBy</option>
+<option value="/pmwiki/pmwiki.php/Synopsis/AsymmetricMultiplayer?action=edit">Synopsis</option>
+<option value="/pmwiki/pmwiki.php/Timeline/AsymmetricMultiplayer?action=edit">Timeline</option>
+<option value="/pmwiki/pmwiki.php/Trivia/AsymmetricMultiplayer?action=edit">Trivia</option>
+<option value="/pmwiki/pmwiki.php/WMG/AsymmetricMultiplayer?action=edit">WMG</option>
+<option value="/pmwiki/pmwiki.php/YMMV/AsymmetricMultiplayer?action=edit">YMMV</option>
+</select>
+</li>
+</ul>
+</nav>
+<div class="article-content retro-folders" id="main-article">
+<p></p><div class="quoteright" style="width:332px;"><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Nautilus" title="/pmwiki/pmwiki.php/VideoGame/Nautilus"><div class="lazy_load_img_box" style="padding-top:64.76%"><img alt="https://static.tvtropes.org/pmwiki/pub/images/nautilus_in_game.png" border="0" class="embeddedimage" height="215" src="https://static.tvtropes.org/pmwiki/pub/images/nautilus_in_game.png" width="332"/></div></a></div>
+<div class="acaptionright" style="width:332px;">A ship that can only move left and right and drop depth charges and homing mines, vs. a submarine that can go anywhere and has to destroy underwater buildings. Totally different experiences.</div>
+<div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_1"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_1'); })</script></div></div><p>Asymmetric Multiplayer is a multiplayer mode in which the different players have totally different roles and capabilities, unlike most multiplayer games, where all the players are generally doing the same thing and playing the game the same way.
+</p><p><a class="twikilink" href="/pmwiki/pmwiki.php/Creator/Nintendo" title="/pmwiki/pmwiki.php/Creator/Nintendo">Nintendo</a> popularized the term with their <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/WiiU" title="/pmwiki/pmwiki.php/UsefulNotes/WiiU">Wii U</a> console, as a way to describe how one player could play the game using the touchscreen-equipped GamePad controller, while others play on the TV, and the two groups have very different goals and even game mechanics. An example is <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/NewSuperMarioBrosU" title="/pmwiki/pmwiki.php/VideoGame/NewSuperMarioBrosU">New Super Mario Bros. U</a></em>, where players who use traditional controllers control characters who run and jump on the TV, while the GamePad player can interact with the environment by messing with enemies, placing blocks in mid-air, and doing other things that affect the TV players' experience.
+</p><div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_2"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_2'); })</script></div></div><p>However, the concept has been around since ancient (<a class="twikilink" href="/pmwiki/pmwiki.php/Main/OlderThanTheNES" title="/pmwiki/pmwiki.php/Main/OlderThanTheNES">by video game standards</a>) times. Generally, it is quite rare in games, as creating two completely different gameplay experiences for two different players requires a great deal of balance.
+</p><p>This does <strong>not</strong> refer to such things as games where players can be different characters (e.g., a magic user and a sword user) with slightly different abilities but carry out essentially the same goal in the same way. This instead refers to games where the roles, abilities and gameplay experience are <strong>drastically</strong> different. To see whether an example fits, think of the question "Does each player have a totally different experience from the others?" If the answer is yes, it's probably Asymmetric Multiplayer.
+</p><p>Compare <a class="twikilink" href="/pmwiki/pmwiki.php/Main/VariablePlayerGoals" title="/pmwiki/pmwiki.php/Main/VariablePlayerGoals">Variable Player Goals</a>, which are often paired with Asymmetric Multiplayer but not the same thing (as Asymmetric Multiplayer can have two players working towards the same goal different ways, and Variable Player Goals can have all players use the same game mechanics).
+</p><div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_3"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_3'); })</script></div></div><hr/><h2>Examples:</h2>
+<p></p><div class="folderlabel" onclick="toggleAllFolders();">    open/close all folders  </div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder0');">    Atari </div><div class="folder" id="folder0" isfolder="true" style="display:block;">
+<ul><li> Possibly <a class="twikilink" href="/pmwiki/pmwiki.php/Main/OlderThanTheNES" title="/pmwiki/pmwiki.php/Main/OlderThanTheNES">one of the oldest examples</a>, <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Nautilus" title="/pmwiki/pmwiki.php/VideoGame/Nautilus">Nautilus</a></em> for the <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/Atari8BitComputers" title="/pmwiki/pmwiki.php/UsefulNotes/Atari8BitComputers">Atari 8-Bit Computers</a> was a two-player game in which one player controlled a submarine and had to destroy underwater buildings, while the other controlled a ship which dropped mines and depth charges and attempted to repair the buildings, but was unable to go underwater. (Fun trivia fact: according to Wikipedia, it's also the very first <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SplitScreen" title="/pmwiki/pmwiki.php/Main/SplitScreen">Split Screen</a> game in existence!)
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/GIJoe" title="/pmwiki/pmwiki.php/Franchise/GIJoe">G.I. Joe</a>: Cobra Strike</em> for the <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/Atari2600" title="/pmwiki/pmwiki.php/UsefulNotes/Atari2600">Atari 2600</a> was similar in multiplayer. One player controlled a giant mechanical cobra that dripped venom from its fangs and could fire a laser beam to attack Joe troopers, while the other player controlled a shield that they could use to block the venom and lasers, and fire missiles to try to destroy the cobra.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder1');">    NES </div><div class="folder" id="folder1" isfolder="true" style="display:block;">
+<ul><li> Little known <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MetroidVania" title="/pmwiki/pmwiki.php/Main/MetroidVania">Metroid Vania</a>, <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/EightEyes" title="/pmwiki/pmwiki.php/VideoGame/EightEyes">8 Eyes</a></em> had the second player controlling the protagonist's pet hawk.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DuckHunt" title="/pmwiki/pmwiki.php/VideoGame/DuckHunt">Duck Hunt</a></em> "Game A", the first player shoots ducks with the light gun and the second player can control the duck with the normal gamepad.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder2');">    Sega Genesis </div><div class="folder" id="folder2" isfolder="true" style="display:block;">
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/ThunderForce" title="/pmwiki/pmwiki.php/VideoGame/ThunderForce">Thunder Force</a> IV</em> had a two-player option, with one player piloting Rynex and the other aiming the weapons.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/GunstarHeroes" title="/pmwiki/pmwiki.php/VideoGame/GunstarHeroes">Gunstar Heroes</a></em>' space stage has one player controlling the ship, while a second manipulates a satellite turret around it.
+</li><li> <em>Mechwarrior</em> for the Sega Genesis's multiplayer had player one driving the Mad Cat Omnimech while player two aimed and fired the weapons.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder3');">    Super Nintendo </div><div class="folder" id="folder3" isfolder="true" style="display:block;">
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/BattleClash" title="/pmwiki/pmwiki.php/VideoGame/BattleClash">Metal Combat: Falcon's Revenge</a></em> was a sequel to the earlier, Battle clash where the player shot at giant Robots with a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/LightGunGame" title="/pmwiki/pmwiki.php/Main/LightGunGame">Light Gun</a>. Metal Combat added a multiplayer where the second player controlled the enemy robots with a traditional controller to battle player 1.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder4');">    Gamecube </div><div class="folder" id="folder4" isfolder="true" style="display:block;">
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheLegendOfZeldaTheWindWaker" title="/pmwiki/pmwiki.php/VideoGame/TheLegendOfZeldaTheWindWaker">The Legend of Zelda: The Wind Waker</a></em> has a co-op mode where one player controls Link and the other uses a <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/GameBoyAdvance" title="/pmwiki/pmwiki.php/UsefulNotes/GameBoyAdvance">Game Boy Advance</a> connected to the <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/NintendoGameCube" title="/pmwiki/pmwiki.php/UsefulNotes/NintendoGameCube">GameCube</a> to provide support (potions, bombs, etc.) with the Tingle Tuner in-game item. (This doesn't apply to the Wii U remake - ironic in light of the Wii U GamePad that can replicate the GBA functionality - instead having been replaced with Miiverse message sharing in the form of the Tingle Bottle.)
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/PacMan" title="/pmwiki/pmwiki.php/VideoGame/PacMan">Pac-Man</a> Vs.</em> also uses a connected Game Boy Advance. The player using the GBA is Pac-Man and gets a full view of the maze, while up to three other players are ghosts and only given limited visibility on a TV split-screen.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder5');">    PC </div><div class="folder" id="folder5" isfolder="true" style="display:block;">
+<ul><li> <em><a class="createlink" href="/pmwiki/pmwiki.php/VideoGame/Savage" title="/pmwiki/pmwiki.php/VideoGame/Savage">Savage</a></em>, for the PC, is a cross between a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/RealTimeStrategy" title="/pmwiki/pmwiki.php/Main/RealTimeStrategy">Real-Time Strategy</a> game and an action game. One player on each team would be the commander and could see the entire battlefield and issue orders to players. All other players would be individual soldiers.
+</li><li> In the <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/HalfLife2" title="/pmwiki/pmwiki.php/VideoGame/HalfLife2">Half-Life 2</a></em> mod <em>Overwatch</em>, one player controls Combine forces from an RTS point of view, while all the other players are on the opposing team and control an individual resistance fighter in typical FPS gameplay.
+<ul><li> Another <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/HalfLife2" title="/pmwiki/pmwiki.php/VideoGame/HalfLife2">Half-Life 2</a></em> named <em>Zombie Master</em> is similar: most of the players are playing survivors in first-person shooter style, while one player plays as the titular Zombie Master, who spawns and controls the zombies and sets off traps in RTS-style gameplay.
+</li></ul></li><li> A popular Arena mod for <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TeamFortress2" title="/pmwiki/pmwiki.php/VideoGame/TeamFortress2">Team Fortress 2</a></em> called <em>Vs. Saxton Hale</em> pits one superpowered player against the rest. Originally, that player would take control of the eponymous Australian, but the mod eventually expanded to include a number of different TF2 "freaks", such as Vagineer and Christian Brutal Sniper, rebranded as <em>Freak Fortress 2.</em>
+</li><li> <em><a class="urllink" href="http://www.unknownworlds.com/ns/">Natural Selection<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a></em> is a <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/HalfLife" title="/pmwiki/pmwiki.php/VideoGame/HalfLife">Half-Life</a></em> mod with Aliens (generally melee- and ambush-focused) vs. <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SpaceMarines" title="/pmwiki/pmwiki.php/Main/SpaceMarines">Space Marines</a> (standard FPS gameplay and guns, and a Commander with an RTS perspective).
+<ul><li> This is continued in the sequel <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/NaturalSelection2" title="/pmwiki/pmwiki.php/VideoGame/NaturalSelection2">Natural Selection 2</a></em>, but as it's no longer a mod, the abilities of the aliens, the space marines and the commanders are increased.
+</li></ul></li><li> <em><a class="urllink" href="http://www.hidden-source.com/">The Hidden<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a></em> is a <a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/HalfLife" title="/pmwiki/pmwiki.php/VideoGame/HalfLife">source engine</a> mod where <strong>one</strong> person with <em>invisibility and a knife</em> faces off against a heavily armed <strong>team</strong> of SWAT-type police with techno-gadgets.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/PiratesVikingsAndKnights" title="/pmwiki/pmwiki.php/VideoGame/PiratesVikingsAndKnights">Pirates Vikings and Knights</a></em> features three different teams with unique classes and playstyles. The <a class="twikilink" href="/pmwiki/pmwiki.php/Main/HornyVikings" title="/pmwiki/pmwiki.php/Main/HornyVikings">Viking team</a> focuses mostly on melee damage and works best as a horde, overrunning the enemy with pure strength. The <a class="twikilink" href="/pmwiki/pmwiki.php/Main/KnightInShiningArmor" title="/pmwiki/pmwiki.php/Main/KnightInShiningArmor">Knight team</a>'s classes have varying degrees of <a class="twikilink" href="/pmwiki/pmwiki.php/Main/CripplingOverspecialization" title="/pmwiki/pmwiki.php/Main/CripplingOverspecialization">Crippling Overspecialization</a>, making a teamwork-oriented approach with class variation the best. The <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Pirate" title="/pmwiki/pmwiki.php/Main/Pirate">Pirates</a> are poorly equipped and lightly armored, but their use of gunpowder weapons makes up for that. Their best use is as <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TheSwarm" title="/pmwiki/pmwiki.php/Main/TheSwarm">The Swarm</a>, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GoddamnedBats" title="/pmwiki/pmwiki.php/Main/GoddamnedBats">dealing consistent poke damage, then running off</a>, never facing the other teams head-on, but rather being a consistent thorn in each of their sides.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Left4Dead" title="/pmwiki/pmwiki.php/VideoGame/Left4Dead">Left 4 Dead</a></em> has zombies vs. human survivors with completely different gameplay styles. The humans can revive downed teammates, and their goal is to reach the end of the level. Player-controlled zombies instead choose where to spawn, and must prevent the human players from reaching the end of the level by killing them. Their capabilities are also vastly different. Dead humans stay dead for a very long time, whereas dead zombie players revive shortly afterward to keep trying to stop the humans.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/PrimalCarnage" title="/pmwiki/pmwiki.php/VideoGame/PrimalCarnage">Primal Carnage</a></em> is basically <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Left4Dead" title="/pmwiki/pmwiki.php/VideoGame/Left4Dead">Left 4 Dead</a></em> but with dinosaurs instead of zombies. In the "Team Deathmatch" gamemode, each side simply has to get the most kills. In the "Get to the Chopper" gamemode, as a human you have to capture checkpoints and make it to the escape helicopter at the end of the map within a time limit; as a dinosaur, you have to stop them.
+</li><li> <em>Island Defense</em>, a popular custom map for <a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Warcraft3" title="/pmwiki/pmwiki.php/VideoGame/Warcraft3">Warcraft 3</a>, had 10 players controlling builders that need to collect resources and build a fortified base to hold of the Titan, while the remaining player controls the Titan, a powerful unit that tries to stop them before their bases become impenetrable.
+</li><li> The <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/ArtemisSpaceshipBridgeSimulator" title="/pmwiki/pmwiki.php/VideoGame/ArtemisSpaceshipBridgeSimulator">Artemis: Spaceship Bridge Simulator</a></em> simulates a <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/StarTrek" title="/pmwiki/pmwiki.php/Franchise/StarTrek">Star Trek</a></em> style spaceship bridge. Each player controls a different aspect of the ship, leading to very different play-styles; the captain is the most extreme example of this, since they cannot take any actions personally and instead relay orders to the other players.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Crawl" title="/pmwiki/pmwiki.php/VideoGame/Crawl">Crawl</a></em> Is a dungeon crawler where one player controls the hero, and the other three control the monsters so they can kill him and play as the hero.
+</li><li> The FPS/RTS hybrid <em><a class="twikilink" href="/pmwiki/pmwiki.php/Videogame/BattleZone1998" title="/pmwiki/pmwiki.php/Videogame/BattleZone1998">Battle Zone 1998</a></em> and its sequel have two player states in the "strategy" multiplayer gamemodes; Commander and Pilot. The Commander takes over most of the RTS functions and have sole control over base equipment (factories and the like) and by default control all the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/PlayerMooks" title="/pmwiki/pmwiki.php/Main/PlayerMooks">Player Mooks</a>. Pilots start out with nothing under their control besides their own <a class="twikilink" href="/pmwiki/pmwiki.php/Main/HoverTank" title="/pmwiki/pmwiki.php/Main/HoverTank">Hover Tank</a>, but the commander can grant control of units to pilots. Commanders generally remain in the base to build it up and defend it, while pilots guide <a class="twikilink" href="/pmwiki/pmwiki.php/Main/WorkerUnit" title="/pmwiki/pmwiki.php/Main/WorkerUnit">Scavengers</a> to biometal pools and engage the enemy. Players can freely swap between the role of commander and pilot in multiplayer. The MPA gamemode has a human team (commander and pilots) versus an AI controlled commander, and Strategy has two teams of human commanders and pilots.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Videogame/ShoresOfHazeron" title="/pmwiki/pmwiki.php/Videogame/ShoresOfHazeron">Shores of Hazeron</a></em> had multiple crew stations on its starships, each of which had unique tasks; the helmsman flew the ship, sensor station locked and scanned targets, and the engineer had to keep multiple constantly moving status indicators for the engines/reactor/FTL drive within a green zone or they would become inefficient, etc. The Captain's chair did little on its own, but could override other stations on the ship, such as allowing the captain to pull up the helm station controls and fly the ship manually. Beyond the starships, each player empire had multiple levels of authority for its members; players without the right credentials couldn't authorize new constructions on planets, while the Emperor or other high-ups could commandeer any starships and colony.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Videogame/SpyParty" title="/pmwiki/pmwiki.php/Videogame/SpyParty">SpyParty</a></em> is a 1v1 game where one player is a spy at a cocktail party full of AI characters and the other player is a sniper trying to figure out who the human spy is from among the AI.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/WhosYourDaddy" title="/pmwiki/pmwiki.php/VideoGame/WhosYourDaddy">Who's Your Daddy?</a></em> is a 1v1 game about a baby who attempts suicide, and a dad trying to prevent that from happening. <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BlackHumor" title="/pmwiki/pmwiki.php/Main/BlackHumor">The baby wins by killing itself</a>.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DeadByDaylight" title="/pmwiki/pmwiki.php/VideoGame/DeadByDaylight">Dead by Daylight</a></em> is a 4v1 <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SurvivalHorror" title="/pmwiki/pmwiki.php/Main/SurvivalHorror">Survival Horror</a> game inspired by slasher movies, in which a team of four Survivors must outwit a powerful Killer, who seeks to hunt them down and sacrifice them to a malevolent Entity.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Depth" title="/pmwiki/pmwiki.php/VideoGame/Depth">Depth</a></em>, is a 4v2 game where you play as either a diver exploring ancient underwater ruins searching for treasure, or a shark trying to kill the divers. As a diver, collecting gold will give you money you can spend on weapons like spear-guns, pistols, rifles, mines, and turrets. As a shark you killing divers will allow you to "evolve", granting traits like hardened scales, increased stamina, bleeding damage, and health regen.
+<ul><li> "Megalodon Hunt" is a 5v1 gamemode where you either play as a diver or a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Megalodon" title="/pmwiki/pmwiki.php/Main/Megalodon">Megalodon</a> shark; when a diver kills the Megalodon, they become the Megalodon.
+</li></ul></li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Allegiance" title="/pmwiki/pmwiki.php/VideoGame/Allegiance">Allegiance</a></em>, one player on each team is the commander. The commander gives orders to computer-controlled miners and building vessels while also giving instructions to players, directing them on where to go and who to attack. They are also the only player that can give authorization to other players to pilot more powerful vessels such as bombers.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/RedOrchestra" title="/pmwiki/pmwiki.php/VideoGame/RedOrchestra">Red Orchestra</a></em>, <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/RedOrchestra2HeroesOfStalingrad" title="/pmwiki/pmwiki.php/VideoGame/RedOrchestra2HeroesOfStalingrad">Red Orchestra 2: Heroes of Stalingrad</a></em>, <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/RisingStorm" title="/pmwiki/pmwiki.php/VideoGame/RisingStorm">Rising Storm</a></em> and <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/RisingStorm2Vietnam" title="/pmwiki/pmwiki.php/VideoGame/RisingStorm2Vietnam">Rising Storm 2: Vietnam</a></em> all include this as a realistic feature of different countries going to war. Available guns, classes, radio commands, and even basic statistics depend on whether you're on the German or Russian side. This is most emphasized in <em>Rising Storm 2</em>, where the North Vietnamese use devious traps, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/WeHaveReserves" title="/pmwiki/pmwiki.php/Main/WeHaveReserves">expendable troops</a>, and Anti-Air Missiles to try and counter the U.S.' generally better weapons, area denial, and emphasis on air superiority.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DoomEternal" title="/pmwiki/pmwiki.php/VideoGame/DoomEternal">Doom Eternal</a></em>: Multiplayer modes allows for a team of players to fight as demons against one single player fighting as the Doom Slayer. Invasions allow this to occur within one person's single player campaign provided the person playing has opted in, while Battlemode is a dedicated multiplayer version set up as a 2v1, best of 3 deathmatch.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/LastYear" title="/pmwiki/pmwiki.php/VideoGame/LastYear">Last Year</a></em>: five players take the role of classmates trapped in a nightmare with the sixth player, who controls three Fiends per match. The students must complete objectives to escape while the Fiend must stop them. The students have a variety of gadgets and an advantage in numbers, while the Killer can spawn and de-spawn out of sight of the students, set up traps, and launch <a class="twikilink" href="/pmwiki/pmwiki.php/Main/OneHitKill" title="/pmwiki/pmwiki.php/Main/OneHitKill">One-Hit Kill</a> ambushes on unsuspecting victims.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/ThemsFightinHerds" title="/pmwiki/pmwiki.php/VideoGame/ThemsFightinHerds">Them's Fightin' Herds</a></em>: The online pixel lobby features a game mode called the Salt Mines, where players can mine for <a class="twikilink" href="/pmwiki/pmwiki.php/Main/WeirdCurrency" title="/pmwiki/pmwiki.php/Main/WeirdCurrency">salt</a>, fight predators, and earn cosmetics. At the end of 15 minutes, whichever player has the most salt transforms into a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BearsAreBadNews" title="/pmwiki/pmwiki.php/Main/BearsAreBadNews">bear</a>. The bear has to hunt down and beat the other players, while the other players need to either survive long enough for the bear to starve, or beat the bear in a fight.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/EnemyOnBoard" title="/pmwiki/pmwiki.php/VideoGame/EnemyOnBoard">Enemy on Board</a></em>, four players are the crew of the ship trying to find and kill the aliens, and two players are the aliens who are trying to kill the crew.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder6');">    Nintendo DS </div><div class="folder" id="folder6" isfolder="true" style="display:block;">
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheLegendOfZeldaPhantomHourglass" title="/pmwiki/pmwiki.php/VideoGame/TheLegendOfZeldaPhantomHourglass">The Legend of Zelda: Phantom Hourglass</a></em> included a multiplayer mode in which one player controls Link and attempts to bring "Force Gems" into a base, while a second player controls three "Phantoms", indestructible knights, by drawing paths in the map for them to follow and stop Link.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder7');">    Wii </div><div class="folder" id="folder7" isfolder="true" style="display:block;">
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SuperMarioGalaxy" title="/pmwiki/pmwiki.php/VideoGame/SuperMarioGalaxy">Super Mario Galaxy</a></em> and <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SuperMarioGalaxy2" title="/pmwiki/pmwiki.php/VideoGame/SuperMarioGalaxy2">Super Mario Galaxy 2</a></em> allow the second player to point at <a class="twikilink" href="/pmwiki/pmwiki.php/Main/FollowTheMoney" title="/pmwiki/pmwiki.php/Main/FollowTheMoney">collectibles</a> with the Wiimote to pick them up and fire them at enemies. Other pointer controls include freezing enemies in place and giving Mario a boosted jump if the two players have good coordination.
+</li><li> The Metamortex sections of <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/KirbysEpicYarn" title="/pmwiki/pmwiki.php/VideoGame/KirbysEpicYarn">Kirby's Epic Yarn</a></em> work this way, with the first player controlling movement while the second player handles a secondary aspect of whatever the two transform into. (Everywhere else, gameplay is identical for both players.)
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SinAndPunishmentStarSuccessor" title="/pmwiki/pmwiki.php/VideoGame/SinAndPunishmentStarSuccessor">Sin and Punishment: Star Successor</a></em> allows a second player to provide additional firepower simply by aiming the Wii Remote at their targets and pressing the fire button. It's implied they're the character that 1P didn't choose, but 2P's character never appears on-screen during gameplay.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Film/Juon" title="/pmwiki/pmwiki.php/Film/Juon">Ju-on</a> The Grudge: Haunted House Simulator</em> contains a mode which lets player one play a chapter as normal, while player two can add to the haunting going on by pressing buttons on their own Wii Remote.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder8');">    Wii U </div><div class="folder" id="folder8" isfolder="true" style="display:block;">
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/NintendoLand" title="/pmwiki/pmwiki.php/VideoGame/NintendoLand">Nintendo Land</a></em> is all about this. Many of the games have multiplayer modes in which one player's view of the action and role is different from the others. The cooperative games do involve players working towards a common goal, but with very different abilities. The competitive games, however, involve the players having totally different goals in addition to completely different abilities.
+<ul><li> <em>Luigi's Ghost Mansion</em> has an invisible ghost, playing on the touch-screen GamePad, try to sneak up on ghost hunters, while the ghost hunters view the TV and try to stop the invisible ghost with the use of flashlights.
+</li><li> <em>Mario Chase</em> has one player view the entire playfield on the GamePad while the others, using split-screen views on the TV, attempt to chase and catch Mario.
+</li><li> <em>Animal Crossing: Sweet Day</em> has one player control two guards on the GamePad to try to catch the other players, who are viewing the TV and trying to steal candy.
+</li><li> <em>Pikmin Adventures</em> has one player using the GamePad control Captain Olimar, and can fight by throwing Pikmin at enemies and objects by touching them on the screen, while up to four other players control giant Pikmin on the TV and fight enemies directly.
+</li><li> <em>Legend of Zelda: Battle Quest</em> has one player on the GamePad as an archer shooting enemies with a bow and arrows, including at a distance, while up to four other players use Wii Remotes to fight enemies up close with a sword.
+</li><li> <em>Metroid Blast</em> allows a player using the GamePad to fly a gunship that has full freedom of movement and blast enemies or other players (if playing competitively), while other players run on the ground and control human fighters who can run, roll into balls, and use grappling beams, but lack the freedom of the gunship.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/NewSuperMarioBrosU" title="/pmwiki/pmwiki.php/VideoGame/NewSuperMarioBrosU">New Super Mario Bros. U</a></em> allows up to four players to control Mario, Luigi and two Toads, while another player can use the GamePad at any time to create blocks that appear on the TV. Both players and enemies can jump on or interact with the blocks. The GamePad player has other abilities, such as interacting with enemies, defeating enemies in some instances, spinning gears in the opposite direction, or revealing invisible 3-up life blocks.
+</li><li> The <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/WiiU" title="/pmwiki/pmwiki.php/UsefulNotes/WiiU">Wii U</a> version of <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SegaSuperstars" title="/pmwiki/pmwiki.php/VideoGame/SegaSuperstars">Sonic &amp; All-Stars Racing Transformed</a></em> has two exclusive modes: Banana Heist, where one person controls <a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SuperMonkeyBall" title="/pmwiki/pmwiki.php/VideoGame/SuperMonkeyBall">Aiai</a> in a ball while everyone else races normally, and Aiai must take bananas from them; and Ninja Tag, where one person controls <a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Shinobi" title="/pmwiki/pmwiki.php/VideoGame/Shinobi">Joe Musashi</a> and runs into the other players. In both modes, all of the other players need to defend themselves.
+</li><li> The Wii U version of <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/RaymanLegends" title="/pmwiki/pmwiki.php/VideoGame/RaymanLegends">Rayman Legends</a></em> lets player 1 do this with the GamePad, using the touchscreen to control Murphy in order to clear obstacles and tickle enemies while letting the other players run and jump as usual. Certain levels require player 1 to do this; when playing solo, these segments skew more toward <a class="twikilink" href="/pmwiki/pmwiki.php/Main/UnexpectedGameplayChange" title="/pmwiki/pmwiki.php/Main/UnexpectedGameplayChange">Unexpected Gameplay Change</a>.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MarioParty" title="/pmwiki/pmwiki.php/VideoGame/MarioParty">Mario Party 10</a></em> has a mode called "Bowser Party", where the group is trying to reach the end of the board and collect the star, but the player controlling Bowser is trying to knock out the other's hearts by using "Bowser Minigames" involving breathing fire, smashing them with a hammer, and <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ArsonMurderAndJaywalking" title="/pmwiki/pmwiki.php/Main/ArsonMurderAndJaywalking">Bingo</a>. Another major difference in the play types is that Bowser sometimes sets traps or tries to trick the group players.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder9');">    Other/Cross-Platform </div><div class="folder" id="folder9" isfolder="true" style="display:block;">
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Videogame/SplinterCell" title="/pmwiki/pmwiki.php/Videogame/SplinterCell">Splinter Cell</a></em>: The Splinter Cell games have multiplayer modes where one team of players plays as spies, with a third-person camera and stealth-oriented gameplay and abilities; and the other team plays as mercs, with a first-person camera and abilities oriented towards detecting spies and killing them.
+</li><li> This applies any time a 1 vs. 3 minigame comes up in the <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MarioParty" title="/pmwiki/pmwiki.php/VideoGame/MarioParty">Mario Party</a></em> series, for the obvious reason that it would be unfair otherwise.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Battlefield2" title="/pmwiki/pmwiki.php/VideoGame/Battlefield2">Battlefield 2</a></em> has a mode where one player on each team is a commander, while all others are soldiers. The commander has the ability to issue orders to players as well as drop artillery, though they also exist as a soldier and can take personal action as well (and of course be killed).
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Battlefield4" title="/pmwiki/pmwiki.php/VideoGame/Battlefield4">Battlefield 4</a></em> re-introduces the commander role, but removes the player from the battlefield entirely, while also giving the ability to drop supplies, order troops, and other tactical advantages.
+</li><li> The selling point of <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Evolve" title="/pmwiki/pmwiki.php/VideoGame/Evolve">Evolve</a></em>. Four players are human hunters, armed with futuristic weapons and gadgets, who rely on teamwork and coordination. One player is a massive monster that becomes more powerful over time and works alone. These two groups play against each other as the balance of power shifts from the hunters to the monster the longer the game goes on.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/ShadowRealms" title="/pmwiki/pmwiki.php/VideoGame/ShadowRealms">Shadow Realms</a></em> is a four-versus-one game. Four human characters face a single overlord character, with the latter's abilities being consciously patterned on those of the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GameMaster" title="/pmwiki/pmwiki.php/Main/GameMaster">Game Master</a> in a pen-and-paper RPG. Its <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SpiritualSuccessor" title="/pmwiki/pmwiki.php/Main/SpiritualSuccessor">Spiritual Successor</a>, <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Breach" title="/pmwiki/pmwiki.php/VideoGame/Breach">Breach</a></em>, has a similar concept.
+</li><li> <em>Silkworm</em> was a multi-platform scrolling shooter where one player controlled a helicopter and the other an armoured jeep. The helicopter player had full screen movement but could only fire forwards and had to avoid colliding with airborne enemies, while the jeep player had to destroy or jump over obstacles on the ground and could fire in any direction. It had a spiritual successor called <em>SWIV</em> with the same basic concept, only transferred to a vertical shooter.
+</li><li> A <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/GameBoy" title="/pmwiki/pmwiki.php/UsefulNotes/GameBoy">Game Boy</a> game for <em><a class="twikilink" href="/pmwiki/pmwiki.php/Film/TheHuntForRedOctober" title="/pmwiki/pmwiki.php/Film/TheHuntForRedOctober">The Hunt for Red October</a></em> had a two-player mode where the second player was the Soviet commander hunting the titular submarine, and thus controlled all the enemy forces one would find on a typical level of the game.
+</li><li> The online multiplayer for <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/BatmanArkhamOrigins" title="/pmwiki/pmwiki.php/VideoGame/BatmanArkhamOrigins">Batman: Arkham Origins</a></em> has four roles it randomly assigns to the players: one of three of Bane's minions, one of three of <a class="twikilink" href="/pmwiki/pmwiki.php/ComicBook/TheJoker" title="/pmwiki/pmwiki.php/ComicBook/TheJoker">The Joker</a>'s minions, Batman, and Robin. In the former two roles, the players attempt to win a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ThirdPersonShooter" title="/pmwiki/pmwiki.php/Main/ThirdPersonShooter">Third-Person Shooter</a> deathmatch to claim as much territory on the map as possible; in the latter two roles, the players take down as many of the respawning minions as they can until they build up a Fear meter, which ends the game in their favor.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FridayThe13thTheGame" title="/pmwiki/pmwiki.php/VideoGame/FridayThe13thTheGame">Friday the 13th: The Game</a></em>: seven players play as Camp Crystal Lake counselors, and the eighth player is Jason Voorhees. The counselors have to try and survive until the end of the game (or if they're feeling brave, work together to beat Jason), while Jason's goal is to <a class="twikilink" href="/pmwiki/pmwiki.php/Main/KillEmAll" title="/pmwiki/pmwiki.php/Main/KillEmAll">Kill 'Em All</a>.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/PredatorHuntingGrounds" title="/pmwiki/pmwiki.php/VideoGame/PredatorHuntingGrounds">Predator: Hunting Grounds</a></em>: four players take on the role of Fireteam members, while a fifth player controls the Predator. The Fireteam must complete a series of objectives and escape, or killing the Predator. The Predator is tasked with killing the Fireteam members, and should they fall in battle, set off their <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SelfDestructMechanism" title="/pmwiki/pmwiki.php/Main/SelfDestructMechanism">Self-Destruct Mechanism</a> to take out the Fireteam in one last-ditch effort.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/IslandWars" title="/pmwiki/pmwiki.php/VideoGame/IslandWars">Island Wars</a></em> subverts this. During the first phase of gameplay (Morning), one player uses a controllable aircraft to fire at the other player's <a class="twikilink" href="/pmwiki/pmwiki.php/Main/VideoGameLives" title="/pmwiki/pmwiki.php/Main/VideoGameLives">palm trees</a> on their island, and the other player's job is to control a grounded cannon to defend against the first player's aircraft. This is a subversion because the second phase (noon) switches the roles around, thus giving each player a similar experience, and the third phase (Evening) has both players fight each other in aircraft.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/BanjoTooie" title="/pmwiki/pmwiki.php/VideoGame/BanjoTooie">Banjo-Tooie</a></em> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/WhatCouldHaveBeen" title="/pmwiki/pmwiki.php/Main/WhatCouldHaveBeen">was going to have</a> a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/CoOpMultiplayer" title="/pmwiki/pmwiki.php/Main/CoOpMultiplayer">Co-Op Multiplayer</a> mode called "Bottles' Revenge". In this mode, Banjo and Kazooie would be followed by Bottles' evil spirit, who would automatically possess the nearest weak-minded creature (I.E. an enemy), allowing the second player to control the enemy and attack the first. If another enemy that Bottles can possess is in range during a possession (indicated by white sparkles), the second player can switch enemies with the press of the R button. During boss battles, Bottles would simply disappear.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/WhiteNoise2" title="/pmwiki/pmwiki.php/VideoGame/WhiteNoise2">White Noise 2</a></em> is about a team of four investigators searching an area for clues trying to solve a mystery, while a fifth player plays as a supernatural creature trying to devour them and halt their investigation.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/ResidentEvil3Remake" title="/pmwiki/pmwiki.php/VideoGame/ResidentEvil3Remake">Resident Evil 3 (Remake)</a></em> comes with the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GaidenGame" title="/pmwiki/pmwiki.php/Main/GaidenGame">Gaiden Game</a> <em>Resident Evil: Resistance</em>, a 4-vs-1 game. Four players take on the role of survivors forced by the Umbrella Corporation to take part in a deadly experiment by the fifth player, who takes the role of the "Mastermind". The survivors control like the main characters in the single player game and must work together to escape from the map, with each survivor having unique abilities such as stronger melee attacks or better healing abilities. The Mastermind is tasked with preventing the survivors' escape by setting traps and summoning zombies and other monsters. Typically, the Mastermind can only see what is happening in the stage through surveillance cameras (which can also be modified with turrets), but they can also take control of a zombie in order to deal with the survivors personally, as well as summon boss monsters like Mr. X to overwhelm their opponents.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder10');">    Tabletop Games </div><div class="folder" id="folder10" isfolder="true" style="display:block;">
+<ul><li> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TabletopRPG" title="/pmwiki/pmwiki.php/Main/TabletopRPG">Pen and paper role-playing games</a> are essentially this in analogue form. The <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GameMaster" title="/pmwiki/pmwiki.php/Main/GameMaster">Game Master</a> has complete control over everything and is unconcerned about leveling, loot, dying, or other player-only problems. The Game Master's job is provide balanced and challenging gameplay as well as rules adjudications. A player's job is to attempt to survive whatever the GM tosses at them.
+</li><li> Cooperative <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AdventureBoardGames" title="/pmwiki/pmwiki.php/Main/AdventureBoardGames">Adventure Board Games</a> like <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/HeroQuest" title="/pmwiki/pmwiki.php/TabletopGame/HeroQuest">HeroQuest</a></em> and <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/DescentJourneysInTheDark" title="/pmwiki/pmwiki.php/TabletopGame/DescentJourneysInTheDark">Descent: Journeys in the Dark</a></em> emulate <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TabletopRPG" title="/pmwiki/pmwiki.php/Main/TabletopRPG">Tabletop RPG</a> in having a "Game Master" but the GM is constricted by the rules just like the other players, and their role is basically reduced to controlling monsters and traps, while other players control individual <a class="twikilink" href="/pmwiki/pmwiki.php/Main/HeroUnit" title="/pmwiki/pmwiki.php/Main/HeroUnit">Hero Units</a>.
+</li><li> In <em>Clue: The Great Museum Caper</em>, one player plays the thief, who is invisible on the board, trying to steal artwork, while the other players play the detectives trying to catch the thief. This style is also used in games like <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/ScotlandYard" title="/pmwiki/pmwiki.php/TabletopGame/ScotlandYard">Scotland Yard</a></em> and <em>Fury of Dracula</em>, or in the bio-terrorist challenge for <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/Pandemic" title="/pmwiki/pmwiki.php/TabletopGame/Pandemic">Pandemic</a>: On The Brink</em>.
+</li><li> <a class="urllink" href="https://en.wikipedia.org/wiki/Fox_games">Fox games<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a> are a class of ancient two-player strategy board games where one player's force is smaller than the other, but usually has unrestricted moves and the ability to kill opposing forces; the larger force has restricted movement and can only immobilize the smaller force.
+</li><li> A few Collectable/Constructed Card Games do this, most notably <a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/Netrunner" title="/pmwiki/pmwiki.php/TabletopGame/Netrunner">Netrunner</a>. In both the original version and the reboot, one player is the corp defending his servers, while the other is the runner trying to hack into those servers. Each side plays by different rules and has his own set of cards to use; the runner can't use corp cards and corp can't use runner cards.
+</li><li> <em>Vast: The Crystal Caverns</em> takes this to an extreme, with up to five completely different characters: the dragon, the knight, the goblins, the thieves, and the cave itself. Each has different rules, statistics, and goals.
+<ul><li> The same company also did <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/Root" title="/pmwiki/pmwiki.php/TabletopGame/Root">Root</a></em>, where each player also play different military, political or religious groups with very different strategies and goals. Each player is essentially playing a different game than the other.
+</li></ul></li><li> The board game <em>Thud</em> (first mentioned as an in-universe game in the <a class="twikilink" href="/pmwiki/pmwiki.php/Literature/Discworld" title="/pmwiki/pmwiki.php/Literature/Discworld">Discworld</a> novel <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/GoingPostal" title="/pmwiki/pmwiki.php/Literature/GoingPostal">Going Postal</a></em> and subsequently <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Defictionalized" title="/pmwiki/pmwiki.php/Main/Defictionalized">Defictionalized</a>) is a "<a class="urllink" href="https://en.wikipedia.org/wiki/Tafl_games">tafl game<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a>" where one player controls a large group of <a class="twikilink" href="/pmwiki/pmwiki.php/Main/FragileSpeedster" title="/pmwiki/pmwiki.php/Main/FragileSpeedster">fast-but-weak</a> dwarfs and the other player controls a smaller group of <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MightyGlacier" title="/pmwiki/pmwiki.php/Main/MightyGlacier">strong-but-slow</a> trolls. A full match is two games, so to win you have to have mastered both.
+<ul><li> Tafl games themselves are a now-lost genre of board games in which the attacking player has numerous pieces and must attempt to capture the defending player's king, while the defending player is greatly outnumbered and must find a way for the king to escape the board. The first tafl games were played in the fourth century, making this video game trope <a class="twikilink" href="/pmwiki/pmwiki.php/Main/OlderThanFeudalism" title="/pmwiki/pmwiki.php/Main/OlderThanFeudalism">Older Than Feudalism</a>.
+</li></ul></li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/BetrayalAtHouseOnTheHill" title="/pmwiki/pmwiki.php/TabletopGame/BetrayalAtHouseOnTheHill">Betrayal at House on the Hill</a></em>, the player who turns traitor often has completely different objectives and gameplay than the remaining heroes. For example, the traitor will sometimes play as a different monster with unique stats, while the heroes have to work together to kill the traitor.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/OGRE" title="/pmwiki/pmwiki.php/TabletopGame/OGRE">OGRE</a></em> is considered a classic with this trope: One player controls an <em>enormous</em> cybertank (The titular Ogre) that is brimming with weapons and heavily armored. The other player commands a number of more conventional forces against it.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/SpiritIsland" title="/pmwiki/pmwiki.php/TabletopGame/SpiritIsland">Spirit Island</a></em> has each player cooperating towards the same goal, but every playable spirit has wildly different rules and effects, will start with a unique set of power cards, and build their own power deck over time.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder11');">    Non-Video Game examples </div><div class="folder" id="folder11" isfolder="true" style="display:block;">
+<ul><li> In the Final Chase of "The Chase" <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/TheChase" title="/pmwiki/pmwiki.php/Series/TheChase">The Chase</a></em>, the players have their clock continue to run during their wrong answers, which the Chaser does not. To balance, the players get a chance to answer the Chaser's dropped questions, for a chance to reduce the Chaser's total.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/Thud" title="/pmwiki/pmwiki.php/Literature/Thud">Thud!</a></em>: Discussed in reference to the titular board game, which features one side playing a small number of individually powerful trolls, and the other a larger number of weaker but fast dwarfs with very powerful combo abilities. The story mentions that most casual players lose interest because "the dwarfs always win", but at the highest levels of play the win percentage leans slightly in favor of trolls. It's also explained that in tournament play every match is two games, one as each side, so a player must master both.
+</li></ul></div>
+<hr/>
+</div>
+<div class="square_ad footer-article-ad main_2" data-isolated="0"></div>
+<div class="section-links" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<div class="titles">
+<div><h3 class="text-center text-uppercase">Previous</h3></div>
+<div><h3 class="text-center text-uppercase">Index</h3></div>
+<div><h3 class="text-center text-uppercase">Next</h3></div>
+</div>
+<div class="links">
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/AssholeVictim">Asshole Victim</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/OlderThanFeudalism">Older Than Feudalism</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/AttemptedRape">Attempted Rape</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/AscendedGlitch">Ascended Glitch</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/OlderThanTheNES">Older Than the NES</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/AsteroidsMonster">Asteroids Monster</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/ScienceFictionVideoGames">Science Fiction Video Games</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/VideoGameGenres">Video Game Genres</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/BattleRoyaleGame">Battle Royale Game</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="outer_ads_by_salon_wrapper" id="exco_player_insert_div">
+</div>
+</article>
+<div id="main-content-sidebar"><div class="sidebar-item display-options">
+<ul class="sidebar display-toggles">
+<li>Show Spoilers <div class="display-toggle show-spoilers" id="sidebar-toggle-showspoilers"></div></li>
+<li>Night Vision <div class="display-toggle night-vision" id="sidebar-toggle-nightvision"></div></li>
+<li>Sticky Header <div class="display-toggle sticky-header" id="sidebar-toggle-stickyheader"></div></li>
+<li>Wide Load <div class="display-toggle wide-load" id="sidebar-toggle-wideload"></div></li>
+</ul>
+<script>updateDesktopPrefs();</script>
+</div>
+<div class="sidebar-item ad sb-ad-unit">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_2"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_2'); });</script> </div>
+</div></div>
+<div class="sidebar-item quick-links" itemtype="http://schema.org/SiteNavigationElement">
+<p class="sidebar-item-title" data-title="Important Links">Important Links</p>
+<div class="padded">
+<a href="/pmwiki/query.php?type=att">Ask The Tropers</a>
+<a href="/pmwiki/query.php?type=tf">Trope Finder</a>
+<a href="/pmwiki/query.php?type=ykts">You Know That Show...</a>
+<a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a>
+<a href="/pmwiki/review_activity.php">Reviews</a>
+<a data-modal-target="login" href="/pmwiki/lbs.php">Live Blogs</a>
+<a href="/pmwiki/ad-free-subscribe.php">Go Ad Free!</a> </div>
+</div>
+<div class="sidebar-item sb-ad-unit">
+<div class="sidebar-section">
+<div class="square_ad ad-size-300x600 ad-section text-center">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_3"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_3'); });</script> </div>
+</div> </div>
+</div>
+</div>
+<div class="sidebar-item">
+<p class="sidebar-item-title" data-title="Crucial Browsing">Crucial Browsing</p>
+<ul class="padded font-s" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><a data-click-toggle="active" href="javascript:void(0);">Genre</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/ActionAdventureTropes" title="Main/ActionAdventureTropes">Action Adventure</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ComedyTropes" title="Main/ComedyTropes">Comedy</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CommercialsTropes" title="Main/CommercialsTropes">Commercials</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CrimeAndPunishmentTropes" title="Main/CrimeAndPunishmentTropes">Crime &amp; Punishment</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DramaTropes" title="Main/DramaTropes">Drama</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/HorrorTropes" title="Main/HorrorTropes">Horror</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LoveTropes" title="Main/LoveTropes">Love</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NewsTropes" title="Main/NewsTropes">News</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ProfessionalWrestling" title="Main/ProfessionalWrestling">Professional Wrestling</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SpeculativeFictionTropes" title="Main/SpeculativeFictionTropes">Speculative Fiction</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SportsStoryTropes" title="Main/SportsStoryTropes">Sports Story</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/WarTropes" title="Main/WarTropes">War</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Media</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/Media" title="Main/Media">All Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/AnimationTropes" title="Main/AnimationTropes">Animation (Western)</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Anime" title="Main/Anime">Anime</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ComicBookTropes" title="Main/ComicBookTropes">Comic Book</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FanFic" title="FanFic/FanFics">Fan Fics</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Film" title="Main/Film">Film</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/GameTropes" title="Main/GameTropes">Game</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Literature" title="Main/Literature">Literature</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MusicAndSoundEffects" title="Main/MusicAndSoundEffects">Music And Sound Effects</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NewMediaTropes" title="Main/NewMediaTropes">New Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/PrintMediaTropes" title="Main/PrintMediaTropes">Print Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Radio" title="Main/Radio">Radio</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SequentialArt" title="Main/SequentialArt">Sequential Art</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TabletopGames" title="Main/TabletopGames">Tabletop Games</a></li>
+<li><a href="/pmwiki/pmwiki.php/UsefulNotes/Television" title="Main/Television">Television</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Theater" title="Main/Theater">Theater</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/VideogameTropes" title="Main/VideogameTropes">Videogame</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Webcomics" title="Main/Webcomics">Webcomics</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Narrative</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/UniversalTropes" title="Main/UniversalTropes">Universal</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/AppliedPhlebotinum" title="Main/AppliedPhlebotinum">Applied Phlebotinum</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CharacterizationTropes" title="Main/CharacterizationTropes">Characterization</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Characters" title="Main/Characters">Characters</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CharactersAsDevice" title="Main/CharactersAsDevice">Characters As Device</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Dialogue" title="Main/Dialogue">Dialogue</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Motifs" title="Main/Motifs">Motifs</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NarrativeDevices" title="Main/NarrativeDevices">Narrative Devices</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Paratext" title="Main/Paratext">Paratext</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Plots" title="Main/Plots">Plots</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Settings" title="Main/Settings">Settings</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Spectacle" title="Main/Spectacle">Spectacle</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Other Categories</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/BritishTellyTropes" title="Main/BritishTellyTropes">British Telly</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TheContributors" title="Main/TheContributors">The Contributors</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CreatorSpeak" title="Main/CreatorSpeak">Creator Speak</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Creators" title="Main/Creators">Creators</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DerivativeWorks" title="Main/DerivativeWorks">Derivative Works</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LanguageTropes" title="Main/LanguageTropes">Language</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LawsAndFormulas" title="Main/LawsAndFormulas">Laws And Formulas</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ShowBusiness" title="Main/ShowBusiness">Show Business</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SplitPersonalityTropes" title="Main/SplitPersonalityTropes">Split Personality</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/StockRoom" title="Main/StockRoom">Stock Room</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TropeTropes" title="Main/TropeTropes">Trope</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Tropes" title="Main/Tropes">Tropes</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TruthAndLies" title="Main/TruthAndLies">Truth And Lies</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TruthInTelevision" title="Main/TruthInTelevision">Truth In Television</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Topical Tropes</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/BetrayalTropes" title="Main/BetrayalTropes">Betrayal</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CensorshipTropes" title="Main/CensorshipTropes">Censorship</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CombatTropes" title="Main/CombatTropes">Combat</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DeathTropes" title="Main/DeathTropes">Death</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FamilyTropes" title="Main/FamilyTropes">Family</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FateAndProphecyTropes" title="Main/FateAndProphecyTropes">Fate And Prophecy</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FoodTropes" title="Main/FoodTropes">Food</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/HolidayTropes" title="Main/HolidayTropes">Holiday</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MemoryTropes" title="Main/MemoryTropes">Memory</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MoneyTropes" title="Main/MoneyTropes">Money</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MoralityTropes" title="Main/MoralityTropes">Morality</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/PoliticsTropes" title="Main/PoliticsTropes">Politics</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ReligionTropes" title="Main/ReligionTropes">Religion</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SchoolTropes" title="Main/SchoolTropes">School</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="sidebar-item showcase">
+<p class="sidebar-item-title" data-title="Community Showcase">Community Showcase <a class="bubble float-right hover-blue" href="/pmwiki/showcase.php">More</a></p>
+<p class="community-showcase">
+<a href="https://sharetv.com/shows/echo_chamber" onclick="trackOutboundLink('https://sharetv.com/shows/echo_chamber');" target="_blank">
+<img alt="" class="lazy-image" data-src="/images/communityShowcase-echochamber.jpg"/></a>
+<a href="/pmwiki/pmwiki.php/Webcomic/TwistedTropes">
+<img alt="" class="lazy-image" data-src="/img/howlandsc-side.jpg"/></a>
+</p>
+</div>
+<div class="sidebar-item sb-ad-unit" id="stick-cont">
+<div class="sidebar-section" id="stick-bar">
+<div class="square_ad ad-size-300x600 ad-section text-center">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_4"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_4'); });</script> </div>
+</div> </div>
+</div>
+</div>
+</div>
+</div>
+<div class="action-bar tablet-off" id="action-bar-bottom">
+<a class="scroll-to-top dead-button" href="#top-of-page" onclick="$('html, body').animate({scrollTop : 0},500);">Top</a>
+</div>
+</div>
+<div class="proper-ad-unit ad-sticky">
+<div id="proper-ad-tvtropes_sticky_ad"> <script>propertag.cmd.push(function() { proper_display('tvtropes_sticky_ad'); });</script> </div>
+</div>
+<footer id="main-footer">
+<div id="main-footer-inner">
+<div class="footer-left">
+<a class="img-link" href="/"><img alt="TV Tropes" class="lazy-image" data-src="/img/tvtropes-footer-logo.png" title="TV Tropes"/></a>
+<form action="index.html" class="navbar-form newsletter-signup validate modal-replies" data-ajax-get="/ajax/subscribe_email.php" id="cse-search-box-mobile" name="" role="">
+<button class="btn-submit newsletter-signup-submit-button" id="subscribe-btn" type="submit"><i class="fa fa-paper-plane"></i></button>
+<input class="form-control" id="subscription-email" name="q" placeholder="Subscribe" size="31" type="text" validate-type="email" value=""/>
+</form>
+<ul class="social-buttons">
+<li><a class="btn fb" href="https://www.facebook.com/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-facebook']);" target="_blank"><i class="fa fa-facebook"></i></a></li>
+<li><a class="btn tw" href="https://www.twitter.com/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-twitter']);" target="_blank"><i class="fa fa-twitter"></i></a> </li>
+<li><a class="btn rd" href="https://www.reddit.com/r/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-reddit']);" target="_blank"><i class="fa fa-reddit-alien"></i></a></li>
+</ul>
+</div>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">TVTropes</h4></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Administrivia">About TVTropes</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TheGoalsOfTVTropes">TVTropes Goals</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TheTropingCode">Troping Code</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TVTropesCustoms">TVTropes Customs</a></li>
+<li><a href="/pmwiki/pmwiki.php/JustForFun/TropesOfLegend">Tropes of Legend</a></li>
+<li><a href="/pmwiki/ad-free-subscribe.php">Go Ad-Free</a></li>
+</ul>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">Community</h4></li>
+<li><a href="/pmwiki/query.php?type=att">Ask The Tropers</a></li>
+<li><a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a></li>
+<li><a href="/pmwiki/query.php?type=tf">Trope Finder</a></li>
+<li><a href="/pmwiki/query.php?type=ykts">You Know That Show</a></li>
+<li><a data-modal-target="login" href="/pmwiki/lbs.php">Live Blogs</a></li>
+<li><a href="/pmwiki/review_activity.php">Reviews</a></li>
+<li><a href="/pmwiki/topics.php">Forum</a></li>
+</ul>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">Tropes HQ</h4></li>
+<li><a href="/pmwiki/about.php">About Us</a></li>
+<li><a href="/pmwiki/contact.php">Contact Us</a></li>
+<li><a href="/pmwiki/dmca.php">DMCA Notice</a></li>
+<li><a href="/pmwiki/privacypolicy.php">Privacy Policy</a></li>
+</ul>
+</div>
+<div class="text-center gutter-top gutter-bottom tablet-on" id="desktop-on-mobile-toggle">
+<a href="/pmwiki/switchDeviceCss.php?mobileVersion=1" rel="nofollow">Switch to <span class="txt-desktop">Desktop</span><span class="txt-mobile">Mobile</span> Version</a>
+</div>
+<div class="legal">
+<p>TVTropes is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License. <br/>Permissions beyond the scope of this license may be available from <a href="mailto:thestaff@tvtropes.org" rel="cc:morePermissions" xmlns:cc="http://creativecommons.org/ns#"> thestaff@tvtropes.org</a>.</p>
+<br/>
+<div class="privacy_wrapper">
+</div>
+</div>
+</footer>
+<style>
+      div.fc-ccpa-root {
+        position: absolute !important;
+        bottom: 93px !important;
+        margin: auto !important;
+        width: 100% !important;
+        z-index: 9999 !important;
+      }
+      .fc-ccpa-root .fc-dns-dialog .fc-dns-link p{
+        outline: none !important;
+        text-decoration: underline !important;
+        font-size: .7em !important;
+        font-family: sans-serif !important;
+      }
+      .fc-ccpa-root .fc-dns-dialog .fc-dns-link .fc-button-background {
+        background: none !important;
+      }
+    </style>
+<div class="full-screen" id="_pm_videoViewer">
+<a class="close" href="#close" id="_pm_videoViewer-close"></a>
+<div class="_pmvv-body">
+<div class="_pmvv-vidbox">
+<video class="video-js vjs-default-skin vjs-16-9" data-video-id="" id="overlay-video-player-box">
+</video>
+<div class="_pmvv-vidbox-desc">
+<h1 id="overlay-title"></h1>
+<p class="_pmvv-vidbox-descTxt" id="overlay-descrip">
+</p>
+<div class="rating-row" data-video-id="">
+<input name="is_logged_in" type="hidden" value="0"/>
+<p>How well does it match the trope?</p>
+<div id="star-rating-group">
+<div class="trope-rate">
+<input id="lamp5" name="rate" type="radio" value="5"/>
+<label for="lamp5" title="Absolutely"></label>
+<input id="lamp4" name="rate" type="radio" value="4"/>
+<label for="lamp4" title="Yes"></label>
+<input id="lamp3" name="rate" type="radio" value="3"/>
+<label for="lamp3" title="Kind of"></label>
+<input id="lamp2" name="rate" type="radio" value="2"/>
+<label for="lamp2" title="Not really"></label>
+<input id="lamp1" name="rate" type="radio" value="1"/>
+<label for="lamp1" title="No"></label>
+</div>
+<div id="star-rating-total">
+</div>
+</div>
+</div>
+<div class="example-media-row">
+<div class="example-overlay">
+<p>Example of:</p>
+<div id="overlay-trope"> / </div>
+</div>
+<div class="media-sources-overlay example-overlay">
+<p>Media sources:</p>
+<div id="overlay-media"> / </div>
+</div>
+</div>
+<p class="_pmvv-vidbox-stats text-right font-s" style="padding-top:8px; border-top: solid 1px rgba(255,255,255,0.2)">
+<a class="float-right" data-modal-target="login" href="#video-feedback">Report</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+        window.special_ops =  {
+            member : 'no',
+            isolated : 0,
+            tags : ['videogame']
+        };
+    </script>
+<script type="text/javascript">
+
+        var cleanCreativeEnabled = "";
+        var donation = "";
+        var live_ads = "1";
+        var img_domain = "https://static.tvtropes.org";
+        var snoozed = cookies.read('snoozedabm');
+        var snoozable = "";
+
+        if (adsRemovedWith) {
+            live_ads = 0;
+        }
+
+        var elem = document.createElement('script');
+        elem.async = true;
+
+        elem.src = '/design/assets/bundle.js?rev=c58d8df02f09262390bbd03db7921fc35c6af306';
+
+        elem.onload = function() {
+                                 }
+        document.getElementsByTagName('head')[0].appendChild(elem);
+
+    </script>
+<script type="text/javascript">
+      function send_analytics_event(user_type, donation){
+          // if(user_type == 'uncached' || user_type == 'cached'){
+          //   ga('send', 'event', 'caching', 'load', user_type, {'nonInteraction': 1});
+          //   return;
+          // }
+          var event_name = user_type;
+
+          if(donation == 'true'){
+              event_name += "_donation"
+          }else if(typeof(valid_user) == 'undefined'){
+              event_name += "_blocked"
+          }else if(valid_user == true){
+              event_name += "_unblocked";
+          }else{
+              event_name = "_unknown"
+          }
+          ga('send', 'event', 'ads', 'load', event_name, {'nonInteraction': 1});
+      }
+
+    
+    send_analytics_event("guest", "false");
+      </script>
+</body>
+</html>

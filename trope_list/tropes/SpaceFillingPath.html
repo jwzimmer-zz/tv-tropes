@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Space-Filling Path - TV Tropes</title>
+<meta content="The Space-Filling Path trope as used in popular culture. No, you can't just walk from point A to point B. Sorry. Video game developers don't like wasting …" name="description"/>
+<link href="https://tvtropes.org/pmwiki/pmwiki.php/Main/SpaceFillingPath" rel="canonical"/>
+<link href="/img/icons/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="@tvtropes" name="twitter:site"/>
+<meta content="@tvtropes" name="twitter:owner"/>
+<meta content="Space-Filling Path - TV Tropes" name="twitter:title"/>
+<meta content="The Space-Filling Path trope as used in popular culture. No, you can't just walk from point A to point B. Sorry. Video game developers don't like wasting …" name="twitter:description"/>
+<meta content="https://static.tvtropes.org/logo_blue_small.png" name="twitter:image:src"/>
+<meta content="TV Tropes" property="og:site_name"/>
+<meta content="en_US" property="og:locale"/>
+<meta content="https://www.facebook.com/tvtropes" property="article:publisher"/>
+<meta content="Space-Filling Path - TV Tropes" property="og:title"/>
+<meta content="website" property="og:type"/>
+<meta content="https://tvtropes.org/pmwiki/pmwiki.php/Main/SpaceFillingPath" property="og:url"/>
+<meta content="https://static.tvtropes.org/logo_blue_small.png" property="og:image"/>
+<meta content="No, you can't just walk from point A to point B. Sorry. Video game developers don't like wasting space, especially if you're talking about an Adventure Game, RPG, or sometimes a First-Person Shooter. Empty rooms with wide open spaces, especially …" property="og:description"/>
+<link href="/img/icons/apple-icon-57x57.png" rel="apple-touch-icon" sizes="57x57" type="image/png"/>
+<link href="/img/icons/apple-icon-60x60.png" rel="apple-touch-icon" sizes="60x60" type="image/png"/>
+<link href="/img/icons/apple-icon-72x72.png" rel="apple-touch-icon" sizes="72x72" type="image/png"/>
+<link href="/img/icons/apple-icon-76x76.png" rel="apple-touch-icon" sizes="76x76" type="image/png"/>
+<link href="/img/icons/apple-icon-114x114.png" rel="apple-touch-icon" sizes="114x114" type="image/png"/>
+<link href="/img/icons/apple-icon-120x120.png" rel="apple-touch-icon" sizes="120x120" type="image/png"/>
+<link href="/img/icons/apple-icon-144x144.png" rel="apple-touch-icon" sizes="144x144" type="image/png"/>
+<link href="/img/icons/apple-icon-152x152.png" rel="apple-touch-icon" sizes="152x152" type="image/png"/>
+<link href="/img/icons/apple-icon-180x180.png" rel="apple-touch-icon" sizes="180x180" type="image/png"/>
+<link href="/img/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/img/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/img/icons/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png"/>
+<link href="/img/icons/favicon-192x192.png" rel="icon" sizes="192x192" type="image/png"/>
+<meta content="width=device-width, initial-scale=1" id="viewport" name="viewport"/>
+<script>
+                var propertag = {};
+                propertag.cmd = [];
+            </script>
+<link href="/design/assets/bundle.css?rev=c58d8df02f09262390bbd03db7921fc35c6af306" rel="stylesheet"/>
+<script>
+                function object(objectId) {
+                    if (document.getElementById && document.getElementById(objectId)) {
+                        return document.getElementById(objectId);
+                    } else if (document.all && document.all(objectId)) {
+                        return document.all(objectId);
+                    } else if (document.layers && document.layers[objectId]) {
+                        return document.layers[objectId];
+                    } else {
+                        return false;
+                    }
+                }
+
+                // JAVASCRIPT COOKIES CODE: for getting and setting user viewing preferences
+                var cookies = {
+                    create: function (name, value, days2expire, path) {
+                        var date = new Date();
+                        date.setTime(date.getTime() + (days2expire * 24 * 60 * 60 * 1000));
+                        var expires = date.toUTCString();
+                        document.cookie = name + '=' + value + ';' + 'expires=' + expires + ';' + 'path=' + path + ';';
+                    },
+										createWithExpire: function(name, value, expires, path) {
+												document.cookie = name + '=' + value + ';' + 'expires=' + expires + ';' + 'path=' + path + ';';
+										},
+                    read: function (name) {
+                        var cookie_value = "",
+                            current_cookie = "",
+                            name_expr = name + "=",
+                            all_cookies = document.cookie.split(';'),
+                            n = all_cookies.length;
+
+                        for (var i = 0; i < n; i++) {
+                            current_cookie = all_cookies[i].trim();
+                            if (current_cookie.indexOf(name_expr) === 0) {
+                                cookie_value = current_cookie.substring(name_expr.length, current_cookie.length);
+                                break;
+                            }
+                        }
+                        return cookie_value;
+                    },
+                    update: function (name, val) {
+                        this.create(name, val, 300, "/");
+                    },
+                    remove: function (name) {
+                        document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
+                    }
+                };
+
+                function updateUserPrefs() {
+                    //GENERAL: detect and set browser, if not cookied (will be treated like a user-preference and added to the #user-pref element)
+                    if( !cookies.read('user-browser') ){
+                        var broswer = '';
+
+                        if(navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPod/i) ){
+                            browser = 'iOS';
+                        } else if (/Opera[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'opera';
+                        } else if (/MSIE (\d+\.\d+);/.test(navigator.userAgent)) {
+                            browser = 'MSIE';
+                        } else if (/Navigator[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'netscape';
+                        } else if (/Chrome[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'chrome';
+                        } else if (/Safari[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'safari';
+                            /Version[\/\s](\d+\.\d+)/.test(navigator.userAgent);
+                            browserVersion = new Number(RegExp.$1);
+                        } else if (/Firefox[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'firefox';
+                        } else {
+                            browser = 'internet_explorer';
+                        }
+                        cookies.create('user-browser',browser,1,'/');
+                        document.getElementById('user-prefs').classList.add('browser-' + browser);
+                    } else {
+                        document.getElementById('user-prefs').classList.add('browser-' + cookies.read('user-browser'));
+                    }
+
+                    //update user preference settings
+                    if (cookies.read('wide-load') !== '') document.getElementById('user-prefs').classList.add('wide-load');
+                    if (cookies.read('night-vision') !== '') document.getElementById('user-prefs').classList.add('night-vision');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('user-prefs').classList.add('sticky-header');
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('user-prefs').classList.add('show-spoilers');
+                    if (cookies.read('folders-open') !== '') document.getElementById('user-prefs').classList.add('folders-open');
+                    if (cookies.read('lefthand-sidebar') !== '') document.getElementById('user-prefs').classList.add('lefthand-sidebar');
+                    if (cookies.read('highlight-links') !== '') document.getElementById('user-prefs').classList.add('highlight-links');
+                    if (cookies.read('forum-gingerbread') !== '') document.getElementById('user-prefs').classList.add('forum-gingerbread');
+                    if (cookies.read('shared-avatars') !== '') document.getElementById('user-prefs').classList.add('shared-avatars');
+                    if (cookies.read('new-search') !== '') document.getElementById('user-prefs').classList.add('new-search');
+                    if (cookies.read('stop-auto-play-video') !== '') document.getElementById('user-prefs').classList.add('stop-auto-play-video');
+
+                    //desktop view on mobile
+                    if (cookies.read('desktop-on-mobile') !== ''){
+                        document.getElementById('user-prefs').classList.add('desktop-on-mobile');
+
+                        var viewport = document.querySelector("meta[name=viewport]");
+                        viewport.setAttribute('content', 'width=1000');
+                    }
+
+                }
+
+                function updateDesktopPrefs() {
+                    if (cookies.read('wide-load') !== '') document.getElementById('sidebar-toggle-wideload').classList.add('active');
+                    if (cookies.read('night-vision') !== '') document.getElementById('sidebar-toggle-nightvision').classList.add('active');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('sidebar-toggle-stickyheader').classList.add('active');
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('sidebar-toggle-showspoilers').classList.add('active');
+
+                }
+
+                function updateMobilePrefs() {
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('mobile-toggle-showspoilers').classList.add('active');
+                    if (cookies.read('night-vision') !== '') document.getElementById('mobile-toggle-nightvision').classList.add('active');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('mobile-toggle-stickyheader').classList.add('active');
+                    if (cookies.read('highlight-links') !== '') document.getElementById('mobile-toggle-highlightlinks').classList.add('active');
+
+                }
+
+
+                if (document.cookie.indexOf("scroll0=") < 0) {
+                    // do nothing
+                } else {
+                    console.log('ads removed by scroll.com');
+                    var adsRemovedWith = 'scroll';
+                    var style = document.createElement('style');
+                    style.innerHTML = '#header-ad, .proper-ad-unit, .square_ad, .sb-ad-unit { display: none !important; } ';
+                    document.head.appendChild(style);
+                }
+            </script>
+<script type="text/javascript">
+
+                var tvtropes_config = {
+                    astri_stream_enabled : "",
+                    is_logged_in         : "",
+                    handle               : "",
+                    get_astri_stream     : "",
+										revnum               : "c58d8df02f09262390bbd03db7921fc35c6af306",
+										img_domain           : "https://static.tvtropes.org",
+										adblock              : "1",
+										adblock_url          : "propermessage.io",
+										pause_editing        : "0",
+										pause_editing_msg    : "",
+										pause_site_changes   : ""
+                };
+            </script>
+<script type="text/javascript">
+						  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+						  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+						  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+						  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+						  ga('create', 'UA-3821842-1', 'auto');
+						  ga('send', 'pageview');
+
+						</script>
+</head>
+<body class="">
+<i id="user-prefs"></i>
+<script>updateUserPrefs();</script>
+<div id="fb-root"></div>
+<div id="modal-box"></div>
+<header class="headroom-element" id="main-header-bar">
+<div id="main-header-bar-inner">
+<span class="header-spacer" id="header-spacer-left"></span>
+<a class="mobile-menu-toggle-button tablet-on" href="#mobile-menu" id="main-mobile-toggle"><span></span><span></span><span></span></a>
+<a class="no-dev" href="/" id="main-header-logoButton"></a>
+<span class="header-spacer" id="header-spacer-right"></span>
+<nav class="tablet-off" id="main-header-nav">
+<a href="/pmwiki/pmwiki.php/Main/Tropes">Tropes</a>
+<a href="/pmwiki/pmwiki.php/Main/Media">Media</a>
+<a class="nav-browse" href="/pmwiki/browse.php">Browse</a>
+<a href="/pmwiki/index_report.php">Indexes</a>
+<a href="/pmwiki/topics.php">Forums</a>
+<a class="nav-browse" href="/pmwiki/recent_videos.php">Videos</a>
+</nav>
+<div id="main-header-bar-right">
+<div class="font-xs mobile-off" id="signup-login-box">
+<a class="hover-underline bold" data-modal-target="signup" href="/pmwiki/login.php">Join</a>
+<a class="hover-underline bold" data-modal-target="login" href="/pmwiki/login.php">Login</a>
+</div>
+<div class="mobile-on inline" id="signup-login-mobileToggle">
+<a data-modal-target="login" href="/pmwiki/login.php"><i class="fa fa-user"></i></a>
+</div>
+<div id="search-box">
+<form action="/pmwiki/search_result.php" class="search">
+<input class="search-box" name="q" placeholder="Search" required="" type="text" value=""/>
+<input class="submit-button" type="submit" value=""/>
+<input name="search_type" type="hidden" value="article"/>
+<input name="page_type" type="hidden" value="all"/>
+<input name="cx" type="hidden" value="partner-pub-6610802604051523:amzitfn8e7v"/>
+<input name="cof" type="hidden" value="FORID:10"/>
+<input name="ie" type="hidden" value="ISO-8859-1"/>
+<input name="siteurl" type="hidden" value=""/>
+<input name="ref" type="hidden" value=""/>
+<input name="ss" type="hidden" value=""/>
+</form>
+<a class="mobile-on mobile-search-toggle close-x" href="#close-search"><i class="fa fa-close"></i></a>
+</div>
+<div id="random-box">
+<a class="button-random-trope" href="/pmwiki/pmwiki.php/Main/WaterfallPuke" onclick="ga('send', 'event', 'button', 'click', 'random trope');" rel="nofollow"></a>
+<a class="button-random-media" href="/pmwiki/pmwiki.php/Literature/FromTheEarthToTheMoon" onclick="ga('send', 'event', 'button', 'click', 'random media');" rel="nofollow"></a>
+</div>
+</div>
+</div>
+<div class="tablet-on" id="mobile-menu"><div class="mobile-menu-options">
+<div class="nav-wrapper">
+<a class="xl" href="/pmwiki/pmwiki.php/Main/Tropes">Tropes</a>
+<a class="xl" href="/pmwiki/pmwiki.php/Main/Media">Media</a>
+<a class="xl" href="/pmwiki/browse.php">Browse</a>
+<a class="xl" href="/pmwiki/index_report.php">Indexes</a>
+<a class="xl" href="/pmwiki/topics.php">Forums</a>
+<a class="xl" href="/pmwiki/recent_videos.php">Videos</a>
+<a href="/pmwiki/query.php?type=att">Ask The Tropers</a>
+<a href="/pmwiki/query.php?type=tf">Trope Finder</a>
+<a href="/pmwiki/query.php?type=ykts">You Know That Show...</a>
+<a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a>
+<a data-click-toggle="active" href="#tools">Tools <i class="fa fa-chevron-down"></i></a>
+<div class="tools-dropdown mobile-dropdown-linkList">
+<a href="/pmwiki/cutlist.php">Cut List</a>
+<a href="/pmwiki/changes.php">New Edits</a>
+<a href="/pmwiki/recent_edit_reasons.php">Edit Reasons</a>
+<a href="/pmwiki/launches.php">Launches</a>
+<a href="/pmwiki/img_list.php">Images List</a>
+<a href="/pmwiki/crown_activity.php">Crowner Activity</a>
+<a href="/pmwiki/no_types.php">Un-typed Pages</a>
+<a href="/pmwiki/page_type_audit.php">Recent Page Type Changes</a>
+</div>
+<a data-click-toggle="active" href="#hq">Tropes HQ <i class="fa fa-chevron-down"></i></a>
+<div class="tools-dropdown mobile-dropdown-linkList">
+<a href="/pmwiki/about.php">About Us</a>
+<a href="/pmwiki/contact.php">Contact Us</a>
+<a href="mailto:advertising@proper.io">Advertise</a>
+<a href="/pmwiki/dmca.php">DMCA Notice</a>
+<a href="/pmwiki/privacypolicy.php">Privacy Policy</a>
+</div>
+<a href="/pmwiki/ad-free-subscribe.php">Go Ad-Free</a>
+<div class="toggle-switches">
+<ul class="mobile-menu display-toggles">
+<li>Show Spoilers <div class="display-toggle show-spoilers" id="mobile-toggle-showspoilers"></div></li>
+<li>Night Vision <div class="display-toggle night-vision" id="mobile-toggle-nightvision"></div></li>
+<li>Sticky Header <div class="display-toggle sticky-header" id="mobile-toggle-stickyheader"></div></li>
+<li>Highlight Links <div class="display-toggle highlight-links" id="mobile-toggle-highlightlinks"></div></li>
+</ul>
+<script>updateMobilePrefs();</script>
+</div>
+</div>
+</div>
+</div>
+</header>
+<div class="mobile-on" id="homepage-introBox-mobile">
+<a href="/"><img class="logo-small" src="/images/logo-white-big.png"/></a>
+<form action="/pmwiki/search_result.php" class="search" style="margin:10px -5px -6px -5px;">
+<input class="search-box" name="q" placeholder="Search" required="" type="text" value=""/>
+<input class="submit-button" type="submit" value=""/>
+<input name="search_type" type="hidden" value="article"/>
+<input name="page_type" type="hidden" value="all"/>
+<input name="cx" type="hidden" value="partner-pub-6610802604051523:amzitfn8e7v"/>
+<input name="cof" type="hidden" value="FORID:10"/>
+<input name="ie" type="hidden" value="ISO-8859-1"/>
+<input name="siteurl" type="hidden" value=""/>
+<input name="ref" type="hidden" value=""/>
+<input name="ss" type="hidden" value=""/>
+</form>
+</div>
+<div class="ad" id="header-ad-wrapper">
+<div id="header-ad">
+<div class="ad-size-970x90 atf_banner">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_1"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_1'); });</script> </div>
+</div> </div>
+</div>
+</div>
+<div id="main-container">
+<div class="action-bar mobile-off" id="action-bar-top">
+<div class="action-bar-right">
+<p>Follow TV Tropes</p>
+<a class="button-fb" href="https://www.facebook.com/TVTropes">
+<i class="fa fa-facebook"></i></a>
+<a class="button-tw" href="https://www.twitter.com/TVTropes">
+<i class="fa fa-twitter"></i></a>
+<a class="button-re" href="https://www.reddit.com/r/TVTropes">
+<i class="fa fa-reddit-alien"></i></a>
+</div>
+<nav class="actions-wrapper" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<ul class="page-actions" id="top_main_list">
+<li class="link-edit">
+<a class="article-edit-button" data-modal-target="login" href="/pmwiki/pmwiki.php/Main/SpaceFillingPath?action=edit" rel="nofollow">
+<i class="fa fa-pencil"></i> Edit Page</a></li><li class="link-related"><a href="/pmwiki/relatedsearch.php?term=Main/SpaceFillingPath">
+<i class="fa fa-share-alt"></i> Related</a></li><li class="link-history"><a href="/pmwiki/article_history.php?article=Main.SpaceFillingPath">
+<i class="fa fa-history"></i> History</a></li><li class="link-discussion"><a href="/pmwiki/remarks.php?trope=Main.SpaceFillingPath">
+<i class="fa fa-comment"></i> Discussion</a></li> </ul>
+<button class="nav__dropdown-toggle" id="top_more_button" onclick="toggle_more_menu('top');" type="button">More</button>
+<ul class="more_menu hidden_more_list" id="top_more_list">
+<li class="link-todo tuck-always more_list_item"><a data-modal-target="login" href="#todo"><i class="fa fa-check-circle"></i> To Do</a></li><li class="link-pageSource tuck-always more_list_item"><a data-modal-target="login" href="/pmwiki/pmwiki.php/Main/SpaceFillingPath?action=source" rel="nofollow" target="_blank"><i class="fa fa-code"></i> Page Source</a></li> </ul>
+</nav>
+<div class="WikiWordModalStub"></div>
+<div class="ImgUploadModalStub" data-page-type="Article"></div>
+<div class="login-alert" style="display: none;">
+You need to <a href="/pmwiki/login.php" style="color:#21A0E8">login</a> to do this. <a href="/pmwiki/login.php?tab=register_account" style="color:#21A0E8">Get Known</a> if you don't have an account
+</div>
+</div>
+<div class="page-Article" id="main-content">
+<article class="with-sidebar" id="main-entry">
+<input id="groupname-hidden" type="hidden" value="Main"/>
+<input id="title-hidden" type="hidden" value="SpaceFillingPath"/>
+<input id="article_id" type="hidden" value="8727"/>
+<input id="logged_in" type="hidden" value="false"/>
+<p class="hidden" id="current_url">http://tvtropes.org/pmwiki/pmwiki.php/Main/SpaceFillingPath</p>
+<meta content="" itemprop="datePublished"/>
+<meta content="" itemprop="articleSection"/>
+<meta content="" itemprop="image"/>
+<a class="watch-button" data-modal-target="login" href="#watch">Follow<span>ing</span></a>
+<h1 class="entry-title" itemprop="headline">
+Space-Filling Path
+</h1>
+<script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+                "@type": "ListItem",
+                "position": 1,
+                "name": "tvtropes.org",
+                "item": "https://tvtropes.org"
+            },{
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Tropes",
+                "item": "https://tvtropes.org/pmwiki/pmwiki.php/Main/Tropes"
+            },{
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Space-Filling Path"            }]
+        }
+    </script>
+<a class="mobile-actionbar-toggle mobile-on" data-click-toggle="active" href="#mobile-actions-toggle" id="mobile-actionbar-toggle">
+<p class="tiny-off">Go To</p><span></span><span></span><span></span><i class="fa fa-pencil"></i></a>
+<nav class="mobile-actions-wrapper mobile-on" id="mobile-actions-bar"></nav>
+<div class="modal fade hidden-until-active" id="editLockModal">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button aria-label="Close" class="close" data-dismiss="modal" type="button"> <span aria-hidden="true">×</span></button>
+<h4 class="modal-title">Edit Locked</h4>
+</div>
+<div class="modal-body">
+<div class="row">
+<div class="body">
+<div class="danger troper_locked_message"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<nav class="body-options" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<ul class="subpage-links">
+<li>
+<a class="subpage-link curr-subpage" href="/pmwiki/pmwiki.php/Main/SpaceFillingPath" title="The Main page">
+<span class="wrapper"><span class="spi main-page"></span>Main</span></a>
+</li>
+<li>
+<a class="subpage-link" href="/pmwiki/pmwiki.php/Laconic/SpaceFillingPath" title="The Laconic page">
+<span class="wrapper"><span class="spi laconic-icon"></span>Laconic</span></a>
+</li>
+<li class="create-subpage dropdown">
+<a aria-expanded="false" class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);" role="button">
+<span class="wrapper">Create New <i class="fa fa-plus-circle"></i></span>
+</a>
+<select onchange="this.options[this.selectedIndex].value &amp;&amp; (window.location = this.options[this.selectedIndex].value);">
+<option value="">- Create New -</option>
+<option value="/pmwiki/pmwiki.php/Analysis/SpaceFillingPath?action=edit">Analysis</option>
+<option value="/pmwiki/pmwiki.php/Characters/SpaceFillingPath?action=edit">Characters</option>
+<option value="/pmwiki/pmwiki.php/FanficRecs/SpaceFillingPath?action=edit">FanficRecs</option>
+<option value="/pmwiki/pmwiki.php/FanWorks/SpaceFillingPath?action=edit">FanWorks</option>
+<option value="/pmwiki/pmwiki.php/Fridge/SpaceFillingPath?action=edit">Fridge</option>
+<option value="/pmwiki/pmwiki.php/Haiku/SpaceFillingPath?action=edit">Haiku</option>
+<option value="/pmwiki/pmwiki.php/Headscratchers/SpaceFillingPath?action=edit">Headscratchers</option>
+<option value="/pmwiki/pmwiki.php/ImageLinks/SpaceFillingPath?action=edit">ImageLinks</option>
+<option value="/pmwiki/pmwiki.php/PlayingWith/SpaceFillingPath?action=edit">PlayingWith</option>
+<option value="/pmwiki/pmwiki.php/Quotes/SpaceFillingPath?action=edit">Quotes</option>
+<option value="/pmwiki/pmwiki.php/Recap/SpaceFillingPath?action=edit">Recap</option>
+<option value="/pmwiki/pmwiki.php/ReferencedBy/SpaceFillingPath?action=edit">ReferencedBy</option>
+<option value="/pmwiki/pmwiki.php/Synopsis/SpaceFillingPath?action=edit">Synopsis</option>
+<option value="/pmwiki/pmwiki.php/Timeline/SpaceFillingPath?action=edit">Timeline</option>
+<option value="/pmwiki/pmwiki.php/Trivia/SpaceFillingPath?action=edit">Trivia</option>
+<option value="/pmwiki/pmwiki.php/WMG/SpaceFillingPath?action=edit">WMG</option>
+<option value="/pmwiki/pmwiki.php/YMMV/SpaceFillingPath?action=edit">YMMV</option>
+</select>
+</li>
+</ul>
+</nav>
+<div class="article-content retro-folders" id="main-article">
+<p>No, you can't just walk from point A to point B. Sorry.
+</p><p>Video game developers don't like wasting space, especially if you're talking about an <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AdventureGame" title="/pmwiki/pmwiki.php/Main/AdventureGame">Adventure Game</a>, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/RPG" title="/pmwiki/pmwiki.php/Main/RPG">RPG</a>, or sometimes a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/FirstPersonShooter" title="/pmwiki/pmwiki.php/Main/FirstPersonShooter">First-Person Shooter</a>. Empty rooms with wide open spaces, especially in dungeons, can be both boring to the player and evident of the developer's laziness. So, what's a developer to do? Easy: Put something in the room. Something — anything — to make the room feel more "substantial".
+</p><div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_1"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_1'); })</script></div></div><p>Sometimes this can lead to very good things, like creative <a class="twikilink" href="/pmwiki/pmwiki.php/Main/StockVideogamePuzzle" title="/pmwiki/pmwiki.php/Main/StockVideogamePuzzle">puzzles</a> or <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SubBoss" title="/pmwiki/pmwiki.php/Main/SubBoss">miniboss</a> battles.
+</p><p>Other times, it can take a slightly more unfortunate turn: If the developers actually <em>are</em> lazy and can't seem to think of anything to add to the room in question, they'll fill it with obstacles, barriers, and line-like walls whose only purpose is to make the player spend more time in the room. It can also happen if the developers <em>think</em> that these are good things, but they don't actually turn out to be fun.
+</p><p>Another reason may be to delay the player to allow the game more time to load in the background. Staying in control, even if it's to do nothing important, is better than a loading screen, right?
+</p><p>Unfortunately for you, it means that even though that next door is two inches away from you when you enter the room, you're going to have to walk all the way around through the entire damn room in order to get to it. But all hope is not lost: If you're lucky, completing the path once will open a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DoorToBefore" title="/pmwiki/pmwiki.php/Main/DoorToBefore">Door to Before</a>.
+</p><div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_2"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_2'); })</script></div></div><p><strong>Here are some of the forms that the Space Filling Path can take:</strong>
+</p><ul><li> <strong>Ping Pong Path:</strong> This is the most basic form of the useless space-filling path. It starts out like a normal old path, but then (for some reason) it curves, making you walk <em>back</em>. And <em>forth</em>. And, if the mappers were feeling especially friendly, <em>back again</em>. Usually (if you're lucky), only two or so iterations are necessary.
+</li><li> <strong>Velvet Rope:</strong> A cousin of the Ping Pong Path, except much longer and more complex. It relies on the same back-and-forth pattern, but starts to add corners, spirals, and other shapes to better <a class="urllink" href="http://en.wikipedia.org/wiki/Space-filling_curve">utilize space.<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a> It can't really be called a <em>maze</em>, since it usually only contains one path that never branches off, in which case it is technically a <em>labyrinth</em>. Anyone with eyes can see how to get through it, but the question is, who has the patience to walk over nearly every tile in the room to get to the exit?
+</li><div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_3"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_3'); })</script></div></div><li> <strong>Intestinal Tract:</strong> A Ping Pong or Velvet Rope path with a twist: instead of just making you walk farther, it also hurts you in some way. How about the occasional <a class="twikilink" href="/pmwiki/pmwiki.php/Main/RandomEncounter" title="/pmwiki/pmwiki.php/Main/RandomEncounter">Random Encounter</a> as you're trekking through the path? Or perhaps the floor damages you with every step? Sounds fun, doesn't it?
+</li><li> <strong>Q*Bert Floor:</strong> You have to step on every tile, usually in one contiguous line without retracing your steps. Like the Velvet Rope, only with no visible boundaries. A brilliant source of <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GuideDangIt" title="/pmwiki/pmwiki.php/Main/GuideDangIt">Guide Dang It!</a>, and if there are enemies in the room that knock you around, it might even become <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ThatOneLevel" title="/pmwiki/pmwiki.php/Main/ThatOneLevel">That One Room</a>.
+</li></ul><p>Remember, however, that <a class="twikilink" href="/pmwiki/pmwiki.php/Administrivia/TropesAreNotBad" title="/pmwiki/pmwiki.php/Administrivia/TropesAreNotBad">Tropes Are Not Bad</a>; there are many legitimate uses for this trope, though like any trope it still requires restraint.
+</p><p>In <a class="twikilink" href="/pmwiki/pmwiki.php/Main/FPS" title="/pmwiki/pmwiki.php/Main/FPS">FPS</a> games smaller space can be made to look larger with a high density of terrain features and cutting short line of sight, which also allows occlusion culling to reduce the rendering load. This also has the benefits of providing shelter and places to hide.
+</p><p>Some maps in <a class="twikilink" href="/pmwiki/pmwiki.php/Main/RealTimeStrategy" title="/pmwiki/pmwiki.php/Main/RealTimeStrategy">Real-Time Strategy</a> games are built this way, in single or multiplayer, to create a long stretch of land to fight over without making a long, skinny map. Also, it creates a more obvious advantage for things like indirect-firing artillery and air transport, both of which can take a shortcut.
+</p><p>This is common in <a class="twikilink" href="/pmwiki/pmwiki.php/Main/RPG" title="/pmwiki/pmwiki.php/Main/RPG">RPGs</a>, as having a longer path means you have to face more <a class="twikilink" href="/pmwiki/pmwiki.php/Main/RandomEncounters" title="/pmwiki/pmwiki.php/Main/RandomEncounters">Random Encounters</a> without increasing how often they appear.
+</p><p>When combined with <a class="twikilink" href="/pmwiki/pmwiki.php/Main/NothingIsScarier" title="/pmwiki/pmwiki.php/Main/NothingIsScarier">Nothing Is Scarier</a> or <a class="twikilink" href="/pmwiki/pmwiki.php/Main/EmptyRoomPsych" title="/pmwiki/pmwiki.php/Main/EmptyRoomPsych">Empty Room Psych</a>, a short space filling path can be an effective horror tool, building suspense without exerting player resources. Though as those tropes note, doing this too much or too often will dampen the effect.
+</p><p><a class="twikilink" href="/pmwiki/pmwiki.php/Main/SceneryPorn" title="/pmwiki/pmwiki.php/Main/SceneryPorn">Scenery Porn</a> can take the edge off of this, possibly resulting in a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BreatherLevel" title="/pmwiki/pmwiki.php/Main/BreatherLevel">Breather Level</a>.
+</p><p>See Also: <a class="twikilink" href="/pmwiki/pmwiki.php/Main/OnlyIdiotsMayPass" title="/pmwiki/pmwiki.php/Main/OnlyIdiotsMayPass">Only Idiots May Pass</a>.
+</p><p></p><hr/><h2>Examples:</h2>
+<p></p><div class="folderlabel" onclick="toggleAllFolders();">    open/close all folders  </div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder0');">    Action Adventure </div><div class="folder" id="folder0" isfolder="true" style="display:block;">
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MetroidPrime" title="/pmwiki/pmwiki.php/VideoGame/MetroidPrime">Metroid Prime</a></em> has short Ping Pong Paths between some rooms to mask the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DynamicLoading" title="/pmwiki/pmwiki.php/Main/DynamicLoading">Dynamic Loading</a>.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MetroidPrime2Echoes" title="/pmwiki/pmwiki.php/VideoGame/MetroidPrime2Echoes">Metroid Prime 2: Echoes</a></em> has a number of rooms where there are two doors, one of which is always blocked by a rotating barrier. To rotate the barrier so you can access the other door, all you have to do is place a Morph Ball Bomb in the slot. Of course, now the barrier is on the first door, so you have to do it AGAIN in order to get back.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DevilMayCry" title="/pmwiki/pmwiki.php/VideoGame/DevilMayCry">Devil May Cry</a></em> 1 and 3 both have examples of this trope. In the first game, there's tentacles trying to get you while in the third game, there literally is an Intestinal Tract.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/StarFoxAdventures" title="/pmwiki/pmwiki.php/VideoGame/StarFoxAdventures">Star Fox Adventures</a></em> contains an underground maze which, while not difficult to figure out, must be visited multiple times in the course of a playthrough to help pad out the length of the game.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/TheLegendOfZelda" title="/pmwiki/pmwiki.php/Franchise/TheLegendOfZelda">The Legend of Zelda</a></em>:
+<ul><li> The 2-D games usually have at least one dungeon with a Q*Bert Floor room. Some even have ping-pong paths, but usually averted as getting the Roc's Feather allows you to jump quickly across the path. In particular, the overworld of <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheLegendOfZeldaALinkToThePast" title="/pmwiki/pmwiki.php/VideoGame/TheLegendOfZeldaALinkToThePast">The Legend of Zelda: A Link to the Past</a></em> (and, to a lesser extent, <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheLegendOfZeldaALinkBetweenWorlds" title="/pmwiki/pmwiki.php/VideoGame/TheLegendOfZeldaALinkBetweenWorlds">The Legend of Zelda: A Link Between Worlds</a></em>) has plenty of tree clusters, fences and one way ledge jump off points, among other things, that limit travel pathway options, forcing roundabout routes to nearby destinations.
+</li><li> This is one of the reasons <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ThatOneLevel" title="/pmwiki/pmwiki.php/Main/ThatOneLevel">the Water Temple</a> from <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheLegendOfZeldaOcarinaOfTime" title="/pmwiki/pmwiki.php/VideoGame/TheLegendOfZeldaOcarinaOfTime">The Legend of Zelda: Ocarina of Time</a></em> gets a lot of hate. Not only do you have to submerge yourself and run (rather slowly at that) through underwater tunnels and resurface, but you also have to constantly <a class="twikilink" href="/pmwiki/pmwiki.php/Main/StockVideoGamePuzzle" title="/pmwiki/pmwiki.php/Main/StockVideoGamePuzzle">switch water levels</a> at designated checkpoints, each one corresponding to a particular tier. Much <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BackTracking" title="/pmwiki/pmwiki.php/Main/BackTracking">Back Tracking</a> abounds, especially if you alter the water level incorrectly for the current situation. <em>And</em> you have to keep going into the item menu to take the Iron Boots on and off. Fortunately, a lot of the things that made the Water Temple so notorious were fixed in the <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/Nintendo3DS" title="/pmwiki/pmwiki.php/UsefulNotes/Nintendo3DS">Nintendo 3DS</a> remake.
+</li><li> Some puzzle rooms in <a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheLegendOfZeldaOracleGames" title="/pmwiki/pmwiki.php/VideoGame/TheLegendOfZeldaOracleGames">Oracle Of Ages</a> feature a pitch black room containing an invisible Space Filling Path over a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BottomlessPit" title="/pmwiki/pmwiki.php/Main/BottomlessPit">Bottomless Pit</a>. While <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TrialAndErrorGameplay" title="/pmwiki/pmwiki.php/Main/TrialAndErrorGameplay">Trial and Error</a> could be used to solve these rooms, the intended way is to generate <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BlockPuzzle" title="/pmwiki/pmwiki.php/Main/BlockPuzzle">Blocks</a> with the Cane of Somaria. If the block falls into the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BottomlessPit" title="/pmwiki/pmwiki.php/Main/BottomlessPit">Bottomless Pit</a>, there is no path there, and you should try another direction.
+</li><li> The Eyeglass Library in <em>Oracle of Ages</em> has books giving directions through the invisible maze to the next book. Until you read the book, there is no path forward, and once you read the book, the path behind you disappears. The final book has nine instructions, which, if you forget them, can be replaced by the Cane of Somaria.
+</li></ul></li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/PrinceOfPersia" title="/pmwiki/pmwiki.php/Franchise/PrinceOfPersia">Prince of Persia</a></em>, the Velvet Path approach is used very frequently. When first entering a room, a lot of the time the first thing the player must do is figure out where the start of the path to get out is, which will invariably use every column, ledge and architectural detail in the room <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BenevolentArchitecture" title="/pmwiki/pmwiki.php/Main/BenevolentArchitecture">that's still standing</a>.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder1');">    Fighting </div><div class="folder" id="folder1" isfolder="true" style="display:block;">
+<ul><li> The Chronicles of the Sword section of <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SoulCalibur" title="/pmwiki/pmwiki.php/VideoGame/SoulCalibur">SoulCalibur</a> 3</em> had a lot of ping-pong paths. This is made more annoying by the space between the paths frequently being lawn or other terrain that should be entirely traversable, but you still have to take the long route.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder2');">    First Person Shooter </div><div class="folder" id="folder2" isfolder="true" style="display:block;">
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Wolfenstein3D" title="/pmwiki/pmwiki.php/VideoGame/Wolfenstein3D">Wolfenstein 3D</a></em> had <em>loads</em> of these. E3M8 is particularly bad. E6M8 is infinitely worse (imagine a figure eight, with paths filling in the insides of both loops).
+</li><li> At a certain point in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Timeshift" title="/pmwiki/pmwiki.php/VideoGame/Timeshift">Timeshift</a></em> you enter a fucking <em>enormous</em> warehouse, so big it constitutes the entirety of the level. You're standing on a metal gangplank overlooking a deadly drop, and the exit point is... straight to your left. Unfortunately, inbetween you and it sit a few stacked boxes. You look at them and go "ok, there's a small space I should realistically be able to jump on to bypass them", but no, if you try that you fall and die. Then you think "why can't I climb them or push them off?", but no, jumping and the action button have no effect (neither does, of course, shooting them with a rocket). The only possible course of action is to go the other way, and start on a ridiculously long and convoluted path that will take you across the entirety of the warehouse - both on the ground floor and on more gangplanks than can be counted - before ultimately leading you to the exit point.
+</li><li> The infamous Golden Gun Room in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/GoldenEye1997" title="/pmwiki/pmwiki.php/VideoGame/GoldenEye1997">GoldenEye (1997)</a></em> features a Q-Bert Floor. Step on the wrong tile, and the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SentryGun" title="/pmwiki/pmwiki.php/Main/SentryGun">automated gun turrets</a> will turn you to Swiss cheese.
+</li><li> Many levels in the <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/Halo" title="/pmwiki/pmwiki.php/Franchise/Halo">Halo</a></em> series follow a ping-pong or velvet rope space-filling path, sometimes enforcing this with instant-death <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GravityBarrier" title="/pmwiki/pmwiki.php/Main/GravityBarrier">fall barriers</a>. Examples include <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/HaloCombatEvolved" title="/pmwiki/pmwiki.php/VideoGame/HaloCombatEvolved">Halo: Combat Evolved</a></em>'s "Pillar of Autumn", "Truth and Reconciliation", "Assault on the Control Room", and "Keyes"; <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Halo2" title="/pmwiki/pmwiki.php/VideoGame/Halo2">Halo 2</a></em>'s "Delta Halo" and "Uprising"/"Great Journey"; and <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Halo3" title="/pmwiki/pmwiki.php/VideoGame/Halo3">Halo 3</a></em>'s "Sierra 117" and "Tsavo Highway". Often, these are used to facilitate <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DynamicLoading" title="/pmwiki/pmwiki.php/Main/DynamicLoading">Dynamic Loading</a>. <em>Combat Evolved</em>'s "The Library" and its descendants are Intestinal Tract levels with constant Flood ambushes and other hazards. And <em>3</em>'s infamous "Cortana" mission is a near-literal intestinal tract, complete with "sphincdoors".
+</li><li> <a class="twikilink" href="/pmwiki/pmwiki.php/Creator/ValveSoftware" title="/pmwiki/pmwiki.php/Creator/ValveSoftware">Valve</a> tends to do this in rather subtle and creative ways.
+<ul><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/HalfLife2" title="/pmwiki/pmwiki.php/VideoGame/HalfLife2">Half-Life 2</a></em>, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ZombieApocalypse" title="/pmwiki/pmwiki.php/Main/ZombieApocalypse">Ravenholm</a> seems a lot larger than it really is, as the player must traverse the streets, building interiors AND roofs.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Portal" title="/pmwiki/pmwiki.php/VideoGame/Portal">Portal</a></em> has Test Chamber 17, in which you can see the button that you place the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/CompanionCube" title="/pmwiki/pmwiki.php/Main/CompanionCube">Weighted Companion Cube</a> on towards the end of the level through a glass floor in one of the energy ball hallways, as well as through a window in the main room.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Left4Dead2" title="/pmwiki/pmwiki.php/VideoGame/Left4Dead2">Left 4 Dead 2</a></em> also has a couple examples:
+<ul><li> You can see the Safe Room in the Barns chapter of Dark Carnival about halfway through the level (and you can throw <a class="twikilink" href="/pmwiki/pmwiki.php/Main/EscortMission" title="/pmwiki/pmwiki.php/Main/EscortMission">Gnome</a> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/HundredPercentCompletion" title="/pmwiki/pmwiki.php/Main/HundredPercentCompletion">Chompski</a> over the fence if you have him). However, to get to it, the Survivors must continue past said fence, turn around and fight through some barns running alongside the area they just navigated, then climb on top of said barns and traverse the roofs to reach the other side of the fence. Then it becomes an Intestinal Tract when you open the gate on the fence, as doing so triggers a Gauntlet Crescendo where Infected just don't stop coming, and the players have to carve their way through the hordes to reach the stadium itself.
+</li><li> The Crescendo event in the the "Park" map of "The Parish" has the survivors running through what used to be a waiting queue to a safe zone; as such, it is a little less subtle.
+</li><li> In "Quarter", also in "The Parish", you can very often see areas you've been to before or have to pass through, from behind a fence, a barricade or a gate. The map itself is surprisingly compact dimension-wise, but the Velvet Rope makes it just as long as any other map.
+</li><li> The final map of the "Suicide Blitz 2" <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GameMod" title="/pmwiki/pmwiki.php/Main/GameMod">custom campaign</a> features a long run through the entryway of a stadium, up the stairs to the top floor, down a level and into the field, then out the other side to the parking lot. All the while a Gauntlet Crescendo is rolling.
+</li></ul></li></ul></li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder3');">    MMORPG </div><div class="folder" id="folder3" isfolder="true" style="display:block;">
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/WorldOfWarcraft" title="/pmwiki/pmwiki.php/VideoGame/WorldOfWarcraft">World of Warcraft</a></em>:
+<ul><li> The Armory wing in the Scarlet Monastery consists largely of a pair of massive hallways with gates arbitrarily placed to maximize the time needed (and the number of enemy groups encountered) to traverse it.
+</li><li> Most of the dungeons invoke this trope, the ones in the expansion packs just tend to be smaller.
+</li><li> The most trope-fitting being Razorfen Downs, with the last 45 minutes spent climbing a tacked-on ascending spiral ramp.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/RuneScape" title="/pmwiki/pmwiki.php/VideoGame/RuneScape">RuneScape</a></em>:
+<ul><li> The tunnels of Ape Atoll in "Monkey Madness" just winding and winding, with traps and hostile creatures at every turn.
+</li><li> Optional in the Ourania Runecrafting complex: There's a short and straight path to the altar camped by hostiles, or you can take a long winding path <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ConvectionSchmonvection" title="/pmwiki/pmwiki.php/Main/ConvectionSchmonvection">over a pool of magma</a> that bypasses them.
+</li></ul></li><li> Unlike many areas in the base game, in the <em>Heavensward</em> expansion (and some parts of Stormblood) for <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FinalFantasyXIV" title="/pmwiki/pmwiki.php/VideoGame/FinalFantasyXIV">Final Fantasy XIV</a></em>, most of the areas past Foundation will have a velvet-rope series of paths, requiring a player go to <em>way</em> out of their way in order to reach their destinations. Once a player has all of the Aetheryte points in an area unlocked, however (something which, naturally, requires the completion of most of the area), they can simply fly everywhere.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder4');">    Platform </div><div class="folder" id="folder4" isfolder="true" style="display:block;">
+<ul><li> ROM hacks (especially of <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/SuperMarioBros" title="/pmwiki/pmwiki.php/Franchise/SuperMarioBros">Super Mario World</a></em>) and <a class="twikilink" href="/pmwiki/pmwiki.php/Main/NintendoHard" title="/pmwiki/pmwiki.php/Main/NintendoHard">Nintendo Hard</a> platform games are the kings of this, utilizing both the ping pong path and the velvet rope path to near ridiculous degrees to make sure every possible part of each room is filled with more and more narrow jumps and instant death spikes. And in some even worse cases, you have to go right back through said maze with an item or after an action is taken the other side.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/SuperMarioBros" title="/pmwiki/pmwiki.php/Franchise/SuperMarioBros">Super Mario Bros.</a></em>:
+<ul><li> The series has this with the block trains/snakes in some of the castles in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SuperMarioWorld" title="/pmwiki/pmwiki.php/VideoGame/SuperMarioWorld">Super Mario World</a></em>, all <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/NewSuperMarioBros" title="/pmwiki/pmwiki.php/VideoGame/NewSuperMarioBros">New Super Mario Bros.</a></em> games and quite a few Mario World hacks, which have Mario riding a moving train of blocks that goes the long way round a huge room past a ton of obstacles. <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/NewSuperMarioBros1" title="/pmwiki/pmwiki.php/VideoGame/NewSuperMarioBros1">New Super Mario Bros.</a></em> even has one in one of the tower levels which goes right, up one block, left, up another block, ad nauseam for a while before moving on upwards.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SuperMarioGalaxy" title="/pmwiki/pmwiki.php/VideoGame/SuperMarioGalaxy">Super Mario Galaxy</a></em>:
+<ul><li> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ThatOneLevel" title="/pmwiki/pmwiki.php/Main/ThatOneLevel">Luigi's Purple Coins</a> becomes a Q*bert Floor, as every platform that it is safe to stand on either disappears or starts rotating and becomes unstable after touching them.
+</li><li> There is also the <em>Hurry, He's Hungry</em> Star in the Sea Slide Galaxy as well as the Shrinking Satellite star in the Hurry Scurry Galaxy, which features a planetoid constructed completely out of disappearing tiles with a Black Hole in the center. Mario must grab an item from each tile, at which point the black hole turns into a Star.
+</li></ul></li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SuperMarioGalaxy2" title="/pmwiki/pmwiki.php/VideoGame/SuperMarioGalaxy2">Super Mario Galaxy 2</a></em>, the Cosmic Clones are a Q*bert Floor mechanic to an extent, because you to have to run from infinite numbers of Mario clones that copy your every move and crossing your path leads to being hurt via <a class="twikilink" href="/pmwiki/pmwiki.php/Main/CollisionDamage" title="/pmwiki/pmwiki.php/Main/CollisionDamage">Collision Damage</a>. This gets applied then to Luigi's Purple Coins from the first game. This time, though, you have Co-Star Luma (if you have friends) to stop the green tiles from disappearing.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/IWannaBeTheGuy" title="/pmwiki/pmwiki.php/VideoGame/IWannaBeTheGuy">I Wanna Be the Guy</a></em> has countless "intestinal tract" type rooms, including several chock full of <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SpikesOfDoom" title="/pmwiki/pmwiki.php/Main/SpikesOfDoom">Spikes of Doom</a> (eg the Room of Patience, which also has four <a class="twikilink" href="/pmwiki/pmwiki.php/Main/LiftOfDoom" title="/pmwiki/pmwiki.php/Main/LiftOfDoom">Lifts of Doom</a>), a gauntlet of <a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MegaMan2" title="/pmwiki/pmwiki.php/VideoGame/MegaMan2">Quick Man</a> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DeathRay" title="/pmwiki/pmwiki.php/Main/DeathRay">Death Rays</a>, and a path consisting of a "snake" of <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TemporaryPlatform" title="/pmwiki/pmwiki.php/Main/TemporaryPlatform">Temporary Platforms</a> that gradually increases in speed.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/Castlevania" title="/pmwiki/pmwiki.php/Franchise/Castlevania">Castlevania</a></em>
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/CastlevaniaHarmonyOfDissonance" title="/pmwiki/pmwiki.php/VideoGame/CastlevaniaHarmonyOfDissonance">Castlevania: Harmony of Dissonance</a></em> has many zigzagging paths designed to make you abuse your two-way dash move just to save time.
+</li><li> The first GBA title, ''<a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/CastlevaniaCircleOfTheMoon" title="/pmwiki/pmwiki.php/VideoGame/CastlevaniaCircleOfTheMoon">Castlevania: Circle of the Moon</a>. In any room that is more than one screen wide or tall, iyou have to move through every possible screen to get from one corner to the other.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/RatchetAndClankFutureToolsOfDestruction" title="/pmwiki/pmwiki.php/VideoGame/RatchetAndClankFutureToolsOfDestruction">Ratchet &amp; Clank Future: Tools of Destruction</a></em> cleverly uses the Velvet Rope approach with the opening Metropolis level. While it might appear to be a long, sprawling path, it actually winds over, under and around itself to disguise how small the level itself is. If the player keeps a close eye out, they can spot earlier and later parts of the level as they go through it.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder5');">    Puzzle </div><div class="folder" id="folder5" isfolder="true" style="display:block;">
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/ZZT" title="/pmwiki/pmwiki.php/VideoGame/ZZT">ZZT</a></em> games from the earlier years of the program made by first-time designers suffered from the presence of Ping Pong Paths so often that they have appeared in "help" games describing and depicting what not to do in a <em>ZZT</em> game. <em>ZZT Syndromes</em> forces the player to step on most of the tiles on the screen - <span class="spoiler" title="you can set spoilers visible by default on your profile"> or it would have if the narrator didn't let you off the hook by carving a tunnel while you were doing it.</span>
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder6');">    Real Time Strategy </div><div class="folder" id="folder6" isfolder="true" style="display:block;">
+<ul><li> Most dungeon crawl missions in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/WarcraftIII" title="/pmwiki/pmwiki.php/VideoGame/WarcraftIII">Warcraft III</a></em> and its expansion. As well as their ancestors, the installation missions from <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Starcraft" title="/pmwiki/pmwiki.php/VideoGame/Starcraft">Starcraft</a></em>.
+</li><li> Many <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Starcraft" title="/pmwiki/pmwiki.php/VideoGame/Starcraft">Starcraft</a></em> and <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/StarcraftII" title="/pmwiki/pmwiki.php/VideoGame/StarcraftII">Starcraft II</a></em> multiplayer maps feature a long, twisty route from one end of the battlefield. Generally, air-heavy strategies are more practical on these maps, since the greater mobility of aircraft helps cancel out the increased time to get to them in the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TechTree" title="/pmwiki/pmwiki.php/Main/TechTree">Tech Tree</a>. One map from SC2 in particular is the epitome of this trope in RTSes: the players' starting locations are on separate plateaus arranged in a circle, with ramps down to a ring around the exterior of the map serving as the only ground route available.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder7');">    Roguelike </div><div class="folder" id="folder7" isfolder="true" style="display:block;">
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/NetHack" title="/pmwiki/pmwiki.php/VideoGame/NetHack">NetHack</a></em>:
+<ul><li> The deepest levels of the game are completely maze-like, and delay moving from one floor to the next to an aggravating degree; although this is why savvy hackers will just bring a pick-axe with them. This is why savvy hackers have Teleport Control. But <strong>really</strong> savvy hackers bring both, because teleportation becomes unreliable once you have the Amulet. A <em>very</em> savvy hacker uses a wand of digging to clear the shortest-line path from stairway to stairway in preparation for the return trip before ever setting foot in the Inner Sanctum.
+</li><li> The variant Slash'EM has a guaranteed Ping Pong Path on one deep level; it's less about filling up space, and more about giving the Wizard of Yendor plenty of time to lay his ubiquitous brand of smackdown upon you at his leisure.
+</li></ul></li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder8');">    RPG </div><div class="folder" id="folder8" isfolder="true" style="display:block;">
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/BaldursGate" title="/pmwiki/pmwiki.php/VideoGame/BaldursGate">Baldur's Gate</a></em>: The third-to-last area is little more than a large room, with flimsy wooden walls set up to create a labyrinth. There are also several nasty monsters who will shoot at you with flaming arrows. Oh, and there are traps set right in front of the monsters, too. And said monsters are resistant to most ranged weapons. <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ThatOneLevel" title="/pmwiki/pmwiki.php/Main/ThatOneLevel">Yeah</a>.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/ShadowHearts" title="/pmwiki/pmwiki.php/VideoGame/ShadowHearts">Shadow Hearts</a></em> has done this a few times. The Wine Cellar in <em>Covenant</em>, for example, sends you through several rooms where you have to flip a switch to lower a path to flip a switch... The last switch in a room, thankfully, lowers the path back out.
+</li><li> Many outdoor locations in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/NeverwinterNights2" title="/pmwiki/pmwiki.php/VideoGame/NeverwinterNights2">Neverwinter Nights 2</a></em> are like this — see <a class="urllink" href="http://gamebanshee.com/neverwinternights2/walkthrough/mountgalardrym.php">this map<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a> for an <a class="twikilink" href="/pmwiki/pmwiki.php/JustForFun/Egregious" title="/pmwiki/pmwiki.php/JustForFun/Egregious">egregious</a> example.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FinalFantasyX" title="/pmwiki/pmwiki.php/VideoGame/FinalFantasyX">Final Fantasy X</a></em> and <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FinalFantasyX2" title="/pmwiki/pmwiki.php/VideoGame/FinalFantasyX2">Final Fantasy X-2</a></em> suffered from this in Macalania Woods and the Mount Gagazet trail, which both featured elongated spirals, where you could actually see the path below you, and in X-2's particularly bad case, you actually do once jump down to the lower path to complete a quest, but can never again use that shortcut.
+</li><li> The world map of the first <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DragonQuest" title="/pmwiki/pmwiki.php/VideoGame/DragonQuest">Dragon Quest</a></em> game arguably fits this trope, as the final enemy's castle is visible from the starting area, but requires a circuitous route to reach.
+</li><li> Dungeons in the game <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheElderScrollsIIDaggerfall" title="/pmwiki/pmwiki.php/VideoGame/TheElderScrollsIIDaggerfall">The Elder Scrolls II: Daggerfall</a></em> have been described affectionately as <em>octopi mating</em> and the random generator is not even entirely to blame for this. Even some of the main quest dungeons, which were carefully designed, appear nebulous.
+</li><li> Since every room in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/LufiaIIRiseOfTheSinistrals" title="/pmwiki/pmwiki.php/VideoGame/LufiaIIRiseOfTheSinistrals">Lufia II: Rise of the Sinistrals</a></em> has a puzzle, there are quite a few room with the aforementioned Q*Bert floor.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SwordOfVermilion" title="/pmwiki/pmwiki.php/VideoGame/SwordOfVermilion">Sword of Vermilion</a></em>, the paths towards both the last town and <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TheVeryDefinitelyFinalDungeon" title="/pmwiki/pmwiki.php/Main/TheVeryDefinitelyFinalDungeon">The Very Definitely Final Dungeon</a> are examples of this trope, the first being a long spiral and the second a long back and forth winding path. One villager even <a class="twikilink" href="/pmwiki/pmwiki.php/Main/LampshadeHanging" title="/pmwiki/pmwiki.php/Main/LampshadeHanging">lampshades</a> it, saying that the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BigBad" title="/pmwiki/pmwiki.php/Main/BigBad">Big Bad</a> made it that way to "discourage you".
+</li><li> A pet peeve of many <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MegaManBattleNetwork" title="/pmwiki/pmwiki.php/VideoGame/MegaManBattleNetwork">Mega Man Battle Network</a></em> players is long, twisty paths in areas of cyberspace where there's no reason for it. Or rather, there <em>is</em> a reason — the designers are forcing more random encounters. It's especially annoying the way each game's final boss has a long enough runup that you'll get attacked at least once, and this is after the no-save point. In the sixth game, Green Area is an <a class="twikilink" href="/pmwiki/pmwiki.php/JustForFun/Egregious" title="/pmwiki/pmwiki.php/JustForFun/Egregious">egregious</a> form of intestinal tract. The stage of the Green Town boss, Judgeman, is also a good example of the Q-Bert Floor.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/ChronoTrigger" title="/pmwiki/pmwiki.php/VideoGame/ChronoTrigger">Chrono Trigger</a> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/VideoGameRemake" title="/pmwiki/pmwiki.php/Main/VideoGameRemake">DS</a></em>. Lost Sanctum. Not only is it a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SpaceFillingPath" title="/pmwiki/pmwiki.php/Main/SpaceFillingPath">Space-Filling Path</a>, but you have to go back and forth on it over and over until you die of boredom.
+</li><li> Most of the <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Pokemon" title="/pmwiki/pmwiki.php/VideoGame/Pokemon">Pokémon</a></em> games contain various degrees of this trope in the Routes that separate towns and other landmarks, although they are typically one-directional, as they are often made out of ledges that can simply be jumped over in the reverse direction.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/PokemonRubyAndSapphire" title="/pmwiki/pmwiki.php/VideoGame/PokemonRubyAndSapphire">Pokémon Ruby and Sapphire</a></em>:
+<ul><li> In the 8th gym, the floor is made of ice, and to open the door to the next room you need to crack all the tiles in the current one, but if you step on the same tile twice, you fall through the floor to the lower level, full of trainers. And the further you got onto the upper floor, the more trainers you have to fight on your way out. And you have to do the previous rooms <em>again</em> when you get back up, which is annoying if you're going for the Gym's trainers on purpose.
+</li><li> Another example is in the Sky Pillar, except this time you need to use the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TooFastToStop" title="/pmwiki/pmwiki.php/Main/TooFastToStop">barely-controllable</a> Mach Bike to go over the cracked tiles before they break completely. The Mach Bike is pretty fast but hard to steer, especially in close quarters, and if you stop (such as from a collision with a wall), the tile you're on gives out and you fall down.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TitanQuest" title="/pmwiki/pmwiki.php/VideoGame/TitanQuest">Titan Quest</a></em> has a velvet rope path in the Labyrinth of Minos.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/UltimaVIIPartII" title="/pmwiki/pmwiki.php/VideoGame/UltimaVIIPartII">Ultima VII Part II</a></em>. One of the (many) trials in the game is a snaking path filled with acid. Plot-wise, you have to recruit an acid-immune character to bypass it, although bringing along a load of healing potions also works.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Wizardry" title="/pmwiki/pmwiki.php/VideoGame/Wizardry">Wizardry</a> V</em>. Dungeon level 4. It does warn you that a 'Labyrinth of Doom' is ahead, or something to that effect. If you don't listen, expect to have to traverse a wind about, single tile path filling half the dungeon and containing nothing but enemies with all sorts of <em><a class="twikilink" href="/pmwiki/pmwiki.php/Main/StandardStatusEffects" title="/pmwiki/pmwiki.php/Main/StandardStatusEffects">Standard Status Effects</a></em> including poison, petrification, and instant death. Of course there's a secret door to skip it right at the entrance...
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Brandish" title="/pmwiki/pmwiki.php/VideoGame/Brandish">Brandish</a></em> lays out the routes on each floor so that you end up covering nearly all of the square-shaped map screen just trying to go from one staircase to the next. There are a few side rooms here and there that you don't need to enter unless you want some extra items, but if you end up trying to backtrack to a previous floor, you're going through nearly the whole map again.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Arcana" title="/pmwiki/pmwiki.php/VideoGame/Arcana">Arcana</a></em> has plenty of winding paths or long dead-end corridors that seem to exist only to give you more chances of getting into a random battle. Especially since simply making a 90-degree turn has a chance of ending up in a battle, just like taking a step forward or backward.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/NieR" title="/pmwiki/pmwiki.php/VideoGame/NieR">NieR</a></em> has one of these when you go to the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/WarmUpDungeon" title="/pmwiki/pmwiki.php/Main/WarmUpDungeon">Warm Up Dungeon</a> where you have to follow a ridiculously looping route to bypass approximately 20 feet of collapsed canyon, which contains no enemies, puzzles or loot and appears to exist for the sole purpose of a cut-scene pan across the tower.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/BreathOfFireI" title="/pmwiki/pmwiki.php/VideoGame/BreathOfFireI">Breath of Fire I</a></em> has a major one. The path <em>appears</em> to be simple—just a bridge with a few extra paths veering off of it... until you step on the button that spins the screen and the characters until you don't know which way is up. And since it's nothing but blackness all around, you can't even use landmarks. Even on the straight stretches you can find yourself turned around and going back the way you came.
+</li><li> While most of <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DragonAgeOrigins" title="/pmwiki/pmwiki.php/VideoGame/DragonAgeOrigins">Dragon Age: Origins</a></em> is railroading at its finest, the most annoying part is the Gauntlet, where you have to keep moving characters in a certain sequence in order to unlock the next part of the puzzle to get <span class="spoiler" title="you can set spoilers visible by default on your profile"> The Sacred Ashes of Andraste</span>.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FalloutNewVegas" title="/pmwiki/pmwiki.php/VideoGame/FalloutNewVegas">Fallout: New Vegas</a></em> uses these to a frustrating degree, since the overworld is divided into cells to facilitate <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DynamicLoading" title="/pmwiki/pmwiki.php/Main/DynamicLoading">dynamic loading</a>, and the paths between cells are rather limited. Trying to go straight to a waypoint will often lead to running into an <a class="twikilink" href="/pmwiki/pmwiki.php/Main/InsurmountableWaistHeightFence" title="/pmwiki/pmwiki.php/Main/InsurmountableWaistHeightFence">Insurmountable Waist-Height Fence</a>, or worse, a Deathclaw or Cazador ambush. The <em>Lonesome Road</em> DLC, having <a class="twikilink" href="/pmwiki/pmwiki.php/Main/NoSidepathsNoExplorationNoFreedom" title="/pmwiki/pmwiki.php/Main/NoSidepathsNoExplorationNoFreedom">No Sidepaths, No Exploration, No Freedom</a>, is even worse, especially near the end, where you have to negotiate a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DemonicSpiders" title="/pmwiki/pmwiki.php/Main/DemonicSpiders">Tunnelers</a>' nest to bypass a cave-in, then follow a long undulating spiral path up to Ulysses' Temple.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DiabloIII" title="/pmwiki/pmwiki.php/VideoGame/DiabloIII">Diablo III</a></em> has at least three needlessly twisty paths - between Old Tristram and Adria's Hut, on the way up to the Desolate Sands, and a long straight path at the start of Zoltan Kulle's sanctum - which are all, barring movement speed increasing buffs, <em>exactly</em> long and twisty enough to last the length of an attendant party member's exposition.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DisgaeaHourOfDarkness" title="/pmwiki/pmwiki.php/VideoGame/DisgaeaHourOfDarkness">Disgaea: Hour of Darkness</a></em>: One of the levels in Celestia starts with such a path made of No Entry geo panels, forcing your characters to slug through as angels shoot at them.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder9');">    Space Management </div><div class="folder" id="folder9" isfolder="true" style="display:block;">
+<ul><li> As their name suggests, all <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SpaceManagementGame" title="/pmwiki/pmwiki.php/Main/SpaceManagementGame">Space Management Games</a> demand their players to make the absolute most of a limited building area. Most games in this genre encourage players to design their facility so that characters can always take the <em>shortest</em> path possible between any two points; but there are several notable exceptions to this depending on the exact subgenre in question.
+<ul><li> In the case of Lair-type games, long, labyrinthine passageways can be used to slow down approaching enemies, giving the defenders more time to prepare and more opportunities to attack. Lining the longest-possible passageway with enough traps to kill most approaching enemies is sometimes the only way to survive at all.
+</li><li> Service Games typically require the shortest paths from A to B, to prevent customers from becoming bored and leaving your facility. However in some cases - especially prison-building games - a very long, twisting passageway can be essential to keeping the denizens from leaving <em>too quickly</em>.
+</li></ul></li><li> Both <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DwarfFortress" title="/pmwiki/pmwiki.php/VideoGame/DwarfFortress">Dwarf Fortress</a></em> and <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Rimworld" title="/pmwiki/pmwiki.php/VideoGame/Rimworld">Rimworld</a></em> attempt to avert the trope by introducing <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DemonicSpiders" title="/pmwiki/pmwiki.php/Main/DemonicSpiders">Digging-type enemies</a>, who will simply burrow through sheer rock and other obstacles to make a beeline for your colony - rendering any labyrinth useless.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder10');">    Survival Horror </div><div class="folder" id="folder10" isfolder="true" style="display:block;">
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/EternalDarkness" title="/pmwiki/pmwiki.php/VideoGame/EternalDarkness">Eternal Darkness</a></em> does this, especially the damaging-floor variety, later on in the game. Why was the whole main lobby of the final dungeon a giant bug zapper again?
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder11');">    Third Person Shooter </div><div class="folder" id="folder11" isfolder="true" style="display:block;">
+<ul><li> A map in <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/StarWars" title="/pmwiki/pmwiki.php/Franchise/StarWars">Star Wars</a>: <a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/JediKnightJediAcademy" title="/pmwiki/pmwiki.php/VideoGame/JediKnightJediAcademy">Jedi Knight: Jedi Academy</a></em> starts with you about to walk from a landing to platform to a nearby building... but then the bridge is blown up by your target. Cue a level which requires you to go through all the surrounding skyscrapers just to reach the one you intended to enter.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/JetForceGemini" title="/pmwiki/pmwiki.php/VideoGame/JetForceGemini">Jet Force Gemini</a></em>. Multiple levels must be revisited to collect every single one of the furry innocent civilians. Who are very vulnerable to any enemy fire. So blow five minutes blasting through yet another reiteration of the same level and a giant rocket blows Squishy Chewbacca to kingdom come? Start over, man. And the pathways through the levels cross over and loop and wrap around each other in dozens of various and differing ways. All not accessible all the time because of various abilities of the three main characters. Long story short, you're going to be seeing the same engine room a LOT. And yes, the enemies will always respawn.
+</li><li> Most of the levels in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/WinBack" title="/pmwiki/pmwiki.php/VideoGame/WinBack">WinBack</a></em> consist of space-filling paths, usually "ping pong" paths, sometimes with <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BackTracking" title="/pmwiki/pmwiki.php/Main/BackTracking">Back Tracking</a> through parts of previous levels.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder12');">    Tower Defense </div><div class="folder" id="folder12" isfolder="true" style="display:block;">
+<ul><li> This is the sole purpose of the genre of web games known as <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TowerDefense" title="/pmwiki/pmwiki.php/Main/TowerDefense">Tower Defense</a> games - you defend a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SpaceFillingPath" title="/pmwiki/pmwiki.php/Main/SpaceFillingPath">Space-Filling Path</a> from a stream of oncoming <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Mooks" title="/pmwiki/pmwiki.php/Main/Mooks">Mooks</a> by building defence towers to shoot them. In some instances, you must also <em>create</em> the SFP, which is an added problem/puzzle. Usually, you must create it while the enemies are flowing, which is even more difficult. <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/PlantsVsZombies" title="/pmwiki/pmwiki.php/VideoGame/PlantsVsZombies">Plants vs. Zombies</a></em> ditched this mechanic and instead had the zombies walk towards the player in straight lines.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder13');">    Real Life </div><div class="folder" id="folder13" isfolder="true" style="display:block;">
+<ul><li> Some cathedrals have a space-filling path marked on the floor, apparently so that pilgrims can walk a long distance inside the cathedral without retracing their steps. "Walking the Labyrinth" is part of Lenten devotionals in many denominations, sometimes associated with the Stations of the Cross.
+</li><li> Every theme park in the world uses this to fit as many queueing people as possible into as small a space as possible.
+</li><li> Also banks, fast food, some stores (by the registers), boxes for linked-belt ammo, cooling conveyors in food production... basically, any time something needs to be stored for a time while remaining in first-in-first-out order.
+</li><li> Switchbacks on mountain roads. In this case, artificially lengthening the road allows the grade to be less steep: it's rise-over-run, and rise is fixed, so beef up "run".
+</li><li> A few streets in especially hilly cities do the same thing for the same reason, such as one block of <a class="urllink" href="http://en.wikipedia.org/wiki/Lombard_Street_(San_Francisco)">Lombard Street in San Francisco<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a>.
+</li><li> In demolitions, time delays are added for synchronizing charges by inserting bundled loops of detcord into the fuse lines. A coiled bundle about 4000 meters long will delay the signal by a half second: it burns very fast.
+</li><li> Many cities before urban planning developed in this manner, with complex and densely-packed structures around narrow roads and alleys. Papal Rome in particular developed what had been a fluke of development into a symbol of revelation, pilgrims to the See passing from the darkness of these roads into the brilliant light of Saint Peter's Square and the heart of the Catholic Church. Mussolini then controversially demolished most of the neighbourhood, as well as destroying or relocating many historic buildings and residences, in order to <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DungeonBypass" title="/pmwiki/pmwiki.php/Main/DungeonBypass">create a straight path</a> as part of his general renovation of Rome. The Via della Conciliazione remains disliked even today for this.
+</li><li> There's a special term for any labyrinth that doesn't branch: Unicursal. Every unicursal labyrinth, incidentally, is a space filling path by design.
+</li><li> <a class="urllink" href="http://en.wikipedia.org/wiki/Space-filling_curve">Space-filling curves<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a> are continuous curves that nonetheless fill an entire square. They are used to provide useful examples/counterexamples to many topological statements. For examples, they explain why the notion of dimension is more complex than it seems to be. Versions of them are also often used in computer programs for geospatial data.
+</li><li> This is the idea behind real labyrinths (as opposed to mazes), such as the Labyrinth of Chartres. It is meant as a metaphorical or meditative activity.
+</li><li> IKEA stores are structured like this, as a single winding path with helpfully placed arrows that take visitors through the furniture showroom, house appliances store, warehouse and cash registers, in that order. It serves two purposes: making the store appear larger than it actually is, and forcing visitors to walk past goods that they wouldn't have otherwise considered, in the hope that they'd be interested in something beyond what they came for. Fortunately, there are also shortcuts tucked away that allow knowledgeable patrons, and employees, to quickly jump from one part of the path to another "distant" part.
+</li></ul></div>
+<hr/>
+</div>
+<div class="square_ad footer-article-ad main_2" data-isolated="0"></div>
+<div class="section-links" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<div class="titles">
+<div><h3 class="text-center text-uppercase">Previous</h3></div>
+<div><h3 class="text-center text-uppercase">Index</h3></div>
+<div><h3 class="text-center text-uppercase">Next</h3></div>
+</div>
+<div class="links">
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/SomeDexterityRequired">Some Dexterity Required</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/OlderThanTheNES">Older Than the NES</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/SplitScreen">Split Screen</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/SongsInTheKeyOfPanic">Songs in the Key of Panic</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/VideoGameTropes">Video Game Tropes</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/ASpaceMarineIsYou">A Space Marine Is You</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="outer_ads_by_salon_wrapper" id="exco_player_insert_div">
+</div>
+</article>
+<div id="main-content-sidebar"><div class="sidebar-item display-options">
+<ul class="sidebar display-toggles">
+<li>Show Spoilers <div class="display-toggle show-spoilers" id="sidebar-toggle-showspoilers"></div></li>
+<li>Night Vision <div class="display-toggle night-vision" id="sidebar-toggle-nightvision"></div></li>
+<li>Sticky Header <div class="display-toggle sticky-header" id="sidebar-toggle-stickyheader"></div></li>
+<li>Wide Load <div class="display-toggle wide-load" id="sidebar-toggle-wideload"></div></li>
+</ul>
+<script>updateDesktopPrefs();</script>
+</div>
+<div class="sidebar-item ad sb-ad-unit">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_2"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_2'); });</script> </div>
+</div></div>
+<div class="sidebar-item quick-links" itemtype="http://schema.org/SiteNavigationElement">
+<p class="sidebar-item-title" data-title="Important Links">Important Links</p>
+<div class="padded">
+<a href="/pmwiki/query.php?type=att">Ask The Tropers</a>
+<a href="/pmwiki/query.php?type=tf">Trope Finder</a>
+<a href="/pmwiki/query.php?type=ykts">You Know That Show...</a>
+<a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a>
+<a href="/pmwiki/review_activity.php">Reviews</a>
+<a data-modal-target="login" href="/pmwiki/lbs.php">Live Blogs</a>
+<a href="/pmwiki/ad-free-subscribe.php">Go Ad Free!</a> </div>
+</div>
+<div class="sidebar-item sb-ad-unit">
+<div class="sidebar-section">
+<div class="square_ad ad-size-300x600 ad-section text-center">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_3"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_3'); });</script> </div>
+</div> </div>
+</div>
+</div>
+<div class="sidebar-item">
+<p class="sidebar-item-title" data-title="Crucial Browsing">Crucial Browsing</p>
+<ul class="padded font-s" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><a data-click-toggle="active" href="javascript:void(0);">Genre</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/ActionAdventureTropes" title="Main/ActionAdventureTropes">Action Adventure</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ComedyTropes" title="Main/ComedyTropes">Comedy</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CommercialsTropes" title="Main/CommercialsTropes">Commercials</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CrimeAndPunishmentTropes" title="Main/CrimeAndPunishmentTropes">Crime &amp; Punishment</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DramaTropes" title="Main/DramaTropes">Drama</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/HorrorTropes" title="Main/HorrorTropes">Horror</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LoveTropes" title="Main/LoveTropes">Love</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NewsTropes" title="Main/NewsTropes">News</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ProfessionalWrestling" title="Main/ProfessionalWrestling">Professional Wrestling</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SpeculativeFictionTropes" title="Main/SpeculativeFictionTropes">Speculative Fiction</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SportsStoryTropes" title="Main/SportsStoryTropes">Sports Story</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/WarTropes" title="Main/WarTropes">War</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Media</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/Media" title="Main/Media">All Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/AnimationTropes" title="Main/AnimationTropes">Animation (Western)</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Anime" title="Main/Anime">Anime</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ComicBookTropes" title="Main/ComicBookTropes">Comic Book</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FanFic" title="FanFic/FanFics">Fan Fics</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Film" title="Main/Film">Film</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/GameTropes" title="Main/GameTropes">Game</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Literature" title="Main/Literature">Literature</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MusicAndSoundEffects" title="Main/MusicAndSoundEffects">Music And Sound Effects</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NewMediaTropes" title="Main/NewMediaTropes">New Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/PrintMediaTropes" title="Main/PrintMediaTropes">Print Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Radio" title="Main/Radio">Radio</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SequentialArt" title="Main/SequentialArt">Sequential Art</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TabletopGames" title="Main/TabletopGames">Tabletop Games</a></li>
+<li><a href="/pmwiki/pmwiki.php/UsefulNotes/Television" title="Main/Television">Television</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Theater" title="Main/Theater">Theater</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/VideogameTropes" title="Main/VideogameTropes">Videogame</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Webcomics" title="Main/Webcomics">Webcomics</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Narrative</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/UniversalTropes" title="Main/UniversalTropes">Universal</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/AppliedPhlebotinum" title="Main/AppliedPhlebotinum">Applied Phlebotinum</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CharacterizationTropes" title="Main/CharacterizationTropes">Characterization</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Characters" title="Main/Characters">Characters</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CharactersAsDevice" title="Main/CharactersAsDevice">Characters As Device</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Dialogue" title="Main/Dialogue">Dialogue</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Motifs" title="Main/Motifs">Motifs</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NarrativeDevices" title="Main/NarrativeDevices">Narrative Devices</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Paratext" title="Main/Paratext">Paratext</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Plots" title="Main/Plots">Plots</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Settings" title="Main/Settings">Settings</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Spectacle" title="Main/Spectacle">Spectacle</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Other Categories</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/BritishTellyTropes" title="Main/BritishTellyTropes">British Telly</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TheContributors" title="Main/TheContributors">The Contributors</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CreatorSpeak" title="Main/CreatorSpeak">Creator Speak</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Creators" title="Main/Creators">Creators</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DerivativeWorks" title="Main/DerivativeWorks">Derivative Works</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LanguageTropes" title="Main/LanguageTropes">Language</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LawsAndFormulas" title="Main/LawsAndFormulas">Laws And Formulas</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ShowBusiness" title="Main/ShowBusiness">Show Business</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SplitPersonalityTropes" title="Main/SplitPersonalityTropes">Split Personality</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/StockRoom" title="Main/StockRoom">Stock Room</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TropeTropes" title="Main/TropeTropes">Trope</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Tropes" title="Main/Tropes">Tropes</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TruthAndLies" title="Main/TruthAndLies">Truth And Lies</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TruthInTelevision" title="Main/TruthInTelevision">Truth In Television</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Topical Tropes</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/BetrayalTropes" title="Main/BetrayalTropes">Betrayal</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CensorshipTropes" title="Main/CensorshipTropes">Censorship</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CombatTropes" title="Main/CombatTropes">Combat</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DeathTropes" title="Main/DeathTropes">Death</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FamilyTropes" title="Main/FamilyTropes">Family</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FateAndProphecyTropes" title="Main/FateAndProphecyTropes">Fate And Prophecy</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FoodTropes" title="Main/FoodTropes">Food</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/HolidayTropes" title="Main/HolidayTropes">Holiday</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MemoryTropes" title="Main/MemoryTropes">Memory</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MoneyTropes" title="Main/MoneyTropes">Money</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MoralityTropes" title="Main/MoralityTropes">Morality</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/PoliticsTropes" title="Main/PoliticsTropes">Politics</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ReligionTropes" title="Main/ReligionTropes">Religion</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SchoolTropes" title="Main/SchoolTropes">School</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="sidebar-item showcase">
+<p class="sidebar-item-title" data-title="Community Showcase">Community Showcase <a class="bubble float-right hover-blue" href="/pmwiki/showcase.php">More</a></p>
+<p class="community-showcase">
+<a href="https://sharetv.com/shows/echo_chamber" onclick="trackOutboundLink('https://sharetv.com/shows/echo_chamber');" target="_blank">
+<img alt="" class="lazy-image" data-src="/images/communityShowcase-echochamber.jpg"/></a>
+<a href="/pmwiki/pmwiki.php/Webcomic/TwistedTropes">
+<img alt="" class="lazy-image" data-src="/img/howlandsc-side.jpg"/></a>
+</p>
+</div>
+<div class="sidebar-item sb-ad-unit" id="stick-cont">
+<div class="sidebar-section" id="stick-bar">
+<div class="square_ad ad-size-300x600 ad-section text-center">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_4"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_4'); });</script> </div>
+</div> </div>
+</div>
+</div>
+</div>
+</div>
+<div class="action-bar tablet-off" id="action-bar-bottom">
+<a class="scroll-to-top dead-button" href="#top-of-page" onclick="$('html, body').animate({scrollTop : 0},500);">Top</a>
+</div>
+</div>
+<div class="proper-ad-unit ad-sticky">
+<div id="proper-ad-tvtropes_sticky_ad"> <script>propertag.cmd.push(function() { proper_display('tvtropes_sticky_ad'); });</script> </div>
+</div>
+<footer id="main-footer">
+<div id="main-footer-inner">
+<div class="footer-left">
+<a class="img-link" href="/"><img alt="TV Tropes" class="lazy-image" data-src="/img/tvtropes-footer-logo.png" title="TV Tropes"/></a>
+<form action="index.html" class="navbar-form newsletter-signup validate modal-replies" data-ajax-get="/ajax/subscribe_email.php" id="cse-search-box-mobile" name="" role="">
+<button class="btn-submit newsletter-signup-submit-button" id="subscribe-btn" type="submit"><i class="fa fa-paper-plane"></i></button>
+<input class="form-control" id="subscription-email" name="q" placeholder="Subscribe" size="31" type="text" validate-type="email" value=""/>
+</form>
+<ul class="social-buttons">
+<li><a class="btn fb" href="https://www.facebook.com/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-facebook']);" target="_blank"><i class="fa fa-facebook"></i></a></li>
+<li><a class="btn tw" href="https://www.twitter.com/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-twitter']);" target="_blank"><i class="fa fa-twitter"></i></a> </li>
+<li><a class="btn rd" href="https://www.reddit.com/r/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-reddit']);" target="_blank"><i class="fa fa-reddit-alien"></i></a></li>
+</ul>
+</div>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">TVTropes</h4></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Administrivia">About TVTropes</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TheGoalsOfTVTropes">TVTropes Goals</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TheTropingCode">Troping Code</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TVTropesCustoms">TVTropes Customs</a></li>
+<li><a href="/pmwiki/pmwiki.php/JustForFun/TropesOfLegend">Tropes of Legend</a></li>
+<li><a href="/pmwiki/ad-free-subscribe.php">Go Ad-Free</a></li>
+</ul>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">Community</h4></li>
+<li><a href="/pmwiki/query.php?type=att">Ask The Tropers</a></li>
+<li><a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a></li>
+<li><a href="/pmwiki/query.php?type=tf">Trope Finder</a></li>
+<li><a href="/pmwiki/query.php?type=ykts">You Know That Show</a></li>
+<li><a data-modal-target="login" href="/pmwiki/lbs.php">Live Blogs</a></li>
+<li><a href="/pmwiki/review_activity.php">Reviews</a></li>
+<li><a href="/pmwiki/topics.php">Forum</a></li>
+</ul>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">Tropes HQ</h4></li>
+<li><a href="/pmwiki/about.php">About Us</a></li>
+<li><a href="/pmwiki/contact.php">Contact Us</a></li>
+<li><a href="/pmwiki/dmca.php">DMCA Notice</a></li>
+<li><a href="/pmwiki/privacypolicy.php">Privacy Policy</a></li>
+</ul>
+</div>
+<div class="text-center gutter-top gutter-bottom tablet-on" id="desktop-on-mobile-toggle">
+<a href="/pmwiki/switchDeviceCss.php?mobileVersion=1" rel="nofollow">Switch to <span class="txt-desktop">Desktop</span><span class="txt-mobile">Mobile</span> Version</a>
+</div>
+<div class="legal">
+<p>TVTropes is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License. <br/>Permissions beyond the scope of this license may be available from <a href="mailto:thestaff@tvtropes.org" rel="cc:morePermissions" xmlns:cc="http://creativecommons.org/ns#"> thestaff@tvtropes.org</a>.</p>
+<br/>
+<div class="privacy_wrapper">
+</div>
+</div>
+</footer>
+<style>
+      div.fc-ccpa-root {
+        position: absolute !important;
+        bottom: 93px !important;
+        margin: auto !important;
+        width: 100% !important;
+        z-index: 9999 !important;
+      }
+      .fc-ccpa-root .fc-dns-dialog .fc-dns-link p{
+        outline: none !important;
+        text-decoration: underline !important;
+        font-size: .7em !important;
+        font-family: sans-serif !important;
+      }
+      .fc-ccpa-root .fc-dns-dialog .fc-dns-link .fc-button-background {
+        background: none !important;
+      }
+    </style>
+<div class="full-screen" id="_pm_videoViewer">
+<a class="close" href="#close" id="_pm_videoViewer-close"></a>
+<div class="_pmvv-body">
+<div class="_pmvv-vidbox">
+<video class="video-js vjs-default-skin vjs-16-9" data-video-id="" id="overlay-video-player-box">
+</video>
+<div class="_pmvv-vidbox-desc">
+<h1 id="overlay-title"></h1>
+<p class="_pmvv-vidbox-descTxt" id="overlay-descrip">
+</p>
+<div class="rating-row" data-video-id="">
+<input name="is_logged_in" type="hidden" value="0"/>
+<p>How well does it match the trope?</p>
+<div id="star-rating-group">
+<div class="trope-rate">
+<input id="lamp5" name="rate" type="radio" value="5"/>
+<label for="lamp5" title="Absolutely"></label>
+<input id="lamp4" name="rate" type="radio" value="4"/>
+<label for="lamp4" title="Yes"></label>
+<input id="lamp3" name="rate" type="radio" value="3"/>
+<label for="lamp3" title="Kind of"></label>
+<input id="lamp2" name="rate" type="radio" value="2"/>
+<label for="lamp2" title="Not really"></label>
+<input id="lamp1" name="rate" type="radio" value="1"/>
+<label for="lamp1" title="No"></label>
+</div>
+<div id="star-rating-total">
+</div>
+</div>
+</div>
+<div class="example-media-row">
+<div class="example-overlay">
+<p>Example of:</p>
+<div id="overlay-trope"> / </div>
+</div>
+<div class="media-sources-overlay example-overlay">
+<p>Media sources:</p>
+<div id="overlay-media"> / </div>
+</div>
+</div>
+<p class="_pmvv-vidbox-stats text-right font-s" style="padding-top:8px; border-top: solid 1px rgba(255,255,255,0.2)">
+<a class="float-right" data-modal-target="login" href="#video-feedback">Report</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+        window.special_ops =  {
+            member : 'no',
+            isolated : 0,
+            tags : ['videogame']
+        };
+    </script>
+<script type="text/javascript">
+
+        var cleanCreativeEnabled = "";
+        var donation = "";
+        var live_ads = "1";
+        var img_domain = "https://static.tvtropes.org";
+        var snoozed = cookies.read('snoozedabm');
+        var snoozable = "";
+
+        if (adsRemovedWith) {
+            live_ads = 0;
+        }
+
+        var elem = document.createElement('script');
+        elem.async = true;
+
+        elem.src = '/design/assets/bundle.js?rev=c58d8df02f09262390bbd03db7921fc35c6af306';
+
+        elem.onload = function() {
+                                 }
+        document.getElementsByTagName('head')[0].appendChild(elem);
+
+    </script>
+<script type="text/javascript">
+      function send_analytics_event(user_type, donation){
+          // if(user_type == 'uncached' || user_type == 'cached'){
+          //   ga('send', 'event', 'caching', 'load', user_type, {'nonInteraction': 1});
+          //   return;
+          // }
+          var event_name = user_type;
+
+          if(donation == 'true'){
+              event_name += "_donation"
+          }else if(typeof(valid_user) == 'undefined'){
+              event_name += "_blocked"
+          }else if(valid_user == true){
+              event_name += "_unblocked";
+          }else{
+              event_name = "_unknown"
+          }
+          ga('send', 'event', 'ads', 'load', event_name, {'nonInteraction': 1});
+      }
+
+    
+    send_analytics_event("guest", "false");
+      </script>
+</body>
+</html>

@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Level-Map Display - TV Tropes</title>
+<meta content="The Level-Map Display trope as used in popular culture. An in-game display of a miniature version of the entire level. The game has to be one where your …" name="description"/>
+<link href="https://tvtropes.org/pmwiki/pmwiki.php/Main/LevelMapDisplay" rel="canonical"/>
+<link href="/img/icons/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="@tvtropes" name="twitter:site"/>
+<meta content="@tvtropes" name="twitter:owner"/>
+<meta content="Level-Map Display - TV Tropes" name="twitter:title"/>
+<meta content="The Level-Map Display trope as used in popular culture. An in-game display of a miniature version of the entire level. The game has to be one where your …" name="twitter:description"/>
+<meta content="https://static.tvtropes.org/pmwiki/pub/images/LevelMapDisplay_2250.png" name="twitter:image:src"/>
+<meta content="TV Tropes" property="og:site_name"/>
+<meta content="en_US" property="og:locale"/>
+<meta content="https://www.facebook.com/tvtropes" property="article:publisher"/>
+<meta content="Level-Map Display - TV Tropes" property="og:title"/>
+<meta content="website" property="og:type"/>
+<meta content="https://tvtropes.org/pmwiki/pmwiki.php/Main/LevelMapDisplay" property="og:url"/>
+<meta content="https://static.tvtropes.org/pmwiki/pub/images/LevelMapDisplay_2250.png" property="og:image"/>
+<meta content="An in-game display of a miniature version of the entire level. The game has to be one where your normal field of view is limited to the area around a player character. Therefore, Real-Time Strategy games and such doesn't count. Examples generally …" property="og:description"/>
+<link href="/img/icons/apple-icon-57x57.png" rel="apple-touch-icon" sizes="57x57" type="image/png"/>
+<link href="/img/icons/apple-icon-60x60.png" rel="apple-touch-icon" sizes="60x60" type="image/png"/>
+<link href="/img/icons/apple-icon-72x72.png" rel="apple-touch-icon" sizes="72x72" type="image/png"/>
+<link href="/img/icons/apple-icon-76x76.png" rel="apple-touch-icon" sizes="76x76" type="image/png"/>
+<link href="/img/icons/apple-icon-114x114.png" rel="apple-touch-icon" sizes="114x114" type="image/png"/>
+<link href="/img/icons/apple-icon-120x120.png" rel="apple-touch-icon" sizes="120x120" type="image/png"/>
+<link href="/img/icons/apple-icon-144x144.png" rel="apple-touch-icon" sizes="144x144" type="image/png"/>
+<link href="/img/icons/apple-icon-152x152.png" rel="apple-touch-icon" sizes="152x152" type="image/png"/>
+<link href="/img/icons/apple-icon-180x180.png" rel="apple-touch-icon" sizes="180x180" type="image/png"/>
+<link href="/img/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/img/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/img/icons/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png"/>
+<link href="/img/icons/favicon-192x192.png" rel="icon" sizes="192x192" type="image/png"/>
+<meta content="width=device-width, initial-scale=1" id="viewport" name="viewport"/>
+<script>
+                var propertag = {};
+                propertag.cmd = [];
+            </script>
+<link href="/design/assets/bundle.css?rev=c58d8df02f09262390bbd03db7921fc35c6af306" rel="stylesheet"/>
+<script>
+                function object(objectId) {
+                    if (document.getElementById && document.getElementById(objectId)) {
+                        return document.getElementById(objectId);
+                    } else if (document.all && document.all(objectId)) {
+                        return document.all(objectId);
+                    } else if (document.layers && document.layers[objectId]) {
+                        return document.layers[objectId];
+                    } else {
+                        return false;
+                    }
+                }
+
+                // JAVASCRIPT COOKIES CODE: for getting and setting user viewing preferences
+                var cookies = {
+                    create: function (name, value, days2expire, path) {
+                        var date = new Date();
+                        date.setTime(date.getTime() + (days2expire * 24 * 60 * 60 * 1000));
+                        var expires = date.toUTCString();
+                        document.cookie = name + '=' + value + ';' + 'expires=' + expires + ';' + 'path=' + path + ';';
+                    },
+										createWithExpire: function(name, value, expires, path) {
+												document.cookie = name + '=' + value + ';' + 'expires=' + expires + ';' + 'path=' + path + ';';
+										},
+                    read: function (name) {
+                        var cookie_value = "",
+                            current_cookie = "",
+                            name_expr = name + "=",
+                            all_cookies = document.cookie.split(';'),
+                            n = all_cookies.length;
+
+                        for (var i = 0; i < n; i++) {
+                            current_cookie = all_cookies[i].trim();
+                            if (current_cookie.indexOf(name_expr) === 0) {
+                                cookie_value = current_cookie.substring(name_expr.length, current_cookie.length);
+                                break;
+                            }
+                        }
+                        return cookie_value;
+                    },
+                    update: function (name, val) {
+                        this.create(name, val, 300, "/");
+                    },
+                    remove: function (name) {
+                        document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
+                    }
+                };
+
+                function updateUserPrefs() {
+                    //GENERAL: detect and set browser, if not cookied (will be treated like a user-preference and added to the #user-pref element)
+                    if( !cookies.read('user-browser') ){
+                        var broswer = '';
+
+                        if(navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPod/i) ){
+                            browser = 'iOS';
+                        } else if (/Opera[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'opera';
+                        } else if (/MSIE (\d+\.\d+);/.test(navigator.userAgent)) {
+                            browser = 'MSIE';
+                        } else if (/Navigator[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'netscape';
+                        } else if (/Chrome[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'chrome';
+                        } else if (/Safari[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'safari';
+                            /Version[\/\s](\d+\.\d+)/.test(navigator.userAgent);
+                            browserVersion = new Number(RegExp.$1);
+                        } else if (/Firefox[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'firefox';
+                        } else {
+                            browser = 'internet_explorer';
+                        }
+                        cookies.create('user-browser',browser,1,'/');
+                        document.getElementById('user-prefs').classList.add('browser-' + browser);
+                    } else {
+                        document.getElementById('user-prefs').classList.add('browser-' + cookies.read('user-browser'));
+                    }
+
+                    //update user preference settings
+                    if (cookies.read('wide-load') !== '') document.getElementById('user-prefs').classList.add('wide-load');
+                    if (cookies.read('night-vision') !== '') document.getElementById('user-prefs').classList.add('night-vision');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('user-prefs').classList.add('sticky-header');
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('user-prefs').classList.add('show-spoilers');
+                    if (cookies.read('folders-open') !== '') document.getElementById('user-prefs').classList.add('folders-open');
+                    if (cookies.read('lefthand-sidebar') !== '') document.getElementById('user-prefs').classList.add('lefthand-sidebar');
+                    if (cookies.read('highlight-links') !== '') document.getElementById('user-prefs').classList.add('highlight-links');
+                    if (cookies.read('forum-gingerbread') !== '') document.getElementById('user-prefs').classList.add('forum-gingerbread');
+                    if (cookies.read('shared-avatars') !== '') document.getElementById('user-prefs').classList.add('shared-avatars');
+                    if (cookies.read('new-search') !== '') document.getElementById('user-prefs').classList.add('new-search');
+                    if (cookies.read('stop-auto-play-video') !== '') document.getElementById('user-prefs').classList.add('stop-auto-play-video');
+
+                    //desktop view on mobile
+                    if (cookies.read('desktop-on-mobile') !== ''){
+                        document.getElementById('user-prefs').classList.add('desktop-on-mobile');
+
+                        var viewport = document.querySelector("meta[name=viewport]");
+                        viewport.setAttribute('content', 'width=1000');
+                    }
+
+                }
+
+                function updateDesktopPrefs() {
+                    if (cookies.read('wide-load') !== '') document.getElementById('sidebar-toggle-wideload').classList.add('active');
+                    if (cookies.read('night-vision') !== '') document.getElementById('sidebar-toggle-nightvision').classList.add('active');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('sidebar-toggle-stickyheader').classList.add('active');
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('sidebar-toggle-showspoilers').classList.add('active');
+
+                }
+
+                function updateMobilePrefs() {
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('mobile-toggle-showspoilers').classList.add('active');
+                    if (cookies.read('night-vision') !== '') document.getElementById('mobile-toggle-nightvision').classList.add('active');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('mobile-toggle-stickyheader').classList.add('active');
+                    if (cookies.read('highlight-links') !== '') document.getElementById('mobile-toggle-highlightlinks').classList.add('active');
+
+                }
+
+
+                if (document.cookie.indexOf("scroll0=") < 0) {
+                    // do nothing
+                } else {
+                    console.log('ads removed by scroll.com');
+                    var adsRemovedWith = 'scroll';
+                    var style = document.createElement('style');
+                    style.innerHTML = '#header-ad, .proper-ad-unit, .square_ad, .sb-ad-unit { display: none !important; } ';
+                    document.head.appendChild(style);
+                }
+            </script>
+<script type="text/javascript">
+
+                var tvtropes_config = {
+                    astri_stream_enabled : "",
+                    is_logged_in         : "",
+                    handle               : "",
+                    get_astri_stream     : "",
+										revnum               : "c58d8df02f09262390bbd03db7921fc35c6af306",
+										img_domain           : "https://static.tvtropes.org",
+										adblock              : "1",
+										adblock_url          : "propermessage.io",
+										pause_editing        : "0",
+										pause_editing_msg    : "",
+										pause_site_changes   : ""
+                };
+            </script>
+<script type="text/javascript">
+						  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+						  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+						  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+						  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+						  ga('create', 'UA-3821842-1', 'auto');
+						  ga('send', 'pageview');
+
+						</script>
+</head>
+<body class="">
+<i id="user-prefs"></i>
+<script>updateUserPrefs();</script>
+<div id="fb-root"></div>
+<div id="modal-box"></div>
+<header class="headroom-element" id="main-header-bar">
+<div id="main-header-bar-inner">
+<span class="header-spacer" id="header-spacer-left"></span>
+<a class="mobile-menu-toggle-button tablet-on" href="#mobile-menu" id="main-mobile-toggle"><span></span><span></span><span></span></a>
+<a class="no-dev" href="/" id="main-header-logoButton"></a>
+<span class="header-spacer" id="header-spacer-right"></span>
+<nav class="tablet-off" id="main-header-nav">
+<a href="/pmwiki/pmwiki.php/Main/Tropes">Tropes</a>
+<a href="/pmwiki/pmwiki.php/Main/Media">Media</a>
+<a class="nav-browse" href="/pmwiki/browse.php">Browse</a>
+<a href="/pmwiki/index_report.php">Indexes</a>
+<a href="/pmwiki/topics.php">Forums</a>
+<a class="nav-browse" href="/pmwiki/recent_videos.php">Videos</a>
+</nav>
+<div id="main-header-bar-right">
+<div class="font-xs mobile-off" id="signup-login-box">
+<a class="hover-underline bold" data-modal-target="signup" href="/pmwiki/login.php">Join</a>
+<a class="hover-underline bold" data-modal-target="login" href="/pmwiki/login.php">Login</a>
+</div>
+<div class="mobile-on inline" id="signup-login-mobileToggle">
+<a data-modal-target="login" href="/pmwiki/login.php"><i class="fa fa-user"></i></a>
+</div>
+<div id="search-box">
+<form action="/pmwiki/search_result.php" class="search">
+<input class="search-box" name="q" placeholder="Search" required="" type="text" value=""/>
+<input class="submit-button" type="submit" value=""/>
+<input name="search_type" type="hidden" value="article"/>
+<input name="page_type" type="hidden" value="all"/>
+<input name="cx" type="hidden" value="partner-pub-6610802604051523:amzitfn8e7v"/>
+<input name="cof" type="hidden" value="FORID:10"/>
+<input name="ie" type="hidden" value="ISO-8859-1"/>
+<input name="siteurl" type="hidden" value=""/>
+<input name="ref" type="hidden" value=""/>
+<input name="ss" type="hidden" value=""/>
+</form>
+<a class="mobile-on mobile-search-toggle close-x" href="#close-search"><i class="fa fa-close"></i></a>
+</div>
+<div id="random-box">
+<a class="button-random-trope" href="/pmwiki/pmwiki.php/Main/PlumbersCrack" onclick="ga('send', 'event', 'button', 'click', 'random trope');" rel="nofollow"></a>
+<a class="button-random-media" href="/pmwiki/pmwiki.php/Manga/AnimalX" onclick="ga('send', 'event', 'button', 'click', 'random media');" rel="nofollow"></a>
+</div>
+</div>
+</div>
+<div class="tablet-on" id="mobile-menu"><div class="mobile-menu-options">
+<div class="nav-wrapper">
+<a class="xl" href="/pmwiki/pmwiki.php/Main/Tropes">Tropes</a>
+<a class="xl" href="/pmwiki/pmwiki.php/Main/Media">Media</a>
+<a class="xl" href="/pmwiki/browse.php">Browse</a>
+<a class="xl" href="/pmwiki/index_report.php">Indexes</a>
+<a class="xl" href="/pmwiki/topics.php">Forums</a>
+<a class="xl" href="/pmwiki/recent_videos.php">Videos</a>
+<a href="/pmwiki/query.php?type=att">Ask The Tropers</a>
+<a href="/pmwiki/query.php?type=tf">Trope Finder</a>
+<a href="/pmwiki/query.php?type=ykts">You Know That Show...</a>
+<a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a>
+<a data-click-toggle="active" href="#tools">Tools <i class="fa fa-chevron-down"></i></a>
+<div class="tools-dropdown mobile-dropdown-linkList">
+<a href="/pmwiki/cutlist.php">Cut List</a>
+<a href="/pmwiki/changes.php">New Edits</a>
+<a href="/pmwiki/recent_edit_reasons.php">Edit Reasons</a>
+<a href="/pmwiki/launches.php">Launches</a>
+<a href="/pmwiki/img_list.php">Images List</a>
+<a href="/pmwiki/crown_activity.php">Crowner Activity</a>
+<a href="/pmwiki/no_types.php">Un-typed Pages</a>
+<a href="/pmwiki/page_type_audit.php">Recent Page Type Changes</a>
+</div>
+<a data-click-toggle="active" href="#hq">Tropes HQ <i class="fa fa-chevron-down"></i></a>
+<div class="tools-dropdown mobile-dropdown-linkList">
+<a href="/pmwiki/about.php">About Us</a>
+<a href="/pmwiki/contact.php">Contact Us</a>
+<a href="mailto:advertising@proper.io">Advertise</a>
+<a href="/pmwiki/dmca.php">DMCA Notice</a>
+<a href="/pmwiki/privacypolicy.php">Privacy Policy</a>
+</div>
+<a href="/pmwiki/ad-free-subscribe.php">Go Ad-Free</a>
+<div class="toggle-switches">
+<ul class="mobile-menu display-toggles">
+<li>Show Spoilers <div class="display-toggle show-spoilers" id="mobile-toggle-showspoilers"></div></li>
+<li>Night Vision <div class="display-toggle night-vision" id="mobile-toggle-nightvision"></div></li>
+<li>Sticky Header <div class="display-toggle sticky-header" id="mobile-toggle-stickyheader"></div></li>
+<li>Highlight Links <div class="display-toggle highlight-links" id="mobile-toggle-highlightlinks"></div></li>
+</ul>
+<script>updateMobilePrefs();</script>
+</div>
+</div>
+</div>
+</div>
+</header>
+<div class="mobile-on" id="homepage-introBox-mobile">
+<a href="/"><img class="logo-small" src="/images/logo-white-big.png"/></a>
+<form action="/pmwiki/search_result.php" class="search" style="margin:10px -5px -6px -5px;">
+<input class="search-box" name="q" placeholder="Search" required="" type="text" value=""/>
+<input class="submit-button" type="submit" value=""/>
+<input name="search_type" type="hidden" value="article"/>
+<input name="page_type" type="hidden" value="all"/>
+<input name="cx" type="hidden" value="partner-pub-6610802604051523:amzitfn8e7v"/>
+<input name="cof" type="hidden" value="FORID:10"/>
+<input name="ie" type="hidden" value="ISO-8859-1"/>
+<input name="siteurl" type="hidden" value=""/>
+<input name="ref" type="hidden" value=""/>
+<input name="ss" type="hidden" value=""/>
+</form>
+</div>
+<div class="ad" id="header-ad-wrapper">
+<div id="header-ad">
+<div class="ad-size-970x90 atf_banner">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_1"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_1'); });</script> </div>
+</div> </div>
+</div>
+</div>
+<div id="main-container">
+<div class="action-bar mobile-off" id="action-bar-top">
+<div class="action-bar-right">
+<p>Follow TV Tropes</p>
+<a class="button-fb" href="https://www.facebook.com/TVTropes">
+<i class="fa fa-facebook"></i></a>
+<a class="button-tw" href="https://www.twitter.com/TVTropes">
+<i class="fa fa-twitter"></i></a>
+<a class="button-re" href="https://www.reddit.com/r/TVTropes">
+<i class="fa fa-reddit-alien"></i></a>
+</div>
+<nav class="actions-wrapper" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<ul class="page-actions" id="top_main_list">
+<li class="link-edit">
+<a class="article-edit-button" data-modal-target="login" href="/pmwiki/pmwiki.php/Main/LevelMapDisplay?action=edit" rel="nofollow">
+<i class="fa fa-pencil"></i> Edit Page</a></li><li class="link-related"><a href="/pmwiki/relatedsearch.php?term=Main/LevelMapDisplay">
+<i class="fa fa-share-alt"></i> Related</a></li><li class="link-history"><a href="/pmwiki/article_history.php?article=Main.LevelMapDisplay">
+<i class="fa fa-history"></i> History</a></li><li class="link-discussion"><a href="/pmwiki/remarks.php?trope=Main.LevelMapDisplay">
+<i class="fa fa-comment"></i> Discussion</a></li> </ul>
+<button class="nav__dropdown-toggle" id="top_more_button" onclick="toggle_more_menu('top');" type="button">More</button>
+<ul class="more_menu hidden_more_list" id="top_more_list">
+<li class="link-todo tuck-always more_list_item"><a data-modal-target="login" href="#todo"><i class="fa fa-check-circle"></i> To Do</a></li><li class="link-pageSource tuck-always more_list_item"><a data-modal-target="login" href="/pmwiki/pmwiki.php/Main/LevelMapDisplay?action=source" rel="nofollow" target="_blank"><i class="fa fa-code"></i> Page Source</a></li> </ul>
+</nav>
+<div class="WikiWordModalStub"></div>
+<div class="ImgUploadModalStub" data-page-type="Article"></div>
+<div class="login-alert" style="display: none;">
+You need to <a href="/pmwiki/login.php" style="color:#21A0E8">login</a> to do this. <a href="/pmwiki/login.php?tab=register_account" style="color:#21A0E8">Get Known</a> if you don't have an account
+</div>
+</div>
+<div class="page-Article" id="main-content">
+<article class="with-sidebar" id="main-entry">
+<input id="groupname-hidden" type="hidden" value="Main"/>
+<input id="title-hidden" type="hidden" value="LevelMapDisplay"/>
+<input id="article_id" type="hidden" value="296300"/>
+<input id="logged_in" type="hidden" value="false"/>
+<p class="hidden" id="current_url">http://tvtropes.org/pmwiki/pmwiki.php/Main/LevelMapDisplay</p>
+<meta content="" itemprop="datePublished"/>
+<meta content="" itemprop="articleSection"/>
+<meta content="" itemprop="image"/>
+<a class="watch-button" data-modal-target="login" href="#watch">Follow<span>ing</span></a>
+<h1 class="entry-title" itemprop="headline">
+Level-Map Display
+</h1>
+<script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+                "@type": "ListItem",
+                "position": 1,
+                "name": "tvtropes.org",
+                "item": "https://tvtropes.org"
+            },{
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Tropes",
+                "item": "https://tvtropes.org/pmwiki/pmwiki.php/Main/Tropes"
+            },{
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Level-Map Display"            }]
+        }
+    </script>
+<a class="mobile-actionbar-toggle mobile-on" data-click-toggle="active" href="#mobile-actions-toggle" id="mobile-actionbar-toggle">
+<p class="tiny-off">Go To</p><span></span><span></span><span></span><i class="fa fa-pencil"></i></a>
+<nav class="mobile-actions-wrapper mobile-on" id="mobile-actions-bar"></nav>
+<div class="modal fade hidden-until-active" id="editLockModal">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button aria-label="Close" class="close" data-dismiss="modal" type="button"> <span aria-hidden="true">×</span></button>
+<h4 class="modal-title">Edit Locked</h4>
+</div>
+<div class="modal-body">
+<div class="row">
+<div class="body">
+<div class="danger troper_locked_message"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<nav class="body-options" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<ul class="subpage-links">
+<li>
+<a class="subpage-link curr-subpage" href="/pmwiki/pmwiki.php/Main/LevelMapDisplay" title="The Main page">
+<span class="wrapper"><span class="spi main-page"></span>Main</span></a>
+</li>
+<li>
+<a class="subpage-link" href="/pmwiki/pmwiki.php/Laconic/LevelMapDisplay" title="The Laconic page">
+<span class="wrapper"><span class="spi laconic-icon"></span>Laconic</span></a>
+</li>
+<li class="create-subpage dropdown">
+<a aria-expanded="false" class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);" role="button">
+<span class="wrapper">Create New <i class="fa fa-plus-circle"></i></span>
+</a>
+<select onchange="this.options[this.selectedIndex].value &amp;&amp; (window.location = this.options[this.selectedIndex].value);">
+<option value="">- Create New -</option>
+<option value="/pmwiki/pmwiki.php/Analysis/LevelMapDisplay?action=edit">Analysis</option>
+<option value="/pmwiki/pmwiki.php/Characters/LevelMapDisplay?action=edit">Characters</option>
+<option value="/pmwiki/pmwiki.php/FanficRecs/LevelMapDisplay?action=edit">FanficRecs</option>
+<option value="/pmwiki/pmwiki.php/FanWorks/LevelMapDisplay?action=edit">FanWorks</option>
+<option value="/pmwiki/pmwiki.php/Fridge/LevelMapDisplay?action=edit">Fridge</option>
+<option value="/pmwiki/pmwiki.php/Haiku/LevelMapDisplay?action=edit">Haiku</option>
+<option value="/pmwiki/pmwiki.php/Headscratchers/LevelMapDisplay?action=edit">Headscratchers</option>
+<option value="/pmwiki/pmwiki.php/ImageLinks/LevelMapDisplay?action=edit">ImageLinks</option>
+<option value="/pmwiki/pmwiki.php/PlayingWith/LevelMapDisplay?action=edit">PlayingWith</option>
+<option value="/pmwiki/pmwiki.php/Quotes/LevelMapDisplay?action=edit">Quotes</option>
+<option value="/pmwiki/pmwiki.php/Recap/LevelMapDisplay?action=edit">Recap</option>
+<option value="/pmwiki/pmwiki.php/ReferencedBy/LevelMapDisplay?action=edit">ReferencedBy</option>
+<option value="/pmwiki/pmwiki.php/Synopsis/LevelMapDisplay?action=edit">Synopsis</option>
+<option value="/pmwiki/pmwiki.php/Timeline/LevelMapDisplay?action=edit">Timeline</option>
+<option value="/pmwiki/pmwiki.php/Trivia/LevelMapDisplay?action=edit">Trivia</option>
+<option value="/pmwiki/pmwiki.php/WMG/LevelMapDisplay?action=edit">WMG</option>
+<option value="/pmwiki/pmwiki.php/YMMV/LevelMapDisplay?action=edit">YMMV</option>
+</select>
+</li>
+</ul>
+</nav>
+<div class="article-content retro-folders" id="main-article">
+<p></p><div class="quoteright" style="width:307px;"><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MegaManLegends" title="/pmwiki/pmwiki.php/VideoGame/MegaManLegends"><div class="lazy_load_img_box" style="padding-top:74.92%"><img alt="https://static.tvtropes.org/pmwiki/pub/images/LevelMapDisplay_2250.png" border="0" class="embeddedimage" height="230" src="https://static.tvtropes.org/pmwiki/pub/images/LevelMapDisplay_2250.png" width="307"/></div></a></div>
+<div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_1"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_1'); })</script></div></div><p>An in-game display of a miniature version of the entire level. The game has to be one where your normal field of view is limited to the area around a player character. Therefore, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/RealTimeStrategy" title="/pmwiki/pmwiki.php/Main/RealTimeStrategy">Real-Time Strategy</a> games and such doesn't count.
+</p><p>Examples generally fit into one of two types:
+</p><ul><li> The map is always available (at least in certain levels), either on the main screen or through a menu system or such. A <a class="twikilink" href="/pmwiki/pmwiki.php/Main/FogOfWar" title="/pmwiki/pmwiki.php/Main/FogOfWar">Fog of War</a>-like effect may limit the map view only to already explored areas.
+</li><li> The map must be obtained, as a special power (which might even cost something to use) and/or collectible item (these are often not tracked for <a class="twikilink" href="/pmwiki/pmwiki.php/Main/OneHundredPercentCompletion" title="/pmwiki/pmwiki.php/Main/OneHundredPercentCompletion">100% Completion</a> because only the map for the area the player is currently in can be brought up).
+</li></ul><p>Systems that display a map of where the player has already traveled are often said to be utilizing "automap". The term descending from early role-playing games where the player was often expected to create their own map, typically on graph paper.
+</p><div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_2"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_2'); })</script></div></div><p>The map display would also rotate to indicate the direction the player is facing, either by rotating the 'you are here' cursor arrow, or by rotating the entire map so that up is the direction they are going. Generally the former method is more commonly used in older games as it was much easier with limited processing power to rotate an arrow than it is to rotate the entire map.
+</p><p>May also be a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/EnemyDetectingRadar" title="/pmwiki/pmwiki.php/Main/EnemyDetectingRadar">Enemy-Detecting Radar</a>, if it shows enemies.
+</p><hr/><div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_3"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_3'); })</script></div></div><h2>Examples:</h2>
+<ul><li> Both <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Drakengard" title="/pmwiki/pmwiki.php/VideoGame/Drakengard">Drakengard</a></em> games displayed a map of the level when pausing the game; the second also allowed you to switch between your <a class="twikilink" href="/pmwiki/pmwiki.php/Main/EnemyDetectingRadar" title="/pmwiki/pmwiki.php/Main/EnemyDetectingRadar">Enemy-Detecting Radar</a> and level-map overlay at any time (once you collected the area's actual map).
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DarkCloud" title="/pmwiki/pmwiki.php/VideoGame/DarkCloud">Dark Cloud</a></em> allowed you to toggle between a small and large map overlay while crawling through its <a class="twikilink" href="/pmwiki/pmwiki.php/Main/RandomlyGeneratedLevels" title="/pmwiki/pmwiki.php/Main/RandomlyGeneratedLevels">Randomly Generated Levels</a>.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/RatchetAndClank" title="/pmwiki/pmwiki.php/VideoGame/RatchetAndClank">Ratchet &amp; Clank</a></em> games have a map that you can pause the game and look at. Each game also has a Mapper gadget you can find, which makes said map also show <a class="twikilink" href="/pmwiki/pmwiki.php/Main/EasterEgg" title="/pmwiki/pmwiki.php/Main/EasterEgg">secret areas</a>.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/FinalFantasy" title="/pmwiki/pmwiki.php/Franchise/FinalFantasy">Final Fantasy</a></em>:
+<ul><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FinalFantasyI" title="/pmwiki/pmwiki.php/VideoGame/FinalFantasyI">Final Fantasy I</a></em> and <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FinalFantasyII" title="/pmwiki/pmwiki.php/VideoGame/FinalFantasyII">Final Fantasy II</a></em>, pressing a combination of buttons on the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/OverworldNotToScale" title="/pmwiki/pmwiki.php/Main/OverworldNotToScale">Overworld Not to Scale</a> would display its zoomed-out version.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FinalFantasyIII" title="/pmwiki/pmwiki.php/VideoGame/FinalFantasyIII">Final Fantasy III</a></em> and <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FinalFantasyIV" title="/pmwiki/pmwiki.php/VideoGame/FinalFantasyIV">Final Fantasy IV</a></em> had a Sight spell to display a map instead. The latter games replaced the both methods with a map that is always available instead.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FinalFantasyV" title="/pmwiki/pmwiki.php/VideoGame/FinalFantasyV">Final Fantasy V</a></em> the map is a special item you need to find on the Ship Graveyard. However, once obtained it can be accessed anywhere on the world map, and even <span class="spoiler" title="you can set spoilers visible by default on your profile"> on the other world, the fusionaded world, and even underground on the center of the earth</span>.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/CaveStory" title="/pmwiki/pmwiki.php/VideoGame/CaveStory">Cave Story</a></em> has a map item that can be acquired early. It's very handy as it shows all hidden passages.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MegaManX3" title="/pmwiki/pmwiki.php/VideoGame/MegaManX3">Mega Man X3</a></em>, the head upgrade gives X access to a (very rudimentary) map of the level, dividing it into small sectors and showcasing the special items of the level.
+</li><li> Pressing the Select button in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MegaManLegends" title="/pmwiki/pmwiki.php/VideoGame/MegaManLegends">Mega Man Legends</a></em> will show you a map of Kattelox Island, and your current position. Pressing Select while in ruins shows you the squares you've explored in the current ruin. In <em>Legends 2</em>, aside from the automap, there is a Map menu which shows the whole area you're currently in. While in ruins, you can even switch between floors.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Diablo" title="/pmwiki/pmwiki.php/VideoGame/Diablo">Diablo</a></em> games. Especially useful given that the maps are randomized. You need that map.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/PeasantsQuest" title="/pmwiki/pmwiki.php/VideoGame/PeasantsQuest">Peasant's Quest</a></em>, you fill in semi-crude drawings for each location visited.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Minecraft" title="/pmwiki/pmwiki.php/VideoGame/Minecraft">Minecraft</a></em> has a Map item which you can craft to keep track of the world you explore. Interestingly, it's the "automap" type but it will only cover the quadrant around the area it was crafted in. If you go past the border, you'll need to craft another. For this reason, it's more useful in mapping the points of interest surrounding your house than as a tool for long distance trips. There is also a craftable compass that points to the world's default spawn point.
+</li><li> Frequent in the <em><a class="createlink" href="/pmwiki/pmwiki.php/Series/Metroid" title="/pmwiki/pmwiki.php/Series/Metroid">Metroid</a></em> series (aside from the first two games, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/QuicksandBox" title="/pmwiki/pmwiki.php/Main/QuicksandBox">helping players get lost</a>), where there are also rooms where Samus can download the map of the place she's currently exploring, or navigate everywhere to get the whole map layout.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/RecettearAnItemShopsTale" title="/pmwiki/pmwiki.php/VideoGame/RecettearAnItemShopsTale">Recettear: An Item Shop's Tale</a></em>'s dungeons have a minimap that completes itself as you go through each randomly generated level. Two of the random effects that can happen on each level play with this; one reveals the entire map from the start, the other disables it.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/TheLegendOfZelda" title="/pmwiki/pmwiki.php/Franchise/TheLegendOfZelda">The Legend of Zelda</a></em>:
+<ul><li> In several games of the series, the world map can be viewed at any time via the menu screen. From <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheLegendOfZeldaOcarinaOfTime" title="/pmwiki/pmwiki.php/VideoGame/TheLegendOfZeldaOcarinaOfTime">Ocarina of Time</a></em> onwards, a mini map display—complete with arrows marking your point of entry (represented in blue) and your current heading (the yellow one)—usually occupies the lower left corner of the screen for faster, easier navigation. There are two games in which, even after reaching a new place, its map has to be obtained from a character: Tingle in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheLegendOfZeldaMajorasMask" title="/pmwiki/pmwiki.php/VideoGame/TheLegendOfZeldaMajorasMask">Majora's Mask</a></em> and the Fishman in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheLegendOfZeldaTheWindWaker" title="/pmwiki/pmwiki.php/VideoGame/TheLegendOfZeldaTheWindWaker">The Wind Waker</a></em>.
+</li><li> In most <em>Zelda games</em>, the player can acquire a Map item inside each dungeon which reveals the layout of the entire dungeon. The dungeon maps are acquired from chests, except in one of the <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheLegendOfZeldaTwilightPrincess" title="/pmwiki/pmwiki.php/VideoGame/TheLegendOfZeldaTwilightPrincess">Twilight Princess</a></em> dungeons (where Link gets it from a resident character). In the first game, the map shown on the subscreen fills itself in as you explore the dungeon, while the map item shows you the general shape of the dungeon as an overlay on the main game screen, including a flashing room to mark your present location. This holds true for the other games except for the latter aspect, because the full dungeon layouts are only displayed via a particular Map Subscreen. In most games, the compass must also be found, which helps you keep your bearings and reveals the location of all unopened chests on the map, as well as the boss's whereabouts.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheLegendOfZeldaBreathOfTheWild" title="/pmwiki/pmwiki.php/VideoGame/TheLegendOfZeldaBreathOfTheWild">The Legend of Zelda: Breath of the Wild</a></em>:
+<ul><li> At the start of the game, the world map on Sheikah slate is blank. Each region on the map contains a Sheikah tower where Link can gain the regional map by climbing to the top and activating the terminal there.
+</li><li> The Divine Beast maps gained from their map terminals not only reveal the entire layouts of those dungeons, they also let you physically manipulate certain mechanical sections of the Divine Beasts to solve puzzles.
+</li></ul></li></ul></li><li> This applies to at least half of all <a class="twikilink" href="/pmwiki/pmwiki.php/Main/RacingGame" title="/pmwiki/pmwiki.php/Main/RacingGame">Racing Games</a>. Every (non-sidescrolling) racer has a heads-up display that at least displays the positions of the other racers compared to the player(s), and nearly all have maps of every course somewhere in the games, if not as an onscreen overlay during the actual races. In the case of <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MarioKart64" title="/pmwiki/pmwiki.php/VideoGame/MarioKart64">Mario Kart 64</a></em>, there's a unique case with one of the courses, whose labyrinthic layout disables the game's capacity to identify where each character is placed until the player has completed the race.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Doom" title="/pmwiki/pmwiki.php/VideoGame/Doom">Doom</a></em>, you can always look at a map of what you have explored so far. If you find a computer map you can see the entire level. <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Heretic" title="/pmwiki/pmwiki.php/VideoGame/Heretic">Heretic</a></em> and <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Hexen" title="/pmwiki/pmwiki.php/VideoGame/Hexen">Hexen</a></em>, which use the same engine, also have automapping, complete with a tan-and-sepia color scheme to fit with the high fantasy setting. <em>Heretic</em> also has map scrolls that reveal the entire map.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/GuildWars" title="/pmwiki/pmwiki.php/VideoGame/GuildWars">Guild Wars</a></em>, there are actually three map displays; a radar-like map of your immediate area which shows the location of friends, neutrals and enemies; a "mini-map" which shows the larger mission or explorable area with objectives and paths; and a map of the entire continent which is obscured at the beginning by "fog of war" and which becomes more detailed and reveals various places as you explore more of the map.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Iji" title="/pmwiki/pmwiki.php/VideoGame/Iji">Iji</a></em> has a map for completed levels, as well as a specific computer terminal in level 6 that reveals the map before you complete it.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DragonSlayer" title="/pmwiki/pmwiki.php/VideoGame/DragonSlayer">Dragon Slayer</a></em> has the MAP spell to display a zoomed-out view of the level. Being a spell, it's not available from the start of the game. It also consumes magic power, like most other spells.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/LaMulana" title="/pmwiki/pmwiki.php/VideoGame/LaMulana">La-Mulana</a></em> has a Map item to be found in each area of the dungeon (there is no overworld map). Viewing a map requires equipping either or both of the Ruins RAM cartridges.
+</li><li> <em><a class="createlink" href="/pmwiki/pmwiki.php/VideoGame/ProjectIGI" title="/pmwiki/pmwiki.php/VideoGame/ProjectIGI">Project IGI</a></em> justified it as a satellite view from above, which marked locations of enemies. However, it won't show anything under a roof.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Nitemare3D" title="/pmwiki/pmwiki.php/VideoGame/Nitemare3D">Nitemare 3D</a></em> had a map in the HUD that could be toggled on and off and drained a particular meter while it was on, and another meter (faster) when you chose to <a class="twikilink" href="/pmwiki/pmwiki.php/Main/EnemyDetectingRadar" title="/pmwiki/pmwiki.php/Main/EnemyDetectingRadar">also see nearby enemies</a>.
+</li><li> The <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/EtrianOdyssey" title="/pmwiki/pmwiki.php/VideoGame/EtrianOdyssey">Etrian Odyssey</a></em> series utilizes the map as a dominant aspect of gameplay. Unlike most modern games the player's progress is not automatically mapped, instead a full complement of mapping tools are provided for the player to make their own maps in the style of older role-playing games.
+</li><li> The arcade version of <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Tutankham" title="/pmwiki/pmwiki.php/VideoGame/Tutankham">Tutankham</a></em> displayed a miniature view of the entire level at the top of the screen. It wasn't really useful for navigation or finding items, so most ports simply omitted it.
+</li><li> The <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/AceCombat" title="/pmwiki/pmwiki.php/VideoGame/AceCombat">Ace Combat</a></em> series typically has a map in the pause menu with mission-critical targets and allies marked on it.
+</li><li> In the <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/NavalOps" title="/pmwiki/pmwiki.php/VideoGame/NavalOps">Naval Ops</a></em> series, the player has a minimap that doubles as <a class="twikilink" href="/pmwiki/pmwiki.php/Main/EnemyDetectingRadar" title="/pmwiki/pmwiki.php/Main/EnemyDetectingRadar">Enemy-Detecting Radar</a>.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/WorldOfTanks" title="/pmwiki/pmwiki.php/VideoGame/WorldOfTanks">World of Tanks</a></em> has a minimap where enemies are marked once an ally has spotted them. Particularly clueless players are often accused of not paying attention to it.
+</li><li> The <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Descent" title="/pmwiki/pmwiki.php/VideoGame/Descent">Descent</a></em> series, owing to its zero-gravity nature, shows its map screen in full (wireframe) 3D - the player can freely scroll and rotate the map in any direction, just the same as they can spin and move their ship in any direction within the level.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SpiderMan2" title="/pmwiki/pmwiki.php/VideoGame/SpiderMan2">Spider-Man 2</a></em> has a zoomable, interactive map of New York. It displays information on challenges, help tokens (also whether or not you've completed them — useful, that), citizens in distress, Spidey Stores, crimes in progress, objective points, and key locations such as the Daily Bugle and Mary Jane's apartment. There was also a GPS-like minimap.
+</li><li> The <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MetalGear" title="/pmwiki/pmwiki.php/VideoGame/MetalGear">Metal Gear</a></em> series has a level map, which comes in handy for the End's boss fight in 3 since it shows you where he's sniping from. In 4 it also shows paths blocked by <a class="twikilink" href="/pmwiki/pmwiki.php/Main/InsurmountableWaistHighFence" title="/pmwiki/pmwiki.php/Main/InsurmountableWaistHighFence">convenient rubble</a>.
+</li><li> Level maps in the <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/DragonAge" title="/pmwiki/pmwiki.php/Franchise/DragonAge">Dragon Age</a></em> games have to be uncovered manually by visiting every spot on them, and the current small portion of them is usually shown on the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/EnemyDetectingRadar" title="/pmwiki/pmwiki.php/Main/EnemyDetectingRadar">Enemy-Detecting Radar</a>. The fact that the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/PlayerCharacter" title="/pmwiki/pmwiki.php/Main/PlayerCharacter">Player Character</a> has access to what essentially amounts to <a class="twikilink" href="/pmwiki/pmwiki.php/Main/PhotographicMemory" title="/pmwiki/pmwiki.php/Main/PhotographicMemory">Photographic Memory</a>, ideal spatial awareness, and a perfect sense of direction is lampshaded hilariously in the <em>Mark of the Assassin</em> DLC for <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DragonAgeII" title="/pmwiki/pmwiki.php/VideoGame/DragonAgeII">Dragon Age II</a></em>, where two party members get separated from Hawke and get hopelessly lost within a rather confined dungeon because they are so used to Hawke always leading the way.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Roundabout" title="/pmwiki/pmwiki.php/VideoGame/Roundabout">Roundabout</a></em> displays a road-map style map of the entire area on the pause screen. It only covers the region of the map you're currently in (Suburbs, Roundabout City, or the Mountain), however.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MassEffect1" title="/pmwiki/pmwiki.php/VideoGame/MassEffect1">Mass Effect</a></em> lets you see a map of your current area at any time, marked with points of interest such as plot destinations, merchants or area transitons. Maps for main areas are made of outlines filled with blue while maps for uncharted worlds are displayed as heightmaps. <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MassEffect2" title="/pmwiki/pmwiki.php/VideoGame/MassEffect2">Mass Effect 2</a></em> limited maps to hub areas only. For missions you had to make do with an arrow on your compass pointing you to the destination instead.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Chantelise" title="/pmwiki/pmwiki.php/VideoGame/Chantelise">Chantelise</a></em>: Every level has one, that also shows where the enemies are.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/ShawsNightmare" title="/pmwiki/pmwiki.php/VideoGame/ShawsNightmare">Shaw's Nightmare</a></em>: There are two map modes which you can use to explore areas, a wireframe mode and a 2D textured mode. You can also see where the enemies are.
+</li><li> The first entry in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheJourneymanProject" title="/pmwiki/pmwiki.php/VideoGame/TheJourneymanProject">The Journeyman Project</a></em> series has the Mapping Biochip, which displays a 2D top-down map, showing where you've walked, including the direction you're facing. The remake <em>Pegasus Prime</em> only allows this map for the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TheMaze" title="/pmwiki/pmwiki.php/Main/TheMaze">Mars Maze</a>, though.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Warframe" title="/pmwiki/pmwiki.php/VideoGame/Warframe">Warframe</a></em>, you have an automap which shows outline of the terrain and points to the locations of your goals and other points of interests, such as merchants.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Unreal" title="/pmwiki/pmwiki.php/VideoGame/Unreal">Unreal</a>:</em>
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/UnrealTournament2004" title="/pmwiki/pmwiki.php/VideoGame/UnrealTournament2004">Unreal Tournament 2004</a></em> has minimaps for the Onslaught mode, where the player, every Power Core and every Power Node are displayed, with <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ColorCodedForYourConvenience" title="/pmwiki/pmwiki.php/Main/ColorCodedForYourConvenience">red, blue or neutral coloring in order to display which items are owned by the red or blue team</a>. The map itself is also displayed in the in-game options menu.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/UnrealTournamentIII" title="/pmwiki/pmwiki.php/VideoGame/UnrealTournamentIII">Unreal Tournament III</a></em> incorporates it for the Warfare and Vehicle <a class="twikilink" href="/pmwiki/pmwiki.php/Main/CaptureTheFlag" title="/pmwiki/pmwiki.php/Main/CaptureTheFlag">Capture the Flag</a> modes. In Warfare, like in Onslaught, it displays the Cores and Nodes, but it also displays the team's own orb, if it's in play, and the enemy team's orb, if it's near an item; while in VCTF it displays the status of the flags and where the team's own flag carrier is. The map itself is displayed in full in the in-game options menu as well.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/EuroTruckSimulator" title="/pmwiki/pmwiki.php/VideoGame/EuroTruckSimulator">Euro Truck Simulator</a></em>, in addition to the standard road map that is part of the HUD, also has a diegetic world map on the GPS screen present in the trucks' more luxurious trim levels. If you feel like experiencing a little more inmersive interface, you can disable your standard HUD map and instead rely on your truck's GPS screen. If you don't feel like paying a fortune of in-game money for upgrading your truck's cabin, a DLC will also allow you to install separate GPS screens into your truck's dashboard or windshield.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/IntoSpace" title="/pmwiki/pmwiki.php/VideoGame/IntoSpace">Into Space</a></em>: A purchasable radar displays the location of some/all items present in the level not far from the rocket (fuel, speed gates, thunderclouds, other vehicles, and in the third game, gifts and <a class="createlink" href="/pmwiki/pmwiki.php/Main/UFOs" title="/pmwiki/pmwiki.php/Main/UFOs">UF Os</a>).
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FormulaRacer" title="/pmwiki/pmwiki.php/VideoGame/FormulaRacer">Formula Racer</a> 2012</em> has a minimap in the top-right corner which displays the position of you and other racers.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Videogame/BioShock1" title="/pmwiki/pmwiki.php/Videogame/BioShock1">BioShock</a></em> and <em><a class="twikilink" href="/pmwiki/pmwiki.php/Videogame/BioShock2" title="/pmwiki/pmwiki.php/Videogame/BioShock2">BioShock 2</a></em> have those, which also indicate the objectives, also show where vending machines are located.
+</li></ul><hr/>
+</div>
+<div class="alt-titles section section-fact">
+<h3>
+<strong>Alternative Title(s):</strong>
+<span>Map Screen</span>, <span>Mini Map</span> </h3>
+</div>
+<div class="square_ad footer-article-ad main_2" data-isolated="0"></div>
+<div class="section-links" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<div class="titles">
+<div><h3 class="text-center text-uppercase">Previous</h3></div>
+<div><h3 class="text-center text-uppercase">Index</h3></div>
+<div><h3 class="text-center text-uppercase">Next</h3></div>
+</div>
+<div class="links">
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/CrowsNestCartography">Crow's Nest Cartography</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/MapTropes">Map Tropes</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/OverworldNotToScale">Overworld Not to Scale</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/KeywordsConversation">Keywords Conversation</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/VideoGameInterfaceElements">Video Game Interface Elements</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/LightGunGame">Light Gun Game</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/VideoGame/MegaManLegends">Mega Man Legends</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/ImageSource/VideoGamesMToZ">ImageSource/Video Games (M to Z)</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Characters/MetalGear">Metal Gear</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="outer_ads_by_salon_wrapper" id="exco_player_insert_div">
+</div>
+</article>
+<div id="main-content-sidebar"><div class="sidebar-item display-options">
+<ul class="sidebar display-toggles">
+<li>Show Spoilers <div class="display-toggle show-spoilers" id="sidebar-toggle-showspoilers"></div></li>
+<li>Night Vision <div class="display-toggle night-vision" id="sidebar-toggle-nightvision"></div></li>
+<li>Sticky Header <div class="display-toggle sticky-header" id="sidebar-toggle-stickyheader"></div></li>
+<li>Wide Load <div class="display-toggle wide-load" id="sidebar-toggle-wideload"></div></li>
+</ul>
+<script>updateDesktopPrefs();</script>
+</div>
+<div class="sidebar-item ad sb-ad-unit">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_2"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_2'); });</script> </div>
+</div></div>
+<div class="sidebar-item quick-links" itemtype="http://schema.org/SiteNavigationElement">
+<p class="sidebar-item-title" data-title="Important Links">Important Links</p>
+<div class="padded">
+<a href="/pmwiki/query.php?type=att">Ask The Tropers</a>
+<a href="/pmwiki/query.php?type=tf">Trope Finder</a>
+<a href="/pmwiki/query.php?type=ykts">You Know That Show...</a>
+<a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a>
+<a href="/pmwiki/review_activity.php">Reviews</a>
+<a data-modal-target="login" href="/pmwiki/lbs.php">Live Blogs</a>
+<a href="/pmwiki/ad-free-subscribe.php">Go Ad Free!</a> </div>
+</div>
+<div class="sidebar-item sb-ad-unit">
+<div class="sidebar-section">
+<div class="square_ad ad-size-300x600 ad-section text-center">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_3"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_3'); });</script> </div>
+</div> </div>
+</div>
+</div>
+<div class="sidebar-item">
+<p class="sidebar-item-title" data-title="Crucial Browsing">Crucial Browsing</p>
+<ul class="padded font-s" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><a data-click-toggle="active" href="javascript:void(0);">Genre</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/ActionAdventureTropes" title="Main/ActionAdventureTropes">Action Adventure</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ComedyTropes" title="Main/ComedyTropes">Comedy</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CommercialsTropes" title="Main/CommercialsTropes">Commercials</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CrimeAndPunishmentTropes" title="Main/CrimeAndPunishmentTropes">Crime &amp; Punishment</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DramaTropes" title="Main/DramaTropes">Drama</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/HorrorTropes" title="Main/HorrorTropes">Horror</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LoveTropes" title="Main/LoveTropes">Love</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NewsTropes" title="Main/NewsTropes">News</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ProfessionalWrestling" title="Main/ProfessionalWrestling">Professional Wrestling</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SpeculativeFictionTropes" title="Main/SpeculativeFictionTropes">Speculative Fiction</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SportsStoryTropes" title="Main/SportsStoryTropes">Sports Story</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/WarTropes" title="Main/WarTropes">War</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Media</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/Media" title="Main/Media">All Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/AnimationTropes" title="Main/AnimationTropes">Animation (Western)</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Anime" title="Main/Anime">Anime</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ComicBookTropes" title="Main/ComicBookTropes">Comic Book</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FanFic" title="FanFic/FanFics">Fan Fics</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Film" title="Main/Film">Film</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/GameTropes" title="Main/GameTropes">Game</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Literature" title="Main/Literature">Literature</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MusicAndSoundEffects" title="Main/MusicAndSoundEffects">Music And Sound Effects</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NewMediaTropes" title="Main/NewMediaTropes">New Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/PrintMediaTropes" title="Main/PrintMediaTropes">Print Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Radio" title="Main/Radio">Radio</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SequentialArt" title="Main/SequentialArt">Sequential Art</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TabletopGames" title="Main/TabletopGames">Tabletop Games</a></li>
+<li><a href="/pmwiki/pmwiki.php/UsefulNotes/Television" title="Main/Television">Television</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Theater" title="Main/Theater">Theater</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/VideogameTropes" title="Main/VideogameTropes">Videogame</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Webcomics" title="Main/Webcomics">Webcomics</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Narrative</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/UniversalTropes" title="Main/UniversalTropes">Universal</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/AppliedPhlebotinum" title="Main/AppliedPhlebotinum">Applied Phlebotinum</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CharacterizationTropes" title="Main/CharacterizationTropes">Characterization</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Characters" title="Main/Characters">Characters</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CharactersAsDevice" title="Main/CharactersAsDevice">Characters As Device</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Dialogue" title="Main/Dialogue">Dialogue</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Motifs" title="Main/Motifs">Motifs</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NarrativeDevices" title="Main/NarrativeDevices">Narrative Devices</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Paratext" title="Main/Paratext">Paratext</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Plots" title="Main/Plots">Plots</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Settings" title="Main/Settings">Settings</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Spectacle" title="Main/Spectacle">Spectacle</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Other Categories</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/BritishTellyTropes" title="Main/BritishTellyTropes">British Telly</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TheContributors" title="Main/TheContributors">The Contributors</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CreatorSpeak" title="Main/CreatorSpeak">Creator Speak</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Creators" title="Main/Creators">Creators</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DerivativeWorks" title="Main/DerivativeWorks">Derivative Works</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LanguageTropes" title="Main/LanguageTropes">Language</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LawsAndFormulas" title="Main/LawsAndFormulas">Laws And Formulas</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ShowBusiness" title="Main/ShowBusiness">Show Business</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SplitPersonalityTropes" title="Main/SplitPersonalityTropes">Split Personality</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/StockRoom" title="Main/StockRoom">Stock Room</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TropeTropes" title="Main/TropeTropes">Trope</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Tropes" title="Main/Tropes">Tropes</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TruthAndLies" title="Main/TruthAndLies">Truth And Lies</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TruthInTelevision" title="Main/TruthInTelevision">Truth In Television</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Topical Tropes</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/BetrayalTropes" title="Main/BetrayalTropes">Betrayal</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CensorshipTropes" title="Main/CensorshipTropes">Censorship</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CombatTropes" title="Main/CombatTropes">Combat</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DeathTropes" title="Main/DeathTropes">Death</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FamilyTropes" title="Main/FamilyTropes">Family</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FateAndProphecyTropes" title="Main/FateAndProphecyTropes">Fate And Prophecy</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FoodTropes" title="Main/FoodTropes">Food</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/HolidayTropes" title="Main/HolidayTropes">Holiday</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MemoryTropes" title="Main/MemoryTropes">Memory</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MoneyTropes" title="Main/MoneyTropes">Money</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MoralityTropes" title="Main/MoralityTropes">Morality</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/PoliticsTropes" title="Main/PoliticsTropes">Politics</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ReligionTropes" title="Main/ReligionTropes">Religion</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SchoolTropes" title="Main/SchoolTropes">School</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="sidebar-item showcase">
+<p class="sidebar-item-title" data-title="Community Showcase">Community Showcase <a class="bubble float-right hover-blue" href="/pmwiki/showcase.php">More</a></p>
+<p class="community-showcase">
+<a href="https://sharetv.com/shows/echo_chamber" onclick="trackOutboundLink('https://sharetv.com/shows/echo_chamber');" target="_blank">
+<img alt="" class="lazy-image" data-src="/images/communityShowcase-echochamber.jpg"/></a>
+<a href="/pmwiki/pmwiki.php/Webcomic/TwistedTropes">
+<img alt="" class="lazy-image" data-src="/img/howlandsc-side.jpg"/></a>
+</p>
+</div>
+<div class="sidebar-item sb-ad-unit" id="stick-cont">
+<div class="sidebar-section" id="stick-bar">
+<div class="square_ad ad-size-300x600 ad-section text-center">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_4"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_4'); });</script> </div>
+</div> </div>
+</div>
+</div>
+</div>
+</div>
+<div class="action-bar tablet-off" id="action-bar-bottom">
+<a class="scroll-to-top dead-button" href="#top-of-page" onclick="$('html, body').animate({scrollTop : 0},500);">Top</a>
+</div>
+</div>
+<div class="proper-ad-unit ad-sticky">
+<div id="proper-ad-tvtropes_sticky_ad"> <script>propertag.cmd.push(function() { proper_display('tvtropes_sticky_ad'); });</script> </div>
+</div>
+<footer id="main-footer">
+<div id="main-footer-inner">
+<div class="footer-left">
+<a class="img-link" href="/"><img alt="TV Tropes" class="lazy-image" data-src="/img/tvtropes-footer-logo.png" title="TV Tropes"/></a>
+<form action="index.html" class="navbar-form newsletter-signup validate modal-replies" data-ajax-get="/ajax/subscribe_email.php" id="cse-search-box-mobile" name="" role="">
+<button class="btn-submit newsletter-signup-submit-button" id="subscribe-btn" type="submit"><i class="fa fa-paper-plane"></i></button>
+<input class="form-control" id="subscription-email" name="q" placeholder="Subscribe" size="31" type="text" validate-type="email" value=""/>
+</form>
+<ul class="social-buttons">
+<li><a class="btn fb" href="https://www.facebook.com/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-facebook']);" target="_blank"><i class="fa fa-facebook"></i></a></li>
+<li><a class="btn tw" href="https://www.twitter.com/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-twitter']);" target="_blank"><i class="fa fa-twitter"></i></a> </li>
+<li><a class="btn rd" href="https://www.reddit.com/r/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-reddit']);" target="_blank"><i class="fa fa-reddit-alien"></i></a></li>
+</ul>
+</div>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">TVTropes</h4></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Administrivia">About TVTropes</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TheGoalsOfTVTropes">TVTropes Goals</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TheTropingCode">Troping Code</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TVTropesCustoms">TVTropes Customs</a></li>
+<li><a href="/pmwiki/pmwiki.php/JustForFun/TropesOfLegend">Tropes of Legend</a></li>
+<li><a href="/pmwiki/ad-free-subscribe.php">Go Ad-Free</a></li>
+</ul>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">Community</h4></li>
+<li><a href="/pmwiki/query.php?type=att">Ask The Tropers</a></li>
+<li><a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a></li>
+<li><a href="/pmwiki/query.php?type=tf">Trope Finder</a></li>
+<li><a href="/pmwiki/query.php?type=ykts">You Know That Show</a></li>
+<li><a data-modal-target="login" href="/pmwiki/lbs.php">Live Blogs</a></li>
+<li><a href="/pmwiki/review_activity.php">Reviews</a></li>
+<li><a href="/pmwiki/topics.php">Forum</a></li>
+</ul>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">Tropes HQ</h4></li>
+<li><a href="/pmwiki/about.php">About Us</a></li>
+<li><a href="/pmwiki/contact.php">Contact Us</a></li>
+<li><a href="/pmwiki/dmca.php">DMCA Notice</a></li>
+<li><a href="/pmwiki/privacypolicy.php">Privacy Policy</a></li>
+</ul>
+</div>
+<div class="text-center gutter-top gutter-bottom tablet-on" id="desktop-on-mobile-toggle">
+<a href="/pmwiki/switchDeviceCss.php?mobileVersion=1" rel="nofollow">Switch to <span class="txt-desktop">Desktop</span><span class="txt-mobile">Mobile</span> Version</a>
+</div>
+<div class="legal">
+<p>TVTropes is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License. <br/>Permissions beyond the scope of this license may be available from <a href="mailto:thestaff@tvtropes.org" rel="cc:morePermissions" xmlns:cc="http://creativecommons.org/ns#"> thestaff@tvtropes.org</a>.</p>
+<br/>
+<div class="privacy_wrapper">
+</div>
+</div>
+</footer>
+<style>
+      div.fc-ccpa-root {
+        position: absolute !important;
+        bottom: 93px !important;
+        margin: auto !important;
+        width: 100% !important;
+        z-index: 9999 !important;
+      }
+      .fc-ccpa-root .fc-dns-dialog .fc-dns-link p{
+        outline: none !important;
+        text-decoration: underline !important;
+        font-size: .7em !important;
+        font-family: sans-serif !important;
+      }
+      .fc-ccpa-root .fc-dns-dialog .fc-dns-link .fc-button-background {
+        background: none !important;
+      }
+    </style>
+<div class="full-screen" id="_pm_videoViewer">
+<a class="close" href="#close" id="_pm_videoViewer-close"></a>
+<div class="_pmvv-body">
+<div class="_pmvv-vidbox">
+<video class="video-js vjs-default-skin vjs-16-9" data-video-id="" id="overlay-video-player-box">
+</video>
+<div class="_pmvv-vidbox-desc">
+<h1 id="overlay-title"></h1>
+<p class="_pmvv-vidbox-descTxt" id="overlay-descrip">
+</p>
+<div class="rating-row" data-video-id="">
+<input name="is_logged_in" type="hidden" value="0"/>
+<p>How well does it match the trope?</p>
+<div id="star-rating-group">
+<div class="trope-rate">
+<input id="lamp5" name="rate" type="radio" value="5"/>
+<label for="lamp5" title="Absolutely"></label>
+<input id="lamp4" name="rate" type="radio" value="4"/>
+<label for="lamp4" title="Yes"></label>
+<input id="lamp3" name="rate" type="radio" value="3"/>
+<label for="lamp3" title="Kind of"></label>
+<input id="lamp2" name="rate" type="radio" value="2"/>
+<label for="lamp2" title="Not really"></label>
+<input id="lamp1" name="rate" type="radio" value="1"/>
+<label for="lamp1" title="No"></label>
+</div>
+<div id="star-rating-total">
+</div>
+</div>
+</div>
+<div class="example-media-row">
+<div class="example-overlay">
+<p>Example of:</p>
+<div id="overlay-trope"> / </div>
+</div>
+<div class="media-sources-overlay example-overlay">
+<p>Media sources:</p>
+<div id="overlay-media"> / </div>
+</div>
+</div>
+<p class="_pmvv-vidbox-stats text-right font-s" style="padding-top:8px; border-top: solid 1px rgba(255,255,255,0.2)">
+<a class="float-right" data-modal-target="login" href="#video-feedback">Report</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+        window.special_ops =  {
+            member : 'no',
+            isolated : 0,
+            tags : ['unknown']
+        };
+    </script>
+<script type="text/javascript">
+
+        var cleanCreativeEnabled = "";
+        var donation = "";
+        var live_ads = "1";
+        var img_domain = "https://static.tvtropes.org";
+        var snoozed = cookies.read('snoozedabm');
+        var snoozable = "";
+
+        if (adsRemovedWith) {
+            live_ads = 0;
+        }
+
+        var elem = document.createElement('script');
+        elem.async = true;
+
+        elem.src = '/design/assets/bundle.js?rev=c58d8df02f09262390bbd03db7921fc35c6af306';
+
+        elem.onload = function() {
+                                 }
+        document.getElementsByTagName('head')[0].appendChild(elem);
+
+    </script>
+<script type="text/javascript">
+      function send_analytics_event(user_type, donation){
+          // if(user_type == 'uncached' || user_type == 'cached'){
+          //   ga('send', 'event', 'caching', 'load', user_type, {'nonInteraction': 1});
+          //   return;
+          // }
+          var event_name = user_type;
+
+          if(donation == 'true'){
+              event_name += "_donation"
+          }else if(typeof(valid_user) == 'undefined'){
+              event_name += "_blocked"
+          }else if(valid_user == true){
+              event_name += "_unblocked";
+          }else{
+              event_name = "_unknown"
+          }
+          ga('send', 'event', 'ads', 'load', event_name, {'nonInteraction': 1});
+      }
+
+    
+    send_analytics_event("guest", "false");
+      </script>
+</body>
+</html>

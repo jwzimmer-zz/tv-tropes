@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Point Build System - TV Tropes</title>
+<meta content="The Point Build System trope as used in popular culture. Point Build, or Point Buy, is a method of generating traits for characters in a Game System by …" name="description"/>
+<link href="https://tvtropes.org/pmwiki/pmwiki.php/Main/PointBuildSystem" rel="canonical"/>
+<link href="/img/icons/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="@tvtropes" name="twitter:site"/>
+<meta content="@tvtropes" name="twitter:owner"/>
+<meta content="Point Build System - TV Tropes" name="twitter:title"/>
+<meta content="The Point Build System trope as used in popular culture. Point Build, or Point Buy, is a method of generating traits for characters in a Game System by …" name="twitter:description"/>
+<meta content="https://static.tvtropes.org/logo_blue_small.png" name="twitter:image:src"/>
+<meta content="TV Tropes" property="og:site_name"/>
+<meta content="en_US" property="og:locale"/>
+<meta content="https://www.facebook.com/tvtropes" property="article:publisher"/>
+<meta content="Point Build System - TV Tropes" property="og:title"/>
+<meta content="website" property="og:type"/>
+<meta content="https://tvtropes.org/pmwiki/pmwiki.php/Main/PointBuildSystem" property="og:url"/>
+<meta content="https://static.tvtropes.org/logo_blue_small.png" property="og:image"/>
+<meta content="Point Build, or Point Buy, is a method of generating traits for characters in a Game System by allocating points from a budget, rather than randomly by rolling dice or picking from a menu of characters with predefined stats and abilities. In most …" property="og:description"/>
+<link href="/img/icons/apple-icon-57x57.png" rel="apple-touch-icon" sizes="57x57" type="image/png"/>
+<link href="/img/icons/apple-icon-60x60.png" rel="apple-touch-icon" sizes="60x60" type="image/png"/>
+<link href="/img/icons/apple-icon-72x72.png" rel="apple-touch-icon" sizes="72x72" type="image/png"/>
+<link href="/img/icons/apple-icon-76x76.png" rel="apple-touch-icon" sizes="76x76" type="image/png"/>
+<link href="/img/icons/apple-icon-114x114.png" rel="apple-touch-icon" sizes="114x114" type="image/png"/>
+<link href="/img/icons/apple-icon-120x120.png" rel="apple-touch-icon" sizes="120x120" type="image/png"/>
+<link href="/img/icons/apple-icon-144x144.png" rel="apple-touch-icon" sizes="144x144" type="image/png"/>
+<link href="/img/icons/apple-icon-152x152.png" rel="apple-touch-icon" sizes="152x152" type="image/png"/>
+<link href="/img/icons/apple-icon-180x180.png" rel="apple-touch-icon" sizes="180x180" type="image/png"/>
+<link href="/img/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/img/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/img/icons/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png"/>
+<link href="/img/icons/favicon-192x192.png" rel="icon" sizes="192x192" type="image/png"/>
+<meta content="width=device-width, initial-scale=1" id="viewport" name="viewport"/>
+<script>
+                var propertag = {};
+                propertag.cmd = [];
+            </script>
+<link href="/design/assets/bundle.css?rev=c58d8df02f09262390bbd03db7921fc35c6af306" rel="stylesheet"/>
+<script>
+                function object(objectId) {
+                    if (document.getElementById && document.getElementById(objectId)) {
+                        return document.getElementById(objectId);
+                    } else if (document.all && document.all(objectId)) {
+                        return document.all(objectId);
+                    } else if (document.layers && document.layers[objectId]) {
+                        return document.layers[objectId];
+                    } else {
+                        return false;
+                    }
+                }
+
+                // JAVASCRIPT COOKIES CODE: for getting and setting user viewing preferences
+                var cookies = {
+                    create: function (name, value, days2expire, path) {
+                        var date = new Date();
+                        date.setTime(date.getTime() + (days2expire * 24 * 60 * 60 * 1000));
+                        var expires = date.toUTCString();
+                        document.cookie = name + '=' + value + ';' + 'expires=' + expires + ';' + 'path=' + path + ';';
+                    },
+										createWithExpire: function(name, value, expires, path) {
+												document.cookie = name + '=' + value + ';' + 'expires=' + expires + ';' + 'path=' + path + ';';
+										},
+                    read: function (name) {
+                        var cookie_value = "",
+                            current_cookie = "",
+                            name_expr = name + "=",
+                            all_cookies = document.cookie.split(';'),
+                            n = all_cookies.length;
+
+                        for (var i = 0; i < n; i++) {
+                            current_cookie = all_cookies[i].trim();
+                            if (current_cookie.indexOf(name_expr) === 0) {
+                                cookie_value = current_cookie.substring(name_expr.length, current_cookie.length);
+                                break;
+                            }
+                        }
+                        return cookie_value;
+                    },
+                    update: function (name, val) {
+                        this.create(name, val, 300, "/");
+                    },
+                    remove: function (name) {
+                        document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
+                    }
+                };
+
+                function updateUserPrefs() {
+                    //GENERAL: detect and set browser, if not cookied (will be treated like a user-preference and added to the #user-pref element)
+                    if( !cookies.read('user-browser') ){
+                        var broswer = '';
+
+                        if(navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPod/i) ){
+                            browser = 'iOS';
+                        } else if (/Opera[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'opera';
+                        } else if (/MSIE (\d+\.\d+);/.test(navigator.userAgent)) {
+                            browser = 'MSIE';
+                        } else if (/Navigator[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'netscape';
+                        } else if (/Chrome[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'chrome';
+                        } else if (/Safari[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'safari';
+                            /Version[\/\s](\d+\.\d+)/.test(navigator.userAgent);
+                            browserVersion = new Number(RegExp.$1);
+                        } else if (/Firefox[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'firefox';
+                        } else {
+                            browser = 'internet_explorer';
+                        }
+                        cookies.create('user-browser',browser,1,'/');
+                        document.getElementById('user-prefs').classList.add('browser-' + browser);
+                    } else {
+                        document.getElementById('user-prefs').classList.add('browser-' + cookies.read('user-browser'));
+                    }
+
+                    //update user preference settings
+                    if (cookies.read('wide-load') !== '') document.getElementById('user-prefs').classList.add('wide-load');
+                    if (cookies.read('night-vision') !== '') document.getElementById('user-prefs').classList.add('night-vision');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('user-prefs').classList.add('sticky-header');
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('user-prefs').classList.add('show-spoilers');
+                    if (cookies.read('folders-open') !== '') document.getElementById('user-prefs').classList.add('folders-open');
+                    if (cookies.read('lefthand-sidebar') !== '') document.getElementById('user-prefs').classList.add('lefthand-sidebar');
+                    if (cookies.read('highlight-links') !== '') document.getElementById('user-prefs').classList.add('highlight-links');
+                    if (cookies.read('forum-gingerbread') !== '') document.getElementById('user-prefs').classList.add('forum-gingerbread');
+                    if (cookies.read('shared-avatars') !== '') document.getElementById('user-prefs').classList.add('shared-avatars');
+                    if (cookies.read('new-search') !== '') document.getElementById('user-prefs').classList.add('new-search');
+                    if (cookies.read('stop-auto-play-video') !== '') document.getElementById('user-prefs').classList.add('stop-auto-play-video');
+
+                    //desktop view on mobile
+                    if (cookies.read('desktop-on-mobile') !== ''){
+                        document.getElementById('user-prefs').classList.add('desktop-on-mobile');
+
+                        var viewport = document.querySelector("meta[name=viewport]");
+                        viewport.setAttribute('content', 'width=1000');
+                    }
+
+                }
+
+                function updateDesktopPrefs() {
+                    if (cookies.read('wide-load') !== '') document.getElementById('sidebar-toggle-wideload').classList.add('active');
+                    if (cookies.read('night-vision') !== '') document.getElementById('sidebar-toggle-nightvision').classList.add('active');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('sidebar-toggle-stickyheader').classList.add('active');
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('sidebar-toggle-showspoilers').classList.add('active');
+
+                }
+
+                function updateMobilePrefs() {
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('mobile-toggle-showspoilers').classList.add('active');
+                    if (cookies.read('night-vision') !== '') document.getElementById('mobile-toggle-nightvision').classList.add('active');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('mobile-toggle-stickyheader').classList.add('active');
+                    if (cookies.read('highlight-links') !== '') document.getElementById('mobile-toggle-highlightlinks').classList.add('active');
+
+                }
+
+
+                if (document.cookie.indexOf("scroll0=") < 0) {
+                    // do nothing
+                } else {
+                    console.log('ads removed by scroll.com');
+                    var adsRemovedWith = 'scroll';
+                    var style = document.createElement('style');
+                    style.innerHTML = '#header-ad, .proper-ad-unit, .square_ad, .sb-ad-unit { display: none !important; } ';
+                    document.head.appendChild(style);
+                }
+            </script>
+<script type="text/javascript">
+
+                var tvtropes_config = {
+                    astri_stream_enabled : "",
+                    is_logged_in         : "",
+                    handle               : "",
+                    get_astri_stream     : "",
+										revnum               : "c58d8df02f09262390bbd03db7921fc35c6af306",
+										img_domain           : "https://static.tvtropes.org",
+										adblock              : "1",
+										adblock_url          : "propermessage.io",
+										pause_editing        : "0",
+										pause_editing_msg    : "",
+										pause_site_changes   : ""
+                };
+            </script>
+<script type="text/javascript">
+						  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+						  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+						  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+						  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+						  ga('create', 'UA-3821842-1', 'auto');
+						  ga('send', 'pageview');
+
+						</script>
+</head>
+<body class="">
+<i id="user-prefs"></i>
+<script>updateUserPrefs();</script>
+<div id="fb-root"></div>
+<div id="modal-box"></div>
+<header class="headroom-element" id="main-header-bar">
+<div id="main-header-bar-inner">
+<span class="header-spacer" id="header-spacer-left"></span>
+<a class="mobile-menu-toggle-button tablet-on" href="#mobile-menu" id="main-mobile-toggle"><span></span><span></span><span></span></a>
+<a class="no-dev" href="/" id="main-header-logoButton"></a>
+<span class="header-spacer" id="header-spacer-right"></span>
+<nav class="tablet-off" id="main-header-nav">
+<a href="/pmwiki/pmwiki.php/Main/Tropes">Tropes</a>
+<a href="/pmwiki/pmwiki.php/Main/Media">Media</a>
+<a class="nav-browse" href="/pmwiki/browse.php">Browse</a>
+<a href="/pmwiki/index_report.php">Indexes</a>
+<a href="/pmwiki/topics.php">Forums</a>
+<a class="nav-browse" href="/pmwiki/recent_videos.php">Videos</a>
+</nav>
+<div id="main-header-bar-right">
+<div class="font-xs mobile-off" id="signup-login-box">
+<a class="hover-underline bold" data-modal-target="signup" href="/pmwiki/login.php">Join</a>
+<a class="hover-underline bold" data-modal-target="login" href="/pmwiki/login.php">Login</a>
+</div>
+<div class="mobile-on inline" id="signup-login-mobileToggle">
+<a data-modal-target="login" href="/pmwiki/login.php"><i class="fa fa-user"></i></a>
+</div>
+<div id="search-box">
+<form action="/pmwiki/search_result.php" class="search">
+<input class="search-box" name="q" placeholder="Search" required="" type="text" value=""/>
+<input class="submit-button" type="submit" value=""/>
+<input name="search_type" type="hidden" value="article"/>
+<input name="page_type" type="hidden" value="all"/>
+<input name="cx" type="hidden" value="partner-pub-6610802604051523:amzitfn8e7v"/>
+<input name="cof" type="hidden" value="FORID:10"/>
+<input name="ie" type="hidden" value="ISO-8859-1"/>
+<input name="siteurl" type="hidden" value=""/>
+<input name="ref" type="hidden" value=""/>
+<input name="ss" type="hidden" value=""/>
+</form>
+<a class="mobile-on mobile-search-toggle close-x" href="#close-search"><i class="fa fa-close"></i></a>
+</div>
+<div id="random-box">
+<a class="button-random-trope" href="/pmwiki/pmwiki.php/Main/SoNearYetSoFar" onclick="ga('send', 'event', 'button', 'click', 'random trope');" rel="nofollow"></a>
+<a class="button-random-media" href="/pmwiki/pmwiki.php/Creator/IvanYefremov" onclick="ga('send', 'event', 'button', 'click', 'random media');" rel="nofollow"></a>
+</div>
+</div>
+</div>
+<div class="tablet-on" id="mobile-menu"><div class="mobile-menu-options">
+<div class="nav-wrapper">
+<a class="xl" href="/pmwiki/pmwiki.php/Main/Tropes">Tropes</a>
+<a class="xl" href="/pmwiki/pmwiki.php/Main/Media">Media</a>
+<a class="xl" href="/pmwiki/browse.php">Browse</a>
+<a class="xl" href="/pmwiki/index_report.php">Indexes</a>
+<a class="xl" href="/pmwiki/topics.php">Forums</a>
+<a class="xl" href="/pmwiki/recent_videos.php">Videos</a>
+<a href="/pmwiki/query.php?type=att">Ask The Tropers</a>
+<a href="/pmwiki/query.php?type=tf">Trope Finder</a>
+<a href="/pmwiki/query.php?type=ykts">You Know That Show...</a>
+<a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a>
+<a data-click-toggle="active" href="#tools">Tools <i class="fa fa-chevron-down"></i></a>
+<div class="tools-dropdown mobile-dropdown-linkList">
+<a href="/pmwiki/cutlist.php">Cut List</a>
+<a href="/pmwiki/changes.php">New Edits</a>
+<a href="/pmwiki/recent_edit_reasons.php">Edit Reasons</a>
+<a href="/pmwiki/launches.php">Launches</a>
+<a href="/pmwiki/img_list.php">Images List</a>
+<a href="/pmwiki/crown_activity.php">Crowner Activity</a>
+<a href="/pmwiki/no_types.php">Un-typed Pages</a>
+<a href="/pmwiki/page_type_audit.php">Recent Page Type Changes</a>
+</div>
+<a data-click-toggle="active" href="#hq">Tropes HQ <i class="fa fa-chevron-down"></i></a>
+<div class="tools-dropdown mobile-dropdown-linkList">
+<a href="/pmwiki/about.php">About Us</a>
+<a href="/pmwiki/contact.php">Contact Us</a>
+<a href="mailto:advertising@proper.io">Advertise</a>
+<a href="/pmwiki/dmca.php">DMCA Notice</a>
+<a href="/pmwiki/privacypolicy.php">Privacy Policy</a>
+</div>
+<a href="/pmwiki/ad-free-subscribe.php">Go Ad-Free</a>
+<div class="toggle-switches">
+<ul class="mobile-menu display-toggles">
+<li>Show Spoilers <div class="display-toggle show-spoilers" id="mobile-toggle-showspoilers"></div></li>
+<li>Night Vision <div class="display-toggle night-vision" id="mobile-toggle-nightvision"></div></li>
+<li>Sticky Header <div class="display-toggle sticky-header" id="mobile-toggle-stickyheader"></div></li>
+<li>Highlight Links <div class="display-toggle highlight-links" id="mobile-toggle-highlightlinks"></div></li>
+</ul>
+<script>updateMobilePrefs();</script>
+</div>
+</div>
+</div>
+</div>
+</header>
+<div class="mobile-on" id="homepage-introBox-mobile">
+<a href="/"><img class="logo-small" src="/images/logo-white-big.png"/></a>
+<form action="/pmwiki/search_result.php" class="search" style="margin:10px -5px -6px -5px;">
+<input class="search-box" name="q" placeholder="Search" required="" type="text" value=""/>
+<input class="submit-button" type="submit" value=""/>
+<input name="search_type" type="hidden" value="article"/>
+<input name="page_type" type="hidden" value="all"/>
+<input name="cx" type="hidden" value="partner-pub-6610802604051523:amzitfn8e7v"/>
+<input name="cof" type="hidden" value="FORID:10"/>
+<input name="ie" type="hidden" value="ISO-8859-1"/>
+<input name="siteurl" type="hidden" value=""/>
+<input name="ref" type="hidden" value=""/>
+<input name="ss" type="hidden" value=""/>
+</form>
+</div>
+<div class="ad" id="header-ad-wrapper">
+<div id="header-ad">
+<div class="ad-size-970x90 atf_banner">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_1"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_1'); });</script> </div>
+</div> </div>
+</div>
+</div>
+<div id="main-container">
+<div class="action-bar mobile-off" id="action-bar-top">
+<div class="action-bar-right">
+<p>Follow TV Tropes</p>
+<a class="button-fb" href="https://www.facebook.com/TVTropes">
+<i class="fa fa-facebook"></i></a>
+<a class="button-tw" href="https://www.twitter.com/TVTropes">
+<i class="fa fa-twitter"></i></a>
+<a class="button-re" href="https://www.reddit.com/r/TVTropes">
+<i class="fa fa-reddit-alien"></i></a>
+</div>
+<nav class="actions-wrapper" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<ul class="page-actions" id="top_main_list">
+<li class="link-edit">
+<a class="article-edit-button" data-modal-target="login" href="/pmwiki/pmwiki.php/Main/PointBuildSystem?action=edit" rel="nofollow">
+<i class="fa fa-pencil"></i> Edit Page</a></li><li class="link-related"><a href="/pmwiki/relatedsearch.php?term=Main/PointBuildSystem">
+<i class="fa fa-share-alt"></i> Related</a></li><li class="link-history"><a href="/pmwiki/article_history.php?article=Main.PointBuildSystem">
+<i class="fa fa-history"></i> History</a></li><li class="link-discussion"><a href="/pmwiki/remarks.php?trope=Main.PointBuildSystem">
+<i class="fa fa-comment"></i> Discussion</a></li> </ul>
+<button class="nav__dropdown-toggle" id="top_more_button" onclick="toggle_more_menu('top');" type="button">More</button>
+<ul class="more_menu hidden_more_list" id="top_more_list">
+<li class="link-todo tuck-always more_list_item"><a data-modal-target="login" href="#todo"><i class="fa fa-check-circle"></i> To Do</a></li><li class="link-pageSource tuck-always more_list_item"><a data-modal-target="login" href="/pmwiki/pmwiki.php/Main/PointBuildSystem?action=source" rel="nofollow" target="_blank"><i class="fa fa-code"></i> Page Source</a></li> </ul>
+</nav>
+<div class="WikiWordModalStub"></div>
+<div class="ImgUploadModalStub" data-page-type="Article"></div>
+<div class="login-alert" style="display: none;">
+You need to <a href="/pmwiki/login.php" style="color:#21A0E8">login</a> to do this. <a href="/pmwiki/login.php?tab=register_account" style="color:#21A0E8">Get Known</a> if you don't have an account
+</div>
+</div>
+<div class="page-Article" id="main-content">
+<article class="with-sidebar" id="main-entry">
+<input id="groupname-hidden" type="hidden" value="Main"/>
+<input id="title-hidden" type="hidden" value="PointBuildSystem"/>
+<input id="article_id" type="hidden" value="5128"/>
+<input id="logged_in" type="hidden" value="false"/>
+<p class="hidden" id="current_url">http://tvtropes.org/pmwiki/pmwiki.php/Main/PointBuildSystem</p>
+<meta content="" itemprop="datePublished"/>
+<meta content="" itemprop="articleSection"/>
+<meta content="" itemprop="image"/>
+<a class="watch-button" data-modal-target="login" href="#watch">Follow<span>ing</span></a>
+<h1 class="entry-title" itemprop="headline">
+Point Build System
+</h1>
+<script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+                "@type": "ListItem",
+                "position": 1,
+                "name": "tvtropes.org",
+                "item": "https://tvtropes.org"
+            },{
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Tropes",
+                "item": "https://tvtropes.org/pmwiki/pmwiki.php/Main/Tropes"
+            },{
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Point Build System"            }]
+        }
+    </script>
+<a class="mobile-actionbar-toggle mobile-on" data-click-toggle="active" href="#mobile-actions-toggle" id="mobile-actionbar-toggle">
+<p class="tiny-off">Go To</p><span></span><span></span><span></span><i class="fa fa-pencil"></i></a>
+<nav class="mobile-actions-wrapper mobile-on" id="mobile-actions-bar"></nav>
+<div class="modal fade hidden-until-active" id="editLockModal">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button aria-label="Close" class="close" data-dismiss="modal" type="button"> <span aria-hidden="true">×</span></button>
+<h4 class="modal-title">Edit Locked</h4>
+</div>
+<div class="modal-body">
+<div class="row">
+<div class="body">
+<div class="danger troper_locked_message"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<nav class="body-options" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<ul class="subpage-links">
+<li>
+<a class="subpage-link curr-subpage" href="/pmwiki/pmwiki.php/Main/PointBuildSystem" title="The Main page">
+<span class="wrapper"><span class="spi main-page"></span>Main</span></a>
+</li>
+<li class="create-subpage dropdown">
+<a aria-expanded="false" class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);" role="button">
+<span class="wrapper">Create New <i class="fa fa-plus-circle"></i></span>
+</a>
+<select onchange="this.options[this.selectedIndex].value &amp;&amp; (window.location = this.options[this.selectedIndex].value);">
+<option value="">- Create New -</option>
+<option value="/pmwiki/pmwiki.php/Analysis/PointBuildSystem?action=edit">Analysis</option>
+<option value="/pmwiki/pmwiki.php/Characters/PointBuildSystem?action=edit">Characters</option>
+<option value="/pmwiki/pmwiki.php/FanficRecs/PointBuildSystem?action=edit">FanficRecs</option>
+<option value="/pmwiki/pmwiki.php/FanWorks/PointBuildSystem?action=edit">FanWorks</option>
+<option value="/pmwiki/pmwiki.php/Fridge/PointBuildSystem?action=edit">Fridge</option>
+<option value="/pmwiki/pmwiki.php/Haiku/PointBuildSystem?action=edit">Haiku</option>
+<option value="/pmwiki/pmwiki.php/Headscratchers/PointBuildSystem?action=edit">Headscratchers</option>
+<option value="/pmwiki/pmwiki.php/ImageLinks/PointBuildSystem?action=edit">ImageLinks</option>
+<option value="/pmwiki/pmwiki.php/Laconic/PointBuildSystem?action=edit">Laconic</option>
+<option value="/pmwiki/pmwiki.php/PlayingWith/PointBuildSystem?action=edit">PlayingWith</option>
+<option value="/pmwiki/pmwiki.php/Quotes/PointBuildSystem?action=edit">Quotes</option>
+<option value="/pmwiki/pmwiki.php/Recap/PointBuildSystem?action=edit">Recap</option>
+<option value="/pmwiki/pmwiki.php/ReferencedBy/PointBuildSystem?action=edit">ReferencedBy</option>
+<option value="/pmwiki/pmwiki.php/Synopsis/PointBuildSystem?action=edit">Synopsis</option>
+<option value="/pmwiki/pmwiki.php/Timeline/PointBuildSystem?action=edit">Timeline</option>
+<option value="/pmwiki/pmwiki.php/Trivia/PointBuildSystem?action=edit">Trivia</option>
+<option value="/pmwiki/pmwiki.php/WMG/PointBuildSystem?action=edit">WMG</option>
+<option value="/pmwiki/pmwiki.php/YMMV/PointBuildSystem?action=edit">YMMV</option>
+</select>
+</li>
+</ul>
+</nav>
+<div class="article-content retro-folders" id="main-article">
+<p>Point Build, or Point Buy, is a method of <a class="twikilink" href="/pmwiki/pmwiki.php/Main/CharacterCustomization" title="/pmwiki/pmwiki.php/Main/CharacterCustomization">generating traits for characters</a> in a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GameSystem" title="/pmwiki/pmwiki.php/Main/GameSystem">Game System</a> by allocating points from a budget, rather than randomly by <a class="twikilink" href="/pmwiki/pmwiki.php/Main/HonestRollsCharacter" title="/pmwiki/pmwiki.php/Main/HonestRollsCharacter">rolling dice</a> or picking from a menu of characters with predefined stats and abilities. In most games, Point Build methods work alongside a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ClassAndLevelSystem" title="/pmwiki/pmwiki.php/Main/ClassAndLevelSystem">Class and Level System</a>, although there are some in which they replace it entirely.
+</p><p>In theory, this type of system promotes game balance by ensuring that characters built with similar point budgets have similar power levels, as opposed to the wildly imbalanced characters that can result from random rolling. However, it can lead to <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MinMaxing" title="/pmwiki/pmwiki.php/Main/MinMaxing">Min-Maxing</a>, where players deliberately allocate points to the "<a class="twikilink" href="/pmwiki/pmwiki.php/Main/OneStatToRuleThemAll" title="/pmwiki/pmwiki.php/Main/OneStatToRuleThemAll">best</a>" stats and abilities for their character concept while <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DumpStat" title="/pmwiki/pmwiki.php/Main/DumpStat">neglecting others</a>, which is often frowned upon.
+</p><div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_1"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_1'); })</script></div></div><p>Many systems take the Point Build method beyond character creation and award additional Character Points either in addition to or in lieu of <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ExperiencePoints" title="/pmwiki/pmwiki.php/Main/ExperiencePoints">Experience Points</a>. In a hybrid system, each <a class="twikilink" href="/pmwiki/pmwiki.php/Main/CharacterLevel" title="/pmwiki/pmwiki.php/Main/CharacterLevel">Character Level</a> awards additional points to spend on stats and abilities. Other common features of Point Build systems include:
+</p><p></p><ul><li> Different traits cost different numbers of points, theoretically putting higher costs on more desirable attributes.
+</li><li> Buying higher levels of a trait costs more points per rank than lower levels.
+</li><li> Particularly in tabletop games, assets that aren't strictly part of your character but that he or she nonetheless benefits from in some way (such as noteworthy equipment, NPC allies and the like) also frequently cost points. This may be in place of or in addition to their notional in-universe cost, be that monetary or otherwise.
+</li><div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_2"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_2'); })</script></div></div><li> There are multiple pools of points, each of which is spent on different types of traits. This is sometimes just done at character creation to ensure the player starts off reasonably balanced, but sometimes it carries on to gameplay by having different types of experience points that can only be used on specific attributes. (Similarly, sometimes points earned during play must be allocated to skills or abilities that the character "used" in some way, or can justify having used.)
+</li><li> You can gain extra points by lowering your attributes below the default starting level or taking <em>negative</em> traits that affect roleplaying or game mechanics (<a class="twikilink" href="/pmwiki/pmwiki.php/Main/HandicappedBadass" title="/pmwiki/pmwiki.php/Main/HandicappedBadass">physical impairment</a>, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DoesntLikeGuns" title="/pmwiki/pmwiki.php/Main/DoesntLikeGuns">inability to use guns</a>, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/WhyDidItHaveToBeSnakes" title="/pmwiki/pmwiki.php/Main/WhyDidItHaveToBeSnakes">paralyzing fear of snakes</a>, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ThatOneDisadvantage" title="/pmwiki/pmwiki.php/Main/ThatOneDisadvantage">spectacular clumsiness</a>, etc.). There are usually limits to this to prevent <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Munchkin" title="/pmwiki/pmwiki.php/Main/Munchkin">ridiculously powerful characters</a>, or characters whose flaws <a class="twikilink" href="/pmwiki/pmwiki.php/Main/CursedWithAwesome" title="/pmwiki/pmwiki.php/Main/CursedWithAwesome">are actually advantages</a>. See <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MinmaxersDelight" title="/pmwiki/pmwiki.php/Main/MinmaxersDelight">Minmaxer's Delight</a>.
+<ul><li> Likewise, in addition to your core stats, you can spend points to take positive traits that affect roleplaying or game mechanics (such as the capacity to acrobatically dodge attacks, Matrix-style.)
+</li></ul></li></ul><p>The concept is not limited to characters in an <a class="twikilink" href="/pmwiki/pmwiki.php/Main/RPG" title="/pmwiki/pmwiki.php/Main/RPG">RPG</a>; simulation games frequently use point allocation (or the equivalent in terms of a cash pool) to build vehicles, robots, spaceships, or other units; and strategy games usually use a point system to create armies, with units costing a variable number of points based on their presumed strength and battles rated in terms of the number of total points allocated to each side.
+</p><div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_3"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_3'); })</script></div></div><p>See also <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AnAdventurerIsYou" title="/pmwiki/pmwiki.php/Main/AnAdventurerIsYou">An Adventurer Is You</a>. A form of <a class="twikilink" href="/pmwiki/pmwiki.php/Main/CharacterCustomization" title="/pmwiki/pmwiki.php/Main/CharacterCustomization">Character Customization</a>. Can lead to players, especially beginners, creating <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MasterOfNone" title="/pmwiki/pmwiki.php/Main/MasterOfNone">Master of None</a> characters, as they try to buy one of everything, and end up with too little of everything.
+</p><hr/><h2>Examples:</h2>
+<p></p><div class="folderlabel" onclick="toggleAllFolders();">    open/close all folders  </div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder0');">     Action Adventure  </div><div class="folder" id="folder0" isfolder="true" style="display:block;">
+<p></p><ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Iji" title="/pmwiki/pmwiki.php/VideoGame/Iji">Iji</a></em>, a two-dimensional multi-directional-scrolling platforming computer game, contains a statistic system that allows the player to improve health, kicking ability, shooting damage, gun access, etc. by spending well-earned points at specific locations.
+</li></ul><p></p></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder1');">     Action RPG  </div><div class="folder" id="folder1" isfolder="true" style="display:block;">
+<p></p><ul><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DemonsSouls" title="/pmwiki/pmwiki.php/VideoGame/DemonsSouls">Demon's Souls</a></em> and <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DarkSouls" title="/pmwiki/pmwiki.php/VideoGame/DarkSouls">Dark Souls</a></em>, you choose a starting class with fixed base stats and each level is adding one point to one stat of your choosing, which is added only when you specifically choose to spend <a class="twikilink" href="/pmwiki/pmwiki.php/Main/PracticalCurrency" title="/pmwiki/pmwiki.php/Main/PracticalCurrency">souls</a> for leveling up. Every other functional aspect of your character depends on their equipment (including spells, technically, because they are scrolls you find and equip to use).
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/GolfStory" title="/pmwiki/pmwiki.php/VideoGame/GolfStory">Golf Story</a></em>, every level-up earns Skill Points, which can be spent to make skills stronger. You can also decrease your Power if you're hitting too hard.
+</li><li> Two of the games in <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/TheElderScrolls" title="/pmwiki/pmwiki.php/Franchise/TheElderScrolls">The Elder Scrolls</a></em> series, <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheElderScrollsIIDaggerfall" title="/pmwiki/pmwiki.php/VideoGame/TheElderScrollsIIDaggerfall">Daggerfall</a></em> and <em>Battlespire</em>, feature this, alongside the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/StatGrinding" title="/pmwiki/pmwiki.php/Main/StatGrinding">Stat Grinding</a> and <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ClassAndLevelSystem" title="/pmwiki/pmwiki.php/Main/ClassAndLevelSystem">Class and Level System</a> seen in most of the other games of the series. In <em>Daggerfall</em>, you could raise some of your attributes by lowering others, and also take increased HP or special advantages (such as immunity to fire or regenerating health) in exchange for leveling more slowly, or have less HP or special disadvantages (such as a phobia of certain creatures or the inability to use certain types of items) in order to level more quickly. <em>Battlespire</em> used a score of numerical points, which were increased by the same sort of special disadvantages and could be used to buy just about everything, including attributes, hit points, spells, and even starting equipment.
+</li></ul><p></p></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder2');">     First Person Shooter  </div><div class="folder" id="folder2" isfolder="true" style="display:block;">
+<p></p><ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Borderlands" title="/pmwiki/pmwiki.php/VideoGame/Borderlands">Borderlands</a></em> has a point system to build up character traits and abilities, such as regenerating health when on a killing spree or increasing accuracy for sniper rifles. Every <a class="twikilink" href="/pmwiki/pmwiki.php/Main/LevelUp" title="/pmwiki/pmwiki.php/Main/LevelUp">Level Up</a> gives you one point to spend on these traits and spending enough in some skills unlocks further skills and you can choose to empty out all the points spent to reallocate them if you desire. However, you will never be able to max out every skill since the max character level is 69<span class="notelabel" onclick="togglenote('note0kskn');"><sup>note </sup></span><span class="inlinefolder" id="note0kskn" isnote="true" onclick="togglenote('note0kskn');" style="cursor:pointer;font-size:smaller;display:none;">Unless one uses a save editor, but this runs the risk of having max skill points while still having room to level, resulting in accumulating more skill points than can be spent</span>.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Paladins" title="/pmwiki/pmwiki.php/VideoGame/Paladins">Paladins</a></em> every champion has six loadout slots, three of which are default to be synergise with specific Talents. When building a Card Loadout, you have a 15 point budget, you can choose between 16 cards, with 5 card slots to fill up before it can be saved and used.
+</li></ul><p></p></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder3');">     Four X  </div><div class="folder" id="folder3" isfolder="true" style="display:block;">
+<p></p><ul><li> Although used for building a race instead of a character, the second and third <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MasterOfOrion" title="/pmwiki/pmwiki.php/VideoGame/MasterOfOrion">Master of Orion</a></em> games give you a set amount of points to distribute as the player wishes, with positive and negative attributes. For the second game, a later technology, Evolutionary Mutation, allows the player to add four extra points, though there are some restrictions on what racial traits can be modified.
+</li><li> The <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/GalacticCivilizations" title="/pmwiki/pmwiki.php/VideoGame/GalacticCivilizations">Galactic Civilizations</a></em> games allow you to customize your race using a similar system, although some racial benefits are hardcoded. You get 15 pts to spend on a Custom Race, but only 10 pts for the pre-made ones who have built in bonuses that can reach levels a Custom Race would need to <a class="twikilink" href="/pmwiki/pmwiki.php/Main/CripplingOverspecialization" title="/pmwiki/pmwiki.php/Main/CripplingOverspecialization">cripple themselves to achieve</a>. They also have built in penalties to balance it out.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SinsOfASolarEmpire" title="/pmwiki/pmwiki.php/VideoGame/SinsOfASolarEmpire">Sins of a Solar Empire</a></em>, capital ships level up to 10. Three normal skills that can level up to 3 and a super skill with one level. Some of the super skills are game breakers; as such they're only available at level 6. Lvl6 cap ships are notably more powerful than Lvl5.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Stellaris" title="/pmwiki/pmwiki.php/VideoGame/Stellaris">Stellaris</a></em> species and empires have separate point-build systems. Species buy traits that cost between one and four points, with the option of increasing their point pool with negative traits, later in game they can buy off negative traits or add new traits with genetic engineering. Empires have three ethos points to distribute along four ethical axes that affect their options of government type, research, policy, and diplomacy.
+</li></ul><p></p></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder4');">     Hack And Slash  </div><div class="folder" id="folder4" isfolder="true" style="display:block;">
+<p></p><ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DiabloII" title="/pmwiki/pmwiki.php/VideoGame/DiabloII">Diablo II</a></em> has a class/level system, but leveling up also awards skill and stat points which can be spent to customize the character.
+</li></ul><p></p></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder5');">     MMORPG  </div><div class="folder" id="folder5" isfolder="true" style="display:block;">
+<p></p><ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/AnarchyOnline" title="/pmwiki/pmwiki.php/VideoGame/AnarchyOnline">Anarchy Online</a></em> has a <em>very</em> involved Point Build System. The basics are the same—you are awarded Improvement Points (IP) with every level you earn—but there is <a class="urllink" href="http://wiki.aodb.us/wiki/Skilltree">a rather substantial list<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a> of skills and attributes on which characters can spend that IP. What's more, a character's <a class="urllink" href="http://www.ao-universe.com/index.php?id=14&amp;pid=411">breed<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a> and <a class="urllink" href="http://wiki.aodb.us/wiki/Skills_Costs_and_Dependencies_Chart">profession<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a> determines how much IP it takes to improve certain skills and attributes.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/ShatteredGalaxy" title="/pmwiki/pmwiki.php/VideoGame/ShatteredGalaxy">Shattered Galaxy</a></em>, a squad-based <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MMORPG" title="/pmwiki/pmwiki.php/Main/MMORPG">MMO</a><a class="twikilink" href="/pmwiki/pmwiki.php/Main/RTS" title="/pmwiki/pmwiki.php/Main/RTS">RTS</a>
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/GuildWars" title="/pmwiki/pmwiki.php/VideoGame/GuildWars">Guild Wars</a></em>, depending on your primary and secondary class, you have a variety of attributes on which you can spend Attribute Points, which are earned by leveling and two particular quests depending on where your starting zone was.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/RagnarokOnline" title="/pmwiki/pmwiki.php/VideoGame/RagnarokOnline">Ragnarok Online</a></em> gives stat points for a Base Level up, and gives Skill Points for a Job Level Up.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TreeOfSavior" title="/pmwiki/pmwiki.php/VideoGame/TreeOfSavior">Tree of Savior</a></em>, as a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SpiritualSuccessor" title="/pmwiki/pmwiki.php/Main/SpiritualSuccessor">Spiritual Successor</a> to <em>RO</em>, has a similar system in which characters are awarded Stat and Skill Points to use as they see fit with every Base or Job level they achieve.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Rift" title="/pmwiki/pmwiki.php/VideoGame/Rift">Rift</a></em>, every class has three "Talent Trees" that they may invest points in to gain new skills, specializing in certain abilities.
+</li><li> The <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DiscworldMUD" title="/pmwiki/pmwiki.php/VideoGame/DiscworldMUD">Discworld MUD</a></em>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/NexusClash" title="/pmwiki/pmwiki.php/VideoGame/NexusClash">Nexus Clash</a></em> skills are bought with Character Points earned by leveling, exploring and <a class="twikilink" href="/pmwiki/pmwiki.php/Main/StatGrinding" title="/pmwiki/pmwiki.php/Main/StatGrinding">Stat Grinding</a>. In practice there are always far more skills worth buying than Character Points available, requiring players to make choices and specialize their characters.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/WorldOfWarcraft" title="/pmwiki/pmwiki.php/VideoGame/WorldOfWarcraft">World of Warcraft</a></em> used to have talent trees in which the player could spend points as they gained levels. However, these only allowed very limited choice in practice, and so the system has been substantially reworked into more of a pure class/level system instead.
+</li></ul><p></p></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder6');">     Puzzle Game  </div><div class="folder" id="folder6" isfolder="true" style="display:block;">
+<p></p><ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/PuzzleQuest" title="/pmwiki/pmwiki.php/VideoGame/PuzzleQuest">Puzzle Quest</a></em> uses this, primarily to keep your character levelling up after it's hit the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Cap" title="/pmwiki/pmwiki.php/Main/Cap">Level Cap</a>.
+</li></ul><p></p></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder7');">     Real Time Strategy Game </div><div class="folder" id="folder7" isfolder="true" style="display:block;">
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TotalWar" title="/pmwiki/pmwiki.php/VideoGame/TotalWar">Total War</a></em> games use a point-buy system similar to many tabletop games for one-off skirmish and multiplayer battles, with units given a cost depending on their expected effectiveness. Notably, these costs can differ significantly from their cost in the single player campaign, since many units have advantages or disadvantages that are not relevant in a single battle.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder8');">     Roguelike </div><div class="folder" id="folder8" isfolder="true" style="display:block;">
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Cataclysm" title="/pmwiki/pmwiki.php/VideoGame/Cataclysm">Cataclysm</a>: Dark Days Ahead</em> has, in descending order of importance, stat points, trait points, and skill points. Points can be spent in their own category, or a "lower" one (stat points can be spent on all categories, trait points can also be spent on skills, and skill points can only be spent on skills).
+<ul><li> Stat points determine your stats, of course. You have 6, and can only get more by lowering one of your 4 stats below their default value of 8. Increasing a stat beyond 14 costs 2 points. Outside of rare mutations or bionics, they are the only way to increase stats.
+</li><li> Trait points are spent on perks such as faster movement speed, less need for food, or more morale gain from certain activities. You can gain more points by giving your character negative traits. Some traits can be gained by mutating, but most can only be gotten through the creation screen.
+</li><li> Skill points are spent on increasing your starting skills. By default, you have 2, but playing with a harder scenario or weaker profession gives extra points, and an easier scenario or stronger profession costs skill points. The first point in a skill gives 2 levels, the next gives 1, and then the cost increases by 1 for each 2 levels. <em>Then</em>, your profession's starting skills are added on top of that, so a Chef (starts with Cooking 4, but costs 1 skill point) with 2 points (3 levels) in Cooking starts with Cooking 7, which would normally cost 12 points, for only 3 points.
+</li></ul></li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder9');">     Role Playing Game  </div><div class="folder" id="folder9" isfolder="true" style="display:block;">
+<p></p><ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MightAndMagic" title="/pmwiki/pmwiki.php/VideoGame/MightAndMagic">Might and Magic</a></em>
+<ul><li> Only the later ones (6 and up), and with a twist in 6 and 7: the pool of points was shared among all 4 characters. The early games (1-5) used random dice rolls.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/ShinMegamiTensei" title="/pmwiki/pmwiki.php/Franchise/ShinMegamiTensei">Shin Megami Tensei</a></em> games frequently allow the protagonist to distribute stat points when leveling up (other party members have fixed stat assignments), though you can't change your starting stats. Examples include <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DevilSurvivor" title="/pmwiki/pmwiki.php/VideoGame/DevilSurvivor">Devil Survivor</a></em>, <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SoulHackers" title="/pmwiki/pmwiki.php/VideoGame/SoulHackers">Soul Hackers</a></em>, <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DigitalDevilSaga" title="/pmwiki/pmwiki.php/VideoGame/DigitalDevilSaga">Digital Devil Saga</a></em>, and every numbered main series game. The first took it further in that you could decide your entire party's starting stats, too.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/KnightsOfTheOldRepublic" title="/pmwiki/pmwiki.php/VideoGame/KnightsOfTheOldRepublic">Knights of the Old Republic</a></em> uses the D&amp;D point buy.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/ScienceGirls" title="/pmwiki/pmwiki.php/VideoGame/ScienceGirls">Science Girls!</a></em> uses this in combination with regular level building. HP and SP still go up per level, but to strengthen your moves or other stats, you have to spend points earned with each new level.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/ArcanumOfSteamworksAndMagickObscura" title="/pmwiki/pmwiki.php/VideoGame/ArcanumOfSteamworksAndMagickObscura">Arcanum: Of Steamworks &amp; Magick Obscura</a></em>'s character generation system gives you five points at creation, one point per level, and an extra point every five levels. These points can be spent on eight statistics, sixteen skills, fifty-six technological disciplines, and eighty spells, or you can just dump them directly into hit points or fatigue.
+</li><li> The <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Fallout" title="/pmwiki/pmwiki.php/VideoGame/Fallout">Fallout</a></em> series' trademark SPECIAL system has separate pools of points for stats (assigned as character creation, can have limited alteration in-game) and skills (start out based on stats, increase at level up).
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SystemShock" title="/pmwiki/pmwiki.php/VideoGame/SystemShock">System Shock</a> 2</em> used cyber modules, which were found in-game rather than earned through level ups, to upgrade stats and skills based on a complicated point-buy structure.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/WarlordsBattlecry" title="/pmwiki/pmwiki.php/VideoGame/WarlordsBattlecry">Warlords Battlecry</a> 3</em> (and possibly other related games) is an RPG/RTS hybrid with a Point Build system for developing the player character.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TalesOfTheDrunkenPaladin" title="/pmwiki/pmwiki.php/VideoGame/TalesOfTheDrunkenPaladin">Tales of the Drunken Paladin</a></em> has Brownie Points for each level up.
+</li><li> The <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/BaldursGate" title="/pmwiki/pmwiki.php/VideoGame/BaldursGate">Baldur's Gate</a></em> series uses a hybrid system for assigning the PC's atributes: the game does the usual 2nd Ed. D&amp;D method of rolling 3d6 for each stat, but then allows the player to redistribute the points as they wish. Of course there's nothing stopping them from hitting the 'Reroll' button until they get a point buy in the high 90s, but playing an <a class="twikilink" href="/pmwiki/pmwiki.php/Main/HonestRollsCharacter" title="/pmwiki/pmwiki.php/Main/HonestRollsCharacter">Honest Rolls Character</a> is a popular <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SelfImposedChallenge" title="/pmwiki/pmwiki.php/Main/SelfImposedChallenge">Self-Imposed Challenge</a>.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/NeverwinterNights" title="/pmwiki/pmwiki.php/VideoGame/NeverwinterNights">Neverwinter Nights</a></em> and <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/NeverwinterNights2" title="/pmwiki/pmwiki.php/VideoGame/NeverwinterNights2">Neverwinter Nights 2</a></em> use a point-buy system for determining characteristics.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/DragonAge" title="/pmwiki/pmwiki.php/Franchise/DragonAge">Dragon Age</a></em> and <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/MassEffect" title="/pmwiki/pmwiki.php/Franchise/MassEffect">Mass Effect</a></em> use point buy during character generation and give additional points on level up.
+</li><li> The main character of <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Dubloon" title="/pmwiki/pmwiki.php/VideoGame/Dubloon">Dubloon</a></em> has his stats defined at the beginning of the game by allocating a total of 240 points to each stat.
+</li><li> When creating a character in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TempleOfElementalEvil" title="/pmwiki/pmwiki.php/VideoGame/TempleOfElementalEvil">Temple of Elemental Evil</a></em>, you can switch back and forth between rolling your ability scores or using a point-buy system. Using the latter generally results in far weaker characters; each ability starts with a score of 8 and you have 25 points to distribute, but it becomes more expensive to increase an ability score the higher that score already is; i.e. 2 points each to raise from 14 to 15 and from 15 to 16, and three points each to raise it from 16 to 17 and from 17 to 18.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Wasteland2" title="/pmwiki/pmwiki.php/VideoGame/Wasteland2">Wasteland 2</a></em> uses full point-buy for attributes and skills. As is typical for the trope, trying to diversify your character can easily result in <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MasterOfNone" title="/pmwiki/pmwiki.php/Main/MasterOfNone">Master of None</a>. The game discourages you from having multiple characters with the same skills, and encourages you to use all specialists instead. Unfortunately, it tells you this <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GuideDangIt" title="/pmwiki/pmwiki.php/Main/GuideDangIt">AFTER you have created your characters</a>. Also unfortunately, you have to create characters with specific skills BEFORE you know which skills will be useful immediately (or at all) and/or which NPCs will be available to join you. Granted, the points you spent at the beginning won't be too expensive later in the game, which has the upside of letting you correct early mistakes and the downside of making the beginning of the game <a class="twikilink" href="/pmwiki/pmwiki.php/Main/EarlyGameHell" title="/pmwiki/pmwiki.php/Main/EarlyGameHell">Early Game Hell</a>.
+</li><li> The only thing level ups give in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Aground" title="/pmwiki/pmwiki.php/VideoGame/Aground">Aground</a></em> (other than a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/LevelUpFillUp" title="/pmwiki/pmwiki.php/Main/LevelUpFillUp">Level-Up Fill-Up</a>) are more skill points, with what areas your character gets stronger in linked purely to where you invested your skill points.
+</li></ul><p></p></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder10');">     Shoot Em Up  </div><div class="folder" id="folder10" isfolder="true" style="display:block;">
+<p></p><ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/HeavyWeapon" title="/pmwiki/pmwiki.php/VideoGame/HeavyWeapon">Heavy Weapon</a></em> gives you an upgrade point after each completed level, which you can distribute among your weapons and equipment. You are able to freely move points from one weapon to another, however, you <em>must</em> use all your upgrade points before you can do the next level.
+</li><li> The NES version of <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/NineteenFortyTwo" title="/pmwiki/pmwiki.php/VideoGame/NineteenFortyTwo">1943: The Battle of Midway</a></em> gives your <a class="twikilink" href="/pmwiki/pmwiki.php/Main/CoolPlane" title="/pmwiki/pmwiki.php/Main/CoolPlane">P-38 Lightning</a> five different aspects to put points into. You start with one point in each category and three points to distribute as you need. As you play the game and discover special power-ups, you can add more points to these aspects.<span class="notelabel" onclick="togglenote('note1hk0n');"><sup>note </sup></span><span class="inlinefolder" id="note1hk0n" isnote="true" onclick="togglenote('note1hk0n');" style="cursor:pointer;font-size:smaller;display:none;">The original arcade version is just a straightforward shoot-em up.</span>
+</li></ul><p></p></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder11');">     Simulation Game  </div><div class="folder" id="folder11" isfolder="true" style="display:block;">
+<p></p><ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DwarfFortress" title="/pmwiki/pmwiki.php/VideoGame/DwarfFortress">Dwarf Fortress</a></em>, in both its Fortress Mode and Adventure Mode. A fortress mode player must purchase skills for his starting seven dwarves, as well as equipment and pets. An adventurer just has to allocate points for skills and physical attributes, and is automatically assigned fixed gear based on highest weapon skill. After that, all attributes and skills are only increased by using them.
+</li><li> The disc-based version of <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/CrushCrumbleAndChomp" title="/pmwiki/pmwiki.php/VideoGame/CrushCrumbleAndChomp">Crush, Crumble, and Chomp!</a></em> allows you to build your own monster with "Monster Points". The number of points available and the cost for each ability varies based on the body form you choose to start with.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheSims" title="/pmwiki/pmwiki.php/VideoGame/TheSims">Sims 2</a></em> does this for creating personalities for individual Sims, with the twist that each personality trait is on a continuum between two extremes. You spend the points to move one trait or another toward the "positive" extreme.
+</li><li> In the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TournamentPlay" title="/pmwiki/pmwiki.php/Main/TournamentPlay">Tournament Play</a> for <em><a class="twikilink" href="/pmwiki/pmwiki.php/Videogame/MechWarrior" title="/pmwiki/pmwiki.php/Videogame/MechWarrior">MechWarrior Living Legends</a></em>, teams are generally assigned either an vehicle tonnage or asset price limit to build their roster of equipment. Price limits are more common, and are generally set so that each player on a team can afford a medium <a class="twikilink" href="/pmwiki/pmwiki.php/Main/HumongousMecha" title="/pmwiki/pmwiki.php/Main/HumongousMecha">BattleMech</a>; players are encouraged to shift money around so that some players can pilot heavier assets at the cost of having another player in a cheaper one. In Puretech mode<span class="notelabel" onclick="togglenote('note21lty');"><sup>note </sup></span><span class="inlinefolder" id="note21lty" isnote="true" onclick="togglenote('note21lty');" style="cursor:pointer;font-size:smaller;display:none;">each team can only use equipment made by their faction</span>, tonnage limits are more arbitrary owing to the performance gap between Inner Sphere and Clan equipment of the same tonnage, so the IS often receives bonus tons to play with. Like price, tonnage is often setup so that every player can afford at least a medium mech.
+</li></ul><p></p></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder12');">     Tabletop Games  </div><div class="folder" id="folder12" isfolder="true" style="display:block;">
+<p></p><ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/Champions" title="/pmwiki/pmwiki.php/TabletopGame/Champions">Champions</a></em> with its <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/HEROSystem" title="/pmwiki/pmwiki.php/TabletopGame/HEROSystem">HERO System</a></em> was the first <a class="twikilink" href="/pmwiki/pmwiki.php/Main/RPG" title="/pmwiki/pmwiki.php/Main/RPG">RPG</a> to use a fully-developed point build system; virtually all other RPGs at the time used predefined characters or dice rolls, being directly inspired by <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/DungeonsAndDragons" title="/pmwiki/pmwiki.php/TabletopGame/DungeonsAndDragons">Dungeons &amp; Dragons</a></em>.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/GURPS" title="/pmwiki/pmwiki.php/TabletopGame/GURPS">GURPS</a></em> is probably the best-supported full-on point buy system to date in terms of supplemental material, with no or minimal class-and-level elements. Note that <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Fallout1" title="/pmwiki/pmwiki.php/VideoGame/Fallout1">Fallout</a></em> was originally planned to be a computer adaptation of this system, but latter turned into the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/FunWithAcronyms" title="/pmwiki/pmwiki.php/Main/FunWithAcronyms">SPECIAL</a> system.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/MutantsAndMasterminds" title="/pmwiki/pmwiki.php/TabletopGame/MutantsAndMasterminds">Mutants &amp; Masterminds</a></em>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/SeventhSea" title="/pmwiki/pmwiki.php/TabletopGame/SeventhSea">7th Sea</a></em>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/CarWars" title="/pmwiki/pmwiki.php/TabletopGame/CarWars">Car Wars</a></em>
+</li><li> The <em>Tri-Stat</em> system, used for <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/BigEyesSmallMouth" title="/pmwiki/pmwiki.php/TabletopGame/BigEyesSmallMouth">Big Eyes, Small Mouth</a></em>, <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/SilverAgeSentinels" title="/pmwiki/pmwiki.php/TabletopGame/SilverAgeSentinels">Silver Age Sentinels</a></em>, and various other games.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/Shadowrun" title="/pmwiki/pmwiki.php/TabletopGame/Shadowrun">Shadowrun</a></em>
+<ul><li> Editions one through three had you assign "Priority" to each of 5 categories: attributes, skills, resources, magic, and race. Each priority had a different amount of points (or money and spell-only skill-points, in the case of resources) to spend on that particular category. <em>The Shadowrun Companion</em> featured an optional character build system that was entirely point-based.
+</li><li> In Fourth Edition the tiers are gone. Character creation is based on total build points, and there are only limits on how many points can be spent in a few categories that apply across the board.
+</li><li> Fifth Edition returns to the priority tiers.
+</li></ul></li><li> <a class="twikilink" href="/pmwiki/pmwiki.php/Creator/WhiteWolf" title="/pmwiki/pmwiki.php/Creator/WhiteWolf">Storyteller System games</a>:
+<ul><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/OldWorldOfDarkness" title="/pmwiki/pmwiki.php/TabletopGame/OldWorldOfDarkness">Old World of Darkness</a></em>, every game has characters built with a slightly different set of rules, right down to what skills are available. In <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/NewWorldOfDarkness" title="/pmwiki/pmwiki.php/TabletopGame/NewWorldOfDarkness">New World of Darkness</a></em> all characters are built first as though they were normal mortals. Then, if they are <em>not</em> normal humans, they have a character template attached from the specific system.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/Exalted" title="/pmwiki/pmwiki.php/TabletopGame/Exalted">Exalted</a></em> has a point-buy system in which you get a certain number of points to spend on each section and a number of bonus points to spend anywhere you like. Some gamers <a class="twikilink" href="/pmwiki/pmwiki.php/Main/HouseRules" title="/pmwiki/pmwiki.php/Main/HouseRules">houserule</a> it to give out a set amount of xp at character creation instead, since one of the awkward points of the Exalted system is that it has flat cost charges and a variable cost experience system, meaning that someone who buys all their traits at 0, 1 or 5 can leave someone who went for a more well-rounded build <a class="twikilink" href="/pmwiki/pmwiki.php/Main/CantCatchUp" title="/pmwiki/pmwiki.php/Main/CantCatchUp">sitting behind</a> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/OvershadowedByAwesome" title="/pmwiki/pmwiki.php/Main/OvershadowedByAwesome">in the dust</a>.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/FadingSuns" title="/pmwiki/pmwiki.php/TabletopGame/FadingSuns">Fading Suns</a></em>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/LegendOfTheFiveRings" title="/pmwiki/pmwiki.php/TabletopGame/LegendOfTheFiveRings">Legend of the Five Rings</a></em> (although eventually the points will result in gaining a rank and hence a new skill, the speed of this depends on where you put them).
+</li><li> Fudge, a tabletop system has a point based system as one character generation method. The other is a totally subjective system, and there are no levels.
+</li><li> The FATE system, based on <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/FUDGE" title="/pmwiki/pmwiki.php/TabletopGame/FUDGE">FUDGE</a></em> though having since evolved into its own direction, uses an essentially simple point-buy-ish system that basically involves choosing this many aspects, that many stunts, and usually filling out the slots in an already pre-arranged skill "pyramid" or "column" (such as e.g. one peak skill at maximum, two of the next lower rank, three of the one below <em>that</em>...); there is no one point pool to be split between the different categories here, and some FATE games complicate things in various ways.
+</li><li> The <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/Unisystem" title="/pmwiki/pmwiki.php/UsefulNotes/Unisystem">Unisystem</a>, used for games like <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/AllFleshMustBeEaten" title="/pmwiki/pmwiki.php/TabletopGame/AllFleshMustBeEaten">All Flesh Must Be Eaten</a></em>, <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/Angel" title="/pmwiki/pmwiki.php/Series/Angel">Angel</a></em>, <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/BuffyTheVampireSlayer" title="/pmwiki/pmwiki.php/VideoGame/BuffyTheVampireSlayer">Buffy the Vampire Slayer</a></em>, <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/ConspiracyX" title="/pmwiki/pmwiki.php/TabletopGame/ConspiracyX">Conspiracy X</a></em>, <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/Witchcraft" title="/pmwiki/pmwiki.php/TabletopGame/Witchcraft">Witchcraft</a></em>, and various others.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/SavageWorlds" title="/pmwiki/pmwiki.php/TabletopGame/SavageWorlds">Savage Worlds</a></em>: though it's a mix of several things. An optional rule (thanks to the <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/Deadlands" title="/pmwiki/pmwiki.php/TabletopGame/Deadlands">Deadlands</a></em> inclusion) is to determine your starting stats and skill points by drawing a hand of cards and assigning them to each.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/HeavyGear" title="/pmwiki/pmwiki.php/TabletopGame/HeavyGear">Heavy Gear</a> 2</em> had a limit for number of points in a single gear, and for the whole team.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/UnknownArmies" title="/pmwiki/pmwiki.php/TabletopGame/UnknownArmies">Unknown Armies</a></em>.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/EclipsePhase" title="/pmwiki/pmwiki.php/TabletopGame/EclipsePhase">Eclipse Phase</a></em>
+</li><li> Most newer <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ClassAndLevelSystem" title="/pmwiki/pmwiki.php/Main/ClassAndLevelSystem">Class and Level System</a> games tend to compensate for their weaknesses by adopting a point buy method for various parts.
+<ul><li> One option in <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/Pathfinder" title="/pmwiki/pmwiki.php/TabletopGame/Pathfinder">Pathfinder</a></em> at the GM's discretion. Required in the official "Pathfinder Society Organized Play".
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/DungeonsAndDragons" title="/pmwiki/pmwiki.php/TabletopGame/DungeonsAndDragons">Dungeons &amp; Dragons</a></em>, originally the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TropeCodifier" title="/pmwiki/pmwiki.php/Main/TropeCodifier">Trope Codifier</a> of dice-based character creation, adopted a Point Buy system as an alternative (and frequently preferred) method in 3rd Edition onward. Even in 2nd Edition, they added player chosen 'proficiencies' that allowed PCs the option of becoming craftsmen, etc. In 3rd Edition, this became a point-buy skill system. 4th edition finally went fully point-buy with that method becoming the default for attributes and the skill system pared down to a simpler version ("trained" or "untrained" vs. counting ranks, paid for with initial class skill choices and optionally feats rather than from a dedicated "skill point" pool).
+</li></ul></li><li> Used for game balance and regulating battle size/length in <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/Warhammer40000" title="/pmwiki/pmwiki.php/TabletopGame/Warhammer40000">Warhammer 40,000</a></em>. Each unit in an army costs a certain number of points, and before the game the players agree on the number of points available per side. The armies must also fit a designated minimum and maximum number of units in each category and models in each unit. The more points, the more numerous and/or powerful the units in each army will be. Also, the more units in each army, the longer the game tends to go on, because they take longer to move and determine attack. 500 points is probably the lowest playable total (that's maybe a squad or two, depending on the race), 1,000 is the average game and 4,000 is usually as high as most players will go outside of a multi-player "megabattle"; much more than that and the game would take all day. Also, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/CrackIsCheaper" title="/pmwiki/pmwiki.php/Main/CrackIsCheaper">Crack Is Cheaper</a> than <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/Warhammer40000" title="/pmwiki/pmwiki.php/TabletopGame/Warhammer40000">Warhammer40000</a></em>, so it's hard to get past that even when if you want to.
+<ul><li> Spin-off games such as <em>Epic 40,000</em> in its various incarnations and <em>Battlefleet Gothic</em> also use the same basic system, although obviously points cost differ somewhat in games that feature entire armies rather than just a few squads.
+</li><li> 40k roleplay games (<em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/DarkHeresy" title="/pmwiki/pmwiki.php/TabletopGame/DarkHeresy">Dark Heresy</a></em>, <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/RogueTrader" title="/pmwiki/pmwiki.php/TabletopGame/RogueTrader">Rogue Trader</a></em>, <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/Deathwatch" title="/pmwiki/pmwiki.php/TabletopGame/Deathwatch">Deathwatch</a></em>, <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/BlackCrusade" title="/pmwiki/pmwiki.php/TabletopGame/BlackCrusade">Black Crusade</a></em>, <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/OnlyWar" title="/pmwiki/pmwiki.php/TabletopGame/OnlyWar">Only War</a></em>) default to dice rolls, but allow point build as an "alternate" character creation. Points actually advantage the players besides the minmaxing, because they're allotted 100 points while dice averages total 99. In addition, character progression is also done by buying upgrades with XP.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/Warhammer" title="/pmwiki/pmwiki.php/TabletopGame/Warhammer">Warhammer</a></em> unsurprisingly uses a similar system to 40K, since the latter was originally just Warhammer <a class="twikilink" href="/pmwiki/pmwiki.php/Main/RecycledInSpace" title="/pmwiki/pmwiki.php/Main/RecycledInSpace">Recycled In Space</a>.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/BloodBowl" title="/pmwiki/pmwiki.php/TabletopGame/BloodBowl">Blood Bowl</a></em> effectively has a points system, with every team starting out with the same amount of gold with which to purchase players and benefits. In a bit of a variation, although income from playing games continues to be spent in the same way, team value is also determined by the level of players on the team, and their upgrades are determined partially randomly and with no points involved. Long-term injuries can also have an effect, so while team value plays a similar role in comparing team effectiveness as in other Warhammer games, it's not solely determined by the points that have been spent. A team that gets lucky with upgrade rolls could be much stronger than another with the same team value, while one with several injuries could have a much lower team value than a team that has spent exactly the same amount of gold.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/CartoonActionHour" title="/pmwiki/pmwiki.php/TabletopGame/CartoonActionHour">Cartoon Action Hour</a></em> does this in both editions. The first season points are called "Character Points", while the second season points are called "Proof of Purchase Points".
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/Battlemachines" title="/pmwiki/pmwiki.php/TabletopGame/Battlemachines">Battlemachines</a></em>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/NewHorizon" title="/pmwiki/pmwiki.php/TabletopGame/NewHorizon">New Horizon</a></em> is exclusively pointbased, although some traits cost geodites (the setting's currency).
+</li><li> Some versions of <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/Traveller" title="/pmwiki/pmwiki.php/TabletopGame/Traveller">Traveller</a></em>, though not all.
+</li><li> The already unusual <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/AmberDicelessRolePlaying" title="/pmwiki/pmwiki.php/TabletopGame/AmberDicelessRolePlaying">Amber Diceless Role Playing</a></em> had an unusual twist to this. Purchasing allies, artifacts, personal universes, and cosmic powers used a set scale, but your attributes were purchased in a competitive auction with the other players. Since this is a game where scheming against the other people at the table is only slightly less encouraged than in <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/Paranoia" title="/pmwiki/pmwiki.php/TabletopGame/Paranoia">Paranoia</a></em>, this provided much of the drama and entertainment to get the game's plotting started.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/Nobilis" title="/pmwiki/pmwiki.php/TabletopGame/Nobilis">Nobilis</a></em>: you get eight points of Skills and Passions, 13 points of Bonds and Afflictions, and then 25 character points to spend on stats, miracle points, Gifts and extra skills/passions.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/Ironclaw" title="/pmwiki/pmwiki.php/TabletopGame/Ironclaw">Ironclaw</a></em>, which also has species and careers that act like a fusion of <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Splat" title="/pmwiki/pmwiki.php/Main/Splat">Splats</a> and ability scores. Though the default character creation method in the 2nd edition simplifies it to 2d8, 3d6, and 1d4 to assign to abilities, 13 skill marks, and three Gifts in addition to those from species and career.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/PoniesAndParasprites" title="/pmwiki/pmwiki.php/TabletopGame/PoniesAndParasprites">Ponies &amp; Parasprites</a></em> uses a point buy system. At character creation, characters gain a number of points to raise their Attribute and Skills scores based on their Age.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/TheSingularitySystem" title="/pmwiki/pmwiki.php/TabletopGame/TheSingularitySystem">The Singularity System</a></em> utilizes a point-build system for its characters. Attributes are bough with attribute points, perks are bought by taking weaknesses, and everything else, including skills, combat maneuvers, gear, cyberware augmentations, psionic talents, spells, vehicles, starships, etc. is bought with Skill Points.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/BattleTech" title="/pmwiki/pmwiki.php/TabletopGame/BattleTech">BattleTech</a></em> uses a point-buy system with its Battle Value system, assigning a BV rating to everything in order to (roughly) define the power levels of the thousands of different unit types that could be brought to the field. Players agree on a BV rating beforehand, as well as a threshold to meet, and build their forces accordingly. Therefore, if the game has a threshold of 4000 BV per player and your first unit deployed is an <em>Atlas</em> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MightyGlacier" title="/pmwiki/pmwiki.php/Main/MightyGlacier">Assault 'Mech</a>, you've already spent around half of your points and have to do the best you can with what's left. <em>Mechwarrior Dark Age</em> did something similar with its point base system, assigning point values to units and having players build armies within a certain point limit.
+</li><li> <em>Mechwarrior</em>, <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/BattleTech" title="/pmwiki/pmwiki.php/TabletopGame/BattleTech">BattleTech</a>'s</em> roleplaying game spinoff, used a point buy system for the first couple of editions... which very quickly led to chronic <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MinMaxing" title="/pmwiki/pmwiki.php/Main/MinMaxing">Min-Maxing</a> as players allocated specific distributions of points for maximum benefit with minimal downsides. The "4-3-2-1-0 priority" system asked players to allocate each point value to attributes, skills, race (a valid entry due to Clan genetic manipulation), perks, and vehicle. Many players dumped their largest point pools into attributes and skills, since those two areas dictated the vast majority of rolls in the game. This led to the development of the 'path' system in 3rd edition and beyond, which simulates the character's past history and how that might affect their attributes, skills, and personality traits.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/BleakWorld" title="/pmwiki/pmwiki.php/TabletopGame/BleakWorld">Bleak World</a></em> uses a version, you can only buy skills designated by class and organization though, with all other attributes being nulled for the character creation process.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/RocketAge" title="/pmwiki/pmwiki.php/TabletopGame/RocketAge">Rocket Age</a></em> uses a point buy system which the entire character creation process runs off. Want attributes and skills? One point for each advancement. Want good traits? However many points that trait costs. Want more points? Well then you'd better start looking at the bad traits...
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/PlanetMercenary" title="/pmwiki/pmwiki.php/TabletopGame/PlanetMercenary">Planet Mercenary</a></em> uses a combination of player choices and point buy to build characters. The only random roll is a cosmetic one, determining the number of eyes a Carbosilicate Amorph has.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/TheOneRing" title="/pmwiki/pmwiki.php/TabletopGame/TheOneRing">The One Ring</a></em> uses two parallel point build systems: Advancement Points are earned by performing well on skill rolls (e.g.: Stealth) and are spent on training in skills, while Experience Points are gained on a session-by-session basis and are spent on training in weapons proficiencies, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/EquipmentUpgrade" title="/pmwiki/pmwiki.php/Main/EquipmentUpgrade">Equipment Upgrades</a>, and unique personal abilities called "Virtues".
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder13');">     Tower Defense  </div><div class="folder" id="folder13" isfolder="true" style="display:block;">
+<p></p><ul><li> Almost all tower defence games use this as the basic mechanic. Players are given a certain number of resource points at the start of a level with which to build and upgrade towers. Depending on the game and mode, they may or may not earn extra points throughout a level.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/CursedTreasure" title="/pmwiki/pmwiki.php/VideoGame/CursedTreasure">Cursed Treasure</a></em>.
+</li><li> <em>Deathtrap</em>, spin-off from <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheIncredibleAdventuresOfVanHelsing" title="/pmwiki/pmwiki.php/VideoGame/TheIncredibleAdventuresOfVanHelsing">The Incredible Adventures of Van Helsing</a></em>, adds an RPG system in between levels, with the player earning points from levelling up to spend on improving traps (ie. towers) as well as their own abilities.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/GemCraft" title="/pmwiki/pmwiki.php/VideoGame/GemCraft">Gem Craft</a></em>.
+</li></ul><p></p></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder14');">     Turn Based Strategy  </div><div class="folder" id="folder14" isfolder="true" style="display:block;">
+<p></p><ul><li> Certain games in the <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SuperRobotWars" title="/pmwiki/pmwiki.php/VideoGame/SuperRobotWars">Super Robot Wars</a></em> series follow this method of character growth with a few examples being the Original Generation games and MX. You use points from leveling a pilot up to increase their stats or buy new special abilities. The mechs, however, are upgraded with money and plot-based events.
+</li><li> <a class="twikilink" href="/pmwiki/pmwiki.php/Creator/IdeaFactory" title="/pmwiki/pmwiki.php/Creator/IdeaFactory">Idea Factory</a> is fond of this. You can easily think <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/AgarestSenki" title="/pmwiki/pmwiki.php/VideoGame/AgarestSenki">Agarest Senki</a></em>, but they did this to their flagship <em>Spectral</em> frachise too, <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/BlazingSouls" title="/pmwiki/pmwiki.php/VideoGame/BlazingSouls">Blazing Souls</a></em> being the most known example.
+</li></ul><p></p></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder15');">     Web Games  </div><div class="folder" id="folder15" isfolder="true" style="display:block;">
+<p></p><ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MafiaWars" title="/pmwiki/pmwiki.php/VideoGame/MafiaWars">Mafia Wars</a></em> has players allocate points earned with each <a class="twikilink" href="/pmwiki/pmwiki.php/Main/CharacterLevel" title="/pmwiki/pmwiki.php/Main/CharacterLevel">Character Level</a> among five stats: Energy (allowing more jobs to be performed), Stamina and Health (allowing more PvP battles), and Attack/Defense (making the character more effective at PvP).
+</li></ul></div>
+<hr/>
+</div>
+<div class="alt-titles section section-fact">
+<h3>
+<strong>Alternative Title(s):</strong>
+<span>Character Points</span>, <span>Point Buy</span>, <span>Point Buy System</span>, <span>Point Build</span> </h3>
+</div>
+<div class="square_ad footer-article-ad main_2" data-isolated="0"></div>
+<div class="section-links" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<div class="titles">
+<div><h3 class="text-center text-uppercase">Previous</h3></div>
+<div><h3 class="text-center text-uppercase">Index</h3></div>
+<div><h3 class="text-center text-uppercase">Next</h3></div>
+</div>
+<div class="links">
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/PlayerParty">Player Party</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/TabletopRPGTropes">Tabletop RPG Tropes</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/PrestigeClass">Prestige Class</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/GameSystem">Game System</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/RolePlayingGame">Role-Playing Game</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/CharacterClassSystem">Character Class System</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/NoSavingThrow">No Saving Throw</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/GameMechanics">Game Mechanics</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/PrestigeClass">Prestige Class</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/NoStatAtrophy">No Stat Atrophy</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/GamingStatTropes">Gaming Stat Tropes</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/SkillPointReset">Skill Point Reset</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/NewWorkRecycledGraphics">New Work, Recycled Graphics</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/VideoGameTropes">Video Game Tropes</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/PostProcessingVideoEffects">Post-Processing Video Effects</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="outer_ads_by_salon_wrapper" id="exco_player_insert_div">
+</div>
+</article>
+<div id="main-content-sidebar"><div class="sidebar-item display-options">
+<ul class="sidebar display-toggles">
+<li>Show Spoilers <div class="display-toggle show-spoilers" id="sidebar-toggle-showspoilers"></div></li>
+<li>Night Vision <div class="display-toggle night-vision" id="sidebar-toggle-nightvision"></div></li>
+<li>Sticky Header <div class="display-toggle sticky-header" id="sidebar-toggle-stickyheader"></div></li>
+<li>Wide Load <div class="display-toggle wide-load" id="sidebar-toggle-wideload"></div></li>
+</ul>
+<script>updateDesktopPrefs();</script>
+</div>
+<div class="sidebar-item ad sb-ad-unit">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_2"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_2'); });</script> </div>
+</div></div>
+<div class="sidebar-item quick-links" itemtype="http://schema.org/SiteNavigationElement">
+<p class="sidebar-item-title" data-title="Important Links">Important Links</p>
+<div class="padded">
+<a href="/pmwiki/query.php?type=att">Ask The Tropers</a>
+<a href="/pmwiki/query.php?type=tf">Trope Finder</a>
+<a href="/pmwiki/query.php?type=ykts">You Know That Show...</a>
+<a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a>
+<a href="/pmwiki/review_activity.php">Reviews</a>
+<a data-modal-target="login" href="/pmwiki/lbs.php">Live Blogs</a>
+<a href="/pmwiki/ad-free-subscribe.php">Go Ad Free!</a> </div>
+</div>
+<div class="sidebar-item sb-ad-unit">
+<div class="sidebar-section">
+<div class="square_ad ad-size-300x600 ad-section text-center">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_3"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_3'); });</script> </div>
+</div> </div>
+</div>
+</div>
+<div class="sidebar-item">
+<p class="sidebar-item-title" data-title="Crucial Browsing">Crucial Browsing</p>
+<ul class="padded font-s" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><a data-click-toggle="active" href="javascript:void(0);">Genre</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/ActionAdventureTropes" title="Main/ActionAdventureTropes">Action Adventure</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ComedyTropes" title="Main/ComedyTropes">Comedy</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CommercialsTropes" title="Main/CommercialsTropes">Commercials</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CrimeAndPunishmentTropes" title="Main/CrimeAndPunishmentTropes">Crime &amp; Punishment</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DramaTropes" title="Main/DramaTropes">Drama</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/HorrorTropes" title="Main/HorrorTropes">Horror</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LoveTropes" title="Main/LoveTropes">Love</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NewsTropes" title="Main/NewsTropes">News</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ProfessionalWrestling" title="Main/ProfessionalWrestling">Professional Wrestling</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SpeculativeFictionTropes" title="Main/SpeculativeFictionTropes">Speculative Fiction</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SportsStoryTropes" title="Main/SportsStoryTropes">Sports Story</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/WarTropes" title="Main/WarTropes">War</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Media</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/Media" title="Main/Media">All Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/AnimationTropes" title="Main/AnimationTropes">Animation (Western)</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Anime" title="Main/Anime">Anime</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ComicBookTropes" title="Main/ComicBookTropes">Comic Book</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FanFic" title="FanFic/FanFics">Fan Fics</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Film" title="Main/Film">Film</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/GameTropes" title="Main/GameTropes">Game</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Literature" title="Main/Literature">Literature</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MusicAndSoundEffects" title="Main/MusicAndSoundEffects">Music And Sound Effects</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NewMediaTropes" title="Main/NewMediaTropes">New Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/PrintMediaTropes" title="Main/PrintMediaTropes">Print Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Radio" title="Main/Radio">Radio</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SequentialArt" title="Main/SequentialArt">Sequential Art</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TabletopGames" title="Main/TabletopGames">Tabletop Games</a></li>
+<li><a href="/pmwiki/pmwiki.php/UsefulNotes/Television" title="Main/Television">Television</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Theater" title="Main/Theater">Theater</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/VideogameTropes" title="Main/VideogameTropes">Videogame</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Webcomics" title="Main/Webcomics">Webcomics</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Narrative</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/UniversalTropes" title="Main/UniversalTropes">Universal</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/AppliedPhlebotinum" title="Main/AppliedPhlebotinum">Applied Phlebotinum</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CharacterizationTropes" title="Main/CharacterizationTropes">Characterization</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Characters" title="Main/Characters">Characters</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CharactersAsDevice" title="Main/CharactersAsDevice">Characters As Device</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Dialogue" title="Main/Dialogue">Dialogue</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Motifs" title="Main/Motifs">Motifs</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NarrativeDevices" title="Main/NarrativeDevices">Narrative Devices</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Paratext" title="Main/Paratext">Paratext</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Plots" title="Main/Plots">Plots</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Settings" title="Main/Settings">Settings</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Spectacle" title="Main/Spectacle">Spectacle</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Other Categories</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/BritishTellyTropes" title="Main/BritishTellyTropes">British Telly</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TheContributors" title="Main/TheContributors">The Contributors</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CreatorSpeak" title="Main/CreatorSpeak">Creator Speak</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Creators" title="Main/Creators">Creators</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DerivativeWorks" title="Main/DerivativeWorks">Derivative Works</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LanguageTropes" title="Main/LanguageTropes">Language</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LawsAndFormulas" title="Main/LawsAndFormulas">Laws And Formulas</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ShowBusiness" title="Main/ShowBusiness">Show Business</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SplitPersonalityTropes" title="Main/SplitPersonalityTropes">Split Personality</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/StockRoom" title="Main/StockRoom">Stock Room</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TropeTropes" title="Main/TropeTropes">Trope</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Tropes" title="Main/Tropes">Tropes</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TruthAndLies" title="Main/TruthAndLies">Truth And Lies</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TruthInTelevision" title="Main/TruthInTelevision">Truth In Television</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Topical Tropes</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/BetrayalTropes" title="Main/BetrayalTropes">Betrayal</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CensorshipTropes" title="Main/CensorshipTropes">Censorship</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CombatTropes" title="Main/CombatTropes">Combat</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DeathTropes" title="Main/DeathTropes">Death</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FamilyTropes" title="Main/FamilyTropes">Family</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FateAndProphecyTropes" title="Main/FateAndProphecyTropes">Fate And Prophecy</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FoodTropes" title="Main/FoodTropes">Food</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/HolidayTropes" title="Main/HolidayTropes">Holiday</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MemoryTropes" title="Main/MemoryTropes">Memory</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MoneyTropes" title="Main/MoneyTropes">Money</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MoralityTropes" title="Main/MoralityTropes">Morality</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/PoliticsTropes" title="Main/PoliticsTropes">Politics</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ReligionTropes" title="Main/ReligionTropes">Religion</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SchoolTropes" title="Main/SchoolTropes">School</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="sidebar-item showcase">
+<p class="sidebar-item-title" data-title="Community Showcase">Community Showcase <a class="bubble float-right hover-blue" href="/pmwiki/showcase.php">More</a></p>
+<p class="community-showcase">
+<a href="https://sharetv.com/shows/echo_chamber" onclick="trackOutboundLink('https://sharetv.com/shows/echo_chamber');" target="_blank">
+<img alt="" class="lazy-image" data-src="/images/communityShowcase-echochamber.jpg"/></a>
+<a href="/pmwiki/pmwiki.php/Webcomic/TwistedTropes">
+<img alt="" class="lazy-image" data-src="/img/howlandsc-side.jpg"/></a>
+</p>
+</div>
+<div class="sidebar-item sb-ad-unit" id="stick-cont">
+<div class="sidebar-section" id="stick-bar">
+<div class="square_ad ad-size-300x600 ad-section text-center">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_4"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_4'); });</script> </div>
+</div> </div>
+</div>
+</div>
+</div>
+</div>
+<div class="action-bar tablet-off" id="action-bar-bottom">
+<a class="scroll-to-top dead-button" href="#top-of-page" onclick="$('html, body').animate({scrollTop : 0},500);">Top</a>
+</div>
+</div>
+<div class="proper-ad-unit ad-sticky">
+<div id="proper-ad-tvtropes_sticky_ad"> <script>propertag.cmd.push(function() { proper_display('tvtropes_sticky_ad'); });</script> </div>
+</div>
+<footer id="main-footer">
+<div id="main-footer-inner">
+<div class="footer-left">
+<a class="img-link" href="/"><img alt="TV Tropes" class="lazy-image" data-src="/img/tvtropes-footer-logo.png" title="TV Tropes"/></a>
+<form action="index.html" class="navbar-form newsletter-signup validate modal-replies" data-ajax-get="/ajax/subscribe_email.php" id="cse-search-box-mobile" name="" role="">
+<button class="btn-submit newsletter-signup-submit-button" id="subscribe-btn" type="submit"><i class="fa fa-paper-plane"></i></button>
+<input class="form-control" id="subscription-email" name="q" placeholder="Subscribe" size="31" type="text" validate-type="email" value=""/>
+</form>
+<ul class="social-buttons">
+<li><a class="btn fb" href="https://www.facebook.com/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-facebook']);" target="_blank"><i class="fa fa-facebook"></i></a></li>
+<li><a class="btn tw" href="https://www.twitter.com/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-twitter']);" target="_blank"><i class="fa fa-twitter"></i></a> </li>
+<li><a class="btn rd" href="https://www.reddit.com/r/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-reddit']);" target="_blank"><i class="fa fa-reddit-alien"></i></a></li>
+</ul>
+</div>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">TVTropes</h4></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Administrivia">About TVTropes</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TheGoalsOfTVTropes">TVTropes Goals</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TheTropingCode">Troping Code</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TVTropesCustoms">TVTropes Customs</a></li>
+<li><a href="/pmwiki/pmwiki.php/JustForFun/TropesOfLegend">Tropes of Legend</a></li>
+<li><a href="/pmwiki/ad-free-subscribe.php">Go Ad-Free</a></li>
+</ul>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">Community</h4></li>
+<li><a href="/pmwiki/query.php?type=att">Ask The Tropers</a></li>
+<li><a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a></li>
+<li><a href="/pmwiki/query.php?type=tf">Trope Finder</a></li>
+<li><a href="/pmwiki/query.php?type=ykts">You Know That Show</a></li>
+<li><a data-modal-target="login" href="/pmwiki/lbs.php">Live Blogs</a></li>
+<li><a href="/pmwiki/review_activity.php">Reviews</a></li>
+<li><a href="/pmwiki/topics.php">Forum</a></li>
+</ul>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">Tropes HQ</h4></li>
+<li><a href="/pmwiki/about.php">About Us</a></li>
+<li><a href="/pmwiki/contact.php">Contact Us</a></li>
+<li><a href="/pmwiki/dmca.php">DMCA Notice</a></li>
+<li><a href="/pmwiki/privacypolicy.php">Privacy Policy</a></li>
+</ul>
+</div>
+<div class="text-center gutter-top gutter-bottom tablet-on" id="desktop-on-mobile-toggle">
+<a href="/pmwiki/switchDeviceCss.php?mobileVersion=1" rel="nofollow">Switch to <span class="txt-desktop">Desktop</span><span class="txt-mobile">Mobile</span> Version</a>
+</div>
+<div class="legal">
+<p>TVTropes is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License. <br/>Permissions beyond the scope of this license may be available from <a href="mailto:thestaff@tvtropes.org" rel="cc:morePermissions" xmlns:cc="http://creativecommons.org/ns#"> thestaff@tvtropes.org</a>.</p>
+<br/>
+<div class="privacy_wrapper">
+</div>
+</div>
+</footer>
+<style>
+      div.fc-ccpa-root {
+        position: absolute !important;
+        bottom: 93px !important;
+        margin: auto !important;
+        width: 100% !important;
+        z-index: 9999 !important;
+      }
+      .fc-ccpa-root .fc-dns-dialog .fc-dns-link p{
+        outline: none !important;
+        text-decoration: underline !important;
+        font-size: .7em !important;
+        font-family: sans-serif !important;
+      }
+      .fc-ccpa-root .fc-dns-dialog .fc-dns-link .fc-button-background {
+        background: none !important;
+      }
+    </style>
+<div class="full-screen" id="_pm_videoViewer">
+<a class="close" href="#close" id="_pm_videoViewer-close"></a>
+<div class="_pmvv-body">
+<div class="_pmvv-vidbox">
+<video class="video-js vjs-default-skin vjs-16-9" data-video-id="" id="overlay-video-player-box">
+</video>
+<div class="_pmvv-vidbox-desc">
+<h1 id="overlay-title"></h1>
+<p class="_pmvv-vidbox-descTxt" id="overlay-descrip">
+</p>
+<div class="rating-row" data-video-id="">
+<input name="is_logged_in" type="hidden" value="0"/>
+<p>How well does it match the trope?</p>
+<div id="star-rating-group">
+<div class="trope-rate">
+<input id="lamp5" name="rate" type="radio" value="5"/>
+<label for="lamp5" title="Absolutely"></label>
+<input id="lamp4" name="rate" type="radio" value="4"/>
+<label for="lamp4" title="Yes"></label>
+<input id="lamp3" name="rate" type="radio" value="3"/>
+<label for="lamp3" title="Kind of"></label>
+<input id="lamp2" name="rate" type="radio" value="2"/>
+<label for="lamp2" title="Not really"></label>
+<input id="lamp1" name="rate" type="radio" value="1"/>
+<label for="lamp1" title="No"></label>
+</div>
+<div id="star-rating-total">
+</div>
+</div>
+</div>
+<div class="example-media-row">
+<div class="example-overlay">
+<p>Example of:</p>
+<div id="overlay-trope"> / </div>
+</div>
+<div class="media-sources-overlay example-overlay">
+<p>Media sources:</p>
+<div id="overlay-media"> / </div>
+</div>
+</div>
+<p class="_pmvv-vidbox-stats text-right font-s" style="padding-top:8px; border-top: solid 1px rgba(255,255,255,0.2)">
+<a class="float-right" data-modal-target="login" href="#video-feedback">Report</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+        window.special_ops =  {
+            member : 'no',
+            isolated : 0,
+            tags : ['unknown']
+        };
+    </script>
+<script type="text/javascript">
+
+        var cleanCreativeEnabled = "";
+        var donation = "";
+        var live_ads = "1";
+        var img_domain = "https://static.tvtropes.org";
+        var snoozed = cookies.read('snoozedabm');
+        var snoozable = "";
+
+        if (adsRemovedWith) {
+            live_ads = 0;
+        }
+
+        var elem = document.createElement('script');
+        elem.async = true;
+
+        elem.src = '/design/assets/bundle.js?rev=c58d8df02f09262390bbd03db7921fc35c6af306';
+
+        elem.onload = function() {
+                                 }
+        document.getElementsByTagName('head')[0].appendChild(elem);
+
+    </script>
+<script type="text/javascript">
+      function send_analytics_event(user_type, donation){
+          // if(user_type == 'uncached' || user_type == 'cached'){
+          //   ga('send', 'event', 'caching', 'load', user_type, {'nonInteraction': 1});
+          //   return;
+          // }
+          var event_name = user_type;
+
+          if(donation == 'true'){
+              event_name += "_donation"
+          }else if(typeof(valid_user) == 'undefined'){
+              event_name += "_blocked"
+          }else if(valid_user == true){
+              event_name += "_unblocked";
+          }else{
+              event_name = "_unknown"
+          }
+          ga('send', 'event', 'ads', 'load', event_name, {'nonInteraction': 1});
+      }
+
+    
+    send_analytics_event("guest", "false");
+      </script>
+</body>
+</html>

@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Perfect-Play A.I. - TV Tropes</title>
+<meta content="The Perfect-Play A.I. trope as used in popular culture. What is it like to challenge a perfect opponent? Perfect Play A.I. is a type of Video Game A.I. most …" name="description"/>
+<link href="https://tvtropes.org/pmwiki/pmwiki.php/Main/PerfectPlayAI" rel="canonical"/>
+<link href="/img/icons/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="@tvtropes" name="twitter:site"/>
+<meta content="@tvtropes" name="twitter:owner"/>
+<meta content="Perfect-Play A.I. - TV Tropes" name="twitter:title"/>
+<meta content="The Perfect-Play A.I. trope as used in popular culture. What is it like to challenge a perfect opponent? Perfect Play A.I. is a type of Video Game A.I. most …" name="twitter:description"/>
+<meta content="https://static.tvtropes.org/logo_blue_small.png" name="twitter:image:src"/>
+<meta content="TV Tropes" property="og:site_name"/>
+<meta content="en_US" property="og:locale"/>
+<meta content="https://www.facebook.com/tvtropes" property="article:publisher"/>
+<meta content="Perfect-Play A.I. - TV Tropes" property="og:title"/>
+<meta content="website" property="og:type"/>
+<meta content="https://tvtropes.org/pmwiki/pmwiki.php/Main/PerfectPlayAI" property="og:url"/>
+<meta content="https://static.tvtropes.org/logo_blue_small.png" property="og:image"/>
+<meta content="What is it like to challenge a perfect opponent? Perfect Play A.I. is a type of Video Game A.I. most commonly found in Fighting Games that correctly blocks or evades every attack and move the player is capable of performing against it, while …" property="og:description"/>
+<link href="/img/icons/apple-icon-57x57.png" rel="apple-touch-icon" sizes="57x57" type="image/png"/>
+<link href="/img/icons/apple-icon-60x60.png" rel="apple-touch-icon" sizes="60x60" type="image/png"/>
+<link href="/img/icons/apple-icon-72x72.png" rel="apple-touch-icon" sizes="72x72" type="image/png"/>
+<link href="/img/icons/apple-icon-76x76.png" rel="apple-touch-icon" sizes="76x76" type="image/png"/>
+<link href="/img/icons/apple-icon-114x114.png" rel="apple-touch-icon" sizes="114x114" type="image/png"/>
+<link href="/img/icons/apple-icon-120x120.png" rel="apple-touch-icon" sizes="120x120" type="image/png"/>
+<link href="/img/icons/apple-icon-144x144.png" rel="apple-touch-icon" sizes="144x144" type="image/png"/>
+<link href="/img/icons/apple-icon-152x152.png" rel="apple-touch-icon" sizes="152x152" type="image/png"/>
+<link href="/img/icons/apple-icon-180x180.png" rel="apple-touch-icon" sizes="180x180" type="image/png"/>
+<link href="/img/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/img/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/img/icons/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png"/>
+<link href="/img/icons/favicon-192x192.png" rel="icon" sizes="192x192" type="image/png"/>
+<meta content="width=device-width, initial-scale=1" id="viewport" name="viewport"/>
+<script>
+                var propertag = {};
+                propertag.cmd = [];
+            </script>
+<link href="/design/assets/bundle.css?rev=c58d8df02f09262390bbd03db7921fc35c6af306" rel="stylesheet"/>
+<script>
+                function object(objectId) {
+                    if (document.getElementById && document.getElementById(objectId)) {
+                        return document.getElementById(objectId);
+                    } else if (document.all && document.all(objectId)) {
+                        return document.all(objectId);
+                    } else if (document.layers && document.layers[objectId]) {
+                        return document.layers[objectId];
+                    } else {
+                        return false;
+                    }
+                }
+
+                // JAVASCRIPT COOKIES CODE: for getting and setting user viewing preferences
+                var cookies = {
+                    create: function (name, value, days2expire, path) {
+                        var date = new Date();
+                        date.setTime(date.getTime() + (days2expire * 24 * 60 * 60 * 1000));
+                        var expires = date.toUTCString();
+                        document.cookie = name + '=' + value + ';' + 'expires=' + expires + ';' + 'path=' + path + ';';
+                    },
+										createWithExpire: function(name, value, expires, path) {
+												document.cookie = name + '=' + value + ';' + 'expires=' + expires + ';' + 'path=' + path + ';';
+										},
+                    read: function (name) {
+                        var cookie_value = "",
+                            current_cookie = "",
+                            name_expr = name + "=",
+                            all_cookies = document.cookie.split(';'),
+                            n = all_cookies.length;
+
+                        for (var i = 0; i < n; i++) {
+                            current_cookie = all_cookies[i].trim();
+                            if (current_cookie.indexOf(name_expr) === 0) {
+                                cookie_value = current_cookie.substring(name_expr.length, current_cookie.length);
+                                break;
+                            }
+                        }
+                        return cookie_value;
+                    },
+                    update: function (name, val) {
+                        this.create(name, val, 300, "/");
+                    },
+                    remove: function (name) {
+                        document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
+                    }
+                };
+
+                function updateUserPrefs() {
+                    //GENERAL: detect and set browser, if not cookied (will be treated like a user-preference and added to the #user-pref element)
+                    if( !cookies.read('user-browser') ){
+                        var broswer = '';
+
+                        if(navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPod/i) ){
+                            browser = 'iOS';
+                        } else if (/Opera[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'opera';
+                        } else if (/MSIE (\d+\.\d+);/.test(navigator.userAgent)) {
+                            browser = 'MSIE';
+                        } else if (/Navigator[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'netscape';
+                        } else if (/Chrome[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'chrome';
+                        } else if (/Safari[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'safari';
+                            /Version[\/\s](\d+\.\d+)/.test(navigator.userAgent);
+                            browserVersion = new Number(RegExp.$1);
+                        } else if (/Firefox[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'firefox';
+                        } else {
+                            browser = 'internet_explorer';
+                        }
+                        cookies.create('user-browser',browser,1,'/');
+                        document.getElementById('user-prefs').classList.add('browser-' + browser);
+                    } else {
+                        document.getElementById('user-prefs').classList.add('browser-' + cookies.read('user-browser'));
+                    }
+
+                    //update user preference settings
+                    if (cookies.read('wide-load') !== '') document.getElementById('user-prefs').classList.add('wide-load');
+                    if (cookies.read('night-vision') !== '') document.getElementById('user-prefs').classList.add('night-vision');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('user-prefs').classList.add('sticky-header');
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('user-prefs').classList.add('show-spoilers');
+                    if (cookies.read('folders-open') !== '') document.getElementById('user-prefs').classList.add('folders-open');
+                    if (cookies.read('lefthand-sidebar') !== '') document.getElementById('user-prefs').classList.add('lefthand-sidebar');
+                    if (cookies.read('highlight-links') !== '') document.getElementById('user-prefs').classList.add('highlight-links');
+                    if (cookies.read('forum-gingerbread') !== '') document.getElementById('user-prefs').classList.add('forum-gingerbread');
+                    if (cookies.read('shared-avatars') !== '') document.getElementById('user-prefs').classList.add('shared-avatars');
+                    if (cookies.read('new-search') !== '') document.getElementById('user-prefs').classList.add('new-search');
+                    if (cookies.read('stop-auto-play-video') !== '') document.getElementById('user-prefs').classList.add('stop-auto-play-video');
+
+                    //desktop view on mobile
+                    if (cookies.read('desktop-on-mobile') !== ''){
+                        document.getElementById('user-prefs').classList.add('desktop-on-mobile');
+
+                        var viewport = document.querySelector("meta[name=viewport]");
+                        viewport.setAttribute('content', 'width=1000');
+                    }
+
+                }
+
+                function updateDesktopPrefs() {
+                    if (cookies.read('wide-load') !== '') document.getElementById('sidebar-toggle-wideload').classList.add('active');
+                    if (cookies.read('night-vision') !== '') document.getElementById('sidebar-toggle-nightvision').classList.add('active');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('sidebar-toggle-stickyheader').classList.add('active');
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('sidebar-toggle-showspoilers').classList.add('active');
+
+                }
+
+                function updateMobilePrefs() {
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('mobile-toggle-showspoilers').classList.add('active');
+                    if (cookies.read('night-vision') !== '') document.getElementById('mobile-toggle-nightvision').classList.add('active');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('mobile-toggle-stickyheader').classList.add('active');
+                    if (cookies.read('highlight-links') !== '') document.getElementById('mobile-toggle-highlightlinks').classList.add('active');
+
+                }
+
+
+                if (document.cookie.indexOf("scroll0=") < 0) {
+                    // do nothing
+                } else {
+                    console.log('ads removed by scroll.com');
+                    var adsRemovedWith = 'scroll';
+                    var style = document.createElement('style');
+                    style.innerHTML = '#header-ad, .proper-ad-unit, .square_ad, .sb-ad-unit { display: none !important; } ';
+                    document.head.appendChild(style);
+                }
+            </script>
+<script type="text/javascript">
+
+                var tvtropes_config = {
+                    astri_stream_enabled : "",
+                    is_logged_in         : "",
+                    handle               : "",
+                    get_astri_stream     : "",
+										revnum               : "c58d8df02f09262390bbd03db7921fc35c6af306",
+										img_domain           : "https://static.tvtropes.org",
+										adblock              : "1",
+										adblock_url          : "propermessage.io",
+										pause_editing        : "0",
+										pause_editing_msg    : "",
+										pause_site_changes   : ""
+                };
+            </script>
+<script type="text/javascript">
+						  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+						  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+						  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+						  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+						  ga('create', 'UA-3821842-1', 'auto');
+						  ga('send', 'pageview');
+
+						</script>
+</head>
+<body class="">
+<i id="user-prefs"></i>
+<script>updateUserPrefs();</script>
+<div id="fb-root"></div>
+<div id="modal-box"></div>
+<header class="headroom-element" id="main-header-bar">
+<div id="main-header-bar-inner">
+<span class="header-spacer" id="header-spacer-left"></span>
+<a class="mobile-menu-toggle-button tablet-on" href="#mobile-menu" id="main-mobile-toggle"><span></span><span></span><span></span></a>
+<a class="no-dev" href="/" id="main-header-logoButton"></a>
+<span class="header-spacer" id="header-spacer-right"></span>
+<nav class="tablet-off" id="main-header-nav">
+<a href="/pmwiki/pmwiki.php/Main/Tropes">Tropes</a>
+<a href="/pmwiki/pmwiki.php/Main/Media">Media</a>
+<a class="nav-browse" href="/pmwiki/browse.php">Browse</a>
+<a href="/pmwiki/index_report.php">Indexes</a>
+<a href="/pmwiki/topics.php">Forums</a>
+<a class="nav-browse" href="/pmwiki/recent_videos.php">Videos</a>
+</nav>
+<div id="main-header-bar-right">
+<div class="font-xs mobile-off" id="signup-login-box">
+<a class="hover-underline bold" data-modal-target="signup" href="/pmwiki/login.php">Join</a>
+<a class="hover-underline bold" data-modal-target="login" href="/pmwiki/login.php">Login</a>
+</div>
+<div class="mobile-on inline" id="signup-login-mobileToggle">
+<a data-modal-target="login" href="/pmwiki/login.php"><i class="fa fa-user"></i></a>
+</div>
+<div id="search-box">
+<form action="/pmwiki/search_result.php" class="search">
+<input class="search-box" name="q" placeholder="Search" required="" type="text" value=""/>
+<input class="submit-button" type="submit" value=""/>
+<input name="search_type" type="hidden" value="article"/>
+<input name="page_type" type="hidden" value="all"/>
+<input name="cx" type="hidden" value="partner-pub-6610802604051523:amzitfn8e7v"/>
+<input name="cof" type="hidden" value="FORID:10"/>
+<input name="ie" type="hidden" value="ISO-8859-1"/>
+<input name="siteurl" type="hidden" value=""/>
+<input name="ref" type="hidden" value=""/>
+<input name="ss" type="hidden" value=""/>
+</form>
+<a class="mobile-on mobile-search-toggle close-x" href="#close-search"><i class="fa fa-close"></i></a>
+</div>
+<div id="random-box">
+<a class="button-random-trope" href="/pmwiki/pmwiki.php/Main/FacePalmOfDoom" onclick="ga('send', 'event', 'button', 'click', 'random trope');" rel="nofollow"></a>
+<a class="button-random-media" href="/pmwiki/pmwiki.php/Podcast/FriendsInYourHead" onclick="ga('send', 'event', 'button', 'click', 'random media');" rel="nofollow"></a>
+</div>
+</div>
+</div>
+<div class="tablet-on" id="mobile-menu"><div class="mobile-menu-options">
+<div class="nav-wrapper">
+<a class="xl" href="/pmwiki/pmwiki.php/Main/Tropes">Tropes</a>
+<a class="xl" href="/pmwiki/pmwiki.php/Main/Media">Media</a>
+<a class="xl" href="/pmwiki/browse.php">Browse</a>
+<a class="xl" href="/pmwiki/index_report.php">Indexes</a>
+<a class="xl" href="/pmwiki/topics.php">Forums</a>
+<a class="xl" href="/pmwiki/recent_videos.php">Videos</a>
+<a href="/pmwiki/query.php?type=att">Ask The Tropers</a>
+<a href="/pmwiki/query.php?type=tf">Trope Finder</a>
+<a href="/pmwiki/query.php?type=ykts">You Know That Show...</a>
+<a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a>
+<a data-click-toggle="active" href="#tools">Tools <i class="fa fa-chevron-down"></i></a>
+<div class="tools-dropdown mobile-dropdown-linkList">
+<a href="/pmwiki/cutlist.php">Cut List</a>
+<a href="/pmwiki/changes.php">New Edits</a>
+<a href="/pmwiki/recent_edit_reasons.php">Edit Reasons</a>
+<a href="/pmwiki/launches.php">Launches</a>
+<a href="/pmwiki/img_list.php">Images List</a>
+<a href="/pmwiki/crown_activity.php">Crowner Activity</a>
+<a href="/pmwiki/no_types.php">Un-typed Pages</a>
+<a href="/pmwiki/page_type_audit.php">Recent Page Type Changes</a>
+</div>
+<a data-click-toggle="active" href="#hq">Tropes HQ <i class="fa fa-chevron-down"></i></a>
+<div class="tools-dropdown mobile-dropdown-linkList">
+<a href="/pmwiki/about.php">About Us</a>
+<a href="/pmwiki/contact.php">Contact Us</a>
+<a href="mailto:advertising@proper.io">Advertise</a>
+<a href="/pmwiki/dmca.php">DMCA Notice</a>
+<a href="/pmwiki/privacypolicy.php">Privacy Policy</a>
+</div>
+<a href="/pmwiki/ad-free-subscribe.php">Go Ad-Free</a>
+<div class="toggle-switches">
+<ul class="mobile-menu display-toggles">
+<li>Show Spoilers <div class="display-toggle show-spoilers" id="mobile-toggle-showspoilers"></div></li>
+<li>Night Vision <div class="display-toggle night-vision" id="mobile-toggle-nightvision"></div></li>
+<li>Sticky Header <div class="display-toggle sticky-header" id="mobile-toggle-stickyheader"></div></li>
+<li>Highlight Links <div class="display-toggle highlight-links" id="mobile-toggle-highlightlinks"></div></li>
+</ul>
+<script>updateMobilePrefs();</script>
+</div>
+</div>
+</div>
+</div>
+</header>
+<div class="mobile-on" id="homepage-introBox-mobile">
+<a href="/"><img class="logo-small" src="/images/logo-white-big.png"/></a>
+<form action="/pmwiki/search_result.php" class="search" style="margin:10px -5px -6px -5px;">
+<input class="search-box" name="q" placeholder="Search" required="" type="text" value=""/>
+<input class="submit-button" type="submit" value=""/>
+<input name="search_type" type="hidden" value="article"/>
+<input name="page_type" type="hidden" value="all"/>
+<input name="cx" type="hidden" value="partner-pub-6610802604051523:amzitfn8e7v"/>
+<input name="cof" type="hidden" value="FORID:10"/>
+<input name="ie" type="hidden" value="ISO-8859-1"/>
+<input name="siteurl" type="hidden" value=""/>
+<input name="ref" type="hidden" value=""/>
+<input name="ss" type="hidden" value=""/>
+</form>
+</div>
+<div class="ad" id="header-ad-wrapper">
+<div id="header-ad">
+<div class="ad-size-970x90 atf_banner">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_1"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_1'); });</script> </div>
+</div> </div>
+</div>
+</div>
+<div id="main-container">
+<div class="action-bar mobile-off" id="action-bar-top">
+<div class="action-bar-right">
+<p>Follow TV Tropes</p>
+<a class="button-fb" href="https://www.facebook.com/TVTropes">
+<i class="fa fa-facebook"></i></a>
+<a class="button-tw" href="https://www.twitter.com/TVTropes">
+<i class="fa fa-twitter"></i></a>
+<a class="button-re" href="https://www.reddit.com/r/TVTropes">
+<i class="fa fa-reddit-alien"></i></a>
+</div>
+<nav class="actions-wrapper" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<ul class="page-actions" id="top_main_list">
+<li class="link-edit">
+<a class="article-edit-button" data-modal-target="login" href="/pmwiki/pmwiki.php/Main/PerfectPlayAI?action=edit" rel="nofollow">
+<i class="fa fa-pencil"></i> Edit Page</a></li><li class="link-related"><a href="/pmwiki/relatedsearch.php?term=Main/PerfectPlayAI">
+<i class="fa fa-share-alt"></i> Related</a></li><li class="link-history"><a href="/pmwiki/article_history.php?article=Main.PerfectPlayAI">
+<i class="fa fa-history"></i> History</a></li><li class="link-discussion"><a href="/pmwiki/remarks.php?trope=Main.PerfectPlayAI">
+<i class="fa fa-comment"></i> Discussion</a></li> </ul>
+<button class="nav__dropdown-toggle" id="top_more_button" onclick="toggle_more_menu('top');" type="button">More</button>
+<ul class="more_menu hidden_more_list" id="top_more_list">
+<li class="link-todo tuck-always more_list_item"><a data-modal-target="login" href="#todo"><i class="fa fa-check-circle"></i> To Do</a></li><li class="link-pageSource tuck-always more_list_item"><a data-modal-target="login" href="/pmwiki/pmwiki.php/Main/PerfectPlayAI?action=source" rel="nofollow" target="_blank"><i class="fa fa-code"></i> Page Source</a></li> </ul>
+</nav>
+<div class="WikiWordModalStub"></div>
+<div class="ImgUploadModalStub" data-page-type="Article"></div>
+<div class="login-alert" style="display: none;">
+You need to <a href="/pmwiki/login.php" style="color:#21A0E8">login</a> to do this. <a href="/pmwiki/login.php?tab=register_account" style="color:#21A0E8">Get Known</a> if you don't have an account
+</div>
+</div>
+<div class="page-Article" id="main-content">
+<article class="with-sidebar" id="main-entry">
+<input id="groupname-hidden" type="hidden" value="Main"/>
+<input id="title-hidden" type="hidden" value="PerfectPlayAI"/>
+<input id="article_id" type="hidden" value="319878"/>
+<input id="logged_in" type="hidden" value="false"/>
+<p class="hidden" id="current_url">http://tvtropes.org/pmwiki/pmwiki.php/Main/PerfectPlayAI</p>
+<meta content="" itemprop="datePublished"/>
+<meta content="" itemprop="articleSection"/>
+<meta content="" itemprop="image"/>
+<a class="watch-button" data-modal-target="login" href="#watch">Follow<span>ing</span></a>
+<h1 class="entry-title" itemprop="headline">
+Perfect-Play A.I.
+</h1>
+<script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+                "@type": "ListItem",
+                "position": 1,
+                "name": "tvtropes.org",
+                "item": "https://tvtropes.org"
+            },{
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Tropes",
+                "item": "https://tvtropes.org/pmwiki/pmwiki.php/Main/Tropes"
+            },{
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Perfect-Play A.I."            }]
+        }
+    </script>
+<a class="mobile-actionbar-toggle mobile-on" data-click-toggle="active" href="#mobile-actions-toggle" id="mobile-actionbar-toggle">
+<p class="tiny-off">Go To</p><span></span><span></span><span></span><i class="fa fa-pencil"></i></a>
+<nav class="mobile-actions-wrapper mobile-on" id="mobile-actions-bar"></nav>
+<div class="modal fade hidden-until-active" id="editLockModal">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button aria-label="Close" class="close" data-dismiss="modal" type="button"> <span aria-hidden="true">×</span></button>
+<h4 class="modal-title">Edit Locked</h4>
+</div>
+<div class="modal-body">
+<div class="row">
+<div class="body">
+<div class="danger troper_locked_message"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<nav class="body-options" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<ul class="subpage-links">
+<li>
+<a class="subpage-link curr-subpage" href="/pmwiki/pmwiki.php/Main/PerfectPlayAI" title="The Main page">
+<span class="wrapper"><span class="spi main-page"></span>Main</span></a>
+</li>
+<li>
+<a class="subpage-link" href="/pmwiki/pmwiki.php/Laconic/PerfectPlayAI" title="The Laconic page">
+<span class="wrapper"><span class="spi laconic-icon"></span>Laconic</span></a>
+</li>
+<li class="create-subpage dropdown">
+<a aria-expanded="false" class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);" role="button">
+<span class="wrapper">Create New <i class="fa fa-plus-circle"></i></span>
+</a>
+<select onchange="this.options[this.selectedIndex].value &amp;&amp; (window.location = this.options[this.selectedIndex].value);">
+<option value="">- Create New -</option>
+<option value="/pmwiki/pmwiki.php/Analysis/PerfectPlayAI?action=edit">Analysis</option>
+<option value="/pmwiki/pmwiki.php/Characters/PerfectPlayAI?action=edit">Characters</option>
+<option value="/pmwiki/pmwiki.php/FanficRecs/PerfectPlayAI?action=edit">FanficRecs</option>
+<option value="/pmwiki/pmwiki.php/FanWorks/PerfectPlayAI?action=edit">FanWorks</option>
+<option value="/pmwiki/pmwiki.php/Fridge/PerfectPlayAI?action=edit">Fridge</option>
+<option value="/pmwiki/pmwiki.php/Haiku/PerfectPlayAI?action=edit">Haiku</option>
+<option value="/pmwiki/pmwiki.php/Headscratchers/PerfectPlayAI?action=edit">Headscratchers</option>
+<option value="/pmwiki/pmwiki.php/ImageLinks/PerfectPlayAI?action=edit">ImageLinks</option>
+<option value="/pmwiki/pmwiki.php/PlayingWith/PerfectPlayAI?action=edit">PlayingWith</option>
+<option value="/pmwiki/pmwiki.php/Quotes/PerfectPlayAI?action=edit">Quotes</option>
+<option value="/pmwiki/pmwiki.php/Recap/PerfectPlayAI?action=edit">Recap</option>
+<option value="/pmwiki/pmwiki.php/ReferencedBy/PerfectPlayAI?action=edit">ReferencedBy</option>
+<option value="/pmwiki/pmwiki.php/Synopsis/PerfectPlayAI?action=edit">Synopsis</option>
+<option value="/pmwiki/pmwiki.php/Timeline/PerfectPlayAI?action=edit">Timeline</option>
+<option value="/pmwiki/pmwiki.php/Trivia/PerfectPlayAI?action=edit">Trivia</option>
+<option value="/pmwiki/pmwiki.php/WMG/PerfectPlayAI?action=edit">WMG</option>
+<option value="/pmwiki/pmwiki.php/YMMV/PerfectPlayAI?action=edit">YMMV</option>
+</select>
+</li>
+</ul>
+</nav>
+<div class="article-content retro-folders" id="main-article">
+<p>What is it like to challenge a perfect opponent?
+</p><p>Perfect Play A.I. is a type of <a class="twikilink" href="/pmwiki/pmwiki.php/Main/VideoGameAI" title="/pmwiki/pmwiki.php/Main/VideoGameAI">Video Game A.I.</a> most commonly found in <a class="twikilink" href="/pmwiki/pmwiki.php/Main/FightingGame" title="/pmwiki/pmwiki.php/Main/FightingGame">Fighting Games</a> that correctly blocks or evades every attack and move the player is capable of performing against it, while slowly approaching the player to attack (often backing the player into a literal corner in the process). They were first popularized by the <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/MortalKombat" title="/pmwiki/pmwiki.php/Franchise/MortalKombat">Mortal Kombat</a></em> series, but have become a recurring AI type in other fighting games, which are often so <a class="twikilink" href="/pmwiki/pmwiki.php/Main/NintendoHard" title="/pmwiki/pmwiki.php/Main/NintendoHard">Nintendo Hard</a> that it seems unfair (even when the computer is not <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TheComputerIsACheatingBastard" title="/pmwiki/pmwiki.php/Main/TheComputerIsACheatingBastard">actually cheating</a>), possibly even <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Unwinnable" title="/pmwiki/pmwiki.php/Main/Unwinnable">invincible</a>.
+</p><div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_1"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_1'); })</script></div></div><p>The AI's attack strategy is <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ArtificialBrilliance" title="/pmwiki/pmwiki.php/Main/ArtificialBrilliance">actually quite simple</a> but excruciatingly effective: The AI has been carefully programmed to avoid making any "unsafe" actions that would provide a clear opportunity for a human opponent to damage them. This includes:
+</p><p></p><ul><li> Correctly blocking and/or evading attacks which the player executes against it;
+</li><li> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/StopHavingFunGuys" title="/pmwiki/pmwiki.php/Main/StopHavingFunGuys">Never executing</a> jump attacks, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/UnnecessaryCombatRoll" title="/pmwiki/pmwiki.php/Main/UnnecessaryCombatRoll">rolls</a>, or any other movement that would obviously preclude it from defending against the player;
+</li><li> A full knowledge of the game's <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TacticalRockPaperScissors" title="/pmwiki/pmwiki.php/Main/TacticalRockPaperScissors">Tactical RockPaperScissors</a>, such as which attacks can counter which moves (like using a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Shoryuken" title="/pmwiki/pmwiki.php/Main/Shoryuken">Shoryuken</a> to counter a jump attack, a weak-but-fast jab to prevent a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MegatonPunch" title="/pmwiki/pmwiki.php/Main/MegatonPunch">Megaton Punch</a> or <a class="twikilink" href="/pmwiki/pmwiki.php/Main/UnblockableAttack" title="/pmwiki/pmwiki.php/Main/UnblockableAttack">Unblockable Attack</a> from executing);
+</li><li> If it possesses a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/CounterAttack" title="/pmwiki/pmwiki.php/Main/CounterAttack">Counter-Attack</a> move, knowing how to time these counters to maximum effect to trap and punish the player's attacks as often as possible.
+<ul><li> Conversely, if the player possesses a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/CounterAttack" title="/pmwiki/pmwiki.php/Main/CounterAttack">Counter-Attack</a> move, the AI may know how to avoid falling victim to it.
+</li></ul></li></ul><div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_2"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_2'); })</script></div></div><p>It's important to note that, generally speaking, the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/PerfectPlayAI" title="/pmwiki/pmwiki.php/Main/PerfectPlayAI">Perfect-Play A.I.</a> is not <em>technically cheating</em>: All of the above moves and tactics are <em>perfectly legitimate</em>, i.e. a sufficiently skilled human player could perform such a strategy themselves to best their opponent. The AI's main advantage here is that <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ComputersAreFast" title="/pmwiki/pmwiki.php/Main/ComputersAreFast">Computers Are Fast</a>, and it can execute these actions with split-second timing and pixel-perfect precision. Whereas a human opponent must visually deduce and predict what their opponent is about to do next, an AI can immediately and directly identify whatever action (movement, attack/defend, etc.) the player is currently performing, even if <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ConfusionFu" title="/pmwiki/pmwiki.php/Main/ConfusionFu">different moves have similar tells</a> that would confuse a human player.
+</p><p>Of course, it's also possible that some Perfect Play <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AIs" title="/pmwiki/pmwiki.php/Main/AIs">AIs</a> are <em>also</em> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TheComputerIsACheatingBastard" title="/pmwiki/pmwiki.php/Main/TheComputerIsACheatingBastard">cheating bastards</a>, but exactly how to distinguish whether or not this is the case is a difficult matter. The AI may be able to predict the player's movements after a button press, even before a distinct animation occurs on-screen. In games where <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DefeatMeansPlayable" title="/pmwiki/pmwiki.php/Main/DefeatMeansPlayable">Defeat Means Playable</a>, a player can compare whether the character in question handles the same in the player's hands as it did in the AI's. For example, if a character has a special attack that requires holding "down" for a full second before executing, a human player is left vulnerable while preparing it (as they cannot move while crouched), but if the AI can execute it immediately with no preparation, then that is a sign of cheating bastardry. However, if the AI is a unique opponent, it may be impossible to ever determine whether the AI was <em>actually</em> cheating, or if the boss character was just <a class="twikilink" href="/pmwiki/pmwiki.php/Main/PurposelyOverpowered" title="/pmwiki/pmwiki.php/Main/PurposelyOverpowered">Purposely Overpowered</a>.
+</p><div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_3"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_3'); })</script></div></div><p>There are few reliable ways to defeat the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/PerfectPlayAI" title="/pmwiki/pmwiki.php/Main/PerfectPlayAI">Perfect-Play A.I.</a> in a fight. One method is to relentlessly attack the AI with <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Combos" title="/pmwiki/pmwiki.php/Main/Combos">Combos</a> and special attacks (ranged or otherwise) that utilize <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ScratchDamage" title="/pmwiki/pmwiki.php/Main/ScratchDamage">Scratch Damage</a> even when blocked; this will slowly wear down the AI and defeat it via <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DeathOfAThousandCuts" title="/pmwiki/pmwiki.php/Main/DeathOfAThousandCuts">Death of a Thousand Cuts</a>. Another method is to simply fight fire with fire: Memorize the AI's attacks over time and learn to perfectly block and/or <a class="twikilink" href="/pmwiki/pmwiki.php/Main/CounterAttack" title="/pmwiki/pmwiki.php/Main/CounterAttack">Counter-Attack</a> whatever move the AI chooses to perform, which may create an opening (no matter how small) to strike back. Most Perfect Play <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AIs" title="/pmwiki/pmwiki.php/Main/AIs">AIs</a> have a flaw in their AI routine <em>somewhere</em>, and once the player learns to <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AIBreaker" title="/pmwiki/pmwiki.php/Main/AIBreaker">exploit that to their advantage</a>, the playing field becomes level.
+</p><p>...right up until you run into a human opponent who knows what they're doing, and get <a class="twikilink" href="/pmwiki/pmwiki.php/Main/CurbStompBattle" title="/pmwiki/pmwiki.php/Main/CurbStompBattle">completely destroyed</a>. And there's the chief problem with this AI behaviour: it will absolutely <em>wreck</em> your reflexes or worse, your very knowledge of what works and what doesn't; against AI that's immune to fakeouts or any sort of coherent strategy, one that brutally punishes any sort of proactive play, you wind up forced into a purely reactive playstyle that will usually get you, as the parlance goes, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/CurbStompBattle" title="/pmwiki/pmwiki.php/Main/CurbStompBattle">bodied</a> by more human-experienced players running on deeper mindgames and sustained offensive momentum.
+</p><p>Compare and contrast the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SNKBoss" title="/pmwiki/pmwiki.php/Main/SNKBoss">SNK Boss</a>, a videogame AI whose difficulty arises primarily from the fact that it <em>is</em> a cheating bastard.
+</p><p></p><hr/><h2>Examples:</h2>
+<p></p><ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/MortalKombat" title="/pmwiki/pmwiki.php/Franchise/MortalKombat">Mortal Kombat</a></em> is famous for this, and is why the trope used to be called the "MK Walker"; an AI opponent on this mode would simply walk over to the player, blocking or dodging any attack with inhuman frame precision and, upon reaching the player, execute a perfectly-timed, unblockable move (usually a throw). Hence "MK Walker". Game-specific examples include:
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MortalKombat2" title="/pmwiki/pmwiki.php/VideoGame/MortalKombat2">Mortal Kombat II</a></em>: All characters at hardest setting, though not on the <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/PlayStation" title="/pmwiki/pmwiki.php/UsefulNotes/PlayStation">PlayStation</a> port.
+</li><li> This becomes even more blatant in <em>Ultimate Mortal Kombat 3</em>, <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MortalKombat4" title="/pmwiki/pmwiki.php/VideoGame/MortalKombat4">Mortal Kombat 4</a></em>, and the N64 version of <em>Mortal Kombat Trilogy</em>.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MortalKombat3" title="/pmwiki/pmwiki.php/VideoGame/MortalKombat3">Mortal Kombat 3</a></em> on the <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/GameBoy" title="/pmwiki/pmwiki.php/UsefulNotes/GameBoy">Game Boy</a> has it too, but in this case the Walkers are surprisingly vulnerable to uppercuts. <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BrokenRecord" title="/pmwiki/pmwiki.php/Main/BrokenRecord">Hope you enjoy doing nothing but uppercuts</a>. Shang Tsung can be murder for this; sometimes, in a single motion, the CPU will transform into a new character and perform the counter-attack that character knows.
+</li><li> <em>Ultimate Mortal Kombat 3</em>:
+<ul><li> Jade. When you play as her, the projectile protection special has to be activated by Back &gt; Forward &gt; High Kick command. When AI plays as her, if you try a projectile attack on her, most of the time she will activate the special at the exact moment you input the projectile move, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TheComputerIsACheatingBastard" title="/pmwiki/pmwiki.php/Main/TheComputerIsACheatingBastard">while running towards you and without stopping at all</a>, and then rip you a new one before you can block anything.
+</li><li> Smoke is impossible even on Very Easy. If you send a long range attack or projectile towards him, he will instantly teleport uppercut you infinitely. Before there's even an animation, he's already killed you. When you play as Smoke, the computer instantly dodges teleporting moves.
+</li></ul></li></ul></li><li> Any character from Kagemaru on in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/VirtuaFighter" title="/pmwiki/pmwiki.php/VideoGame/VirtuaFighter">Virtua Fighter</a> 2</em>.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheLastBlade" title="/pmwiki/pmwiki.php/VideoGame/TheLastBlade">The Last Blade</a></em>, the boss, Kagami, is a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/PerfectPlayAI" title="/pmwiki/pmwiki.php/Main/PerfectPlayAI">Perfect-Play A.I.</a> in his first form.
+<ul><li> Then again this is a trait most <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SNKBoss" title="/pmwiki/pmwiki.php/Main/SNKBoss">SNK Bosses</a> share.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/StreetFighter" title="/pmwiki/pmwiki.php/Franchise/StreetFighter">Street Fighter</a></em> franchise examples:
+<ul><li> If you set the difficulty to the hardest level on certain <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/StreetFighterII" title="/pmwiki/pmwiki.php/VideoGame/StreetFighterII">Street Fighter II</a></em> games, nearly every character becomes a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/PerfectPlayAI" title="/pmwiki/pmwiki.php/Main/PerfectPlayAI">Perfect-Play A.I.</a>. Characters with invincible reversals, such as the Shotos and Guile, will read your inputs and counter appropriately with a Shoryuken or Flash Kick. Zangief will pull out his <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SpinningPiledriver" title="/pmwiki/pmwiki.php/Main/SpinningPiledriver">Spinning Piledriver</a> at the worst possible times, magically vaccuming you into his clutches from absurd ranges. If you go up against a character with a multiple-hitting throw, such as Dhalsim's noogie or Balrog's head bash, then the computer will mash out the inputs at speeds which are physically impossible for humans to attain, meaning you will never be able to break out AND the computer will always get the fastest possible version of those throws with the maximum amount of hits and damage.
+</li><li> <em>Street Fighter Alpha 2</em>'s Shin Akuma on any setting and to a lesser extent <em>SFA 3</em> Akuma on medium and up are terrible about this. His <a class="twikilink" href="/pmwiki/pmwiki.php/Main/PerfectPlayAI" title="/pmwiki/pmwiki.php/Main/PerfectPlayAI">Perfect-Play A.I.</a> routine consists of walking psychic shoryukens (or Dragon Punches - DP for short) combined with tick throws, the result being that you're afraid to poke with anything, because no matter what you poke with, or how you set it up, the comp will just read your buttons and DP you out of it. If you block, the computer will just tick throw you out of it. If you are expecting the tick and try to reverse the throw, you'll get psychic DP'ed (since you're performing a throw/attempt and not really blocking). Try to perform a reversal and you'll be thrown. Occasionally (and Ryu will do this as well, though not with all the other stuff Akuma adds in), if you get the reversal, Akuma will actually block, then throw a reversal DP on the tail end of yours.
+</li><li> <em>Street Fighter Alpha 3</em>: Final Bison. With or without Final Psycho Crusher he's still incredibly annoying with this.
+</li><li> <em>Super Street Fighter II X</em>/<em>Super Turbo</em>: Akuma/Gouki. On eight stars, he becomes the cosmic overlord of this trope.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/StreetFighterEX" title="/pmwiki/pmwiki.php/VideoGame/StreetFighterEX">Street Fighter EX Plus Alpha</a></em>: This is noticeable fighting Akuma/Shin Akuma on harder difficulties.
+</li><li> <em>Street Fighter IV</em>'s Seth is an <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SNKBoss" title="/pmwiki/pmwiki.php/Main/SNKBoss">SNK Boss</a> with this. It's fairly easy to beat him at first, but once you finish Round 1 he gets up and says "<a class="twikilink" href="/pmwiki/pmwiki.php/Main/ILetYouWin" title="/pmwiki/pmwiki.php/Main/ILetYouWin">I Let You Win</a>". Cue this trope in full force.
+</li></ul></li></ul><ul><li> Kasumi Todoh in most versions she is playable in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheKingOfFighters" title="/pmwiki/pmwiki.php/VideoGame/TheKingOfFighters">The King of Fighters</a></em>. Her fighting style is based on returning physical attacks with her counter stances. If controlled by a Expert level CPU, she will slowly approach the player while instantly countering moves that make physical contact and doing a reversal uppercut if the player tries to do a normal grab on her. She also has a unblockable move that works like a grab, so if you choose not to attack her when she reaches you, she'll use that. A nice addition is that if you try to stop her from advancing with projectiles she'll just stop, wait a while until you stop throwing fireballs, and taunt you.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/KillerInstinct" title="/pmwiki/pmwiki.php/VideoGame/KillerInstinct">Killer Instinct</a>.</em> If you do any kind of move that has more than 5 frames and doesn't hit the opponent, the AI will rush in, do a special which goes straight through your attack, and then follow up with a flawless 8-hit combo. All at the exact moment you press the button. There's a reason we call <a class="twikilink" href="/pmwiki/pmwiki.php/Main/NintendoHard" title="/pmwiki/pmwiki.php/Main/NintendoHard">Nintendo Hard</a> "Nintendo Hard."
+<ul><li> Much less prevalent in <em>Killer Instinct 2,</em> where the game mechanics are much friendlier and give you many opportunities to counter the AI. The <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TacticalRockPaperScissors" title="/pmwiki/pmwiki.php/Main/TacticalRockPaperScissors">Tactical RockPaperScissors</a> nature of how combo openers work in <em>KI2</em> is probably the easiest thing you can use to this effect, and combo breakers are <em>much</em> easier, so the AI popping off its perfect combos is no longer your death knell. In fact, if you don't have the reflexes to do the breaker correctly on purpose, you still have a fifty-fifty chance of getting it by guessing.
+</li><li> The 2013 <em>KI</em> game has the "Kyle" difficulty level, which is full of input-reading and combo breaking. The game's <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TrueFinalBoss" title="/pmwiki/pmwiki.php/Main/TrueFinalBoss">True Final Boss</a>, Shadow Jago, will always be set to this difficulty.
+</li></ul></li><li> In <a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DigimonRumbleArena" title="/pmwiki/pmwiki.php/VideoGame/DigimonRumbleArena">Digimon Rumble Arena</a>, Reapermon was capable of instantly winning with just one combo: Charging forward with Grim Slasher, a multi-hit special, followed by Bone Duster, another multi-hit special. His super meter will be full after this, allowing him to follow up with Burning Cyclone immediately. His opponent <em>will</em> be dazed after this, which Reapermon will exploit for another Grim Slasher -&gt; Bone Duster combo. He'd probably use another finisher and keep repeating if the player's health wouldn't already be 0 at this point. His AI could pull this even in easy mode. And to top it all off, Reapermon becomes playable after just one playthrough.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Dota2" title="/pmwiki/pmwiki.php/VideoGame/Dota2">Dota 2</a></em>
+<ul><li> The bots, especially on Hard and Unfair difficulties, tend to be able to take turns stunning their victim, almost always landing the next stun as the previous stun wears off. Naturally, they do it even better than most professional teams. Doesn't stop them from making other serious tactical mistakes, but since most bot heroes include at least one stun, it can be extremely frustrating to be the one the bots pick on (which is typically done by choosing the most fragile target).
+</li><li> Another aspect of the bots' near-cheat level perfect play is their simulated reaction time to player actions, which is decided by the chosen difficulty level. On <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ExactlyWhatItSaysOnTheTin" title="/pmwiki/pmwiki.php/Main/ExactlyWhatItSaysOnTheTin">Unfair</a> difficulty, it's nil. This means a Pudge who hooks an enemy hero out of a group will be instantly spotted and get a blink-stun in his face before the hook has even returned.
+</li></ul></li><li> Several of the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BonusBoss" title="/pmwiki/pmwiki.php/Main/BonusBoss">bonus bosses</a> in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/OneMustFall" title="/pmwiki/pmwiki.php/VideoGame/OneMustFall">One Must Fall</a>,</em> especially Devan Shell. To make things worse, One Must Fall had block damage off by default (and you needed a cheat code to turn it on).
+<ul><li> All the arcade mode opponent on Ultimate difficulty probably count as Perfect Play <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AIs" title="/pmwiki/pmwiki.php/Main/AIs">AIs</a>. Luckily they don't handle special move cancelling well.
+</li></ul></li><li> Every opponent on every difficulty in <em>Facebreaker</em>.
+</li><li> Probably other <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SNKBoss" title="/pmwiki/pmwiki.php/Main/SNKBoss">SNK Bosses</a>, but Geese Howard from <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FatalFury" title="/pmwiki/pmwiki.php/VideoGame/FatalFury">Fatal Fury</a></em> fits this trope best.
+</li><li> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TheComputerIsACheatingBastard" title="/pmwiki/pmwiki.php/Main/TheComputerIsACheatingBastard">The AI</a> in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SoulCalibur" title="/pmwiki/pmwiki.php/VideoGame/SoulCalibur">SoulCalibur</a> 3</em> can sometimes do this when it's going all out. It can read your buttons, and (when it's at its best, like on Dancing Statues Hard) it can counter moves with its inhuman reflexes. Worse, it gets faster based on how much you press the button, even blocking. So if you block too long, the computer goes into a berserk rage, conveniently attacking in a way that gets around your block and is simply too fast to counter.
+</li><li> It's back with a vengeance in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SoulCalibur" title="/pmwiki/pmwiki.php/VideoGame/SoulCalibur">SoulCalibur</a> 5</em>. The AI has no problem executing just guards (which block practically any attack but require insane timing) at any time, can pull off Ivy's <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SomeDexterityRequired" title="/pmwiki/pmwiki.php/Main/SomeDexterityRequired">notoriously difficult</a> Calamity Symphony throw at the drop of a hat, and can make grown men weep when controlling Alpha Patroklos (who is easily the hardest character to use, once again due to the ridiculous timing he requires, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DifficultButAwesome" title="/pmwiki/pmwiki.php/Main/DifficultButAwesome">but when mastered...</a>).
+</li><li> In the first <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MarioParty" title="/pmwiki/pmwiki.php/VideoGame/MarioParty">Mario Party</a></em> game, the A.I. may not play "completely" perfect in slot cat derby, but they can come pretty damn close. They never spin out when going around turns, despite how much their tires may smoke, so they manage to finish pretty fast, making it insanely difficult for a human player to beat them.
+<ul><li> In several of the button masher minigames in the early Mario Parties, you could only beat a computer if you were lucky. In games such as Skate Board Scamper, Abandon Ship and especially Mecha Marathon, the computer could sometimes out speed a good human button masher, even on easy (especially since the A.I. isn't actually pushing any real buttons, making it potentially as fast as a turbo controller). This also applies to minigames in the first game where you had to rotate the analog stick.
+<ul><li> In some of the button mashing minigames, the AI could potentially "press buttons" faster than an N64 controller was capable of registering them.
+</li></ul></li></ul></li><li> Vergil from <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DevilMayCry3DantesAwakening" title="/pmwiki/pmwiki.php/VideoGame/DevilMayCry3DantesAwakening">Devil May Cry 3: Dante's Awakening</a></em> is close to, but not a true <a class="twikilink" href="/pmwiki/pmwiki.php/Main/PerfectPlayAI" title="/pmwiki/pmwiki.php/Main/PerfectPlayAI">Perfect-Play A.I.</a>. He will parry and counter your attacks, but you can dodge and counter his attacks.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DevilMayCry4" title="/pmwiki/pmwiki.php/VideoGame/DevilMayCry4">Devil May Cry 4</a></em> has a number of examples:
+<ul><li> With some of his styles, Dante does the same as Vergil from before. The most effective way to beat him is walk to him while shooting, causing Dante <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ShootTheBullet" title="/pmwiki/pmwiki.php/Main/ShootTheBullet">to do the same</a>, then quickly attacking with Devil Buster once in range. You can also sit on top of the altar in the room: due to a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GoodBadBug" title="/pmwiki/pmwiki.php/Main/GoodBadBug">Good Bad Bug</a> he'll repeatedly try to jump up to get to you, leaving himself wide open to the Devil Buster <em>every single time without fail</em>.
+</li><li> On <a class="twikilink" href="/pmwiki/pmwiki.php/Main/HarderThanHard" title="/pmwiki/pmwiki.php/Main/HarderThanHard">Dante Must Die</a>, Berial becomes like this. Going to face him head-on suicidal. The secret to beating him is to do these things: 1. Use your fully charged gun on him as much as possible. 2. Hit him with your sword immediately after he does a lunge attack. Go for the sides and hindquarters. 3. The moment his flames drop, go berserk with devil trigger, especially trigger-enhanced buster (Nero's demon arm).
+</li><li> The Angelo Credo fight is a good example of this trope as well. Most of the time, he will advance steadily towards you or hurl spears at you. His sword attacks are a bitch to dodge (so quick you don't see them), and unless you nail the timing, attempts to grab him will either <a class="twikilink" href="/pmwiki/pmwiki.php/Main/NoSell" title="/pmwiki/pmwiki.php/Main/NoSell">fail</a>, or do very little damage.
+</li><li> Some <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Mook" title="/pmwiki/pmwiki.php/Main/Mook">mooks</a> also do this, such as the Angelo enemies. <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BossInMookClothing" title="/pmwiki/pmwiki.php/Main/BossInMookClothing">Alto Angelo</a> will block your hits a lot and often your attempts at grabbing them result in a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/NoSell" title="/pmwiki/pmwiki.php/Main/NoSell">No-Sell</a>.
+</li><li> In the Special Edition, Vergil as a playable character is meant to be played like this. His Concentration meter fills by walking slowly towards the enemy and making no wasted moves.
+</li></ul></li><li> This can happen in tag-team matches in some games in the <em><a class="twikilink" href="/pmwiki/pmwiki.php/Wrestling/WWE" title="/pmwiki/pmwiki.php/Wrestling/WWE">WWE</a> Smackdown vs. Raw</em> series. If a computer player decides that they want to tag out, then 90% of the time your every attack will be countered, dodged, or ignored until this is done. It usually does not occur in other modes, however.
+<ul><li> If the computer does not want to allow you to do a flying attack it will stop you, no matter what.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Wrestling/WWE" title="/pmwiki/pmwiki.php/Wrestling/WWE">WWE</a> SmackDown vs. Raw 2010</em> has one of these, curiously enough for a wrestling game - the final fight in Edge's Road to WrestleMania story against Mr. Kennedy (<a class="twikilink" href="/pmwiki/pmwiki.php/Main/MemeticMutation" title="/pmwiki/pmwiki.php/Main/MemeticMutation">KENNEDY!</a>) sees Kennedy become an absolute perfect countering machine, who can recover from anything you throw at him in no time while being able to leave you lying with almost any grapple he uses.
+<ul><li> This also happens in Randy Orton's RtWM, as part of an <a class="twikilink" href="/pmwiki/pmwiki.php/Main/HopelessBossFight" title="/pmwiki/pmwiki.php/Main/HopelessBossFight">Hopeless Boss Fight</a>; the lights go out and suddenly the Undertaker is standing <em>right behind you</em>. He is impossible to hurt, perfectly evading and reversing anything you attempt to do to him - and the objective changes from winning the match to escaping backstage.
+</li><li> In Day of Reckoning series, WWE games for the Gamecube, if the computer decides it's time to tag a partner, knock out the referee or <a class="twikilink" href="/pmwiki/pmwiki.php/Main/NotCheatingUnlessYouGetCaught" title="/pmwiki/pmwiki.php/Main/NotCheatingUnlessYouGetCaught">go for a weapon</a> don't expect to get any hits in. <a class="twikilink" href="/pmwiki/pmwiki.php/Main/UnflinchingWalk" title="/pmwiki/pmwiki.php/Main/UnflinchingWalk">It will slowly walk</a> to its destination as if there is a sunset in the background and counter every move you do <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TheComputerIsACheatingBastard" title="/pmwiki/pmwiki.php/Main/TheComputerIsACheatingBastard">even ones impossible to actually perform</a> (e.g. countering a move while in the process of countering a move).
+</li><li> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TheComputerIsACheatingBastard" title="/pmwiki/pmwiki.php/Main/TheComputerIsACheatingBastard">Face it, the game will simply glitch if it has to</a>.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/TheLegendOfZelda" title="/pmwiki/pmwiki.php/Franchise/TheLegendOfZelda">The Legend of Zelda</a></em>:
+<ul><li> The <a class="twikilink" href="/pmwiki/pmwiki.php/Main/FinalBoss" title="/pmwiki/pmwiki.php/Main/FinalBoss">Final Boss</a> of <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/ZeldaIITheAdventureOfLink" title="/pmwiki/pmwiki.php/VideoGame/ZeldaIITheAdventureOfLink">Zelda II: The Adventure of Link</a></em> is an example that predates even the more infamous fighting (i.e. MK) examples: Dark Link aggressively advances toward the player and tries to attack whichever position (high or low) the player isn't currently guarding against; and when the player attacks, Dark Link merely counters with his shield in the appropriate position. He is remembered for having one flaw in his AI ("duck and stab") because he sometimes counters a low strike with a jump, which leaves his legs open to attack.
+</li><li> Dark Link in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheLegendOfZeldaOcarinaOfTime" title="/pmwiki/pmwiki.php/VideoGame/TheLegendOfZeldaOcarinaOfTime">The Legend of Zelda: Ocarina of Time</a></em>, being a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ShoutOut" title="/pmwiki/pmwiki.php/Main/ShoutOut">Shout-Out</a> to the original, mirrors Link's sword attacks (almost) perfectly, causing nothing more than clashing blades. (Dark Link is also opposite-handed from normal Link, adding to the 'mirror' effect) He backflips to counter Link's charged spin attack, and if the player attempts to make a thrust attack, counters by <em><strong>jumping on Link's sword</strong></em> and striking. For the first half of the battle he doesn't even attack at all, but merely stands back and counters Link's moves. But he actually doesn't counter much else, such as bombs or Deku Nuts.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/HyruleWarriors" title="/pmwiki/pmwiki.php/VideoGame/HyruleWarriors">Hyrule Warriors</a></em>: Some levels in Adventure Mode, "quiz" fights in particular, will pit you against characters who will guard against almost every attack you throw at them. You need to wait for the opportunity to break their weak point gauge or find the opportunity to interrupt their attacks.
+</li></ul></li><li> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BonusBoss" title="/pmwiki/pmwiki.php/Main/BonusBoss">Valkyrie</a> from <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TalesOfEternia" title="/pmwiki/pmwiki.php/VideoGame/TalesOfEternia">Tales of Eternia</a></em>. Not only is she an equal in close quarters to Reid, Farah, Ras, or Cless (the other <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BonusBoss" title="/pmwiki/pmwiki.php/Main/BonusBoss">Bonus Boss</a>), she can <em>guard-break</em> you as well, interrupting any combo you initiate and opening her own routine. With flawless timing of course. Without Rising Phoenix or Sonic Chaos, it's impossible to hurt her. Oh, and she has her own <a class="twikilink" href="/pmwiki/pmwiki.php/Main/LimitBreak" title="/pmwiki/pmwiki.php/Main/LimitBreak">hi-ougi</a> too, and it is <em>mean</em>.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TalesOfTheTempest" title="/pmwiki/pmwiki.php/VideoGame/TalesOfTheTempest">Tales of the Tempest</a></em>: The one thing the boss AI does well is block. If you are doing melee damage, you can be sure they're going to block and reduce your attack to <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ScratchDamage" title="/pmwiki/pmwiki.php/Main/ScratchDamage">Scratch Damage</a>.
+</li><li> In the browsergame <em><a class="createlink" href="/pmwiki/pmwiki.php/VideoGame/Estiah" title="/pmwiki/pmwiki.php/VideoGame/Estiah">Estiah</a></em>, the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ChestMonster" title="/pmwiki/pmwiki.php/Main/ChestMonster">Chest Mimic</a> is a turn based variation of this. This monster either uses 'Close', which gives it enough defenses to easily shrug off multiple attacks, or a few offensive moves which, despite stripping it of all defense, all give in an extra action (And unlike the player, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TheComputerIsACheatingBastard" title="/pmwiki/pmwiki.php/Main/TheComputerIsACheatingBastard">the mimic is immune to the four action limit</a>). This means that after hitting you a few times, the boss will always leave a wall of defense that is impossible to brute force through. However, <span class="spoiler" title="you can set spoilers visible by default on your profile">its health is low enough that it's possible to use high penetration attacks to tick it to death, and Damage over Time moves will constantly hit during its undefended attack strings for massive damage</span>.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/EternalFighterZero" title="/pmwiki/pmwiki.php/VideoGame/EternalFighterZero">Eternal Fighter Zero</a></em>, final boss <a class="twikilink" href="/pmwiki/pmwiki.php/VisualNovel/AIR" title="/pmwiki/pmwiki.php/VisualNovel/AIR">Kanna</a> fits this trope quite well at the higher difficulties. Her AI will block practically every attack you throw at her, and her range, attack speed, and priority will rock you when she gets close. <a class="twikilink" href="/pmwiki/pmwiki.php/VisualNovel/Kanon" title="/pmwiki/pmwiki.php/VisualNovel/Kanon">Ayu</a> also has some of this trait on the highest difficulty.
+</li><li> Chin fights like this in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheKingOfFighters" title="/pmwiki/pmwiki.php/VideoGame/TheKingOfFighters">The King of Fighters</a> '97</em>. However, it's fairly easy to work around it by jabbing at a distance and blocking his attack.
+</li><li> As a boss character based on counter moves, <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/BlazBlue" title="/pmwiki/pmwiki.php/VideoGame/BlazBlue">BlazBlue</a></em>'s Hakumen rather sensibly fights this way. If you're not careful, he may well counter you into a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/OneHitKill" title="/pmwiki/pmwiki.php/Main/OneHitKill">Astral Finish.</a> Depending on your character and playstyle, he can make the game's actual <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SNKBoss" title="/pmwiki/pmwiki.php/Main/SNKBoss">SNK Boss</a> v-13 feel weak and anticlimactic in comparison.
+<ul><li> In Score Attack mode, <em>everyone</em> turns into Perfect Play <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AIs" title="/pmwiki/pmwiki.php/Main/AIs">AIs</a>. Instant Blocking all your attacks and escaping your throws before launching you into a 20+ hit combo the instant you do something unsafe. And then you have to fight <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SNKBoss" title="/pmwiki/pmwiki.php/Main/SNKBoss">Unlimited Nu, Unlimited Rachel</a> and <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TrueFinalBoss" title="/pmwiki/pmwiki.php/Main/TrueFinalBoss">Unlimited Ragna</a> in this mode. And if Unlimited Ragna hits you with the right counter, he will super drain over 2/3 your life and heal over half his already 3 times over health bar.
+<ul><li> <em>Extend</em> ups the ante with "Unlimited Mars" mode. Everything above, and EVERYONE is in their unlimited mode. The unholy fusion of <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SNKBoss" title="/pmwiki/pmwiki.php/Main/SNKBoss">SNK Boss</a> and <a class="twikilink" href="/pmwiki/pmwiki.php/Main/PerfectPlayAI" title="/pmwiki/pmwiki.php/Main/PerfectPlayAI">Perfect-Play A.I.</a>.
+</li></ul></li></ul></li><li> <a class="twikilink" href="/pmwiki/pmwiki.php/Creator/ArcSystemWorks" title="/pmwiki/pmwiki.php/Creator/ArcSystemWorks">Arc System Works</a> has done it again. With their help on the console port of <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/ArcanaHeart" title="/pmwiki/pmwiki.php/VideoGame/ArcanaHeart">Arcana Heart</a> 3</em> in score attack mode, Parace L Sia returns, and combines this with <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SNKBoss" title="/pmwiki/pmwiki.php/Main/SNKBoss">SNK Boss</a> into one of the most unholy fusions imaginable, making every unlimited character from <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/BlazBlue" title="/pmwiki/pmwiki.php/VideoGame/BlazBlue">BlazBlue</a></em> seem like nothing in comparison.
+</li><li> The Sega Genesis <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TeenageMutantNinjaTurtlesTournamentFighters" title="/pmwiki/pmwiki.php/VideoGame/TeenageMutantNinjaTurtlesTournamentFighters">Teenage Mutant Ninja Turtles: Tournament Fighters</a></em> had Karai as the last boss. If you tried to stand back, she would <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BeamSpam" title="/pmwiki/pmwiki.php/Main/BeamSpam">spam projectiles</a> you couldn't jump over. If you tried to get close, she would knock you down, then throw you repeatedly with absolutely no window of opportunity to move or escape between throws. This was at difficulty setting <em>1</em>. It went up to <em>8</em>.
+<ul><li> Then again, the whole game was criticized for being way too hard, even on the easiest difficulty setting.
+</li><li> She was much worse in the SNES edition. Air superiority in the form of a leaping multi-hit attack, similar to E. Honda's Hundred-Hand Slap, and she had the best jump in the whole game. She could easily clear most of the screen in one leap. And she "walked" rather fast. Trust me, she was bad, bad news.
+</li></ul></li><li> The highest-level AI's in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DissidiaFinalFantasy" title="/pmwiki/pmwiki.php/VideoGame/DissidiaFinalFantasy">Dissidia Final Fantasy</a></em> are made of this trope; they will easily predict and block or dodge almost any attack, while attacking instantly and fatally as soon as you get anywhere near them. Your only real chance is to block at random times, hope they do something blockable to you, and attack them instantly while they reel back (a time span which is, naturally <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TheComputerIsACheatingBastard" title="/pmwiki/pmwiki.php/Main/TheComputerIsACheatingBastard">much shorter than yours would be</a>).
+</li><li> The Level 9 CPU's in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SuperSmashBros" title="/pmwiki/pmwiki.php/VideoGame/SuperSmashBros">Super Smash Bros.</a></em> are also made of this trope. While they're not very good at actual <em>tactics</em> , their reflexes on dodges, grabs, power-shields, and counter-attacks (for characters who have them) are impeccable. Dealing with the AI usually boils down to waiting for them to make a stupid move on their own and then capitalizing on it before they go on the defensive again.
+<ul><li> Thought Level 9 was hard? Try fighting a Level <em><a class="twikilink" href="/pmwiki/pmwiki.php/Main/UpToEleven" title="/pmwiki/pmwiki.php/Main/UpToEleven">50</a></em> amiibo. At this point, the AI will perfect-shield and punish any laggy attack or vulnerable recovery you make. In fact, its reaction time alone is enough to <a class="urllink" href="http://www.eventhubs.com/images/2014/nov/26/amiibo-fox-places-third-super-smash-bros-wii-u-tournament-highlight-01/">beat several professional players in a tournament<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a>.
+<ul><li> This is made less impressive by the fact that high-level amiibos are also <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TheComputerIsACheatingBastard" title="/pmwiki/pmwiki.php/Main/TheComputerIsACheatingBastard">cheating bastards</a>, given they always do more damage than a human-controlled character does, for no particular reason.
+</li></ul></li><li> It's been found that the Level 9 CPUs are legitimately this trope; they're always reading inputs and always ready to react at a moment's notice, and by all technicality, the only reason the lower levels are easier is because a randomizer sometimes stops their inputs, with higher chances the lower you go to the point of seeming brain dead. In reality, they're calculating everything you do at 9 the entire time and were built as <a class="twikilink" href="/pmwiki/pmwiki.php/Main/PerfectPlayAI" title="/pmwiki/pmwiki.php/Main/PerfectPlayAI">Perfect-Play A.I.</a> to begin with as playing at the highest difficulty all but removes this random chance. Though there are some <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AIBreaker" title="/pmwiki/pmwiki.php/Main/AIBreaker">A.I. Breaker</a> strategies and some characters they dip into <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ArtificialStupidity" title="/pmwiki/pmwiki.php/Main/ArtificialStupidity">Artificial Stupidity</a> with.
+</li></ul></li><li> Saotome Genma in the <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/SNES" title="/pmwiki/pmwiki.php/UsefulNotes/SNES">SNES</a> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Manga/RanmaOneHalf" title="/pmwiki/pmwiki.php/Manga/RanmaOneHalf">Ranma ½</a> Hard Battle.</em>
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SidMeiersPirates" title="/pmwiki/pmwiki.php/VideoGame/SidMeiersPirates">Sid Meier's Pirates!</a></em>, on higher difficulty levels and age, the Marquis de la Montalban becomes this. He will always perform the proper defense for your attack far faster than you can attack, with the net result being that the fight is literally <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Unwinnable" title="/pmwiki/pmwiki.php/Main/Unwinnable">Unwinnable</a>.
+</li><li> The optional second boss fight against Darth Vader in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheForceUnleashed" title="/pmwiki/pmwiki.php/VideoGame/TheForceUnleashed">The Force Unleashed</a></em>. He stops playing around with Force telekinesis to demonstrate his mastery of lightsaber combat.
+<ul><li> He's also kind of this in Starkiller's duel with him in the sequel. He's a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MightyGlacier" title="/pmwiki/pmwiki.php/Main/MightyGlacier">Mighty Glacier</a> that takes very little damage from all of your attacks, blocks all of your Force moves (even going into Force Fury mode only damages him a small amount) and he has <em>two health bars</em>.
+</li><li> The prologue level of the first game inverts this by having you play <em>as Darth Vader</em> while he leisurely strolls through a Wookiee village and nonchalantly massacres everything in sight. It's every bit as brutally awesome as it sounds.
+</li></ul></li><li> Boss battles with Jeanne from <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Bayonetta" title="/pmwiki/pmwiki.php/VideoGame/Bayonetta">Bayonetta</a></em> see her acting relatively sedate from far away, usually content to pepper you with gunfire or launch a super-attack or two your way. However, she's always closing distance between Bayonetta and herself or waiting for you to come to her, and once the gap is closed she begins busting out lengthy and hugely damaging combos with very little breathing room between her attacks. On the harder difficulties, she drops this tactic and just starts <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ThatOneBoss" title="/pmwiki/pmwiki.php/Main/ThatOneBoss">tearing you apart from across the room.</a>
+</li><li> Cyber-Akuma from <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MarvelSuperHeroesVsStreetFighter" title="/pmwiki/pmwiki.php/VideoGame/MarvelSuperHeroesVsStreetFighter">Marvel Super Heroes vs. Street Fighter</a></em> is a abnormally fast <a class="twikilink" href="/pmwiki/pmwiki.php/Main/PerfectPlayAI" title="/pmwiki/pmwiki.php/Main/PerfectPlayAI">Perfect-Play A.I.</a>. His preferred method of attack is to launch a missile from a screen's distance, then dash in close as you block high, deliver a lightning-fast low kick and chain it into a super attack. When he air jumps, he unleashes 2 fireballs down at you. The only way to beat him is by piling on the projectiles but he readily throws his own to counter yours. If he closes the distance between you, it's pretty much over.
+</li><li> Several bosses and some <a class="twikilink" href="/pmwiki/pmwiki.php/Main/EliteMooks" title="/pmwiki/pmwiki.php/Main/EliteMooks">Elite Mooks</a> in the <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/StreetsOfRage" title="/pmwiki/pmwiki.php/VideoGame/StreetsOfRage">Streets of Rage</a></em> series, fan remake included. Some foes will always back up out of your reach the minute you try to advance on them to attack (but will gladly advance on you the minute you turn and walk the other way), backing up off the screen where you can't hit them, but they can hit you. You also have enemies that will stop moving or sidestep your special attacks and will follow up with a counter. Then there are enemies that will knock you out of the air if you try to attack them with a jump attack. To top all of his off, most enemies in the later levels will combo you and team up on you where their attacks take priority over your own attacks.
+</li><li> Used to awesome effect by <span class="spoiler" title="you can set spoilers visible by default on your profile">Albert Wesker</span> in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/ResidentEvil5" title="/pmwiki/pmwiki.php/VideoGame/ResidentEvil5">Resident Evil 5</a></em>. Walks forward menacingly, instantaneously <a class="twikilink" href="/pmwiki/pmwiki.php/Main/FlashStep" title="/pmwiki/pmwiki.php/Main/FlashStep">flashstepping</a> bullets and knife attacks <span class="spoiler" title="you can set spoilers visible by default on your profile">unless he can't see them coming</span>. Also inverted, if you decide to fight him rather than <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TimedMission" title="/pmwiki/pmwiki.php/Main/TimedMission">time out</a> the level; nearly all of his attacks can be brutally countered if you're fast enough, and his attacks very briefly leave him vulnerable to gunfire.
+</li><li> Agents from <a class="twikilink" href="/pmwiki/pmwiki.php/Film/TheMatrix" title="/pmwiki/pmwiki.php/Film/TheMatrix">The Matrix</a> can be thought of as Perfect Play <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AIs" title="/pmwiki/pmwiki.php/Main/AIs">AIs</a> within that particular game. Any gun attacks are automatically dodged while they walk towards the humans, and generally their kung fu is so much better than yours that there's little chance surviving if you let them reach you. Supposedly, Neo could beat them because he could "read" the patterns in the code and counter the AI.
+</li><li> One "Boss" (all enemies operate the same way, but from the storyline some could be considered bosses) in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DefJamSeries" title="/pmwiki/pmwiki.php/VideoGame/DefJamSeries">DefJam</a>: Fight For New York</em> starts out as this. You're supposed to avoid him until his ability wanes, but it is possible to <a class="twikilink" href="/pmwiki/pmwiki.php/Main/HoistbyHisOwnPetard" title="/pmwiki/pmwiki.php/Main/HoistbyHisOwnPetard">counter all of his attacks.</a>
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SuperCosplayWarUltra" title="/pmwiki/pmwiki.php/VideoGame/SuperCosplayWarUltra">Super Cosplay War Ultra</a></em>, Shin-Z is particularly adept at this. Manage to knock him down? He'll block as soon as he gets up to prevent a follow-up attack. Try to attack him from a distance? He'll start spamming high-priority projectiles non-stop to pin you down while he slowly advances towards you. Manage to jump over the projectiles and air dash in his direction? Genocide Cutter to the face. Manage to get right up next to him somehow? Enjoy an unblockable grab attack, that he'll usually chain into a super grab attack. Sometimes it seems like the only way to hit him is when he tries to use his super when he doesn't have enough EX bars for it, stunning him for a brief second (then again, this is a flaw with all the bosses in the game.)
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MetalGearSolidPortableOps" title="/pmwiki/pmwiki.php/VideoGame/MetalGearSolidPortableOps">Metal Gear Solid: Portable Ops</a></em>, Null does this on harder difficulty modes. If you roll at him at just the right angle, though, he swipes at you with his sword, giving you a window in which you can pump a tranq dart into him.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/ProfessorLaytonAndTheLastSpecter" title="/pmwiki/pmwiki.php/VideoGame/ProfessorLaytonAndTheLastSpecter">Professor Layton and the Last Specter</a></em>, a few puzzles feature an AI opponent, in cases in which you have to force the opponent to make the last move. The opponent will always make the ideal move under the circumstances, and you must make the right decisions to force it into a situation in which it has no choice but to be defeated.
+</li><li> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/WordOfGod" title="/pmwiki/pmwiki.php/Main/WordOfGod">Word of God</a> has stated that Twilight does so in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MyLittlePonyFightingIsMagic" title="/pmwiki/pmwiki.php/VideoGame/MyLittlePonyFightingIsMagic">My Little Pony: Fighting Is Magic</a></em>.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/GuitarHero" title="/pmwiki/pmwiki.php/VideoGame/GuitarHero">Guitar Hero</a> III</em>, Lou misses no notes for the most part (but read on), and often times throws attacks at you during your own attack phrases. The first attack phrase is on his side of the chart only, so no matter how good you are, he can throw one at your first attack phrase. Averted when you do somehow manage to get an attack and throw it at him, as he <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ArtificialStupidity" title="/pmwiki/pmwiki.php/Main/ArtificialStupidity">completely falls apart</a>, even if the affected section could reasonably still be hit by a human player.
+</li><li> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/UnwinnableJokeGame" title="/pmwiki/pmwiki.php/Main/UnwinnableJokeGame">Unwinnable Joke Game</a> <a class="urllink" href="http://www.pippinbarr.com/games/zorba/Zorba.html">Zorba<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a>, in which all you can ever hope to do is tie against your CPU opponent, as it never makes a single mistake. This was apparently deliberate, as the game was made as sort of a commentary that winning against a CPU opponent most of the time is only possible because it <em>lets</em> you win (especially in rhythm games.)
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FortuneSummoners" title="/pmwiki/pmwiki.php/VideoGame/FortuneSummoners">Fortune Summoners</a></em> has both the allied (there are 3 characters, the player control 1 and the AI the other 2, you can switch which you control at any point) and enemy AI do this with a few exceptions or flaws even on the lowest difficulty setting. Enemies dodge the instant an attack is made (even the lowliest of slimes), it is possible (for a lone character) to repeatedly attack them dozens of time and have them dodge every time perfectly, on perfect execution they will not have time to retaliate but neither will you ever hit them. The only way to actually hit an enemy is to use an attack type it cannot dodge, block and then retaliate (taking small amounts of damage and hoping they use a blockable attack) use the terrain to "confuse" them, attack from a range at which they cannot dodge (usually too close but some enemies can be made to dodge in a way that backfires with certain attacks) or to have multiple characters attack the same enemy at once. The AI can also see perfectly through the graphically fancy spell effects that block view and is not affected by the lag caused by such spells (which can introduce several seconds of delay into player commands). When casting spells X must be held down until a circle forms completely and then released to cast, premature release of the button disrupts the spell, the AI always takes exactly the minimum amount of time to cast a spell (minimizing chance of interruption) and never fails to fully form the spell circle. Furthermore the AI can instantly select any spell it knows unlike a human which has to spend time switching between books and desired spells until they reach the right one. The AI for Arche also never messes up a combo (which requires pressing multiple keys in order, with the right timing, and modified by position and situation).
+</li><li> Many racing games feature computer opponents that can make perfect turns and almost never crash
+</li><li> Is the perfect way to describe the AI of the opponent planes during a dogfight in <a class="createlink" href="/pmwiki/pmwiki.php/Main/CarrierAces" title="/pmwiki/pmwiki.php/Main/CarrierAces">Carrier Aces</a>, a SNES original plane simulation game. They evade away your attacks, follow you recklessly until you are right in the middle of their radar, alter their speed in such a way that you're perfectly in their orbit, then shoot at you without you being ever able to hit them afterwards thanks to the fact that you can't execute a turn. They are beatable but you have to take in consideration your speed, fuel and radar.
+</li><li> Non-fighting game example: any game which has been <a class="urllink" href="http://en.wikipedia.org/wiki/Solved_game">strongly solved<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a> has an algorithm out there that can make it utterly unbeatable because it has truly perfect play. This doesn't mean <em>good</em> play; it means truly <a class="urllink" href="http://en.wikipedia.org/wiki/Solved_game#Perfect_play">perfect play<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a> in the game theory sense of the term. For example, try playing the program <a class="urllink" href="http://dana.sourceforge.net/">Velena<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a> at Connect Four and give it the first turn. You will lose because "she" will literally play <em>perfectly</em> because Connect Four has been completely solved - and first player wins.
+<ul><li> While more complex games like chess are far from being completely solved (and likely never will be), there do exist 'tablebases' which are capable of playing perfectly in positions where there are only a small number of pieces on the board (the current limit is around 7).
+</li><li> The game Tic-Tac-Toe can be played perfectly by humans. Perfect play results in a draw. To understand perfect play, you could literally work out all possible games of Tic-Tac-Toe on some scratch paper, and if you do so, you can build a decision tree. Once you do, you realize you have a very simple game where players who know what they're doing will always end up in a draw. To start, realize X only has three initial plays; corner, side, or center. All corners and sides, after all, are equivalent at the start of the game. <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/XKCD" title="/pmwiki/pmwiki.php/Webcomic/XKCD">xkcd</a></em> provides a diagram of optimal plays <a class="urllink" href="https://xkcd.com/832/">here<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a>.
+</li></ul></li><li> Real Life example: In <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/TheArtOfWarSunTzu" title="/pmwiki/pmwiki.php/Literature/TheArtOfWarSunTzu">The Art of War</a></em>, <a class="twikilink" href="/pmwiki/pmwiki.php/Creator/SunTzu" title="/pmwiki/pmwiki.php/Creator/SunTzu">Sun Tzu</a> recommends "safe" approaches such as these in the following quote.
+</li></ul><div class="indent">"... the opportunity of defeating the enemy is provided by the enemy himself."
+</div><ul><li> In the <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Worms" title="/pmwiki/pmwiki.php/VideoGame/Worms">Worms</a></em> series, CPU opponents on the highest settings are able to perfectly calculate bazooka shots to compensate for the wind, and can fire off grenades and related weapons such that they explode right as they hit the target worm. See that worm of yours that's on low health? Well, if the next "CPU: Good" AI opponent is able to make a trajectory to that worm with any of their weapons, <em>and</em> targets the hapless worm, that poor sap is already dead.
+</li><li> The Miis in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TomodachiLife" title="/pmwiki/pmwiki.php/VideoGame/TomodachiLife">Tomodachi Life</a></em> have this in certain minigames, the most obvious case being vs Match, where they have nearly perfect memory as to where each picture was. Oftentimes, you'll only win vs Match because the AI basically let you win.
+</li><li> In Sony's <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MLBTheShow" title="/pmwiki/pmwiki.php/VideoGame/MLBTheShow">MLB: The Show</a></em> baseball series, the computer pulls this stuff on both offense and defense.
+<ul><li> When it's batting, the computer will suddenly make contact with almost every pitch, either fouling the ball away or getting a hit. This serves the purpose of either tiring out your pitcher faster or reducing your total score, since anything that isn't a three-pitch strikeout detracts from it.
+</li><li> When it's pitching, the computer will become amazingly accurate at hitting the strike zone once it's gotten two balls or more. The computer will also be able to sniff out a base-stealing attempt like a bloodhound.
+</li></ul></li><li> Inconsistent with <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/LeagueOfLegends" title="/pmwiki/pmwiki.php/VideoGame/LeagueOfLegends">League of Legends</a></em> bots, particularly at intermediate level. An observable example is they evade Jinx's "Zap!" taser with perfect timing, even when fired while in stealth or otherwise out of sight. However, they stupidly run right into her "Flame Chomper" traps.
+</li><li> The Yu-Gi-Oh! Duel Generation AI can be quite strong, especially on harder campaign mode decks and weekly challenges, making incredible utilization of their decks.
+</li><li> The old <em><a class="twikilink" href="/pmwiki/pmwiki.php/Manga/OnePiece" title="/pmwiki/pmwiki.php/Manga/OnePiece">One Piece: Grand Battle</a></em> series of games on the Gamecube and <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/PlayStation2" title="/pmwiki/pmwiki.php/UsefulNotes/PlayStation2">PlayStation 2</a>, mostly the final one which was released only in America: <em>Grand Adventure</em>. The opponent AI is actually pretty dumb on normal and hard difficulty, but <em>hardest</em>? Hoo boy. You might as well be playing with a handicap against you; the AI no longer gets stunned when caught in a combo (so they can attack you between punches, meaning slow <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MightyGlacier" title="/pmwiki/pmwiki.php/Main/MightyGlacier">Mighty Glacier</a> characters are next to useless), they're programmed to <em>immediately</em> grab or use a guard breaker the second you press the block button, and the ones with counter attacks will use them perfectly without fail. What's worse is that, unlike most fighting games, they often will outright have double your health, strength, <em>and</em> defense even when it defies common sense. The only way to win is to spam aerial attacks, items, and super attacks and hope you don't die (though <em>throwing</em> items no longer works either, since they have perfect timing and will catch them no matter what position they're in and throw it back at you).
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/QuakeI" title="/pmwiki/pmwiki.php/VideoGame/QuakeI">QuakeI</a></em> didn't implement the trope, but was one of the first games where developers created bots to simulate players. For example, the Reaper bot. While it can't read your input, it could hear you from anywhere on the map, had dead perfect aim (emphasis on "dead"), a reaction time measured in milliseconds, and could dodge anything non-hitscan that you threw at it. As developer experience generally increased, later shooters and bot developers deliberately nerfed their bots to be less inhuman (outside of higher difficulty levels).
+</li><li> Non-game example: in <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/StarTrekTheNextGeneration" title="/pmwiki/pmwiki.php/Series/StarTrekTheNextGeneration">Star Trek: The Next Generation</a></em> during their rematch Data used this strategy against the Strategema master Kolrami, making a perfect play for a <em>draw</em>. This wore Kolrami out so much that he <a class="twikilink" href="/pmwiki/pmwiki.php/Main/RageQuit" title="/pmwiki/pmwiki.php/Main/RageQuit">Rage Quit</a>, giving Data the victory.
+</li><li> The <a class="twikilink" href="/pmwiki/pmwiki.php/Main/FinalBoss" title="/pmwiki/pmwiki.php/Main/FinalBoss">Final Boss</a> of <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/ZXSpectrum" title="/pmwiki/pmwiki.php/UsefulNotes/ZXSpectrum">ZX Spectrum</a> darts sim <em>180</em> is Jammy Jim. You get first throw, and you'll need it because one blink and he'll 9-dart you. He misses his target about once in every fifty throws. It's quite telling that while you need to take two legs to beat everyone else, you can beat Jim with one.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Touhou" title="/pmwiki/pmwiki.php/VideoGame/Touhou">Touhou</a></em>'s Phantasmagoria games the A.I. has two settings: play as an idiot or as a god. After spawning the A.I. will dodge absolutely everything you throw at it, and this is obvious from the way it moves (erratic, seemingly suicidal moves around bullets but always stopping short of getting hit). This is temporary only, after a while the A.I. will switch to idiot mode and get quickly murdered. This is what makes up the game's timer system, where each level's objective is to survive long enough for the A.I. to end up killing itself.
+<ul><li> The A.I. actually does have a flaw, but in this particular Touhou game you're unlikely to be able to exploit it before the opponent's invincibility period wears off (this is why people don't always realize there <em>is</em> an invincibility period, due to the aversion of <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TheLawOfDiminishingDefensiveEffort" title="/pmwiki/pmwiki.php/Main/TheLawOfDiminishingDefensiveEffort">The Law of Diminishing Defensive Effort</a>). It only calculates bullet trajectories in its immediate vicinity and can fail to spot an completely inescapable pattern coming until it's too late to avoid it, where a human player would head for the other side of the screen seconds before.
+</li></ul></li><li> The final boss of the puzzle game <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/WindAndWaterPuzzleBattles" title="/pmwiki/pmwiki.php/VideoGame/WindAndWaterPuzzleBattles">Wind And Water: Puzzle Battles</a></em>, Shinji, is a gigantic <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DifficultySpike" title="/pmwiki/pmwiki.php/Main/DifficultySpike">Difficulty Spike</a> is comparison to the previous boss due to this trope. He makes the most effective possible combinations and dozen-long chains with every move he makes, gaining over 10000 points per minute. Nothing the average player ever thinks up will ever put a scratch on this guy, so most people are left hoping for some fluke to happen — twice in a row, since you have to win two rounds to beat him.
+</li><li> Unlock the 'Z3' difficulty in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DragonBallZBudokai" title="/pmwiki/pmwiki.php/VideoGame/DragonBallZBudokai"> Dragon Ball Z: Budokai</a></em> and <em>every</em> enemy in the story becomes this.
+</li><li> Similar to the <em>Zorba</em> example above, <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Yakuza0" title="/pmwiki/pmwiki.php/VideoGame/Yakuza0">Yakuza 0</a></em> has a disco dancing minigame where the player can engage in dance-offs with other dancers. One opponent for these is Miracle Johnson, an <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Expy" title="/pmwiki/pmwiki.php/Main/Expy">Expy</a> of <a class="twikilink" href="/pmwiki/pmwiki.php/Music/MichaelJackson" title="/pmwiki/pmwiki.php/Music/MichaelJackson">Michael Jackson</a>, and the dance-off is set to a song <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SuspiciouslySimilarSong" title="/pmwiki/pmwiki.php/Main/SuspiciouslySimilarSong">suspiciously similar to "Bad".</a> Needless to say, Miracle will always get the highest possible score and <a class="twikilink" href="/pmwiki/pmwiki.php/Main/HopelessBossFight" title="/pmwiki/pmwiki.php/Main/HopelessBossFight">there's no way to beat him.</a> Fortunately, the substory this dance battle happens in continues on even after you lose.
+</li></ul><h2>Non-game examples:</h2>
+<ul><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/SuperMinion" title="/pmwiki/pmwiki.php/Literature/SuperMinion">Super Minion</a></em>, Adder describes Tofu as always making the perfect move in every situation during a fight. This makes him a fearsome opponent for all but the most skilled opponents, but Adder knows exactly how to manipulate him because even reliably making the right choice <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AIBreaker" title="/pmwiki/pmwiki.php/Main/AIBreaker">is a kind of predictability</a>.
+</li></ul><hr/>
+</div>
+<div class="square_ad footer-article-ad main_2" data-isolated="0"></div>
+<div class="section-links" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<div class="titles">
+<div><h3 class="text-center text-uppercase">Previous</h3></div>
+<div><h3 class="text-center text-uppercase">Index</h3></div>
+<div><h3 class="text-center text-uppercase">Next</h3></div>
+</div>
+<div class="links">
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/NPCScheduling">NPC Scheduling</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/VideoGameAI">Video Game A.I.</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/RubberBandAI">Rubber-Band A.I.</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/NonGivingUpSchoolGuy">Non-Giving-Up School Guy</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/ThisIndexIsUnstoppable">This Index Is Unstoppable</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/PerpetualMotionMonster">Perpetual-Motion Monster</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/MovesetClone">Moveset Clone</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/VideogameCharacters">Video Game Characters</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/SkillGateCharacters">Skill Gate Characters</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="outer_ads_by_salon_wrapper" id="exco_player_insert_div">
+</div>
+</article>
+<div id="main-content-sidebar"><div class="sidebar-item display-options">
+<ul class="sidebar display-toggles">
+<li>Show Spoilers <div class="display-toggle show-spoilers" id="sidebar-toggle-showspoilers"></div></li>
+<li>Night Vision <div class="display-toggle night-vision" id="sidebar-toggle-nightvision"></div></li>
+<li>Sticky Header <div class="display-toggle sticky-header" id="sidebar-toggle-stickyheader"></div></li>
+<li>Wide Load <div class="display-toggle wide-load" id="sidebar-toggle-wideload"></div></li>
+</ul>
+<script>updateDesktopPrefs();</script>
+</div>
+<div class="sidebar-item ad sb-ad-unit">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_2"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_2'); });</script> </div>
+</div></div>
+<div class="sidebar-item quick-links" itemtype="http://schema.org/SiteNavigationElement">
+<p class="sidebar-item-title" data-title="Important Links">Important Links</p>
+<div class="padded">
+<a href="/pmwiki/query.php?type=att">Ask The Tropers</a>
+<a href="/pmwiki/query.php?type=tf">Trope Finder</a>
+<a href="/pmwiki/query.php?type=ykts">You Know That Show...</a>
+<a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a>
+<a href="/pmwiki/review_activity.php">Reviews</a>
+<a data-modal-target="login" href="/pmwiki/lbs.php">Live Blogs</a>
+<a href="/pmwiki/ad-free-subscribe.php">Go Ad Free!</a> </div>
+</div>
+<div class="sidebar-item sb-ad-unit">
+<div class="sidebar-section">
+<div class="square_ad ad-size-300x600 ad-section text-center">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_3"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_3'); });</script> </div>
+</div> </div>
+</div>
+</div>
+<div class="sidebar-item">
+<p class="sidebar-item-title" data-title="Crucial Browsing">Crucial Browsing</p>
+<ul class="padded font-s" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><a data-click-toggle="active" href="javascript:void(0);">Genre</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/ActionAdventureTropes" title="Main/ActionAdventureTropes">Action Adventure</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ComedyTropes" title="Main/ComedyTropes">Comedy</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CommercialsTropes" title="Main/CommercialsTropes">Commercials</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CrimeAndPunishmentTropes" title="Main/CrimeAndPunishmentTropes">Crime &amp; Punishment</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DramaTropes" title="Main/DramaTropes">Drama</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/HorrorTropes" title="Main/HorrorTropes">Horror</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LoveTropes" title="Main/LoveTropes">Love</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NewsTropes" title="Main/NewsTropes">News</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ProfessionalWrestling" title="Main/ProfessionalWrestling">Professional Wrestling</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SpeculativeFictionTropes" title="Main/SpeculativeFictionTropes">Speculative Fiction</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SportsStoryTropes" title="Main/SportsStoryTropes">Sports Story</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/WarTropes" title="Main/WarTropes">War</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Media</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/Media" title="Main/Media">All Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/AnimationTropes" title="Main/AnimationTropes">Animation (Western)</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Anime" title="Main/Anime">Anime</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ComicBookTropes" title="Main/ComicBookTropes">Comic Book</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FanFic" title="FanFic/FanFics">Fan Fics</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Film" title="Main/Film">Film</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/GameTropes" title="Main/GameTropes">Game</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Literature" title="Main/Literature">Literature</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MusicAndSoundEffects" title="Main/MusicAndSoundEffects">Music And Sound Effects</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NewMediaTropes" title="Main/NewMediaTropes">New Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/PrintMediaTropes" title="Main/PrintMediaTropes">Print Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Radio" title="Main/Radio">Radio</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SequentialArt" title="Main/SequentialArt">Sequential Art</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TabletopGames" title="Main/TabletopGames">Tabletop Games</a></li>
+<li><a href="/pmwiki/pmwiki.php/UsefulNotes/Television" title="Main/Television">Television</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Theater" title="Main/Theater">Theater</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/VideogameTropes" title="Main/VideogameTropes">Videogame</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Webcomics" title="Main/Webcomics">Webcomics</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Narrative</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/UniversalTropes" title="Main/UniversalTropes">Universal</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/AppliedPhlebotinum" title="Main/AppliedPhlebotinum">Applied Phlebotinum</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CharacterizationTropes" title="Main/CharacterizationTropes">Characterization</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Characters" title="Main/Characters">Characters</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CharactersAsDevice" title="Main/CharactersAsDevice">Characters As Device</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Dialogue" title="Main/Dialogue">Dialogue</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Motifs" title="Main/Motifs">Motifs</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NarrativeDevices" title="Main/NarrativeDevices">Narrative Devices</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Paratext" title="Main/Paratext">Paratext</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Plots" title="Main/Plots">Plots</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Settings" title="Main/Settings">Settings</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Spectacle" title="Main/Spectacle">Spectacle</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Other Categories</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/BritishTellyTropes" title="Main/BritishTellyTropes">British Telly</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TheContributors" title="Main/TheContributors">The Contributors</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CreatorSpeak" title="Main/CreatorSpeak">Creator Speak</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Creators" title="Main/Creators">Creators</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DerivativeWorks" title="Main/DerivativeWorks">Derivative Works</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LanguageTropes" title="Main/LanguageTropes">Language</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LawsAndFormulas" title="Main/LawsAndFormulas">Laws And Formulas</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ShowBusiness" title="Main/ShowBusiness">Show Business</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SplitPersonalityTropes" title="Main/SplitPersonalityTropes">Split Personality</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/StockRoom" title="Main/StockRoom">Stock Room</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TropeTropes" title="Main/TropeTropes">Trope</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Tropes" title="Main/Tropes">Tropes</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TruthAndLies" title="Main/TruthAndLies">Truth And Lies</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TruthInTelevision" title="Main/TruthInTelevision">Truth In Television</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Topical Tropes</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/BetrayalTropes" title="Main/BetrayalTropes">Betrayal</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CensorshipTropes" title="Main/CensorshipTropes">Censorship</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CombatTropes" title="Main/CombatTropes">Combat</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DeathTropes" title="Main/DeathTropes">Death</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FamilyTropes" title="Main/FamilyTropes">Family</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FateAndProphecyTropes" title="Main/FateAndProphecyTropes">Fate And Prophecy</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FoodTropes" title="Main/FoodTropes">Food</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/HolidayTropes" title="Main/HolidayTropes">Holiday</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MemoryTropes" title="Main/MemoryTropes">Memory</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MoneyTropes" title="Main/MoneyTropes">Money</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MoralityTropes" title="Main/MoralityTropes">Morality</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/PoliticsTropes" title="Main/PoliticsTropes">Politics</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ReligionTropes" title="Main/ReligionTropes">Religion</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SchoolTropes" title="Main/SchoolTropes">School</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="sidebar-item showcase">
+<p class="sidebar-item-title" data-title="Community Showcase">Community Showcase <a class="bubble float-right hover-blue" href="/pmwiki/showcase.php">More</a></p>
+<p class="community-showcase">
+<a href="https://sharetv.com/shows/echo_chamber" onclick="trackOutboundLink('https://sharetv.com/shows/echo_chamber');" target="_blank">
+<img alt="" class="lazy-image" data-src="/images/communityShowcase-echochamber.jpg"/></a>
+<a href="/pmwiki/pmwiki.php/Webcomic/TwistedTropes">
+<img alt="" class="lazy-image" data-src="/img/howlandsc-side.jpg"/></a>
+</p>
+</div>
+<div class="sidebar-item sb-ad-unit" id="stick-cont">
+<div class="sidebar-section" id="stick-bar">
+<div class="square_ad ad-size-300x600 ad-section text-center">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_4"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_4'); });</script> </div>
+</div> </div>
+</div>
+</div>
+</div>
+</div>
+<div class="action-bar tablet-off" id="action-bar-bottom">
+<a class="scroll-to-top dead-button" href="#top-of-page" onclick="$('html, body').animate({scrollTop : 0},500);">Top</a>
+</div>
+</div>
+<div class="proper-ad-unit ad-sticky">
+<div id="proper-ad-tvtropes_sticky_ad"> <script>propertag.cmd.push(function() { proper_display('tvtropes_sticky_ad'); });</script> </div>
+</div>
+<footer id="main-footer">
+<div id="main-footer-inner">
+<div class="footer-left">
+<a class="img-link" href="/"><img alt="TV Tropes" class="lazy-image" data-src="/img/tvtropes-footer-logo.png" title="TV Tropes"/></a>
+<form action="index.html" class="navbar-form newsletter-signup validate modal-replies" data-ajax-get="/ajax/subscribe_email.php" id="cse-search-box-mobile" name="" role="">
+<button class="btn-submit newsletter-signup-submit-button" id="subscribe-btn" type="submit"><i class="fa fa-paper-plane"></i></button>
+<input class="form-control" id="subscription-email" name="q" placeholder="Subscribe" size="31" type="text" validate-type="email" value=""/>
+</form>
+<ul class="social-buttons">
+<li><a class="btn fb" href="https://www.facebook.com/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-facebook']);" target="_blank"><i class="fa fa-facebook"></i></a></li>
+<li><a class="btn tw" href="https://www.twitter.com/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-twitter']);" target="_blank"><i class="fa fa-twitter"></i></a> </li>
+<li><a class="btn rd" href="https://www.reddit.com/r/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-reddit']);" target="_blank"><i class="fa fa-reddit-alien"></i></a></li>
+</ul>
+</div>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">TVTropes</h4></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Administrivia">About TVTropes</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TheGoalsOfTVTropes">TVTropes Goals</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TheTropingCode">Troping Code</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TVTropesCustoms">TVTropes Customs</a></li>
+<li><a href="/pmwiki/pmwiki.php/JustForFun/TropesOfLegend">Tropes of Legend</a></li>
+<li><a href="/pmwiki/ad-free-subscribe.php">Go Ad-Free</a></li>
+</ul>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">Community</h4></li>
+<li><a href="/pmwiki/query.php?type=att">Ask The Tropers</a></li>
+<li><a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a></li>
+<li><a href="/pmwiki/query.php?type=tf">Trope Finder</a></li>
+<li><a href="/pmwiki/query.php?type=ykts">You Know That Show</a></li>
+<li><a data-modal-target="login" href="/pmwiki/lbs.php">Live Blogs</a></li>
+<li><a href="/pmwiki/review_activity.php">Reviews</a></li>
+<li><a href="/pmwiki/topics.php">Forum</a></li>
+</ul>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">Tropes HQ</h4></li>
+<li><a href="/pmwiki/about.php">About Us</a></li>
+<li><a href="/pmwiki/contact.php">Contact Us</a></li>
+<li><a href="/pmwiki/dmca.php">DMCA Notice</a></li>
+<li><a href="/pmwiki/privacypolicy.php">Privacy Policy</a></li>
+</ul>
+</div>
+<div class="text-center gutter-top gutter-bottom tablet-on" id="desktop-on-mobile-toggle">
+<a href="/pmwiki/switchDeviceCss.php?mobileVersion=1" rel="nofollow">Switch to <span class="txt-desktop">Desktop</span><span class="txt-mobile">Mobile</span> Version</a>
+</div>
+<div class="legal">
+<p>TVTropes is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License. <br/>Permissions beyond the scope of this license may be available from <a href="mailto:thestaff@tvtropes.org" rel="cc:morePermissions" xmlns:cc="http://creativecommons.org/ns#"> thestaff@tvtropes.org</a>.</p>
+<br/>
+<div class="privacy_wrapper">
+</div>
+</div>
+</footer>
+<style>
+      div.fc-ccpa-root {
+        position: absolute !important;
+        bottom: 93px !important;
+        margin: auto !important;
+        width: 100% !important;
+        z-index: 9999 !important;
+      }
+      .fc-ccpa-root .fc-dns-dialog .fc-dns-link p{
+        outline: none !important;
+        text-decoration: underline !important;
+        font-size: .7em !important;
+        font-family: sans-serif !important;
+      }
+      .fc-ccpa-root .fc-dns-dialog .fc-dns-link .fc-button-background {
+        background: none !important;
+      }
+    </style>
+<div class="full-screen" id="_pm_videoViewer">
+<a class="close" href="#close" id="_pm_videoViewer-close"></a>
+<div class="_pmvv-body">
+<div class="_pmvv-vidbox">
+<video class="video-js vjs-default-skin vjs-16-9" data-video-id="" id="overlay-video-player-box">
+</video>
+<div class="_pmvv-vidbox-desc">
+<h1 id="overlay-title"></h1>
+<p class="_pmvv-vidbox-descTxt" id="overlay-descrip">
+</p>
+<div class="rating-row" data-video-id="">
+<input name="is_logged_in" type="hidden" value="0"/>
+<p>How well does it match the trope?</p>
+<div id="star-rating-group">
+<div class="trope-rate">
+<input id="lamp5" name="rate" type="radio" value="5"/>
+<label for="lamp5" title="Absolutely"></label>
+<input id="lamp4" name="rate" type="radio" value="4"/>
+<label for="lamp4" title="Yes"></label>
+<input id="lamp3" name="rate" type="radio" value="3"/>
+<label for="lamp3" title="Kind of"></label>
+<input id="lamp2" name="rate" type="radio" value="2"/>
+<label for="lamp2" title="Not really"></label>
+<input id="lamp1" name="rate" type="radio" value="1"/>
+<label for="lamp1" title="No"></label>
+</div>
+<div id="star-rating-total">
+</div>
+</div>
+</div>
+<div class="example-media-row">
+<div class="example-overlay">
+<p>Example of:</p>
+<div id="overlay-trope"> / </div>
+</div>
+<div class="media-sources-overlay example-overlay">
+<p>Media sources:</p>
+<div id="overlay-media"> / </div>
+</div>
+</div>
+<p class="_pmvv-vidbox-stats text-right font-s" style="padding-top:8px; border-top: solid 1px rgba(255,255,255,0.2)">
+<a class="float-right" data-modal-target="login" href="#video-feedback">Report</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+        window.special_ops =  {
+            member : 'no',
+            isolated : 0,
+            tags : ['videogame']
+        };
+    </script>
+<script type="text/javascript">
+
+        var cleanCreativeEnabled = "";
+        var donation = "";
+        var live_ads = "1";
+        var img_domain = "https://static.tvtropes.org";
+        var snoozed = cookies.read('snoozedabm');
+        var snoozable = "";
+
+        if (adsRemovedWith) {
+            live_ads = 0;
+        }
+
+        var elem = document.createElement('script');
+        elem.async = true;
+
+        elem.src = '/design/assets/bundle.js?rev=c58d8df02f09262390bbd03db7921fc35c6af306';
+
+        elem.onload = function() {
+                                 }
+        document.getElementsByTagName('head')[0].appendChild(elem);
+
+    </script>
+<script type="text/javascript">
+      function send_analytics_event(user_type, donation){
+          // if(user_type == 'uncached' || user_type == 'cached'){
+          //   ga('send', 'event', 'caching', 'load', user_type, {'nonInteraction': 1});
+          //   return;
+          // }
+          var event_name = user_type;
+
+          if(donation == 'true'){
+              event_name += "_donation"
+          }else if(typeof(valid_user) == 'undefined'){
+              event_name += "_blocked"
+          }else if(valid_user == true){
+              event_name += "_unblocked";
+          }else{
+              event_name = "_unknown"
+          }
+          ga('send', 'event', 'ads', 'load', event_name, {'nonInteraction': 1});
+      }
+
+    
+    send_analytics_event("guest", "false");
+      </script>
+</body>
+</html>

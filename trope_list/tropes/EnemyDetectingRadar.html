@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Enemy-Detecting Radar - TV Tropes</title>
+<meta content="The Enemy-Detecting Radar trope as used in popular culture. A few real life combat vehicles have radar support (and all seafaring vessels are required to …" name="description"/>
+<link href="https://tvtropes.org/pmwiki/pmwiki.php/Main/EnemyDetectingRadar" rel="canonical"/>
+<link href="/img/icons/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="@tvtropes" name="twitter:site"/>
+<meta content="@tvtropes" name="twitter:owner"/>
+<meta content="Enemy-Detecting Radar - TV Tropes" name="twitter:title"/>
+<meta content="The Enemy-Detecting Radar trope as used in popular culture. A few real life combat vehicles have radar support (and all seafaring vessels are required to …" name="twitter:description"/>
+<meta content="https://static.tvtropes.org/logo_blue_small.png" name="twitter:image:src"/>
+<meta content="TV Tropes" property="og:site_name"/>
+<meta content="en_US" property="og:locale"/>
+<meta content="https://www.facebook.com/tvtropes" property="article:publisher"/>
+<meta content="Enemy-Detecting Radar - TV Tropes" property="og:title"/>
+<meta content="website" property="og:type"/>
+<meta content="https://tvtropes.org/pmwiki/pmwiki.php/Main/EnemyDetectingRadar" property="og:url"/>
+<meta content="https://static.tvtropes.org/logo_blue_small.png" property="og:image"/>
+<meta content="A few real life combat vehicles have radar support (and all seafaring vessels are required to have at least one) that can help the pilot navigate the battlefield and avoid enemies, so it's no surprise that this is often part of video games that …" property="og:description"/>
+<link href="/img/icons/apple-icon-57x57.png" rel="apple-touch-icon" sizes="57x57" type="image/png"/>
+<link href="/img/icons/apple-icon-60x60.png" rel="apple-touch-icon" sizes="60x60" type="image/png"/>
+<link href="/img/icons/apple-icon-72x72.png" rel="apple-touch-icon" sizes="72x72" type="image/png"/>
+<link href="/img/icons/apple-icon-76x76.png" rel="apple-touch-icon" sizes="76x76" type="image/png"/>
+<link href="/img/icons/apple-icon-114x114.png" rel="apple-touch-icon" sizes="114x114" type="image/png"/>
+<link href="/img/icons/apple-icon-120x120.png" rel="apple-touch-icon" sizes="120x120" type="image/png"/>
+<link href="/img/icons/apple-icon-144x144.png" rel="apple-touch-icon" sizes="144x144" type="image/png"/>
+<link href="/img/icons/apple-icon-152x152.png" rel="apple-touch-icon" sizes="152x152" type="image/png"/>
+<link href="/img/icons/apple-icon-180x180.png" rel="apple-touch-icon" sizes="180x180" type="image/png"/>
+<link href="/img/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/img/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/img/icons/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png"/>
+<link href="/img/icons/favicon-192x192.png" rel="icon" sizes="192x192" type="image/png"/>
+<meta content="width=device-width, initial-scale=1" id="viewport" name="viewport"/>
+<script>
+                var propertag = {};
+                propertag.cmd = [];
+            </script>
+<link href="/design/assets/bundle.css?rev=c58d8df02f09262390bbd03db7921fc35c6af306" rel="stylesheet"/>
+<script>
+                function object(objectId) {
+                    if (document.getElementById && document.getElementById(objectId)) {
+                        return document.getElementById(objectId);
+                    } else if (document.all && document.all(objectId)) {
+                        return document.all(objectId);
+                    } else if (document.layers && document.layers[objectId]) {
+                        return document.layers[objectId];
+                    } else {
+                        return false;
+                    }
+                }
+
+                // JAVASCRIPT COOKIES CODE: for getting and setting user viewing preferences
+                var cookies = {
+                    create: function (name, value, days2expire, path) {
+                        var date = new Date();
+                        date.setTime(date.getTime() + (days2expire * 24 * 60 * 60 * 1000));
+                        var expires = date.toUTCString();
+                        document.cookie = name + '=' + value + ';' + 'expires=' + expires + ';' + 'path=' + path + ';';
+                    },
+										createWithExpire: function(name, value, expires, path) {
+												document.cookie = name + '=' + value + ';' + 'expires=' + expires + ';' + 'path=' + path + ';';
+										},
+                    read: function (name) {
+                        var cookie_value = "",
+                            current_cookie = "",
+                            name_expr = name + "=",
+                            all_cookies = document.cookie.split(';'),
+                            n = all_cookies.length;
+
+                        for (var i = 0; i < n; i++) {
+                            current_cookie = all_cookies[i].trim();
+                            if (current_cookie.indexOf(name_expr) === 0) {
+                                cookie_value = current_cookie.substring(name_expr.length, current_cookie.length);
+                                break;
+                            }
+                        }
+                        return cookie_value;
+                    },
+                    update: function (name, val) {
+                        this.create(name, val, 300, "/");
+                    },
+                    remove: function (name) {
+                        document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
+                    }
+                };
+
+                function updateUserPrefs() {
+                    //GENERAL: detect and set browser, if not cookied (will be treated like a user-preference and added to the #user-pref element)
+                    if( !cookies.read('user-browser') ){
+                        var broswer = '';
+
+                        if(navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPod/i) ){
+                            browser = 'iOS';
+                        } else if (/Opera[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'opera';
+                        } else if (/MSIE (\d+\.\d+);/.test(navigator.userAgent)) {
+                            browser = 'MSIE';
+                        } else if (/Navigator[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'netscape';
+                        } else if (/Chrome[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'chrome';
+                        } else if (/Safari[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'safari';
+                            /Version[\/\s](\d+\.\d+)/.test(navigator.userAgent);
+                            browserVersion = new Number(RegExp.$1);
+                        } else if (/Firefox[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'firefox';
+                        } else {
+                            browser = 'internet_explorer';
+                        }
+                        cookies.create('user-browser',browser,1,'/');
+                        document.getElementById('user-prefs').classList.add('browser-' + browser);
+                    } else {
+                        document.getElementById('user-prefs').classList.add('browser-' + cookies.read('user-browser'));
+                    }
+
+                    //update user preference settings
+                    if (cookies.read('wide-load') !== '') document.getElementById('user-prefs').classList.add('wide-load');
+                    if (cookies.read('night-vision') !== '') document.getElementById('user-prefs').classList.add('night-vision');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('user-prefs').classList.add('sticky-header');
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('user-prefs').classList.add('show-spoilers');
+                    if (cookies.read('folders-open') !== '') document.getElementById('user-prefs').classList.add('folders-open');
+                    if (cookies.read('lefthand-sidebar') !== '') document.getElementById('user-prefs').classList.add('lefthand-sidebar');
+                    if (cookies.read('highlight-links') !== '') document.getElementById('user-prefs').classList.add('highlight-links');
+                    if (cookies.read('forum-gingerbread') !== '') document.getElementById('user-prefs').classList.add('forum-gingerbread');
+                    if (cookies.read('shared-avatars') !== '') document.getElementById('user-prefs').classList.add('shared-avatars');
+                    if (cookies.read('new-search') !== '') document.getElementById('user-prefs').classList.add('new-search');
+                    if (cookies.read('stop-auto-play-video') !== '') document.getElementById('user-prefs').classList.add('stop-auto-play-video');
+
+                    //desktop view on mobile
+                    if (cookies.read('desktop-on-mobile') !== ''){
+                        document.getElementById('user-prefs').classList.add('desktop-on-mobile');
+
+                        var viewport = document.querySelector("meta[name=viewport]");
+                        viewport.setAttribute('content', 'width=1000');
+                    }
+
+                }
+
+                function updateDesktopPrefs() {
+                    if (cookies.read('wide-load') !== '') document.getElementById('sidebar-toggle-wideload').classList.add('active');
+                    if (cookies.read('night-vision') !== '') document.getElementById('sidebar-toggle-nightvision').classList.add('active');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('sidebar-toggle-stickyheader').classList.add('active');
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('sidebar-toggle-showspoilers').classList.add('active');
+
+                }
+
+                function updateMobilePrefs() {
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('mobile-toggle-showspoilers').classList.add('active');
+                    if (cookies.read('night-vision') !== '') document.getElementById('mobile-toggle-nightvision').classList.add('active');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('mobile-toggle-stickyheader').classList.add('active');
+                    if (cookies.read('highlight-links') !== '') document.getElementById('mobile-toggle-highlightlinks').classList.add('active');
+
+                }
+
+
+                if (document.cookie.indexOf("scroll0=") < 0) {
+                    // do nothing
+                } else {
+                    console.log('ads removed by scroll.com');
+                    var adsRemovedWith = 'scroll';
+                    var style = document.createElement('style');
+                    style.innerHTML = '#header-ad, .proper-ad-unit, .square_ad, .sb-ad-unit { display: none !important; } ';
+                    document.head.appendChild(style);
+                }
+            </script>
+<script type="text/javascript">
+
+                var tvtropes_config = {
+                    astri_stream_enabled : "",
+                    is_logged_in         : "",
+                    handle               : "",
+                    get_astri_stream     : "",
+										revnum               : "c58d8df02f09262390bbd03db7921fc35c6af306",
+										img_domain           : "https://static.tvtropes.org",
+										adblock              : "1",
+										adblock_url          : "propermessage.io",
+										pause_editing        : "0",
+										pause_editing_msg    : "",
+										pause_site_changes   : ""
+                };
+            </script>
+<script type="text/javascript">
+						  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+						  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+						  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+						  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+						  ga('create', 'UA-3821842-1', 'auto');
+						  ga('send', 'pageview');
+
+						</script>
+</head>
+<body class="">
+<i id="user-prefs"></i>
+<script>updateUserPrefs();</script>
+<div id="fb-root"></div>
+<div id="modal-box"></div>
+<header class="headroom-element" id="main-header-bar">
+<div id="main-header-bar-inner">
+<span class="header-spacer" id="header-spacer-left"></span>
+<a class="mobile-menu-toggle-button tablet-on" href="#mobile-menu" id="main-mobile-toggle"><span></span><span></span><span></span></a>
+<a class="no-dev" href="/" id="main-header-logoButton"></a>
+<span class="header-spacer" id="header-spacer-right"></span>
+<nav class="tablet-off" id="main-header-nav">
+<a href="/pmwiki/pmwiki.php/Main/Tropes">Tropes</a>
+<a href="/pmwiki/pmwiki.php/Main/Media">Media</a>
+<a class="nav-browse" href="/pmwiki/browse.php">Browse</a>
+<a href="/pmwiki/index_report.php">Indexes</a>
+<a href="/pmwiki/topics.php">Forums</a>
+<a class="nav-browse" href="/pmwiki/recent_videos.php">Videos</a>
+</nav>
+<div id="main-header-bar-right">
+<div class="font-xs mobile-off" id="signup-login-box">
+<a class="hover-underline bold" data-modal-target="signup" href="/pmwiki/login.php">Join</a>
+<a class="hover-underline bold" data-modal-target="login" href="/pmwiki/login.php">Login</a>
+</div>
+<div class="mobile-on inline" id="signup-login-mobileToggle">
+<a data-modal-target="login" href="/pmwiki/login.php"><i class="fa fa-user"></i></a>
+</div>
+<div id="search-box">
+<form action="/pmwiki/search_result.php" class="search">
+<input class="search-box" name="q" placeholder="Search" required="" type="text" value=""/>
+<input class="submit-button" type="submit" value=""/>
+<input name="search_type" type="hidden" value="article"/>
+<input name="page_type" type="hidden" value="all"/>
+<input name="cx" type="hidden" value="partner-pub-6610802604051523:amzitfn8e7v"/>
+<input name="cof" type="hidden" value="FORID:10"/>
+<input name="ie" type="hidden" value="ISO-8859-1"/>
+<input name="siteurl" type="hidden" value=""/>
+<input name="ref" type="hidden" value=""/>
+<input name="ss" type="hidden" value=""/>
+</form>
+<a class="mobile-on mobile-search-toggle close-x" href="#close-search"><i class="fa fa-close"></i></a>
+</div>
+<div id="random-box">
+<a class="button-random-trope" href="/pmwiki/pmwiki.php/Main/BackstoryHorror" onclick="ga('send', 'event', 'button', 'click', 'random trope');" rel="nofollow"></a>
+<a class="button-random-media" href="/pmwiki/pmwiki.php/Music/TheRutles" onclick="ga('send', 'event', 'button', 'click', 'random media');" rel="nofollow"></a>
+</div>
+</div>
+</div>
+<div class="tablet-on" id="mobile-menu"><div class="mobile-menu-options">
+<div class="nav-wrapper">
+<a class="xl" href="/pmwiki/pmwiki.php/Main/Tropes">Tropes</a>
+<a class="xl" href="/pmwiki/pmwiki.php/Main/Media">Media</a>
+<a class="xl" href="/pmwiki/browse.php">Browse</a>
+<a class="xl" href="/pmwiki/index_report.php">Indexes</a>
+<a class="xl" href="/pmwiki/topics.php">Forums</a>
+<a class="xl" href="/pmwiki/recent_videos.php">Videos</a>
+<a href="/pmwiki/query.php?type=att">Ask The Tropers</a>
+<a href="/pmwiki/query.php?type=tf">Trope Finder</a>
+<a href="/pmwiki/query.php?type=ykts">You Know That Show...</a>
+<a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a>
+<a data-click-toggle="active" href="#tools">Tools <i class="fa fa-chevron-down"></i></a>
+<div class="tools-dropdown mobile-dropdown-linkList">
+<a href="/pmwiki/cutlist.php">Cut List</a>
+<a href="/pmwiki/changes.php">New Edits</a>
+<a href="/pmwiki/recent_edit_reasons.php">Edit Reasons</a>
+<a href="/pmwiki/launches.php">Launches</a>
+<a href="/pmwiki/img_list.php">Images List</a>
+<a href="/pmwiki/crown_activity.php">Crowner Activity</a>
+<a href="/pmwiki/no_types.php">Un-typed Pages</a>
+<a href="/pmwiki/page_type_audit.php">Recent Page Type Changes</a>
+</div>
+<a data-click-toggle="active" href="#hq">Tropes HQ <i class="fa fa-chevron-down"></i></a>
+<div class="tools-dropdown mobile-dropdown-linkList">
+<a href="/pmwiki/about.php">About Us</a>
+<a href="/pmwiki/contact.php">Contact Us</a>
+<a href="mailto:advertising@proper.io">Advertise</a>
+<a href="/pmwiki/dmca.php">DMCA Notice</a>
+<a href="/pmwiki/privacypolicy.php">Privacy Policy</a>
+</div>
+<a href="/pmwiki/ad-free-subscribe.php">Go Ad-Free</a>
+<div class="toggle-switches">
+<ul class="mobile-menu display-toggles">
+<li>Show Spoilers <div class="display-toggle show-spoilers" id="mobile-toggle-showspoilers"></div></li>
+<li>Night Vision <div class="display-toggle night-vision" id="mobile-toggle-nightvision"></div></li>
+<li>Sticky Header <div class="display-toggle sticky-header" id="mobile-toggle-stickyheader"></div></li>
+<li>Highlight Links <div class="display-toggle highlight-links" id="mobile-toggle-highlightlinks"></div></li>
+</ul>
+<script>updateMobilePrefs();</script>
+</div>
+</div>
+</div>
+</div>
+</header>
+<div class="mobile-on" id="homepage-introBox-mobile">
+<a href="/"><img class="logo-small" src="/images/logo-white-big.png"/></a>
+<form action="/pmwiki/search_result.php" class="search" style="margin:10px -5px -6px -5px;">
+<input class="search-box" name="q" placeholder="Search" required="" type="text" value=""/>
+<input class="submit-button" type="submit" value=""/>
+<input name="search_type" type="hidden" value="article"/>
+<input name="page_type" type="hidden" value="all"/>
+<input name="cx" type="hidden" value="partner-pub-6610802604051523:amzitfn8e7v"/>
+<input name="cof" type="hidden" value="FORID:10"/>
+<input name="ie" type="hidden" value="ISO-8859-1"/>
+<input name="siteurl" type="hidden" value=""/>
+<input name="ref" type="hidden" value=""/>
+<input name="ss" type="hidden" value=""/>
+</form>
+</div>
+<div class="ad" id="header-ad-wrapper">
+<div id="header-ad">
+<div class="ad-size-970x90 atf_banner">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_1"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_1'); });</script> </div>
+</div> </div>
+</div>
+</div>
+<div id="main-container">
+<div class="action-bar mobile-off" id="action-bar-top">
+<div class="action-bar-right">
+<p>Follow TV Tropes</p>
+<a class="button-fb" href="https://www.facebook.com/TVTropes">
+<i class="fa fa-facebook"></i></a>
+<a class="button-tw" href="https://www.twitter.com/TVTropes">
+<i class="fa fa-twitter"></i></a>
+<a class="button-re" href="https://www.reddit.com/r/TVTropes">
+<i class="fa fa-reddit-alien"></i></a>
+</div>
+<nav class="actions-wrapper" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<ul class="page-actions" id="top_main_list">
+<li class="link-edit">
+<a class="article-edit-button" data-modal-target="login" href="/pmwiki/pmwiki.php/Main/EnemyDetectingRadar?action=edit" rel="nofollow">
+<i class="fa fa-pencil"></i> Edit Page</a></li><li class="link-related"><a href="/pmwiki/relatedsearch.php?term=Main/EnemyDetectingRadar">
+<i class="fa fa-share-alt"></i> Related</a></li><li class="link-history"><a href="/pmwiki/article_history.php?article=Main.EnemyDetectingRadar">
+<i class="fa fa-history"></i> History</a></li><li class="link-discussion"><a href="/pmwiki/remarks.php?trope=Main.EnemyDetectingRadar">
+<i class="fa fa-comment"></i> Discussion</a></li> </ul>
+<button class="nav__dropdown-toggle" id="top_more_button" onclick="toggle_more_menu('top');" type="button">More</button>
+<ul class="more_menu hidden_more_list" id="top_more_list">
+<li class="link-todo tuck-always more_list_item"><a data-modal-target="login" href="#todo"><i class="fa fa-check-circle"></i> To Do</a></li><li class="link-pageSource tuck-always more_list_item"><a data-modal-target="login" href="/pmwiki/pmwiki.php/Main/EnemyDetectingRadar?action=source" rel="nofollow" target="_blank"><i class="fa fa-code"></i> Page Source</a></li> </ul>
+</nav>
+<div class="WikiWordModalStub"></div>
+<div class="ImgUploadModalStub" data-page-type="Article"></div>
+<div class="login-alert" style="display: none;">
+You need to <a href="/pmwiki/login.php" style="color:#21A0E8">login</a> to do this. <a href="/pmwiki/login.php?tab=register_account" style="color:#21A0E8">Get Known</a> if you don't have an account
+</div>
+</div>
+<div class="page-Article" id="main-content">
+<article class="with-sidebar" id="main-entry">
+<input id="groupname-hidden" type="hidden" value="Main"/>
+<input id="title-hidden" type="hidden" value="EnemyDetectingRadar"/>
+<input id="article_id" type="hidden" value="35260"/>
+<input id="logged_in" type="hidden" value="false"/>
+<p class="hidden" id="current_url">http://tvtropes.org/pmwiki/pmwiki.php/Main/EnemyDetectingRadar</p>
+<meta content="" itemprop="datePublished"/>
+<meta content="" itemprop="articleSection"/>
+<meta content="" itemprop="image"/>
+<a class="watch-button" data-modal-target="login" href="#watch">Follow<span>ing</span></a>
+<h1 class="entry-title" itemprop="headline">
+Enemy-Detecting Radar
+</h1>
+<script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+                "@type": "ListItem",
+                "position": 1,
+                "name": "tvtropes.org",
+                "item": "https://tvtropes.org"
+            },{
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Tropes",
+                "item": "https://tvtropes.org/pmwiki/pmwiki.php/Main/Tropes"
+            },{
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Enemy-Detecting Radar"            }]
+        }
+    </script>
+<a class="mobile-actionbar-toggle mobile-on" data-click-toggle="active" href="#mobile-actions-toggle" id="mobile-actionbar-toggle">
+<p class="tiny-off">Go To</p><span></span><span></span><span></span><i class="fa fa-pencil"></i></a>
+<nav class="mobile-actions-wrapper mobile-on" id="mobile-actions-bar"></nav>
+<div class="modal fade hidden-until-active" id="editLockModal">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button aria-label="Close" class="close" data-dismiss="modal" type="button"> <span aria-hidden="true">×</span></button>
+<h4 class="modal-title">Edit Locked</h4>
+</div>
+<div class="modal-body">
+<div class="row">
+<div class="body">
+<div class="danger troper_locked_message"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<nav class="body-options" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<ul class="subpage-links">
+<li>
+<a class="subpage-link curr-subpage" href="/pmwiki/pmwiki.php/Main/EnemyDetectingRadar" title="The Main page">
+<span class="wrapper"><span class="spi main-page"></span>Main</span></a>
+</li>
+<li>
+<a class="subpage-link" href="/pmwiki/pmwiki.php/Laconic/EnemyDetectingRadar" title="The Laconic page">
+<span class="wrapper"><span class="spi laconic-icon"></span>Laconic</span></a>
+</li>
+<li class="create-subpage dropdown">
+<a aria-expanded="false" class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);" role="button">
+<span class="wrapper">Create New <i class="fa fa-plus-circle"></i></span>
+</a>
+<select onchange="this.options[this.selectedIndex].value &amp;&amp; (window.location = this.options[this.selectedIndex].value);">
+<option value="">- Create New -</option>
+<option value="/pmwiki/pmwiki.php/Analysis/EnemyDetectingRadar?action=edit">Analysis</option>
+<option value="/pmwiki/pmwiki.php/Characters/EnemyDetectingRadar?action=edit">Characters</option>
+<option value="/pmwiki/pmwiki.php/FanficRecs/EnemyDetectingRadar?action=edit">FanficRecs</option>
+<option value="/pmwiki/pmwiki.php/FanWorks/EnemyDetectingRadar?action=edit">FanWorks</option>
+<option value="/pmwiki/pmwiki.php/Fridge/EnemyDetectingRadar?action=edit">Fridge</option>
+<option value="/pmwiki/pmwiki.php/Haiku/EnemyDetectingRadar?action=edit">Haiku</option>
+<option value="/pmwiki/pmwiki.php/Headscratchers/EnemyDetectingRadar?action=edit">Headscratchers</option>
+<option value="/pmwiki/pmwiki.php/ImageLinks/EnemyDetectingRadar?action=edit">ImageLinks</option>
+<option value="/pmwiki/pmwiki.php/PlayingWith/EnemyDetectingRadar?action=edit">PlayingWith</option>
+<option value="/pmwiki/pmwiki.php/Quotes/EnemyDetectingRadar?action=edit">Quotes</option>
+<option value="/pmwiki/pmwiki.php/Recap/EnemyDetectingRadar?action=edit">Recap</option>
+<option value="/pmwiki/pmwiki.php/ReferencedBy/EnemyDetectingRadar?action=edit">ReferencedBy</option>
+<option value="/pmwiki/pmwiki.php/Synopsis/EnemyDetectingRadar?action=edit">Synopsis</option>
+<option value="/pmwiki/pmwiki.php/Timeline/EnemyDetectingRadar?action=edit">Timeline</option>
+<option value="/pmwiki/pmwiki.php/Trivia/EnemyDetectingRadar?action=edit">Trivia</option>
+<option value="/pmwiki/pmwiki.php/WMG/EnemyDetectingRadar?action=edit">WMG</option>
+<option value="/pmwiki/pmwiki.php/YMMV/EnemyDetectingRadar?action=edit">YMMV</option>
+</select>
+</li>
+</ul>
+</nav>
+<div class="article-content retro-folders" id="main-article">
+<p></p><div class="quoteright" style="width:350px;"><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/AlienIsolation" title="/pmwiki/pmwiki.php/VideoGame/AlienIsolation"><div class="lazy_load_img_box" style="padding-top:56.57%"><img alt="https://static.tvtropes.org/pmwiki/pub/images/c37300318cf50ef7f266844ddfe0efd1.jpg" border="0" class="embeddedimage" height="198" src="https://static.tvtropes.org/pmwiki/pub/images/c37300318cf50ef7f266844ddfe0efd1.jpg" width="350"/></div></a></div>
+<div class="acaptionright" style="width:350px;"><a class="twikilink" href="/pmwiki/pmwiki.php/Main/OhCrap" title="/pmwiki/pmwiki.php/Main/OhCrap">Oh... good</a>...<a class="twikilink" href="/pmwiki/pmwiki.php/Main/ThisIsGoingToSuck" title="/pmwiki/pmwiki.php/Main/ThisIsGoingToSuck">it works</a>.</div>
+<p></p><div class="indent"><em>"I also invented your radar, which somehow knows which direction enemy soldiers are looking and even when they yawn."</em>
+<div class="indent">— <strong>Mei Ling</strong>, <em>ToastyFrog.com Thumbnail Theater: "<a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MetalGearSolid" title="/pmwiki/pmwiki.php/VideoGame/MetalGearSolid">Metal Gear Solid</a>, Part 1"</em>
+</div></div><div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_1"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_1'); })</script></div></div><p>A few real life combat vehicles have radar support (and all seafaring vessels are required to have at least one) that can help the pilot navigate the battlefield and avoid enemies, so it's no surprise that this is often part of video games that feature such systems. Sometimes it's justified as your character's equipment, or psychic, abilities or <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Handwave" title="/pmwiki/pmwiki.php/Main/Handwave">Handwaved</a> as <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AWizardDidIt" title="/pmwiki/pmwiki.php/Main/AWizardDidIt">A Wizard Did It</a>; other times it's just there with <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GameplayAndStorySegregation" title="/pmwiki/pmwiki.php/Main/GameplayAndStorySegregation">no explanation</a> except to <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AcceptableBreaksFromReality" title="/pmwiki/pmwiki.php/Main/AcceptableBreaksFromReality">make the player's life easier</a>. It may also partially model non-visual cues that humans tend to get like positional sound location (an aspect of the <a class="urllink" href="http://en.wikipedia.org/wiki/Cocktail_party_effect">cocktail party effect<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a>) which are difficult to implement in video game sound systems which often lack the ability to create true positional sound. Alternately, the "radar" is used to detect hidden items instead.
+</p><p>In some games, you will encounter enemies who can interfere with your radar in some way or other. Some jam the radar, filling the screen with static, others just don't show up at all or only show up randomly for a split second. This is usually justified with stealth technology and almost never affects visual detection or lock-ons.
+</p><div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_2"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_2'); })</script></div></div><p>In cases where both enemy and friendly units will be shown, they will be <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ColorCodedArmies" title="/pmwiki/pmwiki.php/Main/ColorCodedArmies">color-coded</a> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ColourCodedForYourConvenience" title="/pmwiki/pmwiki.php/Main/ColourCodedForYourConvenience">for the player's convenience.</a>
+</p><p>A common variation is for the radar to only display enemy units that are attacking. It's also often tied to <a class="twikilink" href="/pmwiki/pmwiki.php/Main/FogOfWar" title="/pmwiki/pmwiki.php/Main/FogOfWar">Fog of War</a>, showing only enemies that you actually see normally.
+</p><p>It may be part of a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/LevelMapDisplay" title="/pmwiki/pmwiki.php/Main/LevelMapDisplay">Level-Map Display</a>.
+</p><p>Related to <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DetectEvil" title="/pmwiki/pmwiki.php/Main/DetectEvil">Detect Evil</a>, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AuraVision" title="/pmwiki/pmwiki.php/Main/AuraVision">Aura Vision</a> and <a class="twikilink" href="/pmwiki/pmwiki.php/Main/EnemyScan" title="/pmwiki/pmwiki.php/Main/EnemyScan">Enemy Scan</a>.
+</p><p></p><hr/><h2>Video Game Examples</h2>
+<div class="folderlabel" onclick="toggleAllFolders();">    open/close all folders  </div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder0');">     Action Adventure  </div><div class="folder" id="folder0" isfolder="true" style="display:block;">
+<p></p><ul><li> The main character of <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Bully" title="/pmwiki/pmwiki.php/VideoGame/Bully">Bully</a></em> has one for absolutely no reason at all.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/EccoTheDolphin" title="/pmwiki/pmwiki.php/VideoGame/EccoTheDolphin">Ecco the Dolphin</a></em> has the real-life-inspired animal version. Using his echolocation tells you where enemies are.
+</li><li> The Compass in <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/TheLegendOfZelda" title="/pmwiki/pmwiki.php/Franchise/TheLegendOfZelda">The Legend of Zelda</a></em> only pointed out the location of the boss and item boxes (starting from <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheLegendOfZeldaLinksAwakening" title="/pmwiki/pmwiki.php/VideoGame/TheLegendOfZeldaLinksAwakening">The Legend of Zelda: Link's Awakening</a></em>); it wasn't until the 3-D titles that it also showed the direction you were facing.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/Metroid" title="/pmwiki/pmwiki.php/Franchise/Metroid">Metroid</a></em>:
+<ul><li> All three <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MetroidPrimeTrilogy" title="/pmwiki/pmwiki.php/VideoGame/MetroidPrimeTrilogy">Metroid Prime Trilogy</a></em> games have this as a function of Samus' suit; in prior <em>Metroid</em> titles, the overworld map screen (if there even was one) just showed whether Samus had already been in a room and if it had an item hidden in it.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MetroidSamusReturns" title="/pmwiki/pmwiki.php/VideoGame/MetroidSamusReturns">Metroid: Samus Returns</a></em>, the Metroid counter from the original <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MetroidIIReturnOfSamus" title="/pmwiki/pmwiki.php/VideoGame/MetroidIIReturnOfSamus">Metroid II: Return of Samus</a></em> gets a slight upgrade; it now blinks whenever a Metroid is close. The closer the Metroid, the darker the color of the icon and the more quickly it blinks. The Metroid amiibo takes this further by marking the nearest Metroid on your map screen.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/ProjectEden" title="/pmwiki/pmwiki.php/VideoGame/ProjectEden">Project Eden</a></em> has a radar that beeps when enemies are near, which can get <em>a little annoying</em> when there is a nearby enemy you can't reach.
+</li><li> Since <a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/SpiderMan" title="/pmwiki/pmwiki.php/Franchise/SpiderMan">Spider-Man</a> has a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SpiderSense" title="/pmwiki/pmwiki.php/Main/SpiderSense">Spider-Sense</a> that alerts him to danger, games featuring him have it as part of the gameplay.
+</li><li> The minimap in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Syndicate" title="/pmwiki/pmwiki.php/VideoGame/Syndicate">Syndicate</a></em> showed the position of people, and distinguished between civilians, police, enemy agents and targets.
+<ul><li> This is often known as an IFF (Identify Friend/Foe) system. They exist in <a class="twikilink" href="/pmwiki/pmwiki.php/Main/RealLife" title="/pmwiki/pmwiki.php/Main/RealLife">Real Life</a>, but those can only tell you if a signal is coming from a known friendly or not. It can't distinguish between enemies, civilians, or allies whose codes haven't been registered as such.
+</li></ul></li></ul><p></p></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder1');">     Arcade  </div><div class="folder" id="folder1" isfolder="true" style="display:block;">
+<ul><li> The scanner in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Defender" title="/pmwiki/pmwiki.php/VideoGame/Defender">Defender</a></em>, which is also used in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/ChopperCommand" title="/pmwiki/pmwiki.php/VideoGame/ChopperCommand">Chopper Command</a></em> and <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/StarWarsTheEmpireStrikesBackAtari2600" title="/pmwiki/pmwiki.php/VideoGame/StarWarsTheEmpireStrikesBackAtari2600">Star Wars: The Empire Strikes Back (Atari 2600)</a></em>.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/CosmicAvenger" title="/pmwiki/pmwiki.php/VideoGame/CosmicAvenger">Cosmic Avenger</a></em> has one appearing on the top of the screen, which can detect where UFOs will appear from.
+</li></ul><p></p></div>
+<div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_3"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_3'); })</script></div></div><p></p><div class="folderlabel" onclick="togglefolder('folder2');">     Eastern RPG  </div><div class="folder" id="folder2" isfolder="true" style="display:block;">
+<p></p><ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/The7thSaga" title="/pmwiki/pmwiki.php/VideoGame/The7thSaga">The 7th Saga</a></em> gives you a crystal ball that allows you to detect enemies, among other things. This functionality seems present mostly for the game to taunt you, as it's nearly impossible to avoid running into them.
+</li><li> The <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DarkCloud" title="/pmwiki/pmwiki.php/VideoGame/DarkCloud">Dark Cloud</a></em> games feature a "Magic Crystal" on each dungeon floor which will reveal the locations of any remaining enemies and treasure chests.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DawnOfMana" title="/pmwiki/pmwiki.php/VideoGame/DawnOfMana">Dawn of Mana</a></em> has one that's even <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ColorCodedForYourConvenience" title="/pmwiki/pmwiki.php/Main/ColorCodedForYourConvenience">Color-Coded for Your Convenience</a>: blue enemies drop items, red ones are just there for you to kill and abuse the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/RagdollPhysics" title="/pmwiki/pmwiki.php/Main/RagdollPhysics">Ragdoll Physics</a> with their bodies, and yellow indicates the direction in which you need to go.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FinalFantasyXII" title="/pmwiki/pmwiki.php/VideoGame/FinalFantasyXII">Final Fantasy XII</a></em> uses a similar system to <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FinalFantasyXI" title="/pmwiki/pmwiki.php/VideoGame/FinalFantasyXI">Final Fantasy XI</a></em>. A mini-map is shown at all times in the corner of the screen. Green dots were NPCs, blue dots were either your allies or a neutral character in the battlefield, red dots were foes, and huge red dots were bosses.
+</li><li> The <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MonsterHunter" title="/pmwiki/pmwiki.php/VideoGame/MonsterHunter">Monster Hunter</a></em> series had the Paintball item, which allowed a hunter to see where his/her mark is located on the onscreen map.
+</li><li> A function of the mini-map in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/OdinSphere" title="/pmwiki/pmwiki.php/VideoGame/OdinSphere">Odin Sphere</a></em> is to show enemy locations and even any projectiles they may be firing.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/ParasiteEve2" title="/pmwiki/pmwiki.php/VideoGame/ParasiteEve2">Parasite Eve 2</a></em> has a radar system that shows how close enemies are to you, but only if you have the GPS item equipped or are wearing armor that has a GPS built in.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Persona3" title="/pmwiki/pmwiki.php/VideoGame/Persona3">Persona 3</a></em> has a radar screen that shows enemies, treasures, and general geography while exploring Tartarus. In one section, the enemies <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ScrappyLevel" title="/pmwiki/pmwiki.php/Main/ScrappyLevel">tend to blend into the dark background</a> and the radar becomes that much more useful.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/Pokemon" title="/pmwiki/pmwiki.php/Franchise/Pokemon">Pokémon</a></em>:
+<ul><li> <em>Pokémon</em> has one of these for items, creatively called the "Item Finder." Over time it's evolved from a somewhat unhelpful noise maker if you were within 50 yards of something, to a "DowsingMCHN" that points out the <em>EXACT</em> location of a hidden item. It wasn't until <em>Fire Red</em> and <em>Leaf Green</em> that players got access to the "Vs. Seeker," which could detect trainers. That is, those who wanted to battle or have a rematch <em>and</em> were onscreen.
+</li><li> The Pokeradar in Gen IV points you to hidden Pokemon via shaking grass. Trouble was it lasted a few steps and then needed 50 steps to recharge.
+</li></ul></li><li> The <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/StarOcean" title="/pmwiki/pmwiki.php/VideoGame/StarOcean">Star Ocean</a></em> games have a radar when battling the enemy to show the relative positions of your team and the enemy's.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/ValkyriaChronicles" title="/pmwiki/pmwiki.php/VideoGame/ValkyriaChronicles">Valkyria Chronicles</a></em>: The overworld map shows the position of all allies and visible enemies.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/ValkyrieProfile2Silmeria" title="/pmwiki/pmwiki.php/VideoGame/ValkyrieProfile2Silmeria">Valkyrie Profile 2 Silmeria</a></em> has a radar when battling the enemy to show the relative positions of your team and the enemy's, as well as each enemy's range of attack when zoomed in. The field map also shows the location of enemies, and changes their color depending on whether they're active (red), defeated (grey), or frozen in place by Alicia's photons (purple).
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/WildArms2" title="/pmwiki/pmwiki.php/VideoGame/WildArms2">Wild ARMs 2</a></em> has a hidden item radar.
+</li></ul><p></p></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder3');">     First Person Shooter  </div><div class="folder" id="folder3" isfolder="true" style="display:block;">
+<p></p><ul><li> The radar in the 1980 coin-op arcade classic <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/BattleZone1980" title="/pmwiki/pmwiki.php/VideoGame/BattleZone1980">BattleZone</a></em> (with wire-frame monochrome graphics.) May make this <a class="twikilink" href="/pmwiki/pmwiki.php/Main/OlderThanTheyThink" title="/pmwiki/pmwiki.php/Main/OlderThanTheyThink">Older Than They Think</a>.
+</li><li> Vehicles and the spacesuit in both <em><a class="twikilink" href="/pmwiki/pmwiki.php/Videogame/BattleZone1998" title="/pmwiki/pmwiki.php/Videogame/BattleZone1998">Battle Zone 1998</a></em> and its sequel have a circular radar display, which shows the terrain in 3-dimensional wireframe, with friendly and enemy contacts displayed on top of the wireframe terrain. Different vehicles have different radar ranges, radar pulse rates, and inherent stealth abilities, the latter of which can be augmented by the RED Field generator or the Scion's Jammer building, which completely hides a vehicle from radar.
+</li><li> The <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/CallOfDuty" title="/pmwiki/pmwiki.php/VideoGame/CallOfDuty">Call of Duty</a></em> series plays with this. In just about every game, there's a map in the top left corner of the screen which shows your squadmates as green chevrons and red dots representing enemy fire - in both <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/WorldWarII" title="/pmwiki/pmwiki.php/UsefulNotes/WorldWarII">World War II</a> and Modern settings. This map could be disabled or enhanced in many ways:
+<ul><li> Calling a UAV or Recon Plane (depending on the setting) will periodically give you all enemy positions every few seconds. Oddly enough, even if said enemies are inside concrete bunkers with no windows. <em>Modern Warfare 3</em> includes an "Advanced UAV" that updates more often, while the <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/CallOfDutyBlackOps" title="/pmwiki/pmwiki.php/VideoGame/CallOfDutyBlackOps">Black Ops</a></em> games include, respectively, an SR-71 Blackbird, an <a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/CallOfDutyBlackOpsII" title="/pmwiki/pmwiki.php/VideoGame/CallOfDutyBlackOpsII">"Orbital VSAT"</a>, and a <a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/CallOfDutyBlackOpsIII" title="/pmwiki/pmwiki.php/VideoGame/CallOfDutyBlackOpsIII">"High Altitude Telemetry Reconnaissance"</a> vehicle that show the positions of enemies in real-time (marking them as red chevrons) and, except for the H.A.T.R., can't be shot down like the standard UAV.
+</li><li> Using tools/perks like UAV Jammer, Camouflage, Cold Blooded, <a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/CallOfDutyBlackOps" title="/pmwiki/pmwiki.php/VideoGame/CallOfDutyBlackOps">Gh</a><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/CallOfDutyBlackOpsII" title="/pmwiki/pmwiki.php/VideoGame/CallOfDutyBlackOpsII">o</a><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/CallOfDutyBlackOpsIII" title="/pmwiki/pmwiki.php/VideoGame/CallOfDutyBlackOpsIII">s</a><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/CallOfDutyInfiniteWarfare" title="/pmwiki/pmwiki.php/VideoGame/CallOfDutyInfiniteWarfare">t</a>, Assassin, <a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/CallOfDutyGhosts" title="/pmwiki/pmwiki.php/VideoGame/CallOfDutyGhosts">Off the Grid</a>, <a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/CallOfDutyAdvancedWarfare" title="/pmwiki/pmwiki.php/VideoGame/CallOfDutyAdvancedWarfare">Low Profile</a> or even simply shooting the UAV down will hide you from this sort of detection.
+</li><li> As well, these maps can be defeated by using suppressed weapons - firing one wouldn't have you show up on enemy radar.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/ModernWarfare" title="/pmwiki/pmwiki.php/VideoGame/ModernWarfare">Modern Warfare</a> 2</em>, a Counter-UAV will completely disable enemy radar - it replaces the map, friendly positions, and enemy positions with static.
+</li><li> The Scrambler perk also makes enemy radar more static-filled the closer to enemy personnel you get. Unfortunately, this can also act as an early-warning system to said enemies.
+</li><li> <em>Modern Warfare 2</em> and <em>3</em> also have heartbeat sensors available for certain weapons - and these can, for some reason, distinguish between friendly and enemy heartbeats. However, these can also be defeated by the 'Ninja' perk, which makes you invisible to such sensors.
+</li><li> Finally, all enemy electronics can be disabled by using an EMP, which makes the only method of detection the Mark One Eyeball. Oddly enough, this only affects the enemy team - not yours. This is, however, averted in Hardcore mode where an EMP will disable <em>all</em> electronics.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/CatacombFantasyTrilogy" title="/pmwiki/pmwiki.php/VideoGame/CatacombFantasyTrilogy">Catacomb Abyss</a></em> and its sequels have you collect crystals throughout the game; each crystal allows you to see one specific type of enemy on your crystal ball (like a radar, it shows enemies at some distance all around you, though it isn't an automap)
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/CommandAndConquerRenegade" title="/pmwiki/pmwiki.php/VideoGame/CommandAndConquerRenegade">Command &amp; Conquer: Renegade</a></em> had a radar that shown the position of enemies, and was jammed by enemy communications centers. In multiplayer mode, it only showed allies (in the default settings, anyway).
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/CounterStrike" title="/pmwiki/pmwiki.php/VideoGame/CounterStrike">Counter-Strike</a></em> has one of these.
+</li><li> The top-down automaps in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Doom" title="/pmwiki/pmwiki.php/VideoGame/Doom">Doom</a></em> and <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Doom" title="/pmwiki/pmwiki.php/VideoGame/Doom">Doom</a> II</em> allow you to see enemies (and other objects) with the proper cheat codes on.
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Strife" title="/pmwiki/pmwiki.php/VideoGame/Strife">Strife</a></em>, another Doom-engine game, adds this function as an item as well. Unfortunately you have to use it on a level filled out by an automap powerup, and only a few levels in Strife have map pickups.
+</li></ul></li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FarCry" title="/pmwiki/pmwiki.php/VideoGame/FarCry">Far Cry</a></em> the player character finds a set of binoculars near the beginning of the game which allows him to isolate the tracking beacons of targetted enemies, putting them on the radar. So, once the enemies have been spotted once, they show up on the radar. This returns in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FarCry3" title="/pmwiki/pmwiki.php/VideoGame/FarCry3">Far Cry 3</a></em>, <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FarCry3BloodDragon" title="/pmwiki/pmwiki.php/VideoGame/FarCry3BloodDragon">Blood Dragon</a></em> and <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FarCry4" title="/pmwiki/pmwiki.php/VideoGame/FarCry4">4</a></em> by way of marking enemies through your camera or cyber-eye depending on the game.
+</li><li> The video game adaptation of <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/GoldenEye1997" title="/pmwiki/pmwiki.php/VideoGame/GoldenEye1997">GoldenEye</a></em> has one, explained as the function of one of Bond's gadgets. <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SpiritualSuccessor" title="/pmwiki/pmwiki.php/Main/SpiritualSuccessor">Spiritual Successor</a> series <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/PerfectDark" title="/pmwiki/pmwiki.php/VideoGame/PerfectDark">Perfect Dark</a></em> also has one.
+<ul><li> Oddly enough you had to unlock a cheat code to <em>turn the radar off</em>. The most common reason for bothering unlocking this cheat was when you had a friend who was so good at the game in multiplayer you had to do <em>something</em> to make things harder for them to hunt everyone down.
+</li></ul></li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/GunsOfIcarus" title="/pmwiki/pmwiki.php/VideoGame/GunsOfIcarus">Guns of Icarus</a></em>, this feature is absolutely vital for tracking the position of enemies, since your vision will be obscured by clouds and weather conditions, and you'll be attacked from all sides—enemies will retreat out of your vision range and circle around to the other side of your ship—so if you don't watch the radar, expect to die.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/Halo" title="/pmwiki/pmwiki.php/Franchise/Halo">Halo</a></em> puts one on the player's <a class="twikilink" href="/pmwiki/pmwiki.php/Main/HUD" title="/pmwiki/pmwiki.php/Main/HUD">HUD</a> in both single-player and multiplayer modes. The one in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Halo4" title="/pmwiki/pmwiki.php/VideoGame/Halo4">Halo 4</a></em> can even indicate vehicle type (e.g. if an enemy is driving a Wraith, they'll appear in the shape of a Wraith on your motion tracker). That said, the tracker can be foiled by either crouch-walking or just moving <em>really</em> slowly.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MAG" title="/pmwiki/pmwiki.php/VideoGame/MAG">MAG</a></em> has different uniforms for different factions, but allied players always show up as blue on the minimap and enemy players show up as red. This has led to expressions like "hey blue dot, heal me" and "fighting some red dot when..."
+</li><li> The <em>Alien</em> one was dutifully cloned by <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Marathon" title="/pmwiki/pmwiki.php/VideoGame/Marathon">Marathon</a></em>'s motion tracker, and has since followed Bungie through the <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/Halo" title="/pmwiki/pmwiki.php/Franchise/Halo">Halo</a></em> series as well. In <em>Marathon</em> humans and defense drones appear as green squares, aliens as red triangles, and hostile players during net play as yellow squares.
+<ul><li> We have recently sensors that can detect someone's heartbeat and therefore determine how many people are in a vehicle, room, etc. Assuming that your enemies have different heartbeats than humans, this technology probably will be used in the sensors of the future.
+</li></ul></li><li> The HUD minimap in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Nitemare3D" title="/pmwiki/pmwiki.php/VideoGame/Nitemare3D">Nitemare 3D</a></em> has an optional overlay that shows enemies in red.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/NoOneLivesForever" title="/pmwiki/pmwiki.php/VideoGame/NoOneLivesForever">No One Lives Forever</a></em> nicely made a gameplay element out of it: your radar <em>doesn't</em> show nearby enemies... unless you shoot them with a "tracking dart" (which takes some skill), after which they appear as red dots on it.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/Videogame/PlanetSide" title="/pmwiki/pmwiki.php/Videogame/PlanetSide">PlanetSide</a> 2</em>, your map will report the position of enemies firing non-silenced weapons. Spotting an enemy tags them on radar, allowing all your allies to see real-time aim and position tracking on their map for a few seconds. Devices like Scout Radar on vehicles, and the infiltrator's Motion Spotter and Recon Darts allow you to expand radar capability.
+</li><li> The Heartbeat Sensor in the <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/RainbowSix" title="/pmwiki/pmwiki.php/VideoGame/RainbowSix">Rainbow Six</a></em> series functions like this.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/RedFaction" title="/pmwiki/pmwiki.php/VideoGame/RedFaction">Red Faction</a>: Guerilla</em> has an in-built radar that shows enemy vehicles. You can purchase an upgrade later on that allows you to see the location of enemy soldiers, too.
+</li><li> <em><a class="createlink" href="/pmwiki/pmwiki.php/VideoGame/SensoryOverload" title="/pmwiki/pmwiki.php/VideoGame/SensoryOverload">Sensory Overload</a></em> has the hidden Radar Display Chip, along with the Proximity Detector which beeps when enemies are nearby, and the Trap Detector which shows trap triggers on the radar. One of the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/McNinja" title="/pmwiki/pmwiki.php/Main/McNinja">McNinja</a> enemies has an <a class="twikilink" href="/pmwiki/pmwiki.php/Main/InvisibilityCloak" title="/pmwiki/pmwiki.php/Main/InvisibilityCloak">Invisibility Cloak</a> that also prevents radar detection.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Stalker" title="/pmwiki/pmwiki.php/VideoGame/Stalker">Stalker</a></em>'s HUD is partly related to the lead character's PDA, which includes a map that marks the locations of other PDA-users and identifies whether they are friendly, hostile, or dead. However, enemies can "cloak" themselves, only appearing on the map when you can see them.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TimeShift" title="/pmwiki/pmwiki.php/VideoGame/TimeShift">Time Shift</a></em>: Your radar can detect enemies (Red), allies (Green) and usable vehicles (Yellow). It also helpfully tells you if they are above, below or on the same level as you.
+</li><li> Appears in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/AliensColonialMarines" title="/pmwiki/pmwiki.php/VideoGame/AliensColonialMarines">Aliens: Colonial Marines</a></em> as a peice of True-To-The-<a class="twikilink" href="/pmwiki/pmwiki.php/Film/Aliens" title="/pmwiki/pmwiki.php/Film/Aliens">Movie</a> equipment. Meaning the motion tracker's a bulky machine you cannot have equipped at the same time as a gun. It also has a proxemity function, the distinctive, hot-and-cold "mlinging... mlinging... mlinging..." audio clue from the film to let you know how close an enemy is.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/AliensVsPredator2010" title="/pmwiki/pmwiki.php/VideoGame/AliensVsPredator2010">Aliens vs. Predator (2010)</a>,</em> the motion tracker appears as a HUD element (and yes, it keeps the proxemity warning audio cues).
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder4');">     Hack And Slash  </div><div class="folder" id="folder4" isfolder="true" style="display:block;">
+<p></p><ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/NoMoreHeroes" title="/pmwiki/pmwiki.php/VideoGame/NoMoreHeroes">No More Heroes</a></em> requires you to earn the "Memory of White", a minimap with the enemies in purple and the treasures in yellow, by collecting Lovikov balls. <em>Desperate Struggle</em> averts the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BagOfSpilling" title="/pmwiki/pmwiki.php/Main/BagOfSpilling">Bag of Spilling</a> by letting Travis keep it.
+</li><li> All of the <em>Warriors</em> series (<em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DynastyWarriors" title="/pmwiki/pmwiki.php/VideoGame/DynastyWarriors">Dynasty Warriors</a></em>, <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SamuraiWarriors" title="/pmwiki/pmwiki.php/VideoGame/SamuraiWarriors">Samurai Warriors</a></em>, <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/WarriorsOrochi" title="/pmwiki/pmwiki.php/VideoGame/WarriorsOrochi">Warriors Orochi</a></em>, the <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/Gundam" title="/pmwiki/pmwiki.php/Franchise/Gundam">Gundam</a></em> spinoff) has an overworld map that <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ColorCodedForYourConvenience" title="/pmwiki/pmwiki.php/Main/ColorCodedForYourConvenience">colors</a> allied units blue, enemies red, and other factions yellow.
+</li></ul><p></p></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder5');">     MMORPG  </div><div class="folder" id="folder5" isfolder="true" style="display:block;">
+<p></p><ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FinalFantasyXI" title="/pmwiki/pmwiki.php/VideoGame/FinalFantasyXI">Final Fantasy XI</a></em> possesses two radar systems. The first can be used by all the classes in the game and is part of the normal HUD, but actual targets you can attack will only show up if you have the Beastmaster, Ninja, Thief, Ranger, Summoner, or Blue Mage jobs either as your main or subjob. Beastmasters and Rangers(and anyone who subs them) can use Wide Scan, which essentially uses the map of the area as a radar for NPCs and monsters. You can even select one to "track", which allows you to hunt it down by pointing towards it on the normal radar.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/KingdomOfLoathing" title="/pmwiki/pmwiki.php/VideoGame/KingdomOfLoathing">Kingdom of Loathing</a></em> has a radar function in the <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/Metroid" title="/pmwiki/pmwiki.php/Franchise/Metroid">Meteoid</a></em> subgame. It doesn't begin detecting enemies until it's been upgraded, though.
+</li><li> Downplayed in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/PlanetSide" title="/pmwiki/pmwiki.php/VideoGame/PlanetSide">PlanetSide</a></em> 2. Enemies do show up on the minimap, but not magically - another player has to see them and "spot" them. Being spotted lasts a few seconds; an attentive spot can ruin an ambush or win a rematch. The infiltrator, with its unique ability to cloak, is the only class that can shed being spotted at will. Infiltrators, however, also carry motion detectors that play this trope straight for a limited time. They in turn can be countered by standing still, equipping the Sensor Shield implant, or shooting/<a class="createlink" href="/pmwiki/pmwiki.php/Main/EMPing" title="/pmwiki/pmwiki.php/Main/EMPing">EM Ping</a> the deployed motion detector.
+</li><li> The <a class="twikilink" href="/pmwiki/pmwiki.php/Main/OurAngelsAreDifferent" title="/pmwiki/pmwiki.php/Main/OurAngelsAreDifferent">Divine Herald</a> from <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/NexusClash" title="/pmwiki/pmwiki.php/VideoGame/NexusClash">Nexus Clash</a></em> can detect when there are demons in the area. Unlike some examples of this trope, the Herald can only find out how many demons are nearby this way and not quite exactly where they are, and it may take a few pings of the radar to triangulate the location of their target.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/WorldOfWarcraft" title="/pmwiki/pmwiki.php/VideoGame/WorldOfWarcraft">World of Warcraft</a></em>:
+<ul><li> The Hunter class has a feature that allows you to see all of one type of mob within the range of your minimap.
+</li><li> This was previously limited to only tracking one type of thing at a time, which was fairly useless if the Hunter was also a miner and didn't want to miss out on collecting shiny rocks. Currently, the number of things that can be simultaneously tracked is limited only by the player's ability to sort through all of the dots.
+</li><li> Paladins can track undead, warlocks can track demons, and druids in cat form can track humanoids.
+<ul><li> And herbalists can track <em>plants</em>, and miners can track <em>rocks</em>....
+</li><li> And rogues can track treasure chests.
+</li></ul></li></ul></li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder6');">     Real Time Strategy  </div><div class="folder" id="folder6" isfolder="true" style="display:block;">
+<ul><li> Many <a class="twikilink" href="/pmwiki/pmwiki.php/Main/RealTimeStrategy" title="/pmwiki/pmwiki.php/Main/RealTimeStrategy">Real-Time Strategy</a> games have a mini-map that shows enemy buildings and troops once the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/FogOfWar" title="/pmwiki/pmwiki.php/Main/FogOfWar">Fog of War</a> has been lifted.
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TotalAnnihilation" title="/pmwiki/pmwiki.php/VideoGame/TotalAnnihilation">Total Annihilation</a></em> even made a distinction between "radar" and "visual range". Radar buildings and units have a large radius and will show incoming enemy units as dots on the minimap, but don't uncover <a class="twikilink" href="/pmwiki/pmwiki.php/Main/FogOfWar" title="/pmwiki/pmwiki.php/Main/FogOfWar">Fog of War</a>.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/StarCraftII" title="/pmwiki/pmwiki.php/VideoGame/StarCraftII">StarCraft II</a></em> has the Terran sensor tower, which shows enemies beyond visual range as a red exclamation mark symbol. In a twist, it also tells opponents where your tower's detection radius is.
+</li><li> Jim Raynor has one built into his armor.
+</li></ul></li><li> In the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SideView" title="/pmwiki/pmwiki.php/Main/SideView">side-scrolling</a> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/RealTimeStrategy" title="/pmwiki/pmwiki.php/Main/RealTimeStrategy">Real-Time Strategy</a> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/ArmorAlley" title="/pmwiki/pmwiki.php/VideoGame/ArmorAlley">Armor Alley</a></em>, your radar displays everything on the length of the battlefield...unless your <a class="twikilink" href="/pmwiki/pmwiki.php/Main/HeroUnit" title="/pmwiki/pmwiki.php/Main/HeroUnit">Hero Unit</a> strays near an enemy signal-jamming van, which will cause the radar display to flicker blank.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/CompanyOfHeroes" title="/pmwiki/pmwiki.php/VideoGame/CompanyOfHeroes">Company of Heroes</a></em>, the British can use such a special ability, when choosing the <em>Royal Commandos</em> Commander Tree (the Brits actually invented Radar in real <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/WW2" title="/pmwiki/pmwiki.php/UsefulNotes/WW2">WW2</a>). You'll receive 3 Radar positions, which you can place randomly on the quadrangular map. This forms a triange between the three stations (see <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BermudaTriangle" title="/pmwiki/pmwiki.php/Main/BermudaTriangle">Bermuda Triangle</a>), a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/FogOfWar" title="/pmwiki/pmwiki.php/Main/FogOfWar">Fog of War</a> - free zone, where you can spot <em>any</em> enemy movments. This method can only supervise up to 50% of the map though (a triangle may fit twice into a quadrangle - Duh!), so you better concentrate all your scouts on the other halve...
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DuneII" title="/pmwiki/pmwiki.php/VideoGame/DuneII">Dune II</a></em> had the Outpost building, which gave you a radar screen that tracked your enemies (including <a class="createlink" href="/pmwiki/pmwiki.php/Main/SandWorms" title="/pmwiki/pmwiki.php/Main/SandWorms">Sand Worms</a>).
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/CommandAndConquer" title="/pmwiki/pmwiki.php/VideoGame/CommandAndConquer">Command &amp; Conquer</a></em>:
+<ul><li> In the original games, you didn't have a minimap unless you built a Radar Dome, which would then show off the entire map (though areas covered by the shroud would appear as black space). Additionally, the later games added ways of detecting stealth units (typically, light vehicles might have sensors which would revealed their location, meaning that players would be well advised to keep a few stealth detecting units around to avoid being ambushed).
+</li><li> Though there were a few missions in the series that gave you the minimap even without a Communications Center (though those missions usually were the ones before you could build a Comm. Center, or those with no base at all).
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/CommandAndConquerGenerals" title="/pmwiki/pmwiki.php/VideoGame/CommandAndConquerGenerals">Command &amp; Conquer: Generals</a></em>: The USA can use a satellite scan (and have radar access) right off the bat as long as they have Command Centers, an ability that can eventually be researched by the GLA for their Radar Vans. The Chinese don't get it, instead having to rely on the detection capabilities of their troop crawlers.
+</li></ul><p></p></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder7');">     Simulation Game  </div><div class="folder" id="folder7" isfolder="true" style="display:block;">
+<ul><li> The <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/AceCombat" title="/pmwiki/pmwiki.php/VideoGame/AceCombat">Ace Combat</a></em> series has a radar system that varies a little between games. In some games, the color of a target indicates either its point value (<em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/AceCombat04ShatteredSkies" title="/pmwiki/pmwiki.php/VideoGame/AceCombat04ShatteredSkies">Ace Combat 04: Shattered Skies</a></em>) or whether it's critical to the mission (<em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/AceCombatZeroTheBelkanWar" title="/pmwiki/pmwiki.php/VideoGame/AceCombatZeroTheBelkanWar">Ace Combat Zero: The Belkan War</a></em>), in others it indicates its current health (<em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/AceCombat5TheUnsungWar" title="/pmwiki/pmwiki.php/VideoGame/AceCombat5TheUnsungWar">Ace Combat 5: The Unsung War</a></em>). Stealth planes generally fade in and out, making it difficult to keep track of them, and aircraft equipped with ECM systems would block portions of the radar or display false targets when close by.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/EscapeVelocity" title="/pmwiki/pmwiki.php/VideoGame/EscapeVelocity">Escape Velocity</a></em> has a radar screen. Buying an IFF Decoder will give it colors: non-hostile ships are blue, enemy ships are red, disabled ships are gray, launched fighters and mission escorts are green.
+</li><li> In the <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MechWarrior" title="/pmwiki/pmwiki.php/VideoGame/MechWarrior">MechWarrior</a></em> series, radar is a staple of practically every game and is extremely useful in tracking enemies and their damage. 2 and 3 offered the 'satellite uplink' mode, which was more like a bird's eye view of the field. Each game has had some kind of mission restriction or equipment to enhance or mess with the radar, including lots of false-positive decoy pods, electronic jammers, and range enhancing probes.
+</li><li> The <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/NavalOps" title="/pmwiki/pmwiki.php/VideoGame/NavalOps">Naval Ops</a></em> series uses this trope quite heavily since trying to spot enemy ships visually is a bit of a pain. Upgrading your ship increases the radar range. Sonar is required to spot submarines. You have a minimap radar in one corner of the screen and a close-range radar as part of your HUD. Stealth enemies may not show up on the minimap, but they'll appear on the HUD.
+</li><li> The <em><a class="twikilink" href="/pmwiki/pmwiki.php/Videogame/X" title="/pmwiki/pmwiki.php/Videogame/X">X-Universe</a></em> series has a Gravidar device fitted onto every ship and spacesuit, which can detect anything (bar <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SpaceMines" title="/pmwiki/pmwiki.php/Main/SpaceMines">Space Mines</a>) within its detection radius, which can be expanded with the Duplex or Triplex scanner. Gravidar is shared between ships and satellites, allowing a satellite to be used as a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TargetSpotter" title="/pmwiki/pmwiki.php/Main/TargetSpotter">Target Spotter</a> for a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MacrossMissileMassacre" title="/pmwiki/pmwiki.php/Main/MacrossMissileMassacre">missile frigate</a>.
+<ul><li> The Gravidar returns in <em><a class="twikilink" href="/pmwiki/pmwiki.php/Videogame/XRebirth" title="/pmwiki/pmwiki.php/Videogame/XRebirth">X Rebirth</a></em>'s 2.0 update with some nifty new features - capital ships and stations are now rendered as 3d objects on the gravidar display, and the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/PortalNetwork" title="/pmwiki/pmwiki.php/Main/PortalNetwork">highway system</a> is likewise shown on the gravidar. Entering a highway will switch the gravidar to a sector-wide highway map, or a tunnel map showing nearby ships in the highway.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/XWing" title="/pmwiki/pmwiki.php/VideoGame/XWing">X-Wing</a></em> and its sequels (<em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TIEFighter" title="/pmwiki/pmwiki.php/VideoGame/TIEFighter">TIE Fighter</a></em>, <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/XWingVsTIEFighter" title="/pmwiki/pmwiki.php/VideoGame/XWingVsTIEFighter">X-Wing vs. TIE Fighter</a></em>, and <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/XWingAlliance" title="/pmwiki/pmwiki.php/VideoGame/XWingAlliance">X-Wing Alliance</a></em>) all featured sensor displays showing any ships nearby using color-coded dots: red for Imperial, green for Rebel, and blue for neutral (or unaligned). Later games added additional colors to represent pirates or otherwise distinguish between multiple unaligned factions.
+</li></ul><p></p></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder8');">     Stealth Based Game  </div><div class="folder" id="folder8" isfolder="true" style="display:block;">
+<p></p><ul><li> A staple of <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MetalGear" title="/pmwiki/pmwiki.php/VideoGame/MetalGear">Metal Gear</a></em> games;
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MetalGear2SolidSnake" title="/pmwiki/pmwiki.php/VideoGame/MetalGear2SolidSnake">Metal Gear 2: Solid Snake</a></em> was the first to use a radar, allowing the player to see enemies on the surrounding screens. It showed both the guards positions and their vision cones to indicate when you could be seen.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MetalGearSolid" title="/pmwiki/pmwiki.php/VideoGame/MetalGearSolid">Metal Gear Solid</a></em> and <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MetalGearSolid2SonsOfLiberty" title="/pmwiki/pmwiki.php/VideoGame/MetalGearSolid2SonsOfLiberty">Metal Gear Solid 2: Sons of Liberty</a></em> both used Soliton radar, which had been invented by Mei Ling. Apparently "It employs the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TechnoBabble" title="/pmwiki/pmwiki.php/Main/TechnoBabble">KdV equation</a> to detect the electromagnetic waves resulting from biological reactions." It could detect when people yawned, when they closed their eyes, which way they were looking, and how far they could see. Triggering an alarm would result in the radar being jammed, as would using chaff grenades, and the radar wouldn't work in enclosed spaces.
+</li><li> As a prequel, <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MetalGearSolid3SnakeEater" title="/pmwiki/pmwiki.php/VideoGame/MetalGearSolid3SnakeEater">Metal Gear Solid 3: Snake Eater</a></em> didn't feature the radar, as it was set before it was invented (and many argued that the radar made the stealth too easy). There were a number of more primitive alternatives that could be found through the game, all of which needed battery power. The Motion Sensor would only show moving guards and animals, so a stationary guard wouldn't be shown. The Sonar would indicate everything, but had to be manually triggered and the 'ping' could alert guards. The AP sensor would vibrate when guards were near.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MetalGearSolidPortableOps" title="/pmwiki/pmwiki.php/VideoGame/MetalGearSolidPortableOps">Metal Gear Solid: Portable Ops</a></em> had a Surround Indicator that would mark the direction and proximity of guards according to how much noise they made, as well as how noisy the player was.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MetalGearSolidPeaceWalker" title="/pmwiki/pmwiki.php/VideoGame/MetalGearSolidPeaceWalker">Metal Gear Solid: Peace Walker</a></em> did not feature one traditionally, being set just 10 years after <em>Snake Eater</em>. However, you can acquire specs to build your own <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AnachronismStew" title="/pmwiki/pmwiki.php/Main/AnachronismStew">battery-powered Soliton Radar</a>, continuity be damned, which functions identically to its appearance in previous games. Unfortunately, the battery consumption means that it's all but <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AwesomeButImpractical" title="/pmwiki/pmwiki.php/Main/AwesomeButImpractical">Awesome, but Impractical</a> until the very last upgrade, whereupon it stops consuming battery.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MetalGearSolid4GunsOfThePatriots" title="/pmwiki/pmwiki.php/VideoGame/MetalGearSolid4GunsOfThePatriots">Metal Gear Solid 4: Guns of the Patriots</a></em> used a similar Threat Ring, this time surrounding the player in 3D when they crouched rather than in a radar screen. The Solid Eye also gives a radar when worn that worked similarly, which showed the position of the player and nearby characters, as well as a second circle around the player that expands or shrinks to indicate how large of a presence they're making themselves through sound and the like - running full-tilt would nearly fill the radar screen, while laying down and blending in with OctoCamo would make the circle only <em>just</em> barely larger than the one indicating their position. The camo index (indicating how effective your camouflage is against your current background) was also worked into the Solid Eye's radar, and would turn blue or red if you're currently harder or easier to notice amidst things like gunfire and mortar shells exploding nearby.
+</li></ul></li></ul><p></p></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder9');">     Survival Horror  </div><div class="folder" id="folder9" isfolder="true" style="display:block;">
+<p></p><ul><li> The <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/AlienVsPredator" title="/pmwiki/pmwiki.php/VideoGame/AlienVsPredator">Alien vs. Predator</a></em> motion detector is of course from the original <em><a class="twikilink" href="/pmwiki/pmwiki.php/Film/Alien" title="/pmwiki/pmwiki.php/Film/Alien">Alien</a></em> movie, and as a result is in absolutely every game based on the franchise, too.
+<ul><li> And, unlike many such systems, the readout only shows movement in an arc in front of you. That means you don't see what's behind you, you don't see enemies who are standing still, and <em>anything</em> moving will set it off including elevators and loading hooks swaying in the wind.
+</li><li> The <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/AlienIsolation" title="/pmwiki/pmwiki.php/VideoGame/AlienIsolation">Alien: Isolation</a></em> radar (pictured) can detect any moving thing in front of you, be it human, droid, or alien. It also has lights to tell you if something is to your side or behind you, but not how far away it is. However, it cannot tell you if it's on the same level as you, and the beeping might alert other things to your presence.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/EnemyZero" title="/pmwiki/pmwiki.php/VideoGame/EnemyZero">Enemy Zero</a></em>. Picture this: you're on a spaceship out in the middle of nowhere, and a bunch of nasty aliens have come aboard and murdered everyone save you and a few others. Problem is, the aliens are <strong>completely invisible</strong>, and you get to roam the corridors of the ship, completely unable to see them. Your only way of knowing they're around is a sonar-ish device that starts pulsing louder and faster depending on how close the aliens are.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FatalFrame" title="/pmwiki/pmwiki.php/VideoGame/FatalFrame">Fatal Frame</a></em> has two: the Camera Obscura's filament, and the main character's heartbeat. The filament glows when a ghost is nearby, and glows brighter if you're facing the ghost and/or getting closer to it. The character's heartbeat also speeds up the closer a ghost is. This is quite handy, because it is a common situation that ghost can be near you and you can't <em>see</em> it, either because it's in a wall or it's invisible at the time.
+</li><li> The NES game <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Jaws" title="/pmwiki/pmwiki.php/VideoGame/Jaws">Jaws</a></em> includes a radar (unlockable with some seashells) to detect the proximity of the shark.
+<ul><li> The "Jaws: The Ride" minigame in <em><a class="createlink" href="/pmwiki/pmwiki.php/Main/UniversalStudiosThemeParkAdventure" title="/pmwiki/pmwiki.php/Main/UniversalStudiosThemeParkAdventure">Universal Studios Theme Park Adventure</a></em> has this as a mechanic to tell you where he is in relation to the <em>Orca</em>. Even in "Hard" mode he gives you enough time to grab a barrel and head towards that section of the boat.
+</li></ul></li><li> The radio in <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/SilentHill" title="/pmwiki/pmwiki.php/Franchise/SilentHill">Silent Hill</a></em> serves as an audio version, emitting ominous-sounding static whenever a monster is lurking nearby, but all it ends up doing is provide <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ParanoiaFuel" title="/pmwiki/pmwiki.php/Main/ParanoiaFuel">Paranoia Fuel</a> since it doesn't tell you how far away said monster is or how many there are. The <a class="twikilink" href="/pmwiki/pmwiki.php/Main/VariableMix" title="/pmwiki/pmwiki.php/Main/VariableMix">Variable Mix</a> ambient music/noise also behaves similarly, which may be why they got rid of the radio altogether in the fourth game (except for the one <span class="spoiler" title="you can set spoilers visible by default on your profile"> in your room so you can check if it's haunted</span>.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FreddyFazbearsPizzeriaSimulator" title="/pmwiki/pmwiki.php/VideoGame/FreddyFazbearsPizzeriaSimulator">Freddy Fazbear's Pizzeria Simulator</a></em>, unlike the other games in the franchise, only had motion sensors instead of cameras serving as this to monitor the killer animatronics, presumably because you're just starting out with your pizzeria and can't afford the cameras. <span class="spoiler" title="you can set spoilers visible by default on your profile"> Really, though, it's to hide that the 'pizzeria' is a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ClosedCircle" title="/pmwiki/pmwiki.php/Main/ClosedCircle">Closed Circle</a> trap for said killer animatronics so they can be destroyed once and for all in the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TwistEnding" title="/pmwiki/pmwiki.php/Main/TwistEnding">Twist Ending</a>.</span>
+</li></ul><p></p></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder10');">     Third Person Shooter  </div><div class="folder" id="folder10" isfolder="true" style="display:block;">
+<p></p><ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/ArmoredCore" title="/pmwiki/pmwiki.php/VideoGame/ArmoredCore">Armored Core</a></em> has this in almost every game, often <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ColorCodedForYourConvenience" title="/pmwiki/pmwiki.php/Main/ColorCodedForYourConvenience">color coded</a>, but in a bit of a different way; The colors of enemies on radar change depending on their vertical alignment with you (blue for higher, yellow for lower). Starting with Armored Core 4, this system is abolished in favor of a 3D radar, but target enemies show up in red while everything else is white.
+<ul><li> Noteworthy in that the radar actually has a scan interval between updates. Equipping a rapid-scan radar makes it a lot easier to perform a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/HighSpeedMissileDodge" title="/pmwiki/pmwiki.php/Main/HighSpeedMissileDodge">High-Speed Missile Dodge</a>, since you can trace the missile trajectories even when they circle behind you, but very often there's a tradeoff between fast scan times and longer radar ranges.
+</li></ul></li><li> The 3D <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/GrandTheftAuto" title="/pmwiki/pmwiki.php/VideoGame/GrandTheftAuto">Grand Theft Auto</a></em> games has a minimap (sometimes called a radar) in-game. At times, it will show a mission objective or a moving enemy. The <a class="twikilink" href="/pmwiki/pmwiki.php/LetsPlay/FreelanceAstronauts" title="/pmwiki/pmwiki.php/LetsPlay/FreelanceAstronauts">Freelance Astronauts</a> made fun of this in their <a class="twikilink" href="/pmwiki/pmwiki.php/Main/LetsPlay" title="/pmwiki/pmwiki.php/Main/LetsPlay">Let's Play</a> of <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/GrandTheftAutoViceCity" title="/pmwiki/pmwiki.php/VideoGame/GrandTheftAutoViceCity">Grand Theft Auto: Vice City</a></em>, coming to the conclusion that most missions involve "killing the pink dot on the radar".
+</li><li> You don't have this in radar form, but the map of the area you get in every mission in the <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Hitman" title="/pmwiki/pmwiki.php/VideoGame/Hitman">Hitman</a></em> games is insanely accurate, even displaying which way doors open, where the fusebox is, and tracking the movement of every person on the premises, Agent 47 included.
+<ul><li> On the higher difficulty levels, details are removed. On the hardest level, only 47 himself is shown on the map, making the "look through keyhole" action quite handy.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Mafia" title="/pmwiki/pmwiki.php/VideoGame/Mafia">Mafia</a></em> despite being set in the 1930s before <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/WorldWarII" title="/pmwiki/pmwiki.php/UsefulNotes/WorldWarII">World War II</a> and the invention of Radar had one for detecting vehicles in the top left of the screen that showed civilian cars as white, Police as blue and enemies as red blips.
+</li><li> The video game adaptation of <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/RogueTrooper" title="/pmwiki/pmwiki.php/VideoGame/RogueTrooper">Rogue Trooper</a></em> shows enemies on a radar at the bottom-left, available as long he is wearing Helm. It doesn't stop enemies from ambushing Rogue when he fires upon the hologram of the traitor general.
+</li><li> A staple of the "All Range Mode" in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/StarFox" title="/pmwiki/pmwiki.php/VideoGame/StarFox">Star Fox</a></em>.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Warframe" title="/pmwiki/pmwiki.php/VideoGame/Warframe">Warframe</a></em> has this by default for your frames, though it is rather short-range. Ivara's passive grants her increased range by default, and of course there are mods, both for your Frame and Companion / Sentinel that increase its range.
+</li></ul><p></p></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder11');">     Turn Based Strategy  </div><div class="folder" id="folder11" isfolder="true" style="display:block;">
+<p></p><ul><li> Long-range scanners in the <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/StarTrekTextGame" title="/pmwiki/pmwiki.php/VideoGame/StarTrekTextGame">Star Trek Text Game</a></em>, possibly the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/UrExample" title="/pmwiki/pmwiki.php/Main/UrExample">Ur-Example</a> from 1971.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/XCom" title="/pmwiki/pmwiki.php/VideoGame/XCom">X-COM</a></em>
+<ul><li> The classic <a class="twikilink" href="/pmwiki/pmwiki.php/Creator/MicroProse" title="/pmwiki/pmwiki.php/Creator/MicroProse">MicroProse</a> series uses two types:
+<ul><li> On the geoscape, bases need radar arrays (or sonar in the case of <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/XCOMTerrorFromTheDeep" title="/pmwiki/pmwiki.php/VideoGame/XCOMTerrorFromTheDeep">Terror From the Deep</a></em>) to locate UFOs. These come in three sizes with increasing range, and the most advanced type will give detailed information on alien craft and their missions.
+</li><li> On the battlescape, troopers can carry a Motion Scanner (Particle Disturbance Sensor in <em>Terror From the Deep</em>) that will detect units that have moved since the player's last turn, even through walls. However, it doesn't differentiate between friend or foe, has a VERY basic display (for instance, a large contact can be either a large unit or a small unit moving quickly), and is rather short range.
+</li></ul></li><li> The <a class="createlink" href="/pmwiki/pmwiki.php/Creator/Firaxis" title="/pmwiki/pmwiki.php/Creator/Firaxis">Firaxis</a> reboot has three:
+<ul><li> The stand-ins for the old base radar arrays are satellites that can be deployed over the Council countries. They detect UFOs flying over the covered countries, guarantee funding from said countries and are <strong>critical</strong> to controlling nation-wide panic in three ways: 1) launching a satellite <em>immediately</em> reduces the panic level by two points out of five, 2) at the end of each month they have a chance to reduce panic by one point, and the chance increases the higher the panic level is, and 3) they preclude the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SadisticChoice" title="/pmwiki/pmwiki.php/Main/SadisticChoice">Sadistic Choice</a> that is the "Alien Abductions" mission, where you can only help one country out of three. The flipside to these advantages are that satellites take 20 full days to build until very late in the game<span class="notelabel" onclick="togglenote('note0dyw0');"><sup>note </sup></span><span class="inlinefolder" id="note0dyw0" isnote="true" onclick="togglenote('note0dyw0');" style="cursor:pointer;font-size:smaller;display:none;">after you research Advanced Construction in the Foundry, you can spend double the money to halve the time to 10 days</span>, require Satellite Uplink or Nexus installations to manage the feeds, and if you ignore a UFO for whatever reason, they can be shot down by a following contact (and instantly raise the country's panic to the breaking point).
+</li><li> The Battle Scanner is a round camera-like device that can be thrown like a grenade, and reveals a section of the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/FogOfWar" title="/pmwiki/pmwiki.php/Main/FogOfWar">Fog of War</a> without alarming the enemies it sees; it also blows the cover on invisible<span class="notelabel" onclick="togglenote('note03hch');"><sup>+ </sup></span><span class="inlinefolder" id="note03hch" isnote="true" onclick="togglenote('note03hch');" style="cursor:pointer;font-size:smaller;display:none;">Seekers in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/XCOMEnemyUnknown" title="/pmwiki/pmwiki.php/VideoGame/XCOMEnemyUnknown">XCOM: Enemy Unknown</a><strong>s </strong></em>Enemy Within<em> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ExpansionPack" title="/pmwiki/pmwiki.php/Main/ExpansionPack">Expansion Pack</a></em></span>, disguised<span class="notelabel" onclick="togglenote('note12fjq');"><sup>+ </sup></span><span class="inlinefolder" id="note12fjq" isnote="true" onclick="togglenote('note12fjq');" style="cursor:pointer;font-size:smaller;display:none;">Faceless in <a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/XCOM2" title="/pmwiki/pmwiki.php/VideoGame/XCOM2">XCOM 2</a><em></em></span> or concealed<span class="notelabel" onclick="togglenote('note2bf7r');"><sup>+ </sup></span><span class="inlinefolder" id="note2bf7r" isnote="true" onclick="togglenote('note2bf7r');" style="cursor:pointer;font-size:smaller;display:none;">Spectres and the Chosen Assassin in <a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/XCOM2" title="/pmwiki/pmwiki.php/VideoGame/XCOM2">XCOM 2</a>s <em>War of the Chosen</em> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ExpansionPack" title="/pmwiki/pmwiki.php/Main/ExpansionPack">Expansion Pack</a></span> enemies within its area of effect but does not affect the invisibility or concealment of the soldier that deploys it. In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/XCOMEnemyUnknown" title="/pmwiki/pmwiki.php/VideoGame/XCOMEnemyUnknown">XCOM: Enemy Unknown</a></em> it's normally a Sniper-exclusive Lieutenant skill<span class="notelabel" onclick="togglenote('note1rubg');"><sup>note </sup></span><span class="inlinefolder" id="note1rubg" isnote="true" onclick="togglenote('note1rubg');" style="cursor:pointer;font-size:smaller;display:none;">any soldier can get it at any rank with the ability-shuffling "Training Roulette" Second Wave option introduced in <em>Enemy Within</em></span> and has two "charges" per mission, while in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/XCOM2" title="/pmwiki/pmwiki.php/VideoGame/XCOM2">XCOM 2</a></em> it's a regular item with only one "charge" developed after performing an autopsy on an ADVENT Trooper.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/XCOM2" title="/pmwiki/pmwiki.php/VideoGame/XCOM2">XCOM 2</a></em>, Specialists at Sergeant rank or above have access to Scanning Protocol, a skill where they use their GREMLIN to increase their sight radius and reveal disguised or concealed enemy units. It only lasts one turn, though.
+</li></ul></li><li> In both continuities, the Hyperwave Relay is a base structure that complements the radar surveillance with info on the UFO's mission and the species on board.
+</li></ul></li></ul><p></p></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder12');">     Western RPG  </div><div class="folder" id="folder12" isfolder="true" style="display:block;">
+<p></p><ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DragonAgeOrigins" title="/pmwiki/pmwiki.php/VideoGame/DragonAgeOrigins">Dragon Age: Origins</a></em> has a Survival skill, and as you gain levels in it, more detail about enemies and higher level enemies will show up. <a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DragonAgeII" title="/pmwiki/pmwiki.php/VideoGame/DragonAgeII">The sequel</a> had all enemies visible on the minimap, but only after you encounter them.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/TheElderScrolls" title="/pmwiki/pmwiki.php/Franchise/TheElderScrolls">The Elder Scrolls</a></em>:
+<ul><li> Available as a spell effect in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheElderScrollsIIIMorrowind" title="/pmwiki/pmwiki.php/VideoGame/TheElderScrollsIIIMorrowind">Morrowind</a></em> and <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheElderScrollsIVOblivion" title="/pmwiki/pmwiki.php/VideoGame/TheElderScrollsIVOblivion">Oblivion</a></em>, where it comes in a variety of types including "Detect Humanoid", "Detect Creature", and "Detect Undead". Using it (or applying it as an enchantment effect to an item) will cause the applicable enemy type to show up on the mini-map. Also available are "Detect Magic/Enchantment" and "Detect Key" (<a class="twikilink" href="/pmwiki/pmwiki.php/Main/MundaneUtility" title="/pmwiki/pmwiki.php/Main/MundaneUtility">presumably the result of a mage losing his tower key once too often</a>).
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheElderScrollsVSkyrim" title="/pmwiki/pmwiki.php/VideoGame/TheElderScrollsVSkyrim">Skyrim</a></em> has two spells, Detect Living and Detect Dead, which do what they sound like, letting you determine where people are located. The latter is a must-have for draugr ruins to spot where those sneaky undead might be hiding. There's also a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MakeMeWannaShout" title="/pmwiki/pmwiki.php/Main/MakeMeWannaShout">Dragon Shout</a> called Aura Whisper that detects <em>everything</em> that can move, living or undead, and has a very wide range and fast cooldown. Once you've got Aura Whisper, you should <em>never</em> fall into an ambush again.
+</li></ul></li><li> The PIPBoy has a motion tracker option in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Fallout1" title="/pmwiki/pmwiki.php/VideoGame/Fallout1">Fallout</a></em> &amp; <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Fallout2" title="/pmwiki/pmwiki.php/VideoGame/Fallout2">Fallout 2</a></em>, which will display all living entities on the minimap scanner when it's switched on.
+<ul><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Fallout3" title="/pmwiki/pmwiki.php/VideoGame/Fallout3">Fallout 3</a></em>, enemies are shown on your compass as red ticks, with the range governed by your Perception stat.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FalloutNewVegas" title="/pmwiki/pmwiki.php/VideoGame/FalloutNewVegas">Fallout: New Vegas</a></em>'s <em>Lonesome Road</em> DLC has areas where the high radiation levels <a class="twikilink" href="/pmwiki/pmwiki.php/Main/InterfaceScrew" title="/pmwiki/pmwiki.php/Main/InterfaceScrew">interfere with your motion tracker</a>.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/MassEffect" title="/pmwiki/pmwiki.php/Franchise/MassEffect">Mass Effect</a></em> features both Enemy Detecting Radar and Radar-Jamming Enemies, specifically geth. But the geth radar-jamming is more of a nuisance than anything else: its range is short enough that they only jam you when they're about to attack (meaning they can't really ambush an attentive player), and their flashlight heads are kind of a giveaway as to their location, even in thick fog.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MightAndMagic" title="/pmwiki/pmwiki.php/VideoGame/MightAndMagic">Might and Magic</a> 6</em> introduced the "new and improved" automap, which, when combined with the first Air magic spell "Wizard Eye", functioned as an Life Detecting Radar - Green is Neutral, Red is Hostile, Blue is Loose Item, and Yellow is Lootable Body.
+<ul><li> Strictly speaking Blue is 'Point of Interest'. Most of the time that either means a chest or a loose item. Sometimes it is a map-object you can interact with (a fountain that regenerates health, a floor that moves, etc).
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/NeverwinterNights2" title="/pmwiki/pmwiki.php/VideoGame/NeverwinterNights2">Neverwinter Nights 2</a></em> has the Track ability, which pinpoints enemies on the minimap at a distance dependent on your Survival skill. You can toggle it on at the cost of movement speed, or you can take the Improved Tracking feat (free to rangers), which changes it to always-on and allows you to move at full speed.
+</li></ul><p></p></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder13');">     Wide Open Sandbox  </div><div class="folder" id="folder13" isfolder="true" style="display:block;">
+<p></p><ul><li> Available in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TerraTech" title="/pmwiki/pmwiki.php/VideoGame/TerraTech">TerraTech</a></em> as actual radar blocks which can be fitted onto the player's tech. A radar allows enemies to show up on the minimap as red targeting reticules.
+</li></ul></div>
+<p></p><h2>Non Video Game Examples:</h2>
+<p></p><div class="folderlabel" onclick="togglefolder('folder14');">     Films  </div><div class="folder" id="folder14" isfolder="true" style="display:block;">
+<p></p><ul><li> One of the most famous occurrences of this is the motion tracker from <em><a class="twikilink" href="/pmwiki/pmwiki.php/Film/Aliens" title="/pmwiki/pmwiki.php/Film/Aliens">Aliens</a></em>, used by the Colonial Marines both to look for survivors of Hadley's Hope and hunt for the titular Xenomorphs. However, it doesn't discriminate between friend and foe, as shown when the very first thing detected was some hamsters in their habitat; Newt is nearly shot when her appearance on the tracker prompts the Marines to prep their weapons.
+</li><li> Utterly averted in <em><a class="twikilink" href="/pmwiki/pmwiki.php/Film/TheGiantBehemoth" title="/pmwiki/pmwiki.php/Film/TheGiantBehemoth">The Giant Behemoth</a></em>, because (for some reason) the Paleosaurus is invisible to radar.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Film/CodeRedTheRubiconConspiracy" title="/pmwiki/pmwiki.php/Film/CodeRedTheRubiconConspiracy">Code Red: the Rubicon Conspiracy</a></em> has a tracking device which initially is being used to track the remaining survivor, but then inexplicably also tracks both types of aliens.
+</li><li> Used to some extent in <em><a class="twikilink" href="/pmwiki/pmwiki.php/Film/JurassicWorld" title="/pmwiki/pmwiki.php/Film/JurassicWorld">Jurassic World</a></em>. The park's command center can monitor most dinosaur movements through a combination of infrared and motion sensors, satellite imagery and implanted tracking beacons, the latter of which play an important dramatic role when the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BigBad" title="/pmwiki/pmwiki.php/Main/BigBad">Indominus</a> starts raising hell. They even manage to keep track of it after <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ItCanThink" title="/pmwiki/pmwiki.php/Main/ItCanThink">it rips out its implant</a>, probably by following the trail of dino corpses and general devastation it leaves in its wake. It still manages to ambush the heroes on a regular basis despite being a 16-meters murder machine, but then again it's also a genetically engineered <a class="twikilink" href="/pmwiki/pmwiki.php/Main/LivingWeapon" title="/pmwiki/pmwiki.php/Main/LivingWeapon">Living Weapon</a> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/NewPowersAsThePlotDemands" title="/pmwiki/pmwiki.php/Main/NewPowersAsThePlotDemands">with a range of abilities</a> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GoneHorriblyRight" title="/pmwiki/pmwiki.php/Main/GoneHorriblyRight">nobody expected it to have</a>.
+</li></ul><p></p></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder15');">     Literature  </div><div class="folder" id="folder15" isfolder="true" style="display:block;">
+<p></p><ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/HarryPotter" title="/pmwiki/pmwiki.php/Literature/HarryPotter">Harry Potter</a></em> has both the Marauder's Map (a real-time map of people and where they are on school grounds) and the Sneakoscope. Though the Sneakoscope only indicates if someone nearby is untrustworthy, whether it's due to a little prank they're playing or something much more serious, with no distinction between the two.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/DarkFuture" title="/pmwiki/pmwiki.php/Literature/DarkFuture">Krokodil Teares</a></em>. Smug Californian Op Bronson Manolo's mobile command centre has a readout showing him exactly how many living people there are in the town of Dead Rat <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ColorCodedForYourConvenience" title="/pmwiki/pmwiki.php/Main/ColorCodedForYourConvenience">with enemies in red and friendlies in blue</a>.
+</li><li> In the <em>Star Wolf</em> series by David Gerrold, due to the distances involved in a space battle no-one ever sees their opponent. In fact the first novel originally ends with the main character discovering that the enemy spacecraft they've been chasing the entire novel is just a sensor glitch (Gerrold later expanded the novel and had this just be an enemy ploy).
+</li></ul><p></p></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder16');">     Pinball  </div><div class="folder" id="folder16" isfolder="true" style="display:block;">
+<p></p><ul><li> "Locate the Joker" in <a class="twikilink" href="/pmwiki/pmwiki.php/Creator/SternPinball" title="/pmwiki/pmwiki.php/Creator/SternPinball">Stern Pinball</a>'s <em><a class="twikilink" href="/pmwiki/pmwiki.php/Pinball/BatmanStern" title="/pmwiki/pmwiki.php/Pinball/BatmanStern">Batman</a></em> shows Batman using a hand-held sensor to track the Joker as he runs around.
+</li></ul><p></p></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder17');">     Real Life  </div><div class="folder" id="folder17" isfolder="true" style="display:block;">
+<p></p><ul><li> As mentioned above, this is <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TruthInTelevision" title="/pmwiki/pmwiki.php/Main/TruthInTelevision">Truth in Television</a>: There is also a widely-used military system called a Radar Warning Receiver, which (in many, but not all cases) identifies the type of radar emissions (i.e. SPY-1, "High Lark", Agave) and can determine the likely threat of them. A general hint — <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SensorSuspense" title="/pmwiki/pmwiki.php/Main/SensorSuspense">a repeating tone</a> indicates that an enemy radar emitter has locked on to you and may be getting ready to fire.
+<ul><li> Want a real life Motion tracker? The closest you'll get in the civilian market is the T-Cube sensor. 500 metre maximum range, with an SOS function, encryption and real time motion detection, the only catch is that you can only see friendlies on your screen. And that it's $500 for two. <a class="urllink" href="http://www.redwolfairsoft.com/redwolf/airsoft/Combat_Gear_Electronic_Positioning_Devices_T_Cube_Motion_Tracker_Unit_Dual_Pack.htm">Take a look.<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a>
+</li></ul></li><li> Aircraft have something referred to as "IFF", the Identification Friend-or-Foe system. By transmitting certain signals, aircraft can be identified as "friendly", "hostile", "civilian/neutral" or "unknown". This is a way that pilots can quickly identify which aircraft belong to their allies to avoid blowing them out of the sky.
+</li></ul><p></p></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder18');">     Tabletop Games  </div><div class="folder" id="folder18" isfolder="true" style="display:block;">
+<p></p><ul><li> In most if not all <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/DungeonsAndDragons" title="/pmwiki/pmwiki.php/TabletopGame/DungeonsAndDragons">Dungeons &amp; Dragons</a></em> game mechanics (and probably a lot of Tabletop RPGs in general) there are spells to detect the presence, location, and relative strength of a variety of creatures, usually in the form of Detect [Alignment], for creatures matching a particular type of alignment and Detect Undead, for <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ExactlyWhatItSaysOnTheTin" title="/pmwiki/pmwiki.php/Main/ExactlyWhatItSaysOnTheTin">undead creatures</a>. There's also Detect Magic, which doesn't detect creatures, but magical items and spell effects.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/Warhammer40000" title="/pmwiki/pmwiki.php/TabletopGame/Warhammer40000">Warhammer 40,000</a></em> has the auspex, a handheld or helmet-mounted scanner that can usually detect enemies. Unfortunately (<a class="twikilink" href="/pmwiki/pmwiki.php/Main/PercussiveMaintenance" title="/pmwiki/pmwiki.php/Main/PercussiveMaintenance">in addition to all the problems with Imperial tech</a>, against the tyranids it sometimes fails due to being calibrated for one species or the other and not hybrids, and sometimes because the 'nids know to stay <em>just</em> out of auspex range when building up their forces for a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ZergRush" title="/pmwiki/pmwiki.php/Main/ZergRush">Zerg Rush</a>.
+</li></ul></div>
+<hr/>
+</div>
+<div class="square_ad footer-article-ad main_2" data-isolated="0"></div>
+<div class="section-links" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<div class="titles">
+<div><h3 class="text-center text-uppercase">Previous</h3></div>
+<div><h3 class="text-center text-uppercase">Index</h3></div>
+<div><h3 class="text-center text-uppercase">Next</h3></div>
+</div>
+<div class="links">
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/EmoteAnimation">Emote Animation</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/VideoGameInterfaceElements">Video Game Interface Elements</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/EvolvingTitleScreen">Evolving Title Screen</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/EdibleCollectible">Edible Collectible</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/OlderThanTheNES">Older Than the NES</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/ExpansionPack">Expansion Pack</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/EndlessGame">Endless Game</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/VideoGameTropes">Video Game Tropes</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/AnEntrepreneurIsYou">An Entrepreneur Is You</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/YourSizeMayVary">Your Size May Vary</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/QuoteSource/Internet">QuoteSource/Internet</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Website/Tumblr">Tumblr</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/CassetteFuturism">Cassette Futurism</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/ImageSource/VideoGamesAToL">ImageSource/Video Games (A to L)</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/SurvivalHorror">Survival Horror</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="outer_ads_by_salon_wrapper" id="exco_player_insert_div">
+</div>
+</article>
+<div id="main-content-sidebar"><div class="sidebar-item display-options">
+<ul class="sidebar display-toggles">
+<li>Show Spoilers <div class="display-toggle show-spoilers" id="sidebar-toggle-showspoilers"></div></li>
+<li>Night Vision <div class="display-toggle night-vision" id="sidebar-toggle-nightvision"></div></li>
+<li>Sticky Header <div class="display-toggle sticky-header" id="sidebar-toggle-stickyheader"></div></li>
+<li>Wide Load <div class="display-toggle wide-load" id="sidebar-toggle-wideload"></div></li>
+</ul>
+<script>updateDesktopPrefs();</script>
+</div>
+<div class="sidebar-item ad sb-ad-unit">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_2"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_2'); });</script> </div>
+</div></div>
+<div class="sidebar-item quick-links" itemtype="http://schema.org/SiteNavigationElement">
+<p class="sidebar-item-title" data-title="Important Links">Important Links</p>
+<div class="padded">
+<a href="/pmwiki/query.php?type=att">Ask The Tropers</a>
+<a href="/pmwiki/query.php?type=tf">Trope Finder</a>
+<a href="/pmwiki/query.php?type=ykts">You Know That Show...</a>
+<a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a>
+<a href="/pmwiki/review_activity.php">Reviews</a>
+<a data-modal-target="login" href="/pmwiki/lbs.php">Live Blogs</a>
+<a href="/pmwiki/ad-free-subscribe.php">Go Ad Free!</a> </div>
+</div>
+<div class="sidebar-item sb-ad-unit">
+<div class="sidebar-section">
+<div class="square_ad ad-size-300x600 ad-section text-center">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_3"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_3'); });</script> </div>
+</div> </div>
+</div>
+</div>
+<div class="sidebar-item">
+<p class="sidebar-item-title" data-title="Crucial Browsing">Crucial Browsing</p>
+<ul class="padded font-s" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><a data-click-toggle="active" href="javascript:void(0);">Genre</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/ActionAdventureTropes" title="Main/ActionAdventureTropes">Action Adventure</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ComedyTropes" title="Main/ComedyTropes">Comedy</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CommercialsTropes" title="Main/CommercialsTropes">Commercials</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CrimeAndPunishmentTropes" title="Main/CrimeAndPunishmentTropes">Crime &amp; Punishment</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DramaTropes" title="Main/DramaTropes">Drama</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/HorrorTropes" title="Main/HorrorTropes">Horror</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LoveTropes" title="Main/LoveTropes">Love</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NewsTropes" title="Main/NewsTropes">News</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ProfessionalWrestling" title="Main/ProfessionalWrestling">Professional Wrestling</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SpeculativeFictionTropes" title="Main/SpeculativeFictionTropes">Speculative Fiction</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SportsStoryTropes" title="Main/SportsStoryTropes">Sports Story</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/WarTropes" title="Main/WarTropes">War</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Media</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/Media" title="Main/Media">All Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/AnimationTropes" title="Main/AnimationTropes">Animation (Western)</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Anime" title="Main/Anime">Anime</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ComicBookTropes" title="Main/ComicBookTropes">Comic Book</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FanFic" title="FanFic/FanFics">Fan Fics</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Film" title="Main/Film">Film</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/GameTropes" title="Main/GameTropes">Game</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Literature" title="Main/Literature">Literature</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MusicAndSoundEffects" title="Main/MusicAndSoundEffects">Music And Sound Effects</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NewMediaTropes" title="Main/NewMediaTropes">New Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/PrintMediaTropes" title="Main/PrintMediaTropes">Print Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Radio" title="Main/Radio">Radio</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SequentialArt" title="Main/SequentialArt">Sequential Art</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TabletopGames" title="Main/TabletopGames">Tabletop Games</a></li>
+<li><a href="/pmwiki/pmwiki.php/UsefulNotes/Television" title="Main/Television">Television</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Theater" title="Main/Theater">Theater</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/VideogameTropes" title="Main/VideogameTropes">Videogame</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Webcomics" title="Main/Webcomics">Webcomics</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Narrative</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/UniversalTropes" title="Main/UniversalTropes">Universal</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/AppliedPhlebotinum" title="Main/AppliedPhlebotinum">Applied Phlebotinum</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CharacterizationTropes" title="Main/CharacterizationTropes">Characterization</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Characters" title="Main/Characters">Characters</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CharactersAsDevice" title="Main/CharactersAsDevice">Characters As Device</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Dialogue" title="Main/Dialogue">Dialogue</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Motifs" title="Main/Motifs">Motifs</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NarrativeDevices" title="Main/NarrativeDevices">Narrative Devices</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Paratext" title="Main/Paratext">Paratext</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Plots" title="Main/Plots">Plots</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Settings" title="Main/Settings">Settings</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Spectacle" title="Main/Spectacle">Spectacle</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Other Categories</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/BritishTellyTropes" title="Main/BritishTellyTropes">British Telly</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TheContributors" title="Main/TheContributors">The Contributors</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CreatorSpeak" title="Main/CreatorSpeak">Creator Speak</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Creators" title="Main/Creators">Creators</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DerivativeWorks" title="Main/DerivativeWorks">Derivative Works</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LanguageTropes" title="Main/LanguageTropes">Language</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LawsAndFormulas" title="Main/LawsAndFormulas">Laws And Formulas</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ShowBusiness" title="Main/ShowBusiness">Show Business</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SplitPersonalityTropes" title="Main/SplitPersonalityTropes">Split Personality</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/StockRoom" title="Main/StockRoom">Stock Room</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TropeTropes" title="Main/TropeTropes">Trope</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Tropes" title="Main/Tropes">Tropes</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TruthAndLies" title="Main/TruthAndLies">Truth And Lies</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TruthInTelevision" title="Main/TruthInTelevision">Truth In Television</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Topical Tropes</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/BetrayalTropes" title="Main/BetrayalTropes">Betrayal</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CensorshipTropes" title="Main/CensorshipTropes">Censorship</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CombatTropes" title="Main/CombatTropes">Combat</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DeathTropes" title="Main/DeathTropes">Death</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FamilyTropes" title="Main/FamilyTropes">Family</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FateAndProphecyTropes" title="Main/FateAndProphecyTropes">Fate And Prophecy</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FoodTropes" title="Main/FoodTropes">Food</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/HolidayTropes" title="Main/HolidayTropes">Holiday</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MemoryTropes" title="Main/MemoryTropes">Memory</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MoneyTropes" title="Main/MoneyTropes">Money</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MoralityTropes" title="Main/MoralityTropes">Morality</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/PoliticsTropes" title="Main/PoliticsTropes">Politics</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ReligionTropes" title="Main/ReligionTropes">Religion</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SchoolTropes" title="Main/SchoolTropes">School</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="sidebar-item showcase">
+<p class="sidebar-item-title" data-title="Community Showcase">Community Showcase <a class="bubble float-right hover-blue" href="/pmwiki/showcase.php">More</a></p>
+<p class="community-showcase">
+<a href="https://sharetv.com/shows/echo_chamber" onclick="trackOutboundLink('https://sharetv.com/shows/echo_chamber');" target="_blank">
+<img alt="" class="lazy-image" data-src="/images/communityShowcase-echochamber.jpg"/></a>
+<a href="/pmwiki/pmwiki.php/Webcomic/TwistedTropes">
+<img alt="" class="lazy-image" data-src="/img/howlandsc-side.jpg"/></a>
+</p>
+</div>
+<div class="sidebar-item sb-ad-unit" id="stick-cont">
+<div class="sidebar-section" id="stick-bar">
+<div class="square_ad ad-size-300x600 ad-section text-center">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_4"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_4'); });</script> </div>
+</div> </div>
+</div>
+</div>
+</div>
+</div>
+<div class="action-bar tablet-off" id="action-bar-bottom">
+<a class="scroll-to-top dead-button" href="#top-of-page" onclick="$('html, body').animate({scrollTop : 0},500);">Top</a>
+</div>
+</div>
+<div class="proper-ad-unit ad-sticky">
+<div id="proper-ad-tvtropes_sticky_ad"> <script>propertag.cmd.push(function() { proper_display('tvtropes_sticky_ad'); });</script> </div>
+</div>
+<footer id="main-footer">
+<div id="main-footer-inner">
+<div class="footer-left">
+<a class="img-link" href="/"><img alt="TV Tropes" class="lazy-image" data-src="/img/tvtropes-footer-logo.png" title="TV Tropes"/></a>
+<form action="index.html" class="navbar-form newsletter-signup validate modal-replies" data-ajax-get="/ajax/subscribe_email.php" id="cse-search-box-mobile" name="" role="">
+<button class="btn-submit newsletter-signup-submit-button" id="subscribe-btn" type="submit"><i class="fa fa-paper-plane"></i></button>
+<input class="form-control" id="subscription-email" name="q" placeholder="Subscribe" size="31" type="text" validate-type="email" value=""/>
+</form>
+<ul class="social-buttons">
+<li><a class="btn fb" href="https://www.facebook.com/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-facebook']);" target="_blank"><i class="fa fa-facebook"></i></a></li>
+<li><a class="btn tw" href="https://www.twitter.com/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-twitter']);" target="_blank"><i class="fa fa-twitter"></i></a> </li>
+<li><a class="btn rd" href="https://www.reddit.com/r/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-reddit']);" target="_blank"><i class="fa fa-reddit-alien"></i></a></li>
+</ul>
+</div>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">TVTropes</h4></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Administrivia">About TVTropes</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TheGoalsOfTVTropes">TVTropes Goals</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TheTropingCode">Troping Code</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TVTropesCustoms">TVTropes Customs</a></li>
+<li><a href="/pmwiki/pmwiki.php/JustForFun/TropesOfLegend">Tropes of Legend</a></li>
+<li><a href="/pmwiki/ad-free-subscribe.php">Go Ad-Free</a></li>
+</ul>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">Community</h4></li>
+<li><a href="/pmwiki/query.php?type=att">Ask The Tropers</a></li>
+<li><a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a></li>
+<li><a href="/pmwiki/query.php?type=tf">Trope Finder</a></li>
+<li><a href="/pmwiki/query.php?type=ykts">You Know That Show</a></li>
+<li><a data-modal-target="login" href="/pmwiki/lbs.php">Live Blogs</a></li>
+<li><a href="/pmwiki/review_activity.php">Reviews</a></li>
+<li><a href="/pmwiki/topics.php">Forum</a></li>
+</ul>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">Tropes HQ</h4></li>
+<li><a href="/pmwiki/about.php">About Us</a></li>
+<li><a href="/pmwiki/contact.php">Contact Us</a></li>
+<li><a href="/pmwiki/dmca.php">DMCA Notice</a></li>
+<li><a href="/pmwiki/privacypolicy.php">Privacy Policy</a></li>
+</ul>
+</div>
+<div class="text-center gutter-top gutter-bottom tablet-on" id="desktop-on-mobile-toggle">
+<a href="/pmwiki/switchDeviceCss.php?mobileVersion=1" rel="nofollow">Switch to <span class="txt-desktop">Desktop</span><span class="txt-mobile">Mobile</span> Version</a>
+</div>
+<div class="legal">
+<p>TVTropes is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License. <br/>Permissions beyond the scope of this license may be available from <a href="mailto:thestaff@tvtropes.org" rel="cc:morePermissions" xmlns:cc="http://creativecommons.org/ns#"> thestaff@tvtropes.org</a>.</p>
+<br/>
+<div class="privacy_wrapper">
+</div>
+</div>
+</footer>
+<style>
+      div.fc-ccpa-root {
+        position: absolute !important;
+        bottom: 93px !important;
+        margin: auto !important;
+        width: 100% !important;
+        z-index: 9999 !important;
+      }
+      .fc-ccpa-root .fc-dns-dialog .fc-dns-link p{
+        outline: none !important;
+        text-decoration: underline !important;
+        font-size: .7em !important;
+        font-family: sans-serif !important;
+      }
+      .fc-ccpa-root .fc-dns-dialog .fc-dns-link .fc-button-background {
+        background: none !important;
+      }
+    </style>
+<div class="full-screen" id="_pm_videoViewer">
+<a class="close" href="#close" id="_pm_videoViewer-close"></a>
+<div class="_pmvv-body">
+<div class="_pmvv-vidbox">
+<video class="video-js vjs-default-skin vjs-16-9" data-video-id="" id="overlay-video-player-box">
+</video>
+<div class="_pmvv-vidbox-desc">
+<h1 id="overlay-title"></h1>
+<p class="_pmvv-vidbox-descTxt" id="overlay-descrip">
+</p>
+<div class="rating-row" data-video-id="">
+<input name="is_logged_in" type="hidden" value="0"/>
+<p>How well does it match the trope?</p>
+<div id="star-rating-group">
+<div class="trope-rate">
+<input id="lamp5" name="rate" type="radio" value="5"/>
+<label for="lamp5" title="Absolutely"></label>
+<input id="lamp4" name="rate" type="radio" value="4"/>
+<label for="lamp4" title="Yes"></label>
+<input id="lamp3" name="rate" type="radio" value="3"/>
+<label for="lamp3" title="Kind of"></label>
+<input id="lamp2" name="rate" type="radio" value="2"/>
+<label for="lamp2" title="Not really"></label>
+<input id="lamp1" name="rate" type="radio" value="1"/>
+<label for="lamp1" title="No"></label>
+</div>
+<div id="star-rating-total">
+</div>
+</div>
+</div>
+<div class="example-media-row">
+<div class="example-overlay">
+<p>Example of:</p>
+<div id="overlay-trope"> / </div>
+</div>
+<div class="media-sources-overlay example-overlay">
+<p>Media sources:</p>
+<div id="overlay-media"> / </div>
+</div>
+</div>
+<p class="_pmvv-vidbox-stats text-right font-s" style="padding-top:8px; border-top: solid 1px rgba(255,255,255,0.2)">
+<a class="float-right" data-modal-target="login" href="#video-feedback">Report</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+        window.special_ops =  {
+            member : 'no',
+            isolated : 0,
+            tags : ['videogame']
+        };
+    </script>
+<script type="text/javascript">
+
+        var cleanCreativeEnabled = "";
+        var donation = "";
+        var live_ads = "1";
+        var img_domain = "https://static.tvtropes.org";
+        var snoozed = cookies.read('snoozedabm');
+        var snoozable = "";
+
+        if (adsRemovedWith) {
+            live_ads = 0;
+        }
+
+        var elem = document.createElement('script');
+        elem.async = true;
+
+        elem.src = '/design/assets/bundle.js?rev=c58d8df02f09262390bbd03db7921fc35c6af306';
+
+        elem.onload = function() {
+                                 }
+        document.getElementsByTagName('head')[0].appendChild(elem);
+
+    </script>
+<script type="text/javascript">
+      function send_analytics_event(user_type, donation){
+          // if(user_type == 'uncached' || user_type == 'cached'){
+          //   ga('send', 'event', 'caching', 'load', user_type, {'nonInteraction': 1});
+          //   return;
+          // }
+          var event_name = user_type;
+
+          if(donation == 'true'){
+              event_name += "_donation"
+          }else if(typeof(valid_user) == 'undefined'){
+              event_name += "_blocked"
+          }else if(valid_user == true){
+              event_name += "_unblocked";
+          }else{
+              event_name = "_unknown"
+          }
+          ga('send', 'event', 'ads', 'load', event_name, {'nonInteraction': 1});
+      }
+
+    
+    send_analytics_event("guest", "false");
+      </script>
+</body>
+</html>

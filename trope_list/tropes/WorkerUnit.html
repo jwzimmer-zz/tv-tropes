@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Worker Unit - TV Tropes</title>
+<meta content="The core of every Command &amp; Conquer Economy, the Worker Unit is ubiquitous on the battlefields of most Real-Time Strategy games, and even some Turn- …" name="description"/>
+<link href="https://tvtropes.org/pmwiki/pmwiki.php/Main/WorkerUnit" rel="canonical"/>
+<link href="/img/icons/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="@tvtropes" name="twitter:site"/>
+<meta content="@tvtropes" name="twitter:owner"/>
+<meta content="Worker Unit - TV Tropes" name="twitter:title"/>
+<meta content="The core of every Command &amp; Conquer Economy, the Worker Unit is ubiquitous on the battlefields of most Real-Time Strategy games, and even some Turn- …" name="twitter:description"/>
+<meta content="https://static.tvtropes.org/logo_blue_small.png" name="twitter:image:src"/>
+<meta content="TV Tropes" property="og:site_name"/>
+<meta content="en_US" property="og:locale"/>
+<meta content="https://www.facebook.com/tvtropes" property="article:publisher"/>
+<meta content="Worker Unit - TV Tropes" property="og:title"/>
+<meta content="website" property="og:type"/>
+<meta content="https://tvtropes.org/pmwiki/pmwiki.php/Main/WorkerUnit" property="og:url"/>
+<meta content="https://static.tvtropes.org/logo_blue_small.png" property="og:image"/>
+<meta content="The core of every Command &amp; Conquer Economy, the Worker Unit is ubiquitous on the battlefields of most Real-Time Strategy games, and even some Turn-Based Strategy and 4X games. It primarily serves two functions:  Collecting Resources: This is …" property="og:description"/>
+<link href="/img/icons/apple-icon-57x57.png" rel="apple-touch-icon" sizes="57x57" type="image/png"/>
+<link href="/img/icons/apple-icon-60x60.png" rel="apple-touch-icon" sizes="60x60" type="image/png"/>
+<link href="/img/icons/apple-icon-72x72.png" rel="apple-touch-icon" sizes="72x72" type="image/png"/>
+<link href="/img/icons/apple-icon-76x76.png" rel="apple-touch-icon" sizes="76x76" type="image/png"/>
+<link href="/img/icons/apple-icon-114x114.png" rel="apple-touch-icon" sizes="114x114" type="image/png"/>
+<link href="/img/icons/apple-icon-120x120.png" rel="apple-touch-icon" sizes="120x120" type="image/png"/>
+<link href="/img/icons/apple-icon-144x144.png" rel="apple-touch-icon" sizes="144x144" type="image/png"/>
+<link href="/img/icons/apple-icon-152x152.png" rel="apple-touch-icon" sizes="152x152" type="image/png"/>
+<link href="/img/icons/apple-icon-180x180.png" rel="apple-touch-icon" sizes="180x180" type="image/png"/>
+<link href="/img/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/img/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/img/icons/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png"/>
+<link href="/img/icons/favicon-192x192.png" rel="icon" sizes="192x192" type="image/png"/>
+<meta content="width=device-width, initial-scale=1" id="viewport" name="viewport"/>
+<script>
+                var propertag = {};
+                propertag.cmd = [];
+            </script>
+<link href="/design/assets/bundle.css?rev=c58d8df02f09262390bbd03db7921fc35c6af306" rel="stylesheet"/>
+<script>
+                function object(objectId) {
+                    if (document.getElementById && document.getElementById(objectId)) {
+                        return document.getElementById(objectId);
+                    } else if (document.all && document.all(objectId)) {
+                        return document.all(objectId);
+                    } else if (document.layers && document.layers[objectId]) {
+                        return document.layers[objectId];
+                    } else {
+                        return false;
+                    }
+                }
+
+                // JAVASCRIPT COOKIES CODE: for getting and setting user viewing preferences
+                var cookies = {
+                    create: function (name, value, days2expire, path) {
+                        var date = new Date();
+                        date.setTime(date.getTime() + (days2expire * 24 * 60 * 60 * 1000));
+                        var expires = date.toUTCString();
+                        document.cookie = name + '=' + value + ';' + 'expires=' + expires + ';' + 'path=' + path + ';';
+                    },
+										createWithExpire: function(name, value, expires, path) {
+												document.cookie = name + '=' + value + ';' + 'expires=' + expires + ';' + 'path=' + path + ';';
+										},
+                    read: function (name) {
+                        var cookie_value = "",
+                            current_cookie = "",
+                            name_expr = name + "=",
+                            all_cookies = document.cookie.split(';'),
+                            n = all_cookies.length;
+
+                        for (var i = 0; i < n; i++) {
+                            current_cookie = all_cookies[i].trim();
+                            if (current_cookie.indexOf(name_expr) === 0) {
+                                cookie_value = current_cookie.substring(name_expr.length, current_cookie.length);
+                                break;
+                            }
+                        }
+                        return cookie_value;
+                    },
+                    update: function (name, val) {
+                        this.create(name, val, 300, "/");
+                    },
+                    remove: function (name) {
+                        document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
+                    }
+                };
+
+                function updateUserPrefs() {
+                    //GENERAL: detect and set browser, if not cookied (will be treated like a user-preference and added to the #user-pref element)
+                    if( !cookies.read('user-browser') ){
+                        var broswer = '';
+
+                        if(navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPod/i) ){
+                            browser = 'iOS';
+                        } else if (/Opera[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'opera';
+                        } else if (/MSIE (\d+\.\d+);/.test(navigator.userAgent)) {
+                            browser = 'MSIE';
+                        } else if (/Navigator[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'netscape';
+                        } else if (/Chrome[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'chrome';
+                        } else if (/Safari[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'safari';
+                            /Version[\/\s](\d+\.\d+)/.test(navigator.userAgent);
+                            browserVersion = new Number(RegExp.$1);
+                        } else if (/Firefox[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'firefox';
+                        } else {
+                            browser = 'internet_explorer';
+                        }
+                        cookies.create('user-browser',browser,1,'/');
+                        document.getElementById('user-prefs').classList.add('browser-' + browser);
+                    } else {
+                        document.getElementById('user-prefs').classList.add('browser-' + cookies.read('user-browser'));
+                    }
+
+                    //update user preference settings
+                    if (cookies.read('wide-load') !== '') document.getElementById('user-prefs').classList.add('wide-load');
+                    if (cookies.read('night-vision') !== '') document.getElementById('user-prefs').classList.add('night-vision');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('user-prefs').classList.add('sticky-header');
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('user-prefs').classList.add('show-spoilers');
+                    if (cookies.read('folders-open') !== '') document.getElementById('user-prefs').classList.add('folders-open');
+                    if (cookies.read('lefthand-sidebar') !== '') document.getElementById('user-prefs').classList.add('lefthand-sidebar');
+                    if (cookies.read('highlight-links') !== '') document.getElementById('user-prefs').classList.add('highlight-links');
+                    if (cookies.read('forum-gingerbread') !== '') document.getElementById('user-prefs').classList.add('forum-gingerbread');
+                    if (cookies.read('shared-avatars') !== '') document.getElementById('user-prefs').classList.add('shared-avatars');
+                    if (cookies.read('new-search') !== '') document.getElementById('user-prefs').classList.add('new-search');
+                    if (cookies.read('stop-auto-play-video') !== '') document.getElementById('user-prefs').classList.add('stop-auto-play-video');
+
+                    //desktop view on mobile
+                    if (cookies.read('desktop-on-mobile') !== ''){
+                        document.getElementById('user-prefs').classList.add('desktop-on-mobile');
+
+                        var viewport = document.querySelector("meta[name=viewport]");
+                        viewport.setAttribute('content', 'width=1000');
+                    }
+
+                }
+
+                function updateDesktopPrefs() {
+                    if (cookies.read('wide-load') !== '') document.getElementById('sidebar-toggle-wideload').classList.add('active');
+                    if (cookies.read('night-vision') !== '') document.getElementById('sidebar-toggle-nightvision').classList.add('active');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('sidebar-toggle-stickyheader').classList.add('active');
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('sidebar-toggle-showspoilers').classList.add('active');
+
+                }
+
+                function updateMobilePrefs() {
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('mobile-toggle-showspoilers').classList.add('active');
+                    if (cookies.read('night-vision') !== '') document.getElementById('mobile-toggle-nightvision').classList.add('active');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('mobile-toggle-stickyheader').classList.add('active');
+                    if (cookies.read('highlight-links') !== '') document.getElementById('mobile-toggle-highlightlinks').classList.add('active');
+
+                }
+
+
+                if (document.cookie.indexOf("scroll0=") < 0) {
+                    // do nothing
+                } else {
+                    console.log('ads removed by scroll.com');
+                    var adsRemovedWith = 'scroll';
+                    var style = document.createElement('style');
+                    style.innerHTML = '#header-ad, .proper-ad-unit, .square_ad, .sb-ad-unit { display: none !important; } ';
+                    document.head.appendChild(style);
+                }
+            </script>
+<script type="text/javascript">
+
+                var tvtropes_config = {
+                    astri_stream_enabled : "",
+                    is_logged_in         : "",
+                    handle               : "",
+                    get_astri_stream     : "",
+										revnum               : "c58d8df02f09262390bbd03db7921fc35c6af306",
+										img_domain           : "https://static.tvtropes.org",
+										adblock              : "1",
+										adblock_url          : "propermessage.io",
+										pause_editing        : "0",
+										pause_editing_msg    : "",
+										pause_site_changes   : ""
+                };
+            </script>
+<script type="text/javascript">
+						  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+						  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+						  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+						  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+						  ga('create', 'UA-3821842-1', 'auto');
+						  ga('send', 'pageview');
+
+						</script>
+</head>
+<body class="">
+<i id="user-prefs"></i>
+<script>updateUserPrefs();</script>
+<div id="fb-root"></div>
+<div id="modal-box"></div>
+<header class="headroom-element" id="main-header-bar">
+<div id="main-header-bar-inner">
+<span class="header-spacer" id="header-spacer-left"></span>
+<a class="mobile-menu-toggle-button tablet-on" href="#mobile-menu" id="main-mobile-toggle"><span></span><span></span><span></span></a>
+<a class="no-dev" href="/" id="main-header-logoButton"></a>
+<span class="header-spacer" id="header-spacer-right"></span>
+<nav class="tablet-off" id="main-header-nav">
+<a href="/pmwiki/pmwiki.php/Main/Tropes">Tropes</a>
+<a href="/pmwiki/pmwiki.php/Main/Media">Media</a>
+<a class="nav-browse" href="/pmwiki/browse.php">Browse</a>
+<a href="/pmwiki/index_report.php">Indexes</a>
+<a href="/pmwiki/topics.php">Forums</a>
+<a class="nav-browse" href="/pmwiki/recent_videos.php">Videos</a>
+</nav>
+<div id="main-header-bar-right">
+<div class="font-xs mobile-off" id="signup-login-box">
+<a class="hover-underline bold" data-modal-target="signup" href="/pmwiki/login.php">Join</a>
+<a class="hover-underline bold" data-modal-target="login" href="/pmwiki/login.php">Login</a>
+</div>
+<div class="mobile-on inline" id="signup-login-mobileToggle">
+<a data-modal-target="login" href="/pmwiki/login.php"><i class="fa fa-user"></i></a>
+</div>
+<div id="search-box">
+<form action="/pmwiki/search_result.php" class="search">
+<input class="search-box" name="q" placeholder="Search" required="" type="text" value=""/>
+<input class="submit-button" type="submit" value=""/>
+<input name="search_type" type="hidden" value="article"/>
+<input name="page_type" type="hidden" value="all"/>
+<input name="cx" type="hidden" value="partner-pub-6610802604051523:amzitfn8e7v"/>
+<input name="cof" type="hidden" value="FORID:10"/>
+<input name="ie" type="hidden" value="ISO-8859-1"/>
+<input name="siteurl" type="hidden" value=""/>
+<input name="ref" type="hidden" value=""/>
+<input name="ss" type="hidden" value=""/>
+</form>
+<a class="mobile-on mobile-search-toggle close-x" href="#close-search"><i class="fa fa-close"></i></a>
+</div>
+<div id="random-box">
+<a class="button-random-trope" href="/pmwiki/pmwiki.php/Main/Ronin" onclick="ga('send', 'event', 'button', 'click', 'random trope');" rel="nofollow"></a>
+<a class="button-random-media" href="/pmwiki/pmwiki.php/LetsPlay/MonotoneTim" onclick="ga('send', 'event', 'button', 'click', 'random media');" rel="nofollow"></a>
+</div>
+</div>
+</div>
+<div class="tablet-on" id="mobile-menu"><div class="mobile-menu-options">
+<div class="nav-wrapper">
+<a class="xl" href="/pmwiki/pmwiki.php/Main/Tropes">Tropes</a>
+<a class="xl" href="/pmwiki/pmwiki.php/Main/Media">Media</a>
+<a class="xl" href="/pmwiki/browse.php">Browse</a>
+<a class="xl" href="/pmwiki/index_report.php">Indexes</a>
+<a class="xl" href="/pmwiki/topics.php">Forums</a>
+<a class="xl" href="/pmwiki/recent_videos.php">Videos</a>
+<a href="/pmwiki/query.php?type=att">Ask The Tropers</a>
+<a href="/pmwiki/query.php?type=tf">Trope Finder</a>
+<a href="/pmwiki/query.php?type=ykts">You Know That Show...</a>
+<a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a>
+<a data-click-toggle="active" href="#tools">Tools <i class="fa fa-chevron-down"></i></a>
+<div class="tools-dropdown mobile-dropdown-linkList">
+<a href="/pmwiki/cutlist.php">Cut List</a>
+<a href="/pmwiki/changes.php">New Edits</a>
+<a href="/pmwiki/recent_edit_reasons.php">Edit Reasons</a>
+<a href="/pmwiki/launches.php">Launches</a>
+<a href="/pmwiki/img_list.php">Images List</a>
+<a href="/pmwiki/crown_activity.php">Crowner Activity</a>
+<a href="/pmwiki/no_types.php">Un-typed Pages</a>
+<a href="/pmwiki/page_type_audit.php">Recent Page Type Changes</a>
+</div>
+<a data-click-toggle="active" href="#hq">Tropes HQ <i class="fa fa-chevron-down"></i></a>
+<div class="tools-dropdown mobile-dropdown-linkList">
+<a href="/pmwiki/about.php">About Us</a>
+<a href="/pmwiki/contact.php">Contact Us</a>
+<a href="mailto:advertising@proper.io">Advertise</a>
+<a href="/pmwiki/dmca.php">DMCA Notice</a>
+<a href="/pmwiki/privacypolicy.php">Privacy Policy</a>
+</div>
+<a href="/pmwiki/ad-free-subscribe.php">Go Ad-Free</a>
+<div class="toggle-switches">
+<ul class="mobile-menu display-toggles">
+<li>Show Spoilers <div class="display-toggle show-spoilers" id="mobile-toggle-showspoilers"></div></li>
+<li>Night Vision <div class="display-toggle night-vision" id="mobile-toggle-nightvision"></div></li>
+<li>Sticky Header <div class="display-toggle sticky-header" id="mobile-toggle-stickyheader"></div></li>
+<li>Highlight Links <div class="display-toggle highlight-links" id="mobile-toggle-highlightlinks"></div></li>
+</ul>
+<script>updateMobilePrefs();</script>
+</div>
+</div>
+</div>
+</div>
+</header>
+<div class="mobile-on" id="homepage-introBox-mobile">
+<a href="/"><img class="logo-small" src="/images/logo-white-big.png"/></a>
+<form action="/pmwiki/search_result.php" class="search" style="margin:10px -5px -6px -5px;">
+<input class="search-box" name="q" placeholder="Search" required="" type="text" value=""/>
+<input class="submit-button" type="submit" value=""/>
+<input name="search_type" type="hidden" value="article"/>
+<input name="page_type" type="hidden" value="all"/>
+<input name="cx" type="hidden" value="partner-pub-6610802604051523:amzitfn8e7v"/>
+<input name="cof" type="hidden" value="FORID:10"/>
+<input name="ie" type="hidden" value="ISO-8859-1"/>
+<input name="siteurl" type="hidden" value=""/>
+<input name="ref" type="hidden" value=""/>
+<input name="ss" type="hidden" value=""/>
+</form>
+</div>
+<div class="ad" id="header-ad-wrapper">
+<div id="header-ad">
+<div class="ad-size-970x90 atf_banner">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_1"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_1'); });</script> </div>
+</div> </div>
+</div>
+</div>
+<div id="main-container">
+<div class="action-bar mobile-off" id="action-bar-top">
+<div class="action-bar-right">
+<p>Follow TV Tropes</p>
+<a class="button-fb" href="https://www.facebook.com/TVTropes">
+<i class="fa fa-facebook"></i></a>
+<a class="button-tw" href="https://www.twitter.com/TVTropes">
+<i class="fa fa-twitter"></i></a>
+<a class="button-re" href="https://www.reddit.com/r/TVTropes">
+<i class="fa fa-reddit-alien"></i></a>
+</div>
+<nav class="actions-wrapper" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<ul class="page-actions" id="top_main_list">
+<li class="link-edit">
+<a class="article-edit-button" data-modal-target="login" href="/pmwiki/pmwiki.php/Main/WorkerUnit?action=edit" rel="nofollow">
+<i class="fa fa-pencil"></i> Edit Page</a></li><li class="link-related"><a href="/pmwiki/relatedsearch.php?term=Main/WorkerUnit">
+<i class="fa fa-share-alt"></i> Related</a></li><li class="link-history"><a href="/pmwiki/article_history.php?article=Main.WorkerUnit">
+<i class="fa fa-history"></i> History</a></li><li class="link-discussion"><a href="/pmwiki/remarks.php?trope=Main.WorkerUnit">
+<i class="fa fa-comment"></i> Discussion</a></li> </ul>
+<button class="nav__dropdown-toggle" id="top_more_button" onclick="toggle_more_menu('top');" type="button">More</button>
+<ul class="more_menu hidden_more_list" id="top_more_list">
+<li class="link-todo tuck-always more_list_item"><a data-modal-target="login" href="#todo"><i class="fa fa-check-circle"></i> To Do</a></li><li class="link-pageSource tuck-always more_list_item"><a data-modal-target="login" href="/pmwiki/pmwiki.php/Main/WorkerUnit?action=source" rel="nofollow" target="_blank"><i class="fa fa-code"></i> Page Source</a></li> </ul>
+</nav>
+<div class="WikiWordModalStub"></div>
+<div class="ImgUploadModalStub" data-page-type="Article"></div>
+<div class="login-alert" style="display: none;">
+You need to <a href="/pmwiki/login.php" style="color:#21A0E8">login</a> to do this. <a href="/pmwiki/login.php?tab=register_account" style="color:#21A0E8">Get Known</a> if you don't have an account
+</div>
+</div>
+<div class="page-Article" id="main-content">
+<article class="with-sidebar" id="main-entry">
+<input id="groupname-hidden" type="hidden" value="Main"/>
+<input id="title-hidden" type="hidden" value="WorkerUnit"/>
+<input id="article_id" type="hidden" value="70479"/>
+<input id="logged_in" type="hidden" value="false"/>
+<p class="hidden" id="current_url">http://tvtropes.org/pmwiki/pmwiki.php/Main/WorkerUnit</p>
+<meta content="" itemprop="datePublished"/>
+<meta content="" itemprop="articleSection"/>
+<meta content="" itemprop="image"/>
+<a class="watch-button" data-modal-target="login" href="#watch">Follow<span>ing</span></a>
+<h1 class="entry-title" itemprop="headline">
+Worker Unit
+</h1>
+<script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+                "@type": "ListItem",
+                "position": 1,
+                "name": "tvtropes.org",
+                "item": "https://tvtropes.org"
+            },{
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Tropes",
+                "item": "https://tvtropes.org/pmwiki/pmwiki.php/Main/Tropes"
+            },{
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Worker Unit"            }]
+        }
+    </script>
+<a class="mobile-actionbar-toggle mobile-on" data-click-toggle="active" href="#mobile-actions-toggle" id="mobile-actionbar-toggle">
+<p class="tiny-off">Go To</p><span></span><span></span><span></span><i class="fa fa-pencil"></i></a>
+<nav class="mobile-actions-wrapper mobile-on" id="mobile-actions-bar"></nav>
+<div class="modal fade hidden-until-active" id="editLockModal">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button aria-label="Close" class="close" data-dismiss="modal" type="button"> <span aria-hidden="true">×</span></button>
+<h4 class="modal-title">Edit Locked</h4>
+</div>
+<div class="modal-body">
+<div class="row">
+<div class="body">
+<div class="danger troper_locked_message"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<nav class="body-options" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<ul class="subpage-links">
+<li>
+<a class="subpage-link curr-subpage" href="/pmwiki/pmwiki.php/Main/WorkerUnit" title="The Main page">
+<span class="wrapper"><span class="spi main-page"></span>Main</span></a>
+</li>
+<li>
+<a class="subpage-link" href="/pmwiki/pmwiki.php/Laconic/WorkerUnit" title="The Laconic page">
+<span class="wrapper"><span class="spi laconic-icon"></span>Laconic</span></a>
+</li>
+<li class="create-subpage dropdown">
+<a aria-expanded="false" class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);" role="button">
+<span class="wrapper">Create New <i class="fa fa-plus-circle"></i></span>
+</a>
+<select onchange="this.options[this.selectedIndex].value &amp;&amp; (window.location = this.options[this.selectedIndex].value);">
+<option value="">- Create New -</option>
+<option value="/pmwiki/pmwiki.php/Analysis/WorkerUnit?action=edit">Analysis</option>
+<option value="/pmwiki/pmwiki.php/Characters/WorkerUnit?action=edit">Characters</option>
+<option value="/pmwiki/pmwiki.php/FanficRecs/WorkerUnit?action=edit">FanficRecs</option>
+<option value="/pmwiki/pmwiki.php/FanWorks/WorkerUnit?action=edit">FanWorks</option>
+<option value="/pmwiki/pmwiki.php/Fridge/WorkerUnit?action=edit">Fridge</option>
+<option value="/pmwiki/pmwiki.php/Haiku/WorkerUnit?action=edit">Haiku</option>
+<option value="/pmwiki/pmwiki.php/Headscratchers/WorkerUnit?action=edit">Headscratchers</option>
+<option value="/pmwiki/pmwiki.php/ImageLinks/WorkerUnit?action=edit">ImageLinks</option>
+<option value="/pmwiki/pmwiki.php/PlayingWith/WorkerUnit?action=edit">PlayingWith</option>
+<option value="/pmwiki/pmwiki.php/Quotes/WorkerUnit?action=edit">Quotes</option>
+<option value="/pmwiki/pmwiki.php/Recap/WorkerUnit?action=edit">Recap</option>
+<option value="/pmwiki/pmwiki.php/ReferencedBy/WorkerUnit?action=edit">ReferencedBy</option>
+<option value="/pmwiki/pmwiki.php/Synopsis/WorkerUnit?action=edit">Synopsis</option>
+<option value="/pmwiki/pmwiki.php/Timeline/WorkerUnit?action=edit">Timeline</option>
+<option value="/pmwiki/pmwiki.php/Trivia/WorkerUnit?action=edit">Trivia</option>
+<option value="/pmwiki/pmwiki.php/WMG/WorkerUnit?action=edit">WMG</option>
+<option value="/pmwiki/pmwiki.php/YMMV/WorkerUnit?action=edit">YMMV</option>
+</select>
+</li>
+</ul>
+</nav>
+<div class="article-content retro-folders" id="main-article">
+<p></p><div class="quoteright" style="width:239px;"><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Warcraft" title="/pmwiki/pmwiki.php/VideoGame/Warcraft"><div class="lazy_load_img_box" style="padding-top:83.68%"><img alt="https://static.tvtropes.org/pmwiki/pub/images/Peon_3575.png" border="0" class="embeddedimage" height="200" src="https://static.tvtropes.org/pmwiki/pub/images/Peon_3575.png" width="239"/></div></a></div>
+<div class="acaptionright" style="width:239px;">Under-appreciated but really useful.</div>
+<p></p><div class="indent"><em>"Ready to work!"</em>
+<div class="indent">— Many worker units
+</div></div><div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_1"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_1'); })</script></div></div><p>The core of every <a class="twikilink" href="/pmwiki/pmwiki.php/Main/CommandAndConquerEconomy" title="/pmwiki/pmwiki.php/Main/CommandAndConquerEconomy">Command &amp; Conquer Economy</a>, the Worker Unit is ubiquitous on the battlefields of most <a class="twikilink" href="/pmwiki/pmwiki.php/Main/RealTimeStrategy" title="/pmwiki/pmwiki.php/Main/RealTimeStrategy">Real-Time Strategy</a> games, and even some <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TurnBasedStrategy" title="/pmwiki/pmwiki.php/Main/TurnBasedStrategy">Turn-Based Strategy</a> and <a class="twikilink" href="/pmwiki/pmwiki.php/Main/FourX" title="/pmwiki/pmwiki.php/Main/FourX">4X</a> games. It primarily serves two functions:
+</p><p></p><ul><li> Collecting <a class="twikilink" href="/pmwiki/pmwiki.php/Main/YouRequireMoreVespeneGas" title="/pmwiki/pmwiki.php/Main/YouRequireMoreVespeneGas">Resources</a>: This is usually done either by having the worker automatically cycle between a resource node and a particular structure, or by simply harvesting resources from a node without having to deliver them somewhere else. The latter method sometimes needs for a structure to be built on the resource node before harvesting can begin.
+</li><li> Constructing <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ConstructAdditionalPylons" title="/pmwiki/pmwiki.php/Main/ConstructAdditionalPylons">Buildings</a>: This is either done by making a worker(or multiple workers) construct a building directly, meaning it can't do anything else until the building is finished (some games give you the option to put multiple workers on one project, allowing it to be completed faster), or by "summoning" a structure, which allows it to attend to other tasks while the building constructs itself. A third possibility is for the worker to "grow" into a building, with the unit getting consumed in the process.
+</li></ul><div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_2"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_2'); })</script></div></div><p>Some games may have different worker units for each task, some may have the same unit do everything. Often, the worker will also have the ability to repair damaged structures and mechanical units. Usually, it'll be cheap, unarmed or weakly armed, and fairly easy to kill, though some may have the ability to turn into <a class="twikilink" href="/pmwiki/pmwiki.php/Main/InstantMilitia" title="/pmwiki/pmwiki.php/Main/InstantMilitia">Instant Militia</a> or jump inside <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GarrisonableStructures" title="/pmwiki/pmwiki.php/Main/GarrisonableStructures">Garrisonable Structures</a> to defend themselves.
+The worker epitomizes the idea of <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BoringButPractical" title="/pmwiki/pmwiki.php/Main/BoringButPractical">Boring, but Practical</a>, being an essential component of your forces in every game, despite usually not doing much/any fighting. If you lose your workers, and lose the building which makes them, you generally lose the game, unless you already have an absurdly powerful army compared to your opponent (which is unlikely if an <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ArbitraryHeadcountLimit" title="/pmwiki/pmwiki.php/Main/ArbitraryHeadcountLimit">Arbitrary Headcount Limit</a> is in place). As such, due to their relative vulnerability and value, they make good targets for hit-and-run harassment tactics. <a class="twikilink" href="/pmwiki/pmwiki.php/Main/CharmPerson" title="/pmwiki/pmwiki.php/Main/CharmPerson">Taking control</a> of an enemy worker sometimes allows you to construct the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/EnemyExchangeProgram" title="/pmwiki/pmwiki.php/Main/EnemyExchangeProgram">enemy faction's structures and units</a>.
+</p><div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_3"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_3'); })</script></div></div><p>Usually armed with a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MagicTool" title="/pmwiki/pmwiki.php/Main/MagicTool">Magic Tool</a> of some kind. Allows for <a class="twikilink" href="/pmwiki/pmwiki.php/Main/EasyLogistics" title="/pmwiki/pmwiki.php/Main/EasyLogistics">Easy Logistics</a>, by allowing tasks that are fairly complex in reality to be performed easily, thus making an <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AcceptableBreakFromReality" title="/pmwiki/pmwiki.php/Main/AcceptableBreakFromReality">Acceptable Break from Reality</a>. Workers are usually included as <a class="twikilink" href="/pmwiki/pmwiki.php/Main/StartingUnits" title="/pmwiki/pmwiki.php/Main/StartingUnits">Starting Units</a>, or at least, can be built without having to research anything.
+</p><p></p><hr/><h2>Examples:</h2>
+<p></p><div class="folderlabel" onclick="toggleAllFolders();">    open/close all folders  </div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder0');">    4X Games </div><div class="folder" id="folder0" isfolder="true" style="display:block;">
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Civilization" title="/pmwiki/pmwiki.php/VideoGame/Civilization">Civilization</a></em>:
+<ul><li> Settlers in the first two games provided both of these functions. Sid Meier's Alpha Centauri split their functions between Colony modules and Terraforming modules, and from that point onward, the Civ games would have Settlers for building new cities and Workers for building improvements.
+</li><li> Also in the first two games, Caravans had some extremely narrow resource-transportation uses, though this was not their intended primary function. A Caravan could be sacrificed to establish a continuous transfer of 1 food unit per turn from one city to another, or to add the Caravan's production cost to the construction of a Wonder of the World.
+</li><li> In <em>Civilization V</em>, certain civ-specific unique units had limited building abilities. <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/TheGloryThatWasRome" title="/pmwiki/pmwiki.php/UsefulNotes/TheGloryThatWasRome">Roman Legions</a>, for instance, had the ability to construct roads and forts in reference to <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TheEngineer" title="/pmwiki/pmwiki.php/Main/TheEngineer">their real-life prowess in doing exactly that</a>, whereas Samurai could construct fishing ships to tie in with the Japanese unique power that draws culture from them.
+</li><li> In <em>Civilization VI</em>, each Worker has a limited number of "charges" to build improvements or remove natural resources; the Chinese and Aztec have the special ability to spend those charges towards building World Wonders and city districts, respectively. The game also introduces Military Engineers in the Renaissance Era, who can build defensive and offensive improvements, and retains Roman Legions' Fort-building ability.
+</li></ul></li><li> Certain <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DesignItYourselfEquipment" title="/pmwiki/pmwiki.php/Main/DesignItYourselfEquipment">subsystems</a> in <em><a class="twikilink" href="/pmwiki/pmwiki.php/Videogame/StarRuler" title="/pmwiki/pmwiki.php/Videogame/StarRuler">Star Ruler</a></em> can make a ship a dedicated worker unit, or a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MilitaryMashupMachine" title="/pmwiki/pmwiki.php/Main/MilitaryMashupMachine">Military Mashup Machine</a>. Ramscoops allow ships to generate their own fuel (which can be transferred automatically to nearby ships), ammo generators generate ammo, cargo bays allow ships to trade good between planets, repair lasers allow ships to repair each other, mining lasers allow ships to <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AsteroidMiners" title="/pmwiki/pmwiki.php/Main/AsteroidMiners">mine asteroids for ore</a> which can then be further processed on-board via a variety of machining subsystems. Inductors and Inducers allow ships to speed up or slow down other ships, to catapult ships out of orbit very quickly or to slow down a ship low on fuel.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder1');">    Real-Time Strategy Games </div><div class="folder" id="folder1" isfolder="true" style="display:block;">
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/HerzogZwei" title="/pmwiki/pmwiki.php/VideoGame/HerzogZwei">Herzog Zwei</a></em> is the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/UrExample" title="/pmwiki/pmwiki.php/Main/UrExample">Ur-Example</a> of this trope. The game introduced the creation and use of worker units to collect resources.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Achron" title="/pmwiki/pmwiki.php/VideoGame/Achron">Achron</a></em>, all units of all three factions are able to fight, some of them are just capable of building as well, usually the infantry. Each race collects resources via buildings called <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ExactlyWhatItSaysOnTheTin" title="/pmwiki/pmwiki.php/Main/ExactlyWhatItSaysOnTheTin">resource processors</a> that are completely useless for everything else.
+</li><li> The <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/AgeOfEmpires" title="/pmwiki/pmwiki.php/VideoGame/AgeOfEmpires">Age of Empires</a></em> series: Villagers act as worker units here, using cycling to gather resources (except in <em>III</em>) and direct construction.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/AgeOfMythology" title="/pmwiki/pmwiki.php/VideoGame/AgeOfMythology">Age of Mythology</a></em> Greek and Egyptian workers function essentially the same, though only the Greeks are called villagers and only they can pray at temples to gather <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GodsNeedPrayerBadly" title="/pmwiki/pmwiki.php/Main/GodsNeedPrayerBadly">favor</a> (Egyptians gain favor building monuments). Norse peasants only gather (dwarves are peasants that mine faster) while their basic infantry do most of the building, and the Atlantean citizens don't need to cycle while gathering, in addition to doing it faster, plus can turn into hero units in emergencies to aid in defending against myth units (and gain a gathering bonus). In exchange, they move slower, are three times more expensive and turning them into heroes requires an aditional cost.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/AshesOfTheSingularity" title="/pmwiki/pmwiki.php/VideoGame/AshesOfTheSingularity">Ashes of the Singularity</a></em>: The PHC Engineer and Substrate Constructor, which construct buildings. In addition, the Substrate has the Harvester, which can harvest resources from unclaimed regions.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/BattleRealms" title="/pmwiki/pmwiki.php/VideoGame/BattleRealms">Battle Realms</a></em> puts its own spin on the concept. While Peasants from all four clans use cycling and direct construction, they also form the backbone of the military in the game, as they use military buildings to upgrade themselves.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Videogame/BattleZone1998" title="/pmwiki/pmwiki.php/Videogame/BattleZone1998">Battle Zone 1998</a></em> and its sequel have Scavengers, which are large utility vehicles which are described as "vacuum cleaners with engines" - the scavengers drive around, suck up <a class="twikilink" href="/pmwiki/pmwiki.php/Main/UnObtanium" title="/pmwiki/pmwiki.php/Main/UnObtanium">bio-metal</a> scrap, then go deposit it at the Recycler (or instantly add it to your scrap pool, in the sequel). Constructors build base structures such as gun towers and power plants. Tugs in both games can be used lift slow, heavy units off the ground and carry them over rough terrain or water very quickly, though they are rarely used outside of the singleplayer campaigns. All of the worker units can only be built at the irreplaceable <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MobileFactory" title="/pmwiki/pmwiki.php/Main/MobileFactory">Recycler</a>, meaning that destroying the enemy Recycler will <a class="twikilink" href="/pmwiki/pmwiki.php/Main/InstantWinCondition" title="/pmwiki/pmwiki.php/Main/InstantWinCondition">instantly win the mission</a>.
+</li><li> <a class="twikilink" href="/pmwiki/pmwiki.php/Creator/BlizzardEntertainment" title="/pmwiki/pmwiki.php/Creator/BlizzardEntertainment">Blizzard Entertainment</a>:
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Starcraft" title="/pmwiki/pmwiki.php/VideoGame/Starcraft">Starcraft</a></em>: All workers use the standard cycling method of resource collection, but use different construction methods. Terran SCVs use direct construction, Protoss Probes use summoning, and Zerg Drones use the growing method. The SCV can also repair mechanical units, and the Drone can burrow to protect itself. In <em>Starcraft 2</em>, an additional temporary worker, the M.U.L.E., is available to the Terrans, which harvests resources at a faster rate, can repair mechanical units at the normal rate, but cannot construct buildings.
+</li><li> As of <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Warcraft" title="/pmwiki/pmwiki.php/VideoGame/Warcraft">Warcraft</a> 3</em>, each faction has a distinctly different worker unit to harvest resources and build or repair structures:
+<ul><li> The Human Peasant is the most "normal" in that it harvests wood or gold by running between the resource and the Town Hall structure, and multiple Peasants can be assigned to build the same structure to put it up faster. Peasants can also be turned into Militia to defend their starting base, fighting as well as a Footman unit. Before a nerf, a popular tactic was to take the five starting Peasants, turn them into Militia, and <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ZergRush" title="/pmwiki/pmwiki.php/Main/ZergRush">Zerg Rush</a> a multiplayer opponent.
+</li><li> The Undead Acolyte harvests gold via magic, so it doesn't have to leave a Gold Mine to collect the resource, and constructs buildings by summoning them, so they can "build and run" but not build faster by cooperating with other Acolytes. Acolytes can also Unsummon their structures to refund a fraction of their build cost, and while they're pathetic in combat, they can be sacrificed and converted into an invisible Shade scout unit. Acolytes also cannot harvest lumber, that duty falls to the Scourge's basic melee unit, the Ghoul.
+</li><li> The Orcish Peon is much like the Peasant, though Peons are hidden while building structures, and when an enemy attacks they can enter Burrow buildings and throw spears from them, making them more effective than the Orcs' dedicated defensive structures. With the Pillage ability researched Peons can gain gold by attacking enemy buildings, though if you're attacking with Peons, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DesperationAttack" title="/pmwiki/pmwiki.php/Main/DesperationAttack">something has gone very wrong</a> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/CherryTapping" title="/pmwiki/pmwiki.php/Main/CherryTapping">for one or both sides</a>.
+</li><li> The Night Elven <a class="twikilink" href="/pmwiki/pmwiki.php/Main/WillOTheWisp" title="/pmwiki/pmwiki.php/Main/WillOTheWisp">Wisp</a> can harvest gold or lumber via magic, without having to ferry a load back to base, and uniquely does not consume a tree it's harvesting wood from. The way they "grow" Night Elf buildings means they can't cooperate to build faster, and a Wisp will be killed if the Ancient it is constructing is destroyed first. Wisps cannot fight in combat, but they can sacrifice themselves with the Detonate ability to drain mana from enemy units and damage summoned enemies - and of course most Night Elf structures <a class="twikilink" href="/pmwiki/pmwiki.php/Main/WhenTreesAttack" title="/pmwiki/pmwiki.php/Main/WhenTreesAttack">are capable of uprooting and defending themselves just fine.</a>
+</li><li> The Goblin Shredder is a mercenary unit that any faction can hire from the Goblin Laboratory. It harvests lumber using the cycling method, but hauls in much larger loads than the standard workers. It's also a reasonable fighter, but using it as one is terribly inefficient due to its cost.
+</li></ul></li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DawnOfWar" title="/pmwiki/pmwiki.php/VideoGame/DawnOfWar">Dawn of War</a></em> has a different worker unit for every race; all of them only construct and repair structures, resource gathering is handled autonomously by capturing points or building generators. Each one is also slightly different from the others. To wit:
+<ul><li> The Space Marine Servitor has no special abilities whatsoever, but is one of the faster moving and more durable (read: least paper-maché-armored) worker units, and can later make use of the Space Marine's Drop Pod ability to quickly redeploy.
+</li><li> The Chaos Heretic can burn its own <a class="twikilink" href="/pmwiki/pmwiki.php/Main/HitPoints" title="/pmwiki/pmwiki.php/Main/HitPoints">HP</a> to build faster.
+</li><li> The Eldar Bonesinger can fight (but isn't at all good at it), repairs vehicles and structures twice as fast and for less than a third the cost, can be upgraded to temporarily disable enemy structures it can reach, and most importantly, can teleport long distances, for example, to construct a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/PortalNetwork" title="/pmwiki/pmwiki.php/Main/PortalNetwork">Webway Gate</a> behind enemy lines...
+</li><li> The Ork Gretchin come in large hordes that cost virtually nothing, have abysmal combat prowess, but move and build fast and can be upgraded to be invisible, even when repairing your tanks mid-battle.
+</li><li> The Imperial Guard Techpriest Enginseer is surprisingly durable and has some combat prowess. They also repair vehicles and structures four times as fast as other worker units, and can man the fairly powerful bunker weapons as well as a full squad of infantry, while costing much less and not taking up unit <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Cap" title="/pmwiki/pmwiki.php/Main/Cap">cap</a>.
+</li><li> The Tau Earth Caste Builder has above-average sight radius and below-average cost. Besides this it has nothing special going for it, really.
+</li><li> The Necron Builder Scarabs are free (but slow to build) and travel in small squads. They are also the only Necron unit able of capturing control points, and their only detector (but also <em>the best</em> detector <em>in the game</em>).
+</li><li> The Dark Eldar Tortured Slave is the frailest of all worker units, but does not have to work on a built structure past starting it (but cannot speed up the construction by using multiple ones). They are also one of only two Dark Eldar units that can harvest souls, needed to fuel their global abilities.
+</li><li> The Sisters of Battle Ecclesiarchal Servitor is pretty much a clone of the Space Marine one, but instead of Drop Podding it has the ability to deal considerable damage to enemy structures if unopposed.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DawnOfWar" title="/pmwiki/pmwiki.php/VideoGame/DawnOfWar">Dawn of War</a> 2</em> removed workers altogether, with light infantry and tech-based heroes filling in for repair and construction duties, while some other field structures have been relegated to global abilities.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/CompanyOfHeroes" title="/pmwiki/pmwiki.php/VideoGame/CompanyOfHeroes">Company of Heroes</a></em> has engineer units. While they are capable of fighting, they're not especially good at it, with the lowest accuracy in the game. They're much better suited to building and repairing. However, they can get <a class="twikilink" href="/pmwiki/pmwiki.php/Main/KillItWithFire" title="/pmwiki/pmwiki.php/Main/KillItWithFire">flamethrowers</a>, which greatly increases their <a class="twikilink" href="/pmwiki/pmwiki.php/Main/IncrediblyLamePun" title="/pmwiki/pmwiki.php/Main/IncrediblyLamePun">fire</a>power.
+</li><li> Imps in both <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DungeonKeeper" title="/pmwiki/pmwiki.php/VideoGame/DungeonKeeper">Dungeon Keeper</a></em> games can mine out rooms, dig for gold, claim land, and retrieve fallen units, but are nigh-useless in combat. They're also unique in that they're <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MadeOfMagic" title="/pmwiki/pmwiki.php/Main/MadeOfMagic">Made of Magic</a> by their Keeper and have no other physical needs.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/EvilGenius" title="/pmwiki/pmwiki.php/VideoGame/EvilGenius">Evil Genius</a></em>: Construction workers, while serving as only Cannon Fodder in battles, are the only minions capable of building new rooms, and are the staple of any world domination plan.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FarGate" title="/pmwiki/pmwiki.php/VideoGame/FarGate">FarGate</a></em> has "Utility Pods" for resource collection (<a class="twikilink" href="/pmwiki/pmwiki.php/Main/AsteroidMiners" title="/pmwiki/pmwiki.php/Main/AsteroidMiners">asteroid mining</a>) and ship repair. There is also a Tug unit, necessary for moving immobile space stations, pre-fab kits, or disabled ships.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/Videogame/FromTheDepths" title="/pmwiki/pmwiki.php/Videogame/FromTheDepths">From the Depths</a></em>, transports are needed to move cargo between resource extraction zone, deliver repair material to fleets, and pick up salvage. Most of the AI factions have some sort of cargo ship with huge amounts of cargo and negligible defenses, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/NotPlayingFairWithResources" title="/pmwiki/pmwiki.php/Main/NotPlayingFairWithResources">though only the player actually requires them</a>.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Globulation" title="/pmwiki/pmwiki.php/VideoGame/Globulation">Globulation</a></em> has worker, scout and fighter... uh... <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BlobMonster" title="/pmwiki/pmwiki.php/Main/BlobMonster">creatures</a>. Without workers you cannot collect resources, and thus cannot do anything at all — even keeping units alive requires a worker collecting raw foodstuff and bringing it to an inn.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/GrimGrimoire" title="/pmwiki/pmwiki.php/VideoGame/GrimGrimoire">GrimGrimoire</a></em>: Has unique worker units for all four schools of magic. Besides collecting mana and building defense structures, each school's worker unit has an additional ability: Glamour's Elves can <a class="twikilink" href="/pmwiki/pmwiki.php/Main/HealingHands" title="/pmwiki/pmwiki.php/Main/HealingHands">heal other units</a>, Necromancy's Ghosts can <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TakingYouWithMe" title="/pmwiki/pmwiki.php/Main/TakingYouWithMe">perform a kamikaze</a> for big damage, Sorcery's Imps can attack, and Alchemy's Blobs can <a class="twikilink" href="/pmwiki/pmwiki.php/Main/StandardStatusEffects" title="/pmwiki/pmwiki.php/Main/StandardStatusEffects">slow enemies down</a>.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/HaloWars" title="/pmwiki/pmwiki.php/VideoGame/HaloWars">Halo Wars</a></em> the closest thing to worker units are the UNSC <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MiniMecha" title="/pmwiki/pmwiki.php/Main/MiniMecha">Cyclops</a> (a modified variant of the Mjolnir Mark III Exoskeleton Prototype that is a unique unit to Sergeant Forge in multi-player and skirmish modes.), and the Covenant Engineer (a race of Biological Supercomputers created by the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Precursors" title="/pmwiki/pmwiki.php/Main/Precursors">Forerunners</a> that were later enslaved by the Covenant). They are the only units that can repair buildings. Resource gathering can be handled by any infantry unit and certain levels and maps some <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GarrisonableStructures" title="/pmwiki/pmwiki.php/Main/GarrisonableStructures">Garrisonable Structures</a> such as Forerunner Supply Elevators can even produce an infinite amount of resources or supply other benefits.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Homeworld" title="/pmwiki/pmwiki.php/VideoGame/Homeworld">Homeworld</a></em> has all construction done in <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TheMothership" title="/pmwiki/pmwiki.php/Main/TheMothership">The Mothership</a> and (small craft only) in carriers. Resource collectors are used to <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AsteroidMiners" title="/pmwiki/pmwiki.php/Main/AsteroidMiners">mine asteroids</a>. They then bring the resources back to the Mothership, a carrier, or a resource controller for processing. They can also be used to refuel fighters and corvettes (this feature is not present in the remastered version the game). Repair corvettes are used to, well, repair other ships. <em>Cataclysm</em> has the generically-named Worker, which actually combines the functions of a resource collector, a repair corvette, and a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/EnemyExchangeProgram" title="/pmwiki/pmwiki.php/Main/EnemyExchangeProgram">salvage corvette</a>. <em>Homeworld 2</em> has its resource collectors conduct mining and repair operations. The prequel <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/HomeworldDesertsOfKharak" title="/pmwiki/pmwiki.php/VideoGame/HomeworldDesertsOfKharak">Homeworld: Deserts of Kharak</a></em> has salvagers, which are the land-based version of the resource collector. Unlike the other games, salvagers only have one function - collecting resources. They also happen to be <em>extremely</em> slow, even slower than your <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BaseOnWheels" title="/pmwiki/pmwiki.php/Main/BaseOnWheels">land carrier</a>.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MachinesWiredForWar" title="/pmwiki/pmwiki.php/VideoGame/MachinesWiredForWar">Machines: Wired For War</a></em> has an entire sub section of 'civilian' units. Dozers (building and repairing stuctures), Transporters (carrying raw materials to be processed), locators (find resources sites)and technicians (researching). More advanced versions need to be researched/stolen and built to climb the tech tree and create new buildings and units.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Netstorm" title="/pmwiki/pmwiki.php/VideoGame/Netstorm">Netstorm</a></em> had no less than 7 rather varied worker units for resource collection (construction didn't require units), which your initial choice of temple would limit to 3 or 4 available (counting the always-buildable golems). On some maps, these could pick up spells and also double as the only fully-controllable offensive units (Netstorm was one of the earliest instances of a "tower versus tower" style of gameplay).
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/PopulousTheBeginning" title="/pmwiki/pmwiki.php/VideoGame/PopulousTheBeginning">Populous: The Beginning</a></em>: Had the braves who build, collect wood, repair and upgrade buildings, generate mana for your spells, and spawn more braves by breeding. They could also fight, but are usually beaten by every other unit type. Also, while all units can become specialized units, specialized-units can not become braves.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/RiseOfNations" title="/pmwiki/pmwiki.php/VideoGame/RiseOfNations">Rise of Nations</a></em>: Workers are responsible for gathering resources through structures and constructing most, if not all, buildings.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SinsOfASolarEmpire" title="/pmwiki/pmwiki.php/VideoGame/SinsOfASolarEmpire">Sins of a Solar Empire</a></em>: A space-based RTS, it has constructors, refinery ships and trade ships as workers, which construct orbital structures, help generate resources(via refineries) and help generate money(via trade ports) respectively. There are also colony ships, which establish colonies on unclaimed or newly-conquered planets. As of <em><a class="twikilink" href="/pmwiki/pmwiki.php/Main/ExpansionPack" title="/pmwiki/pmwiki.php/Main/ExpansionPack">Entrenchment</a></em>, there are also special worker ships specifically designed to construct Starbases.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/StarTrekArmada" title="/pmwiki/pmwiki.php/VideoGame/StarTrekArmada">Star Trek: Armada</a></em> has constructor ships for all four sides that build all the structures and mining freighters for, well, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AsteroidMiners" title="/pmwiki/pmwiki.php/Main/AsteroidMiners">mining asteroids</a>. The sequel has the same for all sides but Species 8472, who have active and passive embryos. The former turn into ships, and the latter become biological structures. In addition, the sequel adds freighters for all sides but Species 8472.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/StarWarsGalacticBattlegrounds" title="/pmwiki/pmwiki.php/VideoGame/StarWarsGalacticBattlegrounds">Star Wars: Galactic Battlegrounds</a></em>, being an <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/AgeOfEmpires" title="/pmwiki/pmwiki.php/VideoGame/AgeOfEmpires">Age of Empires</a> II</em> reskin, has worker units for all factions who can harvest resources cyclically and build and repair structures. They are droids for all factions barring the Gungans (who use a non-sentient but related species called the Glurrgs), the Wookiees (who do the work themselves), and the Separatists from the <em>Clone Campaigns</em> expansion (who use Geonosians). The game also has Utility Trawlers available to all factions which are capable of fishing further off the coast than regular workers, while the Gungans can also uniquely build some underwater structures with them.
+</li><li> Both sides in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TotalAnnihilation" title="/pmwiki/pmwiki.php/VideoGame/TotalAnnihilation">Total Annihilation</a></em> had multiple construction units. There are construction robots, ground vehicles, aircraft, ships and hovercraft. This allows you to use different units to build in different terrains. On top of that, there are advanced versions of construction units that build advanced structures. One significant difference here is that these units do not perform routine resource collection. The construction units build dedicated structures to gather resources. They also have the option to reclaim map objects and wreckage, but this is on a per-object basis.
+<ul><li> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SpiritualSuccessor" title="/pmwiki/pmwiki.php/Main/SpiritualSuccessor">Spiritual Successor</a> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SupremeCommander" title="/pmwiki/pmwiki.php/VideoGame/SupremeCommander">Supreme Commander</a></em> simplifies that to three increasingly potent and expensive amphibious Engineers per side. The sequel further simplifies that to one per side, with more structures unlocked by research.
+</li><li> The Commander in TA and the ACU in the SC series are interesting variations, being <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DoAnythingRobot" title="/pmwiki/pmwiki.php/Main/DoAnythingRobot">Do Anything Robots</a>. They do the first round of heavy lifting in most missions due to being the sole starting unit.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Warzone2100" title="/pmwiki/pmwiki.php/VideoGame/Warzone2100">Warzone 2100</a></em> has a 'truck' module that can be fitted to any ground-based chassis, as well as the combat engineer cyborg. Both are used to directly construct and repair buildings, and capture oil wells. Repairing units is done by another class of cyborgs/modules.
+</li><li> <a class="twikilink" href="/pmwiki/pmwiki.php/Creator/WestwoodStudios" title="/pmwiki/pmwiki.php/Creator/WestwoodStudios">Westwood Studios</a> games:
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DuneII" title="/pmwiki/pmwiki.php/VideoGame/DuneII">Dune II</a></em> was the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TropeCodifier" title="/pmwiki/pmwiki.php/Main/TropeCodifier">Trope Codifier</a> for this sort of RTS game, which Westwood continued to refine in their <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/CommandAndConquer" title="/pmwiki/pmwiki.php/VideoGame/CommandAndConquer">Command &amp; Conquer</a></em> series. A slow, defenseless unit called a Mobile Construction Vehicle can unpack into a Construction Yard, which forms the heart of a base and assembles all the other buildings in it. A Harvester unit collects resources (<a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/Dune" title="/pmwiki/pmwiki.php/Franchise/Dune">spice</a>, <a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/CommandAndConquerTiberianSeries" title="/pmwiki/pmwiki.php/VideoGame/CommandAndConquerTiberianSeries">Tiberium</a>, or <a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/CommandAndConquerRedAlert" title="/pmwiki/pmwiki.php/VideoGame/CommandAndConquerRedAlert">ore</a>) for processing into credits at a Refinery building, and in some games additional Silos may need to be built to hold all the stuff until you can spend it.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/CommandAndConquerRedAlert2" title="/pmwiki/pmwiki.php/VideoGame/CommandAndConquerRedAlert2">Command &amp; Conquer: Red Alert 2</a></em> added some tweaks for each faction's harvester units. The Allied Ore Collector has to roll out to an ore field as normal, but can teleport back to base for easy collection. The Soviet Ore Collector is reinforced with extra armor and has a machine gun turret to defend against infantry and light vehicles. Yuri's faction, added in the expansion pack, has a Slave Miner, which is a mobile ore processor with mind-controlled slaves using shovels to dig ore.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/CommandAndConquerGenerals" title="/pmwiki/pmwiki.php/VideoGame/CommandAndConquerGenerals">Command &amp; Conquer: Generals</a></em> is a departure from the <em>C&amp;C</em> forumla in that Construction Yards are absent, in favor of Blizzard-style worker units. America uses bulldozers to build with, but can quickly collect supplies with Chinook helicopters, which can also serve as infantry transports if needed. China uses bulldozers to build and supply trucks to harvest, nothing spcial there. The poor GLA has a peasant that builds and gathers resources, and is so slow and inefficient that one of the upgrades you can purchase gives the poor guys some shoes!
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/CommandAndConquerTiberiumWars" title="/pmwiki/pmwiki.php/VideoGame/CommandAndConquerTiberiumWars">Command &amp; Conquer 3: Tiberium Wars</a></em> and the <em>Kane's Wrath</em> expansion, the basic GDI Harvester is armed with a light machine gun, the ZOCOM faction's variant has a rocket turret, while the Steel Talons' has a bunker on it that can be occupied by an infantry unit; the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TankGoodness" title="/pmwiki/pmwiki.php/Main/TankGoodness">MARV</a> super unit can also, besides kicking lots of ass, instantly collect and process any Tiberium it drives over. The standard Nod harvester is equipped with an <a class="twikilink" href="/pmwiki/pmwiki.php/Main/InvisibilityCloak" title="/pmwiki/pmwiki.php/Main/InvisibilityCloak">Invisibility Cloak</a>, save for those used by the Black Hand faction, which lacks stealth tech. Scrin harvesters are unarmed but heal in the presence of Tiberium crystals, and the Reaper-17 faction equips its harvesters with <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DeflectorShields" title="/pmwiki/pmwiki.php/Main/DeflectorShields">Deflector Shields</a>.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/CommandAndConquerRedAlert3" title="/pmwiki/pmwiki.php/VideoGame/CommandAndConquerRedAlert3">Command &amp; Conquer: Red Alert 3</a></em>, all factions' harvesters are amphibious due to the game's emphasis on naval combat. The Allied Prospector also doubles as a builder unit, since it can unpack into a Command Hub and allow new buildings to be put up nearby. The Soviet Ore Collector can also deploy a metal shield around it to make it much harder to kill, while the faction also has the Sputnik, a secondary builder unit that can put down an Outpost to allow buildings to be constructed nearby. The Imperial Ore Collector can equip a laser turret for self-defense, but can't harvest while it's active, while all the Empire's buildings are unpacked from Nanocores.
+</li></ul></li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder2');">    Simulation Games </div><div class="folder" id="folder2" isfolder="true" style="display:block;">
+<ul><li> In the <em><a class="twikilink" href="/pmwiki/pmwiki.php/Videogame/X" title="/pmwiki/pmwiki.php/Videogame/X">X-Universe</a></em> series, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SpaceTrucker" title="/pmwiki/pmwiki.php/Main/SpaceTrucker">Transport (Small)</a> and <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MileLongShip" title="/pmwiki/pmwiki.php/Main/MileLongShip">Transport (Large)</a> are the basic workers for the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/NGOSuperPower" title="/pmwiki/pmwiki.php/Main/NGOSuperPower">player's empire</a> once it's <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AnEntrepreneurIsYou" title="/pmwiki/pmwiki.php/Main/AnEntrepreneurIsYou">sufficient built-up</a>. TS class ships (both the player's and the NPC traders) ferry wares between factories, are the only way to mine <a class="twikilink" href="/pmwiki/pmwiki.php/Main/UnObtanium" title="/pmwiki/pmwiki.php/Main/UnObtanium">Nividium</a>, and are the generally the best way to pick up salvage after a large battle. TL class ships are the only way to <a class="twikilink" href="/pmwiki/pmwiki.php/Main/RidiculouslyFastConstruction" title="/pmwiki/pmwiki.php/Main/RidiculouslyFastConstruction">build space stations</a>, though it's possible to hire a NPC TL to construct your stations for you. Both classes of ships can be armed - and with TLs, often decently - so it's possible to turn them into an <a class="twikilink" href="/pmwiki/pmwiki.php/Main/InstantMilitia" title="/pmwiki/pmwiki.php/Main/InstantMilitia">Instant Militia</a> if needed.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder3');">    Turn-Based Strategy </div><div class="folder" id="folder3" isfolder="true" style="display:block;">
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/GalacticCivilizations" title="/pmwiki/pmwiki.php/VideoGame/GalacticCivilizations">Galactic Civilizations</a> 2</em>: Colony ships establish new colonies (being consumed in the process) and transfer population to pre-existing colonies (re-useable). Trade ships help earn credits by cycling between one of your planets and another race's planet along a fixed trade route, gaining bonuses when passing through the area of effect of an economic starbase. Space miners set up mining facilities in asteroid belts, slightly boosting the closest planets military and social production. Surveyors harvest spacial anomalies and act as scouts. And finally, constructors build or upgrade starbases, but get consumed in the process.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Colonization" title="/pmwiki/pmwiki.php/VideoGame/Colonization">Colonization</a></em> has few non-naval units that aren't supposed to work in a colony, but Pioneer does outdoor job - builds roads, plows fields and cleans forests.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SwordOfTheStars" title="/pmwiki/pmwiki.php/VideoGame/SwordOfTheStars">Sword of the Stars</a></em>, colony ships add population and infrastructure to planets, being consumed in the process, in addition to claiming worlds without imperial populations (either because it hasn't been colonized yet or someone nuked the previous occupants). Tankers refuel other ships, refineries refuel and produce new fuel. Mining ships extract resources from uninhabited systems and take them back home. And salvage ships repair damaged ships or reclaim resources from destroyed ones. The expansions introduce freighters that increase income through trade and constructors that build space stations.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Videogame/GenjuuRyodan" title="/pmwiki/pmwiki.php/Videogame/GenjuuRyodan">Genjuu Ryodan</a></em> has mana generator units where they gather mana for the player to summon units.
+</li><li> POW Armors and Craft Modules in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/RType" title="/pmwiki/pmwiki.php/VideoGame/RType">R-Type</a> Command</em> can both rearm and refuel ships, and the Craft Module can repair other ships, clear mines, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AsteroidMiner" title="/pmwiki/pmwiki.php/Main/AsteroidMiner">mine Solonium from asteroids,</a> and claim Hangars.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Prismata" title="/pmwiki/pmwiki.php/VideoGame/Prismata">Prismata</a></em> has drones, which produce gold. There are also special types of drones that have a random chance of appearing in a given match.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder4');">    Turn-Based Tactics </div><div class="folder" id="folder4" isfolder="true" style="display:block;">
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/AdvancedStrategicCommand" title="/pmwiki/pmwiki.php/VideoGame/AdvancedStrategicCommand">Advanced Strategic Command</a></em>: Has a lot of these, depending on the unit set, of course. Different transports are required for <a class="urllink" href="http://asc-hq.org/unitguide/html/11Ui4.html">ammo<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a>, <a class="urllink" href="http://asc-hq.org/unitguide/html/10Ui2.html">fuel<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a> and <a class="urllink" href="http://asc-hq.org/unitguide/html/25Ui2.html">construction materials<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a> that all runs out rather quickly. Field repair vehicles, to fix units without hauling them all the way to the factory. Generators to keep your mines and factories running when you don't have enough powerplants connected to them. Bulldozers to construct <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TunnelNetwork" title="/pmwiki/pmwiki.php/Main/TunnelNetwork">pipelines</a>, bridges or runways for planes. Builder vehicles to create buildings and turret foundations. Resource prospectors to know where to build a mine or oil platform. Icebreakers. Almost anything requires a proper <a class="twikilink" href="/pmwiki/pmwiki.php/Main/WorkerUnit" title="/pmwiki/pmwiki.php/Main/WorkerUnit">Worker Unit</a> and some spent resources.
+</li><li> This doesn't really affect gameplay at all, but the Iron Legion's Rifle Grunts in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/BattalionWars" title="/pmwiki/pmwiki.php/VideoGame/BattalionWars">Battalion Wars</a></em> spend their every waking off-duty hour happily digging in the Nerocite mines.
+<ul><li> In the main <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/NintendoWars" title="/pmwiki/pmwiki.php/VideoGame/NintendoWars">Nintendo Wars</a></em> series, your infantry generally fill the closest thing to a worker role by capturing cities and factories.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/BattleIsle" title="/pmwiki/pmwiki.php/VideoGame/BattleIsle">Battle Isle</a></em>, the first installment had the SC-P Merlin Pioneer unit which could build a depot on any suitable location, which could later be used to repair your units. The second installment greatly expanded on this with including ammunition/fuel transports, road construction vehicles and trains capable of repairing units. Strangely collecting raw resources was generally not a significant part of the game-play, and the resource ("Aldinium"), could be transported with any regular transport capable of transporting units.
+</li></ul></div>
+<p></p><hr/>
+</div>
+<div class="square_ad footer-article-ad main_2" data-isolated="0"></div>
+<div class="section-links" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<div class="titles">
+<div><h3 class="text-center text-uppercase">Previous</h3></div>
+<div><h3 class="text-center text-uppercase">Index</h3></div>
+<div><h3 class="text-center text-uppercase">Next</h3></div>
+</div>
+<div class="links">
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/WeatherOfWar">Weather of War</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/StrategyGameTropes">Strategy Game Tropes</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/YouHaveResearchedBreathing">You Have Researched Breathing</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/SeparateButIdentical">Separate, but Identical</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/ImageSource/VideoGamesMToZ">ImageSource/Video Games (M to Z)</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/VideoGame/WarcraftIII">Warcraft III</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="outer_ads_by_salon_wrapper" id="exco_player_insert_div">
+</div>
+</article>
+<div id="main-content-sidebar"><div class="sidebar-item display-options">
+<ul class="sidebar display-toggles">
+<li>Show Spoilers <div class="display-toggle show-spoilers" id="sidebar-toggle-showspoilers"></div></li>
+<li>Night Vision <div class="display-toggle night-vision" id="sidebar-toggle-nightvision"></div></li>
+<li>Sticky Header <div class="display-toggle sticky-header" id="sidebar-toggle-stickyheader"></div></li>
+<li>Wide Load <div class="display-toggle wide-load" id="sidebar-toggle-wideload"></div></li>
+</ul>
+<script>updateDesktopPrefs();</script>
+</div>
+<div class="sidebar-item ad sb-ad-unit">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_2"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_2'); });</script> </div>
+</div></div>
+<div class="sidebar-item quick-links" itemtype="http://schema.org/SiteNavigationElement">
+<p class="sidebar-item-title" data-title="Important Links">Important Links</p>
+<div class="padded">
+<a href="/pmwiki/query.php?type=att">Ask The Tropers</a>
+<a href="/pmwiki/query.php?type=tf">Trope Finder</a>
+<a href="/pmwiki/query.php?type=ykts">You Know That Show...</a>
+<a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a>
+<a href="/pmwiki/review_activity.php">Reviews</a>
+<a data-modal-target="login" href="/pmwiki/lbs.php">Live Blogs</a>
+<a href="/pmwiki/ad-free-subscribe.php">Go Ad Free!</a> </div>
+</div>
+<div class="sidebar-item sb-ad-unit">
+<div class="sidebar-section">
+<div class="square_ad ad-size-300x600 ad-section text-center">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_3"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_3'); });</script> </div>
+</div> </div>
+</div>
+</div>
+<div class="sidebar-item">
+<p class="sidebar-item-title" data-title="Crucial Browsing">Crucial Browsing</p>
+<ul class="padded font-s" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><a data-click-toggle="active" href="javascript:void(0);">Genre</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/ActionAdventureTropes" title="Main/ActionAdventureTropes">Action Adventure</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ComedyTropes" title="Main/ComedyTropes">Comedy</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CommercialsTropes" title="Main/CommercialsTropes">Commercials</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CrimeAndPunishmentTropes" title="Main/CrimeAndPunishmentTropes">Crime &amp; Punishment</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DramaTropes" title="Main/DramaTropes">Drama</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/HorrorTropes" title="Main/HorrorTropes">Horror</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LoveTropes" title="Main/LoveTropes">Love</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NewsTropes" title="Main/NewsTropes">News</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ProfessionalWrestling" title="Main/ProfessionalWrestling">Professional Wrestling</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SpeculativeFictionTropes" title="Main/SpeculativeFictionTropes">Speculative Fiction</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SportsStoryTropes" title="Main/SportsStoryTropes">Sports Story</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/WarTropes" title="Main/WarTropes">War</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Media</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/Media" title="Main/Media">All Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/AnimationTropes" title="Main/AnimationTropes">Animation (Western)</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Anime" title="Main/Anime">Anime</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ComicBookTropes" title="Main/ComicBookTropes">Comic Book</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FanFic" title="FanFic/FanFics">Fan Fics</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Film" title="Main/Film">Film</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/GameTropes" title="Main/GameTropes">Game</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Literature" title="Main/Literature">Literature</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MusicAndSoundEffects" title="Main/MusicAndSoundEffects">Music And Sound Effects</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NewMediaTropes" title="Main/NewMediaTropes">New Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/PrintMediaTropes" title="Main/PrintMediaTropes">Print Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Radio" title="Main/Radio">Radio</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SequentialArt" title="Main/SequentialArt">Sequential Art</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TabletopGames" title="Main/TabletopGames">Tabletop Games</a></li>
+<li><a href="/pmwiki/pmwiki.php/UsefulNotes/Television" title="Main/Television">Television</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Theater" title="Main/Theater">Theater</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/VideogameTropes" title="Main/VideogameTropes">Videogame</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Webcomics" title="Main/Webcomics">Webcomics</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Narrative</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/UniversalTropes" title="Main/UniversalTropes">Universal</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/AppliedPhlebotinum" title="Main/AppliedPhlebotinum">Applied Phlebotinum</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CharacterizationTropes" title="Main/CharacterizationTropes">Characterization</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Characters" title="Main/Characters">Characters</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CharactersAsDevice" title="Main/CharactersAsDevice">Characters As Device</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Dialogue" title="Main/Dialogue">Dialogue</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Motifs" title="Main/Motifs">Motifs</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NarrativeDevices" title="Main/NarrativeDevices">Narrative Devices</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Paratext" title="Main/Paratext">Paratext</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Plots" title="Main/Plots">Plots</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Settings" title="Main/Settings">Settings</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Spectacle" title="Main/Spectacle">Spectacle</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Other Categories</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/BritishTellyTropes" title="Main/BritishTellyTropes">British Telly</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TheContributors" title="Main/TheContributors">The Contributors</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CreatorSpeak" title="Main/CreatorSpeak">Creator Speak</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Creators" title="Main/Creators">Creators</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DerivativeWorks" title="Main/DerivativeWorks">Derivative Works</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LanguageTropes" title="Main/LanguageTropes">Language</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LawsAndFormulas" title="Main/LawsAndFormulas">Laws And Formulas</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ShowBusiness" title="Main/ShowBusiness">Show Business</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SplitPersonalityTropes" title="Main/SplitPersonalityTropes">Split Personality</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/StockRoom" title="Main/StockRoom">Stock Room</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TropeTropes" title="Main/TropeTropes">Trope</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Tropes" title="Main/Tropes">Tropes</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TruthAndLies" title="Main/TruthAndLies">Truth And Lies</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TruthInTelevision" title="Main/TruthInTelevision">Truth In Television</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Topical Tropes</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/BetrayalTropes" title="Main/BetrayalTropes">Betrayal</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CensorshipTropes" title="Main/CensorshipTropes">Censorship</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CombatTropes" title="Main/CombatTropes">Combat</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DeathTropes" title="Main/DeathTropes">Death</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FamilyTropes" title="Main/FamilyTropes">Family</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FateAndProphecyTropes" title="Main/FateAndProphecyTropes">Fate And Prophecy</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FoodTropes" title="Main/FoodTropes">Food</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/HolidayTropes" title="Main/HolidayTropes">Holiday</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MemoryTropes" title="Main/MemoryTropes">Memory</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MoneyTropes" title="Main/MoneyTropes">Money</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MoralityTropes" title="Main/MoralityTropes">Morality</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/PoliticsTropes" title="Main/PoliticsTropes">Politics</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ReligionTropes" title="Main/ReligionTropes">Religion</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SchoolTropes" title="Main/SchoolTropes">School</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="sidebar-item showcase">
+<p class="sidebar-item-title" data-title="Community Showcase">Community Showcase <a class="bubble float-right hover-blue" href="/pmwiki/showcase.php">More</a></p>
+<p class="community-showcase">
+<a href="https://sharetv.com/shows/echo_chamber" onclick="trackOutboundLink('https://sharetv.com/shows/echo_chamber');" target="_blank">
+<img alt="" class="lazy-image" data-src="/images/communityShowcase-echochamber.jpg"/></a>
+<a href="/pmwiki/pmwiki.php/Webcomic/TwistedTropes">
+<img alt="" class="lazy-image" data-src="/img/howlandsc-side.jpg"/></a>
+</p>
+</div>
+<div class="sidebar-item sb-ad-unit" id="stick-cont">
+<div class="sidebar-section" id="stick-bar">
+<div class="square_ad ad-size-300x600 ad-section text-center">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_4"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_4'); });</script> </div>
+</div> </div>
+</div>
+</div>
+</div>
+</div>
+<div class="action-bar tablet-off" id="action-bar-bottom">
+<a class="scroll-to-top dead-button" href="#top-of-page" onclick="$('html, body').animate({scrollTop : 0},500);">Top</a>
+</div>
+</div>
+<div class="proper-ad-unit ad-sticky">
+<div id="proper-ad-tvtropes_sticky_ad"> <script>propertag.cmd.push(function() { proper_display('tvtropes_sticky_ad'); });</script> </div>
+</div>
+<footer id="main-footer">
+<div id="main-footer-inner">
+<div class="footer-left">
+<a class="img-link" href="/"><img alt="TV Tropes" class="lazy-image" data-src="/img/tvtropes-footer-logo.png" title="TV Tropes"/></a>
+<form action="index.html" class="navbar-form newsletter-signup validate modal-replies" data-ajax-get="/ajax/subscribe_email.php" id="cse-search-box-mobile" name="" role="">
+<button class="btn-submit newsletter-signup-submit-button" id="subscribe-btn" type="submit"><i class="fa fa-paper-plane"></i></button>
+<input class="form-control" id="subscription-email" name="q" placeholder="Subscribe" size="31" type="text" validate-type="email" value=""/>
+</form>
+<ul class="social-buttons">
+<li><a class="btn fb" href="https://www.facebook.com/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-facebook']);" target="_blank"><i class="fa fa-facebook"></i></a></li>
+<li><a class="btn tw" href="https://www.twitter.com/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-twitter']);" target="_blank"><i class="fa fa-twitter"></i></a> </li>
+<li><a class="btn rd" href="https://www.reddit.com/r/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-reddit']);" target="_blank"><i class="fa fa-reddit-alien"></i></a></li>
+</ul>
+</div>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">TVTropes</h4></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Administrivia">About TVTropes</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TheGoalsOfTVTropes">TVTropes Goals</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TheTropingCode">Troping Code</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TVTropesCustoms">TVTropes Customs</a></li>
+<li><a href="/pmwiki/pmwiki.php/JustForFun/TropesOfLegend">Tropes of Legend</a></li>
+<li><a href="/pmwiki/ad-free-subscribe.php">Go Ad-Free</a></li>
+</ul>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">Community</h4></li>
+<li><a href="/pmwiki/query.php?type=att">Ask The Tropers</a></li>
+<li><a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a></li>
+<li><a href="/pmwiki/query.php?type=tf">Trope Finder</a></li>
+<li><a href="/pmwiki/query.php?type=ykts">You Know That Show</a></li>
+<li><a data-modal-target="login" href="/pmwiki/lbs.php">Live Blogs</a></li>
+<li><a href="/pmwiki/review_activity.php">Reviews</a></li>
+<li><a href="/pmwiki/topics.php">Forum</a></li>
+</ul>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">Tropes HQ</h4></li>
+<li><a href="/pmwiki/about.php">About Us</a></li>
+<li><a href="/pmwiki/contact.php">Contact Us</a></li>
+<li><a href="/pmwiki/dmca.php">DMCA Notice</a></li>
+<li><a href="/pmwiki/privacypolicy.php">Privacy Policy</a></li>
+</ul>
+</div>
+<div class="text-center gutter-top gutter-bottom tablet-on" id="desktop-on-mobile-toggle">
+<a href="/pmwiki/switchDeviceCss.php?mobileVersion=1" rel="nofollow">Switch to <span class="txt-desktop">Desktop</span><span class="txt-mobile">Mobile</span> Version</a>
+</div>
+<div class="legal">
+<p>TVTropes is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License. <br/>Permissions beyond the scope of this license may be available from <a href="mailto:thestaff@tvtropes.org" rel="cc:morePermissions" xmlns:cc="http://creativecommons.org/ns#"> thestaff@tvtropes.org</a>.</p>
+<br/>
+<div class="privacy_wrapper">
+</div>
+</div>
+</footer>
+<style>
+      div.fc-ccpa-root {
+        position: absolute !important;
+        bottom: 93px !important;
+        margin: auto !important;
+        width: 100% !important;
+        z-index: 9999 !important;
+      }
+      .fc-ccpa-root .fc-dns-dialog .fc-dns-link p{
+        outline: none !important;
+        text-decoration: underline !important;
+        font-size: .7em !important;
+        font-family: sans-serif !important;
+      }
+      .fc-ccpa-root .fc-dns-dialog .fc-dns-link .fc-button-background {
+        background: none !important;
+      }
+    </style>
+<div class="full-screen" id="_pm_videoViewer">
+<a class="close" href="#close" id="_pm_videoViewer-close"></a>
+<div class="_pmvv-body">
+<div class="_pmvv-vidbox">
+<video class="video-js vjs-default-skin vjs-16-9" data-video-id="" id="overlay-video-player-box">
+</video>
+<div class="_pmvv-vidbox-desc">
+<h1 id="overlay-title"></h1>
+<p class="_pmvv-vidbox-descTxt" id="overlay-descrip">
+</p>
+<div class="rating-row" data-video-id="">
+<input name="is_logged_in" type="hidden" value="0"/>
+<p>How well does it match the trope?</p>
+<div id="star-rating-group">
+<div class="trope-rate">
+<input id="lamp5" name="rate" type="radio" value="5"/>
+<label for="lamp5" title="Absolutely"></label>
+<input id="lamp4" name="rate" type="radio" value="4"/>
+<label for="lamp4" title="Yes"></label>
+<input id="lamp3" name="rate" type="radio" value="3"/>
+<label for="lamp3" title="Kind of"></label>
+<input id="lamp2" name="rate" type="radio" value="2"/>
+<label for="lamp2" title="Not really"></label>
+<input id="lamp1" name="rate" type="radio" value="1"/>
+<label for="lamp1" title="No"></label>
+</div>
+<div id="star-rating-total">
+</div>
+</div>
+</div>
+<div class="example-media-row">
+<div class="example-overlay">
+<p>Example of:</p>
+<div id="overlay-trope"> / </div>
+</div>
+<div class="media-sources-overlay example-overlay">
+<p>Media sources:</p>
+<div id="overlay-media"> / </div>
+</div>
+</div>
+<p class="_pmvv-vidbox-stats text-right font-s" style="padding-top:8px; border-top: solid 1px rgba(255,255,255,0.2)">
+<a class="float-right" data-modal-target="login" href="#video-feedback">Report</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+        window.special_ops =  {
+            member : 'no',
+            isolated : 0,
+            tags : ['unknown']
+        };
+    </script>
+<script type="text/javascript">
+
+        var cleanCreativeEnabled = "";
+        var donation = "";
+        var live_ads = "1";
+        var img_domain = "https://static.tvtropes.org";
+        var snoozed = cookies.read('snoozedabm');
+        var snoozable = "";
+
+        if (adsRemovedWith) {
+            live_ads = 0;
+        }
+
+        var elem = document.createElement('script');
+        elem.async = true;
+
+        elem.src = '/design/assets/bundle.js?rev=c58d8df02f09262390bbd03db7921fc35c6af306';
+
+        elem.onload = function() {
+                                 }
+        document.getElementsByTagName('head')[0].appendChild(elem);
+
+    </script>
+<script type="text/javascript">
+      function send_analytics_event(user_type, donation){
+          // if(user_type == 'uncached' || user_type == 'cached'){
+          //   ga('send', 'event', 'caching', 'load', user_type, {'nonInteraction': 1});
+          //   return;
+          // }
+          var event_name = user_type;
+
+          if(donation == 'true'){
+              event_name += "_donation"
+          }else if(typeof(valid_user) == 'undefined'){
+              event_name += "_blocked"
+          }else if(valid_user == true){
+              event_name += "_unblocked";
+          }else{
+              event_name = "_unknown"
+          }
+          ga('send', 'event', 'ads', 'load', event_name, {'nonInteraction': 1});
+      }
+
+    
+    send_analytics_event("guest", "false");
+      </script>
+</body>
+</html>

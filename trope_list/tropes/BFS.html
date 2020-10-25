@@ -1,0 +1,1247 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>BFS - TV Tropes</title>
+<meta content="The melee weapon equivalent of a BFG. A common trope to both video games and anime, a BFS is an unrealistically large sword most often owned by The Hero, …" name="description"/>
+<link href="https://tvtropes.org/pmwiki/pmwiki.php/Main/BFS" rel="canonical"/>
+<link href="/img/icons/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="@tvtropes" name="twitter:site"/>
+<meta content="@tvtropes" name="twitter:owner"/>
+<meta content="BFS - TV Tropes" name="twitter:title"/>
+<meta content="The melee weapon equivalent of a BFG. A common trope to both video games and anime, a BFS is an unrealistically large sword most often owned by The Hero, …" name="twitter:description"/>
+<meta content="https://static.tvtropes.org/pmwiki/pub/images/ffvii_bfs.png" name="twitter:image:src"/>
+<meta content="TV Tropes" property="og:site_name"/>
+<meta content="en_US" property="og:locale"/>
+<meta content="https://www.facebook.com/tvtropes" property="article:publisher"/>
+<meta content="BFS - TV Tropes" property="og:title"/>
+<meta content="website" property="og:type"/>
+<meta content="https://tvtropes.org/pmwiki/pmwiki.php/Main/BFS" property="og:url"/>
+<meta content="https://static.tvtropes.org/pmwiki/pub/images/ffvii_bfs.png" property="og:image"/>
+<meta content="The melee weapon equivalent of a BFG. A common trope to both video games and anime, a BFS is an unrealistically large sword most often owned by The Hero, The Chosen One, or whatever type the lead happens to be. To be a true BFS, it should be …" property="og:description"/>
+<link href="/img/icons/apple-icon-57x57.png" rel="apple-touch-icon" sizes="57x57" type="image/png"/>
+<link href="/img/icons/apple-icon-60x60.png" rel="apple-touch-icon" sizes="60x60" type="image/png"/>
+<link href="/img/icons/apple-icon-72x72.png" rel="apple-touch-icon" sizes="72x72" type="image/png"/>
+<link href="/img/icons/apple-icon-76x76.png" rel="apple-touch-icon" sizes="76x76" type="image/png"/>
+<link href="/img/icons/apple-icon-114x114.png" rel="apple-touch-icon" sizes="114x114" type="image/png"/>
+<link href="/img/icons/apple-icon-120x120.png" rel="apple-touch-icon" sizes="120x120" type="image/png"/>
+<link href="/img/icons/apple-icon-144x144.png" rel="apple-touch-icon" sizes="144x144" type="image/png"/>
+<link href="/img/icons/apple-icon-152x152.png" rel="apple-touch-icon" sizes="152x152" type="image/png"/>
+<link href="/img/icons/apple-icon-180x180.png" rel="apple-touch-icon" sizes="180x180" type="image/png"/>
+<link href="/img/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/img/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/img/icons/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png"/>
+<link href="/img/icons/favicon-192x192.png" rel="icon" sizes="192x192" type="image/png"/>
+<meta content="width=device-width, initial-scale=1" id="viewport" name="viewport"/>
+<script>
+                var propertag = {};
+                propertag.cmd = [];
+            </script>
+<link href="/design/assets/bundle.css?rev=c58d8df02f09262390bbd03db7921fc35c6af306" rel="stylesheet"/>
+<script>
+                function object(objectId) {
+                    if (document.getElementById && document.getElementById(objectId)) {
+                        return document.getElementById(objectId);
+                    } else if (document.all && document.all(objectId)) {
+                        return document.all(objectId);
+                    } else if (document.layers && document.layers[objectId]) {
+                        return document.layers[objectId];
+                    } else {
+                        return false;
+                    }
+                }
+
+                // JAVASCRIPT COOKIES CODE: for getting and setting user viewing preferences
+                var cookies = {
+                    create: function (name, value, days2expire, path) {
+                        var date = new Date();
+                        date.setTime(date.getTime() + (days2expire * 24 * 60 * 60 * 1000));
+                        var expires = date.toUTCString();
+                        document.cookie = name + '=' + value + ';' + 'expires=' + expires + ';' + 'path=' + path + ';';
+                    },
+										createWithExpire: function(name, value, expires, path) {
+												document.cookie = name + '=' + value + ';' + 'expires=' + expires + ';' + 'path=' + path + ';';
+										},
+                    read: function (name) {
+                        var cookie_value = "",
+                            current_cookie = "",
+                            name_expr = name + "=",
+                            all_cookies = document.cookie.split(';'),
+                            n = all_cookies.length;
+
+                        for (var i = 0; i < n; i++) {
+                            current_cookie = all_cookies[i].trim();
+                            if (current_cookie.indexOf(name_expr) === 0) {
+                                cookie_value = current_cookie.substring(name_expr.length, current_cookie.length);
+                                break;
+                            }
+                        }
+                        return cookie_value;
+                    },
+                    update: function (name, val) {
+                        this.create(name, val, 300, "/");
+                    },
+                    remove: function (name) {
+                        document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
+                    }
+                };
+
+                function updateUserPrefs() {
+                    //GENERAL: detect and set browser, if not cookied (will be treated like a user-preference and added to the #user-pref element)
+                    if( !cookies.read('user-browser') ){
+                        var broswer = '';
+
+                        if(navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPod/i) ){
+                            browser = 'iOS';
+                        } else if (/Opera[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'opera';
+                        } else if (/MSIE (\d+\.\d+);/.test(navigator.userAgent)) {
+                            browser = 'MSIE';
+                        } else if (/Navigator[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'netscape';
+                        } else if (/Chrome[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'chrome';
+                        } else if (/Safari[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'safari';
+                            /Version[\/\s](\d+\.\d+)/.test(navigator.userAgent);
+                            browserVersion = new Number(RegExp.$1);
+                        } else if (/Firefox[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'firefox';
+                        } else {
+                            browser = 'internet_explorer';
+                        }
+                        cookies.create('user-browser',browser,1,'/');
+                        document.getElementById('user-prefs').classList.add('browser-' + browser);
+                    } else {
+                        document.getElementById('user-prefs').classList.add('browser-' + cookies.read('user-browser'));
+                    }
+
+                    //update user preference settings
+                    if (cookies.read('wide-load') !== '') document.getElementById('user-prefs').classList.add('wide-load');
+                    if (cookies.read('night-vision') !== '') document.getElementById('user-prefs').classList.add('night-vision');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('user-prefs').classList.add('sticky-header');
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('user-prefs').classList.add('show-spoilers');
+                    if (cookies.read('folders-open') !== '') document.getElementById('user-prefs').classList.add('folders-open');
+                    if (cookies.read('lefthand-sidebar') !== '') document.getElementById('user-prefs').classList.add('lefthand-sidebar');
+                    if (cookies.read('highlight-links') !== '') document.getElementById('user-prefs').classList.add('highlight-links');
+                    if (cookies.read('forum-gingerbread') !== '') document.getElementById('user-prefs').classList.add('forum-gingerbread');
+                    if (cookies.read('shared-avatars') !== '') document.getElementById('user-prefs').classList.add('shared-avatars');
+                    if (cookies.read('new-search') !== '') document.getElementById('user-prefs').classList.add('new-search');
+                    if (cookies.read('stop-auto-play-video') !== '') document.getElementById('user-prefs').classList.add('stop-auto-play-video');
+
+                    //desktop view on mobile
+                    if (cookies.read('desktop-on-mobile') !== ''){
+                        document.getElementById('user-prefs').classList.add('desktop-on-mobile');
+
+                        var viewport = document.querySelector("meta[name=viewport]");
+                        viewport.setAttribute('content', 'width=1000');
+                    }
+
+                }
+
+                function updateDesktopPrefs() {
+                    if (cookies.read('wide-load') !== '') document.getElementById('sidebar-toggle-wideload').classList.add('active');
+                    if (cookies.read('night-vision') !== '') document.getElementById('sidebar-toggle-nightvision').classList.add('active');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('sidebar-toggle-stickyheader').classList.add('active');
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('sidebar-toggle-showspoilers').classList.add('active');
+
+                }
+
+                function updateMobilePrefs() {
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('mobile-toggle-showspoilers').classList.add('active');
+                    if (cookies.read('night-vision') !== '') document.getElementById('mobile-toggle-nightvision').classList.add('active');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('mobile-toggle-stickyheader').classList.add('active');
+                    if (cookies.read('highlight-links') !== '') document.getElementById('mobile-toggle-highlightlinks').classList.add('active');
+
+                }
+
+
+                if (document.cookie.indexOf("scroll0=") < 0) {
+                    // do nothing
+                } else {
+                    console.log('ads removed by scroll.com');
+                    var adsRemovedWith = 'scroll';
+                    var style = document.createElement('style');
+                    style.innerHTML = '#header-ad, .proper-ad-unit, .square_ad, .sb-ad-unit { display: none !important; } ';
+                    document.head.appendChild(style);
+                }
+            </script>
+<script type="text/javascript">
+
+                var tvtropes_config = {
+                    astri_stream_enabled : "",
+                    is_logged_in         : "",
+                    handle               : "",
+                    get_astri_stream     : "",
+										revnum               : "c58d8df02f09262390bbd03db7921fc35c6af306",
+										img_domain           : "https://static.tvtropes.org",
+										adblock              : "1",
+										adblock_url          : "propermessage.io",
+										pause_editing        : "0",
+										pause_editing_msg    : "",
+										pause_site_changes   : ""
+                };
+            </script>
+<script type="text/javascript">
+						  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+						  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+						  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+						  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+						  ga('create', 'UA-3821842-1', 'auto');
+						  ga('send', 'pageview');
+
+						</script>
+</head>
+<body class="">
+<i id="user-prefs"></i>
+<script>updateUserPrefs();</script>
+<div id="fb-root"></div>
+<div id="modal-box"></div>
+<header class="headroom-element" id="main-header-bar">
+<div id="main-header-bar-inner">
+<span class="header-spacer" id="header-spacer-left"></span>
+<a class="mobile-menu-toggle-button tablet-on" href="#mobile-menu" id="main-mobile-toggle"><span></span><span></span><span></span></a>
+<a class="no-dev" href="/" id="main-header-logoButton"></a>
+<span class="header-spacer" id="header-spacer-right"></span>
+<nav class="tablet-off" id="main-header-nav">
+<a href="/pmwiki/pmwiki.php/Main/Tropes">Tropes</a>
+<a href="/pmwiki/pmwiki.php/Main/Media">Media</a>
+<a class="nav-browse" href="/pmwiki/browse.php">Browse</a>
+<a href="/pmwiki/index_report.php">Indexes</a>
+<a href="/pmwiki/topics.php">Forums</a>
+<a class="nav-browse" href="/pmwiki/recent_videos.php">Videos</a>
+</nav>
+<div id="main-header-bar-right">
+<div class="font-xs mobile-off" id="signup-login-box">
+<a class="hover-underline bold" data-modal-target="signup" href="/pmwiki/login.php">Join</a>
+<a class="hover-underline bold" data-modal-target="login" href="/pmwiki/login.php">Login</a>
+</div>
+<div class="mobile-on inline" id="signup-login-mobileToggle">
+<a data-modal-target="login" href="/pmwiki/login.php"><i class="fa fa-user"></i></a>
+</div>
+<div id="search-box">
+<form action="/pmwiki/search_result.php" class="search">
+<input class="search-box" name="q" placeholder="Search" required="" type="text" value=""/>
+<input class="submit-button" type="submit" value=""/>
+<input name="search_type" type="hidden" value="article"/>
+<input name="page_type" type="hidden" value="all"/>
+<input name="cx" type="hidden" value="partner-pub-6610802604051523:amzitfn8e7v"/>
+<input name="cof" type="hidden" value="FORID:10"/>
+<input name="ie" type="hidden" value="ISO-8859-1"/>
+<input name="siteurl" type="hidden" value=""/>
+<input name="ref" type="hidden" value=""/>
+<input name="ss" type="hidden" value=""/>
+</form>
+<a class="mobile-on mobile-search-toggle close-x" href="#close-search"><i class="fa fa-close"></i></a>
+</div>
+<div id="random-box">
+<a class="button-random-trope" href="/pmwiki/pmwiki.php/Main/CreepyDoll" onclick="ga('send', 'event', 'button', 'click', 'random trope');" rel="nofollow"></a>
+<a class="button-random-media" href="/pmwiki/pmwiki.php/Literature/TheChemicalGardenTrilogy" onclick="ga('send', 'event', 'button', 'click', 'random media');" rel="nofollow"></a>
+</div>
+</div>
+</div>
+<div class="tablet-on" id="mobile-menu"><div class="mobile-menu-options">
+<div class="nav-wrapper">
+<a class="xl" href="/pmwiki/pmwiki.php/Main/Tropes">Tropes</a>
+<a class="xl" href="/pmwiki/pmwiki.php/Main/Media">Media</a>
+<a class="xl" href="/pmwiki/browse.php">Browse</a>
+<a class="xl" href="/pmwiki/index_report.php">Indexes</a>
+<a class="xl" href="/pmwiki/topics.php">Forums</a>
+<a class="xl" href="/pmwiki/recent_videos.php">Videos</a>
+<a href="/pmwiki/query.php?type=att">Ask The Tropers</a>
+<a href="/pmwiki/query.php?type=tf">Trope Finder</a>
+<a href="/pmwiki/query.php?type=ykts">You Know That Show...</a>
+<a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a>
+<a data-click-toggle="active" href="#tools">Tools <i class="fa fa-chevron-down"></i></a>
+<div class="tools-dropdown mobile-dropdown-linkList">
+<a href="/pmwiki/cutlist.php">Cut List</a>
+<a href="/pmwiki/changes.php">New Edits</a>
+<a href="/pmwiki/recent_edit_reasons.php">Edit Reasons</a>
+<a href="/pmwiki/launches.php">Launches</a>
+<a href="/pmwiki/img_list.php">Images List</a>
+<a href="/pmwiki/crown_activity.php">Crowner Activity</a>
+<a href="/pmwiki/no_types.php">Un-typed Pages</a>
+<a href="/pmwiki/page_type_audit.php">Recent Page Type Changes</a>
+</div>
+<a data-click-toggle="active" href="#hq">Tropes HQ <i class="fa fa-chevron-down"></i></a>
+<div class="tools-dropdown mobile-dropdown-linkList">
+<a href="/pmwiki/about.php">About Us</a>
+<a href="/pmwiki/contact.php">Contact Us</a>
+<a href="mailto:advertising@proper.io">Advertise</a>
+<a href="/pmwiki/dmca.php">DMCA Notice</a>
+<a href="/pmwiki/privacypolicy.php">Privacy Policy</a>
+</div>
+<a href="/pmwiki/ad-free-subscribe.php">Go Ad-Free</a>
+<div class="toggle-switches">
+<ul class="mobile-menu display-toggles">
+<li>Show Spoilers <div class="display-toggle show-spoilers" id="mobile-toggle-showspoilers"></div></li>
+<li>Night Vision <div class="display-toggle night-vision" id="mobile-toggle-nightvision"></div></li>
+<li>Sticky Header <div class="display-toggle sticky-header" id="mobile-toggle-stickyheader"></div></li>
+<li>Highlight Links <div class="display-toggle highlight-links" id="mobile-toggle-highlightlinks"></div></li>
+</ul>
+<script>updateMobilePrefs();</script>
+</div>
+</div>
+</div>
+</div>
+</header>
+<div class="mobile-on" id="homepage-introBox-mobile">
+<a href="/"><img class="logo-small" src="/images/logo-white-big.png"/></a>
+<form action="/pmwiki/search_result.php" class="search" style="margin:10px -5px -6px -5px;">
+<input class="search-box" name="q" placeholder="Search" required="" type="text" value=""/>
+<input class="submit-button" type="submit" value=""/>
+<input name="search_type" type="hidden" value="article"/>
+<input name="page_type" type="hidden" value="all"/>
+<input name="cx" type="hidden" value="partner-pub-6610802604051523:amzitfn8e7v"/>
+<input name="cof" type="hidden" value="FORID:10"/>
+<input name="ie" type="hidden" value="ISO-8859-1"/>
+<input name="siteurl" type="hidden" value=""/>
+<input name="ref" type="hidden" value=""/>
+<input name="ss" type="hidden" value=""/>
+</form>
+</div>
+<div class="ad" id="header-ad-wrapper">
+<div id="header-ad">
+<div class="ad-size-970x90 atf_banner">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_1"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_1'); });</script> </div>
+</div> </div>
+</div>
+</div>
+<div id="main-container">
+<div class="action-bar mobile-off" id="action-bar-top">
+<div class="action-bar-right">
+<p>Follow TV Tropes</p>
+<a class="button-fb" href="https://www.facebook.com/TVTropes">
+<i class="fa fa-facebook"></i></a>
+<a class="button-tw" href="https://www.twitter.com/TVTropes">
+<i class="fa fa-twitter"></i></a>
+<a class="button-re" href="https://www.reddit.com/r/TVTropes">
+<i class="fa fa-reddit-alien"></i></a>
+</div>
+<nav class="actions-wrapper" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<ul class="page-actions" id="top_main_list">
+<li class="link-edit">
+<a class="article-edit-button" data-modal-target="login" href="/pmwiki/pmwiki.php/Main/BFS?action=edit" rel="nofollow">
+<i class="fa fa-pencil"></i> Edit Page</a></li><li class="link-related"><a href="/pmwiki/relatedsearch.php?term=Main/BFS">
+<i class="fa fa-share-alt"></i> Related</a></li><li class="link-history"><a href="/pmwiki/article_history.php?article=Main.BFS">
+<i class="fa fa-history"></i> History</a></li><li class="link-discussion"><a href="/pmwiki/remarks.php?trope=Main.BFS">
+<i class="fa fa-comment"></i> Discussion</a></li> </ul>
+<button class="nav__dropdown-toggle" id="top_more_button" onclick="toggle_more_menu('top');" type="button">More</button>
+<ul class="more_menu hidden_more_list" id="top_more_list">
+<li class="link-todo tuck-always more_list_item"><a data-modal-target="login" href="#todo"><i class="fa fa-check-circle"></i> To Do</a></li><li class="link-pageSource tuck-always more_list_item"><a data-modal-target="login" href="/pmwiki/pmwiki.php/Main/BFS?action=source" rel="nofollow" target="_blank"><i class="fa fa-code"></i> Page Source</a></li> </ul>
+</nav>
+<div class="WikiWordModalStub"></div>
+<div class="ImgUploadModalStub" data-page-type="Article"></div>
+<div class="login-alert" style="display: none;">
+You need to <a href="/pmwiki/login.php" style="color:#21A0E8">login</a> to do this. <a href="/pmwiki/login.php?tab=register_account" style="color:#21A0E8">Get Known</a> if you don't have an account
+</div>
+</div>
+<div class="page-Article" id="main-content">
+<article class="with-sidebar" id="main-entry">
+<input id="groupname-hidden" type="hidden" value="Main"/>
+<input id="title-hidden" type="hidden" value="BFS"/>
+<input id="article_id" type="hidden" value="575"/>
+<input id="logged_in" type="hidden" value="false"/>
+<p class="hidden" id="current_url">http://tvtropes.org/pmwiki/pmwiki.php/Main/BFS</p>
+<meta content="" itemprop="datePublished"/>
+<meta content="" itemprop="articleSection"/>
+<meta content="" itemprop="image"/>
+<a class="watch-button" data-modal-target="login" href="#watch">Follow<span>ing</span></a>
+<h1 class="entry-title" itemprop="headline">
+BFS
+</h1>
+<script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+                "@type": "ListItem",
+                "position": 1,
+                "name": "tvtropes.org",
+                "item": "https://tvtropes.org"
+            },{
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Tropes",
+                "item": "https://tvtropes.org/pmwiki/pmwiki.php/Main/Tropes"
+            },{
+                "@type": "ListItem",
+                "position": 3,
+                "name": "BFS"            }]
+        }
+    </script>
+<a class="mobile-actionbar-toggle mobile-on" data-click-toggle="active" href="#mobile-actions-toggle" id="mobile-actionbar-toggle">
+<p class="tiny-off">Go To</p><span></span><span></span><span></span><i class="fa fa-pencil"></i></a>
+<nav class="mobile-actions-wrapper mobile-on" id="mobile-actions-bar"></nav>
+<div class="modal fade hidden-until-active" id="editLockModal">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button aria-label="Close" class="close" data-dismiss="modal" type="button"> <span aria-hidden="true">×</span></button>
+<h4 class="modal-title">Edit Locked</h4>
+</div>
+<div class="modal-body">
+<div class="row">
+<div class="body">
+<div class="danger troper_locked_message"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<nav class="body-options" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<ul class="subpage-links">
+<li>
+<a class="subpage-link curr-subpage" href="/pmwiki/pmwiki.php/Main/BFS" title="The Main page">
+<span class="wrapper"><span class="spi main-page"></span>Main</span></a>
+</li>
+<li>
+<a class="subpage-link" href="/pmwiki/pmwiki.php/Analysis/BFS" title="The Analysis page">
+<span class="wrapper"><span class="spi analysis"></span>Analysis</span></a>
+</li>
+<li>
+<a class="subpage-link" href="/pmwiki/pmwiki.php/Laconic/BFS" title="The Laconic page">
+<span class="wrapper"><span class="spi laconic-icon"></span>Laconic</span></a>
+</li>
+<li>
+<a class="subpage-link" href="/pmwiki/pmwiki.php/Quotes/BFS" title="The Quotes page">
+<span class="wrapper"><span class="spi quotes"></span>Quotes</span></a>
+</li>
+<li>
+<a class="subpage-link" href="/pmwiki/pmwiki.php/ImageLinks/BFS" title="The ImageLinks page">
+<span class="wrapper">ImageLinks</span></a>
+</li>
+<li>
+<a class="subpage-link" href="/pmwiki/pmwiki.php/It/BFS" title="The It page">
+<span class="wrapper">It</span></a>
+</li>
+<li>
+<a class="subpage-link" href="/pmwiki/pmwiki.php/PlayingWith/BFS" title="The PlayingWith page">
+<span class="wrapper">PlayingWith</span></a>
+</li>
+<li>
+<a class="subpage-link video-examples-tab" href="/pmwiki/pmwiki.php/VideoExamples/BFS" title="Video Examples">
+<img alt="play" class="" src="/images/play-button-logo.png"/>
+<span class="wrapper">VideoExamples</span>
+</a>
+</li>
+<li class="create-subpage dropdown">
+<a aria-expanded="false" class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);" role="button">
+<span class="wrapper">Create New <i class="fa fa-plus-circle"></i></span>
+</a>
+<select onchange="this.options[this.selectedIndex].value &amp;&amp; (window.location = this.options[this.selectedIndex].value);">
+<option value="">- Create New -</option>
+<option value="/pmwiki/pmwiki.php/Characters/BFS?action=edit">Characters</option>
+<option value="/pmwiki/pmwiki.php/FanficRecs/BFS?action=edit">FanficRecs</option>
+<option value="/pmwiki/pmwiki.php/FanWorks/BFS?action=edit">FanWorks</option>
+<option value="/pmwiki/pmwiki.php/Fridge/BFS?action=edit">Fridge</option>
+<option value="/pmwiki/pmwiki.php/Haiku/BFS?action=edit">Haiku</option>
+<option value="/pmwiki/pmwiki.php/Headscratchers/BFS?action=edit">Headscratchers</option>
+<option value="/pmwiki/pmwiki.php/Recap/BFS?action=edit">Recap</option>
+<option value="/pmwiki/pmwiki.php/ReferencedBy/BFS?action=edit">ReferencedBy</option>
+<option value="/pmwiki/pmwiki.php/Synopsis/BFS?action=edit">Synopsis</option>
+<option value="/pmwiki/pmwiki.php/Timeline/BFS?action=edit">Timeline</option>
+<option value="/pmwiki/pmwiki.php/Trivia/BFS?action=edit">Trivia</option>
+<option value="/pmwiki/pmwiki.php/WMG/BFS?action=edit">WMG</option>
+<option value="/pmwiki/pmwiki.php/YMMV/BFS?action=edit">YMMV</option>
+</select>
+</li>
+</ul>
+</nav>
+<div class="article-content retro-folders" id="main-article">
+<p>
+</p><div class="quoteright" style="width:350px;"><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FinalFantasyVIIRemake" title="/pmwiki/pmwiki.php/VideoGame/FinalFantasyVIIRemake"><div class="lazy_load_img_box" style="padding-top:68%"><img alt="https://static.tvtropes.org/pmwiki/pub/images/ffvii_bfs.png" border="0" class="embeddedimage" height="238" src="https://static.tvtropes.org/pmwiki/pub/images/ffvii_bfs.png" width="350"/></div></a></div>
+<div class="acaptionright" style="width:350px;">You know what they say about <a class="twikilink" href="/pmwiki/pmwiki.php/Main/CompensatingForSomething" title="/pmwiki/pmwiki.php/Main/CompensatingForSomething">guys with big swords...</a><span class="notelabel" onclick="togglenote('note0muxp');"><sup>note </sup></span><span class="inlinefolder" id="note0muxp" isnote="true" onclick="togglenote('note0muxp');" style="cursor:pointer;font-size:smaller;display:none;">They have big sheaths, too!</span></div>
+<div class="indent"><em>"It was much too big to be called a sword. Massive, thick, heavy, and far too rough. Indeed, it was like a slab of raw iron."</em>
+<div class="indent">— Narration introducing the Dragonslayer, <em><a class="twikilink" href="/pmwiki/pmwiki.php/Manga/Berserk" title="/pmwiki/pmwiki.php/Manga/Berserk">Berserk</a></em>
+</div></div><div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_1"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_1'); })</script></div></div><p>The melee weapon equivalent of a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BFG" title="/pmwiki/pmwiki.php/Main/BFG">BFG</a>.
+</p><p>A common trope to both video games and anime, a BFS is an unrealistically large sword most often owned by <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TheHero" title="/pmwiki/pmwiki.php/Main/TheHero">The Hero</a>, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TheChosenOne" title="/pmwiki/pmwiki.php/Main/TheChosenOne">The Chosen One</a>, or whatever type the lead happens to be. To be a true BFS, it should be nearly as long as its owner is tall. It may or may not have other special qualities besides being humongous. If a BFS does possess other strange qualities, one of them almost assuredly prevents it from being used by other people, whether that be weight, a magical barrier, a direct link to its owner, or other means.
+</p><p>Usually no other character in a game or series is the possessor of a sword that is anywhere close to as huge. Sometimes, even when unusual swords and weapons are an everyday occurrence, characters are still surprised by the size of the lead's BFS, as it is a physical manifestation of its owner's potential power.
+</p><div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_2"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_2'); })</script></div></div><p><a class="twikilink" href="/pmwiki/pmwiki.php/Main/TheRival" title="/pmwiki/pmwiki.php/Main/TheRival">The Rival</a> or <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BigBad" title="/pmwiki/pmwiki.php/Main/BigBad">Big Bad</a> will sometimes own a BFS, representing a significant hurdle and challenge for the protagonist to overcome. It is rarer for a secondary character, such as <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TheLancer" title="/pmwiki/pmwiki.php/Main/TheLancer">The Lancer</a> or <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TheBigGuy" title="/pmwiki/pmwiki.php/Main/TheBigGuy">The Big Guy</a>, to own a BFS, but if the lead character does not possess one, one of the others in their party likely will.
+</p><p>This trope includes any type of improbably large ("anime-sized") melee weapon. After the aforementioned big-ass sword, gigantic <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BladeOnAStick" title="/pmwiki/pmwiki.php/Main/BladeOnAStick">lances</a> tend to be the most common. However, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DropTheHammer" title="/pmwiki/pmwiki.php/Main/DropTheHammer">humongous hammers</a> and <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AnAxeToGrind" title="/pmwiki/pmwiki.php/Main/AnAxeToGrind">titanic axes</a> also appear from time to time, most commonly in the hands of <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TheBigGuy" title="/pmwiki/pmwiki.php/Main/TheBigGuy">The Big Guy</a> (or, just for the absurdity of it all, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GlacierWaif" title="/pmwiki/pmwiki.php/Main/GlacierWaif">a little girl</a>).
+</p><p>An ancient trope. Oversized, unrealistic swords aren't unheard of in medieval or earlier fiction, poetry, and artwork. To make matters more confusing, most societies employing swords also made huge ceremonial swords for display, which laymen of later periods may mistake for actual war tools. Swords employed in combat or dueling were <a class="urllink" href="http://www.thearma.org/essays/weights.htm">lighter<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a> than even the typical, non-BFS fantasy sword  which makes a lot of sense, if you remember it's about swinging one hundreds of times and quick enough — while the only purpose of a ceremonial or executioner's sword is to be carried along or make one strong cut respectively, there's not a lot of swinging around. Even the really <em>big</em> swords, such was the German Zweihänder, which were used for "fencing" with (batting aside or cutting) <em><a class="twikilink" href="/pmwiki/pmwiki.php/Main/BladeOnAStick" title="/pmwiki/pmwiki.php/Main/BladeOnAStick">polearms</a></em> or <a class="twikilink" href="/pmwiki/pmwiki.php/Main/RadialAsskicking" title="/pmwiki/pmwiki.php/Main/RadialAsskicking">keeping multiple opponents at bay</a> were <a class="urllink" href="http://www.thearma.org/essays/2HGS.html">much lighter<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a> (relatively speaking) than we are led to believe by most fictional portrayals.
+</p><div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_3"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_3'); })</script></div></div><p>Compare <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BigBulkyBomb" title="/pmwiki/pmwiki.php/Main/BigBulkyBomb">Big, Bulky Bomb</a>, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BFG" title="/pmwiki/pmwiki.php/Main/BFG">BFG</a> (as mentioned above) and <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GreatBow" title="/pmwiki/pmwiki.php/Main/GreatBow">Great Bow</a>. May well be a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BiggerStick" title="/pmwiki/pmwiki.php/Main/BiggerStick">Bigger Stick</a>. May involve <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Hammerspace" title="/pmwiki/pmwiki.php/Main/Hammerspace">Hammerspace</a> physics for storage, or <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SticksToTheBack" title="/pmwiki/pmwiki.php/Main/SticksToTheBack">some sort of strange magnetism</a>. <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BladeAboveTheShoulder" title="/pmwiki/pmwiki.php/Main/BladeAboveTheShoulder">Almost always held casually resting on the hero's shoulder</a>.
+</p><p>If it's being wielded with just one hand, it's a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/OneHandedZweihander" title="/pmwiki/pmwiki.php/Main/OneHandedZweihander">One-Handed Zweihänder</a>. See <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GiantsKnifeHumansGreatsword" title="/pmwiki/pmwiki.php/Main/GiantsKnifeHumansGreatsword">Giant's Knife; Human's Greatsword</a> for when characters wield weapons meant for a race of a different size. Compare <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DualWielding" title="/pmwiki/pmwiki.php/Main/DualWielding">Dual Wielding</a>, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/HeroesPreferSwords" title="/pmwiki/pmwiki.php/Main/HeroesPreferSwords">Heroes Prefer Swords</a>, and <a class="twikilink" href="/pmwiki/pmwiki.php/Main/InfinityPlusOneSword" title="/pmwiki/pmwiki.php/Main/InfinityPlusOneSword">Infinity +1 Sword</a>. May be used to create a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SinisterScrapingSound" title="/pmwiki/pmwiki.php/Main/SinisterScrapingSound">Sinister Scraping Sound</a>. Obligatory links to <a class="twikilink" href="/pmwiki/pmwiki.php/Main/FreudWasRight" title="/pmwiki/pmwiki.php/Main/FreudWasRight">Freud Was Right</a> and <a class="twikilink" href="/pmwiki/pmwiki.php/Main/CompensatingForSomething" title="/pmwiki/pmwiki.php/Main/CompensatingForSomething">Compensating for Something</a> are here for your convenience.
+</p><p>For the computer scientists reading this page, <a class="twikilink" href="/pmwiki/pmwiki.php/JustForFun/IThoughtItMeant" title="/pmwiki/pmwiki.php/JustForFun/IThoughtItMeant">this page has nothing to do</a> with <a class="urllink" href="https://en.wikipedia.org/wiki/Breadth-first_search">breadth-first search<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a>.
+</p><p></p><hr/><h2>Example subpages:</h2>
+<p>
+</p><ul><li> <a class="twikilink" href="/pmwiki/pmwiki.php/BFS/AnimeAndManga" title="/pmwiki/pmwiki.php/BFS/AnimeAndManga">Anime &amp; Manga</a>
+</li><li> <a class="twikilink" href="/pmwiki/pmwiki.php/BFS/Film" title="/pmwiki/pmwiki.php/BFS/Film">Film - Live-Action</a>
+</li><li> <a class="twikilink" href="/pmwiki/pmwiki.php/BFS/Literature" title="/pmwiki/pmwiki.php/BFS/Literature">Literature</a>
+</li><li> <a class="twikilink" href="/pmwiki/pmwiki.php/BFS/LiveActionTV" title="/pmwiki/pmwiki.php/BFS/LiveActionTV">Live-Action TV</a>
+</li><li> <a class="twikilink" href="/pmwiki/pmwiki.php/BFS/TabletopGames" title="/pmwiki/pmwiki.php/BFS/TabletopGames">Tabletop Games</a>
+</li><li> <a class="twikilink" href="/pmwiki/pmwiki.php/BFS/VideoGames" title="/pmwiki/pmwiki.php/BFS/VideoGames">Video Games</a>
+</li><li> <a class="twikilink" href="/pmwiki/pmwiki.php/BFS/Webcomics" title="/pmwiki/pmwiki.php/BFS/Webcomics">Webcomics</a>
+</li><li> <a class="twikilink" href="/pmwiki/pmwiki.php/BFS/WesternAnimation" title="/pmwiki/pmwiki.php/BFS/WesternAnimation">Western Animation</a>
+</li></ul><p></p><h2>Other examples</h2>
+<div class="folderlabel" onclick="toggleAllFolders();">    open/close all folders  </div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder0');">    Comic Books </div><div class="folder" id="folder0" isfolder="true" style="display:block;">
+<ul><li> <a class="twikilink" href="/pmwiki/pmwiki.php/ComicBook/BettyRoss" title="/pmwiki/pmwiki.php/ComicBook/BettyRoss">Red She-Hulk</a> has a great sword named Savage Sword of She-Hulk, created by <a class="twikilink" href="/pmwiki/pmwiki.php/ComicBook/IronMan" title="/pmwiki/pmwiki.php/ComicBook/IronMan">Iron Man</a> and blessed by Odin.
+</li><li> In Marvel's <em><a class="twikilink" href="/pmwiki/pmwiki.php/ComicBook/TheMightyThor" title="/pmwiki/pmwiki.php/ComicBook/TheMightyThor">Thor</a></em>, the concept is taken to its logical extreme with the <a class="urllink" href="http://images.wikia.com/marveldatabase/images/8/87/Odinsword_Thor_300.jpg">Odinsword<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a><small>◊</small>, which is many times the size of <em>anybody</em>, human or Asgardian. Thor has successfully thrown it, but he could never wield it. Not least because drawing it from its sheath causes the end of the universe.
+<ul><li> Unfortunately it was badly depowered in Roy Thomas' Celestial/Ring Cycle storyline, in which we learn its origin and that drawing it, rather than destroying the universe, <span class="spoiler" title="you can set spoilers visible by default on your profile"> will merely(?) bring on the day of Ragnarok</span>. We also find out why it's that big: <span class="spoiler" title="you can set spoilers visible by default on your profile"> it's meant to be wielded by a giant-size Destroyer, powered by Odin and all the other Asgardians except Thor, when he defends Earth from the even larger Celestials</span>.
+</li><li> Later, it reappears on a slightly more plausible scale during <em>Fear Itself</em> (though it's still about as tall as Thor and half as wide), when Thor wields it against his <a class="twikilink" href="/pmwiki/pmwiki.php/Main/EvilUncle" title="/pmwiki/pmwiki.php/Main/EvilUncle">Evil Uncle</a>, Cul, the Serpent.
+</li></ul></li><li> Shinryuken in <em><a class="twikilink" href="/pmwiki/pmwiki.php/ComicBook/GoldDigger" title="/pmwiki/pmwiki.php/ComicBook/GoldDigger">Gold Digger</a></em> whose Colossal Blade, Size-mitar, is one big reference to Sanger Zonvolt, listed above.
+</li><li> Korvus' Phoenix Blade from <em><a class="twikilink" href="/pmwiki/pmwiki.php/ComicBook/XMen" title="/pmwiki/pmwiki.php/ComicBook/XMen">X-Men</a></em>. Unlike most examples, it's suggested that the lingering Phoenix fragment was what allowed Korvus (a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BoxedCrook" title="/pmwiki/pmwiki.php/Main/BoxedCrook">Boxed Crook</a>) to wield it with relative ease, and, theoretically, carve his way through any opposition. Unfortunately, the Shi'ar high official who had this bright idea, neglected to think it through: namely, one of the people he was sending Korvus after was Rachel Grey-Summers, a former host of the Phoenix. And, as she points out to a flabbergasted Korvus after she pulls off a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BareHandedBladeBlock" title="/pmwiki/pmwiki.php/Main/BareHandedBladeBlock">Bare-Handed Blade Block</a>, absorbing the Phoenix fragment, the Phoenix knows her and likes her.
+</li></ul><ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/ComicBook/WonderWoman1987" title="/pmwiki/pmwiki.php/ComicBook/WonderWoman1987">Wonder Woman (1987)</a></em>: When <a class="twikilink" href="/pmwiki/pmwiki.php/ComicBook/Artemis" title="/pmwiki/pmwiki.php/ComicBook/Artemis">Artemis</a> returns as a demon hunter she's weilding a massive sword that with a blade that is at <em>least</em> five feet long. She's still carrying a bow as well, but it is no longer her primary weapon.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/ComicBook/New52" title="/pmwiki/pmwiki.php/ComicBook/New52">New 52</a></em>: <em><a class="twikilink" href="/pmwiki/pmwiki.php/ComicBook/Deathstroke" title="/pmwiki/pmwiki.php/ComicBook/Deathstroke">Deathstroke</a></em> has a giant sword that is almost never entirely on panel.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder1');">    Eastern Animation </div><div class="folder" id="folder1" isfolder="true" style="display:block;">
+<ul><li> The Estonian animation <em><a class="twikilink" href="/pmwiki/pmwiki.php/Animation/SuurToll" title="/pmwiki/pmwiki.php/Animation/SuurToll">Suur Tõll</a></em> gives the towering leader of the second horde one. He towers over every one but the giant eponymous character, and his sword is as big as he is.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder2');">    Fan Works </div><div class="folder" id="folder2" isfolder="true" style="display:block;">
+<ul><li> The Pyrefrost Beowolf in <em><a class="twikilink" href="/pmwiki/pmwiki.php/FanFic/RaindropsHearthsWarmingEveMiracle" title="/pmwiki/pmwiki.php/FanFic/RaindropsHearthsWarmingEveMiracle">Raindrop's Hearth's Warming Eve Miracle</a></em> has a pair of scythes the size of him...
+<ul><li> The size of a dragon.
+</li></ul></li><li> Blackfire in <em><a class="twikilink" href="/pmwiki/pmwiki.php/Fanfic/WithStringsAttached" title="/pmwiki/pmwiki.php/Fanfic/WithStringsAttached">With Strings Attached</a></em>. It probably changes size, too.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/FanFic/TheImmortalGame" title="/pmwiki/pmwiki.php/FanFic/TheImmortalGame">The Immortal Game</a></em>, most unicorn blades have about nine pieces to them. Sir Unimpressive, who trained for ten years, has an impressive thirteen. <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ActionFashionista" title="/pmwiki/pmwiki.php/Main/ActionFashionista">Rarity</a> and her father <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TheDragon" title="/pmwiki/pmwiki.php/Main/TheDragon">General Esteem</a> (considered to be the most powerful mortal warrior on the planet) has fourteen. <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TykeBomb" title="/pmwiki/pmwiki.php/Main/TykeBomb">Astor Coruscare</a>, the most powerful Unicorn at her time, is implied to have at least twenty pieces. Twilight Sparkle's blade Equinox? <strong>Twenty Seven.</strong>
+</li><li> The katana Yuunagi in <a class="twikilink" href="/pmwiki/pmwiki.php/FanFic/TheTaintedGrimoire" title="/pmwiki/pmwiki.php/FanFic/TheTaintedGrimoire">The Tainted Grimoire</a> is an example of this trope.
+</li><li> In the <em><a class="twikilink" href="/pmwiki/pmwiki.php/Manga/Naruto" title="/pmwiki/pmwiki.php/Manga/Naruto">Naruto</a></em> AU story <a class="urllink" href="https://www.fanfiction.net/s/8649007/1/Kitsune-s-Power">Kitsune's Power<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a>, the main character gains a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GoneHorriblyRight" title="/pmwiki/pmwiki.php/Main/GoneHorriblyRight">bloodlimit</a> granting him <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SuperStrength" title="/pmwiki/pmwiki.php/Main/SuperStrength">Super Strength</a>. He ends up having a sword made for him very like the one from <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Utawarerumono" title="/pmwiki/pmwiki.php/VideoGame/Utawarerumono">Utawarerumono</a></em> and uses it to fight Zabuza to a standstill.
+</li><li> Brittany, the main character of <em><a class="twikilink" href="/pmwiki/pmwiki.php/Fanfic/NewReality" title="/pmwiki/pmwiki.php/Fanfic/NewReality">New Reality</a></em> uses zweihänder.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/Fanfic/Wonderful" title="/pmwiki/pmwiki.php/Fanfic/Wonderful">Wonderful!</a></em>, one of the weapons of <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TheHero" title="/pmwiki/pmwiki.php/Main/TheHero">Taylor</a> is a huge sword. She used it for first time to fight an <a class="twikilink" href="/pmwiki/pmwiki.php/Main/EldritchAbomination" title="/pmwiki/pmwiki.php/Main/EldritchAbomination">Eldritch Abomination</a>.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/Fanfic/WithThisRing" title="/pmwiki/pmwiki.php/Fanfic/WithThisRing">With This Ring</a></em>, Renegade OL eventually makes himself one.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Fanfic/RobbReturns" title="/pmwiki/pmwiki.php/Fanfic/RobbReturns">Robb Returns</a></em>: Stormbreaker, the Durrandons' ancient greatsword that Robert found, counts as one. When it is used, the sound of thunder can actually be heard. <span class="spoiler" title="you can set spoilers visible by default on your profile"><a class="twikilink" href="/pmwiki/pmwiki.php/Main/RuleOfSymbolism" title="/pmwiki/pmwiki.php/Main/RuleOfSymbolism">It also brings out the enemy's true nature</a>, as it proves by making Jaime's sword rust from the inside, and will not be stained by the blood of a coward.</span>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Fanfic/HarbingerFinmonster" title="/pmwiki/pmwiki.php/Fanfic/HarbingerFinmonster">Harbinger (Finmonster)</a></em> (<em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/DannyPhantom" title="/pmwiki/pmwiki.php/WesternAnimation/DannyPhantom">Danny Phantom</a></em>, <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/GravityFalls" title="/pmwiki/pmwiki.php/WesternAnimation/GravityFalls">Gravity Falls</a></em>, <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/ParaNorman" title="/pmwiki/pmwiki.php/WesternAnimation/ParaNorman">ParaNorman</a></em>): In this story, Wendy Corduroy, has a double-edged sword for a weapon that Danny describes as being almost ridiculously large.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/WhatIfIKnowTooManyReasonsICanBeStrong" title="/pmwiki/pmwiki.php/Webcomic/WhatIfIKnowTooManyReasonsICanBeStrong">What If I Know Too Many Reasons I Can Be Strong?</a></em>: Haganezuka makes Tanjiro huge swords named the Demonslayer.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Fanfic/DNMC" title="/pmwiki/pmwiki.php/Fanfic/DNMC">DNMC</a></em> features D'Arg and his two <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ShotgunsAreJustBetter" title="/pmwiki/pmwiki.php/Main/ShotgunsAreJustBetter">shotgun</a> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MixAndMatchWeapon" title="/pmwiki/pmwiki.php/Main/MixAndMatchWeapon">swords</a> that he can <a class="twikilink" href="/pmwiki/pmwiki.php/Main/FlamingSword" title="/pmwiki/pmwiki.php/Main/FlamingSword">set on fire</a> which he's named <em>Fire, Ready, Aim</em>. <a class="twikilink" href="/pmwiki/pmwiki.php/Main/RuleOfSymbolism" title="/pmwiki/pmwiki.php/Main/RuleOfSymbolism">Fitting for someone as reckless as him.</a> Deconstructed, since their size and weight don't do him any favors against a more agile opponent, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/CripplingOverspecialization" title="/pmwiki/pmwiki.php/Main/CripplingOverspecialization">especially if they're a human and not a Creature of Grimm</a>.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder3');">    Manhwa and Manhua </div><div class="folder" id="folder3" isfolder="true" style="display:block;">
+<ul><li> Percer from <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/Id" title="/pmwiki/pmwiki.php/Literature/Id">Id</a></em> has an absurdly large sword that he manages to use single handed.
+</li><li> Batu and Yuda from <em><a class="twikilink" href="/pmwiki/pmwiki.php/Manhwa/ShamanWarrior" title="/pmwiki/pmwiki.php/Manhwa/ShamanWarrior">Shaman Warrior</a></em> both employ these.
+</li><li> Sando's sword from <em><a class="twikilink" href="/pmwiki/pmwiki.php/Manhwa/ShinAngyoOnshi" title="/pmwiki/pmwiki.php/Manhwa/ShinAngyoOnshi">Shin Angyo Onshi</a></em> is bigger than she is.
+</li><li> Lu Xiao from <em><a class="twikilink" href="/pmwiki/pmwiki.php/Manhua/InfinityGame" title="/pmwiki/pmwiki.php/Manhua/InfinityGame">Infinity Game</a></em> creates a sword out of magic that is at least twenty feet tall. She weilds it one-handed.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder4');">    Mythology and Religion </div><div class="folder" id="folder4" isfolder="true" style="display:block;">
+<ul><li> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/OlderThanDirt" title="/pmwiki/pmwiki.php/Main/OlderThanDirt">Older Than Dirt</a>: In <a class="twikilink" href="/pmwiki/pmwiki.php/Literature/TheEpicOfGilgamesh" title="/pmwiki/pmwiki.php/Literature/TheEpicOfGilgamesh">The Epic of Gilgamesh</a> "They cast great daggers/ Their blades were 120 pounds each/ The cross guards of their handles thirty pounds each/ They carried daggers worked with thirty pounds of gold/ Gilgamesh and Enkidu bore ten times sixty pounds each."
+</li><li> Former adversary and later vassal of King Arthur, Osla Big Knife, carried Bronllavyn Short Broad, a sword whose dimensions are never completely specified. However, it is stated that it was large enough to be used as a bridge and that Osla himself died when the sword fell out of its sheath, allowing the sheath to fill up with so much water that he was dragged under and drowned. Osla appears twice in the Welsh <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/Mabinogion" title="/pmwiki/pmwiki.php/Literature/Mabinogion">Mabinogion</a>,</em> with the earliest text he appears in dating back to 1160 or thereabouts. This constitutes one the trope's few non-Asian and non-Asian-influenced appearances.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/Beowulf" title="/pmwiki/pmwiki.php/Literature/Beowulf">Beowulf</a></em> wielded a giant sword when he fought Grendel's mom. Justified in that it was in fact made by giants.
+</li><li> In <a class="twikilink" href="/pmwiki/pmwiki.php/Literature/TheBible" title="/pmwiki/pmwiki.php/Literature/TheBible">The Bible</a>
+<ul><li> After killing the giant Goliath, David cuts off his head with the giant's own sword. Considering that Goliath was about 9.5 ft tall, his sword must have been rather large compared to David.
+</li><li> Later, when David was on the run from Saul, he is without a sword and is given the sword of Goliath from a temple. Some images have him continue to wield this BFS for his entire reign. A BFS in this time period <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AluminumChristmasTrees" title="/pmwiki/pmwiki.php/Main/AluminumChristmasTrees">would be the size of a normal sword by our standards</a>, as the iron age had just started around this time.
+</li><li> In Deuteronomy 28, and Ezekiel 14, one of the punishments of the wicked is to be by the sword. In chapter 21 of Ezekiel, God wields that sword, and the description of it makes it seem rather huge, deadly, and quite awesome, if not terrifying. That same huge sword is in St. John's Revelation, used by the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/HorsemenOfTheApocalypse" title="/pmwiki/pmwiki.php/Main/HorsemenOfTheApocalypse">rider of the red horse</a>. Such a sword is said to be symbolic of war and violence.
+</li></ul></li><li> While <a class="twikilink" href="/pmwiki/pmwiki.php/Myth/NorseMythology" title="/pmwiki/pmwiki.php/Myth/NorseMythology">Thor</a> was known for his hammer, his wife, Sif, carried a BFS, being every bit a badass as he was.
+</li><li> <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/Islam" title="/pmwiki/pmwiki.php/UsefulNotes/Islam">Muslim</a> esoterica has Zulfiqar, the story of which is rather odd. The historical Zulfiqar was a sword, and a very large one at that, possibly with two points. It was captured in a raid in which both the prophet Muhammad and his younger cousin/foster brother/son-in-law Ali participated; when time came to divide up the booty, Muhammad gave the sword to Ali, and it became an heirloom of Ali's line. This would all be some minor trivia if it weren't for the fact that some Muslims decided that Ali and his line were the rightful successors of Muhammad in his role as political and spiritual leader of the Muslim <em>Ummah</em> (nation); this group became the Shia branch of the faith, and they represent 15-20% of all Muslims today. As a result, the sword has been mythologized substantially among the Shia: rather than being simply two-pointed, Shia legend would have Zulfiqar be more extensively or completely bifurcated, and be so great and imbued with divine power that when used, it requires an angel be around to catch it, for if it fell, it would <em>cleave the Earth in two</em>. Non-Shia Muslims—and a fair number of Shia <em>ulema</em> (clerics/jurists)—think this story is nonsense, but it remains pervasive, and as a result Zulfiqar (and <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SpellMyNameWithAnS" title="/pmwiki/pmwiki.php/Main/SpellMyNameWithAnS">variants</a>) remains a common name among some groups of Shia (particularly the Ismailis of Pakistan, who produced the Prime Minister Zulfikar Ali Bhutto).
+</li><li> The <a class="twikilink" href="/pmwiki/pmwiki.php/Myth/IrishMythology" title="/pmwiki/pmwiki.php/Myth/IrishMythology">Irish Ulster Cycle</a> has Fergus mac Roiche's greatsword, Caladbolg ("hard sheath"). That thing could dispatch an <em>army</em> with a single stroke. Not that it gets to do so against Conall Cernach's forces, since a peace agreement had been arranged (even if he tore up a lot of his soldiers with Caladbolg at less than full force). Nonetheless, to show that his side won't be taking intrigues lying down, Fergus uses Caladbolg to <em>cut the tops away from three hills, <strong>with one stroke each</strong></em>. Because of close cognates in Welsh legends, some scholars believe that the stories of Caladbolg were the template for <a class="twikilink" href="/pmwiki/pmwiki.php/Myth/KingArthur" title="/pmwiki/pmwiki.php/Myth/KingArthur">Excalibur</a>. Maybe <em>that's</em> why Arthur's reign persisted for so long in the stories.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder5');">    Podcasts </div><div class="folder" id="folder5" isfolder="true" style="display:block;">
+<ul><li> In the <em><a class="twikilink" href="/pmwiki/pmwiki.php/Podcast/CoolKidsTable" title="/pmwiki/pmwiki.php/Podcast/CoolKidsTable">Cool Kids Table</a></em> game <em>Creepy Town</em>, Walter insists on adding a claymore to the hillbilly torture shack room, regardless of how incongruous that is with the haunted house the teens are trying to set up.
+</li><li> <a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FinalFantasyTacticsAdvance" title="/pmwiki/pmwiki.php/VideoGame/FinalFantasyTacticsAdvance">Marche</a> naturally gets to wield his Judge Blade when Jory plays as him in <em><a class="twikilink" href="/pmwiki/pmwiki.php/Podcast/InterstitialActualPlay" title="/pmwiki/pmwiki.php/Podcast/InterstitialActualPlay">Interstitial Actual Play</a></em>.
+<ul><li> Inverted with <span class="spoiler" title="you can set spoilers visible by default on your profile"> Tagdegx</span>. They wield the Buster Sword, which is huge for them, but their tiny body means it's only about as big as a dagger for everyone else.
+</li></ul></li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder6');">    Theatre </div><div class="folder" id="folder6" isfolder="true" style="display:block;">
+<ul><li> The three brothers in <em><a class="twikilink" href="/pmwiki/pmwiki.php/Theatre/PrincessIda" title="/pmwiki/pmwiki.php/Theatre/PrincessIda">Princess Ida</a></em> carry incredibly large swords in many productions.
+<ul><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/Theatre/Ruddigore" title="/pmwiki/pmwiki.php/Theatre/Ruddigore">Ruddigore</a></em> Dame Hannah appropriates one when confronting Sir Ruthven.
+</li></ul></li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder7');">    Toys </div><div class="folder" id="folder7" isfolder="true" style="display:block;">
+<ul><li> Most swords in <em><a class="twikilink" href="/pmwiki/pmwiki.php/Toys/BIONICLE" title="/pmwiki/pmwiki.php/Toys/BIONICLE">BIONICLE</a></em> are <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AwesomeButImpractical" title="/pmwiki/pmwiki.php/Main/AwesomeButImpractical">absurdly large, ornate and impractical</a>; this is partially <a class="twikilink" href="/pmwiki/pmwiki.php/Main/EnforcedTrope" title="/pmwiki/pmwiki.php/Main/EnforcedTrope">enforced</a> by <a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/LEGO" title="/pmwiki/pmwiki.php/Franchise/LEGO">LEGO</a>, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BlatantLies" title="/pmwiki/pmwiki.php/Main/BlatantLies">who claim they "don't make realistic weapons"</a>. Lhikan and Tahu's swords are big enough to be used as a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/CoolBoard" title="/pmwiki/pmwiki.php/Main/CoolBoard">surfboard</a>. <a class="twikilink" href="/pmwiki/pmwiki.php/Main/LavaAddsAwesome" title="/pmwiki/pmwiki.php/Main/LavaAddsAwesome">On lava.</a>
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder8');">    Visual Novels </div><div class="folder" id="folder8" isfolder="true" style="display:block;">
+<ul><li> A few appear in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VisualNovel/FateStayNight" title="/pmwiki/pmwiki.php/VisualNovel/FateStayNight">Fate/stay night</a></em>:
+<ul><li> Assassin in has a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/EveryJapaneseSwordIsAKatana" title="/pmwiki/pmwiki.php/Main/EveryJapaneseSwordIsAKatana">nodachi</a> with a blade length of 150cm, or roughly five feet. Not terribly notable except the game specifically points out this is more the length of a lance than a sword and is unrealistically large. The 'actual' Monohoshizao had a more modest 90cm blade. Only Assassin's obscene skill can wield such a long sword, apparently. And it's still only suited for one-on-one dueling, and not for large-scale battle.
+</li><li> Berserker's axe-sword, which is a giant hunk of stone that looks somewhere between, well, an axe and a sword. It looks <em>almost</em> normal sized in relation to Berserker, who's about 8 feet tall. However, when <span class="spoiler" title="you can set spoilers visible by default on your profile">Shirou</span> uses it in Heaven's Feel, it's as big as he is. <span class="spoiler" title="you can set spoilers visible by default on your profile">And to top it off he uses it <a class="twikilink" href="/pmwiki/pmwiki.php/Main/OneHandedZweihander" title="/pmwiki/pmwiki.php/Main/OneHandedZweihander">one-handed.</a></span>
+</li><li> Saber surprisingly enough uses a fairly normal sized sword that spends much of its time invisible, but is by far the shortest and smallest Servant, so it looks much larger in her hands. However when she fires off <span class="spoiler" title="you can set spoilers visible by default on your profile">Excalibur</span> it takes the form of a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SwordBeam" title="/pmwiki/pmwiki.php/Main/SwordBeam">giant sword made of light</a>
+</li><li> Expanded universe materials have featured even more of these, especially in the hands of Sabers. Siegfried's Balmung is about as tall as he is, and he's already a giant of a man. The Saber version of Frankenstein carries a ridiculously bulky weapon that seems to weigh more than her. Musashi carries regular ol' katanas, but her <a class="twikilink" href="/pmwiki/pmwiki.php/Main/LimitBreak" title="/pmwiki/pmwiki.php/Main/LimitBreak">Limit Break</a> causes her sword to become about a hundred times her height. And then there's Okita Alter's Purgatory Blade, which is a nodachi around eight feet long, and ends up poking comically far above her model.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VisualNovel/YoJinBo" title="/pmwiki/pmwiki.php/VisualNovel/YoJinBo">Yo-Jin-Bo</a></em> has a giant katana wielded by Ittosai; it's nearly as long as he is tall. Villain Nobumasa has a Big Freakin' Spear as well.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VisualNovel/EienNoAselia" title="/pmwiki/pmwiki.php/VisualNovel/EienNoAselia">Eien no Aselia</a></em>, despite the premise of super powered cosmic swords all trying to kill each other, most of them aren't <em>that</em> unrealistically huge. But Karma? It's bigger than the guy wielding and that guy is pretty big.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VisualNovel/YuminaTheEthereal" title="/pmwiki/pmwiki.php/VisualNovel/YuminaTheEthereal">Yumina The Ethereal</a></em> is full of BFS, but one character can turn <em>herself</em> into a BFS that is capable of destroying <em>anything</em> in <a class="twikilink" href="/pmwiki/pmwiki.php/Main/OneHitKill" title="/pmwiki/pmwiki.php/Main/OneHitKill">a single strike.</a>
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VisualNovel/MarcoAndTheGalaxyDragon" title="/pmwiki/pmwiki.php/VisualNovel/MarcoAndTheGalaxyDragon">Marco and the Galaxy Dragon</a></em>, Gargouilles sword Coelacanth has a large blade. <span class="spoiler" title="you can set spoilers visible by default on your profile">Yuuko</span>, meanwhile, wields a nodachi almost as long as she is tall.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder9');">    Web Original </div><div class="folder" id="folder9" isfolder="true" style="display:block;">
+<ul><li> These sometimes appear in <em><a class="twikilink" href="/pmwiki/pmwiki.php/Roleplay/SurvivalOfTheFittest" title="/pmwiki/pmwiki.php/Roleplay/SurvivalOfTheFittest">Survival of the Fittest</a></em>, where Danya sometimes puts medieval swords on the list of weapons to be assigned. Such swords include a 55-inches-long Claymore, a 6-feet-long Zweihänder, and a Grosse Messer.
+</li><li> Kuar in <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/TechInfantry" title="/pmwiki/pmwiki.php/TabletopGame/TechInfantry">Tech Infantry</a></em> is only somewhat huge, but a world with werewolves, vampires, and other supernaturally strong characters facing off against supernaturally-tough enemies who may be <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ImmuneToBullets" title="/pmwiki/pmwiki.php/Main/ImmuneToBullets">Immune to Bullets</a>, big honking swords are commonplace.
+</li><li> <a class="twikilink" href="/pmwiki/pmwiki.php/WebAnimation/KingsOfPowerFourBillionPercent" title="/pmwiki/pmwiki.php/WebAnimation/KingsOfPowerFourBillionPercent">Kings of Power: 4 Billion%</a>: one of the characters has a very prominient <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BFS" title="/pmwiki/pmwiki.php/Main/BFS">BFS</a>.
+</li><li> <a class="twikilink" href="/pmwiki/pmwiki.php/Roleplay/MSFHighForum" title="/pmwiki/pmwiki.php/Roleplay/MSFHighForum">MSF High Forum</a>: Sam wields one of these. A large claymore to be specific. So does Mercurius.
+</li><li> During a <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/Champions" title="/pmwiki/pmwiki.php/TabletopGame/Champions">Champions</a></em> game, one player claimed that a 40d6 killing attack was not excessive for a photon torpedo because "That's only as much damage as 25 sword hacks." That, combined with a healthy dose of <a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/StarFleetBattles" title="/pmwiki/pmwiki.php/TabletopGame/StarFleetBattles">Star Fleet Battles</a>, gave us <em><a class="urllink" href="http://www.rogermwilcox.name/stories/buccaneer.html">Buccaneer!<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a></em>, whose sword was so huge it did the equivalent of 25 sword hacks.
+</li><li> Black Knight in <em><a class="twikilink" href="/pmwiki/pmwiki.php/Roleplay/MarvelsRPG" title="/pmwiki/pmwiki.php/Roleplay/MarvelsRPG">Marvels RPG</a></em> sports Excalibur, which on top of being a BFS is also an <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AbsurdlySharpBlade" title="/pmwiki/pmwiki.php/Main/AbsurdlySharpBlade">Absurdly Sharp Blade</a> able to release lightning shocks and instill <a class="twikilink" href="/pmwiki/pmwiki.php/Main/PrimalFear" title="/pmwiki/pmwiki.php/Main/PrimalFear">Primal Fear</a> just by being wielded.
+</li><li> The <a class="urllink" href="http://askaninja.com/videos/ask-a-ninja-question-68-legendary-weapons/">Ask A Ninja<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a> Ninja describes something called an "Extremely Extremely Broadsword," which is so big that "it can slice TEXAS in half!" He also notes that there are only a few things in the universe that can even lift it, and since none of them are good guys.
+</li><li> Uncommon but still present in <em><a class="twikilink" href="/pmwiki/pmwiki.php/WebAnimation/RWBY" title="/pmwiki/pmwiki.php/WebAnimation/RWBY">RWBY</a></em>. Yatsuhashi and Sage both wield conventional large swords, and the base form of Qrow's gunscythe is a folding one. Perhaps the most impressive example is the one that belongs to Yang's mother Raven Branwen, which is a nodachi as long as she is tall and has a revolving dust mechanism in the hilt similar to Weiss' rapier (which speaking of wouldn't be a shabby example as it's got to be three feet in length).
+<ul><li> And in Volume 4 <span class="spoiler" title="you can set spoilers visible by default on your profile"> Jaune upgrades his long sword, Crocea Mors, so that it can combine with its sheath to turn into one of these.</span>
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/WebAnimation/Dreamscape" title="/pmwiki/pmwiki.php/WebAnimation/Dreamscape">Dreamscape</a></em>: The Master of the Dammed's <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ALoadOfBull" title="/pmwiki/pmwiki.php/Main/ALoadOfBull">minotaurs</a> carried huge swords.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder10');">    Web Video </div><div class="folder" id="folder10" isfolder="true" style="display:block;">
+<ul><li> In the <em><a class="twikilink" href="/pmwiki/pmwiki.php/WebVideo/AuralnautsStarWarsSaga" title="/pmwiki/pmwiki.php/WebVideo/AuralnautsStarWarsSaga">Auralnauts Star Wars Saga</a></em>, the laser sword of Dirk Lasermaster is long enough to always extend offscreen (even during <em>an establishing shot of Tatooine from space</em>).
+</li><li> <a class="twikilink" href="/pmwiki/pmwiki.php/WebVideo/Smosh" title="/pmwiki/pmwiki.php/WebVideo/Smosh">Smosh</a> deconstructs this in their <em><a class="twikilink" href="/pmwiki/pmwiki.php/Main/RealityEnsues" title="/pmwiki/pmwiki.php/Main/RealityEnsues">If It Were Real</a></em> series, where <a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FinalFantasyVII" title="/pmwiki/pmwiki.php/VideoGame/FinalFantasyVII">Cloud's Buster Sword</a> is shown to be too heavy to use.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder11');">    Real Life </div><div class="folder" id="folder11" isfolder="true" style="display:block;">
+<ul><li> Large, two-handed swords have been made and used in a wide variety of cultures throughout history. Some are made purely for ceremonial purposes and are impractical to use, while others are quite serviceable in the type of warfare they were created to be used in.
+</li><li> See <a class="urllink" href="https://www.youtube.com/watch?v=Un1M7xbCCIs">here<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a> for a man using, or rather <em>attempting</em> to use, a real-life replica of <a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FinalFantasyVII" title="/pmwiki/pmwiki.php/VideoGame/FinalFantasyVII">Cloud's buster sword</a> that he made himself, which weighs 20.9kg or 46 lbs. As a <em><a class="twikilink" href="/pmwiki/pmwiki.php/Website/Cracked" title="/pmwiki/pmwiki.php/Website/Cracked">Cracked</a></em> article <a class="urllink" href="http://www.cracked.com/blog/the-8-manliest-images-on-the-internet/">noted<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a>, the victor in this case is neither the pallet nor the smith wielding the sword, but rather the laws of gravity and physics which make such a weapon absurd in the first place. It cannot even be properly swung: He has to lift it up and let it drop down on the target under its own weight. At least he deserves major points for effort. <a class="urllink" href="https://www.youtube.com/watch?v=VNc7kHADtUw">He later got a strongman<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a> to attempt to swing it, and even he's only able to strike the wooden pallet by letting the blade fall. The original smith <a class="urllink" href="https://www.youtube.com/watch?v=vGkcgGf2Fzw">revisited the video<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a> seven years later.
+</li><li> Tony on <a class="urllink" href="https://www.youtube.com/watch?v=xogheZdAO18">this episode<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a> of <em><a class="twikilink" href="/pmwiki/pmwiki.php/WebVideo/ManAtArms" title="/pmwiki/pmwiki.php/WebVideo/ManAtArms">Man at Arms</a></em> also recreated Cloud's Buster Sword, which even when made of aircraft aluminum with a steel cutting edge inserted was guessed to probably weigh 75 or 80 pounds. Tony wrecked his back and arm just from lifting it, and since it was too heavy to swing the only way to cut anything with it was to have two men lift it into place above the target and let it fall down like the blade of a guillotine. Besides this, Tony creates many other huge replica weapons on the show, as do the Stagmer brothers in the <em>Reforged</em> season.
+</li><li> <a class="urllink" href="https://www.youtube.com/channel/UC_9P8orwOsJ-GqW5GaB-fEA">Pretty Hate Machining<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a> made a 123 lb. Buster Sword out of inch-thick AR500 steel. <a class="urllink" href="https://www.youtube.com/watch?v=6k5SauImw9I">As seen here<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a>, two-time <a class="twikilink" href="/pmwiki/pmwiki.php/Main/WorldsStrongestMan" title="/pmwiki/pmwiki.php/Main/WorldsStrongestMan">World's Strongest Man</a> finalist Robert Oberst needed help to lift it onto his shoulder, and could only drop it rather than swing it.
+</li><li> Practitioners of Baguazhang, a Chinese internal martial art, train with oversized swords to build strength and so on. It's relatively easy to find daos almost five feet long and weighing around 5 lbs. The guy in the bottom pic of the <a class="urllink" href="http://en.wikipedia.org/wiki/Bagua_zhang">Wikipedia page on Baguazhang<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a> is training with an oversized dao that looks like it could give the Buster Sword a run for its money!
+</li><li> History tells of a Frisian pirate and rebel by the name of "Grutte Pier" ("Big Pier") who rose to prominence during the early sixteenth century. He was reported to be an enormous man, and strong enough to bend coins one-handed with three fingers. Some sources estimate his height to have been at least seven-feet tall, based around the length of the two swords reported to be his—both seven feet in length. However, these swords reputed to be his were probably ceremonial bearing swords that were incorrectly identified as combat weapons in later times and ascribed to him through romantic speculation. According to legend, Grutte Pier was strong enough to behead multiple men in a single blow. Unfortunately, the sword was proven <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AwesomeYetImpractical" title="/pmwiki/pmwiki.php/Main/AwesomeYetImpractical">Awesome, yet Impractical</a> when he drowned after the sheath filled with water.
+</li><li> The <em><a class="urllink" href="http://en.wikipedia.org/wiki/%C5%8Cdachi">ōdachi<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a></em> or "great sword" (also known as a <em>nodachi</em> or "field sword") is most easily described as a larger version of the <em>katana</em> or <em>tachi</em>, and was intended to be used by foot soldiers against cavalry. Typical examples were over five feet long, <a class="urllink" href="http://www.freewebs.com/toufuushogunate/Nodachi.jpg">which is longer than the typical Japanese man is tall<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a><small>◊</small>. However, it's speculated that many or perhaps even most <em>ōdachi</em> were never used in combat. Forging one was proof of a swordsmith's skill, and owning one was a status symbol for a samurai wealthy enough to afford it. However, polearms (such as the <em>naginata</em>) were cheaper to build, easier to train people with, and all-around more useful in the hands of a skilled soldier. There are also styles of using the <em>nodachi</em> in a very aggressive manner to defeat polearms, by essentially advancing toward a foe with polearm and using multiple rapid downward cuts to batter the enemy weapon down and cut the head and shoulders with the sheer weight and momentum of the blade.
+</li><li> A specialized version of the <em>ōdachi</em> was known as the <em>zanbatou</em> or "horse-cleaving sword" (derived from the Chinese <em><a class="urllink" href="https://en.wikipedia.org/wiki/Zhanmadao">zhanmadao<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a></em> with the same meaning). It supposedly differed from the <em>ōdachi</em> mainly by having a ricasso approximately 12-18 inches long (similar to the German <em>Zweihänder</em>), allowing it to be used as a short polearm as well as a sword against cavalry. Unlike large <em>nodachi</em> and <em>ōdachi</em> of which we have some surviving examples, it is more doubtful whether the <em>zanbatou</em> ever actually existed or would have been a usable weapon if it did.
+</li><li> <a class="urllink" href="http://japantrip.tripod.com/nodachi/norimitsu.html">This<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a> mind-bogglingly enormous <em>ōdachi</em> is <em>377 cm (over 12 feet) long</em>, and is the largest sword of its type known to exist in Japan. However, it was made not for use in battle, but to test a particular forging technique. Other examples, though none of quite that magnitude, can be found on the linked site.
+</li><li> When you're trying to arm a giant, sometimes a normal sword just won't do. <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TheBigGuy" title="/pmwiki/pmwiki.php/Main/TheBigGuy">Peter Francisco</a> (also known as <a class="twikilink" href="/pmwiki/pmwiki.php/Main/RedBaron" title="/pmwiki/pmwiki.php/Main/RedBaron">the Virginia Giant</a> or <a class="twikilink" href="/pmwiki/pmwiki.php/Main/IHaveManyNames" title="/pmwiki/pmwiki.php/Main/IHaveManyNames">the Virginia Hercules</a>) was well over 6'6" and joined the patriot cause when the Revolutionary War broke out. Since most weapons were designed at at time when the average man was 5'8" George Washington decided to arm the man with a specially made sword that measured 5' long, longer than some of the soldiers in the army were tall. This sword proved useful. At just the Battle of Guilford Courthouse, he killed 11 British solders with it.
+</li><li> Civil War officer Heros von Borke was another larger-than-usual man who needed a larger-than-usual sword. An immigrant from Prussia, the 6'4" dragoon officer became a Confederate cavalryman. And he bought his 42" German made Solingen sword to fight with.
+</li><li> The Scottish two-handed claymore, while not quite as huge as the Zweihänder and nowhere near as big as fantasy examples, was quite large. They were typically around 140cm of length and weighed less than 6lbs, and are numerous existing examples in museums.
+</li><li> A two-handed sword said to have been owned by Scottish hero William Wallace is 5 feet, 4 inches long (163cm), and weights 6 lbs (2.7 kg). However, it is at the very most a composite creation put together long after Wallace's death and may or may not contain any parts of Wallace's real sword.
+</li><li> The Museum of Scotland in Edinburgh houses a claymore—admittedly ceremonial—that is at least seven feet (a bit more than two meters) long in total. <a class="urllink" href="http://i98.photobucket.com/albums/l241/azvolrien/MuseumBFS.jpg">See for yourself.<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a><small>◊</small>
+</li><li> The German "Zweihänder" was up to 6 feet long, weighing up to 7 lb. (3 kg) and <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ExactlyWhatItSaysOnTheTin" title="/pmwiki/pmwiki.php/Main/ExactlyWhatItSaysOnTheTin">used in both hands</a>, allegedly to break up pike formations. While heavy, it is still <a class="urllink" href="https://www.youtube.com/watch?v=_hfLZozBVpM">agile and flexible<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a> if wielded properly. Two-handers are included in the iconic image of the Landsknechts (hired foot soldiers, often not of noble origin). Those who actually used two-handed swords were called "Doppelsöldner" (double mercenary) because they received double pay for their services.
+</li><li> Pepin the Short's sword was about 1.83m (little over 6 feet) long. The most remarkable thing is that Pepin himself was 1.37m (under 4 feet and half) tall.
+</li><li> The Italian Spadone (sometimes called Spadone a due mani, Great Sword in two hands), and its relative, the Iberian Montante (See a training example <a class="urllink" href="http://www.armor.com/train233.html">here<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a>) were very large swords, frequently exceeding five feet in length. The montante was usually used against other weapons, while the Spadone was used in the same fashion, but also used in duels. They averaged 5-6lbs, and were quite maneuverable.
+</li><li> The Chinese <a class="urllink" href="http://en.wikipedia.org/wiki/Dadao">Dadao<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a> isn't especially long (the blade is usually 2-3 feet) but it's very broad and blade-heavy. And in the <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/SecondSinoJapaneseWar" title="/pmwiki/pmwiki.php/UsefulNotes/SecondSinoJapaneseWar">Second Sino-Japanese War</a>, the dadāo was surprisingly effective against Japanese soldiers in hand-to-hand combat, used by the famous "Big Sword" shock troops. It helped that most of the soldiers who made up Big Sword brigades were ex-warlord mercenaries, who had a lot of experience in furiously hacking other mercenaries to death.
+</li><li> The whole premise of the <em><a class="twikilink" href="/pmwiki/pmwiki.php/Creator/DiscoveryChannel" title="/pmwiki/pmwiki.php/Creator/DiscoveryChannel">Discovery Channel</a></em> show, Big Giant Swords. And other giant weapons.
+</li></ul></div>
+<hr/>
+</div>
+<div class="lazy-video-script">
+<a id="VideoExamples"></a>
+<div> </div>
+<div class="video-examples has-thumbnails">
+<div class="video-examples-header">
+<a class="font-s float-right text-blue" data-modal-target="login" href="#feedback">Feedback</a>
+<h3 class="bold">Video Example(s):</h3>
+</div>
+<div class="video-examples-featured">
+<a class="video-launch-link video-overlay-link featured-widget-vid" data-video-approval="APPROVED" data-video-average-rating="5.00" data-video-descrip="Great Grey Wolf Sif weilding Artorias' Greatsword." data-video-id="jptmtb" data-video-media-sources="VideoGame/DarkSoulsI" data-video-rating-count="2" data-video-thumbnail="https://i.vimeocdn.com/video/782445346_640x360.jpg?r=pad" data-video-title="Artorias' Greatsword" data-video-trope="Main/BFS" data-video-tropename="BFS" data-video-troper-rating="" data-video-url="https://player.vimeo.com/external/335780912.sd.mp4?s=14afb06c9beab8525affda5cf906ddf8fbfd5282&amp;profile_id=164&amp;oauth2_token_id=1043337761" href="#video-link">
+<div class="featured-widget-vid-iframe">
+<video class="video-js vjs-default-skin vjs-16-9" controls="" data-setup='{"ga": {"eventsToTrack": ["error"]}}' id="featured-video-player">
+</video>
+</div>
+</a>
+<h2 class="bold font-l">Artorias' Greatsword</h2>
+<p class="_pmvv-vidbox-descTxt">
+Great Grey Wolf Sif weilding Artorias' Greatsword. </p>
+</div>
+<div class="video-examples-thumbs">
+<a class="video-launch-link video-overlay-link video-background-image lazy-image" data-src="https://i.vimeocdn.com/video/970342545_640x360.jpg?r=pad" data-video-approval="APPROVED" data-video-average-rating="" data-video-descrip="If Daniel finds enough chalices, Dirk Steadfast will loan him his magic sword for his quest." data-video-id="i6rzn8" data-video-media-sources="VideoGame/MediEvil" data-video-rating-count="" data-video-thumbnail="https://i.vimeocdn.com/video/970342545_640x360.jpg?r=pad" data-video-title="Steadfast's Magic Sword" data-video-trope="Main/BFS" data-video-tropename="BFS" data-video-troper-rating="" data-video-url="https://player.vimeo.com/external/465442135.sd.mp4?s=f9a307453bb3a331071cbdaff084e2f3aafcef23&amp;profile_id=139&amp;oauth2_token_id=1043337761" href="#video-link">
+<p><span class="bold">Steadfast's Mag...</span></p>
+</a>
+<a class="video-launch-link video-overlay-link video-background-image lazy-image" data-src="https://i.vimeocdn.com/video/845815110_640x360.jpg?r=pad" data-video-approval="APPROVED" data-video-average-rating="" data-video-descrip="The Thief Costume that Sly can get in this level that originally belonged to Salim comes with a scimitar as big as he is that can one-hit K.O. rooftop guards and two-hit kill flashlight guards." data-video-id="q16fhb" data-video-media-sources="VideoGame/SlyCooperThievesInTime,Recap/SlyCooperThievesInTimeMission05FortyThieves" data-video-rating-count="" data-video-thumbnail="https://i.vimeocdn.com/video/845815110_640x360.jpg?r=pad" data-video-title="Sly's Scimitar" data-video-trope="Main/BFS" data-video-tropename="BFS" data-video-troper-rating="" data-video-url="https://player.vimeo.com/external/384154215.hd.mp4?s=d141e9cc721755cb9da23681d7b9012f5c55847e&amp;profile_id=174&amp;oauth2_token_id=1043337761" href="#video-link">
+<p><span class="bold">Sly's Scimitar</span></p>
+</a>
+<a class="video-launch-link video-overlay-link video-background-image lazy-image" data-src="https://i.vimeocdn.com/video/815628039_640x360.jpg?r=pad" data-video-approval="APPROVED" data-video-average-rating="" data-video-descrip="Augus uses Wailing Dark against Asura, an effective sword Augus only unsheathes for worthy opponents and can extend indefinitely." data-video-id="rqizvt" data-video-media-sources="VideoGame/AsurasWrath" data-video-rating-count="" data-video-thumbnail="https://i.vimeocdn.com/video/815628039_640x360.jpg?r=pad" data-video-title="Wailing Dark" data-video-trope="Main/BFS" data-video-tropename="BFS" data-video-troper-rating="" data-video-url="https://player.vimeo.com/external/361230775.sd.mp4?s=8dc64572a7965c6fb32543305bf7e662833d58ed&amp;profile_id=164&amp;oauth2_token_id=1043337761" href="#video-link">
+<p><span class="bold">Wailing Dark</span></p>
+</a>
+<a class="video-launch-link video-overlay-link video-background-image lazy-image" data-src="https://i.vimeocdn.com/video/803133127_640x360.jpg?r=pad" data-video-approval="APPROVED" data-video-average-rating="" data-video-descrip="Antibug summons a sword bigger than she is using her Anti-Charm." data-video-id="6btoaa" data-video-media-sources="WesternAnimation/MiraculousLadybug,Recap/MiraculousLadybugS01E17Antibug" data-video-rating-count="" data-video-thumbnail="https://i.vimeocdn.com/video/803133127_640x360.jpg?r=pad" data-video-title="Antibug's Anticharm" data-video-trope="Main/BFS" data-video-tropename="BFS" data-video-troper-rating="" data-video-url="https://player.vimeo.com/external/351517378.hd.mp4?s=20fcb4e24394fb12ff555907538b1c8736a5f13f&amp;profile_id=174&amp;oauth2_token_id=1043337761" href="#video-link">
+<p><span class="bold">Antibug's Antic...</span></p>
+</a>
+<a class="video-launch-link video-overlay-link video-background-image lazy-image" data-src="https://i.vimeocdn.com/video/803119975_640x360.jpg?r=pad" data-video-approval="APPROVED" data-video-average-rating="" data-video-descrip="Siax and his claymore Lunatic." data-video-id="tnploj" data-video-media-sources="VideoGame/KingdomHeartsII" data-video-rating-count="" data-video-thumbnail="https://i.vimeocdn.com/video/803119975_640x360.jpg?r=pad" data-video-title="Lunatic" data-video-trope="Main/BFS" data-video-tropename="BFS" data-video-troper-rating="" data-video-url="https://player.vimeo.com/external/351507363.hd.mp4?s=8fa4f05e536c0b611ab6cd7df0d9a23384ddb64e&amp;profile_id=174&amp;oauth2_token_id=1043337761" href="#video-link">
+<p><span class="bold">Lunatic</span></p>
+</a>
+<a class="video-launch-link video-overlay-link video-background-image lazy-image" data-src="https://i.vimeocdn.com/video/794839111_640x360.jpg?r=pad" data-video-approval="APPROVED" data-video-average-rating="" data-video-descrip="Valor destroying the bridge to Fimbulventr." data-video-id="tuw8x4" data-video-media-sources="VideoGame/Bayonetta2" data-video-rating-count="" data-video-thumbnail="https://i.vimeocdn.com/video/794839111_640x360.jpg?r=pad" data-video-title="Valor's Sword" data-video-trope="Main/BFS" data-video-tropename="BFS" data-video-troper-rating="" data-video-url="https://player.vimeo.com/external/345146849.sd.mp4?s=6a9a1b0342d5ec83db0207023f1cc155648e454e&amp;profile_id=165&amp;oauth2_token_id=1043337761" href="#video-link">
+<p><span class="bold">Valor's Sword</span></p>
+</a>
+<a class="video-launch-link video-overlay-link video-background-image lazy-image" data-src="https://i.vimeocdn.com/video/782149109_640x360.jpg?r=pad" data-video-approval="APPROVED" data-video-average-rating="" data-video-descrip="An arcane sword discovered long ago by Ludwig. &lt;br&gt;When blue moonlight dances around the sword, and it channels the abyssal cosmos, its great blade will hurl a shadowy lightwave. &lt;br&gt;The Holy Moonlight Sword is synonymous with Ludwig, the Holy Blade, but few have ever set eyes on the great blade, and whatever guidance it has to offer, it seems to be of a very private, elusive sort." data-video-id="zhufhw" data-video-media-sources="VideoGame/Bloodborne" data-video-rating-count="" data-video-thumbnail="https://i.vimeocdn.com/video/782149109_640x360.jpg?r=pad" data-video-title="The Holy Moonlight Greatsword" data-video-trope="Main/BFS" data-video-tropename="BFS" data-video-troper-rating="" data-video-url="https://player.vimeo.com/external/335539989.sd.mp4?s=8658d932287eaabd108c0b9beddda48136bf65ab&amp;profile_id=164&amp;oauth2_token_id=1043337761" href="#video-link">
+<p><span class="bold">The Holy Moonli...</span></p>
+</a>
+</div>
+</div>
+</div>
+<div class="alt-titles section section-fact">
+<h3>
+<strong>Alternative Title(s):</strong>
+<span>Big Fancy Sword</span>, <span>Big Fucking Sword</span>, <span>Ridiculously Huge Sword</span>, <span>Big Freaking Sword</span> </h3>
+</div>
+<div class="square_ad footer-article-ad main_2" data-isolated="0"></div>
+<div class="section-links" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<div class="titles">
+<div><h3 class="text-center text-uppercase">Previous</h3></div>
+<div><h3 class="text-center text-uppercase">Index</h3></div>
+<div><h3 class="text-center text-uppercase">Next</h3></div>
+</div>
+<div class="links">
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/WhamEpisode">Wham Episode</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/VideoSource/SlyCooper">VideoSource/Sly Cooper</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/BigEater">Big Eater</a>
+</li>
+</ul>
+<ul>
+<li>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/ThudAndBlunder">Thud and Blunder</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/CoolHorse">Cool Horse</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/TheBerserker">The Berserker</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/VideoSource/KingdomHearts">VideoSource/Kingdom Hearts</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/BladeOnAStick">Blade on a Stick</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/ChainsawGripBFG">Chainsaw-Grip BFG</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/VideogameItemsAndInventory">Video Game Items and Inventory</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/BonusStageCollectables">Bonus Stage Collectables</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/BFG">BFG</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/VideoSource/AsurasWrath">VideoSource/Asura's Wrath</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/BloodKnight">Blood Knight</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/ArmoredCoffins">Armored Coffins</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/MechaTropes">Mecha Tropes</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/CapedMecha">Caped Mecha</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/BayonetYa">Bayonet Ya</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/SwordTropes">Sword Tropes</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/BlackSwordsAreBetter">Black Swords Are Better</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/BFG">BFG</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/TokusatsuTropes">Tokusatsu Tropes</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/BlueIsHeroic">Blue Is Heroic</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/BFG">BFG</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/Power">Power</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/BioAugmentation">Bio-Augmentation</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/BFG">BFG</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/TruthInTelevision/AToC">TruthInTelevision/A to C</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/BigApplesauce">Big Applesauce</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/BFG">BFG</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/BiggerIsBetter">Bigger Is Better</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/ColonyDrop">Colony Drop</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/BFG">BFG</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/ImpossiblyCoolWeapon">Impossibly Cool Weapon</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/FlamingSword">Flaming Sword</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/BelligerentSexualTension">Belligerent Sexual Tension</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/OlderThanDirt">Older Than Dirt</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/BigScrewedUpFamily">Big, Screwed-Up Family</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/BFG">BFG</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/ShortTitles">Short Titles</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Film/Big">Big</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Manga/Berserk">Berserk</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/QuoteSource/AnimeAndManga">QuoteSource/Anime &amp; Manga</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/HatesBeingTouched">Hates Being Touched</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/BFG">BFG</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/OverdosedTropes">Overdosed Tropes</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/ThePowerOfFriendship">The Power of Friendship</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/TyrannosaurusRex">Tyrannosaurus rex</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/VideoSource/MiraculousLadybug">VideoSource/Miraculous Ladybug</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/EvilCounterpart">Evil Counterpart</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/BFG">BFG</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/RuleOfCool">Rule of Cool</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/TheBladeAlwaysLandsPointyEndIn">The Blade Always Lands Pointy End In</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/AnimalisticAbomination">Animalistic Abomination</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/VideoSource/VideoGames">VideoSource/Video Games</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/EldritchAbomination">Eldritch Abomination</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/AncestralWeapon">Ancestral Weapon</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/CoolSword">Cool Sword</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/BifurcatedWeapon">Bifurcated Weapon</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/BFG">BFG</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/ThisIndexHitsForMassiveDamage">This Index Hits for Massive Damage</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/BoomHeadshot">Boom, Headshot!</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/VideoGame/FinalFantasyVIIRemake">Final Fantasy VII Remake</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/ImageSource/VideoGamesAToL">ImageSource/Video Games (A to L)</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/VideoGame/FinalFantasyVIII">Final Fantasy VIII</a>
+</li>
+</ul>
+</div>
+</div>
+</article>
+<div id="main-content-sidebar"><div class="sidebar-item display-options">
+<ul class="sidebar display-toggles">
+<li>Show Spoilers <div class="display-toggle show-spoilers" id="sidebar-toggle-showspoilers"></div></li>
+<li>Night Vision <div class="display-toggle night-vision" id="sidebar-toggle-nightvision"></div></li>
+<li>Sticky Header <div class="display-toggle sticky-header" id="sidebar-toggle-stickyheader"></div></li>
+<li>Wide Load <div class="display-toggle wide-load" id="sidebar-toggle-wideload"></div></li>
+</ul>
+<script>updateDesktopPrefs();</script>
+</div>
+<div class="sidebar-item ad sb-ad-unit">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_2"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_2'); });</script> </div>
+</div></div>
+<div class="sidebar-item quick-links" itemtype="http://schema.org/SiteNavigationElement">
+<p class="sidebar-item-title" data-title="Important Links">Important Links</p>
+<div class="padded">
+<a href="/pmwiki/query.php?type=att">Ask The Tropers</a>
+<a href="/pmwiki/query.php?type=tf">Trope Finder</a>
+<a href="/pmwiki/query.php?type=ykts">You Know That Show...</a>
+<a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a>
+<a href="/pmwiki/review_activity.php">Reviews</a>
+<a data-modal-target="login" href="/pmwiki/lbs.php">Live Blogs</a>
+<a href="/pmwiki/ad-free-subscribe.php">Go Ad Free!</a> </div>
+</div>
+<div class="sidebar-item sb-ad-unit">
+<div class="sidebar-section">
+<div class="square_ad ad-size-300x600 ad-section text-center">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_3"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_3'); });</script> </div>
+</div> </div>
+</div>
+</div>
+<div class="sidebar-item">
+<p class="sidebar-item-title" data-title="Crucial Browsing">Crucial Browsing</p>
+<ul class="padded font-s" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><a data-click-toggle="active" href="javascript:void(0);">Genre</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/ActionAdventureTropes" title="Main/ActionAdventureTropes">Action Adventure</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ComedyTropes" title="Main/ComedyTropes">Comedy</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CommercialsTropes" title="Main/CommercialsTropes">Commercials</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CrimeAndPunishmentTropes" title="Main/CrimeAndPunishmentTropes">Crime &amp; Punishment</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DramaTropes" title="Main/DramaTropes">Drama</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/HorrorTropes" title="Main/HorrorTropes">Horror</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LoveTropes" title="Main/LoveTropes">Love</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NewsTropes" title="Main/NewsTropes">News</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ProfessionalWrestling" title="Main/ProfessionalWrestling">Professional Wrestling</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SpeculativeFictionTropes" title="Main/SpeculativeFictionTropes">Speculative Fiction</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SportsStoryTropes" title="Main/SportsStoryTropes">Sports Story</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/WarTropes" title="Main/WarTropes">War</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Media</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/Media" title="Main/Media">All Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/AnimationTropes" title="Main/AnimationTropes">Animation (Western)</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Anime" title="Main/Anime">Anime</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ComicBookTropes" title="Main/ComicBookTropes">Comic Book</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FanFic" title="FanFic/FanFics">Fan Fics</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Film" title="Main/Film">Film</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/GameTropes" title="Main/GameTropes">Game</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Literature" title="Main/Literature">Literature</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MusicAndSoundEffects" title="Main/MusicAndSoundEffects">Music And Sound Effects</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NewMediaTropes" title="Main/NewMediaTropes">New Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/PrintMediaTropes" title="Main/PrintMediaTropes">Print Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Radio" title="Main/Radio">Radio</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SequentialArt" title="Main/SequentialArt">Sequential Art</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TabletopGames" title="Main/TabletopGames">Tabletop Games</a></li>
+<li><a href="/pmwiki/pmwiki.php/UsefulNotes/Television" title="Main/Television">Television</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Theater" title="Main/Theater">Theater</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/VideogameTropes" title="Main/VideogameTropes">Videogame</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Webcomics" title="Main/Webcomics">Webcomics</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Narrative</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/UniversalTropes" title="Main/UniversalTropes">Universal</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/AppliedPhlebotinum" title="Main/AppliedPhlebotinum">Applied Phlebotinum</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CharacterizationTropes" title="Main/CharacterizationTropes">Characterization</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Characters" title="Main/Characters">Characters</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CharactersAsDevice" title="Main/CharactersAsDevice">Characters As Device</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Dialogue" title="Main/Dialogue">Dialogue</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Motifs" title="Main/Motifs">Motifs</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NarrativeDevices" title="Main/NarrativeDevices">Narrative Devices</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Paratext" title="Main/Paratext">Paratext</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Plots" title="Main/Plots">Plots</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Settings" title="Main/Settings">Settings</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Spectacle" title="Main/Spectacle">Spectacle</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Other Categories</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/BritishTellyTropes" title="Main/BritishTellyTropes">British Telly</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TheContributors" title="Main/TheContributors">The Contributors</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CreatorSpeak" title="Main/CreatorSpeak">Creator Speak</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Creators" title="Main/Creators">Creators</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DerivativeWorks" title="Main/DerivativeWorks">Derivative Works</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LanguageTropes" title="Main/LanguageTropes">Language</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LawsAndFormulas" title="Main/LawsAndFormulas">Laws And Formulas</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ShowBusiness" title="Main/ShowBusiness">Show Business</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SplitPersonalityTropes" title="Main/SplitPersonalityTropes">Split Personality</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/StockRoom" title="Main/StockRoom">Stock Room</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TropeTropes" title="Main/TropeTropes">Trope</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Tropes" title="Main/Tropes">Tropes</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TruthAndLies" title="Main/TruthAndLies">Truth And Lies</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TruthInTelevision" title="Main/TruthInTelevision">Truth In Television</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Topical Tropes</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/BetrayalTropes" title="Main/BetrayalTropes">Betrayal</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CensorshipTropes" title="Main/CensorshipTropes">Censorship</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CombatTropes" title="Main/CombatTropes">Combat</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DeathTropes" title="Main/DeathTropes">Death</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FamilyTropes" title="Main/FamilyTropes">Family</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FateAndProphecyTropes" title="Main/FateAndProphecyTropes">Fate And Prophecy</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FoodTropes" title="Main/FoodTropes">Food</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/HolidayTropes" title="Main/HolidayTropes">Holiday</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MemoryTropes" title="Main/MemoryTropes">Memory</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MoneyTropes" title="Main/MoneyTropes">Money</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MoralityTropes" title="Main/MoralityTropes">Morality</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/PoliticsTropes" title="Main/PoliticsTropes">Politics</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ReligionTropes" title="Main/ReligionTropes">Religion</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SchoolTropes" title="Main/SchoolTropes">School</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="sidebar-item showcase">
+<p class="sidebar-item-title" data-title="Community Showcase">Community Showcase <a class="bubble float-right hover-blue" href="/pmwiki/showcase.php">More</a></p>
+<p class="community-showcase">
+<a href="https://sharetv.com/shows/echo_chamber" onclick="trackOutboundLink('https://sharetv.com/shows/echo_chamber');" target="_blank">
+<img alt="" class="lazy-image" data-src="/images/communityShowcase-echochamber.jpg"/></a>
+<a href="/pmwiki/pmwiki.php/Webcomic/TwistedTropes">
+<img alt="" class="lazy-image" data-src="/img/howlandsc-side.jpg"/></a>
+</p>
+</div>
+<div class="sidebar-item sb-ad-unit" id="stick-cont">
+<div class="sidebar-section" id="stick-bar">
+<div class="square_ad ad-size-300x600 ad-section text-center">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_4"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_4'); });</script> </div>
+</div> </div>
+</div>
+</div>
+</div>
+</div>
+<div class="action-bar tablet-off" id="action-bar-bottom">
+<a class="scroll-to-top dead-button" href="#top-of-page" onclick="$('html, body').animate({scrollTop : 0},500);">Top</a>
+</div>
+</div>
+<div class="proper-ad-unit ad-sticky">
+<div id="proper-ad-tvtropes_sticky_ad"> <script>propertag.cmd.push(function() { proper_display('tvtropes_sticky_ad'); });</script> </div>
+</div>
+<footer id="main-footer">
+<div id="main-footer-inner">
+<div class="footer-left">
+<a class="img-link" href="/"><img alt="TV Tropes" class="lazy-image" data-src="/img/tvtropes-footer-logo.png" title="TV Tropes"/></a>
+<form action="index.html" class="navbar-form newsletter-signup validate modal-replies" data-ajax-get="/ajax/subscribe_email.php" id="cse-search-box-mobile" name="" role="">
+<button class="btn-submit newsletter-signup-submit-button" id="subscribe-btn" type="submit"><i class="fa fa-paper-plane"></i></button>
+<input class="form-control" id="subscription-email" name="q" placeholder="Subscribe" size="31" type="text" validate-type="email" value=""/>
+</form>
+<ul class="social-buttons">
+<li><a class="btn fb" href="https://www.facebook.com/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-facebook']);" target="_blank"><i class="fa fa-facebook"></i></a></li>
+<li><a class="btn tw" href="https://www.twitter.com/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-twitter']);" target="_blank"><i class="fa fa-twitter"></i></a> </li>
+<li><a class="btn rd" href="https://www.reddit.com/r/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-reddit']);" target="_blank"><i class="fa fa-reddit-alien"></i></a></li>
+</ul>
+</div>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">TVTropes</h4></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Administrivia">About TVTropes</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TheGoalsOfTVTropes">TVTropes Goals</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TheTropingCode">Troping Code</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TVTropesCustoms">TVTropes Customs</a></li>
+<li><a href="/pmwiki/pmwiki.php/JustForFun/TropesOfLegend">Tropes of Legend</a></li>
+<li><a href="/pmwiki/ad-free-subscribe.php">Go Ad-Free</a></li>
+</ul>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">Community</h4></li>
+<li><a href="/pmwiki/query.php?type=att">Ask The Tropers</a></li>
+<li><a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a></li>
+<li><a href="/pmwiki/query.php?type=tf">Trope Finder</a></li>
+<li><a href="/pmwiki/query.php?type=ykts">You Know That Show</a></li>
+<li><a data-modal-target="login" href="/pmwiki/lbs.php">Live Blogs</a></li>
+<li><a href="/pmwiki/review_activity.php">Reviews</a></li>
+<li><a href="/pmwiki/topics.php">Forum</a></li>
+</ul>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">Tropes HQ</h4></li>
+<li><a href="/pmwiki/about.php">About Us</a></li>
+<li><a href="/pmwiki/contact.php">Contact Us</a></li>
+<li><a href="/pmwiki/dmca.php">DMCA Notice</a></li>
+<li><a href="/pmwiki/privacypolicy.php">Privacy Policy</a></li>
+</ul>
+</div>
+<div class="text-center gutter-top gutter-bottom tablet-on" id="desktop-on-mobile-toggle">
+<a href="/pmwiki/switchDeviceCss.php?mobileVersion=1" rel="nofollow">Switch to <span class="txt-desktop">Desktop</span><span class="txt-mobile">Mobile</span> Version</a>
+</div>
+<div class="legal">
+<p>TVTropes is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License. <br/>Permissions beyond the scope of this license may be available from <a href="mailto:thestaff@tvtropes.org" rel="cc:morePermissions" xmlns:cc="http://creativecommons.org/ns#"> thestaff@tvtropes.org</a>.</p>
+<br/>
+<div class="privacy_wrapper">
+</div>
+</div>
+</footer>
+<style>
+      div.fc-ccpa-root {
+        position: absolute !important;
+        bottom: 93px !important;
+        margin: auto !important;
+        width: 100% !important;
+        z-index: 9999 !important;
+      }
+      .fc-ccpa-root .fc-dns-dialog .fc-dns-link p{
+        outline: none !important;
+        text-decoration: underline !important;
+        font-size: .7em !important;
+        font-family: sans-serif !important;
+      }
+      .fc-ccpa-root .fc-dns-dialog .fc-dns-link .fc-button-background {
+        background: none !important;
+      }
+    </style>
+<div class="full-screen" id="_pm_videoViewer">
+<a class="close" href="#close" id="_pm_videoViewer-close"></a>
+<div class="_pmvv-body">
+<div class="_pmvv-vidbox">
+<video class="video-js vjs-default-skin vjs-16-9" data-video-id="jptmtb" id="overlay-video-player-box">
+</video>
+<div class="_pmvv-vidbox-desc">
+<h1 id="overlay-title">Artorias' Greatsword</h1>
+<p class="_pmvv-vidbox-descTxt" id="overlay-descrip">
+Great Grey Wolf Sif weilding Artorias' Greatsword.	</p>
+<div class="rating-row" data-video-id="jptmtb">
+<input name="is_logged_in" type="hidden" value="0"/>
+<p>How well does it match the trope?</p>
+<div id="star-rating-group">
+<div class="trope-rate">
+<input id="lamp5" name="rate" type="radio" value="5"/>
+<label for="lamp5" title="Absolutely"></label>
+<input id="lamp4" name="rate" type="radio" value="4"/>
+<label for="lamp4" title="Yes"></label>
+<input id="lamp3" name="rate" type="radio" value="3"/>
+<label for="lamp3" title="Kind of"></label>
+<input id="lamp2" name="rate" type="radio" value="2"/>
+<label for="lamp2" title="Not really"></label>
+<input id="lamp1" name="rate" type="radio" value="1"/>
+<label for="lamp1" title="No"></label>
+</div>
+<div id="star-rating-total">
+5 (2 votes)
+</div>
+</div>
+</div>
+<div class="example-media-row">
+<div class="example-overlay">
+<p>Example of:</p>
+<div id="overlay-trope">Main / BFS</div>
+</div>
+<div class="media-sources-overlay example-overlay">
+<p>Media sources:</p>
+<div id="overlay-media">Main / BFS</div>
+</div>
+</div>
+<p class="_pmvv-vidbox-stats text-right font-s" style="padding-top:8px; border-top: solid 1px rgba(255,255,255,0.2)">
+<a class="float-right" data-modal-target="login" href="#video-feedback">Report</a>
+</p>
+</div>
+</div>
+</div>
+<div class="_pmvv-foot">
+<div class="_pmvv-foot-scrollwrapper">
+<a class="video-launch-link video-overlay-link video-background-image lazy-image" data-src="https://i.vimeocdn.com/video/782445346_640x360.jpg?r=pad" data-video-approval="APPROVED" data-video-average-rating="5.00" data-video-descrip="Great Grey Wolf Sif weilding Artorias' Greatsword." data-video-id="jptmtb" data-video-media-sources="VideoGame/DarkSoulsI" data-video-rating-count="2" data-video-thumbnail="https://i.vimeocdn.com/video/782445346_640x360.jpg?r=pad" data-video-title="Artorias' Greatsword" data-video-trope="Main/BFS" data-video-tropename="BFS" data-video-troper-rating="" data-video-url="https://player.vimeo.com/external/335780912.sd.mp4?s=14afb06c9beab8525affda5cf906ddf8fbfd5282&amp;profile_id=164&amp;oauth2_token_id=1043337761" data-vimeo-id="335780912" href="#video-link">
+<p><span class="bold">Artorias' Great...</span></p>
+</a>
+<a class="video-launch-link video-overlay-link video-background-image lazy-image" data-src="https://i.vimeocdn.com/video/970342545_640x360.jpg?r=pad" data-video-approval="APPROVED" data-video-average-rating="" data-video-descrip="If Daniel finds enough chalices, Dirk Steadfast will loan him his magic sword for his quest." data-video-id="i6rzn8" data-video-media-sources="VideoGame/MediEvil" data-video-rating-count="" data-video-thumbnail="https://i.vimeocdn.com/video/970342545_640x360.jpg?r=pad" data-video-title="Steadfast's Magic Sword" data-video-trope="Main/BFS" data-video-tropename="BFS" data-video-troper-rating="" data-video-url="https://player.vimeo.com/external/465442135.sd.mp4?s=f9a307453bb3a331071cbdaff084e2f3aafcef23&amp;profile_id=139&amp;oauth2_token_id=1043337761" data-vimeo-id="465442135" href="#video-link">
+<p><span class="bold">Steadfast's Mag...</span></p>
+</a>
+<a class="video-launch-link video-overlay-link video-background-image lazy-image" data-src="https://i.vimeocdn.com/video/845815110_640x360.jpg?r=pad" data-video-approval="APPROVED" data-video-average-rating="" data-video-descrip="The Thief Costume that Sly can get in this level that originally belonged to Salim comes with a scimitar as big as he is that can one-hit K.O. rooftop guards and two-hit kill flashlight guards." data-video-id="q16fhb" data-video-media-sources="VideoGame/SlyCooperThievesInTime,Recap/SlyCooperThievesInTimeMission05FortyThieves" data-video-rating-count="" data-video-thumbnail="https://i.vimeocdn.com/video/845815110_640x360.jpg?r=pad" data-video-title="Sly's Scimitar" data-video-trope="Main/BFS" data-video-tropename="BFS" data-video-troper-rating="" data-video-url="https://player.vimeo.com/external/384154215.hd.mp4?s=d141e9cc721755cb9da23681d7b9012f5c55847e&amp;profile_id=174&amp;oauth2_token_id=1043337761" data-vimeo-id="384154215" href="#video-link">
+<p><span class="bold">Sly's Scimitar</span></p>
+</a>
+<a class="video-launch-link video-overlay-link video-background-image lazy-image" data-src="https://i.vimeocdn.com/video/815628039_640x360.jpg?r=pad" data-video-approval="APPROVED" data-video-average-rating="5.00" data-video-descrip="Augus uses Wailing Dark against Asura, an effective sword Augus only unsheathes for worthy opponents and can extend indefinitely." data-video-id="rqizvt" data-video-media-sources="VideoGame/AsurasWrath" data-video-rating-count="2" data-video-thumbnail="https://i.vimeocdn.com/video/815628039_640x360.jpg?r=pad" data-video-title="Wailing Dark" data-video-trope="Main/BFS" data-video-tropename="BFS" data-video-troper-rating="" data-video-url="https://player.vimeo.com/external/361230775.sd.mp4?s=8dc64572a7965c6fb32543305bf7e662833d58ed&amp;profile_id=164&amp;oauth2_token_id=1043337761" data-vimeo-id="361230775" href="#video-link">
+<p><span class="bold">Wailing Dark</span></p>
+</a>
+<a class="video-launch-link video-overlay-link video-background-image lazy-image" data-src="https://i.vimeocdn.com/video/803133127_640x360.jpg?r=pad" data-video-approval="APPROVED" data-video-average-rating="5.00" data-video-descrip="Antibug summons a sword bigger than she is using her Anti-Charm." data-video-id="6btoaa" data-video-media-sources="WesternAnimation/MiraculousLadybug,Recap/MiraculousLadybugS01E17Antibug" data-video-rating-count="2" data-video-thumbnail="https://i.vimeocdn.com/video/803133127_640x360.jpg?r=pad" data-video-title="Antibug's Anticharm" data-video-trope="Main/BFS" data-video-tropename="BFS" data-video-troper-rating="" data-video-url="https://player.vimeo.com/external/351517378.hd.mp4?s=20fcb4e24394fb12ff555907538b1c8736a5f13f&amp;profile_id=174&amp;oauth2_token_id=1043337761" data-vimeo-id="351517378" href="#video-link">
+<p><span class="bold">Antibug's Antic...</span></p>
+</a>
+<a class="video-launch-link video-overlay-link video-background-image lazy-image" data-src="https://i.vimeocdn.com/video/803119975_640x360.jpg?r=pad" data-video-approval="APPROVED" data-video-average-rating="5.00" data-video-descrip="Siax and his claymore Lunatic." data-video-id="tnploj" data-video-media-sources="VideoGame/KingdomHeartsII" data-video-rating-count="2" data-video-thumbnail="https://i.vimeocdn.com/video/803119975_640x360.jpg?r=pad" data-video-title="Lunatic" data-video-trope="Main/BFS" data-video-tropename="BFS" data-video-troper-rating="" data-video-url="https://player.vimeo.com/external/351507363.hd.mp4?s=8fa4f05e536c0b611ab6cd7df0d9a23384ddb64e&amp;profile_id=174&amp;oauth2_token_id=1043337761" data-vimeo-id="351507363" href="#video-link">
+<p><span class="bold">Lunatic</span></p>
+</a>
+<a class="video-launch-link video-overlay-link video-background-image lazy-image" data-src="https://i.vimeocdn.com/video/794839111_640x360.jpg?r=pad" data-video-approval="APPROVED" data-video-average-rating="5.00" data-video-descrip="Valor destroying the bridge to Fimbulventr." data-video-id="tuw8x4" data-video-media-sources="VideoGame/Bayonetta2" data-video-rating-count="3" data-video-thumbnail="https://i.vimeocdn.com/video/794839111_640x360.jpg?r=pad" data-video-title="Valor's Sword" data-video-trope="Main/BFS" data-video-tropename="BFS" data-video-troper-rating="" data-video-url="https://player.vimeo.com/external/345146849.sd.mp4?s=6a9a1b0342d5ec83db0207023f1cc155648e454e&amp;profile_id=165&amp;oauth2_token_id=1043337761" data-vimeo-id="345146849" href="#video-link">
+<p><span class="bold">Valor's Sword</span></p>
+</a>
+<a class="video-launch-link video-overlay-link video-background-image lazy-image" data-src="https://i.vimeocdn.com/video/782149109_640x360.jpg?r=pad" data-video-approval="APPROVED" data-video-average-rating="5.00" data-video-descrip="An arcane sword discovered long ago by Ludwig. &lt;br&gt;When blue moonlight dances around the sword, and it channels the abyssal cosmos, its great blade will hurl a shadowy lightwave. &lt;br&gt;The Holy Moonlight Sword is synonymous with Ludwig, the Holy Blade, but few have ever set eyes on the great blade, and whatever guidance it has to offer, it seems to be of a very private, elusive sort." data-video-id="zhufhw" data-video-media-sources="VideoGame/Bloodborne" data-video-rating-count="7" data-video-thumbnail="https://i.vimeocdn.com/video/782149109_640x360.jpg?r=pad" data-video-title="The Holy Moonlight Greatsword" data-video-trope="Main/BFS" data-video-tropename="BFS" data-video-troper-rating="" data-video-url="https://player.vimeo.com/external/335539989.sd.mp4?s=8658d932287eaabd108c0b9beddda48136bf65ab&amp;profile_id=164&amp;oauth2_token_id=1043337761" data-vimeo-id="335539989" href="#video-link">
+<p><span class="bold">The Holy Moonli...</span></p>
+</a>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+        window.special_ops =  {
+            member : 'no',
+            isolated : 0,
+            tags : ['videogame']
+        };
+    </script>
+<script type="text/javascript">
+
+        var cleanCreativeEnabled = "";
+        var donation = "";
+        var live_ads = "1";
+        var img_domain = "https://static.tvtropes.org";
+        var snoozed = cookies.read('snoozedabm');
+        var snoozable = "";
+
+        if (adsRemovedWith) {
+            live_ads = 0;
+        }
+
+        var elem = document.createElement('script');
+        elem.async = true;
+
+        elem.src = '/design/assets/bundle.js?rev=c58d8df02f09262390bbd03db7921fc35c6af306';
+
+        elem.onload = function() {
+                                 }
+        document.getElementsByTagName('head')[0].appendChild(elem);
+
+    </script>
+<script type="text/javascript">
+      function send_analytics_event(user_type, donation){
+          // if(user_type == 'uncached' || user_type == 'cached'){
+          //   ga('send', 'event', 'caching', 'load', user_type, {'nonInteraction': 1});
+          //   return;
+          // }
+          var event_name = user_type;
+
+          if(donation == 'true'){
+              event_name += "_donation"
+          }else if(typeof(valid_user) == 'undefined'){
+              event_name += "_blocked"
+          }else if(valid_user == true){
+              event_name += "_unblocked";
+          }else{
+              event_name = "_unknown"
+          }
+          ga('send', 'event', 'ads', 'load', event_name, {'nonInteraction': 1});
+      }
+
+    
+    send_analytics_event("guest", "false");
+      </script>
+</body>
+</html>

@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Game System - TV Tropes</title>
+<meta content="Game System is a Role-Playing Game term. It refers to the set of rules that regulate gameplay and simulate actions that can be performed by the game's …" name="description"/>
+<link href="https://tvtropes.org/pmwiki/pmwiki.php/Main/GameSystem" rel="canonical"/>
+<link href="/img/icons/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="@tvtropes" name="twitter:site"/>
+<meta content="@tvtropes" name="twitter:owner"/>
+<meta content="Game System - TV Tropes" name="twitter:title"/>
+<meta content="Game System is a Role-Playing Game term. It refers to the set of rules that regulate gameplay and simulate actions that can be performed by the game's …" name="twitter:description"/>
+<meta content="https://static.tvtropes.org/logo_blue_small.png" name="twitter:image:src"/>
+<meta content="TV Tropes" property="og:site_name"/>
+<meta content="en_US" property="og:locale"/>
+<meta content="https://www.facebook.com/tvtropes" property="article:publisher"/>
+<meta content="Game System - TV Tropes" property="og:title"/>
+<meta content="website" property="og:type"/>
+<meta content="https://tvtropes.org/pmwiki/pmwiki.php/Main/GameSystem" property="og:url"/>
+<meta content="https://static.tvtropes.org/logo_blue_small.png" property="og:image"/>
+<meta content="Game System is a Role-Playing Game term. It refers to the set of rules that regulate gameplay and simulate actions that can be performed by the game's characters. The purpose of a game system is to avoid the &quot;Cops and Robbers&quot; problem — …" property="og:description"/>
+<link href="/img/icons/apple-icon-57x57.png" rel="apple-touch-icon" sizes="57x57" type="image/png"/>
+<link href="/img/icons/apple-icon-60x60.png" rel="apple-touch-icon" sizes="60x60" type="image/png"/>
+<link href="/img/icons/apple-icon-72x72.png" rel="apple-touch-icon" sizes="72x72" type="image/png"/>
+<link href="/img/icons/apple-icon-76x76.png" rel="apple-touch-icon" sizes="76x76" type="image/png"/>
+<link href="/img/icons/apple-icon-114x114.png" rel="apple-touch-icon" sizes="114x114" type="image/png"/>
+<link href="/img/icons/apple-icon-120x120.png" rel="apple-touch-icon" sizes="120x120" type="image/png"/>
+<link href="/img/icons/apple-icon-144x144.png" rel="apple-touch-icon" sizes="144x144" type="image/png"/>
+<link href="/img/icons/apple-icon-152x152.png" rel="apple-touch-icon" sizes="152x152" type="image/png"/>
+<link href="/img/icons/apple-icon-180x180.png" rel="apple-touch-icon" sizes="180x180" type="image/png"/>
+<link href="/img/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/img/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/img/icons/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png"/>
+<link href="/img/icons/favicon-192x192.png" rel="icon" sizes="192x192" type="image/png"/>
+<meta content="width=device-width, initial-scale=1" id="viewport" name="viewport"/>
+<script>
+                var propertag = {};
+                propertag.cmd = [];
+            </script>
+<link href="/design/assets/bundle.css?rev=c58d8df02f09262390bbd03db7921fc35c6af306" rel="stylesheet"/>
+<script>
+                function object(objectId) {
+                    if (document.getElementById && document.getElementById(objectId)) {
+                        return document.getElementById(objectId);
+                    } else if (document.all && document.all(objectId)) {
+                        return document.all(objectId);
+                    } else if (document.layers && document.layers[objectId]) {
+                        return document.layers[objectId];
+                    } else {
+                        return false;
+                    }
+                }
+
+                // JAVASCRIPT COOKIES CODE: for getting and setting user viewing preferences
+                var cookies = {
+                    create: function (name, value, days2expire, path) {
+                        var date = new Date();
+                        date.setTime(date.getTime() + (days2expire * 24 * 60 * 60 * 1000));
+                        var expires = date.toUTCString();
+                        document.cookie = name + '=' + value + ';' + 'expires=' + expires + ';' + 'path=' + path + ';';
+                    },
+										createWithExpire: function(name, value, expires, path) {
+												document.cookie = name + '=' + value + ';' + 'expires=' + expires + ';' + 'path=' + path + ';';
+										},
+                    read: function (name) {
+                        var cookie_value = "",
+                            current_cookie = "",
+                            name_expr = name + "=",
+                            all_cookies = document.cookie.split(';'),
+                            n = all_cookies.length;
+
+                        for (var i = 0; i < n; i++) {
+                            current_cookie = all_cookies[i].trim();
+                            if (current_cookie.indexOf(name_expr) === 0) {
+                                cookie_value = current_cookie.substring(name_expr.length, current_cookie.length);
+                                break;
+                            }
+                        }
+                        return cookie_value;
+                    },
+                    update: function (name, val) {
+                        this.create(name, val, 300, "/");
+                    },
+                    remove: function (name) {
+                        document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
+                    }
+                };
+
+                function updateUserPrefs() {
+                    //GENERAL: detect and set browser, if not cookied (will be treated like a user-preference and added to the #user-pref element)
+                    if( !cookies.read('user-browser') ){
+                        var broswer = '';
+
+                        if(navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPod/i) ){
+                            browser = 'iOS';
+                        } else if (/Opera[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'opera';
+                        } else if (/MSIE (\d+\.\d+);/.test(navigator.userAgent)) {
+                            browser = 'MSIE';
+                        } else if (/Navigator[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'netscape';
+                        } else if (/Chrome[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'chrome';
+                        } else if (/Safari[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'safari';
+                            /Version[\/\s](\d+\.\d+)/.test(navigator.userAgent);
+                            browserVersion = new Number(RegExp.$1);
+                        } else if (/Firefox[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'firefox';
+                        } else {
+                            browser = 'internet_explorer';
+                        }
+                        cookies.create('user-browser',browser,1,'/');
+                        document.getElementById('user-prefs').classList.add('browser-' + browser);
+                    } else {
+                        document.getElementById('user-prefs').classList.add('browser-' + cookies.read('user-browser'));
+                    }
+
+                    //update user preference settings
+                    if (cookies.read('wide-load') !== '') document.getElementById('user-prefs').classList.add('wide-load');
+                    if (cookies.read('night-vision') !== '') document.getElementById('user-prefs').classList.add('night-vision');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('user-prefs').classList.add('sticky-header');
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('user-prefs').classList.add('show-spoilers');
+                    if (cookies.read('folders-open') !== '') document.getElementById('user-prefs').classList.add('folders-open');
+                    if (cookies.read('lefthand-sidebar') !== '') document.getElementById('user-prefs').classList.add('lefthand-sidebar');
+                    if (cookies.read('highlight-links') !== '') document.getElementById('user-prefs').classList.add('highlight-links');
+                    if (cookies.read('forum-gingerbread') !== '') document.getElementById('user-prefs').classList.add('forum-gingerbread');
+                    if (cookies.read('shared-avatars') !== '') document.getElementById('user-prefs').classList.add('shared-avatars');
+                    if (cookies.read('new-search') !== '') document.getElementById('user-prefs').classList.add('new-search');
+                    if (cookies.read('stop-auto-play-video') !== '') document.getElementById('user-prefs').classList.add('stop-auto-play-video');
+
+                    //desktop view on mobile
+                    if (cookies.read('desktop-on-mobile') !== ''){
+                        document.getElementById('user-prefs').classList.add('desktop-on-mobile');
+
+                        var viewport = document.querySelector("meta[name=viewport]");
+                        viewport.setAttribute('content', 'width=1000');
+                    }
+
+                }
+
+                function updateDesktopPrefs() {
+                    if (cookies.read('wide-load') !== '') document.getElementById('sidebar-toggle-wideload').classList.add('active');
+                    if (cookies.read('night-vision') !== '') document.getElementById('sidebar-toggle-nightvision').classList.add('active');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('sidebar-toggle-stickyheader').classList.add('active');
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('sidebar-toggle-showspoilers').classList.add('active');
+
+                }
+
+                function updateMobilePrefs() {
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('mobile-toggle-showspoilers').classList.add('active');
+                    if (cookies.read('night-vision') !== '') document.getElementById('mobile-toggle-nightvision').classList.add('active');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('mobile-toggle-stickyheader').classList.add('active');
+                    if (cookies.read('highlight-links') !== '') document.getElementById('mobile-toggle-highlightlinks').classList.add('active');
+
+                }
+
+
+                if (document.cookie.indexOf("scroll0=") < 0) {
+                    // do nothing
+                } else {
+                    console.log('ads removed by scroll.com');
+                    var adsRemovedWith = 'scroll';
+                    var style = document.createElement('style');
+                    style.innerHTML = '#header-ad, .proper-ad-unit, .square_ad, .sb-ad-unit { display: none !important; } ';
+                    document.head.appendChild(style);
+                }
+            </script>
+<script type="text/javascript">
+
+                var tvtropes_config = {
+                    astri_stream_enabled : "",
+                    is_logged_in         : "",
+                    handle               : "",
+                    get_astri_stream     : "",
+										revnum               : "c58d8df02f09262390bbd03db7921fc35c6af306",
+										img_domain           : "https://static.tvtropes.org",
+										adblock              : "1",
+										adblock_url          : "propermessage.io",
+										pause_editing        : "0",
+										pause_editing_msg    : "",
+										pause_site_changes   : ""
+                };
+            </script>
+<script type="text/javascript">
+						  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+						  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+						  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+						  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+						  ga('create', 'UA-3821842-1', 'auto');
+						  ga('send', 'pageview');
+
+						</script>
+</head>
+<body class="">
+<i id="user-prefs"></i>
+<script>updateUserPrefs();</script>
+<div id="fb-root"></div>
+<div id="modal-box"></div>
+<header class="headroom-element" id="main-header-bar">
+<div id="main-header-bar-inner">
+<span class="header-spacer" id="header-spacer-left"></span>
+<a class="mobile-menu-toggle-button tablet-on" href="#mobile-menu" id="main-mobile-toggle"><span></span><span></span><span></span></a>
+<a class="no-dev" href="/" id="main-header-logoButton"></a>
+<span class="header-spacer" id="header-spacer-right"></span>
+<nav class="tablet-off" id="main-header-nav">
+<a href="/pmwiki/pmwiki.php/Main/Tropes">Tropes</a>
+<a href="/pmwiki/pmwiki.php/Main/Media">Media</a>
+<a class="nav-browse" href="/pmwiki/browse.php">Browse</a>
+<a href="/pmwiki/index_report.php">Indexes</a>
+<a href="/pmwiki/topics.php">Forums</a>
+<a class="nav-browse" href="/pmwiki/recent_videos.php">Videos</a>
+</nav>
+<div id="main-header-bar-right">
+<div class="font-xs mobile-off" id="signup-login-box">
+<a class="hover-underline bold" data-modal-target="signup" href="/pmwiki/login.php">Join</a>
+<a class="hover-underline bold" data-modal-target="login" href="/pmwiki/login.php">Login</a>
+</div>
+<div class="mobile-on inline" id="signup-login-mobileToggle">
+<a data-modal-target="login" href="/pmwiki/login.php"><i class="fa fa-user"></i></a>
+</div>
+<div id="search-box">
+<form action="/pmwiki/search_result.php" class="search">
+<input class="search-box" name="q" placeholder="Search" required="" type="text" value=""/>
+<input class="submit-button" type="submit" value=""/>
+<input name="search_type" type="hidden" value="article"/>
+<input name="page_type" type="hidden" value="all"/>
+<input name="cx" type="hidden" value="partner-pub-6610802604051523:amzitfn8e7v"/>
+<input name="cof" type="hidden" value="FORID:10"/>
+<input name="ie" type="hidden" value="ISO-8859-1"/>
+<input name="siteurl" type="hidden" value=""/>
+<input name="ref" type="hidden" value=""/>
+<input name="ss" type="hidden" value=""/>
+</form>
+<a class="mobile-on mobile-search-toggle close-x" href="#close-search"><i class="fa fa-close"></i></a>
+</div>
+<div id="random-box">
+<a class="button-random-trope" href="/pmwiki/pmwiki.php/Main/TheUnHug" onclick="ga('send', 'event', 'button', 'click', 'random trope');" rel="nofollow"></a>
+<a class="button-random-media" href="/pmwiki/pmwiki.php/Series/WhiteCollar" onclick="ga('send', 'event', 'button', 'click', 'random media');" rel="nofollow"></a>
+</div>
+</div>
+</div>
+<div class="tablet-on" id="mobile-menu"><div class="mobile-menu-options">
+<div class="nav-wrapper">
+<a class="xl" href="/pmwiki/pmwiki.php/Main/Tropes">Tropes</a>
+<a class="xl" href="/pmwiki/pmwiki.php/Main/Media">Media</a>
+<a class="xl" href="/pmwiki/browse.php">Browse</a>
+<a class="xl" href="/pmwiki/index_report.php">Indexes</a>
+<a class="xl" href="/pmwiki/topics.php">Forums</a>
+<a class="xl" href="/pmwiki/recent_videos.php">Videos</a>
+<a href="/pmwiki/query.php?type=att">Ask The Tropers</a>
+<a href="/pmwiki/query.php?type=tf">Trope Finder</a>
+<a href="/pmwiki/query.php?type=ykts">You Know That Show...</a>
+<a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a>
+<a data-click-toggle="active" href="#tools">Tools <i class="fa fa-chevron-down"></i></a>
+<div class="tools-dropdown mobile-dropdown-linkList">
+<a href="/pmwiki/cutlist.php">Cut List</a>
+<a href="/pmwiki/changes.php">New Edits</a>
+<a href="/pmwiki/recent_edit_reasons.php">Edit Reasons</a>
+<a href="/pmwiki/launches.php">Launches</a>
+<a href="/pmwiki/img_list.php">Images List</a>
+<a href="/pmwiki/crown_activity.php">Crowner Activity</a>
+<a href="/pmwiki/no_types.php">Un-typed Pages</a>
+<a href="/pmwiki/page_type_audit.php">Recent Page Type Changes</a>
+</div>
+<a data-click-toggle="active" href="#hq">Tropes HQ <i class="fa fa-chevron-down"></i></a>
+<div class="tools-dropdown mobile-dropdown-linkList">
+<a href="/pmwiki/about.php">About Us</a>
+<a href="/pmwiki/contact.php">Contact Us</a>
+<a href="mailto:advertising@proper.io">Advertise</a>
+<a href="/pmwiki/dmca.php">DMCA Notice</a>
+<a href="/pmwiki/privacypolicy.php">Privacy Policy</a>
+</div>
+<a href="/pmwiki/ad-free-subscribe.php">Go Ad-Free</a>
+<div class="toggle-switches">
+<ul class="mobile-menu display-toggles">
+<li>Show Spoilers <div class="display-toggle show-spoilers" id="mobile-toggle-showspoilers"></div></li>
+<li>Night Vision <div class="display-toggle night-vision" id="mobile-toggle-nightvision"></div></li>
+<li>Sticky Header <div class="display-toggle sticky-header" id="mobile-toggle-stickyheader"></div></li>
+<li>Highlight Links <div class="display-toggle highlight-links" id="mobile-toggle-highlightlinks"></div></li>
+</ul>
+<script>updateMobilePrefs();</script>
+</div>
+</div>
+</div>
+</div>
+</header>
+<div class="mobile-on" id="homepage-introBox-mobile">
+<a href="/"><img class="logo-small" src="/images/logo-white-big.png"/></a>
+<form action="/pmwiki/search_result.php" class="search" style="margin:10px -5px -6px -5px;">
+<input class="search-box" name="q" placeholder="Search" required="" type="text" value=""/>
+<input class="submit-button" type="submit" value=""/>
+<input name="search_type" type="hidden" value="article"/>
+<input name="page_type" type="hidden" value="all"/>
+<input name="cx" type="hidden" value="partner-pub-6610802604051523:amzitfn8e7v"/>
+<input name="cof" type="hidden" value="FORID:10"/>
+<input name="ie" type="hidden" value="ISO-8859-1"/>
+<input name="siteurl" type="hidden" value=""/>
+<input name="ref" type="hidden" value=""/>
+<input name="ss" type="hidden" value=""/>
+</form>
+</div>
+<div class="ad" id="header-ad-wrapper">
+<div id="header-ad">
+<div class="ad-size-970x90 atf_banner">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_1"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_1'); });</script> </div>
+</div> </div>
+</div>
+</div>
+<div id="main-container">
+<div class="action-bar mobile-off" id="action-bar-top">
+<div class="action-bar-right">
+<p>Follow TV Tropes</p>
+<a class="button-fb" href="https://www.facebook.com/TVTropes">
+<i class="fa fa-facebook"></i></a>
+<a class="button-tw" href="https://www.twitter.com/TVTropes">
+<i class="fa fa-twitter"></i></a>
+<a class="button-re" href="https://www.reddit.com/r/TVTropes">
+<i class="fa fa-reddit-alien"></i></a>
+</div>
+<nav class="actions-wrapper" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<ul class="page-actions" id="top_main_list">
+<li class="link-edit">
+<a class="article-edit-button" data-modal-target="login" href="/pmwiki/pmwiki.php/Main/GameSystem?action=edit" rel="nofollow">
+<i class="fa fa-pencil"></i> Edit Page</a></li><li class="link-related"><a href="/pmwiki/relatedsearch.php?term=Main/GameSystem">
+<i class="fa fa-share-alt"></i> Related</a></li><li class="link-history"><a href="/pmwiki/article_history.php?article=Main.GameSystem">
+<i class="fa fa-history"></i> History</a></li><li class="link-discussion"><a href="/pmwiki/remarks.php?trope=Main.GameSystem">
+<i class="fa fa-comment"></i> Discussion</a></li> </ul>
+<button class="nav__dropdown-toggle" id="top_more_button" onclick="toggle_more_menu('top');" type="button">More</button>
+<ul class="more_menu hidden_more_list" id="top_more_list">
+<li class="link-todo tuck-always more_list_item"><a data-modal-target="login" href="#todo"><i class="fa fa-check-circle"></i> To Do</a></li><li class="link-pageSource tuck-always more_list_item"><a data-modal-target="login" href="/pmwiki/pmwiki.php/Main/GameSystem?action=source" rel="nofollow" target="_blank"><i class="fa fa-code"></i> Page Source</a></li> </ul>
+</nav>
+<div class="WikiWordModalStub"></div>
+<div class="ImgUploadModalStub" data-page-type="Article"></div>
+<div class="login-alert" style="display: none;">
+You need to <a href="/pmwiki/login.php" style="color:#21A0E8">login</a> to do this. <a href="/pmwiki/login.php?tab=register_account" style="color:#21A0E8">Get Known</a> if you don't have an account
+</div>
+</div>
+<div class="page-Article" id="main-content">
+<article class="with-sidebar" id="main-entry">
+<input id="groupname-hidden" type="hidden" value="Main"/>
+<input id="title-hidden" type="hidden" value="GameSystem"/>
+<input id="article_id" type="hidden" value="2589"/>
+<input id="logged_in" type="hidden" value="false"/>
+<p class="hidden" id="current_url">http://tvtropes.org/pmwiki/pmwiki.php/Main/GameSystem</p>
+<meta content="" itemprop="datePublished"/>
+<meta content="" itemprop="articleSection"/>
+<meta content="" itemprop="image"/>
+<a class="watch-button" data-modal-target="login" href="#watch">Follow<span>ing</span></a>
+<h1 class="entry-title" itemprop="headline">
+Game System
+</h1>
+<script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+                "@type": "ListItem",
+                "position": 1,
+                "name": "tvtropes.org",
+                "item": "https://tvtropes.org"
+            },{
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Tropes",
+                "item": "https://tvtropes.org/pmwiki/pmwiki.php/Main/Tropes"
+            },{
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Game System"            }]
+        }
+    </script>
+<a class="mobile-actionbar-toggle mobile-on" data-click-toggle="active" href="#mobile-actions-toggle" id="mobile-actionbar-toggle">
+<p class="tiny-off">Go To</p><span></span><span></span><span></span><i class="fa fa-pencil"></i></a>
+<nav class="mobile-actions-wrapper mobile-on" id="mobile-actions-bar"></nav>
+<div class="modal fade hidden-until-active" id="editLockModal">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button aria-label="Close" class="close" data-dismiss="modal" type="button"> <span aria-hidden="true">×</span></button>
+<h4 class="modal-title">Edit Locked</h4>
+</div>
+<div class="modal-body">
+<div class="row">
+<div class="body">
+<div class="danger troper_locked_message"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<nav class="body-options" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<ul class="subpage-links">
+<li>
+<a class="subpage-link curr-subpage" href="/pmwiki/pmwiki.php/Main/GameSystem" title="The Main page">
+<span class="wrapper"><span class="spi main-page"></span>Main</span></a>
+</li>
+<li class="create-subpage dropdown">
+<a aria-expanded="false" class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);" role="button">
+<span class="wrapper">Create New <i class="fa fa-plus-circle"></i></span>
+</a>
+<select onchange="this.options[this.selectedIndex].value &amp;&amp; (window.location = this.options[this.selectedIndex].value);">
+<option value="">- Create New -</option>
+<option value="/pmwiki/pmwiki.php/Analysis/GameSystem?action=edit">Analysis</option>
+<option value="/pmwiki/pmwiki.php/Characters/GameSystem?action=edit">Characters</option>
+<option value="/pmwiki/pmwiki.php/FanficRecs/GameSystem?action=edit">FanficRecs</option>
+<option value="/pmwiki/pmwiki.php/FanWorks/GameSystem?action=edit">FanWorks</option>
+<option value="/pmwiki/pmwiki.php/Fridge/GameSystem?action=edit">Fridge</option>
+<option value="/pmwiki/pmwiki.php/Haiku/GameSystem?action=edit">Haiku</option>
+<option value="/pmwiki/pmwiki.php/Headscratchers/GameSystem?action=edit">Headscratchers</option>
+<option value="/pmwiki/pmwiki.php/ImageLinks/GameSystem?action=edit">ImageLinks</option>
+<option value="/pmwiki/pmwiki.php/Laconic/GameSystem?action=edit">Laconic</option>
+<option value="/pmwiki/pmwiki.php/PlayingWith/GameSystem?action=edit">PlayingWith</option>
+<option value="/pmwiki/pmwiki.php/Quotes/GameSystem?action=edit">Quotes</option>
+<option value="/pmwiki/pmwiki.php/Recap/GameSystem?action=edit">Recap</option>
+<option value="/pmwiki/pmwiki.php/ReferencedBy/GameSystem?action=edit">ReferencedBy</option>
+<option value="/pmwiki/pmwiki.php/Synopsis/GameSystem?action=edit">Synopsis</option>
+<option value="/pmwiki/pmwiki.php/Timeline/GameSystem?action=edit">Timeline</option>
+<option value="/pmwiki/pmwiki.php/Trivia/GameSystem?action=edit">Trivia</option>
+<option value="/pmwiki/pmwiki.php/WMG/GameSystem?action=edit">WMG</option>
+<option value="/pmwiki/pmwiki.php/YMMV/GameSystem?action=edit">YMMV</option>
+</select>
+</li>
+</ul>
+</nav>
+<div class="article-content retro-folders" id="main-article">
+<p>Game System is a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/RolePlayingGame" title="/pmwiki/pmwiki.php/Main/RolePlayingGame">Role-Playing Game</a> term. It refers to the set of rules that regulate gameplay and simulate actions that can be performed by the game's characters. The purpose of a game system is to avoid the "Cops and Robbers" problem — when one player can say "Bang, I shot you!" and the other can say "No you didn't, I dodged so you missed!", no meaningful progress can be made. What a Game System does is set down rules for how well the players can shoot and dodge (among other things), so everyone can agree on what actually happened. Given the sheer number of things that a player might attempt in a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/RolePlayingGame" title="/pmwiki/pmwiki.php/Main/RolePlayingGame">Role-Playing Game</a>, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GameSystem" title="/pmwiki/pmwiki.php/Main/GameSystem">Game Systems</a> can be correspondingly complex.
+</p><div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_1"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_1'); })</script></div></div><p>Most Game Systems involve using numerical statistics to mathematically chart a character's abilities, though the exact stats and the nature of their use varies widely between systems. In addition, most systems generally involve some randomness, so that there's an element of chance in most actions — you can't be 100% certain beforehand whether your attempt will succeed or fail. In <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TabletopGames" title="/pmwiki/pmwiki.php/Main/TabletopGames">Tabletop Games</a>, this typically takes the form of <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/Dice" title="/pmwiki/pmwiki.php/UsefulNotes/Dice">dice-rolling</a>, while <a class="twikilink" href="/pmwiki/pmwiki.php/Main/VideoGames" title="/pmwiki/pmwiki.php/Main/VideoGames">Video Games</a> use random number generators instead. In addition, there's typically one person who takes the role of "referee", controlling <a class="twikilink" href="/pmwiki/pmwiki.php/Main/NPC" title="/pmwiki/pmwiki.php/Main/NPC">NPC</a>'s actions and deciding how rules apply in specific situations. The computer AI does this in <a class="twikilink" href="/pmwiki/pmwiki.php/Main/VideoGame" title="/pmwiki/pmwiki.php/Main/VideoGame">Video Game</a> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/RPG" title="/pmwiki/pmwiki.php/Main/RPG">RPGs</a>, but it falls to a human <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GameMaster" title="/pmwiki/pmwiki.php/Main/GameMaster">Game Master</a> to do this in <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TabletopGames" title="/pmwiki/pmwiki.php/Main/TabletopGames">Tabletop Games</a> — this, unsurprisingly, means that tabletop <a class="twikilink" href="/pmwiki/pmwiki.php/Main/RPG" title="/pmwiki/pmwiki.php/Main/RPG">RPGs</a> tend to be much more flexible and fluid than computer-based ones; a program can only handle what it's been programmed to, while a person is much more capable of improvisation.
+</p><div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_2"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_2'); })</script></div></div><p>Game Systems can be divided into two general categories: <a class="twikilink" href="/pmwiki/pmwiki.php/Main/CharacterClassSystem" title="/pmwiki/pmwiki.php/Main/CharacterClassSystem">Character Class Systems</a> and <a class="twikilink" href="/pmwiki/pmwiki.php/Main/PointBuildSystem" title="/pmwiki/pmwiki.php/Main/PointBuildSystem">Point Build Systems</a>. A <a class="twikilink" href="/pmwiki/pmwiki.php/Main/CharacterClassSystem" title="/pmwiki/pmwiki.php/Main/CharacterClassSystem">Character Class System</a> has each player pick their character's "class" (which represents a specific skillset, like combat or stealth) and allows them to advance according to that class's abilities. A <a class="twikilink" href="/pmwiki/pmwiki.php/Main/PointBuildSystem" title="/pmwiki/pmwiki.php/Main/PointBuildSystem">Point Build System</a>, on the other hand, allows players to spend character points on whatever <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SkillScoresAndPerks" title="/pmwiki/pmwiki.php/Main/SkillScoresAndPerks">Skill Scores and Perks</a> they want; balance is provided by the cost of abilities and how many points players are allowed to spend, rather than balancing specific classes against each other.
+</p><p>There is a <em>lot</em> of overlap between the two types of systems, especially in the from of sub-systems. Game designers want to prevent characters of a given class from being identical, so in order to encourage <a class="twikilink" href="/pmwiki/pmwiki.php/Main/CharacterCustomization" title="/pmwiki/pmwiki.php/Main/CharacterCustomization">Character Customization</a>, they frequently build a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/PointBuildSystem" title="/pmwiki/pmwiki.php/Main/PointBuildSystem">Point Build System</a> <em>into</em> their <a class="twikilink" href="/pmwiki/pmwiki.php/Main/CharacterClassSystem" title="/pmwiki/pmwiki.php/Main/CharacterClassSystem">Character Class System</a>. This will usually take the form of some "universal" abilities available to all classes and purchased via point buy, having point-buy abilities within a class so that different characters of the same class may have different abilities, or both.
+</p><div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_3"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_3'); })</script></div></div><p>Originally a Game System and its setting were tightly integrated — if you wanted to play in a certain setting, or genre, you bought a book or boxed set that described both the system and the setting, and/or an 'adventure pack' that detailed a pre-made storyline for the players to follow. However, over the years the concepts of <a class="twikilink" href="/pmwiki/pmwiki.php/Main/HouseSystem" title="/pmwiki/pmwiki.php/Main/HouseSystem">House Systems</a> and <a class="twikilink" href="/pmwiki/pmwiki.php/Main/UniversalSystem" title="/pmwiki/pmwiki.php/Main/UniversalSystem">Universal Systems</a> have emerged. <a class="twikilink" href="/pmwiki/pmwiki.php/Main/HouseSystem" title="/pmwiki/pmwiki.php/Main/HouseSystem">House Systems</a>, as the name implies, are <a class="twikilink" href="/pmwiki/pmwiki.php/Main/HouseRules" title="/pmwiki/pmwiki.php/Main/HouseRules">House Rules</a> taken to their logical extreme — home-brewed systems consisting <em>entirely</em> (or at least largely) of <a class="twikilink" href="/pmwiki/pmwiki.php/Main/HouseRules" title="/pmwiki/pmwiki.php/Main/HouseRules">House Rules</a>. <a class="twikilink" href="/pmwiki/pmwiki.php/Main/UniversalSystem" title="/pmwiki/pmwiki.php/Main/UniversalSystem">Universal Systems</a>, on the other hand, are deliberately designed <em>without</em> a specific setting or storyline — they usually consist of the basic framework (such as dice-rolling and combat mechanics), but also have rules that allow a player to adapt his favorite novel or computer game for use as a setting.
+</p><p>Specific Game Systems sometimes go through dozens of revisions. Each new version can be expected to either clarify existing rules (if ambiguities have arisen in previous versions), add entirely new mechanics to the system (e.g., adding a new section for vehicular combat rules), or streamline existing rules that have been discovered to be unwieldy or poorly-designed.
+</p><p>Due to the nature of its design, a Game System's rules are not all-encompassing — some ambiguity is usually left as a "fudge factor" so that a DM can create new rules to suit a particular situation. Such ambiguity can also allow the <em>player</em> some leeway, by creating loopholes in the game's rules that permit him to do what the rule system would normally prevent. Such loopholes, if found to present an unfair advantage to a player, are usually closed in subsequent revisions.
+</p><p></p><hr/><h2>Examples</h2>
+<p></p><ul><li> The <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/D20System" title="/pmwiki/pmwiki.php/UsefulNotes/D20System">d20 System</a>, originally used by <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/DungeonsAndDragons" title="/pmwiki/pmwiki.php/TabletopGame/DungeonsAndDragons">Dungeons &amp; Dragons</a></em> since 3rd Edition. Available under a free license, it has a huge number of settings and spinoff systems related to it.
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/MutantsAndMasterminds" title="/pmwiki/pmwiki.php/TabletopGame/MutantsAndMasterminds">Mutants &amp; Masterminds</a></em> is a superhero-themed system <em>heavily</em> modified from d20, to the point of being completely <a class="twikilink" href="/pmwiki/pmwiki.php/Main/PointBuy" title="/pmwiki/pmwiki.php/Main/PointBuy">Point Buy</a>.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/Pathfinder" title="/pmwiki/pmwiki.php/TabletopGame/Pathfinder">Pathfinder</a></em> is the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SpiritualSuccessor" title="/pmwiki/pmwiki.php/Main/SpiritualSuccessor">Spiritual Successor</a> to D&amp;D 3.5, created after the introduction of D&amp;D 4E.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/MonteCooksWorldOfDarkness" title="/pmwiki/pmwiki.php/TabletopGame/MonteCooksWorldOfDarkness">Monte Cook's World of Darkness</a></em>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/LegendSystem" title="/pmwiki/pmwiki.php/TabletopGame/LegendSystem">Legend System</a></em> is a D20 hack, mostly notable for a really neat multiclassing system.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/BEEREngine" title="/pmwiki/pmwiki.php/TabletopGame/BEEREngine">BEER Engine</a></em>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/GURPS" title="/pmwiki/pmwiki.php/TabletopGame/GURPS">GURPS</a></em>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/Champions" title="/pmwiki/pmwiki.php/TabletopGame/Champions">Hero System</a></em>
+</li><li> Guardians of Order's Tri-Stat system, used in:
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/BigEyesSmallMouth" title="/pmwiki/pmwiki.php/TabletopGame/BigEyesSmallMouth">Big Eyes, Small Mouth</a></em>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/SilverAgeSentinels" title="/pmwiki/pmwiki.php/TabletopGame/SilverAgeSentinels">Silver Age Sentinels</a></em>.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/Traveller" title="/pmwiki/pmwiki.php/TabletopGame/Traveller">Traveller</a></em>
+</li><li> By <a class="twikilink" href="/pmwiki/pmwiki.php/Creator/WhiteWolf" title="/pmwiki/pmwiki.php/Creator/WhiteWolf">White Wolf</a>, we have the Storyteller system, used in:
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/Exalted" title="/pmwiki/pmwiki.php/TabletopGame/Exalted">Exalted</a></em>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/Scion" title="/pmwiki/pmwiki.php/TabletopGame/Scion">Scion</a></em>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/TrinityUniverse" title="/pmwiki/pmwiki.php/TabletopGame/TrinityUniverse">Trinity Universe</a></em>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/OldWorldOfDarkness" title="/pmwiki/pmwiki.php/TabletopGame/OldWorldOfDarkness">The World of Darkness</a></em>
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/ChroniclesOfDarkness" title="/pmwiki/pmwiki.php/TabletopGame/ChroniclesOfDarkness">Chronicles of Darkness</a></em> uses the Storytell<strong>ing</strong> system, a cousin system.
+</li></ul></li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/FATAL" title="/pmwiki/pmwiki.php/TabletopGame/FATAL">FATAL</a></em>, an infamously horrible "adult" RPG. It uses a... <em>unique</em> game system, which involves 1d10000's, among others, and occasionally can result in characters achieving negative values in attributes, such as <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MemeticMutation" title="/pmwiki/pmwiki.php/Main/MemeticMutation">anal circumference</a>.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/ForgedInTheDark" title="/pmwiki/pmwiki.php/UsefulNotes/ForgedInTheDark">Forged in the Dark</a></em> was originally designed for <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/BladesInTheDark" title="/pmwiki/pmwiki.php/TabletopGame/BladesInTheDark">Blades in the Dark</a></em>, but has since been released as a free SRD and used to run games in entirely different genres.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/Fudge" title="/pmwiki/pmwiki.php/TabletopGame/Fudge">Fudge</a></em> (including <em>FATE</em> and its <em>FATE Accelerated</em> variant).
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/LegendOfTheFiveRings" title="/pmwiki/pmwiki.php/TabletopGame/LegendOfTheFiveRings">Legend of the Five Rings</a></em>
+</li><li> <a class="twikilink" href="/pmwiki/pmwiki.php/Creator/RTalsorian" title="/pmwiki/pmwiki.php/Creator/RTalsorian">R Talsorian</a>'s Interlock system, used in:
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/Mekton" title="/pmwiki/pmwiki.php/TabletopGame/Mekton">Mekton</a></em>, a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/HumongousMecha" title="/pmwiki/pmwiki.php/Main/HumongousMecha">Humongous Mecha</a> game.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/Cyberpunk" title="/pmwiki/pmwiki.php/TabletopGame/Cyberpunk">Cyberpunk</a> 2020</em> (though with a little bit more detailing in the combat).
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/Paranoia" title="/pmwiki/pmwiki.php/TabletopGame/Paranoia">Paranoia</a></em>
+</li><li> The <em><a class="createlink" href="/pmwiki/pmwiki.php/TabletopGame/Palladium" title="/pmwiki/pmwiki.php/TabletopGame/Palladium">Palladium</a></em> system, used by <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/Rifts" title="/pmwiki/pmwiki.php/TabletopGame/Rifts">Rifts</a></em>, <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/PalladiumFantasy" title="/pmwiki/pmwiki.php/TabletopGame/PalladiumFantasy">Palladium Fantasy</a></em>, and others.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/PoweredByTheApocalypse" title="/pmwiki/pmwiki.php/TabletopGame/PoweredByTheApocalypse">Powered by the Apocalypse</a></em>: Originally developed for <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/ApocalypseWorld" title="/pmwiki/pmwiki.php/TabletopGame/ApocalypseWorld">Apocalypse World</a></em>, it has since been adapted to a number of other RPGs, e.g. <em>Dungeon World</em>, <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/MonsterOfTheWeek" title="/pmwiki/pmwiki.php/TabletopGame/MonsterOfTheWeek">Monster of the Week</a></em>, <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/Monsterhearts" title="/pmwiki/pmwiki.php/TabletopGame/Monsterhearts">Monsterhearts</a></em>, <em>Sagas of the Icelanders</em>, etc. While not a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/UniversalSystem" title="/pmwiki/pmwiki.php/Main/UniversalSystem">Universal System</a> <em>per se</em>, it is designed to be lightweight and easily hackable, making it uniquely easy to adapt to any setting and narrative genre.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/Shadowrun" title="/pmwiki/pmwiki.php/TabletopGame/Shadowrun">Shadowrun</a></em>
+</li><li> <a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/SavageWorlds" title="/pmwiki/pmwiki.php/TabletopGame/SavageWorlds">Savage Worlds</a> from Pinnacle Entertainment Group.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/Unisystem" title="/pmwiki/pmwiki.php/UsefulNotes/Unisystem">Unisystem</a></em>
+</li><li> Fantasy Flight's <em>Genesys</em>, believed to be a contraction of "Generic System", which started out as the system used for <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/StarWarsRoleplayingGame" title="/pmwiki/pmwiki.php/TabletopGame/StarWarsRoleplayingGame">Edge of the Empire</a></em> et al. Based on rolling dice with symbols on them and interpreting results from there.
+</li></ul><hr/>
+</div>
+<div class="square_ad footer-article-ad main_2" data-isolated="0"></div>
+<div class="section-links" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<div class="titles">
+<div><h3 class="text-center text-uppercase">Previous</h3></div>
+<div><h3 class="text-center text-uppercase">Index</h3></div>
+<div><h3 class="text-center text-uppercase">Next</h3></div>
+</div>
+<div class="links">
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/GameplayRandomization">Gameplay Randomization</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/TabletopRPGTropes">Tabletop RPG Tropes</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/GamingStatTropes">Gaming Stat Tropes</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/FollowThePlottedLine">Follow the Plotted Line</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/RolePlayingGame">Role-Playing Game</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/PointBuildSystem">Point Build System</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="outer_ads_by_salon_wrapper" id="exco_player_insert_div">
+</div>
+</article>
+<div id="main-content-sidebar"><div class="sidebar-item display-options">
+<ul class="sidebar display-toggles">
+<li>Show Spoilers <div class="display-toggle show-spoilers" id="sidebar-toggle-showspoilers"></div></li>
+<li>Night Vision <div class="display-toggle night-vision" id="sidebar-toggle-nightvision"></div></li>
+<li>Sticky Header <div class="display-toggle sticky-header" id="sidebar-toggle-stickyheader"></div></li>
+<li>Wide Load <div class="display-toggle wide-load" id="sidebar-toggle-wideload"></div></li>
+</ul>
+<script>updateDesktopPrefs();</script>
+</div>
+<div class="sidebar-item ad sb-ad-unit">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_2"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_2'); });</script> </div>
+</div></div>
+<div class="sidebar-item quick-links" itemtype="http://schema.org/SiteNavigationElement">
+<p class="sidebar-item-title" data-title="Important Links">Important Links</p>
+<div class="padded">
+<a href="/pmwiki/query.php?type=att">Ask The Tropers</a>
+<a href="/pmwiki/query.php?type=tf">Trope Finder</a>
+<a href="/pmwiki/query.php?type=ykts">You Know That Show...</a>
+<a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a>
+<a href="/pmwiki/review_activity.php">Reviews</a>
+<a data-modal-target="login" href="/pmwiki/lbs.php">Live Blogs</a>
+<a href="/pmwiki/ad-free-subscribe.php">Go Ad Free!</a> </div>
+</div>
+<div class="sidebar-item sb-ad-unit">
+<div class="sidebar-section">
+<div class="square_ad ad-size-300x600 ad-section text-center">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_3"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_3'); });</script> </div>
+</div> </div>
+</div>
+</div>
+<div class="sidebar-item">
+<p class="sidebar-item-title" data-title="Crucial Browsing">Crucial Browsing</p>
+<ul class="padded font-s" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><a data-click-toggle="active" href="javascript:void(0);">Genre</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/ActionAdventureTropes" title="Main/ActionAdventureTropes">Action Adventure</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ComedyTropes" title="Main/ComedyTropes">Comedy</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CommercialsTropes" title="Main/CommercialsTropes">Commercials</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CrimeAndPunishmentTropes" title="Main/CrimeAndPunishmentTropes">Crime &amp; Punishment</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DramaTropes" title="Main/DramaTropes">Drama</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/HorrorTropes" title="Main/HorrorTropes">Horror</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LoveTropes" title="Main/LoveTropes">Love</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NewsTropes" title="Main/NewsTropes">News</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ProfessionalWrestling" title="Main/ProfessionalWrestling">Professional Wrestling</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SpeculativeFictionTropes" title="Main/SpeculativeFictionTropes">Speculative Fiction</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SportsStoryTropes" title="Main/SportsStoryTropes">Sports Story</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/WarTropes" title="Main/WarTropes">War</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Media</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/Media" title="Main/Media">All Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/AnimationTropes" title="Main/AnimationTropes">Animation (Western)</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Anime" title="Main/Anime">Anime</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ComicBookTropes" title="Main/ComicBookTropes">Comic Book</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FanFic" title="FanFic/FanFics">Fan Fics</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Film" title="Main/Film">Film</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/GameTropes" title="Main/GameTropes">Game</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Literature" title="Main/Literature">Literature</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MusicAndSoundEffects" title="Main/MusicAndSoundEffects">Music And Sound Effects</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NewMediaTropes" title="Main/NewMediaTropes">New Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/PrintMediaTropes" title="Main/PrintMediaTropes">Print Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Radio" title="Main/Radio">Radio</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SequentialArt" title="Main/SequentialArt">Sequential Art</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TabletopGames" title="Main/TabletopGames">Tabletop Games</a></li>
+<li><a href="/pmwiki/pmwiki.php/UsefulNotes/Television" title="Main/Television">Television</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Theater" title="Main/Theater">Theater</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/VideogameTropes" title="Main/VideogameTropes">Videogame</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Webcomics" title="Main/Webcomics">Webcomics</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Narrative</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/UniversalTropes" title="Main/UniversalTropes">Universal</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/AppliedPhlebotinum" title="Main/AppliedPhlebotinum">Applied Phlebotinum</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CharacterizationTropes" title="Main/CharacterizationTropes">Characterization</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Characters" title="Main/Characters">Characters</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CharactersAsDevice" title="Main/CharactersAsDevice">Characters As Device</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Dialogue" title="Main/Dialogue">Dialogue</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Motifs" title="Main/Motifs">Motifs</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NarrativeDevices" title="Main/NarrativeDevices">Narrative Devices</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Paratext" title="Main/Paratext">Paratext</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Plots" title="Main/Plots">Plots</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Settings" title="Main/Settings">Settings</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Spectacle" title="Main/Spectacle">Spectacle</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Other Categories</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/BritishTellyTropes" title="Main/BritishTellyTropes">British Telly</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TheContributors" title="Main/TheContributors">The Contributors</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CreatorSpeak" title="Main/CreatorSpeak">Creator Speak</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Creators" title="Main/Creators">Creators</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DerivativeWorks" title="Main/DerivativeWorks">Derivative Works</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LanguageTropes" title="Main/LanguageTropes">Language</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LawsAndFormulas" title="Main/LawsAndFormulas">Laws And Formulas</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ShowBusiness" title="Main/ShowBusiness">Show Business</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SplitPersonalityTropes" title="Main/SplitPersonalityTropes">Split Personality</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/StockRoom" title="Main/StockRoom">Stock Room</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TropeTropes" title="Main/TropeTropes">Trope</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Tropes" title="Main/Tropes">Tropes</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TruthAndLies" title="Main/TruthAndLies">Truth And Lies</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TruthInTelevision" title="Main/TruthInTelevision">Truth In Television</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Topical Tropes</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/BetrayalTropes" title="Main/BetrayalTropes">Betrayal</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CensorshipTropes" title="Main/CensorshipTropes">Censorship</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CombatTropes" title="Main/CombatTropes">Combat</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DeathTropes" title="Main/DeathTropes">Death</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FamilyTropes" title="Main/FamilyTropes">Family</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FateAndProphecyTropes" title="Main/FateAndProphecyTropes">Fate And Prophecy</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FoodTropes" title="Main/FoodTropes">Food</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/HolidayTropes" title="Main/HolidayTropes">Holiday</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MemoryTropes" title="Main/MemoryTropes">Memory</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MoneyTropes" title="Main/MoneyTropes">Money</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MoralityTropes" title="Main/MoralityTropes">Morality</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/PoliticsTropes" title="Main/PoliticsTropes">Politics</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ReligionTropes" title="Main/ReligionTropes">Religion</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SchoolTropes" title="Main/SchoolTropes">School</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="sidebar-item showcase">
+<p class="sidebar-item-title" data-title="Community Showcase">Community Showcase <a class="bubble float-right hover-blue" href="/pmwiki/showcase.php">More</a></p>
+<p class="community-showcase">
+<a href="https://sharetv.com/shows/echo_chamber" onclick="trackOutboundLink('https://sharetv.com/shows/echo_chamber');" target="_blank">
+<img alt="" class="lazy-image" data-src="/images/communityShowcase-echochamber.jpg"/></a>
+<a href="/pmwiki/pmwiki.php/Webcomic/TwistedTropes">
+<img alt="" class="lazy-image" data-src="/img/howlandsc-side.jpg"/></a>
+</p>
+</div>
+<div class="sidebar-item sb-ad-unit" id="stick-cont">
+<div class="sidebar-section" id="stick-bar">
+<div class="square_ad ad-size-300x600 ad-section text-center">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_4"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_4'); });</script> </div>
+</div> </div>
+</div>
+</div>
+</div>
+</div>
+<div class="action-bar tablet-off" id="action-bar-bottom">
+<a class="scroll-to-top dead-button" href="#top-of-page" onclick="$('html, body').animate({scrollTop : 0},500);">Top</a>
+</div>
+</div>
+<div class="proper-ad-unit ad-sticky">
+<div id="proper-ad-tvtropes_sticky_ad"> <script>propertag.cmd.push(function() { proper_display('tvtropes_sticky_ad'); });</script> </div>
+</div>
+<footer id="main-footer">
+<div id="main-footer-inner">
+<div class="footer-left">
+<a class="img-link" href="/"><img alt="TV Tropes" class="lazy-image" data-src="/img/tvtropes-footer-logo.png" title="TV Tropes"/></a>
+<form action="index.html" class="navbar-form newsletter-signup validate modal-replies" data-ajax-get="/ajax/subscribe_email.php" id="cse-search-box-mobile" name="" role="">
+<button class="btn-submit newsletter-signup-submit-button" id="subscribe-btn" type="submit"><i class="fa fa-paper-plane"></i></button>
+<input class="form-control" id="subscription-email" name="q" placeholder="Subscribe" size="31" type="text" validate-type="email" value=""/>
+</form>
+<ul class="social-buttons">
+<li><a class="btn fb" href="https://www.facebook.com/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-facebook']);" target="_blank"><i class="fa fa-facebook"></i></a></li>
+<li><a class="btn tw" href="https://www.twitter.com/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-twitter']);" target="_blank"><i class="fa fa-twitter"></i></a> </li>
+<li><a class="btn rd" href="https://www.reddit.com/r/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-reddit']);" target="_blank"><i class="fa fa-reddit-alien"></i></a></li>
+</ul>
+</div>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">TVTropes</h4></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Administrivia">About TVTropes</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TheGoalsOfTVTropes">TVTropes Goals</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TheTropingCode">Troping Code</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TVTropesCustoms">TVTropes Customs</a></li>
+<li><a href="/pmwiki/pmwiki.php/JustForFun/TropesOfLegend">Tropes of Legend</a></li>
+<li><a href="/pmwiki/ad-free-subscribe.php">Go Ad-Free</a></li>
+</ul>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">Community</h4></li>
+<li><a href="/pmwiki/query.php?type=att">Ask The Tropers</a></li>
+<li><a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a></li>
+<li><a href="/pmwiki/query.php?type=tf">Trope Finder</a></li>
+<li><a href="/pmwiki/query.php?type=ykts">You Know That Show</a></li>
+<li><a data-modal-target="login" href="/pmwiki/lbs.php">Live Blogs</a></li>
+<li><a href="/pmwiki/review_activity.php">Reviews</a></li>
+<li><a href="/pmwiki/topics.php">Forum</a></li>
+</ul>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">Tropes HQ</h4></li>
+<li><a href="/pmwiki/about.php">About Us</a></li>
+<li><a href="/pmwiki/contact.php">Contact Us</a></li>
+<li><a href="/pmwiki/dmca.php">DMCA Notice</a></li>
+<li><a href="/pmwiki/privacypolicy.php">Privacy Policy</a></li>
+</ul>
+</div>
+<div class="text-center gutter-top gutter-bottom tablet-on" id="desktop-on-mobile-toggle">
+<a href="/pmwiki/switchDeviceCss.php?mobileVersion=1" rel="nofollow">Switch to <span class="txt-desktop">Desktop</span><span class="txt-mobile">Mobile</span> Version</a>
+</div>
+<div class="legal">
+<p>TVTropes is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License. <br/>Permissions beyond the scope of this license may be available from <a href="mailto:thestaff@tvtropes.org" rel="cc:morePermissions" xmlns:cc="http://creativecommons.org/ns#"> thestaff@tvtropes.org</a>.</p>
+<br/>
+<div class="privacy_wrapper">
+</div>
+</div>
+</footer>
+<style>
+      div.fc-ccpa-root {
+        position: absolute !important;
+        bottom: 93px !important;
+        margin: auto !important;
+        width: 100% !important;
+        z-index: 9999 !important;
+      }
+      .fc-ccpa-root .fc-dns-dialog .fc-dns-link p{
+        outline: none !important;
+        text-decoration: underline !important;
+        font-size: .7em !important;
+        font-family: sans-serif !important;
+      }
+      .fc-ccpa-root .fc-dns-dialog .fc-dns-link .fc-button-background {
+        background: none !important;
+      }
+    </style>
+<div class="full-screen" id="_pm_videoViewer">
+<a class="close" href="#close" id="_pm_videoViewer-close"></a>
+<div class="_pmvv-body">
+<div class="_pmvv-vidbox">
+<video class="video-js vjs-default-skin vjs-16-9" data-video-id="" id="overlay-video-player-box">
+</video>
+<div class="_pmvv-vidbox-desc">
+<h1 id="overlay-title"></h1>
+<p class="_pmvv-vidbox-descTxt" id="overlay-descrip">
+</p>
+<div class="rating-row" data-video-id="">
+<input name="is_logged_in" type="hidden" value="0"/>
+<p>How well does it match the trope?</p>
+<div id="star-rating-group">
+<div class="trope-rate">
+<input id="lamp5" name="rate" type="radio" value="5"/>
+<label for="lamp5" title="Absolutely"></label>
+<input id="lamp4" name="rate" type="radio" value="4"/>
+<label for="lamp4" title="Yes"></label>
+<input id="lamp3" name="rate" type="radio" value="3"/>
+<label for="lamp3" title="Kind of"></label>
+<input id="lamp2" name="rate" type="radio" value="2"/>
+<label for="lamp2" title="Not really"></label>
+<input id="lamp1" name="rate" type="radio" value="1"/>
+<label for="lamp1" title="No"></label>
+</div>
+<div id="star-rating-total">
+</div>
+</div>
+</div>
+<div class="example-media-row">
+<div class="example-overlay">
+<p>Example of:</p>
+<div id="overlay-trope"> / </div>
+</div>
+<div class="media-sources-overlay example-overlay">
+<p>Media sources:</p>
+<div id="overlay-media"> / </div>
+</div>
+</div>
+<p class="_pmvv-vidbox-stats text-right font-s" style="padding-top:8px; border-top: solid 1px rgba(255,255,255,0.2)">
+<a class="float-right" data-modal-target="login" href="#video-feedback">Report</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+        window.special_ops =  {
+            member : 'no',
+            isolated : 0,
+            tags : ['videogame']
+        };
+    </script>
+<script type="text/javascript">
+
+        var cleanCreativeEnabled = "";
+        var donation = "";
+        var live_ads = "1";
+        var img_domain = "https://static.tvtropes.org";
+        var snoozed = cookies.read('snoozedabm');
+        var snoozable = "";
+
+        if (adsRemovedWith) {
+            live_ads = 0;
+        }
+
+        var elem = document.createElement('script');
+        elem.async = true;
+
+        elem.src = '/design/assets/bundle.js?rev=c58d8df02f09262390bbd03db7921fc35c6af306';
+
+        elem.onload = function() {
+                                 }
+        document.getElementsByTagName('head')[0].appendChild(elem);
+
+    </script>
+<script type="text/javascript">
+      function send_analytics_event(user_type, donation){
+          // if(user_type == 'uncached' || user_type == 'cached'){
+          //   ga('send', 'event', 'caching', 'load', user_type, {'nonInteraction': 1});
+          //   return;
+          // }
+          var event_name = user_type;
+
+          if(donation == 'true'){
+              event_name += "_donation"
+          }else if(typeof(valid_user) == 'undefined'){
+              event_name += "_blocked"
+          }else if(valid_user == true){
+              event_name += "_unblocked";
+          }else{
+              event_name = "_unknown"
+          }
+          ga('send', 'event', 'ads', 'load', event_name, {'nonInteraction': 1});
+      }
+
+    
+    send_analytics_event("guest", "false");
+      </script>
+</body>
+</html>

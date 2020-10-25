@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Developer's Room - TV Tropes</title>
+<meta content="The Developer's Room is an area in a video game filled with Author Avatars and in-jokes. It has no bearing on the story, it's just an Easter Egg — but …" name="description"/>
+<link href="https://tvtropes.org/pmwiki/pmwiki.php/Main/DevelopersRoom" rel="canonical"/>
+<link href="/img/icons/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="@tvtropes" name="twitter:site"/>
+<meta content="@tvtropes" name="twitter:owner"/>
+<meta content="Developer's Room - TV Tropes" name="twitter:title"/>
+<meta content="The Developer's Room is an area in a video game filled with Author Avatars and in-jokes. It has no bearing on the story, it's just an Easter Egg — but …" name="twitter:description"/>
+<meta content="https://static.tvtropes.org/logo_blue_small.png" name="twitter:image:src"/>
+<meta content="TV Tropes" property="og:site_name"/>
+<meta content="en_US" property="og:locale"/>
+<meta content="https://www.facebook.com/tvtropes" property="article:publisher"/>
+<meta content="Developer's Room - TV Tropes" property="og:title"/>
+<meta content="website" property="og:type"/>
+<meta content="https://tvtropes.org/pmwiki/pmwiki.php/Main/DevelopersRoom" property="og:url"/>
+<meta content="https://static.tvtropes.org/logo_blue_small.png" property="og:image"/>
+<meta content="The Developer's Room is an area in a video game filled with Author Avatars and in-jokes. It has no bearing on the story, it's just an Easter Egg — but that doesn't make it any less fun, as it may also contain some additional rewards and …" property="og:description"/>
+<link href="/img/icons/apple-icon-57x57.png" rel="apple-touch-icon" sizes="57x57" type="image/png"/>
+<link href="/img/icons/apple-icon-60x60.png" rel="apple-touch-icon" sizes="60x60" type="image/png"/>
+<link href="/img/icons/apple-icon-72x72.png" rel="apple-touch-icon" sizes="72x72" type="image/png"/>
+<link href="/img/icons/apple-icon-76x76.png" rel="apple-touch-icon" sizes="76x76" type="image/png"/>
+<link href="/img/icons/apple-icon-114x114.png" rel="apple-touch-icon" sizes="114x114" type="image/png"/>
+<link href="/img/icons/apple-icon-120x120.png" rel="apple-touch-icon" sizes="120x120" type="image/png"/>
+<link href="/img/icons/apple-icon-144x144.png" rel="apple-touch-icon" sizes="144x144" type="image/png"/>
+<link href="/img/icons/apple-icon-152x152.png" rel="apple-touch-icon" sizes="152x152" type="image/png"/>
+<link href="/img/icons/apple-icon-180x180.png" rel="apple-touch-icon" sizes="180x180" type="image/png"/>
+<link href="/img/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/img/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/img/icons/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png"/>
+<link href="/img/icons/favicon-192x192.png" rel="icon" sizes="192x192" type="image/png"/>
+<meta content="width=device-width, initial-scale=1" id="viewport" name="viewport"/>
+<script>
+                var propertag = {};
+                propertag.cmd = [];
+            </script>
+<link href="/design/assets/bundle.css?rev=c58d8df02f09262390bbd03db7921fc35c6af306" rel="stylesheet"/>
+<script>
+                function object(objectId) {
+                    if (document.getElementById && document.getElementById(objectId)) {
+                        return document.getElementById(objectId);
+                    } else if (document.all && document.all(objectId)) {
+                        return document.all(objectId);
+                    } else if (document.layers && document.layers[objectId]) {
+                        return document.layers[objectId];
+                    } else {
+                        return false;
+                    }
+                }
+
+                // JAVASCRIPT COOKIES CODE: for getting and setting user viewing preferences
+                var cookies = {
+                    create: function (name, value, days2expire, path) {
+                        var date = new Date();
+                        date.setTime(date.getTime() + (days2expire * 24 * 60 * 60 * 1000));
+                        var expires = date.toUTCString();
+                        document.cookie = name + '=' + value + ';' + 'expires=' + expires + ';' + 'path=' + path + ';';
+                    },
+										createWithExpire: function(name, value, expires, path) {
+												document.cookie = name + '=' + value + ';' + 'expires=' + expires + ';' + 'path=' + path + ';';
+										},
+                    read: function (name) {
+                        var cookie_value = "",
+                            current_cookie = "",
+                            name_expr = name + "=",
+                            all_cookies = document.cookie.split(';'),
+                            n = all_cookies.length;
+
+                        for (var i = 0; i < n; i++) {
+                            current_cookie = all_cookies[i].trim();
+                            if (current_cookie.indexOf(name_expr) === 0) {
+                                cookie_value = current_cookie.substring(name_expr.length, current_cookie.length);
+                                break;
+                            }
+                        }
+                        return cookie_value;
+                    },
+                    update: function (name, val) {
+                        this.create(name, val, 300, "/");
+                    },
+                    remove: function (name) {
+                        document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
+                    }
+                };
+
+                function updateUserPrefs() {
+                    //GENERAL: detect and set browser, if not cookied (will be treated like a user-preference and added to the #user-pref element)
+                    if( !cookies.read('user-browser') ){
+                        var broswer = '';
+
+                        if(navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPod/i) ){
+                            browser = 'iOS';
+                        } else if (/Opera[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'opera';
+                        } else if (/MSIE (\d+\.\d+);/.test(navigator.userAgent)) {
+                            browser = 'MSIE';
+                        } else if (/Navigator[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'netscape';
+                        } else if (/Chrome[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'chrome';
+                        } else if (/Safari[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'safari';
+                            /Version[\/\s](\d+\.\d+)/.test(navigator.userAgent);
+                            browserVersion = new Number(RegExp.$1);
+                        } else if (/Firefox[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'firefox';
+                        } else {
+                            browser = 'internet_explorer';
+                        }
+                        cookies.create('user-browser',browser,1,'/');
+                        document.getElementById('user-prefs').classList.add('browser-' + browser);
+                    } else {
+                        document.getElementById('user-prefs').classList.add('browser-' + cookies.read('user-browser'));
+                    }
+
+                    //update user preference settings
+                    if (cookies.read('wide-load') !== '') document.getElementById('user-prefs').classList.add('wide-load');
+                    if (cookies.read('night-vision') !== '') document.getElementById('user-prefs').classList.add('night-vision');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('user-prefs').classList.add('sticky-header');
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('user-prefs').classList.add('show-spoilers');
+                    if (cookies.read('folders-open') !== '') document.getElementById('user-prefs').classList.add('folders-open');
+                    if (cookies.read('lefthand-sidebar') !== '') document.getElementById('user-prefs').classList.add('lefthand-sidebar');
+                    if (cookies.read('highlight-links') !== '') document.getElementById('user-prefs').classList.add('highlight-links');
+                    if (cookies.read('forum-gingerbread') !== '') document.getElementById('user-prefs').classList.add('forum-gingerbread');
+                    if (cookies.read('shared-avatars') !== '') document.getElementById('user-prefs').classList.add('shared-avatars');
+                    if (cookies.read('new-search') !== '') document.getElementById('user-prefs').classList.add('new-search');
+                    if (cookies.read('stop-auto-play-video') !== '') document.getElementById('user-prefs').classList.add('stop-auto-play-video');
+
+                    //desktop view on mobile
+                    if (cookies.read('desktop-on-mobile') !== ''){
+                        document.getElementById('user-prefs').classList.add('desktop-on-mobile');
+
+                        var viewport = document.querySelector("meta[name=viewport]");
+                        viewport.setAttribute('content', 'width=1000');
+                    }
+
+                }
+
+                function updateDesktopPrefs() {
+                    if (cookies.read('wide-load') !== '') document.getElementById('sidebar-toggle-wideload').classList.add('active');
+                    if (cookies.read('night-vision') !== '') document.getElementById('sidebar-toggle-nightvision').classList.add('active');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('sidebar-toggle-stickyheader').classList.add('active');
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('sidebar-toggle-showspoilers').classList.add('active');
+
+                }
+
+                function updateMobilePrefs() {
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('mobile-toggle-showspoilers').classList.add('active');
+                    if (cookies.read('night-vision') !== '') document.getElementById('mobile-toggle-nightvision').classList.add('active');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('mobile-toggle-stickyheader').classList.add('active');
+                    if (cookies.read('highlight-links') !== '') document.getElementById('mobile-toggle-highlightlinks').classList.add('active');
+
+                }
+
+
+                if (document.cookie.indexOf("scroll0=") < 0) {
+                    // do nothing
+                } else {
+                    console.log('ads removed by scroll.com');
+                    var adsRemovedWith = 'scroll';
+                    var style = document.createElement('style');
+                    style.innerHTML = '#header-ad, .proper-ad-unit, .square_ad, .sb-ad-unit { display: none !important; } ';
+                    document.head.appendChild(style);
+                }
+            </script>
+<script type="text/javascript">
+
+                var tvtropes_config = {
+                    astri_stream_enabled : "",
+                    is_logged_in         : "",
+                    handle               : "",
+                    get_astri_stream     : "",
+										revnum               : "c58d8df02f09262390bbd03db7921fc35c6af306",
+										img_domain           : "https://static.tvtropes.org",
+										adblock              : "1",
+										adblock_url          : "propermessage.io",
+										pause_editing        : "0",
+										pause_editing_msg    : "",
+										pause_site_changes   : ""
+                };
+            </script>
+<script type="text/javascript">
+						  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+						  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+						  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+						  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+						  ga('create', 'UA-3821842-1', 'auto');
+						  ga('send', 'pageview');
+
+						</script>
+</head>
+<body class="">
+<i id="user-prefs"></i>
+<script>updateUserPrefs();</script>
+<div id="fb-root"></div>
+<div id="modal-box"></div>
+<header class="headroom-element" id="main-header-bar">
+<div id="main-header-bar-inner">
+<span class="header-spacer" id="header-spacer-left"></span>
+<a class="mobile-menu-toggle-button tablet-on" href="#mobile-menu" id="main-mobile-toggle"><span></span><span></span><span></span></a>
+<a class="no-dev" href="/" id="main-header-logoButton"></a>
+<span class="header-spacer" id="header-spacer-right"></span>
+<nav class="tablet-off" id="main-header-nav">
+<a href="/pmwiki/pmwiki.php/Main/Tropes">Tropes</a>
+<a href="/pmwiki/pmwiki.php/Main/Media">Media</a>
+<a class="nav-browse" href="/pmwiki/browse.php">Browse</a>
+<a href="/pmwiki/index_report.php">Indexes</a>
+<a href="/pmwiki/topics.php">Forums</a>
+<a class="nav-browse" href="/pmwiki/recent_videos.php">Videos</a>
+</nav>
+<div id="main-header-bar-right">
+<div class="font-xs mobile-off" id="signup-login-box">
+<a class="hover-underline bold" data-modal-target="signup" href="/pmwiki/login.php">Join</a>
+<a class="hover-underline bold" data-modal-target="login" href="/pmwiki/login.php">Login</a>
+</div>
+<div class="mobile-on inline" id="signup-login-mobileToggle">
+<a data-modal-target="login" href="/pmwiki/login.php"><i class="fa fa-user"></i></a>
+</div>
+<div id="search-box">
+<form action="/pmwiki/search_result.php" class="search">
+<input class="search-box" name="q" placeholder="Search" required="" type="text" value=""/>
+<input class="submit-button" type="submit" value=""/>
+<input name="search_type" type="hidden" value="article"/>
+<input name="page_type" type="hidden" value="all"/>
+<input name="cx" type="hidden" value="partner-pub-6610802604051523:amzitfn8e7v"/>
+<input name="cof" type="hidden" value="FORID:10"/>
+<input name="ie" type="hidden" value="ISO-8859-1"/>
+<input name="siteurl" type="hidden" value=""/>
+<input name="ref" type="hidden" value=""/>
+<input name="ss" type="hidden" value=""/>
+</form>
+<a class="mobile-on mobile-search-toggle close-x" href="#close-search"><i class="fa fa-close"></i></a>
+</div>
+<div id="random-box">
+<a class="button-random-trope" href="/pmwiki/pmwiki.php/Main/TruthSerums" onclick="ga('send', 'event', 'button', 'click', 'random trope');" rel="nofollow"></a>
+<a class="button-random-media" href="/pmwiki/pmwiki.php/VideoGame/Toonstruck" onclick="ga('send', 'event', 'button', 'click', 'random media');" rel="nofollow"></a>
+</div>
+</div>
+</div>
+<div class="tablet-on" id="mobile-menu"><div class="mobile-menu-options">
+<div class="nav-wrapper">
+<a class="xl" href="/pmwiki/pmwiki.php/Main/Tropes">Tropes</a>
+<a class="xl" href="/pmwiki/pmwiki.php/Main/Media">Media</a>
+<a class="xl" href="/pmwiki/browse.php">Browse</a>
+<a class="xl" href="/pmwiki/index_report.php">Indexes</a>
+<a class="xl" href="/pmwiki/topics.php">Forums</a>
+<a class="xl" href="/pmwiki/recent_videos.php">Videos</a>
+<a href="/pmwiki/query.php?type=att">Ask The Tropers</a>
+<a href="/pmwiki/query.php?type=tf">Trope Finder</a>
+<a href="/pmwiki/query.php?type=ykts">You Know That Show...</a>
+<a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a>
+<a data-click-toggle="active" href="#tools">Tools <i class="fa fa-chevron-down"></i></a>
+<div class="tools-dropdown mobile-dropdown-linkList">
+<a href="/pmwiki/cutlist.php">Cut List</a>
+<a href="/pmwiki/changes.php">New Edits</a>
+<a href="/pmwiki/recent_edit_reasons.php">Edit Reasons</a>
+<a href="/pmwiki/launches.php">Launches</a>
+<a href="/pmwiki/img_list.php">Images List</a>
+<a href="/pmwiki/crown_activity.php">Crowner Activity</a>
+<a href="/pmwiki/no_types.php">Un-typed Pages</a>
+<a href="/pmwiki/page_type_audit.php">Recent Page Type Changes</a>
+</div>
+<a data-click-toggle="active" href="#hq">Tropes HQ <i class="fa fa-chevron-down"></i></a>
+<div class="tools-dropdown mobile-dropdown-linkList">
+<a href="/pmwiki/about.php">About Us</a>
+<a href="/pmwiki/contact.php">Contact Us</a>
+<a href="mailto:advertising@proper.io">Advertise</a>
+<a href="/pmwiki/dmca.php">DMCA Notice</a>
+<a href="/pmwiki/privacypolicy.php">Privacy Policy</a>
+</div>
+<a href="/pmwiki/ad-free-subscribe.php">Go Ad-Free</a>
+<div class="toggle-switches">
+<ul class="mobile-menu display-toggles">
+<li>Show Spoilers <div class="display-toggle show-spoilers" id="mobile-toggle-showspoilers"></div></li>
+<li>Night Vision <div class="display-toggle night-vision" id="mobile-toggle-nightvision"></div></li>
+<li>Sticky Header <div class="display-toggle sticky-header" id="mobile-toggle-stickyheader"></div></li>
+<li>Highlight Links <div class="display-toggle highlight-links" id="mobile-toggle-highlightlinks"></div></li>
+</ul>
+<script>updateMobilePrefs();</script>
+</div>
+</div>
+</div>
+</div>
+</header>
+<div class="mobile-on" id="homepage-introBox-mobile">
+<a href="/"><img class="logo-small" src="/images/logo-white-big.png"/></a>
+<form action="/pmwiki/search_result.php" class="search" style="margin:10px -5px -6px -5px;">
+<input class="search-box" name="q" placeholder="Search" required="" type="text" value=""/>
+<input class="submit-button" type="submit" value=""/>
+<input name="search_type" type="hidden" value="article"/>
+<input name="page_type" type="hidden" value="all"/>
+<input name="cx" type="hidden" value="partner-pub-6610802604051523:amzitfn8e7v"/>
+<input name="cof" type="hidden" value="FORID:10"/>
+<input name="ie" type="hidden" value="ISO-8859-1"/>
+<input name="siteurl" type="hidden" value=""/>
+<input name="ref" type="hidden" value=""/>
+<input name="ss" type="hidden" value=""/>
+</form>
+</div>
+<div class="ad" id="header-ad-wrapper">
+<div id="header-ad">
+<div class="ad-size-970x90 atf_banner">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_1"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_1'); });</script> </div>
+</div> </div>
+</div>
+</div>
+<div id="main-container">
+<div class="action-bar mobile-off" id="action-bar-top">
+<div class="action-bar-right">
+<p>Follow TV Tropes</p>
+<a class="button-fb" href="https://www.facebook.com/TVTropes">
+<i class="fa fa-facebook"></i></a>
+<a class="button-tw" href="https://www.twitter.com/TVTropes">
+<i class="fa fa-twitter"></i></a>
+<a class="button-re" href="https://www.reddit.com/r/TVTropes">
+<i class="fa fa-reddit-alien"></i></a>
+</div>
+<nav class="actions-wrapper" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<ul class="page-actions" id="top_main_list">
+<li class="link-edit">
+<a class="article-edit-button" data-modal-target="login" href="/pmwiki/pmwiki.php/Main/DevelopersRoom?action=edit" rel="nofollow">
+<i class="fa fa-pencil"></i> Edit Page</a></li><li class="link-related"><a href="/pmwiki/relatedsearch.php?term=Main/DevelopersRoom">
+<i class="fa fa-share-alt"></i> Related</a></li><li class="link-history"><a href="/pmwiki/article_history.php?article=Main.DevelopersRoom">
+<i class="fa fa-history"></i> History</a></li><li class="link-discussion"><a href="/pmwiki/remarks.php?trope=Main.DevelopersRoom">
+<i class="fa fa-comment"></i> Discussion</a></li> </ul>
+<button class="nav__dropdown-toggle" id="top_more_button" onclick="toggle_more_menu('top');" type="button">More</button>
+<ul class="more_menu hidden_more_list" id="top_more_list">
+<li class="link-todo tuck-always more_list_item"><a data-modal-target="login" href="#todo"><i class="fa fa-check-circle"></i> To Do</a></li><li class="link-pageSource tuck-always more_list_item"><a data-modal-target="login" href="/pmwiki/pmwiki.php/Main/DevelopersRoom?action=source" rel="nofollow" target="_blank"><i class="fa fa-code"></i> Page Source</a></li> </ul>
+</nav>
+<div class="WikiWordModalStub"></div>
+<div class="ImgUploadModalStub" data-page-type="Article"></div>
+<div class="login-alert" style="display: none;">
+You need to <a href="/pmwiki/login.php" style="color:#21A0E8">login</a> to do this. <a href="/pmwiki/login.php?tab=register_account" style="color:#21A0E8">Get Known</a> if you don't have an account
+</div>
+</div>
+<div class="page-Article" id="main-content">
+<article class="with-sidebar" id="main-entry">
+<input id="groupname-hidden" type="hidden" value="Main"/>
+<input id="title-hidden" type="hidden" value="DevelopersRoom"/>
+<input id="article_id" type="hidden" value="9227"/>
+<input id="logged_in" type="hidden" value="false"/>
+<p class="hidden" id="current_url">http://tvtropes.org/pmwiki/pmwiki.php/Main/DevelopersRoom</p>
+<meta content="" itemprop="datePublished"/>
+<meta content="" itemprop="articleSection"/>
+<meta content="" itemprop="image"/>
+<a class="watch-button" data-modal-target="login" href="#watch">Follow<span>ing</span></a>
+<h1 class="entry-title" itemprop="headline">
+Developer's Room
+</h1>
+<script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+                "@type": "ListItem",
+                "position": 1,
+                "name": "tvtropes.org",
+                "item": "https://tvtropes.org"
+            },{
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Tropes",
+                "item": "https://tvtropes.org/pmwiki/pmwiki.php/Main/Tropes"
+            },{
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Developer's Room"            }]
+        }
+    </script>
+<a class="mobile-actionbar-toggle mobile-on" data-click-toggle="active" href="#mobile-actions-toggle" id="mobile-actionbar-toggle">
+<p class="tiny-off">Go To</p><span></span><span></span><span></span><i class="fa fa-pencil"></i></a>
+<nav class="mobile-actions-wrapper mobile-on" id="mobile-actions-bar"></nav>
+<div class="modal fade hidden-until-active" id="editLockModal">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button aria-label="Close" class="close" data-dismiss="modal" type="button"> <span aria-hidden="true">×</span></button>
+<h4 class="modal-title">Edit Locked</h4>
+</div>
+<div class="modal-body">
+<div class="row">
+<div class="body">
+<div class="danger troper_locked_message"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<nav class="body-options" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<ul class="subpage-links">
+<li>
+<a class="subpage-link curr-subpage" href="/pmwiki/pmwiki.php/Main/DevelopersRoom" title="The Main page">
+<span class="wrapper"><span class="spi main-page"></span>Main</span></a>
+</li>
+<li>
+<a class="subpage-link" href="/pmwiki/pmwiki.php/Laconic/DevelopersRoom" title="The Laconic page">
+<span class="wrapper"><span class="spi laconic-icon"></span>Laconic</span></a>
+</li>
+<li class="create-subpage dropdown">
+<a aria-expanded="false" class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);" role="button">
+<span class="wrapper">Create New <i class="fa fa-plus-circle"></i></span>
+</a>
+<select onchange="this.options[this.selectedIndex].value &amp;&amp; (window.location = this.options[this.selectedIndex].value);">
+<option value="">- Create New -</option>
+<option value="/pmwiki/pmwiki.php/Analysis/DevelopersRoom?action=edit">Analysis</option>
+<option value="/pmwiki/pmwiki.php/Characters/DevelopersRoom?action=edit">Characters</option>
+<option value="/pmwiki/pmwiki.php/FanficRecs/DevelopersRoom?action=edit">FanficRecs</option>
+<option value="/pmwiki/pmwiki.php/FanWorks/DevelopersRoom?action=edit">FanWorks</option>
+<option value="/pmwiki/pmwiki.php/Fridge/DevelopersRoom?action=edit">Fridge</option>
+<option value="/pmwiki/pmwiki.php/Haiku/DevelopersRoom?action=edit">Haiku</option>
+<option value="/pmwiki/pmwiki.php/Headscratchers/DevelopersRoom?action=edit">Headscratchers</option>
+<option value="/pmwiki/pmwiki.php/ImageLinks/DevelopersRoom?action=edit">ImageLinks</option>
+<option value="/pmwiki/pmwiki.php/PlayingWith/DevelopersRoom?action=edit">PlayingWith</option>
+<option value="/pmwiki/pmwiki.php/Quotes/DevelopersRoom?action=edit">Quotes</option>
+<option value="/pmwiki/pmwiki.php/Recap/DevelopersRoom?action=edit">Recap</option>
+<option value="/pmwiki/pmwiki.php/ReferencedBy/DevelopersRoom?action=edit">ReferencedBy</option>
+<option value="/pmwiki/pmwiki.php/Synopsis/DevelopersRoom?action=edit">Synopsis</option>
+<option value="/pmwiki/pmwiki.php/Timeline/DevelopersRoom?action=edit">Timeline</option>
+<option value="/pmwiki/pmwiki.php/Trivia/DevelopersRoom?action=edit">Trivia</option>
+<option value="/pmwiki/pmwiki.php/WMG/DevelopersRoom?action=edit">WMG</option>
+<option value="/pmwiki/pmwiki.php/YMMV/DevelopersRoom?action=edit">YMMV</option>
+</select>
+</li>
+</ul>
+</nav>
+<div class="article-content retro-folders" id="main-article">
+<p></p><div class="quoteright" style="width:240px;"><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/PokemonFireRedAndLeafGreen" title="/pmwiki/pmwiki.php/VideoGame/PokemonFireRedAndLeafGreen"><div class="lazy_load_img_box" style="padding-top:66.67%"><img alt="https://static.tvtropes.org/pmwiki/pub/images/Game_Freak_development_room.png" border="0" class="embeddedimage" height="160" src="https://static.tvtropes.org/pmwiki/pub/images/Game_Freak_development_room.png" width="240"/></div></a></div>
+<p></p><div class="indent"><em>"Congratulations! You found me! Here, have some points."</em>
+<div class="indent">— <strong>Christy Marx</strong>, <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/ConquestsOfTheLongbow" title="/pmwiki/pmwiki.php/VideoGame/ConquestsOfTheLongbow">Conquests of the Longbow</a></em>
+</div></div><div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_1"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_1'); })</script></div></div><p>The Developer's Room is an area in a video game filled with <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AuthorAvatar" title="/pmwiki/pmwiki.php/Main/AuthorAvatar">Author Avatars</a> and in-jokes. It has no bearing on the story, it's just an <a class="twikilink" href="/pmwiki/pmwiki.php/Main/EasterEgg" title="/pmwiki/pmwiki.php/Main/EasterEgg">Easter Egg</a> — but that doesn't make it any less <a class="twikilink" href="/pmwiki/pmwiki.php/Main/RuleOfFun" title="/pmwiki/pmwiki.php/Main/RuleOfFun">fun</a>, as it may also contain some additional rewards and goodies for the player alongside all the "thank you for playing our game" messages. Unlike a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DebugRoom" title="/pmwiki/pmwiki.php/Main/DebugRoom">Debug Room</a>, which almost always requires a code (sometimes a built-in one, sometimes not), a Developer's Room can often be reached on a normal playthrough.
+</p><hr/><div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_2"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_2'); })</script></div></div><h2>Examples:</h2>
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Antichamber" title="/pmwiki/pmwiki.php/VideoGame/Antichamber">Antichamber</a></em> has several, all of them hidden behind some of the game's most challenging puzzles.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/BoxxyQuestTheGatheringStorm" title="/pmwiki/pmwiki.php/VideoGame/BoxxyQuestTheGatheringStorm">BoxxyQuest: The Gathering Storm</a></em>, finishing the main story unlocks Intersite Town, an entire developers <em>town</em> with plenty to see, including a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SoundTest" title="/pmwiki/pmwiki.php/Main/SoundTest">Sound Test</a>, a Rarity Showcase that explains all of the games hidden items, a house where you can rewatch the credits, and a huge museum filled with tons of behind-the-scenes trivia. If you have a swimsuit, then you can also trigger a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BeachEpisode" title="/pmwiki/pmwiki.php/Main/BeachEpisode">Beach Episode</a> while youre here.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/ChronoTrigger" title="/pmwiki/pmwiki.php/VideoGame/ChronoTrigger">Chrono Trigger</a></em>: The "best" ending, achieved by beating the game as soon as possible, is one of these, with enough developer-avatars to fill a dozen rooms.
+<ul><li> Ditto for the sequel, <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/ChronoCross" title="/pmwiki/pmwiki.php/VideoGame/ChronoCross">Chrono Cross</a></em>.
+</li><li> You can also access this in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/ChronoTrigger" title="/pmwiki/pmwiki.php/VideoGame/ChronoTrigger">Chrono Trigger</a></em> if you manage to prevail in the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/HopelessBossFight" title="/pmwiki/pmwiki.php/Main/HopelessBossFight">Hopeless Boss Fight</a> - as said boss has dramatically boosted stats compared to any other time you fight it, it's actually easier to beat it by the above method (which can involve fighting the final boss alone).
+</li></ul></li><div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_3"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_3'); })</script></div></div><li> During the credits of <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Driver" title="/pmwiki/pmwiki.php/VideoGame/Driver">Driver</a></em>, Tanner drives through Newcastle-upon-Tyne, the hometown of Reflections. This was originally meant to be a playable area, but got <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DummiedOut" title="/pmwiki/pmwiki.php/Main/DummiedOut">Dummied Out</a>, although there is a mod for the PC version that allows access to it.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FinalFantasyIV" title="/pmwiki/pmwiki.php/VideoGame/FinalFantasyIV">Final Fantasy IV</a></em>: It's hidden in the Dwarves' castle. It was removed from the English-language SNES release (probably due to the maps being removed to make room for the expanded training room and because the secret <a class="twikilink" href="/pmwiki/pmwiki.php/Main/JokeItem" title="/pmwiki/pmwiki.php/Main/JokeItem">Porno Mag item</a> would not get past Nintendo's strict censors at the time.), then restored in later versions and in the Namingway Edition hack of the US SNES version. Note that the characters found in the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/VideoGameRemake" title="/pmwiki/pmwiki.php/Main/VideoGameRemake">DS version</a> are different, to reflect the development team for that version specifically.
+<ul><li> The location is also accessible in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FinalFantasyIVTheAfterYears" title="/pmwiki/pmwiki.php/VideoGame/FinalFantasyIVTheAfterYears">After Years</a></em> as well, but the place is empty and there's a note on the door that says "Old Developer's Room, new location will be posted later". A later chapter changes the sign to read "Please do not look for us". The new location is on the moon, found by using a warp to go to "???" after a major story event and then using a secret passage.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FinalFantasyXIV" title="/pmwiki/pmwiki.php/VideoGame/FinalFantasyXIV">Final Fantasy XIV</a></em> also had one for the 2015 Rising Event, which was the second anniversary of <em>A Realm Reborn's</em> launch. In the event, the Wandering Minstrel (who was an <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AuthorAvatar" title="/pmwiki/pmwiki.php/Main/AuthorAvatar">Author Avatar</a> that has been in the game for a while) is investigating an issue that turns out to be <a class="twikilink" href="/pmwiki/pmwiki.php/Main/LampshadeHanging" title="/pmwiki/pmwiki.php/Main/LampshadeHanging">Lampshade Hanging</a> on bots and debugs. After completing it, he brings you to the developer's room, which turns out to be filled with wacky <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AuthorAvatar" title="/pmwiki/pmwiki.php/Main/AuthorAvatar">AuthorAvatars</a> for several of the developers. Interestingly, due to this game in the series being an MMORPG and events only being temporary, the Developer's Room was temporary as well, and it remains to be seen if we'll ever get to go there again.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Gauntlet" title="/pmwiki/pmwiki.php/VideoGame/Gauntlet">Gauntlet</a>: Dark Legacy</em> had a secret stage taking place in the offices of <a class="twikilink" href="/pmwiki/pmwiki.php/Creator/MidwayGames" title="/pmwiki/pmwiki.php/Creator/MidwayGames">Midway</a>, and had a lot of in-jokes although the developers themselves never appeared (although a few of their faces did).
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MachinaOfThePlanetTreePlanetRuler" title="/pmwiki/pmwiki.php/VideoGame/MachinaOfThePlanetTreePlanetRuler">Machina of the Planet Tree -Planet Ruler-</a></em>: After beating the game, the player will be allowed to save, which loads into the sound test room. Talking to the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AuthorAvatar" title="/pmwiki/pmwiki.php/Main/AuthorAvatar">Author Avatar</a> several times reveals plans for an update to the game and a sequel.
+</li><li> Every mainline <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/Pokemon" title="/pmwiki/pmwiki.php/Franchise/Pokemon">Pokémon</a></em> has either a branch office where the player can meet the game's staff or a hotel room where you can talk to a designer who's on vacation. Going to this location after completing the Pokédex will get you a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/OneHundredPercentCompletion" title="/pmwiki/pmwiki.php/Main/OneHundredPercentCompletion">100% Completion</a> certificate from them. From <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/PokemonBlackAndWhite" title="/pmwiki/pmwiki.php/VideoGame/PokemonBlackAndWhite">Pokémon Black and White</a></em> onwards, you're able to battle Shigeki Morimoto once a day, with Morimoto being a designer and programmer who has been involved in the series from the beginning. He's best known for personally designing <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SecretCharacter" title="/pmwiki/pmwiki.php/Main/SecretCharacter">Mew</a> and adding it to the game at the last minute, a move credited for making <em>Pokémon</em> a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/CashCowFranchise" title="/pmwiki/pmwiki.php/Main/CashCowFranchise">Cash Cow Franchise</a>.
+<ul><li> This is also how you unlock the GB Sounds key item in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/PokemonGoldAndSilver" title="/pmwiki/pmwiki.php/VideoGame/PokemonGoldAndSilver">HeartGold and SoulSilver</a></em>.
+</li><li> You can also battle another developer, Koji Nishino, in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/PokemonBlack2AndWhite2" title="/pmwiki/pmwiki.php/VideoGame/PokemonBlack2AndWhite2">Black 2 and White 2</a></em>. His team includes a Snorlax, based on an in-joke concerning Nishino's tendency to eat moldy food from the company fridge.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/PokemonSunAndMoon" title="/pmwiki/pmwiki.php/VideoGame/PokemonSunAndMoon">Sun and Moon</a></em>, winning against Morimoto the first time grants you an item that speeds up egg hatching. Showing him certain Pokémon that originated from the Virtual Console releases of <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/PokemonRedAndBlue" title="/pmwiki/pmwiki.php/VideoGame/PokemonRedAndBlue">Red and Blue</a></em> to him will have him reveal some tidbits about <em>Red and Blue</em>'s development <span class="notelabel" onclick="togglenote('note0jne3');"><sup>note </sup></span><span class="inlinefolder" id="note0jne3" isnote="true" onclick="togglenote('note0jne3');" style="cursor:pointer;font-size:smaller;display:none;">specifically, Mankey, Tauros, Exeggutor, Diglett and Mew.</span>. <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/PokemonUltraSunAndUltraMoon" title="/pmwiki/pmwiki.php/VideoGame/PokemonUltraSunAndUltraMoon">Ultra Sun and Ultra Moon</a></em> throws in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/PokemonGoldAndSilver" title="/pmwiki/pmwiki.php/VideoGame/PokemonGoldAndSilver">Gold and Silver</a></em> development facts and a set of Apricorn Balls if you show off creatures from the VC releases of those games, in addition to a double battle against Kazumasa Iwao (the game's director, who happens to have a unique character model).
+</li></ul></li><li> The <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/RatchetAndClank" title="/pmwiki/pmwiki.php/Franchise/RatchetAndClank">Ratchet &amp; Clank</a></em> series has the Insomniac Museum, which can be accessed in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/RatchetAndClankGoingCommando" title="/pmwiki/pmwiki.php/VideoGame/RatchetAndClankGoingCommando">Going Commando</a></em> (by getting all Skill Points and Weapon Mods, by using a hidden teleporter on Boldan between 3 AM and 4 AM [It's developed by <em>Insomniac</em> Games after all], or by jumping off the grind rail at a certain point, going over to the building containing the teleporter, finding a non-solid wall to go under the building and jumping through the floor), <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/RatchetAndClankUpYourArsenal" title="/pmwiki/pmwiki.php/VideoGame/RatchetAndClankUpYourArsenal">Up Your Arsenal</a></em> (by getting all 15 trophies or using a hidden teleporter on Kerwan between 3 AM and 4 AM again) and <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/RatchetAndClankFutureACrackInTime" title="/pmwiki/pmwiki.php/VideoGame/RatchetAndClankFutureACrackInTime">A Crack in Time</a></em> (by rescuing all Zoni, beating the game, and defeating <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BonusBoss" title="/pmwiki/pmwiki.php/Main/BonusBoss">Bonus Boss</a> <span class="spoiler" title="you can set spoilers visible by default on your profile">Lord Vorselon for the third time</span>). As its name implies, it also doubles as a behind-the-scenes gallery of things scrapped during development of the games.
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/RatchetAndClank2016" title="/pmwiki/pmwiki.php/VideoGame/RatchetAndClank2016">Ratchet &amp; Clank (2016)</a></em> also contains the Insomniac Museum, but it's different from the aforementioned three. Instead of containing things that didn't make it into the game, it just contains things from every game from the first through that game (although none of it can be taken, only looked at) and the movie scenes that appeared in the game, plus two of the Japanese commercials for <em>Going Commando</em>.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/RatchetAndClankSizeMatters" title="/pmwiki/pmwiki.php/VideoGame/RatchetAndClankSizeMatters">Ratchet &amp; Clank: Size Matters</a></em> and <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SecretAgentClank" title="/pmwiki/pmwiki.php/VideoGame/SecretAgentClank">Secret Agent Clank</a></em> also have the High Impact Games treehouse, which also contains the gallery.
+</li><li> <em>Rush 2: Extreme Racing USA</em> has a entire course set in Midway's offices.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SagaFrontier" title="/pmwiki/pmwiki.php/VideoGame/SagaFrontier">SaGa Frontier</a></em>: Can only be accessed after completing all the characters' stories. You can re-battle bosses from other stories with the character you most recently cleared with, and there are some stronger versions of bosses to be fought there as well.
+<ul><li> The English patch for <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/RomancingSaga3" title="/pmwiki/pmwiki.php/VideoGame/RomancingSaga3">Romancing Saga 3</a></em> by Mana_Sword also added one into the game, accessible via an overelaborate sidequest bordering on <a class="twikilink" href="/pmwiki/pmwiki.php/Main/UrbanLegendOfZelda" title="/pmwiki/pmwiki.php/Main/UrbanLegendOfZelda">Urban Legend of Zelda</a> in execution (kill a specific major boss with a specific party member present, kick him out of the party, listen to the song he sings afterwards, take the new item that has somehow appeared in your storage, go bug a random NPC until he takes it and tells you to go pray for a miracle, get another specific party member in your party, get to the end of a semi-obscure dungeon that now has a new option in the dialogue box that pops up at the end). It uses Shinon, a town normally inaccessible beyond the introductory cutscene as its base and unlike most other examples given here, it does give you several pieces of <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GameBreaker" title="/pmwiki/pmwiki.php/Main/GameBreaker">Game-Breaker</a> equipment, including a powered-up form of a weapon that's only normally usable in battle temporarily, a powerful spear that's normally only gotten as a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/RandomlyDrops" title="/pmwiki/pmwiki.php/Main/RandomlyDrops">random drop from a powerful boss</a> and a stupidly powerful piece of armor that normally comes pre-equipped on a certain character, can't be removed once equipped (not that you'd want to) and you only normally get vastly inferior fake versions of it during normal gameplay.
+</li><li> Another SNES fan translation that followed the <em>Romancing Saga 3</em> example is <em><a class="createlink" href="/pmwiki/pmwiki.php/Main/CyberKnight" title="/pmwiki/pmwiki.php/Main/CyberKnight">Cyber Knight</a></em>.
+</li></ul></li><li> The original <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/StarOcean1" title="/pmwiki/pmwiki.php/VideoGame/StarOcean1">Star Ocean</a></em> on SNES also has one, which is accessible by using the otherwise useless Oracle skill after beating the game: strangely enough, doing so is also the only way to leave the final dungeon and visit the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BonusDungeon" title="/pmwiki/pmwiki.php/Main/BonusDungeon">Bonus Dungeon</a> located elsewhere, which doesn't become accessible until you beat the game.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/CityOfHeroes" title="/pmwiki/pmwiki.php/VideoGame/CityOfHeroes">City of Heroes</a></em> had one... well, two, both more specific to the artists than the devs in general. The original was in City Of Villains, in the highest level zone, with a "No Players Allowed" sign in front. This place got trashed, and the new Developer's Room was in one of the newer City Of Heroes zones. It wasn't closed off as such, just pretty well-hidden. The first lasted for some time before a player found it, and the second was discovered in days (or maybe hours) after the zone was introduced.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/StarControl" title="/pmwiki/pmwiki.php/VideoGame/StarControl">Star Control</a> 2</em> was <em>going</em> to have one of these as the Secret of the Rainbow Worlds, but they ended up not doing it since they couldn't come up with enough gags for it.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Adventure" title="/pmwiki/pmwiki.php/VideoGame/Adventure">Adventure</a></em> had the famous <a class="twikilink" href="/pmwiki/pmwiki.php/Main/EasterEgg" title="/pmwiki/pmwiki.php/Main/EasterEgg">Easter Egg</a> room where the developer signed his name with the walls. (When it was made, Atari had a policy of not including programmer credits).
+</li><li> Even early works with no NPCs to speak of, such as <a class="twikilink" href="/pmwiki/pmwiki.php/Creator/AdventureInternational" title="/pmwiki/pmwiki.php/Creator/AdventureInternational">Scott Adams</a>'s <em>Adventureland</em>, include rooms like "I'm in the memory RAM of an IBM PC. I took a wrong turn!"
+</li><li> In one of the <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/LeisureSuitLarry" title="/pmwiki/pmwiki.php/VideoGame/LeisureSuitLarry">Leisure Suit Larry</a></em> games, the people in the Disco are named after the devs.
+<ul><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/LeisureSuitLarry3PassionatePattiInPursuitOfThePulsatingPectorals" title="/pmwiki/pmwiki.php/VideoGame/LeisureSuitLarry3PassionatePattiInPursuitOfThePulsatingPectorals">Leisure Suit Larry 3: Passionate Patti in Pursuit of the Pulsating Pectorals</a></em>, the player can find developers Al Lowe and Ken Williams in several places: When first approaching the two at a club, the player can say a short phrase to the two, after which Al and Ken discuss the idea of putting themselves in the game and having Larry say something to them, only to conclude that <a class="twikilink" href="/pmwiki/pmwiki.php/Main/LampshadeHanging" title="/pmwiki/pmwiki.php/Main/LampshadeHanging">it's way too implausible</a> and teleport away.
+</li></ul></li><li> As listed in the opening quote, <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/ConquestsOfTheLongbow" title="/pmwiki/pmwiki.php/VideoGame/ConquestsOfTheLongbow">Conquests of the Longbow</a>.</em> The developers vacillate over how many points to give you, finally deciding on <span class="spoiler" title="you can set spoilers visible by default on your profile"> zero</span>.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Fallout2" title="/pmwiki/pmwiki.php/VideoGame/Fallout2">Fallout 2</a></em> has one as a random encounter on the world map.
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Fallout3" title="/pmwiki/pmwiki.php/VideoGame/Fallout3">Fallout 3</a></em> has an area called the Bethesda Ruins, which actually is an upscale suburb (Bethesda, Maryland) in the Washington, DC metro area. And yes, that's where Bethesda Softworks was founded in real life (they since relocated north to Rockville, Maryland, which although is also in the DC area, is completely absent from the game).
+<ul><li> The designers prided themselves on how geographically accurate the map of DC is. After all, they do live there.
+</li></ul></li><li> If you hold shift while clicking on the credits option on the main menu, both <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Fallout1" title="/pmwiki/pmwiki.php/VideoGame/Fallout1">Fallout</a></em> and <em>Fallout 2</em> will instead show you a series of quotes and messages from the developers and playtesters.
+</li><li> The <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GameMod" title="/pmwiki/pmwiki.php/Main/GameMod">Fallout 2 Restoration Mod</a> features a special encounter on the world map that can only be seen after beating the game, featuring everyone who worked on the mod as <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/StarWars" title="/pmwiki/pmwiki.php/Franchise/StarWars">Star Wars</a></em> characters.
+</li></ul></li><li> In <em>Vampyr</em>, the gods of the world that the player meets in Heaven after dying are the programmers of the game. They judge the player based on his actions, and presumably allow him to be reincarnated. It's also possible to fight them, but they're bloody tough. Killing one particular eunuch jester in Heaven gains the player a whole load of experience points and the favour of the gods.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/PrinceOfPersiaTheSandsOfTime" title="/pmwiki/pmwiki.php/VideoGame/PrinceOfPersiaTheSandsOfTime">Prince of Persia: The Sands of Time</a></em> had a developer's room in the remake of <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/PrinceOfPersia1" title="/pmwiki/pmwiki.php/VideoGame/PrinceOfPersia1">Prince Of Persia 1</a></em>, in place of the exit to the first level. The room was full of discarded snack boxes and had a giant mural of the game's staff on the far wall.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SeriousSam" title="/pmwiki/pmwiki.php/VideoGame/SeriousSam">Serious Sam</a></em> includes a room in the first level which is filled with giant-headed versions of all the Croteam developers.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheTalosPrinciple" title="/pmwiki/pmwiki.php/VideoGame/TheTalosPrinciple">The Talos Principle</a></em>, also by Croteam, there's a secret area that can be accessed from the first lobby by <span class="spoiler" title="you can set spoilers visible by default on your profile">walking through a non-solid wall</span>, which contains robots like the one you're playing as, except they have monitor heads with the developer faces on them.
+</li><li> Not an actual room that can be explored, but in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Earthbound" title="/pmwiki/pmwiki.php/VideoGame/Earthbound">Earthbound</a></em> checking a sign in Fourside reveals the message "Planning Meeting for <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Mother3" title="/pmwiki/pmwiki.php/VideoGame/Mother3">Earthbound 2</a></em>."
+<ul><li> <em>Mother 3</em> itself has what is more of a Developer's Hotel Room. This can't be explored either, but you can listen to the dialogue of the people inside.
+</li></ul></li><li> The first <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DarkForcesSaga" title="/pmwiki/pmwiki.php/VideoGame/DarkForcesSaga">Dark Forces</a></em> game features a hidden room in the fourth level. It's unusual as a trope example because you explicitly need a code to get there (the one that toggles height check, so you can fall any distance without dying and climb any cliff just by bumping into it). You get to shoot an ewok.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Blood" title="/pmwiki/pmwiki.php/VideoGame/Blood">Blood</a></em> has the Monolith office as a Blood Bath level, most noticeable for featuring the cut Beast monster which Caleb would have originally been able to transform into.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Terranigma" title="/pmwiki/pmwiki.php/VideoGame/Terranigma">Terranigma</a></em>, a minor sidequest in Neotokio unlocks the Quintet offices.
+</li><li> After the credits roll in <em>Mission: Impossible</em> for the N64, the character is returned to the embassy level from the beginning of the game, except this time, the party goers are replaced by the game's developers.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MightAndMagic" title="/pmwiki/pmwiki.php/VideoGame/MightAndMagic">Might and Magic</a> 6, 7</em> and <em>8</em> each featured a dungeon called NWC full of civilians with the names of <a class="twikilink" href="/pmwiki/pmwiki.php/Creator/NewWorldComputing" title="/pmwiki/pmwiki.php/Creator/NewWorldComputing">New World Computing</a> (the games' developer) employees. <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MightAndMagic" title="/pmwiki/pmwiki.php/VideoGame/MightAndMagic">Might and Magic</a> 6</em> even has Jon Van Caneghem (CEO of NWC) and Trip Hawkins (CEO of 3DO, who owned NWC at the time) represented as hostile goblins that attacked your party.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FreeSpace" title="/pmwiki/pmwiki.php/VideoGame/FreeSpace">FreeSpace</a> 2</em>, a cheat code will cause a pirate ship to warp in (that's right, a pirate ship. In a space combat game) with the developers' faces on the pirates.
+<ul><li> And it is the single toughest ship in the game, with <em>ten billion</em> hitpoints... several orders of magnitude more than a Sathanas juggernaut!
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DungeonSiege" title="/pmwiki/pmwiki.php/VideoGame/DungeonSiege">Dungeon Siege</a> II</em> has a secret dungeon that has high level groundhogs and copies of your party members that you must defeat in order to reach the developers room.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DivineDivinity" title="/pmwiki/pmwiki.php/VideoGame/DivineDivinity">Divine Divinity</a></em> has a secret area which developers are in, and needs to be rescued. One of them will grant you game's secret armor after you destroy all the bugs (as in, game bugs).
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/ZombiesAteMyNeighbors" title="/pmwiki/pmwiki.php/VideoGame/ZombiesAteMyNeighbors">Zombies Ate My Neighbors</a></em> finishes on one of these. After defeating Dr Tongue, you go to a bonus level, "The Monsters Among Us," set in the <a class="twikilink" href="/pmwiki/pmwiki.php/Creator/LucasArts" title="/pmwiki/pmwiki.php/Creator/LucasArts">LucasArts</a> office and featuring <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AuthorAvatar" title="/pmwiki/pmwiki.php/Main/AuthorAvatar">Author Avatars</a>.
+</li><li> The granddaddy of all adventure games, <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/ColossalCave" title="/pmwiki/pmwiki.php/VideoGame/ColossalCave">Colossal Cave</a></em>, features something like this. When you have solved all the puzzles, you are transported to a backstage area full of game props and snoozing dwarves, and have to make your way to the exit.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MaxPayne" title="/pmwiki/pmwiki.php/VideoGame/MaxPayne">Max Payne</a></em> has two: One hidden room where you get a radio message from the developers, and one where a TV plays a short <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/StarTrek" title="/pmwiki/pmwiki.php/Franchise/StarTrek">Star Trek</a></em> parody with the characters voiced by the developers.
+<ul><li> The second game had <a class="twikilink" href="/pmwiki/pmwiki.php/Main/InMemoriam" title="/pmwiki/pmwiki.php/Main/InMemoriam">a memorial for a developer who died during production</a>.
+</li></ul></li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DeusExInvisibleWar" title="/pmwiki/pmwiki.php/VideoGame/DeusExInvisibleWar">Deus Ex: Invisible War</a></em>, <span class="spoiler" title="you can set spoilers visible by default on your profile">when you get to the snowed-over UNATCO base</span>, if you flush the toilet in <span class="spoiler" title="you can set spoilers visible by default on your profile">Manderley's office</span>, then you'll access a secret dance party, complete with floating data cubes containing quotes from the development of the game and characters from all over the game saying odd things. Make sure you save your game before you enter, though! <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DeadEndRoom" title="/pmwiki/pmwiki.php/Main/DeadEndRoom">The only way out of the dance party is to reload your last save</a>.
+<ul><li> This was also a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ShoutOut" title="/pmwiki/pmwiki.php/Main/ShoutOut">Shout-Out</a> to the original game where <span class="spoiler" title="you can set spoilers visible by default on your profile"> fiddling with the flag in Manderley's office</span> early on in the game unlocked a special dance party ending cutscene.
+</li></ul></li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DrawnToLife" title="/pmwiki/pmwiki.php/VideoGame/DrawnToLife">Drawn to Life</a></em>, if you donate enough coins to a well, you will be taken to the "developer's grove".
+</li><li> <a class="twikilink" href="/pmwiki/pmwiki.php/Creator/AmbrosiaSoftware" title="/pmwiki/pmwiki.php/Creator/AmbrosiaSoftware">Ambrosia Software</a> rents office space in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/HarryTheHandsomeExecutive" title="/pmwiki/pmwiki.php/VideoGame/HarryTheHandsomeExecutive">Harry the Handsome Executive</a></em>'s setting, ScumCo Tower. The staff is out when you visit, but they each left you a memo.
+</li><li> Freeware game <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/StandstillGirl" title="/pmwiki/pmwiki.php/VideoGame/StandstillGirl">Standstill Girl</a></em> has one in the form of Alice's Backyard. You can unlock it with a password; it gives some details about the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TrueEnding" title="/pmwiki/pmwiki.php/Main/TrueEnding">True Ending</a> and about the game development.
+</li><li> In episode 2 of <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Biomenace" title="/pmwiki/pmwiki.php/VideoGame/Biomenace">Biomenace</a></em>, there's one level that seems to be nothing but a long chamber with a villain-gloat cutscene in the middle. But some tricky jumping can reveal a special key and land the player at a secret door (helpfully labelled "Secret Door") containing three developers, one of whom complains to another about leaving the door key where the hero could get it. The room has some handy powerups and various (unusable) items from other Apogee games. If you shoot the developers, one pulls out a rapid-fire version of the game's strongest player weapon and proceeds to mow you down unless you get out quick.
+</li><li> In <em><a class="createlink" href="/pmwiki/pmwiki.php/VideoGame/BeyondZork" title="/pmwiki/pmwiki.php/VideoGame/BeyondZork">Beyond Zork</a></em>, you can travel to the dimension of the Implementors (development team) and have lunch with them.
+<ul><li> In a variant, the earlier Infocom game <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Enchanter" title="/pmwiki/pmwiki.php/VideoGame/Enchanter">Enchanter</a></em> allowed you to summon the Implementors.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/WorldOfWarcraft" title="/pmwiki/pmwiki.php/VideoGame/WorldOfWarcraft">World of Warcraft</a></em> has the "Developers Playground", where many objects and <a class="twikilink" href="/pmwiki/pmwiki.php/Main/NPC" title="/pmwiki/pmwiki.php/Main/NPC">NPCs</a> are strewn about randomly as they were being tested out. There are also many 90 degree cliffs, broken patches of terrain, and spots where the third person camera that usually follows the player stops moving as you run away. While it's inaccessible to players on live servers, earlier versions of the game had some tricks that allowed access to similar development areas. One area, the Caverns of Time, was accessible by normal players months before it was added in the next expansion pack, in a semi-unfinished state.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/KingsQuestIVThePerilsOfRosella" title="/pmwiki/pmwiki.php/VideoGame/KingsQuestIVThePerilsOfRosella">King's Quest IV: The Perils of Rosella</a>.</em> If you go to a certain room (in certain versions of the game) and enter the text command "Beam Me", you end up in a starship in orbit, staffed by sprite versions of the people at <a class="twikilink" href="/pmwiki/pmwiki.php/Creator/Sierra" title="/pmwiki/pmwiki.php/Creator/Sierra">Sierra</a> who made the game.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/LEGOIsland" title="/pmwiki/pmwiki.php/VideoGame/LEGOIsland">LEGO Island</a> 2: The Brickster's Revenge</em> (for the PC) had a room hidden in the cave on the side of a mountain that, with the proper typed code and 100% game completion, contained LEGO avatars of a good deal of the design and production team for the game.
+</li><li> Completing <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Utawarerumono" title="/pmwiki/pmwiki.php/VideoGame/Utawarerumono">Utawarerumono</a></em> nets you this as well as Battle Data, a sort of bonus achievements set. The devs try and kill you for some reason or another. You'll also find <em><a class="twikilink" href="/pmwiki/pmwiki.php/VisualNovel/ToHeart" title="/pmwiki/pmwiki.php/VisualNovel/ToHeart">To Heart</a></em> and <em><a class="twikilink" href="/pmwiki/pmwiki.php/Videogame/ComicParty" title="/pmwiki/pmwiki.php/Videogame/ComicParty">Comic Party</a></em> references.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/EscapeVelocity" title="/pmwiki/pmwiki.php/VideoGame/EscapeVelocity">Escape Velocity</a> Nova</em> includes a star system hidden in the middle of dead space after completing a major story-line, which holds ships designed to be avatars of dev team members who are also found randomly in the game.
+</li><li> Microsoft Excel of all programs had one: the surprisingly creepy <a class="urllink" href="https://www.youtube.com/watch?v=nwg9eLHZZRo">Hall of Tortured Souls<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a> in Excel 95.
+</li><li> The PC version of <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/ChipsChallenge" title="/pmwiki/pmwiki.php/VideoGame/ChipsChallenge">Chip's Challenge</a></em> contains a secret level called "Thanks to..." in which the developers' names are spelled in the tiles, and a "hint" block thanks the testing team.
+</li><li> The <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GameMod" title="/pmwiki/pmwiki.php/Main/GameMod">ROM hack</a> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/SuperMarioBros" title="/pmwiki/pmwiki.php/Franchise/SuperMarioBros">Super Mario World</a> 2+3: The Essence Star</em> has one in the final level where, during the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/PopQuiz" title="/pmwiki/pmwiki.php/Main/PopQuiz">Pop Quiz</a>, if you give the wrong answer to the final question, you will see a scene where the author has to deal with people demanding him to pay for the use of their graphics.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/LaMulana" title="/pmwiki/pmwiki.php/VideoGame/LaMulana">La-Mulana</a></em> has <em>three</em> developer rooms, one for each of the game's three developers. You need a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GuideDangIt" title="/pmwiki/pmwiki.php/Main/GuideDangIt">special ROM combination</a> to be able to listen to them.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheElderScrollsIIIMorrowind" title="/pmwiki/pmwiki.php/VideoGame/TheElderScrollsIIIMorrowind">The Elder Scrolls III: Morrowind</a></em> has a few which cross over with <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DebugRoom" title="/pmwiki/pmwiki.php/Main/DebugRoom">Debug Room</a>. In particular is the ToddTest cell, which contains NPCs with such dignified names as Todd's Super Tester Guy and Pretty Kitty. The area contains one of nearly every type of item in the game.
+</li><li> Shoot a broken wall after beating the last boss in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/QuakeII" title="/pmwiki/pmwiki.php/VideoGame/QuakeII">Quake II</a></em> and you'll find a room with gigantic pics of the developers. Activate them for extra fun, then drop down a hole to find a relaxing Tank surrounded by <a class="twikilink" href="/pmwiki/pmwiki.php/Main/FanDisservice" title="/pmwiki/pmwiki.php/Main/FanDisservice">rotting cyborg hotties.</a>
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Scribblenauts" title="/pmwiki/pmwiki.php/VideoGame/Scribblenauts">Scribblenauts</a></em>, one of the teleporter's six destinations is one of these.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Painkiller" title="/pmwiki/pmwiki.php/VideoGame/Painkiller">Painkiller</a>: Battle Out Of Hell</em> has a secret level featuring portraits of the developers scattered around a castle, and the goal is to collect all their souls and leave. This level is only accessible by beating <em>Battle Out Of Hell</em> on Trauma difficulty, which in itself is only accessible by collecting at least 9 out of the 10 possible Black Tarot cards and beating the game on Nightmare difficulty.
+</li><li> <em>ZOMG</em> has one of these, consisting of a tavern in the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/FirstTown" title="/pmwiki/pmwiki.php/Main/FirstTown">First Town</a>.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/EternalDaughter" title="/pmwiki/pmwiki.php/VideoGame/EternalDaughter">Eternal Daughter</a></em> has one. You can't actually enter the room; your character can only sit quietly in the secret passage on one side, watching the game's two developers as one works on the code and the other works on graphics of the main character herself.
+<div class="indent"> <em>"Hey, I just got a great idea for </em>Eternal Daughter 2<em>..."</em> <br/><em>"...shut up, shut up, shut up!"</em>
+</div></li><li> The old 1980s text game <em>Transylvania</em> had a hidden chamber full of the company's mascot penguins wearing sunglasses who would deliver an advertisement for one of the company's other games. The PC then wakes up outside the room again, feeling disoriented.
+</li><li> Logic gate-programming game <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/RobotOdyssey" title="/pmwiki/pmwiki.php/VideoGame/RobotOdyssey">Robot Odyssey</a>: Escape from Robotropolis</em> had one that was fairly easy to access that gave you a suitcase and a keyhole that didn't do anything.
+<ul><li> <span class="spoiler" title="you can set spoilers visible by default on your profile">The Java fan remake, <em>Droidquest</em>, used this room as part of the method for accessing the secret sixth level of puzzles.</span>
+</li></ul></li><li> Completing <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/BraveSoul" title="/pmwiki/pmwiki.php/VideoGame/BraveSoul">Brave Soul</a></em> at least once will unlock the Staff Room. This place has the best weapon shop in game, and the person you need to talk to for unlocking the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BonusDungeon" title="/pmwiki/pmwiki.php/Main/BonusDungeon">Bonus Dungeon</a>.
+</li><li> The final level in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Doom" title="/pmwiki/pmwiki.php/VideoGame/Doom">Doom II</a></em> contains a hidden room with <a class="twikilink" href="/pmwiki/pmwiki.php/Creator/JohnRomero" title="/pmwiki/pmwiki.php/Creator/JohnRomero">John Romero</a>'s head in it. (In fact, the Romero head is the actual final boss - the big demon you shoot at is just a wall texture.)
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/ChexQuest" title="/pmwiki/pmwiki.php/VideoGame/ChexQuest">Chex Quest</a></em> has a secret dimly-lit room with photos of the development team on all the walls.
+</li><li> Each of the <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Marathon" title="/pmwiki/pmwiki.php/VideoGame/Marathon">Marathon</a></em> games has a "developer's terminal" hidden in its final stage.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/HaloReach" title="/pmwiki/pmwiki.php/VideoGame/HaloReach">Halo: Reach</a></em>'s ninth level has the "Tribute Room", which contains various <a class="twikilink" href="/pmwiki/pmwiki.php/Creator/Bungie" title="/pmwiki/pmwiki.php/Creator/Bungie">Bungie</a>- and <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/Halo" title="/pmwiki/pmwiki.php/Franchise/Halo">Halo</a></em>-related easter eggs, including seven <em>Marathon</em>-style terminals thanking parts of the fan community. Interestingly, the room is actually revealed in a cutscene to be Dr. Halsey's lab; the aforementioned terminals are even written from her perspective.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DukeNukem" title="/pmwiki/pmwiki.php/VideoGame/DukeNukem">Duke Nukem 3D</a></em> has a developer's level, inaccessible in normal gameplay that contains the developers as dead astronaut wall textures. They can also be seen with Duke in the ending of the third episode.
+</li><li> Even <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/GarrysMod" title="/pmwiki/pmwiki.php/VideoGame/GarrysMod">Garry's Mod</a></em> uses this trope: there is a secret room in the default map (gm_construct) that can be accessed via noclip and contains a "thank you" message from the mapper.
+</li><li> Related: The Chris Houlihan room in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheLegendOfZeldaALinkToThePast" title="/pmwiki/pmwiki.php/VideoGame/TheLegendOfZeldaALinkToThePast">The Legend of Zelda: A Link to the Past</a></em>, which can only be reached if the game fails to load an area. Chris Houlihan was actually the winner of a Nintendo Power contest which meant his name would appear in a game. Apparently, this was how the developers decided to do it (the room exists in other regional versions of the game, but Chris Houlihan's name is only in the American version).
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/CustomRobo" title="/pmwiki/pmwiki.php/VideoGame/CustomRobo">Custom Robo</a></em> had one after beating the entire game in the apartment next door of the protagonist's room.
+</li><li> <em>Mercenary: The Second City</em> had a series of triangular doors in different locations in the game. These doors would normally require a triangular key but this did not appear in the game, and the manual stated "only the author has it". There was, in fact, an easter egg which would allow these doors to be opened, giving access to a developer's room: a massive hall with the endpoint of every triangle door in the game (allowing you to teleport quickly around the game, and to escape from prisons that would normally have no exit) and a bar of gold that could be sold for enough money to buy anything in the game.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Vette" title="/pmwiki/pmwiki.php/VideoGame/Vette">Vette</a></em> has the island suburb of Alameda, which is where Spectrum Holobyte was headquartered.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Misao" title="/pmwiki/pmwiki.php/VideoGame/Misao">Misao</a></em> has one that can be accessed by entering a special code after reaching the "Truth" ending. This allows the player to see some prototype artwork and learn details about the characters <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AllThereInTheManual" title="/pmwiki/pmwiki.php/Main/AllThereInTheManual">only revealed inside</a>.
+</li><li> The <em><a class="twikilink" href="/pmwiki/pmwiki.php/Videogame/NeverwinterNights" title="/pmwiki/pmwiki.php/Videogame/NeverwinterNights">Neverwinter Nights</a></em> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GameMod" title="/pmwiki/pmwiki.php/Main/GameMod">Game Mod</a> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Videogame/JulyAnarchy" title="/pmwiki/pmwiki.php/Videogame/JulyAnarchy">July Anarchy</a>: Prologue</em> is meant to be played with a precreated character included in the game files. Trying to play the mod without playing as him sticks the player in a cross-shaped room whose floor, walls, and ceiling are covered in lava like a cheap symbolic Hell. The room is occupied by special NPCs representing characters that were deleted from the current version of the mod, with a description explaining their in-development history and why they don't appear in the mod.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DragonAgeOrigins" title="/pmwiki/pmwiki.php/VideoGame/DragonAgeOrigins">Dragon Age: Origins</a></em> has the graveyard in Haven, which is filled with tombstones containing quips and jokes from the dev team, such as "Here Lies Multiplayer." The graveyard can only be accessed by leaving Haven after completing the Gauntlet, then returning later. Since there is no plot-related reason to go back to Haven once you've acquired the Sacred Ashes of Andraste, it's extremely easy to miss this particular <a class="twikilink" href="/pmwiki/pmwiki.php/Main/EasterEgg" title="/pmwiki/pmwiki.php/Main/EasterEgg">Easter Egg</a>.
+</li><li> The VGA remake of <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/QuestForGloryI" title="/pmwiki/pmwiki.php/VideoGame/QuestForGloryI">Quest for Glory I</a></em> turns Baron von Spielberg's throne room into this at the end of the game, with members of the dev team making cameos amongst the normal characters.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SaintsRowIV" title="/pmwiki/pmwiki.php/VideoGame/SaintsRowIV">Saints Row IV</a></em>, there is a hidden room in Let's Pretend that contains cut-outs of the development team's faces, as well as a secret weapon that is otherwise unobtainable: <a class="twikilink" href="/pmwiki/pmwiki.php/Main/InfinityPlusOneSword" title="/pmwiki/pmwiki.php/Main/InfinityPlusOneSword">the Loud Locust.</a>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/GoatSimulator" title="/pmwiki/pmwiki.php/VideoGame/GoatSimulator">Goat Simulator</a></em> features a house that turns out to be the workplace of Coffee Stain Studios, the game's creators, depicted as being hard at work on a <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FlappyBird" title="/pmwiki/pmwiki.php/VideoGame/FlappyBird">Flappy Bird</a></em> ripoff.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/ElseHeartBreak" title="/pmwiki/pmwiki.php/VideoGame/ElseHeartBreak">Else Heart Break</a></em> has at least three.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/NocturneRebirth" title="/pmwiki/pmwiki.php/VideoGame/NocturneRebirth">Nocturne: Rebirth</a></em> has a dev room that can be accessed if the player beats the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/FinalBoss" title="/pmwiki/pmwiki.php/Main/FinalBoss">Final Boss</a> with all party members at or below level 35. Unlike most examples, this one contains several <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BonusBoss" title="/pmwiki/pmwiki.php/Main/BonusBoss">Bonus Bosses</a> of varying difficulties, including a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/HopelessBossFight" title="/pmwiki/pmwiki.php/Main/HopelessBossFight">Hopeless Boss Fight</a>.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Undertale" title="/pmwiki/pmwiki.php/VideoGame/Undertale">Undertale</a></em> has a dev room behind a locked door that can only be opened by <span class="spoiler" title="you can set spoilers visible by default on your profile">avoiding all the Special Thanks in the True Ending credits. Inside, it is revealed that the Annoying Dog programmed the entire game by barking into a computer with speech-to-text software</span>.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheStanleyParable" title="/pmwiki/pmwiki.php/VideoGame/TheStanleyParable">The Stanley Parable</a></em>: One of the endings in the HD Remake leads to the player discovering a museum full of trivia about the development of the game.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TitanQuest" title="/pmwiki/pmwiki.php/VideoGame/TitanQuest">Titan Quest</a></em> features one such room per expansion pack. Each requires the player to find a hidden key to unlock the door to it, and within are enemies named after the developers, as well as a chest filled with exclusive, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/EasterEgg" title="/pmwiki/pmwiki.php/Main/EasterEgg">Easter Egg</a> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/LethalJokeItem" title="/pmwiki/pmwiki.php/Main/LethalJokeItem">Lethal Joke Equipment</a>.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/HollowKnight" title="/pmwiki/pmwiki.php/VideoGame/HollowKnight">Hollow Knight</a></em> has the Shrine of Believers, which contains tablets with messages from each of the Kickstarter backers, <span class="spoiler" title="you can set spoilers visible by default on your profile"> and is accessed by using the Dream Nail on the tall moth statue in the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/CaveBehindTheFalls" title="/pmwiki/pmwiki.php/Main/CaveBehindTheFalls">Cave Behind the Falls</a> in the Spirits' Glade</span>.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Celeste" title="/pmwiki/pmwiki.php/VideoGame/Celeste">Celeste</a></em>: In Chapter 6, there exists a hidden developer room that can be accessed by <span class="spoiler" title="you can set spoilers visible by default on your profile"> going in the opening above Granny, and then completing the room through the use of advanced techniques that are taught later in the game.</span>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheTiamatSacrament" title="/pmwiki/pmwiki.php/VideoGame/TheTiamatSacrament">The Tiamat Sacrament</a></em>: The reward for obtaining all the Soul Gems and beating the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TrueFinalBoss" title="/pmwiki/pmwiki.php/Main/TrueFinalBoss">True Final Boss</a> is access to the newly rebuilt throne room, where the NPCs will explain the development of the game, as well as hint towards a hidden tenth Rune Blade. Unusually for most examples of this trope, the room contains both dev NPCs and story NPCs, with the latter continuing to remark on plot relevant events as if they were in a normal gameplay session rather than a dev room.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Barony" title="/pmwiki/pmwiki.php/VideoGame/Barony">Barony</a></em>: <span class="spoiler" title="you can set spoilers visible by default on your profile">The Hall of Trials</span> has a gate at the far end that the player cannot open. Through an elaborate series of secrets found around the level, you can open the gates and get into the Master's Wing, where chests contain every item and spell in the game. A lever here will conjure a random monster to fight.
+</li></ul><hr/>
+</div>
+<div class="alt-titles section section-fact">
+<h3>
+<strong>Alternative Title(s):</strong>
+<span>Developer Room</span> </h3>
+</div>
+<div class="square_ad footer-article-ad main_2" data-isolated="0"></div>
+<div class="section-links" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<div class="titles">
+<div><h3 class="text-center text-uppercase">Previous</h3></div>
+<div><h3 class="text-center text-uppercase">Index</h3></div>
+<div><h3 class="text-center text-uppercase">Next</h3></div>
+</div>
+<div class="links">
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/DeadCharacterWalking">Dead Character Walking</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/PagesNeedingExampleSorting">Pages Needing Example Sorting</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/DifficultyByAcceleration">Difficulty by Acceleration</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/DemoBonus">Demo Bonus</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/VideoGameRewards">Video Game Rewards</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/DiscountCard">Discount Card</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/ModifiedClone">Modified Clone</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/ImageSource/Pokemon">ImageSource/Pokémon</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/GlitchEntity">Glitch Entity</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/VideoGame/ConquestsOfTheLongbow">Conquests of the Longbow</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/QuoteSource/VideoGames">QuoteSource/Video Games</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/VideoGame/Creatures">Creatures</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="outer_ads_by_salon_wrapper" id="exco_player_insert_div">
+</div>
+</article>
+<div id="main-content-sidebar"><div class="sidebar-item display-options">
+<ul class="sidebar display-toggles">
+<li>Show Spoilers <div class="display-toggle show-spoilers" id="sidebar-toggle-showspoilers"></div></li>
+<li>Night Vision <div class="display-toggle night-vision" id="sidebar-toggle-nightvision"></div></li>
+<li>Sticky Header <div class="display-toggle sticky-header" id="sidebar-toggle-stickyheader"></div></li>
+<li>Wide Load <div class="display-toggle wide-load" id="sidebar-toggle-wideload"></div></li>
+</ul>
+<script>updateDesktopPrefs();</script>
+</div>
+<div class="sidebar-item ad sb-ad-unit">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_2"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_2'); });</script> </div>
+</div></div>
+<div class="sidebar-item quick-links" itemtype="http://schema.org/SiteNavigationElement">
+<p class="sidebar-item-title" data-title="Important Links">Important Links</p>
+<div class="padded">
+<a href="/pmwiki/query.php?type=att">Ask The Tropers</a>
+<a href="/pmwiki/query.php?type=tf">Trope Finder</a>
+<a href="/pmwiki/query.php?type=ykts">You Know That Show...</a>
+<a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a>
+<a href="/pmwiki/review_activity.php">Reviews</a>
+<a data-modal-target="login" href="/pmwiki/lbs.php">Live Blogs</a>
+<a href="/pmwiki/ad-free-subscribe.php">Go Ad Free!</a> </div>
+</div>
+<div class="sidebar-item sb-ad-unit">
+<div class="sidebar-section">
+<div class="square_ad ad-size-300x600 ad-section text-center">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_3"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_3'); });</script> </div>
+</div> </div>
+</div>
+</div>
+<div class="sidebar-item">
+<p class="sidebar-item-title" data-title="Crucial Browsing">Crucial Browsing</p>
+<ul class="padded font-s" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><a data-click-toggle="active" href="javascript:void(0);">Genre</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/ActionAdventureTropes" title="Main/ActionAdventureTropes">Action Adventure</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ComedyTropes" title="Main/ComedyTropes">Comedy</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CommercialsTropes" title="Main/CommercialsTropes">Commercials</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CrimeAndPunishmentTropes" title="Main/CrimeAndPunishmentTropes">Crime &amp; Punishment</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DramaTropes" title="Main/DramaTropes">Drama</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/HorrorTropes" title="Main/HorrorTropes">Horror</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LoveTropes" title="Main/LoveTropes">Love</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NewsTropes" title="Main/NewsTropes">News</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ProfessionalWrestling" title="Main/ProfessionalWrestling">Professional Wrestling</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SpeculativeFictionTropes" title="Main/SpeculativeFictionTropes">Speculative Fiction</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SportsStoryTropes" title="Main/SportsStoryTropes">Sports Story</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/WarTropes" title="Main/WarTropes">War</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Media</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/Media" title="Main/Media">All Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/AnimationTropes" title="Main/AnimationTropes">Animation (Western)</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Anime" title="Main/Anime">Anime</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ComicBookTropes" title="Main/ComicBookTropes">Comic Book</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FanFic" title="FanFic/FanFics">Fan Fics</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Film" title="Main/Film">Film</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/GameTropes" title="Main/GameTropes">Game</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Literature" title="Main/Literature">Literature</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MusicAndSoundEffects" title="Main/MusicAndSoundEffects">Music And Sound Effects</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NewMediaTropes" title="Main/NewMediaTropes">New Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/PrintMediaTropes" title="Main/PrintMediaTropes">Print Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Radio" title="Main/Radio">Radio</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SequentialArt" title="Main/SequentialArt">Sequential Art</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TabletopGames" title="Main/TabletopGames">Tabletop Games</a></li>
+<li><a href="/pmwiki/pmwiki.php/UsefulNotes/Television" title="Main/Television">Television</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Theater" title="Main/Theater">Theater</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/VideogameTropes" title="Main/VideogameTropes">Videogame</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Webcomics" title="Main/Webcomics">Webcomics</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Narrative</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/UniversalTropes" title="Main/UniversalTropes">Universal</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/AppliedPhlebotinum" title="Main/AppliedPhlebotinum">Applied Phlebotinum</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CharacterizationTropes" title="Main/CharacterizationTropes">Characterization</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Characters" title="Main/Characters">Characters</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CharactersAsDevice" title="Main/CharactersAsDevice">Characters As Device</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Dialogue" title="Main/Dialogue">Dialogue</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Motifs" title="Main/Motifs">Motifs</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NarrativeDevices" title="Main/NarrativeDevices">Narrative Devices</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Paratext" title="Main/Paratext">Paratext</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Plots" title="Main/Plots">Plots</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Settings" title="Main/Settings">Settings</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Spectacle" title="Main/Spectacle">Spectacle</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Other Categories</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/BritishTellyTropes" title="Main/BritishTellyTropes">British Telly</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TheContributors" title="Main/TheContributors">The Contributors</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CreatorSpeak" title="Main/CreatorSpeak">Creator Speak</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Creators" title="Main/Creators">Creators</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DerivativeWorks" title="Main/DerivativeWorks">Derivative Works</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LanguageTropes" title="Main/LanguageTropes">Language</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LawsAndFormulas" title="Main/LawsAndFormulas">Laws And Formulas</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ShowBusiness" title="Main/ShowBusiness">Show Business</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SplitPersonalityTropes" title="Main/SplitPersonalityTropes">Split Personality</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/StockRoom" title="Main/StockRoom">Stock Room</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TropeTropes" title="Main/TropeTropes">Trope</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Tropes" title="Main/Tropes">Tropes</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TruthAndLies" title="Main/TruthAndLies">Truth And Lies</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TruthInTelevision" title="Main/TruthInTelevision">Truth In Television</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Topical Tropes</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/BetrayalTropes" title="Main/BetrayalTropes">Betrayal</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CensorshipTropes" title="Main/CensorshipTropes">Censorship</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CombatTropes" title="Main/CombatTropes">Combat</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DeathTropes" title="Main/DeathTropes">Death</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FamilyTropes" title="Main/FamilyTropes">Family</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FateAndProphecyTropes" title="Main/FateAndProphecyTropes">Fate And Prophecy</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FoodTropes" title="Main/FoodTropes">Food</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/HolidayTropes" title="Main/HolidayTropes">Holiday</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MemoryTropes" title="Main/MemoryTropes">Memory</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MoneyTropes" title="Main/MoneyTropes">Money</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MoralityTropes" title="Main/MoralityTropes">Morality</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/PoliticsTropes" title="Main/PoliticsTropes">Politics</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ReligionTropes" title="Main/ReligionTropes">Religion</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SchoolTropes" title="Main/SchoolTropes">School</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="sidebar-item showcase">
+<p class="sidebar-item-title" data-title="Community Showcase">Community Showcase <a class="bubble float-right hover-blue" href="/pmwiki/showcase.php">More</a></p>
+<p class="community-showcase">
+<a href="https://sharetv.com/shows/echo_chamber" onclick="trackOutboundLink('https://sharetv.com/shows/echo_chamber');" target="_blank">
+<img alt="" class="lazy-image" data-src="/images/communityShowcase-echochamber.jpg"/></a>
+<a href="/pmwiki/pmwiki.php/Webcomic/TwistedTropes">
+<img alt="" class="lazy-image" data-src="/img/howlandsc-side.jpg"/></a>
+</p>
+</div>
+<div class="sidebar-item sb-ad-unit" id="stick-cont">
+<div class="sidebar-section" id="stick-bar">
+<div class="square_ad ad-size-300x600 ad-section text-center">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_4"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_4'); });</script> </div>
+</div> </div>
+</div>
+</div>
+</div>
+</div>
+<div class="action-bar tablet-off" id="action-bar-bottom">
+<a class="scroll-to-top dead-button" href="#top-of-page" onclick="$('html, body').animate({scrollTop : 0},500);">Top</a>
+</div>
+</div>
+<div class="proper-ad-unit ad-sticky">
+<div id="proper-ad-tvtropes_sticky_ad"> <script>propertag.cmd.push(function() { proper_display('tvtropes_sticky_ad'); });</script> </div>
+</div>
+<footer id="main-footer">
+<div id="main-footer-inner">
+<div class="footer-left">
+<a class="img-link" href="/"><img alt="TV Tropes" class="lazy-image" data-src="/img/tvtropes-footer-logo.png" title="TV Tropes"/></a>
+<form action="index.html" class="navbar-form newsletter-signup validate modal-replies" data-ajax-get="/ajax/subscribe_email.php" id="cse-search-box-mobile" name="" role="">
+<button class="btn-submit newsletter-signup-submit-button" id="subscribe-btn" type="submit"><i class="fa fa-paper-plane"></i></button>
+<input class="form-control" id="subscription-email" name="q" placeholder="Subscribe" size="31" type="text" validate-type="email" value=""/>
+</form>
+<ul class="social-buttons">
+<li><a class="btn fb" href="https://www.facebook.com/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-facebook']);" target="_blank"><i class="fa fa-facebook"></i></a></li>
+<li><a class="btn tw" href="https://www.twitter.com/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-twitter']);" target="_blank"><i class="fa fa-twitter"></i></a> </li>
+<li><a class="btn rd" href="https://www.reddit.com/r/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-reddit']);" target="_blank"><i class="fa fa-reddit-alien"></i></a></li>
+</ul>
+</div>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">TVTropes</h4></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Administrivia">About TVTropes</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TheGoalsOfTVTropes">TVTropes Goals</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TheTropingCode">Troping Code</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TVTropesCustoms">TVTropes Customs</a></li>
+<li><a href="/pmwiki/pmwiki.php/JustForFun/TropesOfLegend">Tropes of Legend</a></li>
+<li><a href="/pmwiki/ad-free-subscribe.php">Go Ad-Free</a></li>
+</ul>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">Community</h4></li>
+<li><a href="/pmwiki/query.php?type=att">Ask The Tropers</a></li>
+<li><a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a></li>
+<li><a href="/pmwiki/query.php?type=tf">Trope Finder</a></li>
+<li><a href="/pmwiki/query.php?type=ykts">You Know That Show</a></li>
+<li><a data-modal-target="login" href="/pmwiki/lbs.php">Live Blogs</a></li>
+<li><a href="/pmwiki/review_activity.php">Reviews</a></li>
+<li><a href="/pmwiki/topics.php">Forum</a></li>
+</ul>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">Tropes HQ</h4></li>
+<li><a href="/pmwiki/about.php">About Us</a></li>
+<li><a href="/pmwiki/contact.php">Contact Us</a></li>
+<li><a href="/pmwiki/dmca.php">DMCA Notice</a></li>
+<li><a href="/pmwiki/privacypolicy.php">Privacy Policy</a></li>
+</ul>
+</div>
+<div class="text-center gutter-top gutter-bottom tablet-on" id="desktop-on-mobile-toggle">
+<a href="/pmwiki/switchDeviceCss.php?mobileVersion=1" rel="nofollow">Switch to <span class="txt-desktop">Desktop</span><span class="txt-mobile">Mobile</span> Version</a>
+</div>
+<div class="legal">
+<p>TVTropes is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License. <br/>Permissions beyond the scope of this license may be available from <a href="mailto:thestaff@tvtropes.org" rel="cc:morePermissions" xmlns:cc="http://creativecommons.org/ns#"> thestaff@tvtropes.org</a>.</p>
+<br/>
+<div class="privacy_wrapper">
+</div>
+</div>
+</footer>
+<style>
+      div.fc-ccpa-root {
+        position: absolute !important;
+        bottom: 93px !important;
+        margin: auto !important;
+        width: 100% !important;
+        z-index: 9999 !important;
+      }
+      .fc-ccpa-root .fc-dns-dialog .fc-dns-link p{
+        outline: none !important;
+        text-decoration: underline !important;
+        font-size: .7em !important;
+        font-family: sans-serif !important;
+      }
+      .fc-ccpa-root .fc-dns-dialog .fc-dns-link .fc-button-background {
+        background: none !important;
+      }
+    </style>
+<div class="full-screen" id="_pm_videoViewer">
+<a class="close" href="#close" id="_pm_videoViewer-close"></a>
+<div class="_pmvv-body">
+<div class="_pmvv-vidbox">
+<video class="video-js vjs-default-skin vjs-16-9" data-video-id="" id="overlay-video-player-box">
+</video>
+<div class="_pmvv-vidbox-desc">
+<h1 id="overlay-title"></h1>
+<p class="_pmvv-vidbox-descTxt" id="overlay-descrip">
+</p>
+<div class="rating-row" data-video-id="">
+<input name="is_logged_in" type="hidden" value="0"/>
+<p>How well does it match the trope?</p>
+<div id="star-rating-group">
+<div class="trope-rate">
+<input id="lamp5" name="rate" type="radio" value="5"/>
+<label for="lamp5" title="Absolutely"></label>
+<input id="lamp4" name="rate" type="radio" value="4"/>
+<label for="lamp4" title="Yes"></label>
+<input id="lamp3" name="rate" type="radio" value="3"/>
+<label for="lamp3" title="Kind of"></label>
+<input id="lamp2" name="rate" type="radio" value="2"/>
+<label for="lamp2" title="Not really"></label>
+<input id="lamp1" name="rate" type="radio" value="1"/>
+<label for="lamp1" title="No"></label>
+</div>
+<div id="star-rating-total">
+</div>
+</div>
+</div>
+<div class="example-media-row">
+<div class="example-overlay">
+<p>Example of:</p>
+<div id="overlay-trope"> / </div>
+</div>
+<div class="media-sources-overlay example-overlay">
+<p>Media sources:</p>
+<div id="overlay-media"> / </div>
+</div>
+</div>
+<p class="_pmvv-vidbox-stats text-right font-s" style="padding-top:8px; border-top: solid 1px rgba(255,255,255,0.2)">
+<a class="float-right" data-modal-target="login" href="#video-feedback">Report</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+        window.special_ops =  {
+            member : 'no',
+            isolated : 0,
+            tags : ['videogame']
+        };
+    </script>
+<script type="text/javascript">
+
+        var cleanCreativeEnabled = "";
+        var donation = "";
+        var live_ads = "1";
+        var img_domain = "https://static.tvtropes.org";
+        var snoozed = cookies.read('snoozedabm');
+        var snoozable = "";
+
+        if (adsRemovedWith) {
+            live_ads = 0;
+        }
+
+        var elem = document.createElement('script');
+        elem.async = true;
+
+        elem.src = '/design/assets/bundle.js?rev=c58d8df02f09262390bbd03db7921fc35c6af306';
+
+        elem.onload = function() {
+                                 }
+        document.getElementsByTagName('head')[0].appendChild(elem);
+
+    </script>
+<script type="text/javascript">
+      function send_analytics_event(user_type, donation){
+          // if(user_type == 'uncached' || user_type == 'cached'){
+          //   ga('send', 'event', 'caching', 'load', user_type, {'nonInteraction': 1});
+          //   return;
+          // }
+          var event_name = user_type;
+
+          if(donation == 'true'){
+              event_name += "_donation"
+          }else if(typeof(valid_user) == 'undefined'){
+              event_name += "_blocked"
+          }else if(valid_user == true){
+              event_name += "_unblocked";
+          }else{
+              event_name = "_unknown"
+          }
+          ga('send', 'event', 'ads', 'load', event_name, {'nonInteraction': 1});
+      }
+
+    
+    send_analytics_event("guest", "false");
+      </script>
+</body>
+</html>

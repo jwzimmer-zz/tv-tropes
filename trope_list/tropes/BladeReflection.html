@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Blade Reflection - TV Tropes</title>
+<meta content="The Blade Reflection trope as used in popular culture. If a character regularly uses a sword of some sort, then the show's opening credits or Stock Footage …" name="description"/>
+<link href="https://tvtropes.org/pmwiki/pmwiki.php/Main/BladeReflection" rel="canonical"/>
+<link href="/img/icons/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="@tvtropes" name="twitter:site"/>
+<meta content="@tvtropes" name="twitter:owner"/>
+<meta content="Blade Reflection - TV Tropes" name="twitter:title"/>
+<meta content="The Blade Reflection trope as used in popular culture. If a character regularly uses a sword of some sort, then the show's opening credits or Stock Footage …" name="twitter:description"/>
+<meta content="https://static.tvtropes.org/pmwiki/pub/images/sample-83da5bfbecdb2fd49c94d8ebeca1c333_2952.jpg" name="twitter:image:src"/>
+<meta content="TV Tropes" property="og:site_name"/>
+<meta content="en_US" property="og:locale"/>
+<meta content="https://www.facebook.com/tvtropes" property="article:publisher"/>
+<meta content="Blade Reflection - TV Tropes" property="og:title"/>
+<meta content="website" property="og:type"/>
+<meta content="https://tvtropes.org/pmwiki/pmwiki.php/Main/BladeReflection" property="og:url"/>
+<meta content="https://static.tvtropes.org/pmwiki/pub/images/sample-83da5bfbecdb2fd49c94d8ebeca1c333_2952.jpg" property="og:image"/>
+<meta content="If a character regularly uses a sword of some sort, then the show's opening credits or Stock Footage will almost always include a shot of that character's face reflected in the highly-polished steel of the blade. Another common usage is to have …" property="og:description"/>
+<link href="/img/icons/apple-icon-57x57.png" rel="apple-touch-icon" sizes="57x57" type="image/png"/>
+<link href="/img/icons/apple-icon-60x60.png" rel="apple-touch-icon" sizes="60x60" type="image/png"/>
+<link href="/img/icons/apple-icon-72x72.png" rel="apple-touch-icon" sizes="72x72" type="image/png"/>
+<link href="/img/icons/apple-icon-76x76.png" rel="apple-touch-icon" sizes="76x76" type="image/png"/>
+<link href="/img/icons/apple-icon-114x114.png" rel="apple-touch-icon" sizes="114x114" type="image/png"/>
+<link href="/img/icons/apple-icon-120x120.png" rel="apple-touch-icon" sizes="120x120" type="image/png"/>
+<link href="/img/icons/apple-icon-144x144.png" rel="apple-touch-icon" sizes="144x144" type="image/png"/>
+<link href="/img/icons/apple-icon-152x152.png" rel="apple-touch-icon" sizes="152x152" type="image/png"/>
+<link href="/img/icons/apple-icon-180x180.png" rel="apple-touch-icon" sizes="180x180" type="image/png"/>
+<link href="/img/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/img/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/img/icons/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png"/>
+<link href="/img/icons/favicon-192x192.png" rel="icon" sizes="192x192" type="image/png"/>
+<meta content="width=device-width, initial-scale=1" id="viewport" name="viewport"/>
+<script>
+                var propertag = {};
+                propertag.cmd = [];
+            </script>
+<link href="/design/assets/bundle.css?rev=c58d8df02f09262390bbd03db7921fc35c6af306" rel="stylesheet"/>
+<script>
+                function object(objectId) {
+                    if (document.getElementById && document.getElementById(objectId)) {
+                        return document.getElementById(objectId);
+                    } else if (document.all && document.all(objectId)) {
+                        return document.all(objectId);
+                    } else if (document.layers && document.layers[objectId]) {
+                        return document.layers[objectId];
+                    } else {
+                        return false;
+                    }
+                }
+
+                // JAVASCRIPT COOKIES CODE: for getting and setting user viewing preferences
+                var cookies = {
+                    create: function (name, value, days2expire, path) {
+                        var date = new Date();
+                        date.setTime(date.getTime() + (days2expire * 24 * 60 * 60 * 1000));
+                        var expires = date.toUTCString();
+                        document.cookie = name + '=' + value + ';' + 'expires=' + expires + ';' + 'path=' + path + ';';
+                    },
+										createWithExpire: function(name, value, expires, path) {
+												document.cookie = name + '=' + value + ';' + 'expires=' + expires + ';' + 'path=' + path + ';';
+										},
+                    read: function (name) {
+                        var cookie_value = "",
+                            current_cookie = "",
+                            name_expr = name + "=",
+                            all_cookies = document.cookie.split(';'),
+                            n = all_cookies.length;
+
+                        for (var i = 0; i < n; i++) {
+                            current_cookie = all_cookies[i].trim();
+                            if (current_cookie.indexOf(name_expr) === 0) {
+                                cookie_value = current_cookie.substring(name_expr.length, current_cookie.length);
+                                break;
+                            }
+                        }
+                        return cookie_value;
+                    },
+                    update: function (name, val) {
+                        this.create(name, val, 300, "/");
+                    },
+                    remove: function (name) {
+                        document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
+                    }
+                };
+
+                function updateUserPrefs() {
+                    //GENERAL: detect and set browser, if not cookied (will be treated like a user-preference and added to the #user-pref element)
+                    if( !cookies.read('user-browser') ){
+                        var broswer = '';
+
+                        if(navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPod/i) ){
+                            browser = 'iOS';
+                        } else if (/Opera[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'opera';
+                        } else if (/MSIE (\d+\.\d+);/.test(navigator.userAgent)) {
+                            browser = 'MSIE';
+                        } else if (/Navigator[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'netscape';
+                        } else if (/Chrome[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'chrome';
+                        } else if (/Safari[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'safari';
+                            /Version[\/\s](\d+\.\d+)/.test(navigator.userAgent);
+                            browserVersion = new Number(RegExp.$1);
+                        } else if (/Firefox[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'firefox';
+                        } else {
+                            browser = 'internet_explorer';
+                        }
+                        cookies.create('user-browser',browser,1,'/');
+                        document.getElementById('user-prefs').classList.add('browser-' + browser);
+                    } else {
+                        document.getElementById('user-prefs').classList.add('browser-' + cookies.read('user-browser'));
+                    }
+
+                    //update user preference settings
+                    if (cookies.read('wide-load') !== '') document.getElementById('user-prefs').classList.add('wide-load');
+                    if (cookies.read('night-vision') !== '') document.getElementById('user-prefs').classList.add('night-vision');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('user-prefs').classList.add('sticky-header');
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('user-prefs').classList.add('show-spoilers');
+                    if (cookies.read('folders-open') !== '') document.getElementById('user-prefs').classList.add('folders-open');
+                    if (cookies.read('lefthand-sidebar') !== '') document.getElementById('user-prefs').classList.add('lefthand-sidebar');
+                    if (cookies.read('highlight-links') !== '') document.getElementById('user-prefs').classList.add('highlight-links');
+                    if (cookies.read('forum-gingerbread') !== '') document.getElementById('user-prefs').classList.add('forum-gingerbread');
+                    if (cookies.read('shared-avatars') !== '') document.getElementById('user-prefs').classList.add('shared-avatars');
+                    if (cookies.read('new-search') !== '') document.getElementById('user-prefs').classList.add('new-search');
+                    if (cookies.read('stop-auto-play-video') !== '') document.getElementById('user-prefs').classList.add('stop-auto-play-video');
+
+                    //desktop view on mobile
+                    if (cookies.read('desktop-on-mobile') !== ''){
+                        document.getElementById('user-prefs').classList.add('desktop-on-mobile');
+
+                        var viewport = document.querySelector("meta[name=viewport]");
+                        viewport.setAttribute('content', 'width=1000');
+                    }
+
+                }
+
+                function updateDesktopPrefs() {
+                    if (cookies.read('wide-load') !== '') document.getElementById('sidebar-toggle-wideload').classList.add('active');
+                    if (cookies.read('night-vision') !== '') document.getElementById('sidebar-toggle-nightvision').classList.add('active');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('sidebar-toggle-stickyheader').classList.add('active');
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('sidebar-toggle-showspoilers').classList.add('active');
+
+                }
+
+                function updateMobilePrefs() {
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('mobile-toggle-showspoilers').classList.add('active');
+                    if (cookies.read('night-vision') !== '') document.getElementById('mobile-toggle-nightvision').classList.add('active');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('mobile-toggle-stickyheader').classList.add('active');
+                    if (cookies.read('highlight-links') !== '') document.getElementById('mobile-toggle-highlightlinks').classList.add('active');
+
+                }
+
+
+                if (document.cookie.indexOf("scroll0=") < 0) {
+                    // do nothing
+                } else {
+                    console.log('ads removed by scroll.com');
+                    var adsRemovedWith = 'scroll';
+                    var style = document.createElement('style');
+                    style.innerHTML = '#header-ad, .proper-ad-unit, .square_ad, .sb-ad-unit { display: none !important; } ';
+                    document.head.appendChild(style);
+                }
+            </script>
+<script type="text/javascript">
+
+                var tvtropes_config = {
+                    astri_stream_enabled : "",
+                    is_logged_in         : "",
+                    handle               : "",
+                    get_astri_stream     : "",
+										revnum               : "c58d8df02f09262390bbd03db7921fc35c6af306",
+										img_domain           : "https://static.tvtropes.org",
+										adblock              : "1",
+										adblock_url          : "propermessage.io",
+										pause_editing        : "0",
+										pause_editing_msg    : "",
+										pause_site_changes   : ""
+                };
+            </script>
+<script type="text/javascript">
+						  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+						  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+						  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+						  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+						  ga('create', 'UA-3821842-1', 'auto');
+						  ga('send', 'pageview');
+
+						</script>
+</head>
+<body class="">
+<i id="user-prefs"></i>
+<script>updateUserPrefs();</script>
+<div id="fb-root"></div>
+<div id="modal-box"></div>
+<header class="headroom-element" id="main-header-bar">
+<div id="main-header-bar-inner">
+<span class="header-spacer" id="header-spacer-left"></span>
+<a class="mobile-menu-toggle-button tablet-on" href="#mobile-menu" id="main-mobile-toggle"><span></span><span></span><span></span></a>
+<a class="no-dev" href="/" id="main-header-logoButton"></a>
+<span class="header-spacer" id="header-spacer-right"></span>
+<nav class="tablet-off" id="main-header-nav">
+<a href="/pmwiki/pmwiki.php/Main/Tropes">Tropes</a>
+<a href="/pmwiki/pmwiki.php/Main/Media">Media</a>
+<a class="nav-browse" href="/pmwiki/browse.php">Browse</a>
+<a href="/pmwiki/index_report.php">Indexes</a>
+<a href="/pmwiki/topics.php">Forums</a>
+<a class="nav-browse" href="/pmwiki/recent_videos.php">Videos</a>
+</nav>
+<div id="main-header-bar-right">
+<div class="font-xs mobile-off" id="signup-login-box">
+<a class="hover-underline bold" data-modal-target="signup" href="/pmwiki/login.php">Join</a>
+<a class="hover-underline bold" data-modal-target="login" href="/pmwiki/login.php">Login</a>
+</div>
+<div class="mobile-on inline" id="signup-login-mobileToggle">
+<a data-modal-target="login" href="/pmwiki/login.php"><i class="fa fa-user"></i></a>
+</div>
+<div id="search-box">
+<form action="/pmwiki/search_result.php" class="search">
+<input class="search-box" name="q" placeholder="Search" required="" type="text" value=""/>
+<input class="submit-button" type="submit" value=""/>
+<input name="search_type" type="hidden" value="article"/>
+<input name="page_type" type="hidden" value="all"/>
+<input name="cx" type="hidden" value="partner-pub-6610802604051523:amzitfn8e7v"/>
+<input name="cof" type="hidden" value="FORID:10"/>
+<input name="ie" type="hidden" value="ISO-8859-1"/>
+<input name="siteurl" type="hidden" value=""/>
+<input name="ref" type="hidden" value=""/>
+<input name="ss" type="hidden" value=""/>
+</form>
+<a class="mobile-on mobile-search-toggle close-x" href="#close-search"><i class="fa fa-close"></i></a>
+</div>
+<div id="random-box">
+<a class="button-random-trope" href="/pmwiki/pmwiki.php/Main/NotMakingThisUpDisclaimer" onclick="ga('send', 'event', 'button', 'click', 'random trope');" rel="nofollow"></a>
+<a class="button-random-media" href="/pmwiki/pmwiki.php/Manga/KingdomOfZombie" onclick="ga('send', 'event', 'button', 'click', 'random media');" rel="nofollow"></a>
+</div>
+</div>
+</div>
+<div class="tablet-on" id="mobile-menu"><div class="mobile-menu-options">
+<div class="nav-wrapper">
+<a class="xl" href="/pmwiki/pmwiki.php/Main/Tropes">Tropes</a>
+<a class="xl" href="/pmwiki/pmwiki.php/Main/Media">Media</a>
+<a class="xl" href="/pmwiki/browse.php">Browse</a>
+<a class="xl" href="/pmwiki/index_report.php">Indexes</a>
+<a class="xl" href="/pmwiki/topics.php">Forums</a>
+<a class="xl" href="/pmwiki/recent_videos.php">Videos</a>
+<a href="/pmwiki/query.php?type=att">Ask The Tropers</a>
+<a href="/pmwiki/query.php?type=tf">Trope Finder</a>
+<a href="/pmwiki/query.php?type=ykts">You Know That Show...</a>
+<a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a>
+<a data-click-toggle="active" href="#tools">Tools <i class="fa fa-chevron-down"></i></a>
+<div class="tools-dropdown mobile-dropdown-linkList">
+<a href="/pmwiki/cutlist.php">Cut List</a>
+<a href="/pmwiki/changes.php">New Edits</a>
+<a href="/pmwiki/recent_edit_reasons.php">Edit Reasons</a>
+<a href="/pmwiki/launches.php">Launches</a>
+<a href="/pmwiki/img_list.php">Images List</a>
+<a href="/pmwiki/crown_activity.php">Crowner Activity</a>
+<a href="/pmwiki/no_types.php">Un-typed Pages</a>
+<a href="/pmwiki/page_type_audit.php">Recent Page Type Changes</a>
+</div>
+<a data-click-toggle="active" href="#hq">Tropes HQ <i class="fa fa-chevron-down"></i></a>
+<div class="tools-dropdown mobile-dropdown-linkList">
+<a href="/pmwiki/about.php">About Us</a>
+<a href="/pmwiki/contact.php">Contact Us</a>
+<a href="mailto:advertising@proper.io">Advertise</a>
+<a href="/pmwiki/dmca.php">DMCA Notice</a>
+<a href="/pmwiki/privacypolicy.php">Privacy Policy</a>
+</div>
+<a href="/pmwiki/ad-free-subscribe.php">Go Ad-Free</a>
+<div class="toggle-switches">
+<ul class="mobile-menu display-toggles">
+<li>Show Spoilers <div class="display-toggle show-spoilers" id="mobile-toggle-showspoilers"></div></li>
+<li>Night Vision <div class="display-toggle night-vision" id="mobile-toggle-nightvision"></div></li>
+<li>Sticky Header <div class="display-toggle sticky-header" id="mobile-toggle-stickyheader"></div></li>
+<li>Highlight Links <div class="display-toggle highlight-links" id="mobile-toggle-highlightlinks"></div></li>
+</ul>
+<script>updateMobilePrefs();</script>
+</div>
+</div>
+</div>
+</div>
+</header>
+<div class="mobile-on" id="homepage-introBox-mobile">
+<a href="/"><img class="logo-small" src="/images/logo-white-big.png"/></a>
+<form action="/pmwiki/search_result.php" class="search" style="margin:10px -5px -6px -5px;">
+<input class="search-box" name="q" placeholder="Search" required="" type="text" value=""/>
+<input class="submit-button" type="submit" value=""/>
+<input name="search_type" type="hidden" value="article"/>
+<input name="page_type" type="hidden" value="all"/>
+<input name="cx" type="hidden" value="partner-pub-6610802604051523:amzitfn8e7v"/>
+<input name="cof" type="hidden" value="FORID:10"/>
+<input name="ie" type="hidden" value="ISO-8859-1"/>
+<input name="siteurl" type="hidden" value=""/>
+<input name="ref" type="hidden" value=""/>
+<input name="ss" type="hidden" value=""/>
+</form>
+</div>
+<div class="ad" id="header-ad-wrapper">
+<div id="header-ad">
+<div class="ad-size-970x90 atf_banner">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_1"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_1'); });</script> </div>
+</div> </div>
+</div>
+</div>
+<div id="main-container">
+<div class="action-bar mobile-off" id="action-bar-top">
+<div class="action-bar-right">
+<p>Follow TV Tropes</p>
+<a class="button-fb" href="https://www.facebook.com/TVTropes">
+<i class="fa fa-facebook"></i></a>
+<a class="button-tw" href="https://www.twitter.com/TVTropes">
+<i class="fa fa-twitter"></i></a>
+<a class="button-re" href="https://www.reddit.com/r/TVTropes">
+<i class="fa fa-reddit-alien"></i></a>
+</div>
+<nav class="actions-wrapper" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<ul class="page-actions" id="top_main_list">
+<li class="link-edit">
+<a class="article-edit-button" data-modal-target="login" href="/pmwiki/pmwiki.php/Main/BladeReflection?action=edit" rel="nofollow">
+<i class="fa fa-pencil"></i> Edit Page</a></li><li class="link-related"><a href="/pmwiki/relatedsearch.php?term=Main/BladeReflection">
+<i class="fa fa-share-alt"></i> Related</a></li><li class="link-history"><a href="/pmwiki/article_history.php?article=Main.BladeReflection">
+<i class="fa fa-history"></i> History</a></li><li class="link-discussion"><a href="/pmwiki/remarks.php?trope=Main.BladeReflection">
+<i class="fa fa-comment"></i> Discussion</a></li> </ul>
+<button class="nav__dropdown-toggle" id="top_more_button" onclick="toggle_more_menu('top');" type="button">More</button>
+<ul class="more_menu hidden_more_list" id="top_more_list">
+<li class="link-todo tuck-always more_list_item"><a data-modal-target="login" href="#todo"><i class="fa fa-check-circle"></i> To Do</a></li><li class="link-pageSource tuck-always more_list_item"><a data-modal-target="login" href="/pmwiki/pmwiki.php/Main/BladeReflection?action=source" rel="nofollow" target="_blank"><i class="fa fa-code"></i> Page Source</a></li> </ul>
+</nav>
+<div class="WikiWordModalStub"></div>
+<div class="ImgUploadModalStub" data-page-type="Article"></div>
+<div class="login-alert" style="display: none;">
+You need to <a href="/pmwiki/login.php" style="color:#21A0E8">login</a> to do this. <a href="/pmwiki/login.php?tab=register_account" style="color:#21A0E8">Get Known</a> if you don't have an account
+</div>
+</div>
+<div class="page-Article" id="main-content">
+<article class="with-sidebar" id="main-entry">
+<input id="groupname-hidden" type="hidden" value="Main"/>
+<input id="title-hidden" type="hidden" value="BladeReflection"/>
+<input id="article_id" type="hidden" value="784"/>
+<input id="logged_in" type="hidden" value="false"/>
+<p class="hidden" id="current_url">http://tvtropes.org/pmwiki/pmwiki.php/Main/BladeReflection</p>
+<meta content="" itemprop="datePublished"/>
+<meta content="" itemprop="articleSection"/>
+<meta content="" itemprop="image"/>
+<a class="watch-button" data-modal-target="login" href="#watch">Follow<span>ing</span></a>
+<h1 class="entry-title" itemprop="headline">
+Blade Reflection
+</h1>
+<script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+                "@type": "ListItem",
+                "position": 1,
+                "name": "tvtropes.org",
+                "item": "https://tvtropes.org"
+            },{
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Tropes",
+                "item": "https://tvtropes.org/pmwiki/pmwiki.php/Main/Tropes"
+            },{
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Blade Reflection"            }]
+        }
+    </script>
+<a class="mobile-actionbar-toggle mobile-on" data-click-toggle="active" href="#mobile-actions-toggle" id="mobile-actionbar-toggle">
+<p class="tiny-off">Go To</p><span></span><span></span><span></span><i class="fa fa-pencil"></i></a>
+<nav class="mobile-actions-wrapper mobile-on" id="mobile-actions-bar"></nav>
+<div class="modal fade hidden-until-active" id="editLockModal">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button aria-label="Close" class="close" data-dismiss="modal" type="button"> <span aria-hidden="true">×</span></button>
+<h4 class="modal-title">Edit Locked</h4>
+</div>
+<div class="modal-body">
+<div class="row">
+<div class="body">
+<div class="danger troper_locked_message"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<nav class="body-options" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<ul class="subpage-links">
+<li>
+<a class="subpage-link curr-subpage" href="/pmwiki/pmwiki.php/Main/BladeReflection" title="The Main page">
+<span class="wrapper"><span class="spi main-page"></span>Main</span></a>
+</li>
+<li class="create-subpage dropdown">
+<a aria-expanded="false" class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);" role="button">
+<span class="wrapper">Create New <i class="fa fa-plus-circle"></i></span>
+</a>
+<select onchange="this.options[this.selectedIndex].value &amp;&amp; (window.location = this.options[this.selectedIndex].value);">
+<option value="">- Create New -</option>
+<option value="/pmwiki/pmwiki.php/Analysis/BladeReflection?action=edit">Analysis</option>
+<option value="/pmwiki/pmwiki.php/Characters/BladeReflection?action=edit">Characters</option>
+<option value="/pmwiki/pmwiki.php/FanficRecs/BladeReflection?action=edit">FanficRecs</option>
+<option value="/pmwiki/pmwiki.php/FanWorks/BladeReflection?action=edit">FanWorks</option>
+<option value="/pmwiki/pmwiki.php/Fridge/BladeReflection?action=edit">Fridge</option>
+<option value="/pmwiki/pmwiki.php/Haiku/BladeReflection?action=edit">Haiku</option>
+<option value="/pmwiki/pmwiki.php/Headscratchers/BladeReflection?action=edit">Headscratchers</option>
+<option value="/pmwiki/pmwiki.php/ImageLinks/BladeReflection?action=edit">ImageLinks</option>
+<option value="/pmwiki/pmwiki.php/Laconic/BladeReflection?action=edit">Laconic</option>
+<option value="/pmwiki/pmwiki.php/PlayingWith/BladeReflection?action=edit">PlayingWith</option>
+<option value="/pmwiki/pmwiki.php/Quotes/BladeReflection?action=edit">Quotes</option>
+<option value="/pmwiki/pmwiki.php/Recap/BladeReflection?action=edit">Recap</option>
+<option value="/pmwiki/pmwiki.php/ReferencedBy/BladeReflection?action=edit">ReferencedBy</option>
+<option value="/pmwiki/pmwiki.php/Synopsis/BladeReflection?action=edit">Synopsis</option>
+<option value="/pmwiki/pmwiki.php/Timeline/BladeReflection?action=edit">Timeline</option>
+<option value="/pmwiki/pmwiki.php/Trivia/BladeReflection?action=edit">Trivia</option>
+<option value="/pmwiki/pmwiki.php/WMG/BladeReflection?action=edit">WMG</option>
+<option value="/pmwiki/pmwiki.php/YMMV/BladeReflection?action=edit">YMMV</option>
+</select>
+</li>
+</ul>
+</nav>
+<div class="article-content retro-folders" id="main-article">
+<p>
+</p><div class="quoteright" style="width:330px;"><a class="twikilink" href="/pmwiki/pmwiki.php/LightNovel/ShakuganNoShana" title="/pmwiki/pmwiki.php/LightNovel/ShakuganNoShana"><div class="lazy_load_img_box" style="padding-top:62.42%"><img alt="https://static.tvtropes.org/pmwiki/pub/images/sample-83da5bfbecdb2fd49c94d8ebeca1c333_2952.jpg" border="0" class="embeddedimage" height="206" src="https://static.tvtropes.org/pmwiki/pub/images/sample-83da5bfbecdb2fd49c94d8ebeca1c333_2952.jpg" width="330"/></div></a></div>
+<div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_1"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_1'); })</script></div></div><p>If a character regularly uses a sword of some sort, then the show's <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TitleSequence" title="/pmwiki/pmwiki.php/Main/TitleSequence">opening credits</a> or <a class="twikilink" href="/pmwiki/pmwiki.php/Main/StockFootage" title="/pmwiki/pmwiki.php/Main/StockFootage">Stock Footage</a> will almost always include a shot of that character's face reflected in the highly-polished steel of the blade. Another common usage is to have the character's opponent(s) reflected in the blade as a reaction shot.
+</p><p>The characters in those scenes are facing each other, but unlike the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MirroredConfrontationShot" title="/pmwiki/pmwiki.php/Main/MirroredConfrontationShot">Mirrored Confrontation Shot</a> that shows them from a side, this shot allows us to see both characters' front faces. Without the reflection, we would have to see one of them from behind.
+</p><p>Remember that <a class="twikilink" href="/pmwiki/pmwiki.php/Administrivia/TropesAreFlexible" title="/pmwiki/pmwiki.php/Administrivia/TropesAreFlexible">Tropes Are Flexible</a>. This trope is usually done with swords, but any object that may show a reflection can be used as well. Sometimes even objects that are not very reflective.
+</p><p></p><hr/><div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_2"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_2'); })</script></div></div><h2>Examples</h2>
+<p></p><div class="folderlabel" onclick="toggleAllFolders();">    open/close all folders  </div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder0');">     Anime and Manga  </div><div class="folder" id="folder0" isfolder="true" style="display:block;">
+<p></p><ul><li> Pictured above is Shana from <em><a class="twikilink" href="/pmwiki/pmwiki.php/LightNovel/ShakuganNoShana" title="/pmwiki/pmwiki.php/LightNovel/ShakuganNoShana">Shakugan no Shana</a></em>. Although that's not Shana being reflected.
+</li><li> Utena, Touga and Saionji in <em><a class="twikilink" href="/pmwiki/pmwiki.php/Anime/RevolutionaryGirlUtena" title="/pmwiki/pmwiki.php/Anime/RevolutionaryGirlUtena">Revolutionary Girl Utena</a></em>
+</li><li> Sakura in <a class="twikilink" href="/pmwiki/pmwiki.php/Anime/SakuraWarsTV" title="/pmwiki/pmwiki.php/Anime/SakuraWarsTV">the TV series version</a> of <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SakuraWars" title="/pmwiki/pmwiki.php/VideoGame/SakuraWars">Sakura Wars</a></em>.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Anime/MobileFighterGGundam" title="/pmwiki/pmwiki.php/Anime/MobileFighterGGundam">Mobile Fighter G Gundam</a></em> doesn't actually do this with its hero Domon, rather, the sword blade reflects the faces of his eventual companions.
+</li><li> The manga of <em><a class="twikilink" href="/pmwiki/pmwiki.php/Manga/Naruto" title="/pmwiki/pmwiki.php/Manga/Naruto">Naruto</a></em> uses this during a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/NotSoDifferent" title="/pmwiki/pmwiki.php/Main/NotSoDifferent">Not So Different</a> moment between Naruto and Gaara: in the aftermath of a fight, the two are facing each other across a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BFS" title="/pmwiki/pmwiki.php/Main/BFS">giant frog's knife</a> planted in the ground. We see a shot of each of them with half their face visible behind the sword and the other half of their opponent's face reflected in the blade.
+</li><li> Yamcha in <em><a class="twikilink" href="/pmwiki/pmwiki.php/Manga/DragonBall" title="/pmwiki/pmwiki.php/Manga/DragonBall">Dragon Ball</a></em>'s intro.
+</li><li> Variant: The opening theme of <em><a class="twikilink" href="/pmwiki/pmwiki.php/Manga/PrincessResurrection" title="/pmwiki/pmwiki.php/Manga/PrincessResurrection">Princess Resurrection</a></em> features Hiro's reflection in the side of a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ChainsawGood" title="/pmwiki/pmwiki.php/Main/ChainsawGood">chainsaw</a>.
+</li><li> In the manga of <em><a class="twikilink" href="/pmwiki/pmwiki.php/Manga/KenichiTheMightiestDisciple" title="/pmwiki/pmwiki.php/Manga/KenichiTheMightiestDisciple">Kenichi: The Mightiest Disciple</a></em>, Shigure Kousaka turns the blade reflection to practical use, using it to see what is behind her. Her only blind spot is the part of the blade reflecting her face.
+</li><li> While not in the opening credits, Juliet in <em><a class="twikilink" href="/pmwiki/pmwiki.php/Anime/RomeoXJuliet" title="/pmwiki/pmwiki.php/Anime/RomeoXJuliet">Romeo X Juliet</a></em> has a shot of her looking at her reflection off the sword, in the rain during a thunderstorm.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Manga/SoulEater" title="/pmwiki/pmwiki.php/Manga/SoulEater">Soul Eater</a></em>: When the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/EquippableAlly" title="/pmwiki/pmwiki.php/Main/EquippableAlly">human-weapon hybrid</a> Soul is in his weapon form and needs to comment on something to his wielder, his face will occasionally be shown as a reflection on his blade.
+<ul><li> Most of the other weapons in soul eater do the same.
+</li><li> There's also a neat effect in the anime, where the reflection on the blade turns from that of Stein <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SlasherSmile" title="/pmwiki/pmwiki.php/Main/SlasherSmile">grinning</a>, to an image of the Weapon Spirit also grinning.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/LightNovel/TheTwelveKingdoms" title="/pmwiki/pmwiki.php/LightNovel/TheTwelveKingdoms">The Twelve Kingdoms</a></em>: Youko's reflection in her sword moves the plot at several points. The sword does not seem to be bound by the laws of specular reflection.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/Anime/PrincessTutu" title="/pmwiki/pmwiki.php/Anime/PrincessTutu">Princess Tutu</a></em>, when <a class="twikilink" href="/pmwiki/pmwiki.php/Main/FailureKnight" title="/pmwiki/pmwiki.php/Main/FailureKnight">Fakir</a> and <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BrainwashedAndCrazy" title="/pmwiki/pmwiki.php/Main/BrainwashedAndCrazy">Mytho</a> get into a sword fight, Mytho sees his reflection in Fakir's sword, leading him to realize <a class="twikilink" href="/pmwiki/pmwiki.php/Main/EvilPrince" title="/pmwiki/pmwiki.php/Main/EvilPrince">what he's become</a>.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VisualNovel/Hakuouki" title="/pmwiki/pmwiki.php/VisualNovel/Hakuouki">Hakuouki</a> Record of Jade Blood</em> features a shot of Hijikata reflected in the blade of Sanan's sword as Sanan draws it against him.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder1');">     Comic Books  </div><div class="folder" id="folder1" isfolder="true" style="display:block;">
+<p></p><ul><li> The cover of <em><a class="twikilink" href="/pmwiki/pmwiki.php/ComicBook/YTheLastMan" title="/pmwiki/pmwiki.php/ComicBook/YTheLastMan">Y: The Last Man</a></em> Book 5: Ring of Truth has Yorick and his pet monkey reflected in the blade of Toyota's katana.
+</li><li> <a class="urllink" href="http://images4.wikia.nocookie.net/__cb20080831180659/marveldatabase/images/3/31/Incredible_Hulk_Vol_1_340.jpg">The famous cover of Hulk #340 (1988)<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a><small>◊</small> has <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Wolverine" title="/pmwiki/pmwiki.php/Main/Wolverine">Wolverine</a> with his claws popped and <a class="twikilink" href="/pmwiki/pmwiki.php/ComicBook/IncredibleHulk" title="/pmwiki/pmwiki.php/ComicBook/IncredibleHulk">Joe Fixit</a> being reflected in them as he's about to unleash <a class="twikilink" href="/pmwiki/pmwiki.php/Main/HulkSmash" title="/pmwiki/pmwiki.php/Main/HulkSmash">the Smash</a>.
+<ul><li> This image (along with a number of other covers relating to one or both of these characters) is replicated in the animated <a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/HulkVs" title="/pmwiki/pmwiki.php/WesternAnimation/HulkVs">Hulk Vs Wolverine</a>.
+</li><li> Wolverine also uses his claws to reflect The Gorgon's <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TakenForGranite" title="/pmwiki/pmwiki.php/Main/TakenForGranite">stone gaze</a> back on him. You'd think a guy who calls himself The Gorgon would've read the legend of Perseus.
+</li></ul></li><li> Inadvertently used by <a class="twikilink" href="/pmwiki/pmwiki.php/Comicbook/Blade" title="/pmwiki/pmwiki.php/Comicbook/Blade">Blade</a> to defeat <a class="twikilink" href="/pmwiki/pmwiki.php/Comicbook/GhostRider" title="/pmwiki/pmwiki.php/Comicbook/GhostRider">Ghost Rider</a> when the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/LetsYouAndHimFight" title="/pmwiki/pmwiki.php/Main/LetsYouAndHimFight">Spirits of Vengeance fight the Nightstalkers.</a>
+</li><li> From the (first) list of <a class="urllink" href="http://www.progressiveboink.com/2012/4/21/2960757/robliefeld3">The 40 Worst Rob Liefeld Drawings<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a>, example #14 has Shatterstar gripping his sword and looking forward, but the reflection in his sword only makes sense if Cannonball is attacking from his right or if the blade is warped in some impossible way.
+</li><li> <a class="twikilink" href="/pmwiki/pmwiki.php/ComicBook/UltimateMarvel" title="/pmwiki/pmwiki.php/ComicBook/UltimateMarvel">Ultimate Marvel</a>
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/ComicBook/Ultimatum" title="/pmwiki/pmwiki.php/ComicBook/Ultimatum">Ultimatum</a></em>: Issue #5 starts with Wolverine ready to attack, and Magneto's face is reflected on his claws.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/ComicBook/UltimateSpiderMan" title="/pmwiki/pmwiki.php/ComicBook/UltimateSpiderMan">Ultimate Spider-Man</a></em>
+<ul><li> In the start of issue 7, both Spider-Man and the Green Goblin are reflected in the eyes of each other.
+</li><li> The cover of issue #13 shows Spider-Man's mask in Peter's hand, reflecting Mary Jane's shocked face in the eyes.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/ComicBook/TheUltimates" title="/pmwiki/pmwiki.php/ComicBook/TheUltimates">The Ultimates</a></em>: The man in the lobby is seen in Hawkeye's glasses.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/ComicBook/SpiderMenII" title="/pmwiki/pmwiki.php/ComicBook/SpiderMenII">Spider-Men II</a></em>: The cover of issue #2 shows both Spider-Men reflected on the Taskmaster's sword.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/ComicBook/WonderWoman1987" title="/pmwiki/pmwiki.php/ComicBook/WonderWoman1987">Wonder Woman (1987)</a></em>: Diana uses the reflection on her gauntlets and sword to see Medusa during their first fight.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder2');">    Films — Animated </div><div class="folder" id="folder2" isfolder="true" style="display:block;">
+<ul><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/DragonsFireAndIce" title="/pmwiki/pmwiki.php/WesternAnimation/DragonsFireAndIce">Dragons: Fire &amp; Ice</a></em> during a duel with the two protagonists, there is a moment when it appears that one stabbed the other while on the ground. The next shot inverts the trope by showing the <em>sword's</em> reflection in the victim's opening eye.
+</li><li> In <a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/DisneyAnimatedCanon" title="/pmwiki/pmwiki.php/Franchise/DisneyAnimatedCanon">Disney's</a> <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/Mulan" title="/pmwiki/pmwiki.php/WesternAnimation/Mulan">Mulan</a></em>, Mulan's face is reflected as she unsheathes a sword before she gives herself an <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ImportantHaircut" title="/pmwiki/pmwiki.php/Main/ImportantHaircut">Important Haircut</a>.
+<ul><li> The cover art has the blade reflecting Mulan's male disguise, while paradoxically she's standing in her original costume <em>behind</em> it.
+</li></ul></li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/MulanII" title="/pmwiki/pmwiki.php/WesternAnimation/MulanII">Mulan II</a></em>, when she is <span class="spoiler" title="you can set spoilers visible by default on your profile">mourning over Shang's death, she is looking at a sword and when lightning flashes, she sees his face reflected in it</span> before she drives the sword into the ground.
+</li></ul></div>
+<div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_3"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_3'); })</script></div></div><p></p><div class="folderlabel" onclick="togglefolder('folder3');">    Films — Live-Action </div><div class="folder" id="folder3" isfolder="true" style="display:block;">
+<ul><li> Expanded upon in <em><a class="twikilink" href="/pmwiki/pmwiki.php/Film/KillBill" title="/pmwiki/pmwiki.php/Film/KillBill">Kill Bill</a> 1</em>, when the Bride uses her mirror-polished blade to inspect all angles of a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Mook" title="/pmwiki/pmwiki.php/Main/Mook">Mook</a> formation.
+<ul><li> Taken from one of its main inspirations, the Lone Wolf and Cub film series, in which Ogami Itto uses his sword to look behind him without alerting a pair of ninjas sneaking up on him. He kills them.
+</li></ul></li><li> In the classic film <em><a class="twikilink" href="/pmwiki/pmwiki.php/Film/LawrenceOfArabia" title="/pmwiki/pmwiki.php/Film/LawrenceOfArabia">Lawrence of Arabia</a></em>, Lawrence uses his dagger blade as an impromptu mirror to check out how he looks in his snazzy new white robes; it was a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ThrowItIn" title="/pmwiki/pmwiki.php/Main/ThrowItIn">Throw It In!</a> moment from actor Peter O'Toole.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/Film/BladeTrinity" title="/pmwiki/pmwiki.php/Film/BladeTrinity">Blade: Trinity</a></em>, when Hannibal King is explaining the origins of Drake/Dracula to Blade, we're treated to a shot of both Drake's human and monster face reflected in the blade shot that's in the creepy stock footage/bloodbath/Fetish Fuel moment.
+</li><li> In the game-based film <em><a class="twikilink" href="/pmwiki/pmwiki.php/Film/DOADeadOrAlive" title="/pmwiki/pmwiki.php/Film/DOADeadOrAlive">DOA: Dead or Alive</a></em>, Helena <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DualWielding" title="/pmwiki/pmwiki.php/Main/DualWielding">dual-wields</a> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/KatanasAreJustBetter" title="/pmwiki/pmwiki.php/Main/KatanasAreJustBetter">katanas</a>, using one as a mirror to look behind her at the surrounding <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Mook" title="/pmwiki/pmwiki.php/Main/Mook">Mooks</a>.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/Film/CastAway" title="/pmwiki/pmwiki.php/Film/CastAway">Cast Away</a></em>, Chuck uses the blade of an ice skate both as a knife and as a mirror.
+</li></ul><p></p></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder4');">     Literature </div><div class="folder" id="folder4" isfolder="true" style="display:block;">
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/TheHeroesOfOlympus" title="/pmwiki/pmwiki.php/Literature/TheHeroesOfOlympus">The Heroes of Olympus</a></em>: Piper Mclean uses her dagger Katoptris as a mirrior like its previous wielder, Helen of Troy.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder5');">     Live Action TV  </div><div class="folder" id="folder5" isfolder="true" style="display:block;">
+<p></p><ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/Heroes" title="/pmwiki/pmwiki.php/Series/Heroes">Heroes</a></em> does it this late in the first season when <span class="spoiler" title="you can set spoilers visible by default on your profile">Kaito Nakamura instructs Hiro in the use of the Sword of Kensei</span>
+</li></ul><p></p></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder6');">     Video Games  </div><div class="folder" id="folder6" isfolder="true" style="display:block;">
+<p></p><ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SuikodenIII" title="/pmwiki/pmwiki.php/VideoGame/SuikodenIII">Suikoden III</a></em> gives this trope a small shuffle, as well: in its opening video, the sword of the main character Geddoe reflects—look closely!—<a class="twikilink" href="/pmwiki/pmwiki.php/Main/TheChick" title="/pmwiki/pmwiki.php/Main/TheChick">The Chick</a> in his unit, known only as Queen.
+<ul><li> A similar scene appears in the opening for <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SuikodenV" title="/pmwiki/pmwiki.php/VideoGame/SuikodenV">Suikoden V</a></em>, with Miakis.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/GuiltyGear" title="/pmwiki/pmwiki.php/VideoGame/GuiltyGear">Guilty Gear XX: Accent Core</a></em>'s new intro gives a moment of Blade Reflection to Ky Kiske, who is facing Sol Badguy at the time.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FinalFantasyX2" title="/pmwiki/pmwiki.php/VideoGame/FinalFantasyX2">Final Fantasy X-2</a></em> does this when a character changes into the warrior class.
+</li><li> In the <em>Kakera Asobi</em> version of the opening to <em><a class="twikilink" href="/pmwiki/pmwiki.php/VisualNovel/HigurashiWhenTheyCry" title="/pmwiki/pmwiki.php/VisualNovel/HigurashiWhenTheyCry">Higurashi: When They Cry</a>: Matsuri</em>, the last shot is of the reflection of a dying cicada in a sword, followed by a glint on the sword and a reflection of someone who looks like <a class="twikilink" href="/pmwiki/pmwiki.php/Main/OracularUrchin" title="/pmwiki/pmwiki.php/Main/OracularUrchin">Rika</a>. <span class="spoiler" title="you can set spoilers visible by default on your profile">It's actually Ouka, Hanyuu's daughter</span>.
+</li><li> On the <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/QuestForGloryV" title="/pmwiki/pmwiki.php/VideoGame/QuestForGloryV">Quest for Glory V</a></em> boxart, our hero reflects the titular dragon on his blade.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/NeopetsTheDarkestFaerie" title="/pmwiki/pmwiki.php/VideoGame/NeopetsTheDarkestFaerie">Neopets: The Darkest Faerie</a></em> has the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BigBad" title="/pmwiki/pmwiki.php/Main/BigBad">Big Bad</a>'s face reflected in the hero's sword on the box art.
+</li><li> In the <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SuperRobotWars" title="/pmwiki/pmwiki.php/VideoGame/SuperRobotWars">Super Robot Wars</a></em> video game series, whenever Sangar Zombolt uses his <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BFS" title="/pmwiki/pmwiki.php/Main/BFS">BFS</a> Zankantou's ultimate attack, the target of the attack will be reflected on the blade as the camera pans up on it. This only applies to the Zankantou used by the Grungust Type-3 and the DyGenGuard.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DevilMayCry4" title="/pmwiki/pmwiki.php/VideoGame/DevilMayCry4">Devil May Cry 4</a></em>, this trope provides the only proof that Nero's Devil Trigger doesn't quite take the form of Nelo Angelo, as many fans speculate. For those dedicated enough to fully clear the game, the game-clear art for Hell or Hell difficulty shows it reflected on Yamato's surface in full color - color that is mostly red, the reflection being Dante's DT form.
+</li></ul><p></p></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder7');">     Web Animation </div><div class="folder" id="folder7" isfolder="true" style="display:block;">
+<p></p><ul><li> A popular recurring theme in fan-comics and animations for <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Undertale" title="/pmwiki/pmwiki.php/VideoGame/Undertale">Undertale</a></em>, specifically those featuring the Genocide route. In this case, it is usually an ominous sign of <span class="spoiler" title="you can set spoilers visible by default on your profile"> The Fallen Child confronting their next victim. Because of the crushing difficulty of his boss fight and thanks to <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MemeticMutation" title="/pmwiki/pmwiki.php/Main/MemeticMutation">Memetic Mutation</a> from a popular <a class="twikilink" href="/pmwiki/pmwiki.php/Main/FilkSong" title="/pmwiki/pmwiki.php/Main/FilkSong">Filk Song</a> comic, Sans is usually the one shown in such a reflection.</span> Best exemplified by this <a class="urllink" href="https://www.youtube.com/watch?v=yKZ2LnSsxLA">spoilery fan-animation<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a>.
+</li></ul><p></p></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder8');">     Webcomics  </div><div class="folder" id="folder8" isfolder="true" style="display:block;">
+<p></p><ul><li> <a class="urllink" href="http://drmcninja.com/page.php?pageNum=37&amp;issue=2">This<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a> page of <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/TheAdventuresOfDrMcNinja" title="/pmwiki/pmwiki.php/Webcomic/TheAdventuresOfDrMcNinja">The Adventures of Dr. McNinja</a></em>.
+</li></ul><p></p></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder9');">    Western Animation </div><div class="folder" id="folder9" isfolder="true" style="display:block;">
+<ul><li> In the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/FreakyFriday" title="/pmwiki/pmwiki.php/Main/FreakyFriday">Freaky Friday</a> episode of <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/PiratesOfDarkWater" title="/pmwiki/pmwiki.php/WesternAnimation/PiratesOfDarkWater">Pirates of Dark Water</a></em>, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BigBad" title="/pmwiki/pmwiki.php/Main/BigBad">Bloth</a> and <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TheHero" title="/pmwiki/pmwiki.php/Main/TheHero">Ren</a> switched bodies, but their true selves could be seen in reflections. So when Ren-in-Bloth was attacked by another good guy, getting him to look into the reflection in his sword during a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BladeLock" title="/pmwiki/pmwiki.php/Main/BladeLock">Blade Lock</a> convinced him that Ren-in-Bloth wasn't evil.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/SamuraiJack" title="/pmwiki/pmwiki.php/WesternAnimation/SamuraiJack">Samurai Jack</a></em> tried to use his blade's reflection to blind his opponents at least once. His sword's mirror polish became a plot point in the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/EnemyWithout" title="/pmwiki/pmwiki.php/Main/EnemyWithout">Enemy Without</a> episode.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/ThunderCats2011" title="/pmwiki/pmwiki.php/WesternAnimation/ThunderCats2011">Thunder Cats 2011</a></em> this is the mechanism of the Sword of Omens' "<a class="twikilink" href="/pmwiki/pmwiki.php/Main/Seers" title="/pmwiki/pmwiki.php/Main/Seers">Sight Beyond Sight</a>," in which protagonist Lion-O sees a frightening <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MirrorMonster" title="/pmwiki/pmwiki.php/Main/MirrorMonster">Mirror Monster</a> vision of <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BigBad" title="/pmwiki/pmwiki.php/Main/BigBad">Big Bad</a> Mumm-Ra.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/TheAvengersEarthsMightiestHeroes" title="/pmwiki/pmwiki.php/WesternAnimation/TheAvengersEarthsMightiestHeroes">The Avengers: Earth's Mightiest Heroes!</a></em>: In "Welcome to Wakanda", Iron Man and the Wasp are reflected in the Grim Reaper's scythe as they advance on him in the mine.
+</li><li> In the <a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/Gargoyles" title="/pmwiki/pmwiki.php/WesternAnimation/Gargoyles">Gargoyles</a> episode "A Long Way Till Morning", Demona is briefly seen reflected in Hudson's sword as he uses it to deflect a laser blast.
+<ul><li> In "Enter Macbeth", the title character is reflected in his wall-mounted sword rack as he chooses a weapon. (When the series' producer looked back on the episodes one by one, he counted this as a "sweet effect" in an episode where serious production issues had delayed everything.)
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/TeenageMutantNinjaTurtles2012" title="/pmwiki/pmwiki.php/WesternAnimation/TeenageMutantNinjaTurtles2012">Teenage Mutant Ninja Turtles (2012)</a></em>: In "Heart of Evil," Donnie becomes fixated on killing <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TheDon" title="/pmwiki/pmwiki.php/Main/TheDon">Don Vizioso</a>, who had previously captured and tried to dissect him in "Mutant Gangland." During the climax, he has Vizioso dead to rights, and is about to spear him with his bo-staff... and then he <a class="urllink" href="https://turtlepedia.wikia.com/wiki/File:503-Donatello_Don_Vizioso.png">sees his crazed reflection in the naginata blade<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a><small>◊</small>. It's this, and realizing how close he was to <a class="twikilink" href="/pmwiki/pmwiki.php/Main/HeWhoFightsMonsters" title="/pmwiki/pmwiki.php/Main/HeWhoFightsMonsters">crossing the line</a>, that finally snaps him out of his <a class="twikilink" href="/pmwiki/pmwiki.php/Main/RevengeBeforeReason" title="/pmwiki/pmwiki.php/Main/RevengeBeforeReason">Revenge Before Reason</a>.
+</li></ul><p></p></div>
+<p></p><hr/>
+</div>
+<div class="square_ad footer-article-ad main_2" data-isolated="0"></div>
+<div class="section-links" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<div class="titles">
+<div><h3 class="text-center text-uppercase">Previous</h3></div>
+<div><h3 class="text-center text-uppercase">Index</h3></div>
+<div><h3 class="text-center text-uppercase">Next</h3></div>
+</div>
+<div class="links">
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/BladeOnAStick">Blade on a Stick</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/SwordTropes">Sword Tropes</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/BladeRun">Blade Run</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/BladeBrake">Blade Brake</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/WeaponsAndWieldingTropes">Weapons and Wielding Tropes</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/BladeRun">Blade Run</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/AttackReflector">Attack Reflector</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/PleaseReflectOnThisIndex">Please Reflect on This Index</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/CloserThanTheyAppear">Closer than They Appear</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/LightNovel/ShakuganNoShana">Shakugan no Shana</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/ImageSource/AnimeAndManga">ImageSource/Anime &amp; Manga</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/EyeCatch">Eye Catch</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="outer_ads_by_salon_wrapper" id="exco_player_insert_div">
+</div>
+</article>
+<div id="main-content-sidebar"><div class="sidebar-item display-options">
+<ul class="sidebar display-toggles">
+<li>Show Spoilers <div class="display-toggle show-spoilers" id="sidebar-toggle-showspoilers"></div></li>
+<li>Night Vision <div class="display-toggle night-vision" id="sidebar-toggle-nightvision"></div></li>
+<li>Sticky Header <div class="display-toggle sticky-header" id="sidebar-toggle-stickyheader"></div></li>
+<li>Wide Load <div class="display-toggle wide-load" id="sidebar-toggle-wideload"></div></li>
+</ul>
+<script>updateDesktopPrefs();</script>
+</div>
+<div class="sidebar-item ad sb-ad-unit">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_2"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_2'); });</script> </div>
+</div></div>
+<div class="sidebar-item quick-links" itemtype="http://schema.org/SiteNavigationElement">
+<p class="sidebar-item-title" data-title="Important Links">Important Links</p>
+<div class="padded">
+<a href="/pmwiki/query.php?type=att">Ask The Tropers</a>
+<a href="/pmwiki/query.php?type=tf">Trope Finder</a>
+<a href="/pmwiki/query.php?type=ykts">You Know That Show...</a>
+<a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a>
+<a href="/pmwiki/review_activity.php">Reviews</a>
+<a data-modal-target="login" href="/pmwiki/lbs.php">Live Blogs</a>
+<a href="/pmwiki/ad-free-subscribe.php">Go Ad Free!</a> </div>
+</div>
+<div class="sidebar-item sb-ad-unit">
+<div class="sidebar-section">
+<div class="square_ad ad-size-300x600 ad-section text-center">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_3"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_3'); });</script> </div>
+</div> </div>
+</div>
+</div>
+<div class="sidebar-item">
+<p class="sidebar-item-title" data-title="Crucial Browsing">Crucial Browsing</p>
+<ul class="padded font-s" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><a data-click-toggle="active" href="javascript:void(0);">Genre</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/ActionAdventureTropes" title="Main/ActionAdventureTropes">Action Adventure</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ComedyTropes" title="Main/ComedyTropes">Comedy</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CommercialsTropes" title="Main/CommercialsTropes">Commercials</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CrimeAndPunishmentTropes" title="Main/CrimeAndPunishmentTropes">Crime &amp; Punishment</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DramaTropes" title="Main/DramaTropes">Drama</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/HorrorTropes" title="Main/HorrorTropes">Horror</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LoveTropes" title="Main/LoveTropes">Love</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NewsTropes" title="Main/NewsTropes">News</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ProfessionalWrestling" title="Main/ProfessionalWrestling">Professional Wrestling</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SpeculativeFictionTropes" title="Main/SpeculativeFictionTropes">Speculative Fiction</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SportsStoryTropes" title="Main/SportsStoryTropes">Sports Story</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/WarTropes" title="Main/WarTropes">War</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Media</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/Media" title="Main/Media">All Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/AnimationTropes" title="Main/AnimationTropes">Animation (Western)</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Anime" title="Main/Anime">Anime</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ComicBookTropes" title="Main/ComicBookTropes">Comic Book</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FanFic" title="FanFic/FanFics">Fan Fics</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Film" title="Main/Film">Film</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/GameTropes" title="Main/GameTropes">Game</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Literature" title="Main/Literature">Literature</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MusicAndSoundEffects" title="Main/MusicAndSoundEffects">Music And Sound Effects</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NewMediaTropes" title="Main/NewMediaTropes">New Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/PrintMediaTropes" title="Main/PrintMediaTropes">Print Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Radio" title="Main/Radio">Radio</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SequentialArt" title="Main/SequentialArt">Sequential Art</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TabletopGames" title="Main/TabletopGames">Tabletop Games</a></li>
+<li><a href="/pmwiki/pmwiki.php/UsefulNotes/Television" title="Main/Television">Television</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Theater" title="Main/Theater">Theater</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/VideogameTropes" title="Main/VideogameTropes">Videogame</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Webcomics" title="Main/Webcomics">Webcomics</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Narrative</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/UniversalTropes" title="Main/UniversalTropes">Universal</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/AppliedPhlebotinum" title="Main/AppliedPhlebotinum">Applied Phlebotinum</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CharacterizationTropes" title="Main/CharacterizationTropes">Characterization</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Characters" title="Main/Characters">Characters</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CharactersAsDevice" title="Main/CharactersAsDevice">Characters As Device</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Dialogue" title="Main/Dialogue">Dialogue</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Motifs" title="Main/Motifs">Motifs</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NarrativeDevices" title="Main/NarrativeDevices">Narrative Devices</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Paratext" title="Main/Paratext">Paratext</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Plots" title="Main/Plots">Plots</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Settings" title="Main/Settings">Settings</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Spectacle" title="Main/Spectacle">Spectacle</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Other Categories</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/BritishTellyTropes" title="Main/BritishTellyTropes">British Telly</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TheContributors" title="Main/TheContributors">The Contributors</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CreatorSpeak" title="Main/CreatorSpeak">Creator Speak</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Creators" title="Main/Creators">Creators</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DerivativeWorks" title="Main/DerivativeWorks">Derivative Works</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LanguageTropes" title="Main/LanguageTropes">Language</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LawsAndFormulas" title="Main/LawsAndFormulas">Laws And Formulas</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ShowBusiness" title="Main/ShowBusiness">Show Business</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SplitPersonalityTropes" title="Main/SplitPersonalityTropes">Split Personality</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/StockRoom" title="Main/StockRoom">Stock Room</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TropeTropes" title="Main/TropeTropes">Trope</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Tropes" title="Main/Tropes">Tropes</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TruthAndLies" title="Main/TruthAndLies">Truth And Lies</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TruthInTelevision" title="Main/TruthInTelevision">Truth In Television</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Topical Tropes</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/BetrayalTropes" title="Main/BetrayalTropes">Betrayal</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CensorshipTropes" title="Main/CensorshipTropes">Censorship</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CombatTropes" title="Main/CombatTropes">Combat</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DeathTropes" title="Main/DeathTropes">Death</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FamilyTropes" title="Main/FamilyTropes">Family</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FateAndProphecyTropes" title="Main/FateAndProphecyTropes">Fate And Prophecy</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FoodTropes" title="Main/FoodTropes">Food</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/HolidayTropes" title="Main/HolidayTropes">Holiday</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MemoryTropes" title="Main/MemoryTropes">Memory</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MoneyTropes" title="Main/MoneyTropes">Money</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MoralityTropes" title="Main/MoralityTropes">Morality</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/PoliticsTropes" title="Main/PoliticsTropes">Politics</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ReligionTropes" title="Main/ReligionTropes">Religion</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SchoolTropes" title="Main/SchoolTropes">School</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="sidebar-item showcase">
+<p class="sidebar-item-title" data-title="Community Showcase">Community Showcase <a class="bubble float-right hover-blue" href="/pmwiki/showcase.php">More</a></p>
+<p class="community-showcase">
+<a href="https://sharetv.com/shows/echo_chamber" onclick="trackOutboundLink('https://sharetv.com/shows/echo_chamber');" target="_blank">
+<img alt="" class="lazy-image" data-src="/images/communityShowcase-echochamber.jpg"/></a>
+<a href="/pmwiki/pmwiki.php/Webcomic/TwistedTropes">
+<img alt="" class="lazy-image" data-src="/img/howlandsc-side.jpg"/></a>
+</p>
+</div>
+<div class="sidebar-item sb-ad-unit" id="stick-cont">
+<div class="sidebar-section" id="stick-bar">
+<div class="square_ad ad-size-300x600 ad-section text-center">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_4"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_4'); });</script> </div>
+</div> </div>
+</div>
+</div>
+</div>
+</div>
+<div class="action-bar tablet-off" id="action-bar-bottom">
+<a class="scroll-to-top dead-button" href="#top-of-page" onclick="$('html, body').animate({scrollTop : 0},500);">Top</a>
+</div>
+</div>
+<div class="proper-ad-unit ad-sticky">
+<div id="proper-ad-tvtropes_sticky_ad"> <script>propertag.cmd.push(function() { proper_display('tvtropes_sticky_ad'); });</script> </div>
+</div>
+<footer id="main-footer">
+<div id="main-footer-inner">
+<div class="footer-left">
+<a class="img-link" href="/"><img alt="TV Tropes" class="lazy-image" data-src="/img/tvtropes-footer-logo.png" title="TV Tropes"/></a>
+<form action="index.html" class="navbar-form newsletter-signup validate modal-replies" data-ajax-get="/ajax/subscribe_email.php" id="cse-search-box-mobile" name="" role="">
+<button class="btn-submit newsletter-signup-submit-button" id="subscribe-btn" type="submit"><i class="fa fa-paper-plane"></i></button>
+<input class="form-control" id="subscription-email" name="q" placeholder="Subscribe" size="31" type="text" validate-type="email" value=""/>
+</form>
+<ul class="social-buttons">
+<li><a class="btn fb" href="https://www.facebook.com/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-facebook']);" target="_blank"><i class="fa fa-facebook"></i></a></li>
+<li><a class="btn tw" href="https://www.twitter.com/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-twitter']);" target="_blank"><i class="fa fa-twitter"></i></a> </li>
+<li><a class="btn rd" href="https://www.reddit.com/r/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-reddit']);" target="_blank"><i class="fa fa-reddit-alien"></i></a></li>
+</ul>
+</div>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">TVTropes</h4></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Administrivia">About TVTropes</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TheGoalsOfTVTropes">TVTropes Goals</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TheTropingCode">Troping Code</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TVTropesCustoms">TVTropes Customs</a></li>
+<li><a href="/pmwiki/pmwiki.php/JustForFun/TropesOfLegend">Tropes of Legend</a></li>
+<li><a href="/pmwiki/ad-free-subscribe.php">Go Ad-Free</a></li>
+</ul>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">Community</h4></li>
+<li><a href="/pmwiki/query.php?type=att">Ask The Tropers</a></li>
+<li><a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a></li>
+<li><a href="/pmwiki/query.php?type=tf">Trope Finder</a></li>
+<li><a href="/pmwiki/query.php?type=ykts">You Know That Show</a></li>
+<li><a data-modal-target="login" href="/pmwiki/lbs.php">Live Blogs</a></li>
+<li><a href="/pmwiki/review_activity.php">Reviews</a></li>
+<li><a href="/pmwiki/topics.php">Forum</a></li>
+</ul>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">Tropes HQ</h4></li>
+<li><a href="/pmwiki/about.php">About Us</a></li>
+<li><a href="/pmwiki/contact.php">Contact Us</a></li>
+<li><a href="/pmwiki/dmca.php">DMCA Notice</a></li>
+<li><a href="/pmwiki/privacypolicy.php">Privacy Policy</a></li>
+</ul>
+</div>
+<div class="text-center gutter-top gutter-bottom tablet-on" id="desktop-on-mobile-toggle">
+<a href="/pmwiki/switchDeviceCss.php?mobileVersion=1" rel="nofollow">Switch to <span class="txt-desktop">Desktop</span><span class="txt-mobile">Mobile</span> Version</a>
+</div>
+<div class="legal">
+<p>TVTropes is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License. <br/>Permissions beyond the scope of this license may be available from <a href="mailto:thestaff@tvtropes.org" rel="cc:morePermissions" xmlns:cc="http://creativecommons.org/ns#"> thestaff@tvtropes.org</a>.</p>
+<br/>
+<div class="privacy_wrapper">
+</div>
+</div>
+</footer>
+<style>
+      div.fc-ccpa-root {
+        position: absolute !important;
+        bottom: 93px !important;
+        margin: auto !important;
+        width: 100% !important;
+        z-index: 9999 !important;
+      }
+      .fc-ccpa-root .fc-dns-dialog .fc-dns-link p{
+        outline: none !important;
+        text-decoration: underline !important;
+        font-size: .7em !important;
+        font-family: sans-serif !important;
+      }
+      .fc-ccpa-root .fc-dns-dialog .fc-dns-link .fc-button-background {
+        background: none !important;
+      }
+    </style>
+<div class="full-screen" id="_pm_videoViewer">
+<a class="close" href="#close" id="_pm_videoViewer-close"></a>
+<div class="_pmvv-body">
+<div class="_pmvv-vidbox">
+<video class="video-js vjs-default-skin vjs-16-9" data-video-id="" id="overlay-video-player-box">
+</video>
+<div class="_pmvv-vidbox-desc">
+<h1 id="overlay-title"></h1>
+<p class="_pmvv-vidbox-descTxt" id="overlay-descrip">
+</p>
+<div class="rating-row" data-video-id="">
+<input name="is_logged_in" type="hidden" value="0"/>
+<p>How well does it match the trope?</p>
+<div id="star-rating-group">
+<div class="trope-rate">
+<input id="lamp5" name="rate" type="radio" value="5"/>
+<label for="lamp5" title="Absolutely"></label>
+<input id="lamp4" name="rate" type="radio" value="4"/>
+<label for="lamp4" title="Yes"></label>
+<input id="lamp3" name="rate" type="radio" value="3"/>
+<label for="lamp3" title="Kind of"></label>
+<input id="lamp2" name="rate" type="radio" value="2"/>
+<label for="lamp2" title="Not really"></label>
+<input id="lamp1" name="rate" type="radio" value="1"/>
+<label for="lamp1" title="No"></label>
+</div>
+<div id="star-rating-total">
+</div>
+</div>
+</div>
+<div class="example-media-row">
+<div class="example-overlay">
+<p>Example of:</p>
+<div id="overlay-trope"> / </div>
+</div>
+<div class="media-sources-overlay example-overlay">
+<p>Media sources:</p>
+<div id="overlay-media"> / </div>
+</div>
+</div>
+<p class="_pmvv-vidbox-stats text-right font-s" style="padding-top:8px; border-top: solid 1px rgba(255,255,255,0.2)">
+<a class="float-right" data-modal-target="login" href="#video-feedback">Report</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+        window.special_ops =  {
+            member : 'no',
+            isolated : 0,
+            tags : ['unknown']
+        };
+    </script>
+<script type="text/javascript">
+
+        var cleanCreativeEnabled = "";
+        var donation = "";
+        var live_ads = "1";
+        var img_domain = "https://static.tvtropes.org";
+        var snoozed = cookies.read('snoozedabm');
+        var snoozable = "";
+
+        if (adsRemovedWith) {
+            live_ads = 0;
+        }
+
+        var elem = document.createElement('script');
+        elem.async = true;
+
+        elem.src = '/design/assets/bundle.js?rev=c58d8df02f09262390bbd03db7921fc35c6af306';
+
+        elem.onload = function() {
+                                 }
+        document.getElementsByTagName('head')[0].appendChild(elem);
+
+    </script>
+<script type="text/javascript">
+      function send_analytics_event(user_type, donation){
+          // if(user_type == 'uncached' || user_type == 'cached'){
+          //   ga('send', 'event', 'caching', 'load', user_type, {'nonInteraction': 1});
+          //   return;
+          // }
+          var event_name = user_type;
+
+          if(donation == 'true'){
+              event_name += "_donation"
+          }else if(typeof(valid_user) == 'undefined'){
+              event_name += "_blocked"
+          }else if(valid_user == true){
+              event_name += "_unblocked";
+          }else{
+              event_name = "_unknown"
+          }
+          ga('send', 'event', 'ads', 'load', event_name, {'nonInteraction': 1});
+      }
+
+    
+    send_analytics_event("guest", "false");
+      </script>
+</body>
+</html>

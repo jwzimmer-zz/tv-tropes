@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Player Personality Quiz - TV Tropes</title>
+<meta content="The Player Personality Quiz trope as used in popular culture. In some video games, particularly at the start, you will occasionally find yourself tested. But …" name="description"/>
+<link href="https://tvtropes.org/pmwiki/pmwiki.php/Main/PlayerPersonalityQuiz" rel="canonical"/>
+<link href="/img/icons/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="@tvtropes" name="twitter:site"/>
+<meta content="@tvtropes" name="twitter:owner"/>
+<meta content="Player Personality Quiz - TV Tropes" name="twitter:title"/>
+<meta content="The Player Personality Quiz trope as used in popular culture. In some video games, particularly at the start, you will occasionally find yourself tested. But …" name="twitter:description"/>
+<meta content="https://static.tvtropes.org/logo_blue_small.png" name="twitter:image:src"/>
+<meta content="TV Tropes" property="og:site_name"/>
+<meta content="en_US" property="og:locale"/>
+<meta content="https://www.facebook.com/tvtropes" property="article:publisher"/>
+<meta content="Player Personality Quiz - TV Tropes" property="og:title"/>
+<meta content="website" property="og:type"/>
+<meta content="https://tvtropes.org/pmwiki/pmwiki.php/Main/PlayerPersonalityQuiz" property="og:url"/>
+<meta content="https://static.tvtropes.org/logo_blue_small.png" property="og:image"/>
+<meta content="In some video games, particularly at the start, you will occasionally find yourself tested. But unlike most tests found in video games, this one doesn't test your knowledge of the trivial. No, this test gives you several hypothetical situations …" property="og:description"/>
+<link href="/img/icons/apple-icon-57x57.png" rel="apple-touch-icon" sizes="57x57" type="image/png"/>
+<link href="/img/icons/apple-icon-60x60.png" rel="apple-touch-icon" sizes="60x60" type="image/png"/>
+<link href="/img/icons/apple-icon-72x72.png" rel="apple-touch-icon" sizes="72x72" type="image/png"/>
+<link href="/img/icons/apple-icon-76x76.png" rel="apple-touch-icon" sizes="76x76" type="image/png"/>
+<link href="/img/icons/apple-icon-114x114.png" rel="apple-touch-icon" sizes="114x114" type="image/png"/>
+<link href="/img/icons/apple-icon-120x120.png" rel="apple-touch-icon" sizes="120x120" type="image/png"/>
+<link href="/img/icons/apple-icon-144x144.png" rel="apple-touch-icon" sizes="144x144" type="image/png"/>
+<link href="/img/icons/apple-icon-152x152.png" rel="apple-touch-icon" sizes="152x152" type="image/png"/>
+<link href="/img/icons/apple-icon-180x180.png" rel="apple-touch-icon" sizes="180x180" type="image/png"/>
+<link href="/img/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/img/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/img/icons/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png"/>
+<link href="/img/icons/favicon-192x192.png" rel="icon" sizes="192x192" type="image/png"/>
+<meta content="width=device-width, initial-scale=1" id="viewport" name="viewport"/>
+<script>
+                var propertag = {};
+                propertag.cmd = [];
+            </script>
+<link href="/design/assets/bundle.css?rev=c58d8df02f09262390bbd03db7921fc35c6af306" rel="stylesheet"/>
+<script>
+                function object(objectId) {
+                    if (document.getElementById && document.getElementById(objectId)) {
+                        return document.getElementById(objectId);
+                    } else if (document.all && document.all(objectId)) {
+                        return document.all(objectId);
+                    } else if (document.layers && document.layers[objectId]) {
+                        return document.layers[objectId];
+                    } else {
+                        return false;
+                    }
+                }
+
+                // JAVASCRIPT COOKIES CODE: for getting and setting user viewing preferences
+                var cookies = {
+                    create: function (name, value, days2expire, path) {
+                        var date = new Date();
+                        date.setTime(date.getTime() + (days2expire * 24 * 60 * 60 * 1000));
+                        var expires = date.toUTCString();
+                        document.cookie = name + '=' + value + ';' + 'expires=' + expires + ';' + 'path=' + path + ';';
+                    },
+										createWithExpire: function(name, value, expires, path) {
+												document.cookie = name + '=' + value + ';' + 'expires=' + expires + ';' + 'path=' + path + ';';
+										},
+                    read: function (name) {
+                        var cookie_value = "",
+                            current_cookie = "",
+                            name_expr = name + "=",
+                            all_cookies = document.cookie.split(';'),
+                            n = all_cookies.length;
+
+                        for (var i = 0; i < n; i++) {
+                            current_cookie = all_cookies[i].trim();
+                            if (current_cookie.indexOf(name_expr) === 0) {
+                                cookie_value = current_cookie.substring(name_expr.length, current_cookie.length);
+                                break;
+                            }
+                        }
+                        return cookie_value;
+                    },
+                    update: function (name, val) {
+                        this.create(name, val, 300, "/");
+                    },
+                    remove: function (name) {
+                        document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
+                    }
+                };
+
+                function updateUserPrefs() {
+                    //GENERAL: detect and set browser, if not cookied (will be treated like a user-preference and added to the #user-pref element)
+                    if( !cookies.read('user-browser') ){
+                        var broswer = '';
+
+                        if(navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPod/i) ){
+                            browser = 'iOS';
+                        } else if (/Opera[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'opera';
+                        } else if (/MSIE (\d+\.\d+);/.test(navigator.userAgent)) {
+                            browser = 'MSIE';
+                        } else if (/Navigator[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'netscape';
+                        } else if (/Chrome[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'chrome';
+                        } else if (/Safari[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'safari';
+                            /Version[\/\s](\d+\.\d+)/.test(navigator.userAgent);
+                            browserVersion = new Number(RegExp.$1);
+                        } else if (/Firefox[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'firefox';
+                        } else {
+                            browser = 'internet_explorer';
+                        }
+                        cookies.create('user-browser',browser,1,'/');
+                        document.getElementById('user-prefs').classList.add('browser-' + browser);
+                    } else {
+                        document.getElementById('user-prefs').classList.add('browser-' + cookies.read('user-browser'));
+                    }
+
+                    //update user preference settings
+                    if (cookies.read('wide-load') !== '') document.getElementById('user-prefs').classList.add('wide-load');
+                    if (cookies.read('night-vision') !== '') document.getElementById('user-prefs').classList.add('night-vision');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('user-prefs').classList.add('sticky-header');
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('user-prefs').classList.add('show-spoilers');
+                    if (cookies.read('folders-open') !== '') document.getElementById('user-prefs').classList.add('folders-open');
+                    if (cookies.read('lefthand-sidebar') !== '') document.getElementById('user-prefs').classList.add('lefthand-sidebar');
+                    if (cookies.read('highlight-links') !== '') document.getElementById('user-prefs').classList.add('highlight-links');
+                    if (cookies.read('forum-gingerbread') !== '') document.getElementById('user-prefs').classList.add('forum-gingerbread');
+                    if (cookies.read('shared-avatars') !== '') document.getElementById('user-prefs').classList.add('shared-avatars');
+                    if (cookies.read('new-search') !== '') document.getElementById('user-prefs').classList.add('new-search');
+                    if (cookies.read('stop-auto-play-video') !== '') document.getElementById('user-prefs').classList.add('stop-auto-play-video');
+
+                    //desktop view on mobile
+                    if (cookies.read('desktop-on-mobile') !== ''){
+                        document.getElementById('user-prefs').classList.add('desktop-on-mobile');
+
+                        var viewport = document.querySelector("meta[name=viewport]");
+                        viewport.setAttribute('content', 'width=1000');
+                    }
+
+                }
+
+                function updateDesktopPrefs() {
+                    if (cookies.read('wide-load') !== '') document.getElementById('sidebar-toggle-wideload').classList.add('active');
+                    if (cookies.read('night-vision') !== '') document.getElementById('sidebar-toggle-nightvision').classList.add('active');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('sidebar-toggle-stickyheader').classList.add('active');
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('sidebar-toggle-showspoilers').classList.add('active');
+
+                }
+
+                function updateMobilePrefs() {
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('mobile-toggle-showspoilers').classList.add('active');
+                    if (cookies.read('night-vision') !== '') document.getElementById('mobile-toggle-nightvision').classList.add('active');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('mobile-toggle-stickyheader').classList.add('active');
+                    if (cookies.read('highlight-links') !== '') document.getElementById('mobile-toggle-highlightlinks').classList.add('active');
+
+                }
+
+
+                if (document.cookie.indexOf("scroll0=") < 0) {
+                    // do nothing
+                } else {
+                    console.log('ads removed by scroll.com');
+                    var adsRemovedWith = 'scroll';
+                    var style = document.createElement('style');
+                    style.innerHTML = '#header-ad, .proper-ad-unit, .square_ad, .sb-ad-unit { display: none !important; } ';
+                    document.head.appendChild(style);
+                }
+            </script>
+<script type="text/javascript">
+
+                var tvtropes_config = {
+                    astri_stream_enabled : "",
+                    is_logged_in         : "",
+                    handle               : "",
+                    get_astri_stream     : "",
+										revnum               : "c58d8df02f09262390bbd03db7921fc35c6af306",
+										img_domain           : "https://static.tvtropes.org",
+										adblock              : "1",
+										adblock_url          : "propermessage.io",
+										pause_editing        : "0",
+										pause_editing_msg    : "",
+										pause_site_changes   : ""
+                };
+            </script>
+<script type="text/javascript">
+						  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+						  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+						  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+						  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+						  ga('create', 'UA-3821842-1', 'auto');
+						  ga('send', 'pageview');
+
+						</script>
+</head>
+<body class="">
+<i id="user-prefs"></i>
+<script>updateUserPrefs();</script>
+<div id="fb-root"></div>
+<div id="modal-box"></div>
+<header class="headroom-element" id="main-header-bar">
+<div id="main-header-bar-inner">
+<span class="header-spacer" id="header-spacer-left"></span>
+<a class="mobile-menu-toggle-button tablet-on" href="#mobile-menu" id="main-mobile-toggle"><span></span><span></span><span></span></a>
+<a class="no-dev" href="/" id="main-header-logoButton"></a>
+<span class="header-spacer" id="header-spacer-right"></span>
+<nav class="tablet-off" id="main-header-nav">
+<a href="/pmwiki/pmwiki.php/Main/Tropes">Tropes</a>
+<a href="/pmwiki/pmwiki.php/Main/Media">Media</a>
+<a class="nav-browse" href="/pmwiki/browse.php">Browse</a>
+<a href="/pmwiki/index_report.php">Indexes</a>
+<a href="/pmwiki/topics.php">Forums</a>
+<a class="nav-browse" href="/pmwiki/recent_videos.php">Videos</a>
+</nav>
+<div id="main-header-bar-right">
+<div class="font-xs mobile-off" id="signup-login-box">
+<a class="hover-underline bold" data-modal-target="signup" href="/pmwiki/login.php">Join</a>
+<a class="hover-underline bold" data-modal-target="login" href="/pmwiki/login.php">Login</a>
+</div>
+<div class="mobile-on inline" id="signup-login-mobileToggle">
+<a data-modal-target="login" href="/pmwiki/login.php"><i class="fa fa-user"></i></a>
+</div>
+<div id="search-box">
+<form action="/pmwiki/search_result.php" class="search">
+<input class="search-box" name="q" placeholder="Search" required="" type="text" value=""/>
+<input class="submit-button" type="submit" value=""/>
+<input name="search_type" type="hidden" value="article"/>
+<input name="page_type" type="hidden" value="all"/>
+<input name="cx" type="hidden" value="partner-pub-6610802604051523:amzitfn8e7v"/>
+<input name="cof" type="hidden" value="FORID:10"/>
+<input name="ie" type="hidden" value="ISO-8859-1"/>
+<input name="siteurl" type="hidden" value=""/>
+<input name="ref" type="hidden" value=""/>
+<input name="ss" type="hidden" value=""/>
+</form>
+<a class="mobile-on mobile-search-toggle close-x" href="#close-search"><i class="fa fa-close"></i></a>
+</div>
+<div id="random-box">
+<a class="button-random-trope" href="/pmwiki/pmwiki.php/Main/PhantomZone" onclick="ga('send', 'event', 'button', 'click', 'random trope');" rel="nofollow"></a>
+<a class="button-random-media" href="/pmwiki/pmwiki.php/Music/TimMcGraw" onclick="ga('send', 'event', 'button', 'click', 'random media');" rel="nofollow"></a>
+</div>
+</div>
+</div>
+<div class="tablet-on" id="mobile-menu"><div class="mobile-menu-options">
+<div class="nav-wrapper">
+<a class="xl" href="/pmwiki/pmwiki.php/Main/Tropes">Tropes</a>
+<a class="xl" href="/pmwiki/pmwiki.php/Main/Media">Media</a>
+<a class="xl" href="/pmwiki/browse.php">Browse</a>
+<a class="xl" href="/pmwiki/index_report.php">Indexes</a>
+<a class="xl" href="/pmwiki/topics.php">Forums</a>
+<a class="xl" href="/pmwiki/recent_videos.php">Videos</a>
+<a href="/pmwiki/query.php?type=att">Ask The Tropers</a>
+<a href="/pmwiki/query.php?type=tf">Trope Finder</a>
+<a href="/pmwiki/query.php?type=ykts">You Know That Show...</a>
+<a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a>
+<a data-click-toggle="active" href="#tools">Tools <i class="fa fa-chevron-down"></i></a>
+<div class="tools-dropdown mobile-dropdown-linkList">
+<a href="/pmwiki/cutlist.php">Cut List</a>
+<a href="/pmwiki/changes.php">New Edits</a>
+<a href="/pmwiki/recent_edit_reasons.php">Edit Reasons</a>
+<a href="/pmwiki/launches.php">Launches</a>
+<a href="/pmwiki/img_list.php">Images List</a>
+<a href="/pmwiki/crown_activity.php">Crowner Activity</a>
+<a href="/pmwiki/no_types.php">Un-typed Pages</a>
+<a href="/pmwiki/page_type_audit.php">Recent Page Type Changes</a>
+</div>
+<a data-click-toggle="active" href="#hq">Tropes HQ <i class="fa fa-chevron-down"></i></a>
+<div class="tools-dropdown mobile-dropdown-linkList">
+<a href="/pmwiki/about.php">About Us</a>
+<a href="/pmwiki/contact.php">Contact Us</a>
+<a href="mailto:advertising@proper.io">Advertise</a>
+<a href="/pmwiki/dmca.php">DMCA Notice</a>
+<a href="/pmwiki/privacypolicy.php">Privacy Policy</a>
+</div>
+<a href="/pmwiki/ad-free-subscribe.php">Go Ad-Free</a>
+<div class="toggle-switches">
+<ul class="mobile-menu display-toggles">
+<li>Show Spoilers <div class="display-toggle show-spoilers" id="mobile-toggle-showspoilers"></div></li>
+<li>Night Vision <div class="display-toggle night-vision" id="mobile-toggle-nightvision"></div></li>
+<li>Sticky Header <div class="display-toggle sticky-header" id="mobile-toggle-stickyheader"></div></li>
+<li>Highlight Links <div class="display-toggle highlight-links" id="mobile-toggle-highlightlinks"></div></li>
+</ul>
+<script>updateMobilePrefs();</script>
+</div>
+</div>
+</div>
+</div>
+</header>
+<div class="mobile-on" id="homepage-introBox-mobile">
+<a href="/"><img class="logo-small" src="/images/logo-white-big.png"/></a>
+<form action="/pmwiki/search_result.php" class="search" style="margin:10px -5px -6px -5px;">
+<input class="search-box" name="q" placeholder="Search" required="" type="text" value=""/>
+<input class="submit-button" type="submit" value=""/>
+<input name="search_type" type="hidden" value="article"/>
+<input name="page_type" type="hidden" value="all"/>
+<input name="cx" type="hidden" value="partner-pub-6610802604051523:amzitfn8e7v"/>
+<input name="cof" type="hidden" value="FORID:10"/>
+<input name="ie" type="hidden" value="ISO-8859-1"/>
+<input name="siteurl" type="hidden" value=""/>
+<input name="ref" type="hidden" value=""/>
+<input name="ss" type="hidden" value=""/>
+</form>
+</div>
+<div class="ad" id="header-ad-wrapper">
+<div id="header-ad">
+<div class="ad-size-970x90 atf_banner">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_1"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_1'); });</script> </div>
+</div> </div>
+</div>
+</div>
+<div id="main-container">
+<div class="action-bar mobile-off" id="action-bar-top">
+<div class="action-bar-right">
+<p>Follow TV Tropes</p>
+<a class="button-fb" href="https://www.facebook.com/TVTropes">
+<i class="fa fa-facebook"></i></a>
+<a class="button-tw" href="https://www.twitter.com/TVTropes">
+<i class="fa fa-twitter"></i></a>
+<a class="button-re" href="https://www.reddit.com/r/TVTropes">
+<i class="fa fa-reddit-alien"></i></a>
+</div>
+<nav class="actions-wrapper" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<ul class="page-actions" id="top_main_list">
+<li class="link-edit">
+<a class="article-edit-button" data-modal-target="login" href="/pmwiki/pmwiki.php/Main/PlayerPersonalityQuiz?action=edit" rel="nofollow">
+<i class="fa fa-pencil"></i> Edit Page</a></li><li class="link-related"><a href="/pmwiki/relatedsearch.php?term=Main/PlayerPersonalityQuiz">
+<i class="fa fa-share-alt"></i> Related</a></li><li class="link-history"><a href="/pmwiki/article_history.php?article=Main.PlayerPersonalityQuiz">
+<i class="fa fa-history"></i> History</a></li><li class="link-discussion"><a href="/pmwiki/remarks.php?trope=Main.PlayerPersonalityQuiz">
+<i class="fa fa-comment"></i> Discussion</a></li> </ul>
+<button class="nav__dropdown-toggle" id="top_more_button" onclick="toggle_more_menu('top');" type="button">More</button>
+<ul class="more_menu hidden_more_list" id="top_more_list">
+<li class="link-todo tuck-always more_list_item"><a data-modal-target="login" href="#todo"><i class="fa fa-check-circle"></i> To Do</a></li><li class="link-pageSource tuck-always more_list_item"><a data-modal-target="login" href="/pmwiki/pmwiki.php/Main/PlayerPersonalityQuiz?action=source" rel="nofollow" target="_blank"><i class="fa fa-code"></i> Page Source</a></li> </ul>
+</nav>
+<div class="WikiWordModalStub"></div>
+<div class="ImgUploadModalStub" data-page-type="Article"></div>
+<div class="login-alert" style="display: none;">
+You need to <a href="/pmwiki/login.php" style="color:#21A0E8">login</a> to do this. <a href="/pmwiki/login.php?tab=register_account" style="color:#21A0E8">Get Known</a> if you don't have an account
+</div>
+</div>
+<div class="page-Article" id="main-content">
+<article class="with-sidebar" id="main-entry">
+<input id="groupname-hidden" type="hidden" value="Main"/>
+<input id="title-hidden" type="hidden" value="PlayerPersonalityQuiz"/>
+<input id="article_id" type="hidden" value="289479"/>
+<input id="logged_in" type="hidden" value="false"/>
+<p class="hidden" id="current_url">http://tvtropes.org/pmwiki/pmwiki.php/Main/PlayerPersonalityQuiz</p>
+<meta content="" itemprop="datePublished"/>
+<meta content="" itemprop="articleSection"/>
+<meta content="" itemprop="image"/>
+<a class="watch-button" data-modal-target="login" href="#watch">Follow<span>ing</span></a>
+<h1 class="entry-title" itemprop="headline">
+Player Personality Quiz
+</h1>
+<script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+                "@type": "ListItem",
+                "position": 1,
+                "name": "tvtropes.org",
+                "item": "https://tvtropes.org"
+            },{
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Tropes",
+                "item": "https://tvtropes.org/pmwiki/pmwiki.php/Main/Tropes"
+            },{
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Player Personality Quiz"            }]
+        }
+    </script>
+<a class="mobile-actionbar-toggle mobile-on" data-click-toggle="active" href="#mobile-actions-toggle" id="mobile-actionbar-toggle">
+<p class="tiny-off">Go To</p><span></span><span></span><span></span><i class="fa fa-pencil"></i></a>
+<nav class="mobile-actions-wrapper mobile-on" id="mobile-actions-bar"></nav>
+<div class="modal fade hidden-until-active" id="editLockModal">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button aria-label="Close" class="close" data-dismiss="modal" type="button"> <span aria-hidden="true">×</span></button>
+<h4 class="modal-title">Edit Locked</h4>
+</div>
+<div class="modal-body">
+<div class="row">
+<div class="body">
+<div class="danger troper_locked_message"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<nav class="body-options" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<ul class="subpage-links">
+<li>
+<a class="subpage-link curr-subpage" href="/pmwiki/pmwiki.php/Main/PlayerPersonalityQuiz" title="The Main page">
+<span class="wrapper"><span class="spi main-page"></span>Main</span></a>
+</li>
+<li>
+<a class="subpage-link video-examples-tab" href="/pmwiki/pmwiki.php/VideoExamples/PlayerPersonalityQuiz" title="Video Examples">
+<img alt="play" class="" src="/images/play-button-logo.png"/>
+<span class="wrapper">VideoExamples</span>
+</a>
+</li>
+<li class="create-subpage dropdown">
+<a aria-expanded="false" class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);" role="button">
+<span class="wrapper">Create New <i class="fa fa-plus-circle"></i></span>
+</a>
+<select onchange="this.options[this.selectedIndex].value &amp;&amp; (window.location = this.options[this.selectedIndex].value);">
+<option value="">- Create New -</option>
+<option value="/pmwiki/pmwiki.php/Analysis/PlayerPersonalityQuiz?action=edit">Analysis</option>
+<option value="/pmwiki/pmwiki.php/Characters/PlayerPersonalityQuiz?action=edit">Characters</option>
+<option value="/pmwiki/pmwiki.php/FanficRecs/PlayerPersonalityQuiz?action=edit">FanficRecs</option>
+<option value="/pmwiki/pmwiki.php/FanWorks/PlayerPersonalityQuiz?action=edit">FanWorks</option>
+<option value="/pmwiki/pmwiki.php/Fridge/PlayerPersonalityQuiz?action=edit">Fridge</option>
+<option value="/pmwiki/pmwiki.php/Haiku/PlayerPersonalityQuiz?action=edit">Haiku</option>
+<option value="/pmwiki/pmwiki.php/Headscratchers/PlayerPersonalityQuiz?action=edit">Headscratchers</option>
+<option value="/pmwiki/pmwiki.php/ImageLinks/PlayerPersonalityQuiz?action=edit">ImageLinks</option>
+<option value="/pmwiki/pmwiki.php/Laconic/PlayerPersonalityQuiz?action=edit">Laconic</option>
+<option value="/pmwiki/pmwiki.php/PlayingWith/PlayerPersonalityQuiz?action=edit">PlayingWith</option>
+<option value="/pmwiki/pmwiki.php/Quotes/PlayerPersonalityQuiz?action=edit">Quotes</option>
+<option value="/pmwiki/pmwiki.php/Recap/PlayerPersonalityQuiz?action=edit">Recap</option>
+<option value="/pmwiki/pmwiki.php/ReferencedBy/PlayerPersonalityQuiz?action=edit">ReferencedBy</option>
+<option value="/pmwiki/pmwiki.php/Synopsis/PlayerPersonalityQuiz?action=edit">Synopsis</option>
+<option value="/pmwiki/pmwiki.php/Timeline/PlayerPersonalityQuiz?action=edit">Timeline</option>
+<option value="/pmwiki/pmwiki.php/Trivia/PlayerPersonalityQuiz?action=edit">Trivia</option>
+<option value="/pmwiki/pmwiki.php/WMG/PlayerPersonalityQuiz?action=edit">WMG</option>
+<option value="/pmwiki/pmwiki.php/YMMV/PlayerPersonalityQuiz?action=edit">YMMV</option>
+</select>
+</li>
+</ul>
+</nav>
+<div class="article-content retro-folders" id="main-article">
+<p></p><div class="quoteright" style="width:240px;"><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/PokemonMysteryDungeonRescueTeam" title="/pmwiki/pmwiki.php/VideoGame/PokemonMysteryDungeonRescueTeam"><div class="lazy_load_img_box" style="padding-top:66.67%"><img alt="https://static.tvtropes.org/pmwiki/pub/images/2485_pokemon_mystery_dungeon_red_rescue_team_urdg_0_4.png" border="0" class="embeddedimage" height="160" src="https://static.tvtropes.org/pmwiki/pub/images/2485_pokemon_mystery_dungeon_red_rescue_team_urdg_0_4.png" width="240"/></div></a></div>
+<div class="acaptionright" style="width:240px;"><a class="twikilink" href="/pmwiki/pmwiki.php/Main/GuideDangIt" title="/pmwiki/pmwiki.php/Main/GuideDangIt">&gt; Look up the answers to get what you want.</a></div>
+<div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_1"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_1'); })</script></div></div><p>In some video games, particularly at the start, you will occasionally find yourself tested. But unlike <a class="twikilink" href="/pmwiki/pmwiki.php/Main/PopQuiz" title="/pmwiki/pmwiki.php/Main/PopQuiz">most tests found in video games</a>, this one doesn't test your knowledge of the trivial. No, this test gives you several hypothetical situations and you must choose an answer that would best describe your course of action in the situation. A personality test, in other words. These tests can be used for a variety of things, such as determining a character's class or job based on your play style, determining which of many possible items to give you; where you sit on a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/KarmaMeter" title="/pmwiki/pmwiki.php/Main/KarmaMeter">Karma Meter</a>, and so on.
+</p><p>The questions on such tests tend to cover a wide variety of topics, from how players would approach difficult problems, to how they react to certain scenarios, and even personal matters such as gender, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/PersonalityBloodTypes" title="/pmwiki/pmwiki.php/Main/PersonalityBloodTypes">blood type</a>, and <a class="twikilink" href="/pmwiki/pmwiki.php/Main/WesternZodiac" title="/pmwiki/pmwiki.php/Main/WesternZodiac">Zodiac</a> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/EasternZodiac" title="/pmwiki/pmwiki.php/Main/EasternZodiac">sign</a>. Most of the time, it's easy to see how your answers affect the result. Stating you would prefer to sneak into a heavily guarded fortress will give you a character more oriented towards stealth related builds, while saying you would rush in with weapons drawn would yield a character better suited to direct combat. Other games might ask questions that have little to do with the actual gameplay, asking you what kind of friend you are, or what you like to do in your spare time.
+</p><div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_2"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_2'); })</script></div></div><p>Depending on the game, the overall influence of your answers can range from simple differences in physical appearance to the entire make-up of your character.
+</p><p>Like any good personality test, there are no wrong answers. That is, unless there is a particular result you're aiming for. Some games might be generous enough to let you retake the test, or manually override it altogether. If not, you can always consult the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GuideDangIt" title="/pmwiki/pmwiki.php/Main/GuideDangIt">Strategy Guide or Online FAQ</a>.
+</p><p>Not related to <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SecretTestOfCharacter" title="/pmwiki/pmwiki.php/Main/SecretTestOfCharacter">Secret Test of Character</a>, where the test situations are real, as opposed to merely hypothetical. See also <a class="twikilink" href="/pmwiki/pmwiki.php/Main/PopQuiz" title="/pmwiki/pmwiki.php/Main/PopQuiz">Pop Quiz</a>.
+</p><p></p><hr/><div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_3"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_3'); })</script></div></div><h2>Examples:</h2>
+<div class="folderlabel" onclick="toggleAllFolders();">    open/close all folders  </div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder0');">     Adventure Game </div><div class="folder" id="folder0" isfolder="true" style="display:block;">
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/QuestForGlory3" title="/pmwiki/pmwiki.php/VideoGame/QuestForGlory3">Quest For Glory 3</a></em> has this when the oracle talks to you. You are then told a fortune based off your answers.
+<ul><li> This one is especially fun because there are always three "reasonable" answers, one "fair" answer, and one joke answer to each question. Picking the joke answers can <a class="twikilink" href="/pmwiki/pmwiki.php/Main/WhatTheHellPlayer" title="/pmwiki/pmwiki.php/Main/WhatTheHellPlayer">make the sequence end abruptly</a>, sans the fortune.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/EscapeFromMonkeyIsland" title="/pmwiki/pmwiki.php/VideoGame/EscapeFromMonkeyIsland">Escape from Monkey Island</a></em> parodies this with the pirate correction school.
+</li><li> One of the draws of <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DokiDokiUniverse" title="/pmwiki/pmwiki.php/VideoGame/DokiDokiUniverse">Doki-Doki Universe</a></em> are the personality questions that you'll be asked throughout the game. However, it's just a straight personality test and doesn't have any significant gameplay effects.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder1');">    Card Games </div><div class="folder" id="folder1" isfolder="true" style="display:block;">
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MonsterRancherBattleCardGame" title="/pmwiki/pmwiki.php/VideoGame/MonsterRancherBattleCardGame">Monster Rancher Battle Card Game</a> Episode II</em> has a quiz that determines your starting Monsters and deck.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/YuGiOhNightmareTroubadour" title="/pmwiki/pmwiki.php/VideoGame/YuGiOhNightmareTroubadour">Yu-Gi-Oh! Nightmare Troubadour</a></em> has a quiz at the start that determines your appearance and 6 of the cards in your starting deck.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder2');">     Dating Sims </div><div class="folder" id="folder2" isfolder="true" style="display:block;">
+<ul><li> The second <em><a class="twikilink" href="/pmwiki/pmwiki.php/VisualNovel/TokimekiMemorialGirlsSide" title="/pmwiki/pmwiki.php/VisualNovel/TokimekiMemorialGirlsSide">Tokimeki Memorial Girl's Side</a></em> game used a questionnaire on the first day of school to decide your character's starting stats and with which character she has an <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AccidentalKiss" title="/pmwiki/pmwiki.php/Main/AccidentalKiss">Accidental Kiss</a> early on.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VisualNovel/MonsterProm" title="/pmwiki/pmwiki.php/VisualNovel/MonsterProm">Monster Prom</a></em> has a personality test from a teen magazine in the beginning of the game with three questions. The first two each raise one of your stats depending on your answer, and the third gives a starting relationship boost to one of the possible dating options.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder3');">     MMORPGs </div><div class="folder" id="folder3" isfolder="true" style="display:block;">
+<ul><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/WorldOfWarcraft" title="/pmwiki/pmwiki.php/VideoGame/WorldOfWarcraft">World of Warcraft</a></em>, during the Darkmoon Faire, you are given one of these by the fortune teller, who gives you a buff for a different stat depending on your answers.
+</li><li> In the tutorial area of <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/RagnarokOnline" title="/pmwiki/pmwiki.php/VideoGame/RagnarokOnline">Ragnarok Online</a></em>, the last stage before entering the gameworld is a test of this kind that determines which of the original six "first jobs" fits your personality. If you choose to follow the results, you get several extras before entering the game.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder4');">     Real Time Strategy </div><div class="folder" id="folder4" isfolder="true" style="display:block;">
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/RepublicTheRevolution" title="/pmwiki/pmwiki.php/VideoGame/RepublicTheRevolution">Republic: The Revolution</a></em> starts with you having to fill in a short questionnaire describing the past of your <a class="twikilink" href="/pmwiki/pmwiki.php/Main/PlayerCharacter" title="/pmwiki/pmwiki.php/Main/PlayerCharacter">Player Character</a>. Your answers mainly determine his political profile and which resources he starts the game with.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder5');">     Roguelike </div><div class="folder" id="folder5" isfolder="true" style="display:block;">
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/AncientDomainsOfMystery" title="/pmwiki/pmwiki.php/VideoGame/AncientDomainsOfMystery">Ancient Domains of Mystery</a></em> gives you the option to use one for determining the stat modifiers to your race/class combo, although your only ever asked a random subset of the questions available. You can also choose random stats.
+</li><li> The <a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/PokemonMysteryDungeonRescueTeam" title="/pmwiki/pmwiki.php/VideoGame/PokemonMysteryDungeonRescueTeam">first</a> <a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/PokemonMysteryDungeonExplorers" title="/pmwiki/pmwiki.php/VideoGame/PokemonMysteryDungeonExplorers">two</a> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/PokemonMysteryDungeon" title="/pmwiki/pmwiki.php/VideoGame/PokemonMysteryDungeon">Pokémon Mystery Dungeon</a></em> <a class="urllink" href="http://www.psypokes.com/dungeon/test.php">open with<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a> <a class="urllink" href="https://www.gamefaqs.com/ds/955859-pokemon-mystery-dungeon-explorers-of-sky/faqs/58014">a personality quiz.<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a> This determines which Pokémon your main character becomes. You're also prompted to give your gender, as that's <em>also</em> a factor. For instance, in <em>Explorers</em>, a Brave male becomes <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ShockAndAwe" title="/pmwiki/pmwiki.php/Main/ShockAndAwe">Pikachu</a> while a Brave female ends up as <a class="twikilink" href="/pmwiki/pmwiki.php/Main/PlayingWithFire" title="/pmwiki/pmwiki.php/Main/PlayingWithFire">Charmander</a>. <a class="urllink" href="https://projectpokemon.org/pages/games/pok&lt;!--C3--&gt;A9mon-super-mystery-dungeon/personality-test-r3/">The quiz returns in<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/PokemonSuperMysteryDungeon" title="/pmwiki/pmwiki.php/VideoGame/PokemonSuperMysteryDungeon">Super Mystery Dungeon</a></em> after being absent from <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/PokemonMysteryDungeonGatesToInfinity" title="/pmwiki/pmwiki.php/VideoGame/PokemonMysteryDungeonGatesToInfinity">Gates to Infinity</a></em>, but you're also given the option to disregard the result and choose your Pokémon directly if you just want a specific one.
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Main/UpdatedRerelease" title="/pmwiki/pmwiki.php/Main/UpdatedRerelease">Explorers of Sky</a></em> also asks if they'd played <em>Explorers of Time</em> or <em>Darkness</em>: If the player says yes, the game is more likely to roll questions that would lead to the new starters.
+</li></ul></li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder6');">     Role Playing Game </div><div class="folder" id="folder6" isfolder="true" style="display:block;">
+<ul><li> An earlier <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/Pokemon" title="/pmwiki/pmwiki.php/Franchise/Pokemon">Pokémon</a></em> example occurs in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/PokemonGoldAndSilver" title="/pmwiki/pmwiki.php/VideoGame/PokemonGoldAndSilver">Crystal</a></em>, when you are tested to see if you are worthy of the final Gym badge after you beat Clair. If you answer everything like a goody two-shoes (re: don't think like <a class="twikilink" href="/pmwiki/pmwiki.php/Main/JerkAss" title="/pmwiki/pmwiki.php/Main/JerkAss">your rival</a>), you get a Dratini that knows Extreme Speed in addition to the badge! This quiz is featured again in the Gold &amp; Silver remakes.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Videogame/KnightsOfTheOldRepublic" title="/pmwiki/pmwiki.php/Videogame/KnightsOfTheOldRepublic">Knights of the Old Republic</a></em> featured one when determining your Jedi class. You can choose to ignore the results if you wish.
+<ul><li> There's a more standard test of personality in it, when a terminal will only permit one person to use it. The player character has to answer like Revan would to access the console. Strangely, even if you fail the test, you are still permitted access after doing battle with several robot guards (this is explained later).
+</li><li> And answering like the villain would turns your <a class="twikilink" href="/pmwiki/pmwiki.php/Main/KarmaMeter" title="/pmwiki/pmwiki.php/Main/KarmaMeter">Karma Meter</a> towards evil. <a class="twikilink" href="/pmwiki/pmwiki.php/Main/StupidGood" title="/pmwiki/pmwiki.php/Main/StupidGood">Have Jedi never heard of</a> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/JediTruth" title="/pmwiki/pmwiki.php/Main/JediTruth">lying</a>?
+<ul><li> The computer had already explained that it would know if you're lying. A little odd that you're not even given the option of trying though.
+</li></ul></li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Fallout3" title="/pmwiki/pmwiki.php/VideoGame/Fallout3">Fallout 3</a></em> used a personality test called the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/FunWithAcronyms" title="/pmwiki/pmwiki.php/Main/FunWithAcronyms">G.O.A.T. exam</a> to determine your tag skills. Of course, the game allows you to completely ignore the results if you wanted; the test-giver will flat-out call it a joke and offer to manipulate your results if asked.
+<ul><li> Right before you sit down to take the GOAT, there is also a Karma Test: Three bullies are harassing your friend and there are any number of ways to deal with them, ranging from violent (negative karma), ignoring it (neutral karma), and talking your way to a peaceful resolution (positive karma) (or, alternatively, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GoodIsNotNice" title="/pmwiki/pmwiki.php/Main/GoodIsNotNice">beating the bullies back</a>).
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FalloutNewVegas" title="/pmwiki/pmwiki.php/VideoGame/FalloutNewVegas">Fallout: New Vegas</a></em> continues the tradition when the doctor who saved your life in the intro gives you a psych test, with Rorschach inkblots and word association. Again, he admits his test has <a class="twikilink" href="/pmwiki/pmwiki.php/Main/NoControlGroup" title="/pmwiki/pmwiki.php/Main/NoControlGroup">No Control Group</a> and lets you decide if his suggestion is valid or not. If you choose options that are clearly bad, the doctor will note that sometimes these tests will let you learn things about folks that you'd rather not have known.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/UltimaIV" title="/pmwiki/pmwiki.php/VideoGame/UltimaIV">Ultima IV</a></em> did this (and could actually be the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TropeMaker" title="/pmwiki/pmwiki.php/Main/TropeMaker">Trope Maker</a>). It selected your character class and starting location based on the results. They reused the same test in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/UltimaV" title="/pmwiki/pmwiki.php/VideoGame/UltimaV">V</a></em>, <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/UltimaVI" title="/pmwiki/pmwiki.php/VideoGame/UltimaVI">VI</a></em> and <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/UltimaIX" title="/pmwiki/pmwiki.php/VideoGame/UltimaIX">IX</a></em> with a few minor changes to the wording of the questions.
+<ul><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/UltimaVII" title="/pmwiki/pmwiki.php/VideoGame/UltimaVII">Ultima VII</a></em>, ignoring all of the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/CopyProtection" title="/pmwiki/pmwiki.php/Main/CopyProtection">Copy Protection</a> tests, joining <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ChurchOfHappyology" title="/pmwiki/pmwiki.php/Main/ChurchOfHappyology">the Fellowship</a> is accompanied by a verbal test administered by Batlin. It handles like a situational examination, with Batlin performing a pragmatic spin on even rather good answers, and, ultimately, you are encouraged to join the Fellowship regardless of how you answer.
+</li></ul></li><li> In the beginning of <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/KingdomHeartsI" title="/pmwiki/pmwiki.php/VideoGame/KingdomHeartsI">Kingdom Hearts</a></em>, you walk through a door in your dreams and must answer a few questions from your "<a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FinalFantasyVIII" title="/pmwiki/pmwiki.php/VideoGame/FinalFantasyVIII">fri</a><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FinalFantasyX" title="/pmwiki/pmwiki.php/VideoGame/FinalFantasyX">ends</a>". You are then told at what time of day your journey starts, as a metaphor for your rate of experience level-up (either fast at low levels, average at all levels, or fast at high levels). Choosing a starting weapon and discarding a second weapon also comes with a descriptor of what qualities you are embodying or discarding, and decides your starting stats and the order of abilities you learn by level-up.
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/KingdomHeartsII" title="/pmwiki/pmwiki.php/VideoGame/KingdomHeartsII">Kingdom Hearts II</a></em> continues this tradition, though it's a bit more streamlined. You only get to pick one weapon.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/TheElderScrolls" title="/pmwiki/pmwiki.php/Franchise/TheElderScrolls">The Elder Scrolls</a></em>:
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheElderScrollsArena" title="/pmwiki/pmwiki.php/VideoGame/TheElderScrollsArena">Arena</a></em>, <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheElderScrollsIIDaggerfall" title="/pmwiki/pmwiki.php/VideoGame/TheElderScrollsIIDaggerfall">Daggerfall</a></em>, and <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheElderScrollsIIIMorrowind" title="/pmwiki/pmwiki.php/VideoGame/TheElderScrollsIIIMorrowind">Morrowind</a></em> all include one during character creation in which you answer a series of questions to determine your class. It's optional so you can choose a different class that the one that is recommended based on the quiz, or just skip it altogether and manually select/create a class. <em>Daggerfall</em>'s is notable because it also determines your starting equipment. With the right answers, you can end up with a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DiscOneNuke" title="/pmwiki/pmwiki.php/Main/DiscOneNuke">Disc-One Nuke</a>. (Skipping it is ill-advised, as <a class="twikilink" href="/pmwiki/pmwiki.php/Main/VideoGameDelegationPenalty" title="/pmwiki/pmwiki.php/Main/VideoGameDelegationPenalty">the game will randomly fill it out</a> and you will likely end up with skills and equipment you have no intention of using.) <em>Morrowind</em>'s is also notably <em><a class="twikilink" href="/pmwiki/pmwiki.php/Main/Justified" title="/pmwiki/pmwiki.php/Main/Justified">justified</a></em> - it is given to you at the Census &amp; Excise Office at the start of the game, ostensibly because the test giver needs a character class for your release forms. (That said, more than a few questions are unintuitive and totally out-of-character...why does an immigration official need to know <a class="twikilink" href="/pmwiki/pmwiki.php/Main/RunningGag" title="/pmwiki/pmwiki.php/Main/RunningGag">what you would do if someone stole your sweetroll</a>?)
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheElderScrollsIVOblivion" title="/pmwiki/pmwiki.php/VideoGame/TheElderScrollsIVOblivion">Oblivion</a></em> replaces it with a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SecretTestOfCharacter" title="/pmwiki/pmwiki.php/Main/SecretTestOfCharacter">Secret Test of Character</a>. A NPC will recommend a class for you based on the skills you use during the tutorial. However, as there are a number of skills that you don't have the ability to use during the tutorial, there are a number of classes it will never recommend.
+</li><li> Subverted in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheElderScrollsVSkyrim" title="/pmwiki/pmwiki.php/VideoGame/TheElderScrollsVSkyrim">Skyrim</a></em>. One character is about to ask all the questions when another cuts him off, noting that it's pointless since your character is scheduled for execution.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/GrandiaII" title="/pmwiki/pmwiki.php/VideoGame/GrandiaII">Grandia II</a></em> had Ryudo test his character. You choose the answers in order to use the piece of devil in him safely.
+</li><li> There is one of these at the beginning of the SFC and GBC remakes of <em>Dragon Warrior 3</em> also called <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DragonQuestIII" title="/pmwiki/pmwiki.php/VideoGame/DragonQuestIII">Dragon Quest III</a></em> in Japan. It starts with a series of yes or no questions. Depending on how how you answer, you get put in a different situation. Your actions in the situation determine your character's personality, which affect your character's stats.
+<ul><li> For example, one scenario places the hero in a kingdom that's about to go to war with its neighbor — then has you overhear <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GodSaveUsFromTheQueen" title="/pmwiki/pmwiki.php/Main/GodSaveUsFromTheQueen">the Queen</a> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/EvilGloating" title="/pmwiki/pmwiki.php/Main/EvilGloating">gloating to herself</a> about how she lied to the king about the other kingdom planning to attack <em>them</em> so that he'd attack "first". Her real reasons for starting this war? <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Greed" title="/pmwiki/pmwiki.php/Main/Greed">She wants all their jewels for herself</a>. Another scenario looks like a straightforward dungeon, but how you proceed through the dungeon gives you very different results (and personalities)).
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SteambotChronicles" title="/pmwiki/pmwiki.php/VideoGame/SteambotChronicles">Steambot Chronicles</a></em> opens with a series of multiple choice personality questions to help determine the personality of your avatar. These include such things as "what would you do if you found a lost wallet full of money?" The game is LOADED with these kinds of personality-shaping questions all throughout.
+</li><li> <a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/ShinMegamiTensei" title="/pmwiki/pmwiki.php/Franchise/ShinMegamiTensei">Shin Megami Tensei</a>:
+<ul><li> A major aspect of <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/ShinMegamiTenseiIIINocturne" title="/pmwiki/pmwiki.php/VideoGame/ShinMegamiTenseiIIINocturne">Shin Megami Tensei III: Nocturne</a></em>, where personality-defining questions will crop up in demon conversations and in major story events. How you answer these questions has an effect on <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MultipleEndings" title="/pmwiki/pmwiki.php/Main/MultipleEndings">what ending you get</a> (as well as what endings are even <em>available</em>). The lone exception is the True Demon Ending, which overrides all other possibilities once you fulfill certain gameplay requirements, making all the previous conversations moot.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/ShinMegamiTenseiIf" title="/pmwiki/pmwiki.php/VideoGame/ShinMegamiTenseiIf">Shin Megami Tensei if...</a>...</em> will ask you about your student life to determinate your initial stats.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/ShinMegamiTenseiStrangeJourney" title="/pmwiki/pmwiki.php/VideoGame/ShinMegamiTenseiStrangeJourney">Shin Megami Tensei: Strange Journey</a></em> also uses a quiz to figure out your character's growth type.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/VampireTheMasqueradeBloodlines" title="/pmwiki/pmwiki.php/VideoGame/VampireTheMasqueradeBloodlines"> Vampire: The Masquerade  Bloodlines</a></em> has one at the very beginning to determine which clan would be best suited to the player. However, the test is optional, and the results are just a suggestion.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/BaldursGateII" title="/pmwiki/pmwiki.php/VideoGame/BaldursGateII">Baldur's Gate II</a></em> puts a spin on this during the Harper sidequest, where the guy in charge of Athkatla's particular Harper branch gives you one of these tests. Unfortunately, since he's trying to prove that you're a danger to society so he can lock you up, he puts a negative spin on every answer you give, right down to your <em>favorite color</em>.
+</li><li> One at the start of <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/RakenzarnTales" title="/pmwiki/pmwiki.php/VideoGame/RakenzarnTales">Rakenzarn Tales</a></em> determines your base stats as well as your default Alignment.
+</li><li> Professor Bamb'o gives you a short, color-coded one at the beginning of <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/PokemonUranium" title="/pmwiki/pmwiki.php/VideoGame/PokemonUranium">Pokémon Uranium</a></em>, to determine which starter suits your playing style.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/JojosBizarreAdventureThe7thStandUser" title="/pmwiki/pmwiki.php/VideoGame/JojosBizarreAdventureThe7thStandUser">JoJo's Bizarre Adventure: The 7th Stand User</a></em> has Abdul give the player a personality quiz at the beginning of the game to determine your Stand, which determines what skills you can learn, as well as affect several bits of dialogue throughout the game.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder7');">     Simulation Game </div><div class="folder" id="folder7" isfolder="true" style="display:block;">
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/AnimalCrossing" title="/pmwiki/pmwiki.php/VideoGame/AnimalCrossing">Animal Crossing</a></em> has you answer questions at the start to change your appearance and gender of your character.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheUrbz" title="/pmwiki/pmwiki.php/VideoGame/TheUrbz">The Urbz</a></em> on the DS and Game Boy Advance has the player answer several questions at the beginning of the game to decide which "rep group" the player's character will be in initially, as well as which rep group-exclusive Xizzles (secret abilities to ease the gameplay) will be available.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MonsterRancher" title="/pmwiki/pmwiki.php/VideoGame/MonsterRancher">Monster Rancher</a></em> 2 has a "breeder type quiz" at the beginning of the game, that appears to be this. However, it doesn't actually affect the game in any known way. It's unknown why it's there.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Prey2017" title="/pmwiki/pmwiki.php/VideoGame/Prey2017">Prey (2017)</a></em> concludes its tutorial with a philosophy questionnaire centered around variants of the trolley problem. <span class="spoiler" title="you can set spoilers visible by default on your profile">The <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TwistEnding" title="/pmwiki/pmwiki.php/Main/TwistEnding">Twist Ending</a> reveals that <em>the entire game</em> is also this, being an in-universe simulation to test a Typhon's empathy. The more caring you act towards NPCs and finish their sidequests, the easier it is to get the good ending.</span>
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheSims4" title="/pmwiki/pmwiki.php/VideoGame/TheSims4">The Sims 4</a></em>, players have the option to take a quiz and determine their Sim's appearance and traits. This quiz is worded as though it's the not-yet-created Sim asking you questions about how they would handle situations and what they're like, and gives them traits based on your answers.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder8');">     Turn Based Strategy </div><div class="folder" id="folder8" isfolder="true" style="display:block;">
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/VantageMaster" title="/pmwiki/pmwiki.php/VideoGame/VantageMaster">Vantage Master</a></em>, a fantasy turn-based strategy game on a field of hexagons, forced you into a specific character class depending on your answers. This would be okay, were it not for the fact that some classes were just really horrible.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder9');">     Turn Based Tactics </div><div class="folder" id="folder9" isfolder="true" style="display:block;">
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/OgreBattle" title="/pmwiki/pmwiki.php/VideoGame/OgreBattle">Ogre Battle</a></em> for the SNES and PSX used one of these to determine your main character's starting alignment, but in more recent games your answers have other effects, such as the items and equipment you start with, and what your starting characters' classes are.
+<ul><li> The one in the SNES game determined what your Lord's attacks were.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/JaggedAlliance" title="/pmwiki/pmwiki.php/VideoGame/JaggedAlliance">Jagged Alliance</a> 2</em> uses this to build a custom merc who works for free when you start a new campaign.
+</li><li> This trope is common to games in the <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Langrisser" title="/pmwiki/pmwiki.php/VideoGame/Langrisser">Langrisser</a></em> series, going back to <em>Der Langrisser</em> on <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/SuperFamicom" title="/pmwiki/pmwiki.php/UsefulNotes/SuperFamicom">Super Famicom</a>. Affects the main character's starting class and stats (although your starting class is overridden by your first promotion, which always turns Elwin into a warrior type.) This is expanded in later games to affect the main character's entire class tree.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder10');">     Visual Novel </div><div class="folder" id="folder10" isfolder="true" style="display:block;">
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VisualNovel/AnimamundiDarkAlchemist" title="/pmwiki/pmwiki.php/VisualNovel/AnimamundiDarkAlchemist">Animamundi Dark Alchemist</a></em> does this at the beginning to narrow down which of the twenty-odd endings you'll get.
+</li></ul></div>
+<p></p><h2>Non-video game examples:</h2>
+<p></p><div class="folderlabel" onclick="togglefolder('folder11');">     Web Original </div><div class="folder" id="folder11" isfolder="true" style="display:block;">
+<ul><li> The <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/HitherbyDragons" title="/pmwiki/pmwiki.php/Literature/HitherbyDragons">Hitherby Dragons</a></em> story <a class="urllink" href="http://imago.hitherby.com/?p=690">"What was Really Going On"<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a> describes the story of Abraham as if it were a player starting a character in an RPG, including decisions made on whether they want to be a ranger or a bard. This is, in fact, a direct parody of the <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/UltimaIV" title="/pmwiki/pmwiki.php/VideoGame/UltimaIV">Ultima IV</a></em> quiz mentioned above.
+</li><li> This is how House Sorting in <a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/HarryPotter" title="/pmwiki/pmwiki.php/Franchise/HarryPotter">Pottermore</a> works. While some of the questions are non-idicative of what house they lead to, it's still pretty easy to game, as a fair amount of questions have answers which correspond to the matching house's colors. For example, one question asks what you'd like to be remembered by in history. Your answers are brave, on a red card (Gryffindor), wise on a blue card (Ravenclaw), great on a green card (Slytherin), or good on a yellow card (Hufflepuff).
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder12');">     New Media </div><div class="folder" id="folder12" isfolder="true" style="display:block;">
+<ul><li> The Internet is rife with all manners of supposed "personality tests" encompassing just about every subject imaginable, ranging from the somewhat logical, to the slightly odd ("What ice cream flavor are you?", which may arbitrarily assign personality traits to each possibility, or simply be complete gibberish), to ones which purport to answer some other mundane question ("What breed of cat should you get?"), to the downright absurd ("How long could you survive chained to a bunkbed with a Velociraptor?").
+</li></ul></div>
+<hr/>
+</div>
+<div class="lazy-video-script">
+<a id="VideoExamples"></a>
+<div> </div>
+<div class="video-examples has-thumbnails">
+<div class="video-examples-header">
+<a class="font-s float-right text-blue" data-modal-target="login" href="#feedback">Feedback</a>
+<h3 class="bold">Video Example(s):</h3>
+</div>
+<div class="video-examples-featured">
+<a class="video-launch-link video-overlay-link featured-widget-vid" data-video-approval="APPROVED" data-video-average-rating="5.00" data-video-descrip="The quiz that determines which Pokemon your main character becomes and what species your partner will be. (Footage provided by Japancommercials4U2 on Youtube.)" data-video-id="7316k4" data-video-media-sources="VideoGame/PokemonSuperMysteryDungeon" data-video-rating-count="4" data-video-thumbnail="https://i.vimeocdn.com/video/843234536_640x360.jpg?r=pad" data-video-title="Pokemon Super Mystery Dungeon" data-video-trope="Main/PlayerPersonalityQuiz" data-video-tropename="Player Personality Quiz" data-video-troper-rating="" data-video-url="https://player.vimeo.com/external/382198182.sd.mp4?s=dc9e15aee834f3d31cac5ae9f67a0e019978aa80&amp;profile_id=164&amp;oauth2_token_id=1043337761" href="#video-link">
+<div class="featured-widget-vid-iframe">
+<video class="video-js vjs-default-skin vjs-16-9" controls="" data-setup='{"ga": {"eventsToTrack": ["error"]}}' id="featured-video-player">
+</video>
+</div>
+</a>
+<h2 class="bold font-l">Pokemon Super Mystery Dungeon</h2>
+<p class="_pmvv-vidbox-descTxt">
+The quiz that determines which Pokemon your main character becomes and what species your partner will be. (Footage provided by Japancommercials4U2 on Youtube.) </p>
+</div>
+<div class="video-examples-thumbs">
+<a class="video-launch-link video-overlay-link video-background-image lazy-image" data-src="https://i.vimeocdn.com/video/843234127_640x360.jpg?r=pad" data-video-approval="APPROVED" data-video-average-rating="" data-video-descrip="The quiz that determines which Pokemon your main character becomes. (Footage provided by komali100 on Youtube.)" data-video-id="owj5xc" data-video-media-sources="VideoGame/PokemonMysteryDungeonExplorersOfSky" data-video-rating-count="" data-video-thumbnail="https://i.vimeocdn.com/video/843234127_640x360.jpg?r=pad" data-video-title="Explorers of Sky" data-video-trope="Main/PlayerPersonalityQuiz" data-video-tropename="Player Personality Quiz" data-video-troper-rating="" data-video-url="https://player.vimeo.com/external/382197850.sd.mp4?s=0ffaaeaf2790f5f2dfd26f3199f84d356b839f71&amp;profile_id=164&amp;oauth2_token_id=1043337761" href="#video-link">
+<p><span class="bold">Explorers of Sky</span></p>
+</a>
+<a class="video-launch-link video-overlay-link video-background-image lazy-image" data-src="https://i.vimeocdn.com/video/843233585_640x360.jpg?r=pad" data-video-approval="APPROVED" data-video-average-rating="" data-video-descrip="The quiz that determines which Pokemon your main character becomes. (Footage provided by Grimahim on Youtube.)" data-video-id="ycu2tx" data-video-media-sources="VideoGame/PokemonMysteryDungeonRescueTeam" data-video-rating-count="" data-video-thumbnail="https://i.vimeocdn.com/video/843233585_640x360.jpg?r=pad" data-video-title="Red Rescue Team" data-video-trope="Main/PlayerPersonalityQuiz" data-video-tropename="Player Personality Quiz" data-video-troper-rating="" data-video-url="https://player.vimeo.com/external/382197417.sd.mp4?s=3baa76ca91eee3268f11341bbb8389f614b1830d&amp;profile_id=164&amp;oauth2_token_id=1043337761" href="#video-link">
+<p><span class="bold">Red Rescue Team</span></p>
+</a>
+</div>
+</div>
+</div>
+<div class="alt-titles section section-fact">
+<h3>
+<strong>Alternative Title(s):</strong>
+<span>Test Of Character</span>, <span>Player Personality Test</span> </h3>
+</div>
+<div class="square_ad footer-article-ad main_2" data-isolated="0"></div>
+<div class="section-links" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<div class="titles">
+<div><h3 class="text-center text-uppercase">Previous</h3></div>
+<div><h3 class="text-center text-uppercase">Index</h3></div>
+<div><h3 class="text-center text-uppercase">Next</h3></div>
+</div>
+<div class="links">
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/PlayerParty">Player Party</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/RolePlayingGame">Role-Playing Game</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/Plunder">Plunder</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/InGameBankingServices">In-Game Banking Services</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/ImageSource/Pokemon">ImageSource/Pokémon</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/SeaSinkhole">Sea Sinkhole</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/VideoGame/PokemonMysteryDungeonExplorers">Pokémon Mystery Dungeon: Explorers</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/VideoSource/VideoGames">VideoSource/Video Games</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/VideoGame/PokemonMysteryDungeonRescueTeam">Pokémon Mystery Dungeon: Rescue Team</a>
+</li>
+</ul>
+</div>
+</div>
+</article>
+<div id="main-content-sidebar"><div class="sidebar-item display-options">
+<ul class="sidebar display-toggles">
+<li>Show Spoilers <div class="display-toggle show-spoilers" id="sidebar-toggle-showspoilers"></div></li>
+<li>Night Vision <div class="display-toggle night-vision" id="sidebar-toggle-nightvision"></div></li>
+<li>Sticky Header <div class="display-toggle sticky-header" id="sidebar-toggle-stickyheader"></div></li>
+<li>Wide Load <div class="display-toggle wide-load" id="sidebar-toggle-wideload"></div></li>
+</ul>
+<script>updateDesktopPrefs();</script>
+</div>
+<div class="sidebar-item ad sb-ad-unit">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_2"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_2'); });</script> </div>
+</div></div>
+<div class="sidebar-item quick-links" itemtype="http://schema.org/SiteNavigationElement">
+<p class="sidebar-item-title" data-title="Important Links">Important Links</p>
+<div class="padded">
+<a href="/pmwiki/query.php?type=att">Ask The Tropers</a>
+<a href="/pmwiki/query.php?type=tf">Trope Finder</a>
+<a href="/pmwiki/query.php?type=ykts">You Know That Show...</a>
+<a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a>
+<a href="/pmwiki/review_activity.php">Reviews</a>
+<a data-modal-target="login" href="/pmwiki/lbs.php">Live Blogs</a>
+<a href="/pmwiki/ad-free-subscribe.php">Go Ad Free!</a> </div>
+</div>
+<div class="sidebar-item sb-ad-unit">
+<div class="sidebar-section">
+<div class="square_ad ad-size-300x600 ad-section text-center">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_3"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_3'); });</script> </div>
+</div> </div>
+</div>
+</div>
+<div class="sidebar-item">
+<p class="sidebar-item-title" data-title="Crucial Browsing">Crucial Browsing</p>
+<ul class="padded font-s" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><a data-click-toggle="active" href="javascript:void(0);">Genre</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/ActionAdventureTropes" title="Main/ActionAdventureTropes">Action Adventure</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ComedyTropes" title="Main/ComedyTropes">Comedy</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CommercialsTropes" title="Main/CommercialsTropes">Commercials</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CrimeAndPunishmentTropes" title="Main/CrimeAndPunishmentTropes">Crime &amp; Punishment</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DramaTropes" title="Main/DramaTropes">Drama</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/HorrorTropes" title="Main/HorrorTropes">Horror</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LoveTropes" title="Main/LoveTropes">Love</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NewsTropes" title="Main/NewsTropes">News</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ProfessionalWrestling" title="Main/ProfessionalWrestling">Professional Wrestling</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SpeculativeFictionTropes" title="Main/SpeculativeFictionTropes">Speculative Fiction</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SportsStoryTropes" title="Main/SportsStoryTropes">Sports Story</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/WarTropes" title="Main/WarTropes">War</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Media</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/Media" title="Main/Media">All Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/AnimationTropes" title="Main/AnimationTropes">Animation (Western)</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Anime" title="Main/Anime">Anime</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ComicBookTropes" title="Main/ComicBookTropes">Comic Book</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FanFic" title="FanFic/FanFics">Fan Fics</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Film" title="Main/Film">Film</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/GameTropes" title="Main/GameTropes">Game</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Literature" title="Main/Literature">Literature</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MusicAndSoundEffects" title="Main/MusicAndSoundEffects">Music And Sound Effects</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NewMediaTropes" title="Main/NewMediaTropes">New Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/PrintMediaTropes" title="Main/PrintMediaTropes">Print Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Radio" title="Main/Radio">Radio</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SequentialArt" title="Main/SequentialArt">Sequential Art</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TabletopGames" title="Main/TabletopGames">Tabletop Games</a></li>
+<li><a href="/pmwiki/pmwiki.php/UsefulNotes/Television" title="Main/Television">Television</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Theater" title="Main/Theater">Theater</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/VideogameTropes" title="Main/VideogameTropes">Videogame</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Webcomics" title="Main/Webcomics">Webcomics</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Narrative</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/UniversalTropes" title="Main/UniversalTropes">Universal</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/AppliedPhlebotinum" title="Main/AppliedPhlebotinum">Applied Phlebotinum</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CharacterizationTropes" title="Main/CharacterizationTropes">Characterization</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Characters" title="Main/Characters">Characters</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CharactersAsDevice" title="Main/CharactersAsDevice">Characters As Device</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Dialogue" title="Main/Dialogue">Dialogue</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Motifs" title="Main/Motifs">Motifs</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NarrativeDevices" title="Main/NarrativeDevices">Narrative Devices</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Paratext" title="Main/Paratext">Paratext</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Plots" title="Main/Plots">Plots</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Settings" title="Main/Settings">Settings</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Spectacle" title="Main/Spectacle">Spectacle</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Other Categories</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/BritishTellyTropes" title="Main/BritishTellyTropes">British Telly</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TheContributors" title="Main/TheContributors">The Contributors</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CreatorSpeak" title="Main/CreatorSpeak">Creator Speak</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Creators" title="Main/Creators">Creators</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DerivativeWorks" title="Main/DerivativeWorks">Derivative Works</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LanguageTropes" title="Main/LanguageTropes">Language</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LawsAndFormulas" title="Main/LawsAndFormulas">Laws And Formulas</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ShowBusiness" title="Main/ShowBusiness">Show Business</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SplitPersonalityTropes" title="Main/SplitPersonalityTropes">Split Personality</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/StockRoom" title="Main/StockRoom">Stock Room</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TropeTropes" title="Main/TropeTropes">Trope</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Tropes" title="Main/Tropes">Tropes</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TruthAndLies" title="Main/TruthAndLies">Truth And Lies</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TruthInTelevision" title="Main/TruthInTelevision">Truth In Television</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Topical Tropes</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/BetrayalTropes" title="Main/BetrayalTropes">Betrayal</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CensorshipTropes" title="Main/CensorshipTropes">Censorship</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CombatTropes" title="Main/CombatTropes">Combat</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DeathTropes" title="Main/DeathTropes">Death</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FamilyTropes" title="Main/FamilyTropes">Family</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FateAndProphecyTropes" title="Main/FateAndProphecyTropes">Fate And Prophecy</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FoodTropes" title="Main/FoodTropes">Food</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/HolidayTropes" title="Main/HolidayTropes">Holiday</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MemoryTropes" title="Main/MemoryTropes">Memory</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MoneyTropes" title="Main/MoneyTropes">Money</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MoralityTropes" title="Main/MoralityTropes">Morality</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/PoliticsTropes" title="Main/PoliticsTropes">Politics</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ReligionTropes" title="Main/ReligionTropes">Religion</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SchoolTropes" title="Main/SchoolTropes">School</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="sidebar-item showcase">
+<p class="sidebar-item-title" data-title="Community Showcase">Community Showcase <a class="bubble float-right hover-blue" href="/pmwiki/showcase.php">More</a></p>
+<p class="community-showcase">
+<a href="https://sharetv.com/shows/echo_chamber" onclick="trackOutboundLink('https://sharetv.com/shows/echo_chamber');" target="_blank">
+<img alt="" class="lazy-image" data-src="/images/communityShowcase-echochamber.jpg"/></a>
+<a href="/pmwiki/pmwiki.php/Webcomic/TwistedTropes">
+<img alt="" class="lazy-image" data-src="/img/howlandsc-side.jpg"/></a>
+</p>
+</div>
+<div class="sidebar-item sb-ad-unit" id="stick-cont">
+<div class="sidebar-section" id="stick-bar">
+<div class="square_ad ad-size-300x600 ad-section text-center">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_4"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_4'); });</script> </div>
+</div> </div>
+</div>
+</div>
+</div>
+</div>
+<div class="action-bar tablet-off" id="action-bar-bottom">
+<a class="scroll-to-top dead-button" href="#top-of-page" onclick="$('html, body').animate({scrollTop : 0},500);">Top</a>
+</div>
+</div>
+<div class="proper-ad-unit ad-sticky">
+<div id="proper-ad-tvtropes_sticky_ad"> <script>propertag.cmd.push(function() { proper_display('tvtropes_sticky_ad'); });</script> </div>
+</div>
+<footer id="main-footer">
+<div id="main-footer-inner">
+<div class="footer-left">
+<a class="img-link" href="/"><img alt="TV Tropes" class="lazy-image" data-src="/img/tvtropes-footer-logo.png" title="TV Tropes"/></a>
+<form action="index.html" class="navbar-form newsletter-signup validate modal-replies" data-ajax-get="/ajax/subscribe_email.php" id="cse-search-box-mobile" name="" role="">
+<button class="btn-submit newsletter-signup-submit-button" id="subscribe-btn" type="submit"><i class="fa fa-paper-plane"></i></button>
+<input class="form-control" id="subscription-email" name="q" placeholder="Subscribe" size="31" type="text" validate-type="email" value=""/>
+</form>
+<ul class="social-buttons">
+<li><a class="btn fb" href="https://www.facebook.com/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-facebook']);" target="_blank"><i class="fa fa-facebook"></i></a></li>
+<li><a class="btn tw" href="https://www.twitter.com/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-twitter']);" target="_blank"><i class="fa fa-twitter"></i></a> </li>
+<li><a class="btn rd" href="https://www.reddit.com/r/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-reddit']);" target="_blank"><i class="fa fa-reddit-alien"></i></a></li>
+</ul>
+</div>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">TVTropes</h4></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Administrivia">About TVTropes</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TheGoalsOfTVTropes">TVTropes Goals</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TheTropingCode">Troping Code</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TVTropesCustoms">TVTropes Customs</a></li>
+<li><a href="/pmwiki/pmwiki.php/JustForFun/TropesOfLegend">Tropes of Legend</a></li>
+<li><a href="/pmwiki/ad-free-subscribe.php">Go Ad-Free</a></li>
+</ul>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">Community</h4></li>
+<li><a href="/pmwiki/query.php?type=att">Ask The Tropers</a></li>
+<li><a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a></li>
+<li><a href="/pmwiki/query.php?type=tf">Trope Finder</a></li>
+<li><a href="/pmwiki/query.php?type=ykts">You Know That Show</a></li>
+<li><a data-modal-target="login" href="/pmwiki/lbs.php">Live Blogs</a></li>
+<li><a href="/pmwiki/review_activity.php">Reviews</a></li>
+<li><a href="/pmwiki/topics.php">Forum</a></li>
+</ul>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">Tropes HQ</h4></li>
+<li><a href="/pmwiki/about.php">About Us</a></li>
+<li><a href="/pmwiki/contact.php">Contact Us</a></li>
+<li><a href="/pmwiki/dmca.php">DMCA Notice</a></li>
+<li><a href="/pmwiki/privacypolicy.php">Privacy Policy</a></li>
+</ul>
+</div>
+<div class="text-center gutter-top gutter-bottom tablet-on" id="desktop-on-mobile-toggle">
+<a href="/pmwiki/switchDeviceCss.php?mobileVersion=1" rel="nofollow">Switch to <span class="txt-desktop">Desktop</span><span class="txt-mobile">Mobile</span> Version</a>
+</div>
+<div class="legal">
+<p>TVTropes is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License. <br/>Permissions beyond the scope of this license may be available from <a href="mailto:thestaff@tvtropes.org" rel="cc:morePermissions" xmlns:cc="http://creativecommons.org/ns#"> thestaff@tvtropes.org</a>.</p>
+<br/>
+<div class="privacy_wrapper">
+</div>
+</div>
+</footer>
+<style>
+      div.fc-ccpa-root {
+        position: absolute !important;
+        bottom: 93px !important;
+        margin: auto !important;
+        width: 100% !important;
+        z-index: 9999 !important;
+      }
+      .fc-ccpa-root .fc-dns-dialog .fc-dns-link p{
+        outline: none !important;
+        text-decoration: underline !important;
+        font-size: .7em !important;
+        font-family: sans-serif !important;
+      }
+      .fc-ccpa-root .fc-dns-dialog .fc-dns-link .fc-button-background {
+        background: none !important;
+      }
+    </style>
+<div class="full-screen" id="_pm_videoViewer">
+<a class="close" href="#close" id="_pm_videoViewer-close"></a>
+<div class="_pmvv-body">
+<div class="_pmvv-vidbox">
+<video class="video-js vjs-default-skin vjs-16-9" data-video-id="7316k4" id="overlay-video-player-box">
+</video>
+<div class="_pmvv-vidbox-desc">
+<h1 id="overlay-title">Pokemon Super Mystery Dungeon</h1>
+<p class="_pmvv-vidbox-descTxt" id="overlay-descrip">
+The quiz that determines which Pokemon your main character becomes and what species your partner will be. (Footage provided by Japancommercials4U2 on Youtube.)	</p>
+<div class="rating-row" data-video-id="7316k4">
+<input name="is_logged_in" type="hidden" value="0"/>
+<p>How well does it match the trope?</p>
+<div id="star-rating-group">
+<div class="trope-rate">
+<input id="lamp5" name="rate" type="radio" value="5"/>
+<label for="lamp5" title="Absolutely"></label>
+<input id="lamp4" name="rate" type="radio" value="4"/>
+<label for="lamp4" title="Yes"></label>
+<input id="lamp3" name="rate" type="radio" value="3"/>
+<label for="lamp3" title="Kind of"></label>
+<input id="lamp2" name="rate" type="radio" value="2"/>
+<label for="lamp2" title="Not really"></label>
+<input id="lamp1" name="rate" type="radio" value="1"/>
+<label for="lamp1" title="No"></label>
+</div>
+<div id="star-rating-total">
+5 (4 votes)
+</div>
+</div>
+</div>
+<div class="example-media-row">
+<div class="example-overlay">
+<p>Example of:</p>
+<div id="overlay-trope">Main / PlayerPersonalityQuiz</div>
+</div>
+<div class="media-sources-overlay example-overlay">
+<p>Media sources:</p>
+<div id="overlay-media">Main / PlayerPersonalityQuiz</div>
+</div>
+</div>
+<p class="_pmvv-vidbox-stats text-right font-s" style="padding-top:8px; border-top: solid 1px rgba(255,255,255,0.2)">
+<a class="float-right" data-modal-target="login" href="#video-feedback">Report</a>
+</p>
+</div>
+</div>
+</div>
+<div class="_pmvv-foot">
+<div class="_pmvv-foot-scrollwrapper">
+<a class="video-launch-link video-overlay-link video-background-image lazy-image" data-src="https://i.vimeocdn.com/video/843234536_640x360.jpg?r=pad" data-video-approval="APPROVED" data-video-average-rating="5.00" data-video-descrip="The quiz that determines which Pokemon your main character becomes and what species your partner will be. (Footage provided by Japancommercials4U2 on Youtube.)" data-video-id="7316k4" data-video-media-sources="VideoGame/PokemonSuperMysteryDungeon" data-video-rating-count="4" data-video-thumbnail="https://i.vimeocdn.com/video/843234536_640x360.jpg?r=pad" data-video-title="Pokemon Super Mystery Dungeon" data-video-trope="Main/PlayerPersonalityQuiz" data-video-tropename="Player Personality Quiz" data-video-troper-rating="" data-video-url="https://player.vimeo.com/external/382198182.sd.mp4?s=dc9e15aee834f3d31cac5ae9f67a0e019978aa80&amp;profile_id=164&amp;oauth2_token_id=1043337761" data-vimeo-id="382198182" href="#video-link">
+<p><span class="bold">Pokemon Super M...</span></p>
+</a>
+<a class="video-launch-link video-overlay-link video-background-image lazy-image" data-src="https://i.vimeocdn.com/video/843234127_640x360.jpg?r=pad" data-video-approval="APPROVED" data-video-average-rating="5.00" data-video-descrip="The quiz that determines which Pokemon your main character becomes. (Footage provided by komali100 on Youtube.)" data-video-id="owj5xc" data-video-media-sources="VideoGame/PokemonMysteryDungeonExplorersOfSky" data-video-rating-count="4" data-video-thumbnail="https://i.vimeocdn.com/video/843234127_640x360.jpg?r=pad" data-video-title="Explorers of Sky" data-video-trope="Main/PlayerPersonalityQuiz" data-video-tropename="Player Personality Quiz" data-video-troper-rating="" data-video-url="https://player.vimeo.com/external/382197850.sd.mp4?s=0ffaaeaf2790f5f2dfd26f3199f84d356b839f71&amp;profile_id=164&amp;oauth2_token_id=1043337761" data-vimeo-id="382197850" href="#video-link">
+<p><span class="bold">Explorers of Sky</span></p>
+</a>
+<a class="video-launch-link video-overlay-link video-background-image lazy-image" data-src="https://i.vimeocdn.com/video/843233585_640x360.jpg?r=pad" data-video-approval="APPROVED" data-video-average-rating="5.00" data-video-descrip="The quiz that determines which Pokemon your main character becomes. (Footage provided by Grimahim on Youtube.)" data-video-id="ycu2tx" data-video-media-sources="VideoGame/PokemonMysteryDungeonRescueTeam" data-video-rating-count="8" data-video-thumbnail="https://i.vimeocdn.com/video/843233585_640x360.jpg?r=pad" data-video-title="Red Rescue Team" data-video-trope="Main/PlayerPersonalityQuiz" data-video-tropename="Player Personality Quiz" data-video-troper-rating="" data-video-url="https://player.vimeo.com/external/382197417.sd.mp4?s=3baa76ca91eee3268f11341bbb8389f614b1830d&amp;profile_id=164&amp;oauth2_token_id=1043337761" data-vimeo-id="382197417" href="#video-link">
+<p><span class="bold">Red Rescue Team</span></p>
+</a>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+        window.special_ops =  {
+            member : 'no',
+            isolated : 0,
+            tags : ['videogame']
+        };
+    </script>
+<script type="text/javascript">
+
+        var cleanCreativeEnabled = "";
+        var donation = "";
+        var live_ads = "1";
+        var img_domain = "https://static.tvtropes.org";
+        var snoozed = cookies.read('snoozedabm');
+        var snoozable = "";
+
+        if (adsRemovedWith) {
+            live_ads = 0;
+        }
+
+        var elem = document.createElement('script');
+        elem.async = true;
+
+        elem.src = '/design/assets/bundle.js?rev=c58d8df02f09262390bbd03db7921fc35c6af306';
+
+        elem.onload = function() {
+                                 }
+        document.getElementsByTagName('head')[0].appendChild(elem);
+
+    </script>
+<script type="text/javascript">
+      function send_analytics_event(user_type, donation){
+          // if(user_type == 'uncached' || user_type == 'cached'){
+          //   ga('send', 'event', 'caching', 'load', user_type, {'nonInteraction': 1});
+          //   return;
+          // }
+          var event_name = user_type;
+
+          if(donation == 'true'){
+              event_name += "_donation"
+          }else if(typeof(valid_user) == 'undefined'){
+              event_name += "_blocked"
+          }else if(valid_user == true){
+              event_name += "_unblocked";
+          }else{
+              event_name = "_unknown"
+          }
+          ga('send', 'event', 'ads', 'load', event_name, {'nonInteraction': 1});
+      }
+
+    
+    send_analytics_event("guest", "false");
+      </script>
+</body>
+</html>

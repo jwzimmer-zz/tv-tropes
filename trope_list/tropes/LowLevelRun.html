@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Low-Level Run - TV Tropes</title>
+<meta content="The Low-Level Run is a variant of the Self-Imposed Challenge, and more specifically a variant of the Minimalist Run. The goal is to complete the game with …" name="description"/>
+<link href="https://tvtropes.org/pmwiki/pmwiki.php/Main/LowLevelRun" rel="canonical"/>
+<link href="/img/icons/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="@tvtropes" name="twitter:site"/>
+<meta content="@tvtropes" name="twitter:owner"/>
+<meta content="Low-Level Run - TV Tropes" name="twitter:title"/>
+<meta content="The Low-Level Run is a variant of the Self-Imposed Challenge, and more specifically a variant of the Minimalist Run. The goal is to complete the game with …" name="twitter:description"/>
+<meta content="https://static.tvtropes.org/pmwiki/pub/images/lowlevel.jpg" name="twitter:image:src"/>
+<meta content="TV Tropes" property="og:site_name"/>
+<meta content="en_US" property="og:locale"/>
+<meta content="https://www.facebook.com/tvtropes" property="article:publisher"/>
+<meta content="Low-Level Run - TV Tropes" property="og:title"/>
+<meta content="website" property="og:type"/>
+<meta content="https://tvtropes.org/pmwiki/pmwiki.php/Main/LowLevelRun" property="og:url"/>
+<meta content="https://static.tvtropes.org/pmwiki/pub/images/lowlevel.jpg" property="og:image"/>
+<meta content="The Low-Level Run is a variant of the Self-Imposed Challenge, and more specifically a variant of the Minimalist Run. The goal is to complete the game with your characters' levels as low as possible. The player does this by avoiding or fleeing as …" property="og:description"/>
+<link href="/img/icons/apple-icon-57x57.png" rel="apple-touch-icon" sizes="57x57" type="image/png"/>
+<link href="/img/icons/apple-icon-60x60.png" rel="apple-touch-icon" sizes="60x60" type="image/png"/>
+<link href="/img/icons/apple-icon-72x72.png" rel="apple-touch-icon" sizes="72x72" type="image/png"/>
+<link href="/img/icons/apple-icon-76x76.png" rel="apple-touch-icon" sizes="76x76" type="image/png"/>
+<link href="/img/icons/apple-icon-114x114.png" rel="apple-touch-icon" sizes="114x114" type="image/png"/>
+<link href="/img/icons/apple-icon-120x120.png" rel="apple-touch-icon" sizes="120x120" type="image/png"/>
+<link href="/img/icons/apple-icon-144x144.png" rel="apple-touch-icon" sizes="144x144" type="image/png"/>
+<link href="/img/icons/apple-icon-152x152.png" rel="apple-touch-icon" sizes="152x152" type="image/png"/>
+<link href="/img/icons/apple-icon-180x180.png" rel="apple-touch-icon" sizes="180x180" type="image/png"/>
+<link href="/img/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/img/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/img/icons/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png"/>
+<link href="/img/icons/favicon-192x192.png" rel="icon" sizes="192x192" type="image/png"/>
+<meta content="width=device-width, initial-scale=1" id="viewport" name="viewport"/>
+<script>
+                var propertag = {};
+                propertag.cmd = [];
+            </script>
+<link href="/design/assets/bundle.css?rev=c58d8df02f09262390bbd03db7921fc35c6af306" rel="stylesheet"/>
+<script>
+                function object(objectId) {
+                    if (document.getElementById && document.getElementById(objectId)) {
+                        return document.getElementById(objectId);
+                    } else if (document.all && document.all(objectId)) {
+                        return document.all(objectId);
+                    } else if (document.layers && document.layers[objectId]) {
+                        return document.layers[objectId];
+                    } else {
+                        return false;
+                    }
+                }
+
+                // JAVASCRIPT COOKIES CODE: for getting and setting user viewing preferences
+                var cookies = {
+                    create: function (name, value, days2expire, path) {
+                        var date = new Date();
+                        date.setTime(date.getTime() + (days2expire * 24 * 60 * 60 * 1000));
+                        var expires = date.toUTCString();
+                        document.cookie = name + '=' + value + ';' + 'expires=' + expires + ';' + 'path=' + path + ';';
+                    },
+										createWithExpire: function(name, value, expires, path) {
+												document.cookie = name + '=' + value + ';' + 'expires=' + expires + ';' + 'path=' + path + ';';
+										},
+                    read: function (name) {
+                        var cookie_value = "",
+                            current_cookie = "",
+                            name_expr = name + "=",
+                            all_cookies = document.cookie.split(';'),
+                            n = all_cookies.length;
+
+                        for (var i = 0; i < n; i++) {
+                            current_cookie = all_cookies[i].trim();
+                            if (current_cookie.indexOf(name_expr) === 0) {
+                                cookie_value = current_cookie.substring(name_expr.length, current_cookie.length);
+                                break;
+                            }
+                        }
+                        return cookie_value;
+                    },
+                    update: function (name, val) {
+                        this.create(name, val, 300, "/");
+                    },
+                    remove: function (name) {
+                        document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
+                    }
+                };
+
+                function updateUserPrefs() {
+                    //GENERAL: detect and set browser, if not cookied (will be treated like a user-preference and added to the #user-pref element)
+                    if( !cookies.read('user-browser') ){
+                        var broswer = '';
+
+                        if(navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPod/i) ){
+                            browser = 'iOS';
+                        } else if (/Opera[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'opera';
+                        } else if (/MSIE (\d+\.\d+);/.test(navigator.userAgent)) {
+                            browser = 'MSIE';
+                        } else if (/Navigator[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'netscape';
+                        } else if (/Chrome[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'chrome';
+                        } else if (/Safari[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'safari';
+                            /Version[\/\s](\d+\.\d+)/.test(navigator.userAgent);
+                            browserVersion = new Number(RegExp.$1);
+                        } else if (/Firefox[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'firefox';
+                        } else {
+                            browser = 'internet_explorer';
+                        }
+                        cookies.create('user-browser',browser,1,'/');
+                        document.getElementById('user-prefs').classList.add('browser-' + browser);
+                    } else {
+                        document.getElementById('user-prefs').classList.add('browser-' + cookies.read('user-browser'));
+                    }
+
+                    //update user preference settings
+                    if (cookies.read('wide-load') !== '') document.getElementById('user-prefs').classList.add('wide-load');
+                    if (cookies.read('night-vision') !== '') document.getElementById('user-prefs').classList.add('night-vision');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('user-prefs').classList.add('sticky-header');
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('user-prefs').classList.add('show-spoilers');
+                    if (cookies.read('folders-open') !== '') document.getElementById('user-prefs').classList.add('folders-open');
+                    if (cookies.read('lefthand-sidebar') !== '') document.getElementById('user-prefs').classList.add('lefthand-sidebar');
+                    if (cookies.read('highlight-links') !== '') document.getElementById('user-prefs').classList.add('highlight-links');
+                    if (cookies.read('forum-gingerbread') !== '') document.getElementById('user-prefs').classList.add('forum-gingerbread');
+                    if (cookies.read('shared-avatars') !== '') document.getElementById('user-prefs').classList.add('shared-avatars');
+                    if (cookies.read('new-search') !== '') document.getElementById('user-prefs').classList.add('new-search');
+                    if (cookies.read('stop-auto-play-video') !== '') document.getElementById('user-prefs').classList.add('stop-auto-play-video');
+
+                    //desktop view on mobile
+                    if (cookies.read('desktop-on-mobile') !== ''){
+                        document.getElementById('user-prefs').classList.add('desktop-on-mobile');
+
+                        var viewport = document.querySelector("meta[name=viewport]");
+                        viewport.setAttribute('content', 'width=1000');
+                    }
+
+                }
+
+                function updateDesktopPrefs() {
+                    if (cookies.read('wide-load') !== '') document.getElementById('sidebar-toggle-wideload').classList.add('active');
+                    if (cookies.read('night-vision') !== '') document.getElementById('sidebar-toggle-nightvision').classList.add('active');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('sidebar-toggle-stickyheader').classList.add('active');
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('sidebar-toggle-showspoilers').classList.add('active');
+
+                }
+
+                function updateMobilePrefs() {
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('mobile-toggle-showspoilers').classList.add('active');
+                    if (cookies.read('night-vision') !== '') document.getElementById('mobile-toggle-nightvision').classList.add('active');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('mobile-toggle-stickyheader').classList.add('active');
+                    if (cookies.read('highlight-links') !== '') document.getElementById('mobile-toggle-highlightlinks').classList.add('active');
+
+                }
+
+
+                if (document.cookie.indexOf("scroll0=") < 0) {
+                    // do nothing
+                } else {
+                    console.log('ads removed by scroll.com');
+                    var adsRemovedWith = 'scroll';
+                    var style = document.createElement('style');
+                    style.innerHTML = '#header-ad, .proper-ad-unit, .square_ad, .sb-ad-unit { display: none !important; } ';
+                    document.head.appendChild(style);
+                }
+            </script>
+<script type="text/javascript">
+
+                var tvtropes_config = {
+                    astri_stream_enabled : "",
+                    is_logged_in         : "",
+                    handle               : "",
+                    get_astri_stream     : "",
+										revnum               : "c58d8df02f09262390bbd03db7921fc35c6af306",
+										img_domain           : "https://static.tvtropes.org",
+										adblock              : "1",
+										adblock_url          : "propermessage.io",
+										pause_editing        : "0",
+										pause_editing_msg    : "",
+										pause_site_changes   : ""
+                };
+            </script>
+<script type="text/javascript">
+						  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+						  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+						  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+						  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+						  ga('create', 'UA-3821842-1', 'auto');
+						  ga('send', 'pageview');
+
+						</script>
+</head>
+<body class="">
+<i id="user-prefs"></i>
+<script>updateUserPrefs();</script>
+<div id="fb-root"></div>
+<div id="modal-box"></div>
+<header class="headroom-element" id="main-header-bar">
+<div id="main-header-bar-inner">
+<span class="header-spacer" id="header-spacer-left"></span>
+<a class="mobile-menu-toggle-button tablet-on" href="#mobile-menu" id="main-mobile-toggle"><span></span><span></span><span></span></a>
+<a class="no-dev" href="/" id="main-header-logoButton"></a>
+<span class="header-spacer" id="header-spacer-right"></span>
+<nav class="tablet-off" id="main-header-nav">
+<a href="/pmwiki/pmwiki.php/Main/Tropes">Tropes</a>
+<a href="/pmwiki/pmwiki.php/Main/Media">Media</a>
+<a class="nav-browse" href="/pmwiki/browse.php">Browse</a>
+<a href="/pmwiki/index_report.php">Indexes</a>
+<a href="/pmwiki/topics.php">Forums</a>
+<a class="nav-browse" href="/pmwiki/recent_videos.php">Videos</a>
+</nav>
+<div id="main-header-bar-right">
+<div class="font-xs mobile-off" id="signup-login-box">
+<a class="hover-underline bold" data-modal-target="signup" href="/pmwiki/login.php">Join</a>
+<a class="hover-underline bold" data-modal-target="login" href="/pmwiki/login.php">Login</a>
+</div>
+<div class="mobile-on inline" id="signup-login-mobileToggle">
+<a data-modal-target="login" href="/pmwiki/login.php"><i class="fa fa-user"></i></a>
+</div>
+<div id="search-box">
+<form action="/pmwiki/search_result.php" class="search">
+<input class="search-box" name="q" placeholder="Search" required="" type="text" value=""/>
+<input class="submit-button" type="submit" value=""/>
+<input name="search_type" type="hidden" value="article"/>
+<input name="page_type" type="hidden" value="all"/>
+<input name="cx" type="hidden" value="partner-pub-6610802604051523:amzitfn8e7v"/>
+<input name="cof" type="hidden" value="FORID:10"/>
+<input name="ie" type="hidden" value="ISO-8859-1"/>
+<input name="siteurl" type="hidden" value=""/>
+<input name="ref" type="hidden" value=""/>
+<input name="ss" type="hidden" value=""/>
+</form>
+<a class="mobile-on mobile-search-toggle close-x" href="#close-search"><i class="fa fa-close"></i></a>
+</div>
+<div id="random-box">
+<a class="button-random-trope" href="/pmwiki/pmwiki.php/Main/BlackBox" onclick="ga('send', 'event', 'button', 'click', 'random trope');" rel="nofollow"></a>
+<a class="button-random-media" href="/pmwiki/pmwiki.php/Film/MataHari" onclick="ga('send', 'event', 'button', 'click', 'random media');" rel="nofollow"></a>
+</div>
+</div>
+</div>
+<div class="tablet-on" id="mobile-menu"><div class="mobile-menu-options">
+<div class="nav-wrapper">
+<a class="xl" href="/pmwiki/pmwiki.php/Main/Tropes">Tropes</a>
+<a class="xl" href="/pmwiki/pmwiki.php/Main/Media">Media</a>
+<a class="xl" href="/pmwiki/browse.php">Browse</a>
+<a class="xl" href="/pmwiki/index_report.php">Indexes</a>
+<a class="xl" href="/pmwiki/topics.php">Forums</a>
+<a class="xl" href="/pmwiki/recent_videos.php">Videos</a>
+<a href="/pmwiki/query.php?type=att">Ask The Tropers</a>
+<a href="/pmwiki/query.php?type=tf">Trope Finder</a>
+<a href="/pmwiki/query.php?type=ykts">You Know That Show...</a>
+<a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a>
+<a data-click-toggle="active" href="#tools">Tools <i class="fa fa-chevron-down"></i></a>
+<div class="tools-dropdown mobile-dropdown-linkList">
+<a href="/pmwiki/cutlist.php">Cut List</a>
+<a href="/pmwiki/changes.php">New Edits</a>
+<a href="/pmwiki/recent_edit_reasons.php">Edit Reasons</a>
+<a href="/pmwiki/launches.php">Launches</a>
+<a href="/pmwiki/img_list.php">Images List</a>
+<a href="/pmwiki/crown_activity.php">Crowner Activity</a>
+<a href="/pmwiki/no_types.php">Un-typed Pages</a>
+<a href="/pmwiki/page_type_audit.php">Recent Page Type Changes</a>
+</div>
+<a data-click-toggle="active" href="#hq">Tropes HQ <i class="fa fa-chevron-down"></i></a>
+<div class="tools-dropdown mobile-dropdown-linkList">
+<a href="/pmwiki/about.php">About Us</a>
+<a href="/pmwiki/contact.php">Contact Us</a>
+<a href="mailto:advertising@proper.io">Advertise</a>
+<a href="/pmwiki/dmca.php">DMCA Notice</a>
+<a href="/pmwiki/privacypolicy.php">Privacy Policy</a>
+</div>
+<a href="/pmwiki/ad-free-subscribe.php">Go Ad-Free</a>
+<div class="toggle-switches">
+<ul class="mobile-menu display-toggles">
+<li>Show Spoilers <div class="display-toggle show-spoilers" id="mobile-toggle-showspoilers"></div></li>
+<li>Night Vision <div class="display-toggle night-vision" id="mobile-toggle-nightvision"></div></li>
+<li>Sticky Header <div class="display-toggle sticky-header" id="mobile-toggle-stickyheader"></div></li>
+<li>Highlight Links <div class="display-toggle highlight-links" id="mobile-toggle-highlightlinks"></div></li>
+</ul>
+<script>updateMobilePrefs();</script>
+</div>
+</div>
+</div>
+</div>
+</header>
+<div class="mobile-on" id="homepage-introBox-mobile">
+<a href="/"><img class="logo-small" src="/images/logo-white-big.png"/></a>
+<form action="/pmwiki/search_result.php" class="search" style="margin:10px -5px -6px -5px;">
+<input class="search-box" name="q" placeholder="Search" required="" type="text" value=""/>
+<input class="submit-button" type="submit" value=""/>
+<input name="search_type" type="hidden" value="article"/>
+<input name="page_type" type="hidden" value="all"/>
+<input name="cx" type="hidden" value="partner-pub-6610802604051523:amzitfn8e7v"/>
+<input name="cof" type="hidden" value="FORID:10"/>
+<input name="ie" type="hidden" value="ISO-8859-1"/>
+<input name="siteurl" type="hidden" value=""/>
+<input name="ref" type="hidden" value=""/>
+<input name="ss" type="hidden" value=""/>
+</form>
+</div>
+<div class="ad" id="header-ad-wrapper">
+<div id="header-ad">
+<div class="ad-size-970x90 atf_banner">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_1"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_1'); });</script> </div>
+</div> </div>
+</div>
+</div>
+<div id="main-container">
+<div class="action-bar mobile-off" id="action-bar-top">
+<div class="action-bar-right">
+<p>Follow TV Tropes</p>
+<a class="button-fb" href="https://www.facebook.com/TVTropes">
+<i class="fa fa-facebook"></i></a>
+<a class="button-tw" href="https://www.twitter.com/TVTropes">
+<i class="fa fa-twitter"></i></a>
+<a class="button-re" href="https://www.reddit.com/r/TVTropes">
+<i class="fa fa-reddit-alien"></i></a>
+</div>
+<nav class="actions-wrapper" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<ul class="page-actions" id="top_main_list">
+<li class="link-edit">
+<a class="article-edit-button" data-modal-target="login" href="/pmwiki/pmwiki.php/Main/LowLevelRun?action=edit" rel="nofollow">
+<i class="fa fa-pencil"></i> Edit Page</a></li><li class="link-related"><a href="/pmwiki/relatedsearch.php?term=Main/LowLevelRun">
+<i class="fa fa-share-alt"></i> Related</a></li><li class="link-history"><a href="/pmwiki/article_history.php?article=Main.LowLevelRun">
+<i class="fa fa-history"></i> History</a></li><li class="link-discussion"><a href="/pmwiki/remarks.php?trope=Main.LowLevelRun">
+<i class="fa fa-comment"></i> Discussion</a></li> </ul>
+<button class="nav__dropdown-toggle" id="top_more_button" onclick="toggle_more_menu('top');" type="button">More</button>
+<ul class="more_menu hidden_more_list" id="top_more_list">
+<li class="link-todo tuck-always more_list_item"><a data-modal-target="login" href="#todo"><i class="fa fa-check-circle"></i> To Do</a></li><li class="link-pageSource tuck-always more_list_item"><a data-modal-target="login" href="/pmwiki/pmwiki.php/Main/LowLevelRun?action=source" rel="nofollow" target="_blank"><i class="fa fa-code"></i> Page Source</a></li> </ul>
+</nav>
+<div class="WikiWordModalStub"></div>
+<div class="ImgUploadModalStub" data-page-type="Article"></div>
+<div class="login-alert" style="display: none;">
+You need to <a href="/pmwiki/login.php" style="color:#21A0E8">login</a> to do this. <a href="/pmwiki/login.php?tab=register_account" style="color:#21A0E8">Get Known</a> if you don't have an account
+</div>
+</div>
+<div class="page-Article" id="main-content">
+<article class="with-sidebar" id="main-entry">
+<input id="groupname-hidden" type="hidden" value="Main"/>
+<input id="title-hidden" type="hidden" value="LowLevelRun"/>
+<input id="article_id" type="hidden" value="3930"/>
+<input id="logged_in" type="hidden" value="false"/>
+<p class="hidden" id="current_url">http://tvtropes.org/pmwiki/pmwiki.php/Main/LowLevelRun</p>
+<meta content="" itemprop="datePublished"/>
+<meta content="" itemprop="articleSection"/>
+<meta content="" itemprop="image"/>
+<div class="article-banner audience type-shrug">
+<p>Please don't list this on a work's page as a trope. <br/>Examples can go on the work's YMMV tab.</p>
+</div>
+<a class="watch-button" data-modal-target="login" href="#watch">Follow<span>ing</span></a>
+<h1 class="entry-title" itemprop="headline">
+Low-Level Run
+</h1>
+<script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+                "@type": "ListItem",
+                "position": 1,
+                "name": "tvtropes.org",
+                "item": "https://tvtropes.org"
+            },{
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Tropes",
+                "item": "https://tvtropes.org/pmwiki/pmwiki.php/Main/Tropes"
+            },{
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Low-Level Run"            }]
+        }
+    </script>
+<a class="mobile-actionbar-toggle mobile-on" data-click-toggle="active" href="#mobile-actions-toggle" id="mobile-actionbar-toggle">
+<p class="tiny-off">Go To</p><span></span><span></span><span></span><i class="fa fa-pencil"></i></a>
+<nav class="mobile-actions-wrapper mobile-on" id="mobile-actions-bar"></nav>
+<div class="modal fade hidden-until-active" id="editLockModal">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button aria-label="Close" class="close" data-dismiss="modal" type="button"> <span aria-hidden="true">×</span></button>
+<h4 class="modal-title">Edit Locked</h4>
+</div>
+<div class="modal-body">
+<div class="row">
+<div class="body">
+<div class="danger troper_locked_message"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<nav class="body-options" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<ul class="subpage-links">
+<li>
+<a class="subpage-link curr-subpage" href="/pmwiki/pmwiki.php/Main/LowLevelRun" title="The Main page">
+<span class="wrapper"><span class="spi main-page"></span>Main</span></a>
+</li>
+<li class="create-subpage dropdown">
+<a aria-expanded="false" class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);" role="button">
+<span class="wrapper">Create New <i class="fa fa-plus-circle"></i></span>
+</a>
+<select onchange="this.options[this.selectedIndex].value &amp;&amp; (window.location = this.options[this.selectedIndex].value);">
+<option value="">- Create New -</option>
+<option value="/pmwiki/pmwiki.php/Analysis/LowLevelRun?action=edit">Analysis</option>
+<option value="/pmwiki/pmwiki.php/Characters/LowLevelRun?action=edit">Characters</option>
+<option value="/pmwiki/pmwiki.php/FanficRecs/LowLevelRun?action=edit">FanficRecs</option>
+<option value="/pmwiki/pmwiki.php/FanWorks/LowLevelRun?action=edit">FanWorks</option>
+<option value="/pmwiki/pmwiki.php/Fridge/LowLevelRun?action=edit">Fridge</option>
+<option value="/pmwiki/pmwiki.php/Haiku/LowLevelRun?action=edit">Haiku</option>
+<option value="/pmwiki/pmwiki.php/Headscratchers/LowLevelRun?action=edit">Headscratchers</option>
+<option value="/pmwiki/pmwiki.php/ImageLinks/LowLevelRun?action=edit">ImageLinks</option>
+<option value="/pmwiki/pmwiki.php/Laconic/LowLevelRun?action=edit">Laconic</option>
+<option value="/pmwiki/pmwiki.php/PlayingWith/LowLevelRun?action=edit">PlayingWith</option>
+<option value="/pmwiki/pmwiki.php/Quotes/LowLevelRun?action=edit">Quotes</option>
+<option value="/pmwiki/pmwiki.php/Recap/LowLevelRun?action=edit">Recap</option>
+<option value="/pmwiki/pmwiki.php/ReferencedBy/LowLevelRun?action=edit">ReferencedBy</option>
+<option value="/pmwiki/pmwiki.php/Synopsis/LowLevelRun?action=edit">Synopsis</option>
+<option value="/pmwiki/pmwiki.php/Timeline/LowLevelRun?action=edit">Timeline</option>
+<option value="/pmwiki/pmwiki.php/Trivia/LowLevelRun?action=edit">Trivia</option>
+<option value="/pmwiki/pmwiki.php/WMG/LowLevelRun?action=edit">WMG</option>
+<option value="/pmwiki/pmwiki.php/YMMV/LowLevelRun?action=edit">YMMV</option>
+</select>
+</li>
+</ul>
+</nav>
+<div class="article-content retro-folders" id="main-article">
+<p></p><div class="quoteright" style="width:350px;"><a class="twikilink" href="/pmwiki/pmwiki.php/Manga/MagicalCircleGuruGuru" title="/pmwiki/pmwiki.php/Manga/MagicalCircleGuruGuru"><div class="lazy_load_img_box" style="padding-top:112.29%"><img alt="https://static.tvtropes.org/pmwiki/pub/images/lowlevel.jpg" border="0" class="embeddedimage" height="393" src="https://static.tvtropes.org/pmwiki/pub/images/lowlevel.jpg" width="350"/></div></a></div>
+<div class="acaptionright" style="width:350px;">To be fair, Nike and Kukuri didn't <a class="twikilink" href="/pmwiki/pmwiki.php/Main/LevelGrinding" title="/pmwiki/pmwiki.php/Main/LevelGrinding">do too much fighting</a> unless it's necessary. This is the final battle, by the way. </div>
+<div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_1"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_1'); })</script></div></div><p>The Low-Level Run is a variant of the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SelfImposedChallenge" title="/pmwiki/pmwiki.php/Main/SelfImposedChallenge">Self-Imposed Challenge</a>, and more specifically a variant of the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MinimalistRun" title="/pmwiki/pmwiki.php/Main/MinimalistRun">Minimalist Run</a>. The goal is to complete the game with your characters' levels as low as possible. The player does this by avoiding or fleeing as many <a class="twikilink" href="/pmwiki/pmwiki.php/Main/RandomEncounters" title="/pmwiki/pmwiki.php/Main/RandomEncounters">Random Encounters</a> as possible, reducing experience gain in any way possible, and still finding a way to beat every required enemy and win the game. The challenge can be expressed either by a specific character's level (usually the lowest level in your party) or by all characters' levels in aggregate.
+</p><p><a class="twikilink" href="/pmwiki/pmwiki.php/Main/CharacterLevel" title="/pmwiki/pmwiki.php/Main/CharacterLevel">Character Levels</a> only really appear in <a class="twikilink" href="/pmwiki/pmwiki.php/Main/RolePlayingGame" title="/pmwiki/pmwiki.php/Main/RolePlayingGame">RPGs</a> and games with <a class="twikilink" href="/pmwiki/pmwiki.php/Main/RPGElements" title="/pmwiki/pmwiki.php/Main/RPGElements">RPG Elements</a>, so you can only do this in that kind of game. Even within that sphere, this challenge is just impossible in some games, but others are well-suited for it, particularly games where tactics or reaction time can outweigh raw power, as well as games where characters' stats can be raised to a competitive level without <a class="twikilink" href="/pmwiki/pmwiki.php/Main/LevelGrinding" title="/pmwiki/pmwiki.php/Main/LevelGrinding">Level Grinding</a>. Occasionally, staying at low level would actually <a class="twikilink" href="/pmwiki/pmwiki.php/Main/LowLevelAdvantage" title="/pmwiki/pmwiki.php/Main/LowLevelAdvantage">provide you advantages</a>.
+</p><div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_2"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_2'); })</script></div></div><p>Most <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Speedrun" title="/pmwiki/pmwiki.php/Main/Speedrun">Speedruns</a> of RPGs are Low-Level Runs by necessity, since speedruns often require skipping parts of the game, which naturally means skipping many occasions to level up. Exceptions tend to go to the opposite extreme, using glitches to ridiculously overlevel the player characters.
+</p><p>Compare <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MinimalistRun" title="/pmwiki/pmwiki.php/Main/MinimalistRun">Minimalist Run</a>, where the objective is to finish the game using as little equipment as possible. Compare <a class="twikilink" href="/pmwiki/pmwiki.php/Main/WeakButSkilled" title="/pmwiki/pmwiki.php/Main/WeakButSkilled">Weak, but Skilled</a>, which is what your character will need to be to get through the game with such comparably low stats and resources. Frequently overlaps with <a class="twikilink" href="/pmwiki/pmwiki.php/Main/PacifistRun" title="/pmwiki/pmwiki.php/Main/PacifistRun">Pacifist Run</a> in games that lack the ability to manipulate EXP gain.
+</p><hr/><div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_3"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_3'); })</script></div></div><h2>Examples</h2>
+<p></p><ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/ChronoTrigger" title="/pmwiki/pmwiki.php/VideoGame/ChronoTrigger">Chrono Trigger</a></em> is well suited for Low-Level Runs: characters gain no experience while <a class="twikilink" href="/pmwiki/pmwiki.php/Main/NonLethalKO" title="/pmwiki/pmwiki.php/Main/NonLethalKO">knocked out</a>, and the battle system is designed in such a way that statistical bonuses gained from equipment far outstrip those gained from <a class="twikilink" href="/pmwiki/pmwiki.php/Main/LevelGrinding" title="/pmwiki/pmwiki.php/Main/LevelGrinding">Level Grinding</a>. There's also a piece of equipment that converts EXP gained into cash (but you don't find it until late in the game), and it's possible to use Tabs to upgrade character stats and use higher-level techs without gaining EXP. It's possible to beat the game with the main character's level as low as 1. That said, "possible" doesn't mean "easy", and there's only one specific party who will give you any hope of beating the final boss.<span class="notelabel" onclick="togglenote('note01b5u');"><sup>note </sup></span><span class="inlinefolder" id="note01b5u" isnote="true" onclick="togglenote('note01b5u');" style="cursor:pointer;font-size:smaller;display:none;">Specifically, judicious application of Crono, Marle, and Robo's "Lifeline" Triple Tech.</span>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TalesOfSymphonia" title="/pmwiki/pmwiki.php/VideoGame/TalesOfSymphonia">Tales of Symphonia</a></em> features a special mode where experience gained is determined by the quality of the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Combos" title="/pmwiki/pmwiki.php/Main/Combos">Combos</a> the player uses. This is intended to reward players who are good at the battle system, but it can be used to keep the characters' levels low by deliberately performing poorly. Since the game is an <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ActionRPG" title="/pmwiki/pmwiki.php/Main/ActionRPG">Action RPG</a>, a good player can avoid all damage and keep enemies locked in infinite <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Combos" title="/pmwiki/pmwiki.php/Main/Combos">Combos</a> regardless of the characters' levels. And the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/NewGamePlus" title="/pmwiki/pmwiki.php/Main/NewGamePlus">New Game+</a> gives you the option to halve the amount of experience gained, which is useful for this type of run. <a class="urllink" href="https://www.youtube.com/results?search_query=tales+of+symphonia+colette+poison&amp;search=Search">There are videos<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a> of low-level parties, with Colette and Raine (the game's healer and defensive mage) <em>leading</em> the battle, defeating <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BonusBoss" title="/pmwiki/pmwiki.php/Main/BonusBoss">Abyssion</a> — the single toughest enemy in the game — by <a class="twikilink" href="/pmwiki/pmwiki.php/Main/CherryTapping" title="/pmwiki/pmwiki.php/Main/CherryTapping">poisoning him and dodging attacks for several minutes</a>. Lloyd can even earn a title by getting to a certain point with an aggregate party level below a certain number.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SuperMarioRPG" title="/pmwiki/pmwiki.php/VideoGame/SuperMarioRPG">Super Mario RPG</a></em> can be beaten with Mario as low as Level 3. It's possible because Mario's standard 3FP Jump attack can be turned into a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DiscOneNuke" title="/pmwiki/pmwiki.php/Main/DiscOneNuke">Disc-One Nuke</a>, and you can use <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GuideDangIt" title="/pmwiki/pmwiki.php/Main/GuideDangIt">hard-to-find</a> items (such as the Star Egg and Lazy Shell) to beat Bowser by turning him into a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/StoneWall" title="/pmwiki/pmwiki.php/Main/StoneWall">Stone Wall</a>. You also need to avoid gaining EXP by abusing the "Lucky" effect, getting the egg that modifies EXP, then guessing the wrong egg and nullifying the EXP gain, which makes many portions of the game a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/LuckBasedMission" title="/pmwiki/pmwiki.php/Main/LuckBasedMission">Luck-Based Mission</a> (without emulation exploits, you generally only have a 1/6 chance of doing it right<span class="notelabel" onclick="togglenote('note1q4du');"><sup>note </sup></span><span class="inlinefolder" id="note1q4du" isnote="true" onclick="togglenote('note1q4du');" style="cursor:pointer;font-size:smaller;display:none;">At one point, there are two bosses you have to fight back-to-back, and you gave to get <em>both</em> eggs wrong in a row to lose all the EXP.</span>). <a class="twikilink" href="/pmwiki/pmwiki.php/Website/GameFAQs" title="/pmwiki/pmwiki.php/Website/GameFAQs">GameFAQs</a> has a <a class="urllink" href="https://gamefaqs.gamespot.com/snes/588739-super-mario-rpg-legend-of-the-seven-stars/faqs/24216">walkthrough<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a> showing you how to do it.
+</li><li> The <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/PaperMario" title="/pmwiki/pmwiki.php/VideoGame/PaperMario">Paper Mario</a></em> games can be beaten with the starting stats of 10HP and 5FP. It's possible by attributing all level-ups to Badge Points, which only work as long as you <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ExactlyWhatItSaysOnTheTin" title="/pmwiki/pmwiki.php/Main/ExactlyWhatItSaysOnTheTin">equip badges</a>. You'll need all the badges you can get, because late-game enemies have <em>high</em> attack power (<em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/PaperMarioTheThousandYearDoor" title="/pmwiki/pmwiki.php/VideoGame/PaperMarioTheThousandYearDoor">Thousand-Year Door</a></em> has a late-game boss that can kill you <a class="twikilink" href="/pmwiki/pmwiki.php/Main/OneHitKO" title="/pmwiki/pmwiki.php/Main/OneHitKO">in a single hit</a> with these settings). You can even cut Mario's max HP to 5 as part of a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GameBreaker" title="/pmwiki/pmwiki.php/Main/GameBreaker">Game-Breaker</a> build called "Danger Mario", which allows Mario to use a plethora of special badges that only activate if Mario has 5HP or less — and since there's no limit on stacking those badges, it can turn Mario into an unstoppable powerhouse.
+<ul><li> <a class="twikilink" href="/pmwiki/pmwiki.php/Creator/Stryder7x" title="/pmwiki/pmwiki.php/Creator/Stryder7x">Stryder7x</a> showed that it is indeed possible to beat every boss, including the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/NintendoHard" title="/pmwiki/pmwiki.php/Main/NintendoHard">Nintendo Hard</a> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BonusBoss" title="/pmwiki/pmwiki.php/Main/BonusBoss">Bonus Bosses</a>, at level 1 (10 HP, 5 FP, and 3 BP) and without upgrading your partners, though doing so requires hacking the game so you don't get any star points, and then farming the Li'l-Oinks for repel gels for the harder bosses.
+</li></ul></li><li> Every <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/FinalFantasy" title="/pmwiki/pmwiki.php/Franchise/FinalFantasy">Final Fantasy</a></em> game has had someone do this, including the ones that don't actually use levels:
+<ul><li> It can be done easily in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FinalFantasyV" title="/pmwiki/pmwiki.php/VideoGame/FinalFantasyV">Final Fantasy V</a></em>, as bosses don't give experience, there are very few forced encounters, and one can still gain job levels from enemies that run away.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FinalFantasyVI" title="/pmwiki/pmwiki.php/VideoGame/FinalFantasyVI">Final Fantasy VI</a></em>, a low-level run is essential to those looking to max out their stats as much as possible. Keeping levels as low as possible (by avoiding battles, juggling characters when you have to fight, and manipulating when characters rejoin the group) allows the player to wait until he has the right espers, which each grant a different stat boost when the character holding them levels up. The endeavor is helped by a few <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GoodBadBugs" title="/pmwiki/pmwiki.php/Main/GoodBadBugs">Good Bad Bugs</a> such as the Vanish-Doom <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GameBreaker" title="/pmwiki/pmwiki.php/Main/GameBreaker">Game-Breaker</a> and isn't a <em>strict</em> low-level run, as it still allows free <a class="twikilink" href="/pmwiki/pmwiki.php/Main/LevelGrinding" title="/pmwiki/pmwiki.php/Main/LevelGrinding">Level Grinding</a> of <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GuestStarPartyMember" title="/pmwiki/pmwiki.php/Main/GuestStarPartyMember">Guest Star Party Members</a> and (at certain times) characters who can't equip espers to gain strength and money. If you're into a <em>real</em> low-level run, you can beat the game with characters as low as Level 6 by having Gau take large amounts of forced experience and then jumping him off into the Veldt so that it doesn't count. It helps that bosses give no EXP in this game either.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FinalFantasyVIII" title="/pmwiki/pmwiki.php/VideoGame/FinalFantasyVIII">Final Fantasy VIII</a></em> is the best-suited game for this in the franchise. Most of your combat power derives not from <a class="twikilink" href="/pmwiki/pmwiki.php/Main/LevelGrinding" title="/pmwiki/pmwiki.php/Main/LevelGrinding">Level Grinding</a>, but from junctioned <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SummonMagic" title="/pmwiki/pmwiki.php/Main/SummonMagic">Guardian Forces</a> and Magic, and your enemies' <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DynamicDifficulty" title="/pmwiki/pmwiki.php/Main/DynamicDifficulty">Dynamic Difficulty</a> is scaled according to your characters' level, but <em>not</em> by what you have junctioned. Also, bosses don't provide EXP, and most random encounter monsters can be turned into cards for the game's <a class="twikilink" href="/pmwiki/pmwiki.php/Main/CardBattleGame" title="/pmwiki/pmwiki.php/Main/CardBattleGame">Card Battle Game</a> (which likewise doesn't provide EXP). This not only makes a low-level run the easiest way to beat the game, but makes it possible to beat the game without earning a single level. (You'll still need to grind monsters to gain Ability Points, in order to teach your GFs the various <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ItemCrafting" title="/pmwiki/pmwiki.php/Main/ItemCrafting">Item Crafting</a> and Magic Crafting abilities that will give you high-level magic.) The spiritual equivalent of a low-level run in this game is a <em>high</em>-level run with no junctioning, which is nearly impossible and considered the hardest <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SelfImposedChallenge" title="/pmwiki/pmwiki.php/Main/SelfImposedChallenge">Self-Imposed Challenge</a> in the entire series.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FinalFantasyIX" title="/pmwiki/pmwiki.php/VideoGame/FinalFantasyIX">Final Fantasy IX</a></em> can be beaten at Level 1. Again, bosses don't give EXP,<span class="notelabel" onclick="togglenote('note2dwad');"><sup>note </sup></span><span class="inlinefolder" id="note2dwad" isnote="true" onclick="togglenote('note2dwad');" style="cursor:pointer;font-size:smaller;display:none;">There's one set of mini-bosses that gives unavoidable EXP, so at least one character has to level up, and the challenge requires that you don't use that character(s) anymore.</span> and the Virus status effect averts EXP gain. You can even take out Ozma, the hidden superboss, this way (although it's not for the faint of heart).
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FinalFantasyX" title="/pmwiki/pmwiki.php/VideoGame/FinalFantasyX">Final Fantasy X</a></em> is well-suited for this, as winning battles doesn't automatically increase your stats; it just gives you points to spend on stat increases. Because of this, "No Sphere Grid" runs (<em>i.e.</em> no stat increases) are merely the tip of the iceberg — you can add on No Items, No Escapes, no Overdrives, <em>etc.</em> The peak of it all is what's called a "NSGNSNCNONENNENBB Challenge": No <a class="twikilink" href="/pmwiki/pmwiki.php/Main/LevelGrinding" title="/pmwiki/pmwiki.php/Main/LevelGrinding">Sphere Grid</a>, No Summoning, No <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ItemCrafting" title="/pmwiki/pmwiki.php/Main/ItemCrafting">Customizing</a>, No <a class="twikilink" href="/pmwiki/pmwiki.php/Main/LimitBreak" title="/pmwiki/pmwiki.php/Main/LimitBreak">Overdrives</a>, No Escapes, No "No <a class="twikilink" href="/pmwiki/pmwiki.php/Main/RandomEncounters" title="/pmwiki/pmwiki.php/Main/RandomEncounters">Encounters</a>", and No Blitzball. It took <em>years</em> to even reach the final boss; <a class="urllink" href="https://www.youtube.com/watch?v=zG_h6x0Il3U">here's<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a> a video of a speedrunner finally pulling it off.
+</li><li> A Low-Level Run of <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FinalFantasyXII" title="/pmwiki/pmwiki.php/VideoGame/FinalFantasyXII">Final Fantasy XII</a></em> is nicknamed a "122333 run", for the lowest possible levels of your party members: Vaan at Level 1, Fran and Balthier at Level 2, and the other three at Level 3. The International version also has a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/NewGamePlus" title="/pmwiki/pmwiki.php/Main/NewGamePlus">New Game+</a> variation where all characters are locked at Level 1.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FinalFantasyXIII" title="/pmwiki/pmwiki.php/VideoGame/FinalFantasyXIII">Final Fantasy XIII</a></em>, much like <em>Final Fantasy X</em>, winning battles doesn't automatically increase your stats, but rather earns Crystogen Points for use in the Crystarium. Thus, a Low-Level Run doesn't require one to avoid battles or try to bypass earning EXP, but to simply not perform crystogenesis. It's been proven possible to beat not only the normal game, but also 62 of the 64 optional missions without using the Crystarium. With the additional restriction of not upgrading equipment, players have made it as far as the final boss in chapter 11. <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FinalFantasyXIII2" title="/pmwiki/pmwiki.php/VideoGame/FinalFantasyXIII2">Final Fantasy XIII-2</a></em> has a similar (but tweaked) Crystarium system for the two primary party members, and an item-based (but still manually-activated) Crystarium system for its <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Mons" title="/pmwiki/pmwiki.php/Main/Mons">monster allies</a>, which allows the same practice.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FinalFantasyXV" title="/pmwiki/pmwiki.php/VideoGame/FinalFantasyXV">Final Fantasy XV</a></em> has an odd relationship with this trope:
+<ul><li> EXP is earned by winning battles and completing quests, but doesn't get taken into account towards levelling up until the party <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TraumaInn" title="/pmwiki/pmwiki.php/Main/TraumaInn">camps at a haven, stays at lodgings</a>, or finishes a chapter. Short-term Low-Level Runs can be done by not voluntarily sleeping for the duration of a chapter.
+</li><li> Lodgings cost gil in exchange for an EXP multiplier, so a traditional Low-Level Run involves sleeping only at havens and free lodgings, thus cashing in as much EXP as possible at ×1.0. By only fighting mandatory battles, making sure that forced stays at lodgings cash in only the EXP that is earned immediately prior, and only clearing main quests until the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/EndgamePlus" title="/pmwiki/pmwiki.php/Main/EndgamePlus">Endgame+</a>, the player will step into the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/VeryDefinitelyFinalDungeon" title="/pmwiki/pmwiki.php/Main/VeryDefinitelyFinalDungeon">Very Definitely Final Dungeon</a> with Noctis at Level 35 and his retinue at Level 30; lodgings in <span class="spoiler" title="you can set spoilers visible by default on your profile">Insomnia</span> are entirely optional, and clearing the game does not automatically cash in any EXP, so from that point on no EXP is forcibly cashed in. This is low enough to make the last few bosses challenging (especially the ones from the <em><a class="twikilink" href="/pmwiki/pmwiki.php/Main/UpdatedRerelease" title="/pmwiki/pmwiki.php/Main/UpdatedRerelease">Royal Edition</a></em>/<em><a class="twikilink" href="/pmwiki/pmwiki.php/Main/DownloadableContent" title="/pmwiki/pmwiki.php/Main/DownloadableContent">Royal Pack</a></em>), but <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DownplayedTrope" title="/pmwiki/pmwiki.php/Main/DownplayedTrope">not exceptionally more</a> than if you were at the expected level of 45.
+</li><li> A free DLC item bestows the Nixperience Band, an accessory that, on being equipped to any member of the party, prevents EXP from being cashed in by <em>everyone</em>. By equipping the Nixperience Band before every slumber (and making abundant use of the numerous <a class="twikilink" href="/pmwiki/pmwiki.php/GameBreaker/FinalFantasy" title="/pmwiki/pmwiki.php/GameBreaker/FinalFantasy">lifelines</a> the game has), a player can go from the opening to the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/FinalBoss" title="/pmwiki/pmwiki.php/Main/FinalBoss">Final Boss</a> at Level 1... <a class="twikilink" href="/pmwiki/pmwiki.php/Main/InvertedTrope" title="/pmwiki/pmwiki.php/Main/InvertedTrope">or</a> save the entire game's EXP for the town with lodgings that offer EXP ×3.0 to save yourself the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/LevelGrinding" title="/pmwiki/pmwiki.php/Main/LevelGrinding">Level Grinding</a>.
+</li></ul></li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/BravelyDefault" title="/pmwiki/pmwiki.php/VideoGame/BravelyDefault">Bravely Default</a></em> and <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/BravelySecond" title="/pmwiki/pmwiki.php/VideoGame/BravelySecond">Bravely Second</a></em> allow the player to turn off the acquisition of experience, job points, or pg at any time. A player with <a class="twikilink" href="/pmwiki/pmwiki.php/Main/InJoke" title="/pmwiki/pmwiki.php/Main/InJoke">celestial</a> patience is free to play either game with no one in their party having double-digit levels. <span class="notelabel" onclick="togglenote('note3lp4l');"><sup>note </sup></span><span class="inlinefolder" id="note3lp4l" isnote="true" onclick="togglenote('note3lp4l');" style="cursor:pointer;font-size:smaller;display:none;">In <em>Default</em>, Ringabel joins at level 5 and Edea at level 6. In <em>Second</em>, Edea joins at level 5, Magnolia at level 6, and Tiz at level 7.</span>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FireEmblem" title="/pmwiki/pmwiki.php/VideoGame/FireEmblem">Fire Emblem</a></em> games do everything in their power to make a Low-Level Run impossible, with the specter of <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AllDeathsFinal" title="/pmwiki/pmwiki.php/Main/AllDeathsFinal">permanent character death</a> always looming and untrained characters becoming increasingly (and mathematically) unable to stand up to enemies the more you neglect them. However, each game usually gives you several pre-promoted powerhouse units to recruit that are somewhat weaker over the long run, but ensure that you won't become <a class="twikilink" href="/pmwiki/pmwiki.php/Main/UnwinnableByMistake" title="/pmwiki/pmwiki.php/Main/UnwinnableByMistake">completely stuck</a>. The best way to capture the spirit of the challenge is with hacks: <a class="urllink" href="https://www.youtube.com/user/DD151/videos">this guy<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a> has several videos with games hacked to reduce all stat growths to 0%<span class="notelabel" onclick="togglenote('note4ze9m');"><sup>note </sup></span><span class="inlinefolder" id="note4ze9m" isnote="true" onclick="togglenote('note4ze9m');" style="cursor:pointer;font-size:smaller;display:none;">This means stats can still increase, but only from stat boosters and promotion.</span>, beating the games on the highest difficulties and often doing so with flying colors despite a weakened army.<span class="notelabel" onclick="togglenote('note5fzus');"><sup>note </sup></span><span class="inlinefolder" id="note5fzus" isnote="true" onclick="togglenote('note5fzus');" style="cursor:pointer;font-size:smaller;display:none;">The only time he lets a unit die is in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FireEmblemShadowDragon" title="/pmwiki/pmwiki.php/VideoGame/FireEmblemShadowDragon">Fire Emblem: Shadow Dragon</a></em>, so that he can revive her later (with a special staff that's the exception to the no-death rule) and 2HKO the final boss.</span> This is mainly accomplished by abusing prepromotes or certain powerful units, and beating chapters as quickly as possible (many later maps can be skipped entirely). The next level from that is the "Negative Growth" hack, which forces units to become <em>weaker</em> from leveling up (especially problematic when dealing with bosses, who provide extremely high XP gain upon death), which is much closer to the playstyle of a traditional Low-Level Run because it forces you to avoid gaining levels as much as possible.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/LegendOfMana" title="/pmwiki/pmwiki.php/VideoGame/LegendOfMana">Legend of Mana</a></em> provides experience as crystals dropped on the ground by enemies, which must be picked up in order to gain levels. More significantly, the player affect enemy levels by planning his or her path through the game. As a result, it is quite possible to fight a level 40 final boss at level 1 the first time through the game, and in <a class="twikilink" href="/pmwiki/pmwiki.php/Main/NewGamePlus" title="/pmwiki/pmwiki.php/Main/NewGamePlus">New Game+</a> mode encounter level 99 bosses with a level 1 character. As <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/LegendOfMana" title="/pmwiki/pmwiki.php/VideoGame/LegendOfMana">Legend of Mana</a></em> is an <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ActionRPG" title="/pmwiki/pmwiki.php/Main/ActionRPG">Action RPG</a>, such a challenge is possible, but takes a lot of skill and blacksmithing.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/Castlevania" title="/pmwiki/pmwiki.php/Franchise/Castlevania">Castlevania</a></em>:
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/CastlevaniaIISimonsQuest" title="/pmwiki/pmwiki.php/VideoGame/CastlevaniaIISimonsQuest"> Castlevania II: Simon's Quest</a></em> can be beaten without gaining any levels. The trick is to immediately go <em>left</em> from the first town and get to the Morning Star with your original 50 hearts plus every small heart you can get. However, you will find that Dracula can kill you in <a class="twikilink" href="/pmwiki/pmwiki.php/Main/OneHitKill" title="/pmwiki/pmwiki.php/Main/OneHitKill">a single hit</a>, making him a much greater challenge. Have fun!
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/CastlevaniaPortraitOfRuin" title="/pmwiki/pmwiki.php/VideoGame/CastlevaniaPortraitOfRuin">Castlevania: Portrait of Ruin</a></em> has a mode where you can stop your characters from gaining more levels after a certain point. This even allows you to stay at Level 1 the entire game. Since this can only be activated when playing the hardest difficulty level of the game, it can make for an almost impossible challenge when playing as certain characters — but not the main characters, who can still grind for money and weapons and take away almost any advantage your enemies may have over you. The biggest challenge in this game is beating Hard mode with a Level 1 restriction and the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/JokeCharacter" title="/pmwiki/pmwiki.php/Main/JokeCharacter">Old Axe Armor</a>, as it prevents you from using most items available to the main characters — Dracula takes forever to beat, but it's <a class="urllink" href="https://www.youtube.com/watch?v=2xZgsjfsj14">possible<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a>.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/CastlevaniaOrderOfEcclesia" title="/pmwiki/pmwiki.php/VideoGame/CastlevaniaOrderOfEcclesia">Castlevania: Order of Ecclesia</a></em> has level caps in its Hard Mode as well. Presumably, this would be fairly simple for Shanoa (well, as simple as <a class="twikilink" href="/pmwiki/pmwiki.php/Main/NintendoHard" title="/pmwiki/pmwiki.php/Main/NintendoHard">that game</a> can get) thanks to the Villager sidequests, but may the Ruinous Powers help you if you try it on <span class="spoiler" title="you can set spoilers visible by default on your profile">Albus</span> Mode.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DiabloII" title="/pmwiki/pmwiki.php/VideoGame/DiabloII">Diablo II</a></em>:
+<ul><li> High-level characters could go to the last Waypoint of each act and send a Town Portal to be used by low-level players in their party. This allowed n00bs to gain access to certain areas without completing the prerequisite quests (for example, getting to the Canyon of the Magi without killing the Summoner, or to the Durance of Hate without ever assembling Khalim's Will). This was nerfed in the 1.10 patch.
+</li><li> A popular set of challenges are the 1@17, 2@20, 3@30 Diablo kills — basically, killing the final boss on a difficulty setting at the earliest possible level. To use the Hell entrance in Normal difficulty requires a character at Level 17, to access Nightmare difficulty requires Level 20, and Hell difficulty is accessible at Level 30. Each challenge is to be attempted solo, though you are not required to attempt or complete any of the earlier challenges to attempt the coveted 3@30.
+</li><li> The literal lowest-level-possible challenge can only be attempted by using outdated patches. It's commonly combined with the Ironman challenges of various difficulty, as well as the impossible no-items-no-skills-no-stats challenge.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/StarOceanTillTheEndOfTime" title="/pmwiki/pmwiki.php/VideoGame/StarOceanTillTheEndOfTime">Star Ocean: Till the End of Time</a></em> actually rewards the player for this. The game features battle trophies which are awards for various feats in battle. Three of these (one for each possible difficulty) are awarded for defeating the final boss with a Level 1 party, and on higher difficulties up to Level 10 is allowed.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/StarControl" title="/pmwiki/pmwiki.php/VideoGame/StarControl">Star Control</a> II</em> is an extreme example, even though it doesn't even <em>have</em> levels. You can play the entire game without ever visiting the Rebel Base at Earth, which means no upgrades to your flagship, a <em>very</em> short supply of fuel, very few combat ships (gained via alliance pacts, which are rare in themselves), and <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BeefGate" title="/pmwiki/pmwiki.php/Main/BeefGate">a new enemy appearing every day</a> (which, in real time, is every five seconds). Even if you can consistently fight off the enemies with zero damage, each battle resets your ship's direction, and without upgrades, you'll be forced to travel everywhere with the slowest possible rotation rate and ship speed — in a game with a time limit. You are <em>screwed</em>. People only started doing this more than <em>ten years</em> after the game's release, and it was not an intended feature, as there's a sequence involving the Rebel Base immediately before <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TheVeryDefinitelyFinalDungeon" title="/pmwiki/pmwiki.php/Main/TheVeryDefinitelyFinalDungeon">The Very Definitely Final Dungeon</a> and the game would crash doing this; the challenge gamers couldn't patch this until the game's code became open-source.
+</li><li> The <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/CityOfHeroes" title="/pmwiki/pmwiki.php/VideoGame/CityOfHeroes">City of Heroes</a></em> version is to create a 1st-level character and race numerous other first levelers through three increasingly dangerous zones. It is an exercise in aggro management, where any villain could kill you with a sneeze and drawing attention is instant death.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/BaldursGate" title="/pmwiki/pmwiki.php/VideoGame/BaldursGate">Baldur's Gate</a></em> has a couple of interesting variants. At least two people have played through the first game without gaining any EXP at all, via a combination of <a class="twikilink" href="/pmwiki/pmwiki.php/Main/StealthRun" title="/pmwiki/pmwiki.php/Main/StealthRun">stealth</a> and using enemies against each other. The second game requires you to kill enemies, so gaining at least <em>some</em> EXP is required, but it can be beaten with only a few thousand EXP gained (out of a cap of 8 million)&gt;
+</li><li> Several <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/KingdomHearts" title="/pmwiki/pmwiki.php/Franchise/KingdomHearts">Kingdom Hearts</a></em> games have a built-in Low-Level Run, as the highest difficulty options include "EXP Zero" or "No Experience" options. Nearly every enemy will easily kill you in one or two shots. However, boss fights (and story-significant battles in general) usually give players stat boots separate from level-ups, which keeps you from being <em>completely</em> screwed (and if you play Critical Mode, you do get a damage boost as well). <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/KingdomHeartsIII" title="/pmwiki/pmwiki.php/VideoGame/KingdomHeartsIII">Kingdom Hearts III</a></em> is the only game with an "EXP Zero" option in all difficulty modes, and <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/KingdomHeartsI" title="/pmwiki/pmwiki.php/VideoGame/KingdomHeartsI">Kingdom Hearts</a></em> was too early to have it — but it was added to the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/UpdatedRerelease" title="/pmwiki/pmwiki.php/Main/UpdatedRerelease">HD ReMIX</a>, which <em>didn't</em> re-balance the game to accommodate it, making it the hardest game in which to achieve an EXP Zero run.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/Pokemon" title="/pmwiki/pmwiki.php/Franchise/Pokemon">Pokémon</a></em> isn't that well suited for it — you need to be able to level up to some degree if you're going to have any success — but there are a few variants:
+<ul><li> A variant of it that is possible in Pokémon is the "<a class="twikilink" href="/pmwiki/pmwiki.php/Main/MinimalistRun" title="/pmwiki/pmwiki.php/Main/MinimalistRun">Minimum Battles</a>" run, in which you do not fight any wild Pokémon and avoid all skippable trainer battles, thus netting you the least possible amount of experience points. In an even harder variant, the use of rare candies is also forbidden, leaving you at the minimum level possible at any point in the game. Due to the low amount of total experience points available, these are almost invariable <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SoloCharacterRun" title="/pmwiki/pmwiki.php/Main/SoloCharacterRun">Solo-Character Runs</a> as well, as even with just one party member you will likely be lower than the level of your opponents during the entire game.
+</li><li> The "<a class="twikilink" href="/pmwiki/pmwiki.php/Main/NotAllowedToGrowUp" title="/pmwiki/pmwiki.php/Main/NotAllowedToGrowUp">No Evolutions</a>" run prevents you from evolving your Pokémon. It isn't <em>quite</em> as hard as a traditional Low-Level Run, because you still earn experience, but when combined with a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SoloCharacterRun" title="/pmwiki/pmwiki.php/Main/SoloCharacterRun">Solo-Character Run</a> it becomes much more challenging (as seen <a class="urllink" href="https://www.youtube.com/watch?v=sRZhCXsg4GI">here<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a>). <em><a class="twikilink" href="/pmwiki/pmwiki.php/LetsPlay/TwitchPlaysPokemon" title="/pmwiki/pmwiki.php/LetsPlay/TwitchPlaysPokemon">Twitch Plays Pokémon</a></em> even managed to pull it off in <em><a class="twikilink" href="/pmwiki/pmwiki.php/LetsPlay/TwitchPlaysPokemonBlack" title="/pmwiki/pmwiki.php/LetsPlay/TwitchPlaysPokemonBlack">Black</a></em>.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/PokemonRedAndBlue" title="/pmwiki/pmwiki.php/VideoGame/PokemonRedAndBlue">Pokémon Red and Blue</a></em>, it is possible to beat the Elite Four with only a Level 7 Mew, but it requires <a class="twikilink" href="/pmwiki/pmwiki.php/Main/LuckBasedMission" title="/pmwiki/pmwiki.php/Main/LuckBasedMission">an incredible amount of luck</a>; Lorelei's first Pokémon alone has to do nothing but non-damaging moves for the first seven turns while you set up. If you manage it, you get so much experience in the process that it can't really be called a "Low-Level Run" by the end.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/PokemonBlackAndWhite" title="/pmwiki/pmwiki.php/VideoGame/PokemonBlackAndWhite">Pokémon Black and White</a></em>, Cynthia can be beaten with Level 1 Pokémon, which is lower than even <em>occurs</em> in the game. It started with <a class="urllink" href="https://www.youtube.com/watch?v=SkVT1KjojCk">a team of Level 1s<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a> and escalated to <a class="urllink" href="https://www.youtube.com/watch?v=S3Yk6zfSdqg">a level 1 Bidoof with improbably low stats<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a> and <a class="urllink" href="https://www.youtube.com/watch?v=OSuwjFacNqE">a single Cottonee<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a>, as gamers tried to one-up each other.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/PokemonBlackAndWhite" title="/pmwiki/pmwiki.php/VideoGame/PokemonBlackAndWhite">Pokémon Black and White</a></em> has a built-in "no experience" patch for this kind of thing, although it was originally designed as punishment for illegally downloading the game.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/TheElderScrolls" title="/pmwiki/pmwiki.php/Franchise/TheElderScrolls">The Elder Scrolls</a></em>:
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheElderScrollsIIIMorrowind" title="/pmwiki/pmwiki.php/VideoGame/TheElderScrollsIIIMorrowind">Morrowind</a></em> has an extreme example, as the alchemy process is considered a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GameBreaker" title="/pmwiki/pmwiki.php/Main/GameBreaker">Game-Breaker</a>: Because the game is paused when the player brews potions, a player can brew an Intelligence boosting potion that lasts a short time, drink it, and then immediately brew another potion that provides an even greater bonus (as the Alchemy skill bonuses are affected by your Intelligence attribute), and it would stack to absurd levels until you can create a potion which restores your entire health pool many times over each second for a real-world hour. This then allows the player to wield the Tools of Kagrenac, Keening and Sunder, without Wraithguard, the protective gauntlet needed to use them. (Otherwise, the tools quickly drain the health of the wielder.) By doing this, it's possible to complete the game's main quest in under 10 minutes without leveling up in any way.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheElderScrollsIVOblivion" title="/pmwiki/pmwiki.php/VideoGame/TheElderScrollsIVOblivion">Oblivion</a></em>, you only gain a level when you gain 10 points in your major skills and then sleep, so it's relatively simple to acquire very high skill levels while remaining at experience Level 1. And since the game's <a class="twikilink" href="/pmwiki/pmwiki.php/Main/LevelScaling" title="/pmwiki/pmwiki.php/Main/LevelScaling">difficulty scales with your level</a>, this is arguably easier than gaining levels the traditional way. Your attributes and equipment will suffer, though. In order to beat the main quest, you must complete at least one of the Daedric artifact quests, each of which has a minimum level, although some are as low as Level 2. It's still possible to complete the game at Level 1, but this requires killing an NPC who is about as powerful as the game engine will allow, then giving up her <a class="twikilink" href="/pmwiki/pmwiki.php/Main/InfinityPlusOneSword" title="/pmwiki/pmwiki.php/Main/InfinityPlusOneSword">Infinity +1 Sword</a> to short-circuit the quest's level requirement. Alternatively, if you're willing to gain just one level, you can complete the easiest Daedric artifact quest in the game instead.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheElderScrollsVSkyrim" title="/pmwiki/pmwiki.php/VideoGame/TheElderScrollsVSkyrim">Skyrim</a></em>'s leveling system requires players to access a leveling window to pick stat allocation (simplified to picking a health, magicka, or stamina boost per level) as well as perks. By deliberately ignoring this window, it is possible to play as a Level 1 character for most of the game, albeit at a cost of not using perks or advanced skills. It also is possible to play through the game without leveling up any skills at all, which requires only fighting with things that do not cause you to level up.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/WorldOfWarcraft" title="/pmwiki/pmwiki.php/VideoGame/WorldOfWarcraft">World of Warcraft</a></em> has a few variations:
+<ul><li> In more recent games, there's the option to disable experience gain, allowing for traditional in-game Low-Level Runs.
+</li><li> The games generally do not allow you to enter most raid dungeons more than five levels before you are "supposed" to. Instead, players have taken to competing against each other by racing Level 1 characters (usually a Gnome or Tauren) into the opposing faction's capital, which is an exercise in aggro management and sheer patience. You can also kill Hogger with <a class="urllink" href="https://www.youtube.com/watch?v=wHWyJT2QRMM">a bunch of Level 1 gnomes<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a>, and the Warcraft Hunters Union downed Ysondre (balanced for 40 Level 60s) with level 2 hunters and Gnomeregan with a party of Level 19 hunters.
+</li><li> There are videos of people using exploits to solo 25-man raid bosses. In particular, someone figured out that a warlock could kite one of the bosses in Serpentshrine Caverns by throwing instant-speed dots and running up and down stairs a lot. <a class="twikilink" href="/pmwiki/pmwiki.php/Creator/BlizzardEntertainment" title="/pmwiki/pmwiki.php/Creator/BlizzardEntertainment">Blizzard</a> frowns on this kind of thing and has been known to ban accounts for this sort of thing (which is unusual for games like this).
+</li><li> One specific challenge is getting "The Explorer" title at the lowest level possible, which requires visiting a majority of Azeroth.
+</li></ul></li><li> There are people crazy enough to take on <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/GodHand" title="/pmwiki/pmwiki.php/VideoGame/GodHand">God Hand</a></em> on Hard Mode, with only the starting moves, while still keeping their <a class="twikilink" href="/pmwiki/pmwiki.php/Main/KickMePrank" title="/pmwiki/pmwiki.php/Main/KickMePrank">Kick-Me Sign</a> on. By the end of the game, your starting moves are practically <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ScratchDamage" title="/pmwiki/pmwiki.php/Main/ScratchDamage">Scratch Damage</a>. Hard Mode locks the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DynamicDifficulty" title="/pmwiki/pmwiki.php/Main/DynamicDifficulty">Dynamic Difficulty</a> on its highest level, "Level Die". The Kick-Me Sign falls off if you use either the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SuperMode" title="/pmwiki/pmwiki.php/Main/SuperMode">God Hand</a> or <a class="twikilink" href="/pmwiki/pmwiki.php/Main/LimitBreak" title="/pmwiki/pmwiki.php/Main/LimitBreak">God Reels</a>. People have beaten the game this way.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Fallout2" title="/pmwiki/pmwiki.php/VideoGame/Fallout2">Fallout 2</a></em> sees this as a necessity for doing a proper <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Speedrun" title="/pmwiki/pmwiki.php/Main/Speedrun">Speedrun</a>; it's possible to beat the game in less than half an hour, but even with the EXP you get from some of the late-game area quests being insane for a low-level character, you will likely finish the game severely underleveled compared to what sanity would dictate.
+</li><li> This is easy to do in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/BeyondOasis" title="/pmwiki/pmwiki.php/VideoGame/BeyondOasis">Beyond Oasis</a></em> (<em>a.k.a.</em> <em>The Story of Thor</em>), since your character's level is determined by the number of hearts he collects (which also, predictably, increase maximum HP), rather than EXP gained by kills. Furthermore, hearts are rigged to only drop from enemies if you're getting your ass kicked, when you would logically need them. Thus, the game's difficulty rather ingeniously scales itself depending on your skill... or, you can simply go macho and ignore hearts altogether.
+</li><li> In the <em><a class="twikilink" href="/pmwiki/pmwiki.php/Website/GaiaOnline" title="/pmwiki/pmwiki.php/Website/GaiaOnline">Gaia Online</a></em> MMO <em>zOMG!</em>, "instanced" areas, whose difficulty is determined by a given player's level, has made Low-Level runs a viable tactic — or you can just game the system by sending in the lowest-level player first to set the difficulty level and then have everyone else do their thing. Still, this can lead to situations where the low man is the last person standing against Queen Lorelei... and wins.
+</li><li> All of the games in the <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MarioAndLuigi" title="/pmwiki/pmwiki.php/VideoGame/MarioAndLuigi">Mario &amp; Luigi</a></em> series let you avoid all damage from every attack if you're good enough with action commands. There are very few exceptions, meaning that perfect skill can result in beating a game with minimal levels. But due to the dependence of damage upon level, it will probably take a very long time to succeed in one of these challenges.
+<ul><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MarioAndLuigiSuperstarSaga" title="/pmwiki/pmwiki.php/VideoGame/MarioAndLuigiSuperstarSaga">Superstar Saga</a></em>, you can get equipment setups to make yourself more powerful without gaining levels, especially the Shroom Force equipment (which is useful at the end when the Koopalings have time bombs which will kill you if you don't beat them fast enough), so you don't even have to do that much dodging. In any event, if you're skilled at dodging and countering, nothing will hit you and it really doesn't matter what level you are. Dodging is also highly important because there are no healing spots in the game,<span class="notelabel" onclick="togglenote('note66d8l');"><sup>note </sup></span><span class="inlinefolder" id="note66d8l" isnote="true" onclick="togglenote('note66d8l');" style="cursor:pointer;font-size:smaller;display:none;">Well, at least not <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DifficultyByRegion" title="/pmwiki/pmwiki.php/Main/DifficultyByRegion">outside of Japan</a></span> which is quite unusual for an RPG.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MarioAndLuigiPartnersInTime" title="/pmwiki/pmwiki.php/VideoGame/MarioAndLuigiPartnersInTime">Partners in Time</a></em>, you have to rely on perfect dodging because there are no items or status effects that can reliably cause enemies to miss. Later enemies whom the game expects to be <a class="twikilink" href="/pmwiki/pmwiki.php/Main/CherryTapping" title="/pmwiki/pmwiki.php/Main/CherryTapping">Cherry Tapping</a> you will now be able to kill you <a class="twikilink" href="/pmwiki/pmwiki.php/Main/OneHitKill" title="/pmwiki/pmwiki.php/Main/OneHitKill">in one hit</a>. While there <em>are</em> healing items in this game, you'll waste precious turns if you have to use them.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MarioAndLuigiBowsersInsideStory" title="/pmwiki/pmwiki.php/VideoGame/MarioAndLuigiBowsersInsideStory">Bowser's Inside Story</a></em> and <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MarioAndLuigiDreamTeam" title="/pmwiki/pmwiki.php/VideoGame/MarioAndLuigiDreamTeam">Dream Team</a></em> both have the added quirk that the giant fights (as Bowser in the former game and as Luigi in the latter) don't depend on statistics at all and are entirely based on the Action Commands — which means you're not even at a disadvantage when you're doing a Low-Level Run.
+</li></ul></li><li> The <em><a class="twikilink" href="/pmwiki/pmwiki.php/Videogame/Soulblazer" title="/pmwiki/pmwiki.php/Videogame/Soulblazer">Soulblazer</a></em> trilogy has different amounts of success with Low-Level runs. <em>Soulblazer</em> requires the vast majority of monster lairs to be sealed in each level in order to finish that level (as the NPCs do aid you in your quest by supplying items or opening pathways to let you continue). Some can be avoided. But to kill the final boss, Deathtoll, you need the Phoenix magic and the Soul Blade, which requires a bare minimum of level 24 (out of 50); anything less and you can't even touch him, never mind hurt him.
+<ul><li> <em>Illusion of Gaia</em> has a very unique levelling system, wherein clearing each room in a level gives you a permanent stat increase in either HP, Strength, or Defense. But when it comes time to face a boss, you get the stat increases anyway, which falls straight into <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AntiGrinding" title="/pmwiki/pmwiki.php/Main/AntiGrinding">Anti-Grinding</a>.
+</li><li> <em>Terranigma</em>, on the other hand, has very few monsters that actually have to be killed. Aside from the bosses of course, only a handful of monsters throughout the game have to be killed in order to open certain hitherto blocked gateways, making underlevelling very possible. The game has now been completed at a measly Level 13 (out of 50), at which a critical hits does 2 points damage to the final boss (who has around 1200HP).
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/XComUFODefense" title="/pmwiki/pmwiki.php/VideoGame/XComUFODefense">X Com UFO Defense</a></em> has a variant in which the ship must reach the final battle using only the default equipment — <em>i.e.</em> no lasers, no plasma, no stun bombs, no blaster launchers, nothing.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/ResidentEvil4" title="/pmwiki/pmwiki.php/VideoGame/ResidentEvil4">Resident Evil 4</a></em> has a variation of this with its "No Merchant, No Attache Case" run. "No Merchant" means you can never buy new weapons or upgrade your current ones, and "No Attache Case" means you can never access your inventory. This means the only weapons you can still use are your combat knife and the basic handgun, and you can only use healing items when you find them, so you can never use Yellow Herbs to increase Leon's or Ada's maximum health. <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/ResidentEvil5" title="/pmwiki/pmwiki.php/VideoGame/ResidentEvil5">Resident Evil 5</a></em> has something similar, but there the inventory is accessible by default.
+</li><li> A <em><a class="twikilink" href="/pmwiki/pmwiki.php/Videogame/RiverCityRansom" title="/pmwiki/pmwiki.php/Videogame/RiverCityRansom">River City Ransom</a></em> tool-assisted <a class="urllink" href="http://video.google.com/videoplay?docid=-6837837618559851663&amp;ei=GzbfSsvpFqjWqAOU_NAE&amp;q=">speedrun<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a> is much faster if it disregards <a class="twikilink" href="/pmwiki/pmwiki.php/Main/LevelGrinding" title="/pmwiki/pmwiki.php/Main/LevelGrinding">Power Leveling</a> and simply runs to each successive boss and takes them down. Of course, by the final boss fight, it's quicker to trick Simon into attacking himself.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Videogame/Earthbound" title="/pmwiki/pmwiki.php/Videogame/Earthbound">Earthbound</a></em> is both an excellent Low-Level Run and a terrible one. The first play area, Onett, turns out to be the biggest challenge in the game; defeating Frank and Frankystein is possible but difficult, but defeating Titanic Ant is virtually impossible without abusing savestates in an emulator, or leveling up once or twice to improve your chances. After that, it's relatively easy in terms of gameplay. However, purists will still find a challenge in attempting to dodge seemingly forced battles, including a miniboss fight. At its worst you'll find yourself scrambling for one pixel to avoid a fight.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/Videogame/DemonsSouls" title="/pmwiki/pmwiki.php/Videogame/DemonsSouls">Demon's Souls</a></em>, the Soul Level 1 challenge is quite common. Some guys take it a step further though and complete the game in the much harder <a class="twikilink" href="/pmwiki/pmwiki.php/Main/NewGamePlus" title="/pmwiki/pmwiki.php/Main/NewGamePlus">New Game+</a> Mode without leveling up ever. Or beating the game using only your fists. There is at least one video series of a "Soul Level 1, New Game +++++++" challenge. It's described as less an RPG, and more of a puzzle game, because if anything so much as touches you, you will die.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DarkSouls" title="/pmwiki/pmwiki.php/VideoGame/DarkSouls">Dark Souls</a></em>, a Soul Level 1 is considered easier than in <em>Demon's Souls</em>, but not by much. While you can't increase health, you can still upgrade weapons to +10 and add elemental damage, and pyromancy is attached to the rank of the flame and not the intelligence or faith stats, allowing you to stay ahead of the damage curve even though a light breeze would destroy you.
+</li><li> The <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Gothic" title="/pmwiki/pmwiki.php/VideoGame/Gothic">Gothic</a></em> expert "The Wonderer" has beaten <em>Gothic II</em> with Expansion at Level 6. You can download the videos <a class="urllink" href="http://www.worldofgothic.de/dl/download_207.htm">here<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a> (in German).
+</li><li> The <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/EpicBattleFantasy" title="/pmwiki/pmwiki.php/VideoGame/EpicBattleFantasy">Epic Battle Fantasy</a></em> series (as well as <em><a class="twikilink" href="/pmwiki/pmwiki.php/Main/SpinOff" title="/pmwiki/pmwiki.php/Main/SpinOff">Bullet</a> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BulletHell" title="/pmwiki/pmwiki.php/Main/BulletHell">Heaven</a></em>) allow the player to simply not upgrade. <em>Bullet Heaven</em> in particular can get really nasty; compare the first <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BonusBoss" title="/pmwiki/pmwiki.php/Main/BonusBoss">Bonus Boss</a> of four (and yes, the others do get harder) on a Low-Level Run <a class="urllink" href="https://www.youtube.com/watch?v=jlKzSvY8T8M">here<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a> to that same boss <a class="urllink" href="https://www.youtube.com/watch?v=i8UM9VCadUg">fought with full upgrades<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a>.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheWorldEndsWithYou" title="/pmwiki/pmwiki.php/VideoGame/TheWorldEndsWithYou">The World Ends with You</a></em> comes equipped with a level slider, which lets you go as low as 1 and as high as you have advanced. The more you handicap yourself, the higher the drop rate is. It's practically required to set your level to 1 to obtain several rare pins, especially in the post-game. Fortunately, the only stat that levels influence is <a class="twikilink" href="/pmwiki/pmwiki.php/Main/HitPoints" title="/pmwiki/pmwiki.php/Main/HitPoints">Hit Points</a>, so you can still destroy enemies in a reasonable timeframe at level 1; <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GlassCannon" title="/pmwiki/pmwiki.php/Main/GlassCannon">you just have to be careful to not get hit too much</a>.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/NetHack" title="/pmwiki/pmwiki.php/VideoGame/NetHack">NetHack</a></em>, a Low-Level Run can be part of a viable strategy, because <span class="spoiler" title="you can set spoilers visible by default on your profile">the cost of the divine protection available in Minetown</span> is proportional to the player's level, so <span class="spoiler" title="you can set spoilers visible by default on your profile">rushing for Minetown without leveling</span> allows the player to <span class="spoiler" title="you can set spoilers visible by default on your profile">acquire lots of protection for relatively little money</span>.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/WildArms1" title="/pmwiki/pmwiki.php/VideoGame/WildArms1">Wild ARMs 1</a></em> can be done in a Low-Level Run thanks to a severe abuse of <a class="urllink" href="https://www.youtube.com/playlist?list=PL12AE6450199298EE&amp;feature=view_all">Goat Dolls<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a>, an item in the game that allows a character to survive any attack with partial HP. The best part is, you can keep re-equipping more during combat. Experience can be avoided completely after a certain point in this game with the "Forgetfulness" status effect, which causes characters not to gain any experience after a fight ends.
+</li><li> <em>10,000,000</em> has achievements for beating the game at rank Explorer or Dungeon Master, rather than the final rank of Hero.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/HyperdimensionNeptuniaUActionUnleashed" title="/pmwiki/pmwiki.php/VideoGame/HyperdimensionNeptuniaUActionUnleashed">Hyperdimension Neptunia U: Action Unleashed</a></em> has an accessory available from the beginning of the game that disables EXP gain and sets everyone at Level 1 regardless of current level. Of course, this can be combined with other equipment, and since it can be equipped on one person and affect everyone, one could simply equip it on a character that they don't plan to use and have all three slots open for equipment that can boost stats fairly well. Also, there are certain bonuses within the game that allow you to give slight stat boosts to your characters by obtaining certain amounts of medals from different enemies, though these are optional and don't have to be accepted in order (for example, one can accept the award for obtaining 999 Dogoo medals before accepting the reward for 100 Dogoo medals), meaning that one can simply refuse to accept them to make the game even harder. The game even gives you trophies for a successful Low-Level Run; one requires you to clear a mission with a negative accessory equipped (<em>i.e.</em> one just described here), and the other requires you to beat <span class="spoiler" title="you can set spoilers visible by default on your profile">the final boss of Neptran Tower</span> with the Level 1 accessory equipped. If you do all this <em>without</em> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MinimalistRun" title="/pmwiki/pmwiki.php/Main/MinimalistRun">equipping other accessories</a> to make up the difference, the game becomes much more challenging.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Videogame/Undertale" title="/pmwiki/pmwiki.php/Videogame/Undertale">Undertale</a></em> outright <em>encourages</em> low-level runs, since the only way to gain EXP is through killing monsters, and the game goes out of its way to make you feel horrible about killing monsters (while sparing them is always an option and at least gives the player gold with which to buy healing items and better armor). The <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GoldenEnding" title="/pmwiki/pmwiki.php/Main/GoldenEnding">Golden Ending</a> requires the player to not kill a single enemy and go through the whole game at LV 1. As you find out, <span class="spoiler" title="you can set spoilers visible by default on your profile">EXP and LV, stand for "EXecution" Points and "Level of Violence".</span>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Videogame/DragonAgeInquisition" title="/pmwiki/pmwiki.php/Videogame/DragonAgeInquisition">Dragon Age: Inquisition</a></em> actually has a DLC achievement for this, among other <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SelfImposedChallenge" title="/pmwiki/pmwiki.php/Main/SelfImposedChallenge">Self-Imposed Challenge</a> options, for getting to a certain point in the game at Level 5 or lower with the "Take it Slow" option on (which halves your XP earned).
+</li><li> It's impossible to play <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/NexusClash" title="/pmwiki/pmwiki.php/VideoGame/NexusClash">Nexus Clash</a></em> and <em>not</em> gain XP and levels eventually, but in a setting where people can transform into <a class="twikilink" href="/pmwiki/pmwiki.php/Main/OurAngelsAreDifferent" title="/pmwiki/pmwiki.php/Main/OurAngelsAreDifferent">angels</a>, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/OurDemonsAreDifferent" title="/pmwiki/pmwiki.php/Main/OurDemonsAreDifferent">demons</a>, and <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TheUbermensch" title="/pmwiki/pmwiki.php/Main/TheUbermensch">superhumans</a>, there are always some players who choose to play a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/UnfazedEveryman" title="/pmwiki/pmwiki.php/Main/UnfazedEveryman">Mortal</a> all the way to the level cap. This is usually roleplayed as saying "<a class="twikilink" href="/pmwiki/pmwiki.php/Main/RageAgainstTheHeavens" title="/pmwiki/pmwiki.php/Main/RageAgainstTheHeavens">Screw you</a>" to the various meddling gods that want people to become the aforementioned superbeings and fight in their wars.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Bloodborne" title="/pmwiki/pmwiki.php/VideoGame/Bloodborne">Bloodborne</a></em> has the "BL 4 run", which is still doable because upgrading your weapons and using items still allows you to deal decent damage. However, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/CriticalHit" title="/pmwiki/pmwiki.php/Main/CriticalHit">visceral attacks</a> scale with the Skill stat, and at BL 4, they do such pitiful damage that most players will use a charged strong attack rather than a visceral after staggering an opponent. On top of that, past about the midway point in NG, or straight from the beginning for the DLC, everything will start to <a class="twikilink" href="/pmwiki/pmwiki.php/Main/OneHitPointWonder" title="/pmwiki/pmwiki.php/Main/OneHitPointWonder">one- or two-shot you</a>. This makes even bosses widely considered to be <a class="twikilink" href="/pmwiki/pmwiki.php/Main/JokeBoss" title="/pmwiki/pmwiki.php/Main/JokeBoss">jokes</a> by the community, like the Celestial Emissary or the second encounter with the Merciless Watchers in the Chalice Dungeons, into genuine threats.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/ShinMegamiTensei" title="/pmwiki/pmwiki.php/Franchise/ShinMegamiTensei">Shin Megami Tensei</a></em>: Various games in the franchise can be beaten while only fighting mandatory encounters such as bosses.
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/ShinMegamiTenseiIIINocturne" title="/pmwiki/pmwiki.php/VideoGame/ShinMegamiTenseiIIINocturne">Shin Megami Tensei III: Nocturne</a></em> can have the <span class="spoiler" title="you can set spoilers visible by default on your profile">True Demon Ending</span> completed at level 53.
+</li><li> The first<em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DigitalDevilSaga" title="/pmwiki/pmwiki.php/VideoGame/DigitalDevilSaga">Digital Devil Saga</a></em> can be beaten at level 34.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/ShinMegamiTenseiStrangeJourney" title="/pmwiki/pmwiki.php/VideoGame/ShinMegamiTenseiStrangeJourney">Shin Megami Tensei: Strange Journey</a></em>'s Neutral Route can be beaten at level 61.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/ShinMegamiTenseiIV" title="/pmwiki/pmwiki.php/VideoGame/ShinMegamiTenseiIV">Shin Megami Tensei IV</a></em> can have the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SuicidalCosmicTemperTantrum" title="/pmwiki/pmwiki.php/Main/SuicidalCosmicTemperTantrum">White route</a> completed at level 44.
+</li></ul></li><li> While it's almost impossible to have a low level run in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheLegendOfHeroesTrailsOfColdSteel" title="/pmwiki/pmwiki.php/VideoGame/TheLegendOfHeroesTrailsOfColdSteel">The Legend of Heroes: Trails of Cold Steel</a></em> due to the game leveling up characters automatically when the game progresses at a certain point, one challenge is level up everyone <em>except</em> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TheHero" title="/pmwiki/pmwiki.php/Main/TheHero">Rean</a> and essentially make it the opposite of <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SoloCharacterRun" title="/pmwiki/pmwiki.php/Main/SoloCharacterRun">Solo-Character Run</a>. If the player only fights the required boss fights, the gap between Rean and his party members can become obscene; in <em>Cold Steel II</em>, Rean can be as low as level 92 (while starting at 40) when everyone else is at around level 130.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/OriAndTheBlindForest" title="/pmwiki/pmwiki.php/VideoGame/OriAndTheBlindForest">Ori and the Blind Forest</a></em> has the "Elite" achievement for completing the game without upgrading Ori's abilities. <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/OriAndTheWillOfTheWisps" title="/pmwiki/pmwiki.php/VideoGame/OriAndTheWillOfTheWisps">Ori and the Will of the Wisps</a></em> likewise has "Lightless" for not spending any <a class="twikilink" href="/pmwiki/pmwiki.php/Main/EnergyEconomy" title="/pmwiki/pmwiki.php/Main/EnergyEconomy">Spirit Light</a> and "Shardless" for not equipping any <a class="twikilink" href="/pmwiki/pmwiki.php/Main/StatusBuff" title="/pmwiki/pmwiki.php/Main/StatusBuff">Shards</a>.
+</li></ul><hr/>
+</div>
+<div class="square_ad footer-article-ad main_2" data-isolated="0"></div>
+<div class="section-links" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<div class="titles">
+<div><h3 class="text-center text-uppercase">Previous</h3></div>
+<div><h3 class="text-center text-uppercase">Index</h3></div>
+<div><h3 class="text-center text-uppercase">Next</h3></div>
+</div>
+<div class="links">
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/HundredPercentCompletion">100% Completion</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/SelfImposedChallenge">Self-Imposed Challenge</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/MinimalistRun">Minimalist Run</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/LoveToHate">Love to Hate</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/AudienceReactions">Audience Reactions</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/MainstreamObscurity">Mainstream Obscurity</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/HundredPercentCompletion">100% Completion</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/VideoGameCulture">Video Game Culture</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/MinimalistRun">Minimalist Run</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/ImpossiblyDeliciousFood">Impossibly Delicious Food</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/ImageSource/AnimeAndManga">ImageSource/Anime &amp; Manga</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/RebuiltPedestal">Rebuilt Pedestal</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="outer_ads_by_salon_wrapper" id="exco_player_insert_div">
+</div>
+</article>
+<div id="main-content-sidebar"><div class="sidebar-item display-options">
+<ul class="sidebar display-toggles">
+<li>Show Spoilers <div class="display-toggle show-spoilers" id="sidebar-toggle-showspoilers"></div></li>
+<li>Night Vision <div class="display-toggle night-vision" id="sidebar-toggle-nightvision"></div></li>
+<li>Sticky Header <div class="display-toggle sticky-header" id="sidebar-toggle-stickyheader"></div></li>
+<li>Wide Load <div class="display-toggle wide-load" id="sidebar-toggle-wideload"></div></li>
+</ul>
+<script>updateDesktopPrefs();</script>
+</div>
+<div class="sidebar-item ad sb-ad-unit">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_2"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_2'); });</script> </div>
+</div></div>
+<div class="sidebar-item quick-links" itemtype="http://schema.org/SiteNavigationElement">
+<p class="sidebar-item-title" data-title="Important Links">Important Links</p>
+<div class="padded">
+<a href="/pmwiki/query.php?type=att">Ask The Tropers</a>
+<a href="/pmwiki/query.php?type=tf">Trope Finder</a>
+<a href="/pmwiki/query.php?type=ykts">You Know That Show...</a>
+<a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a>
+<a href="/pmwiki/review_activity.php">Reviews</a>
+<a data-modal-target="login" href="/pmwiki/lbs.php">Live Blogs</a>
+<a href="/pmwiki/ad-free-subscribe.php">Go Ad Free!</a> </div>
+</div>
+<div class="sidebar-item sb-ad-unit">
+<div class="sidebar-section">
+<div class="square_ad ad-size-300x600 ad-section text-center">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_3"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_3'); });</script> </div>
+</div> </div>
+</div>
+</div>
+<div class="sidebar-item">
+<p class="sidebar-item-title" data-title="Crucial Browsing">Crucial Browsing</p>
+<ul class="padded font-s" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><a data-click-toggle="active" href="javascript:void(0);">Genre</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/ActionAdventureTropes" title="Main/ActionAdventureTropes">Action Adventure</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ComedyTropes" title="Main/ComedyTropes">Comedy</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CommercialsTropes" title="Main/CommercialsTropes">Commercials</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CrimeAndPunishmentTropes" title="Main/CrimeAndPunishmentTropes">Crime &amp; Punishment</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DramaTropes" title="Main/DramaTropes">Drama</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/HorrorTropes" title="Main/HorrorTropes">Horror</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LoveTropes" title="Main/LoveTropes">Love</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NewsTropes" title="Main/NewsTropes">News</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ProfessionalWrestling" title="Main/ProfessionalWrestling">Professional Wrestling</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SpeculativeFictionTropes" title="Main/SpeculativeFictionTropes">Speculative Fiction</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SportsStoryTropes" title="Main/SportsStoryTropes">Sports Story</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/WarTropes" title="Main/WarTropes">War</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Media</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/Media" title="Main/Media">All Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/AnimationTropes" title="Main/AnimationTropes">Animation (Western)</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Anime" title="Main/Anime">Anime</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ComicBookTropes" title="Main/ComicBookTropes">Comic Book</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FanFic" title="FanFic/FanFics">Fan Fics</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Film" title="Main/Film">Film</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/GameTropes" title="Main/GameTropes">Game</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Literature" title="Main/Literature">Literature</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MusicAndSoundEffects" title="Main/MusicAndSoundEffects">Music And Sound Effects</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NewMediaTropes" title="Main/NewMediaTropes">New Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/PrintMediaTropes" title="Main/PrintMediaTropes">Print Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Radio" title="Main/Radio">Radio</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SequentialArt" title="Main/SequentialArt">Sequential Art</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TabletopGames" title="Main/TabletopGames">Tabletop Games</a></li>
+<li><a href="/pmwiki/pmwiki.php/UsefulNotes/Television" title="Main/Television">Television</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Theater" title="Main/Theater">Theater</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/VideogameTropes" title="Main/VideogameTropes">Videogame</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Webcomics" title="Main/Webcomics">Webcomics</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Narrative</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/UniversalTropes" title="Main/UniversalTropes">Universal</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/AppliedPhlebotinum" title="Main/AppliedPhlebotinum">Applied Phlebotinum</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CharacterizationTropes" title="Main/CharacterizationTropes">Characterization</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Characters" title="Main/Characters">Characters</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CharactersAsDevice" title="Main/CharactersAsDevice">Characters As Device</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Dialogue" title="Main/Dialogue">Dialogue</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Motifs" title="Main/Motifs">Motifs</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NarrativeDevices" title="Main/NarrativeDevices">Narrative Devices</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Paratext" title="Main/Paratext">Paratext</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Plots" title="Main/Plots">Plots</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Settings" title="Main/Settings">Settings</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Spectacle" title="Main/Spectacle">Spectacle</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Other Categories</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/BritishTellyTropes" title="Main/BritishTellyTropes">British Telly</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TheContributors" title="Main/TheContributors">The Contributors</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CreatorSpeak" title="Main/CreatorSpeak">Creator Speak</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Creators" title="Main/Creators">Creators</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DerivativeWorks" title="Main/DerivativeWorks">Derivative Works</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LanguageTropes" title="Main/LanguageTropes">Language</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LawsAndFormulas" title="Main/LawsAndFormulas">Laws And Formulas</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ShowBusiness" title="Main/ShowBusiness">Show Business</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SplitPersonalityTropes" title="Main/SplitPersonalityTropes">Split Personality</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/StockRoom" title="Main/StockRoom">Stock Room</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TropeTropes" title="Main/TropeTropes">Trope</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Tropes" title="Main/Tropes">Tropes</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TruthAndLies" title="Main/TruthAndLies">Truth And Lies</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TruthInTelevision" title="Main/TruthInTelevision">Truth In Television</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Topical Tropes</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/BetrayalTropes" title="Main/BetrayalTropes">Betrayal</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CensorshipTropes" title="Main/CensorshipTropes">Censorship</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CombatTropes" title="Main/CombatTropes">Combat</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DeathTropes" title="Main/DeathTropes">Death</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FamilyTropes" title="Main/FamilyTropes">Family</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FateAndProphecyTropes" title="Main/FateAndProphecyTropes">Fate And Prophecy</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FoodTropes" title="Main/FoodTropes">Food</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/HolidayTropes" title="Main/HolidayTropes">Holiday</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MemoryTropes" title="Main/MemoryTropes">Memory</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MoneyTropes" title="Main/MoneyTropes">Money</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MoralityTropes" title="Main/MoralityTropes">Morality</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/PoliticsTropes" title="Main/PoliticsTropes">Politics</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ReligionTropes" title="Main/ReligionTropes">Religion</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SchoolTropes" title="Main/SchoolTropes">School</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="sidebar-item showcase">
+<p class="sidebar-item-title" data-title="Community Showcase">Community Showcase <a class="bubble float-right hover-blue" href="/pmwiki/showcase.php">More</a></p>
+<p class="community-showcase">
+<a href="https://sharetv.com/shows/echo_chamber" onclick="trackOutboundLink('https://sharetv.com/shows/echo_chamber');" target="_blank">
+<img alt="" class="lazy-image" data-src="/images/communityShowcase-echochamber.jpg"/></a>
+<a href="/pmwiki/pmwiki.php/Webcomic/TwistedTropes">
+<img alt="" class="lazy-image" data-src="/img/howlandsc-side.jpg"/></a>
+</p>
+</div>
+<div class="sidebar-item sb-ad-unit" id="stick-cont">
+<div class="sidebar-section" id="stick-bar">
+<div class="square_ad ad-size-300x600 ad-section text-center">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_4"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_4'); });</script> </div>
+</div> </div>
+</div>
+</div>
+</div>
+</div>
+<div class="action-bar tablet-off" id="action-bar-bottom">
+<a class="scroll-to-top dead-button" href="#top-of-page" onclick="$('html, body').animate({scrollTop : 0},500);">Top</a>
+</div>
+</div>
+<div class="proper-ad-unit ad-sticky">
+<div id="proper-ad-tvtropes_sticky_ad"> <script>propertag.cmd.push(function() { proper_display('tvtropes_sticky_ad'); });</script> </div>
+</div>
+<footer id="main-footer">
+<div id="main-footer-inner">
+<div class="footer-left">
+<a class="img-link" href="/"><img alt="TV Tropes" class="lazy-image" data-src="/img/tvtropes-footer-logo.png" title="TV Tropes"/></a>
+<form action="index.html" class="navbar-form newsletter-signup validate modal-replies" data-ajax-get="/ajax/subscribe_email.php" id="cse-search-box-mobile" name="" role="">
+<button class="btn-submit newsletter-signup-submit-button" id="subscribe-btn" type="submit"><i class="fa fa-paper-plane"></i></button>
+<input class="form-control" id="subscription-email" name="q" placeholder="Subscribe" size="31" type="text" validate-type="email" value=""/>
+</form>
+<ul class="social-buttons">
+<li><a class="btn fb" href="https://www.facebook.com/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-facebook']);" target="_blank"><i class="fa fa-facebook"></i></a></li>
+<li><a class="btn tw" href="https://www.twitter.com/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-twitter']);" target="_blank"><i class="fa fa-twitter"></i></a> </li>
+<li><a class="btn rd" href="https://www.reddit.com/r/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-reddit']);" target="_blank"><i class="fa fa-reddit-alien"></i></a></li>
+</ul>
+</div>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">TVTropes</h4></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Administrivia">About TVTropes</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TheGoalsOfTVTropes">TVTropes Goals</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TheTropingCode">Troping Code</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TVTropesCustoms">TVTropes Customs</a></li>
+<li><a href="/pmwiki/pmwiki.php/JustForFun/TropesOfLegend">Tropes of Legend</a></li>
+<li><a href="/pmwiki/ad-free-subscribe.php">Go Ad-Free</a></li>
+</ul>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">Community</h4></li>
+<li><a href="/pmwiki/query.php?type=att">Ask The Tropers</a></li>
+<li><a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a></li>
+<li><a href="/pmwiki/query.php?type=tf">Trope Finder</a></li>
+<li><a href="/pmwiki/query.php?type=ykts">You Know That Show</a></li>
+<li><a data-modal-target="login" href="/pmwiki/lbs.php">Live Blogs</a></li>
+<li><a href="/pmwiki/review_activity.php">Reviews</a></li>
+<li><a href="/pmwiki/topics.php">Forum</a></li>
+</ul>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">Tropes HQ</h4></li>
+<li><a href="/pmwiki/about.php">About Us</a></li>
+<li><a href="/pmwiki/contact.php">Contact Us</a></li>
+<li><a href="/pmwiki/dmca.php">DMCA Notice</a></li>
+<li><a href="/pmwiki/privacypolicy.php">Privacy Policy</a></li>
+</ul>
+</div>
+<div class="text-center gutter-top gutter-bottom tablet-on" id="desktop-on-mobile-toggle">
+<a href="/pmwiki/switchDeviceCss.php?mobileVersion=1" rel="nofollow">Switch to <span class="txt-desktop">Desktop</span><span class="txt-mobile">Mobile</span> Version</a>
+</div>
+<div class="legal">
+<p>TVTropes is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License. <br/>Permissions beyond the scope of this license may be available from <a href="mailto:thestaff@tvtropes.org" rel="cc:morePermissions" xmlns:cc="http://creativecommons.org/ns#"> thestaff@tvtropes.org</a>.</p>
+<br/>
+<div class="privacy_wrapper">
+</div>
+</div>
+</footer>
+<style>
+      div.fc-ccpa-root {
+        position: absolute !important;
+        bottom: 93px !important;
+        margin: auto !important;
+        width: 100% !important;
+        z-index: 9999 !important;
+      }
+      .fc-ccpa-root .fc-dns-dialog .fc-dns-link p{
+        outline: none !important;
+        text-decoration: underline !important;
+        font-size: .7em !important;
+        font-family: sans-serif !important;
+      }
+      .fc-ccpa-root .fc-dns-dialog .fc-dns-link .fc-button-background {
+        background: none !important;
+      }
+    </style>
+<div class="full-screen" id="_pm_videoViewer">
+<a class="close" href="#close" id="_pm_videoViewer-close"></a>
+<div class="_pmvv-body">
+<div class="_pmvv-vidbox">
+<video class="video-js vjs-default-skin vjs-16-9" data-video-id="" id="overlay-video-player-box">
+</video>
+<div class="_pmvv-vidbox-desc">
+<h1 id="overlay-title"></h1>
+<p class="_pmvv-vidbox-descTxt" id="overlay-descrip">
+</p>
+<div class="rating-row" data-video-id="">
+<input name="is_logged_in" type="hidden" value="0"/>
+<p>How well does it match the trope?</p>
+<div id="star-rating-group">
+<div class="trope-rate">
+<input id="lamp5" name="rate" type="radio" value="5"/>
+<label for="lamp5" title="Absolutely"></label>
+<input id="lamp4" name="rate" type="radio" value="4"/>
+<label for="lamp4" title="Yes"></label>
+<input id="lamp3" name="rate" type="radio" value="3"/>
+<label for="lamp3" title="Kind of"></label>
+<input id="lamp2" name="rate" type="radio" value="2"/>
+<label for="lamp2" title="Not really"></label>
+<input id="lamp1" name="rate" type="radio" value="1"/>
+<label for="lamp1" title="No"></label>
+</div>
+<div id="star-rating-total">
+</div>
+</div>
+</div>
+<div class="example-media-row">
+<div class="example-overlay">
+<p>Example of:</p>
+<div id="overlay-trope"> / </div>
+</div>
+<div class="media-sources-overlay example-overlay">
+<p>Media sources:</p>
+<div id="overlay-media"> / </div>
+</div>
+</div>
+<p class="_pmvv-vidbox-stats text-right font-s" style="padding-top:8px; border-top: solid 1px rgba(255,255,255,0.2)">
+<a class="float-right" data-modal-target="login" href="#video-feedback">Report</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+        window.special_ops =  {
+            member : 'no',
+            isolated : 0,
+            tags : ['unknown']
+        };
+    </script>
+<script type="text/javascript">
+
+        var cleanCreativeEnabled = "";
+        var donation = "";
+        var live_ads = "1";
+        var img_domain = "https://static.tvtropes.org";
+        var snoozed = cookies.read('snoozedabm');
+        var snoozable = "";
+
+        if (adsRemovedWith) {
+            live_ads = 0;
+        }
+
+        var elem = document.createElement('script');
+        elem.async = true;
+
+        elem.src = '/design/assets/bundle.js?rev=c58d8df02f09262390bbd03db7921fc35c6af306';
+
+        elem.onload = function() {
+                                 }
+        document.getElementsByTagName('head')[0].appendChild(elem);
+
+    </script>
+<script type="text/javascript">
+      function send_analytics_event(user_type, donation){
+          // if(user_type == 'uncached' || user_type == 'cached'){
+          //   ga('send', 'event', 'caching', 'load', user_type, {'nonInteraction': 1});
+          //   return;
+          // }
+          var event_name = user_type;
+
+          if(donation == 'true'){
+              event_name += "_donation"
+          }else if(typeof(valid_user) == 'undefined'){
+              event_name += "_blocked"
+          }else if(valid_user == true){
+              event_name += "_unblocked";
+          }else{
+              event_name = "_unknown"
+          }
+          ga('send', 'event', 'ads', 'load', event_name, {'nonInteraction': 1});
+      }
+
+    
+    send_analytics_event("guest", "false");
+      </script>
+</body>
+</html>

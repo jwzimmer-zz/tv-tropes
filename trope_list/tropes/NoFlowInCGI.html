@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>No Flow in CGI - TV Tropes</title>
+<meta content="The No Flow in CGI trope as used in popular culture. In old or low-budget CGI, the characters will never wear loose garments, have long hair or include …" name="description"/>
+<link href="https://tvtropes.org/pmwiki/pmwiki.php/Main/NoFlowInCGI" rel="canonical"/>
+<link href="/img/icons/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="@tvtropes" name="twitter:site"/>
+<meta content="@tvtropes" name="twitter:owner"/>
+<meta content="No Flow in CGI - TV Tropes" name="twitter:title"/>
+<meta content="The No Flow in CGI trope as used in popular culture. In old or low-budget CGI, the characters will never wear loose garments, have long hair or include …" name="twitter:description"/>
+<meta content="https://static.tvtropes.org/pmwiki/pub/images/obiwan.jpg" name="twitter:image:src"/>
+<meta content="TV Tropes" property="og:site_name"/>
+<meta content="en_US" property="og:locale"/>
+<meta content="https://www.facebook.com/tvtropes" property="article:publisher"/>
+<meta content="No Flow in CGI - TV Tropes" property="og:title"/>
+<meta content="website" property="og:type"/>
+<meta content="https://tvtropes.org/pmwiki/pmwiki.php/Main/NoFlowInCGI" property="og:url"/>
+<meta content="https://static.tvtropes.org/pmwiki/pub/images/obiwan.jpg" property="og:image"/>
+<meta content="In old or low-budget CGI, the characters will never wear loose garments, have long hair or include anything that might flow or rustle in wind or when moving. This is because accurately simulating flowing hair and fabric requires two extremely …" property="og:description"/>
+<link href="/img/icons/apple-icon-57x57.png" rel="apple-touch-icon" sizes="57x57" type="image/png"/>
+<link href="/img/icons/apple-icon-60x60.png" rel="apple-touch-icon" sizes="60x60" type="image/png"/>
+<link href="/img/icons/apple-icon-72x72.png" rel="apple-touch-icon" sizes="72x72" type="image/png"/>
+<link href="/img/icons/apple-icon-76x76.png" rel="apple-touch-icon" sizes="76x76" type="image/png"/>
+<link href="/img/icons/apple-icon-114x114.png" rel="apple-touch-icon" sizes="114x114" type="image/png"/>
+<link href="/img/icons/apple-icon-120x120.png" rel="apple-touch-icon" sizes="120x120" type="image/png"/>
+<link href="/img/icons/apple-icon-144x144.png" rel="apple-touch-icon" sizes="144x144" type="image/png"/>
+<link href="/img/icons/apple-icon-152x152.png" rel="apple-touch-icon" sizes="152x152" type="image/png"/>
+<link href="/img/icons/apple-icon-180x180.png" rel="apple-touch-icon" sizes="180x180" type="image/png"/>
+<link href="/img/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/img/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/img/icons/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png"/>
+<link href="/img/icons/favicon-192x192.png" rel="icon" sizes="192x192" type="image/png"/>
+<meta content="width=device-width, initial-scale=1" id="viewport" name="viewport"/>
+<script>
+                var propertag = {};
+                propertag.cmd = [];
+            </script>
+<link href="/design/assets/bundle.css?rev=c58d8df02f09262390bbd03db7921fc35c6af306" rel="stylesheet"/>
+<script>
+                function object(objectId) {
+                    if (document.getElementById && document.getElementById(objectId)) {
+                        return document.getElementById(objectId);
+                    } else if (document.all && document.all(objectId)) {
+                        return document.all(objectId);
+                    } else if (document.layers && document.layers[objectId]) {
+                        return document.layers[objectId];
+                    } else {
+                        return false;
+                    }
+                }
+
+                // JAVASCRIPT COOKIES CODE: for getting and setting user viewing preferences
+                var cookies = {
+                    create: function (name, value, days2expire, path) {
+                        var date = new Date();
+                        date.setTime(date.getTime() + (days2expire * 24 * 60 * 60 * 1000));
+                        var expires = date.toUTCString();
+                        document.cookie = name + '=' + value + ';' + 'expires=' + expires + ';' + 'path=' + path + ';';
+                    },
+										createWithExpire: function(name, value, expires, path) {
+												document.cookie = name + '=' + value + ';' + 'expires=' + expires + ';' + 'path=' + path + ';';
+										},
+                    read: function (name) {
+                        var cookie_value = "",
+                            current_cookie = "",
+                            name_expr = name + "=",
+                            all_cookies = document.cookie.split(';'),
+                            n = all_cookies.length;
+
+                        for (var i = 0; i < n; i++) {
+                            current_cookie = all_cookies[i].trim();
+                            if (current_cookie.indexOf(name_expr) === 0) {
+                                cookie_value = current_cookie.substring(name_expr.length, current_cookie.length);
+                                break;
+                            }
+                        }
+                        return cookie_value;
+                    },
+                    update: function (name, val) {
+                        this.create(name, val, 300, "/");
+                    },
+                    remove: function (name) {
+                        document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
+                    }
+                };
+
+                function updateUserPrefs() {
+                    //GENERAL: detect and set browser, if not cookied (will be treated like a user-preference and added to the #user-pref element)
+                    if( !cookies.read('user-browser') ){
+                        var broswer = '';
+
+                        if(navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPod/i) ){
+                            browser = 'iOS';
+                        } else if (/Opera[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'opera';
+                        } else if (/MSIE (\d+\.\d+);/.test(navigator.userAgent)) {
+                            browser = 'MSIE';
+                        } else if (/Navigator[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'netscape';
+                        } else if (/Chrome[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'chrome';
+                        } else if (/Safari[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'safari';
+                            /Version[\/\s](\d+\.\d+)/.test(navigator.userAgent);
+                            browserVersion = new Number(RegExp.$1);
+                        } else if (/Firefox[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'firefox';
+                        } else {
+                            browser = 'internet_explorer';
+                        }
+                        cookies.create('user-browser',browser,1,'/');
+                        document.getElementById('user-prefs').classList.add('browser-' + browser);
+                    } else {
+                        document.getElementById('user-prefs').classList.add('browser-' + cookies.read('user-browser'));
+                    }
+
+                    //update user preference settings
+                    if (cookies.read('wide-load') !== '') document.getElementById('user-prefs').classList.add('wide-load');
+                    if (cookies.read('night-vision') !== '') document.getElementById('user-prefs').classList.add('night-vision');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('user-prefs').classList.add('sticky-header');
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('user-prefs').classList.add('show-spoilers');
+                    if (cookies.read('folders-open') !== '') document.getElementById('user-prefs').classList.add('folders-open');
+                    if (cookies.read('lefthand-sidebar') !== '') document.getElementById('user-prefs').classList.add('lefthand-sidebar');
+                    if (cookies.read('highlight-links') !== '') document.getElementById('user-prefs').classList.add('highlight-links');
+                    if (cookies.read('forum-gingerbread') !== '') document.getElementById('user-prefs').classList.add('forum-gingerbread');
+                    if (cookies.read('shared-avatars') !== '') document.getElementById('user-prefs').classList.add('shared-avatars');
+                    if (cookies.read('new-search') !== '') document.getElementById('user-prefs').classList.add('new-search');
+                    if (cookies.read('stop-auto-play-video') !== '') document.getElementById('user-prefs').classList.add('stop-auto-play-video');
+
+                    //desktop view on mobile
+                    if (cookies.read('desktop-on-mobile') !== ''){
+                        document.getElementById('user-prefs').classList.add('desktop-on-mobile');
+
+                        var viewport = document.querySelector("meta[name=viewport]");
+                        viewport.setAttribute('content', 'width=1000');
+                    }
+
+                }
+
+                function updateDesktopPrefs() {
+                    if (cookies.read('wide-load') !== '') document.getElementById('sidebar-toggle-wideload').classList.add('active');
+                    if (cookies.read('night-vision') !== '') document.getElementById('sidebar-toggle-nightvision').classList.add('active');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('sidebar-toggle-stickyheader').classList.add('active');
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('sidebar-toggle-showspoilers').classList.add('active');
+
+                }
+
+                function updateMobilePrefs() {
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('mobile-toggle-showspoilers').classList.add('active');
+                    if (cookies.read('night-vision') !== '') document.getElementById('mobile-toggle-nightvision').classList.add('active');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('mobile-toggle-stickyheader').classList.add('active');
+                    if (cookies.read('highlight-links') !== '') document.getElementById('mobile-toggle-highlightlinks').classList.add('active');
+
+                }
+
+
+                if (document.cookie.indexOf("scroll0=") < 0) {
+                    // do nothing
+                } else {
+                    console.log('ads removed by scroll.com');
+                    var adsRemovedWith = 'scroll';
+                    var style = document.createElement('style');
+                    style.innerHTML = '#header-ad, .proper-ad-unit, .square_ad, .sb-ad-unit { display: none !important; } ';
+                    document.head.appendChild(style);
+                }
+            </script>
+<script type="text/javascript">
+
+                var tvtropes_config = {
+                    astri_stream_enabled : "",
+                    is_logged_in         : "",
+                    handle               : "",
+                    get_astri_stream     : "",
+										revnum               : "c58d8df02f09262390bbd03db7921fc35c6af306",
+										img_domain           : "https://static.tvtropes.org",
+										adblock              : "1",
+										adblock_url          : "propermessage.io",
+										pause_editing        : "0",
+										pause_editing_msg    : "",
+										pause_site_changes   : ""
+                };
+            </script>
+<script type="text/javascript">
+						  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+						  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+						  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+						  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+						  ga('create', 'UA-3821842-1', 'auto');
+						  ga('send', 'pageview');
+
+						</script>
+</head>
+<body class="">
+<i id="user-prefs"></i>
+<script>updateUserPrefs();</script>
+<div id="fb-root"></div>
+<div id="modal-box"></div>
+<header class="headroom-element" id="main-header-bar">
+<div id="main-header-bar-inner">
+<span class="header-spacer" id="header-spacer-left"></span>
+<a class="mobile-menu-toggle-button tablet-on" href="#mobile-menu" id="main-mobile-toggle"><span></span><span></span><span></span></a>
+<a class="no-dev" href="/" id="main-header-logoButton"></a>
+<span class="header-spacer" id="header-spacer-right"></span>
+<nav class="tablet-off" id="main-header-nav">
+<a href="/pmwiki/pmwiki.php/Main/Tropes">Tropes</a>
+<a href="/pmwiki/pmwiki.php/Main/Media">Media</a>
+<a class="nav-browse" href="/pmwiki/browse.php">Browse</a>
+<a href="/pmwiki/index_report.php">Indexes</a>
+<a href="/pmwiki/topics.php">Forums</a>
+<a class="nav-browse" href="/pmwiki/recent_videos.php">Videos</a>
+</nav>
+<div id="main-header-bar-right">
+<div class="font-xs mobile-off" id="signup-login-box">
+<a class="hover-underline bold" data-modal-target="signup" href="/pmwiki/login.php">Join</a>
+<a class="hover-underline bold" data-modal-target="login" href="/pmwiki/login.php">Login</a>
+</div>
+<div class="mobile-on inline" id="signup-login-mobileToggle">
+<a data-modal-target="login" href="/pmwiki/login.php"><i class="fa fa-user"></i></a>
+</div>
+<div id="search-box">
+<form action="/pmwiki/search_result.php" class="search">
+<input class="search-box" name="q" placeholder="Search" required="" type="text" value=""/>
+<input class="submit-button" type="submit" value=""/>
+<input name="search_type" type="hidden" value="article"/>
+<input name="page_type" type="hidden" value="all"/>
+<input name="cx" type="hidden" value="partner-pub-6610802604051523:amzitfn8e7v"/>
+<input name="cof" type="hidden" value="FORID:10"/>
+<input name="ie" type="hidden" value="ISO-8859-1"/>
+<input name="siteurl" type="hidden" value=""/>
+<input name="ref" type="hidden" value=""/>
+<input name="ss" type="hidden" value=""/>
+</form>
+<a class="mobile-on mobile-search-toggle close-x" href="#close-search"><i class="fa fa-close"></i></a>
+</div>
+<div id="random-box">
+<a class="button-random-trope" href="/pmwiki/pmwiki.php/Main/MushroomSamba" onclick="ga('send', 'event', 'button', 'click', 'random trope');" rel="nofollow"></a>
+<a class="button-random-media" href="/pmwiki/pmwiki.php/Creator/JenniferGarner" onclick="ga('send', 'event', 'button', 'click', 'random media');" rel="nofollow"></a>
+</div>
+</div>
+</div>
+<div class="tablet-on" id="mobile-menu"><div class="mobile-menu-options">
+<div class="nav-wrapper">
+<a class="xl" href="/pmwiki/pmwiki.php/Main/Tropes">Tropes</a>
+<a class="xl" href="/pmwiki/pmwiki.php/Main/Media">Media</a>
+<a class="xl" href="/pmwiki/browse.php">Browse</a>
+<a class="xl" href="/pmwiki/index_report.php">Indexes</a>
+<a class="xl" href="/pmwiki/topics.php">Forums</a>
+<a class="xl" href="/pmwiki/recent_videos.php">Videos</a>
+<a href="/pmwiki/query.php?type=att">Ask The Tropers</a>
+<a href="/pmwiki/query.php?type=tf">Trope Finder</a>
+<a href="/pmwiki/query.php?type=ykts">You Know That Show...</a>
+<a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a>
+<a data-click-toggle="active" href="#tools">Tools <i class="fa fa-chevron-down"></i></a>
+<div class="tools-dropdown mobile-dropdown-linkList">
+<a href="/pmwiki/cutlist.php">Cut List</a>
+<a href="/pmwiki/changes.php">New Edits</a>
+<a href="/pmwiki/recent_edit_reasons.php">Edit Reasons</a>
+<a href="/pmwiki/launches.php">Launches</a>
+<a href="/pmwiki/img_list.php">Images List</a>
+<a href="/pmwiki/crown_activity.php">Crowner Activity</a>
+<a href="/pmwiki/no_types.php">Un-typed Pages</a>
+<a href="/pmwiki/page_type_audit.php">Recent Page Type Changes</a>
+</div>
+<a data-click-toggle="active" href="#hq">Tropes HQ <i class="fa fa-chevron-down"></i></a>
+<div class="tools-dropdown mobile-dropdown-linkList">
+<a href="/pmwiki/about.php">About Us</a>
+<a href="/pmwiki/contact.php">Contact Us</a>
+<a href="mailto:advertising@proper.io">Advertise</a>
+<a href="/pmwiki/dmca.php">DMCA Notice</a>
+<a href="/pmwiki/privacypolicy.php">Privacy Policy</a>
+</div>
+<a href="/pmwiki/ad-free-subscribe.php">Go Ad-Free</a>
+<div class="toggle-switches">
+<ul class="mobile-menu display-toggles">
+<li>Show Spoilers <div class="display-toggle show-spoilers" id="mobile-toggle-showspoilers"></div></li>
+<li>Night Vision <div class="display-toggle night-vision" id="mobile-toggle-nightvision"></div></li>
+<li>Sticky Header <div class="display-toggle sticky-header" id="mobile-toggle-stickyheader"></div></li>
+<li>Highlight Links <div class="display-toggle highlight-links" id="mobile-toggle-highlightlinks"></div></li>
+</ul>
+<script>updateMobilePrefs();</script>
+</div>
+</div>
+</div>
+</div>
+</header>
+<div class="mobile-on" id="homepage-introBox-mobile">
+<a href="/"><img class="logo-small" src="/images/logo-white-big.png"/></a>
+<form action="/pmwiki/search_result.php" class="search" style="margin:10px -5px -6px -5px;">
+<input class="search-box" name="q" placeholder="Search" required="" type="text" value=""/>
+<input class="submit-button" type="submit" value=""/>
+<input name="search_type" type="hidden" value="article"/>
+<input name="page_type" type="hidden" value="all"/>
+<input name="cx" type="hidden" value="partner-pub-6610802604051523:amzitfn8e7v"/>
+<input name="cof" type="hidden" value="FORID:10"/>
+<input name="ie" type="hidden" value="ISO-8859-1"/>
+<input name="siteurl" type="hidden" value=""/>
+<input name="ref" type="hidden" value=""/>
+<input name="ss" type="hidden" value=""/>
+</form>
+</div>
+<div class="ad" id="header-ad-wrapper">
+<div id="header-ad">
+<div class="ad-size-970x90 atf_banner">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_1"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_1'); });</script> </div>
+</div> </div>
+</div>
+</div>
+<div id="main-container">
+<div class="action-bar mobile-off" id="action-bar-top">
+<div class="action-bar-right">
+<p>Follow TV Tropes</p>
+<a class="button-fb" href="https://www.facebook.com/TVTropes">
+<i class="fa fa-facebook"></i></a>
+<a class="button-tw" href="https://www.twitter.com/TVTropes">
+<i class="fa fa-twitter"></i></a>
+<a class="button-re" href="https://www.reddit.com/r/TVTropes">
+<i class="fa fa-reddit-alien"></i></a>
+</div>
+<nav class="actions-wrapper" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<ul class="page-actions" id="top_main_list">
+<li class="link-edit">
+<a class="article-edit-button" data-modal-target="login" href="/pmwiki/pmwiki.php/Main/NoFlowInCGI?action=edit" rel="nofollow">
+<i class="fa fa-pencil"></i> Edit Page</a></li><li class="link-related"><a href="/pmwiki/relatedsearch.php?term=Main/NoFlowInCGI">
+<i class="fa fa-share-alt"></i> Related</a></li><li class="link-history"><a href="/pmwiki/article_history.php?article=Main.NoFlowInCGI">
+<i class="fa fa-history"></i> History</a></li><li class="link-discussion"><a href="/pmwiki/remarks.php?trope=Main.NoFlowInCGI">
+<i class="fa fa-comment"></i> Discussion</a></li> </ul>
+<button class="nav__dropdown-toggle" id="top_more_button" onclick="toggle_more_menu('top');" type="button">More</button>
+<ul class="more_menu hidden_more_list" id="top_more_list">
+<li class="link-todo tuck-always more_list_item"><a data-modal-target="login" href="#todo"><i class="fa fa-check-circle"></i> To Do</a></li><li class="link-pageSource tuck-always more_list_item"><a data-modal-target="login" href="/pmwiki/pmwiki.php/Main/NoFlowInCGI?action=source" rel="nofollow" target="_blank"><i class="fa fa-code"></i> Page Source</a></li> </ul>
+</nav>
+<div class="WikiWordModalStub"></div>
+<div class="ImgUploadModalStub" data-page-type="Article"></div>
+<div class="login-alert" style="display: none;">
+You need to <a href="/pmwiki/login.php" style="color:#21A0E8">login</a> to do this. <a href="/pmwiki/login.php?tab=register_account" style="color:#21A0E8">Get Known</a> if you don't have an account
+</div>
+</div>
+<div class="page-Article" id="main-content">
+<article class="with-sidebar" id="main-entry">
+<input id="groupname-hidden" type="hidden" value="Main"/>
+<input id="title-hidden" type="hidden" value="NoFlowInCGI"/>
+<input id="article_id" type="hidden" value="44858"/>
+<input id="logged_in" type="hidden" value="false"/>
+<p class="hidden" id="current_url">http://tvtropes.org/pmwiki/pmwiki.php/Main/NoFlowInCGI</p>
+<meta content="" itemprop="datePublished"/>
+<meta content="" itemprop="articleSection"/>
+<meta content="" itemprop="image"/>
+<a class="watch-button" data-modal-target="login" href="#watch">Follow<span>ing</span></a>
+<h1 class="entry-title" itemprop="headline">
+No Flow in CGI
+</h1>
+<script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+                "@type": "ListItem",
+                "position": 1,
+                "name": "tvtropes.org",
+                "item": "https://tvtropes.org"
+            },{
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Tropes",
+                "item": "https://tvtropes.org/pmwiki/pmwiki.php/Main/Tropes"
+            },{
+                "@type": "ListItem",
+                "position": 3,
+                "name": "No Flow in CGI"            }]
+        }
+    </script>
+<a class="mobile-actionbar-toggle mobile-on" data-click-toggle="active" href="#mobile-actions-toggle" id="mobile-actionbar-toggle">
+<p class="tiny-off">Go To</p><span></span><span></span><span></span><i class="fa fa-pencil"></i></a>
+<nav class="mobile-actions-wrapper mobile-on" id="mobile-actions-bar"></nav>
+<div class="modal fade hidden-until-active" id="editLockModal">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button aria-label="Close" class="close" data-dismiss="modal" type="button"> <span aria-hidden="true">×</span></button>
+<h4 class="modal-title">Edit Locked</h4>
+</div>
+<div class="modal-body">
+<div class="row">
+<div class="body">
+<div class="danger troper_locked_message"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<nav class="body-options" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<ul class="subpage-links">
+<li>
+<a class="subpage-link curr-subpage" href="/pmwiki/pmwiki.php/Main/NoFlowInCGI" title="The Main page">
+<span class="wrapper"><span class="spi main-page"></span>Main</span></a>
+</li>
+<li>
+<a class="subpage-link" href="/pmwiki/pmwiki.php/Laconic/NoFlowInCGI" title="The Laconic page">
+<span class="wrapper"><span class="spi laconic-icon"></span>Laconic</span></a>
+</li>
+<li class="create-subpage dropdown">
+<a aria-expanded="false" class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);" role="button">
+<span class="wrapper">Create New <i class="fa fa-plus-circle"></i></span>
+</a>
+<select onchange="this.options[this.selectedIndex].value &amp;&amp; (window.location = this.options[this.selectedIndex].value);">
+<option value="">- Create New -</option>
+<option value="/pmwiki/pmwiki.php/Analysis/NoFlowInCGI?action=edit">Analysis</option>
+<option value="/pmwiki/pmwiki.php/Characters/NoFlowInCGI?action=edit">Characters</option>
+<option value="/pmwiki/pmwiki.php/FanficRecs/NoFlowInCGI?action=edit">FanficRecs</option>
+<option value="/pmwiki/pmwiki.php/FanWorks/NoFlowInCGI?action=edit">FanWorks</option>
+<option value="/pmwiki/pmwiki.php/Fridge/NoFlowInCGI?action=edit">Fridge</option>
+<option value="/pmwiki/pmwiki.php/Haiku/NoFlowInCGI?action=edit">Haiku</option>
+<option value="/pmwiki/pmwiki.php/Headscratchers/NoFlowInCGI?action=edit">Headscratchers</option>
+<option value="/pmwiki/pmwiki.php/ImageLinks/NoFlowInCGI?action=edit">ImageLinks</option>
+<option value="/pmwiki/pmwiki.php/PlayingWith/NoFlowInCGI?action=edit">PlayingWith</option>
+<option value="/pmwiki/pmwiki.php/Quotes/NoFlowInCGI?action=edit">Quotes</option>
+<option value="/pmwiki/pmwiki.php/Recap/NoFlowInCGI?action=edit">Recap</option>
+<option value="/pmwiki/pmwiki.php/ReferencedBy/NoFlowInCGI?action=edit">ReferencedBy</option>
+<option value="/pmwiki/pmwiki.php/Synopsis/NoFlowInCGI?action=edit">Synopsis</option>
+<option value="/pmwiki/pmwiki.php/Timeline/NoFlowInCGI?action=edit">Timeline</option>
+<option value="/pmwiki/pmwiki.php/Trivia/NoFlowInCGI?action=edit">Trivia</option>
+<option value="/pmwiki/pmwiki.php/WMG/NoFlowInCGI?action=edit">WMG</option>
+<option value="/pmwiki/pmwiki.php/YMMV/NoFlowInCGI?action=edit">YMMV</option>
+</select>
+</li>
+</ul>
+</nav>
+<div class="article-content retro-folders" id="main-article">
+<p>
+</p><div class="quoteright" style="width:350px;"><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/StarWars" title="/pmwiki/pmwiki.php/Franchise/StarWars"><div class="lazy_load_img_box" style="padding-top:129.14%"><img alt="https://static.tvtropes.org/pmwiki/pub/images/obiwan.jpg" border="0" class="embeddedimage" height="452" src="https://static.tvtropes.org/pmwiki/pub/images/obiwan.jpg" width="350"/></div></a></div>
+<div class="acaptionright" style="width:350px;"><span class="font-s"><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/StarWarsCloneWars" title="/pmwiki/pmwiki.php/WesternAnimation/StarWarsCloneWars">The Force</a>, or <a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/StarWarsTheCloneWars" title="/pmwiki/pmwiki.php/WesternAnimation/StarWarsTheCloneWars">extra strength hair spray</a>? You decide.</span></div>
+<div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_1"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_1'); })</script></div></div><p>In old or low-budget CGI, the characters will never wear loose garments, have long hair or include anything that might flow or rustle in wind or when moving.
+</p><p>This is because accurately simulating flowing hair and fabric requires two extremely computationally expensive things: a very high polygon count that can translate into smoothly curved surfaces and individual strands of hair, and <a class="urllink" href="https://en.wikipedia.org/wiki/Computational_fluid_dynamics">computational fluid dynamics<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a> to accurately simulate the material's motion as well as the air itself. As a result, early CGI software and hardware limitations made anything other than clunky, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/UncannyValley" title="/pmwiki/pmwiki.php/Main/UncannyValley">Uncanny Valley</a> inspiring graphics impossible (and these limitations still apply to modern entry-level hardware and software). Even when technical limits and costs are slowly being pushed back, it's still hard and costly to simulate nowadays, especially in video games, where maintaining 60 FPS means there's only 16 milliseconds to calculate all that.
+</p><div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_2"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_2'); })</script></div></div><p>To circumvent these limitations, authors and graphic artists had to make a few concessions and stylistic choices. Such as:
+</p><ul><li> Girls and women would have short hair and wear skintight gear. When they did have long hair, it would be done up in buns or heavily "moussed", becoming an immobile block. Now, there are some low-priced and freely available feminine hair props for use in Poser or DAZ Studio can be realistically animated with wind and gravity effects: for example, <a class="urllink" href="https://www.renderosity.com/mod/bcs/?ViewProduct=33204">Egypt Hair by 3Dream<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a>.
+</li><li> Films, TV episodes, or entire <em>series</em> would take place in settings whose inhabitants naturally lacked loose garments and billowing hair. For example, being <a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/ToyStory" title="/pmwiki/pmwiki.php/WesternAnimation/ToyStory">plastic toys</a>, <a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/ReBoot" title="/pmwiki/pmwiki.php/WesternAnimation/ReBoot">computer programs</a>, <a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/VeggieTales" title="/pmwiki/pmwiki.php/WesternAnimation/VeggieTales">vegetables</a>, <a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/BeastWars" title="/pmwiki/pmwiki.php/WesternAnimation/BeastWars">robots that turn into animals</a>, or <a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/ABugsLife" title="/pmwiki/pmwiki.php/WesternAnimation/ABugsLife">ants</a>.
+</li><li> All loose fabrics will be inert, either by being drawn taut or by never having a breeze/character move them. This can lead to images like, say, never showing a character sitting in bed with the covers up, and if they do get out of bed, then simply cutting away while they move the covers.
+</li></ul><div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_3"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_3'); })</script></div></div><p>Averting this trope has long been a Holy Grail for CGI animators, which can lead to trouble. A lot of instances of flowing hair or gowns end up flowing <em>too much</em>, taking attention from anything else in the scene, like Dr. Ross' hair in <em><a class="twikilink" href="/pmwiki/pmwiki.php/Anime/FinalFantasyTheSpiritsWithin" title="/pmwiki/pmwiki.php/Anime/FinalFantasyTheSpiritsWithin">Final Fantasy: The Spirits Within</a></em>, or Nariko's in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/HeavenlySword" title="/pmwiki/pmwiki.php/VideoGame/HeavenlySword">Heavenly Sword</a></em>. When flowing is done right, it either is unambiguously the centerpiece of the scene, <strong>or</strong> doesn't call attention to itself but rather <a class="twikilink" href="/pmwiki/pmwiki.php/Main/WillingSuspensionOfDisbelief" title="/pmwiki/pmwiki.php/Main/WillingSuspensionOfDisbelief">reinforces a viewer's immersion</a>. This trope is why <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ASpaceMarineIsYou" title="/pmwiki/pmwiki.php/Main/ASpaceMarineIsYou">A Space Marine Is You</a> is still so extremely prevalent: It's easier to model and animate a bald guy (or better yet, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/FeaturelessProtagonist" title="/pmwiki/pmwiki.php/Main/FeaturelessProtagonist">always helmeted</a>) wearing an armored spacesuit than it is trying to create an <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ElegantGothicLolita" title="/pmwiki/pmwiki.php/Main/ElegantGothicLolita">Elegant Gothic Lolita</a> from Harajuku. Just imagine the processing power required to handle the delicate and intricate clothes that flow in a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DramaticWind" title="/pmwiki/pmwiki.php/Main/DramaticWind">Dramatic Wind</a>... or when running and fighting.
+</p><p>To be fair, in real life a lot of people's hair doesn't move much, with the exception of strong wind or fully submerged. But <a class="twikilink" href="/pmwiki/pmwiki.php/Main/RealityIsUnrealistic" title="/pmwiki/pmwiki.php/Main/RealityIsUnrealistic">Reality Is Unrealistic</a> and less cool, and besides, how else would the CGI animators show off their skills and technology (and their budget; flowing in CGI can get expensive)?
+</p><p>For another approach to averting this trope, see <a class="twikilink" href="/pmwiki/pmwiki.php/Main/JigglePhysics" title="/pmwiki/pmwiki.php/Main/JigglePhysics">Jiggle Physics</a>.
+</p><hr/><h2>Examples:</h2>
+<p></p><div class="folderlabel" onclick="toggleAllFolders();">    open/close all folders  </div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder0');">    Anime and Manga </div><div class="folder" id="folder0" isfolder="true" style="display:block;">
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Anime/DigimonXEvolution" title="/pmwiki/pmwiki.php/Anime/DigimonXEvolution">Digimon X-Evolution</a></em>: Though they did give Omegamon and Dukemon their signature badass capes, they're awkwardly animated to a fairly visible extent. Similarly, DORUmon's fur.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Anime/TheMysteriousCitiesOfGold" title="/pmwiki/pmwiki.php/Anime/TheMysteriousCitiesOfGold">The Mysterious Cities of Gold</a></em>: Averted. From Menzoda's cape to Zia's hair, everything flows beautifully.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder1');">    Films — Animation </div><div class="folder" id="folder1" isfolder="true" style="display:block;">
+<ul><li> This is why Belle's hair was usually in a ponytail in <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/BeautyAndTheBeast" title="/pmwiki/pmwiki.php/WesternAnimation/BeautyAndTheBeast">Beauty and the Beast</a></em> (though her dress twirls during the song "Beauty and the Beast").
+</li><li> This is why flexible objects with elaborate surface patterns like the flying carpet in <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/Aladdin" title="/pmwiki/pmwiki.php/WesternAnimation/Aladdin">Aladdin</a></em>) were generally avoided by Disney before CGI. In the direct-to-video sequels and the TV series, the carpet's elaborate design was downgraded so it could be drawn without CGI. Compare the <a class="urllink" href="http://1.bp.blogspot.com/_YtQFcCXNo6k/TAANptMk7fI/AAAAAAAAFMw/NeOwtWQC06Y/s1600/carpet11.jpg">carpet as seen in the feature<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a><small>◊</small> with the <a class="urllink" href="http://1.bp.blogspot.com/-FfjJYRc-WlY/T7_FusFjayI/AAAAAAAADQs/MpAj6mp6ktQ/s400/Aladdin_cartoon_magic_carpet_4.jpg">direct-to-video/television version<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a><small>◊</small>.
+</li><li> In 2001's <em><a class="twikilink" href="/pmwiki/pmwiki.php/Anime/FinalFantasyTheSpiritsWithin" title="/pmwiki/pmwiki.php/Anime/FinalFantasyTheSpiritsWithin">Final Fantasy: The Spirits Within</a></em>, 40% of the CGI effects were to make Aki's hair flow (and she definitely had a tendency to shake it around to <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ShootTheMoney" title="/pmwiki/pmwiki.php/Main/ShootTheMoney">let you know</a>). Just about every other character has short hair at most.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Anime/FinalFantasyVIIAdventChildren" title="/pmwiki/pmwiki.php/Anime/FinalFantasyVIIAdventChildren">Final Fantasy VII: Advent Children</a></em> has Sephiroth's hair and Red XIII's fur. While the former got more screen time as a key character, it was still stated to be very costly. Red XIII/Nanaki on the other hand got very little. <a class="twikilink" href="/pmwiki/pmwiki.php/Main/WordOfGod" title="/pmwiki/pmwiki.php/Main/WordOfGod">Word of God</a> also says that Cait Sith showed up riding Red XIII instead of his giant Moogle Doll thing because rendering that big thing (which was already established to be fur-covered as well) would have taken too much time out of other, more important parts of the movie. See the video game section below for more. In a similar vein, Tifa has <a class="twikilink" href="/pmwiki/pmwiki.php/Main/RapunzelHair" title="/pmwiki/pmwiki.php/Main/RapunzelHair">Rapunzel Hair</a> that goes to just above her knees in the original game. In the film, it's shortened to elbow length to make it easier to animate.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/TheIncredibles" title="/pmwiki/pmwiki.php/WesternAnimation/TheIncredibles">The Incredibles</a></em>:
+<ul><li> Violet's hair took <em>a lot</em> of work to animate properly. In fact, Pixar animators had to cut a scene showing the family hiding in the ocean because of how much effort it would take to animate her hair underwater.
+</li><li> Practically all characters have hair that is affected by wind, water and movement. Violet's is the most noticeable, but Dash's hair is definitely not static when he runs at high speed. Dash's hair was actually the most difficult hair in the film; it had a general shape that it needed to keep, but it also needed to react to stimulus like his vast speed properly, without stretching — <em>much</em>. It took over a year of work to get his hair right.
+</li><li> Despite the attempts to avert this, Helen's hair when they first land in the water after <span class="spoiler" title="you can set spoilers visible by default on your profile">the plane gets blown up</span> plays this trope straight.
+</li><li> The hair technology was made so that its movement was simulated and animators didn't have to position it themselves, which is great for normal shots, but then there are times when the director wants it to move a specific way for dramatic effect (like how Mr. Incredible's hair falls when <span class="spoiler" title="you can set spoilers visible by default on your profile">he thinks his family's been killed</span>) and the simulation team start talking about "a half-second of force 5 gale wind in Mars gravity..."
+</li><li> In the director's commentary on the DVD, they say that a relatively understated scene early in the movie caused lots of headaches for the animators. Mr. Incredible is examining his old costume and notices a rip from his fight with the robot (which prompts him to get a new costume, and it's that same rip that tips off his wife that he's being a superhero again). Apparently, it is very, very hard to animate someone sticking a hand through a hole in cloth.
+<div class="indent"> Do we <em>have</em> to do this? How about Bob just looks down at the shirt and <em>tells</em> us that it's torn?
+</div></li><li> Another simple scene was processor-intensive: when the costume is chucked in the garbage can at Edna's and slowly slides in from the edge; it was incredibly difficult to simulate.
+</li><li> Speaking of Edna, this trope is the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/WatsonianVsDoylist" title="/pmwiki/pmwiki.php/Main/WatsonianVsDoylist">Doylist reason</a> for her "no capes" rule, although <a class="twikilink" href="/pmwiki/pmwiki.php/Main/CapeSnag" title="/pmwiki/pmwiki.php/Main/CapeSnag">the reason she gives</a> most certainly makes sense.
+</li><li> Because of this, a large chunk of the movie's <a class="twikilink" href="/pmwiki/pmwiki.php/Main/HilariousOuttakes" title="/pmwiki/pmwiki.php/Main/HilariousOuttakes">Hilarious Outtakes</a> is simply hair failing to do things it should be doing.
+</li></ul></li><li> One of the reasons <a class="twikilink" href="/pmwiki/pmwiki.php/Creator/Pixar" title="/pmwiki/pmwiki.php/Creator/Pixar">Pixar</a> stuck to making movies about plastic toys and bugs in the early days was because it avoided problems like this. Observe the difference in how dogs are modeled in <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/ToyStory" title="/pmwiki/pmwiki.php/WesternAnimation/ToyStory">Toy Story</a></em> (static, plastic-looking) compared to <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/ToyStory2" title="/pmwiki/pmwiki.php/WesternAnimation/ToyStory2">Toy Story 2</a></em> (appropriately fuzzy). And even the characters that were <em>supposed</em> to look like plastic in the first <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/ToyStory" title="/pmwiki/pmwiki.php/WesternAnimation/ToyStory">Toy Story</a></em> film had noticeably limited facial animation compared to the next two films.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/LuxoJr" title="/pmwiki/pmwiki.php/WesternAnimation/LuxoJr">Luxo Jr.</a></em>, it was mentioned in the commentary that the <em>cord</em> bouncing up and down was the hardest thing to animate in the entire short. John Lasseter had to animate each jump by hand, and in his own words, "...it was <em>painful</em>."
+</li><li> When Pixar produced <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/MonstersInc" title="/pmwiki/pmwiki.php/WesternAnimation/MonstersInc">Monsters, Inc.</a></em>, they'd developed software models that could make Sully's fur look fluffy, stiff, or windswept where necessary. However, a bit of toilet paper stuck to Mike's foot took the longest time to get right. Even the fur came with a price; to fully render Sully's 2.3 million individual hairs, it took the software 11-12 hours per frame. That means that every second that Sully is on screen took up to <em>twelve days</em> to render.
+</li><li> Most human females that appear in early Pixar films normally wear either pants or tight clothing. An exception to this rule would be a female patient in the dentist's waiting room near the end of <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/FindingNemo" title="/pmwiki/pmwiki.php/WesternAnimation/FindingNemo">Finding Nemo</a></em> who is mistaken by both Nemo and the Tank Gang for Darla, especially in the full-screen version where the exposed portion of said patient's legs are completely visible. However, the environment averts this with plants realistically moving with the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/IncrediblyLamePun" title="/pmwiki/pmwiki.php/Main/IncrediblyLamePun">flow</a>.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/Brave" title="/pmwiki/pmwiki.php/WesternAnimation/Brave">Brave</a></em> seems hell-bent on <a class="urllink" href="https://i.imgur.com/JjeLgkY.gif">defying this trope.<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a><small>◊</small> What's also noticeable is that the heroine has long, <em>curly</em> hair, which is animated realistically (rather than being a block with lines in it). Curly hair is very difficult to animate as not only does it sway, it bounces, unlike straight hair.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/BarbieAsRapunzel" title="/pmwiki/pmwiki.php/WesternAnimation/BarbieAsRapunzel">Barbie as Rapunzel</a></em>'s braid looks okay, but when she wears her hair <em>loose</em>, it looks like it's made of rubber. Semi-justifiable because, not only was the film released two years before <a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/TheIncredibles" title="/pmwiki/pmwiki.php/WesternAnimation/TheIncredibles">Pixar perfected hair</a>, but when <a class="twikilink" href="/pmwiki/pmwiki.php/Creator/Disney" title="/pmwiki/pmwiki.php/Creator/Disney">Disney</a> did their <a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/Tangled" title="/pmwiki/pmwiki.php/WesternAnimation/Tangled">telling of the story</a>, it took <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SavedFromDevelopmentHell" title="/pmwiki/pmwiki.php/Main/SavedFromDevelopmentHell">years and years</a> to perfect the technology for all that hair.
+<ul><li> Barbie movies are very guilty of this. <a class="twikilink" href="/pmwiki/pmwiki.php/Main/CoversAlwaysLie" title="/pmwiki/pmwiki.php/Main/CoversAlwaysLie">On the covers</a> and <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ShowAccuracyToyAccuracy" title="/pmwiki/pmwiki.php/Main/ShowAccuracyToyAccuracy">the doll-lines</a>, Barbie is always portrayed with long, wavy hair. In the movies themselves, her character's hair is almost always short, in a ponytail or a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/PrimAndProperBun" title="/pmwiki/pmwiki.php/Main/PrimAndProperBun">Prim and Proper Bun</a>. Then again, the fanbase tends to prefer the more individual hairstyles Barbie has in the movies themselves, so it's probably more a problem about the cover artists being lazy.
+</li></ul></li><li> Even though <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/Cars" title="/pmwiki/pmwiki.php/WesternAnimation/Cars">Cars</a></em> is a perfect example of this trope, there are some aversions, like shots of flowing water and the tearaways near the beginning of the movie produce various realistic flames, which are especially impressive to anyone who knows how difficult realistic particle animation is.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/Tangled" title="/pmwiki/pmwiki.php/WesternAnimation/Tangled">Tangled</a></em>:
+<ul><li> <em>Tangled</em> <a class="urllink" href="http://www.scientificamerican.com/article.cfm?id=fit-for-a-princess">avoiding this trope well enough to attract scientific attention<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a>, although the models involved are still being improved. Averting this trope is the reason why this movie is the second most expensive film ever made. They did very well with the hair, clothes, and water... but the fire not so much.
+</li><li> This was partially why they abandoned the original art style. The film was originally supposed to look like a watercolor painting using the technique that was later used for shorts such as <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/Paperman" title="/pmwiki/pmwiki.php/WesternAnimation/Paperman">Paperman</a></em>. However, it proved to be <em>way</em> too expensive and difficult, so it was changed to a more typical art style. Even today, the hardware is still in its early stages and it is hard to make use of outside of shorts.
+</li></ul></li><li> In the commentary for <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/OverTheHedge" title="/pmwiki/pmwiki.php/WesternAnimation/OverTheHedge">Over the Hedge</a></em>, they mention that the animators complained that there was a lot of hugging in the movie. Not because it was sappy, but because it was really hard to animate fur in a hug.
+</li><li> You can see the technology improving in the <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/Shrek" title="/pmwiki/pmwiki.php/WesternAnimation/Shrek">Shrek</a></em> movies. In the first movie, it took them a lot of effort to make Fiona's hair sway, and Shrek is bald. The second movie used a new engine for handling hair, and they lampshade it by having a shot where Prince Charming takes of his helmet to show his incredibly smooth and wavy hair. <em>Shrek 3</em> added the ability to model longer flowing hair, and they used that to render the different hair styles of the princesses. In <em>Shrek 4</em>, there is a scene where Fiona appears as a warrior and you see her long curly hair swaying in the wind. <a class="urllink" href="http://www.traileraddict.com/trailer/shrek/the-whole-story-evolution-of-hair">Here's<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a> a video that shows the evolution of Fiona's hair. One of the outtakes for the first movie showcased an animation error where Donkey's fur looked less like a donkey's and more like an absurdly-fluffy bunny.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/Frozen" title="/pmwiki/pmwiki.php/Franchise/Frozen">Frozen</a></em>:
+<ul><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/Frozen2013" title="/pmwiki/pmwiki.php/WesternAnimation/Frozen2013">Frozen</a></em>, their main flow-related challenge was rendering heavy cloths such as velvet and wool in such a way that they still billow and swirl with appropriate grace. Elsa's glorious dress of ice flows quite well, especially with the giant trailing translucent snowflake cape behind her. Both Elsa and Anna wear their hair in braids, which also required some new programs on the part of the animators — namely, making braids that were clearly composed of three interwoven strands, instead of braids that are just lengthened, tactile blocks of hair (like Fiona or <a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/HowToTrainYourDragon" title="/pmwiki/pmwiki.php/WesternAnimation/HowToTrainYourDragon">Astrid.</a>) However, one short scene proved to be nearly impossible to animate: during the song "Let It Go," <a class="urllink" href="http://media.tumblr.com/e6db9d915972a04d592baca3e6730884/tumblr_mxeikjElqh1s3s22so3_250.gif">where Elsa takes down her hair and pulls her braid over her shoulder<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a><small>◊</small>. The only way they could do the scene without having the model break was to cheat and have the braid phase <em>through</em> Elsa's arm instead of over it. The animators did a good job of making it barely noticeable, and those that did notice seemed to agree it was <a class="twikilink" href="/pmwiki/pmwiki.php/Main/WorthIt" title="/pmwiki/pmwiki.php/Main/WorthIt">Worth It</a>.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/OlafsFrozenAdventure" title="/pmwiki/pmwiki.php/WesternAnimation/OlafsFrozenAdventure">Olaf's Frozen Adventure</a></em>, the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/HappyHolidaysDress" title="/pmwiki/pmwiki.php/Main/HappyHolidaysDress">Happy Holidays Dresses</a> Elsa and Anna wear have more natural movement than the previous installments. This applies even to the fur on Elsa's <a class="twikilink" href="/pmwiki/pmwiki.php/Main/PrettyInMink" title="/pmwiki/pmwiki.php/Main/PrettyInMink">white fox collar</a>.
+</li></ul></li><li> Even though the characters are mostly mechanical cyborgs based on plastic toys, the first three <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DirectToVideo" title="/pmwiki/pmwiki.php/Main/DirectToVideo">Direct-to-Video</a> <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/Bionicle" title="/pmwiki/pmwiki.php/WesternAnimation/Bionicle">BIONICLE</a></em> movies opted to dress up the Turaga with tribal robes that had floppy ribbons on the front. Roodaka in the third movie was given mechanical-looking braids with several individual strands that hung down to her shoulder-line. Again, this is not a feature seen on the toy, which instead had short, solid "pigtails". They also turned her originally short robo-ponytail into a large, metal-plated bendy "flap", but at least kept it as a single piece. The fourth movie had none of this, and gave its characters unmoving, metal loincloths... even on those characters whose toy designs already had their groin covered up.
+</li><li> <a class="twikilink" href="/pmwiki/pmwiki.php/Creator/Laika" title="/pmwiki/pmwiki.php/Creator/Laika">Laika</a> seems to make a point of averting this trope <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DoingItForTheArt" title="/pmwiki/pmwiki.php/Main/DoingItForTheArt">just for the hell of it</a>, despite the fact that they operate primarily in stop motion, which is, if anything, even <em>harder</em> to animate realistic flow than in CGI. The animators seem to love incorporate lots of heavily mobile flowing elements like flowing hair or moving fur and feathers. Their movies tend to look good as a result.
+</li><li> Similarly to Laika, the two animated films that <a class="twikilink" href="/pmwiki/pmwiki.php/Creator/WesAnderson" title="/pmwiki/pmwiki.php/Creator/WesAnderson">Wes Anderson</a> has directed (<em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/FantasticMrFox" title="/pmwiki/pmwiki.php/WesternAnimation/FantasticMrFox">Fantastic Mr. Fox</a></em> and <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/IsleOfDogs" title="/pmwiki/pmwiki.php/WesternAnimation/IsleOfDogs">Isle of Dogs</a></em>) have both averted this trope to hell and back. Both take place in a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/WorldOfFunnyAnimals" title="/pmwiki/pmwiki.php/Main/WorldOfFunnyAnimals">World of Funny Animals</a> which are <em>covered</em> in densely matted, realistically flowing hair, and that's not to mention all the other particle effects that help the movies achieve an almost photorealistic look.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder2');">    Films — Live-Action </div><div class="folder" id="folder2" isfolder="true" style="display:block;">
+<ul><li> This is <a class="twikilink" href="/pmwiki/pmwiki.php/Main/InvokedTrope" title="/pmwiki/pmwiki.php/Main/InvokedTrope">invoked</a> in <em><a class="twikilink" href="/pmwiki/pmwiki.php/Film/TronLegacy" title="/pmwiki/pmwiki.php/Film/TronLegacy">TRON: Legacy</a></em>, which is appropriate since it takes place inside a computer. Everyone has short hair, there's barely any loose fabric, and no real wind except when moving (and in most of those times they wear helmets or are inside vehicles).
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/Film/Inception" title="/pmwiki/pmwiki.php/Film/Inception">Inception</a></em> wardrobe made sure that Ariadne had her hair up for the level in the hotel. As her character floats in zero gravity for that level, it would have been a nightmare for the SFX crew to animate Ellen Page's hair if it had been down.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/Film/Gravity" title="/pmwiki/pmwiki.php/Film/Gravity">Gravity</a></em>, <a class="twikilink" href="/pmwiki/pmwiki.php/Creator/SandraBullock" title="/pmwiki/pmwiki.php/Creator/SandraBullock">Sandra Bullock</a> has short hair because she spends almost the entire movie in zero gravity.
+</li><li> A scene in <em><a class="twikilink" href="/pmwiki/pmwiki.php/Film/Arrival" title="/pmwiki/pmwiki.php/Film/Arrival">Arrival</a></em> averts it presumably just <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GratuitousSpecialEffects" title="/pmwiki/pmwiki.php/Main/GratuitousSpecialEffects">for the hell of it</a>. Amy Adams enters a zero gravity situation with her hair tied up, only for it to come undone and spend the scene billowing around as it would in actual zero gravity.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder3');">    Live-Action TV </div><div class="folder" id="folder3" isfolder="true" style="display:block;">
+<ul><li> The animators loved working on <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/WalkingWithDinosaurs" title="/pmwiki/pmwiki.php/Series/WalkingWithDinosaurs">Walking with Dinosaurs</a></em> because the animals they had to create were either scaly or had only short fuzz — however, they did get slammed quite a bit by the paleontologist community for <a class="twikilink" href="/pmwiki/pmwiki.php/Main/RaptorAttack" title="/pmwiki/pmwiki.php/Main/RaptorAttack">not feathering their raptors</a>. Then came the sequel, <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/WalkingWithBeasts" title="/pmwiki/pmwiki.php/Series/WalkingWithBeasts">Walking with Beasts</a></em>, about prehistoric mammals, and they didn't laugh anymore. In the end, they settled for using guide hairs, single strands of hair whose animation the computer copied over and over until the entire animal got fully covered by it. This way, they only had to animate fewer hairs. The results may not be super realistic, but it at least spared them from crashing their systems.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/TheFutureIsWild" title="/pmwiki/pmwiki.php/Series/TheFutureIsWild">The Future Is Wild</a></em>, some hairy mammals are featured early on, but they quickly go extinct in the later segments, resulting in the world being populated by computer-friendlier creatures such as fish, insects or cephalopods.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder4');">    Video Games </div><div class="folder" id="folder4" isfolder="true" style="display:block;">
+<ul><li> Naturally, since it was the advent of fully-rendered and usable 3D graphics, the <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/Nintendo64" title="/pmwiki/pmwiki.php/UsefulNotes/Nintendo64">Nintendo 64</a>/<a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/PlayStation" title="/pmwiki/pmwiki.php/UsefulNotes/PlayStation">PlayStation</a>/<a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/SegaSaturn" title="/pmwiki/pmwiki.php/UsefulNotes/SegaSaturn">Sega Saturn</a> <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/TheFifthGenerationOfConsoleVideoGames" title="/pmwiki/pmwiki.php/UsefulNotes/TheFifthGenerationOfConsoleVideoGames">era</a> of gaming fell victim to this. Although the Nintendo 64 had the strongest potential graphical power, its utilization of cartridges instead of CD-ROMs among other things actually made it <em>less</em> able to render things realistically, so the PlayStation was the system that showed off this trope the most (most Sega Saturn games were <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TwoPointFiveD" title="/pmwiki/pmwiki.php/Main/TwoPointFiveD">2.5D</a>).
+</li><li> The PS1 (as well as the <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/SegaDreamcast" title="/pmwiki/pmwiki.php/UsefulNotes/SegaDreamcast">Sega Dreamcast</a> game <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/ResidentEvilCodeVeronica" title="/pmwiki/pmwiki.php/VideoGame/ResidentEvilCodeVeronica">Resident Evil  Code: Veronica</a></em>) <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/ResidentEvil" title="/pmwiki/pmwiki.php/Franchise/ResidentEvil">Resident Evil</a></em> games fell victim to this, save for the first game, whose cutscenes were made of live-action footage instead. The only thing that ever flowed in the early games was Claire Redfield's ponytail.
+</li><li> In the 2D games of the <em><a class="twikilink" href="/pmwiki/pmwiki.php/Main/StreetFighter" title="/pmwiki/pmwiki.php/Main/StreetFighter">Street Fighter</a></em> series, Chun Li wears her long hair up in <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Odango" title="/pmwiki/pmwiki.php/Main/Odango">Odango</a> buns, Cammy's hair is braided into 2 easily animated plaits, Karin's hair is sectioned into 6 tubular ringlets, and Sakura has short, boyish hair — all are easy to animate. Rose provides an exception, and her long hair flows seamlessly out behind her in a wave-like motion. However, when the games went 3D for the <em>Street Fighter IV</em> series, Rose's render was criticized by fans for having a zig-zag of rigid, plastic-looking hair that incorporated none of the movement of her 2D sprite.
+</li><li> Hardly anyone in the <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/GrandTheftAuto" title="/pmwiki/pmwiki.php/VideoGame/GrandTheftAuto">Grand Theft Auto</a></em> franchise has anything other than short hair. All of the protagonists, from Claude to Luis have either short or buzzed haircuts and even though Carl Johnson can get his hair cut in various ways, you never get anything that would sway in the wind.
+<ul><li> Lampshaded in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/GrandTheftAutoV" title="/pmwiki/pmwiki.php/VideoGame/GrandTheftAutoV">Grand Theft Auto V</a></em> on the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ShowWithinAShow" title="/pmwiki/pmwiki.php/Main/ShowWithinAShow">in-game TV show</a> <em>Fame or Shame</em> when a singer prepares to perform a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ClicheStorm" title="/pmwiki/pmwiki.php/Main/ClicheStorm">Cliché Storm</a> power ballad, complete with a wind machine, but Lazlow tells him that the wind machine is broken.
+</li></ul></li><li> A particularly glaring example would be Ezio's cape from <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/AssassinsCreedII" title="/pmwiki/pmwiki.php/VideoGame/AssassinsCreedII">Assassin's Creed II</a></em> and <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/AssassinsCreedBrotherhood" title="/pmwiki/pmwiki.php/VideoGame/AssassinsCreedBrotherhood">Assassin's Creed: Brotherhood</a></em>. When Ezio walking around or even jogging, his cape has a pretty realistic flow, but when he's running or on horseback, the cape becomes stiff as a damned board.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/TheLegendOfZelda" title="/pmwiki/pmwiki.php/Franchise/TheLegendOfZelda">The Legend of Zelda</a></em>:
+<ul><li> Even though there is little flow, there are ways to fake it, at least in the <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/PlayStation" title="/pmwiki/pmwiki.php/UsefulNotes/PlayStation">PlayStation</a>/<a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/Nintendo64" title="/pmwiki/pmwiki.php/UsefulNotes/Nintendo64">Nintendo 64</a>/<a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/SegaSaturn" title="/pmwiki/pmwiki.php/UsefulNotes/SegaSaturn">Sega Saturn</a> era. If something was supposed to flow, like a dress, the designers would at least have it warp a little to show some animation, like Zelda's dresses in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheLegendOfZeldaOcarinaOfTime" title="/pmwiki/pmwiki.php/VideoGame/TheLegendOfZeldaOcarinaOfTime">The Legend of Zelda: Ocarina of Time</a></em>. Ganondorf's cape also animates quite well during the fight against him. <span class="spoiler" title="you can set spoilers visible by default on your profile">When he's beaten, though, it moves straight through his body as he collapses.</span>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/HyruleWarriors" title="/pmwiki/pmwiki.php/VideoGame/HyruleWarriors">Hyrule Warriors</a></em> gives Link a long blue <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ScarfOfAsskicking" title="/pmwiki/pmwiki.php/Main/ScarfOfAsskicking">Scarf of Asskicking</a>, the only purpose of which seems to be <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DefiedTrope" title="/pmwiki/pmwiki.php/Main/DefiedTrope">waving and fluttering all over the place with full cloth physics</a>.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheLegendOfZeldaTheWindWaker" title="/pmwiki/pmwiki.php/VideoGame/TheLegendOfZeldaTheWindWaker">The Legend of Zelda: The Wind Waker</a></em> has very impressive cloth simulation (for 2003) for clothing and hair and manages to avoid this trope for the most part. Sometimes, however, some flaws with the physics engine crop up, including a small flaw with how long, thin strings are handled. The trope is played straight with Medli, who has a long ponytail that is seemingly not affected by the wind, even though her hair moves when she is walking or running.
+</li></ul></li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/DungeonsAndDragons" title="/pmwiki/pmwiki.php/TabletopGame/DungeonsAndDragons">Dungeons &amp; Dragons</a>: Scourge of Worlds</em>, a CGI choose-your-path DVD adventure, which used the iconic 3rd Edition <em>D&amp;D</em> characters, all the characters used were fairly straight interpretations of their original artwork, with the exception of Mialee, the elf wizard. The reason is that her original design had a huge mop of hair that extended to her knees. The CGI version had a small knot that extended off the back of her head.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Videogame/EverQuestII" title="/pmwiki/pmwiki.php/Videogame/EverQuestII">EverQuest II</a></em> averts this if an option is enabled — however, like the rest of the engine, this is not efficient and requires high-end hardware to enable unless you want your framerate to drop through the floor. With the option disabled, clothing just kind of wraps around the body.
+</li><li> Very common with mods for <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheSims2" title="/pmwiki/pmwiki.php/VideoGame/TheSims2">The Sims 2</a></em>. Though creators of mods have improved tremendously since the old days, it's not uncommon for it to appear that the sims are using industrial strength hairspray and way too much starch in their laundry. Also, a lot of custom content creators try to fix this and end up with the hair having a gap under the neck, skirts with black areas under them, and even feet bending at the ankle (usually with high heels that are higher than what is usual in the game).
+</li><li> According to developers, some of the character design changes in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/CastlevaniaJudgment" title="/pmwiki/pmwiki.php/VideoGame/CastlevaniaJudgment">Castlevania: Judgment</a></em> were made due to this trope. One often-cited example is Shanoa's short hair and church hood, which was much less well received than her long flowing hair from <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/CastlevaniaOrderOfEcclesia" title="/pmwiki/pmwiki.php/VideoGame/CastlevaniaOrderOfEcclesia">Castlevania: Order of Ecclesia</a></em>.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/Castlevania" title="/pmwiki/pmwiki.php/Franchise/Castlevania">Castlevania</a></em>
+<ul><li> In the original <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/CastlevaniaRondoOfBlood" title="/pmwiki/pmwiki.php/VideoGame/CastlevaniaRondoOfBlood">Castlevania: Rondo of Blood</a></em> (which uses sprite-based graphics outside a few <a class="twikilink" href="/pmwiki/pmwiki.php/Main/LimitedAnimation" title="/pmwiki/pmwiki.php/Main/LimitedAnimation">Limited Animation</a> cutscenes), Maria Renard wears a dress and her hair down. In the 2.5D <a class="twikilink" href="/pmwiki/pmwiki.php/Main/VideoGameRemake" title="/pmwiki/pmwiki.php/Main/VideoGameRemake">remake</a> in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/CastlevaniaTheDraculaXChronicles" title="/pmwiki/pmwiki.php/VideoGame/CastlevaniaTheDraculaXChronicles">Castlevania: The Dracula X Chronicles</a></em>, her Ayami Kojima redesign features pants and a ponytail, presumably because of this trope.
+</li><li> And in the original <em>Rondo</em>, Richter is wearing a long trenchcoat with a flowing bandanna, and his appearance in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/CastlevaniaSymphonyOfTheNight" title="/pmwiki/pmwiki.php/VideoGame/CastlevaniaSymphonyOfTheNight">Castlevania: Symphony of the Night</a></em> shows him with back-length hair and an even longer coat. In <em>DXC</em> he looks like a reject for Sgt. Pepper's Lonely Hearts Club Band as a result of this cost-cutting.
+</li><li> The reason we never get a 3D Alucard based on Ayami Kojima's design is because it would be really, <em>really</em> hard to make a 3D animation as magnificent as his <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/CastlevaniaSymphonyOfTheNight" title="/pmwiki/pmwiki.php/VideoGame/CastlevaniaSymphonyOfTheNight">Castlevania: Symphony of the Night</a></em> sprite. His running animation started with about 15 frames, as he lunged into his run. Then looped another 15 for the running itself, complete with his long hair flowing and his cape flapping. The <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SuperSmashBrosUltimate" title="/pmwiki/pmwiki.php/VideoGame/SuperSmashBrosUltimate">Super Smash Bros. Ultimate</a></em> model of him makes a good attempt at least.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/TombRaider" title="/pmwiki/pmwiki.php/Franchise/TombRaider">Tomb Raider</a></em>
+<ul><li> Lara's trademark ponytail in the original <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TombRaider" title="/pmwiki/pmwiki.php/VideoGame/TombRaider">Tomb Raider</a></em> was absent outside FMVs. From <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TombRaiderII" title="/pmwiki/pmwiki.php/VideoGame/TombRaiderII">Tomb Raider II</a></em> onward, however, her ponytail was present and had its very own physics engine, making it blow in wind (at different degrees depending on her surroundings!) collide with Lara's body and even float on the surface of water. Nowadays the physics are a bit dodgy due to the different engine — one could play a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DrinkingGame" title="/pmwiki/pmwiki.php/Main/DrinkingGame">Drinking Game</a> and take a sip every time Lara's hair goes straight through her neck.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TombRaider2013" title="/pmwiki/pmwiki.php/VideoGame/TombRaider2013">Tomb Raider (2013)</a></em>, however, goes out of its way to avert this. On 7th-gen consoles and low graphics settings on PCs, Lara's hair moves fairly realistically, although it's wrapped in a tight ponytail. High-end PCs have an option called TressFX, which seems to render almost every single hair on Lara's head as it flutters about in the breeze...at the cost of about half your video memory. And since TressFX is an AMD program routine, it doesn't run well with nVidia graphics cards. It's standard in <a class="twikilink" href="/pmwiki/pmwiki.php/Main/UpdatedRerelease" title="/pmwiki/pmwiki.php/Main/UpdatedRerelease">the Definitive Edition remake</a>. <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/RiseOfTheTombRaider" title="/pmwiki/pmwiki.php/VideoGame/RiseOfTheTombRaider">Rise of the Tomb Raider</a></em> continues to uses the impressive hair physics on current-gen consoles and PC, to the point that Lara's hair actually moves a bit <em>too</em> much to be realistic.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Primal" title="/pmwiki/pmwiki.php/VideoGame/Primal">Primal</a></em> did something similar with Jen's distinctive pigtails, as well as with one or two other characters, most of whom suffered from the 'hair through the neck' problem.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MetalGear" title="/pmwiki/pmwiki.php/VideoGame/MetalGear">Metal Gear</a></em>:
+<ul><li> This happened to Solid Snake in the original <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MetalGearSolid" title="/pmwiki/pmwiki.php/VideoGame/MetalGearSolid">Metal Gear Solid</a></em> for PSX, whose design includes a long, flowing bandanna. It slowed the engine down so much, though, that the ends were eventually cut off. In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MetalGearSolid2SonsOfLiberty" title="/pmwiki/pmwiki.php/VideoGame/MetalGearSolid2SonsOfLiberty">Metal Gear Solid 2: Sons of Liberty</a></em>, the bandanna tails follow his motions almost perfectly and even flutter noisily when he opens a door to the storm on the deck outside, and was exaggerated by the tails on the Infinity Bandanna being as long as Snake is tall, giving an impression a little like a ninja scarf. The <a class="twikilink" href="/pmwiki/pmwiki.php/Main/VideoGameRemake" title="/pmwiki/pmwiki.php/Main/VideoGameRemake">Video Game Remake</a> <em>The Twin Snakes</em> implemented the bandana as originally intended.
+</li><li> Snake's <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SpyCatsuit" title="/pmwiki/pmwiki.php/Main/SpyCatsuit">skintight outfit</a> might be an example of this trope. The original plan was to put him in combat fatigues, but they didn't have the technology at the time to realistically move them in the wind of the storm <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AndNowForSomeoneCompletelyDifferent" title="/pmwiki/pmwiki.php/Main/AndNowForSomeoneCompletelyDifferent">Snake's part of the game was set in</a>. It worked out <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Fanservice" title="/pmwiki/pmwiki.php/Main/Fanservice">well enough, though</a>, because it led to a "<a class="twikilink" href="/pmwiki/pmwiki.php/Main/StupidSexyFlanders" title="/pmwiki/pmwiki.php/Main/StupidSexyFlanders">Stupid, sexy Snake</a>" situation.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MetalGearSolid2SonsOfLiberty" title="/pmwiki/pmwiki.php/VideoGame/MetalGearSolid2SonsOfLiberty">Metal Gear Solid 2: Sons of Liberty</a></em> also averts this with Raiden's hair, though it doesn't seem to have much weight so it looks a bit unrealistic.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MetalGearSolid3SnakeEater" title="/pmwiki/pmwiki.php/VideoGame/MetalGearSolid3SnakeEater">Metal Gear Solid 3: Snake Eater</a></em> Snake's clothes react convincingly well to wind etc.
+</li><li> Thanks to the new FOX Engine, <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MetalGearSolidVThePhantomPain" title="/pmwiki/pmwiki.php/VideoGame/MetalGearSolidVThePhantomPain">Metal Gear Solid V: The Phantom Pain</a></em> this trope is averted, as can be seen in the opening to <em>Ground Zeros</em> with Skullface's rain coat and Snake's new scarf-laden outfit, complete with trailing belt that follows him like a tail.
+</li></ul></li><li> <em>MLB: The Show 07</em> on the PS3 demonstrates why this trope exists. The game tries to model wind effects on flags and player jerseys, but it only contributes to an <a class="twikilink" href="/pmwiki/pmwiki.php/Main/UncannyValley" title="/pmwiki/pmwiki.php/Main/UncannyValley">Uncanny Valley</a> feeling.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/SuperMarioBros" title="/pmwiki/pmwiki.php/Franchise/SuperMarioBros">Super Mario Bros.</a></em>:
+<ul><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/NewSuperMarioBrosWii" title="/pmwiki/pmwiki.php/VideoGame/NewSuperMarioBrosWii">New Super Mario Bros. Wii</a></em>, a second Toad (officially known as "Blue Toad") was used as the fourth playable character instead of Princess Peach in order to avoid programming the physics for her dress, as well as to have every character play the same way. This carries over to <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/NewSuperMarioBrosU" title="/pmwiki/pmwiki.php/VideoGame/NewSuperMarioBrosU">New Super Mario Bros. U</a></em> (which, ironically, replaced him in its <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/NintendoSwitch" title="/pmwiki/pmwiki.php/UsefulNotes/NintendoSwitch">Nintendo Switch</a> update with Toadette, who can transform into a facsimile of Peach).
+</li><li> Averted in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SuperMario3DWorld" title="/pmwiki/pmwiki.php/VideoGame/SuperMario3DWorld">Super Mario 3D World</a></em>, where Princess Peach is playable, as is Rosalina.
+</li><li> Peach is playable in the mobile runner game <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SuperMarioRun" title="/pmwiki/pmwiki.php/VideoGame/SuperMarioRun">Super Mario Run</a></em>, which is stylized after the <em>New Super Mario Bros</em> series. Her dress however doesn't move as much as it does in <em>Super Mario 3D World</em>.
+</li><li> The <em>Mario</em> series' relationship with this trope predates three-dimensional graphics: Mario's trademark cap was added because the developers didn't want to have to animate hair. The mustaches were also a result of not wanting to animate a face.
+</li><li> This was also played straight with the original version of <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BigBad" title="/pmwiki/pmwiki.php/Main/BigBad">Bowser</a>, who was actually depicted without hair in that game. However, he did have hair in the SNES remake.
+</li></ul></li><li> Starting in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SuperSmashBrosMelee" title="/pmwiki/pmwiki.php/VideoGame/SuperSmashBrosMelee">Super Smash Bros. Melee</a></em>, the <em>Super Smash Bros.</em> series has a few features that blow in the wind (<a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/TheLegendOfZelda" title="/pmwiki/pmwiki.php/Franchise/TheLegendOfZelda">Link's</a> cap, the <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FireEmblem" title="/pmwiki/pmwiki.php/VideoGame/FireEmblem">Fire Emblem</a></em> characters' capes, the princesses' skirts, etc.). It's obvious that they didn't put much effort into this, though — the capes frequently clip, and Peach and Zelda's hair act as single cohesive units. Notably, you can remove these objects in Debug Mode — including the skirts.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/CityOfHeroes" title="/pmwiki/pmwiki.php/VideoGame/CityOfHeroes">City of Heroes</a></em>, only one character, Ghost Widow, has flowing hair. The developers stated this would be a huge performance bottleneck if they extended it to everyone else. Even still, her hair is a bit too elastic for its own good. Also played straight with every piece of clothing or equipment (most noticeably in the robes), besides the capes. The capes, which are the source of Ghost Widow's hair physics, work nicely, since they flow and move rather nicely, but the elasticity is still there. Especially noticeable when using travel powers, since any quick movement makes the cape double in size temporarily. Champions Online uses basically the same physics, too.
+<ul><li> The developers had actually left capes out of <em>City of Heroes</em> when it was initially released, citing this problem. They decided no capes were better than really poorly done capes, and decided to wait until they could work out decent cape physics to implement them.
+</li><li> This brings in a unique, player-enforced version of this trope. During certain missions involving large groups of players, enemies and most importantly particle effects, attending players were often asked to have their characters dress in as simple costumes as possible. This lessened the demand on lower-end computers during the more graphically demanding portions. With capes being as processor intensive as they were, players would often be kicked outright if spotted wearing one.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/MortalKombat" title="/pmwiki/pmwiki.php/Franchise/MortalKombat">Mortal Kombat</a></em>
+<ul><li> Made painfully clear in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MortalKombat4" title="/pmwiki/pmwiki.php/VideoGame/MortalKombat4">Mortal Kombat 4</a></em> with Sonya's frozen ponytail. Later games, made for more powerful systems, managed to avert this: almost everyone has some part of their hair or clothes that flaps freely (in fact, Goro and Kintaro have front flaps added to their <a class="twikilink" href="/pmwiki/pmwiki.php/Main/LoinCloth" title="/pmwiki/pmwiki.php/Main/LoinCloth">Loin Cloths</a> in later games for probably this exact reason). They do occasionally clip inside the character models, though.
+</li><li> Inverted with Shang Tsung: Much like he did in the first game, he was originally intended to have long flowing hair in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MortalKombat3" title="/pmwiki/pmwiki.php/VideoGame/MortalKombat3">Mortal Kombat 3</a></em>, which used live-action motion captured actors for the character sprites, but it apparently caused problems, so he had a ponytail instead. In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MortalKombatDeadlyAlliance" title="/pmwiki/pmwiki.php/VideoGame/MortalKombatDeadlyAlliance">Deadly Alliance</a></em>, his first appearance in 3D rendering, he had...long flowing hair. Admittedly, this was at the point where technology could accommodate for this, since he wasn't in <em>4</em>.
+</li></ul></li><li> Inverted with H-Game developer <em>Illusion</em>, since it devotes <em>a lot</em> (and with good reason) of its developing efforts on giving compelling animation to the games' girls, especially to their hair. To the point that it's jarring when its compared to the flat-boxed environments.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/GuildWars" title="/pmwiki/pmwiki.php/VideoGame/GuildWars">Guild Wars</a></em> plays this straight with most of the outfits for the player characters, with the exception of the capes that signal the player's guild which have realistic cloth simulation animation. The longer female styles and accessories in later campaigns (see Dervishes and Ritualists) do move, with the exception of that one high-ponytail look used by Necromancers and Rangers. But the Dervish skirts can be cone-like and a particular (across-the-board) curled, bouncy ponytail has hilarious effects when dancing.
+</li><li> Squall's fur collar in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FinalFantasyVIII" title="/pmwiki/pmwiki.php/VideoGame/FinalFantasyVIII">Final Fantasy VIII</a></em> was added expressly to challenge the animators by keeping them from following the trope.
+</li><li> Hair in the original <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/MassEffect" title="/pmwiki/pmwiki.php/Franchise/MassEffect">Mass Effect</a></em> trilogy has all of the bob and flow of a concrete sculpture. This is hilariously evident with Miranda in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MassEffect2" title="/pmwiki/pmwiki.php/VideoGame/MassEffect2">Mass Effect 2</a></em> and <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MassEffect3" title="/pmwiki/pmwiki.php/VideoGame/MassEffect3">3</a></em>; unlike the military-haired characters of the rest of the game, Miranda has long, flowing, shoulder-length hair, but it's as stiff as a brick. It <em>does</em> kind of move, but only around the shoulders. Like so many other things, the third game's <em>Citadel</em> DLC pokes fun at this. This trope is also in effect with the "tears" characters would cry, which range from a pool below their eyes to two slicks running down their cheeks. No animations in between — it's quite a surprise to see someone suddenly look like they've been crying for ten minutes. It's <a class="twikilink" href="/pmwiki/pmwiki.php/Main/UncannyValley" title="/pmwiki/pmwiki.php/Main/UncannyValley">especially jarring</a> next to all the genuinely <em>good</em> graphics the game features, including stunning backgrounds. <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MassEffectAndromeda" title="/pmwiki/pmwiki.php/VideoGame/MassEffectAndromeda">Mass Effect: Andromeda</a></em> finally <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AvertedTrope" title="/pmwiki/pmwiki.php/Main/AvertedTrope">averts</a> this trope for the first time in the series.
+</li><li> <a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/DragonAge" title="/pmwiki/pmwiki.php/Franchise/DragonAge">Dragon Age</a>:
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DragonAgeOrigins" title="/pmwiki/pmwiki.php/VideoGame/DragonAgeOrigins">Dragon Age: Origins</a></em> suffers from this in typical <a class="twikilink" href="/pmwiki/pmwiki.php/Creator/BioWare" title="/pmwiki/pmwiki.php/Creator/BioWare">BioWare</a> fashion, made worse by the possibility to give long beards to the characters. They are all the same length and attached to a hard point a bit above the solar plexus of the model. This leads to a lot of clipping, with the tips plunging into heavy armour, or the beard stretching elastically between chin and torso whenever a character turns their head during dialogue.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DragonAgeII" title="/pmwiki/pmwiki.php/VideoGame/DragonAgeII">Dragon Age II</a></em> BioWare started to address this by having hair move subtlety during conversation, cutscenes or when just running about (although compare the Arishok's long hair in the trailer to the game). The beards remain as stiff as ever though.
+</li><li> <a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DragonAgeInquisition" title="/pmwiki/pmwiki.php/VideoGame/DragonAgeInquisition">Dragon Age: Inquisition</a> goes back to square one again, most likely due to the engine shift. All the available hairstyles for the inquisitor remain frozen in place, even the longer ones. The exception is Morrigan and Sera, whose bangs move slightly during conversations.
+</li></ul></li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/HalfLife2" title="/pmwiki/pmwiki.php/VideoGame/HalfLife2">Half-Life 2</a></em>, Alyx's hair is very short and Dr. Mossman's is pulled into a tight bun.
+</li><li> By <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Left4Dead" title="/pmwiki/pmwiki.php/VideoGame/Left4Dead">Left 4 Dead</a></em>, Valve was comfortable giving Zoey a ponytail and bangs. Although they did a pretty good job animating the Boomer's <a class="urllink" href="https://www.youtube.com/watch?v=hzipB3lS-bo&amp;has_verified=1">large bodies...<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a>
+<ul><li> During the development of <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Left4Dead2" title="/pmwiki/pmwiki.php/VideoGame/Left4Dead2">Left 4 Dead 2</a></em>, the Spitter was going to be in a nightgown, but the idea got scrapped due to the difficulty of rendering a free flowing dress. Similarly, the survivors were going to have straps and other similar accessories to show how they can carry their weapons, but it was also cut out.
+</li></ul></li><li> And now several of the unlockable items in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TeamFortress2" title="/pmwiki/pmwiki.php/VideoGame/TeamFortress2">Team Fortress 2</a></em> also have jigglebones — which essentially allow them to simulate the inertia produced by the movements of whichever character is carrying or wearing them. Which seems to have hit a wall and bounced back. The <a class="urllink" href="http://wiki.teamfortress.com/wiki/A_Rather_Festive_Tree">Christmas tree hat<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a> and the rubber ball they created for an anniversary patch in 2010 (which appears in BLU's spawn when the server is in "party mode") both <a class="urllink" href="https://www.youtube.com/watch?v=G0JhXerUE0U">wobble and spaz out even when they are sitting perfectly still with no physics being applied to them<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a>.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheElderScrollsIVOblivion" title="/pmwiki/pmwiki.php/VideoGame/TheElderScrollsIVOblivion">The Elder Scrolls IV: Oblivion</a></em> and <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Fallout3" title="/pmwiki/pmwiki.php/VideoGame/Fallout3">Fallout 3</a></em> (which both run on the Gambryo engine), hair is kept above the neck short, even for female characters, to avert this trope. The PC versions allow for mods, and longer hair — but the hair doesn't move at all. When the player drops into a crouch for sneaking, the hair clips through the character's body.
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheElderScrollsVSkyrim" title="/pmwiki/pmwiki.php/VideoGame/TheElderScrollsVSkyrim">Skyrim</a></em> however has a problem with flowing clothes. This is most noticable on the Nightingale Armor, where the cape seems to be anchored at the hip, causing it to unnaturally bend with the PC's body movements rather than actual flow. Similarly any dress or robe in the game will cling onto the legs of the wearer as they walk, rather than realistically wave. When switching to 3rd person displays this trope is entirely in effect for most of your character's gear, especially any cloaks, which sit motionlessly upon your back even while moving.
+</li><li> For Skyrim's <em>Dawnguard</em> DLC, physics-enabled cloaks were added... but only used on a single (major) NPC. You'll never obtain one of them, as a player. Even if you do get your hands on it through modding, it's prone to glitching out without (sometimes even <em>with</em>) the correct settings in the game's configuration files.
+</li><li> This is evident in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FalloutNewVegas" title="/pmwiki/pmwiki.php/VideoGame/FalloutNewVegas">Fallout: New Vegas</a></em>, due to the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BadassLongcoat" title="/pmwiki/pmwiki.php/Main/BadassLongcoat">Badass Longcoat</a> of the Rangers being the game's <a class="twikilink" href="/pmwiki/pmwiki.php/Main/IconicOutfit" title="/pmwiki/pmwiki.php/Main/IconicOutfit">Iconic Outfit</a>: it never blows or billows the way you'd expect a coat to do, even in a Mojave sandstorm, and it also seems to be glued to the legs based on how it moves when the wearer walks.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Fallout4" title="/pmwiki/pmwiki.php/VideoGame/Fallout4">Fallout 4</a></em>, which runs on an updated version of the Gamebryo engine, averts this with clothing and hair physics on all characters, including the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/PlayerCharacter" title="/pmwiki/pmwiki.php/Main/PlayerCharacter">Player Character</a>.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SecondLife" title="/pmwiki/pmwiki.php/VideoGame/SecondLife">Second Life</a></em> partially avoids this with animated hair and skirts available as purchased items. It still has clipping issues, but it does look okay most of the time. The default avatar hair ("slider hair") does not flow at all, nor does default avatar skirts. Also, most hair is created with either toruses, which are easy to bend into locks, or sculpties, which are user-defined shapes. Neither of these support the "Flexible Path" option. Hair in <em>Second Life</em> thus ranges from very well-done hair that doesn't flow, to somewhat crappy-looking hair that flows properly.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FinalFantasyXIII" title="/pmwiki/pmwiki.php/VideoGame/FinalFantasyXIII">Final Fantasy XIII</a></em> averts this. Even Sazh, the most heavily-dressed character in the party and sporting a tight afro, has elements of his clothes and hair that blow in the breeze. This is because most of the many years it took to make the game were spent making the graphics engine deliver as realistic graphics as possible, at all times, without slowing down. It <a class="twikilink" href="/pmwiki/pmwiki.php/Main/CostumePorn" title="/pmwiki/pmwiki.php/Main/CostumePorn">certainly</a> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SceneryPorn" title="/pmwiki/pmwiki.php/Main/SceneryPorn">shows</a>.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/WorldOfWarcraft" title="/pmwiki/pmwiki.php/VideoGame/WorldOfWarcraft">World of Warcraft</a></em>, capes do flow, but not particularly well. It's especially obvious when the character has a tail, like the Tauren and the Draenei do. Then the cape sways in perfect sync with the tail, but doesn't fall properly at the end of the tail. They also don't wrap around or cover the body, but fall straight down the back like a towel tied around the neck. Capes also clip <em>horribly</em> while riding a raptor mount. <br/><br/>Hair also deserves a mention, as aside from one or two pony-tails per race and gender, none of the hair in the game moves much regardless of length or style. The reason is, of course, that the capes and hairstyles aren't using any sort of physics, they're simply running through animations like the rest of the character model. The cape is attached to the characters at a fixed length and distance, more like a shell rather than flowing as in <em>City of Heroes</em>.
+<ul><li> However, the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/PandaingToTheAudience" title="/pmwiki/pmwiki.php/Main/PandaingToTheAudience">Pandaren</a> which are now playable avert this. While compared to other games they're still rather static, looking at the capes or hair on a Pandaren compared to any other race is quite impressive for such an old engine.
+</li><li> The new models avert these problems to some degree. Long hairstyles still don't quite look realistic, but they seem greased rather than gelled: which at least makes sense given the Medieval-Fantasy setting. Cape animation has improved considerably, and characters often have other animated pieces as well. also, they fixed some of the clipping issues (not all though). For example capes now jiggle in response to vertical movement: such as a female night elf's idle bounce.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/AmericanMcGeesAlice" title="/pmwiki/pmwiki.php/VideoGame/AmericanMcGeesAlice">American McGee's Alice</a></em> is a bit weird. Alice's hair is stiff as a board and can be seen cutting through her neck if you can twist her head right. Her apron ties, on the other hand, flap fairly convincingly whenever she runs or stands in a breeze. The sequel, <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/AliceMadnessReturns" title="/pmwiki/pmwiki.php/VideoGame/AliceMadnessReturns">Alice: Madness Returns</a></em>, averts this trope by giving Alice's hair pretty complex animation.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/RockBand" title="/pmwiki/pmwiki.php/VideoGame/RockBand">Rock Band</a></em>, there are no guitar straps in the animations because of this. The guitars still act like the straps are there, just invisible. The mo-cap people wore guitar straps and nobody bothered to adjust the models for it. Also, at least one of the potential hair models for female rockers will give them pigtails made of concrete.
+</li><li> Played straight in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TalesOfSymphonia" title="/pmwiki/pmwiki.php/VideoGame/TalesOfSymphonia">Tales of Symphonia</a></em>. Particularly jarring with Colette, whose elbow-length hair was rigid as a board.
+</li><li> In the <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SaintsRow" title="/pmwiki/pmwiki.php/VideoGame/SaintsRow">Saints Row</a></em> series, there is a wide variety of long hairstyles to choose from, ranging from corn rows to dreads to ponytails to straight, elbow-length hair. Every single one of these styles is as rigid and stiff as a plank of wood. It's particularly noticeable in a cutscene in the second game, where your character is thrown around during a fight with a rival gang leader — his/her hair sticks perfectly to him/her the whole time, no matter how long it is. Averted in the third game and onwards, where hair (and a limited selection of clothing) bounces and flops around along with the character.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/AlanWake" title="/pmwiki/pmwiki.php/VideoGame/AlanWake">Alan Wake</a></em>, Alan's shirts and tweed jacket behave very much like shirts and a tweed jacket — the hood bobs around, coattails and lapels flow in the wind, and the tweed pattern bends realistically.
+</li><li> According to the folks at Double Fine, the original main character of <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Psychonauts" title="/pmwiki/pmwiki.php/VideoGame/Psychonauts">Psychonauts</a></em>, D'artanan, had a big, flowy <a class="twikilink" href="/pmwiki/pmwiki.php/Main/NiceHat" title="/pmwiki/pmwiki.php/Main/NiceHat">hat</a> that was "too awesome to animate".
+</li><li> <a class="twikilink" href="/pmwiki/pmwiki.php/Creator/BioWare" title="/pmwiki/pmwiki.php/Creator/BioWare">BioWare</a>'s <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/NeverwinterNights" title="/pmwiki/pmwiki.php/VideoGame/NeverwinterNights">Neverwinter Nights</a></em> is oddly selective about which items have "flow." Hair and loose sleeves, for example, will deform a bit while moving, but robes will remain stock still.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/GodOfWarIII" title="/pmwiki/pmwiki.php/VideoGame/GodOfWarIII">God of War III</a></em>, Hercules' loincloth sometimes clips through his legs, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/VaporWear" title="/pmwiki/pmwiki.php/Main/VaporWear">exposing his buttocks</a>. On the other hand, Kratos' skirt generally flows pretty well.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Flower" title="/pmwiki/pmwiki.php/VideoGame/Flower">Flower</a></em> averts, despite not depicting any humans. Grass, flowers, petals in the breeze, and other objects all blow realistically in the player-controlled wind.
+</li><li> Most of the characters in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DeadSpace" title="/pmwiki/pmwiki.php/VideoGame/DeadSpace">Dead Space</a></em> have short or no hair, except Kendra, whose long hair moves more like a piece of stiff fabric.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Videogame/DeadOrAlive" title="/pmwiki/pmwiki.php/Videogame/DeadOrAlive">Dead or Alive</a></em>:
+<ul><li> Assuming you can tear your eyes from the physics-insulting boobs, you may notice the terribly animated hair.
+</li><li> In <em>Dimensions</em> they use a different engine for handling long hair that stops it from clipping through the girl's shoulder every time she moves. Long, flowy dresses will still flow strangely at times, though.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/KingdomHeartsBirthBySleep" title="/pmwiki/pmwiki.php/VideoGame/KingdomHeartsBirthBySleep">Kingdom Hearts: Birth by Sleep</a></em> had to remove the capes from the Keyblade armor seen in the teaser movies at the end of <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/KingdomHeartsII" title="/pmwiki/pmwiki.php/VideoGame/KingdomHeartsII">Kingdom Hearts II</a></em> for the actual game because of the programing difficulty and lag involved in simulating proper cape movement in the multiplayer. Even when the characters reappeared in later games on more powerful systems, they still don't have their capes; it seems this trope retconned them out. The closest thing yet is the Lingering Will's cape spontaneously appearing at the end of a remastered <em>Birth by Sleep</em>.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MegaManX" title="/pmwiki/pmwiki.php/VideoGame/MegaManX">Mega Man X</a></em>: Zero in 3D-appearances, especially in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TatsunokoVsCapcom" title="/pmwiki/pmwiki.php/VideoGame/TatsunokoVsCapcom">Tatsunoko vs. Capcom</a></em> and <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MarvelVsCapcom3" title="/pmwiki/pmwiki.php/VideoGame/MarvelVsCapcom3">Marvel vs. Capcom 3</a></em>, where his hair acts as just a big bunch of yellow... <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BuffySpeak" title="/pmwiki/pmwiki.php/Main/BuffySpeak">something</a> instead of, you know, hair.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/EternalSonata" title="/pmwiki/pmwiki.php/VideoGame/EternalSonata">Eternal Sonata</a></em>, characters like Polka wear beautiful, bulky layered dresses which remain static and unmoving in all weather, and the characters run around with their arms at a perpetual 45-degree angle to avoid having to interact with the fabric.
+</li><li> Mostly straight in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Prototype" title="/pmwiki/pmwiki.php/VideoGame/Prototype">[PROTOTYPE]</a></em>. Models are pretty static to the point where even chest-length hair appears stuck into place of female character models, making it look like rubber. Even the flow of Alex's jacket is scripted to animate only during certain actions.
+</li><li> The <a class="twikilink" href="/pmwiki/pmwiki.php/Main/WhatCouldHaveBeen" title="/pmwiki/pmwiki.php/Main/WhatCouldHaveBeen">cancelled</a> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/Batman" title="/pmwiki/pmwiki.php/Franchise/Batman">Gotham by Gaslight</a></em> video game had some <a class="urllink" href="https://www.youtube.com/watch?v=65IsSRMi4i0">surprisingly great cape physics<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a>.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DynastyWarriors" title="/pmwiki/pmwiki.php/VideoGame/DynastyWarriors">Dynasty Warriors</a></em> and by extension <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SamuraiWarriors" title="/pmwiki/pmwiki.php/VideoGame/SamuraiWarriors">Samurai Warriors</a></em> had this in spades for most of their games (although it's improving with each iteration) where any character with a cape or long hair would have those parts of the character model freeze in a static horizontal position when moving forward, as noted however they are getting better with this.
+</li><li> This is the reason <a class="twikilink" href="/pmwiki/pmwiki.php/Comicbook/Spawn" title="/pmwiki/pmwiki.php/Comicbook/Spawn">Spawn</a>'s cape was turned into an axe and his chains are missing in his appearance in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SoulSeries" title="/pmwiki/pmwiki.php/VideoGame/SoulSeries">Soul Calibur 2</a></em>. Seong Mina's dress in one of her alternate costumes also tends to act ridiculously whenever she is knocked into the air.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/WatchDogs" title="/pmwiki/pmwiki.php/VideoGame/WatchDogs">Watch_Dogs</a></em> averts this. Just look at Aiden's coat! They even managed to realistically make him put his hands in his pockets, something most animators would kill themselves trying to do.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FinalFantasyIX" title="/pmwiki/pmwiki.php/VideoGame/FinalFantasyIX">Final Fantasy IX</a></em> has a cloth example in Princess Garnet's white dress, most memorably seen in the game's opening and closing <a class="twikilink" href="/pmwiki/pmwiki.php/Main/FullMotionVideo" title="/pmwiki/pmwiki.php/Main/FullMotionVideo">FMVs</a>. In the FMVs, the dress's motion flow is pretty natural, but in-game, the dress literally doesn't move. After speaking to the rest of the party at the beginning of Disc 3, Garnet steps backward and turns, and the dress stays the exact same shape. In fact, it doesn't seem like any part of her body or her clothes move at ALL in that dress, at least not below the waist.
+</li><li> From the <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/PlayStation2" title="/pmwiki/pmwiki.php/UsefulNotes/PlayStation2">PlayStation 2</a> era and onwards, <a class="twikilink" href="/pmwiki/pmwiki.php/Creator/SquareEnix" title="/pmwiki/pmwiki.php/Creator/SquareEnix">Square Enix</a> have been pretty good at averting this trope, at least in terms of what's capable with their game engines. Their games feature character with long hair, or flowing robes that aren't simply inert lumps of polygons. In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FinalFantasyX" title="/pmwiki/pmwiki.php/VideoGame/FinalFantasyX">Final Fantasy X</a></em>, <a class="twikilink" href="/pmwiki/pmwiki.php/Creator/TetsuyaNomura" title="/pmwiki/pmwiki.php/Creator/TetsuyaNomura">Tetsuya Nomura</a> made a point to challenge the visual programmers with Lulu's <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TooManyBelts" title="/pmwiki/pmwiki.php/Main/TooManyBelts">dress</a>. It works out in real-time, but in pre-rendered scenes the camera would avoid looking at her from the waist down, or have her not present at all.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/PrinceOfPersiaTheSandsOfTime" title="/pmwiki/pmwiki.php/VideoGame/PrinceOfPersiaTheSandsOfTime">Prince of Persia: The Sands of Time</a></em> averts this not on the characters themselves, but on the various tapestries, banners and curtains that you can run into and brush aside.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/PrinceOfPersia2008" title="/pmwiki/pmwiki.php/VideoGame/PrinceOfPersia2008">Prince of Persia (2008)</a></em> averts this when it comes to clothes; it is set in a windy desert, but everyone's clothes act realistically, like Elika's blouse shifting slightly but still clinging to her body. <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TheCorruption" title="/pmwiki/pmwiki.php/Main/TheCorruption">The Corruption</a> and character hair, however, both play it straight.
+</li><li> Lampshaded in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/ZorkGrandInquisitor" title="/pmwiki/pmwiki.php/VideoGame/ZorkGrandInquisitor">Zork: Grand Inquisitor</a></em>, where a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/PamphletShelf" title="/pmwiki/pmwiki.php/Main/PamphletShelf">Pamphlet Shelf</a> book on <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AllTrollsAreDifferent" title="/pmwiki/pmwiki.php/Main/AllTrollsAreDifferent">a troll-like species</a> appearing in the game comments that they are usually hairy, but "the rarer Broigmoidus C.Graphicus... is most often hairless".
+</li><li> Averted in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Nocturne" title="/pmwiki/pmwiki.php/VideoGame/Nocturne">Nocturne</a></em>. Real-time cloth physics were applied liberally to various things such as curtains and articles of clothing, and (more or less) reacted to being walked through and blown by the wind.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SenranKagura" title="/pmwiki/pmwiki.php/VideoGame/SenranKagura">Senran Kagura</a></em> has very stiff hair animation, but notably for having such a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/WorldOfBuxom" title="/pmwiki/pmwiki.php/Main/WorldOfBuxom">bouncy</a> cast, also applies to this to the girls' chests, eschewing <a class="twikilink" href="/pmwiki/pmwiki.php/Main/JigglePhysics" title="/pmwiki/pmwiki.php/Main/JigglePhysics">Jiggle Physics</a> in favor of canned animations based on what else the model is doing. In a case of <a class="twikilink" href="/pmwiki/pmwiki.php/Administrivia/TropesAreNotBad" title="/pmwiki/pmwiki.php/Administrivia/TropesAreNotBad">Tropes Are Not Bad</a>, this (and the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/PuniPlush" title="/pmwiki/pmwiki.php/Main/PuniPlush">Puni Plush</a> art style) actually makes it look <em>less</em> ridiculous than, say, <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DeadOrAlive" title="/pmwiki/pmwiki.php/VideoGame/DeadOrAlive">Dead or Alive</a></em>.
+</li><li> In the opening movie to <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Tekken" title="/pmwiki/pmwiki.php/VideoGame/Tekken">Tekken</a> 2</em>, Nina Williams has a spot which seems to expressly show Namco can avert this trope... At least in FMVs. Later games avert this by having in-engine clothing physics (of note being Jin Kazama's hoodie from <em>4</em> onwards that will fall off his head if he does something that knocks it off, like rolling backwards off the ground).
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Destiny" title="/pmwiki/pmwiki.php/VideoGame/Destiny">Destiny</a></em> seems dead set on averting this. Notably Hunters and Warlocks are given capes and coats respectively that flap around as they move. A good example is a Hunter on a Sparrow, as the cloak will billow in the breeze as the Hunter zooms around everywhere.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/Pokemon" title="/pmwiki/pmwiki.php/Franchise/Pokemon">Pokémon</a></em>:
+<ul><li> Several of the trainer classes in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/PokemonXAndY" title="/pmwiki/pmwiki.php/VideoGame/PokemonXAndY">Pokémon X and Y</a></em> are shown with curly or wavy hair in their artwork, however their overworld models show them with straight hair.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/PokemonSunAndMoon" title="/pmwiki/pmwiki.php/VideoGame/PokemonSunAndMoon">Pokémon Sun and Moon</a></em> is a bit better at this than its previous generation, but even then it keeps curls to a minimum.
+</li></ul></li><li> Despite the Victorian inspired setting and the expectation that <a class="twikilink" href="/pmwiki/pmwiki.php/Main/EveryProperLadyShouldCurtsy" title="/pmwiki/pmwiki.php/Main/EveryProperLadyShouldCurtsy">Every Proper Lady Should Curtsy</a> none of the women in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Dishonored" title="/pmwiki/pmwiki.php/VideoGame/Dishonored">Dishonored</a></em> wear dresses or skirts and keep their hair short or pinned up.
+</li><li> Any of the long hairstyles in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheMovies" title="/pmwiki/pmwiki.php/VideoGame/TheMovies">The Movies</a></em> notably don't gel with particular animations such as sharp head turns. They remain rigid while the rest of the head moves. None of the long styles ever go longer than the middle of the back presumably for this reason. This shows up in some of the outfits with long skirts and dresses - especially when the models are riding horses.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/BatmanArkhamOrigins" title="/pmwiki/pmwiki.php/VideoGame/BatmanArkhamOrigins">Batman: Arkham Origins</a></em> gave Shiva, who normally has flowing hair that reaches almost to her waist, a short bob cut. She's had similar cuts in the comics, however.
+</li><li> Any video game based on <a class="twikilink" href="/pmwiki/pmwiki.php/ComicBook/Spawn" title="/pmwiki/pmwiki.php/ComicBook/Spawn">Spawn</a> tends to hide his iconic cape unless it's in a cutscene. His chains are also absent most of the time due to this trope. However, thanks to the advancements in technology, his <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GuestFighter" title="/pmwiki/pmwiki.php/Main/GuestFighter">guest appearance</a> in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MortalKombat11" title="/pmwiki/pmwiki.php/VideoGame/MortalKombat11">Mortal Kombat 11</a></em> gives him the full package of powers during gameplay, cape and chains included.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FinalFantasyXIV" title="/pmwiki/pmwiki.php/VideoGame/FinalFantasyXIV">Final Fantasy XIV</a></em> has hair of all kinds and there's several hairstyles that are long and flowing. Robes, skirts, and poofy sleeves are also common. However, the physics in the game are very basic; shoulder length hair and some skirts or robes do move with the player's movement and can even flutter in the wind, but it's very basic movement. Hair that goes past the shoulders don't move at all and a lot of long sleeves don't flow either, which makes them look like someone put too much starch in the wash. Clipping is also extremely common with armor that has a big collar if there's long hair involved and skirts and robes can cause your feet to clip through as you run.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/BatmanVengeance" title="/pmwiki/pmwiki.php/VideoGame/BatmanVengeance">Batman: Vengeance</a></em>: Batman's cape zigzags this. It moves independently of Batman himself so that it can act realistically when he's running, climbing, or grappling. The <em>downside</em> of this is that it flaps around wildly whenever he's standing still, and it looks about as realistic as the cloth capes on the old Kenner action figures.
+</li><li> In the <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/Kirby" title="/pmwiki/pmwiki.php/Franchise/Kirby">Kirby</a></em> series, most of Meta Knight's 3D appearances avoided this by constantly depicting him with his wings and never with his cape, unless it's wrapped around him. The <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SuperSmashBros" title="/pmwiki/pmwiki.php/VideoGame/SuperSmashBros">Super Smash Bros.</a></em> series are the only games where he's constantly shown with his cape.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DonkeyKongCountryTropicalFreeze" title="/pmwiki/pmwiki.php/VideoGame/DonkeyKongCountryTropicalFreeze">Donkey Kong Country: Tropical Freeze</a></em>: According to producer Kensuke Tanabe, the developers decided to take advantage of the Wii U's power by averting this, despite highly increased development time. The E3 2013 reveal of the game saw Satoru Iwata making a special point of calling attention to DK's new fur physics.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Splatoon" title="/pmwiki/pmwiki.php/VideoGame/Splatoon">Splatoon</a></em> and <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Splatoon2" title="/pmwiki/pmwiki.php/VideoGame/Splatoon2">Splatoon 2</a></em> avert this, with Inklings' and Octolings' tentacle hair bobbing and bouncing around with every step they take (most impressive with the default <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MegaTwintails" title="/pmwiki/pmwiki.php/Main/MegaTwintails">Mega Twintails</a> on the girl). The clothing is rather tight and stiff when worn, but special attention was given to the animation of your character's shirt crumpling to the ground after you're <a class="twikilink" href="/pmwiki/pmwiki.php/Main/NonLethalKO" title="/pmwiki/pmwiki.php/Main/NonLethalKO">splatted</a>.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FireEmblemThreeHouses" title="/pmwiki/pmwiki.php/VideoGame/FireEmblemThreeHouses">Fire Emblem: Three Houses</a></em> tends to animate large clumps of hair as a single mass, moving more like a cape than hair. It's particularly noticeable with <a class="twikilink" href="/pmwiki/pmwiki.php/Main/LongHairedPrettyBoy" title="/pmwiki/pmwiki.php/Main/LongHairedPrettyBoy">Ferdinand</a>'s post-timeskip model, as his hair in the back moves as a single mass instead of individual pieces and has a tendency to float instead of resting in place. This is especially noticeable if he reclasses to a class with a more revealing outfit and/or moves his head enough, <a class="urllink" href="https://66.media.tumblr.com/a0c99ec6eeff7c70b62bcc756487b259/620479e7cfe51150-dc/s500x750/94f1e03fa5cd236dd2b67ad890dcb8c4bbb705ce.png">which can result in some rather odd views.<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a><small>◊</small>
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder5');">    Web Animation </div><div class="folder" id="folder5" isfolder="true" style="display:block;">
+<ul><li> The <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/DoctorWho" title="/pmwiki/pmwiki.php/Series/DoctorWho">Doctor Who</a></em> webcast <em>Dreamland</em> falls squarely into this trope.
+</li><li> Played with in the animated shorts based on <em>The Legend of Zelda: <a class="twikilink" href="/pmwiki/pmwiki.php/WebAnimation/TheLightOfCourage" title="/pmwiki/pmwiki.php/WebAnimation/TheLightOfCourage">The Light of Courage</a></em>. Link and Zelda's hair and clothes are completely stiff, but Ganon's robe flows <em>way too much</em>, at one point even <em>falling halfway off</em> when he moves too fast. (This was actually a mistake, but they decided to <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ThrowItIn" title="/pmwiki/pmwiki.php/Main/ThrowItIn">Throw It In!</a> because it was <a class="twikilink" href="/pmwiki/pmwiki.php/Main/RuleOfFunny" title="/pmwiki/pmwiki.php/Main/RuleOfFunny">funny</a>.)
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/WebVideo/TwoBestFriendsPlay" title="/pmwiki/pmwiki.php/WebVideo/TwoBestFriendsPlay">Two Best Friends Play</a></em>: Pat comments on this trope in several videogame playthroughs. It's hard to realistically animate a character underneath bedcovers, so Pat draws attention to all the cutscenes with characters sleeping on top of the covers (or without any covers at all). On the rare occasion that a game does shows someone sleeping under the covers, Pat will point out how unrealistic the covers look. While watching the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/OptionalSexualEncounter" title="/pmwiki/pmwiki.php/Main/OptionalSexualEncounter">Optional Sexual Encounter</a> in <em>Heavy Rain</em>, Pat quips, "They have sex behind the bed so they don't have to get underneath the covers."
+</li><li> Varies in <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/MikuMikuDance" title="/pmwiki/pmwiki.php/UsefulNotes/MikuMikuDance">MikuMikuDance</a> videos, depending on the model and who the maker is. Generally, long hair and free-flowing clothing such as skirts, coats, and scarves are handled decently as far as basic motion goes. However, medium or short hair has virtually no life whatsoever. Also, clothing doesn't exactly fold. It bends and/or clips instead.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/WebAnimation/RWBY" title="/pmwiki/pmwiki.php/WebAnimation/RWBY">RWBY</a></em>:
+<ul><li> <em>RWBY</em> tends to avoid this however — it's still noticeable that most background characters all have straight hair. Even with named characters, curls are not that common.
+</li><li> Nora originally wore a bow behind her skirt. This was scrapped after volume 1 because the bow was hard to animate.
+</li><li> In volume 7, Blake's hair lost its curl when she received a haircut. Jaune's wavy hair also looks rough in animation.
+</li></ul></li><li> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AvertedTrope" title="/pmwiki/pmwiki.php/Main/AvertedTrope">Averted to a seriously impressive degree</a> with the various CGI <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AnimalisticAbomination" title="/pmwiki/pmwiki.php/Main/AnimalisticAbomination">interdimensional animal creatures</a> of <em><a class="twikilink" href="/pmwiki/pmwiki.php/WebVideo/SatelliteCity" title="/pmwiki/pmwiki.php/WebVideo/SatelliteCity">Satellite City</a></em>, all the more impressive because the animation is primarily done by one guy working alone. The vast majority of the characters, with only a few exceptions, are seriously fluffy demon-creatures who all have either a thick coating of fur, long human-like hair, some form of flowing human clothing, or all of the above. They can even be seen breathing subtly, and getting visibly soaked through in places when there's a light rain. There's still not a whole lot of movement in the fur, but it's well-justified since they <a class="twikilink" href="/pmwiki/pmwiki.php/Main/JustifiedTrope" title="/pmwiki/pmwiki.php/Main/JustifiedTrope">spend most of their time inside where there's no wind.</a>
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder6');">    Western Animation </div><div class="folder" id="folder6" isfolder="true" style="display:block;">
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/AvatarTheLastAirbender" title="/pmwiki/pmwiki.php/Franchise/AvatarTheLastAirbender">Avatar: The Last Airbender</a></em>:
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/AvatarTheLastAirbender" title="/pmwiki/pmwiki.php/WesternAnimation/AvatarTheLastAirbender">Avatar: The Last Airbender</a></em>: Not CGI, but Katara's "hair loopies" were opted over overly-long hair because they were easier to animate.
+</li><li> Similarly, in the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SequelSeries" title="/pmwiki/pmwiki.php/Main/SequelSeries">Sequel Series</a> <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/TheLegendOfKorra" title="/pmwiki/pmwiki.php/WesternAnimation/TheLegendOfKorra">The Legend of Korra</a></em> early artwork for Kya showed that she was supposed to have dreadlocks. In the final product she just has straight hair because it was easier to animate.
+</li></ul></li><li> One of the trope's first widespread sights was in <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/JonnyQuestTheRealAdventures" title="/pmwiki/pmwiki.php/WesternAnimation/JonnyQuestTheRealAdventures">Jonny Quest: The Real Adventures</a></em>. Whenever the characters entered the virtual Questworld, they would wear form-fitting armor instead of clothes, and due to the animation techniques, hair would look like a sculpted helmet, flow be damned.
+</li><li> Various shows by <a class="twikilink" href="/pmwiki/pmwiki.php/Creator/MainframeEntertainment" title="/pmwiki/pmwiki.php/Creator/MainframeEntertainment">Mainframe Entertainment</a> had to use this trope:
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/ReBoot" title="/pmwiki/pmwiki.php/WesternAnimation/ReBoot">ReBoot</a></em> is set in a computer, so everyone wears skintight clothes. It wasn't until later seasons that female characters even <em>had</em> long hair.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/ShadowRaiders" title="/pmwiki/pmwiki.php/WesternAnimation/ShadowRaiders">Shadow Raiders</a></em> is set in space, with aliens made of rock, magma, who are insects, reptiles or robots. So no-one even <em>has</em> hair, nor wear billowy clothes. Only the reptiles of Bone have moving membranes/ridges on their backs, which do move along with them. A few rare scenes features static fabrics in the throne room of planet Fire.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/BeastWars" title="/pmwiki/pmwiki.php/WesternAnimation/BeastWars">Beast Wars</a></em> loves this trope. The big advantage to having a show with a cast composed of robots is that you do away with the issue of clothes and hair right from the get go. Of course the character models look like they're just composed of geometric shapes; they're all robots! Problems arise when you look at the animal alt-modes and the real-life animals they run across, fur and feathers might as well be sculpted on for all they move.
+</li><li> Despite the technology only being a couple of years more advanced than for its forerunner, <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/BeastMachines" title="/pmwiki/pmwiki.php/WesternAnimation/BeastMachines">Beast Machines</a></em> gave Blackarachnia a big clump of black hair in her robot mode. Thankfully, due to the way her forehead was designed, the animators didn't have to bother with the front. Then, there's also Nightscream's infamous floppy hair-streak. Essentially, although they are for the most part animated to look floppy, they look more like <a class="twikilink" href="/pmwiki/pmwiki.php/Main/UncannyValley" title="/pmwiki/pmwiki.php/Main/UncannyValley">weird bits of flesh coming out of their head</a>, as they never separate into strands.
+</li><li> All female characters in <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/SpiderManTheNewAnimatedSeries" title="/pmwiki/pmwiki.php/WesternAnimation/SpiderManTheNewAnimatedSeries">Spider-Man: The New Animated Series</a></em> have their hair either in ponytails or cut short, including MJ, who rarely has short hair in the comics. Peter Parker was also supposed to wear baggier clothes to hide his super-strong musculature but he wears moderately tight clothing in the final product.
+</li></ul></li><li> The <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/DonkeyKongCountry" title="/pmwiki/pmwiki.php/WesternAnimation/DonkeyKongCountry">Donkey Kong Country</a></em> adaptation has a fair amount of this, but the most obvious is King K. Rool, who had an ankle-length cape in the game. In the series, it was shortened to the point that it seems to be about the size of a placemat.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/VeggieTales" title="/pmwiki/pmwiki.php/WesternAnimation/VeggieTales">VeggieTales</a></em> characters were designed as vegetables because they were basically spheres with a few extra features. Easy to animate. At least that's how it began. While the later character designs are largely the same, the subtle details have changed quite a bit. Larry now looks more like an actual cucumber, with bumps and color striations. The animation has gotten more sophisticated, but why would the animators <em>want</em> to do something more complex when what we have now works so well? Giving Bob and Larry hands at this point would make about as much sense as putting a drop-tile ceiling on the <a class="twikilink" href="/pmwiki/pmwiki.php/Art/SistineChapel" title="/pmwiki/pmwiki.php/Art/SistineChapel">Sistine Chapel</a>. <br/><br/>Clothes or costumes that the Veggies wear, however — notably shirts — tend to stick rigidly to their bodies, because this simplifies the animator's job tremendously. Occasionally this results in strange-looking object behaviors — like the paper bag that Larry wears over his head in the counter-top bookend scenes for "Minnesota Cuke and the Search for Noah's Umbrella," which sounds like a paper bag but moves like a rubber artist's eraser.
+</li><li> The CGI animation of <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/StarWarsTheCloneWars" title="/pmwiki/pmwiki.php/WesternAnimation/StarWarsTheCloneWars">Star Wars: The Clone Wars</a></em> was initially unfortunately notorious for this. A common line by critics was that the characters' hair looked like it was chiseled out of wood. Especially visible on Obi-Wan, whose rock beard has such a sharp edge to it he might be able to kill someone by chin-butting them. Aside from hair, the Jedi all wear gauntlets so the animators don't have to animate the flowing sleeves presented in the live-action theatrical films. The Jedi robes also have no sleeves and are basically hooded cloaks. The animators thought that it was very difficult animating Ventress with her skirt on during fight scenes. As <em>The Clone Wars</em> progressed, new models for the characters were introduced that did have flowing hair and clothes. By the time of the second season, the animation of <em>The Clone Wars</em> actually looked better than how it looked back in its pilot film.
+</li><li> Usually played straight in <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/CodeLyoko" title="/pmwiki/pmwiki.php/WesternAnimation/CodeLyoko">Code Lyoko</a></em>, especially in season 1. And a rare justified case, because they are actually in a virtual space, so the CGI, with or without flow, is what the characters <em>actually</em> see. The Lyoko Avatars have all blocky hair (including Yumi's, which is in a tight bun) and clingy clothes. By season 2, the animators try adding a little flow, like with the occasional <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DramaticWind" title="/pmwiki/pmwiki.php/Main/DramaticWind">Dramatic Wind</a>, or Ulrich's hair ribbon flapping behind him when he's riding the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/CoolBike" title="/pmwiki/pmwiki.php/Main/CoolBike">Overbike</a>. By season 4, Yumi has loose hair that certainly flow with her <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SheFu" title="/pmwiki/pmwiki.php/Main/SheFu">various acrobatics</a>, though the clothes are even more <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SensualSpandex" title="/pmwiki/pmwiki.php/Main/SensualSpandex">skintight</a>.
+</li><li> <a class="twikilink" href="/pmwiki/pmwiki.php/Creator/DreamworksAnimation" title="/pmwiki/pmwiki.php/Creator/DreamworksAnimation">Dreamworks Animation</a>:
+<ul><li> Very egregious in movie-to-series adaptations like <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/KungFuPandaLegendsOfAwesomeness" title="/pmwiki/pmwiki.php/WesternAnimation/KungFuPandaLegendsOfAwesomeness">Kung Fu Panda: Legends of Awesomeness</a></em> and <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/ThePenguinsOfMadagascar" title="/pmwiki/pmwiki.php/WesternAnimation/ThePenguinsOfMadagascar">The Penguins of Madagascar</a></em>, where the painstaking detail in each fur and feather for the animal characters in the movies is noticeably absent, replaced by smooth bodies and static clumps, like Alex's mane when he briefly appeared as a spirit guide to an amnesiac Skipper in one episode. For <em>Kung Fu Panda</em>, individual hairs are placed in, but they are so spaced apart or few between that it becomes very noticeable when using close-up shots.
+</li><li> However, Dreamworks does manage to avert this in the show <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/DragonsRidersOfBerk" title="/pmwiki/pmwiki.php/WesternAnimation/DragonsRidersOfBerk">Dragons: Riders of Berk</a></em>. The quality still isn't the same as the film, but it still manages to work. Hair and clothes retain their texture and aren't all stiff, though some of the fur clothing pieces have either had the fur shortened or removed.
+</li><li> And played again in <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/MonstersVsAliens2013" title="/pmwiki/pmwiki.php/WesternAnimation/MonstersVsAliens2013">Monsters vs. Aliens</a></em>, where Susan/Ginormica's hair is very smooth, static and tied in a ponytail.
+</li></ul></li><li> Averted in some instances, yet played straight in others, in <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/TeenageMutantNinjaTurtles2012" title="/pmwiki/pmwiki.php/WesternAnimation/TeenageMutantNinjaTurtles2012">Teenage Mutant Ninja Turtles (2012)</a></em>. The Turtles' bandannas are often seen flapping around in the breeze during combat. However, Shredder never wears his cape during battle, though this is justified as <a class="twikilink" href="/pmwiki/pmwiki.php/Main/CapeSnag" title="/pmwiki/pmwiki.php/Main/CapeSnag">they can be a liability</a> in battle.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/MonsterBusterClub" title="/pmwiki/pmwiki.php/WesternAnimation/MonsterBusterClub">Monster Buster Club</a></em> follows the CGI standard of characters having blocks for hair and tight clothes. However, it also subverts somewhat the trope with the hair not being static but waving along with movements (especially the bangs, locks or tips).
+</li><li> Very obvious on the humans in <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/TransformersPrime" title="/pmwiki/pmwiki.php/WesternAnimation/TransformersPrime">Transformers: Prime</a></em>; their hair hardly moves at all, giving the impression that they're wearing way too much hair gel.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/DonkeyKongCountry" title="/pmwiki/pmwiki.php/WesternAnimation/DonkeyKongCountry">Donkey Kong Country</a></em> altered King K. Rool's long cape from the games into a comedically short one that goes just past his shoulders. Besides that, Dixie's ponytail was shortened, Candy's shoulder-length hair was changed to an updo, and all of the Kritters' tails were removed.
+</li><li> This is made less obvious in <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/MilesFromTomorrowland" title="/pmwiki/pmwiki.php/WesternAnimation/MilesFromTomorrowland">Miles from Tomorrowland</a></em>; despite the space setting that makes shorter, stiffer fabric and hair feel more natural, materials on these characters do move lightly from time to time.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/StarWarsRebels" title="/pmwiki/pmwiki.php/WesternAnimation/StarWarsRebels">Star Wars Rebels</a></em> has it both ways. The characters have sections of hair that move with the wind and action, but the rest is solid even when it shouldn't be. They avoid loose clothing, but it sometimes moves lightly anyway. Averted completely with Darth Vader's cape, which eats up a considerable amount of the clothing budget every episode it's in. The hard plastic armor that the clones and storm troopers are famed for are also too flexible, making it too obvious that they were simply painted onto the very flexible human model underneath, rather than being made of its composite parts.
+</li><li> Since Flash animating wavy hair is difficult, in <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/SpacePOP" title="/pmwiki/pmwiki.php/WesternAnimation/SpacePOP">SpacePOP</a></em> Rhea's hair is thinner and shorter than in the illustrations and Athena's hair is always tied into a bun instead of loose. Luna's long hair is separately animated from the rest of her.
+</li><li> The Italian cartoon <em>Leonardo</em> features an heavy example of this trope. <a class="urllink" href="http://media.tvblog.it/l/leo/leonardo2.jpg">Season 1<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a><small>◊</small> was hand-drawn and featured characters with long, flowing hair and clothing, while <a class="urllink" href="http://media.famigliacristiana.it/2015/9/leonardo-expo_gioconda-leonardo-e-lorenzo-ep3-la-gara-di-torte_1518883.jpg">Season 2<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a><small>◊</small> was done in CGI and features the same characters with tied up hair and more fitting clothing (not to mention that <a class="twikilink" href="/pmwiki/pmwiki.php/Main/YouDontLookLikeYou" title="/pmwiki/pmwiki.php/Main/YouDontLookLikeYou">the character designs barely resemble the old ones</a>).
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/ReadyJetGo" title="/pmwiki/pmwiki.php/WesternAnimation/ReadyJetGo">Ready Jet Go!</a></em>, most of the characters wear pants, and most of the females' hair only reaches their shoulders because animating flowing skirts/hair would be difficult on this show's seemingly low-budget in the earlier episodes. Lillian wears a dress, but it's very still. Mindy's pigtails are an exception, as they're often seen moving and bouncing with the slightest movements of her head, especially in the later episodes (starting with "Solar System Bake-Off"), which all have a higher budget, so all the characters have a better flow.
+</li></ul></div>
+<hr/>
+</div>
+<div class="square_ad footer-article-ad main_2" data-isolated="0"></div>
+<div class="section-links" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<div class="titles">
+<div><h3 class="text-center text-uppercase">Previous</h3></div>
+<div><h3 class="text-center text-uppercase">Index</h3></div>
+<div><h3 class="text-center text-uppercase">Next</h3></div>
+</div>
+<div class="links">
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/HeroTrackingFailure">Hero-Tracking Failure</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/ImageSource/StarWars">ImageSource/Star Wars</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/StylishProtectionGear">Stylish Protection Gear</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/NarrativeShapeshifting">Narrative Shapeshifting</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/AnimationTropes">Animation Tropes</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/NotQuiteStarring">Not Quite Starring</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/NoAnimalsWereHarmed">No Animals Were Harmed</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/UndeadHorseTrope">Undead Horse Trope</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/NonSingingVoice">Non-Singing Voice</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="outer_ads_by_salon_wrapper" id="exco_player_insert_div">
+</div>
+</article>
+<div id="main-content-sidebar"><div class="sidebar-item display-options">
+<ul class="sidebar display-toggles">
+<li>Show Spoilers <div class="display-toggle show-spoilers" id="sidebar-toggle-showspoilers"></div></li>
+<li>Night Vision <div class="display-toggle night-vision" id="sidebar-toggle-nightvision"></div></li>
+<li>Sticky Header <div class="display-toggle sticky-header" id="sidebar-toggle-stickyheader"></div></li>
+<li>Wide Load <div class="display-toggle wide-load" id="sidebar-toggle-wideload"></div></li>
+</ul>
+<script>updateDesktopPrefs();</script>
+</div>
+<div class="sidebar-item ad sb-ad-unit">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_2"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_2'); });</script> </div>
+</div></div>
+<div class="sidebar-item quick-links" itemtype="http://schema.org/SiteNavigationElement">
+<p class="sidebar-item-title" data-title="Important Links">Important Links</p>
+<div class="padded">
+<a href="/pmwiki/query.php?type=att">Ask The Tropers</a>
+<a href="/pmwiki/query.php?type=tf">Trope Finder</a>
+<a href="/pmwiki/query.php?type=ykts">You Know That Show...</a>
+<a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a>
+<a href="/pmwiki/review_activity.php">Reviews</a>
+<a data-modal-target="login" href="/pmwiki/lbs.php">Live Blogs</a>
+<a href="/pmwiki/ad-free-subscribe.php">Go Ad Free!</a> </div>
+</div>
+<div class="sidebar-item sb-ad-unit">
+<div class="sidebar-section">
+<div class="square_ad ad-size-300x600 ad-section text-center">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_3"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_3'); });</script> </div>
+</div> </div>
+</div>
+</div>
+<div class="sidebar-item">
+<p class="sidebar-item-title" data-title="Crucial Browsing">Crucial Browsing</p>
+<ul class="padded font-s" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><a data-click-toggle="active" href="javascript:void(0);">Genre</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/ActionAdventureTropes" title="Main/ActionAdventureTropes">Action Adventure</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ComedyTropes" title="Main/ComedyTropes">Comedy</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CommercialsTropes" title="Main/CommercialsTropes">Commercials</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CrimeAndPunishmentTropes" title="Main/CrimeAndPunishmentTropes">Crime &amp; Punishment</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DramaTropes" title="Main/DramaTropes">Drama</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/HorrorTropes" title="Main/HorrorTropes">Horror</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LoveTropes" title="Main/LoveTropes">Love</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NewsTropes" title="Main/NewsTropes">News</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ProfessionalWrestling" title="Main/ProfessionalWrestling">Professional Wrestling</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SpeculativeFictionTropes" title="Main/SpeculativeFictionTropes">Speculative Fiction</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SportsStoryTropes" title="Main/SportsStoryTropes">Sports Story</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/WarTropes" title="Main/WarTropes">War</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Media</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/Media" title="Main/Media">All Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/AnimationTropes" title="Main/AnimationTropes">Animation (Western)</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Anime" title="Main/Anime">Anime</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ComicBookTropes" title="Main/ComicBookTropes">Comic Book</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FanFic" title="FanFic/FanFics">Fan Fics</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Film" title="Main/Film">Film</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/GameTropes" title="Main/GameTropes">Game</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Literature" title="Main/Literature">Literature</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MusicAndSoundEffects" title="Main/MusicAndSoundEffects">Music And Sound Effects</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NewMediaTropes" title="Main/NewMediaTropes">New Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/PrintMediaTropes" title="Main/PrintMediaTropes">Print Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Radio" title="Main/Radio">Radio</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SequentialArt" title="Main/SequentialArt">Sequential Art</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TabletopGames" title="Main/TabletopGames">Tabletop Games</a></li>
+<li><a href="/pmwiki/pmwiki.php/UsefulNotes/Television" title="Main/Television">Television</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Theater" title="Main/Theater">Theater</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/VideogameTropes" title="Main/VideogameTropes">Videogame</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Webcomics" title="Main/Webcomics">Webcomics</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Narrative</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/UniversalTropes" title="Main/UniversalTropes">Universal</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/AppliedPhlebotinum" title="Main/AppliedPhlebotinum">Applied Phlebotinum</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CharacterizationTropes" title="Main/CharacterizationTropes">Characterization</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Characters" title="Main/Characters">Characters</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CharactersAsDevice" title="Main/CharactersAsDevice">Characters As Device</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Dialogue" title="Main/Dialogue">Dialogue</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Motifs" title="Main/Motifs">Motifs</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NarrativeDevices" title="Main/NarrativeDevices">Narrative Devices</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Paratext" title="Main/Paratext">Paratext</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Plots" title="Main/Plots">Plots</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Settings" title="Main/Settings">Settings</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Spectacle" title="Main/Spectacle">Spectacle</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Other Categories</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/BritishTellyTropes" title="Main/BritishTellyTropes">British Telly</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TheContributors" title="Main/TheContributors">The Contributors</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CreatorSpeak" title="Main/CreatorSpeak">Creator Speak</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Creators" title="Main/Creators">Creators</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DerivativeWorks" title="Main/DerivativeWorks">Derivative Works</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LanguageTropes" title="Main/LanguageTropes">Language</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LawsAndFormulas" title="Main/LawsAndFormulas">Laws And Formulas</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ShowBusiness" title="Main/ShowBusiness">Show Business</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SplitPersonalityTropes" title="Main/SplitPersonalityTropes">Split Personality</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/StockRoom" title="Main/StockRoom">Stock Room</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TropeTropes" title="Main/TropeTropes">Trope</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Tropes" title="Main/Tropes">Tropes</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TruthAndLies" title="Main/TruthAndLies">Truth And Lies</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TruthInTelevision" title="Main/TruthInTelevision">Truth In Television</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Topical Tropes</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/BetrayalTropes" title="Main/BetrayalTropes">Betrayal</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CensorshipTropes" title="Main/CensorshipTropes">Censorship</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CombatTropes" title="Main/CombatTropes">Combat</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DeathTropes" title="Main/DeathTropes">Death</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FamilyTropes" title="Main/FamilyTropes">Family</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FateAndProphecyTropes" title="Main/FateAndProphecyTropes">Fate And Prophecy</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FoodTropes" title="Main/FoodTropes">Food</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/HolidayTropes" title="Main/HolidayTropes">Holiday</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MemoryTropes" title="Main/MemoryTropes">Memory</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MoneyTropes" title="Main/MoneyTropes">Money</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MoralityTropes" title="Main/MoralityTropes">Morality</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/PoliticsTropes" title="Main/PoliticsTropes">Politics</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ReligionTropes" title="Main/ReligionTropes">Religion</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SchoolTropes" title="Main/SchoolTropes">School</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="sidebar-item showcase">
+<p class="sidebar-item-title" data-title="Community Showcase">Community Showcase <a class="bubble float-right hover-blue" href="/pmwiki/showcase.php">More</a></p>
+<p class="community-showcase">
+<a href="https://sharetv.com/shows/echo_chamber" onclick="trackOutboundLink('https://sharetv.com/shows/echo_chamber');" target="_blank">
+<img alt="" class="lazy-image" data-src="/images/communityShowcase-echochamber.jpg"/></a>
+<a href="/pmwiki/pmwiki.php/Webcomic/TwistedTropes">
+<img alt="" class="lazy-image" data-src="/img/howlandsc-side.jpg"/></a>
+</p>
+</div>
+<div class="sidebar-item sb-ad-unit" id="stick-cont">
+<div class="sidebar-section" id="stick-bar">
+<div class="square_ad ad-size-300x600 ad-section text-center">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_4"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_4'); });</script> </div>
+</div> </div>
+</div>
+</div>
+</div>
+</div>
+<div class="action-bar tablet-off" id="action-bar-bottom">
+<a class="scroll-to-top dead-button" href="#top-of-page" onclick="$('html, body').animate({scrollTop : 0},500);">Top</a>
+</div>
+</div>
+<div class="proper-ad-unit ad-sticky">
+<div id="proper-ad-tvtropes_sticky_ad"> <script>propertag.cmd.push(function() { proper_display('tvtropes_sticky_ad'); });</script> </div>
+</div>
+<footer id="main-footer">
+<div id="main-footer-inner">
+<div class="footer-left">
+<a class="img-link" href="/"><img alt="TV Tropes" class="lazy-image" data-src="/img/tvtropes-footer-logo.png" title="TV Tropes"/></a>
+<form action="index.html" class="navbar-form newsletter-signup validate modal-replies" data-ajax-get="/ajax/subscribe_email.php" id="cse-search-box-mobile" name="" role="">
+<button class="btn-submit newsletter-signup-submit-button" id="subscribe-btn" type="submit"><i class="fa fa-paper-plane"></i></button>
+<input class="form-control" id="subscription-email" name="q" placeholder="Subscribe" size="31" type="text" validate-type="email" value=""/>
+</form>
+<ul class="social-buttons">
+<li><a class="btn fb" href="https://www.facebook.com/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-facebook']);" target="_blank"><i class="fa fa-facebook"></i></a></li>
+<li><a class="btn tw" href="https://www.twitter.com/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-twitter']);" target="_blank"><i class="fa fa-twitter"></i></a> </li>
+<li><a class="btn rd" href="https://www.reddit.com/r/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-reddit']);" target="_blank"><i class="fa fa-reddit-alien"></i></a></li>
+</ul>
+</div>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">TVTropes</h4></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Administrivia">About TVTropes</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TheGoalsOfTVTropes">TVTropes Goals</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TheTropingCode">Troping Code</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TVTropesCustoms">TVTropes Customs</a></li>
+<li><a href="/pmwiki/pmwiki.php/JustForFun/TropesOfLegend">Tropes of Legend</a></li>
+<li><a href="/pmwiki/ad-free-subscribe.php">Go Ad-Free</a></li>
+</ul>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">Community</h4></li>
+<li><a href="/pmwiki/query.php?type=att">Ask The Tropers</a></li>
+<li><a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a></li>
+<li><a href="/pmwiki/query.php?type=tf">Trope Finder</a></li>
+<li><a href="/pmwiki/query.php?type=ykts">You Know That Show</a></li>
+<li><a data-modal-target="login" href="/pmwiki/lbs.php">Live Blogs</a></li>
+<li><a href="/pmwiki/review_activity.php">Reviews</a></li>
+<li><a href="/pmwiki/topics.php">Forum</a></li>
+</ul>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">Tropes HQ</h4></li>
+<li><a href="/pmwiki/about.php">About Us</a></li>
+<li><a href="/pmwiki/contact.php">Contact Us</a></li>
+<li><a href="/pmwiki/dmca.php">DMCA Notice</a></li>
+<li><a href="/pmwiki/privacypolicy.php">Privacy Policy</a></li>
+</ul>
+</div>
+<div class="text-center gutter-top gutter-bottom tablet-on" id="desktop-on-mobile-toggle">
+<a href="/pmwiki/switchDeviceCss.php?mobileVersion=1" rel="nofollow">Switch to <span class="txt-desktop">Desktop</span><span class="txt-mobile">Mobile</span> Version</a>
+</div>
+<div class="legal">
+<p>TVTropes is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License. <br/>Permissions beyond the scope of this license may be available from <a href="mailto:thestaff@tvtropes.org" rel="cc:morePermissions" xmlns:cc="http://creativecommons.org/ns#"> thestaff@tvtropes.org</a>.</p>
+<br/>
+<div class="privacy_wrapper">
+</div>
+</div>
+</footer>
+<style>
+      div.fc-ccpa-root {
+        position: absolute !important;
+        bottom: 93px !important;
+        margin: auto !important;
+        width: 100% !important;
+        z-index: 9999 !important;
+      }
+      .fc-ccpa-root .fc-dns-dialog .fc-dns-link p{
+        outline: none !important;
+        text-decoration: underline !important;
+        font-size: .7em !important;
+        font-family: sans-serif !important;
+      }
+      .fc-ccpa-root .fc-dns-dialog .fc-dns-link .fc-button-background {
+        background: none !important;
+      }
+    </style>
+<div class="full-screen" id="_pm_videoViewer">
+<a class="close" href="#close" id="_pm_videoViewer-close"></a>
+<div class="_pmvv-body">
+<div class="_pmvv-vidbox">
+<video class="video-js vjs-default-skin vjs-16-9" data-video-id="" id="overlay-video-player-box">
+</video>
+<div class="_pmvv-vidbox-desc">
+<h1 id="overlay-title"></h1>
+<p class="_pmvv-vidbox-descTxt" id="overlay-descrip">
+</p>
+<div class="rating-row" data-video-id="">
+<input name="is_logged_in" type="hidden" value="0"/>
+<p>How well does it match the trope?</p>
+<div id="star-rating-group">
+<div class="trope-rate">
+<input id="lamp5" name="rate" type="radio" value="5"/>
+<label for="lamp5" title="Absolutely"></label>
+<input id="lamp4" name="rate" type="radio" value="4"/>
+<label for="lamp4" title="Yes"></label>
+<input id="lamp3" name="rate" type="radio" value="3"/>
+<label for="lamp3" title="Kind of"></label>
+<input id="lamp2" name="rate" type="radio" value="2"/>
+<label for="lamp2" title="Not really"></label>
+<input id="lamp1" name="rate" type="radio" value="1"/>
+<label for="lamp1" title="No"></label>
+</div>
+<div id="star-rating-total">
+</div>
+</div>
+</div>
+<div class="example-media-row">
+<div class="example-overlay">
+<p>Example of:</p>
+<div id="overlay-trope"> / </div>
+</div>
+<div class="media-sources-overlay example-overlay">
+<p>Media sources:</p>
+<div id="overlay-media"> / </div>
+</div>
+</div>
+<p class="_pmvv-vidbox-stats text-right font-s" style="padding-top:8px; border-top: solid 1px rgba(255,255,255,0.2)">
+<a class="float-right" data-modal-target="login" href="#video-feedback">Report</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+        window.special_ops =  {
+            member : 'no',
+            isolated : 0,
+            tags : ['videogame']
+        };
+    </script>
+<script type="text/javascript">
+
+        var cleanCreativeEnabled = "";
+        var donation = "";
+        var live_ads = "1";
+        var img_domain = "https://static.tvtropes.org";
+        var snoozed = cookies.read('snoozedabm');
+        var snoozable = "";
+
+        if (adsRemovedWith) {
+            live_ads = 0;
+        }
+
+        var elem = document.createElement('script');
+        elem.async = true;
+
+        elem.src = '/design/assets/bundle.js?rev=c58d8df02f09262390bbd03db7921fc35c6af306';
+
+        elem.onload = function() {
+                                 }
+        document.getElementsByTagName('head')[0].appendChild(elem);
+
+    </script>
+<script type="text/javascript">
+      function send_analytics_event(user_type, donation){
+          // if(user_type == 'uncached' || user_type == 'cached'){
+          //   ga('send', 'event', 'caching', 'load', user_type, {'nonInteraction': 1});
+          //   return;
+          // }
+          var event_name = user_type;
+
+          if(donation == 'true'){
+              event_name += "_donation"
+          }else if(typeof(valid_user) == 'undefined'){
+              event_name += "_blocked"
+          }else if(valid_user == true){
+              event_name += "_unblocked";
+          }else{
+              event_name = "_unknown"
+          }
+          ga('send', 'event', 'ads', 'load', event_name, {'nonInteraction': 1});
+      }
+
+    
+    send_analytics_event("guest", "false");
+      </script>
+</body>
+</html>

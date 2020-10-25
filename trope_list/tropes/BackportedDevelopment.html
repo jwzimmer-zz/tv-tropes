@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Backported Development - TV Tropes</title>
+<meta content="The Backported Development trope as used in popular culture. Sometimes, characters develop over the course of a show. And sometimes, shows will present new …" name="description"/>
+<link href="https://tvtropes.org/pmwiki/pmwiki.php/Main/BackportedDevelopment" rel="canonical"/>
+<link href="/img/icons/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="@tvtropes" name="twitter:site"/>
+<meta content="@tvtropes" name="twitter:owner"/>
+<meta content="Backported Development - TV Tropes" name="twitter:title"/>
+<meta content="The Backported Development trope as used in popular culture. Sometimes, characters develop over the course of a show. And sometimes, shows will present new …" name="twitter:description"/>
+<meta content="https://static.tvtropes.org/logo_blue_small.png" name="twitter:image:src"/>
+<meta content="TV Tropes" property="og:site_name"/>
+<meta content="en_US" property="og:locale"/>
+<meta content="https://www.facebook.com/tvtropes" property="article:publisher"/>
+<meta content="Backported Development - TV Tropes" property="og:title"/>
+<meta content="website" property="og:type"/>
+<meta content="https://tvtropes.org/pmwiki/pmwiki.php/Main/BackportedDevelopment" property="og:url"/>
+<meta content="https://static.tvtropes.org/logo_blue_small.png" property="og:image"/>
+<meta content="Sometimes, characters develop over the course of a show. And sometimes, shows will present new scenes from earlier time periods. And sometimes, characters in a flashback (or a prequel) will exhibit character unlike the way they acted before the …" property="og:description"/>
+<link href="/img/icons/apple-icon-57x57.png" rel="apple-touch-icon" sizes="57x57" type="image/png"/>
+<link href="/img/icons/apple-icon-60x60.png" rel="apple-touch-icon" sizes="60x60" type="image/png"/>
+<link href="/img/icons/apple-icon-72x72.png" rel="apple-touch-icon" sizes="72x72" type="image/png"/>
+<link href="/img/icons/apple-icon-76x76.png" rel="apple-touch-icon" sizes="76x76" type="image/png"/>
+<link href="/img/icons/apple-icon-114x114.png" rel="apple-touch-icon" sizes="114x114" type="image/png"/>
+<link href="/img/icons/apple-icon-120x120.png" rel="apple-touch-icon" sizes="120x120" type="image/png"/>
+<link href="/img/icons/apple-icon-144x144.png" rel="apple-touch-icon" sizes="144x144" type="image/png"/>
+<link href="/img/icons/apple-icon-152x152.png" rel="apple-touch-icon" sizes="152x152" type="image/png"/>
+<link href="/img/icons/apple-icon-180x180.png" rel="apple-touch-icon" sizes="180x180" type="image/png"/>
+<link href="/img/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/img/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/img/icons/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png"/>
+<link href="/img/icons/favicon-192x192.png" rel="icon" sizes="192x192" type="image/png"/>
+<meta content="width=device-width, initial-scale=1" id="viewport" name="viewport"/>
+<script>
+                var propertag = {};
+                propertag.cmd = [];
+            </script>
+<link href="/design/assets/bundle.css?rev=c58d8df02f09262390bbd03db7921fc35c6af306" rel="stylesheet"/>
+<script>
+                function object(objectId) {
+                    if (document.getElementById && document.getElementById(objectId)) {
+                        return document.getElementById(objectId);
+                    } else if (document.all && document.all(objectId)) {
+                        return document.all(objectId);
+                    } else if (document.layers && document.layers[objectId]) {
+                        return document.layers[objectId];
+                    } else {
+                        return false;
+                    }
+                }
+
+                // JAVASCRIPT COOKIES CODE: for getting and setting user viewing preferences
+                var cookies = {
+                    create: function (name, value, days2expire, path) {
+                        var date = new Date();
+                        date.setTime(date.getTime() + (days2expire * 24 * 60 * 60 * 1000));
+                        var expires = date.toUTCString();
+                        document.cookie = name + '=' + value + ';' + 'expires=' + expires + ';' + 'path=' + path + ';';
+                    },
+										createWithExpire: function(name, value, expires, path) {
+												document.cookie = name + '=' + value + ';' + 'expires=' + expires + ';' + 'path=' + path + ';';
+										},
+                    read: function (name) {
+                        var cookie_value = "",
+                            current_cookie = "",
+                            name_expr = name + "=",
+                            all_cookies = document.cookie.split(';'),
+                            n = all_cookies.length;
+
+                        for (var i = 0; i < n; i++) {
+                            current_cookie = all_cookies[i].trim();
+                            if (current_cookie.indexOf(name_expr) === 0) {
+                                cookie_value = current_cookie.substring(name_expr.length, current_cookie.length);
+                                break;
+                            }
+                        }
+                        return cookie_value;
+                    },
+                    update: function (name, val) {
+                        this.create(name, val, 300, "/");
+                    },
+                    remove: function (name) {
+                        document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
+                    }
+                };
+
+                function updateUserPrefs() {
+                    //GENERAL: detect and set browser, if not cookied (will be treated like a user-preference and added to the #user-pref element)
+                    if( !cookies.read('user-browser') ){
+                        var broswer = '';
+
+                        if(navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPod/i) ){
+                            browser = 'iOS';
+                        } else if (/Opera[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'opera';
+                        } else if (/MSIE (\d+\.\d+);/.test(navigator.userAgent)) {
+                            browser = 'MSIE';
+                        } else if (/Navigator[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'netscape';
+                        } else if (/Chrome[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'chrome';
+                        } else if (/Safari[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'safari';
+                            /Version[\/\s](\d+\.\d+)/.test(navigator.userAgent);
+                            browserVersion = new Number(RegExp.$1);
+                        } else if (/Firefox[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'firefox';
+                        } else {
+                            browser = 'internet_explorer';
+                        }
+                        cookies.create('user-browser',browser,1,'/');
+                        document.getElementById('user-prefs').classList.add('browser-' + browser);
+                    } else {
+                        document.getElementById('user-prefs').classList.add('browser-' + cookies.read('user-browser'));
+                    }
+
+                    //update user preference settings
+                    if (cookies.read('wide-load') !== '') document.getElementById('user-prefs').classList.add('wide-load');
+                    if (cookies.read('night-vision') !== '') document.getElementById('user-prefs').classList.add('night-vision');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('user-prefs').classList.add('sticky-header');
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('user-prefs').classList.add('show-spoilers');
+                    if (cookies.read('folders-open') !== '') document.getElementById('user-prefs').classList.add('folders-open');
+                    if (cookies.read('lefthand-sidebar') !== '') document.getElementById('user-prefs').classList.add('lefthand-sidebar');
+                    if (cookies.read('highlight-links') !== '') document.getElementById('user-prefs').classList.add('highlight-links');
+                    if (cookies.read('forum-gingerbread') !== '') document.getElementById('user-prefs').classList.add('forum-gingerbread');
+                    if (cookies.read('shared-avatars') !== '') document.getElementById('user-prefs').classList.add('shared-avatars');
+                    if (cookies.read('new-search') !== '') document.getElementById('user-prefs').classList.add('new-search');
+                    if (cookies.read('stop-auto-play-video') !== '') document.getElementById('user-prefs').classList.add('stop-auto-play-video');
+
+                    //desktop view on mobile
+                    if (cookies.read('desktop-on-mobile') !== ''){
+                        document.getElementById('user-prefs').classList.add('desktop-on-mobile');
+
+                        var viewport = document.querySelector("meta[name=viewport]");
+                        viewport.setAttribute('content', 'width=1000');
+                    }
+
+                }
+
+                function updateDesktopPrefs() {
+                    if (cookies.read('wide-load') !== '') document.getElementById('sidebar-toggle-wideload').classList.add('active');
+                    if (cookies.read('night-vision') !== '') document.getElementById('sidebar-toggle-nightvision').classList.add('active');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('sidebar-toggle-stickyheader').classList.add('active');
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('sidebar-toggle-showspoilers').classList.add('active');
+
+                }
+
+                function updateMobilePrefs() {
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('mobile-toggle-showspoilers').classList.add('active');
+                    if (cookies.read('night-vision') !== '') document.getElementById('mobile-toggle-nightvision').classList.add('active');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('mobile-toggle-stickyheader').classList.add('active');
+                    if (cookies.read('highlight-links') !== '') document.getElementById('mobile-toggle-highlightlinks').classList.add('active');
+
+                }
+
+
+                if (document.cookie.indexOf("scroll0=") < 0) {
+                    // do nothing
+                } else {
+                    console.log('ads removed by scroll.com');
+                    var adsRemovedWith = 'scroll';
+                    var style = document.createElement('style');
+                    style.innerHTML = '#header-ad, .proper-ad-unit, .square_ad, .sb-ad-unit { display: none !important; } ';
+                    document.head.appendChild(style);
+                }
+            </script>
+<script type="text/javascript">
+
+                var tvtropes_config = {
+                    astri_stream_enabled : "",
+                    is_logged_in         : "",
+                    handle               : "",
+                    get_astri_stream     : "",
+										revnum               : "c58d8df02f09262390bbd03db7921fc35c6af306",
+										img_domain           : "https://static.tvtropes.org",
+										adblock              : "1",
+										adblock_url          : "propermessage.io",
+										pause_editing        : "0",
+										pause_editing_msg    : "",
+										pause_site_changes   : ""
+                };
+            </script>
+<script type="text/javascript">
+						  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+						  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+						  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+						  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+						  ga('create', 'UA-3821842-1', 'auto');
+						  ga('send', 'pageview');
+
+						</script>
+</head>
+<body class="">
+<i id="user-prefs"></i>
+<script>updateUserPrefs();</script>
+<div id="fb-root"></div>
+<div id="modal-box"></div>
+<header class="headroom-element" id="main-header-bar">
+<div id="main-header-bar-inner">
+<span class="header-spacer" id="header-spacer-left"></span>
+<a class="mobile-menu-toggle-button tablet-on" href="#mobile-menu" id="main-mobile-toggle"><span></span><span></span><span></span></a>
+<a class="no-dev" href="/" id="main-header-logoButton"></a>
+<span class="header-spacer" id="header-spacer-right"></span>
+<nav class="tablet-off" id="main-header-nav">
+<a href="/pmwiki/pmwiki.php/Main/Tropes">Tropes</a>
+<a href="/pmwiki/pmwiki.php/Main/Media">Media</a>
+<a class="nav-browse" href="/pmwiki/browse.php">Browse</a>
+<a href="/pmwiki/index_report.php">Indexes</a>
+<a href="/pmwiki/topics.php">Forums</a>
+<a class="nav-browse" href="/pmwiki/recent_videos.php">Videos</a>
+</nav>
+<div id="main-header-bar-right">
+<div class="font-xs mobile-off" id="signup-login-box">
+<a class="hover-underline bold" data-modal-target="signup" href="/pmwiki/login.php">Join</a>
+<a class="hover-underline bold" data-modal-target="login" href="/pmwiki/login.php">Login</a>
+</div>
+<div class="mobile-on inline" id="signup-login-mobileToggle">
+<a data-modal-target="login" href="/pmwiki/login.php"><i class="fa fa-user"></i></a>
+</div>
+<div id="search-box">
+<form action="/pmwiki/search_result.php" class="search">
+<input class="search-box" name="q" placeholder="Search" required="" type="text" value=""/>
+<input class="submit-button" type="submit" value=""/>
+<input name="search_type" type="hidden" value="article"/>
+<input name="page_type" type="hidden" value="all"/>
+<input name="cx" type="hidden" value="partner-pub-6610802604051523:amzitfn8e7v"/>
+<input name="cof" type="hidden" value="FORID:10"/>
+<input name="ie" type="hidden" value="ISO-8859-1"/>
+<input name="siteurl" type="hidden" value=""/>
+<input name="ref" type="hidden" value=""/>
+<input name="ss" type="hidden" value=""/>
+</form>
+<a class="mobile-on mobile-search-toggle close-x" href="#close-search"><i class="fa fa-close"></i></a>
+</div>
+<div id="random-box">
+<a class="button-random-trope" href="/pmwiki/pmwiki.php/Main/CreepyGood" onclick="ga('send', 'event', 'button', 'click', 'random trope');" rel="nofollow"></a>
+<a class="button-random-media" href="/pmwiki/pmwiki.php/Film/StrikingDistance" onclick="ga('send', 'event', 'button', 'click', 'random media');" rel="nofollow"></a>
+</div>
+</div>
+</div>
+<div class="tablet-on" id="mobile-menu"><div class="mobile-menu-options">
+<div class="nav-wrapper">
+<a class="xl" href="/pmwiki/pmwiki.php/Main/Tropes">Tropes</a>
+<a class="xl" href="/pmwiki/pmwiki.php/Main/Media">Media</a>
+<a class="xl" href="/pmwiki/browse.php">Browse</a>
+<a class="xl" href="/pmwiki/index_report.php">Indexes</a>
+<a class="xl" href="/pmwiki/topics.php">Forums</a>
+<a class="xl" href="/pmwiki/recent_videos.php">Videos</a>
+<a href="/pmwiki/query.php?type=att">Ask The Tropers</a>
+<a href="/pmwiki/query.php?type=tf">Trope Finder</a>
+<a href="/pmwiki/query.php?type=ykts">You Know That Show...</a>
+<a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a>
+<a data-click-toggle="active" href="#tools">Tools <i class="fa fa-chevron-down"></i></a>
+<div class="tools-dropdown mobile-dropdown-linkList">
+<a href="/pmwiki/cutlist.php">Cut List</a>
+<a href="/pmwiki/changes.php">New Edits</a>
+<a href="/pmwiki/recent_edit_reasons.php">Edit Reasons</a>
+<a href="/pmwiki/launches.php">Launches</a>
+<a href="/pmwiki/img_list.php">Images List</a>
+<a href="/pmwiki/crown_activity.php">Crowner Activity</a>
+<a href="/pmwiki/no_types.php">Un-typed Pages</a>
+<a href="/pmwiki/page_type_audit.php">Recent Page Type Changes</a>
+</div>
+<a data-click-toggle="active" href="#hq">Tropes HQ <i class="fa fa-chevron-down"></i></a>
+<div class="tools-dropdown mobile-dropdown-linkList">
+<a href="/pmwiki/about.php">About Us</a>
+<a href="/pmwiki/contact.php">Contact Us</a>
+<a href="mailto:advertising@proper.io">Advertise</a>
+<a href="/pmwiki/dmca.php">DMCA Notice</a>
+<a href="/pmwiki/privacypolicy.php">Privacy Policy</a>
+</div>
+<a href="/pmwiki/ad-free-subscribe.php">Go Ad-Free</a>
+<div class="toggle-switches">
+<ul class="mobile-menu display-toggles">
+<li>Show Spoilers <div class="display-toggle show-spoilers" id="mobile-toggle-showspoilers"></div></li>
+<li>Night Vision <div class="display-toggle night-vision" id="mobile-toggle-nightvision"></div></li>
+<li>Sticky Header <div class="display-toggle sticky-header" id="mobile-toggle-stickyheader"></div></li>
+<li>Highlight Links <div class="display-toggle highlight-links" id="mobile-toggle-highlightlinks"></div></li>
+</ul>
+<script>updateMobilePrefs();</script>
+</div>
+</div>
+</div>
+</div>
+</header>
+<div class="mobile-on" id="homepage-introBox-mobile">
+<a href="/"><img class="logo-small" src="/images/logo-white-big.png"/></a>
+<form action="/pmwiki/search_result.php" class="search" style="margin:10px -5px -6px -5px;">
+<input class="search-box" name="q" placeholder="Search" required="" type="text" value=""/>
+<input class="submit-button" type="submit" value=""/>
+<input name="search_type" type="hidden" value="article"/>
+<input name="page_type" type="hidden" value="all"/>
+<input name="cx" type="hidden" value="partner-pub-6610802604051523:amzitfn8e7v"/>
+<input name="cof" type="hidden" value="FORID:10"/>
+<input name="ie" type="hidden" value="ISO-8859-1"/>
+<input name="siteurl" type="hidden" value=""/>
+<input name="ref" type="hidden" value=""/>
+<input name="ss" type="hidden" value=""/>
+</form>
+</div>
+<div class="ad" id="header-ad-wrapper">
+<div id="header-ad">
+<div class="ad-size-970x90 atf_banner">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_1"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_1'); });</script> </div>
+</div> </div>
+</div>
+</div>
+<div id="main-container">
+<div class="action-bar mobile-off" id="action-bar-top">
+<div class="action-bar-right">
+<p>Follow TV Tropes</p>
+<a class="button-fb" href="https://www.facebook.com/TVTropes">
+<i class="fa fa-facebook"></i></a>
+<a class="button-tw" href="https://www.twitter.com/TVTropes">
+<i class="fa fa-twitter"></i></a>
+<a class="button-re" href="https://www.reddit.com/r/TVTropes">
+<i class="fa fa-reddit-alien"></i></a>
+</div>
+<nav class="actions-wrapper" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<ul class="page-actions" id="top_main_list">
+<li class="link-edit">
+<a class="article-edit-button" data-modal-target="login" href="/pmwiki/pmwiki.php/Main/BackportedDevelopment?action=edit" rel="nofollow">
+<i class="fa fa-pencil"></i> Edit Page</a></li><li class="link-related"><a href="/pmwiki/relatedsearch.php?term=Main/BackportedDevelopment">
+<i class="fa fa-share-alt"></i> Related</a></li><li class="link-history"><a href="/pmwiki/article_history.php?article=Main.BackportedDevelopment">
+<i class="fa fa-history"></i> History</a></li><li class="link-discussion"><a href="/pmwiki/remarks.php?trope=Main.BackportedDevelopment">
+<i class="fa fa-comment"></i> Discussion</a></li> </ul>
+<button class="nav__dropdown-toggle" id="top_more_button" onclick="toggle_more_menu('top');" type="button">More</button>
+<ul class="more_menu hidden_more_list" id="top_more_list">
+<li class="link-todo tuck-always more_list_item"><a data-modal-target="login" href="#todo"><i class="fa fa-check-circle"></i> To Do</a></li><li class="link-pageSource tuck-always more_list_item"><a data-modal-target="login" href="/pmwiki/pmwiki.php/Main/BackportedDevelopment?action=source" rel="nofollow" target="_blank"><i class="fa fa-code"></i> Page Source</a></li> </ul>
+</nav>
+<div class="WikiWordModalStub"></div>
+<div class="ImgUploadModalStub" data-page-type="Article"></div>
+<div class="login-alert" style="display: none;">
+You need to <a href="/pmwiki/login.php" style="color:#21A0E8">login</a> to do this. <a href="/pmwiki/login.php?tab=register_account" style="color:#21A0E8">Get Known</a> if you don't have an account
+</div>
+</div>
+<div class="page-Article" id="main-content">
+<article class="with-sidebar" id="main-entry">
+<input id="groupname-hidden" type="hidden" value="Main"/>
+<input id="title-hidden" type="hidden" value="BackportedDevelopment"/>
+<input id="article_id" type="hidden" value="52621"/>
+<input id="logged_in" type="hidden" value="false"/>
+<p class="hidden" id="current_url">http://tvtropes.org/pmwiki/pmwiki.php/Main/BackportedDevelopment</p>
+<meta content="" itemprop="datePublished"/>
+<meta content="" itemprop="articleSection"/>
+<meta content="" itemprop="image"/>
+<a class="watch-button" data-modal-target="login" href="#watch">Follow<span>ing</span></a>
+<h1 class="entry-title" itemprop="headline">
+Backported Development
+</h1>
+<script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+                "@type": "ListItem",
+                "position": 1,
+                "name": "tvtropes.org",
+                "item": "https://tvtropes.org"
+            },{
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Tropes",
+                "item": "https://tvtropes.org/pmwiki/pmwiki.php/Main/Tropes"
+            },{
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Backported Development"            }]
+        }
+    </script>
+<a class="mobile-actionbar-toggle mobile-on" data-click-toggle="active" href="#mobile-actions-toggle" id="mobile-actionbar-toggle">
+<p class="tiny-off">Go To</p><span></span><span></span><span></span><i class="fa fa-pencil"></i></a>
+<nav class="mobile-actions-wrapper mobile-on" id="mobile-actions-bar"></nav>
+<div class="modal fade hidden-until-active" id="editLockModal">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button aria-label="Close" class="close" data-dismiss="modal" type="button"> <span aria-hidden="true">×</span></button>
+<h4 class="modal-title">Edit Locked</h4>
+</div>
+<div class="modal-body">
+<div class="row">
+<div class="body">
+<div class="danger troper_locked_message"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<nav class="body-options" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<ul class="subpage-links">
+<li>
+<a class="subpage-link curr-subpage" href="/pmwiki/pmwiki.php/Main/BackportedDevelopment" title="The Main page">
+<span class="wrapper"><span class="spi main-page"></span>Main</span></a>
+</li>
+<li>
+<a class="subpage-link" href="/pmwiki/pmwiki.php/Laconic/BackportedDevelopment" title="The Laconic page">
+<span class="wrapper"><span class="spi laconic-icon"></span>Laconic</span></a>
+</li>
+<li class="create-subpage dropdown">
+<a aria-expanded="false" class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);" role="button">
+<span class="wrapper">Create New <i class="fa fa-plus-circle"></i></span>
+</a>
+<select onchange="this.options[this.selectedIndex].value &amp;&amp; (window.location = this.options[this.selectedIndex].value);">
+<option value="">- Create New -</option>
+<option value="/pmwiki/pmwiki.php/Analysis/BackportedDevelopment?action=edit">Analysis</option>
+<option value="/pmwiki/pmwiki.php/Characters/BackportedDevelopment?action=edit">Characters</option>
+<option value="/pmwiki/pmwiki.php/FanficRecs/BackportedDevelopment?action=edit">FanficRecs</option>
+<option value="/pmwiki/pmwiki.php/FanWorks/BackportedDevelopment?action=edit">FanWorks</option>
+<option value="/pmwiki/pmwiki.php/Fridge/BackportedDevelopment?action=edit">Fridge</option>
+<option value="/pmwiki/pmwiki.php/Haiku/BackportedDevelopment?action=edit">Haiku</option>
+<option value="/pmwiki/pmwiki.php/Headscratchers/BackportedDevelopment?action=edit">Headscratchers</option>
+<option value="/pmwiki/pmwiki.php/ImageLinks/BackportedDevelopment?action=edit">ImageLinks</option>
+<option value="/pmwiki/pmwiki.php/PlayingWith/BackportedDevelopment?action=edit">PlayingWith</option>
+<option value="/pmwiki/pmwiki.php/Quotes/BackportedDevelopment?action=edit">Quotes</option>
+<option value="/pmwiki/pmwiki.php/Recap/BackportedDevelopment?action=edit">Recap</option>
+<option value="/pmwiki/pmwiki.php/ReferencedBy/BackportedDevelopment?action=edit">ReferencedBy</option>
+<option value="/pmwiki/pmwiki.php/Synopsis/BackportedDevelopment?action=edit">Synopsis</option>
+<option value="/pmwiki/pmwiki.php/Timeline/BackportedDevelopment?action=edit">Timeline</option>
+<option value="/pmwiki/pmwiki.php/Trivia/BackportedDevelopment?action=edit">Trivia</option>
+<option value="/pmwiki/pmwiki.php/WMG/BackportedDevelopment?action=edit">WMG</option>
+<option value="/pmwiki/pmwiki.php/YMMV/BackportedDevelopment?action=edit">YMMV</option>
+</select>
+</li>
+</ul>
+</nav>
+<div class="article-content retro-folders" id="main-article">
+<p>
+
+
+Sometimes, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/CharacterDevelopment" title="/pmwiki/pmwiki.php/Main/CharacterDevelopment">characters develop over the course of a show</a>. And sometimes, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Flashback" title="/pmwiki/pmwiki.php/Main/Flashback">shows will present new scenes from earlier time periods</a>. And sometimes, characters in a flashback (or a prequel) will exhibit character unlike the way they acted before the time the flashback is occurring.
+</p><p>For example, when <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AliceAndBob" title="/pmwiki/pmwiki.php/Main/AliceAndBob">Bob</a> started on the show in 1991 he was characterized as a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Jerkass" title="/pmwiki/pmwiki.php/Main/Jerkass">Jerkass</a>, but became a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/JerkWithAHeartOfGold" title="/pmwiki/pmwiki.php/Main/JerkWithAHeartOfGold">Jerk with a Heart of Gold</a> in 1993, and then just became a nice guy by 1995, but is shown in a recent flashback to 1990 to have been a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/NiceGuy" title="/pmwiki/pmwiki.php/Main/NiceGuy">Nice Guy</a> in 1990, with no explanation/extenuating circumstances.
+</p><div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_1"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_1'); })</script></div></div><p>Usually, this happens unintentionally due to <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Flanderization" title="/pmwiki/pmwiki.php/Main/Flanderization">Flanderization</a> and <a class="twikilink" href="/pmwiki/pmwiki.php/Main/CharacterizationMarchesOn" title="/pmwiki/pmwiki.php/Main/CharacterizationMarchesOn">Characterization Marches On</a>, often due to the too many flashbacks to track characterization in an <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ExpansionPackPast" title="/pmwiki/pmwiki.php/Main/ExpansionPackPast">Expansion Pack Past</a>. This might be used to <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Retcon" title="/pmwiki/pmwiki.php/Main/Retcon">Retcon</a> an existing flashback, maybe because it also had to be reshot since it was a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/FlashbackWithTheOtherDarrin" title="/pmwiki/pmwiki.php/Main/FlashbackWithTheOtherDarrin">Flashback with the Other Darrin</a>. If you not only pick up your old characterization but also your old visual style, it's a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/RetrauxFlashback" title="/pmwiki/pmwiki.php/Main/RetrauxFlashback">Retraux Flashback</a>. If, however, the flashback and the character change happen <em>in the same episode/arc</em>, then it's a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BelatedBackstory" title="/pmwiki/pmwiki.php/Main/BelatedBackstory">Belated Backstory</a>. It's also this trope rather than <a class="twikilink" href="/pmwiki/pmwiki.php/Main/FlashbackWithTheOtherDarrin" title="/pmwiki/pmwiki.php/Main/FlashbackWithTheOtherDarrin">Flashback with the Other Darrin</a> when a present-day actor or character design is used to represent a character in a new scene set in the past.
+</p><p>Trope name comes from "backporting," a concept in software development where features from a new codebase are imported to an older branch of development.
+</p><div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_2"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_2'); })</script></div></div><p></p><hr/><h2>Examples:</h2>
+<p></p><div class="folderlabel" onclick="toggleAllFolders();">    open/close all folders  </div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder0');">    Anime &amp; Manga </div><div class="folder" id="folder0" isfolder="true" style="display:block;">
+<ul><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/Manga/OnePiece" title="/pmwiki/pmwiki.php/Manga/OnePiece">One Piece</a></em> we have Luffy, the straw-hat-wearing hero. He got the hat, which is his <a class="twikilink" href="/pmwiki/pmwiki.php/Main/NumberOneDime" title="/pmwiki/pmwiki.php/Main/NumberOneDime">#1 Dime</a>, as a seven-year-old. At the start of the series, where he is seventeen, this caused a problem for him because the hat would often fall off in battles so that he would have to make another person hold it for him. After the Alabasta arc, he gets a string strap for it so that he can have it hanging from his neck while fighting which gives him much more flexibility (probably because he was very close at losing the hat in the Alabasta arc). Some time later, we get a flashback to when he was seven years old, and suddenly, it appears that he already had the string strap back then.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Anime/Pokemon" title="/pmwiki/pmwiki.php/Anime/Pokemon">Pokémon</a></em>:
+<ul><li> Whenever Ash appears in flashbacks he is an <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Keet" title="/pmwiki/pmwiki.php/Main/Keet">excitable</a> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/FriendToAllLivingThings" title="/pmwiki/pmwiki.php/Main/FriendToAllLivingThings">Friend to All Living Things</a> and an all-around <a class="twikilink" href="/pmwiki/pmwiki.php/Main/NiceGuy" title="/pmwiki/pmwiki.php/Main/NiceGuy">Nice Guy</a>. This is ignoring his personality in the original series (Kanto and Johto) where he was a more bratty and stubborn character. Even <em><a class="twikilink" href="/pmwiki/pmwiki.php/Anime/PokemonIChooseYou" title="/pmwiki/pmwiki.php/Anime/PokemonIChooseYou">Pokémon: I Choose You!</a></em> features the less cocky, less hardheaded Ash. It was his <a class="twikilink" href="/pmwiki/pmwiki.php/Main/CharacterDevelopment" title="/pmwiki/pmwiki.php/Main/CharacterDevelopment">Character Development</a> that transformed him into a more tame and gentle character by Hoenn.
+</li><li> One episode also has Pikachu suffer amnesia, but still act kind-natured and naive, despite the fact that Pikachu started off a disobedient and lazy <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Jerkass" title="/pmwiki/pmwiki.php/Main/Jerkass">Jerkass</a> when Ash received him in the first episode. Even throughout Kanto Pikachu had some mean elements, which were watered away as time went on.
+</li></ul></li><li> A strange one due to the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MerchandiseDriven" title="/pmwiki/pmwiki.php/Main/MerchandiseDriven">Merchandise-Driven</a> nature of the anime: In <a class="createlink" href="/pmwiki/pmwiki.php/Main/CardfightVanguard" title="/pmwiki/pmwiki.php/Main/CardfightVanguard">Cardfight Vanguard</a> G, there's a flashback to at least 15 years before the start of the original series. A fight in this scene includes characters using Stride Units, a mechanic that wasn't actually developed until several years later.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder1');">    Audio Plays </div><div class="folder" id="folder1" isfolder="true" style="display:block;">
+<ul><li> In the audiobook version of <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/RedDwarf" title="/pmwiki/pmwiki.php/Literature/RedDwarf">Red Dwarf</a>: Infinity Welcomes Careful Drivers</em>, Chris Barrie does an impression of Robert Lewellyn doing a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/FakeNationality" title="/pmwiki/pmwiki.php/Main/FakeNationality">Fake Canadian</a> accent as Kryten, even though the scenes are based on Krytyen's Season II introduction episode, where he was played by David Ross sounding like C3P0. Not quite a straight example however, as the novels aren't really in the same continuity as the series to start with; see the Literature section for more details.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder2');">    Comic Books </div><div class="folder" id="folder2" isfolder="true" style="display:block;">
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/ComicBook/ChaosWar" title="/pmwiki/pmwiki.php/ComicBook/ChaosWar">Chaos War</a>: <a class="twikilink" href="/pmwiki/pmwiki.php/ComicBook/Ares" title="/pmwiki/pmwiki.php/ComicBook/Ares">Ares</a></em> shows <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GodOfChaos" title="/pmwiki/pmwiki.php/Main/GodOfChaos">Amatsu-Mikaboshi</a> wearing his present-day duds in a flashback to the original Ares miniseries.
+</li><li> Judge Anderson, a psychic Judge in the Dreddverse, was a very flippant and easy-going character when she first appeared in <em><a class="twikilink" href="/pmwiki/pmwiki.php/ComicBook/JudgeDredd" title="/pmwiki/pmwiki.php/ComicBook/JudgeDredd">Judge Dredd</a></em>, though would get serious when the situation mandated it. As time went on, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/CharacterDevelopment" title="/pmwiki/pmwiki.php/Main/CharacterDevelopment">she became</a> a rather serious character most of the time, and her dominant mood was vague despair at the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/CrapsackWorld" title="/pmwiki/pmwiki.php/Main/CrapsackWorld">shape of the world</a>. In late 2010, possibly as part of the buildup to the new <em><a class="twikilink" href="/pmwiki/pmwiki.php/Film/Dredd" title="/pmwiki/pmwiki.php/Film/Dredd">Dredd</a></em> movie, Alan Grant started writing a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Prequel" title="/pmwiki/pmwiki.php/Main/Prequel">prequel</a> series, <em>Cadet Anderson</em>, set <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ExactlyWhatItSaysOnTheTin" title="/pmwiki/pmwiki.php/Main/ExactlyWhatItSaysOnTheTin">during Anderson's days as a cadet</a>. In the prequel series, she is a very serious character who wishes the world could be better, in seeming contrast to the fun and light-hearted lady who first fought Judge Death.
+</li><li> General Sam Lane, originally Lois's gruff father who didn't like Clark much and wasn't entirely impressed with Superman, but had a good heart beneath it all, died during the alien invasion of <em><a class="twikilink" href="/pmwiki/pmwiki.php/Comicbook/OurWorldsAtWar" title="/pmwiki/pmwiki.php/Comicbook/OurWorldsAtWar">Our Worlds at War</a></em>. When he came <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BackFromTheDead" title="/pmwiki/pmwiki.php/Main/BackFromTheDead">Back from the Dead</a>, his experiences in that war had left him with a new anti-alien attitude that turned him into a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GeneralRipper" title="/pmwiki/pmwiki.php/Main/GeneralRipper">General Ripper</a> declaring war on <a class="twikilink" href="/pmwiki/pmwiki.php/Comicbook/NewKrypton" title="/pmwiki/pmwiki.php/Comicbook/NewKrypton">New Krypton</a>. In the <em>Superman: Secret Origins</em> miniseries, Sam was gunning for Superman from the first moment he learned Metropolis's new hero was an alien, and is responsible for creating Metallo as his anti-Kryptonian weapon.
+</li><li> <a class="twikilink" href="/pmwiki/pmwiki.php/Comicbook/Wolverine" title="/pmwiki/pmwiki.php/Comicbook/Wolverine">Wolverine</a>'s personality has remained pretty consistent throughtout his decades of publication, but his speaking style hasn't. Modern incarnations of Wolvie have him speak in a very coarse, almost Texan drawl-like <a class="twikilink" href="/pmwiki/pmwiki.php/Main/FunetikAksent" title="/pmwiki/pmwiki.php/Main/FunetikAksent">Funetik Aksent</a>, and in his worse days, he'll refer to EVERYONE as '<a class="twikilink" href="/pmwiki/pmwiki.php/Main/CharacterTic" title="/pmwiki/pmwiki.php/Main/CharacterTic">bub</a>', no matter the situation. It can be very jarring to go back to early issues and find he had a pretty normal way of speaking during the seventies. Being over 200 years old, he occasionally guest-stars in flashback issues, such as his appearance in <a class="twikilink" href="/pmwiki/pmwiki.php/ComicBook/AgentsOfAtlas" title="/pmwiki/pmwiki.php/ComicBook/AgentsOfAtlas">Agents of Atlas</a>, where he inevitably talks in the familiarly rough dialect he uses in the present day.
+</li><li> The 1998 story "Amy's Secret Past" from <em><a class="twikilink" href="/pmwiki/pmwiki.php/ComicBook/SonicTheComic" title="/pmwiki/pmwiki.php/ComicBook/SonicTheComic">Sonic the Comic</a></em> depicts a tomboyish <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ActionGirl" title="/pmwiki/pmwiki.php/Main/ActionGirl">Action Girl</a> Amy even prior to her becoming a Freedom Fighter. In early comics, Amy had a more chipper and girly personality. It also depicts Robotnik with his "evolved" design despite that not appearing until several issues into the series.
+</li></ul></div>
+<div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_3"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_3'); })</script></div></div><p></p><div class="folderlabel" onclick="togglefolder('folder3');">    Films — Live-Action </div><div class="folder" id="folder3" isfolder="true" style="display:block;">
+<ul><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/Film/StarTrekNemesis" title="/pmwiki/pmwiki.php/Film/StarTrekNemesis">Star Trek: Nemesis</a></em>, they show a picture of Jean-Luc Picard when he was young, and for some reason, he was bald, despite the fact that his balding had everything to do with his age, as previously shown in the show. This also makes the villain's baldness quite baffling. However, <a class="twikilink" href="/pmwiki/pmwiki.php/Creator/PatrickStewart" title="/pmwiki/pmwiki.php/Creator/PatrickStewart">Patrick Stewart</a> himself really <em>had</em> lost his hair by this age, really muddling things. One handwave that swims dangerously close to being a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/VoodooShark" title="/pmwiki/pmwiki.php/Main/VoodooShark">Voodoo Shark</a> is the fact that both the picture and Shinzon have stubble, indicating both the young Picard and his clone both shaved their heads on purpose. Other flashback Picards with hair had just let it grow back.
+</li><li> Anything related to <a class="twikilink" href="/pmwiki/pmwiki.php/Series/StarTrekTheOriginalSeries" title="/pmwiki/pmwiki.php/Series/StarTrekTheOriginalSeries">the original</a> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/StarTrek" title="/pmwiki/pmwiki.php/Franchise/StarTrek">Star Trek</a></em> treats Chekov as having been there from the beginning, and ignores details about the clothing and technology that were different in the first two pilots.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder4');">    Literature </div><div class="folder" id="folder4" isfolder="true" style="display:block;">
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/RedDwarf" title="/pmwiki/pmwiki.php/Literature/RedDwarf">Red Dwarf</a>: Infinity Welcomes Careful Drivers</em> incorporated several retconned details from later seasons of the series, most prominently the relationship between Lister and Kochanski, the size and crew complement of the titular spacecraft and the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/EarlyInstallmentWeirdness" title="/pmwiki/pmwiki.php/Main/EarlyInstallmentWeirdness">Early Installment Weirdness</a> around Kryten's personality traits. Between these changes, the significant <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AdaptationExpansion" title="/pmwiki/pmwiki.php/Main/AdaptationExpansion">Adaptation Expansion</a> and the <em>much</em> darker tone it should probably be treated as an <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AlternateContinuity" title="/pmwiki/pmwiki.php/Main/AlternateContinuity">Alternate Continuity</a>; the sequels would eventually stop following the TV series canon even in <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BroadStrokes" title="/pmwiki/pmwiki.php/Main/BroadStrokes">Broad Strokes</a> and develop into their own thing.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder5');">    Live-Action TV </div><div class="folder" id="folder5" isfolder="true" style="display:block;">
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/TheBigBangTheory" title="/pmwiki/pmwiki.php/Series/TheBigBangTheory">The Big Bang Theory</a></em>: In the flashback episode "The Staircase Implementation," Sheldon acts like his current, flanderized self instead of his more socially conscious earlier persona, despite the fact that the episode takes place four years before the series begins.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/Frasier" title="/pmwiki/pmwiki.php/Series/Frasier">Frasier</a>:</em> Martin was supposedly insufferably crabby and unpleasant before Frasier moved back to Seattle, which is used to explain why Frasier rarely visited when he lived in Boston. Flashbacks in some later seasons definitely show family tension, but Martins personality isnt noticeably different (hes even apologetic for what little crabbiness he displays), making a lot of the pre-series family drama a mostly <a class="twikilink" href="/pmwiki/pmwiki.php/Main/InformedFlaw" title="/pmwiki/pmwiki.php/Main/InformedFlaw">Informed Flaw</a>.
+</li><li> Averted in <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/Lost" title="/pmwiki/pmwiki.php/Series/Lost">Lost</a></em>, which cuts around with its flashbacks, but keeps characterization as established when the scene takes place (noticeably when Shannon and Boone are shown shortly around the time of the crash, Shannon is still doing nothing but complaining.)
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/RedDwarf" title="/pmwiki/pmwiki.php/Series/RedDwarf">Red Dwarf</a></em>:
+<ul><li> In flashbacks to shortly after the revival of Rimmer (Series I), the style of the 'H' on his head and his uniform were the ones from Series VII.
+</li><li> Kryten's <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TheOtherDarrin" title="/pmwiki/pmwiki.php/Main/TheOtherDarrin">changed appearance</a> is handwaved by the explanation that Lister rebuilt him after a spacebike crash, yet a few episodes later we see a moving photograph of Kryten pre-crash and he looks (<a class="twikilink" href="/pmwiki/pmwiki.php/Main/CanadaEh" title="/pmwiki/pmwiki.php/Main/CanadaEh">and speaks</a>) the same as post-crash. Additionally, the other Series 4000 mechanoid we meet, Able, looks like the "rebuilt" Kryten as do his spare heads in "DNA" and "Beyond a Joke".
+</li><li> The flashback in series 2's "Stasis Leak" to before the accident maintains the set design and props that were added to the bunk room in series 2.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/HighlanderTheSeries" title="/pmwiki/pmwiki.php/Series/HighlanderTheSeries">Highlander: The Series</a></em>: In the pilot, it is stated that Duncan has remained "out of the Game" for over a century. Later, throughout the series he is depicted in flashbacks defending himself from other Immortals and taking heads throughout said century. Of course, given <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ThereCanBeOnlyOne" title="/pmwiki/pmwiki.php/Main/ThereCanBeOnlyOne">the nature of immortals</a> in Highlander, it's impossible to survive if you aren't good at defending yourself and willing to end an opponent before he does the same to you, even if you're not after the ultimate power the last immortal standing is supposed to receive. Yes, they can't attack you on holy ground, but that means you'd have to hole up in a church somewhere and never set foot off its property for one moment <em>ever.</em> Nope, you'd better be good enough with the sword to at least survive a trip to the store for more toilet paper.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/MyNameIsEarl" title="/pmwiki/pmwiki.php/Series/MyNameIsEarl">My Name Is Earl</a></em> had this twice, both with heavy lampshades. Two flashbacks saw Earl being the good guy despite the show's entire premise being he was an awful person until he "discovered" Karma. One featured Earl saving Joy from a killer bee while his <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TheAce" title="/pmwiki/pmwiki.php/Main/TheAce">cousin</a> cowered in a tent, and the other was his <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Retcon" title="/pmwiki/pmwiki.php/Main/Retcon">reasoning</a> for <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AuthorsSavingThrow" title="/pmwiki/pmwiki.php/Main/AuthorsSavingThrow">raising two kids who were not his own</a>. Both were described as the only good thing he did before he made the list.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/StarTrekTheNextGeneration" title="/pmwiki/pmwiki.php/Series/StarTrekTheNextGeneration">Star Trek: The Next Generation</a></em> had this in the series finale.
+<ul><li> The captain's chair shown in the past is the same one as the then-current chair, with little lights under the arm-rests instead of the folding panels the first season chair had.
+</li><li> Past Worf's makeup design was slightly modified from the current version rather than being the version from the beginning of the series (which took much longer to apply and was more uncomfortable for the actor). His forehead ridges were TOTALLY different in season one, not just created by different makeup techniques.
+</li><li> Also, O'Brien was treated as a major character, though originally, it wasn't clear that Colm Meaney's background redshirt in the premiere was intended to be O'Brien, who didn't become a major character until well into season two. Assuming that it <em>is</em> him lets them bring a major character <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BackForTheFinale" title="/pmwiki/pmwiki.php/Main/BackForTheFinale">Back for the Finale</a>, and it's easy to say that the time-travelling Picard gave him more attention because he <em>now</em> knows his true potential.)
+</li><li> Finally, there's no avoiding the fact that the actors don't look exactly the same. Tasha's a little chubbier than she was before because Denise Crosby hadn't had to keep herself in playing-a-starship-security-chief shape in a long time.
+</li><li> It's all especially noticeable because, to their credit, they otherwise <em>totally</em> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ShownTheirWork" title="/pmwiki/pmwiki.php/Main/ShownTheirWork">nailed the differences</a> between season one and the rest of the series.
+</li></ul></li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/BoyMeetsWorld" title="/pmwiki/pmwiki.php/Series/BoyMeetsWorld">Boy Meets World</a>,</em> Topanga is originally a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/HopelessSuitor" title="/pmwiki/pmwiki.php/Main/HopelessSuitor">Hopeless Suitor</a> for Cory and a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/CloudCuckooLander" title="/pmwiki/pmwiki.php/Main/CloudCuckooLander">Cloud Cuckoo Lander</a>. The high school era made her a totally different character, and gave her and Cory a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/RelationshipUpgrade" title="/pmwiki/pmwiki.php/Main/RelationshipUpgrade">Relationship Upgrade</a>. All flashbacks and references to the past from then on pretended that Topanga had always been exactly as she is now, and that she and Cory had been in love since preschool.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder6');">    Toys </div><div class="folder" id="folder6" isfolder="true" style="display:block;">
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Toys/Bionicle" title="/pmwiki/pmwiki.php/Toys/Bionicle">BIONICLE</a></em> contains an <a class="twikilink" href="/pmwiki/pmwiki.php/Main/EnforcedTrope" title="/pmwiki/pmwiki.php/Main/EnforcedTrope">enforced</a> example. Originally, the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Hobbits" title="/pmwiki/pmwiki.php/Main/Hobbits">race of diminutive villagers</a> was called "the Tohunga" until <a class="twikilink" href="/pmwiki/pmwiki.php/Main/RealLifeWritesThePlot" title="/pmwiki/pmwiki.php/Main/RealLifeWritesThePlot">Maori activists sued</a> the <a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/LEGO" title="/pmwiki/pmwiki.php/Franchise/LEGO">LEGO</a> Group for trying to <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/Trademark" title="/pmwiki/pmwiki.php/UsefulNotes/Trademark">trademark</a> words in their language. The Story team wrote a scene to <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MeaningfulRename" title="/pmwiki/pmwiki.php/Main/MeaningfulRename">change around a few names</a>, with the Tohunga becoming "the Matoran" in celebration of their newfound unity. That was until the story expanded beyond the island of Mata Nui with a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Prequel" title="/pmwiki/pmwiki.php/Main/Prequel">prequel</a> arc. Since they certainly couldn't reuse the old names, the name "Tohunga" was <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Retcon" title="/pmwiki/pmwiki.php/Main/Retcon">retconned</a> out, and the villager was of the Matoran race from the very beginning.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder7');">    Video Games </div><div class="folder" id="folder7" isfolder="true" style="display:block;">
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SonicTheHedgehog" title="/pmwiki/pmwiki.php/VideoGame/SonicTheHedgehog">Sonic the Hedgehog</a></em>:
+<ul><li> In the first <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SonicAdventure" title="/pmwiki/pmwiki.php/VideoGame/SonicAdventure">Sonic Adventure</a></em> game, Tails and Amy have flashbacks dating back to the times of the classic Mega Drive games. In them, Sonic, Tails and Amy are depicted in their modern designs. The devs apparently didn't feel like making alternate models for a few seconds worth of footage. This wasn't really a problem until <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SonicGenerations" title="/pmwiki/pmwiki.php/VideoGame/SonicGenerations">Sonic Generations</a></em> came out and established that the characters used to look like their classic designs in their younger years, though.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SonicAdventure2" title="/pmwiki/pmwiki.php/VideoGame/SonicAdventure2">Sonic Adventure 2</a></em>, there are numerous cutscenes which show Shadow fifty years ago. Throughout the game, he acquires numerous bits of equipment, and the items you've got are visible on his character model even in the flashback cutscenes.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SoulSeries" title="/pmwiki/pmwiki.php/VideoGame/SoulSeries">Soulcalibur: Broken Destiny</a></em>'s version of Yoshimitsu strongly resembles his <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Tekken" title="/pmwiki/pmwiki.php/VideoGame/Tekken">Tekken</a> 6</em> appearance, where he looks like an alien rather than a samurai which is what he's supposed to be in the <em>Soul</em> series (it takes place centuries earlier). In the first <em>Tekken</em>, Yoshimitsu looks more like a knight, which is more consistent with how he would have looked when the <em>Soul</em> series is set. Justified by the fact that the Yoshimitsu in both series are <a class="twikilink" href="/pmwiki/pmwiki.php/Main/LegacyCharacter" title="/pmwiki/pmwiki.php/Main/LegacyCharacter">separate individuals bearing the same name</a>. As theorized for years and finally confirmed in <em>Soulcalibur V</em> (which included a "Yoshimitsu the Second," the successor to the Yoshimitsu in the preceding four games), the leader of the Manji clan is whomever has ownership of a particular sword, also named Yoshimitsu, which is earned by <a class="twikilink" href="/pmwiki/pmwiki.php/Main/KlingonPromotion" title="/pmwiki/pmwiki.php/Main/KlingonPromotion">defeating the previous Yoshimitsu in a</a> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DuelToTheDeath" title="/pmwiki/pmwiki.php/Main/DuelToTheDeath">Duel to the Death</a> and assuming their name, allowing the cursed katana to accept them as their rightful wielder. The new Yoshimitsu then adopts the mannerisms, fighting style, and identity of their predecessor, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/LegacyImmortality" title="/pmwiki/pmwiki.php/Main/LegacyImmortality">thus continuing on the folk legend of Yoshimitsu</a>. Beyond this, Yoshimitsu's design almost always changes between games (<em><a class="twikilink" href="/pmwiki/pmwiki.php/Main/DreamMatchGame" title="/pmwiki/pmwiki.php/Main/DreamMatchGame">Tekken Tag Tournament</a></em> is the only exception to date, reusing his <em>T3</em> attire), and quite drastically. Even in his <em>Soulcalibur</em> appearances, where he conforms to a samurai-influenced aesthetic, does Yoshimitsu look wildly different between games.
+</li><li> Averted in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/CrisisCore" title="/pmwiki/pmwiki.php/VideoGame/CrisisCore">Crisis Core</a>: <a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FinalFantasyVII" title="/pmwiki/pmwiki.php/VideoGame/FinalFantasyVII">Final Fantasy VII</a></em>, where despite having undergone <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Flanderization" title="/pmwiki/pmwiki.php/Main/Flanderization">Flanderization</a> in sequels and spin-offs, Cloud <a class="twikilink" href="/pmwiki/pmwiki.php/Main/CharacterRerailment" title="/pmwiki/pmwiki.php/Main/CharacterRerailment">acts really close to his original characterisation</a> (or at least as close as you'd reasonably expect considering how much younger he is). Aerith also returns to being <a class="twikilink" href="/pmwiki/pmwiki.php/Main/PluckyGirl" title="/pmwiki/pmwiki.php/Main/PluckyGirl">bossy and intelligent</a> rather than being <a class="twikilink" href="/pmwiki/pmwiki.php/Main/IncorruptiblePurePureness" title="/pmwiki/pmwiki.php/Main/IncorruptiblePurePureness">Incorruptible Pure Pureness</a> and Yuffie goes back to being sneaky, sarcastic and manipulative rather than a goofy <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GenkiGirl" title="/pmwiki/pmwiki.php/Main/GenkiGirl">Genki Girl</a>.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Portal2" title="/pmwiki/pmwiki.php/VideoGame/Portal2">Portal 2</a></em> changes the design on many items such as the elevators and the Material Emancipation Grills, yet when you return to destroyed areas from the first game they are fitted with the new design. Visiting "Old Aperture" later on reveals that these new designs were apparently in use in test chambers from decades before the first game took place. The devs specifically avoided this with the <span class="spoiler" title="you can set spoilers visible by default on your profile">original, burn-marked but intact <a class="twikilink" href="/pmwiki/pmwiki.php/Main/CompanionCube" title="/pmwiki/pmwiki.php/Main/CompanionCube">Companion Cube</a></span>, though.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MarioAndLuigiSuperstarSaga" title="/pmwiki/pmwiki.php/VideoGame/MarioAndLuigiSuperstarSaga">Mario &amp; Luigi Superstar Saga + Bowser's Minions</a></em> updates the standard Mario characters and species to resemble their equivalents in later RPGs, leading to things like the Toads being made into mere palette swaps and quite a few monsters being given designs based on the main series rather than the original game. It also brings over the Elite Trio and Dr Toadley from <em>Bowser's Inside Story</em> too, opening up a few plot holes in the process (the former are wearing outfits that mark their promotion in <em>Dream Team</em>, the latter apparently never met the Mario Bros before <em>Bowser's Inside Story</em>).
+</li><li> The recent <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/MortalKombat" title="/pmwiki/pmwiki.php/Franchise/MortalKombat">Mortal Kombat</a></em> games are guilty of this. The story of <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MortalKombat9" title="/pmwiki/pmwiki.php/VideoGame/MortalKombat9">Mortal Kombat 9</a></em> picks up right after <a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MortalKombatArmageddon" title="/pmwiki/pmwiki.php/VideoGame/MortalKombatArmageddon">the previous game</a>, but none of the characters look as they did in <em>Armageddon</em> when we rewind and go back to <a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MortalKombat1" title="/pmwiki/pmwiki.php/VideoGame/MortalKombat1">the first tournament</a> (Johnny has short brown hair rather than the longer blondish hair he had at the time, Sonya wears her black leather outfit and has her hair in a long ponytail instead of wearing a bomber jacket and having her hair shorter, etc). And <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MortalKombatX" title="/pmwiki/pmwiki.php/VideoGame/MortalKombatX">Mortal Kombat X</a></em> flashes back to the <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MortalKombat2" title="/pmwiki/pmwiki.php/VideoGame/MortalKombat2">Mortal Kombat II</a></em> part of <em>MK9</em>, and the characters look as they do in <em>MKX</em> rather than <em>MK9</em>!
+</li><li> Solid Snake in the original <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MetalGearSolid" title="/pmwiki/pmwiki.php/VideoGame/MetalGearSolid">Metal Gear Solid</a></em> was extremely buff, but relatively compact, suiting someone who did have to crawl through air vents as part of his job description (his body was modelled on <a class="twikilink" href="/pmwiki/pmwiki.php/Creator/JeanClaudeVanDamme" title="/pmwiki/pmwiki.php/Creator/JeanClaudeVanDamme">Jean-Claude Van Damme</a>). In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MetalGearSolid2SonsOfLiberty" title="/pmwiki/pmwiki.php/VideoGame/MetalGearSolid2SonsOfLiberty">Metal Gear Solid 2: Sons of Liberty</a></em> he has a thicker physique, which was intended to indicate him ageing from early 30s to middle-age and putting on weight. In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MetalGearSolid3SnakeEater" title="/pmwiki/pmwiki.php/VideoGame/MetalGearSolid3SnakeEater">Metal Gear Solid 3: Snake Eater</a></em>, his father Big Boss is buffer still, compared in the casting sheet to an <a class="twikilink" href="/pmwiki/pmwiki.php/Creator/ArnoldSchwarzenegger" title="/pmwiki/pmwiki.php/Creator/ArnoldSchwarzenegger">Arnold Schwarzenegger</a> type. Several later appearances of the character outside of the core series buff up Solid to his father's level, such as his appearance in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SuperSmashBrosBrawl" title="/pmwiki/pmwiki.php/VideoGame/SuperSmashBrosBrawl">Super Smash Bros. Brawl</a></em>, and his frighteningly muscular render for <em>The Legacy Collection</em> where his biceps are significantly thicker than his entire head.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder8');">    Web Animation </div><div class="folder" id="folder8" isfolder="true" style="display:block;">
+<ul><li> Zig-zagged in <em><a class="twikilink" href="/pmwiki/pmwiki.php/Machinima/RedVsBlue" title="/pmwiki/pmwiki.php/Machinima/RedVsBlue">Red vs. Blue</a></em>. Caboose is implied to have gotten to his current stupidity after he got possessed by an evil AI at the end of Season 1. Yet two episodes with flashbacks before that (in seasons 3 and 14) he's already depicted with his <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SimpletonVoice" title="/pmwiki/pmwiki.php/Main/SimpletonVoice">Simpleton Voice</a> and mannerisms. The flashbacks also have Sarge speaking in his Southern drawl instead of the R. Lee Ermey-esque ruff talk from Season 1. On the other hand, the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/OriginsEpisode" title="/pmwiki/pmwiki.php/Main/OriginsEpisode">Origins Episode</a> in season 14 displays <a class="twikilink" href="/pmwiki/pmwiki.php/Main/EarlyInstallmentWeirdness" title="/pmwiki/pmwiki.php/Main/EarlyInstallmentWeirdness">an inconsistent dynamic from the first episode</a>, where Sarge seemingly likes Grif better than Simmons (when later Sarge would display a borderline homicidal hatred for Grif, while respecting Simmons for being <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ProfessionalButtKisser" title="/pmwiki/pmwiki.php/Main/ProfessionalButtKisser">a sycophantic</a> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/NumberTwo" title="/pmwiki/pmwiki.php/Main/NumberTwo">Number Two</a>).
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder9');">    Web Comics </div><div class="folder" id="folder9" isfolder="true" style="display:block;">
+<ul><li> This happens in <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/MSPaintMasterpieces" title="/pmwiki/pmwiki.php/Webcomic/MSPaintMasterpieces">MS Paint Masterpieces</a></em>, where Ferretvision and current strips contradict each other. In this case, though, it's a conscious retcon.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder10');">    Western Animation </div><div class="folder" id="folder10" isfolder="true" style="display:block;">
+<ul><li> <a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/DCAnimatedUniverse" title="/pmwiki/pmwiki.php/Franchise/DCAnimatedUniverse">DC Animated Universe</a>:
+<ul><li> When Mr. Freeze was cloned in <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/BatmanBeyond" title="/pmwiki/pmwiki.php/WesternAnimation/BatmanBeyond">Batman Beyond</a></em>, he was depicted as still being bald despite having hair when we see a pre-Freeze Victor Fries in <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/BatmanTheAnimatedSeries" title="/pmwiki/pmwiki.php/WesternAnimation/BatmanTheAnimatedSeries">Batman: The Animated Series</a></em> — though considering the clone later redeveloped Freeze's inability to tolerate warm temperatures, maybe it was a sign of <a class="twikilink" href="/pmwiki/pmwiki.php/Main/CloneDegeneration" title="/pmwiki/pmwiki.php/Main/CloneDegeneration">Clone Degeneration</a>.
+</li><li> As <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/JusticeLeague" title="/pmwiki/pmwiki.php/WesternAnimation/JusticeLeague">Justice League</a> Unlimited</em> drew to a close, so did <em><a class="twikilink" href="/pmwiki/pmwiki.php/ComicBook/InfiniteCrisis" title="/pmwiki/pmwiki.php/ComicBook/InfiniteCrisis">Infinite Crisis</a></em>. However, the sequel films <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/BatmanAndHarleyQuinn" title="/pmwiki/pmwiki.php/WesternAnimation/BatmanAndHarleyQuinn">Batman and Harley Quinn</a></em> and <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/JusticeLeagueVsTheFatalFive" title="/pmwiki/pmwiki.php/WesternAnimation/JusticeLeagueVsTheFatalFive">Justice League vs. The Fatal Five</a></em> have introduced a number of elements from the "One Year Later" <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TimeSkip" title="/pmwiki/pmwiki.php/Main/TimeSkip">Time Skip</a> after <em>IC</em> and the <a class="twikilink" href="/pmwiki/pmwiki.php/ComicBook/New52" title="/pmwiki/pmwiki.php/ComicBook/New52">New 52</a>. The former film sees the introduction of A.R.G.U.S., a government agency that first appeared in the New 52, into the DCAU and the latter not only sees A.R.G.U.S., but both Miss Martian (a character introduced as part of "One Year Later") and Jessica Cruz (who was introduced in the aftermath of <em><a class="twikilink" href="/pmwiki/pmwiki.php/ComicBook/ForeverEvil" title="/pmwiki/pmwiki.php/ComicBook/ForeverEvil">Forever Evil</a></em>) as major characters. Additionally, the latter film sees Wonder Woman now regularly carrying a sword with her ala her <a class="twikilink" href="/pmwiki/pmwiki.php/ComicBook/New52" title="/pmwiki/pmwiki.php/ComicBook/New52">New 52</a>, <a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/DCExtendedUniverse" title="/pmwiki/pmwiki.php/Franchise/DCExtendedUniverse">DC Extended Universe</a>, and <a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/DCAnimatedMovieUniverse" title="/pmwiki/pmwiki.php/WesternAnimation/DCAnimatedMovieUniverse">DC Animated Movie Universe</a> counterparts and much like in <em><a class="twikilink" href="/pmwiki/pmwiki.php/Film/TheDarkKnightTrilogy" title="/pmwiki/pmwiki.php/Film/TheDarkKnightTrilogy">The Dark Knight Trilogy</a></em> and <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/BatmanArkhamSeries" title="/pmwiki/pmwiki.php/VideoGame/BatmanArkhamSeries">Batman: Arkham Series</a></em>, Batman's cape doubles as a glider itself rather than a glider being a separate piece of equipment.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/BatmanReturnOfTheCapedCrusaders" title="/pmwiki/pmwiki.php/WesternAnimation/BatmanReturnOfTheCapedCrusaders">Batman: Return of the Caped Crusaders</a></em>, a tie-in movie to the '60s <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/Batman1966" title="/pmwiki/pmwiki.php/Series/Batman1966">Batman</a></em> show, has a mention of Alfred as having worked for the Waynes since Bruce was a child. However, this was an idea introduced post-<em><a class="twikilink" href="/pmwiki/pmwiki.php/ComicBook/CrisisOnInfiniteEarths" title="/pmwiki/pmwiki.php/ComicBook/CrisisOnInfiniteEarths">Crisis on Infinite Earths</a></em> with <em><a class="twikilink" href="/pmwiki/pmwiki.php/ComicBook/BatmanYearOne" title="/pmwiki/pmwiki.php/ComicBook/BatmanYearOne">Batman: Year One</a></em>, which was around 20 years after the show ended, and pre-<em>CoIE</em>, Alfred only joined Bruce's employ after Dick Grayson became Robin.
+</li><li> After being <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Uncancelled" title="/pmwiki/pmwiki.php/Main/Uncancelled">uncancelled</a> in 2019 (having been cancelled in 2013), <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/YoungJustice" title="/pmwiki/pmwiki.php/WesternAnimation/YoungJustice">Young Justice</a></em> introduced some elements that were going on in the comics since its cancellation, including Harper Row (best known as Bluebird in the comics, introduced in late 2011/early 2012 but didn't become Bluebird until 2014) and Jonathan Samuel Kent (introduced in 2015).
+</li><li> In the <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/AvatarTheLastAirbender" title="/pmwiki/pmwiki.php/WesternAnimation/AvatarTheLastAirbender">Avatar: The Last Airbender</a></em> episode "The Western Air Temple", there's a flashback scene showing Zuko and Iroh a few weeks after <span class="spoiler" title="you can set spoilers visible by default on your profile">their banishment</span>, searching the temple to see if it's where the Avatar has been hiding. Iroh's voice actor had to be replaced during the second season, as <a class="twikilink" href="/pmwiki/pmwiki.php/Creator/Mako" title="/pmwiki/pmwiki.php/Creator/Mako">Mako</a> Iwamatsu <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AuthorExistenceFailure" title="/pmwiki/pmwiki.php/Main/AuthorExistenceFailure">passed away</a>. Hearing the new voice come out in a scene set pre-S3 was very jarring for some fans.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/Ninjago" title="/pmwiki/pmwiki.php/WesternAnimation/Ninjago">Ninjago</a></em>: In a few of the <em>Tales from the Monastery of Spinjitzu</em> shorts, flashbacks to new Season 1 and 2 era adventures show the ninja in their current forms. <a class="twikilink" href="/pmwiki/pmwiki.php/Main/LampshadeHanging" title="/pmwiki/pmwiki.php/Main/LampshadeHanging">Lampshaded</a> and <a class="twikilink" href="/pmwiki/pmwiki.php/Main/JustifiedTrope" title="/pmwiki/pmwiki.php/Main/JustifiedTrope">justified</a> in "Elemental Rider" where the memory is shown via "enhanced visual augmentation" (see the quote below). It's also <a class="urllink" href="https://twitter.com/TommyAndreasen/status/1075713014085640193">explained<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a> by one of the creators that "the stories are memories, fantasies, dreams, visual augmentations which means they are saturated by the ninja's current state of mind and self image."
+<div class="indent"><strong>Kai</strong>: Hey, we didn't look like that back then. <br/><strong>Zane</strong>: I told you, it was an enhanced visual augmentation. <br/><strong>Kai</strong>: Whatever.
+</div></li><li> The <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/StarWarsTheCloneWars" title="/pmwiki/pmwiki.php/WesternAnimation/StarWarsTheCloneWars">Star Wars: The Clone Wars</a></em> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Uncancelled" title="/pmwiki/pmwiki.php/Main/Uncancelled">revival</a> in 2019 was slightly rewritten to reflect changes made in canon since its cancellation in 2013/2014, such as adding references to <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/StarWarsRebels" title="/pmwiki/pmwiki.php/WesternAnimation/StarWarsRebels">Star Wars Rebels</a></em> (the inclusion of Ursa, cameos from Depa Billaba and Caleb/Kanan), <em><a class="twikilink" href="/pmwiki/pmwiki.php/Film/Solo" title="/pmwiki/pmwiki.php/Film/Solo">Solo</a></em> (cameo from Dryden Vos), and <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/TheMandalorian" title="/pmwiki/pmwiki.php/Series/TheMandalorian">The Mandalorian</a></em> (Maul commenting that Mandalorians aren't meant to live in the sewers).
+</li><li> Garnet from <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/StevenUniverse" title="/pmwiki/pmwiki.php/WesternAnimation/StevenUniverse">Steven Universe</a></em> is introduced as completely stoic and emotionally closed off, but becomes more friendly, snarky and open with her emotions as the show goes on. Later on, flashbacks from before Steven was born continue portraying her as friendly and laid back. Many fans took this to imply that she was hardened after the death of Rose Quartz. But then the episode "Three gems and a Baby" (which takes place shortly after Rose's death) was released and Garnet is once warm and maternal, seemingly retconning her original cold persona into a case of <a class="twikilink" href="/pmwiki/pmwiki.php/Main/CharacterizationMarchesOn" title="/pmwiki/pmwiki.php/Main/CharacterizationMarchesOn">Characterization Marches On</a>.
+</li></ul></div>
+<p></p><hr/>
+</div>
+<div class="square_ad footer-article-ad main_2" data-isolated="0"></div>
+<div class="section-links" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<div class="titles">
+<div><h3 class="text-center text-uppercase">Previous</h3></div>
+<div><h3 class="text-center text-uppercase">Index</h3></div>
+<div><h3 class="text-center text-uppercase">Next</h3></div>
+</div>
+<div class="links">
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/AntiNepotism">Anti-Nepotism</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/CharacterizationTropes">Characterization Tropes</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/BeetleManiac">Beetle Maniac</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="outer_ads_by_salon_wrapper" id="exco_player_insert_div">
+</div>
+</article>
+<div id="main-content-sidebar"><div class="sidebar-item display-options">
+<ul class="sidebar display-toggles">
+<li>Show Spoilers <div class="display-toggle show-spoilers" id="sidebar-toggle-showspoilers"></div></li>
+<li>Night Vision <div class="display-toggle night-vision" id="sidebar-toggle-nightvision"></div></li>
+<li>Sticky Header <div class="display-toggle sticky-header" id="sidebar-toggle-stickyheader"></div></li>
+<li>Wide Load <div class="display-toggle wide-load" id="sidebar-toggle-wideload"></div></li>
+</ul>
+<script>updateDesktopPrefs();</script>
+</div>
+<div class="sidebar-item ad sb-ad-unit">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_2"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_2'); });</script> </div>
+</div></div>
+<div class="sidebar-item quick-links" itemtype="http://schema.org/SiteNavigationElement">
+<p class="sidebar-item-title" data-title="Important Links">Important Links</p>
+<div class="padded">
+<a href="/pmwiki/query.php?type=att">Ask The Tropers</a>
+<a href="/pmwiki/query.php?type=tf">Trope Finder</a>
+<a href="/pmwiki/query.php?type=ykts">You Know That Show...</a>
+<a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a>
+<a href="/pmwiki/review_activity.php">Reviews</a>
+<a data-modal-target="login" href="/pmwiki/lbs.php">Live Blogs</a>
+<a href="/pmwiki/ad-free-subscribe.php">Go Ad Free!</a> </div>
+</div>
+<div class="sidebar-item sb-ad-unit">
+<div class="sidebar-section">
+<div class="square_ad ad-size-300x600 ad-section text-center">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_3"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_3'); });</script> </div>
+</div> </div>
+</div>
+</div>
+<div class="sidebar-item">
+<p class="sidebar-item-title" data-title="Crucial Browsing">Crucial Browsing</p>
+<ul class="padded font-s" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><a data-click-toggle="active" href="javascript:void(0);">Genre</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/ActionAdventureTropes" title="Main/ActionAdventureTropes">Action Adventure</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ComedyTropes" title="Main/ComedyTropes">Comedy</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CommercialsTropes" title="Main/CommercialsTropes">Commercials</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CrimeAndPunishmentTropes" title="Main/CrimeAndPunishmentTropes">Crime &amp; Punishment</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DramaTropes" title="Main/DramaTropes">Drama</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/HorrorTropes" title="Main/HorrorTropes">Horror</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LoveTropes" title="Main/LoveTropes">Love</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NewsTropes" title="Main/NewsTropes">News</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ProfessionalWrestling" title="Main/ProfessionalWrestling">Professional Wrestling</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SpeculativeFictionTropes" title="Main/SpeculativeFictionTropes">Speculative Fiction</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SportsStoryTropes" title="Main/SportsStoryTropes">Sports Story</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/WarTropes" title="Main/WarTropes">War</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Media</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/Media" title="Main/Media">All Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/AnimationTropes" title="Main/AnimationTropes">Animation (Western)</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Anime" title="Main/Anime">Anime</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ComicBookTropes" title="Main/ComicBookTropes">Comic Book</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FanFic" title="FanFic/FanFics">Fan Fics</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Film" title="Main/Film">Film</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/GameTropes" title="Main/GameTropes">Game</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Literature" title="Main/Literature">Literature</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MusicAndSoundEffects" title="Main/MusicAndSoundEffects">Music And Sound Effects</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NewMediaTropes" title="Main/NewMediaTropes">New Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/PrintMediaTropes" title="Main/PrintMediaTropes">Print Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Radio" title="Main/Radio">Radio</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SequentialArt" title="Main/SequentialArt">Sequential Art</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TabletopGames" title="Main/TabletopGames">Tabletop Games</a></li>
+<li><a href="/pmwiki/pmwiki.php/UsefulNotes/Television" title="Main/Television">Television</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Theater" title="Main/Theater">Theater</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/VideogameTropes" title="Main/VideogameTropes">Videogame</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Webcomics" title="Main/Webcomics">Webcomics</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Narrative</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/UniversalTropes" title="Main/UniversalTropes">Universal</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/AppliedPhlebotinum" title="Main/AppliedPhlebotinum">Applied Phlebotinum</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CharacterizationTropes" title="Main/CharacterizationTropes">Characterization</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Characters" title="Main/Characters">Characters</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CharactersAsDevice" title="Main/CharactersAsDevice">Characters As Device</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Dialogue" title="Main/Dialogue">Dialogue</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Motifs" title="Main/Motifs">Motifs</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NarrativeDevices" title="Main/NarrativeDevices">Narrative Devices</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Paratext" title="Main/Paratext">Paratext</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Plots" title="Main/Plots">Plots</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Settings" title="Main/Settings">Settings</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Spectacle" title="Main/Spectacle">Spectacle</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Other Categories</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/BritishTellyTropes" title="Main/BritishTellyTropes">British Telly</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TheContributors" title="Main/TheContributors">The Contributors</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CreatorSpeak" title="Main/CreatorSpeak">Creator Speak</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Creators" title="Main/Creators">Creators</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DerivativeWorks" title="Main/DerivativeWorks">Derivative Works</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LanguageTropes" title="Main/LanguageTropes">Language</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LawsAndFormulas" title="Main/LawsAndFormulas">Laws And Formulas</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ShowBusiness" title="Main/ShowBusiness">Show Business</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SplitPersonalityTropes" title="Main/SplitPersonalityTropes">Split Personality</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/StockRoom" title="Main/StockRoom">Stock Room</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TropeTropes" title="Main/TropeTropes">Trope</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Tropes" title="Main/Tropes">Tropes</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TruthAndLies" title="Main/TruthAndLies">Truth And Lies</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TruthInTelevision" title="Main/TruthInTelevision">Truth In Television</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Topical Tropes</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/BetrayalTropes" title="Main/BetrayalTropes">Betrayal</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CensorshipTropes" title="Main/CensorshipTropes">Censorship</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CombatTropes" title="Main/CombatTropes">Combat</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DeathTropes" title="Main/DeathTropes">Death</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FamilyTropes" title="Main/FamilyTropes">Family</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FateAndProphecyTropes" title="Main/FateAndProphecyTropes">Fate And Prophecy</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FoodTropes" title="Main/FoodTropes">Food</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/HolidayTropes" title="Main/HolidayTropes">Holiday</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MemoryTropes" title="Main/MemoryTropes">Memory</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MoneyTropes" title="Main/MoneyTropes">Money</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MoralityTropes" title="Main/MoralityTropes">Morality</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/PoliticsTropes" title="Main/PoliticsTropes">Politics</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ReligionTropes" title="Main/ReligionTropes">Religion</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SchoolTropes" title="Main/SchoolTropes">School</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="sidebar-item showcase">
+<p class="sidebar-item-title" data-title="Community Showcase">Community Showcase <a class="bubble float-right hover-blue" href="/pmwiki/showcase.php">More</a></p>
+<p class="community-showcase">
+<a href="https://sharetv.com/shows/echo_chamber" onclick="trackOutboundLink('https://sharetv.com/shows/echo_chamber');" target="_blank">
+<img alt="" class="lazy-image" data-src="/images/communityShowcase-echochamber.jpg"/></a>
+<a href="/pmwiki/pmwiki.php/Webcomic/TwistedTropes">
+<img alt="" class="lazy-image" data-src="/img/howlandsc-side.jpg"/></a>
+</p>
+</div>
+<div class="sidebar-item sb-ad-unit" id="stick-cont">
+<div class="sidebar-section" id="stick-bar">
+<div class="square_ad ad-size-300x600 ad-section text-center">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_4"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_4'); });</script> </div>
+</div> </div>
+</div>
+</div>
+</div>
+</div>
+<div class="action-bar tablet-off" id="action-bar-bottom">
+<a class="scroll-to-top dead-button" href="#top-of-page" onclick="$('html, body').animate({scrollTop : 0},500);">Top</a>
+</div>
+</div>
+<div class="proper-ad-unit ad-sticky">
+<div id="proper-ad-tvtropes_sticky_ad"> <script>propertag.cmd.push(function() { proper_display('tvtropes_sticky_ad'); });</script> </div>
+</div>
+<footer id="main-footer">
+<div id="main-footer-inner">
+<div class="footer-left">
+<a class="img-link" href="/"><img alt="TV Tropes" class="lazy-image" data-src="/img/tvtropes-footer-logo.png" title="TV Tropes"/></a>
+<form action="index.html" class="navbar-form newsletter-signup validate modal-replies" data-ajax-get="/ajax/subscribe_email.php" id="cse-search-box-mobile" name="" role="">
+<button class="btn-submit newsletter-signup-submit-button" id="subscribe-btn" type="submit"><i class="fa fa-paper-plane"></i></button>
+<input class="form-control" id="subscription-email" name="q" placeholder="Subscribe" size="31" type="text" validate-type="email" value=""/>
+</form>
+<ul class="social-buttons">
+<li><a class="btn fb" href="https://www.facebook.com/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-facebook']);" target="_blank"><i class="fa fa-facebook"></i></a></li>
+<li><a class="btn tw" href="https://www.twitter.com/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-twitter']);" target="_blank"><i class="fa fa-twitter"></i></a> </li>
+<li><a class="btn rd" href="https://www.reddit.com/r/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-reddit']);" target="_blank"><i class="fa fa-reddit-alien"></i></a></li>
+</ul>
+</div>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">TVTropes</h4></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Administrivia">About TVTropes</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TheGoalsOfTVTropes">TVTropes Goals</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TheTropingCode">Troping Code</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TVTropesCustoms">TVTropes Customs</a></li>
+<li><a href="/pmwiki/pmwiki.php/JustForFun/TropesOfLegend">Tropes of Legend</a></li>
+<li><a href="/pmwiki/ad-free-subscribe.php">Go Ad-Free</a></li>
+</ul>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">Community</h4></li>
+<li><a href="/pmwiki/query.php?type=att">Ask The Tropers</a></li>
+<li><a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a></li>
+<li><a href="/pmwiki/query.php?type=tf">Trope Finder</a></li>
+<li><a href="/pmwiki/query.php?type=ykts">You Know That Show</a></li>
+<li><a data-modal-target="login" href="/pmwiki/lbs.php">Live Blogs</a></li>
+<li><a href="/pmwiki/review_activity.php">Reviews</a></li>
+<li><a href="/pmwiki/topics.php">Forum</a></li>
+</ul>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">Tropes HQ</h4></li>
+<li><a href="/pmwiki/about.php">About Us</a></li>
+<li><a href="/pmwiki/contact.php">Contact Us</a></li>
+<li><a href="/pmwiki/dmca.php">DMCA Notice</a></li>
+<li><a href="/pmwiki/privacypolicy.php">Privacy Policy</a></li>
+</ul>
+</div>
+<div class="text-center gutter-top gutter-bottom tablet-on" id="desktop-on-mobile-toggle">
+<a href="/pmwiki/switchDeviceCss.php?mobileVersion=1" rel="nofollow">Switch to <span class="txt-desktop">Desktop</span><span class="txt-mobile">Mobile</span> Version</a>
+</div>
+<div class="legal">
+<p>TVTropes is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License. <br/>Permissions beyond the scope of this license may be available from <a href="mailto:thestaff@tvtropes.org" rel="cc:morePermissions" xmlns:cc="http://creativecommons.org/ns#"> thestaff@tvtropes.org</a>.</p>
+<br/>
+<div class="privacy_wrapper">
+</div>
+</div>
+</footer>
+<style>
+      div.fc-ccpa-root {
+        position: absolute !important;
+        bottom: 93px !important;
+        margin: auto !important;
+        width: 100% !important;
+        z-index: 9999 !important;
+      }
+      .fc-ccpa-root .fc-dns-dialog .fc-dns-link p{
+        outline: none !important;
+        text-decoration: underline !important;
+        font-size: .7em !important;
+        font-family: sans-serif !important;
+      }
+      .fc-ccpa-root .fc-dns-dialog .fc-dns-link .fc-button-background {
+        background: none !important;
+      }
+    </style>
+<div class="full-screen" id="_pm_videoViewer">
+<a class="close" href="#close" id="_pm_videoViewer-close"></a>
+<div class="_pmvv-body">
+<div class="_pmvv-vidbox">
+<video class="video-js vjs-default-skin vjs-16-9" data-video-id="" id="overlay-video-player-box">
+</video>
+<div class="_pmvv-vidbox-desc">
+<h1 id="overlay-title"></h1>
+<p class="_pmvv-vidbox-descTxt" id="overlay-descrip">
+</p>
+<div class="rating-row" data-video-id="">
+<input name="is_logged_in" type="hidden" value="0"/>
+<p>How well does it match the trope?</p>
+<div id="star-rating-group">
+<div class="trope-rate">
+<input id="lamp5" name="rate" type="radio" value="5"/>
+<label for="lamp5" title="Absolutely"></label>
+<input id="lamp4" name="rate" type="radio" value="4"/>
+<label for="lamp4" title="Yes"></label>
+<input id="lamp3" name="rate" type="radio" value="3"/>
+<label for="lamp3" title="Kind of"></label>
+<input id="lamp2" name="rate" type="radio" value="2"/>
+<label for="lamp2" title="Not really"></label>
+<input id="lamp1" name="rate" type="radio" value="1"/>
+<label for="lamp1" title="No"></label>
+</div>
+<div id="star-rating-total">
+</div>
+</div>
+</div>
+<div class="example-media-row">
+<div class="example-overlay">
+<p>Example of:</p>
+<div id="overlay-trope"> / </div>
+</div>
+<div class="media-sources-overlay example-overlay">
+<p>Media sources:</p>
+<div id="overlay-media"> / </div>
+</div>
+</div>
+<p class="_pmvv-vidbox-stats text-right font-s" style="padding-top:8px; border-top: solid 1px rgba(255,255,255,0.2)">
+<a class="float-right" data-modal-target="login" href="#video-feedback">Report</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+        window.special_ops =  {
+            member : 'no',
+            isolated : 0,
+            tags : ['unknown']
+        };
+    </script>
+<script type="text/javascript">
+
+        var cleanCreativeEnabled = "";
+        var donation = "";
+        var live_ads = "1";
+        var img_domain = "https://static.tvtropes.org";
+        var snoozed = cookies.read('snoozedabm');
+        var snoozable = "";
+
+        if (adsRemovedWith) {
+            live_ads = 0;
+        }
+
+        var elem = document.createElement('script');
+        elem.async = true;
+
+        elem.src = '/design/assets/bundle.js?rev=c58d8df02f09262390bbd03db7921fc35c6af306';
+
+        elem.onload = function() {
+                                 }
+        document.getElementsByTagName('head')[0].appendChild(elem);
+
+    </script>
+<script type="text/javascript">
+      function send_analytics_event(user_type, donation){
+          // if(user_type == 'uncached' || user_type == 'cached'){
+          //   ga('send', 'event', 'caching', 'load', user_type, {'nonInteraction': 1});
+          //   return;
+          // }
+          var event_name = user_type;
+
+          if(donation == 'true'){
+              event_name += "_donation"
+          }else if(typeof(valid_user) == 'undefined'){
+              event_name += "_blocked"
+          }else if(valid_user == true){
+              event_name += "_unblocked";
+          }else{
+              event_name = "_unknown"
+          }
+          ga('send', 'event', 'ads', 'load', event_name, {'nonInteraction': 1});
+      }
+
+    
+    send_analytics_event("guest", "false");
+      </script>
+</body>
+</html>

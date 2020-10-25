@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Interactive Comic - TV Tropes</title>
+<meta content="The Interactive Comic trope as used in popular culture. A Webcomic that, unlike most webcomics that have a set story and swipe reader speculation …" name="description"/>
+<link href="https://tvtropes.org/pmwiki/pmwiki.php/Main/InteractiveComic" rel="canonical"/>
+<link href="/img/icons/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="@tvtropes" name="twitter:site"/>
+<meta content="@tvtropes" name="twitter:owner"/>
+<meta content="Interactive Comic - TV Tropes" name="twitter:title"/>
+<meta content="The Interactive Comic trope as used in popular culture. A Webcomic that, unlike most webcomics that have a set story and swipe reader speculation …" name="twitter:description"/>
+<meta content="https://static.tvtropes.org/logo_blue_small.png" name="twitter:image:src"/>
+<meta content="TV Tropes" property="og:site_name"/>
+<meta content="en_US" property="og:locale"/>
+<meta content="https://www.facebook.com/tvtropes" property="article:publisher"/>
+<meta content="Interactive Comic - TV Tropes" property="og:title"/>
+<meta content="website" property="og:type"/>
+<meta content="https://tvtropes.org/pmwiki/pmwiki.php/Main/InteractiveComic" property="og:url"/>
+<meta content="https://static.tvtropes.org/logo_blue_small.png" property="og:image"/>
+<meta content="A Webcomic that, unlike most webcomics that have a set story and swipe reader speculation periodically, takes a lot of reader input. Frequently, the author will take so much reader input that nearly the entire webcomic is made of user suggestions …" property="og:description"/>
+<link href="/img/icons/apple-icon-57x57.png" rel="apple-touch-icon" sizes="57x57" type="image/png"/>
+<link href="/img/icons/apple-icon-60x60.png" rel="apple-touch-icon" sizes="60x60" type="image/png"/>
+<link href="/img/icons/apple-icon-72x72.png" rel="apple-touch-icon" sizes="72x72" type="image/png"/>
+<link href="/img/icons/apple-icon-76x76.png" rel="apple-touch-icon" sizes="76x76" type="image/png"/>
+<link href="/img/icons/apple-icon-114x114.png" rel="apple-touch-icon" sizes="114x114" type="image/png"/>
+<link href="/img/icons/apple-icon-120x120.png" rel="apple-touch-icon" sizes="120x120" type="image/png"/>
+<link href="/img/icons/apple-icon-144x144.png" rel="apple-touch-icon" sizes="144x144" type="image/png"/>
+<link href="/img/icons/apple-icon-152x152.png" rel="apple-touch-icon" sizes="152x152" type="image/png"/>
+<link href="/img/icons/apple-icon-180x180.png" rel="apple-touch-icon" sizes="180x180" type="image/png"/>
+<link href="/img/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/img/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/img/icons/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png"/>
+<link href="/img/icons/favicon-192x192.png" rel="icon" sizes="192x192" type="image/png"/>
+<meta content="width=device-width, initial-scale=1" id="viewport" name="viewport"/>
+<script>
+                var propertag = {};
+                propertag.cmd = [];
+            </script>
+<link href="/design/assets/bundle.css?rev=c58d8df02f09262390bbd03db7921fc35c6af306" rel="stylesheet"/>
+<script>
+                function object(objectId) {
+                    if (document.getElementById && document.getElementById(objectId)) {
+                        return document.getElementById(objectId);
+                    } else if (document.all && document.all(objectId)) {
+                        return document.all(objectId);
+                    } else if (document.layers && document.layers[objectId]) {
+                        return document.layers[objectId];
+                    } else {
+                        return false;
+                    }
+                }
+
+                // JAVASCRIPT COOKIES CODE: for getting and setting user viewing preferences
+                var cookies = {
+                    create: function (name, value, days2expire, path) {
+                        var date = new Date();
+                        date.setTime(date.getTime() + (days2expire * 24 * 60 * 60 * 1000));
+                        var expires = date.toUTCString();
+                        document.cookie = name + '=' + value + ';' + 'expires=' + expires + ';' + 'path=' + path + ';';
+                    },
+										createWithExpire: function(name, value, expires, path) {
+												document.cookie = name + '=' + value + ';' + 'expires=' + expires + ';' + 'path=' + path + ';';
+										},
+                    read: function (name) {
+                        var cookie_value = "",
+                            current_cookie = "",
+                            name_expr = name + "=",
+                            all_cookies = document.cookie.split(';'),
+                            n = all_cookies.length;
+
+                        for (var i = 0; i < n; i++) {
+                            current_cookie = all_cookies[i].trim();
+                            if (current_cookie.indexOf(name_expr) === 0) {
+                                cookie_value = current_cookie.substring(name_expr.length, current_cookie.length);
+                                break;
+                            }
+                        }
+                        return cookie_value;
+                    },
+                    update: function (name, val) {
+                        this.create(name, val, 300, "/");
+                    },
+                    remove: function (name) {
+                        document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
+                    }
+                };
+
+                function updateUserPrefs() {
+                    //GENERAL: detect and set browser, if not cookied (will be treated like a user-preference and added to the #user-pref element)
+                    if( !cookies.read('user-browser') ){
+                        var broswer = '';
+
+                        if(navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPod/i) ){
+                            browser = 'iOS';
+                        } else if (/Opera[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'opera';
+                        } else if (/MSIE (\d+\.\d+);/.test(navigator.userAgent)) {
+                            browser = 'MSIE';
+                        } else if (/Navigator[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'netscape';
+                        } else if (/Chrome[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'chrome';
+                        } else if (/Safari[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'safari';
+                            /Version[\/\s](\d+\.\d+)/.test(navigator.userAgent);
+                            browserVersion = new Number(RegExp.$1);
+                        } else if (/Firefox[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'firefox';
+                        } else {
+                            browser = 'internet_explorer';
+                        }
+                        cookies.create('user-browser',browser,1,'/');
+                        document.getElementById('user-prefs').classList.add('browser-' + browser);
+                    } else {
+                        document.getElementById('user-prefs').classList.add('browser-' + cookies.read('user-browser'));
+                    }
+
+                    //update user preference settings
+                    if (cookies.read('wide-load') !== '') document.getElementById('user-prefs').classList.add('wide-load');
+                    if (cookies.read('night-vision') !== '') document.getElementById('user-prefs').classList.add('night-vision');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('user-prefs').classList.add('sticky-header');
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('user-prefs').classList.add('show-spoilers');
+                    if (cookies.read('folders-open') !== '') document.getElementById('user-prefs').classList.add('folders-open');
+                    if (cookies.read('lefthand-sidebar') !== '') document.getElementById('user-prefs').classList.add('lefthand-sidebar');
+                    if (cookies.read('highlight-links') !== '') document.getElementById('user-prefs').classList.add('highlight-links');
+                    if (cookies.read('forum-gingerbread') !== '') document.getElementById('user-prefs').classList.add('forum-gingerbread');
+                    if (cookies.read('shared-avatars') !== '') document.getElementById('user-prefs').classList.add('shared-avatars');
+                    if (cookies.read('new-search') !== '') document.getElementById('user-prefs').classList.add('new-search');
+                    if (cookies.read('stop-auto-play-video') !== '') document.getElementById('user-prefs').classList.add('stop-auto-play-video');
+
+                    //desktop view on mobile
+                    if (cookies.read('desktop-on-mobile') !== ''){
+                        document.getElementById('user-prefs').classList.add('desktop-on-mobile');
+
+                        var viewport = document.querySelector("meta[name=viewport]");
+                        viewport.setAttribute('content', 'width=1000');
+                    }
+
+                }
+
+                function updateDesktopPrefs() {
+                    if (cookies.read('wide-load') !== '') document.getElementById('sidebar-toggle-wideload').classList.add('active');
+                    if (cookies.read('night-vision') !== '') document.getElementById('sidebar-toggle-nightvision').classList.add('active');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('sidebar-toggle-stickyheader').classList.add('active');
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('sidebar-toggle-showspoilers').classList.add('active');
+
+                }
+
+                function updateMobilePrefs() {
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('mobile-toggle-showspoilers').classList.add('active');
+                    if (cookies.read('night-vision') !== '') document.getElementById('mobile-toggle-nightvision').classList.add('active');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('mobile-toggle-stickyheader').classList.add('active');
+                    if (cookies.read('highlight-links') !== '') document.getElementById('mobile-toggle-highlightlinks').classList.add('active');
+
+                }
+
+
+                if (document.cookie.indexOf("scroll0=") < 0) {
+                    // do nothing
+                } else {
+                    console.log('ads removed by scroll.com');
+                    var adsRemovedWith = 'scroll';
+                    var style = document.createElement('style');
+                    style.innerHTML = '#header-ad, .proper-ad-unit, .square_ad, .sb-ad-unit { display: none !important; } ';
+                    document.head.appendChild(style);
+                }
+            </script>
+<script type="text/javascript">
+
+                var tvtropes_config = {
+                    astri_stream_enabled : "",
+                    is_logged_in         : "",
+                    handle               : "",
+                    get_astri_stream     : "",
+										revnum               : "c58d8df02f09262390bbd03db7921fc35c6af306",
+										img_domain           : "https://static.tvtropes.org",
+										adblock              : "1",
+										adblock_url          : "propermessage.io",
+										pause_editing        : "0",
+										pause_editing_msg    : "",
+										pause_site_changes   : ""
+                };
+            </script>
+<script type="text/javascript">
+						  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+						  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+						  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+						  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+						  ga('create', 'UA-3821842-1', 'auto');
+						  ga('send', 'pageview');
+
+						</script>
+</head>
+<body class="">
+<i id="user-prefs"></i>
+<script>updateUserPrefs();</script>
+<div id="fb-root"></div>
+<div id="modal-box"></div>
+<header class="headroom-element" id="main-header-bar">
+<div id="main-header-bar-inner">
+<span class="header-spacer" id="header-spacer-left"></span>
+<a class="mobile-menu-toggle-button tablet-on" href="#mobile-menu" id="main-mobile-toggle"><span></span><span></span><span></span></a>
+<a class="no-dev" href="/" id="main-header-logoButton"></a>
+<span class="header-spacer" id="header-spacer-right"></span>
+<nav class="tablet-off" id="main-header-nav">
+<a href="/pmwiki/pmwiki.php/Main/Tropes">Tropes</a>
+<a href="/pmwiki/pmwiki.php/Main/Media">Media</a>
+<a class="nav-browse" href="/pmwiki/browse.php">Browse</a>
+<a href="/pmwiki/index_report.php">Indexes</a>
+<a href="/pmwiki/topics.php">Forums</a>
+<a class="nav-browse" href="/pmwiki/recent_videos.php">Videos</a>
+</nav>
+<div id="main-header-bar-right">
+<div class="font-xs mobile-off" id="signup-login-box">
+<a class="hover-underline bold" data-modal-target="signup" href="/pmwiki/login.php">Join</a>
+<a class="hover-underline bold" data-modal-target="login" href="/pmwiki/login.php">Login</a>
+</div>
+<div class="mobile-on inline" id="signup-login-mobileToggle">
+<a data-modal-target="login" href="/pmwiki/login.php"><i class="fa fa-user"></i></a>
+</div>
+<div id="search-box">
+<form action="/pmwiki/search_result.php" class="search">
+<input class="search-box" name="q" placeholder="Search" required="" type="text" value=""/>
+<input class="submit-button" type="submit" value=""/>
+<input name="search_type" type="hidden" value="article"/>
+<input name="page_type" type="hidden" value="all"/>
+<input name="cx" type="hidden" value="partner-pub-6610802604051523:amzitfn8e7v"/>
+<input name="cof" type="hidden" value="FORID:10"/>
+<input name="ie" type="hidden" value="ISO-8859-1"/>
+<input name="siteurl" type="hidden" value=""/>
+<input name="ref" type="hidden" value=""/>
+<input name="ss" type="hidden" value=""/>
+</form>
+<a class="mobile-on mobile-search-toggle close-x" href="#close-search"><i class="fa fa-close"></i></a>
+</div>
+<div id="random-box">
+<a class="button-random-trope" href="/pmwiki/pmwiki.php/Main/BossRush" onclick="ga('send', 'event', 'button', 'click', 'random trope');" rel="nofollow"></a>
+<a class="button-random-media" href="/pmwiki/pmwiki.php/Webcomic/HeroinaRobotDetective" onclick="ga('send', 'event', 'button', 'click', 'random media');" rel="nofollow"></a>
+</div>
+</div>
+</div>
+<div class="tablet-on" id="mobile-menu"><div class="mobile-menu-options">
+<div class="nav-wrapper">
+<a class="xl" href="/pmwiki/pmwiki.php/Main/Tropes">Tropes</a>
+<a class="xl" href="/pmwiki/pmwiki.php/Main/Media">Media</a>
+<a class="xl" href="/pmwiki/browse.php">Browse</a>
+<a class="xl" href="/pmwiki/index_report.php">Indexes</a>
+<a class="xl" href="/pmwiki/topics.php">Forums</a>
+<a class="xl" href="/pmwiki/recent_videos.php">Videos</a>
+<a href="/pmwiki/query.php?type=att">Ask The Tropers</a>
+<a href="/pmwiki/query.php?type=tf">Trope Finder</a>
+<a href="/pmwiki/query.php?type=ykts">You Know That Show...</a>
+<a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a>
+<a data-click-toggle="active" href="#tools">Tools <i class="fa fa-chevron-down"></i></a>
+<div class="tools-dropdown mobile-dropdown-linkList">
+<a href="/pmwiki/cutlist.php">Cut List</a>
+<a href="/pmwiki/changes.php">New Edits</a>
+<a href="/pmwiki/recent_edit_reasons.php">Edit Reasons</a>
+<a href="/pmwiki/launches.php">Launches</a>
+<a href="/pmwiki/img_list.php">Images List</a>
+<a href="/pmwiki/crown_activity.php">Crowner Activity</a>
+<a href="/pmwiki/no_types.php">Un-typed Pages</a>
+<a href="/pmwiki/page_type_audit.php">Recent Page Type Changes</a>
+</div>
+<a data-click-toggle="active" href="#hq">Tropes HQ <i class="fa fa-chevron-down"></i></a>
+<div class="tools-dropdown mobile-dropdown-linkList">
+<a href="/pmwiki/about.php">About Us</a>
+<a href="/pmwiki/contact.php">Contact Us</a>
+<a href="mailto:advertising@proper.io">Advertise</a>
+<a href="/pmwiki/dmca.php">DMCA Notice</a>
+<a href="/pmwiki/privacypolicy.php">Privacy Policy</a>
+</div>
+<a href="/pmwiki/ad-free-subscribe.php">Go Ad-Free</a>
+<div class="toggle-switches">
+<ul class="mobile-menu display-toggles">
+<li>Show Spoilers <div class="display-toggle show-spoilers" id="mobile-toggle-showspoilers"></div></li>
+<li>Night Vision <div class="display-toggle night-vision" id="mobile-toggle-nightvision"></div></li>
+<li>Sticky Header <div class="display-toggle sticky-header" id="mobile-toggle-stickyheader"></div></li>
+<li>Highlight Links <div class="display-toggle highlight-links" id="mobile-toggle-highlightlinks"></div></li>
+</ul>
+<script>updateMobilePrefs();</script>
+</div>
+</div>
+</div>
+</div>
+</header>
+<div class="mobile-on" id="homepage-introBox-mobile">
+<a href="/"><img class="logo-small" src="/images/logo-white-big.png"/></a>
+<form action="/pmwiki/search_result.php" class="search" style="margin:10px -5px -6px -5px;">
+<input class="search-box" name="q" placeholder="Search" required="" type="text" value=""/>
+<input class="submit-button" type="submit" value=""/>
+<input name="search_type" type="hidden" value="article"/>
+<input name="page_type" type="hidden" value="all"/>
+<input name="cx" type="hidden" value="partner-pub-6610802604051523:amzitfn8e7v"/>
+<input name="cof" type="hidden" value="FORID:10"/>
+<input name="ie" type="hidden" value="ISO-8859-1"/>
+<input name="siteurl" type="hidden" value=""/>
+<input name="ref" type="hidden" value=""/>
+<input name="ss" type="hidden" value=""/>
+</form>
+</div>
+<div class="ad" id="header-ad-wrapper">
+<div id="header-ad">
+<div class="ad-size-970x90 atf_banner">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_1"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_1'); });</script> </div>
+</div> </div>
+</div>
+</div>
+<div id="main-container">
+<div class="action-bar mobile-off" id="action-bar-top">
+<div class="action-bar-right">
+<p>Follow TV Tropes</p>
+<a class="button-fb" href="https://www.facebook.com/TVTropes">
+<i class="fa fa-facebook"></i></a>
+<a class="button-tw" href="https://www.twitter.com/TVTropes">
+<i class="fa fa-twitter"></i></a>
+<a class="button-re" href="https://www.reddit.com/r/TVTropes">
+<i class="fa fa-reddit-alien"></i></a>
+</div>
+<nav class="actions-wrapper" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<ul class="page-actions" id="top_main_list">
+<li class="link-edit">
+<a class="article-edit-button" data-modal-target="login" href="/pmwiki/pmwiki.php/Main/InteractiveComic?action=edit" rel="nofollow">
+<i class="fa fa-pencil"></i> Edit Page</a></li><li class="link-related"><a href="/pmwiki/relatedsearch.php?term=Main/InteractiveComic">
+<i class="fa fa-share-alt"></i> Related</a></li><li class="link-history"><a href="/pmwiki/article_history.php?article=Main.InteractiveComic">
+<i class="fa fa-history"></i> History</a></li><li class="link-discussion"><a href="/pmwiki/remarks.php?trope=Main.InteractiveComic">
+<i class="fa fa-comment"></i> Discussion</a></li> </ul>
+<button class="nav__dropdown-toggle" id="top_more_button" onclick="toggle_more_menu('top');" type="button">More</button>
+<ul class="more_menu hidden_more_list" id="top_more_list">
+<li class="link-todo tuck-always more_list_item"><a data-modal-target="login" href="#todo"><i class="fa fa-check-circle"></i> To Do</a></li><li class="link-pageSource tuck-always more_list_item"><a data-modal-target="login" href="/pmwiki/pmwiki.php/Main/InteractiveComic?action=source" rel="nofollow" target="_blank"><i class="fa fa-code"></i> Page Source</a></li> </ul>
+</nav>
+<div class="WikiWordModalStub"></div>
+<div class="ImgUploadModalStub" data-page-type="Article"></div>
+<div class="login-alert" style="display: none;">
+You need to <a href="/pmwiki/login.php" style="color:#21A0E8">login</a> to do this. <a href="/pmwiki/login.php?tab=register_account" style="color:#21A0E8">Get Known</a> if you don't have an account
+</div>
+</div>
+<div class="page-Article" id="main-content">
+<article class="with-sidebar" id="main-entry">
+<input id="groupname-hidden" type="hidden" value="Main"/>
+<input id="title-hidden" type="hidden" value="InteractiveComic"/>
+<input id="article_id" type="hidden" value="81047"/>
+<input id="logged_in" type="hidden" value="false"/>
+<p class="hidden" id="current_url">http://tvtropes.org/pmwiki/pmwiki.php/Main/InteractiveComic</p>
+<meta content="" itemprop="datePublished"/>
+<meta content="" itemprop="articleSection"/>
+<meta content="" itemprop="image"/>
+<a class="watch-button" data-modal-target="login" href="#watch">Follow<span>ing</span></a>
+<h1 class="entry-title" itemprop="headline">
+Interactive Comic
+</h1>
+<script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+                "@type": "ListItem",
+                "position": 1,
+                "name": "tvtropes.org",
+                "item": "https://tvtropes.org"
+            },{
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Tropes",
+                "item": "https://tvtropes.org/pmwiki/pmwiki.php/Main/Tropes"
+            },{
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Interactive Comic"            }]
+        }
+    </script>
+<a class="mobile-actionbar-toggle mobile-on" data-click-toggle="active" href="#mobile-actions-toggle" id="mobile-actionbar-toggle">
+<p class="tiny-off">Go To</p><span></span><span></span><span></span><i class="fa fa-pencil"></i></a>
+<nav class="mobile-actions-wrapper mobile-on" id="mobile-actions-bar"></nav>
+<div class="modal fade hidden-until-active" id="editLockModal">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button aria-label="Close" class="close" data-dismiss="modal" type="button"> <span aria-hidden="true">×</span></button>
+<h4 class="modal-title">Edit Locked</h4>
+</div>
+<div class="modal-body">
+<div class="row">
+<div class="body">
+<div class="danger troper_locked_message"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<nav class="body-options" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<ul class="subpage-links">
+<li>
+<a class="subpage-link curr-subpage" href="/pmwiki/pmwiki.php/Main/InteractiveComic" title="The Main page">
+<span class="wrapper"><span class="spi main-page"></span>Main</span></a>
+</li>
+<li class="create-subpage dropdown">
+<a aria-expanded="false" class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);" role="button">
+<span class="wrapper">Create New <i class="fa fa-plus-circle"></i></span>
+</a>
+<select onchange="this.options[this.selectedIndex].value &amp;&amp; (window.location = this.options[this.selectedIndex].value);">
+<option value="">- Create New -</option>
+<option value="/pmwiki/pmwiki.php/Analysis/InteractiveComic?action=edit">Analysis</option>
+<option value="/pmwiki/pmwiki.php/Characters/InteractiveComic?action=edit">Characters</option>
+<option value="/pmwiki/pmwiki.php/FanficRecs/InteractiveComic?action=edit">FanficRecs</option>
+<option value="/pmwiki/pmwiki.php/FanWorks/InteractiveComic?action=edit">FanWorks</option>
+<option value="/pmwiki/pmwiki.php/Fridge/InteractiveComic?action=edit">Fridge</option>
+<option value="/pmwiki/pmwiki.php/Haiku/InteractiveComic?action=edit">Haiku</option>
+<option value="/pmwiki/pmwiki.php/Headscratchers/InteractiveComic?action=edit">Headscratchers</option>
+<option value="/pmwiki/pmwiki.php/ImageLinks/InteractiveComic?action=edit">ImageLinks</option>
+<option value="/pmwiki/pmwiki.php/Laconic/InteractiveComic?action=edit">Laconic</option>
+<option value="/pmwiki/pmwiki.php/PlayingWith/InteractiveComic?action=edit">PlayingWith</option>
+<option value="/pmwiki/pmwiki.php/Quotes/InteractiveComic?action=edit">Quotes</option>
+<option value="/pmwiki/pmwiki.php/Recap/InteractiveComic?action=edit">Recap</option>
+<option value="/pmwiki/pmwiki.php/ReferencedBy/InteractiveComic?action=edit">ReferencedBy</option>
+<option value="/pmwiki/pmwiki.php/Synopsis/InteractiveComic?action=edit">Synopsis</option>
+<option value="/pmwiki/pmwiki.php/Timeline/InteractiveComic?action=edit">Timeline</option>
+<option value="/pmwiki/pmwiki.php/Trivia/InteractiveComic?action=edit">Trivia</option>
+<option value="/pmwiki/pmwiki.php/WMG/InteractiveComic?action=edit">WMG</option>
+<option value="/pmwiki/pmwiki.php/YMMV/InteractiveComic?action=edit">YMMV</option>
+</select>
+</li>
+</ul>
+</nav>
+<div class="article-content retro-folders" id="main-article">
+<p></p><div class="quoteright" style="width:350px;"><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/AwfulHospital" title="/pmwiki/pmwiki.php/Webcomic/AwfulHospital"><div class="lazy_load_img_box" style="padding-top:32.38%"><img alt="https://mediaproxy.tvtropes.org/width/350/https://static.tvtropes.org/pmwiki/pub/images/seduce.png" border="0" class="embeddedimage" height="113" src="https://mediaproxy.tvtropes.org/width/350/https://static.tvtropes.org/pmwiki/pub/images/seduce.png" width="350"/></div></a></div>
+<div class="acaptionright" style="width:350px;"> &gt;SEDUCE THE SANDWICH</div>
+<div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_1"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_1'); })</script></div></div><p>A <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Webcomic" title="/pmwiki/pmwiki.php/Main/Webcomic">Webcomic</a> that, unlike most webcomics that have a set story and <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AscendedFanon" title="/pmwiki/pmwiki.php/Main/AscendedFanon">swipe reader speculation periodically</a>, takes a <em>lot</em> of reader input. Frequently, the author will take so much reader input that nearly the entire webcomic is made of user suggestions. As such, they <em>always</em> have some way to put in suggestions, whether it's a designated forum where you can post in a suggestion box, comment in a comment box, a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ShoutBox" title="/pmwiki/pmwiki.php/Main/ShoutBox">Shout Box</a>, or an email address you can send suggestions to. In fact, many of these comics had their origins in forum threads, where the update panels are <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DirectDemographic" title="/pmwiki/pmwiki.php/Main/DirectDemographic">in-line with the discussion of said panels and the suggestions</a>.
+</p><p>In many cases (nearly all since the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TropeCodifier" title="/pmwiki/pmwiki.php/Main/TropeCodifier">Trope Codifier</a> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/MSPaintAdventures" title="/pmwiki/pmwiki.php/Webcomic/MSPaintAdventures">MS Paint Adventures</a></em>), the webcomic will be <a class="twikilink" href="/pmwiki/pmwiki.php/Main/FramingDevice" title="/pmwiki/pmwiki.php/Main/FramingDevice">presented as if it were a log of an</a> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/InteractiveFiction" title="/pmwiki/pmwiki.php/Main/InteractiveFiction">Interactive Fiction</a> game (with pictures). Because commands are parsed by a human and only one (or a very select few) command paths are actually used, the story usually ends up <a class="twikilink" href="/pmwiki/pmwiki.php/Main/KudzuPlot" title="/pmwiki/pmwiki.php/Main/KudzuPlot">far more complex than is possible to program into a game</a> (mostly because the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/CombinatorialExplosion" title="/pmwiki/pmwiki.php/Main/CombinatorialExplosion">Combinatorial Explosion</a> is much smaller and can thus be handled manually). <a class="twikilink" href="/pmwiki/pmwiki.php/Main/WriteWhatYouKnow" title="/pmwiki/pmwiki.php/Main/WriteWhatYouKnow">Due to the sort of people who make these comics</a>, these comics also frequently spoof such things as <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AdventureGame" title="/pmwiki/pmwiki.php/Main/AdventureGame">Adventure Games</a>, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SimulationGame" title="/pmwiki/pmwiki.php/Main/SimulationGame">Simulation Games</a>, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/PuzzleGame" title="/pmwiki/pmwiki.php/Main/PuzzleGame">Puzzle Games</a>, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/RoleplayingGame" title="/pmwiki/pmwiki.php/Main/RoleplayingGame">Roleplaying Games</a>, or <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TurnBasedStrategy" title="/pmwiki/pmwiki.php/Main/TurnBasedStrategy">Turn-Based Strategy</a> games.
+</p><div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_2"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_2'); })</script></div></div><p>These comics generally update with only one panel at a time and as such can be updated <em>very quickly</em>. <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ArchivePanic" title="/pmwiki/pmwiki.php/Main/ArchivePanic">Often even more than once a day.</a>
+</p><p>For obvious reasons, these comics cannot use a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/StripBuffer" title="/pmwiki/pmwiki.php/Main/StripBuffer">Strip Buffer</a> at all.
+</p><p>Frequently these comics straddle the boundary between <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Webcomic" title="/pmwiki/pmwiki.php/Main/Webcomic">Webcomic</a> and <a class="twikilink" href="/pmwiki/pmwiki.php/Main/NewMedia" title="/pmwiki/pmwiki.php/Main/NewMedia">New Media</a>/<a class="twikilink" href="/pmwiki/pmwiki.php/Main/WebOriginal" title="/pmwiki/pmwiki.php/Main/WebOriginal">Web Original</a>. General precedent seems to be to put <a class="twikilink" href="/pmwiki/pmwiki.php/Main/InteractiveComic" title="/pmwiki/pmwiki.php/Main/InteractiveComic">Interactive Comics</a> in the Webcomic category. More and more however, traditional web comic creators are experimenting with the medium.
+</p><p></p><div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_3"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_3'); })</script></div></div><h1>Tropes often used include</h1>
+<ul><li> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AscendedFanon" title="/pmwiki/pmwiki.php/Main/AscendedFanon">Ascended Fanon</a>: and <em>nothing but</em>. Collectively, these comics may well be the best example.
+<ul><li> Beyond direct suggestions, authors often take direction of the future updates by canonizing fan speculation.
+</li></ul></li><li> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/CerebusSyndrome" title="/pmwiki/pmwiki.php/Main/CerebusSyndrome">Cerebus Syndrome</a>: Specifically, once the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/OntologicalMystery" title="/pmwiki/pmwiki.php/Main/OntologicalMystery">Ontological Mystery</a> is slightly less of a mystery, the author will often reveal a backstory for the world and the character. This generally tilts the comic away from silly hijinks to plot-driven story.
+</li><li> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ForegoneConclusion" title="/pmwiki/pmwiki.php/Main/ForegoneConclusion">Foregone Conclusion</a>: <em>Homestuck</em> has proven that as any interactive comic becomes popular enough, it begins to defy the medium. The creator of <em>Homestuck</em> has said that before ultimately closing the suggestion boxes, there were so many suggestions that he could pick any direction he wanted, subverting the idea of the interactivity.
+<ul><li> <em>Homestuck</em> is also an interesting case study in that the author eventually got incredibly fed up by endless streams of countless moronic suggestions; something usually considered a strength of this genre.
+<ul><li> Even more interesting is that without suggestions, fans still affect the comic in small ways as community jokes and theories often appear in the comics or have nods to them. Also, the author himself said "90% of 'calling it' is actually influencing it in disguise."
+</li></ul></li></ul></li><li> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/OntologicalMystery" title="/pmwiki/pmwiki.php/Main/OntologicalMystery">Ontological Mystery</a>: Often of the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/YouWakeUpInARoom" title="/pmwiki/pmwiki.php/Main/YouWakeUpInARoom">You Wake Up in a Room</a> kind. <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SturgeonsLaw" title="/pmwiki/pmwiki.php/Main/SturgeonsLaw">Fortunately or unfortunately</a>, this type of beginning to a story is <em>incredibly</em> easy to pull off.
+</li><li> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/PresentTenseNarrative" title="/pmwiki/pmwiki.php/Main/PresentTenseNarrative">Present Tense Narrative</a>
+</li><li> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SecondPersonNarration" title="/pmwiki/pmwiki.php/Main/SecondPersonNarration">Second-Person Narration</a>
+</li><li> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SchrodingersGun" title="/pmwiki/pmwiki.php/Main/SchrodingersGun">Schrödinger's Gun</a>
+</li><li> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GenreSavvy" title="/pmwiki/pmwiki.php/Main/GenreSavvy">Genre Savvy</a> or <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GenreBlindness" title="/pmwiki/pmwiki.php/Main/GenreBlindness">Genre Blindness</a>: Depending on the quality of reader suggestions, the protagonist in question can be <a class="twikilink" href="/pmwiki/pmwiki.php/Main/IdiotBall" title="/pmwiki/pmwiki.php/Main/IdiotBall">a bumbling idiot with no brains</a> or <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SmartBall" title="/pmwiki/pmwiki.php/Main/SmartBall">an incredibly smart ninja who knows all the trappings of his fiction</a>, or anything in between.
+</li></ul><hr/><h2>Examples:</h2>
+<ul><li> The genre really arose out of <a class="twikilink" href="/pmwiki/pmwiki.php/Main/InteractiveFiction" title="/pmwiki/pmwiki.php/Main/InteractiveFiction">Interactive Fiction</a> and joking around on forums (both Ruby Quest and MSPA started on forums), so pinning down the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/UrExample" title="/pmwiki/pmwiki.php/Main/UrExample">Ur-Example</a> is probably impossible.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/RubyQuest" title="/pmwiki/pmwiki.php/Webcomic/RubyQuest">Ruby Quest</a></em> and all the other <a class="urllink" href="http://1d4chan.org/wiki/Quest">/tg/ quests<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a> are the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TropeMaker" title="/pmwiki/pmwiki.php/Main/TropeMaker">Trope Makers</a> (though <em>Ruby Quest</em> itself is younger than the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TropeCodifier" title="/pmwiki/pmwiki.php/Main/TropeCodifier">Trope Codifier</a>).
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Roleplay/JohnQuest" title="/pmwiki/pmwiki.php/Roleplay/JohnQuest">John Quest</a></em>, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GaidenGame" title="/pmwiki/pmwiki.php/Main/GaidenGame">Gaiden Game</a>-esque <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SelfParody" title="/pmwiki/pmwiki.php/Main/SelfParody">Self-Parody</a> of Ruby by the <a class="twikilink" href="/pmwiki/pmwiki.php/Creator/TheWeaver" title="/pmwiki/pmwiki.php/Creator/TheWeaver">same author</a>.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/NanQuest" title="/pmwiki/pmwiki.php/Webcomic/NanQuest">Nan Quest</a></em>, <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/RubyQuest" title="/pmwiki/pmwiki.php/Webcomic/RubyQuest">Ruby Quest</a></em>'s <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SpiritualSequel" title="/pmwiki/pmwiki.php/Main/SpiritualSequel">Spiritual Sequel</a>.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/DiveQuest" title="/pmwiki/pmwiki.php/Webcomic/DiveQuest">Dive Quest</a></em>, a fantasy roleplay and possible prequel to <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/RubyQuest" title="/pmwiki/pmwiki.php/Webcomic/RubyQuest">Ruby Quest</a></em>.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/EnemyQuest" title="/pmwiki/pmwiki.php/Webcomic/EnemyQuest">Enemy Quest</a></em> is a Romance/Science-Fiction interactive comic in the same vein as <a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/RubyQuest" title="/pmwiki/pmwiki.php/Webcomic/RubyQuest">Ruby Quest</a> and <a class="twikilink" href="/pmwiki/pmwiki.php/Roleplay/NanQuest" title="/pmwiki/pmwiki.php/Roleplay/NanQuest">Nan Quest</a>. Created by <a class="urllink" href="http://questden.org/wiki/Bromeliad">Bromeliad<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a>, It follows the story of one Zack Nguyen as he's hired by a government agency to take place in a cultural exchange program with Earth's newest residents: the Visitors, a collection of four alien races from <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AnotherDimension" title="/pmwiki/pmwiki.php/Main/AnotherDimension">another dimension</a>.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/OldRepublicPaintAdventures" title="/pmwiki/pmwiki.php/Webcomic/OldRepublicPaintAdventures">Old Republic Paint Adventures</a></em> is an interactive comic (loosely) set in the Star Wars universe.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/MSPaintAdventures" title="/pmwiki/pmwiki.php/Webcomic/MSPaintAdventures">MS Paint Adventures</a></em> is the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TropeCodifier" title="/pmwiki/pmwiki.php/Main/TropeCodifier">Trope Codifier</a>.
+<ul><li> This has changed a bit since the site was started. While completed series <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/ProblemSleuth" title="/pmwiki/pmwiki.php/Webcomic/ProblemSleuth">Problem Sleuth</a></em> is still an excellent example of the genre, the current series <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/Homestuck" title="/pmwiki/pmwiki.php/Webcomic/Homestuck">Homestuck</a></em> has long since closed its submission boxes and is for all practical purposes a "normal" webcomic styled like an interactive comic. The audience still has a significant influence on the story, though, as author <a class="twikilink" href="/pmwiki/pmwiki.php/Creator/AndrewHussie" title="/pmwiki/pmwiki.php/Creator/AndrewHussie">Andrew Hussie</a> enjoys reading fan theories and <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AscendedFanon" title="/pmwiki/pmwiki.php/Main/AscendedFanon">employing</a> the ones he likes into the story.
+</li></ul></li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/KoanOfTheDay" title="/pmwiki/pmwiki.php/Webcomic/KoanOfTheDay">Koan of the Day</a></em>, the guru is visited by the Goddess, which introduces a <a class="urllink" href="http://www.koanoftheday.com/146/">complicated puzzle game that few people have solved<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a>.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/Voices" title="/pmwiki/pmwiki.php/Webcomic/Voices">Voices</a></em> (which was originally an <a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/MSPaintAdventures" title="/pmwiki/pmwiki.php/Webcomic/MSPaintAdventures">MSPA Forum Adventure</a> before getting its own site.)
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/LittleRobotBigScaryWorld" title="/pmwiki/pmwiki.php/Webcomic/LittleRobotBigScaryWorld">Little Robot Big Scary World</a></em>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Roleplay/DorfQuest" title="/pmwiki/pmwiki.php/Roleplay/DorfQuest">Dorf Quest</a></em>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/SilentHillPromise" title="/pmwiki/pmwiki.php/Webcomic/SilentHillPromise">Silent Hill: Promise</a></em>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/RedOakRising" title="/pmwiki/pmwiki.php/Webcomic/RedOakRising">Red Oak Rising</a></em> a dramatically toned supernatural horror/mystery.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/AetheriaEpics" title="/pmwiki/pmwiki.php/Webcomic/AetheriaEpics">Aetheria Epics</a></em>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/TouhouNekokayou" title="/pmwiki/pmwiki.php/Webcomic/TouhouNekokayou">Touhou Nekokayou</a></em>'s Create.swf Adventures
+</li><li> <em>Epicsplosion: Tripp Rougestar's Space-filled Adventure</em>, whose story depends on which of several paths you take, something that <a class="twikilink" href="/pmwiki/pmwiki.php/Creator/AndrewHussie" title="/pmwiki/pmwiki.php/Creator/AndrewHussie">Andrew Hussie</a> tried with <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/BardQuest" title="/pmwiki/pmwiki.php/Webcomic/BardQuest">Bard Quest</a></em>.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/DeathByChoice" title="/pmwiki/pmwiki.php/Webcomic/DeathByChoice">Death By Choice</a></em>, a detective comic, is a Choose Your Own Adventure comic where the reader plays the role of a detective.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/WickedAwesomeAdventure" title="/pmwiki/pmwiki.php/Webcomic/WickedAwesomeAdventure">Wicked Awesome Adventure</a></em>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/Prequel" title="/pmwiki/pmwiki.php/Webcomic/Prequel">Prequel</a></em> (which was also a <a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/MSPaintAdventures" title="/pmwiki/pmwiki.php/Webcomic/MSPaintAdventures">MSPA Forum Adventure</a> before getting its own site.)
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/DemonThesis" title="/pmwiki/pmwiki.php/Webcomic/DemonThesis">Demon Thesis</a></em>, a mix of interactive comic and java based tactical game by Chris Doucette, who also brought us <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/TheLastDaysOfFOXHOUND" title="/pmwiki/pmwiki.php/Webcomic/TheLastDaysOfFOXHOUND">The Last Days of FOXHOUND</a></em>.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/Gengame" title="/pmwiki/pmwiki.php/Webcomic/Gengame">Gengame</a></em>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/MorphE" title="/pmwiki/pmwiki.php/Webcomic/MorphE">Morph E</a></em>, is like a visual novel, with animations and <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/AceAttorney" title="/pmwiki/pmwiki.php/Franchise/AceAttorney">Ace Attorney</a></em> styled investigation sequences.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/DeepRise" title="/pmwiki/pmwiki.php/Webcomic/DeepRise">Deep Rise</a></em>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/OmnitopiaThePlayground" title="/pmwiki/pmwiki.php/Webcomic/OmnitopiaThePlayground">Omnitopia The Playground</a></em> where all the main characters are people from the Gitpg forums who have given permission to appear in the comic.
+</li><li> <em><a class="urllink" href="http://banditsquest.com/">Bandit's Quest<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a></em>, stated to have been inspired by MSPA, originated on <a class="urllink" href="http://banditsquest.tumblr.com/">tumblr<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a>.
+</li><li> <em><a class="createlink" href="/pmwiki/pmwiki.php/Webcomic/CityOfTheDead" title="/pmwiki/pmwiki.php/Webcomic/CityOfTheDead">City Of The Dead</a></em>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/LunarHill" title="/pmwiki/pmwiki.php/Webcomic/LunarHill">Lunar Hill</a></em>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/TinyCatPeople" title="/pmwiki/pmwiki.php/Webcomic/TinyCatPeople">Tiny Cat People</a></em>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/EvilPlan" title="/pmwiki/pmwiki.php/Webcomic/EvilPlan">Evil Plan</a></em> switched over to a MSPA style for <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AprilFoolsDay" title="/pmwiki/pmwiki.php/Main/AprilFoolsDay">April Fools' Day</a> 2012, and took suggestions from the readers. The comic was updated nearly a hundred times that day, with several of the images being <a class="urllink" href="http://evilplan.thewebcomic.com/comics/1460787/start-game/">animated .gifs.<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a>
+</li><li> <em><a class="createlink" href="/pmwiki/pmwiki.php/Webcomic/PantsSeatCarpetRide" title="/pmwiki/pmwiki.php/Webcomic/PantsSeatCarpetRide">Pants Seat Carpet Ride</a></em>, which is told from the third person and contains no images, was inspired by MSPA.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/Drowtales" title="/pmwiki/pmwiki.php/Webcomic/Drowtales">Drowtales</a></em>, is based around this to varying degrees for all of its comics besides its primary one, Moonless Age.
+</li><li> <em><a class="urllink" href="http://www.rebuildempyrean.com/">Mystic Empyrean Rebuild<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a></em>, is entirely based around user suggestions either on the forums or every other week to determine the course of the primary narrative.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/StableQuest" title="/pmwiki/pmwiki.php/Webcomic/StableQuest">StableQuest</a></em>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/AwfulHospital" title="/pmwiki/pmwiki.php/Webcomic/AwfulHospital">Awful Hospital</a></em>
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/StrangeSchool" title="/pmwiki/pmwiki.php/Webcomic/StrangeSchool">Strange School</a></em> (fancomic)
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/WeenieLicked" title="/pmwiki/pmwiki.php/Webcomic/WeenieLicked">Weenie Licked</a></em>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/BeCalm" title="/pmwiki/pmwiki.php/Webcomic/BeCalm">Be Calm</a></em> runs on reader commands, but <span class="spoiler" title="you can set spoilers visible by default on your profile"> the characters are fully aware that they are being interacted with, and often break the fourth wall to address the "voices" giving them prompts.</span>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/BasketsOfGuts" title="/pmwiki/pmwiki.php/Webcomic/BasketsOfGuts">Baskets of Guts</a></em>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/SaveThePrincess" title="/pmwiki/pmwiki.php/Webcomic/SaveThePrincess">Save the Princess</a></em>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/Transverse" title="/pmwiki/pmwiki.php/Webcomic/Transverse">Transverse</a></em>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/WayOfWushu" title="/pmwiki/pmwiki.php/Webcomic/WayOfWushu">Way Of Wushu</a></em>
+</li><li> Downplayed in <em><a class="twikilink" href="/pmwiki/pmwiki.php/WebOriginal/Unichat" title="/pmwiki/pmwiki.php/WebOriginal/Unichat">Unichat</a></em>, which breaks from the genre's <a class="twikilink" href="/pmwiki/pmwiki.php/Main/InteractiveFiction" title="/pmwiki/pmwiki.php/Main/InteractiveFiction">Interactive Fiction</a> roots, instead allowing readers to interact with the narrative through the Unichat platform itself.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/BloodIsMine" title="/pmwiki/pmwiki.php/Webcomic/BloodIsMine">Blood Is Mine</a></em>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/RWBYQuest" title="/pmwiki/pmwiki.php/Webcomic/RWBYQuest">RWBY Quest</a></em>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/MyDeliriumAlcazar" title="/pmwiki/pmwiki.php/Webcomic/MyDeliriumAlcazar">My Delirium Alcazar</a></em>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/CutieClash" title="/pmwiki/pmwiki.php/Webcomic/CutieClash">Cutie Clash</a></em>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/LandFall" title="/pmwiki/pmwiki.php/Webcomic/LandFall">Land Fall</a></em>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/NASAPone" title="/pmwiki/pmwiki.php/Webcomic/NASAPone">NASA Pone</a></em>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/TheComplex" title="/pmwiki/pmwiki.php/Webcomic/TheComplex">The Complex</a></em>
+</li></ul><p>Several websites include entire sections in which <a class="twikilink" href="/pmwiki/pmwiki.php/Main/InteractiveComic" title="/pmwiki/pmwiki.php/Main/InteractiveComic">Interactive Comics</a> can be created.
+</p><ul><li> The <a class="urllink" href="http://www.mspaforums.com/forumdisplay.php?85">MSPA Forum Adventures<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a> forum (now a redirect to the hereinafter mentioned archive website<span class="notelabel" onclick="togglenote('note0xu0d');"><sup>note </sup></span><span class="inlinefolder" id="note0xu0d" isnote="true" onclick="togglenote('note0xu0d');" style="cursor:pointer;font-size:smaller;display:none;">The forums crashed, possibly after an attack, and could never be satisfactorily be brought back up; many adventures were continued on other forums such as Eagle Time and Omega Update.</span>), which as the name suggests is part of <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/MSPaintAdventures" title="/pmwiki/pmwiki.php/Webcomic/MSPaintAdventures">MS Paint Adventures</a></em>' forum. A substantial number of these are fanfiction of <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/Homestuck" title="/pmwiki/pmwiki.php/Webcomic/Homestuck">Homestuck</a></em>, and a lot of them are archived on <a class="urllink" href="http://mspfanventures.com/">MS Paint Fan Adventures<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a>, a collaborative mirror site which transposes these adventures from forum posts into the style of MSPA proper.
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/ABeginnersGuideToTheEndOfTheUniverse" title="/pmwiki/pmwiki.php/Webcomic/ABeginnersGuideToTheEndOfTheUniverse">A Beginner's Guide to the End of the Universe</a></em>
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/ChairmanJackEmerge" title="/pmwiki/pmwiki.php/Webcomic/ChairmanJackEmerge">Chairman Jack: Emerge</a></em> (sequel)
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/ACompleteWasteOfTime" title="/pmwiki/pmwiki.php/Webcomic/ACompleteWasteOfTime">A Complete Waste of Time</a></em>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Roleplay/Alanna" title="/pmwiki/pmwiki.php/Roleplay/Alanna">Alanna</a></em>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/AllNightLaundry" title="/pmwiki/pmwiki.php/Webcomic/AllNightLaundry">All Night Laundry</a></em>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/ArtOfDomination" title="/pmwiki/pmwiki.php/Webcomic/ArtOfDomination">Art of Domination</a></em>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/BeTheSeaDwellerLowblood" title="/pmwiki/pmwiki.php/Webcomic/BeTheSeaDwellerLowblood">Be the Sea Dweller Lowblood</a></em>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/Castelocked" title="/pmwiki/pmwiki.php/Webcomic/Castelocked">Castelocked</a></em>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/Chiasmata" title="/pmwiki/pmwiki.php/Webcomic/Chiasmata">Chiasmata</a></em>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/Cordless" title="/pmwiki/pmwiki.php/Webcomic/Cordless">Cordless</a></em>
+<ul><li> And its short-lived Reboot, <a class="urllink" href="http://www.mspaforums.com/showthread.php?47265-Rebuild-of-Cordless">Rebuild of Cordless.<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a>
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/CorgiQuest" title="/pmwiki/pmwiki.php/Webcomic/CorgiQuest">Corgi Quest</a></em>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Roleplay/CrystalRave" title="/pmwiki/pmwiki.php/Roleplay/CrystalRave">Crystal Rave</a></em>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/CultFollowing" title="/pmwiki/pmwiki.php/Webcomic/CultFollowing">Cult Following</a></em>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/DarkDungeonsLightBot" title="/pmwiki/pmwiki.php/Webcomic/DarkDungeonsLightBot">Dark Dungeons, Light Bot</a></em>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/Datastuck" title="/pmwiki/pmwiki.php/Webcomic/Datastuck">Datastuck</a></em>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/DontNameIt" title="/pmwiki/pmwiki.php/Webcomic/DontNameIt">Don't Name It</a></em>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/DoubleReacharoundOrange" title="/pmwiki/pmwiki.php/Webcomic/DoubleReacharoundOrange">Double Reacharound Orange</a></em>
+</li><li> <em><a class="createlink" href="/pmwiki/pmwiki.php/Webcomic/DoubleReacharoundRed" title="/pmwiki/pmwiki.php/Webcomic/DoubleReacharoundRed">Double Reacharound Red</a></em>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/DungeonsOfSunnydale" title="/pmwiki/pmwiki.php/Webcomic/DungeonsOfSunnydale">Dungeons of Sunnydale</a></em>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/Facade" title="/pmwiki/pmwiki.php/Webcomic/Facade">Façade</a></em>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/Fortuna" title="/pmwiki/pmwiki.php/Webcomic/Fortuna">Fortuna</a></em>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/Godquest" title="/pmwiki/pmwiki.php/Webcomic/Godquest">Godquest</a></em>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/Heartstuck" title="/pmwiki/pmwiki.php/Webcomic/Heartstuck">Heartstuck</a></em>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/Hexane" title="/pmwiki/pmwiki.php/Webcomic/Hexane">Hexane</a></em>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/Hoofstuck" title="/pmwiki/pmwiki.php/Webcomic/Hoofstuck">Hoofstuck</a></em>
+</li><li> <em><a class="createlink" href="/pmwiki/pmwiki.php/Webcomic/Housetrapped" title="/pmwiki/pmwiki.php/Webcomic/Housetrapped">Housetrapped</a></em>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/Iji" title="/pmwiki/pmwiki.php/Webcomic/Iji">Iji</a></em>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/ItsMidnightSomewhere" title="/pmwiki/pmwiki.php/Webcomic/ItsMidnightSomewhere">ItsMidnightSomewhere</a></em>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/LegendOfTheHunter" title="/pmwiki/pmwiki.php/Webcomic/LegendOfTheHunter">Legend Of The Hunter</a></em>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/Lucidstuck" title="/pmwiki/pmwiki.php/Webcomic/Lucidstuck">Lucidstuck</a></em>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/MarySueQuest" title="/pmwiki/pmwiki.php/Webcomic/MarySueQuest">Mary Sue Quest</a></em>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/Masquerade" title="/pmwiki/pmwiki.php/Webcomic/Masquerade">Masquerade</a></em>
+</li><li> <a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/DotMemoria" title="/pmwiki/pmwiki.php/Webcomic/DotMemoria">.Memoria</a>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/TheMotleyTwo" title="/pmwiki/pmwiki.php/Webcomic/TheMotleyTwo">The Motley Two</a></em>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/NepetaQuest2011" title="/pmwiki/pmwiki.php/Webcomic/NepetaQuest2011">Nepeta Quest 2011</a></em>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/Nightfall" title="/pmwiki/pmwiki.php/Webcomic/Nightfall">Nightfall</a></em>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/Oceanfalls" title="/pmwiki/pmwiki.php/Webcomic/Oceanfalls">Oceanfalls</a></em>
+</li><li> <em><a class="createlink" href="/pmwiki/pmwiki.php/Fanfic/Selfstuck" title="/pmwiki/pmwiki.php/Fanfic/Selfstuck">Selfstuck</a></em>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/SinisterEvolution" title="/pmwiki/pmwiki.php/Webcomic/SinisterEvolution">Sinister Evolution</a></em>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/StuckHomestuck" title="/pmwiki/pmwiki.php/Webcomic/StuckHomestuck">STuCK</a></em>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/Superego" title="/pmwiki/pmwiki.php/Webcomic/Superego">Superego</a></em>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/SynodicReboot" title="/pmwiki/pmwiki.php/Webcomic/SynodicReboot">Synodic Reboot</a></em>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/TheHumanGame" title="/pmwiki/pmwiki.php/Webcomic/TheHumanGame">TheHumanGame</a></em>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/TrolSeasson" title="/pmwiki/pmwiki.php/Webcomic/TrolSeasson">Trol Seasson</a></em>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/Waterworks" title="/pmwiki/pmwiki.php/Webcomic/Waterworks">Waterworks</a></em>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/Wildlife" title="/pmwiki/pmwiki.php/Webcomic/Wildlife">Wildlife</a></em>
+</li></ul></li></ul><ul><li> Sufficient Velocity Forums' <a class="urllink" href="https://forums.sufficientvelocity.com/forums/quests.29/">Quests Section<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a>, which includes these:
+</li></ul><dl><dd><ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/TerreneSpire" title="/pmwiki/pmwiki.php/Webcomic/TerreneSpire">Terrene Spire</a></em>
+</li></ul></dd></dl><ul><li> A section of <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/GarrysMod" title="/pmwiki/pmwiki.php/VideoGame/GarrysMod">Garry's Mod</a></em> forums (Facepunch).
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Website/Questden" title="/pmwiki/pmwiki.php/Website/Questden">Questden</a></em> was created to run image board quests, which use a mix of pictures and accompanying text to tell stories..
+</li></ul><dl><dd><ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/AcidSoup" title="/pmwiki/pmwiki.php/Webcomic/AcidSoup">Acid Soup</a></em>: A girl got something stolen from her, but she doesn't know what in a city where that could be practically anything.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/ALittleTownCalledCoxwette" title="/pmwiki/pmwiki.php/Webcomic/ALittleTownCalledCoxwette">A Little Town Called Coxwette</a></em>: A fugitive, randy tomcat tries to hide out in a lovely little <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TownWithADarkSecret" title="/pmwiki/pmwiki.php/Main/TownWithADarkSecret">Town with a Dark Secret</a>.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/AsteroidQuest" title="/pmwiki/pmwiki.php/Webcomic/AsteroidQuest">AsteroidQuest</a></em>: A sprawling science fiction adventure in a high tech setting featuring many distinctive alien races.
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/WebComic/UnnaturalSelection" title="/pmwiki/pmwiki.php/WebComic/UnnaturalSelection">Unnatural Selection</a></em>: An AI simulation happening in the greater Asteroidverse.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/KnightBlades" title="/pmwiki/pmwiki.php/Webcomic/KnightBlades">Knight Blades</a></em>: A parallel story about a knight errant seeking to eliminate a great evil and to serve his master, Muschio.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/Dungeoneer" title="/pmwiki/pmwiki.php/Webcomic/Dungeoneer">Dungeoneer</a></em>: A Dungeon Heart trying to expand her dungeon and maybe become a better person.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Roleplay/FenQuest" title="/pmwiki/pmwiki.php/Roleplay/FenQuest">FenQuest</a></em>: A kobold on a quest to make a name for himself and marry his love.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Roleplay/MudyQuest" title="/pmwiki/pmwiki.php/Roleplay/MudyQuest">Mudy Quest</a></em>: A kobold named Mudy out to claim a kingdom as his own.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/TrashyVampireRomanceNovel" title="/pmwiki/pmwiki.php/Webcomic/TrashyVampireRomanceNovel">Trashy Vampire Romance Novel</a></em>: TVRN is the un-life of the recently-turned vampire Ricardo Castro and the messy situations he gets into.
+</li></ul></dd></dl><ul><li> <a class="twikilink" href="/pmwiki/pmwiki.php/Roleplay/Bay12PlayByPostGames" title="/pmwiki/pmwiki.php/Roleplay/Bay12PlayByPostGames">Bay 12</a> has several in the Forum Games and Roleplaying section, including such works as <a class="urllink" href="http://www.bay12forums.com/smf/index.php?topic=55601.0">thiiiiiiiis<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a>.
+</li></ul><dl><dd><ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/DarknessRedeemedNecromechanic" title="/pmwiki/pmwiki.php/Webcomic/DarknessRedeemedNecromechanic">Darkness Redeemed Necromechanic</a></em>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/TheLittlestCheesemaker" title="/pmwiki/pmwiki.php/Webcomic/TheLittlestCheesemaker">The Littlest Cheesemaker</a></em>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/LosingIsFun" title="/pmwiki/pmwiki.php/Webcomic/LosingIsFun">Losing Is Fun</a></em>
+</li></ul></dd></dl><ul><li> <a class="urllink" href="http://www.evil-dog.com/storyshift.html">StoryShift<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a>, as written about by <a class="urllink" href="http://boingboing.net/2014/11/05/storyshift-is-a-new-storytelli.html">BoingBoing<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a>.
+</li></ul><hr/>
+</div>
+<div class="square_ad footer-article-ad main_2" data-isolated="0"></div>
+<div class="section-links" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<div class="titles">
+<div><h3 class="text-center text-uppercase">Previous</h3></div>
+<div><h3 class="text-center text-uppercase">Index</h3></div>
+<div><h3 class="text-center text-uppercase">Next</h3></div>
+</div>
+<div class="links">
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/FurryWebcomics">Furry Webcomics</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/WebcomicTropes">Webcomic Tropes</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/JournalComic">Journal Comic</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/PhotoComic">Photo Comic</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/Webcomics">Webcomics</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/MotionComic">Motion Comic</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Webcomic/EvilGenius">Evil Genius</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/StickFigureComic">Stick-Figure Comic</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Webcomic/HyperboleAndAHalf">Hyperbole and a Half</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/AnimateBodyParts">Animate Body Parts</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/ImageSource/Webcomics">ImageSource/Webcomics</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/PestController">Pest Controller</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="outer_ads_by_salon_wrapper" id="exco_player_insert_div">
+</div>
+</article>
+<div id="main-content-sidebar"><div class="sidebar-item display-options">
+<ul class="sidebar display-toggles">
+<li>Show Spoilers <div class="display-toggle show-spoilers" id="sidebar-toggle-showspoilers"></div></li>
+<li>Night Vision <div class="display-toggle night-vision" id="sidebar-toggle-nightvision"></div></li>
+<li>Sticky Header <div class="display-toggle sticky-header" id="sidebar-toggle-stickyheader"></div></li>
+<li>Wide Load <div class="display-toggle wide-load" id="sidebar-toggle-wideload"></div></li>
+</ul>
+<script>updateDesktopPrefs();</script>
+</div>
+<div class="sidebar-item ad sb-ad-unit">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_2"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_2'); });</script> </div>
+</div></div>
+<div class="sidebar-item quick-links" itemtype="http://schema.org/SiteNavigationElement">
+<p class="sidebar-item-title" data-title="Important Links">Important Links</p>
+<div class="padded">
+<a href="/pmwiki/query.php?type=att">Ask The Tropers</a>
+<a href="/pmwiki/query.php?type=tf">Trope Finder</a>
+<a href="/pmwiki/query.php?type=ykts">You Know That Show...</a>
+<a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a>
+<a href="/pmwiki/review_activity.php">Reviews</a>
+<a data-modal-target="login" href="/pmwiki/lbs.php">Live Blogs</a>
+<a href="/pmwiki/ad-free-subscribe.php">Go Ad Free!</a> </div>
+</div>
+<div class="sidebar-item sb-ad-unit">
+<div class="sidebar-section">
+<div class="square_ad ad-size-300x600 ad-section text-center">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_3"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_3'); });</script> </div>
+</div> </div>
+</div>
+</div>
+<div class="sidebar-item">
+<p class="sidebar-item-title" data-title="Crucial Browsing">Crucial Browsing</p>
+<ul class="padded font-s" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><a data-click-toggle="active" href="javascript:void(0);">Genre</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/ActionAdventureTropes" title="Main/ActionAdventureTropes">Action Adventure</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ComedyTropes" title="Main/ComedyTropes">Comedy</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CommercialsTropes" title="Main/CommercialsTropes">Commercials</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CrimeAndPunishmentTropes" title="Main/CrimeAndPunishmentTropes">Crime &amp; Punishment</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DramaTropes" title="Main/DramaTropes">Drama</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/HorrorTropes" title="Main/HorrorTropes">Horror</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LoveTropes" title="Main/LoveTropes">Love</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NewsTropes" title="Main/NewsTropes">News</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ProfessionalWrestling" title="Main/ProfessionalWrestling">Professional Wrestling</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SpeculativeFictionTropes" title="Main/SpeculativeFictionTropes">Speculative Fiction</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SportsStoryTropes" title="Main/SportsStoryTropes">Sports Story</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/WarTropes" title="Main/WarTropes">War</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Media</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/Media" title="Main/Media">All Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/AnimationTropes" title="Main/AnimationTropes">Animation (Western)</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Anime" title="Main/Anime">Anime</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ComicBookTropes" title="Main/ComicBookTropes">Comic Book</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FanFic" title="FanFic/FanFics">Fan Fics</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Film" title="Main/Film">Film</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/GameTropes" title="Main/GameTropes">Game</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Literature" title="Main/Literature">Literature</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MusicAndSoundEffects" title="Main/MusicAndSoundEffects">Music And Sound Effects</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NewMediaTropes" title="Main/NewMediaTropes">New Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/PrintMediaTropes" title="Main/PrintMediaTropes">Print Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Radio" title="Main/Radio">Radio</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SequentialArt" title="Main/SequentialArt">Sequential Art</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TabletopGames" title="Main/TabletopGames">Tabletop Games</a></li>
+<li><a href="/pmwiki/pmwiki.php/UsefulNotes/Television" title="Main/Television">Television</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Theater" title="Main/Theater">Theater</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/VideogameTropes" title="Main/VideogameTropes">Videogame</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Webcomics" title="Main/Webcomics">Webcomics</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Narrative</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/UniversalTropes" title="Main/UniversalTropes">Universal</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/AppliedPhlebotinum" title="Main/AppliedPhlebotinum">Applied Phlebotinum</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CharacterizationTropes" title="Main/CharacterizationTropes">Characterization</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Characters" title="Main/Characters">Characters</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CharactersAsDevice" title="Main/CharactersAsDevice">Characters As Device</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Dialogue" title="Main/Dialogue">Dialogue</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Motifs" title="Main/Motifs">Motifs</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NarrativeDevices" title="Main/NarrativeDevices">Narrative Devices</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Paratext" title="Main/Paratext">Paratext</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Plots" title="Main/Plots">Plots</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Settings" title="Main/Settings">Settings</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Spectacle" title="Main/Spectacle">Spectacle</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Other Categories</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/BritishTellyTropes" title="Main/BritishTellyTropes">British Telly</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TheContributors" title="Main/TheContributors">The Contributors</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CreatorSpeak" title="Main/CreatorSpeak">Creator Speak</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Creators" title="Main/Creators">Creators</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DerivativeWorks" title="Main/DerivativeWorks">Derivative Works</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LanguageTropes" title="Main/LanguageTropes">Language</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LawsAndFormulas" title="Main/LawsAndFormulas">Laws And Formulas</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ShowBusiness" title="Main/ShowBusiness">Show Business</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SplitPersonalityTropes" title="Main/SplitPersonalityTropes">Split Personality</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/StockRoom" title="Main/StockRoom">Stock Room</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TropeTropes" title="Main/TropeTropes">Trope</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Tropes" title="Main/Tropes">Tropes</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TruthAndLies" title="Main/TruthAndLies">Truth And Lies</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TruthInTelevision" title="Main/TruthInTelevision">Truth In Television</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Topical Tropes</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/BetrayalTropes" title="Main/BetrayalTropes">Betrayal</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CensorshipTropes" title="Main/CensorshipTropes">Censorship</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CombatTropes" title="Main/CombatTropes">Combat</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DeathTropes" title="Main/DeathTropes">Death</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FamilyTropes" title="Main/FamilyTropes">Family</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FateAndProphecyTropes" title="Main/FateAndProphecyTropes">Fate And Prophecy</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FoodTropes" title="Main/FoodTropes">Food</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/HolidayTropes" title="Main/HolidayTropes">Holiday</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MemoryTropes" title="Main/MemoryTropes">Memory</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MoneyTropes" title="Main/MoneyTropes">Money</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MoralityTropes" title="Main/MoralityTropes">Morality</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/PoliticsTropes" title="Main/PoliticsTropes">Politics</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ReligionTropes" title="Main/ReligionTropes">Religion</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SchoolTropes" title="Main/SchoolTropes">School</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="sidebar-item showcase">
+<p class="sidebar-item-title" data-title="Community Showcase">Community Showcase <a class="bubble float-right hover-blue" href="/pmwiki/showcase.php">More</a></p>
+<p class="community-showcase">
+<a href="https://sharetv.com/shows/echo_chamber" onclick="trackOutboundLink('https://sharetv.com/shows/echo_chamber');" target="_blank">
+<img alt="" class="lazy-image" data-src="/images/communityShowcase-echochamber.jpg"/></a>
+<a href="/pmwiki/pmwiki.php/Webcomic/TwistedTropes">
+<img alt="" class="lazy-image" data-src="/img/howlandsc-side.jpg"/></a>
+</p>
+</div>
+<div class="sidebar-item sb-ad-unit" id="stick-cont">
+<div class="sidebar-section" id="stick-bar">
+<div class="square_ad ad-size-300x600 ad-section text-center">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_4"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_4'); });</script> </div>
+</div> </div>
+</div>
+</div>
+</div>
+</div>
+<div class="action-bar tablet-off" id="action-bar-bottom">
+<a class="scroll-to-top dead-button" href="#top-of-page" onclick="$('html, body').animate({scrollTop : 0},500);">Top</a>
+</div>
+</div>
+<div class="proper-ad-unit ad-sticky">
+<div id="proper-ad-tvtropes_sticky_ad"> <script>propertag.cmd.push(function() { proper_display('tvtropes_sticky_ad'); });</script> </div>
+</div>
+<footer id="main-footer">
+<div id="main-footer-inner">
+<div class="footer-left">
+<a class="img-link" href="/"><img alt="TV Tropes" class="lazy-image" data-src="/img/tvtropes-footer-logo.png" title="TV Tropes"/></a>
+<form action="index.html" class="navbar-form newsletter-signup validate modal-replies" data-ajax-get="/ajax/subscribe_email.php" id="cse-search-box-mobile" name="" role="">
+<button class="btn-submit newsletter-signup-submit-button" id="subscribe-btn" type="submit"><i class="fa fa-paper-plane"></i></button>
+<input class="form-control" id="subscription-email" name="q" placeholder="Subscribe" size="31" type="text" validate-type="email" value=""/>
+</form>
+<ul class="social-buttons">
+<li><a class="btn fb" href="https://www.facebook.com/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-facebook']);" target="_blank"><i class="fa fa-facebook"></i></a></li>
+<li><a class="btn tw" href="https://www.twitter.com/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-twitter']);" target="_blank"><i class="fa fa-twitter"></i></a> </li>
+<li><a class="btn rd" href="https://www.reddit.com/r/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-reddit']);" target="_blank"><i class="fa fa-reddit-alien"></i></a></li>
+</ul>
+</div>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">TVTropes</h4></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Administrivia">About TVTropes</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TheGoalsOfTVTropes">TVTropes Goals</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TheTropingCode">Troping Code</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TVTropesCustoms">TVTropes Customs</a></li>
+<li><a href="/pmwiki/pmwiki.php/JustForFun/TropesOfLegend">Tropes of Legend</a></li>
+<li><a href="/pmwiki/ad-free-subscribe.php">Go Ad-Free</a></li>
+</ul>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">Community</h4></li>
+<li><a href="/pmwiki/query.php?type=att">Ask The Tropers</a></li>
+<li><a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a></li>
+<li><a href="/pmwiki/query.php?type=tf">Trope Finder</a></li>
+<li><a href="/pmwiki/query.php?type=ykts">You Know That Show</a></li>
+<li><a data-modal-target="login" href="/pmwiki/lbs.php">Live Blogs</a></li>
+<li><a href="/pmwiki/review_activity.php">Reviews</a></li>
+<li><a href="/pmwiki/topics.php">Forum</a></li>
+</ul>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">Tropes HQ</h4></li>
+<li><a href="/pmwiki/about.php">About Us</a></li>
+<li><a href="/pmwiki/contact.php">Contact Us</a></li>
+<li><a href="/pmwiki/dmca.php">DMCA Notice</a></li>
+<li><a href="/pmwiki/privacypolicy.php">Privacy Policy</a></li>
+</ul>
+</div>
+<div class="text-center gutter-top gutter-bottom tablet-on" id="desktop-on-mobile-toggle">
+<a href="/pmwiki/switchDeviceCss.php?mobileVersion=1" rel="nofollow">Switch to <span class="txt-desktop">Desktop</span><span class="txt-mobile">Mobile</span> Version</a>
+</div>
+<div class="legal">
+<p>TVTropes is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License. <br/>Permissions beyond the scope of this license may be available from <a href="mailto:thestaff@tvtropes.org" rel="cc:morePermissions" xmlns:cc="http://creativecommons.org/ns#"> thestaff@tvtropes.org</a>.</p>
+<br/>
+<div class="privacy_wrapper">
+</div>
+</div>
+</footer>
+<style>
+      div.fc-ccpa-root {
+        position: absolute !important;
+        bottom: 93px !important;
+        margin: auto !important;
+        width: 100% !important;
+        z-index: 9999 !important;
+      }
+      .fc-ccpa-root .fc-dns-dialog .fc-dns-link p{
+        outline: none !important;
+        text-decoration: underline !important;
+        font-size: .7em !important;
+        font-family: sans-serif !important;
+      }
+      .fc-ccpa-root .fc-dns-dialog .fc-dns-link .fc-button-background {
+        background: none !important;
+      }
+    </style>
+<div class="full-screen" id="_pm_videoViewer">
+<a class="close" href="#close" id="_pm_videoViewer-close"></a>
+<div class="_pmvv-body">
+<div class="_pmvv-vidbox">
+<video class="video-js vjs-default-skin vjs-16-9" data-video-id="" id="overlay-video-player-box">
+</video>
+<div class="_pmvv-vidbox-desc">
+<h1 id="overlay-title"></h1>
+<p class="_pmvv-vidbox-descTxt" id="overlay-descrip">
+</p>
+<div class="rating-row" data-video-id="">
+<input name="is_logged_in" type="hidden" value="0"/>
+<p>How well does it match the trope?</p>
+<div id="star-rating-group">
+<div class="trope-rate">
+<input id="lamp5" name="rate" type="radio" value="5"/>
+<label for="lamp5" title="Absolutely"></label>
+<input id="lamp4" name="rate" type="radio" value="4"/>
+<label for="lamp4" title="Yes"></label>
+<input id="lamp3" name="rate" type="radio" value="3"/>
+<label for="lamp3" title="Kind of"></label>
+<input id="lamp2" name="rate" type="radio" value="2"/>
+<label for="lamp2" title="Not really"></label>
+<input id="lamp1" name="rate" type="radio" value="1"/>
+<label for="lamp1" title="No"></label>
+</div>
+<div id="star-rating-total">
+</div>
+</div>
+</div>
+<div class="example-media-row">
+<div class="example-overlay">
+<p>Example of:</p>
+<div id="overlay-trope"> / </div>
+</div>
+<div class="media-sources-overlay example-overlay">
+<p>Media sources:</p>
+<div id="overlay-media"> / </div>
+</div>
+</div>
+<p class="_pmvv-vidbox-stats text-right font-s" style="padding-top:8px; border-top: solid 1px rgba(255,255,255,0.2)">
+<a class="float-right" data-modal-target="login" href="#video-feedback">Report</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+        window.special_ops =  {
+            member : 'no',
+            isolated : 0,
+            tags : ['unknown']
+        };
+    </script>
+<script type="text/javascript">
+
+        var cleanCreativeEnabled = "";
+        var donation = "";
+        var live_ads = "1";
+        var img_domain = "https://static.tvtropes.org";
+        var snoozed = cookies.read('snoozedabm');
+        var snoozable = "";
+
+        if (adsRemovedWith) {
+            live_ads = 0;
+        }
+
+        var elem = document.createElement('script');
+        elem.async = true;
+
+        elem.src = '/design/assets/bundle.js?rev=c58d8df02f09262390bbd03db7921fc35c6af306';
+
+        elem.onload = function() {
+                                 }
+        document.getElementsByTagName('head')[0].appendChild(elem);
+
+    </script>
+<script type="text/javascript">
+      function send_analytics_event(user_type, donation){
+          // if(user_type == 'uncached' || user_type == 'cached'){
+          //   ga('send', 'event', 'caching', 'load', user_type, {'nonInteraction': 1});
+          //   return;
+          // }
+          var event_name = user_type;
+
+          if(donation == 'true'){
+              event_name += "_donation"
+          }else if(typeof(valid_user) == 'undefined'){
+              event_name += "_blocked"
+          }else if(valid_user == true){
+              event_name += "_unblocked";
+          }else{
+              event_name = "_unknown"
+          }
+          ga('send', 'event', 'ads', 'load', event_name, {'nonInteraction': 1});
+      }
+
+    
+    send_analytics_event("guest", "false");
+      </script>
+</body>
+</html>

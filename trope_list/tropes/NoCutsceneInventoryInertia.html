@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>No Cutscene Inventory Inertia - TV Tropes</title>
+<meta content="The No Cutscene Inventory Inertia trope as used in popular culture. In Video Games, it's quite rare for your character to be limited to one weapon or costume …" name="description"/>
+<link href="https://tvtropes.org/pmwiki/pmwiki.php/Main/NoCutsceneInventoryInertia" rel="canonical"/>
+<link href="/img/icons/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="@tvtropes" name="twitter:site"/>
+<meta content="@tvtropes" name="twitter:owner"/>
+<meta content="No Cutscene Inventory Inertia - TV Tropes" name="twitter:title"/>
+<meta content="The No Cutscene Inventory Inertia trope as used in popular culture. In Video Games, it's quite rare for your character to be limited to one weapon or costume …" name="twitter:description"/>
+<meta content="https://static.tvtropes.org/logo_blue_small.png" name="twitter:image:src"/>
+<meta content="TV Tropes" property="og:site_name"/>
+<meta content="en_US" property="og:locale"/>
+<meta content="https://www.facebook.com/tvtropes" property="article:publisher"/>
+<meta content="No Cutscene Inventory Inertia - TV Tropes" property="og:title"/>
+<meta content="website" property="og:type"/>
+<meta content="https://tvtropes.org/pmwiki/pmwiki.php/Main/NoCutsceneInventoryInertia" property="og:url"/>
+<meta content="https://static.tvtropes.org/logo_blue_small.png" property="og:image"/>
+<meta content="In Video Games, it's quite rare for your character to be limited to one weapon or costume. One of the benefits of using real-time-rendering and textures is that you can swap them out for other things to change the look and feel of a character's …" property="og:description"/>
+<link href="/img/icons/apple-icon-57x57.png" rel="apple-touch-icon" sizes="57x57" type="image/png"/>
+<link href="/img/icons/apple-icon-60x60.png" rel="apple-touch-icon" sizes="60x60" type="image/png"/>
+<link href="/img/icons/apple-icon-72x72.png" rel="apple-touch-icon" sizes="72x72" type="image/png"/>
+<link href="/img/icons/apple-icon-76x76.png" rel="apple-touch-icon" sizes="76x76" type="image/png"/>
+<link href="/img/icons/apple-icon-114x114.png" rel="apple-touch-icon" sizes="114x114" type="image/png"/>
+<link href="/img/icons/apple-icon-120x120.png" rel="apple-touch-icon" sizes="120x120" type="image/png"/>
+<link href="/img/icons/apple-icon-144x144.png" rel="apple-touch-icon" sizes="144x144" type="image/png"/>
+<link href="/img/icons/apple-icon-152x152.png" rel="apple-touch-icon" sizes="152x152" type="image/png"/>
+<link href="/img/icons/apple-icon-180x180.png" rel="apple-touch-icon" sizes="180x180" type="image/png"/>
+<link href="/img/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/img/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/img/icons/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png"/>
+<link href="/img/icons/favicon-192x192.png" rel="icon" sizes="192x192" type="image/png"/>
+<meta content="width=device-width, initial-scale=1" id="viewport" name="viewport"/>
+<script>
+                var propertag = {};
+                propertag.cmd = [];
+            </script>
+<link href="/design/assets/bundle.css?rev=c58d8df02f09262390bbd03db7921fc35c6af306" rel="stylesheet"/>
+<script>
+                function object(objectId) {
+                    if (document.getElementById && document.getElementById(objectId)) {
+                        return document.getElementById(objectId);
+                    } else if (document.all && document.all(objectId)) {
+                        return document.all(objectId);
+                    } else if (document.layers && document.layers[objectId]) {
+                        return document.layers[objectId];
+                    } else {
+                        return false;
+                    }
+                }
+
+                // JAVASCRIPT COOKIES CODE: for getting and setting user viewing preferences
+                var cookies = {
+                    create: function (name, value, days2expire, path) {
+                        var date = new Date();
+                        date.setTime(date.getTime() + (days2expire * 24 * 60 * 60 * 1000));
+                        var expires = date.toUTCString();
+                        document.cookie = name + '=' + value + ';' + 'expires=' + expires + ';' + 'path=' + path + ';';
+                    },
+										createWithExpire: function(name, value, expires, path) {
+												document.cookie = name + '=' + value + ';' + 'expires=' + expires + ';' + 'path=' + path + ';';
+										},
+                    read: function (name) {
+                        var cookie_value = "",
+                            current_cookie = "",
+                            name_expr = name + "=",
+                            all_cookies = document.cookie.split(';'),
+                            n = all_cookies.length;
+
+                        for (var i = 0; i < n; i++) {
+                            current_cookie = all_cookies[i].trim();
+                            if (current_cookie.indexOf(name_expr) === 0) {
+                                cookie_value = current_cookie.substring(name_expr.length, current_cookie.length);
+                                break;
+                            }
+                        }
+                        return cookie_value;
+                    },
+                    update: function (name, val) {
+                        this.create(name, val, 300, "/");
+                    },
+                    remove: function (name) {
+                        document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
+                    }
+                };
+
+                function updateUserPrefs() {
+                    //GENERAL: detect and set browser, if not cookied (will be treated like a user-preference and added to the #user-pref element)
+                    if( !cookies.read('user-browser') ){
+                        var broswer = '';
+
+                        if(navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPod/i) ){
+                            browser = 'iOS';
+                        } else if (/Opera[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'opera';
+                        } else if (/MSIE (\d+\.\d+);/.test(navigator.userAgent)) {
+                            browser = 'MSIE';
+                        } else if (/Navigator[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'netscape';
+                        } else if (/Chrome[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'chrome';
+                        } else if (/Safari[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'safari';
+                            /Version[\/\s](\d+\.\d+)/.test(navigator.userAgent);
+                            browserVersion = new Number(RegExp.$1);
+                        } else if (/Firefox[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'firefox';
+                        } else {
+                            browser = 'internet_explorer';
+                        }
+                        cookies.create('user-browser',browser,1,'/');
+                        document.getElementById('user-prefs').classList.add('browser-' + browser);
+                    } else {
+                        document.getElementById('user-prefs').classList.add('browser-' + cookies.read('user-browser'));
+                    }
+
+                    //update user preference settings
+                    if (cookies.read('wide-load') !== '') document.getElementById('user-prefs').classList.add('wide-load');
+                    if (cookies.read('night-vision') !== '') document.getElementById('user-prefs').classList.add('night-vision');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('user-prefs').classList.add('sticky-header');
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('user-prefs').classList.add('show-spoilers');
+                    if (cookies.read('folders-open') !== '') document.getElementById('user-prefs').classList.add('folders-open');
+                    if (cookies.read('lefthand-sidebar') !== '') document.getElementById('user-prefs').classList.add('lefthand-sidebar');
+                    if (cookies.read('highlight-links') !== '') document.getElementById('user-prefs').classList.add('highlight-links');
+                    if (cookies.read('forum-gingerbread') !== '') document.getElementById('user-prefs').classList.add('forum-gingerbread');
+                    if (cookies.read('shared-avatars') !== '') document.getElementById('user-prefs').classList.add('shared-avatars');
+                    if (cookies.read('new-search') !== '') document.getElementById('user-prefs').classList.add('new-search');
+                    if (cookies.read('stop-auto-play-video') !== '') document.getElementById('user-prefs').classList.add('stop-auto-play-video');
+
+                    //desktop view on mobile
+                    if (cookies.read('desktop-on-mobile') !== ''){
+                        document.getElementById('user-prefs').classList.add('desktop-on-mobile');
+
+                        var viewport = document.querySelector("meta[name=viewport]");
+                        viewport.setAttribute('content', 'width=1000');
+                    }
+
+                }
+
+                function updateDesktopPrefs() {
+                    if (cookies.read('wide-load') !== '') document.getElementById('sidebar-toggle-wideload').classList.add('active');
+                    if (cookies.read('night-vision') !== '') document.getElementById('sidebar-toggle-nightvision').classList.add('active');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('sidebar-toggle-stickyheader').classList.add('active');
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('sidebar-toggle-showspoilers').classList.add('active');
+
+                }
+
+                function updateMobilePrefs() {
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('mobile-toggle-showspoilers').classList.add('active');
+                    if (cookies.read('night-vision') !== '') document.getElementById('mobile-toggle-nightvision').classList.add('active');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('mobile-toggle-stickyheader').classList.add('active');
+                    if (cookies.read('highlight-links') !== '') document.getElementById('mobile-toggle-highlightlinks').classList.add('active');
+
+                }
+
+
+                if (document.cookie.indexOf("scroll0=") < 0) {
+                    // do nothing
+                } else {
+                    console.log('ads removed by scroll.com');
+                    var adsRemovedWith = 'scroll';
+                    var style = document.createElement('style');
+                    style.innerHTML = '#header-ad, .proper-ad-unit, .square_ad, .sb-ad-unit { display: none !important; } ';
+                    document.head.appendChild(style);
+                }
+            </script>
+<script type="text/javascript">
+
+                var tvtropes_config = {
+                    astri_stream_enabled : "",
+                    is_logged_in         : "",
+                    handle               : "",
+                    get_astri_stream     : "",
+										revnum               : "c58d8df02f09262390bbd03db7921fc35c6af306",
+										img_domain           : "https://static.tvtropes.org",
+										adblock              : "1",
+										adblock_url          : "propermessage.io",
+										pause_editing        : "0",
+										pause_editing_msg    : "",
+										pause_site_changes   : ""
+                };
+            </script>
+<script type="text/javascript">
+						  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+						  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+						  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+						  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+						  ga('create', 'UA-3821842-1', 'auto');
+						  ga('send', 'pageview');
+
+						</script>
+</head>
+<body class="">
+<i id="user-prefs"></i>
+<script>updateUserPrefs();</script>
+<div id="fb-root"></div>
+<div id="modal-box"></div>
+<header class="headroom-element" id="main-header-bar">
+<div id="main-header-bar-inner">
+<span class="header-spacer" id="header-spacer-left"></span>
+<a class="mobile-menu-toggle-button tablet-on" href="#mobile-menu" id="main-mobile-toggle"><span></span><span></span><span></span></a>
+<a class="no-dev" href="/" id="main-header-logoButton"></a>
+<span class="header-spacer" id="header-spacer-right"></span>
+<nav class="tablet-off" id="main-header-nav">
+<a href="/pmwiki/pmwiki.php/Main/Tropes">Tropes</a>
+<a href="/pmwiki/pmwiki.php/Main/Media">Media</a>
+<a class="nav-browse" href="/pmwiki/browse.php">Browse</a>
+<a href="/pmwiki/index_report.php">Indexes</a>
+<a href="/pmwiki/topics.php">Forums</a>
+<a class="nav-browse" href="/pmwiki/recent_videos.php">Videos</a>
+</nav>
+<div id="main-header-bar-right">
+<div class="font-xs mobile-off" id="signup-login-box">
+<a class="hover-underline bold" data-modal-target="signup" href="/pmwiki/login.php">Join</a>
+<a class="hover-underline bold" data-modal-target="login" href="/pmwiki/login.php">Login</a>
+</div>
+<div class="mobile-on inline" id="signup-login-mobileToggle">
+<a data-modal-target="login" href="/pmwiki/login.php"><i class="fa fa-user"></i></a>
+</div>
+<div id="search-box">
+<form action="/pmwiki/search_result.php" class="search">
+<input class="search-box" name="q" placeholder="Search" required="" type="text" value=""/>
+<input class="submit-button" type="submit" value=""/>
+<input name="search_type" type="hidden" value="article"/>
+<input name="page_type" type="hidden" value="all"/>
+<input name="cx" type="hidden" value="partner-pub-6610802604051523:amzitfn8e7v"/>
+<input name="cof" type="hidden" value="FORID:10"/>
+<input name="ie" type="hidden" value="ISO-8859-1"/>
+<input name="siteurl" type="hidden" value=""/>
+<input name="ref" type="hidden" value=""/>
+<input name="ss" type="hidden" value=""/>
+</form>
+<a class="mobile-on mobile-search-toggle close-x" href="#close-search"><i class="fa fa-close"></i></a>
+</div>
+<div id="random-box">
+<a class="button-random-trope" href="/pmwiki/pmwiki.php/Main/Asspull" onclick="ga('send', 'event', 'button', 'click', 'random trope');" rel="nofollow"></a>
+<a class="button-random-media" href="/pmwiki/pmwiki.php/Manga/MakaiOuji" onclick="ga('send', 'event', 'button', 'click', 'random media');" rel="nofollow"></a>
+</div>
+</div>
+</div>
+<div class="tablet-on" id="mobile-menu"><div class="mobile-menu-options">
+<div class="nav-wrapper">
+<a class="xl" href="/pmwiki/pmwiki.php/Main/Tropes">Tropes</a>
+<a class="xl" href="/pmwiki/pmwiki.php/Main/Media">Media</a>
+<a class="xl" href="/pmwiki/browse.php">Browse</a>
+<a class="xl" href="/pmwiki/index_report.php">Indexes</a>
+<a class="xl" href="/pmwiki/topics.php">Forums</a>
+<a class="xl" href="/pmwiki/recent_videos.php">Videos</a>
+<a href="/pmwiki/query.php?type=att">Ask The Tropers</a>
+<a href="/pmwiki/query.php?type=tf">Trope Finder</a>
+<a href="/pmwiki/query.php?type=ykts">You Know That Show...</a>
+<a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a>
+<a data-click-toggle="active" href="#tools">Tools <i class="fa fa-chevron-down"></i></a>
+<div class="tools-dropdown mobile-dropdown-linkList">
+<a href="/pmwiki/cutlist.php">Cut List</a>
+<a href="/pmwiki/changes.php">New Edits</a>
+<a href="/pmwiki/recent_edit_reasons.php">Edit Reasons</a>
+<a href="/pmwiki/launches.php">Launches</a>
+<a href="/pmwiki/img_list.php">Images List</a>
+<a href="/pmwiki/crown_activity.php">Crowner Activity</a>
+<a href="/pmwiki/no_types.php">Un-typed Pages</a>
+<a href="/pmwiki/page_type_audit.php">Recent Page Type Changes</a>
+</div>
+<a data-click-toggle="active" href="#hq">Tropes HQ <i class="fa fa-chevron-down"></i></a>
+<div class="tools-dropdown mobile-dropdown-linkList">
+<a href="/pmwiki/about.php">About Us</a>
+<a href="/pmwiki/contact.php">Contact Us</a>
+<a href="mailto:advertising@proper.io">Advertise</a>
+<a href="/pmwiki/dmca.php">DMCA Notice</a>
+<a href="/pmwiki/privacypolicy.php">Privacy Policy</a>
+</div>
+<a href="/pmwiki/ad-free-subscribe.php">Go Ad-Free</a>
+<div class="toggle-switches">
+<ul class="mobile-menu display-toggles">
+<li>Show Spoilers <div class="display-toggle show-spoilers" id="mobile-toggle-showspoilers"></div></li>
+<li>Night Vision <div class="display-toggle night-vision" id="mobile-toggle-nightvision"></div></li>
+<li>Sticky Header <div class="display-toggle sticky-header" id="mobile-toggle-stickyheader"></div></li>
+<li>Highlight Links <div class="display-toggle highlight-links" id="mobile-toggle-highlightlinks"></div></li>
+</ul>
+<script>updateMobilePrefs();</script>
+</div>
+</div>
+</div>
+</div>
+</header>
+<div class="mobile-on" id="homepage-introBox-mobile">
+<a href="/"><img class="logo-small" src="/images/logo-white-big.png"/></a>
+<form action="/pmwiki/search_result.php" class="search" style="margin:10px -5px -6px -5px;">
+<input class="search-box" name="q" placeholder="Search" required="" type="text" value=""/>
+<input class="submit-button" type="submit" value=""/>
+<input name="search_type" type="hidden" value="article"/>
+<input name="page_type" type="hidden" value="all"/>
+<input name="cx" type="hidden" value="partner-pub-6610802604051523:amzitfn8e7v"/>
+<input name="cof" type="hidden" value="FORID:10"/>
+<input name="ie" type="hidden" value="ISO-8859-1"/>
+<input name="siteurl" type="hidden" value=""/>
+<input name="ref" type="hidden" value=""/>
+<input name="ss" type="hidden" value=""/>
+</form>
+</div>
+<div class="ad" id="header-ad-wrapper">
+<div id="header-ad">
+<div class="ad-size-970x90 atf_banner">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_1"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_1'); });</script> </div>
+</div> </div>
+</div>
+</div>
+<div id="main-container">
+<div class="action-bar mobile-off" id="action-bar-top">
+<div class="action-bar-right">
+<p>Follow TV Tropes</p>
+<a class="button-fb" href="https://www.facebook.com/TVTropes">
+<i class="fa fa-facebook"></i></a>
+<a class="button-tw" href="https://www.twitter.com/TVTropes">
+<i class="fa fa-twitter"></i></a>
+<a class="button-re" href="https://www.reddit.com/r/TVTropes">
+<i class="fa fa-reddit-alien"></i></a>
+</div>
+<nav class="actions-wrapper" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<ul class="page-actions" id="top_main_list">
+<li class="link-edit">
+<a class="article-edit-button" data-modal-target="login" href="/pmwiki/pmwiki.php/Main/NoCutsceneInventoryInertia?action=edit" rel="nofollow">
+<i class="fa fa-pencil"></i> Edit Page</a></li><li class="link-related"><a href="/pmwiki/relatedsearch.php?term=Main/NoCutsceneInventoryInertia">
+<i class="fa fa-share-alt"></i> Related</a></li><li class="link-history"><a href="/pmwiki/article_history.php?article=Main.NoCutsceneInventoryInertia">
+<i class="fa fa-history"></i> History</a></li><li class="link-discussion"><a href="/pmwiki/remarks.php?trope=Main.NoCutsceneInventoryInertia">
+<i class="fa fa-comment"></i> Discussion</a></li> </ul>
+<button class="nav__dropdown-toggle" id="top_more_button" onclick="toggle_more_menu('top');" type="button">More</button>
+<ul class="more_menu hidden_more_list" id="top_more_list">
+<li class="link-todo tuck-always more_list_item"><a data-modal-target="login" href="#todo"><i class="fa fa-check-circle"></i> To Do</a></li><li class="link-pageSource tuck-always more_list_item"><a data-modal-target="login" href="/pmwiki/pmwiki.php/Main/NoCutsceneInventoryInertia?action=source" rel="nofollow" target="_blank"><i class="fa fa-code"></i> Page Source</a></li> </ul>
+</nav>
+<div class="WikiWordModalStub"></div>
+<div class="ImgUploadModalStub" data-page-type="Article"></div>
+<div class="login-alert" style="display: none;">
+You need to <a href="/pmwiki/login.php" style="color:#21A0E8">login</a> to do this. <a href="/pmwiki/login.php?tab=register_account" style="color:#21A0E8">Get Known</a> if you don't have an account
+</div>
+</div>
+<div class="page-Article" id="main-content">
+<article class="with-sidebar" id="main-entry">
+<input id="groupname-hidden" type="hidden" value="Main"/>
+<input id="title-hidden" type="hidden" value="NoCutsceneInventoryInertia"/>
+<input id="article_id" type="hidden" value="50008"/>
+<input id="logged_in" type="hidden" value="false"/>
+<p class="hidden" id="current_url">http://tvtropes.org/pmwiki/pmwiki.php/Main/NoCutsceneInventoryInertia</p>
+<meta content="" itemprop="datePublished"/>
+<meta content="" itemprop="articleSection"/>
+<meta content="" itemprop="image"/>
+<a class="watch-button" data-modal-target="login" href="#watch">Follow<span>ing</span></a>
+<h1 class="entry-title" itemprop="headline">
+No Cutscene Inventory Inertia
+</h1>
+<script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+                "@type": "ListItem",
+                "position": 1,
+                "name": "tvtropes.org",
+                "item": "https://tvtropes.org"
+            },{
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Tropes",
+                "item": "https://tvtropes.org/pmwiki/pmwiki.php/Main/Tropes"
+            },{
+                "@type": "ListItem",
+                "position": 3,
+                "name": "No Cutscene Inventory Inertia"            }]
+        }
+    </script>
+<a class="mobile-actionbar-toggle mobile-on" data-click-toggle="active" href="#mobile-actions-toggle" id="mobile-actionbar-toggle">
+<p class="tiny-off">Go To</p><span></span><span></span><span></span><i class="fa fa-pencil"></i></a>
+<nav class="mobile-actions-wrapper mobile-on" id="mobile-actions-bar"></nav>
+<div class="modal fade hidden-until-active" id="editLockModal">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button aria-label="Close" class="close" data-dismiss="modal" type="button"> <span aria-hidden="true">×</span></button>
+<h4 class="modal-title">Edit Locked</h4>
+</div>
+<div class="modal-body">
+<div class="row">
+<div class="body">
+<div class="danger troper_locked_message"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<nav class="body-options" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<ul class="subpage-links">
+<li>
+<a class="subpage-link curr-subpage" href="/pmwiki/pmwiki.php/Main/NoCutsceneInventoryInertia" title="The Main page">
+<span class="wrapper"><span class="spi main-page"></span>Main</span></a>
+</li>
+<li>
+<a class="subpage-link" href="/pmwiki/pmwiki.php/Laconic/NoCutsceneInventoryInertia" title="The Laconic page">
+<span class="wrapper"><span class="spi laconic-icon"></span>Laconic</span></a>
+</li>
+<li class="create-subpage dropdown">
+<a aria-expanded="false" class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);" role="button">
+<span class="wrapper">Create New <i class="fa fa-plus-circle"></i></span>
+</a>
+<select onchange="this.options[this.selectedIndex].value &amp;&amp; (window.location = this.options[this.selectedIndex].value);">
+<option value="">- Create New -</option>
+<option value="/pmwiki/pmwiki.php/Analysis/NoCutsceneInventoryInertia?action=edit">Analysis</option>
+<option value="/pmwiki/pmwiki.php/Characters/NoCutsceneInventoryInertia?action=edit">Characters</option>
+<option value="/pmwiki/pmwiki.php/FanficRecs/NoCutsceneInventoryInertia?action=edit">FanficRecs</option>
+<option value="/pmwiki/pmwiki.php/FanWorks/NoCutsceneInventoryInertia?action=edit">FanWorks</option>
+<option value="/pmwiki/pmwiki.php/Fridge/NoCutsceneInventoryInertia?action=edit">Fridge</option>
+<option value="/pmwiki/pmwiki.php/Haiku/NoCutsceneInventoryInertia?action=edit">Haiku</option>
+<option value="/pmwiki/pmwiki.php/Headscratchers/NoCutsceneInventoryInertia?action=edit">Headscratchers</option>
+<option value="/pmwiki/pmwiki.php/ImageLinks/NoCutsceneInventoryInertia?action=edit">ImageLinks</option>
+<option value="/pmwiki/pmwiki.php/PlayingWith/NoCutsceneInventoryInertia?action=edit">PlayingWith</option>
+<option value="/pmwiki/pmwiki.php/Quotes/NoCutsceneInventoryInertia?action=edit">Quotes</option>
+<option value="/pmwiki/pmwiki.php/Recap/NoCutsceneInventoryInertia?action=edit">Recap</option>
+<option value="/pmwiki/pmwiki.php/ReferencedBy/NoCutsceneInventoryInertia?action=edit">ReferencedBy</option>
+<option value="/pmwiki/pmwiki.php/Synopsis/NoCutsceneInventoryInertia?action=edit">Synopsis</option>
+<option value="/pmwiki/pmwiki.php/Timeline/NoCutsceneInventoryInertia?action=edit">Timeline</option>
+<option value="/pmwiki/pmwiki.php/Trivia/NoCutsceneInventoryInertia?action=edit">Trivia</option>
+<option value="/pmwiki/pmwiki.php/WMG/NoCutsceneInventoryInertia?action=edit">WMG</option>
+<option value="/pmwiki/pmwiki.php/YMMV/NoCutsceneInventoryInertia?action=edit">YMMV</option>
+</select>
+</li>
+</ul>
+</nav>
+<div class="article-content retro-folders" id="main-article">
+<p></p><div class="indent"><em>"Well, it's finally happened. Shooters have been evolving for something like two decades, through thick and thin, through brown and gray, through showers of flailing ragdolls against a background of excessive bloom, but it was all worth it because shooters have reached the peak. Yes, with </em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MaxPayne3" title="/pmwiki/pmwiki.php/VideoGame/MaxPayne3">Max Payne 3</a><em>, shooters have finally figured out how to have the main character holding the same guns in cutscenes that he was using in the preceding gameplay. Close up the shop and <a class="twikilink" href="/pmwiki/pmwiki.php/Music/PinkFloyd" title="/pmwiki/pmwiki.php/Music/PinkFloyd">shine all those crazy diamonds</a>; it's not getting any better than this."</em>
+<div class="indent">— <strong>Ben "Yahtzee" Croshaw</strong>, <em><a class="twikilink" href="/pmwiki/pmwiki.php/WebAnimation/ZeroPunctuation" title="/pmwiki/pmwiki.php/WebAnimation/ZeroPunctuation">Zero Punctuation</a></em>
+</div></div><div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_1"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_1'); })</script></div></div><p>In <a class="twikilink" href="/pmwiki/pmwiki.php/Main/VideoGames" title="/pmwiki/pmwiki.php/Main/VideoGames">Video Games</a>, it's quite rare for your character to be limited to one weapon or costume. One of the benefits of using real-time-rendering and textures is that you can swap them out for other things to change the look and feel of a character's costume or give them different equipment. Often times, however (especially in earlier games), <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Cutscene" title="/pmwiki/pmwiki.php/Main/Cutscene">cutscenes</a> are not rendered in real time. This can create some continuity issues, since there can be only one possible configuration of gear used in the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Cutscene" title="/pmwiki/pmwiki.php/Main/Cutscene">cutscene</a>. Usually, this is the default gear the character starts the game with.
+</p><p>In recent years this has been minimized somewhat by the increased prevalence of in-engine cutscenes, which are complex sets of animations rendered in real-time as opposed to a video file that plays. That said, even for games that handle cutscenes in this manner, this trope is still noticeably prevalent for many reasons. One is that in-engine cutscenes may use higher-quality models for the characters and their weapons and equipment - if the devs only made one high-quality weapon model, then that's what you're always going to be seen with.
+</p><div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_2"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_2'); })</script></div></div><p>A <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Subtrope" title="/pmwiki/pmwiki.php/Main/Subtrope">subtrope</a> of <a class="twikilink" href="/pmwiki/pmwiki.php/Main/StoryOverwrite" title="/pmwiki/pmwiki.php/Main/StoryOverwrite">Story Overwrite</a>, and, by extension, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GameplayAndStorySegregation" title="/pmwiki/pmwiki.php/Main/GameplayAndStorySegregation">Gameplay and Story Segregation</a>.
+</p><p>Compare <a class="twikilink" href="/pmwiki/pmwiki.php/Main/InformedEquipment" title="/pmwiki/pmwiki.php/Main/InformedEquipment">Informed Equipment</a> for worn or wielded items not being visible.
+</p><p></p><hr/><h2>Examples:</h2>
+<p></p><ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/Halo" title="/pmwiki/pmwiki.php/Franchise/Halo">Halo</a></em>:
+<ul><li> You will always be carrying an assault rifle during cutscenes in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/HaloCombatEvolved" title="/pmwiki/pmwiki.php/VideoGame/HaloCombatEvolved">Halo: Combat Evolved</a></em>, no matter what weapon you had beforehand. Later games only ever change what weapon takes the place of what you're using, such as the battle rifle in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Halo2" title="/pmwiki/pmwiki.php/VideoGame/Halo2">Halo 2</a></em> and the silenced submachine gun in <em><a class="twikilink" href="/pmwiki/pmwiki.php/Videogame/Halo3ODST" title="/pmwiki/pmwiki.php/Videogame/Halo3ODST">Halo 3: ODST</a></em>. The first game at least does seem to try to avert this by starting you with an assault rifle in almost every level, but then also ends up having the most jarring example of the trope in the "Two Betrayals" level, where his cutscene assault rifle suddenly morphs into a shotgun and plasma pistol in gameplay.
+</li><li> Averted on rare occasions in <em>Halo 2</em>, however, where the Chief and Arbiter would actually carry what you had equipped before a cutscene started, such as the cutscene in "Oracle" where the Arbiter will actually fire on the Heretic Leader's Banshee with whatever weapon you were carrying, and other instances would have them pick up something other than a battle rifle/carbine in a cutscene, then start the mission it preceded with those same weapons, such as "Delta Halo" starting Chief with the SMG and rocket launcher he pulled out of his drop-pod.
+</li><div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_3"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_3'); })</script></div></div><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/HaloReach" title="/pmwiki/pmwiki.php/VideoGame/HaloReach">Halo: Reach</a></em> your armor is completely customizable, but you will always be wielding either an Assault Rifle, DMR, or Pistol during cutscenes; at the very least, the game will always actually start you with what the cutscene showed you carrying, and mid-mission cutscenes will reflect whatever you're actually carrying. Armor-wise, it's also partially enforced by the game hiding Armor Effects during the cutscenes, since poignant moments <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Narm" title="/pmwiki/pmwiki.php/Main/Narm">would be ruined by showing your head be on fire during them</a>.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/ResidentEvil" title="/pmwiki/pmwiki.php/Franchise/ResidentEvil">Resident Evil</a></em>:
+<ul><li> The first three games would avoid the trope by always having the player character shown with whatever weapon they're equipped with as well as any alternate outfits you have them wear. This is not the case in CG cutscenes where the characters are always shown in their default outfits.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/ResidentEvil4" title="/pmwiki/pmwiki.php/VideoGame/ResidentEvil4">Resident Evil 4</a></em> has Leon always wielding his trusty handgun in the cutscenes, even though you can sell it whenever you please. There's also one cutscene in Ada's bonus "Separate Ways" mode that shows Leon going to town on Ganados with a TMP, even though you can completely skip buying the gun. In the PS2 version of <em>Resident Evil 4</em>, being pre-rendered CGI, Leon is always wearing his default costume in cutscenes as well. In the Wii version, Leon retains the tactical vest and the bonus RPD uniform in cutscenes, but not the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BadassInANiceSuit" title="/pmwiki/pmwiki.php/Main/BadassInANiceSuit">mobster suit</a>.
+</li><li> Much the same goes for <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/ResidentEvil5" title="/pmwiki/pmwiki.php/VideoGame/ResidentEvil5">Resident Evil 5</a></em>. The armor items show up as part of the characters' models, but Sheva and Chris will <em>always</em> hold and use the Beretta 92 pistols they start the game with in cutscenes.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/ResidentEvil2Remake" title="/pmwiki/pmwiki.php/VideoGame/ResidentEvil2Remake">Resident Evil 2 (Remake)</a></em> will always show the player character's weapons that are holstered. If the character has to draw a weapon in a cutscene, they'll always use their starter pistol, even if it's in an item box. Said pistols will also be rendered in their basic form, even if you added upgrades.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/ResidentEvil3Remake" title="/pmwiki/pmwiki.php/VideoGame/ResidentEvil3Remake">Resident Evil 3 (Remake)</a></em> will have Jill using her pistol, grenade launcher, and knife in a few cutscenes, even if they are in an item box. Jill will also fire her weapons in said scenes even if you have no ammo for them. Likewise, Carlos will always be shown wielding his assault rifle regardless of whether he has it on him or not.
+</li></ul></li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/Videogame/GearsOfWar" title="/pmwiki/pmwiki.php/Videogame/GearsOfWar">Gears of War</a></em>, Marcus is always wielding his Lancer in the cutscenes, regardless of whether or not you have it on you at the time. In the third game, many NPC characters in your squad are also carrying different weapons by default, but when a cutscene rolls around, everyone is suddenly using Lancers.
+</li><li> The <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SecretOfMana" title="/pmwiki/pmwiki.php/VideoGame/SecretOfMana">Secret of Mana</a></em> Remake shows Randi using the Mana Sword on a possessed Dyluck, no matter what weapon the player currently has equipped on him. <a class="twikilink" href="/pmwiki/pmwiki.php/Main/JustifiedTrope" title="/pmwiki/pmwiki.php/Main/JustifiedTrope">Justified</a>, with the Mana Sword being said to have the power to remove possession from people, so he would obviously use this.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MetalGear" title="/pmwiki/pmwiki.php/VideoGame/MetalGear">Metal Gear</a></em>:
+<ul><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MetalGearSolid" title="/pmwiki/pmwiki.php/VideoGame/MetalGearSolid">Metal Gear Solid</a></em>, even if you found and equipped the SOCOM suppressor, Snake doesn't use it when he mercy kills <span class="spoiler" title="you can set spoilers visible by default on your profile">Sniper Wolf</span>, though admittedly this was intentional as to not completely ruin the impact of the scene with a dulled "pop" instead of an echoing "bang." Other cutscenes in the original game are a crapshoot as to whether the SOCOM will be suppressed or not, while cutscenes in <em>The Twin Snakes</em> will always have it appear without.
+</li><li> Cutscenes in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MetalGearSolid2SonsOfLiberty" title="/pmwiki/pmwiki.php/VideoGame/MetalGearSolid2SonsOfLiberty">Metal Gear Solid 2: Sons of Liberty</a></em> will nearly always have Raiden using the SOCOM pistol when he's brandishing a weapon. This game is at least consistent about depicting it with the suppressor if you found and attached it to the gun, but it will still make its normal unsuppressed gunshots if he fires it in a cutscene. Things get especially silly if the player equips the slide-locked, tranquilizer-dart-firing M9 pistol before entering the cutscene, as Raiden will brandish it instead of the SOCOM but otherwise use it like it <em>is</em> the SOCOM, complete with firing loudly and semi-automatically at, and drawing blood from, the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/NighInvulnerable" title="/pmwiki/pmwiki.php/Main/NighInvulnerable">otherwise invincible Vamp</a> on two separate occasions<span class="notelabel" onclick="togglenote('note0dtzh');"><sup>note </sup></span><span class="inlinefolder" id="note0dtzh" isnote="true" onclick="togglenote('note0dtzh');" style="cursor:pointer;font-size:smaller;display:none;">the <em>Substance</em> rerelease seems to have fixed the first case, but not the second</span>. In one instance before getting the SOCOM, though - namely, the cutscene in which Raiden is introduced to Vamp and <em>gets</em> the SOCOM - the game goes out of its way to properly depict whether you're using the M9 or not: if you don't have it equipped or missed it entirely, Raiden will enter the room without a weapon in his hands (the M9 shoved in his holster if you have it), and if you do have it equipped, Raiden enters the room with entirely different animations showing him brandishing the gun.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MetalGearSolid3SnakeEater" title="/pmwiki/pmwiki.php/VideoGame/MetalGearSolid3SnakeEater">Metal Gear Solid 3: Snake Eater</a></em>, Snake will usually keep whatever outfit or face-paint he has on in the following cutscene. This does not extend to his weaponry, however, as he'll usually just sport the M1911; at the very least, like <em>MGS2</em>, the game will actually depict it with a suppressor attached if you have one on it. Same for the tranquilizer gun in cutscenes from the prologue Virtuous Mission, though in the one occasion where he <em>fires</em> it in a cutscene it sounds loud regardless (though, since the cutscene is made with him using that pistol in mind, he only fires it one time without somehow turning it into a semi-automatic weapon). Notably, the few other weapons he uses in cutscenes (namely, the SVD and the RPG-7 in specific cutscenes during the endgame) are actually given to the player if they hadn't already acquired them at that stage, as they are required for the sections immediately following when he uses them. This can be <a class="twikilink" href="/pmwiki/pmwiki.php/Main/HandWave" title="/pmwiki/pmwiki.php/Main/HandWave">Hand Waved</a> as the two weapons having been inside the sidecar of EVA's bike, right next to the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BottomlessMagazines" title="/pmwiki/pmwiki.php/Main/BottomlessMagazines">endless piles of ammo</a> for the chase sequence before then.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MetalGearSolid4GunsOfThePatriots" title="/pmwiki/pmwiki.php/VideoGame/MetalGearSolid4GunsOfThePatriots">Metal Gear Solid 4: Guns of the Patriots</a></em> follows suit, showing whatever Octo-Camo or Face-Camo textures Snake was wearing in the cutscenes (and even letting you erase them mid-cutscene by shaking the controller), but always showing him brandishing either the Operator pistol he gets five minutes into the game or the M4 Custom rifle he acquires a while after that. All cutscenes that play before intense combat such as a boss battle have the cutscene <em>transition</em> into the gameplay, usually with a close-up on Snake that pans to an over-the-shoulder shot, where his health bar and such appear. While the transition is seamless and looks really nice, the game will automatically place the Operator or M4 into Snake's active inventory if they aren't already there, swapping them out with other guns, which can get really annoying if you suddenly lose a gun you need or prefer over those two. This means when you gain control, you immediately have to go into the Weapons menu and reselect it, which kind of takes away the cool factor of the transition. The cutscenes also don't reflect the player's weapon modifications except during those transitions, so Snake will have a completely unmodified M4 in his hands during a regular cutscene, then in the camera angle change between that and the transition-into-gameplay, that M4 can suddenly sprout a big-ass scope on top, a silencer at the end of the barrel, a flashlight and laser sight on the left and right sides of it, and a shotgun underneath.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MetalGearSolidPeaceWalker" title="/pmwiki/pmwiki.php/VideoGame/MetalGearSolidPeaceWalker">Metal Gear Solid: Peace Walker</a></em> has Big Boss or members of his private army begin <em>every</em> boss battle by pointing the M16 rifle that you probably stopped using within 20 missions of the beginning at the enemy vehicle. Even if it's a giant tank the size of the shuttle transporter that said M16 wouldn't do a thing to.
+</li><li> At the end of <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MetalGearSolidVGroundZeroes" title="/pmwiki/pmwiki.php/VideoGame/MetalGearSolidVGroundZeroes">Metal Gear Solid V: Ground Zeroes</a></em>, Big Boss pulls out an MRS-4 carbine to combat the XOF unit as they destroy Mother Base. This is the rifle he starts with on Normal, albeit in the cutscene, the ingame suppressor and flashlight are not present. Of course, on Hard he starts with only a tranquiliser pistol with two magazines and on subsequent playthroughs of each mission, regardless of difficulty, the player can swap out their default weapons for unlocked equipment.
+</li><li> During the cutscenes of <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MetalGearSolidVThePhantomPain" title="/pmwiki/pmwiki.php/VideoGame/MetalGearSolidVThePhantomPain">Metal Gear Solid V: The Phantom Pain</a></em>, Snake inevitably pulls out an AM D114, even if he only has a tranq pistol in his inventory.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DirgeOfCerberus" title="/pmwiki/pmwiki.php/VideoGame/DirgeOfCerberus">Dirge of Cerberus</a></em> has Vincent using the vanilla Cerberus pistol (how "vanilla" a triple-barreled revolver is is relative) in cutscenes, no matter how <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GunAccessories" title="/pmwiki/pmwiki.php/Main/GunAccessories">pimped out</a> you have it, or if you were using the machine gun or rifle a second ago. Avoided in cutscenes where Vincent is in his Chaos form and using Death Penalty, though this is more by accident as the player has no choice in the matter of armament in this form.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/FinalFantasy" title="/pmwiki/pmwiki.php/Franchise/FinalFantasy">Final Fantasy</a></em>:
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FinalFantasyVII" title="/pmwiki/pmwiki.php/VideoGame/FinalFantasyVII">Final Fantasy VII</a></em> works around this by making starting weapons unsellable.
+<ul><li> An odd variant of this trope applying to <em>people</em> is in the final FMV of <em>VII</em>, where Vincent and Yuffie never show up, even if you beat Sephiroth with them. This is because Vincent is an optional character while Yuffie <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SoLongAndThanksForAllTheGear" title="/pmwiki/pmwiki.php/Main/SoLongAndThanksForAllTheGear">will leave the party permanently</a> if a certain event isn't handled right, so accounting for all the possibilities would require four versions of the same cutscene. Later material, like the opening of the aforementioned <em>Dirge of Cerberus</em>, would establish they were canonically elsewhere at the time handling last-minute evacuations from underneath Meteor.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FinalFantasyVIII" title="/pmwiki/pmwiki.php/VideoGame/FinalFantasyVIII">Final Fantasy VIII</a></em>'s Squall is always shown with his Revolver model gunblade, regardless of your current gunblade model.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FinalFantasyXIII" title="/pmwiki/pmwiki.php/VideoGame/FinalFantasyXIII">Final Fantasy XIII</a></em>, equipment changes only ever appear in battle.
+</li><li> Mostly averted in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FinalFantasyXIII2" title="/pmwiki/pmwiki.php/VideoGame/FinalFantasyXIII2">Final Fantasy XIII-2</a></em>. When cutscenes involve weapons, the characters are always holding exactly the ones they have equipped. When the cutscenes don't involve weapons, however, Noel's blades, which are usually sheathed on his back while running in the field, sometimes seem to mysteriously disappear altogether. Serah's weapon simply turns into Mog outside of combat, so for her it's not this trope.
+</li><li> It also happens in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FinalFantasyX" title="/pmwiki/pmwiki.php/VideoGame/FinalFantasyX">Final Fantasy X</a></em>, but for one scene only: The group shot as the team enters Zanarkand has the team put their weapons together. This will show default weapons and the Brotherhood, regardless of what is equipped. Why? The scene is actually the first scene of the game, and everything leading up to it is <a class="twikilink" href="/pmwiki/pmwiki.php/Main/HowWeGotHere" title="/pmwiki/pmwiki.php/Main/HowWeGotHere">How We Got Here</a>, so the game literally <em>can't</em> know what you'll have equipped when you catch up. It's otherwise averted; the FMV scenes typically don't show weapons—and one of the few that does, Auron's introduction, takes place before he's a party member, so he can't have anything but his default weapon. Most of the other scenes use the in-game engine, and use what you have equipped.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FinalFantasyX2" title="/pmwiki/pmwiki.php/VideoGame/FinalFantasyX2">Final Fantasy X-2</a></em> different dress-spheres change the characters' outfits and abilities. Despite this being a major plot point, outside of battle the girls are always wearing the same clothes.
+</li><li> Averted entirely during <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/LightningReturnsFinalFantasyXIII" title="/pmwiki/pmwiki.php/VideoGame/LightningReturnsFinalFantasyXIII">Lightning Returns: Final Fantasy XIII</a></em>. Lightning will wear whatever Garb, Weapon and Shield are equipped at all times, even if it's hilariously inappropriate for the scene. (An action packed sequence while dressed as <a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FinalFantasyX" title="/pmwiki/pmwiki.php/VideoGame/FinalFantasyX">Yuna</a> or wearing an outfit made of Moogle plushies for example) The only exception is the final concluding scenes (after you beat the final boss). Lightning will be wearing her default outfit for those scenes as they are prerendered. Sneakily however, the game also buffs Lightning's default Garb such that there is a very highly likely chance that you'll be equipping that exact outfit anyway.
+</li><li> Averted in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FinalFantasyXIV" title="/pmwiki/pmwiki.php/VideoGame/FinalFantasyXIV">Final Fantasy XIV</a></em>. When your character appears in any cutscene, they are always shown wearing exactly what they had equipped in the game at that point, including full face-covering headgear. This is made somewhat hilarious for cutscenes that include close-ups of your character for the purpose of showing off their expressions in reaction to a plot twist... as you can get a nice detailed close-up of a completely masked face instead. One exception is made for a cutscene showing the death of an NPC where your character's headgear is suddenly removed just so you can see their reaction to the person dying (if the headgear is a part of something that takes up multiple slots, then the headgear will stay on since removing that means removing everything else with it). Taken <a class="twikilink" href="/pmwiki/pmwiki.php/Main/UpToEleven" title="/pmwiki/pmwiki.php/Main/UpToEleven">Up to Eleven</a> when you use the Story Journal feature to revisit cutscenes from throughout the game, as the cutscenes will always render your character based on what they're wearing at the time you view them, rather than being able to remember what they were wearing when you first saw that cutscene. This makes it possible to watch a main story cutscene with your character wearing a full set of crafting class gear or even nothing but your underwear if you feel like it. One scene in the <em>Shadowbringers</em> story plays it straight where it shows <span class="spoiler" title="you can set spoilers visible by default on your profile"> the player character dead in a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BadFuture" title="/pmwiki/pmwiki.php/Main/BadFuture">Bad Future</a> scenario while they're wearing the clothes Tataru made for them at the end of <em>Stormblood</em>.</span> There's also an in-gameplay example late in <em>Heavensward</em>, where the game outright tells you that it's going to modify your gear's appearance for the duration of a story battle (dressing up as an Ishgardian knight while fighting for them in a big free-for-all between the Grand Companies).
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FinalFantasyXV" title="/pmwiki/pmwiki.php/VideoGame/FinalFantasyXV">Final Fantasy XV</a></em> averts this for the most part, where the majority of the cutscenes are rendered in real time. The only times this doesn't happen are in the ending chapter, where Noctis is changed into his suit automatically by the game and in the alternate ending to Episode Ignis, where they're in their royal outfits. Both instances are where the cutscenes are pre-rendered.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/KingdomHearts" title="/pmwiki/pmwiki.php/Franchise/KingdomHearts">Kingdom Hearts</a></em>:
+<ul><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/KingdomHearts358DaysOver2" title="/pmwiki/pmwiki.php/VideoGame/KingdomHearts358DaysOver2">Kingdom Hearts: 358/2 Days</a></em>, Roxas always has the Kingdom Key equipped in all scenes. <span class="spoiler" title="you can set spoilers visible by default on your profile">Except for the last mission, where he finally uses his <a class="twikilink" href="/pmwiki/pmwiki.php/Main/IconicItem" title="/pmwiki/pmwiki.php/Main/IconicItem">trademark</a> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DualWielding" title="/pmwiki/pmwiki.php/Main/DualWielding">Oathkeeper/Oblivion combo</a>.</span>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/KingdomHeartsII" title="/pmwiki/pmwiki.php/VideoGame/KingdomHeartsII">Kingdom Hearts II</a></em> averts this except for one cutscene, immediately prior to the 1000 Heartless fight, which is an FMV as it was simply impossible for the PS2 to render the scene in real-time. On the flip side, the game also demonstrates one of the <a class="twikilink" href="/pmwiki/pmwiki.php/Administrivia/TropesAreTools" title="/pmwiki/pmwiki.php/Administrivia/TropesAreTools">unintended side effects</a> of averting this trope; occasionally Sora's Keyblade will clip through other objects, characters, or the prongs in his helmet if in Space Paranoids, during cutscenes because you're using a bigger Keyblade than the game expects.
+<ul><li> While most Drive Forms will be shown in cutscenes if Sora was in one when the cutscene starts, Anti Form will be immediately canceled.
+</li><li> As mentioned earlier, Sora wears a helmet in Space Paranoids with two prongs sticking out from the back. Should <a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/LiloAndStitch" title="/pmwiki/pmwiki.php/WesternAnimation/LiloAndStitch">Stitch</a> be summoned in that world with the cutscene playing, the prongs will clip into <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AlohaHawaii" title="/pmwiki/pmwiki.php/Main/AlohaHawaii">the ground</a> when Sora gets knocked down and licked in affection.
+</li></ul></li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/KingdomHeartsI" title="/pmwiki/pmwiki.php/VideoGame/KingdomHeartsI">Kingdom Hearts</a></em> this is almost averted. When <a class="twikilink" href="/pmwiki/pmwiki.php/Main/RivalTurnedEvil" title="/pmwiki/pmwiki.php/Main/RivalTurnedEvil">Riku</a> takes the Keyblade from Sora, it reverts to being the Kingdom Key, no matter what shape it was before. Justified in-universe as the Kingdom Key is the base form of the Keyblade. The keychains are what transforms it, and Sora still has those.
+<ul><li> This also applies in the endgame for <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/KingdomHearts3DDreamDropDistance" title="/pmwiki/pmwiki.php/VideoGame/KingdomHearts3DDreamDropDistance">Kingdom Hearts 3D: Dream Drop Distance</a></em> when Riku takes the Keyblade from Sora again (<a class="twikilink" href="/pmwiki/pmwiki.php/Main/TheAtoner" title="/pmwiki/pmwiki.php/Main/TheAtoner">but for different reasons</a>). No matter what keychain Sora was using at the moment of <span class="spoiler" title="you can set spoilers visible by default on your profile">his death</span>, he'll always be using the Kingdom Key <span class="spoiler" title="you can set spoilers visible by default on your profile">as the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/PostFinalBoss" title="/pmwiki/pmwiki.php/Main/PostFinalBoss">Post-Final Boss</a></span>, and it remains this way when Riku uses it <span class="spoiler" title="you can set spoilers visible by default on your profile">to revive Sora and return to the awakened world</span>.
+</li></ul></li><li> In general, if it's rendered using game models, equipment will show up as whatever you actually have equipped. Presumably because it's impractical to render everything for every Keyblade, though, FMVs will always show you using Kingdom Key.
+</li></ul></li><li> Used in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/NinjaGaiden" title="/pmwiki/pmwiki.php/VideoGame/NinjaGaiden">Ninja Gaiden</a></em>, though your costume will change, Ryu is always shown holding the Dragon Sword.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Okami" title="/pmwiki/pmwiki.php/VideoGame/Okami">Ōkami</a></em>, Ammy usually has Divine Retribution, the first weapon received in the game equipped in cutscenes, even when you've found far better weapons. And when you get the <em>best</em> weapons, that's all she's ever shown using. Strangely, in a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/NewGamePlus" title="/pmwiki/pmwiki.php/Main/NewGamePlus">New Game+</a>, any karmic transformers you may be wearing will translate into the cutscenes, including modified versions for the few scenes that show Ammy through mortals' eyes.
+</li><li> Oddly inverted in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TalesOfVesperia" title="/pmwiki/pmwiki.php/VideoGame/TalesOfVesperia">Tales of Vesperia</a></em>. During the game, there are cutscene flashbacks to previous in-game events. However, the characters in the cutscene will always be wearing their current costumes, rather than the outfits they were wearing at the time of the event. (Considering some of the costume titles, it can end up looking like the characters' memories are rather. . . <a class="twikilink" href="/pmwiki/pmwiki.php/Main/UnreliableVoiceOver" title="/pmwiki/pmwiki.php/Main/UnreliableVoiceOver">flawed, to say the least.</a>) Thankfully, it was fixed in later <a class="twikilink" href="/pmwiki/pmwiki.php/Main/UpdatedReRelease" title="/pmwiki/pmwiki.php/Main/UpdatedReRelease">Updated Re Release</a> of the game.
+<ul><li> It does have a few straight examples. Usually the game would do its best to show current equipment, but the more action-packed cutscenes are pre-rendered (and some are outright 2D animation). Those will always show Yuri with his default outfit and "official" weapon. The problem being, said weapon is a katana, there are very few katanas in the game, and by the time you get your hands on one you'll have passed a number of those cutscenes already.
+</li></ul></li><li> Similarly to the <em>Vesperia</em> example above, in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SonicAdventure" title="/pmwiki/pmwiki.php/VideoGame/SonicAdventure">Sonic Adventure</a></em>, characters in cutscenes always have all of the Level-Up Items that you've collected for them, even if they didn't (or couldn't) have them at that point.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DragonAgeOrigins" title="/pmwiki/pmwiki.php/VideoGame/DragonAgeOrigins">Dragon Age: Origins</a></em>:
+<ul><li> Your party will never wear headgear during cutscenes or conversations. While it is possible that a heavy steel face-covering helmet would be removed for ease of communication, it does not make sense for a mage's or a priest's headwear to be removed. The game never shows the characters taking off or putting on the headgear.
+</li><li> In most cutscenes that involve attacking/killing someone, the character will use a generic dagger (nicknamed the "<a class="twikilink" href="/pmwiki/pmwiki.php/Main/FanNickname" title="/pmwiki/pmwiki.php/Main/FanNickname">Murder Knife</a>") instead of their equipped weapon, regardless of their class or standard <a class="twikilink" href="/pmwiki/pmwiki.php/Main/WeaponOfChoice" title="/pmwiki/pmwiki.php/Main/WeaponOfChoice">Weapon of Choice</a>. The two exceptions are if you choose to execute <span class="spoiler" title="you can set spoilers visible by default on your profile">Loghain</span> and when you <span class="spoiler" title="you can set spoilers visible by default on your profile">kill the Archdemon</span>, which both show you using a generic greatsword—in the latter case, it's at least shown that the character picks it up right then and there on the battlefield, but in the former, there's no explanation given for why, say, a low-Strength rogue or mage is suddenly wielding this huge blade.
+</li></ul></li><li> Similar to the "Murder Knife", certain classes in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/StarWarsTheOldRepublic" title="/pmwiki/pmwiki.php/VideoGame/StarWarsTheOldRepublic">Star Wars: The Old Republic</a></em> (specifically, Republic Trooper and Imperial Agent) carry around a "Murder Blaster" strapped to their thighs, which they only ever use to threaten or kill people in cutscenes, since in-game they don't actually have the Weapon: Blaster Pistol skill (Troopers specialize in <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ChainsawGripBFG" title="/pmwiki/pmwiki.php/Main/ChainsawGripBFG">Chainsaw Grip BFGs</a>, while Agents get <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SniperRifle" title="/pmwiki/pmwiki.php/Main/SniperRifle">Sniper Rifles</a>; both can also use blaster rifles). This is less of an issue with Smugglers and Bounty Hunters, who use blaster pistols in both gameplay and cutscenes, and the Force-wielding classes, who get to use their iconic lightsabers (or <a class="twikilink" href="/pmwiki/pmwiki.php/Main/LightningCanDoAnything" title="/pmwiki/pmwiki.php/Main/LightningCanDoAnything">Force Lightning</a>, in the Sith Inquisitor's case) for everything.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/MassEffect" title="/pmwiki/pmwiki.php/Franchise/MassEffect">Mass Effect</a></em>:
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MassEffect1" title="/pmwiki/pmwiki.php/VideoGame/MassEffect1">Mass Effect</a></em>: During the Virmire mission, party members - including the ones you just arrived with - change into their default equipment the moment you stop controlling.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MassEffect2" title="/pmwiki/pmwiki.php/VideoGame/MassEffect2">Mass Effect 2</a></em> the characters can only carry weapons that they are trained to use. Yet they will still pull out a pre-scripted gun during cutscenes, even if they don't carry that type. Most noticeably, <em>everyone</em> will use assault rifles in the final mission cutscenes. On the other hand, if the cutscene script calls for a weapon type the character <em>does</em> carry, they will use the weapon model they have equipped, but it will still <em>behave</em> like the default weapon of that type. For example, characters will fire the semi-automatic Mattock rifle on full auto or the Phalanx much faster than its actual firing rate.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MassEffect3" title="/pmwiki/pmwiki.php/VideoGame/MassEffect3">Mass Effect 3</a></em>:
+<ul><li> Characters will routinely wield an Avenger assault rifle or a Predator pistol, regardless of what weapons they were equipped with before a mission (or even if they are able to equip that weapon class). Shepard can be <a class="twikilink" href="/pmwiki/pmwiki.php/Main/WalkingArmory" title="/pmwiki/pmwiki.php/Main/WalkingArmory">carrying five weapons on his/her back</a> during the Grissom Academy mission, yet s/he fires on a heavy mech with an Avenger that magically appears from nowhere if it's not one of those weapons. James routinely carries a pistol in cutscenes, even though he's a heavy weapons expert and can only use rifles and shotguns in gameplay. The game sometimes replaces your weapons <em>with the same weapons</em>, as Shepard might holster his/her Avenger rifle to pull out a completely different Avenger rifle. Interestingly enough, weapon mods <em>do</em> carry over into cutscenes, so long as those weapons are the Avenger rifle and Predator pistol (AKA the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/FanNickname" title="/pmwiki/pmwiki.php/Main/FanNickname">"Cutscene Pistol of Doom"</a>).
+</li><li> Any gun larger than an SMG is holstered above the shoulder like an Assault rifle and then clip to where they should be. While it only looks slightly uncanny when you're carrying a sniper rifle, it is very hard to miss when you're carrying a shotgun, which is normally holstered across the waist.
+</li><li> Bioware attempted to fix the "no helmets in cutscenes" issue that plagued <em>2</em>, but it looks even more goofy in the third game. Helmets magically disappear in cutscenes - in the Attican Traverse: Krogan Team mission, Shepard and company can be running down a tunnel in full armor, yet his/her helmet inexplicably disappears as s/he rounds a corner. This can even extend to squadmates - in the Extended Cut evacuation scene, while talking to Shepard, Garrus' helmet magically disappears and reappears in different shots. And <em>then</em> there's the weirdness that can ensue where Shepard kisses a romanced Jack through an N7 full-face breather helmet because that's a conversation option, not a cutscene (although you can switch it to "Off In Conversations" if you like).
+</li><li> In the <em>Leviathan</em> DLC, the developers attempted to avert this by letting Shepard and squadmates actually use their equipped weapon to fire at an Artifact. However, due to the great variety of ammunition at that point, it can happen that the weapon doesn't seem to fire at all, and still blast the artifact into pieces, fire more times than it has shots, or shotguns unleashing a full-auto spread, when they don't normally operate that way!
+</li><li> Averted in the <em>Citadel</em> DLC when <span class="spoiler" title="you can set spoilers visible by default on your profile"> Shepard and his/her squad has been trapped in the Archives by his/her clone</span>. Shepard fires his/her pistol at his/her captor and it's actually the pistol you equipped. For example, the Scorpion pistol fires sticky mines instead of bullets, meaning that Shepard fires three times, the cutscene continues, then the mines go off.
+</li><li> When you get roasted by <span class="spoiler" title="you can set spoilers visible by default on your profile">Harbinger</span> at the end, your charred and wrecked armour will be designed after the standard N-7 armour or a related suit like the Blood Dragon, even if you're wearing the various DLC armours that are structured differently.
+</li></ul></li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Videogame/StarOceanTillTheEndOfTime" title="/pmwiki/pmwiki.php/Videogame/StarOceanTillTheEndOfTime">Star Ocean: Till the End of Time</a></em> had multiple costumes, yet only the defaults were used for in-game cutscenes. Made more egregious by how screenshots on the case and in advertisements made it appear that the game <em>averted</em> this trope, by using shots from <span class="spoiler" title="you can set spoilers visible by default on your profile"> a bonus dungeon where the party fights copies of themselves wearing the alternate costumes</span>.
+</li><li> From <em><a class="twikilink" href="/pmwiki/pmwiki.php/Videogame/MegaManX4" title="/pmwiki/pmwiki.php/Videogame/MegaManX4">Mega Man X4</a></em> onward, any animated cutscene with X shows him in his base form, with whatever armor powerups you have being absent. In game scenes keep the armor on though, leading to continuity problems in X7 and X8 which go from in game to animated during the final boss fights.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/Videogame/MegaManZX" title="/pmwiki/pmwiki.php/Videogame/MegaManZX">Mega Man ZX</a> Advent</em>, you always turn back to Model A before a cutscene. Even if it is before a boss battle and being in that form wold help you, you always start the fight in Model A.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Videogame/MegaManZero" title="/pmwiki/pmwiki.php/Videogame/MegaManZero">Mega Man Zero</a></em> games always have Zero with his default red coloration in hand-drawn cutscene images. In the first game this is justified as there's no way to change his appearance, but in the second game and beyond there are a number of different possible colors for Zero to be, due to Forms or Body Chips.
+</li><li> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AvertedTrope" title="/pmwiki/pmwiki.php/Main/AvertedTrope">Averted</a> in the original <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MegaManZX" title="/pmwiki/pmwiki.php/VideoGame/MegaManZX">Mega Man ZX</a></em>, where going into any cutscene with any equipped Biometal (or <em>no</em> equipped Biometal), will result in the cutscene proceeding as usual and Vent/Aile's textbox will show them wearing that specific armor, save in very specific cutscenes where they will switch to Model ZX (The battle with Prometheus, re-Megamerging against Serpent's <a class="twikilink" href="/pmwiki/pmwiki.php/Main/OneWingedAngel" title="/pmwiki/pmwiki.php/Main/OneWingedAngel">One-Winged Angel</a> form). This even includes <a class="twikilink" href="/pmwiki/pmwiki.php/Main/InfinityPlusOneSword" title="/pmwiki/pmwiki.php/Main/InfinityPlusOneSword">Model OX</a>, a form that can <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BraggingRightsReward" title="/pmwiki/pmwiki.php/Main/BraggingRightsReward">only be unlocked on a cleared save file</a> and would only be able to show up in a cutscene if you replay the final level again.
+</li><li> In the original <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MarvelUltimateAlliance" title="/pmwiki/pmwiki.php/VideoGame/MarvelUltimateAlliance">Marvel Ultimate Alliance</a></em>, this happens with entire characters; whilst the player can theoretically choose any combination of characters to play during the game, the cutscenes pretty much all feature the original (and seemingly default) combination of Captain America, Spider-Man, Thor and Wolverine throughout the entire game.
+<ul><li> The sequel subverts this by simply not rendering anyone else than necessary. In fact, in one cutscene, Captain America and Iron Man are seen stepping out of a teleporter with four androgynous forms behind them (your team).
+</li></ul></li><li> In the <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/CallOfJuarezBoundInBlood" title="/pmwiki/pmwiki.php/VideoGame/CallOfJuarezBoundInBlood">Call of Juarez: Bound in Blood</a></em>, characters revert to the same "quick shooter revolver" during cut scenes. This actually makes even less sense for the character Juarez, a character who carries two valuable, powerful pistols on his person at all times, yet will leave them untouched in their holsters whilst using a far inferior gun throughout the game.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/STALKER" title="/pmwiki/pmwiki.php/VideoGame/STALKER">STALKER</a>: Shadow of Chernobyl</em> shows the Marked One carrying an AKS-74U in every cutscene. While that makes sense for flashbacks that occur before the game begins, the player would player would most likely have a more powerful weapon by the end of the game. The final cutscenes are even more <a class="twikilink" href="/pmwiki/pmwiki.php/JustForFun/Egregious" title="/pmwiki/pmwiki.php/JustForFun/Egregious">egregious</a> as he is seen wearing armor that the player likely sold a long time ago after upgrading to better suits, especially if you went for the true ending where you get a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/PowerArmor" title="/pmwiki/pmwiki.php/Main/PowerArmor">powered exoskeleton</a> for free (and would have had a hard time surviving the final level without it.)
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SuperMarioBros3" title="/pmwiki/pmwiki.php/VideoGame/SuperMarioBros3">Super Mario Bros. 3</a></em>, <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SuperMarioWorld" title="/pmwiki/pmwiki.php/VideoGame/SuperMarioWorld">Super Mario World</a></em> and <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/NewSuperMarioBrosWii" title="/pmwiki/pmwiki.php/VideoGame/NewSuperMarioBrosWii">New Super Mario Bros. Wii</a></em>, Mario and Luigi (and the Toads in the latter game) are always Super Mario/Luigi/whoever in the ending cut scenes after beating Bowser (and in the latter, always Super Mario/Luigi/whoever in the credits mini game), despite whatever power up you're using at the time. You also begin the latter game's gameplay without the Super form, even though the player characters all don't actually lose it in the opening unlike the original <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/NewSuperMarioBros" title="/pmwiki/pmwiki.php/VideoGame/NewSuperMarioBros">New Super Mario Bros.</a>.</em>
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SuperMarioBros3" title="/pmwiki/pmwiki.php/VideoGame/SuperMarioBros3">Super Mario Bros. 3</a></em> actively shows Mario turning to Super Mario between beating Bowser and entering the Princess' room. Also, in <em><a class="twikilink" href="/pmwiki/pmwiki.php/Main/VideoGameRemake" title="/pmwiki/pmwiki.php/Main/VideoGameRemake">Super Mario Advance 4</a></em>, when you continue playing after beating Bowser, Mario will start as Super Mario.
+</li><li> In the <em><a class="twikilink" href="/pmwiki/pmwiki.php/Main/CompilationRerelease" title="/pmwiki/pmwiki.php/Main/CompilationRerelease">Super Mario All-Stars</a></em> version of <em>Super Mario Bros.</em>, a Super Mushroom will drop out of the sky if you beat Bowser while small to ensure that Mario (or Luigi) is Super for the end cutscene. However, the cutscene will not reflect it if you had a Fire Flower.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SuperMarioOdyssey" title="/pmwiki/pmwiki.php/VideoGame/SuperMarioOdyssey">Super Mario Odyssey</a></em> mostly averts this, with cutscenes changing depending on what Mario is wearing at the moment: the only exception is the cutscene before the Robobrood fight on the Dark Side, which for some reason always shows Mario wearing the wedding suit.
+</li><li> Rather annoying in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/OnimushaWarlords" title="/pmwiki/pmwiki.php/VideoGame/OnimushaWarlords">Onimusha: Warlords</a></em> and <a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Onimusha2SamuraisDestiny" title="/pmwiki/pmwiki.php/VideoGame/Onimusha2SamuraisDestiny">its sequel</a>: Your character uses the basic <a class="twikilink" href="/pmwiki/pmwiki.php/Main/KatanasAreJustBetter" title="/pmwiki/pmwiki.php/Main/KatanasAreJustBetter">katana blade</a> in all cutscenes presumably because it can't be leveled up and thus remains visually static... But you get a much better sword, even in its <a class="twikilink" href="/pmwiki/pmwiki.php/Main/EvolvingWeapon" title="/pmwiki/pmwiki.php/Main/EvolvingWeapon">level 1 state,</a> about ten minutes in.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SaintsRow" title="/pmwiki/pmwiki.php/VideoGame/SaintsRow">Saints Row</a></em>:
+<ul><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SaintsRow1" title="/pmwiki/pmwiki.php/VideoGame/SaintsRow1">Saints Row</a></em>, your character mostly wields a single low level handgun in cut scenes even if you have access to dual Kobras or GDHCs. On the other hand, it's completely averted with your clothes. It really puts a whole new spin on the game when you're gangbanging in a Santa Claus outfit, chains, and sunglasses.
+</li><li> The loading screens for <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SaintsRow2" title="/pmwiki/pmwiki.php/VideoGame/SaintsRow2">Saints Row 2</a></em> take this further, showing still scenes from the cutscenes surrounding the most recently-played mission, with a default (male) character in a wife-beater instead of the player's custom character.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SaintsRowTheThird" title="/pmwiki/pmwiki.php/VideoGame/SaintsRowTheThird">Saints Row: The Third</a></em>, one of the Brute takedown moves has the boss pull out the .45 Shepherd regardless of what pistol you actually have equipped (although let's be honest, especially if you have the explosive rounds upgrade, it probably <em><a class="twikilink" href="/pmwiki/pmwiki.php/Main/ComplacentGamingSyndrome" title="/pmwiki/pmwiki.php/Main/ComplacentGamingSyndrome">is</a></em> the .45 Shepherd).
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Bayonetta" title="/pmwiki/pmwiki.php/VideoGame/Bayonetta">Bayonetta</a></em> is somewhat inconsistent on this, acknowledging any change in costume, including the variants that result from equipping a certain weapon and Umbran Elegance item, but the only weapons which Bayonetta ever uses in any cutscene are the starting pair of hand guns and the quartet of custom-made pistols named Scarborough Fair given to her by Rodin following the prologue. No <a class="twikilink" href="/pmwiki/pmwiki.php/Main/LaserBlade" title="/pmwiki/pmwiki.php/Main/LaserBlade">Pillow Talk</a> or <a class="twikilink" href="/pmwiki/pmwiki.php/Main/RayGun" title="/pmwiki/pmwiki.php/Main/RayGun">Bazillions</a> to go along with that snazzy nun costume outside of gameplay for you! One will have to leave that look (in the cutscenes, anyway) up to the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/StarWars" title="/pmwiki/pmwiki.php/Main/StarWars">Star Wars</a> games!
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TalesOfSymphonia" title="/pmwiki/pmwiki.php/VideoGame/TalesOfSymphonia">Tales of Symphonia</a></em> the characters will typically wield their basic starting weapons in cutscenes. However, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TheHero" title="/pmwiki/pmwiki.php/Main/TheHero">Lloyd</a> will switch to a generic steel sword instead of his starting <a class="twikilink" href="/pmwiki/pmwiki.php/Main/WoodenKatanasAreEvenBetter" title="/pmwiki/pmwiki.php/Main/WoodenKatanasAreEvenBetter">wooden swords</a> when you get to the first town where you can buy a set, even if you didn't actually buy one much less equip it<span class="notelabel" onclick="togglenote('note1p4k2');"><sup>note </sup></span><span class="inlinefolder" id="note1p4k2" isnote="true" onclick="togglenote('note1p4k2');" style="cursor:pointer;font-size:smaller;display:none;">And since you get a title for keeping the wooden swords equipped until a certain boss battle well after this point, you're pretty likely to see this in action.</span>. And after he receives them, he will use his <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SwordOfPlotAdvancement" title="/pmwiki/pmwiki.php/Main/SwordOfPlotAdvancement">Sword of Plot Advancement</a>, the Material Blades. Again, regardless of what he's actually got equipped.
+<ul><li> If Colette is wearing an alternate costume during the scene where she suffers <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ClothingDamage" title="/pmwiki/pmwiki.php/Main/ClothingDamage">Clothing Damage</a> (when she <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TakingTheBullet" title="/pmwiki/pmwiki.php/Main/TakingTheBullet">Takes The Bullet</a> <span class="spoiler" title="you can set spoilers visible by default on your profile">from a dying Forcystus and her scale-covered arm is revealed</span>), she will switch to her default outfit the instant it happens. It almost looks like she is losing a power-up, like <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/SuperMarioBros" title="/pmwiki/pmwiki.php/Franchise/SuperMarioBros">Mario</a></em>.
+</li></ul></li><li> When the <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/RatchetAndClank" title="/pmwiki/pmwiki.php/Franchise/RatchetAndClank">Ratchet &amp; Clank</a></em> games started using prerendered cutscenes starting in <em>Tools of Destruction</em>, Ratchet always switched to some generic armor for cutscenes. In <em>A Crack in Time</em>, the developers worked around this by giving Ratchet an upgradeable <a class="twikilink" href="/pmwiki/pmwiki.php/Main/HardLight" title="/pmwiki/pmwiki.php/Main/HardLight">Hard Light</a> armor suit that was simply turned off during cutscenes.
+<ul><li> Another example occurs in <em>Going Commando</em>: Ratchet always uses the <em>Heavy</em> Lancer in cutscenes, even if you haven't upgraded the regular Lancer yet. (Though since it's your go-to <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BoringButPractical" title="/pmwiki/pmwiki.php/Main/BoringButPractical">Boring, but Practical</a> weapon throughout the game, you basically have to <em>try</em> to not have it upgraded by that point, but still...)
+</li></ul></li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/Videogame/DragonQuestIX" title="/pmwiki/pmwiki.php/Videogame/DragonQuestIX">Dragon Quest IX</a></em> you choose your hero's gender and looks, and so everyone's character will look different. Late in the story there is an animated cutscene involving your hero riding a dragon. To reconcile this, the game forces you to wear a certain armour and helmet before riding a dragon, and this armour completely covers your hero's/heroine's face and body. What's more, the game forces you to leave all of your (also-custom) teammates behind for this scene, apparently just to avoid having to avoid explaining why they're not on the dragon too. Also, the first such scene shows bits of the hero's default outfit and the people in the series of events following the event make a big deal of the hero's outfit. Not normally an issue (you can't get anything else by then), except you can unequip it. One earlier scene (in-engine) refuses to progress until you get dressed, so it isn't clear why they didn't do it for this one as well.
+</li><li> No matter which weapons you bring with you on missions in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DevilMayCry3DantesAwakening" title="/pmwiki/pmwiki.php/VideoGame/DevilMayCry3DantesAwakening">Devil May Cry 3: Dante's Awakening</a></em>, Dante will always be using Rebellion and his pistols in cutscenes. Outside of the cutscenes in which he acquires new weapons, the only other time he uses something different is one time he uses Cerberus as a grappling hook.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/Videogame/Gothic" title="/pmwiki/pmwiki.php/Videogame/Gothic">Gothic</a></em>, no matter which armor/robe you wear, you are always shown wearing Ore Armor during cut-scenes.
+</li><li> In <em>Gothic II</em>, your equipment in ending cutscenes is only determined by your faction.
+</li><li> Happens to the point of <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DrinkingGame" title="/pmwiki/pmwiki.php/Main/DrinkingGame">liver failure</a> in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FrontMissionEvolved" title="/pmwiki/pmwiki.php/VideoGame/FrontMissionEvolved">Front Mission Evolved</a></em>; while your Wanzer will always match whatever parts/paint scheme you've chosen, your weapons will <em>always</em> switch to what the game assumes you <em>should</em> be carrying at the time despite the fact that all game cutscenes are rendered fully in-engine and on-stage <em>and</em> the fact that your Wanzer rarely fires a shot in such scenes.
+</li><li> Many endings of <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FalloutNewVegas" title="/pmwiki/pmwiki.php/VideoGame/FalloutNewVegas">Fallout: New Vegas</a></em> will show a final shot of The Courier walking off into the sunset wearing an Armored Vault 21 Suit, even though it's impossible to obtain without mods or cheats and you have likely obtained much better armor by the end of the game. The Courier in the picture is also seen from the back and using a default Male/Female hairstyle, so he/she may not even resemble the character you had designed.
+</li><li> In the GBA remake of <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DonkeyKongCountry3DixieKongsDoubleTrouble" title="/pmwiki/pmwiki.php/VideoGame/DonkeyKongCountry3DixieKongsDoubleTrouble">Donkey Kong Country 3: Dixie Kong's Double Trouble!</a></em>, if you defeat the final boss with just Kiddy Kong, Dixie will speak whether she's present or not. <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DudeWheresMyRespect" title="/pmwiki/pmwiki.php/Main/DudeWheresMyRespect">She will also get all the praise.</a>
+</li><li> Happens in <em><a class="twikilink" href="/pmwiki/pmwiki.php/Videogame/Uncharted" title="/pmwiki/pmwiki.php/Videogame/Uncharted">Uncharted</a></em>. In cutscenes Drake will always be carrying his trusty pistol except for maybe one or two scenes where he steals/uses/finds a weapon within the cutscene. Though when you exit the cutscene you still retain your current inventory with only one or two exceptions again.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/Videogame/LostPlanet" title="/pmwiki/pmwiki.php/Videogame/LostPlanet">Lost Planet</a> 2</em>, the loadout you currently have equipped is usually replaced with the default machine gun in cutscenes. The exception is one cutscene which shows your team entering a corridor, pointing their weapons around while looking for hostiles. This can be amusing if a team member has a supporting weapon (like a <em>shield</em>) equipped prior to starting the cutscene.
+</li><li> Generally averted in <em><a class="twikilink" href="/pmwiki/pmwiki.php/Videogame/WorldOfWarcraft" title="/pmwiki/pmwiki.php/Videogame/WorldOfWarcraft">World of Warcraft</a></em>; the Cataclysm expansion released in December 2010 contains many cutscenes, and those that depict your character show you dressed exactly as you are. However, it's still worth mentioning because of one time they averted this trope <em>but shouldn't have</em>. In the Wrath of the Lich King expansion, a couple quests involved time traveling and teaming up with yourself from other time periods. In the first quest, available at level 75, you teamed up with your "future self" — a friendly NPC is created that looks identical to you right then, but is level 80. In the second quest, available at level 80, you teamed up with your "past self" — a friendly NPC is created that looks identical to you but was level 75. This is bizarre because it would have made far more sense for the NPC in the first quest to look like you in certain epic armor sets, and the NPC in the second quest to look like you did when you did the first quest (especially if you have since acquired armor a Level 75 character cannot equip), but for some reason they didn't bother with that level of complexity.
+<ul><li> They haven't entirely figured out how to deal with <a class="twikilink" href="/pmwiki/pmwiki.php/Main/VoluntaryShapeshifting" title="/pmwiki/pmwiki.php/Main/VoluntaryShapeshifting">druids</a> in their various forms. Some cutscenes show the druid in their default caster form even if they were in cat or bear forms (Most of the earliest added cutscenes), some show the druid's actual current form (Many of the later added ones, including the Island Expedition animated endcards for victory/defeat), and a few flipflop between (When you walk into Kul Tiras with Jaina, the druid is in animal form, until the sentencing starts, then abruptly shifted to caster).
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/SilentHill" title="/pmwiki/pmwiki.php/Franchise/SilentHill">Silent Hill</a></em>:
+<ul><li> Averted with costumes in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SilentHill3" title="/pmwiki/pmwiki.php/VideoGame/SilentHill3">Silent Hill 3</a></em> and forward: your characters will always be wearing whatever unlockable costumes they have on. This can turn <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SilentHillOrigins" title="/pmwiki/pmwiki.php/VideoGame/SilentHillOrigins">Silent Hill: 0rigins</a></em> into <span class="spoiler" title="you can set spoilers visible by default on your profile"> Travis' fursuit adventures</span>.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SilentHill3" title="/pmwiki/pmwiki.php/VideoGame/SilentHill3">Silent Hill 3</a></em> has an interesting aversion (or perhaps inversion). Generally when a cutscene starts that involves Heather, the game will shut off the flashlight and will de-equip your active weapon. When the cutscene ends, you will either have no weapon, or be equipped with whatever weapon Heather was holding at the end of the cutscene, and the flashlight will still be shut off.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/Videogame/SilentHillHomecoming" title="/pmwiki/pmwiki.php/Videogame/SilentHillHomecoming">Silent Hill: Homecoming</a></em>, Alex will always be shown using the Mk. 23 handgun in cutscenes, even if you have the Chrome Hammer, the improved replacement for the Mk. 23.
+</li></ul></li><li> Played straight in the first two <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/GodOfWar" title="/pmwiki/pmwiki.php/VideoGame/GodOfWar">God of War</a></em> games: Special costumes aren't shown in cutscenes and the Blades of Chaos/Athena, despite changing their appearance with each power up, are always shown to be at level 2/1/3 (in the first game) and 4 in the second. However, the third game subvert all of this, with all the special costumes displayed in the game mode. Also, Kratos' new weapon (the Blades of Exile) never change their appearance.
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/GodOfWarII" title="/pmwiki/pmwiki.php/VideoGame/GodOfWarII">God of War II</a></em> is an example of this; regardless of how far you have upgraded the Blades of Athena, in cutscenes, they almost always appear as dull and gray (as if you never upgraded them at all) and sometimes even blue (as if Kratos is still the god of war).
+</li></ul></li><li> While <em><a class="twikilink" href="/pmwiki/pmwiki.php/Videogame/JadeEmpire" title="/pmwiki/pmwiki.php/Videogame/JadeEmpire">Jade Empire</a></em> doesn't have any changeable clothing (and with the player character being a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BareFistedMonk" title="/pmwiki/pmwiki.php/Main/BareFistedMonk">Bare-Fisted Monk</a>, weapons are a non-issue), each of its several pre-rendered cutscenes will show whichever of the several character models the player is using.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/ParasiteEve" title="/pmwiki/pmwiki.php/VideoGame/ParasiteEve">Parasite Eve</a></em> does this for both in game cut scenes and the FMV scenes. No matter what weapon you have equipped, Aya is always shown with a handgun outside of battles. The sequel mostly avoid the trope, though falls into different issues due to the animations usually still <em>assuming</em> she's always using a handgun. In game cut scenes that show Aya pointing her weapon at someone or something will have her use whatever weapon she has equipped, which can lead to a hilarious moment in the start of the tower mall section where Aya steps out of the elevator and aims a billy club or <a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FinalFantasyVIII" title="/pmwiki/pmwiki.php/VideoGame/FinalFantasyVIII">Gunblade</a> around like a handgun. In an FMV, she will always use her handgun, regardless if you have it on you or not.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/Videogame/KnightsOfTheOldRepublic" title="/pmwiki/pmwiki.php/Videogame/KnightsOfTheOldRepublic">Knights of the Old Republic</a></em>, in the last cutscene before Bastila <span class="spoiler" title="you can set spoilers visible by default on your profile">is captured by Malak</span>, she wields her starting double-bladed yellow lightsaber rather than whatever she had equipped when you controlled her. And later, when <span class="spoiler" title="you can set spoilers visible by default on your profile">Malak is torturing her</span>, she is shown wearing her original clothes from Taris rather than what you dressed her in.
+</li><li> A peculiar variant occurs in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheElderScrollsIVOblivion" title="/pmwiki/pmwiki.php/VideoGame/TheElderScrollsIVOblivion">The Elder Scrolls IV: Oblivion</a></em>. After one particular sub-quest, a statue is made of the player character. However, due to certain quirks in the procedure the game uses to create the statue, it will often not actually be wearing the same equipment the player used.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Videogame/PerfectDark" title="/pmwiki/pmwiki.php/Videogame/PerfectDark">Perfect Dark</a></em>
+<ul><li> In the original game, at the end of the third level/first mission, Joanna will use any pistol/machine pistol equipped at the time for the cutscene, but will go to the default Falcon 2 if anything else is used.
+</li><li> <em>Zero</em> has an odd variation of this: your standard weapon is a pistol with an <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SniperPistol" title="/pmwiki/pmwiki.php/Main/SniperPistol">attached scope</a>, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/LaserSight" title="/pmwiki/pmwiki.php/Main/LaserSight">Laser Sight</a>/flashlight, and suppressor. While in gameplay only the suppressor can be removed, in cutscenes, <em>none</em> of these are on the pistol when it appears.
+</li></ul></li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/Videogame/StarWarsTheForceUnleashed" title="/pmwiki/pmwiki.php/Videogame/StarWarsTheForceUnleashed">Star Wars: The Force Unleashed</a></em>, Starkiller will always use a pre-scripted lightsaber in cutscenes (red in the beginning, blue later), regardless of what color the player has equipped. This is due to the fact cutscenes aren't done within the game engine but pre-rendered.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Warhammer40000SpaceMarine" title="/pmwiki/pmwiki.php/VideoGame/Warhammer40000SpaceMarine">Warhammer 40,000: Space Marine</a></em>, Titus will use the Plasma Pistol in cutscenes instead of the Bolt Pistol if you swapped the two weapons. However, he will continue holding the default Chainsword alongside it even if you've switched out for a Thunder Hammer or Power Axe.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/Videogame/DynastyWarriorsGundam" title="/pmwiki/pmwiki.php/Videogame/DynastyWarriorsGundam">Dynasty Warriors: Gundam</a> 2</em>, story mission cutscenes always use that pilot's default mobile suit. This is fine in Official Mode where you're playing through the anime storylines and required to use specific mobile suits, but Mission Mode will play the cutscene even if you're piloting something else.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DynastyWarriors" title="/pmwiki/pmwiki.php/VideoGame/DynastyWarriors">Dynasty Warriors</a> 8</em> will have some cutscenes in the campaign modes involving the player's chosen character, often in a prelude to battle or starting the scenario <a class="twikilink" href="/pmwiki/pmwiki.php/Main/InMediasRes" title="/pmwiki/pmwiki.php/Main/InMediasRes">In Medias Res</a>, and will always show them with their iconic third-tier weapon no matter what equipment you give them personally in the preparation screen. This can get jarring when a character will be animated in the cutscene charging into battle with a gigantic sword...only for their weapon to instantly shrink down to a basic starting blade when the player takes control, or worse yet, not even be present, as it is possible to choose to not equip a character with their signature weapon at all.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Videogame/DeadIsland" title="/pmwiki/pmwiki.php/Videogame/DeadIsland">Dead Island</a></em> actually does this with the entire cast. You can play solo, or play with 4 friends with identical characters, but during cutscenes all four canon characters appear regardless of who's actually present in the game.
+</li><li> Inverted in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DarkCloud" title="/pmwiki/pmwiki.php/VideoGame/DarkCloud">Dark Cloud 2</a></em>. Your characters will be wearing whatever items you've given them just prior to the cutscene. Even if it makes no logical sense whatsoever to have Max dressed as a clown or Monica dressed as a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Catgirl" title="/pmwiki/pmwiki.php/Main/Catgirl">Catgirl</a>, if that's what you're wearing, then by God it'll be in the cutscene.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Interstate76" title="/pmwiki/pmwiki.php/VideoGame/Interstate76">Interstate '82</a></em>, Taurus will be shown exiting his Ferrari Expy after defeating <span class="spoiler" title="you can set spoilers visible by default on your profile">Rank Dick</span>, regardless of what car he was actually driving.
+</li><li> Played straight in the <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/BatmanArkhamSeries" title="/pmwiki/pmwiki.php/VideoGame/BatmanArkhamSeries">Batman: Arkham Series</a></em> during major cutscenes, Batman is always wearing his default batsuit, no matter what DLC you're wearing. It's somewhat justified in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/BatmanArkhamCity" title="/pmwiki/pmwiki.php/VideoGame/BatmanArkhamCity">Arkham City</a></em> as one cutscene involves <span class="spoiler" title="you can set spoilers visible by default on your profile">Talia lifting up Batman's cowl</span>, and some batsuits (like the <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/BatmanBeyond" title="/pmwiki/pmwiki.php/WesternAnimation/BatmanBeyond">Batman Beyond</a></em> one) would clash with that.
+</li><li> Instances in <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/TheLegendOfZelda" title="/pmwiki/pmwiki.php/Franchise/TheLegendOfZelda">The Legend of Zelda</a></em> games:
+<ul><li> Sometimes subverted in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheLegendOfZeldaOcarinaOfTime" title="/pmwiki/pmwiki.php/VideoGame/TheLegendOfZeldaOcarinaOfTime">The Legend of Zelda: Ocarina of Time</a></em>, whenever the cutscene before a boss plays, Link will either sheathe his currently equipped weapon or just not have it in his hands and automatically pull out the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/InfinityMinusOneSword" title="/pmwiki/pmwiki.php/Main/InfinityMinusOneSword">Master Sword</a> right before battle. Especially true for the final fight with Ganon as a cutscene requires Link to have the Master Sword being hit out of his hands and out of the arena.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheLegendOfZeldaTheWindWaker" title="/pmwiki/pmwiki.php/VideoGame/TheLegendOfZeldaTheWindWaker">The Legend of Zelda: The Wind Waker</a></em>, there exists a single prerendered cutscene, while other cutscenes are rendered in real-time. This cutscene is at the very end of the game, and shows Link and Tetra being picked up by Tetra's pirate crew <span class="spoiler" title="you can set spoilers visible by default on your profile">after the final battle</span>. The game also has a second quest, in which Link does not wear his signature green tunic. Instead Link only wears his Outset Island "pajamas" through the course of the game. However, at the prerendered cutscene mentioned earlier, Link is seen wearing his green tunic. As the game was being rushed to meet the deadline, the developers probably did not render an alternate cutscene for Link <span class="spoiler" title="you can set spoilers visible by default on your profile">wearing the invisible clothes</span>. It is also possible that this is intentional, as one theory suggests that the clothes are visible because Link has been deemed a true hero, and is worthy of being able to see the clothes. Additionally, depending on the scene, Link may or may not have his equipped weapon and Hero's Charm mask due to the way the game is programmed.
+</li><li> Taken a step further via plot-induced glitch in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/HyruleWarriors" title="/pmwiki/pmwiki.php/VideoGame/HyruleWarriors">Hyrule Warriors</a></em> in the story mission "A War of Spirit" if you play as Link (other characters are usable in Free Mode) equipped with any weapon other than the Master Sword, (Epona, the Magic Rod, the Gauntlets, etc.). Link is shown wielding the Master Sword during the cutscene that occurs partway through the mission, and afterwards will be using the Master Sword for the rest of it. It's harmless, and somewhat justified because <span class="spoiler" title="you can set spoilers visible by default on your profile"> the Master Sword's true power awakens in the cutscene</span>, but it's confusing if you had another weapon equippped.
+</li></ul></li><li> <em><a class="createlink" href="/pmwiki/pmwiki.php/VideoGame/BattlezoneII" title="/pmwiki/pmwiki.php/VideoGame/BattlezoneII">Battlezone II</a></em>: The cutscene at the end of the final mission in the ISDF campaign shows your character escaping in a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/HoverTank" title="/pmwiki/pmwiki.php/Main/HoverTank">Saber tank</a>, even though you can disable and commandeer the enemy vehicles if it gets destroyed (likely to happen if you don't go the stealth route, as there is no opportunity to repair it). The fact that you can change vehicles easily, and they look much more impressive than the character on foot, is likely why there are so few cutscenes in the whole game.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Bully" title="/pmwiki/pmwiki.php/VideoGame/Bully">Bully</a></em>, as well as Jimmy's outfit being retained in every cutscene, he will be shown to put away his current weapon during scripted in-game events, such as dialogue in missions. If he has something equipped when finishing a Photography class, he'll be holding it during the cutscene.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SpecOpsTheLine" title="/pmwiki/pmwiki.php/VideoGame/SpecOpsTheLine">Spec Ops: The Line</a></em>, Walker is almost always depicted carrying the two starting weapons, the M4A1 assault rifle and the M9 pistol, in cutscenes. Becomes glaringly obvious when he proceeds to visibly shove said weapons back into <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Hammerspace" title="/pmwiki/pmwiki.php/Main/Hammerspace">Hammerspace</a> immediately whent he player takes control again.
+</li><li> Averted in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Xenoblade" title="/pmwiki/pmwiki.php/VideoGame/Xenoblade">Xenoblade</a></em>. Characters always appear in any cutscene using exactly what weapon they had equipped and what armor their <a class="twikilink" href="/pmwiki/pmwiki.php/Main/VirtualPaperDoll" title="/pmwiki/pmwiki.php/Main/VirtualPaperDoll">Virtual Paper Doll</a> self was wearing. It gets pretty impressive (or <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Narm" title="/pmwiki/pmwiki.php/Main/Narm">ridiculous</a>, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/RainbowPimpGear" title="/pmwiki/pmwiki.php/Main/RainbowPimpGear">depending on what you're wearing</a>) when the game remembers what to use during flashbacks. Of course, this then leads to the exact opposite problem in certain cutscenes in which the characters talk as if they're using their starting weapons when they aren't (and this gets worse in a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/NewGamePlus" title="/pmwiki/pmwiki.php/Main/NewGamePlus">New Game+</a>, particularly with regard to a plot-relevant weapon you get at the end of the game that you can keep for the next playthrough...)
+<ul><li> The game also shoots itself in the foot in regards to Shulk's ability to see the future. For instance, his vision of Prison Island happens relatively early, and is shown multiple times before you actually get there. And each and every time, the characters will be wearing whatever they were wearing when the prediction was first made, even though you will be upgrading your equipment quite a bit between those two points. Apparently, the Monado was expecting Shulk to just really like his old outfit.
+</li></ul></li><li> Likewise averted in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/XenobladeChroniclesX" title="/pmwiki/pmwiki.php/VideoGame/XenobladeChroniclesX">Xenoblade Chronicles X</a></em>, with the odd exception of some characters occasionally pulling out a "Murder Pistol" like in <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/MassEffect" title="/pmwiki/pmwiki.php/Franchise/MassEffect">Mass Effect</a></em> to shoot or even just threaten others. This pistol, used by both <a class="twikilink" href="/pmwiki/pmwiki.php/Main/NonPlayerCharacter" title="/pmwiki/pmwiki.php/Main/NonPlayerCharacter">Non Player Characters</a> and party members, however is not obtainable by the player and is never seen otherwise. In one particular example, the player defeats a powerful monster, only to be confronted by its babies. The player, having possibly run into this very situation before<span class="spoiler" title="you can set spoilers visible by default on your profile"> (and possibly learned a hard lesson from it)</span> can choose to kill them, and if they do, their character will aim at them with their normal weapon, only for another party member to stop them and shoot them himself with the Murder Pistol.
+</li><li> Averted in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/XenobladeChronicles2" title="/pmwiki/pmwiki.php/VideoGame/XenobladeChronicles2">Xenoblade Chronicles 2</a></em>, up to a point. For most of the game, it's pretty good about it - the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/EmpathicWeapon" title="/pmwiki/pmwiki.php/Main/EmpathicWeapon">Blade</a> characters have equipped in cutscenes is their plot-relevant partner they won't drop anyway, which of <a class="twikilink" href="/pmwiki/pmwiki.php/Main/LiteralSplitPersonality" title="/pmwiki/pmwiki.php/Main/LiteralSplitPersonality">Pyra or Mythra</a> you have equipped at a time isn't a big deal because the two can <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SharingABody" title="/pmwiki/pmwiki.php/Main/SharingABody">hot-swap at will</a>, and Rex has a plot-enforced partner whose weapons are shown when his primary is unavailable for plot reasons. However, all bets are off as of chapter seven's climax, as <span class="spoiler" title="you can set spoilers visible by default on your profile">Nia's ability to switch modes and Rex's Master Driver abilities</span> mean reality might not reflect cutscenes still following these rules. <a class="twikilink" href="/pmwiki/pmwiki.php/Main/NewGamePlus" title="/pmwiki/pmwiki.php/Main/NewGamePlus">New Game+</a> also removes many of the restrictions cutscenes rely on to make sense, but this is hardly the most canon-violating thing one can do in NG+, and <a class="twikilink" href="/pmwiki/pmwiki.php/Main/WordOfGod" title="/pmwiki/pmwiki.php/Main/WordOfGod">Word of God</a> admits these perks are impossible to reconcile with the plot (let alone presentation) anyway.
+</li><li> Averted similarly in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FireEmblemAwakening" title="/pmwiki/pmwiki.php/VideoGame/FireEmblemAwakening">Fire Emblem Awakening</a></em>, where characters that you've reclassed using Second Seals will keep their in-game model in cutscenes (though portraits will always keep them in their default class). However, this has the side effect of making certain scenes <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Narm" title="/pmwiki/pmwiki.php/Main/Narm">unintentionally hilarious</a> if a plot-important character is in a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/RainbowPimpGear" title="/pmwiki/pmwiki.php/Main/RainbowPimpGear">ridiculous-looking</a> or <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Stripperiffic" title="/pmwiki/pmwiki.php/Main/Stripperiffic">Stripperiffic</a> class. Common culprits include Dark Mages and Sorcerers, Knights and Generals (and Great Knights except for Frederick, whose <a class="twikilink" href="/pmwiki/pmwiki.php/Main/CustomUniform" title="/pmwiki/pmwiki.php/Main/CustomUniform">Custom Uniform</a> actually looks decent), and any of the axe-centric classes (Fighter, Barbarian, Warrior, and Berserker) for those who don't start in them.
+<ul><li> Flip-flops several times in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FireEmblemFates" title="/pmwiki/pmwiki.php/VideoGame/FireEmblemFates">Fire Emblem Fates</a>: Birthright</em>. Early in the story, the player character is given a unique sword and is, by default, a sword-wielding class. However, you can reclass the player character into a non-sword-wielding class. Averted in certain cutscenes where the camera is built to show the player character using his/her unique sword but the class chosen cannot equip said sword (amusingly showing different animations - like those for the Basara, for instance - that either clip other models or are played halfway off the screen); played straight in the final chapter, where the player character will wield the unique sword regardless of current class.
+</li></ul></li><li> Particularly noticeable in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Solatorobo" title="/pmwiki/pmwiki.php/VideoGame/Solatorobo">Solatorobo</a></em>, where your <em>only</em> piece of changeable equipment is the giant robot you ride in, of which there are five entirely different-looking models, and two <a class="twikilink" href="/pmwiki/pmwiki.php/Main/PaletteSwap" title="/pmwiki/pmwiki.php/Main/PaletteSwap">Palette Swaps</a> per model. Yet important cutscenes always default back to the original model.
+</li><li> Noticeably averted in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/WarCraft" title="/pmwiki/pmwiki.php/VideoGame/WarCraft">WarCraft</a> III</em>'s Human campaign, where Arthas dumps his paladin's hammer for a cursed sword. He even has a special animation for it.
+<ul><li> The custom maps that allow different weapons to show up generally avert this, as it'd be <em>more</em> complicated to make sure the unit has the right weapon attachment.
+</li></ul></li><li> Zigzagged by <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/XCOMEnemyUnknown" title="/pmwiki/pmwiki.php/VideoGame/XCOMEnemyUnknown">XCOM: Enemy Unknown</a></em>. Five troopers are shown boarding the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DropShip" title="/pmwiki/pmwiki.php/Main/DropShip">Sky Ranger</a> in the opening sequence, but only four are available for the mission, and they aren't even the same characters as the cutscene. Every other cutscene involving XCOM troopers averts this, however, including your first psi trooper, and in the expansion, first gene and MEC troopers. <span class="spoiler" title="you can set spoilers visible by default on your profile">The Volunteer</span> is also determined by the engine, and s/he is wearing whatever customization you give him/her. This extends to the ending cutscene of the final mission, which not only uses your choice of <span class="spoiler" title="you can set spoilers visible by default on your profile">the Volunteer</span>, but also shows your top three soldiers <span class="spoiler" title="you can set spoilers visible by default on your profile">as the Volunteer urges them to <a class="twikilink" href="/pmwiki/pmwiki.php/Main/HeroicSacrifice" title="/pmwiki/pmwiki.php/Main/HeroicSacrifice">leave him/her behind</a>.</span>
+</li><li> There's a cutscene in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/JakIIRenegade" title="/pmwiki/pmwiki.php/VideoGame/JakIIRenegade">Jak II: Renegade</a></em> where Jak dispatches two Metal Heads with his Blaster Rifle, regardless of whether the player has any ammo left.
+</li><li> Gleefully averted with <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/ResonanceOfFate" title="/pmwiki/pmwiki.php/VideoGame/ResonanceOfFate">Resonance of Fate</a></em> (<em>End of Eternity</em> in Japan). Not only does it have a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/VirtualPaperDoll" title="/pmwiki/pmwiki.php/Main/VirtualPaperDoll">Virtual Paper Doll</a> aspect to it, nearly every single cutscene is done in-game, so any changes you make to the costume (which includes the A "official" costume set, and B "casual" set) as well as hair color change, glasses and others, will <em>always</em> be <a class="urllink" href="http://www.gamereactor.es/media/68/resonancefatemoden_206859b.jpg">accurately reflected in cutscenes<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a><small>◊</small>.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/AssassinsCreed" title="/pmwiki/pmwiki.php/Franchise/AssassinsCreed">Assassin's Creed</a></em>:
+<ul><li> Averted in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/AssassinsCreedII" title="/pmwiki/pmwiki.php/VideoGame/AssassinsCreedII">Assassin's Creed II</a></em>, <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/AssassinsCreedBrotherhood" title="/pmwiki/pmwiki.php/VideoGame/AssassinsCreedBrotherhood">Brotherhood</a></em> and <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/AssassinsCreedRevelations" title="/pmwiki/pmwiki.php/VideoGame/AssassinsCreedRevelations">Revelations</a></em>. Every change in armor or weapons is properly represented in the cutscenes due to the majority of them being ingame.
+</li><li> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Downplayed" title="/pmwiki/pmwiki.php/Main/Downplayed">Downplayed</a> in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/AssassinsCreedIII" title="/pmwiki/pmwiki.php/VideoGame/AssassinsCreedIII">Assassin's Creed III</a></em> where the weapons you have do appear in cutscenes but armor and dyes don´t.
+</li><li> Averted once again in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/AssassinsCreedIVBlackFlag" title="/pmwiki/pmwiki.php/VideoGame/AssassinsCreedIVBlackFlag">Assassin's Creed IV: Black Flag</a></em> where your weapons, armor and cosmetic changes are reflected in cutscenes. The scenes still play out like they would with the normal model, though: Edward will still try to put his hood on while using costumes that don´t have them and will try to put his hood down while using costumes that have them fixed.
+</li></ul></li><li> Generally averted in the <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/NoMoreHeroes" title="/pmwiki/pmwiki.php/VideoGame/NoMoreHeroes">No More Heroes</a></em> games, where the cutscenes will show Travis wearing whatever he's wearing and wielding whatever weapon he's using in gameplay, even getting entirely different animations for activating his beam katana before gameplay actually starts depending on the sword. The only way this is even touched on is with the Rose Nasty, the last weapon in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/NoMoreHeroes2DesperateStruggle" title="/pmwiki/pmwiki.php/VideoGame/NoMoreHeroes2DesperateStruggle">Desperate Struggle</a></em>, which unlike all of the other weapons in the series, requires Travis to <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DualWielding" title="/pmwiki/pmwiki.php/Main/DualWielding">Dual Wield</a>. Since the cutscenes are all scripted with Travis using one sword, the off-hand sword will disappear if Travis is using the Rose Nasty during a cutscene.
+</li><li> Due to its <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/RPGMaker" title="/pmwiki/pmwiki.php/UsefulNotes/RPGMaker">engine's</a> graphical limitations, <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/AVeryLongRopeToTheTopOfTheSky" title="/pmwiki/pmwiki.php/VideoGame/AVeryLongRopeToTheTopOfTheSky">A Very Long Rope to the Top of the Sky</a></em> does not have this problem per se. However, whenever <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TheHero" title="/pmwiki/pmwiki.php/Main/TheHero">Ivy</a> draws a weapon in a cutscene, it is always referred to as being a sword (complete with an "unsheathing" sound effect), regardless of what weapon she actually has equipped.
+</li><li> Averted in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MonsterHunter" title="/pmwiki/pmwiki.php/VideoGame/MonsterHunter">Monster Hunter</a> 4 Ultimate</em>, where the cutscenes are played in-engine and designed to have your hunter wearing whatever armor and weapon (s)he has equipped at the time. This also includes subsequent re-watches, so you can go back and watch yourself encounter a monster for the first time while wearing a suit of armor harvested from it, or just in your skivvies.
+<ul><li> Similarly inverted in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MonsterHunterWorld" title="/pmwiki/pmwiki.php/VideoGame/MonsterHunterWorld">Monster Hunter: World</a></em>, where you hunter will always be shown with their currently-equipped armor and weapon. The cutscenes are a lot more dynamic now too, so to avoid the action clashing with your primary weapon's limitations, the hunter tends to get creative with the standard-issues slinger instead.
+</li></ul></li><li> In most of the <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/TombRaider" title="/pmwiki/pmwiki.php/Franchise/TombRaider">Tomb Raider</a></em> games, Lara will always use her pistols in cutscenes no matter how many other guns she had found and used.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/GoldenSun" title="/pmwiki/pmwiki.php/VideoGame/GoldenSun">Golden Sun</a></em>: In the sequel, one cutscene starts when you cast Whirlwind on a tornado-shaped stone formation, a spell only Sheba has access to. It's possible to use another character with another spell (both have the same effect under a different name) thanks to the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/JobSystem" title="/pmwiki/pmwiki.php/Main/JobSystem">Job System</a>, but the cutscene always plays out as if Sheba had cast it.
+</li><li> When you perform a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/KillEmAll" title="/pmwiki/pmwiki.php/Main/KillEmAll">Kill 'Em All</a> run in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Undertale" title="/pmwiki/pmwiki.php/VideoGame/Undertale">Undertale</a></em>, no matter what weapon you have equipped, you will always be depicted as killing <span class="spoiler" title="you can set spoilers visible by default on your profile">Sans, Asgore and Flowey</span> with the knife. It just wouldn't be as dramatic if you did it with, say, a torn notebook.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/CallOfDuty" title="/pmwiki/pmwiki.php/VideoGame/CallOfDuty">Call of Duty</a></em>:
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/CallOfDutyBlackOpsII" title="/pmwiki/pmwiki.php/VideoGame/CallOfDutyBlackOpsII">Call of Duty: Black Ops II</a></em> does this often due to its more cinematic nature than previous games in the series (where mid-mission "cutscenes", at best, were typically just NPCs going through a scripted animation as the player's weapon was lowered so they couldn't interrupt it). An early instance is in the opening level, "Pyrrhic Victory", in which Mason pulls out a Hi-Power pistol to threaten Menendez and ultimately <a class="twikilink" href="/pmwiki/pmwiki.php/Main/EyeScream" title="/pmwiki/pmwiki.php/Main/EyeScream">shoot out his eye</a>, in spite of the fact that the Hi-Power is never used by any enemies he could have conceivably grabbed one off of and isn't available for the player's loadout until three missions later. Another one is halfway through "Achille's Veil", the first half of which is played as deep-cover agent Farid instead of primary protagonist David Mason; when the latter shows up in the cutscene bisecting the level, he has an MP7 in his hands, which like the above is not available until the next mission - when control shifts to him here, he takes whatever Farid had, even stuff like the suit of optical camo.
+</li><li> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AvertedTrope" title="/pmwiki/pmwiki.php/Main/AvertedTrope">Averted</a> in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/CallOfDutyBlackOpsIII" title="/pmwiki/pmwiki.php/VideoGame/CallOfDutyBlackOpsIII">Call of Duty: Black Ops III</a></em> despite its even heavier focus on cinematics, where the player's inventory loadout and outfit is reflected in all of the cutscenes. This even carries over to the various attachments players can equip on their firearms, which will alter the way the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/PlayerCharacter" title="/pmwiki/pmwiki.php/Main/PlayerCharacter">Player Character</a> carries his/her gun in cutscenes, such as actually holding the vertical foregrip attached to their weapon rather than their hand phasing through it to grip the weapon normally like characters in previous games in the series would typically do. There is, however, one rather silly instance of this in the very first mission, regarding the cutscene at the end wherein your character gets <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AnArmAndALeg" title="/pmwiki/pmwiki.php/Main/AnArmAndALeg">ripped to shreds</a> by an autonomous drone - you can wear whatever outfit you want to the mission, and your character's arms will be visible wearing the outfit throughout the mission, but the exact <em>instant</em> that drone actually starts ripping limbs off of them, your character model will switch back to the "Undercover" outfit you were forced to wear for the first time through that mission.
+</li></ul></li><li> Played utterly straight in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/AlphaProtocol" title="/pmwiki/pmwiki.php/VideoGame/AlphaProtocol">Alpha Protocol</a></em> - no matter what sort of loadout Michael is carrying, if he feels the need to shoot someone in the face in a cutscene he'll suddenly be carrying a pistol in a holster across his chest. Even if he has a <em>different</em> pistol already equipped.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FiftyCentBloodOnTheSand" title="/pmwiki/pmwiki.php/VideoGame/FiftyCentBloodOnTheSand">50 Cent: Blood on the Sand</a></em> goes to particularly extreme lengths with this trope. The game already all but ensures this by only bringing four weapons over for the pre-rendered cutscenes (the Desert Eagle, the Mossberg, the AK and the M4), but it goes above and beyond by not even keeping <em>which</em> rifle <a class="twikilink" href="/pmwiki/pmwiki.php/Music/FiftyCent" title="/pmwiki/pmwiki.php/Music/FiftyCent">Fiddy</a> is using in the cutscene consistent - literally every other time the camera angle changes, his rifle will switch from an AK into an M4 or vice-versa.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/NierAutomata" title="/pmwiki/pmwiki.php/VideoGame/NierAutomata">NieR: Automata</a></em>, 2B, 9S, and A2 all use their signature weapons (Virtuous Contract, Cruel Oath, and the Type 4-0 sword) in cutscenes, even though they're capable of using any among a massive arsenal of weapons in gameplay. Where this gets strange is that in A2's story, she starts using 2B's sword in cutscenes <span class="spoiler" title="you can set spoilers visible by default on your profile">after 2B dies due to the latter giving it to her</span>, but you can still have 9S using 2B's sword in sections occurring simultaneously.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SpiderManPS4" title="/pmwiki/pmwiki.php/VideoGame/SpiderManPS4">Spider-Man (PS4)</a></em>, this is mostly averted. Spider-Man will be rendered in real time with the suit you have equipped on him. The only times it's played straight are in the opening cutscene, since the devs didn't take New Game Plus into account, he's still in the classic suit until he jumps out the window, the ending chapter's cutscenes, where it switches you into the Advanced suit and the cutscene is pre-rendered to explain why the Anti-Ock Suit is based on its design, and a cutscene after Spider-Man cures himself of the effects of Scorpion's venom, where his mask (because he's for some reason only in his boxers otherwise) is still from the Classic/Advanced Suit, which then becomes an unlockable outfit in itself when you 100% the game.
+</li><li> Averted in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TalesOfBerseria" title="/pmwiki/pmwiki.php/VideoGame/TalesOfBerseria">Tales of Berseria</a></em>. All cutscenes are rendered in-engine, and so will accurately reflect the party's current weapon and costume.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/RedDeadRedemption2" title="/pmwiki/pmwiki.php/VideoGame/RedDeadRedemption2">Red Dead Redemption II</a></em> does an extremely frustrating variant of this trope: story mission cutscenes are rendered in-engine, but Arthur's gun will frequently get replaced with the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/StarterEquipment" title="/pmwiki/pmwiki.php/Main/StarterEquipment">Cattleman Revolver</a> which he will then be stuck with during the mission. Cue many, many cries of <a class="twikilink" href="/pmwiki/pmwiki.php/Main/FakeDifficulty" title="/pmwiki/pmwiki.php/Main/FakeDifficulty">Fake Difficulty</a>.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/YesYourGrace" title="/pmwiki/pmwiki.php/VideoGame/YesYourGrace">Yes, Your Grace</a></em>: The cutscenes, especially the many from the game's last hour or so, can be quite inconsistent about the paintings remaining in the Royal chambers, Cedani's outfit and Asalia's look. The state of the former two depends on player decisions, meaning that the cutscene depiction will sometimes be correct. The change in the latter is a mandatory element of the plot and involves a major haircut and dress retailoring.
+</li></ul><hr/>
+</div>
+<div class="square_ad footer-article-ad main_2" data-isolated="0"></div>
+<div class="section-links" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<div class="titles">
+<div><h3 class="text-center text-uppercase">Previous</h3></div>
+<div><h3 class="text-center text-uppercase">Index</h3></div>
+<div><h3 class="text-center text-uppercase">Next</h3></div>
+</div>
+<div class="links">
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/NoCanonForTheWicked">No Canon for the Wicked</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/PagesNeedingExampleSorting">Pages Needing Example Sorting</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/NoFairCheating">No Fair Cheating</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/NewsTravelsFast">News Travels Fast</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/GameplayAndStorySegregation">Gameplay and Story Segregation</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/NPCRandomEncounterImmunity">NPC Random Encounter Immunity</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="outer_ads_by_salon_wrapper" id="exco_player_insert_div">
+</div>
+</article>
+<div id="main-content-sidebar"><div class="sidebar-item display-options">
+<ul class="sidebar display-toggles">
+<li>Show Spoilers <div class="display-toggle show-spoilers" id="sidebar-toggle-showspoilers"></div></li>
+<li>Night Vision <div class="display-toggle night-vision" id="sidebar-toggle-nightvision"></div></li>
+<li>Sticky Header <div class="display-toggle sticky-header" id="sidebar-toggle-stickyheader"></div></li>
+<li>Wide Load <div class="display-toggle wide-load" id="sidebar-toggle-wideload"></div></li>
+</ul>
+<script>updateDesktopPrefs();</script>
+</div>
+<div class="sidebar-item ad sb-ad-unit">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_2"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_2'); });</script> </div>
+</div></div>
+<div class="sidebar-item quick-links" itemtype="http://schema.org/SiteNavigationElement">
+<p class="sidebar-item-title" data-title="Important Links">Important Links</p>
+<div class="padded">
+<a href="/pmwiki/query.php?type=att">Ask The Tropers</a>
+<a href="/pmwiki/query.php?type=tf">Trope Finder</a>
+<a href="/pmwiki/query.php?type=ykts">You Know That Show...</a>
+<a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a>
+<a href="/pmwiki/review_activity.php">Reviews</a>
+<a data-modal-target="login" href="/pmwiki/lbs.php">Live Blogs</a>
+<a href="/pmwiki/ad-free-subscribe.php">Go Ad Free!</a> </div>
+</div>
+<div class="sidebar-item sb-ad-unit">
+<div class="sidebar-section">
+<div class="square_ad ad-size-300x600 ad-section text-center">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_3"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_3'); });</script> </div>
+</div> </div>
+</div>
+</div>
+<div class="sidebar-item">
+<p class="sidebar-item-title" data-title="Crucial Browsing">Crucial Browsing</p>
+<ul class="padded font-s" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><a data-click-toggle="active" href="javascript:void(0);">Genre</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/ActionAdventureTropes" title="Main/ActionAdventureTropes">Action Adventure</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ComedyTropes" title="Main/ComedyTropes">Comedy</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CommercialsTropes" title="Main/CommercialsTropes">Commercials</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CrimeAndPunishmentTropes" title="Main/CrimeAndPunishmentTropes">Crime &amp; Punishment</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DramaTropes" title="Main/DramaTropes">Drama</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/HorrorTropes" title="Main/HorrorTropes">Horror</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LoveTropes" title="Main/LoveTropes">Love</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NewsTropes" title="Main/NewsTropes">News</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ProfessionalWrestling" title="Main/ProfessionalWrestling">Professional Wrestling</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SpeculativeFictionTropes" title="Main/SpeculativeFictionTropes">Speculative Fiction</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SportsStoryTropes" title="Main/SportsStoryTropes">Sports Story</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/WarTropes" title="Main/WarTropes">War</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Media</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/Media" title="Main/Media">All Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/AnimationTropes" title="Main/AnimationTropes">Animation (Western)</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Anime" title="Main/Anime">Anime</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ComicBookTropes" title="Main/ComicBookTropes">Comic Book</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FanFic" title="FanFic/FanFics">Fan Fics</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Film" title="Main/Film">Film</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/GameTropes" title="Main/GameTropes">Game</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Literature" title="Main/Literature">Literature</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MusicAndSoundEffects" title="Main/MusicAndSoundEffects">Music And Sound Effects</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NewMediaTropes" title="Main/NewMediaTropes">New Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/PrintMediaTropes" title="Main/PrintMediaTropes">Print Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Radio" title="Main/Radio">Radio</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SequentialArt" title="Main/SequentialArt">Sequential Art</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TabletopGames" title="Main/TabletopGames">Tabletop Games</a></li>
+<li><a href="/pmwiki/pmwiki.php/UsefulNotes/Television" title="Main/Television">Television</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Theater" title="Main/Theater">Theater</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/VideogameTropes" title="Main/VideogameTropes">Videogame</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Webcomics" title="Main/Webcomics">Webcomics</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Narrative</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/UniversalTropes" title="Main/UniversalTropes">Universal</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/AppliedPhlebotinum" title="Main/AppliedPhlebotinum">Applied Phlebotinum</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CharacterizationTropes" title="Main/CharacterizationTropes">Characterization</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Characters" title="Main/Characters">Characters</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CharactersAsDevice" title="Main/CharactersAsDevice">Characters As Device</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Dialogue" title="Main/Dialogue">Dialogue</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Motifs" title="Main/Motifs">Motifs</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NarrativeDevices" title="Main/NarrativeDevices">Narrative Devices</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Paratext" title="Main/Paratext">Paratext</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Plots" title="Main/Plots">Plots</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Settings" title="Main/Settings">Settings</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Spectacle" title="Main/Spectacle">Spectacle</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Other Categories</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/BritishTellyTropes" title="Main/BritishTellyTropes">British Telly</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TheContributors" title="Main/TheContributors">The Contributors</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CreatorSpeak" title="Main/CreatorSpeak">Creator Speak</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Creators" title="Main/Creators">Creators</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DerivativeWorks" title="Main/DerivativeWorks">Derivative Works</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LanguageTropes" title="Main/LanguageTropes">Language</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LawsAndFormulas" title="Main/LawsAndFormulas">Laws And Formulas</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ShowBusiness" title="Main/ShowBusiness">Show Business</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SplitPersonalityTropes" title="Main/SplitPersonalityTropes">Split Personality</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/StockRoom" title="Main/StockRoom">Stock Room</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TropeTropes" title="Main/TropeTropes">Trope</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Tropes" title="Main/Tropes">Tropes</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TruthAndLies" title="Main/TruthAndLies">Truth And Lies</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TruthInTelevision" title="Main/TruthInTelevision">Truth In Television</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Topical Tropes</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/BetrayalTropes" title="Main/BetrayalTropes">Betrayal</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CensorshipTropes" title="Main/CensorshipTropes">Censorship</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CombatTropes" title="Main/CombatTropes">Combat</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DeathTropes" title="Main/DeathTropes">Death</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FamilyTropes" title="Main/FamilyTropes">Family</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FateAndProphecyTropes" title="Main/FateAndProphecyTropes">Fate And Prophecy</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FoodTropes" title="Main/FoodTropes">Food</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/HolidayTropes" title="Main/HolidayTropes">Holiday</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MemoryTropes" title="Main/MemoryTropes">Memory</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MoneyTropes" title="Main/MoneyTropes">Money</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MoralityTropes" title="Main/MoralityTropes">Morality</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/PoliticsTropes" title="Main/PoliticsTropes">Politics</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ReligionTropes" title="Main/ReligionTropes">Religion</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SchoolTropes" title="Main/SchoolTropes">School</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="sidebar-item showcase">
+<p class="sidebar-item-title" data-title="Community Showcase">Community Showcase <a class="bubble float-right hover-blue" href="/pmwiki/showcase.php">More</a></p>
+<p class="community-showcase">
+<a href="https://sharetv.com/shows/echo_chamber" onclick="trackOutboundLink('https://sharetv.com/shows/echo_chamber');" target="_blank">
+<img alt="" class="lazy-image" data-src="/images/communityShowcase-echochamber.jpg"/></a>
+<a href="/pmwiki/pmwiki.php/Webcomic/TwistedTropes">
+<img alt="" class="lazy-image" data-src="/img/howlandsc-side.jpg"/></a>
+</p>
+</div>
+<div class="sidebar-item sb-ad-unit" id="stick-cont">
+<div class="sidebar-section" id="stick-bar">
+<div class="square_ad ad-size-300x600 ad-section text-center">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_4"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_4'); });</script> </div>
+</div> </div>
+</div>
+</div>
+</div>
+</div>
+<div class="action-bar tablet-off" id="action-bar-bottom">
+<a class="scroll-to-top dead-button" href="#top-of-page" onclick="$('html, body').animate({scrollTop : 0},500);">Top</a>
+</div>
+</div>
+<div class="proper-ad-unit ad-sticky">
+<div id="proper-ad-tvtropes_sticky_ad"> <script>propertag.cmd.push(function() { proper_display('tvtropes_sticky_ad'); });</script> </div>
+</div>
+<footer id="main-footer">
+<div id="main-footer-inner">
+<div class="footer-left">
+<a class="img-link" href="/"><img alt="TV Tropes" class="lazy-image" data-src="/img/tvtropes-footer-logo.png" title="TV Tropes"/></a>
+<form action="index.html" class="navbar-form newsletter-signup validate modal-replies" data-ajax-get="/ajax/subscribe_email.php" id="cse-search-box-mobile" name="" role="">
+<button class="btn-submit newsletter-signup-submit-button" id="subscribe-btn" type="submit"><i class="fa fa-paper-plane"></i></button>
+<input class="form-control" id="subscription-email" name="q" placeholder="Subscribe" size="31" type="text" validate-type="email" value=""/>
+</form>
+<ul class="social-buttons">
+<li><a class="btn fb" href="https://www.facebook.com/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-facebook']);" target="_blank"><i class="fa fa-facebook"></i></a></li>
+<li><a class="btn tw" href="https://www.twitter.com/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-twitter']);" target="_blank"><i class="fa fa-twitter"></i></a> </li>
+<li><a class="btn rd" href="https://www.reddit.com/r/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-reddit']);" target="_blank"><i class="fa fa-reddit-alien"></i></a></li>
+</ul>
+</div>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">TVTropes</h4></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Administrivia">About TVTropes</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TheGoalsOfTVTropes">TVTropes Goals</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TheTropingCode">Troping Code</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TVTropesCustoms">TVTropes Customs</a></li>
+<li><a href="/pmwiki/pmwiki.php/JustForFun/TropesOfLegend">Tropes of Legend</a></li>
+<li><a href="/pmwiki/ad-free-subscribe.php">Go Ad-Free</a></li>
+</ul>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">Community</h4></li>
+<li><a href="/pmwiki/query.php?type=att">Ask The Tropers</a></li>
+<li><a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a></li>
+<li><a href="/pmwiki/query.php?type=tf">Trope Finder</a></li>
+<li><a href="/pmwiki/query.php?type=ykts">You Know That Show</a></li>
+<li><a data-modal-target="login" href="/pmwiki/lbs.php">Live Blogs</a></li>
+<li><a href="/pmwiki/review_activity.php">Reviews</a></li>
+<li><a href="/pmwiki/topics.php">Forum</a></li>
+</ul>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">Tropes HQ</h4></li>
+<li><a href="/pmwiki/about.php">About Us</a></li>
+<li><a href="/pmwiki/contact.php">Contact Us</a></li>
+<li><a href="/pmwiki/dmca.php">DMCA Notice</a></li>
+<li><a href="/pmwiki/privacypolicy.php">Privacy Policy</a></li>
+</ul>
+</div>
+<div class="text-center gutter-top gutter-bottom tablet-on" id="desktop-on-mobile-toggle">
+<a href="/pmwiki/switchDeviceCss.php?mobileVersion=1" rel="nofollow">Switch to <span class="txt-desktop">Desktop</span><span class="txt-mobile">Mobile</span> Version</a>
+</div>
+<div class="legal">
+<p>TVTropes is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License. <br/>Permissions beyond the scope of this license may be available from <a href="mailto:thestaff@tvtropes.org" rel="cc:morePermissions" xmlns:cc="http://creativecommons.org/ns#"> thestaff@tvtropes.org</a>.</p>
+<br/>
+<div class="privacy_wrapper">
+</div>
+</div>
+</footer>
+<style>
+      div.fc-ccpa-root {
+        position: absolute !important;
+        bottom: 93px !important;
+        margin: auto !important;
+        width: 100% !important;
+        z-index: 9999 !important;
+      }
+      .fc-ccpa-root .fc-dns-dialog .fc-dns-link p{
+        outline: none !important;
+        text-decoration: underline !important;
+        font-size: .7em !important;
+        font-family: sans-serif !important;
+      }
+      .fc-ccpa-root .fc-dns-dialog .fc-dns-link .fc-button-background {
+        background: none !important;
+      }
+    </style>
+<div class="full-screen" id="_pm_videoViewer">
+<a class="close" href="#close" id="_pm_videoViewer-close"></a>
+<div class="_pmvv-body">
+<div class="_pmvv-vidbox">
+<video class="video-js vjs-default-skin vjs-16-9" data-video-id="" id="overlay-video-player-box">
+</video>
+<div class="_pmvv-vidbox-desc">
+<h1 id="overlay-title"></h1>
+<p class="_pmvv-vidbox-descTxt" id="overlay-descrip">
+</p>
+<div class="rating-row" data-video-id="">
+<input name="is_logged_in" type="hidden" value="0"/>
+<p>How well does it match the trope?</p>
+<div id="star-rating-group">
+<div class="trope-rate">
+<input id="lamp5" name="rate" type="radio" value="5"/>
+<label for="lamp5" title="Absolutely"></label>
+<input id="lamp4" name="rate" type="radio" value="4"/>
+<label for="lamp4" title="Yes"></label>
+<input id="lamp3" name="rate" type="radio" value="3"/>
+<label for="lamp3" title="Kind of"></label>
+<input id="lamp2" name="rate" type="radio" value="2"/>
+<label for="lamp2" title="Not really"></label>
+<input id="lamp1" name="rate" type="radio" value="1"/>
+<label for="lamp1" title="No"></label>
+</div>
+<div id="star-rating-total">
+</div>
+</div>
+</div>
+<div class="example-media-row">
+<div class="example-overlay">
+<p>Example of:</p>
+<div id="overlay-trope"> / </div>
+</div>
+<div class="media-sources-overlay example-overlay">
+<p>Media sources:</p>
+<div id="overlay-media"> / </div>
+</div>
+</div>
+<p class="_pmvv-vidbox-stats text-right font-s" style="padding-top:8px; border-top: solid 1px rgba(255,255,255,0.2)">
+<a class="float-right" data-modal-target="login" href="#video-feedback">Report</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+        window.special_ops =  {
+            member : 'no',
+            isolated : 0,
+            tags : ['videogame']
+        };
+    </script>
+<script type="text/javascript">
+
+        var cleanCreativeEnabled = "";
+        var donation = "";
+        var live_ads = "1";
+        var img_domain = "https://static.tvtropes.org";
+        var snoozed = cookies.read('snoozedabm');
+        var snoozable = "";
+
+        if (adsRemovedWith) {
+            live_ads = 0;
+        }
+
+        var elem = document.createElement('script');
+        elem.async = true;
+
+        elem.src = '/design/assets/bundle.js?rev=c58d8df02f09262390bbd03db7921fc35c6af306';
+
+        elem.onload = function() {
+                                 }
+        document.getElementsByTagName('head')[0].appendChild(elem);
+
+    </script>
+<script type="text/javascript">
+      function send_analytics_event(user_type, donation){
+          // if(user_type == 'uncached' || user_type == 'cached'){
+          //   ga('send', 'event', 'caching', 'load', user_type, {'nonInteraction': 1});
+          //   return;
+          // }
+          var event_name = user_type;
+
+          if(donation == 'true'){
+              event_name += "_donation"
+          }else if(typeof(valid_user) == 'undefined'){
+              event_name += "_blocked"
+          }else if(valid_user == true){
+              event_name += "_unblocked";
+          }else{
+              event_name = "_unknown"
+          }
+          ga('send', 'event', 'ads', 'load', event_name, {'nonInteraction': 1});
+      }
+
+    
+    send_analytics_event("guest", "false");
+      </script>
+</body>
+</html>

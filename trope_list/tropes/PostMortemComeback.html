@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Post-Mortem Comeback - TV Tropes</title>
+<meta content="The Post-Mortem Comeback trope as used in popular culture. The Big Bad is dead, but there's something missing. The fans want to see more from him; the author …" name="description"/>
+<link href="https://tvtropes.org/pmwiki/pmwiki.php/Main/PostMortemComeback" rel="canonical"/>
+<link href="/img/icons/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="@tvtropes" name="twitter:site"/>
+<meta content="@tvtropes" name="twitter:owner"/>
+<meta content="Post-Mortem Comeback - TV Tropes" name="twitter:title"/>
+<meta content="The Post-Mortem Comeback trope as used in popular culture. The Big Bad is dead, but there's something missing. The fans want to see more from him; the author …" name="twitter:description"/>
+<meta content="https://static.tvtropes.org/logo_blue_small.png" name="twitter:image:src"/>
+<meta content="TV Tropes" property="og:site_name"/>
+<meta content="en_US" property="og:locale"/>
+<meta content="https://www.facebook.com/tvtropes" property="article:publisher"/>
+<meta content="Post-Mortem Comeback - TV Tropes" property="og:title"/>
+<meta content="website" property="og:type"/>
+<meta content="https://tvtropes.org/pmwiki/pmwiki.php/Main/PostMortemComeback" property="og:url"/>
+<meta content="https://static.tvtropes.org/logo_blue_small.png" property="og:image"/>
+<meta content="The Big Bad is dead, but there's something missing. The fans want to see more from him; the author has a few ideas left for him that didn't make it before he was killed; or the conflict hasn't entirely been resolved in your view. What can you do …" property="og:description"/>
+<link href="/img/icons/apple-icon-57x57.png" rel="apple-touch-icon" sizes="57x57" type="image/png"/>
+<link href="/img/icons/apple-icon-60x60.png" rel="apple-touch-icon" sizes="60x60" type="image/png"/>
+<link href="/img/icons/apple-icon-72x72.png" rel="apple-touch-icon" sizes="72x72" type="image/png"/>
+<link href="/img/icons/apple-icon-76x76.png" rel="apple-touch-icon" sizes="76x76" type="image/png"/>
+<link href="/img/icons/apple-icon-114x114.png" rel="apple-touch-icon" sizes="114x114" type="image/png"/>
+<link href="/img/icons/apple-icon-120x120.png" rel="apple-touch-icon" sizes="120x120" type="image/png"/>
+<link href="/img/icons/apple-icon-144x144.png" rel="apple-touch-icon" sizes="144x144" type="image/png"/>
+<link href="/img/icons/apple-icon-152x152.png" rel="apple-touch-icon" sizes="152x152" type="image/png"/>
+<link href="/img/icons/apple-icon-180x180.png" rel="apple-touch-icon" sizes="180x180" type="image/png"/>
+<link href="/img/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/img/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/img/icons/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png"/>
+<link href="/img/icons/favicon-192x192.png" rel="icon" sizes="192x192" type="image/png"/>
+<meta content="width=device-width, initial-scale=1" id="viewport" name="viewport"/>
+<script>
+                var propertag = {};
+                propertag.cmd = [];
+            </script>
+<link href="/design/assets/bundle.css?rev=c58d8df02f09262390bbd03db7921fc35c6af306" rel="stylesheet"/>
+<script>
+                function object(objectId) {
+                    if (document.getElementById && document.getElementById(objectId)) {
+                        return document.getElementById(objectId);
+                    } else if (document.all && document.all(objectId)) {
+                        return document.all(objectId);
+                    } else if (document.layers && document.layers[objectId]) {
+                        return document.layers[objectId];
+                    } else {
+                        return false;
+                    }
+                }
+
+                // JAVASCRIPT COOKIES CODE: for getting and setting user viewing preferences
+                var cookies = {
+                    create: function (name, value, days2expire, path) {
+                        var date = new Date();
+                        date.setTime(date.getTime() + (days2expire * 24 * 60 * 60 * 1000));
+                        var expires = date.toUTCString();
+                        document.cookie = name + '=' + value + ';' + 'expires=' + expires + ';' + 'path=' + path + ';';
+                    },
+										createWithExpire: function(name, value, expires, path) {
+												document.cookie = name + '=' + value + ';' + 'expires=' + expires + ';' + 'path=' + path + ';';
+										},
+                    read: function (name) {
+                        var cookie_value = "",
+                            current_cookie = "",
+                            name_expr = name + "=",
+                            all_cookies = document.cookie.split(';'),
+                            n = all_cookies.length;
+
+                        for (var i = 0; i < n; i++) {
+                            current_cookie = all_cookies[i].trim();
+                            if (current_cookie.indexOf(name_expr) === 0) {
+                                cookie_value = current_cookie.substring(name_expr.length, current_cookie.length);
+                                break;
+                            }
+                        }
+                        return cookie_value;
+                    },
+                    update: function (name, val) {
+                        this.create(name, val, 300, "/");
+                    },
+                    remove: function (name) {
+                        document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
+                    }
+                };
+
+                function updateUserPrefs() {
+                    //GENERAL: detect and set browser, if not cookied (will be treated like a user-preference and added to the #user-pref element)
+                    if( !cookies.read('user-browser') ){
+                        var broswer = '';
+
+                        if(navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPod/i) ){
+                            browser = 'iOS';
+                        } else if (/Opera[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'opera';
+                        } else if (/MSIE (\d+\.\d+);/.test(navigator.userAgent)) {
+                            browser = 'MSIE';
+                        } else if (/Navigator[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'netscape';
+                        } else if (/Chrome[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'chrome';
+                        } else if (/Safari[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'safari';
+                            /Version[\/\s](\d+\.\d+)/.test(navigator.userAgent);
+                            browserVersion = new Number(RegExp.$1);
+                        } else if (/Firefox[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'firefox';
+                        } else {
+                            browser = 'internet_explorer';
+                        }
+                        cookies.create('user-browser',browser,1,'/');
+                        document.getElementById('user-prefs').classList.add('browser-' + browser);
+                    } else {
+                        document.getElementById('user-prefs').classList.add('browser-' + cookies.read('user-browser'));
+                    }
+
+                    //update user preference settings
+                    if (cookies.read('wide-load') !== '') document.getElementById('user-prefs').classList.add('wide-load');
+                    if (cookies.read('night-vision') !== '') document.getElementById('user-prefs').classList.add('night-vision');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('user-prefs').classList.add('sticky-header');
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('user-prefs').classList.add('show-spoilers');
+                    if (cookies.read('folders-open') !== '') document.getElementById('user-prefs').classList.add('folders-open');
+                    if (cookies.read('lefthand-sidebar') !== '') document.getElementById('user-prefs').classList.add('lefthand-sidebar');
+                    if (cookies.read('highlight-links') !== '') document.getElementById('user-prefs').classList.add('highlight-links');
+                    if (cookies.read('forum-gingerbread') !== '') document.getElementById('user-prefs').classList.add('forum-gingerbread');
+                    if (cookies.read('shared-avatars') !== '') document.getElementById('user-prefs').classList.add('shared-avatars');
+                    if (cookies.read('new-search') !== '') document.getElementById('user-prefs').classList.add('new-search');
+                    if (cookies.read('stop-auto-play-video') !== '') document.getElementById('user-prefs').classList.add('stop-auto-play-video');
+
+                    //desktop view on mobile
+                    if (cookies.read('desktop-on-mobile') !== ''){
+                        document.getElementById('user-prefs').classList.add('desktop-on-mobile');
+
+                        var viewport = document.querySelector("meta[name=viewport]");
+                        viewport.setAttribute('content', 'width=1000');
+                    }
+
+                }
+
+                function updateDesktopPrefs() {
+                    if (cookies.read('wide-load') !== '') document.getElementById('sidebar-toggle-wideload').classList.add('active');
+                    if (cookies.read('night-vision') !== '') document.getElementById('sidebar-toggle-nightvision').classList.add('active');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('sidebar-toggle-stickyheader').classList.add('active');
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('sidebar-toggle-showspoilers').classList.add('active');
+
+                }
+
+                function updateMobilePrefs() {
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('mobile-toggle-showspoilers').classList.add('active');
+                    if (cookies.read('night-vision') !== '') document.getElementById('mobile-toggle-nightvision').classList.add('active');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('mobile-toggle-stickyheader').classList.add('active');
+                    if (cookies.read('highlight-links') !== '') document.getElementById('mobile-toggle-highlightlinks').classList.add('active');
+
+                }
+
+
+                if (document.cookie.indexOf("scroll0=") < 0) {
+                    // do nothing
+                } else {
+                    console.log('ads removed by scroll.com');
+                    var adsRemovedWith = 'scroll';
+                    var style = document.createElement('style');
+                    style.innerHTML = '#header-ad, .proper-ad-unit, .square_ad, .sb-ad-unit { display: none !important; } ';
+                    document.head.appendChild(style);
+                }
+            </script>
+<script type="text/javascript">
+
+                var tvtropes_config = {
+                    astri_stream_enabled : "",
+                    is_logged_in         : "",
+                    handle               : "",
+                    get_astri_stream     : "",
+										revnum               : "c58d8df02f09262390bbd03db7921fc35c6af306",
+										img_domain           : "https://static.tvtropes.org",
+										adblock              : "1",
+										adblock_url          : "propermessage.io",
+										pause_editing        : "0",
+										pause_editing_msg    : "",
+										pause_site_changes   : ""
+                };
+            </script>
+<script type="text/javascript">
+						  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+						  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+						  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+						  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+						  ga('create', 'UA-3821842-1', 'auto');
+						  ga('send', 'pageview');
+
+						</script>
+</head>
+<body class="">
+<i id="user-prefs"></i>
+<script>updateUserPrefs();</script>
+<div id="fb-root"></div>
+<div id="modal-box"></div>
+<header class="headroom-element" id="main-header-bar">
+<div id="main-header-bar-inner">
+<span class="header-spacer" id="header-spacer-left"></span>
+<a class="mobile-menu-toggle-button tablet-on" href="#mobile-menu" id="main-mobile-toggle"><span></span><span></span><span></span></a>
+<a class="no-dev" href="/" id="main-header-logoButton"></a>
+<span class="header-spacer" id="header-spacer-right"></span>
+<nav class="tablet-off" id="main-header-nav">
+<a href="/pmwiki/pmwiki.php/Main/Tropes">Tropes</a>
+<a href="/pmwiki/pmwiki.php/Main/Media">Media</a>
+<a class="nav-browse" href="/pmwiki/browse.php">Browse</a>
+<a href="/pmwiki/index_report.php">Indexes</a>
+<a href="/pmwiki/topics.php">Forums</a>
+<a class="nav-browse" href="/pmwiki/recent_videos.php">Videos</a>
+</nav>
+<div id="main-header-bar-right">
+<div class="font-xs mobile-off" id="signup-login-box">
+<a class="hover-underline bold" data-modal-target="signup" href="/pmwiki/login.php">Join</a>
+<a class="hover-underline bold" data-modal-target="login" href="/pmwiki/login.php">Login</a>
+</div>
+<div class="mobile-on inline" id="signup-login-mobileToggle">
+<a data-modal-target="login" href="/pmwiki/login.php"><i class="fa fa-user"></i></a>
+</div>
+<div id="search-box">
+<form action="/pmwiki/search_result.php" class="search">
+<input class="search-box" name="q" placeholder="Search" required="" type="text" value=""/>
+<input class="submit-button" type="submit" value=""/>
+<input name="search_type" type="hidden" value="article"/>
+<input name="page_type" type="hidden" value="all"/>
+<input name="cx" type="hidden" value="partner-pub-6610802604051523:amzitfn8e7v"/>
+<input name="cof" type="hidden" value="FORID:10"/>
+<input name="ie" type="hidden" value="ISO-8859-1"/>
+<input name="siteurl" type="hidden" value=""/>
+<input name="ref" type="hidden" value=""/>
+<input name="ss" type="hidden" value=""/>
+</form>
+<a class="mobile-on mobile-search-toggle close-x" href="#close-search"><i class="fa fa-close"></i></a>
+</div>
+<div id="random-box">
+<a class="button-random-trope" href="/pmwiki/pmwiki.php/Main/ReligiousHorror" onclick="ga('send', 'event', 'button', 'click', 'random trope');" rel="nofollow"></a>
+<a class="button-random-media" href="/pmwiki/pmwiki.php/FanFic/TengenToppaGurrenSolvernia" onclick="ga('send', 'event', 'button', 'click', 'random media');" rel="nofollow"></a>
+</div>
+</div>
+</div>
+<div class="tablet-on" id="mobile-menu"><div class="mobile-menu-options">
+<div class="nav-wrapper">
+<a class="xl" href="/pmwiki/pmwiki.php/Main/Tropes">Tropes</a>
+<a class="xl" href="/pmwiki/pmwiki.php/Main/Media">Media</a>
+<a class="xl" href="/pmwiki/browse.php">Browse</a>
+<a class="xl" href="/pmwiki/index_report.php">Indexes</a>
+<a class="xl" href="/pmwiki/topics.php">Forums</a>
+<a class="xl" href="/pmwiki/recent_videos.php">Videos</a>
+<a href="/pmwiki/query.php?type=att">Ask The Tropers</a>
+<a href="/pmwiki/query.php?type=tf">Trope Finder</a>
+<a href="/pmwiki/query.php?type=ykts">You Know That Show...</a>
+<a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a>
+<a data-click-toggle="active" href="#tools">Tools <i class="fa fa-chevron-down"></i></a>
+<div class="tools-dropdown mobile-dropdown-linkList">
+<a href="/pmwiki/cutlist.php">Cut List</a>
+<a href="/pmwiki/changes.php">New Edits</a>
+<a href="/pmwiki/recent_edit_reasons.php">Edit Reasons</a>
+<a href="/pmwiki/launches.php">Launches</a>
+<a href="/pmwiki/img_list.php">Images List</a>
+<a href="/pmwiki/crown_activity.php">Crowner Activity</a>
+<a href="/pmwiki/no_types.php">Un-typed Pages</a>
+<a href="/pmwiki/page_type_audit.php">Recent Page Type Changes</a>
+</div>
+<a data-click-toggle="active" href="#hq">Tropes HQ <i class="fa fa-chevron-down"></i></a>
+<div class="tools-dropdown mobile-dropdown-linkList">
+<a href="/pmwiki/about.php">About Us</a>
+<a href="/pmwiki/contact.php">Contact Us</a>
+<a href="mailto:advertising@proper.io">Advertise</a>
+<a href="/pmwiki/dmca.php">DMCA Notice</a>
+<a href="/pmwiki/privacypolicy.php">Privacy Policy</a>
+</div>
+<a href="/pmwiki/ad-free-subscribe.php">Go Ad-Free</a>
+<div class="toggle-switches">
+<ul class="mobile-menu display-toggles">
+<li>Show Spoilers <div class="display-toggle show-spoilers" id="mobile-toggle-showspoilers"></div></li>
+<li>Night Vision <div class="display-toggle night-vision" id="mobile-toggle-nightvision"></div></li>
+<li>Sticky Header <div class="display-toggle sticky-header" id="mobile-toggle-stickyheader"></div></li>
+<li>Highlight Links <div class="display-toggle highlight-links" id="mobile-toggle-highlightlinks"></div></li>
+</ul>
+<script>updateMobilePrefs();</script>
+</div>
+</div>
+</div>
+</div>
+</header>
+<div class="mobile-on" id="homepage-introBox-mobile">
+<a href="/"><img class="logo-small" src="/images/logo-white-big.png"/></a>
+<form action="/pmwiki/search_result.php" class="search" style="margin:10px -5px -6px -5px;">
+<input class="search-box" name="q" placeholder="Search" required="" type="text" value=""/>
+<input class="submit-button" type="submit" value=""/>
+<input name="search_type" type="hidden" value="article"/>
+<input name="page_type" type="hidden" value="all"/>
+<input name="cx" type="hidden" value="partner-pub-6610802604051523:amzitfn8e7v"/>
+<input name="cof" type="hidden" value="FORID:10"/>
+<input name="ie" type="hidden" value="ISO-8859-1"/>
+<input name="siteurl" type="hidden" value=""/>
+<input name="ref" type="hidden" value=""/>
+<input name="ss" type="hidden" value=""/>
+</form>
+</div>
+<div class="ad" id="header-ad-wrapper">
+<div id="header-ad">
+<div class="ad-size-970x90 atf_banner">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_1"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_1'); });</script> </div>
+</div> </div>
+</div>
+</div>
+<div id="main-container">
+<div class="action-bar mobile-off" id="action-bar-top">
+<div class="action-bar-right">
+<p>Follow TV Tropes</p>
+<a class="button-fb" href="https://www.facebook.com/TVTropes">
+<i class="fa fa-facebook"></i></a>
+<a class="button-tw" href="https://www.twitter.com/TVTropes">
+<i class="fa fa-twitter"></i></a>
+<a class="button-re" href="https://www.reddit.com/r/TVTropes">
+<i class="fa fa-reddit-alien"></i></a>
+</div>
+<nav class="actions-wrapper" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<ul class="page-actions" id="top_main_list">
+<li class="link-edit">
+<a class="article-edit-button" data-modal-target="login" href="/pmwiki/pmwiki.php/Main/PostMortemComeback?action=edit" rel="nofollow">
+<i class="fa fa-pencil"></i> Edit Page</a></li><li class="link-related"><a href="/pmwiki/relatedsearch.php?term=Main/PostMortemComeback">
+<i class="fa fa-share-alt"></i> Related</a></li><li class="link-history"><a href="/pmwiki/article_history.php?article=Main.PostMortemComeback">
+<i class="fa fa-history"></i> History</a></li><li class="link-discussion"><a href="/pmwiki/remarks.php?trope=Main.PostMortemComeback">
+<i class="fa fa-comment"></i> Discussion</a></li> </ul>
+<button class="nav__dropdown-toggle" id="top_more_button" onclick="toggle_more_menu('top');" type="button">More</button>
+<ul class="more_menu hidden_more_list" id="top_more_list">
+<li class="link-todo tuck-always more_list_item"><a data-modal-target="login" href="#todo"><i class="fa fa-check-circle"></i> To Do</a></li><li class="link-pageSource tuck-always more_list_item"><a data-modal-target="login" href="/pmwiki/pmwiki.php/Main/PostMortemComeback?action=source" rel="nofollow" target="_blank"><i class="fa fa-code"></i> Page Source</a></li> </ul>
+</nav>
+<div class="WikiWordModalStub"></div>
+<div class="ImgUploadModalStub" data-page-type="Article"></div>
+<div class="login-alert" style="display: none;">
+You need to <a href="/pmwiki/login.php" style="color:#21A0E8">login</a> to do this. <a href="/pmwiki/login.php?tab=register_account" style="color:#21A0E8">Get Known</a> if you don't have an account
+</div>
+</div>
+<div class="page-Article" id="main-content">
+<article class="with-sidebar" id="main-entry">
+<input id="groupname-hidden" type="hidden" value="Main"/>
+<input id="title-hidden" type="hidden" value="PostMortemComeback"/>
+<input id="article_id" type="hidden" value="315422"/>
+<input id="logged_in" type="hidden" value="false"/>
+<p class="hidden" id="current_url">http://tvtropes.org/pmwiki/pmwiki.php/Main/PostMortemComeback</p>
+<meta content="" itemprop="datePublished"/>
+<meta content="" itemprop="articleSection"/>
+<meta content="" itemprop="image"/>
+<a class="watch-button" data-modal-target="login" href="#watch">Follow<span>ing</span></a>
+<h1 class="entry-title" itemprop="headline">
+Post-Mortem Comeback
+</h1>
+<script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+                "@type": "ListItem",
+                "position": 1,
+                "name": "tvtropes.org",
+                "item": "https://tvtropes.org"
+            },{
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Tropes",
+                "item": "https://tvtropes.org/pmwiki/pmwiki.php/Main/Tropes"
+            },{
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Post-Mortem Comeback"            }]
+        }
+    </script>
+<a class="mobile-actionbar-toggle mobile-on" data-click-toggle="active" href="#mobile-actions-toggle" id="mobile-actionbar-toggle">
+<p class="tiny-off">Go To</p><span></span><span></span><span></span><i class="fa fa-pencil"></i></a>
+<nav class="mobile-actions-wrapper mobile-on" id="mobile-actions-bar"></nav>
+<div class="modal fade hidden-until-active" id="editLockModal">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button aria-label="Close" class="close" data-dismiss="modal" type="button"> <span aria-hidden="true">×</span></button>
+<h4 class="modal-title">Edit Locked</h4>
+</div>
+<div class="modal-body">
+<div class="row">
+<div class="body">
+<div class="danger troper_locked_message"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<nav class="body-options" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<ul class="subpage-links">
+<li>
+<a class="subpage-link curr-subpage" href="/pmwiki/pmwiki.php/Main/PostMortemComeback" title="The Main page">
+<span class="wrapper"><span class="spi main-page"></span>Main</span></a>
+</li>
+<li class="create-subpage dropdown">
+<a aria-expanded="false" class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);" role="button">
+<span class="wrapper">Create New <i class="fa fa-plus-circle"></i></span>
+</a>
+<select onchange="this.options[this.selectedIndex].value &amp;&amp; (window.location = this.options[this.selectedIndex].value);">
+<option value="">- Create New -</option>
+<option value="/pmwiki/pmwiki.php/Analysis/PostMortemComeback?action=edit">Analysis</option>
+<option value="/pmwiki/pmwiki.php/Characters/PostMortemComeback?action=edit">Characters</option>
+<option value="/pmwiki/pmwiki.php/FanficRecs/PostMortemComeback?action=edit">FanficRecs</option>
+<option value="/pmwiki/pmwiki.php/FanWorks/PostMortemComeback?action=edit">FanWorks</option>
+<option value="/pmwiki/pmwiki.php/Fridge/PostMortemComeback?action=edit">Fridge</option>
+<option value="/pmwiki/pmwiki.php/Haiku/PostMortemComeback?action=edit">Haiku</option>
+<option value="/pmwiki/pmwiki.php/Headscratchers/PostMortemComeback?action=edit">Headscratchers</option>
+<option value="/pmwiki/pmwiki.php/ImageLinks/PostMortemComeback?action=edit">ImageLinks</option>
+<option value="/pmwiki/pmwiki.php/Laconic/PostMortemComeback?action=edit">Laconic</option>
+<option value="/pmwiki/pmwiki.php/PlayingWith/PostMortemComeback?action=edit">PlayingWith</option>
+<option value="/pmwiki/pmwiki.php/Quotes/PostMortemComeback?action=edit">Quotes</option>
+<option value="/pmwiki/pmwiki.php/Recap/PostMortemComeback?action=edit">Recap</option>
+<option value="/pmwiki/pmwiki.php/ReferencedBy/PostMortemComeback?action=edit">ReferencedBy</option>
+<option value="/pmwiki/pmwiki.php/Synopsis/PostMortemComeback?action=edit">Synopsis</option>
+<option value="/pmwiki/pmwiki.php/Timeline/PostMortemComeback?action=edit">Timeline</option>
+<option value="/pmwiki/pmwiki.php/Trivia/PostMortemComeback?action=edit">Trivia</option>
+<option value="/pmwiki/pmwiki.php/WMG/PostMortemComeback?action=edit">WMG</option>
+<option value="/pmwiki/pmwiki.php/YMMV/PostMortemComeback?action=edit">YMMV</option>
+</select>
+</li>
+</ul>
+</nav>
+<div class="article-content retro-folders" id="main-article">
+<p></p><div class="indent"><strong>Tuvok:</strong> She has been dead for over a year now. There would have been no way to predict this turn of events. <br/><strong>Paris:</strong> I guess we should have known Seska wouldn't let a little thing like death stop her from getting even.
+<div class="indent">— <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/StarTrekVoyager" title="/pmwiki/pmwiki.php/Series/StarTrekVoyager">Star Trek: Voyager</a></em>, "Worst Case Scenario"
+</div></div><p>The <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BigBad" title="/pmwiki/pmwiki.php/Main/BigBad">Big Bad</a> is <em><a class="twikilink" href="/pmwiki/pmwiki.php/Main/KilledOffForReal" title="/pmwiki/pmwiki.php/Main/KilledOffForReal">dead</a></em>, but there's something missing. The fans want to see more from him; the author has a few ideas left for him that didn't make it before he was killed; or the conflict hasn't entirely been resolved in your view. What can you do? Bring him back, without bringing him back.
+</p><div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_1"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_1'); })</script></div></div><p>A supposedly deceased villain can do this by <a class="twikilink" href="/pmwiki/pmwiki.php/Main/CrazyPrepared" title="/pmwiki/pmwiki.php/Main/CrazyPrepared">previously laying one final failsafe</a> to antagonize the heroes, or indirectly allowing their acts to force the heroes to hallucinate about him. A more unorthodox method allows the villain to transfer his memories, consciousness or soul into <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GrandTheftMe" title="/pmwiki/pmwiki.php/Main/GrandTheftMe">someone or something else</a>, gradually allowing him to re-materialize in that new object or being like a parasite.
+</p><p>Compare <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ThanatosGambit" title="/pmwiki/pmwiki.php/Main/ThanatosGambit">Thanatos Gambit</a> and <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MyDeathIsJustTheBeginning" title="/pmwiki/pmwiki.php/Main/MyDeathIsJustTheBeginning">My Death Is Just the Beginning</a>. This may lead to <a class="twikilink" href="/pmwiki/pmwiki.php/Main/YourPrincessIsInAnotherCastle" title="/pmwiki/pmwiki.php/Main/YourPrincessIsInAnotherCastle">Your Princess Is in Another Castle!</a>. Not to be confused with <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BackFromTheDead" title="/pmwiki/pmwiki.php/Main/BackFromTheDead">Back from the Dead</a>.
+</p><p>Be warned that as this is a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DeathTrope" title="/pmwiki/pmwiki.php/Main/DeathTrope">Death Trope</a> and usually a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/PlotTwist" title="/pmwiki/pmwiki.php/Main/PlotTwist">Plot Twist</a>, spoilers on this page are <strong>unmarked</strong>.
+</p><hr/><div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_2"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_2'); })</script></div></div><h2>Examples:</h2>
+<p></p><div class="folderlabel" onclick="toggleAllFolders();">    open/close all folders  </div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder0');">    Anime and Manga </div><div class="folder" id="folder0" isfolder="true" style="display:block;">
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Manga/Bleach" title="/pmwiki/pmwiki.php/Manga/Bleach">Bleach</a></em> had one of the most disturbing examples, enough that it led to a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MoralEventHorizon" title="/pmwiki/pmwiki.php/Main/MoralEventHorizon">Moral Event Horizon</a>. At the end of his encounter with Mayuri Kurotsuchi, Szayelaporro Granz was devoured by Ashisogi Jizo, but he revived himself by implanting pieces of his <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BattleAura" title="/pmwiki/pmwiki.php/Main/BattleAura">Battle Aura</a> into Nemu, allowing him to reform himself while inside her stomach. You read that right - he <em>raped</em> her.
+</li><li> A possible <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TropeCodifier" title="/pmwiki/pmwiki.php/Main/TropeCodifier">Trope Codifier</a> has <a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/DragonBall" title="/pmwiki/pmwiki.php/Franchise/DragonBall">King Piccolo</a> vomiting up an egg that contained his nearly-identical (appearance and personality) son, who eventually went into an <a class="twikilink" href="/pmwiki/pmwiki.php/Main/EnemyMine" title="/pmwiki/pmwiki.php/Main/EnemyMine">Enemy Mine</a> with Goku against Raditz and ended up killing both Saiyans thanks to Goku's <a class="twikilink" href="/pmwiki/pmwiki.php/Main/HeroicSacrifice" title="/pmwiki/pmwiki.php/Main/HeroicSacrifice">Heroic Sacrifice</a>. But then Piccolo Jr. went <a class="twikilink" href="/pmwiki/pmwiki.php/Main/OffTheRails" title="/pmwiki/pmwiki.php/Main/OffTheRails">Off the Rails</a> and became one of Goku's staunchest allies and friends.
+<ul><li> There's also Dr. Gero, with his Androids 17 and 18 (who would actually succeed in killing most of the heroes and the population of the Earth in an alternate timeline) and later, Cell (who <em>did</em> accomplish Gero's original goal, kill Goku).
+</li></ul></li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder1');">    Comic Books </div><div class="folder" id="folder1" isfolder="true" style="display:block;">
+<ul><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/ComicBook/TheCloneSaga" title="/pmwiki/pmwiki.php/ComicBook/TheCloneSaga">The Clone Saga</a></em>, after the Jackal dies, a post-mortem compulsion activates within <a class="twikilink" href="/pmwiki/pmwiki.php/ComicBook/SpiderMan" title="/pmwiki/pmwiki.php/ComicBook/SpiderMan">Spider-Man</a>'s brain, causing him to try to kill whoever he loves most under temporary conscious mind control.
+</li><li> At the conclusion of a very long <em><a class="twikilink" href="/pmwiki/pmwiki.php/ComicBook/SpiderMan" title="/pmwiki/pmwiki.php/ComicBook/SpiderMan">Spider-Man</a></em> arc involving robots disguised as Peter's parents, we discover that the entire plan was set in motion by Harry Osborn (Green Goblin II) some time before his death. It gets even better because while Harry eventually forgave Spider-Man and moved on, the last time he was seen (prior to One More Day) was here, on a videotape he'd made, gloating over an enraged Spider-Man.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/Comicbook/TheIncredibleHulk" title="/pmwiki/pmwiki.php/Comicbook/TheIncredibleHulk">The Incredible Hulk</a></em> comics, after the Leader died (circa #345) and before he came <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BackFromTheDead" title="/pmwiki/pmwiki.php/Main/BackFromTheDead">Back from the Dead</a>, he implanted his memories into a loyal follower who had a similar gamma-induced mutation as he.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder2');">    Fanfiction </div><div class="folder" id="folder2" isfolder="true" style="display:block;">
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Fanfic/TheLionKingAdventures" title="/pmwiki/pmwiki.php/Fanfic/TheLionKingAdventures">The Lion King Adventures</a></em>:
+<ul><li> Death, the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BigBad" title="/pmwiki/pmwiki.php/Main/BigBad">Big Bad</a> of Series 3, is destroyed in <em>Darkness Falls</em>, but returns twice in Series 4 via some "extremely complex" prerecorded messages.
+</li><li> Hago is the king of coming <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BackFromTheDead" title="/pmwiki/pmwiki.php/Main/BackFromTheDead">Back from the Dead</a>, but in between his resurrections, there are a few examples of this:
+<ul><li> After his original death in <em>Friends to the End</em>, he spends most of Series 2 haunting Simba in dreams and <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Foreshadowing" title="/pmwiki/pmwiki.php/Main/Foreshadowing">Foreshadowing</a> at his return.
+</li><li> Then, after yet another death in <em>Tama's Troubles</em>, the events of the following story, <em>Survival</em>, are revealed to be a trap he set at some point in the past, complete with recorded message from him.
+</li></ul></li></ul></li><li> At the end of the <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/MyLittlePonyFriendshipIsMagic" title="/pmwiki/pmwiki.php/WesternAnimation/MyLittlePonyFriendshipIsMagic">My Little Pony: Friendship Is Magic</a></em> fanfic <em><a class="urllink" href="http://thejboy88.deviantart.com/gallery/42768477">Shadows<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a></em>, King Sombra is <a class="twikilink" href="/pmwiki/pmwiki.php/Main/KilledOffForReal" title="/pmwiki/pmwiki.php/Main/KilledOffForReal">Killed Off for Real</a>. However, in the sequel, <em><a class="urllink" href="http://thejboy88.deviantart.com/gallery/44076506">The Divide<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a></em>, it turns out that there's an echo of him left in Twilight's mind (as a result of the dark magic she used), which spends a couple of chapters haunting her and damaging her faith in Celestia, before finally being purged from her mind.
+</li><li> The <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/TeenTitans" title="/pmwiki/pmwiki.php/WesternAnimation/TeenTitans">Teen Titans</a></em> fic <em><a class="urllink" href="https://www.fanfiction.net/s/6096887/1/Dust">Dust<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a></em> is set after the episode "Haunted", so Slade's hallucinated presence is referenced. More important are several pre-recorded messages he left behind prior to his death to taunt Robin. <span class="spoiler" title="you can set spoilers visible by default on your profile"> And then it turns out that the story's entire plot — someone conducting a campaign to emotionally destroy the Titans — was set up in advance by him at some point during Season 2.</span>
+</li></ul></div>
+<div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_3"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_3'); })</script></div></div><p></p><div class="folderlabel" onclick="togglefolder('folder3');">    Literature </div><div class="folder" id="folder3" isfolder="true" style="display:block;">
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/HarryPotterAndTheChamberOfSecrets" title="/pmwiki/pmwiki.php/Literature/HarryPotterAndTheChamberOfSecrets">Harry Potter and the Chamber of Secrets</a></em>: Voldemort is incorporeal rather than dead, but he still manages to cause problems via a magic diary containing the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/LivingMemory" title="/pmwiki/pmwiki.php/Main/LivingMemory">Living Memory</a> of his teenaged self, who was already a murderer and is happy to get another shot.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder4');">    Live Action TV </div><div class="folder" id="folder4" isfolder="true" style="display:block;">
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/Airwolf" title="/pmwiki/pmwiki.php/Series/Airwolf">Airwolf</a></em> once had this: Airwolf's mad creator had a program hidden inside it that nearly caused it to trigger World War III. The creator's been dead for quite a while, yet his revenge wasn't complete.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/Arrow" title="/pmwiki/pmwiki.php/Series/Arrow">Arrow</a></em>: Adrian Chase AKA Prometheus commits suicide by <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BoomHeadshot" title="/pmwiki/pmwiki.php/Main/BoomHeadshot">shooting himself in the head</a> in the Season 5 finale. He reappears in Season 6 as a hallucination to Oliver induced by <a class="twikilink" href="/pmwiki/pmwiki.php/Main/FantasticDrug" title="/pmwiki/pmwiki.php/Main/FantasticDrug">Vertigo</a>.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/BuffyTheVampireSlayer" title="/pmwiki/pmwiki.php/Series/BuffyTheVampireSlayer">Buffy the Vampire Slayer</a></em>: The Mayor, the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BigBad" title="/pmwiki/pmwiki.php/Main/BigBad">Big Bad</a> of season 3 who's killed at the end of the season, gets one final hurrah in season 4 when a contingency plan he set up lets Faith pull a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GrandTheftMe" title="/pmwiki/pmwiki.php/Main/GrandTheftMe">Grand Theft Me</a> on Buffy.
+</li><li> The <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/StarTrekDeepSpaceNine" title="/pmwiki/pmwiki.php/Series/StarTrekDeepSpaceNine">Star Trek: Deep Space Nine</a></em> episode <a class="urllink" href="http://en.memory-alpha.org/wiki/Trials_and_Tribble-ations_%28episode%29">Trials and Tribbleations<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a> features the Klingon from the <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/StarTrekTheOriginalSeries" title="/pmwiki/pmwiki.php/Series/StarTrekTheOriginalSeries">Star Trek: The Original Series</a></em> episode <a class="urllink" href="http://en.memory-alpha.org/wiki/The_Trouble_with_Tribbles_%28episode%29">Trouble with tribbles<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a> going back 100 years into the past to plant a bomb that will kill Kirk.
+</li><li> In the <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/StarTrekVoyager" title="/pmwiki/pmwiki.php/Series/StarTrekVoyager">Star Trek: Voyager</a></em> episode "Worst Case Scenario" (S3 E25), a highly adaptive hologram of Seska enters the program and manipulates it to her own ends.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/StargateSG1" title="/pmwiki/pmwiki.php/Series/StargateSG1">Stargate SG-1</a></em>: An episode in one of the later seasons featured a villain of the week named Khalek. He's not only revealed to be a Goa'uld-Human hybrid, but a clone of <a class="twikilink" href="/pmwiki/pmwiki.php/Main/OmnicidalManiac" title="/pmwiki/pmwiki.php/Main/OmnicidalManiac">Anubis</a>, the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BigBad" title="/pmwiki/pmwiki.php/Main/BigBad">Big Bad</a> of season 5 to 8 and the most evil Go'uld who ever lived. Anubis had built him as a backup plan with <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GeneticMemory" title="/pmwiki/pmwiki.php/Main/GeneticMemory">Genetic Memory</a> from his "father" in the event that he was taken out for good himself.
+</li><li> In the fourth season of <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/Sherlock" title="/pmwiki/pmwiki.php/Series/Sherlock">Sherlock</a></em>, Jim Moriarty, who apparently killed himself at the end of the second season, is hinted to be somehow still alive and plotting the events of the season. It is revealed in the final episode that he really did die, but pre-arranged with the new <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BigBad" title="/pmwiki/pmwiki.php/Main/BigBad">Big Bad</a> that the villain in question could use recordings of him to troll Sherlock.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/GoseiSentaiDairanger" title="/pmwiki/pmwiki.php/Series/GoseiSentaiDairanger">Gosei Sentai Dairanger</a></em>, the Gorma Tribe members that resurfaced from 6,000 years ago are actually clay doll copies created by the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BigBad" title="/pmwiki/pmwiki.php/Main/BigBad">Big Bad</a>, the originals having died 6,000 years ago. <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GoMadFromTheRevelation" title="/pmwiki/pmwiki.php/Main/GoMadFromTheRevelation">Much to the Big Bad's shock</a>, he discovers that he's also a clay doll copy that the original Big Bad made in his image.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder5');">    Video Games </div><div class="folder" id="folder5" isfolder="true" style="display:block;">
+<ul><li> <a class="twikilink" href="/pmwiki/pmwiki.php/Creator/SquareEnix" title="/pmwiki/pmwiki.php/Creator/SquareEnix">Square Enix</a> had Sephiroth do this in <em><a class="twikilink" href="/pmwiki/pmwiki.php/Anime/FinalFantasyVIIAdventChildren" title="/pmwiki/pmwiki.php/Anime/FinalFantasyVIIAdventChildren">Final Fantasy VII: Advent Children</a></em> by focusing on his hatred of Cloud to keep from being assimilated by the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/LifeStream" title="/pmwiki/pmwiki.php/Main/LifeStream">Life Stream</a>; while using Kadaj and his gang to find what was left of Jenova to bring about Hojo's reunion theory. Thereby allowing him to be reborn.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/GrimFandango" title="/pmwiki/pmwiki.php/VideoGame/GrimFandango">Grim Fandango</a></em>, the hero's rival Domino has been dead for over a year, but the good guys still have to contend with a deadly booby-trap he's laid for them when they finally get back to Rubacava to find the hiding place of their car. Dom's laid out an elaborate set of dominos all around the car that will trigger a bomb if they disturb it.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MassEffect1" title="/pmwiki/pmwiki.php/VideoGame/MassEffect1">Mass Effect</a></em> had a variant, where Saren was reanimated into a husk.
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MassEffect2" title="/pmwiki/pmwiki.php/VideoGame/MassEffect2">Mass Effect 2</a></em> had the Derelict Reaper continuing to influence the crew that investigated its insides after it was disabled. It was disabled millions of years ago. Very, <em>very</em> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/CosmicHorrorStory" title="/pmwiki/pmwiki.php/Main/CosmicHorrorStory">Lovecraftian</a>.
+</li></ul></li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MetalGearSolid2" title="/pmwiki/pmwiki.php/VideoGame/MetalGearSolid2">Metal Gear Solid 2</a></em>, Liquid's hand possesses Ocelot.
+</li><li> The final puzzle in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/StillLife2" title="/pmwiki/pmwiki.php/VideoGame/StillLife2">Still Life 2</a></em> revolves around this. After finally identifying and killing the villain, our heroine rushes to save the hostage, only to find her strapped to the bomb, and a villains' final recording playing on the screen - he has planned for his death and left us with a final <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SadisticChoice" title="/pmwiki/pmwiki.php/Main/SadisticChoice">Sadistic Choice</a> - try to save the hostage and risk detonating the bomb that kills you both; or save yourself and leave the hostage to die - which will get transmitted all over the Internet.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder6');">    Western Animation </div><div class="folder" id="folder6" isfolder="true" style="display:block;">
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/ReBoot" title="/pmwiki/pmwiki.php/WesternAnimation/ReBoot">ReBoot</a></em> had this. When Bob enters the core to save data and force a system restart,Bob encountered a program left behind by Megabyte, who at this point was launched into <a class="twikilink" href="/pmwiki/pmwiki.php/Main/HyperspaceIsAScaryPlace" title="/pmwiki/pmwiki.php/Main/HyperspaceIsAScaryPlace">the Web</a>. It's a simulation of Megabyte, which can self-replicate. All it does it taunt Bob.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/TeenTitans" title="/pmwiki/pmwiki.php/WesternAnimation/TeenTitans">Teen Titans</a></em>:
+<ul><li> Slade makes a very effective one in season three. He was thrown into a pool of lava in the second season, but the dust in his mask left a chemical substance that made Robin see, hear and feel Slade, even when he wasn't there. And as a final touch of paranoia, it turns out that <em>someone</em> deliberately triggered this effect from outside the tower...
+</li><li> Slade is brought <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BackFromTheDead" title="/pmwiki/pmwiki.php/Main/BackFromTheDead">Back from the Dead</a> by Trigon in the following season. Whether he triggered the above plan himself is never stated.
+</li></ul></li><li> A variation of this occurs in <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/TeenageMutantNinjaTurtles2003" title="/pmwiki/pmwiki.php/WesternAnimation/TeenageMutantNinjaTurtles2003">Teenage Mutant Ninja Turtles (2003)</a></em>, where it is eventually revealed that the Shredder keeps an online backup of his mind, in case his body is ever destroyed. After he was written off the series—exiled, but not killed—the writers had that backup infect, rewrite, reformat, and eventually take over the mind of the cybernetic villainess Viral from the Fast Forward season, therefore allowing a new version of the Shredder (fittingly titled "Cyber Shredder") to enter the fold in Back to the Sewers.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/BatmanBeyondReturnOfTheJoker" title="/pmwiki/pmwiki.php/WesternAnimation/BatmanBeyondReturnOfTheJoker">Batman Beyond: Return of the Joker</a></em>, it appears that the years-dead Joker is mysteriously alive again. It is eventually revealed that while the original Joker really is dead (the circumstances of his death being revealed in the show), he unfortunately had one last trick up his sleeve. Specifically, the new Joker is actually the former Robin Tim Drake, on the verge of having his original personality permanently overwritten by a microchip implanted in his brain containing an upload of the original Joker's consciousness and DNA.
+</li></ul></div>
+<hr/>
+</div>
+<div class="square_ad footer-article-ad main_2" data-isolated="0"></div>
+<div class="section-links" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<div class="titles">
+<div><h3 class="text-center text-uppercase">Previous</h3></div>
+<div><h3 class="text-center text-uppercase">Index</h3></div>
+<div><h3 class="text-center text-uppercase">Next</h3></div>
+</div>
+<div class="links">
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/PoorlyTimedConfession">Poorly Timed Confession</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/PlotTwist">Plot Twist</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/ProphecyTwist">Prophecy Twist</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/PosthumousNarration">Posthumous Narration</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/DeathTropes">Death Tropes</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/PostMortemConversion">Post-Mortem Conversion</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/OverprotectiveDad">Overprotective Dad</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/QuoteSource/LiveActionTV">QuoteSource/Live-Action TV</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/StewedAlive">Stewed Alive</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="outer_ads_by_salon_wrapper" id="exco_player_insert_div">
+</div>
+</article>
+<div id="main-content-sidebar"><div class="sidebar-item display-options">
+<ul class="sidebar display-toggles">
+<li>Show Spoilers <div class="display-toggle show-spoilers" id="sidebar-toggle-showspoilers"></div></li>
+<li>Night Vision <div class="display-toggle night-vision" id="sidebar-toggle-nightvision"></div></li>
+<li>Sticky Header <div class="display-toggle sticky-header" id="sidebar-toggle-stickyheader"></div></li>
+<li>Wide Load <div class="display-toggle wide-load" id="sidebar-toggle-wideload"></div></li>
+</ul>
+<script>updateDesktopPrefs();</script>
+</div>
+<div class="sidebar-item ad sb-ad-unit">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_2"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_2'); });</script> </div>
+</div></div>
+<div class="sidebar-item quick-links" itemtype="http://schema.org/SiteNavigationElement">
+<p class="sidebar-item-title" data-title="Important Links">Important Links</p>
+<div class="padded">
+<a href="/pmwiki/query.php?type=att">Ask The Tropers</a>
+<a href="/pmwiki/query.php?type=tf">Trope Finder</a>
+<a href="/pmwiki/query.php?type=ykts">You Know That Show...</a>
+<a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a>
+<a href="/pmwiki/review_activity.php">Reviews</a>
+<a data-modal-target="login" href="/pmwiki/lbs.php">Live Blogs</a>
+<a href="/pmwiki/ad-free-subscribe.php">Go Ad Free!</a> </div>
+</div>
+<div class="sidebar-item sb-ad-unit">
+<div class="sidebar-section">
+<div class="square_ad ad-size-300x600 ad-section text-center">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_3"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_3'); });</script> </div>
+</div> </div>
+</div>
+</div>
+<div class="sidebar-item">
+<p class="sidebar-item-title" data-title="Crucial Browsing">Crucial Browsing</p>
+<ul class="padded font-s" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><a data-click-toggle="active" href="javascript:void(0);">Genre</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/ActionAdventureTropes" title="Main/ActionAdventureTropes">Action Adventure</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ComedyTropes" title="Main/ComedyTropes">Comedy</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CommercialsTropes" title="Main/CommercialsTropes">Commercials</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CrimeAndPunishmentTropes" title="Main/CrimeAndPunishmentTropes">Crime &amp; Punishment</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DramaTropes" title="Main/DramaTropes">Drama</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/HorrorTropes" title="Main/HorrorTropes">Horror</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LoveTropes" title="Main/LoveTropes">Love</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NewsTropes" title="Main/NewsTropes">News</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ProfessionalWrestling" title="Main/ProfessionalWrestling">Professional Wrestling</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SpeculativeFictionTropes" title="Main/SpeculativeFictionTropes">Speculative Fiction</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SportsStoryTropes" title="Main/SportsStoryTropes">Sports Story</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/WarTropes" title="Main/WarTropes">War</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Media</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/Media" title="Main/Media">All Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/AnimationTropes" title="Main/AnimationTropes">Animation (Western)</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Anime" title="Main/Anime">Anime</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ComicBookTropes" title="Main/ComicBookTropes">Comic Book</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FanFic" title="FanFic/FanFics">Fan Fics</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Film" title="Main/Film">Film</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/GameTropes" title="Main/GameTropes">Game</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Literature" title="Main/Literature">Literature</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MusicAndSoundEffects" title="Main/MusicAndSoundEffects">Music And Sound Effects</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NewMediaTropes" title="Main/NewMediaTropes">New Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/PrintMediaTropes" title="Main/PrintMediaTropes">Print Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Radio" title="Main/Radio">Radio</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SequentialArt" title="Main/SequentialArt">Sequential Art</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TabletopGames" title="Main/TabletopGames">Tabletop Games</a></li>
+<li><a href="/pmwiki/pmwiki.php/UsefulNotes/Television" title="Main/Television">Television</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Theater" title="Main/Theater">Theater</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/VideogameTropes" title="Main/VideogameTropes">Videogame</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Webcomics" title="Main/Webcomics">Webcomics</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Narrative</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/UniversalTropes" title="Main/UniversalTropes">Universal</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/AppliedPhlebotinum" title="Main/AppliedPhlebotinum">Applied Phlebotinum</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CharacterizationTropes" title="Main/CharacterizationTropes">Characterization</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Characters" title="Main/Characters">Characters</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CharactersAsDevice" title="Main/CharactersAsDevice">Characters As Device</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Dialogue" title="Main/Dialogue">Dialogue</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Motifs" title="Main/Motifs">Motifs</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NarrativeDevices" title="Main/NarrativeDevices">Narrative Devices</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Paratext" title="Main/Paratext">Paratext</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Plots" title="Main/Plots">Plots</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Settings" title="Main/Settings">Settings</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Spectacle" title="Main/Spectacle">Spectacle</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Other Categories</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/BritishTellyTropes" title="Main/BritishTellyTropes">British Telly</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TheContributors" title="Main/TheContributors">The Contributors</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CreatorSpeak" title="Main/CreatorSpeak">Creator Speak</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Creators" title="Main/Creators">Creators</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DerivativeWorks" title="Main/DerivativeWorks">Derivative Works</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LanguageTropes" title="Main/LanguageTropes">Language</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LawsAndFormulas" title="Main/LawsAndFormulas">Laws And Formulas</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ShowBusiness" title="Main/ShowBusiness">Show Business</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SplitPersonalityTropes" title="Main/SplitPersonalityTropes">Split Personality</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/StockRoom" title="Main/StockRoom">Stock Room</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TropeTropes" title="Main/TropeTropes">Trope</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Tropes" title="Main/Tropes">Tropes</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TruthAndLies" title="Main/TruthAndLies">Truth And Lies</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TruthInTelevision" title="Main/TruthInTelevision">Truth In Television</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Topical Tropes</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/BetrayalTropes" title="Main/BetrayalTropes">Betrayal</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CensorshipTropes" title="Main/CensorshipTropes">Censorship</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CombatTropes" title="Main/CombatTropes">Combat</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DeathTropes" title="Main/DeathTropes">Death</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FamilyTropes" title="Main/FamilyTropes">Family</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FateAndProphecyTropes" title="Main/FateAndProphecyTropes">Fate And Prophecy</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FoodTropes" title="Main/FoodTropes">Food</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/HolidayTropes" title="Main/HolidayTropes">Holiday</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MemoryTropes" title="Main/MemoryTropes">Memory</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MoneyTropes" title="Main/MoneyTropes">Money</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MoralityTropes" title="Main/MoralityTropes">Morality</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/PoliticsTropes" title="Main/PoliticsTropes">Politics</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ReligionTropes" title="Main/ReligionTropes">Religion</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SchoolTropes" title="Main/SchoolTropes">School</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="sidebar-item showcase">
+<p class="sidebar-item-title" data-title="Community Showcase">Community Showcase <a class="bubble float-right hover-blue" href="/pmwiki/showcase.php">More</a></p>
+<p class="community-showcase">
+<a href="https://sharetv.com/shows/echo_chamber" onclick="trackOutboundLink('https://sharetv.com/shows/echo_chamber');" target="_blank">
+<img alt="" class="lazy-image" data-src="/images/communityShowcase-echochamber.jpg"/></a>
+<a href="/pmwiki/pmwiki.php/Webcomic/TwistedTropes">
+<img alt="" class="lazy-image" data-src="/img/howlandsc-side.jpg"/></a>
+</p>
+</div>
+<div class="sidebar-item sb-ad-unit" id="stick-cont">
+<div class="sidebar-section" id="stick-bar">
+<div class="square_ad ad-size-300x600 ad-section text-center">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_4"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_4'); });</script> </div>
+</div> </div>
+</div>
+</div>
+</div>
+</div>
+<div class="action-bar tablet-off" id="action-bar-bottom">
+<a class="scroll-to-top dead-button" href="#top-of-page" onclick="$('html, body').animate({scrollTop : 0},500);">Top</a>
+</div>
+</div>
+<div class="proper-ad-unit ad-sticky">
+<div id="proper-ad-tvtropes_sticky_ad"> <script>propertag.cmd.push(function() { proper_display('tvtropes_sticky_ad'); });</script> </div>
+</div>
+<footer id="main-footer">
+<div id="main-footer-inner">
+<div class="footer-left">
+<a class="img-link" href="/"><img alt="TV Tropes" class="lazy-image" data-src="/img/tvtropes-footer-logo.png" title="TV Tropes"/></a>
+<form action="index.html" class="navbar-form newsletter-signup validate modal-replies" data-ajax-get="/ajax/subscribe_email.php" id="cse-search-box-mobile" name="" role="">
+<button class="btn-submit newsletter-signup-submit-button" id="subscribe-btn" type="submit"><i class="fa fa-paper-plane"></i></button>
+<input class="form-control" id="subscription-email" name="q" placeholder="Subscribe" size="31" type="text" validate-type="email" value=""/>
+</form>
+<ul class="social-buttons">
+<li><a class="btn fb" href="https://www.facebook.com/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-facebook']);" target="_blank"><i class="fa fa-facebook"></i></a></li>
+<li><a class="btn tw" href="https://www.twitter.com/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-twitter']);" target="_blank"><i class="fa fa-twitter"></i></a> </li>
+<li><a class="btn rd" href="https://www.reddit.com/r/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-reddit']);" target="_blank"><i class="fa fa-reddit-alien"></i></a></li>
+</ul>
+</div>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">TVTropes</h4></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Administrivia">About TVTropes</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TheGoalsOfTVTropes">TVTropes Goals</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TheTropingCode">Troping Code</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TVTropesCustoms">TVTropes Customs</a></li>
+<li><a href="/pmwiki/pmwiki.php/JustForFun/TropesOfLegend">Tropes of Legend</a></li>
+<li><a href="/pmwiki/ad-free-subscribe.php">Go Ad-Free</a></li>
+</ul>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">Community</h4></li>
+<li><a href="/pmwiki/query.php?type=att">Ask The Tropers</a></li>
+<li><a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a></li>
+<li><a href="/pmwiki/query.php?type=tf">Trope Finder</a></li>
+<li><a href="/pmwiki/query.php?type=ykts">You Know That Show</a></li>
+<li><a data-modal-target="login" href="/pmwiki/lbs.php">Live Blogs</a></li>
+<li><a href="/pmwiki/review_activity.php">Reviews</a></li>
+<li><a href="/pmwiki/topics.php">Forum</a></li>
+</ul>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">Tropes HQ</h4></li>
+<li><a href="/pmwiki/about.php">About Us</a></li>
+<li><a href="/pmwiki/contact.php">Contact Us</a></li>
+<li><a href="/pmwiki/dmca.php">DMCA Notice</a></li>
+<li><a href="/pmwiki/privacypolicy.php">Privacy Policy</a></li>
+</ul>
+</div>
+<div class="text-center gutter-top gutter-bottom tablet-on" id="desktop-on-mobile-toggle">
+<a href="/pmwiki/switchDeviceCss.php?mobileVersion=1" rel="nofollow">Switch to <span class="txt-desktop">Desktop</span><span class="txt-mobile">Mobile</span> Version</a>
+</div>
+<div class="legal">
+<p>TVTropes is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License. <br/>Permissions beyond the scope of this license may be available from <a href="mailto:thestaff@tvtropes.org" rel="cc:morePermissions" xmlns:cc="http://creativecommons.org/ns#"> thestaff@tvtropes.org</a>.</p>
+<br/>
+<div class="privacy_wrapper">
+</div>
+</div>
+</footer>
+<style>
+      div.fc-ccpa-root {
+        position: absolute !important;
+        bottom: 93px !important;
+        margin: auto !important;
+        width: 100% !important;
+        z-index: 9999 !important;
+      }
+      .fc-ccpa-root .fc-dns-dialog .fc-dns-link p{
+        outline: none !important;
+        text-decoration: underline !important;
+        font-size: .7em !important;
+        font-family: sans-serif !important;
+      }
+      .fc-ccpa-root .fc-dns-dialog .fc-dns-link .fc-button-background {
+        background: none !important;
+      }
+    </style>
+<div class="full-screen" id="_pm_videoViewer">
+<a class="close" href="#close" id="_pm_videoViewer-close"></a>
+<div class="_pmvv-body">
+<div class="_pmvv-vidbox">
+<video class="video-js vjs-default-skin vjs-16-9" data-video-id="" id="overlay-video-player-box">
+</video>
+<div class="_pmvv-vidbox-desc">
+<h1 id="overlay-title"></h1>
+<p class="_pmvv-vidbox-descTxt" id="overlay-descrip">
+</p>
+<div class="rating-row" data-video-id="">
+<input name="is_logged_in" type="hidden" value="0"/>
+<p>How well does it match the trope?</p>
+<div id="star-rating-group">
+<div class="trope-rate">
+<input id="lamp5" name="rate" type="radio" value="5"/>
+<label for="lamp5" title="Absolutely"></label>
+<input id="lamp4" name="rate" type="radio" value="4"/>
+<label for="lamp4" title="Yes"></label>
+<input id="lamp3" name="rate" type="radio" value="3"/>
+<label for="lamp3" title="Kind of"></label>
+<input id="lamp2" name="rate" type="radio" value="2"/>
+<label for="lamp2" title="Not really"></label>
+<input id="lamp1" name="rate" type="radio" value="1"/>
+<label for="lamp1" title="No"></label>
+</div>
+<div id="star-rating-total">
+</div>
+</div>
+</div>
+<div class="example-media-row">
+<div class="example-overlay">
+<p>Example of:</p>
+<div id="overlay-trope"> / </div>
+</div>
+<div class="media-sources-overlay example-overlay">
+<p>Media sources:</p>
+<div id="overlay-media"> / </div>
+</div>
+</div>
+<p class="_pmvv-vidbox-stats text-right font-s" style="padding-top:8px; border-top: solid 1px rgba(255,255,255,0.2)">
+<a class="float-right" data-modal-target="login" href="#video-feedback">Report</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+        window.special_ops =  {
+            member : 'no',
+            isolated : 0,
+            tags : ['unknown']
+        };
+    </script>
+<script type="text/javascript">
+
+        var cleanCreativeEnabled = "";
+        var donation = "";
+        var live_ads = "1";
+        var img_domain = "https://static.tvtropes.org";
+        var snoozed = cookies.read('snoozedabm');
+        var snoozable = "";
+
+        if (adsRemovedWith) {
+            live_ads = 0;
+        }
+
+        var elem = document.createElement('script');
+        elem.async = true;
+
+        elem.src = '/design/assets/bundle.js?rev=c58d8df02f09262390bbd03db7921fc35c6af306';
+
+        elem.onload = function() {
+                                 }
+        document.getElementsByTagName('head')[0].appendChild(elem);
+
+    </script>
+<script type="text/javascript">
+      function send_analytics_event(user_type, donation){
+          // if(user_type == 'uncached' || user_type == 'cached'){
+          //   ga('send', 'event', 'caching', 'load', user_type, {'nonInteraction': 1});
+          //   return;
+          // }
+          var event_name = user_type;
+
+          if(donation == 'true'){
+              event_name += "_donation"
+          }else if(typeof(valid_user) == 'undefined'){
+              event_name += "_blocked"
+          }else if(valid_user == true){
+              event_name += "_unblocked";
+          }else{
+              event_name = "_unknown"
+          }
+          ga('send', 'event', 'ads', 'load', event_name, {'nonInteraction': 1});
+      }
+
+    
+    send_analytics_event("guest", "false");
+      </script>
+</body>
+</html>

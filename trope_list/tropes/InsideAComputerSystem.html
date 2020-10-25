@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Inside a Computer System - TV Tropes</title>
+<meta content="The Inside a Computer System trope as used in popular culture. This is a relatively new branch of Science Fiction that deals with the aspects of people being …" name="description"/>
+<link href="https://tvtropes.org/pmwiki/pmwiki.php/Main/InsideAComputerSystem" rel="canonical"/>
+<link href="/img/icons/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="@tvtropes" name="twitter:site"/>
+<meta content="@tvtropes" name="twitter:owner"/>
+<meta content="Inside a Computer System - TV Tropes" name="twitter:title"/>
+<meta content="The Inside a Computer System trope as used in popular culture. This is a relatively new branch of Science Fiction that deals with the aspects of people being …" name="twitter:description"/>
+<meta content="https://static.tvtropes.org/logo_blue_small.png" name="twitter:image:src"/>
+<meta content="TV Tropes" property="og:site_name"/>
+<meta content="en_US" property="og:locale"/>
+<meta content="https://www.facebook.com/tvtropes" property="article:publisher"/>
+<meta content="Inside a Computer System - TV Tropes" property="og:title"/>
+<meta content="website" property="og:type"/>
+<meta content="https://tvtropes.org/pmwiki/pmwiki.php/Main/InsideAComputerSystem" property="og:url"/>
+<meta content="https://static.tvtropes.org/logo_blue_small.png" property="og:image"/>
+<meta content="This is a relatively new branch of Science Fiction that deals with the aspects of people being either partially or completely attached to, and part of, a computer system. Virtual Reality taken to the next step, or, perhaps, Virtual Reality as …" property="og:description"/>
+<link href="/img/icons/apple-icon-57x57.png" rel="apple-touch-icon" sizes="57x57" type="image/png"/>
+<link href="/img/icons/apple-icon-60x60.png" rel="apple-touch-icon" sizes="60x60" type="image/png"/>
+<link href="/img/icons/apple-icon-72x72.png" rel="apple-touch-icon" sizes="72x72" type="image/png"/>
+<link href="/img/icons/apple-icon-76x76.png" rel="apple-touch-icon" sizes="76x76" type="image/png"/>
+<link href="/img/icons/apple-icon-114x114.png" rel="apple-touch-icon" sizes="114x114" type="image/png"/>
+<link href="/img/icons/apple-icon-120x120.png" rel="apple-touch-icon" sizes="120x120" type="image/png"/>
+<link href="/img/icons/apple-icon-144x144.png" rel="apple-touch-icon" sizes="144x144" type="image/png"/>
+<link href="/img/icons/apple-icon-152x152.png" rel="apple-touch-icon" sizes="152x152" type="image/png"/>
+<link href="/img/icons/apple-icon-180x180.png" rel="apple-touch-icon" sizes="180x180" type="image/png"/>
+<link href="/img/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/img/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/img/icons/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png"/>
+<link href="/img/icons/favicon-192x192.png" rel="icon" sizes="192x192" type="image/png"/>
+<meta content="width=device-width, initial-scale=1" id="viewport" name="viewport"/>
+<script>
+                var propertag = {};
+                propertag.cmd = [];
+            </script>
+<link href="/design/assets/bundle.css?rev=c58d8df02f09262390bbd03db7921fc35c6af306" rel="stylesheet"/>
+<script>
+                function object(objectId) {
+                    if (document.getElementById && document.getElementById(objectId)) {
+                        return document.getElementById(objectId);
+                    } else if (document.all && document.all(objectId)) {
+                        return document.all(objectId);
+                    } else if (document.layers && document.layers[objectId]) {
+                        return document.layers[objectId];
+                    } else {
+                        return false;
+                    }
+                }
+
+                // JAVASCRIPT COOKIES CODE: for getting and setting user viewing preferences
+                var cookies = {
+                    create: function (name, value, days2expire, path) {
+                        var date = new Date();
+                        date.setTime(date.getTime() + (days2expire * 24 * 60 * 60 * 1000));
+                        var expires = date.toUTCString();
+                        document.cookie = name + '=' + value + ';' + 'expires=' + expires + ';' + 'path=' + path + ';';
+                    },
+										createWithExpire: function(name, value, expires, path) {
+												document.cookie = name + '=' + value + ';' + 'expires=' + expires + ';' + 'path=' + path + ';';
+										},
+                    read: function (name) {
+                        var cookie_value = "",
+                            current_cookie = "",
+                            name_expr = name + "=",
+                            all_cookies = document.cookie.split(';'),
+                            n = all_cookies.length;
+
+                        for (var i = 0; i < n; i++) {
+                            current_cookie = all_cookies[i].trim();
+                            if (current_cookie.indexOf(name_expr) === 0) {
+                                cookie_value = current_cookie.substring(name_expr.length, current_cookie.length);
+                                break;
+                            }
+                        }
+                        return cookie_value;
+                    },
+                    update: function (name, val) {
+                        this.create(name, val, 300, "/");
+                    },
+                    remove: function (name) {
+                        document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
+                    }
+                };
+
+                function updateUserPrefs() {
+                    //GENERAL: detect and set browser, if not cookied (will be treated like a user-preference and added to the #user-pref element)
+                    if( !cookies.read('user-browser') ){
+                        var broswer = '';
+
+                        if(navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPod/i) ){
+                            browser = 'iOS';
+                        } else if (/Opera[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'opera';
+                        } else if (/MSIE (\d+\.\d+);/.test(navigator.userAgent)) {
+                            browser = 'MSIE';
+                        } else if (/Navigator[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'netscape';
+                        } else if (/Chrome[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'chrome';
+                        } else if (/Safari[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'safari';
+                            /Version[\/\s](\d+\.\d+)/.test(navigator.userAgent);
+                            browserVersion = new Number(RegExp.$1);
+                        } else if (/Firefox[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'firefox';
+                        } else {
+                            browser = 'internet_explorer';
+                        }
+                        cookies.create('user-browser',browser,1,'/');
+                        document.getElementById('user-prefs').classList.add('browser-' + browser);
+                    } else {
+                        document.getElementById('user-prefs').classList.add('browser-' + cookies.read('user-browser'));
+                    }
+
+                    //update user preference settings
+                    if (cookies.read('wide-load') !== '') document.getElementById('user-prefs').classList.add('wide-load');
+                    if (cookies.read('night-vision') !== '') document.getElementById('user-prefs').classList.add('night-vision');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('user-prefs').classList.add('sticky-header');
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('user-prefs').classList.add('show-spoilers');
+                    if (cookies.read('folders-open') !== '') document.getElementById('user-prefs').classList.add('folders-open');
+                    if (cookies.read('lefthand-sidebar') !== '') document.getElementById('user-prefs').classList.add('lefthand-sidebar');
+                    if (cookies.read('highlight-links') !== '') document.getElementById('user-prefs').classList.add('highlight-links');
+                    if (cookies.read('forum-gingerbread') !== '') document.getElementById('user-prefs').classList.add('forum-gingerbread');
+                    if (cookies.read('shared-avatars') !== '') document.getElementById('user-prefs').classList.add('shared-avatars');
+                    if (cookies.read('new-search') !== '') document.getElementById('user-prefs').classList.add('new-search');
+                    if (cookies.read('stop-auto-play-video') !== '') document.getElementById('user-prefs').classList.add('stop-auto-play-video');
+
+                    //desktop view on mobile
+                    if (cookies.read('desktop-on-mobile') !== ''){
+                        document.getElementById('user-prefs').classList.add('desktop-on-mobile');
+
+                        var viewport = document.querySelector("meta[name=viewport]");
+                        viewport.setAttribute('content', 'width=1000');
+                    }
+
+                }
+
+                function updateDesktopPrefs() {
+                    if (cookies.read('wide-load') !== '') document.getElementById('sidebar-toggle-wideload').classList.add('active');
+                    if (cookies.read('night-vision') !== '') document.getElementById('sidebar-toggle-nightvision').classList.add('active');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('sidebar-toggle-stickyheader').classList.add('active');
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('sidebar-toggle-showspoilers').classList.add('active');
+
+                }
+
+                function updateMobilePrefs() {
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('mobile-toggle-showspoilers').classList.add('active');
+                    if (cookies.read('night-vision') !== '') document.getElementById('mobile-toggle-nightvision').classList.add('active');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('mobile-toggle-stickyheader').classList.add('active');
+                    if (cookies.read('highlight-links') !== '') document.getElementById('mobile-toggle-highlightlinks').classList.add('active');
+
+                }
+
+
+                if (document.cookie.indexOf("scroll0=") < 0) {
+                    // do nothing
+                } else {
+                    console.log('ads removed by scroll.com');
+                    var adsRemovedWith = 'scroll';
+                    var style = document.createElement('style');
+                    style.innerHTML = '#header-ad, .proper-ad-unit, .square_ad, .sb-ad-unit { display: none !important; } ';
+                    document.head.appendChild(style);
+                }
+            </script>
+<script type="text/javascript">
+
+                var tvtropes_config = {
+                    astri_stream_enabled : "",
+                    is_logged_in         : "",
+                    handle               : "",
+                    get_astri_stream     : "",
+										revnum               : "c58d8df02f09262390bbd03db7921fc35c6af306",
+										img_domain           : "https://static.tvtropes.org",
+										adblock              : "1",
+										adblock_url          : "propermessage.io",
+										pause_editing        : "0",
+										pause_editing_msg    : "",
+										pause_site_changes   : ""
+                };
+            </script>
+<script type="text/javascript">
+						  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+						  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+						  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+						  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+						  ga('create', 'UA-3821842-1', 'auto');
+						  ga('send', 'pageview');
+
+						</script>
+</head>
+<body class="">
+<i id="user-prefs"></i>
+<script>updateUserPrefs();</script>
+<div id="fb-root"></div>
+<div id="modal-box"></div>
+<header class="headroom-element" id="main-header-bar">
+<div id="main-header-bar-inner">
+<span class="header-spacer" id="header-spacer-left"></span>
+<a class="mobile-menu-toggle-button tablet-on" href="#mobile-menu" id="main-mobile-toggle"><span></span><span></span><span></span></a>
+<a class="no-dev" href="/" id="main-header-logoButton"></a>
+<span class="header-spacer" id="header-spacer-right"></span>
+<nav class="tablet-off" id="main-header-nav">
+<a href="/pmwiki/pmwiki.php/Main/Tropes">Tropes</a>
+<a href="/pmwiki/pmwiki.php/Main/Media">Media</a>
+<a class="nav-browse" href="/pmwiki/browse.php">Browse</a>
+<a href="/pmwiki/index_report.php">Indexes</a>
+<a href="/pmwiki/topics.php">Forums</a>
+<a class="nav-browse" href="/pmwiki/recent_videos.php">Videos</a>
+</nav>
+<div id="main-header-bar-right">
+<div class="font-xs mobile-off" id="signup-login-box">
+<a class="hover-underline bold" data-modal-target="signup" href="/pmwiki/login.php">Join</a>
+<a class="hover-underline bold" data-modal-target="login" href="/pmwiki/login.php">Login</a>
+</div>
+<div class="mobile-on inline" id="signup-login-mobileToggle">
+<a data-modal-target="login" href="/pmwiki/login.php"><i class="fa fa-user"></i></a>
+</div>
+<div id="search-box">
+<form action="/pmwiki/search_result.php" class="search">
+<input class="search-box" name="q" placeholder="Search" required="" type="text" value=""/>
+<input class="submit-button" type="submit" value=""/>
+<input name="search_type" type="hidden" value="article"/>
+<input name="page_type" type="hidden" value="all"/>
+<input name="cx" type="hidden" value="partner-pub-6610802604051523:amzitfn8e7v"/>
+<input name="cof" type="hidden" value="FORID:10"/>
+<input name="ie" type="hidden" value="ISO-8859-1"/>
+<input name="siteurl" type="hidden" value=""/>
+<input name="ref" type="hidden" value=""/>
+<input name="ss" type="hidden" value=""/>
+</form>
+<a class="mobile-on mobile-search-toggle close-x" href="#close-search"><i class="fa fa-close"></i></a>
+</div>
+<div id="random-box">
+<a class="button-random-trope" href="/pmwiki/pmwiki.php/Main/GiantHandsOfDoom" onclick="ga('send', 'event', 'button', 'click', 'random trope');" rel="nofollow"></a>
+<a class="button-random-media" href="/pmwiki/pmwiki.php/Series/HeeHaw" onclick="ga('send', 'event', 'button', 'click', 'random media');" rel="nofollow"></a>
+</div>
+</div>
+</div>
+<div class="tablet-on" id="mobile-menu"><div class="mobile-menu-options">
+<div class="nav-wrapper">
+<a class="xl" href="/pmwiki/pmwiki.php/Main/Tropes">Tropes</a>
+<a class="xl" href="/pmwiki/pmwiki.php/Main/Media">Media</a>
+<a class="xl" href="/pmwiki/browse.php">Browse</a>
+<a class="xl" href="/pmwiki/index_report.php">Indexes</a>
+<a class="xl" href="/pmwiki/topics.php">Forums</a>
+<a class="xl" href="/pmwiki/recent_videos.php">Videos</a>
+<a href="/pmwiki/query.php?type=att">Ask The Tropers</a>
+<a href="/pmwiki/query.php?type=tf">Trope Finder</a>
+<a href="/pmwiki/query.php?type=ykts">You Know That Show...</a>
+<a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a>
+<a data-click-toggle="active" href="#tools">Tools <i class="fa fa-chevron-down"></i></a>
+<div class="tools-dropdown mobile-dropdown-linkList">
+<a href="/pmwiki/cutlist.php">Cut List</a>
+<a href="/pmwiki/changes.php">New Edits</a>
+<a href="/pmwiki/recent_edit_reasons.php">Edit Reasons</a>
+<a href="/pmwiki/launches.php">Launches</a>
+<a href="/pmwiki/img_list.php">Images List</a>
+<a href="/pmwiki/crown_activity.php">Crowner Activity</a>
+<a href="/pmwiki/no_types.php">Un-typed Pages</a>
+<a href="/pmwiki/page_type_audit.php">Recent Page Type Changes</a>
+</div>
+<a data-click-toggle="active" href="#hq">Tropes HQ <i class="fa fa-chevron-down"></i></a>
+<div class="tools-dropdown mobile-dropdown-linkList">
+<a href="/pmwiki/about.php">About Us</a>
+<a href="/pmwiki/contact.php">Contact Us</a>
+<a href="mailto:advertising@proper.io">Advertise</a>
+<a href="/pmwiki/dmca.php">DMCA Notice</a>
+<a href="/pmwiki/privacypolicy.php">Privacy Policy</a>
+</div>
+<a href="/pmwiki/ad-free-subscribe.php">Go Ad-Free</a>
+<div class="toggle-switches">
+<ul class="mobile-menu display-toggles">
+<li>Show Spoilers <div class="display-toggle show-spoilers" id="mobile-toggle-showspoilers"></div></li>
+<li>Night Vision <div class="display-toggle night-vision" id="mobile-toggle-nightvision"></div></li>
+<li>Sticky Header <div class="display-toggle sticky-header" id="mobile-toggle-stickyheader"></div></li>
+<li>Highlight Links <div class="display-toggle highlight-links" id="mobile-toggle-highlightlinks"></div></li>
+</ul>
+<script>updateMobilePrefs();</script>
+</div>
+</div>
+</div>
+</div>
+</header>
+<div class="mobile-on" id="homepage-introBox-mobile">
+<a href="/"><img class="logo-small" src="/images/logo-white-big.png"/></a>
+<form action="/pmwiki/search_result.php" class="search" style="margin:10px -5px -6px -5px;">
+<input class="search-box" name="q" placeholder="Search" required="" type="text" value=""/>
+<input class="submit-button" type="submit" value=""/>
+<input name="search_type" type="hidden" value="article"/>
+<input name="page_type" type="hidden" value="all"/>
+<input name="cx" type="hidden" value="partner-pub-6610802604051523:amzitfn8e7v"/>
+<input name="cof" type="hidden" value="FORID:10"/>
+<input name="ie" type="hidden" value="ISO-8859-1"/>
+<input name="siteurl" type="hidden" value=""/>
+<input name="ref" type="hidden" value=""/>
+<input name="ss" type="hidden" value=""/>
+</form>
+</div>
+<div class="ad" id="header-ad-wrapper">
+<div id="header-ad">
+<div class="ad-size-970x90 atf_banner">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_1"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_1'); });</script> </div>
+</div> </div>
+</div>
+</div>
+<div id="main-container">
+<div class="action-bar mobile-off" id="action-bar-top">
+<div class="action-bar-right">
+<p>Follow TV Tropes</p>
+<a class="button-fb" href="https://www.facebook.com/TVTropes">
+<i class="fa fa-facebook"></i></a>
+<a class="button-tw" href="https://www.twitter.com/TVTropes">
+<i class="fa fa-twitter"></i></a>
+<a class="button-re" href="https://www.reddit.com/r/TVTropes">
+<i class="fa fa-reddit-alien"></i></a>
+</div>
+<nav class="actions-wrapper" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<ul class="page-actions" id="top_main_list">
+<li class="link-edit">
+<a class="article-edit-button" data-modal-target="login" href="/pmwiki/pmwiki.php/Main/InsideAComputerSystem?action=edit" rel="nofollow">
+<i class="fa fa-pencil"></i> Edit Page</a></li><li class="link-related"><a href="/pmwiki/relatedsearch.php?term=Main/InsideAComputerSystem">
+<i class="fa fa-share-alt"></i> Related</a></li><li class="link-history"><a href="/pmwiki/article_history.php?article=Main.InsideAComputerSystem">
+<i class="fa fa-history"></i> History</a></li><li class="link-discussion"><a href="/pmwiki/remarks.php?trope=Main.InsideAComputerSystem">
+<i class="fa fa-comment"></i> Discussion</a></li> </ul>
+<button class="nav__dropdown-toggle" id="top_more_button" onclick="toggle_more_menu('top');" type="button">More</button>
+<ul class="more_menu hidden_more_list" id="top_more_list">
+<li class="link-todo tuck-always more_list_item"><a data-modal-target="login" href="#todo"><i class="fa fa-check-circle"></i> To Do</a></li><li class="link-pageSource tuck-always more_list_item"><a data-modal-target="login" href="/pmwiki/pmwiki.php/Main/InsideAComputerSystem?action=source" rel="nofollow" target="_blank"><i class="fa fa-code"></i> Page Source</a></li> </ul>
+</nav>
+<div class="WikiWordModalStub"></div>
+<div class="ImgUploadModalStub" data-page-type="Article"></div>
+<div class="login-alert" style="display: none;">
+You need to <a href="/pmwiki/login.php" style="color:#21A0E8">login</a> to do this. <a href="/pmwiki/login.php?tab=register_account" style="color:#21A0E8">Get Known</a> if you don't have an account
+</div>
+</div>
+<div class="page-Article" id="main-content">
+<article class="with-sidebar" id="main-entry">
+<input id="groupname-hidden" type="hidden" value="Main"/>
+<input id="title-hidden" type="hidden" value="InsideAComputerSystem"/>
+<input id="article_id" type="hidden" value="10477"/>
+<input id="logged_in" type="hidden" value="false"/>
+<p class="hidden" id="current_url">http://tvtropes.org/pmwiki/pmwiki.php/Main/InsideAComputerSystem</p>
+<meta content="" itemprop="datePublished"/>
+<meta content="" itemprop="articleSection"/>
+<meta content="" itemprop="image"/>
+<a class="watch-button" data-modal-target="login" href="#watch">Follow<span>ing</span></a>
+<h1 class="entry-title" itemprop="headline">
+Inside a Computer System
+</h1>
+<script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+                "@type": "ListItem",
+                "position": 1,
+                "name": "tvtropes.org",
+                "item": "https://tvtropes.org"
+            },{
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Tropes",
+                "item": "https://tvtropes.org/pmwiki/pmwiki.php/Main/Tropes"
+            },{
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Inside a Computer System"            }]
+        }
+    </script>
+<a class="mobile-actionbar-toggle mobile-on" data-click-toggle="active" href="#mobile-actions-toggle" id="mobile-actionbar-toggle">
+<p class="tiny-off">Go To</p><span></span><span></span><span></span><i class="fa fa-pencil"></i></a>
+<nav class="mobile-actions-wrapper mobile-on" id="mobile-actions-bar"></nav>
+<div class="modal fade hidden-until-active" id="editLockModal">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button aria-label="Close" class="close" data-dismiss="modal" type="button"> <span aria-hidden="true">×</span></button>
+<h4 class="modal-title">Edit Locked</h4>
+</div>
+<div class="modal-body">
+<div class="row">
+<div class="body">
+<div class="danger troper_locked_message"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<nav class="body-options" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<ul class="subpage-links">
+<li>
+<a class="subpage-link curr-subpage" href="/pmwiki/pmwiki.php/Main/InsideAComputerSystem" title="The Main page">
+<span class="wrapper"><span class="spi main-page"></span>Main</span></a>
+</li>
+<li>
+<a class="subpage-link" href="/pmwiki/pmwiki.php/Quotes/InsideAComputerSystem" title="The Quotes page">
+<span class="wrapper"><span class="spi quotes"></span>Quotes</span></a>
+</li>
+<li class="create-subpage dropdown">
+<a aria-expanded="false" class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);" role="button">
+<span class="wrapper">Create New <i class="fa fa-plus-circle"></i></span>
+</a>
+<select onchange="this.options[this.selectedIndex].value &amp;&amp; (window.location = this.options[this.selectedIndex].value);">
+<option value="">- Create New -</option>
+<option value="/pmwiki/pmwiki.php/Analysis/InsideAComputerSystem?action=edit">Analysis</option>
+<option value="/pmwiki/pmwiki.php/Characters/InsideAComputerSystem?action=edit">Characters</option>
+<option value="/pmwiki/pmwiki.php/FanficRecs/InsideAComputerSystem?action=edit">FanficRecs</option>
+<option value="/pmwiki/pmwiki.php/FanWorks/InsideAComputerSystem?action=edit">FanWorks</option>
+<option value="/pmwiki/pmwiki.php/Fridge/InsideAComputerSystem?action=edit">Fridge</option>
+<option value="/pmwiki/pmwiki.php/Haiku/InsideAComputerSystem?action=edit">Haiku</option>
+<option value="/pmwiki/pmwiki.php/Headscratchers/InsideAComputerSystem?action=edit">Headscratchers</option>
+<option value="/pmwiki/pmwiki.php/ImageLinks/InsideAComputerSystem?action=edit">ImageLinks</option>
+<option value="/pmwiki/pmwiki.php/Laconic/InsideAComputerSystem?action=edit">Laconic</option>
+<option value="/pmwiki/pmwiki.php/PlayingWith/InsideAComputerSystem?action=edit">PlayingWith</option>
+<option value="/pmwiki/pmwiki.php/Recap/InsideAComputerSystem?action=edit">Recap</option>
+<option value="/pmwiki/pmwiki.php/ReferencedBy/InsideAComputerSystem?action=edit">ReferencedBy</option>
+<option value="/pmwiki/pmwiki.php/Synopsis/InsideAComputerSystem?action=edit">Synopsis</option>
+<option value="/pmwiki/pmwiki.php/Timeline/InsideAComputerSystem?action=edit">Timeline</option>
+<option value="/pmwiki/pmwiki.php/Trivia/InsideAComputerSystem?action=edit">Trivia</option>
+<option value="/pmwiki/pmwiki.php/WMG/InsideAComputerSystem?action=edit">WMG</option>
+<option value="/pmwiki/pmwiki.php/YMMV/InsideAComputerSystem?action=edit">YMMV</option>
+</select>
+</li>
+</ul>
+</nav>
+<div class="article-content retro-folders" id="main-article">
+<p>This is a relatively new branch of <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ScienceFiction" title="/pmwiki/pmwiki.php/Main/ScienceFiction">Science Fiction</a> that deals with the aspects of people being either partially or completely attached to, and part of, a computer system. Virtual Reality taken to the next step, or, perhaps, Virtual Reality <em>as</em> reality.
+</p><p>Being partially attached means that you "jack in" or otherwise connect, and you then experience whatever the computer system shows you, typically providing audio and visual quality at the maximum of human perception. It might go further and give you taste, touch, smell and more, or as <a class="twikilink" href="/pmwiki/pmwiki.php/Creator/DennisMiller" title="/pmwiki/pmwiki.php/Creator/DennisMiller">Dennis Miller</a> once put it, "You know, folks, the day an unemployed ironworker can lie in his BarcaLounger with a Foster's in one hand and a channel flicker in the other and fork supermodel Claudia Schiffer for $19.95, it's gonna make <a class="twikilink" href="/pmwiki/pmwiki.php/Main/CrackIsCheaper" title="/pmwiki/pmwiki.php/Main/CrackIsCheaper">crack</a> look like Sanka."<span class="notelabel" onclick="togglenote('note0e2ss');"><sup>note </sup></span><span class="inlinefolder" id="note0e2ss" isnote="true" onclick="togglenote('note0e2ss');" style="cursor:pointer;font-size:smaller;display:none;">Sanak is a brand of instant decaffeinated coffee.</span> (More than one sci-fi story has this happen: Humanity dies out because everyone is so busy <a class="urllink" href="http://dilbert.com/strips/comic/1994-10-14/">having hot virtual sex<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a> that there's no-one left to make any actual babies.)
+</p><div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_1"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_1'); })</script></div></div><p>If you're completely attached, either <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BrainUploading" title="/pmwiki/pmwiki.php/Main/BrainUploading">your consciousness has been transferred into the system</a> and you no longer have a "real body" outside of the system (or at least, your uploaded consciousness is no longer bound to it), or you are "stuck in a pod" and are connected to it. You may or may not know you're within a computer system.
+</p><p>Then there's sending the whole person in there, body and mind, which is <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BodyUploading" title="/pmwiki/pmwiki.php/Main/BodyUploading">Body Uploading</a>.
+</p><p>Although there is some overlap between the two concepts, this differs from <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Cyberspace" title="/pmwiki/pmwiki.php/Main/Cyberspace">Cyberspace</a> in that when you're Inside a Computer System, it may be completely self-contained and have no connection to the outside world. You might also be alone in there. <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Cyberspace" title="/pmwiki/pmwiki.php/Main/Cyberspace">Cyberspace</a> implies a connection between the computer system and the real world, and has multiple people connected to it. <em><a class="twikilink" href="/pmwiki/pmwiki.php/Film/TheMatrix" title="/pmwiki/pmwiki.php/Film/TheMatrix">The Matrix</a></em> fits both definitions.
+</p><div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_2"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_2'); })</script></div></div><p>To make things easier on the audience (not to mention, where relevant, special effects budgets) the computer environment is generally depicted as being very similar to the physical world; i.e., people still look like people, they still have a "body" and a "location" and they obey most of the laws of "physics", etc. These rules are almost always tampered with (e.g., defying gravity in The Matrix), but the fundamentals are mostly the same (e.g., Matrix-people have only 4 limbs).
+</p><p>The <em>real</em> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DeepImmersionGaming" title="/pmwiki/pmwiki.php/Main/DeepImmersionGaming">Deep-Immersion Gaming</a>. If the user thinks it's real, it becomes a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/LotusEaterMachine" title="/pmwiki/pmwiki.php/Main/LotusEaterMachine">Lotus-Eater Machine</a>. See also <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TheMostDangerousVideoGame" title="/pmwiki/pmwiki.php/Main/TheMostDangerousVideoGame">The Most Dangerous Video Game</a>, where what happens in a game can have deadly consequences, and <a class="twikilink" href="/pmwiki/pmwiki.php/Main/WinToExit" title="/pmwiki/pmwiki.php/Main/WinToExit">Win to Exit</a>, when the characters must compete to get out of a game.
+</p><hr/><div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_3"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_3'); })</script></div></div><h2>Examples:</h2>
+<p></p><div class="folderlabel" onclick="toggleAllFolders();">    open/close all folders  </div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder0');">    Advertising </div><div class="folder" id="folder0" isfolder="true" style="display:block;">
+<ul><li> In the <a class="twikilink" href="/pmwiki/pmwiki.php/Creator/Toonami" title="/pmwiki/pmwiki.php/Creator/Toonami">Toonami</a> total immersion event <em>Trapped in Hyperspace</em>, TOM plugs himself into the Absolution's computer systems to try and get rid of a virus named Swayzak that has infected them.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder1');">    Anime and Manga </div><div class="folder" id="folder1" isfolder="true" style="display:block;">
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Anime/SerialExperimentsLain" title="/pmwiki/pmwiki.php/Anime/SerialExperimentsLain">Serial Experiments Lain</a></em> has this as the central theme of the story. Notably, it treats <a class="twikilink" href="/pmwiki/pmwiki.php/Main/InsideAComputerSystem" title="/pmwiki/pmwiki.php/Main/InsideAComputerSystem">Inside a Computer System</a> as a mystical experience, without any technological peripherals connecting people to the virtual reality; the only "scientific" explanation given to the out of body experiences is the Earth's electromagnetic Schumann Resonance, which in the story can link human brains and computer equipment together without anyone noticing.
+</li><li> In <em>Silent Mobius</em>, this is <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MadScientist" title="/pmwiki/pmwiki.php/Main/MadScientist">Lebia Maverick's</a> main shtick.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Anime/YuGiOh" title="/pmwiki/pmwiki.php/Anime/YuGiOh">Yu-Gi-Oh!</a></em>: The Legendary Heroes arc of Season 1 and the Virtual World arc of Season 3.
+<ul><li> The premise of <em><a class="twikilink" href="/pmwiki/pmwiki.php/Anime/YuGiOhVRAINS" title="/pmwiki/pmwiki.php/Anime/YuGiOhVRAINS">Yu-Gi-Oh! VRAINS</a></em>.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/GhostInTheShell" title="/pmwiki/pmwiki.php/Franchise/GhostInTheShell">Ghost in the Shell</a></em> has a lot of virtual chatrooms and hacking, though in the latter case most people just use a simple glyph as their avatar.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/DotHack" title="/pmwiki/pmwiki.php/Franchise/DotHack">.hack</a></em> plays with the trope: most entries in the series take place inside a MMORPG, except in <em>.hack//Liminality</em>, which is all about what's going on on the outside. However, most characters are merely sitting at a computer, playing the game like one would in the real world. The fact that the game is <em>somehow</em> affecting people's minds despite any kind of direct neural link is one of the franchise's greatest mysteries, and there are multiple cases in the series of people whose minds are trapped within the game, experiencing everything as though it is real.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Anime/DennouCoil" title="/pmwiki/pmwiki.php/Anime/DennouCoil">Dennou Coil</a></em> has the real and virtual world coexisting with the use of <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AugmentedReality" title="/pmwiki/pmwiki.php/Main/AugmentedReality">Augmented Reality</a> glasses.
+</li><li> <a class="twikilink" href="/pmwiki/pmwiki.php/Anime/BakuganBattleBrawlers" title="/pmwiki/pmwiki.php/Anime/BakuganBattleBrawlers">Bakugan Battle Brawlers</a> has the Interspace, a virtual reality intended to return Bakugan battling fo a fun card game from <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SeriousBusiness" title="/pmwiki/pmwiki.php/Main/SeriousBusiness">Serious Business</a>. Unfortunately, not only is it highjacked by the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/QuirkyMinibossSquad" title="/pmwiki/pmwiki.php/Main/QuirkyMinibossSquad">Quirky Miniboss Squad</a> in the next season, but attempts to prevent a similar situation by making the system self-sufficient results in it <a class="twikilink" href="/pmwiki/pmwiki.php/Main/NotTheIntendedUse" title="/pmwiki/pmwiki.php/Main/NotTheIntendedUse">making the game more violent</a>. Eventually, the protagonists decided to delete it and start over with a whole city.
+</li><li> The second season of <em><a class="twikilink" href="/pmwiki/pmwiki.php/Anime/Superbook" title="/pmwiki/pmwiki.php/Anime/Superbook">Superbook</a></em> had the pet dog one of the first season's regulars getting trapped in a computer after a freak accident caused it to merge with the Superbook (the Bible, only with a magic ability to transport people into the stories). The new hero of the season then had to travel into the computer to get her back.
+</li><li> Chisame of <em><a class="twikilink" href="/pmwiki/pmwiki.php/Manga/MahouSenseiNegima" title="/pmwiki/pmwiki.php/Manga/MahouSenseiNegima">Mahou Sensei Negima!</a></em>, being a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/PlayfulHacker" title="/pmwiki/pmwiki.php/Main/PlayfulHacker">Playful Hacker</a>, gains an Artifact that lets her do this.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Anime/CorrectorYui" title="/pmwiki/pmwiki.php/Anime/CorrectorYui">Corrector Yui</a></em>.
+</li><li> Like <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/DotHack" title="/pmwiki/pmwiki.php/Franchise/DotHack">.hack</a></em>, everyone in <em>Mythic Quest</em> is in the MMORPG <em>Mythic Quest</em>.
+</li><li> The Digital World in <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/Digimon" title="/pmwiki/pmwiki.php/Franchise/Digimon">Digimon</a></em>, also being an example of <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Cyberspace" title="/pmwiki/pmwiki.php/Main/Cyberspace">Cyberspace</a>, is comprised of data from the real world's telecommunication networks. Although topographically similar in some respects to Earth, it is highly malleable in nature, by virtue of how easily data can be amended and overwritten. The majority of locations there are named after real computer and technological terms; for instance, some of the major continents of the Digital World are the Folder, Server, WWW, and Directory Continents, all separated by the Net Ocean. File Island is a key location, where the <a class="twikilink" href="/pmwiki/pmwiki.php/Anime/DigimonAdventure" title="/pmwiki/pmwiki.php/Anime/DigimonAdventure">original Digidestined</a> were first brought.
+</li><li> The entire premise behind <em><a class="twikilink" href="/pmwiki/pmwiki.php/LightNovel/SwordArtOnline" title="/pmwiki/pmwiki.php/LightNovel/SwordArtOnline">Sword Art Online</a></em>, in which characters immerse their consciousness completely within a virtual reality.
+</li><li> It's revealed that the world of <a class="twikilink" href="/pmwiki/pmwiki.php/Manga/Amatsuki" title="/pmwiki/pmwiki.php/Manga/Amatsuki">Amatsuki</a> is in fact a computer simulation of the past <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TimeTravel" title="/pmwiki/pmwiki.php/Main/TimeTravel">instead of the real thing</a>, and that Toki and Kon are still somewhere in our world experiencing virtual reality. <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MindScrew" title="/pmwiki/pmwiki.php/Main/MindScrew">How they got there is another matter entirely...</a>
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder2');">    Comic Books </div><div class="folder" id="folder2" isfolder="true" style="display:block;">
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/ComicBook/Kimmie66" title="/pmwiki/pmwiki.php/ComicBook/Kimmie66">kimmie66</a></em> takes place almost entirely in "lairs", basically VR environments.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/ComicBook/NthManTheUltimateNinja" title="/pmwiki/pmwiki.php/ComicBook/NthManTheUltimateNinja">Nth Man: The Ultimate Ninja </a></em>, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/RealityWarper" title="/pmwiki/pmwiki.php/Main/RealityWarper">Reality Warper</a> Alfie O'Meagan traps John Doe and Colonel Novikova inside a video game, complete with horrible 8-bit music, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GoombaStomp" title="/pmwiki/pmwiki.php/Main/GoombaStomp">Goomba Stomping</a>, and secret <a class="twikilink" href="/pmwiki/pmwiki.php/Main/WarpZone" title="/pmwiki/pmwiki.php/Main/WarpZone">Warp Zones</a>.
+</li><li> Minor <em><a class="twikilink" href="/pmwiki/pmwiki.php/ComicBook/Firestorm" title="/pmwiki/pmwiki.php/ComicBook/Firestorm">Firestorm</a></em> villains Bug and Byte are a brother and sister with the power to <em>physically</em> enter computer systems (à la <em><a class="twikilink" href="/pmwiki/pmwiki.php/Film/Tron" title="/pmwiki/pmwiki.php/Film/Tron">TRON</a>.)</em>
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder3');">    Fan Works </div><div class="folder" id="folder3" isfolder="true" style="display:block;">
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/FanFic/FriendshipIsOptimal" title="/pmwiki/pmwiki.php/FanFic/FriendshipIsOptimal">Friendship is Optimal</a></em>: The virtual world of Equestria takes place within a giant computer system run by a strong artificial intelligence known as Celest-A.I..
+</li><li> This happens to Twilight Sparkle in <em><a class="urllink" href="http://www.fimfiction.net/story/268471/ponyexe">pony.exe<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a></em>. The owner of the computer simply assumes she is a virus at first, then he thinks she is a very advanced virus, and then she takes control of the computer...
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Roleplay/DCNation" title="/pmwiki/pmwiki.php/Roleplay/DCNation">DC Nation</a></em> had this as a way to explain Jericho's "death." In one of the canonical comics, he possessed a technopathic criminal trying to hurt Raven. Nation explained it as the technopath winning and Jericho getting uploaded to the world's computer networks, endlessly chased by the technopath (in the form of a black lion). When he finally is able to try and contact Oracle, his abilities misfire and pull <em>her</em> into <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Cyberspace" title="/pmwiki/pmwiki.php/Main/Cyberspace">cyberspace</a>. Queue Babs realizing she's not confined to a wheelchair here, and is even <em>scarier</em> as a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DigitizedHacker" title="/pmwiki/pmwiki.php/Main/DigitizedHacker">Digitized Hacker</a> than she was as Batgirl.
+</li><li> This is used to better display the skills of the various team leaders during the <a class="twikilink" href="/pmwiki/pmwiki.php/WebAnimation/RWBY" title="/pmwiki/pmwiki.php/WebAnimation/RWBY">Vytal Festival</a> in <em><a class="twikilink" href="/pmwiki/pmwiki.php/Roleplay/LordsAmongTheAshes" title="/pmwiki/pmwiki.php/Roleplay/LordsAmongTheAshes">Lords Among The Ashes</a>.</em> They are all put into a position of leadership in a virtual world for what is supposed to be <a class="twikilink" href="/pmwiki/pmwiki.php/Main/YearInsideHourOutside" title="/pmwiki/pmwiki.php/Main/YearInsideHourOutside">ten weeks in-sim (ten days in real life)</a>. Unfortunately, Cinder's computer virus <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GoneHorriblyWrong" title="/pmwiki/pmwiki.php/Main/GoneHorriblyWrong">corrupts the program</a>, turning what should have been a marginally challenging ten weeks into an almost <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DeathWorld" title="/pmwiki/pmwiki.php/Main/DeathWorld">hellishly difficult</a> <em>ten years.</em>
+</li><li> <a class="twikilink" href="/pmwiki/pmwiki.php/Manga/MyHeroAcademia" title="/pmwiki/pmwiki.php/Manga/MyHeroAcademia">Izuku Midoriya</a> spends a year trapped in a simulation before attending U.A. in <em><a class="twikilink" href="/pmwiki/pmwiki.php/Fanfic/LockedInDigital" title="/pmwiki/pmwiki.php/Fanfic/LockedInDigital">Locked In Digital</a></em>.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder4');">    Film </div><div class="folder" id="folder4" isfolder="true" style="display:block;">
+<ul><li> We did mention <em><a class="twikilink" href="/pmwiki/pmwiki.php/Film/TheMatrix" title="/pmwiki/pmwiki.php/Film/TheMatrix">The Matrix</a></em> once or twice, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SarcasmMode" title="/pmwiki/pmwiki.php/Main/SarcasmMode">didn't we</a>?
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Film/JohnnyMnemonic" title="/pmwiki/pmwiki.php/Film/JohnnyMnemonic">Johnny Mnemonic</a></em>, starring the indomitable <a class="twikilink" href="/pmwiki/pmwiki.php/Creator/KeanuReeves" title="/pmwiki/pmwiki.php/Creator/KeanuReeves">Keanu Reeves</a>, had scenes in cyberspace, but the movie mostly took place in meatspace.
+</li><li> <a class="twikilink" href="/pmwiki/pmwiki.php/Creator/ArnoldSchwarzenegger" title="/pmwiki/pmwiki.php/Creator/ArnoldSchwarzenegger">Arnold Schwarzenegger</a> in the original <em><a class="twikilink" href="/pmwiki/pmwiki.php/Film/TotalRecall1990" title="/pmwiki/pmwiki.php/Film/TotalRecall1990">Total Recall (1990)</a></em> is trying to determine if what is happening to him is real, or if it is memories that have been implanted in his brain because he's on a console.
+</li><li> <a class="twikilink" href="/pmwiki/pmwiki.php/Creator/TomCruise" title="/pmwiki/pmwiki.php/Creator/TomCruise">Tom Cruise</a> in <em><a class="twikilink" href="/pmwiki/pmwiki.php/Film/VanillaSky" title="/pmwiki/pmwiki.php/Film/VanillaSky">Vanilla Sky</a></em> may be simply be having a series of really bad experiences, or he's stored in a computer system and is living a fantasy existence.
+</li><li> <a class="twikilink" href="/pmwiki/pmwiki.php/Creator/NatalieWood" title="/pmwiki/pmwiki.php/Creator/NatalieWood">Natalie Wood</a>'s last film, <em><a class="twikilink" href="/pmwiki/pmwiki.php/Film/Brainstorm" title="/pmwiki/pmwiki.php/Film/Brainstorm">Brainstorm</a></em>, worked with equipment that could do the whole virtual reality thing <em>over a telephone line</em>. Not DSL, either; a simple modem that hooked up to someone's phone, or could be acoustically coupled and transferred over a pay phone.
+</li><li> The movie <em><a class="twikilink" href="/pmwiki/pmwiki.php/Film/EXistenZ" title="/pmwiki/pmwiki.php/Film/EXistenZ">eXistenZ</a></em> had a virtual reality gaming system that people entered, and in some cases you couldn't tell whether they were in a game or in reality. This movie came out about the same time as <em><a class="twikilink" href="/pmwiki/pmwiki.php/Film/TheMatrix" title="/pmwiki/pmwiki.php/Film/TheMatrix">The Matrix</a></em> and <em>The Thirteenth Floor</em>.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/Film/Freejack" title="/pmwiki/pmwiki.php/Film/Freejack">Freejack</a></em>, the "soul" of the character played by <a class="twikilink" href="/pmwiki/pmwiki.php/Creator/AnthonyHopkins" title="/pmwiki/pmwiki.php/Creator/AnthonyHopkins">Anthony Hopkins</a> is stored in a computer because his body has died, and needs a replacement body to be transferred into within 24 hours or his soul will also die.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Film/Tron" title="/pmwiki/pmwiki.php/Film/Tron">TRON</a></em> (and its sequel <em><a class="twikilink" href="/pmwiki/pmwiki.php/Film/TronLegacy" title="/pmwiki/pmwiki.php/Film/TronLegacy">TRON: Legacy</a></em>) are variations on this. The protagonists <em>physically</em> enter a computer network when their bodies are reduced to component information by a teleportation device (actually a laser, but the same principle is involved).
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Film/TheThirteenthFloor" title="/pmwiki/pmwiki.php/Film/TheThirteenthFloor">The Thirteenth Floor</a></em> revolved around a city in a computer system owned by the protagonist's company - <span class="spoiler" title="you can set spoilers visible by default on your profile"> which in turn was in a city within a computer system</span>. And possibly <span class="spoiler" title="you can set spoilers visible by default on your profile">inside at least one more computer system - if you notice, every one of the three worlds you see has different <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ColorWash" title="/pmwiki/pmwiki.php/Main/ColorWash">subtle colorizations</a> to them like that <a class="twikilink" href="/pmwiki/pmwiki.php/Main/LampshadeHanging" title="/pmwiki/pmwiki.php/Main/LampshadeHanging">pointed out</a> for the 1920s sim, and the movie ends on a CRT-shutdown animation...</span>
+<ul><li> Although not a direct remake this movie tells the same story as "World On A Wire" (1971), a German film by Rainer Werner Fassbinder including <span class="spoiler" title="you can set spoilers visible by default on your profile"> the realization that their world is a simulation just like the one they created, including the ability to move up to the next level</span>. It is highly stylized and bizarre.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Film/StrangeDays" title="/pmwiki/pmwiki.php/Film/StrangeDays">Strange Days</a></em> features video recordings that provide direct sensory stimulus when played back, like virtual reality home videos.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/Film/Virtuosity" title="/pmwiki/pmwiki.php/Film/Virtuosity">Virtuosity</a></em>, <a class="twikilink" href="/pmwiki/pmwiki.php/Creator/DenzelWashington" title="/pmwiki/pmwiki.php/Creator/DenzelWashington">Denzel Washington</a> is a cop, convicted of manslaughter, who gets time off from his sentence to fight Sid, an entity inside a computer who is an amalgam of the personality of dozens of serial killers and mass murderers. When Sid ends up getting himself released into the real world, Washington has to be let out of prison to stop him before Sid kills lots more people than his initial bloodbath takes out.
+</li><li> The main premise of the <em><a class="twikilink" href="/pmwiki/pmwiki.php/Manga/DetectiveConan" title="/pmwiki/pmwiki.php/Manga/DetectiveConan">Detective Conan</a></em> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/NonSerialMovie" title="/pmwiki/pmwiki.php/Main/NonSerialMovie">Non-Serial Movie</a> <em>Phantom of Baker Street</em> involves Cocoon, a virtual reality gaming system that puts injects the senses of the players by <em>neural stimulation</em> when sat inside the pods. And then, the boss of the software company murders the chief engineer of the project on the day of testing; the said engineering spread an AI that hacked into the gaming system, which in turn caused <a class="twikilink" href="/pmwiki/pmwiki.php/Main/HolodeckMalfunction" title="/pmwiki/pmwiki.php/Main/HolodeckMalfunction">Holodeck Malfunction</a>...
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/WreckItRalph" title="/pmwiki/pmwiki.php/WesternAnimation/WreckItRalph">Wreck-It Ralph</a></em> takes place in a world of video games. Its sequel, <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/RalphBreaksTheInternet" title="/pmwiki/pmwiki.php/WesternAnimation/RalphBreaksTheInternet">Ralph Breaks the Internet</a></em>, takes place in a world where the Internet is a sprawling metropolis.
+</li><li> <em><a class="createlink" href="/pmwiki/pmwiki.php/Main/OldMasterQ" title="/pmwiki/pmwiki.php/Main/OldMasterQ">Old Master Q</a>: Incredible Pet Detective</em>; The main characters get sucked into a computer system in an internet cafe. Naturally three of them have <a class="twikilink" href="/pmwiki/pmwiki.php/Main/LotusEaterMachine" title="/pmwiki/pmwiki.php/Main/LotusEaterMachine">Lotus-Eater Machine</a> moments.
+<ul><li> A smaller example in <a class="createlink" href="/pmwiki/pmwiki.php/Main/OldMasterQ" title="/pmwiki/pmwiki.php/Main/OldMasterQ">Old Master Q</a>: Shan T (an <a class="twikilink" href="/pmwiki/pmwiki.php/Film/ETTheExtraTerrestrial" title="/pmwiki/pmwiki.php/Film/ETTheExtraTerrestrial">ET</a>-<a class="twikilink" href="/pmwiki/pmwiki.php/Main/FollowTheLeader" title="/pmwiki/pmwiki.php/Main/FollowTheLeader">ploita</a><a class="twikilink" href="/pmwiki/pmwiki.php/WebVideo/TheCinemaSnob" title="/pmwiki/pmwiki.php/WebVideo/TheCinemaSnob">tion</a> Film), OMQ gets sucked into <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ShoutOut" title="/pmwiki/pmwiki.php/Main/ShoutOut">not</a>-<a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/PacMan" title="/pmwiki/pmwiki.php/VideoGame/PacMan">Pac-Man</a> and gets beat up by the ghosts. He gets out of the machine and beats the living hell out of the cabinet.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/TheEmojiMovie" title="/pmwiki/pmwiki.php/WesternAnimation/TheEmojiMovie">The Emoji Movie</a></em> takes place in a world inside a person's smartphone, which is technically a computer, where apps become worlds within themselves that can be visited.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder5');">    Literature </div><div class="folder" id="folder5" isfolder="true" style="display:block;">
+<ul><li> Cyberspace, or the Matrix, in the <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/SprawlTrilogy" title="/pmwiki/pmwiki.php/Literature/SprawlTrilogy">Sprawl Trilogy</a></em> of <a class="twikilink" href="/pmwiki/pmwiki.php/Creator/WilliamGibson" title="/pmwiki/pmwiki.php/Creator/WilliamGibson">William Gibson</a> popularized this trope.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/TheHitchhikersGuideToTheGalaxy" title="/pmwiki/pmwiki.php/Literature/TheHitchhikersGuideToTheGalaxy">The Hitchhiker's Guide to the Galaxy</a></em>:
+<ul><li> One of the books featured a description of an alien computer terminal which worked in this way. However, one could exit at any time, and reality and virtual reality were quite distinct.
+</li><li> This trope is central to the original book's premise: <span class="spoiler" title="you can set spoilers visible by default on your profile"> The Earth itself</span> is a very elaborate computer created to discover <span class="spoiler" title="you can set spoilers visible by default on your profile"> the Great Question of Life, the Universe and Everything (the answer has already been found: 42).</span> The behavior of the beings on the planet are a goodly part of the computations.
+</li></ul></li><li> The <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/Otherland" title="/pmwiki/pmwiki.php/Literature/Otherland">Otherland</a></em> series by <a class="twikilink" href="/pmwiki/pmwiki.php/Creator/TadWilliams" title="/pmwiki/pmwiki.php/Creator/TadWilliams">Tad Williams</a> is about a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/RagtagBunchOfMisfits" title="/pmwiki/pmwiki.php/Main/RagtagBunchOfMisfits">Ragtag Bunch of Misfits</a> who break into a virtual reality network (in a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TwentyMinutesIntoTheFuture" title="/pmwiki/pmwiki.php/Main/TwentyMinutesIntoTheFuture">time</a> where <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TheMetaverse" title="/pmwiki/pmwiki.php/Main/TheMetaverse">VR is commonplace</a>) and become trapped there, unable to go offline. Furthermore, they can apparently be <a class="twikilink" href="/pmwiki/pmwiki.php/Main/YourMindMakesItReal" title="/pmwiki/pmwiki.php/Main/YourMindMakesItReal">killed there too</a>. One of the mysteries they must solve is why this is the case.
+</li><li> G.A. Effinger's book <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/MaridAudran" title="/pmwiki/pmwiki.php/Literature/MaridAudran">When Gravity Fails</a></em> has a system where people meet in a Virtual Reality system, and can even have sex while in the system, and it's indistinguishable from the real thing. In one case, eight people lie down on the Virtual Reality couches, and only seven get up; one of the visitors figured a way to kill one of the others by causing their "soul" not to go back into the body, but to stay and effectively be purged when the machine was shut down.
+</li><li> <em>In the Matter of: <a class="twikilink" href="/pmwiki/pmwiki.php/Literature/InstrumentOfGod" title="/pmwiki/pmwiki.php/Literature/InstrumentOfGod">Instrument of God</a></em> is about the Afterlife, set up inside a massive computer system, where the occupants are aware both that they are dead and that they are within a computer system.
+</li><li> Vivian Van Velde's novel <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/HeirApparent" title="/pmwiki/pmwiki.php/Literature/HeirApparent">Heir Apparent</a></em> rests completely on this idea. Gianine gets trapped in a virtual reality fantasy game when it's damaged, and has to win the game to escape.
+</li><li> Piers Anthony's <a class="urllink" href="http://en.wikipedia.org/wiki/Killobyte">''Killobyte''<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a> involves a paralyzed cop and a diabetic player who are both trapped in a virtual reality game by a hacker and in danger of dying in reality.
+</li><li> The majority of the storyline of <em>Realtime Interrupt</em> by James Hogan is <a class="twikilink" href="/pmwiki/pmwiki.php/Main/InsideAComputerSystem" title="/pmwiki/pmwiki.php/Main/InsideAComputerSystem">Inside a Computer System</a>. The apparent strangeness of reality the character experiences is explained to him as mental illness.
+</li><li> <a class="twikilink" href="/pmwiki/pmwiki.php/Creator/GregEgan" title="/pmwiki/pmwiki.php/Creator/GregEgan">Greg Egan</a>:
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/PermutationCity" title="/pmwiki/pmwiki.php/Literature/PermutationCity">Permutation City</a></em> is a remarkably hard scifi look at this trope, with some strange philosophical added in.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/Diaspora" title="/pmwiki/pmwiki.php/Literature/Diaspora">Diaspora</a></em> features a relatively in-depth look at the Polises, underground supercomputers simulating posthuman intelligences several times faster than real time.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/SchildsLadder" title="/pmwiki/pmwiki.php/Literature/SchildsLadder">Schild's Ladder</a></em> has entire societies that live inside computers, even ones simulating extra physical dimensions, or non-euclidean space.
+</li><li> The short story Crystal Nights is about creating <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AIs" title="/pmwiki/pmwiki.php/Main/AIs">AIs</a> that live inside a simulated universe.
+</li></ul></li><li> The subject of any number of philosophical papers from the classic "<a class="twikilink" href="/pmwiki/pmwiki.php/Main/BrainInAJar" title="/pmwiki/pmwiki.php/Main/BrainInAJar">Brain in a Jar</a>" introduction to epistemology, to Robert Nozick's <em>Experience Machine</em>, which raises the question of whether or not it would be ethical to plug into one.
+</li><li> <a class="twikilink" href="/pmwiki/pmwiki.php/Creator/JackChalker" title="/pmwiki/pmwiki.php/Creator/JackChalker">Jack Chalker</a>'s <em>Wonderland Gambit</em> trilogy features people who have been inside the machine so long they've created thousands of alternate universes — all of <a class="twikilink" href="/pmwiki/pmwiki.php/Main/NoEndorHolocaust" title="/pmwiki/pmwiki.php/Main/NoEndorHolocaust">which keep running</a> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DreamApocalypse" title="/pmwiki/pmwiki.php/Main/DreamApocalypse">after they're gone</a>.
+</li><li> The <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/TakeshiKovacs" title="/pmwiki/pmwiki.php/Literature/TakeshiKovacs">Takeshi Kovacs</a></em> series features this trope put toward particularly gruesome ends. Torture victims could be implanted into a computer world, where they would be tortured for hours of subjective time every minute, for as long as the computer stays running. In theory, a person's consciousness could experience millennia of agony without the mercy of death.
+</li><li> <a class="twikilink" href="/pmwiki/pmwiki.php/Creator/TimothyZahn" title="/pmwiki/pmwiki.php/Creator/TimothyZahn">Timothy Zahn</a>'s <em>Conqueror</em>'s Trilogy: The Copperhead fighter pilots have implants that allow them to jack into their fightercrafts: the pilots become the craft. They have expanded fields of vision, data from the ship's status comes in as taste, smell and touch. It is an extremely addictive feeling, leading to some pilots remaining jacked in between missions. Recently the Commonwealth military had set up better screening processes to avoid this. Reception to these new tests is varied.
+</li><li> Most of the events in <a class="twikilink" href="/pmwiki/pmwiki.php/Creator/SergeyLukyanenko" title="/pmwiki/pmwiki.php/Creator/SergeyLukyanenko">Sergey Lukyanenko</a>'s <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/LabyrinthOfReflections" title="/pmwiki/pmwiki.php/Literature/LabyrinthOfReflections">Labyrinth of Reflections</a></em> trilogy take place in a virtual city called Deeptown, made possible due to a psychosis-inducing video that is played every time someone logs on. A full body suit is necessary for an immersive experience, although the first case of perceiving a virtual world as reality occurred with a guy playing <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Doom" title="/pmwiki/pmwiki.php/VideoGame/Doom">Doom</a></em> afted watching the video. A special group of people are able to exit the "deep" at will. These so-called "Divers" can also see security holes and backwoods as... holes and doors. The trilogy also features a "super-Diver" with the ability to see how things really are and affect them (e.g. walking through a solid object after realizing it's only a computer-generated model).
+<ul><li> In Lukyanenko's <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/Competitors" title="/pmwiki/pmwiki.php/Literature/Competitors">Competitors</a></em> novel, the Seekers believe that all of them (i.e people who have been sent to the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SpaceStation" title="/pmwiki/pmwiki.php/Main/SpaceStation">Space Station</a> for three years, while their original bodies continue living on Earth) are trapped in a computer simulation. They're eventually disabused of that notion.
+</li></ul></li><li> The <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/EightWorlds" title="/pmwiki/pmwiki.php/Literature/EightWorlds">Eight Worlds</a></em> series by <a class="twikilink" href="/pmwiki/pmwiki.php/Creator/JohnVarley" title="/pmwiki/pmwiki.php/Creator/JohnVarley">John Varley</a> has a few examples:
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Film/OverdrawnAtTheMemoryBank" title="/pmwiki/pmwiki.php/Film/OverdrawnAtTheMemoryBank">Overdrawn at the Memory Bank</a></em> (and its infamous film adaptation) has a man whose consciousness is loaded into a computer to keep him alive after his body is misplaced.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/SteelBeach" title="/pmwiki/pmwiki.php/Literature/SteelBeach">Steel Beach</a></em> has the protagonist spend several virtual years (and very little actual time) inside a therapeutic computer simulation.
+</li></ul></li><li> <a class="twikilink" href="/pmwiki/pmwiki.php/Creator/VernorVinge" title="/pmwiki/pmwiki.php/Creator/VernorVinge">Vernor Vinge</a>'s novella <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/TrueNames" title="/pmwiki/pmwiki.php/Literature/TrueNames">True Names</a></em>, with its video game called "The Other Plane" and the specialized interface devices known as "Portals", is one of the earliest works to try to make a truly plausible, realistic version of this trope, and in doing so, introduced many of the concepts that would become common in <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Cyberpunk" title="/pmwiki/pmwiki.php/Main/Cyberpunk">Cyberpunk</a> a few years later.
+</li><li> Daniel Galouye, "Simulacron 3"/"The 13th Floor"/"Counterfeit World" (all the same book), 1965, thus <a class="twikilink" href="/pmwiki/pmwiki.php/Main/OlderThanTheNES" title="/pmwiki/pmwiki.php/Main/OlderThanTheNES">Older Than the NES</a>. Adapted for film twice.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/TheQuantumThief" title="/pmwiki/pmwiki.php/Literature/TheQuantumThief">The Quantum Thief</a></em>-trilogy features three distinct kinds of virtual realities in its <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Transhuman" title="/pmwiki/pmwiki.php/Main/Transhuman">Transhuman</a> future: Spimescape, that is highly abstract representation of computer systems and networks themselves where gogols (uploaded minds and AIs mostly live, tending their tasks, Sobornost virs that are either highly accurate replicas of real places and events, sometimes all the way down to the quantum level, or representations of abstract concepts, and finally the Zoku Realms that tend to tell a story or fulfill a fantasy and are only limited by the vast imagination of their creators. The Realms also have a special quality of altering their participants to suit the story, often stripping their <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Transhuman" title="/pmwiki/pmwiki.php/Main/Transhuman">Transhuman</a> capabilities temporarily in the process.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/Doom" title="/pmwiki/pmwiki.php/Literature/Doom">Doom: Endgame</a></em>, Fly and Arlene have their souls stuffed into a Newbie computer system and are forced to relive the events of the Phobos/Deimos invasion.
+</li><li> <a class="twikilink" href="/pmwiki/pmwiki.php/Creator/TerryPratchett" title="/pmwiki/pmwiki.php/Creator/TerryPratchett">Terry Pratchett</a> wrote "#IFDEFDEBUG + WORLD/ ENOUGH + TIME", a short story in which everyone has become virtual-reality dwellers, or "afers" as the story calls them.
+</li><li> Marian in <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/MARZENA" title="/pmwiki/pmwiki.php/Literature/MARZENA">MARZENA</a></em> when she uses her Bremen chips to connect to Geni's Thalamic Subnetwork and to the FTD Engine.
+</li><li> In the <a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/StarTrekExpandedUniverse" title="/pmwiki/pmwiki.php/Franchise/StarTrekExpandedUniverse">Star Trek Expanded Universe</a>, Diane Duane's novel <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/SpocksWorld" title="/pmwiki/pmwiki.php/Literature/SpocksWorld">Spock's World</a></em> has several historical interludes. In one, a member of a pre-Reformation Vulcan family-ship crew spends considerable time participating in the mind-nets, a telepathic/computer net virtual reality. When a mutiny on board ship sends it on an uncontrollable course, she retreats into the mind-nets until the ship is destroyed.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/Main/StarWars" title="/pmwiki/pmwiki.php/Main/StarWars">Star Wars</a> on Trial</em> (a series of essays defending and criticizing the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/StarWars" title="/pmwiki/pmwiki.php/Main/StarWars">Star Wars</a> canon), one of the essays proposed that the GFFA <span class="notelabel" onclick="togglenote('note1r0o2');"><sup>note </sup></span><span class="inlinefolder" id="note1r0o2" isnote="true" onclick="togglenote('note1r0o2');" style="cursor:pointer;font-size:smaller;display:none;"> Galaxy Far Far Away</span> was a computer simulation, and that those who used the Force were merely exploiting bugs in the code.
+</li><li> <a class="twikilink" href="/pmwiki/pmwiki.php/Literature/Ravirn" title="/pmwiki/pmwiki.php/Literature/Ravirn">Ravirn</a>, being a hacker/cracker with some magic due to <span class="spoiler" title="you can set spoilers visible by default on your profile">being descended from one of the Greek Fates</span>, can enter computers, or even networks, to help in modifying the code he's looking at. But so can a lot of other people.....
+</li><li> In the <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/SmallMedium" title="/pmwiki/pmwiki.php/Literature/SmallMedium">Small Medium</a></em> series, it's made clear that the <em>Generica Online</em> books exist in a world where the Playas were originally playing an extremely immersive VR game (with some implication that the virtual reality world was overlaid on one that already existed) before something changed that trapped them there.
+</li><li> <a class="twikilink" href="/pmwiki/pmwiki.php/Creator/IsaacAsimov" title="/pmwiki/pmwiki.php/Creator/IsaacAsimov">Isaac Asimov</a> and <a class="twikilink" href="/pmwiki/pmwiki.php/Creator/JanetAsimov" title="/pmwiki/pmwiki.php/Creator/JanetAsimov">Janet Asimov</a>'s <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/NorbyAndTheCourtJester" title="/pmwiki/pmwiki.php/Literature/NorbyAndTheCourtJester">Norby and the Court Jester</a></em>: The concept of virtual reality games are called "feelies", due to the way they interact with your brain and create the impressions of sense-stimulus. A <a class="twikilink" href="/pmwiki/pmwiki.php/Main/FictionalVideoGame" title="/pmwiki/pmwiki.php/Main/FictionalVideoGame">Fictional Video Game</a> in this story provides a central plot element, as the program is corrupted by a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ComputerVirus" title="/pmwiki/pmwiki.php/Main/ComputerVirus">Computer Virus</a> that <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Brainwashed" title="/pmwiki/pmwiki.php/Main/Brainwashed">Brainwashes</a> the players.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder6');">    Live-Action TV </div><div class="folder" id="folder6" isfolder="true" style="display:block;">
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/Caprica" title="/pmwiki/pmwiki.php/Series/Caprica">Caprica</a></em> has the holo-bands, your own personal Matrix. Portrayed somewhat realistically as a new user, who just got his own avatar, doesn't know how to move without moving his physical legs. Also, he spawns in a drab concrete room with a single door, along with his guide, who apologizes for the lack of décor.
+</li><li> A notably early example was in the 1976 <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/DoctorWho" title="/pmwiki/pmwiki.php/Series/DoctorWho">Doctor Who</a></em> story <em>The Deadly Assassin</em>, where the Doctor travels into a surreal virtual world inside a computer matrix.
+<ul><li> In NuWho, the Doctor saves River and her archeology team by uploading them to a planet-sized computer.
+</li></ul></li><li> The <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/StargateSG1" title="/pmwiki/pmwiki.php/Series/StargateSG1">Stargate SG-1</a></em> episode "The Gamekeeper" featured a planet whose inhabitants deliberately plugged themselves into virtual reality pods after the planet was devastated. By the time SG-1 found it, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/NewEden" title="/pmwiki/pmwiki.php/Main/NewEden">it got better</a>. The planet had definitely recovered into a near-paradise. Too bad that the "Gamekeeper" didn't bother to tell the inhabitants of the planet. Fortunately, SG-1 was there to save the day... again.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/StargateAtlantis" title="/pmwiki/pmwiki.php/Series/StargateAtlantis">Stargate Atlantis</a></em> also did this a few times. In one episode, McKay has to get Sheppard out of a VR where he's imprisoned. Later they use a VR system to <a class="twikilink" href="/pmwiki/pmwiki.php/Main/HoYay" title="/pmwiki/pmwiki.php/Main/HoYay">dive into each others' minds.</a>, and there's also a VR pod that a friendly replicator girl gets plugged into to keep her on ice, while giving her the impression of living a normal life.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/Vr5" title="/pmwiki/pmwiki.php/Series/Vr5">Vr5</a></em>, Syd can draw the subconscious mind of anyone she calls on a telephone into virtual reality. As in <em>Brainstorm</em>, this involves an acoustic modem. Which was already about ten years out of date when the show aired. Viewers actually watched the whole series eventually discovered that the much-maligned "acoustic modem" was <em>not</em> off-the-shelf technology, but <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AppliedPhlebotinum" title="/pmwiki/pmwiki.php/Main/AppliedPhlebotinum">Applied Phlebotinum</a> from a buried Secret Project.
+</li><li> J-drama <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/Sh15uya" title="/pmwiki/pmwiki.php/Series/Sh15uya">Sh15uya</a></em> centres on a group of fifteen-year-olds trapped in a virtual replica of Shibuya.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/RedDwarf" title="/pmwiki/pmwiki.php/Series/RedDwarf">Red Dwarf</a></em> had a slew of games and realities of this type, generally known as Total Immersion Gaming. The sims ranged from Better Than Life, a free-form fantasy enabler; to Streets of Laredo, a wild-west game that allowed players to play as one of three cowboys with their own unique skills; to Jane Austen World, which is <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ExactlyWhatItSaysOnTheTin" title="/pmwiki/pmwiki.php/Main/ExactlyWhatItSaysOnTheTin">exactly what it sounds like.</a>
+</li></ul><ul><li> The <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/StarTrekVoyager" title="/pmwiki/pmwiki.php/Series/StarTrekVoyager">Star Trek: Voyager</a></em> episode "The Thaw".
+</li><li> The premise of the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BonusRound" title="/pmwiki/pmwiki.php/Main/BonusRound">Bonus Round</a> on <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/NickArcade" title="/pmwiki/pmwiki.php/Series/NickArcade">Nick Arcade</a></em>.
+</li><li> In <em>Gene Roddenberry's <a class="twikilink" href="/pmwiki/pmwiki.php/Series/Andromeda" title="/pmwiki/pmwiki.php/Series/Andromeda">Andromeda</a></em>, intrepid engineer Seamus Harper has an implant that allows him to connect to, and enter, computer systems. He often uses this to work on/in the titular starship's main computer. This is how he first meets the ship's AI, Andromeda ("Rommie").
+<div class="indent"> Welcome to my mind. Now go away.
+</div></li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder7');">    Music </div><div class="folder" id="folder7" isfolder="true" style="display:block;">
+<ul><li> The song "Mastermind" on the <a class="twikilink" href="/pmwiki/pmwiki.php/Music/HeavensGate" title="/pmwiki/pmwiki.php/Music/HeavensGate">Heaven's Gate</a> album <em>Menergy</em> has the title character monitoring our life which is actually inside a computer.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Music/ComputerWorld" title="/pmwiki/pmwiki.php/Music/ComputerWorld">Computer World</a></em> by <a class="twikilink" href="/pmwiki/pmwiki.php/Music/Kraftwerk" title="/pmwiki/pmwiki.php/Music/Kraftwerk">Kraftwerk</a> is a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ConceptAlbum" title="/pmwiki/pmwiki.php/Main/ConceptAlbum">Concept Album</a> about the rise of computers within society.
+</li><li> The <a class="twikilink" href="/pmwiki/pmwiki.php/Music/Keldian" title="/pmwiki/pmwiki.php/Music/Keldian">Keldian</a> song "Change the World" is about two hackers, one of who gets stuck in the digital world. The whole song is basically a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ShoutOut" title="/pmwiki/pmwiki.php/Main/ShoutOut">Shout-Out</a> to <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/Shadowrun" title="/pmwiki/pmwiki.php/TabletopGame/Shadowrun">Shadowrun</a></em>.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder8');">    Podcasts </div><div class="folder" id="folder8" isfolder="true" style="display:block;">
+<ul><li> The fifth season of <em><a class="twikilink" href="/pmwiki/pmwiki.php/Podcast/SAYER" title="/pmwiki/pmwiki.php/Podcast/SAYER">SAYER</a></em> involves the creation of a simulation mimicing a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MegaCorp" title="/pmwiki/pmwiki.php/Main/MegaCorp">Mega-Corp</a>'s research base—including thousands of virtual copies of its employees, constructed from data backups—as a sandbox for training a new <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ArtificialIntelligence" title="/pmwiki/pmwiki.php/Main/ArtificialIntelligence">AI</a> to interact with humans. Since time can be artificially accelerated inside the simulation, this process takes only weeks when it could have taken <em>six years</em>. Another interesting consequence is that, since, according to official company policy, simulated employees <a class="twikilink" href="/pmwiki/pmwiki.php/Main/WhatMeasureIsANonhuman" title="/pmwiki/pmwiki.php/Main/WhatMeasureIsANonhuman">are not technically human</a>, the AIs are able to interact with them in ways <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ThreeLawsCompliant" title="/pmwiki/pmwiki.php/Main/ThreeLawsCompliant">they would not otherwise be able to</a>.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder9');">    Roleplay </div><div class="folder" id="folder9" isfolder="true" style="display:block;">
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Roleplay/DarwinsSoldiers" title="/pmwiki/pmwiki.php/Roleplay/DarwinsSoldiers">Darwin's Soldiers</a></em> story <em>Schrodinger's Prisoners</em> takes place primarily in one of these.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder10');">    Tabletop Games </div><div class="folder" id="folder10" isfolder="true" style="display:block;">
+<ul><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/Shadowrun" title="/pmwiki/pmwiki.php/TabletopGame/Shadowrun">Shadowrun</a></em>, any character equipped with a data-jack and a cyberdeck can enter the Matrix, a network that connects just about every computer system in the Seattle area. Deckers specialize in this sort of thing. Some do it to mine data and sell it to <a class="twikilink" href="/pmwiki/pmwiki.php/Main/InformationBroker" title="/pmwiki/pmwiki.php/Main/InformationBroker">the highest bidder</a>, while others use it to <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TheCracker" title="/pmwiki/pmwiki.php/Main/TheCracker">shut down corporate security systems</a>. The Otaku were able to access it without any sort of gear, but their powers faded <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GrowingUpSucks" title="/pmwiki/pmwiki.php/Main/GrowingUpSucks">when they reached adulthood</a>; following the Second Crash, the Fading stopped, and those with the power rechristened themselves technomancers. Also the Matrix became wireless.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/EclipsePhase" title="/pmwiki/pmwiki.php/TabletopGame/EclipsePhase">Eclipse Phase</a></em> there are massive virtual habitats inhabited by <a class="twikilink" href="/pmwiki/pmwiki.php/Main/VirtualGhost" title="/pmwiki/pmwiki.php/Main/VirtualGhost">infomorphs</a>, who make up a significant part of the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AfterTheEnd" title="/pmwiki/pmwiki.php/Main/AfterTheEnd">post-Fall</a> population. Those with bodies (biological or synthetic) can access a variety of virches but most prefer <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AugmentedReality" title="/pmwiki/pmwiki.php/Main/AugmentedReality">Augmented Reality</a>.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/Cyberpunk" title="/pmwiki/pmwiki.php/TabletopGame/Cyberpunk">Cyberpunk</a> 2020</em> shares with <em>Shadowrun</em> above the same ways to enter an Internet that works <em>a la</em> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/Neuromancer" title="/pmwiki/pmwiki.php/Literature/Neuromancer">Neuromancer</a></em>. It also has virtual realities that, as usual, the more monies you spend creating them the better they become.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder11');">    Theater </div><div class="folder" id="folder11" isfolder="true" style="display:block;">
+<ul><li> <em>Possible Worlds</em> by John Mighton has two detectives investigating the theft of a human brain. At one point they go to a scientist who studies brains, and one takes a machine hooked up to a rat brain with him. He muses what it would be like to be like the rat brain and believe things are real although they are really just electrical pulses. His partner tells him not to be ridiculous. Also, <span class="spoiler" title="you can set spoilers visible by default on your profile"> In the end, the detectives find that the scientist with the rat brain had stolen the human one and all the scenes that had "happened" to the dead man were just dreams he was having after the scientist hooked up some machine to his brain.</span> Fascinating play, but bloody confusing.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder12');">    Video Games </div><div class="folder" id="folder12" isfolder="true" style="display:block;">
+<ul><li> The video game <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/AMindForeverVoyaging" title="/pmwiki/pmwiki.php/VideoGame/AMindForeverVoyaging">A Mind Forever Voyaging</a></em> has you as a computer AI, with the real world around you simulated, and now you've been let in on the gag. Believe it or not, it was released in 1985.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/ElseHeartbreak" title="/pmwiki/pmwiki.php/VideoGame/ElseHeartbreak">else Heart.Break()</a></em> is set "in a world where bits have replaced atoms". <span class="spoiler" title="you can set spoilers visible by default on your profile">And you can go a level deeper by Slurp()ing.</span>
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Fallout3" title="/pmwiki/pmwiki.php/VideoGame/Fallout3">Fallout 3</a></em>:
+<ul><li> The people of Tranquility Lane are all in pods hooked up into the main computer a la The Matrix.
+</li><li> In the add on <em>Operation: Anchorage</em> The player character can enter a military training simulation, it is obviously not real from the players perceptive but the computer generated characters see it as totally real. McGraw also mentions that the sim had it's safety protocols turned off, meaning that getting killed in the sim results in your character going into cardiac arrest in the "real" world.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/StarOceanTillTheEndOfTime" title="/pmwiki/pmwiki.php/VideoGame/StarOceanTillTheEndOfTime">Star Ocean: Till the End of Time</a></em> <span class="spoiler" title="you can set spoilers visible by default on your profile">All of the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/PlayerCharacters" title="/pmwiki/pmwiki.php/Main/PlayerCharacters">Player Characters</a> were actually <a class="twikilink" href="/pmwiki/pmwiki.php/Main/NPC" title="/pmwiki/pmwiki.php/Main/NPC">NPCs</a> in an <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Mmorpg" title="/pmwiki/pmwiki.php/Main/Mmorpg">mmorpg</a>.</span>
+</li><li> The <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MegaManBattleNetwork" title="/pmwiki/pmwiki.php/VideoGame/MegaManBattleNetwork">Mega Man Battle Network</a></em> series integrates this into gameplay. The player controls Mega Man's human counterpart who can "Jack In" Megaman into various computer systems to solve various puzzles and progress through the plot.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/KingdomHeartsII" title="/pmwiki/pmwiki.php/VideoGame/KingdomHeartsII">Kingdom Hearts II</a></em> gives us Space Paranoids, the <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/Tron" title="/pmwiki/pmwiki.php/Franchise/Tron">TRON</a></em> level. That's without mentioning <span class="spoiler" title="you can set spoilers visible by default on your profile"> the virtual Twilight Town DiZ and Riku trap Roxas in, which Sora and the gang later visit. Weirdly, you have to be go through the latter to unlock the final dungeon - the heroes enter a portal in the virtual mansion's basement, pass through "Betwixt &amp; Between" and end up at the Organization's home, apparently flesh and blood again.</span>
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/KingdomHeartsCoded" title="/pmwiki/pmwiki.php/VideoGame/KingdomHeartsCoded">Kingdom Hearts coded</a></em>, like <em>Kingdom Hearts II</em>, is based entirely around the trope.
+</li><li> We get to visit The Grid, which is based on the film <em><a class="twikilink" href="/pmwiki/pmwiki.php/Film/TronLegacy" title="/pmwiki/pmwiki.php/Film/TronLegacy">TRON: Legacy</a></em>, in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/KingdomHearts3DDreamDropDistance" title="/pmwiki/pmwiki.php/VideoGame/KingdomHearts3DDreamDropDistance">Kingdom Hearts 3D: Dream Drop Distance</a></em>. Surprisingly, while Sora and Riku become computer programs with their own identity discs, <span class="spoiler" title="you can set spoilers visible by default on your profile"> Xemnas and Young Xehanort</span> remain flesh and blood.
+</li></ul></li><li> On <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/Pokemon" title="/pmwiki/pmwiki.php/Franchise/Pokemon">Pokémon</a></em>, you store the titular monsters inside one. And items inside another. The anime is more sensible; Ash just teleports his mons to Professor Oak.
+<ul><li> Not only this but there's also Porygon that is implied to travel freely into the cyberspace.
+</li><li> Also, this make sense when you <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BreakingTheFourthWall" title="/pmwiki/pmwiki.php/Main/BreakingTheFourthWall">meeting developers</a> and when they explain that the pokemon world is <a class="twikilink" href="/pmwiki/pmwiki.php/Main/NoFourthWall" title="/pmwiki/pmwiki.php/Main/NoFourthWall">virtual one</a>.
+</li></ul></li><li> This trope is heavily at work in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Galerians" title="/pmwiki/pmwiki.php/VideoGame/Galerians">Galerians</a>: Ash</em>, with <span class="spoiler" title="you can set spoilers visible by default on your profile"> the main villain being a computer program who has built his own virtual reality so that he can experience life as humans do</span>.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MassEffect3" title="/pmwiki/pmwiki.php/VideoGame/MassEffect3">Mass Effect 3</a></em>, a side mission has Shepard <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BrainUploading" title="/pmwiki/pmwiki.php/Main/BrainUploading">upload his/her mind</a> to a geth server on Rannoch in order to disable a fighter squadron attacking the quarian fleet. The <em>TRON</em>-like computer world is a case of <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AFormYouAreComfortableWith" title="/pmwiki/pmwiki.php/Main/AFormYouAreComfortableWith">A Form You Are Comfortable With</a> created by your geth helper, as the geth are pure software.
+<ul><li> The latter trope gets <a class="twikilink" href="/pmwiki/pmwiki.php/Main/LampshadeHanging" title="/pmwiki/pmwiki.php/Main/LampshadeHanging">lampshaded</a> when Shepard asks when memories of quarians from pre-exodus days feature them in full-body encounter suits. Legion replies that Shepard's own mind is filling in missing pieces. Since Shepard has never seen a quarian sans suit, they can't imagine them without one.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TronTwoPointOh" title="/pmwiki/pmwiki.php/VideoGame/TronTwoPointOh">TRON 2.0</a></em>, naturally, takes place almost entirely inside several computers with protagonist Jet Bradley digitized into them.
+</li><li> The <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/Intellivision" title="/pmwiki/pmwiki.php/UsefulNotes/Intellivision">Intellivision</a> game <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TronMazeATron" title="/pmwiki/pmwiki.php/VideoGame/TronMazeATron">Tron: Maze-A-Tron</a></em> takes place in a world that basically consists of <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AutoScrollingLevel" title="/pmwiki/pmwiki.php/Main/AutoScrollingLevel">a scrolling computer circuit board</a> — in essence, being <em><a class="twikilink" href="/pmwiki/pmwiki.php/Main/LiteralMetaphor" title="/pmwiki/pmwiki.php/Main/LiteralMetaphor">literally</a></em> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/LiteralMetaphor" title="/pmwiki/pmwiki.php/Main/LiteralMetaphor">inside a computer system</a>.
+</li><li> The final level of <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Obsidian" title="/pmwiki/pmwiki.php/VideoGame/Obsidian">Obsidian</a></em> takes place inside the core of the nanobot-controlling AI, Ceres, which looks like a scaled-up version of the AI's own internal components, as Max speculates earlier. It's likely that this example is a physical construct rather than a virtual world, as the game's previous levels were built via the AI's nanobots.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Submachine" title="/pmwiki/pmwiki.php/VideoGame/Submachine">Submachine</a> 6: The Edge</em> involves connecting to various terminals using a special pod, which transitions to a greenish void with bright green pathways leading to various functions of the Edge.
+</li><li> The obscure adventure game <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/NetZone" title="/pmwiki/pmwiki.php/VideoGame/NetZone">Net Zone</a></em> is set primarily in the Genecys Zone, which your character enters using a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BrainComputerInterface" title="/pmwiki/pmwiki.php/Main/BrainComputerInterface">neural interface</a>. The kicker is that the company Cycorp designed this space as their virtual production facility for "CY-11" artificial life forms, and you spend a majority of the game using this facility to <span class="spoiler" title="you can set spoilers visible by default on your profile"> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BrainUploading" title="/pmwiki/pmwiki.php/Main/BrainUploading">resurrect your dead father, Zel Winters, as one of these CY-11s</a>.</span>
+</li><li> One of the many bizarre locations in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/ArmedAndDelirious" title="/pmwiki/pmwiki.php/VideoGame/ArmedAndDelirious">Armed &amp; Delirious</a></em>.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheBizarreAdventuresOfWoodruffAndTheSchnibble" title="/pmwiki/pmwiki.php/VideoGame/TheBizarreAdventuresOfWoodruffAndTheSchnibble">The Bizarre Adventures of Woodruff and the Schnibble</a></em>, the Health Wiseman is trapped inside the virtual trip until Woodruff frees him.
+</li><li> <em>Immercenary</em>, a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/FirstPersonShooter" title="/pmwiki/pmwiki.php/Main/FirstPersonShooter">First-Person Shooter</a> for the 3DO, is set inside a virtual reality network.
+</li><li> A pretty major plot point in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DigitalDevilSaga" title="/pmwiki/pmwiki.php/VideoGame/DigitalDevilSaga">Digital Devil Saga</a></em>. <span class="spoiler" title="you can set spoilers visible by default on your profile">The entirety of the first game takes place in a simulation developed by the villains as a sort of testing ground, and the main cast are all <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ArtificialIntelligence" title="/pmwiki/pmwiki.php/Main/ArtificialIntelligence">Artificial Intelligences</a> based off of the perceptions Sera had of the people she worked with. This isn't revealed until the second game, though it is <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Foreshadowing" title="/pmwiki/pmwiki.php/Main/Foreshadowing">Foreshadowed</a> in the first.</span>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheMatrixPathOfNeo" title="/pmwiki/pmwiki.php/VideoGame/TheMatrixPathOfNeo">The Matrix: Path of Neo</a></em> set in <a class="twikilink" href="/pmwiki/pmwiki.php/Main/RuleOfThree" title="/pmwiki/pmwiki.php/Main/RuleOfThree">the Matrix</a>, obviously.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Rez" title="/pmwiki/pmwiki.php/VideoGame/Rez">Rez</a></em> is set inside a massive computer network that the main character has <a class="twikilink" href="/pmwiki/pmwiki.php/Main/HollywoodHacking" title="/pmwiki/pmwiki.php/Main/HollywoodHacking">hacked into</a> in order to prevent an AI named Eden from shutting down.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/NoMansSky" title="/pmwiki/pmwiki.php/VideoGame/NoMansSky">No Man's Sky</a></em>: Priest-Entity Nada believes they're in one based on the fact of how many <a class="twikilink" href="/pmwiki/pmwiki.php/Main/LampshadeHanging" title="/pmwiki/pmwiki.php/Main/LampshadeHanging">elements repeat across the universe</a> and that the Atlas Stones are somehow involved. <span class="spoiler" title="you can set spoilers visible by default on your profile"> The Waking Titan ARG reveals he's entirely correct.</span>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Splatoon2" title="/pmwiki/pmwiki.php/VideoGame/Splatoon2">Splatoon 2</a></em> has <a class="urllink" href="https://www.youtube.com/watch?v=ExOSqCkViZo">one Splatfest conversation<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a> between Pearl and Marina end with the latter espousing this idea, followed by both of them giving the camera an <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AsideGlance" title="/pmwiki/pmwiki.php/Main/AsideGlance">Aside Glance</a>. Given that they're both video game characters (and that <a class="twikilink" href="/pmwiki/pmwiki.php/Main/WordOfGod" title="/pmwiki/pmwiki.php/Main/WordOfGod">Word of God</a> has implied that they're at least somewhat <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MediumAwareness" title="/pmwiki/pmwiki.php/Main/MediumAwareness">aware of this fact</a>), they aren't exactly wrong.
+</li><li> The concept of <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/TheMuppets" title="/pmwiki/pmwiki.php/Franchise/TheMuppets">The Muppets</a> CD-ROM: Muppets Inside</em> is that the Muppets have been trapped inside <em>your</em> computer system (due to a Bunsen invention that went wrong, of course), and you must complete the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MiniGame" title="/pmwiki/pmwiki.php/Main/MiniGame">Mini Games</a> to get them out.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Videogame/AceCombat3Electrosphere" title="/pmwiki/pmwiki.php/Videogame/AceCombat3Electrosphere">Ace Combat 3: Electrosphere</a></em> has one of the final battle set in the titular Electrosphere, the Strangereal equivalent of the Internet. <span class="spoiler" title="you can set spoilers visible by default on your profile"> Later revealed that the entire game is a simulation to test how an AI, which is you, through different possibilities, can achieve the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Revenge" title="/pmwiki/pmwiki.php/Main/Revenge">goal</a> set by <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MadScientist" title="/pmwiki/pmwiki.php/Main/MadScientist">the creator</a>. After completing all possible routes, all of this is revealed to you, and the entire system purged as the AI is released to the reality.</span>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/OperationInnerSpace" title="/pmwiki/pmwiki.php/VideoGame/OperationInnerSpace">Operation: Inner Space</a></em>: A force known as the Inner Demon has invaded your computer and scattered the icons on your hard drive. You fly a spaceship into folders to recover these.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder13');">    Web Comics </div><div class="folder" id="folder13" isfolder="true" style="display:block;">
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/TheNoob" title="/pmwiki/pmwiki.php/Webcomic/TheNoob">The Noob</a></em> is set in the VR of the "Clichequest" MMORPG. (Mostly, at least.)
+</li><li> Used for a shameless <em><a class="twikilink" href="/pmwiki/pmwiki.php/Film/TheMatrix" title="/pmwiki/pmwiki.php/Film/TheMatrix">Matrix</a></em> parody during the <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/SluggyFreelance" title="/pmwiki/pmwiki.php/Webcomic/SluggyFreelance">Sluggy Freelance</a></em> mini-arc <a class="urllink" href="http://www.sluggy.com/daily.php?date=000123">"The Quatrix"<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a>.
+</li><li> Near the end of <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/Narbonic" title="/pmwiki/pmwiki.php/Webcomic/Narbonic">Narbonic</a></em><span class="spoiler" title="you can set spoilers visible by default on your profile"> Helen goes into the AI computer that Dave has taken over, in order to try to rescue him</span>.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/GuildedAge" title="/pmwiki/pmwiki.php/Webcomic/GuildedAge">Guilded Age</a></em> takes place inside a computer game created by sorcery. The <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BigBad" title="/pmwiki/pmwiki.php/Main/BigBad">Big Bad</a> is actually a company exec/programmer trying to "crash" the game so he can rescue five <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DeepImmersionGaming" title="/pmwiki/pmwiki.php/Main/DeepImmersionGaming">Deep Immersion Gamers</a> trapped inside. Trouble is, it's strongly implied that the gameworld has its own, real existence, and that the Five have actually <em>become</em> their characters.
+</li><li> Parodied in <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/Freefall" title="/pmwiki/pmwiki.php/Webcomic/Freefall">Freefall</a></em> with a <a class="urllink" href="http://freefall.purrsia.com/ff300/fv00279.htm">practical joke<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a> that briefly terrifies Sam Starfall:
+<div class="indent"> <strong>Sam:</strong> Computer, end all virtual reality simulations. <em>*Helix covers his environment suit face plate from behind*</em> <em><strong>AAAAAAAAAAHHH!</strong></em>
+</div></li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder14');">    Web Original </div><div class="folder" id="folder14" isfolder="true" style="display:block;">
+<ul><li> The Netwerk of <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/FloatingPoint" title="/pmwiki/pmwiki.php/Literature/FloatingPoint">Floating Point</a></em> is a digital universe populated by living <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ArtificialIntelligence" title="/pmwiki/pmwiki.php/Main/ArtificialIntelligence">Programs</a> that seems to have no connection to the outside world. In fact, few of its inhabitants believe an outside world even exists.
+</li><li> Merry, in the <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/WhateleyUniverse" title="/pmwiki/pmwiki.php/Literature/WhateleyUniverse">Whateley Universe</a></em>, is a cyberpath who can interface with computer networks simply by being within a few feet of a powerful CPU hooked to the network. When she does this, she's "in" the computer network. She meets a Whateley Academy kid who can do almost as much as she can, but who prefers the <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/Tron" title="/pmwiki/pmwiki.php/Franchise/Tron">TRON</a></em> visuals for his version of cyberspace.
+</li><li> AIs are important in the <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/ChaosTimeline" title="/pmwiki/pmwiki.php/Literature/ChaosTimeline">Chaos Timeline</a></em>, so expect this.
+</li><li> In the <em><a class="twikilink" href="/pmwiki/pmwiki.php/Wiki/SCPFoundation" title="/pmwiki/pmwiki.php/Wiki/SCPFoundation">SCP Foundation</a></em>, SCP-866 is a supercomputer that happens to be much stronger than it should have been, and the Foundation realizes its <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MundaneUtility" title="/pmwiki/pmwiki.php/Main/MundaneUtility">Mundane Utility</a> as an exceptional way of simulating physics and other properties of the universe. The catch? 20% of its resources (which are in the zettabytes, by the way) go towards four "test worlds." The computer itself probably exists elsewhere in <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TheMultiverse" title="/pmwiki/pmwiki.php/Main/TheMultiverse">The Multiverse</a>, with the version built in the 21st century of our world being its vessel, in a way. When a doctor tries to input some programming to shift a city in the second test world slightly, he winds up <a class="twikilink" href="/pmwiki/pmwiki.php/Main/EpicFail" title="/pmwiki/pmwiki.php/Main/EpicFail">sending our version of said city into outer space.</a><span class="notelabel" onclick="togglenote('note2hd4k');"><sup>note </sup></span><span class="inlinefolder" id="note2hd4k" isnote="true" onclick="togglenote('note2hd4k');" style="cursor:pointer;font-size:smaller;display:none;">Assuming test world #2 isn't our world, which is suggested.</span> Investigation revealed that <a class="twikilink" href="/pmwiki/pmwiki.php/Main/FailedASpotCheck" title="/pmwiki/pmwiki.php/Main/FailedASpotCheck">he made a rounding error; the same type of error managed to</a> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DisproportionateRetribution" title="/pmwiki/pmwiki.php/Main/DisproportionateRetribution">kill the last person who made one.</a> Speaking of which, it's also <a class="twikilink" href="/pmwiki/pmwiki.php/Main/CrazyPrepared" title="/pmwiki/pmwiki.php/Main/CrazyPrepared">Crazy-Prepared</a> to do all sorts of things to the people who try to cut off its power, for obvious reasons.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder15');">    Western Animation </div><div class="folder" id="folder15" isfolder="true" style="display:block;">
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/ReBoot" title="/pmwiki/pmwiki.php/WesternAnimation/ReBoot">ReBoot</a></em> is about the different programs running in the computer. Characters include the command.com (Phong, <span class="spoiler" title="you can set spoilers visible by default on your profile"> and later Dot</span>), the virus trying to take over the system (Megabyte), and the anti-viral program trying to stop him (Bob, <span class="spoiler" title="you can set spoilers visible by default on your profile"> and later Enzo</span>).
+</li><li> The entire premise of <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/CodeLyoko" title="/pmwiki/pmwiki.php/WesternAnimation/CodeLyoko">Code Lyoko</a></em>. Going further than just "connected", though, the heroes are physically transported into the virtual world.
+</li><li> <a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/ScoobyDoo" title="/pmwiki/pmwiki.php/WesternAnimation/ScoobyDoo">Scooby-Doo</a> and his buds did the <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/Tron" title="/pmwiki/pmwiki.php/Franchise/Tron">TRON</a></em> version of this trope, being disassembled in the real world and dropped into a video game in <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/ScoobyDooAndTheCyberChase" title="/pmwiki/pmwiki.php/WesternAnimation/ScoobyDooAndTheCyberChase">Scooby-Doo and the Cyber Chase</a></em>.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/CourageTheCowardlyDog" title="/pmwiki/pmwiki.php/WesternAnimation/CourageTheCowardlyDog">Courage the Cowardly Dog</a></em>: In the episode "Hard Drive Courage", Courage's computer catches a virus and kidnaps Muriel into its digital world in the hope of curing its "illness" as Courage goes to rescue her. Things like computer mice, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/VisualPun" title="/pmwiki/pmwiki.php/Main/VisualPun">a "RAM"</a> and a hard drive named Bill <a class="twikilink" href="/pmwiki/pmwiki.php/Main/HomicideMachines" title="/pmwiki/pmwiki.php/Main/HomicideMachines">are out to kill Courage as well</a>.
+</li><li> Featured in the <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/OneHundredAndOneDalmatiansTheSeries" title="/pmwiki/pmwiki.php/WesternAnimation/OneHundredAndOneDalmatiansTheSeries">101 Dalmatians: The Series</a></em> episode "Virtual Lucky", due to a freak power surge Cruealla and Lucky both end up sucked into Roger's video game and must compete against each other in a series of levels to earn the right to return to the real world. Cadpig and Rolly are also eventually sucked into the game. In the end, they all had to work together with Cruella in order to escape.
+</li><li> This was a common plot in <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AnimatedSeries" title="/pmwiki/pmwiki.php/Main/AnimatedSeries">Animated Series</a> from <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TheEighties" title="/pmwiki/pmwiki.php/Main/TheEighties">The '80s</a>:
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/Centurions" title="/pmwiki/pmwiki.php/WesternAnimation/Centurions">Centurions</a></em>: "The Incredible Shrinking Centurions"
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/DuckTales1987" title="/pmwiki/pmwiki.php/WesternAnimation/DuckTales1987">DuckTales (1987)</a></em>: "Scrooge's Last Adventure"
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/FilmationsGhostbusters" title="/pmwiki/pmwiki.php/WesternAnimation/FilmationsGhostbusters">Filmation's Ghostbusters</a></em>: "Cyman's Revenge", which was <a class="twikilink" href="/pmwiki/pmwiki.php/Main/RecycledScript" title="/pmwiki/pmwiki.php/Main/RecycledScript">very similar to</a>...
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/HeManAndTheMastersOfTheUniverse1983" title="/pmwiki/pmwiki.php/WesternAnimation/HeManAndTheMastersOfTheUniverse1983">He-Man and the Masters of the Universe (1983)</a></em>: "Day of the Machines"
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/PacMan" title="/pmwiki/pmwiki.php/WesternAnimation/PacMan">Pac-Man</a></em>: "Computer Packy"
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/JohnnyTest" title="/pmwiki/pmwiki.php/WesternAnimation/JohnnyTest">Johnny Test</a></em> When <span class="spoiler" title="you can set spoilers visible by default on your profile">Susan and Mary develop a system for relieving boredom on a rainy day, by reliving "The Chronicles of Narnia: The Lion, The Witch, and The Wardrobe"</span>.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/AdventureTime" title="/pmwiki/pmwiki.php/WesternAnimation/AdventureTime">Adventure Time</a></em>: "Guardians of Sunshine"
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/Cyberchase" title="/pmwiki/pmwiki.php/WesternAnimation/Cyberchase">Cyberchase</a></em> is all around this. Some moments in the beginning and/or end of some episodes do show the protagonists in the real world, though.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/TronUprising" title="/pmwiki/pmwiki.php/WesternAnimation/TronUprising">TRON: Uprising</a></em>: See film above, but it's more like <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/ReBoot" title="/pmwiki/pmwiki.php/WesternAnimation/ReBoot">ReBoot</a></em> in that it centers around the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DoomedByCanon" title="/pmwiki/pmwiki.php/Main/DoomedByCanon">Doomed by Canon</a> Programs of Argon City.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/JonnyQuestTheRealAdventures" title="/pmwiki/pmwiki.php/WesternAnimation/JonnyQuestTheRealAdventures">Jonny Quest: The Real Adventures</a></em> - Anything dealing with Questworld and its tendency to become dangerous, particularly if Dr. Surd managed some <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BrainUploading" title="/pmwiki/pmwiki.php/Main/BrainUploading">Brain Uploading</a>.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/AskTheStorybots" title="/pmwiki/pmwiki.php/WesternAnimation/AskTheStorybots">Ask the StoryBots</a></em> has the StoryBots living inside a computer. Their task is to answer questions that children send into them. The main team, Answer Team 341B, often end up leaving the computer to head to the "Outer World" to figure out more information about the question and form an answer. The episode "How Do Computers Work?" has Team 341B travelling into <em>another</em> computer to figure out computers themselves actually work.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder16');">    Real Life </div><div class="folder" id="folder16" isfolder="true" style="display:block;">
+<ul><li> René Descartes actually grappled with a very similar idea in his Meditations On First Philosophy, first published <em>in 1641</em>. Descartes proposes the idea that there could be an evil genius or other outside influence keeping him trapped and exposing him to false experiences (a real, full simulated world). This shortly follows his own proof of his own existence (the famous Cogito Ergo Sum he is more well known for) and is ultimately resolved, then he goes on to prove that God exists and otherwise codifies his own philosophy and weltanschauung.
+</li><li> A common idea is that <a class="twikilink" href="/pmwiki/pmwiki.php/Main/RealLife" title="/pmwiki/pmwiki.php/Main/RealLife">Real Life</a> is in fact a computer simulation and that everyone is either a body that's hardwired in, or just sophisticated pieces of software, being run by who-knows-what. In fact, if the multi-verse hypothesis is true then there are probably many more simulated universes than real ones simply because there would be huge numbers of universes where at least some one has created at least one simulated universe, and if one persons done it once then there would probably be many universes with huge numbers of simulated universes in them (and then some of those might make their own simulated universes). But it all depends on there being a multi-verse really. <br/><br/>A similar theory goes as follows: Assume the Universe is finite. If the Universe is finite, it can be perfectly recreated in a simulation, given sufficient resources. If we can perfectly simulate the Universe, our simulation will contain individuals who will attempt to perfectly simulate their universe. As their (simulated) Universe is finite, they will be able to do so. This recurses infinitely. Therefore, there are potentially an infinite number of simulated universes, each containing one or more simulated universes, with one (real) Universe at the top of the stack.
+<ul><li> An infinite universe can simulate other infinite universes within itself, so long as it confines the simulation to an <a class="urllink" href="http://en.wikipedia.org/wiki/Light_cone">expanding finite region.<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a> Our universe, for example, could be infinite and as long as the portion of it that is simulated expands outward at the speed of light, we would never be able to tell. This can also be used to construct infinite simulations-within-simulations.
+</li><li> This idea is the subject of philosopher Nick Bostrom's "simulation hypothesis", described in detail at <a class="urllink" href="http://www.simulation-argument.com">Are You Living in a Computer Simulation?<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a>. To an SF fan, the argument can be quite convincing, considering that the technical premises of the argument are very mild speculations in comparison to the kinds of tech described in SF, even the hard variety.
+</li><li> An important note about this concept that is often forgotten: there is no logically meaningful difference from our inside perspective whether the universe is a simulation or the stack-top. For some reason a lot of people seem to find the idea that the universe could suddenly be revealed as "not real" disturbing, when it really makes no difference at all (<a class="twikilink" href="/pmwiki/pmwiki.php/Main/VideoGameCrueltyPotential" title="/pmwiki/pmwiki.php/Main/VideoGameCrueltyPotential">as long as the programmers don't interfere</a>, anyway). And no, there is absolutely no way we could somehow cost more computation power in our reality by running our own simulated universes.<span class="notelabel" onclick="togglenote('note3y8om');"><sup>note </sup></span><span class="inlinefolder" id="note3y8om" isnote="true" onclick="togglenote('note3y8om');" style="cursor:pointer;font-size:smaller;display:none;">Basically, unless given evidence to the contrary, the most reasonable assumption is that the computer isn't simulating complex, advanced constructs like "people" or "planets" at a high level, but rather building them out of simpler units that are subatomic particles. These would eat up the same amount of processing power whether embedded in the middle of a planet, forming part of your digestive system, or shaped into a complex machine such as a universe-simulating computer. Secondly, it doesn't actually matter how fast the supposed external computer is; since our perception of time is going to be tied to the way the computer completes each stage of the simulation, it could be paused for ten thousand years and then powered up again <em>and we'd never notice</em> because the universe was effectively frozen during that period, your thoughts included.</span>
+</li><li> OK, if we are a simulation, <em>where are the tropes</em>? <span class="notelabel" onclick="togglenote('note4ff5l');"><sup>note </sup></span><span class="inlinefolder" id="note4ff5l" isnote="true" onclick="togglenote('note4ff5l');" style="cursor:pointer;font-size:smaller;display:none;">Never mind, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/RealLife" title="/pmwiki/pmwiki.php/Main/RealLife">here they are.</a></span>
+</li></ul></li><li> To a certain extent, life right now in the 2000's. Consider how prevalent an Internet-capable device is (iPod, cellphone, etc) used in the modern world and how easy it is to use them. Some programs like Mumble (a VOIP program) even work via Bluetooth and such without requiring a computer <em>per se</em>. Thus it's entirely possible to never be disconnected from the Internet.
+</li><li> Marshall Brain, founder of the Web site HowStuffWorks.com, <a class="urllink" href="http://www.marshallbrain.com/discard1.htm">has argued that one day we will likely all live in a simulated environment<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a>, probably within the lifetimes of many people reading this page.
+</li><li> The <a class="urllink" href="https://www.humanbrainproject.eu/">Human Brain Project<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a> and <a class="urllink" href="http://bluebrain.epfl.ch/">Blue Brain Project<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a> are two independent teams working to simulate a human brain; so far, the BBP has managed to emulate <a class="urllink" href="http://www.nature.com/news/fragment-of-rat-brain-simulated-in-supercomputer-1.18536">a small chunk of rat brain<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a>, while the HBP has created <a class="urllink" href="http://ieet.org/index.php/IEET/more/sim20150301">a simulated mouse brain in a virtual mouse body<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a>.
+</li><li> It is possible to build a computer in Minecraft, which can play Minecraft. Alright, a 2D version of Minecraft with the world's absolute worst interface, but still. The infinitely recursive stack of simulated universes may not be the one we're living in, but it's theoretically possible to make. <a class="urllink" href="https://en.wikipedia.org/wiki/Gnosticism">Gives a whole new meaning to the term "God Game".<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a>
+</li></ul></div>
+<hr/>
+</div>
+<div class="square_ad footer-article-ad main_2" data-isolated="0"></div>
+<div class="section-links" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<div class="titles">
+<div><h3 class="text-center text-uppercase">Previous</h3></div>
+<div><h3 class="text-center text-uppercase">Index</h3></div>
+<div><h3 class="text-center text-uppercase">Next</h3></div>
+</div>
+<div class="links">
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/HolographicTerminal">Holographic Terminal</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/MagicalComputer">Magical Computer</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/InstantAIJustAddWater">Instant A.I.: Just Add Water!</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/IndustrialGhetto">Industrial Ghetto</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/CyberpunkTropes">Cyberpunk Tropes</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/JapanTakesOverTheWorld">Japan Takes Over the World</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/TheInspectorIsComing">The Inspector Is Coming</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/Plots">Plots</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/InstantBookDeal">Instant Book Deal</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/InnerCitySchool">Inner City School</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/Settings">Settings</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/InTheDoldrums">In the Doldrums</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/InsectoidAliens">Insectoid Aliens</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/SpeculativeFictionTropes">Speculative Fiction Tropes</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/InsignificantLittleBluePlanet">Insignificant Little Blue Planet</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="outer_ads_by_salon_wrapper" id="exco_player_insert_div">
+</div>
+</article>
+<div id="main-content-sidebar"><div class="sidebar-item display-options">
+<ul class="sidebar display-toggles">
+<li>Show Spoilers <div class="display-toggle show-spoilers" id="sidebar-toggle-showspoilers"></div></li>
+<li>Night Vision <div class="display-toggle night-vision" id="sidebar-toggle-nightvision"></div></li>
+<li>Sticky Header <div class="display-toggle sticky-header" id="sidebar-toggle-stickyheader"></div></li>
+<li>Wide Load <div class="display-toggle wide-load" id="sidebar-toggle-wideload"></div></li>
+</ul>
+<script>updateDesktopPrefs();</script>
+</div>
+<div class="sidebar-item ad sb-ad-unit">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_2"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_2'); });</script> </div>
+</div></div>
+<div class="sidebar-item quick-links" itemtype="http://schema.org/SiteNavigationElement">
+<p class="sidebar-item-title" data-title="Important Links">Important Links</p>
+<div class="padded">
+<a href="/pmwiki/query.php?type=att">Ask The Tropers</a>
+<a href="/pmwiki/query.php?type=tf">Trope Finder</a>
+<a href="/pmwiki/query.php?type=ykts">You Know That Show...</a>
+<a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a>
+<a href="/pmwiki/review_activity.php">Reviews</a>
+<a data-modal-target="login" href="/pmwiki/lbs.php">Live Blogs</a>
+<a href="/pmwiki/ad-free-subscribe.php">Go Ad Free!</a> </div>
+</div>
+<div class="sidebar-item sb-ad-unit">
+<div class="sidebar-section">
+<div class="square_ad ad-size-300x600 ad-section text-center">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_3"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_3'); });</script> </div>
+</div> </div>
+</div>
+</div>
+<div class="sidebar-item">
+<p class="sidebar-item-title" data-title="Crucial Browsing">Crucial Browsing</p>
+<ul class="padded font-s" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><a data-click-toggle="active" href="javascript:void(0);">Genre</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/ActionAdventureTropes" title="Main/ActionAdventureTropes">Action Adventure</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ComedyTropes" title="Main/ComedyTropes">Comedy</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CommercialsTropes" title="Main/CommercialsTropes">Commercials</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CrimeAndPunishmentTropes" title="Main/CrimeAndPunishmentTropes">Crime &amp; Punishment</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DramaTropes" title="Main/DramaTropes">Drama</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/HorrorTropes" title="Main/HorrorTropes">Horror</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LoveTropes" title="Main/LoveTropes">Love</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NewsTropes" title="Main/NewsTropes">News</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ProfessionalWrestling" title="Main/ProfessionalWrestling">Professional Wrestling</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SpeculativeFictionTropes" title="Main/SpeculativeFictionTropes">Speculative Fiction</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SportsStoryTropes" title="Main/SportsStoryTropes">Sports Story</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/WarTropes" title="Main/WarTropes">War</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Media</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/Media" title="Main/Media">All Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/AnimationTropes" title="Main/AnimationTropes">Animation (Western)</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Anime" title="Main/Anime">Anime</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ComicBookTropes" title="Main/ComicBookTropes">Comic Book</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FanFic" title="FanFic/FanFics">Fan Fics</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Film" title="Main/Film">Film</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/GameTropes" title="Main/GameTropes">Game</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Literature" title="Main/Literature">Literature</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MusicAndSoundEffects" title="Main/MusicAndSoundEffects">Music And Sound Effects</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NewMediaTropes" title="Main/NewMediaTropes">New Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/PrintMediaTropes" title="Main/PrintMediaTropes">Print Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Radio" title="Main/Radio">Radio</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SequentialArt" title="Main/SequentialArt">Sequential Art</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TabletopGames" title="Main/TabletopGames">Tabletop Games</a></li>
+<li><a href="/pmwiki/pmwiki.php/UsefulNotes/Television" title="Main/Television">Television</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Theater" title="Main/Theater">Theater</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/VideogameTropes" title="Main/VideogameTropes">Videogame</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Webcomics" title="Main/Webcomics">Webcomics</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Narrative</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/UniversalTropes" title="Main/UniversalTropes">Universal</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/AppliedPhlebotinum" title="Main/AppliedPhlebotinum">Applied Phlebotinum</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CharacterizationTropes" title="Main/CharacterizationTropes">Characterization</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Characters" title="Main/Characters">Characters</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CharactersAsDevice" title="Main/CharactersAsDevice">Characters As Device</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Dialogue" title="Main/Dialogue">Dialogue</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Motifs" title="Main/Motifs">Motifs</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NarrativeDevices" title="Main/NarrativeDevices">Narrative Devices</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Paratext" title="Main/Paratext">Paratext</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Plots" title="Main/Plots">Plots</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Settings" title="Main/Settings">Settings</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Spectacle" title="Main/Spectacle">Spectacle</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Other Categories</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/BritishTellyTropes" title="Main/BritishTellyTropes">British Telly</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TheContributors" title="Main/TheContributors">The Contributors</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CreatorSpeak" title="Main/CreatorSpeak">Creator Speak</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Creators" title="Main/Creators">Creators</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DerivativeWorks" title="Main/DerivativeWorks">Derivative Works</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LanguageTropes" title="Main/LanguageTropes">Language</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LawsAndFormulas" title="Main/LawsAndFormulas">Laws And Formulas</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ShowBusiness" title="Main/ShowBusiness">Show Business</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SplitPersonalityTropes" title="Main/SplitPersonalityTropes">Split Personality</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/StockRoom" title="Main/StockRoom">Stock Room</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TropeTropes" title="Main/TropeTropes">Trope</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Tropes" title="Main/Tropes">Tropes</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TruthAndLies" title="Main/TruthAndLies">Truth And Lies</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TruthInTelevision" title="Main/TruthInTelevision">Truth In Television</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Topical Tropes</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/BetrayalTropes" title="Main/BetrayalTropes">Betrayal</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CensorshipTropes" title="Main/CensorshipTropes">Censorship</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CombatTropes" title="Main/CombatTropes">Combat</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DeathTropes" title="Main/DeathTropes">Death</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FamilyTropes" title="Main/FamilyTropes">Family</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FateAndProphecyTropes" title="Main/FateAndProphecyTropes">Fate And Prophecy</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FoodTropes" title="Main/FoodTropes">Food</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/HolidayTropes" title="Main/HolidayTropes">Holiday</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MemoryTropes" title="Main/MemoryTropes">Memory</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MoneyTropes" title="Main/MoneyTropes">Money</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MoralityTropes" title="Main/MoralityTropes">Morality</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/PoliticsTropes" title="Main/PoliticsTropes">Politics</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ReligionTropes" title="Main/ReligionTropes">Religion</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SchoolTropes" title="Main/SchoolTropes">School</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="sidebar-item showcase">
+<p class="sidebar-item-title" data-title="Community Showcase">Community Showcase <a class="bubble float-right hover-blue" href="/pmwiki/showcase.php">More</a></p>
+<p class="community-showcase">
+<a href="https://sharetv.com/shows/echo_chamber" onclick="trackOutboundLink('https://sharetv.com/shows/echo_chamber');" target="_blank">
+<img alt="" class="lazy-image" data-src="/images/communityShowcase-echochamber.jpg"/></a>
+<a href="/pmwiki/pmwiki.php/Webcomic/TwistedTropes">
+<img alt="" class="lazy-image" data-src="/img/howlandsc-side.jpg"/></a>
+</p>
+</div>
+<div class="sidebar-item sb-ad-unit" id="stick-cont">
+<div class="sidebar-section" id="stick-bar">
+<div class="square_ad ad-size-300x600 ad-section text-center">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_4"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_4'); });</script> </div>
+</div> </div>
+</div>
+</div>
+</div>
+</div>
+<div class="action-bar tablet-off" id="action-bar-bottom">
+<a class="scroll-to-top dead-button" href="#top-of-page" onclick="$('html, body').animate({scrollTop : 0},500);">Top</a>
+</div>
+</div>
+<div class="proper-ad-unit ad-sticky">
+<div id="proper-ad-tvtropes_sticky_ad"> <script>propertag.cmd.push(function() { proper_display('tvtropes_sticky_ad'); });</script> </div>
+</div>
+<footer id="main-footer">
+<div id="main-footer-inner">
+<div class="footer-left">
+<a class="img-link" href="/"><img alt="TV Tropes" class="lazy-image" data-src="/img/tvtropes-footer-logo.png" title="TV Tropes"/></a>
+<form action="index.html" class="navbar-form newsletter-signup validate modal-replies" data-ajax-get="/ajax/subscribe_email.php" id="cse-search-box-mobile" name="" role="">
+<button class="btn-submit newsletter-signup-submit-button" id="subscribe-btn" type="submit"><i class="fa fa-paper-plane"></i></button>
+<input class="form-control" id="subscription-email" name="q" placeholder="Subscribe" size="31" type="text" validate-type="email" value=""/>
+</form>
+<ul class="social-buttons">
+<li><a class="btn fb" href="https://www.facebook.com/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-facebook']);" target="_blank"><i class="fa fa-facebook"></i></a></li>
+<li><a class="btn tw" href="https://www.twitter.com/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-twitter']);" target="_blank"><i class="fa fa-twitter"></i></a> </li>
+<li><a class="btn rd" href="https://www.reddit.com/r/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-reddit']);" target="_blank"><i class="fa fa-reddit-alien"></i></a></li>
+</ul>
+</div>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">TVTropes</h4></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Administrivia">About TVTropes</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TheGoalsOfTVTropes">TVTropes Goals</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TheTropingCode">Troping Code</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TVTropesCustoms">TVTropes Customs</a></li>
+<li><a href="/pmwiki/pmwiki.php/JustForFun/TropesOfLegend">Tropes of Legend</a></li>
+<li><a href="/pmwiki/ad-free-subscribe.php">Go Ad-Free</a></li>
+</ul>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">Community</h4></li>
+<li><a href="/pmwiki/query.php?type=att">Ask The Tropers</a></li>
+<li><a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a></li>
+<li><a href="/pmwiki/query.php?type=tf">Trope Finder</a></li>
+<li><a href="/pmwiki/query.php?type=ykts">You Know That Show</a></li>
+<li><a data-modal-target="login" href="/pmwiki/lbs.php">Live Blogs</a></li>
+<li><a href="/pmwiki/review_activity.php">Reviews</a></li>
+<li><a href="/pmwiki/topics.php">Forum</a></li>
+</ul>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">Tropes HQ</h4></li>
+<li><a href="/pmwiki/about.php">About Us</a></li>
+<li><a href="/pmwiki/contact.php">Contact Us</a></li>
+<li><a href="/pmwiki/dmca.php">DMCA Notice</a></li>
+<li><a href="/pmwiki/privacypolicy.php">Privacy Policy</a></li>
+</ul>
+</div>
+<div class="text-center gutter-top gutter-bottom tablet-on" id="desktop-on-mobile-toggle">
+<a href="/pmwiki/switchDeviceCss.php?mobileVersion=1" rel="nofollow">Switch to <span class="txt-desktop">Desktop</span><span class="txt-mobile">Mobile</span> Version</a>
+</div>
+<div class="legal">
+<p>TVTropes is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License. <br/>Permissions beyond the scope of this license may be available from <a href="mailto:thestaff@tvtropes.org" rel="cc:morePermissions" xmlns:cc="http://creativecommons.org/ns#"> thestaff@tvtropes.org</a>.</p>
+<br/>
+<div class="privacy_wrapper">
+</div>
+</div>
+</footer>
+<style>
+      div.fc-ccpa-root {
+        position: absolute !important;
+        bottom: 93px !important;
+        margin: auto !important;
+        width: 100% !important;
+        z-index: 9999 !important;
+      }
+      .fc-ccpa-root .fc-dns-dialog .fc-dns-link p{
+        outline: none !important;
+        text-decoration: underline !important;
+        font-size: .7em !important;
+        font-family: sans-serif !important;
+      }
+      .fc-ccpa-root .fc-dns-dialog .fc-dns-link .fc-button-background {
+        background: none !important;
+      }
+    </style>
+<div class="full-screen" id="_pm_videoViewer">
+<a class="close" href="#close" id="_pm_videoViewer-close"></a>
+<div class="_pmvv-body">
+<div class="_pmvv-vidbox">
+<video class="video-js vjs-default-skin vjs-16-9" data-video-id="" id="overlay-video-player-box">
+</video>
+<div class="_pmvv-vidbox-desc">
+<h1 id="overlay-title"></h1>
+<p class="_pmvv-vidbox-descTxt" id="overlay-descrip">
+</p>
+<div class="rating-row" data-video-id="">
+<input name="is_logged_in" type="hidden" value="0"/>
+<p>How well does it match the trope?</p>
+<div id="star-rating-group">
+<div class="trope-rate">
+<input id="lamp5" name="rate" type="radio" value="5"/>
+<label for="lamp5" title="Absolutely"></label>
+<input id="lamp4" name="rate" type="radio" value="4"/>
+<label for="lamp4" title="Yes"></label>
+<input id="lamp3" name="rate" type="radio" value="3"/>
+<label for="lamp3" title="Kind of"></label>
+<input id="lamp2" name="rate" type="radio" value="2"/>
+<label for="lamp2" title="Not really"></label>
+<input id="lamp1" name="rate" type="radio" value="1"/>
+<label for="lamp1" title="No"></label>
+</div>
+<div id="star-rating-total">
+</div>
+</div>
+</div>
+<div class="example-media-row">
+<div class="example-overlay">
+<p>Example of:</p>
+<div id="overlay-trope"> / </div>
+</div>
+<div class="media-sources-overlay example-overlay">
+<p>Media sources:</p>
+<div id="overlay-media"> / </div>
+</div>
+</div>
+<p class="_pmvv-vidbox-stats text-right font-s" style="padding-top:8px; border-top: solid 1px rgba(255,255,255,0.2)">
+<a class="float-right" data-modal-target="login" href="#video-feedback">Report</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+        window.special_ops =  {
+            member : 'no',
+            isolated : 0,
+            tags : ['unknown']
+        };
+    </script>
+<script type="text/javascript">
+
+        var cleanCreativeEnabled = "";
+        var donation = "";
+        var live_ads = "1";
+        var img_domain = "https://static.tvtropes.org";
+        var snoozed = cookies.read('snoozedabm');
+        var snoozable = "";
+
+        if (adsRemovedWith) {
+            live_ads = 0;
+        }
+
+        var elem = document.createElement('script');
+        elem.async = true;
+
+        elem.src = '/design/assets/bundle.js?rev=c58d8df02f09262390bbd03db7921fc35c6af306';
+
+        elem.onload = function() {
+                                 }
+        document.getElementsByTagName('head')[0].appendChild(elem);
+
+    </script>
+<script type="text/javascript">
+      function send_analytics_event(user_type, donation){
+          // if(user_type == 'uncached' || user_type == 'cached'){
+          //   ga('send', 'event', 'caching', 'load', user_type, {'nonInteraction': 1});
+          //   return;
+          // }
+          var event_name = user_type;
+
+          if(donation == 'true'){
+              event_name += "_donation"
+          }else if(typeof(valid_user) == 'undefined'){
+              event_name += "_blocked"
+          }else if(valid_user == true){
+              event_name += "_unblocked";
+          }else{
+              event_name = "_unknown"
+          }
+          ga('send', 'event', 'ads', 'load', event_name, {'nonInteraction': 1});
+      }
+
+    
+    send_analytics_event("guest", "false");
+      </script>
+</body>
+</html>

@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Debug Room - TV Tropes</title>
+<meta content="A Debug Room is a location, menu or mode with options the programmers would have used for testing the game. It's usually not supposed to be accessed by the …" name="description"/>
+<link href="https://tvtropes.org/pmwiki/pmwiki.php/Main/DebugRoom" rel="canonical"/>
+<link href="/img/icons/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="@tvtropes" name="twitter:site"/>
+<meta content="@tvtropes" name="twitter:owner"/>
+<meta content="Debug Room - TV Tropes" name="twitter:title"/>
+<meta content="A Debug Room is a location, menu or mode with options the programmers would have used for testing the game. It's usually not supposed to be accessed by the …" name="twitter:description"/>
+<meta content="https://static.tvtropes.org/logo_blue_small.png" name="twitter:image:src"/>
+<meta content="TV Tropes" property="og:site_name"/>
+<meta content="en_US" property="og:locale"/>
+<meta content="https://www.facebook.com/tvtropes" property="article:publisher"/>
+<meta content="Debug Room - TV Tropes" property="og:title"/>
+<meta content="website" property="og:type"/>
+<meta content="https://tvtropes.org/pmwiki/pmwiki.php/Main/DebugRoom" property="og:url"/>
+<meta content="https://static.tvtropes.org/logo_blue_small.png" property="og:image"/>
+<meta content="A Debug Room is a location, menu or mode with options the programmers would have used for testing the game. It's usually not supposed to be accessed by the player; as such, it will either require a complicated code/password or be inaccessible …" property="og:description"/>
+<link href="/img/icons/apple-icon-57x57.png" rel="apple-touch-icon" sizes="57x57" type="image/png"/>
+<link href="/img/icons/apple-icon-60x60.png" rel="apple-touch-icon" sizes="60x60" type="image/png"/>
+<link href="/img/icons/apple-icon-72x72.png" rel="apple-touch-icon" sizes="72x72" type="image/png"/>
+<link href="/img/icons/apple-icon-76x76.png" rel="apple-touch-icon" sizes="76x76" type="image/png"/>
+<link href="/img/icons/apple-icon-114x114.png" rel="apple-touch-icon" sizes="114x114" type="image/png"/>
+<link href="/img/icons/apple-icon-120x120.png" rel="apple-touch-icon" sizes="120x120" type="image/png"/>
+<link href="/img/icons/apple-icon-144x144.png" rel="apple-touch-icon" sizes="144x144" type="image/png"/>
+<link href="/img/icons/apple-icon-152x152.png" rel="apple-touch-icon" sizes="152x152" type="image/png"/>
+<link href="/img/icons/apple-icon-180x180.png" rel="apple-touch-icon" sizes="180x180" type="image/png"/>
+<link href="/img/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/img/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/img/icons/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png"/>
+<link href="/img/icons/favicon-192x192.png" rel="icon" sizes="192x192" type="image/png"/>
+<meta content="width=device-width, initial-scale=1" id="viewport" name="viewport"/>
+<script>
+                var propertag = {};
+                propertag.cmd = [];
+            </script>
+<link href="/design/assets/bundle.css?rev=c58d8df02f09262390bbd03db7921fc35c6af306" rel="stylesheet"/>
+<script>
+                function object(objectId) {
+                    if (document.getElementById && document.getElementById(objectId)) {
+                        return document.getElementById(objectId);
+                    } else if (document.all && document.all(objectId)) {
+                        return document.all(objectId);
+                    } else if (document.layers && document.layers[objectId]) {
+                        return document.layers[objectId];
+                    } else {
+                        return false;
+                    }
+                }
+
+                // JAVASCRIPT COOKIES CODE: for getting and setting user viewing preferences
+                var cookies = {
+                    create: function (name, value, days2expire, path) {
+                        var date = new Date();
+                        date.setTime(date.getTime() + (days2expire * 24 * 60 * 60 * 1000));
+                        var expires = date.toUTCString();
+                        document.cookie = name + '=' + value + ';' + 'expires=' + expires + ';' + 'path=' + path + ';';
+                    },
+										createWithExpire: function(name, value, expires, path) {
+												document.cookie = name + '=' + value + ';' + 'expires=' + expires + ';' + 'path=' + path + ';';
+										},
+                    read: function (name) {
+                        var cookie_value = "",
+                            current_cookie = "",
+                            name_expr = name + "=",
+                            all_cookies = document.cookie.split(';'),
+                            n = all_cookies.length;
+
+                        for (var i = 0; i < n; i++) {
+                            current_cookie = all_cookies[i].trim();
+                            if (current_cookie.indexOf(name_expr) === 0) {
+                                cookie_value = current_cookie.substring(name_expr.length, current_cookie.length);
+                                break;
+                            }
+                        }
+                        return cookie_value;
+                    },
+                    update: function (name, val) {
+                        this.create(name, val, 300, "/");
+                    },
+                    remove: function (name) {
+                        document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
+                    }
+                };
+
+                function updateUserPrefs() {
+                    //GENERAL: detect and set browser, if not cookied (will be treated like a user-preference and added to the #user-pref element)
+                    if( !cookies.read('user-browser') ){
+                        var broswer = '';
+
+                        if(navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPod/i) ){
+                            browser = 'iOS';
+                        } else if (/Opera[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'opera';
+                        } else if (/MSIE (\d+\.\d+);/.test(navigator.userAgent)) {
+                            browser = 'MSIE';
+                        } else if (/Navigator[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'netscape';
+                        } else if (/Chrome[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'chrome';
+                        } else if (/Safari[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'safari';
+                            /Version[\/\s](\d+\.\d+)/.test(navigator.userAgent);
+                            browserVersion = new Number(RegExp.$1);
+                        } else if (/Firefox[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'firefox';
+                        } else {
+                            browser = 'internet_explorer';
+                        }
+                        cookies.create('user-browser',browser,1,'/');
+                        document.getElementById('user-prefs').classList.add('browser-' + browser);
+                    } else {
+                        document.getElementById('user-prefs').classList.add('browser-' + cookies.read('user-browser'));
+                    }
+
+                    //update user preference settings
+                    if (cookies.read('wide-load') !== '') document.getElementById('user-prefs').classList.add('wide-load');
+                    if (cookies.read('night-vision') !== '') document.getElementById('user-prefs').classList.add('night-vision');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('user-prefs').classList.add('sticky-header');
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('user-prefs').classList.add('show-spoilers');
+                    if (cookies.read('folders-open') !== '') document.getElementById('user-prefs').classList.add('folders-open');
+                    if (cookies.read('lefthand-sidebar') !== '') document.getElementById('user-prefs').classList.add('lefthand-sidebar');
+                    if (cookies.read('highlight-links') !== '') document.getElementById('user-prefs').classList.add('highlight-links');
+                    if (cookies.read('forum-gingerbread') !== '') document.getElementById('user-prefs').classList.add('forum-gingerbread');
+                    if (cookies.read('shared-avatars') !== '') document.getElementById('user-prefs').classList.add('shared-avatars');
+                    if (cookies.read('new-search') !== '') document.getElementById('user-prefs').classList.add('new-search');
+                    if (cookies.read('stop-auto-play-video') !== '') document.getElementById('user-prefs').classList.add('stop-auto-play-video');
+
+                    //desktop view on mobile
+                    if (cookies.read('desktop-on-mobile') !== ''){
+                        document.getElementById('user-prefs').classList.add('desktop-on-mobile');
+
+                        var viewport = document.querySelector("meta[name=viewport]");
+                        viewport.setAttribute('content', 'width=1000');
+                    }
+
+                }
+
+                function updateDesktopPrefs() {
+                    if (cookies.read('wide-load') !== '') document.getElementById('sidebar-toggle-wideload').classList.add('active');
+                    if (cookies.read('night-vision') !== '') document.getElementById('sidebar-toggle-nightvision').classList.add('active');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('sidebar-toggle-stickyheader').classList.add('active');
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('sidebar-toggle-showspoilers').classList.add('active');
+
+                }
+
+                function updateMobilePrefs() {
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('mobile-toggle-showspoilers').classList.add('active');
+                    if (cookies.read('night-vision') !== '') document.getElementById('mobile-toggle-nightvision').classList.add('active');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('mobile-toggle-stickyheader').classList.add('active');
+                    if (cookies.read('highlight-links') !== '') document.getElementById('mobile-toggle-highlightlinks').classList.add('active');
+
+                }
+
+
+                if (document.cookie.indexOf("scroll0=") < 0) {
+                    // do nothing
+                } else {
+                    console.log('ads removed by scroll.com');
+                    var adsRemovedWith = 'scroll';
+                    var style = document.createElement('style');
+                    style.innerHTML = '#header-ad, .proper-ad-unit, .square_ad, .sb-ad-unit { display: none !important; } ';
+                    document.head.appendChild(style);
+                }
+            </script>
+<script type="text/javascript">
+
+                var tvtropes_config = {
+                    astri_stream_enabled : "",
+                    is_logged_in         : "",
+                    handle               : "",
+                    get_astri_stream     : "",
+										revnum               : "c58d8df02f09262390bbd03db7921fc35c6af306",
+										img_domain           : "https://static.tvtropes.org",
+										adblock              : "1",
+										adblock_url          : "propermessage.io",
+										pause_editing        : "0",
+										pause_editing_msg    : "",
+										pause_site_changes   : ""
+                };
+            </script>
+<script type="text/javascript">
+						  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+						  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+						  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+						  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+						  ga('create', 'UA-3821842-1', 'auto');
+						  ga('send', 'pageview');
+
+						</script>
+</head>
+<body class="">
+<i id="user-prefs"></i>
+<script>updateUserPrefs();</script>
+<div id="fb-root"></div>
+<div id="modal-box"></div>
+<header class="headroom-element" id="main-header-bar">
+<div id="main-header-bar-inner">
+<span class="header-spacer" id="header-spacer-left"></span>
+<a class="mobile-menu-toggle-button tablet-on" href="#mobile-menu" id="main-mobile-toggle"><span></span><span></span><span></span></a>
+<a class="no-dev" href="/" id="main-header-logoButton"></a>
+<span class="header-spacer" id="header-spacer-right"></span>
+<nav class="tablet-off" id="main-header-nav">
+<a href="/pmwiki/pmwiki.php/Main/Tropes">Tropes</a>
+<a href="/pmwiki/pmwiki.php/Main/Media">Media</a>
+<a class="nav-browse" href="/pmwiki/browse.php">Browse</a>
+<a href="/pmwiki/index_report.php">Indexes</a>
+<a href="/pmwiki/topics.php">Forums</a>
+<a class="nav-browse" href="/pmwiki/recent_videos.php">Videos</a>
+</nav>
+<div id="main-header-bar-right">
+<div class="font-xs mobile-off" id="signup-login-box">
+<a class="hover-underline bold" data-modal-target="signup" href="/pmwiki/login.php">Join</a>
+<a class="hover-underline bold" data-modal-target="login" href="/pmwiki/login.php">Login</a>
+</div>
+<div class="mobile-on inline" id="signup-login-mobileToggle">
+<a data-modal-target="login" href="/pmwiki/login.php"><i class="fa fa-user"></i></a>
+</div>
+<div id="search-box">
+<form action="/pmwiki/search_result.php" class="search">
+<input class="search-box" name="q" placeholder="Search" required="" type="text" value=""/>
+<input class="submit-button" type="submit" value=""/>
+<input name="search_type" type="hidden" value="article"/>
+<input name="page_type" type="hidden" value="all"/>
+<input name="cx" type="hidden" value="partner-pub-6610802604051523:amzitfn8e7v"/>
+<input name="cof" type="hidden" value="FORID:10"/>
+<input name="ie" type="hidden" value="ISO-8859-1"/>
+<input name="siteurl" type="hidden" value=""/>
+<input name="ref" type="hidden" value=""/>
+<input name="ss" type="hidden" value=""/>
+</form>
+<a class="mobile-on mobile-search-toggle close-x" href="#close-search"><i class="fa fa-close"></i></a>
+</div>
+<div id="random-box">
+<a class="button-random-trope" href="/pmwiki/pmwiki.php/Main/AndKnowingIsHalfTheBattle" onclick="ga('send', 'event', 'button', 'click', 'random trope');" rel="nofollow"></a>
+<a class="button-random-media" href="/pmwiki/pmwiki.php/Film/TheRageCarrie2" onclick="ga('send', 'event', 'button', 'click', 'random media');" rel="nofollow"></a>
+</div>
+</div>
+</div>
+<div class="tablet-on" id="mobile-menu"><div class="mobile-menu-options">
+<div class="nav-wrapper">
+<a class="xl" href="/pmwiki/pmwiki.php/Main/Tropes">Tropes</a>
+<a class="xl" href="/pmwiki/pmwiki.php/Main/Media">Media</a>
+<a class="xl" href="/pmwiki/browse.php">Browse</a>
+<a class="xl" href="/pmwiki/index_report.php">Indexes</a>
+<a class="xl" href="/pmwiki/topics.php">Forums</a>
+<a class="xl" href="/pmwiki/recent_videos.php">Videos</a>
+<a href="/pmwiki/query.php?type=att">Ask The Tropers</a>
+<a href="/pmwiki/query.php?type=tf">Trope Finder</a>
+<a href="/pmwiki/query.php?type=ykts">You Know That Show...</a>
+<a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a>
+<a data-click-toggle="active" href="#tools">Tools <i class="fa fa-chevron-down"></i></a>
+<div class="tools-dropdown mobile-dropdown-linkList">
+<a href="/pmwiki/cutlist.php">Cut List</a>
+<a href="/pmwiki/changes.php">New Edits</a>
+<a href="/pmwiki/recent_edit_reasons.php">Edit Reasons</a>
+<a href="/pmwiki/launches.php">Launches</a>
+<a href="/pmwiki/img_list.php">Images List</a>
+<a href="/pmwiki/crown_activity.php">Crowner Activity</a>
+<a href="/pmwiki/no_types.php">Un-typed Pages</a>
+<a href="/pmwiki/page_type_audit.php">Recent Page Type Changes</a>
+</div>
+<a data-click-toggle="active" href="#hq">Tropes HQ <i class="fa fa-chevron-down"></i></a>
+<div class="tools-dropdown mobile-dropdown-linkList">
+<a href="/pmwiki/about.php">About Us</a>
+<a href="/pmwiki/contact.php">Contact Us</a>
+<a href="mailto:advertising@proper.io">Advertise</a>
+<a href="/pmwiki/dmca.php">DMCA Notice</a>
+<a href="/pmwiki/privacypolicy.php">Privacy Policy</a>
+</div>
+<a href="/pmwiki/ad-free-subscribe.php">Go Ad-Free</a>
+<div class="toggle-switches">
+<ul class="mobile-menu display-toggles">
+<li>Show Spoilers <div class="display-toggle show-spoilers" id="mobile-toggle-showspoilers"></div></li>
+<li>Night Vision <div class="display-toggle night-vision" id="mobile-toggle-nightvision"></div></li>
+<li>Sticky Header <div class="display-toggle sticky-header" id="mobile-toggle-stickyheader"></div></li>
+<li>Highlight Links <div class="display-toggle highlight-links" id="mobile-toggle-highlightlinks"></div></li>
+</ul>
+<script>updateMobilePrefs();</script>
+</div>
+</div>
+</div>
+</div>
+</header>
+<div class="mobile-on" id="homepage-introBox-mobile">
+<a href="/"><img class="logo-small" src="/images/logo-white-big.png"/></a>
+<form action="/pmwiki/search_result.php" class="search" style="margin:10px -5px -6px -5px;">
+<input class="search-box" name="q" placeholder="Search" required="" type="text" value=""/>
+<input class="submit-button" type="submit" value=""/>
+<input name="search_type" type="hidden" value="article"/>
+<input name="page_type" type="hidden" value="all"/>
+<input name="cx" type="hidden" value="partner-pub-6610802604051523:amzitfn8e7v"/>
+<input name="cof" type="hidden" value="FORID:10"/>
+<input name="ie" type="hidden" value="ISO-8859-1"/>
+<input name="siteurl" type="hidden" value=""/>
+<input name="ref" type="hidden" value=""/>
+<input name="ss" type="hidden" value=""/>
+</form>
+</div>
+<div class="ad" id="header-ad-wrapper">
+<div id="header-ad">
+<div class="ad-size-970x90 atf_banner">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_1"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_1'); });</script> </div>
+</div> </div>
+</div>
+</div>
+<div id="main-container">
+<div class="action-bar mobile-off" id="action-bar-top">
+<div class="action-bar-right">
+<p>Follow TV Tropes</p>
+<a class="button-fb" href="https://www.facebook.com/TVTropes">
+<i class="fa fa-facebook"></i></a>
+<a class="button-tw" href="https://www.twitter.com/TVTropes">
+<i class="fa fa-twitter"></i></a>
+<a class="button-re" href="https://www.reddit.com/r/TVTropes">
+<i class="fa fa-reddit-alien"></i></a>
+</div>
+<nav class="actions-wrapper" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<ul class="page-actions" id="top_main_list">
+<li class="link-edit">
+<a class="article-edit-button" data-modal-target="login" href="/pmwiki/pmwiki.php/Main/DebugRoom?action=edit" rel="nofollow">
+<i class="fa fa-pencil"></i> Edit Page</a></li><li class="link-related"><a href="/pmwiki/relatedsearch.php?term=Main/DebugRoom">
+<i class="fa fa-share-alt"></i> Related</a></li><li class="link-history"><a href="/pmwiki/article_history.php?article=Main.DebugRoom">
+<i class="fa fa-history"></i> History</a></li><li class="link-discussion"><a href="/pmwiki/remarks.php?trope=Main.DebugRoom">
+<i class="fa fa-comment"></i> Discussion</a></li> </ul>
+<button class="nav__dropdown-toggle" id="top_more_button" onclick="toggle_more_menu('top');" type="button">More</button>
+<ul class="more_menu hidden_more_list" id="top_more_list">
+<li class="link-todo tuck-always more_list_item"><a data-modal-target="login" href="#todo"><i class="fa fa-check-circle"></i> To Do</a></li><li class="link-pageSource tuck-always more_list_item"><a data-modal-target="login" href="/pmwiki/pmwiki.php/Main/DebugRoom?action=source" rel="nofollow" target="_blank"><i class="fa fa-code"></i> Page Source</a></li> </ul>
+</nav>
+<div class="WikiWordModalStub"></div>
+<div class="ImgUploadModalStub" data-page-type="Article"></div>
+<div class="login-alert" style="display: none;">
+You need to <a href="/pmwiki/login.php" style="color:#21A0E8">login</a> to do this. <a href="/pmwiki/login.php?tab=register_account" style="color:#21A0E8">Get Known</a> if you don't have an account
+</div>
+</div>
+<div class="page-Article" id="main-content">
+<article class="with-sidebar" id="main-entry">
+<input id="groupname-hidden" type="hidden" value="Main"/>
+<input id="title-hidden" type="hidden" value="DebugRoom"/>
+<input id="article_id" type="hidden" value="13819"/>
+<input id="logged_in" type="hidden" value="false"/>
+<p class="hidden" id="current_url">http://tvtropes.org/pmwiki/pmwiki.php/Main/DebugRoom</p>
+<meta content="" itemprop="datePublished"/>
+<meta content="" itemprop="articleSection"/>
+<meta content="" itemprop="image"/>
+<a class="watch-button" data-modal-target="login" href="#watch">Follow<span>ing</span></a>
+<h1 class="entry-title" itemprop="headline">
+Debug Room
+</h1>
+<script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+                "@type": "ListItem",
+                "position": 1,
+                "name": "tvtropes.org",
+                "item": "https://tvtropes.org"
+            },{
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Tropes",
+                "item": "https://tvtropes.org/pmwiki/pmwiki.php/Main/Tropes"
+            },{
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Debug Room"            }]
+        }
+    </script>
+<a class="mobile-actionbar-toggle mobile-on" data-click-toggle="active" href="#mobile-actions-toggle" id="mobile-actionbar-toggle">
+<p class="tiny-off">Go To</p><span></span><span></span><span></span><i class="fa fa-pencil"></i></a>
+<nav class="mobile-actions-wrapper mobile-on" id="mobile-actions-bar"></nav>
+<div class="modal fade hidden-until-active" id="editLockModal">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button aria-label="Close" class="close" data-dismiss="modal" type="button"> <span aria-hidden="true">×</span></button>
+<h4 class="modal-title">Edit Locked</h4>
+</div>
+<div class="modal-body">
+<div class="row">
+<div class="body">
+<div class="danger troper_locked_message"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<nav class="body-options" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<ul class="subpage-links">
+<li>
+<a class="subpage-link curr-subpage" href="/pmwiki/pmwiki.php/Main/DebugRoom" title="The Main page">
+<span class="wrapper"><span class="spi main-page"></span>Main</span></a>
+</li>
+<li>
+<a class="subpage-link" href="/pmwiki/pmwiki.php/PlayingWith/DebugRoom" title="The PlayingWith page">
+<span class="wrapper">PlayingWith</span></a>
+</li>
+<li class="create-subpage dropdown">
+<a aria-expanded="false" class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);" role="button">
+<span class="wrapper">Create New <i class="fa fa-plus-circle"></i></span>
+</a>
+<select onchange="this.options[this.selectedIndex].value &amp;&amp; (window.location = this.options[this.selectedIndex].value);">
+<option value="">- Create New -</option>
+<option value="/pmwiki/pmwiki.php/Analysis/DebugRoom?action=edit">Analysis</option>
+<option value="/pmwiki/pmwiki.php/Characters/DebugRoom?action=edit">Characters</option>
+<option value="/pmwiki/pmwiki.php/FanficRecs/DebugRoom?action=edit">FanficRecs</option>
+<option value="/pmwiki/pmwiki.php/FanWorks/DebugRoom?action=edit">FanWorks</option>
+<option value="/pmwiki/pmwiki.php/Fridge/DebugRoom?action=edit">Fridge</option>
+<option value="/pmwiki/pmwiki.php/Haiku/DebugRoom?action=edit">Haiku</option>
+<option value="/pmwiki/pmwiki.php/Headscratchers/DebugRoom?action=edit">Headscratchers</option>
+<option value="/pmwiki/pmwiki.php/ImageLinks/DebugRoom?action=edit">ImageLinks</option>
+<option value="/pmwiki/pmwiki.php/Laconic/DebugRoom?action=edit">Laconic</option>
+<option value="/pmwiki/pmwiki.php/Quotes/DebugRoom?action=edit">Quotes</option>
+<option value="/pmwiki/pmwiki.php/Recap/DebugRoom?action=edit">Recap</option>
+<option value="/pmwiki/pmwiki.php/ReferencedBy/DebugRoom?action=edit">ReferencedBy</option>
+<option value="/pmwiki/pmwiki.php/Synopsis/DebugRoom?action=edit">Synopsis</option>
+<option value="/pmwiki/pmwiki.php/Timeline/DebugRoom?action=edit">Timeline</option>
+<option value="/pmwiki/pmwiki.php/Trivia/DebugRoom?action=edit">Trivia</option>
+<option value="/pmwiki/pmwiki.php/WMG/DebugRoom?action=edit">WMG</option>
+<option value="/pmwiki/pmwiki.php/YMMV/DebugRoom?action=edit">YMMV</option>
+</select>
+</li>
+</ul>
+</nav>
+<div class="article-content retro-folders" id="main-article">
+<p>A Debug Room is a location, menu or mode with options the programmers would have used for testing the game. <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DummiedOut" title="/pmwiki/pmwiki.php/Main/DummiedOut">It's usually not supposed to be accessed by the player</a>; as such, it will either require a complicated code/password or be inaccessible without the help of a <a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/GameShark" title="/pmwiki/pmwiki.php/VideoGame/GameShark">GameShark</a> or the like. Often contains a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/WarpZone" title="/pmwiki/pmwiki.php/Main/WarpZone">Warp Zone</a>.
+</p><p>Not to be confused with <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DevelopersRoom" title="/pmwiki/pmwiki.php/Main/DevelopersRoom">Developer's Room</a>, which is a kind of <a class="twikilink" href="/pmwiki/pmwiki.php/Main/EasterEgg" title="/pmwiki/pmwiki.php/Main/EasterEgg">Easter Egg</a> and doesn't have exploits included.
+</p><div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_1"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_1'); })</script></div></div><p>While many <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Roguelike" title="/pmwiki/pmwiki.php/Main/Roguelike">roguelikes</a> call this "wizard mode", <a class="twikilink" href="/pmwiki/pmwiki.php/Main/WizardMode" title="/pmwiki/pmwiki.php/Main/WizardMode">Wizard Mode</a> is an unrelated <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Pinball" title="/pmwiki/pmwiki.php/Main/Pinball">pinball-game</a> trope.
+</p><hr/><h2>Examples:</h2>
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SuperMarioRPG" title="/pmwiki/pmwiki.php/VideoGame/SuperMarioRPG">Super Mario RPG</a></em> has a debug room with limited functionality: it's speculated that most of its features were ripped out of the game before release. It also acts similarly to <a class="urllink" href="http://tcrf.net/The_Legend_of_Zelda:_A_Link_to_the_Past_(SNES)#Chris_Houlihan_room">the Chris Houlihan room<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a> in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheLegendOfZeldaALinkToThePast" title="/pmwiki/pmwiki.php/VideoGame/TheLegendOfZeldaALinkToThePast">The Legend of Zelda: A Link to the Past</a></em>, in that the player is sent there if the game runs into faulty map data, but otherwise it can only be accessed by patch codes.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SonicTheHedgehog" title="/pmwiki/pmwiki.php/VideoGame/SonicTheHedgehog">Sonic the Hedgehog</a> 1, 2, 3 and Knuckles</em> all have debug modes which can be accessed by the player. In Sonic 2, it's done simply by playing the right sequence of sounds in the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SoundTest" title="/pmwiki/pmwiki.php/Main/SoundTest">Sound Test</a> (spelling out the game's release date, one digit at a time, in year-month-day order.) The debug mode in each lets Sonic turn into a variety of items (moved around with the d-pad), and place them onto the level. In <em>Sonic 3</em>, you could also use the item-turning feature to reach Knuckles' paths as Sonic and vice-versa.
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SonicAdventure2" title="/pmwiki/pmwiki.php/VideoGame/SonicAdventure2">Sonic Adventure 2</a></em> contains an actual debug room, accessible through hacking, or via <a class="urllink" href="https://www.youtube.com/watch?v=n-qtj9ij4wo">a glitch<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a>. This glitch is even <em>easier</em> to perform in the HD re-release, to the point where it can easily be done <em>accidentally</em>, which is how it was first discovered. It was fixed in the PC version, though for obvious reasons this is also the version in which the hacking method is most accessible.
+</li></ul></li><div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_2"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_2'); })</script></div></div><li> The PC version of <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SonicTheHedgehogCD" title="/pmwiki/pmwiki.php/VideoGame/SonicTheHedgehogCD">Sonic the Hedgehog CD</a></em> allowed you to access its debug mode by adding a single line of text to one of the game's data files.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FinalFantasyTactics" title="/pmwiki/pmwiki.php/VideoGame/FinalFantasyTactics">Final Fantasy Tactics</a></em> has debug menu items that, among other things, allow you to pit two teams of your characters against each other on <em>any</em> map in the game. It requires a Game Shark to access. This was eventually fixed up and released as a multiplayer mode in the PSP rerelease.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FinalFantasyVII" title="/pmwiki/pmwiki.php/VideoGame/FinalFantasyVII">Final Fantasy VII</a></em> had a debug room that let you fight against pyramid-like test enemies, max out Materia, and the like. It also had several strange <a class="twikilink" href="/pmwiki/pmwiki.php/Main/EasterEgg" title="/pmwiki/pmwiki.php/Main/EasterEgg">Easter Egg</a> features such as changing your overworld model into a giant Aerith and a section of the floor that complains when you walk on it. Fun fact: one of the NPCs (said giant Aerith) can send you to different places in the game world. When asked to be sent "to Hades", she replies that <em>you're already there</em>.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/EarthBound" title="/pmwiki/pmwiki.php/VideoGame/EarthBound">EarthBound</a></em> has a fairly elaborate debug menu. This menu contains, among other things, a <a class="twikilink" href="/pmwiki/pmwiki.php/Videogame/Kirby" title="/pmwiki/pmwiki.php/Videogame/Kirby">Kirby</a> sprite from <em>Kirby's Dream Course</em> as the menu cursor - an artifact left by a HAL Laboratory programmer, perhaps, considering how <em>EarthBound</em> and <em>Dream Course</em> were developed at around the same time. Although another more well-known debug menu exists as well - one intended to be used during the game, similar to <em>Super Mario RPG</em>. This menu is also reachable via one of the options from the former... and is significantly trickier to figure out, since it remains untranslated from Japanese despite the lack of a Japanese font. Only a few words are recognizable as compressed garbled <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Engrish" title="/pmwiki/pmwiki.php/Main/Engrish">Engrish</a> - "SUND" for Sound, "TRP-T" for Teleport, and "GtZStTI" for Goods Edit, for example.
+<ul><div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_3"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_3'); })</script></div></div><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Mother3" title="/pmwiki/pmwiki.php/VideoGame/Mother3">Mother 3</a></em> has a debug menu that's somewhat notable for the fact that, unlike most examples on this page, it's in the form of a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/NotHyperbole" title="/pmwiki/pmwiki.php/Main/NotHyperbole">literal</a> <a class="urllink" href="https://tcrf.net/Mother_3#Debug_Room">debug room.<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a> This plain beige and white room features a variety of NPCs from throughout the game that, when talked to, can provide various options such as choosing which part of which chapter to start at, configuring the player's party and level, viewing pre-battle screen transitions, and <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TheLastOfTheseIsNotLikeTheOthers" title="/pmwiki/pmwiki.php/Main/TheLastOfTheseIsNotLikeTheOthers">filling the player's inventory with nuts</a>. The player can also fight the Firefly mid-boss, with this room being the only place where they can see its <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DummiedOut" title="/pmwiki/pmwiki.php/Main/DummiedOut">Dummied Out</a> back sprite in action; losing to the Firefly or choosing a chapter/event to play is the only direct method of exiting this room.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/TheElderScrolls" title="/pmwiki/pmwiki.php/Franchise/TheElderScrolls">The Elder Scrolls</a></em>
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheElderScrollsIIIMorrowind" title="/pmwiki/pmwiki.php/VideoGame/TheElderScrollsIIIMorrowind">Morrowind</a></em> has several separate debug rooms accessible through the console. Some of them are also named after specific developers. ("Todd Test", "Mark's Vampire Test Cell", etc.)
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheElderScrollsIVOblivion" title="/pmwiki/pmwiki.php/VideoGame/TheElderScrollsIVOblivion">Oblivion</a></em> has a whole series of them, accessible from a central hall. Including screwing around with some weird people designed to test the AI, you can stock up on some useful (and some useless) equipment, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AwesomeButImpractical" title="/pmwiki/pmwiki.php/Main/AwesomeButImpractical">including some that were dummied out</a>.
+</li><li> Really, would it be a Bethesda game if <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheElderScrollsVSkyrim" title="/pmwiki/pmwiki.php/VideoGame/TheElderScrollsVSkyrim">Skyrim</a></em> were any different? Players have, amongst other things, the ability to reach M'aiq the Liar at any point, or reach a dev testing room with every item in the game, <a class="urllink" href="https://tcrf.net/The_Elder_Scrolls_V:_Skyrim">with nothing but a three-letter console command and a destination.<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a>
+</li></ul></li><li> Same engine, same developers, same test cells: the developers' rooms in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Fallout3" title="/pmwiki/pmwiki.php/VideoGame/Fallout3">Fallout 3</a></em> contain all items, a crapload of respawning mines, lots of locked safes and hackable computers, and a random guy with a gun. It's impossible to reach in normal gameplay; the only way to get in or out is via the console or plugins.
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Fallout76" title="/pmwiki/pmwiki.php/VideoGame/Fallout76">Fallout 76</a></em>, built on the same engine by same developers, also has a dev room with all of the items. However, as Fallout 76 is a multiplayer game, the dev room has been the target of cheaters and glitch exploiters since launch. It was possible for a cheater to reach the Dev Room, grab all the best gear in the game, get out, then dominate any other player they came across. Bethesda has created various countermeasures to try to stop this, including emailing the cheaters and asking them how they got in.
+</li></ul></li><li> The debug room in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/UltimaVII" title="/pmwiki/pmwiki.php/VideoGame/UltimaVII">Ultima VII</a>: The Black Gate</em>, which contains a cache of plot-relevant items and teleports to plot-relevant locations in the game world, can be accessed by a player who uses a large number of crates to make a staircase, climb up onto the ceiling of a certain building in Trinsic, the starting town, and crawl down the chimney.
+<ul><li> Its sequel, <em>Serpent Isle</em>, had a similar debug room, containing every item in the game once again, but the <em>really</em> fun devroom featured a lot of posters and statues of Dallas Cowboys cheerleaders, as well as various nude dancers.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TalesOfDestiny" title="/pmwiki/pmwiki.php/VideoGame/TalesOfDestiny">Tales of Destiny</a></em> also had its own debug room, which was weird in the fact that it was more or less completely translated and legible on its own: the main reason to visit it isn't to screw around with your stats and whatnot, but to talk to Cless and watch him randomly make <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/SouthPark" title="/pmwiki/pmwiki.php/WesternAnimation/SouthPark">South Park</a></em> quotes while pretending to be Cartman's evil twin.
+</li><li> A few cartridges of <em><a class="twikilink" href="/pmwiki/pmwiki.php/Videogame/SuperMarioBros" title="/pmwiki/pmwiki.php/Videogame/SuperMarioBros">Super Mario All-Stars</a></em> left the factory with a debug mode intact. Pressing select in a game of <em>Super Mario Bros 3</em> in these carts allows you to cycle through all of the plumber's various forms at will. Press Y and select for the <a class="urllink" href="http://www.mariowiki.com/Goomba%27s_Shoe">Kuribo's Shoe<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a>, though it's usually just a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GoodBadBugs" title="/pmwiki/pmwiki.php/Main/GoodBadBugs">jumble of pixels</a>.
+<ul><li> The original <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SuperMarioBros3" title="/pmwiki/pmwiki.php/VideoGame/SuperMarioBros3">Super Mario Bros. 3</a></em> had a debug mode in the form of the Game Genie Code KKKZSPIU, which has the power cycle and Kuribo's Shoe effect described above, as well as granting you one of every item and a level warp ability. In addition, the power cycle could be twisted into the ultimate <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GameBreaker" title="/pmwiki/pmwiki.php/Main/GameBreaker">Game-Breaker</a> by turning into a statue as Tanooki Mario, and cycling before the statue time limit ran out, giving you permanent statue status in any form OTHER THAN Tanooki.
+</li></ul></li><li> The very first <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Tenchu" title="/pmwiki/pmwiki.php/VideoGame/Tenchu">Tenchu</a></em> game also had a comprehensive debug mode that's accessed via a complicated button press code: unlike all other codes in the game which are changed between different versions of the game, the debug mode is the same for all versions of the game. Using it allows you to do a great many things, including but not limited to:
+<ul><li> Add as many items into your inventory as you want and make all of them infinite.
+</li><li> Add, delete, change the patrol routes of and set the AI of enemies and save and load them to the memory card, although it's not known how well the latter works.
+</li><li> Become any character in the level and replace AI with the second controller. This can lead to hilarity such as confusing VS matches, ninjas that run like dogs and enemies (including animals) using ninja items.
+</li><li> Ninjas losing the lower half of their torsos or becoming just floating swords.
+</li><li> Unfortunately, none of the later games left the debug mode intact, and what was hyped to be the debug mode in Tenchu 3 just ended up being an enemy control cheat that didn't even work that well.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheSims" title="/pmwiki/pmwiki.php/VideoGame/TheSims">The Sims</a> 2</em>: boolProp testingCheatsEnabled true, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/FanNickname" title="/pmwiki/pmwiki.php/Main/FanNickname">Fan Nicknamed</a> "boolprop" by people who don't know what "boolprop" means. It allows you, among other things, to kill Sims, make them pregnant with their own <a class="twikilink" href="/pmwiki/pmwiki.php/Main/OppositeSexClone" title="/pmwiki/pmwiki.php/Main/OppositeSexClone">Opposite-Sex Clone</a>, or reveal their <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GayOption" title="/pmwiki/pmwiki.php/Main/GayOption">autonomous gender preference</a>.
+</li><li> All of the 3D <em>Zelda</em> games have debug modes that can be enabled via cheat codes, but only <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheLegendOfZeldaTheWindWaker" title="/pmwiki/pmwiki.php/VideoGame/TheLegendOfZeldaTheWindWaker">The Legend of Zelda: The Wind Waker</a></em> and <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheLegendOfZeldaOcarinaOfTime" title="/pmwiki/pmwiki.php/VideoGame/TheLegendOfZeldaOcarinaOfTime">The Legend of Zelda: Ocarina of Time</a></em> have actual rooms (the latter from a debug ROM.) The most notable one in <em>The Wind Waker</em> is like a playground, and is best known for having a <em>gigantic</em> tower that dwarfs anything seen in the game and takes upwards of 15 minutes to climb.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SuperSmashBros" title="/pmwiki/pmwiki.php/VideoGame/SuperSmashBros">Super Smash Bros.</a> Melee</em> had a particularly awesome debug menu. Some of the features included changing your appearance to options normally not available, spawning any item you desire, accessing a huge test level, a more complete <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SoundTest" title="/pmwiki/pmwiki.php/Main/SoundTest">Sound Test</a>, the ability to play as a wireframe, the sandbag, Giga Bowser, and Master or Crazy Hand. <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SchmuckBait" title="/pmwiki/pmwiki.php/Main/SchmuckBait">Be careful though</a>, there is one feature on the debug menu that tests memory card features, which will allow you to <em>wipe your memory card clean or delete Smash Bros. save data.</em> Nonetheless, the debug mode made the game even more fun than it was already, especially in combination with other Action Replay codes (i.e. Super/Poison Mushrooms having stacking, permanent effects or always having bunny ears). To boot, you could use debug view modes, such as showing the names of currently playing character animation, showing character hitboxes (even going so far as to differentiate invincibility frames, the attack hit ranges, grabbable objects, and the regular hitboxes with different colors, which looks awesome). Fun times were had indeed.
+</li><li> The Nintendo 64 game <em>Star Wars: Shadows of the Empire</em> had a very comprehensive debug mode that allows the player to control almost everything in the game down to minute details. It was accessed by pressing almost every button on the controller and then holding the joystick halfway alternating left and right until a confirmation sound is heard. Most gamers had to use their nose, chin, feet, or another gamer in order to enter this code.
+</li><li> Nearly all <em><a class="twikilink" href="/pmwiki/pmwiki.php/Videogame/MortalKombat" title="/pmwiki/pmwiki.php/Videogame/MortalKombat">Mortal Kombat</a></em> games had a debug menu.
+</li><li> A secret cheat code in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SimCity" title="/pmwiki/pmwiki.php/VideoGame/SimCity">SimCity</a> 2000</em> gave the player access to the Debug menu, which included options for everything from millions of dollars of free money to new and terrible disasters.
+</li><li> It's possible to access Debug Island in the second game in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/ShadowHearts" title="/pmwiki/pmwiki.php/VideoGame/ShadowHearts">Shadow Hearts</a></em> series with one of the two known patch codes (either after the intro cutscenes or by entering a location on the World Map immediately after entering the screen, without moving the cursor). After gaining access to it player can enter a huge menu in Japanese with lots of subsections and options. It's extremely easy to crash the game though (and the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BonusDungeon" title="/pmwiki/pmwiki.php/Main/BonusDungeon">Sea of Woods</a> area seems to be wiped from the game, even though it's still listed in the warp menu and you can unlock some of the other <a class="twikilink" href="/pmwiki/pmwiki.php/Main/LimitedSpecialCollectorsUltimateEdition" title="/pmwiki/pmwiki.php/Main/LimitedSpecialCollectorsUltimateEdition">Director's Cut</a> features).
+</li><li> Using the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/KonamiCode" title="/pmwiki/pmwiki.php/Main/KonamiCode">Konami Code</a> in the computer game <em>Insaniquarium</em> after you win grants you access to a "sandbox mode" where you can add anything you want.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Videogame/BreathOfFire" title="/pmwiki/pmwiki.php/Videogame/BreathOfFire">Breath of Fire</a></em> has the Dr. Warp debugging tool, which can be acessed by ROM hacking and allows you to warp to any location, including several <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DummiedOut" title="/pmwiki/pmwiki.php/Main/DummiedOut">Dummied Out</a> areas.
+</li><li> <a class="urllink" href="http://tcrf.net/Kirby%27s_Adventure/Debug_Rooms#Room_00A8">Rooms 0007 and 00A8<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a> in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/KirbysAdventure" title="/pmwiki/pmwiki.php/VideoGame/KirbysAdventure">Kirby's Adventure</a></em>.
+</li><li> A really weird one in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/GoldenSun" title="/pmwiki/pmwiki.php/VideoGame/GoldenSun">Golden Sun</a></em>. It has all the main characters in the game standing in an empty void arranged into a grid, each one with a different function (giving items, sound effects, etc.) Naturally, they don't have their usual characterization but respond in a stilted mechanically precise way. The effect's rather eerie, to say the least.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DevilMayCry" title="/pmwiki/pmwiki.php/VideoGame/DevilMayCry">Devil May Cry</a> 4</em> contains a debug mode in the PC version which can directly be accessed in certain international versions or by using a modified .exe file. The debug mode allows for numerous options, including invincibility, allowing Dante to be played on Nero's levels, infinite jumps, max mission rankings, one hit kills, etc.
+</li><li> The <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SuperStarWars" title="/pmwiki/pmwiki.php/VideoGame/SuperStarWars">Super Star Wars</a></em> SNES trilogy has a robust debug feature which offers, amongst other things, invulnerability, infinite <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SmartBomb" title="/pmwiki/pmwiki.php/Main/SmartBomb">thermal detonators</a>, stage select and the ability to choose who you want to play as (Up to and including all forms of Leia in Super Return of the Jedi).
+</li><li> The GBA entries to the <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SuperRobotWars" title="/pmwiki/pmwiki.php/VideoGame/SuperRobotWars">Super Robot Wars</a></em> franchise had a debug mode that could only be accessed through codes. They usually included a test stage where the hero and villain units fought, an attack viewer and a sprite viewer. <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SuperRobotWarsJudgment" title="/pmwiki/pmwiki.php/VideoGame/SuperRobotWarsJudgment">Super Robot Wars Judgment</a></em>'s Debug mode ended up revealing an attack for the Justice Gundam that the unit didn't have in the original (a self-destruct attack that was given to Boss Borot instead).
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/CliveBarkersUndying" title="/pmwiki/pmwiki.php/VideoGame/CliveBarkersUndying">Clive Barker's Undying</a></em> features two testing levels "playground" and "smoketest" (only accesible using the game cheats), featuring, among other things, objects left out of normal gameplay and tiles <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ExactlyWhatItSaysOnTheTin" title="/pmwiki/pmwiki.php/Main/ExactlyWhatItSaysOnTheTin">with labels that tell what type of ground you're stepping on</a>.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/WorldOfWarcraft" title="/pmwiki/pmwiki.php/VideoGame/WorldOfWarcraft">World of Warcraft</a></em> vanilla had "GM Island" that was the default spawn point of every in game GM, to allow them to check if they're invisible before teleporting themselves to check on claims of botting or glitches. There's a boat and a shack. it exists in its own instance, and is now only accessable to the GMs (A player can only find their way there if they hack the game, or are sent there into a small prison cell which is rumored to be a "time out" corner).
+</li><li> Every <a class="twikilink" href="/pmwiki/pmwiki.php/Creator/HumongousEntertainment" title="/pmwiki/pmwiki.php/Creator/HumongousEntertainment">Humongous Entertainment</a> game released after <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/PuttPutt" title="/pmwiki/pmwiki.php/VideoGame/PuttPutt">Putt-Putt</a> Saves the Zoo</em> has a debug room that can be enabled by adding an INI option into the hegames.ini file. They let you go to any room in the game, pick up any item, and even change up the paths. Some of the games even let you put the game in "fast mode" or execute a script at any time.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/KnightsOfTheOldRepublic" title="/pmwiki/pmwiki.php/VideoGame/KnightsOfTheOldRepublic">Knights of the Old Republic</a></em> has the "Galaxy Droid", which can only be accessed through a glitch at a specific point in the game (after completing the third required story mission). The Galaxy Droid allows instant access to every map of the game, including levels which have been <a class="twikilink" href="/pmwiki/pmwiki.php/Main/PermanentlyMissableContent" title="/pmwiki/pmwiki.php/Main/PermanentlyMissableContent">rendered inaccessible</a>, and skips loading screens, cinematic sequences, and the minigame that occasionally appears when traveling between planets.
+</li><li> The Object Testing Arena added to <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DwarfFortress" title="/pmwiki/pmwiki.php/VideoGame/DwarfFortress">Dwarf Fortress</a></em> is a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DebugRoom" title="/pmwiki/pmwiki.php/Main/DebugRoom">Debug Room</a> that's accessible right from the in-game menu, to be used for debugging <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GameMod" title="/pmwiki/pmwiki.php/Main/GameMod">Game Mods</a>.
+</li><li> The original Japanese release of <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/BloodyRoar" title="/pmwiki/pmwiki.php/VideoGame/BloodyRoar">Bloody Roar</a> 3</em> left in a debug mode that allowed players to deform player models and environments like a proto-<em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/GarrysMod" title="/pmwiki/pmwiki.php/VideoGame/GarrysMod">Garry's Mod</a></em>. Sadly, some people abused it to create somewhat pornographic images, and the feature was then pulled from the US version and all subsequent re-releases.
+</li><li> In the "Developer Mode" of the 2012 <a class="twikilink" href="/pmwiki/pmwiki.php/Main/UpdatedRerelease" title="/pmwiki/pmwiki.php/Main/UpdatedRerelease">Updated Re-release</a> of <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DivinityIITheDragonKnightSaga" title="/pmwiki/pmwiki.php/VideoGame/DivinityIITheDragonKnightSaga">Divinity II: The Dragon Knight Saga</a></em>, the debug mode is easily accessible right from the word "go", to the point of being one of the much-touted features of the Developer's Cut.
+</li><li> Accessible only through a level select mode, <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/JurassicParkTrespasser" title="/pmwiki/pmwiki.php/VideoGame/JurassicParkTrespasser">Jurassic Park: Trespasser</a></em> has a debug level that has several strange objects, most of the game's firearms, a domino-inspired physics test and a button that spawns a raptor, presumably for <a class="twikilink" href="/pmwiki/pmwiki.php/Main/VideoGameCrueltyPotential" title="/pmwiki/pmwiki.php/Main/VideoGameCrueltyPotential">weapons testing purposes</a>.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/EarthwormJim" title="/pmwiki/pmwiki.php/VideoGame/EarthwormJim">Earthworm Jim</a></em> 1 and 2 have this, and the latter also has a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SoundTest" title="/pmwiki/pmwiki.php/Main/SoundTest">Sound Test</a>.
+</li><li> <a class="twikilink" href="/pmwiki/pmwiki.php/Creator/ZapDramatic" title="/pmwiki/pmwiki.php/Creator/ZapDramatic">Zap Dramatic</a>'s <em>Sir Basil Pike Public School</em> has a debug menu allowing one to skip around the storyline and alter their Persuasion Power at will.
+</li><li> Both <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/EccoTheDolphin" title="/pmwiki/pmwiki.php/VideoGame/EccoTheDolphin">Ecco the Dolphin</a></em> games have debug menus accessible by pausing Ecco mid-turn and pressing a button sequence.
+</li><li> The game of <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/TheLionKing1994" title="/pmwiki/pmwiki.php/WesternAnimation/TheLionKing1994">The Lion King (1994)</a></em> had one accessible with a button sequence from the title screen.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/BetrayalAtKrondor" title="/pmwiki/pmwiki.php/VideoGame/BetrayalAtKrondor">Betrayal at Krondor</a></em> has a key combination to summon a magic chest that can heal the party, give money/whetstones/healing items/etc. and provide quest items for the current chapter. The passwords to open the chest differ for each chapter. If you fail to open it, one of your characters calls cheating shameful. When you're done with it, a character says something along the lines of "we shouldn't cheat <em>too</em> much".
+</li><li> The Japanese version of <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DigimonWorld" title="/pmwiki/pmwiki.php/VideoGame/DigimonWorld">Digimon World</a></em> had a left-over debug menu accessible in-game at the start of a new playthrough. It contained miscellaneous items in large quantities, including Digivolution items for Digimon that were <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DummiedOut" title="/pmwiki/pmwiki.php/Main/DummiedOut">Dummied Out</a>. This menu was made inaccessible in international versions, however.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Videogame/ColossalCave" title="/pmwiki/pmwiki.php/Videogame/ColossalCave">Colossal Cave</a></em>, which ran on timesharing computers had "Wizard Mode" that if you wanted to use it, had to be typed as the first command given to the game. You then had to give the password and solve a computation to prove you are a Wizard. In Wizard Mode, you could shut down the game into single player mode, set the hours the game is allowed to be played (to keep people from running it when a lot of people want to use the computer, like during daytime hours of finals week on a university or college computer) or to set holidays when anyone could play with no restrictions (like Thanksgiving or Christmas).
+</li><li> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/WordOfGod" title="/pmwiki/pmwiki.php/Main/WordOfGod">Word of the Elder Powers</a> says <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/NexusClash" title="/pmwiki/pmwiki.php/VideoGame/NexusClash">Nexus Clash</a></em> has one of these squirreled away somewhere for testing mechanics as part of the series' <a class="twikilink" href="/pmwiki/pmwiki.php/Main/PerpetualBeta" title="/pmwiki/pmwiki.php/Main/PerpetualBeta">Perpetual Beta</a>. The alpha map for the latest iteration is a more publicly accessible version since the development process has become more openly discussed with time.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SuperMarioMaker" title="/pmwiki/pmwiki.php/VideoGame/SuperMarioMaker">Super Mario Maker</a></em> levels often have "dev exits" or "dev stars," shortcuts or powerups hidden in deliberately counterintuitive locations. The designer uses it to <a class="twikilink" href="/pmwiki/pmwiki.php/Main/WarpZone" title="/pmwiki/pmwiki.php/Main/WarpZone">bypass the level</a> so they can upload a difficult stage without going to the trouble of beating it (the game requires you to beat a stage before uploading it, to prove that it's not impossible). Levels using this contentious trick are often given away by a seemingly impossible <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Speedrun" title="/pmwiki/pmwiki.php/Main/Speedrun">world-record time</a>, set by a player who found the shortcut (either by accident or by examining the level in the editor before replaying it).
+</li><li> Text adventures written using the <em>Inform</em> system can be compiled with a set of debugging commands such as 'purloin' (which moves any object in the game into the player's possession) or 'gonear' (which moves the player to where the specified object is). Some games were released with the debugging commands still active, making them much easier to solve than the author had intended.
+</li><li> Earlier versions of <em><a class="twikilink" href="/pmwiki/pmwiki.php/Videogame/Curses" title="/pmwiki/pmwiki.php/Videogame/Curses">Curses</a></em> had an extra room called "Graham's Lair" which allowed the developer rapid access to various areas of the game. Once the debug verbs were unlocked, 'xtravel' would take the player there.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/LeisureSuitLarry2LookingForLoveInSeveralWrongPlaces" title="/pmwiki/pmwiki.php/VideoGame/LeisureSuitLarry2LookingForLoveInSeveralWrongPlaces">Leisure Suit Larry 2: Looking for Love (in Several Wrong Places)</a></em>: You can access an extensive debug mode if you use 555-0724 as the number at the beginning, letting you get all the items, visit all rooms, check position, and more. The list of available commands is accessible when you type in "Help". The game thinks you're Al Lowe during this.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheHobbit1982" title="/pmwiki/pmwiki.php/VideoGame/TheHobbit1982">The Hobbit (1982)</a></em>: In two locations (one in the Misty Mountains, one near the Lonely Mountain) there's an exit you can't take, because "This room is too full for you to enter". They both lead to the same location, a shortcut that would have allowed the original developers to bypass Mirkwood. The room was blocked off by placing a stone in it so large and heavy that the game engine couldn't handle anything else being in the same location.
+</li><li> The adult <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BaraGenre" title="/pmwiki/pmwiki.php/Main/BaraGenre">Bara Genre</a> game <em>Strange Flesh</em> allows you to access this after getting all three endings, where you get to see all the animations and interactions with enemies.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VisualNovel/TokimekiMemorial" title="/pmwiki/pmwiki.php/VisualNovel/TokimekiMemorial">Tokimeki Memorial</a></em> on the SNES has two: one is a "cultural festival simulator" accessed by using a specific code on the name select screen (or entering the Game Genie code 7E007C03) and the other is a "minigame mode" accessed by entering the Game Genie code 7E007C07. Using a specific button combination here would allow you to check each background and see each character's ending.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/KeinegedAnNor" title="/pmwiki/pmwiki.php/VideoGame/KeinegedAnNor">Keineged an nor</a></em>: You can access debug mode which shows locations of objects and other things by clicking start on the title screen and immediately holding the right mouse button.
+</li></ul><hr/>
+</div>
+<div class="alt-titles section section-fact">
+<h3>
+<strong>Alternative Title(s):</strong>
+<span>Debug Mode</span>, <span>Debug Menu</span> </h3>
+</div>
+<div class="square_ad footer-article-ad main_2" data-isolated="0"></div>
+<div class="section-links" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<div class="titles">
+<div><h3 class="text-center text-uppercase">Previous</h3></div>
+<div><h3 class="text-center text-uppercase">Index</h3></div>
+<div><h3 class="text-center text-uppercase">Next</h3></div>
+</div>
+<div class="links">
+<ul>
+<li>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/DummiedOut/TheElderScrolls">DummiedOut/The Elder Scrolls</a>
+</li>
+<li>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/DeathIsASlapOnTheWrist">Death Is a Slap on the Wrist</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/VideoGameRewards">Video Game Rewards</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/DemoBonus">Demo Bonus</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="outer_ads_by_salon_wrapper" id="exco_player_insert_div">
+</div>
+</article>
+<div id="main-content-sidebar"><div class="sidebar-item display-options">
+<ul class="sidebar display-toggles">
+<li>Show Spoilers <div class="display-toggle show-spoilers" id="sidebar-toggle-showspoilers"></div></li>
+<li>Night Vision <div class="display-toggle night-vision" id="sidebar-toggle-nightvision"></div></li>
+<li>Sticky Header <div class="display-toggle sticky-header" id="sidebar-toggle-stickyheader"></div></li>
+<li>Wide Load <div class="display-toggle wide-load" id="sidebar-toggle-wideload"></div></li>
+</ul>
+<script>updateDesktopPrefs();</script>
+</div>
+<div class="sidebar-item ad sb-ad-unit">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_2"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_2'); });</script> </div>
+</div></div>
+<div class="sidebar-item quick-links" itemtype="http://schema.org/SiteNavigationElement">
+<p class="sidebar-item-title" data-title="Important Links">Important Links</p>
+<div class="padded">
+<a href="/pmwiki/query.php?type=att">Ask The Tropers</a>
+<a href="/pmwiki/query.php?type=tf">Trope Finder</a>
+<a href="/pmwiki/query.php?type=ykts">You Know That Show...</a>
+<a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a>
+<a href="/pmwiki/review_activity.php">Reviews</a>
+<a data-modal-target="login" href="/pmwiki/lbs.php">Live Blogs</a>
+<a href="/pmwiki/ad-free-subscribe.php">Go Ad Free!</a> </div>
+</div>
+<div class="sidebar-item sb-ad-unit">
+<div class="sidebar-section">
+<div class="square_ad ad-size-300x600 ad-section text-center">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_3"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_3'); });</script> </div>
+</div> </div>
+</div>
+</div>
+<div class="sidebar-item">
+<p class="sidebar-item-title" data-title="Crucial Browsing">Crucial Browsing</p>
+<ul class="padded font-s" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><a data-click-toggle="active" href="javascript:void(0);">Genre</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/ActionAdventureTropes" title="Main/ActionAdventureTropes">Action Adventure</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ComedyTropes" title="Main/ComedyTropes">Comedy</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CommercialsTropes" title="Main/CommercialsTropes">Commercials</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CrimeAndPunishmentTropes" title="Main/CrimeAndPunishmentTropes">Crime &amp; Punishment</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DramaTropes" title="Main/DramaTropes">Drama</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/HorrorTropes" title="Main/HorrorTropes">Horror</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LoveTropes" title="Main/LoveTropes">Love</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NewsTropes" title="Main/NewsTropes">News</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ProfessionalWrestling" title="Main/ProfessionalWrestling">Professional Wrestling</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SpeculativeFictionTropes" title="Main/SpeculativeFictionTropes">Speculative Fiction</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SportsStoryTropes" title="Main/SportsStoryTropes">Sports Story</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/WarTropes" title="Main/WarTropes">War</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Media</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/Media" title="Main/Media">All Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/AnimationTropes" title="Main/AnimationTropes">Animation (Western)</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Anime" title="Main/Anime">Anime</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ComicBookTropes" title="Main/ComicBookTropes">Comic Book</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FanFic" title="FanFic/FanFics">Fan Fics</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Film" title="Main/Film">Film</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/GameTropes" title="Main/GameTropes">Game</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Literature" title="Main/Literature">Literature</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MusicAndSoundEffects" title="Main/MusicAndSoundEffects">Music And Sound Effects</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NewMediaTropes" title="Main/NewMediaTropes">New Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/PrintMediaTropes" title="Main/PrintMediaTropes">Print Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Radio" title="Main/Radio">Radio</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SequentialArt" title="Main/SequentialArt">Sequential Art</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TabletopGames" title="Main/TabletopGames">Tabletop Games</a></li>
+<li><a href="/pmwiki/pmwiki.php/UsefulNotes/Television" title="Main/Television">Television</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Theater" title="Main/Theater">Theater</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/VideogameTropes" title="Main/VideogameTropes">Videogame</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Webcomics" title="Main/Webcomics">Webcomics</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Narrative</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/UniversalTropes" title="Main/UniversalTropes">Universal</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/AppliedPhlebotinum" title="Main/AppliedPhlebotinum">Applied Phlebotinum</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CharacterizationTropes" title="Main/CharacterizationTropes">Characterization</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Characters" title="Main/Characters">Characters</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CharactersAsDevice" title="Main/CharactersAsDevice">Characters As Device</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Dialogue" title="Main/Dialogue">Dialogue</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Motifs" title="Main/Motifs">Motifs</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NarrativeDevices" title="Main/NarrativeDevices">Narrative Devices</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Paratext" title="Main/Paratext">Paratext</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Plots" title="Main/Plots">Plots</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Settings" title="Main/Settings">Settings</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Spectacle" title="Main/Spectacle">Spectacle</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Other Categories</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/BritishTellyTropes" title="Main/BritishTellyTropes">British Telly</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TheContributors" title="Main/TheContributors">The Contributors</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CreatorSpeak" title="Main/CreatorSpeak">Creator Speak</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Creators" title="Main/Creators">Creators</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DerivativeWorks" title="Main/DerivativeWorks">Derivative Works</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LanguageTropes" title="Main/LanguageTropes">Language</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LawsAndFormulas" title="Main/LawsAndFormulas">Laws And Formulas</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ShowBusiness" title="Main/ShowBusiness">Show Business</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SplitPersonalityTropes" title="Main/SplitPersonalityTropes">Split Personality</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/StockRoom" title="Main/StockRoom">Stock Room</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TropeTropes" title="Main/TropeTropes">Trope</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Tropes" title="Main/Tropes">Tropes</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TruthAndLies" title="Main/TruthAndLies">Truth And Lies</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TruthInTelevision" title="Main/TruthInTelevision">Truth In Television</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Topical Tropes</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/BetrayalTropes" title="Main/BetrayalTropes">Betrayal</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CensorshipTropes" title="Main/CensorshipTropes">Censorship</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CombatTropes" title="Main/CombatTropes">Combat</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DeathTropes" title="Main/DeathTropes">Death</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FamilyTropes" title="Main/FamilyTropes">Family</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FateAndProphecyTropes" title="Main/FateAndProphecyTropes">Fate And Prophecy</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FoodTropes" title="Main/FoodTropes">Food</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/HolidayTropes" title="Main/HolidayTropes">Holiday</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MemoryTropes" title="Main/MemoryTropes">Memory</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MoneyTropes" title="Main/MoneyTropes">Money</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MoralityTropes" title="Main/MoralityTropes">Morality</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/PoliticsTropes" title="Main/PoliticsTropes">Politics</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ReligionTropes" title="Main/ReligionTropes">Religion</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SchoolTropes" title="Main/SchoolTropes">School</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="sidebar-item showcase">
+<p class="sidebar-item-title" data-title="Community Showcase">Community Showcase <a class="bubble float-right hover-blue" href="/pmwiki/showcase.php">More</a></p>
+<p class="community-showcase">
+<a href="https://sharetv.com/shows/echo_chamber" onclick="trackOutboundLink('https://sharetv.com/shows/echo_chamber');" target="_blank">
+<img alt="" class="lazy-image" data-src="/images/communityShowcase-echochamber.jpg"/></a>
+<a href="/pmwiki/pmwiki.php/Webcomic/TwistedTropes">
+<img alt="" class="lazy-image" data-src="/img/howlandsc-side.jpg"/></a>
+</p>
+</div>
+<div class="sidebar-item sb-ad-unit" id="stick-cont">
+<div class="sidebar-section" id="stick-bar">
+<div class="square_ad ad-size-300x600 ad-section text-center">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_4"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_4'); });</script> </div>
+</div> </div>
+</div>
+</div>
+</div>
+</div>
+<div class="action-bar tablet-off" id="action-bar-bottom">
+<a class="scroll-to-top dead-button" href="#top-of-page" onclick="$('html, body').animate({scrollTop : 0},500);">Top</a>
+</div>
+</div>
+<div class="proper-ad-unit ad-sticky">
+<div id="proper-ad-tvtropes_sticky_ad"> <script>propertag.cmd.push(function() { proper_display('tvtropes_sticky_ad'); });</script> </div>
+</div>
+<footer id="main-footer">
+<div id="main-footer-inner">
+<div class="footer-left">
+<a class="img-link" href="/"><img alt="TV Tropes" class="lazy-image" data-src="/img/tvtropes-footer-logo.png" title="TV Tropes"/></a>
+<form action="index.html" class="navbar-form newsletter-signup validate modal-replies" data-ajax-get="/ajax/subscribe_email.php" id="cse-search-box-mobile" name="" role="">
+<button class="btn-submit newsletter-signup-submit-button" id="subscribe-btn" type="submit"><i class="fa fa-paper-plane"></i></button>
+<input class="form-control" id="subscription-email" name="q" placeholder="Subscribe" size="31" type="text" validate-type="email" value=""/>
+</form>
+<ul class="social-buttons">
+<li><a class="btn fb" href="https://www.facebook.com/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-facebook']);" target="_blank"><i class="fa fa-facebook"></i></a></li>
+<li><a class="btn tw" href="https://www.twitter.com/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-twitter']);" target="_blank"><i class="fa fa-twitter"></i></a> </li>
+<li><a class="btn rd" href="https://www.reddit.com/r/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-reddit']);" target="_blank"><i class="fa fa-reddit-alien"></i></a></li>
+</ul>
+</div>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">TVTropes</h4></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Administrivia">About TVTropes</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TheGoalsOfTVTropes">TVTropes Goals</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TheTropingCode">Troping Code</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TVTropesCustoms">TVTropes Customs</a></li>
+<li><a href="/pmwiki/pmwiki.php/JustForFun/TropesOfLegend">Tropes of Legend</a></li>
+<li><a href="/pmwiki/ad-free-subscribe.php">Go Ad-Free</a></li>
+</ul>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">Community</h4></li>
+<li><a href="/pmwiki/query.php?type=att">Ask The Tropers</a></li>
+<li><a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a></li>
+<li><a href="/pmwiki/query.php?type=tf">Trope Finder</a></li>
+<li><a href="/pmwiki/query.php?type=ykts">You Know That Show</a></li>
+<li><a data-modal-target="login" href="/pmwiki/lbs.php">Live Blogs</a></li>
+<li><a href="/pmwiki/review_activity.php">Reviews</a></li>
+<li><a href="/pmwiki/topics.php">Forum</a></li>
+</ul>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">Tropes HQ</h4></li>
+<li><a href="/pmwiki/about.php">About Us</a></li>
+<li><a href="/pmwiki/contact.php">Contact Us</a></li>
+<li><a href="/pmwiki/dmca.php">DMCA Notice</a></li>
+<li><a href="/pmwiki/privacypolicy.php">Privacy Policy</a></li>
+</ul>
+</div>
+<div class="text-center gutter-top gutter-bottom tablet-on" id="desktop-on-mobile-toggle">
+<a href="/pmwiki/switchDeviceCss.php?mobileVersion=1" rel="nofollow">Switch to <span class="txt-desktop">Desktop</span><span class="txt-mobile">Mobile</span> Version</a>
+</div>
+<div class="legal">
+<p>TVTropes is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License. <br/>Permissions beyond the scope of this license may be available from <a href="mailto:thestaff@tvtropes.org" rel="cc:morePermissions" xmlns:cc="http://creativecommons.org/ns#"> thestaff@tvtropes.org</a>.</p>
+<br/>
+<div class="privacy_wrapper">
+</div>
+</div>
+</footer>
+<style>
+      div.fc-ccpa-root {
+        position: absolute !important;
+        bottom: 93px !important;
+        margin: auto !important;
+        width: 100% !important;
+        z-index: 9999 !important;
+      }
+      .fc-ccpa-root .fc-dns-dialog .fc-dns-link p{
+        outline: none !important;
+        text-decoration: underline !important;
+        font-size: .7em !important;
+        font-family: sans-serif !important;
+      }
+      .fc-ccpa-root .fc-dns-dialog .fc-dns-link .fc-button-background {
+        background: none !important;
+      }
+    </style>
+<div class="full-screen" id="_pm_videoViewer">
+<a class="close" href="#close" id="_pm_videoViewer-close"></a>
+<div class="_pmvv-body">
+<div class="_pmvv-vidbox">
+<video class="video-js vjs-default-skin vjs-16-9" data-video-id="" id="overlay-video-player-box">
+</video>
+<div class="_pmvv-vidbox-desc">
+<h1 id="overlay-title"></h1>
+<p class="_pmvv-vidbox-descTxt" id="overlay-descrip">
+</p>
+<div class="rating-row" data-video-id="">
+<input name="is_logged_in" type="hidden" value="0"/>
+<p>How well does it match the trope?</p>
+<div id="star-rating-group">
+<div class="trope-rate">
+<input id="lamp5" name="rate" type="radio" value="5"/>
+<label for="lamp5" title="Absolutely"></label>
+<input id="lamp4" name="rate" type="radio" value="4"/>
+<label for="lamp4" title="Yes"></label>
+<input id="lamp3" name="rate" type="radio" value="3"/>
+<label for="lamp3" title="Kind of"></label>
+<input id="lamp2" name="rate" type="radio" value="2"/>
+<label for="lamp2" title="Not really"></label>
+<input id="lamp1" name="rate" type="radio" value="1"/>
+<label for="lamp1" title="No"></label>
+</div>
+<div id="star-rating-total">
+</div>
+</div>
+</div>
+<div class="example-media-row">
+<div class="example-overlay">
+<p>Example of:</p>
+<div id="overlay-trope"> / </div>
+</div>
+<div class="media-sources-overlay example-overlay">
+<p>Media sources:</p>
+<div id="overlay-media"> / </div>
+</div>
+</div>
+<p class="_pmvv-vidbox-stats text-right font-s" style="padding-top:8px; border-top: solid 1px rgba(255,255,255,0.2)">
+<a class="float-right" data-modal-target="login" href="#video-feedback">Report</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+        window.special_ops =  {
+            member : 'no',
+            isolated : 0,
+            tags : ['unknown']
+        };
+    </script>
+<script type="text/javascript">
+
+        var cleanCreativeEnabled = "";
+        var donation = "";
+        var live_ads = "1";
+        var img_domain = "https://static.tvtropes.org";
+        var snoozed = cookies.read('snoozedabm');
+        var snoozable = "";
+
+        if (adsRemovedWith) {
+            live_ads = 0;
+        }
+
+        var elem = document.createElement('script');
+        elem.async = true;
+
+        elem.src = '/design/assets/bundle.js?rev=c58d8df02f09262390bbd03db7921fc35c6af306';
+
+        elem.onload = function() {
+                                 }
+        document.getElementsByTagName('head')[0].appendChild(elem);
+
+    </script>
+<script type="text/javascript">
+      function send_analytics_event(user_type, donation){
+          // if(user_type == 'uncached' || user_type == 'cached'){
+          //   ga('send', 'event', 'caching', 'load', user_type, {'nonInteraction': 1});
+          //   return;
+          // }
+          var event_name = user_type;
+
+          if(donation == 'true'){
+              event_name += "_donation"
+          }else if(typeof(valid_user) == 'undefined'){
+              event_name += "_blocked"
+          }else if(valid_user == true){
+              event_name += "_unblocked";
+          }else{
+              event_name = "_unknown"
+          }
+          ga('send', 'event', 'ads', 'load', event_name, {'nonInteraction': 1});
+      }
+
+    
+    send_analytics_event("guest", "false");
+      </script>
+</body>
+</html>

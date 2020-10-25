@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Game Maker - TV Tropes</title>
+<meta content="The Game Maker trope as used in popular culture. Due to the massive complexity of the majority of major programming languages, and the difficulty of actually …" name="description"/>
+<link href="https://tvtropes.org/pmwiki/pmwiki.php/Main/GameMaker" rel="canonical"/>
+<link href="/img/icons/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="@tvtropes" name="twitter:site"/>
+<meta content="@tvtropes" name="twitter:owner"/>
+<meta content="Game Maker - TV Tropes" name="twitter:title"/>
+<meta content="The Game Maker trope as used in popular culture. Due to the massive complexity of the majority of major programming languages, and the difficulty of actually …" name="twitter:description"/>
+<meta content="https://static.tvtropes.org/pmwiki/pub/images/pcs-box_5400.jpg" name="twitter:image:src"/>
+<meta content="TV Tropes" property="og:site_name"/>
+<meta content="en_US" property="og:locale"/>
+<meta content="https://www.facebook.com/tvtropes" property="article:publisher"/>
+<meta content="Game Maker - TV Tropes" property="og:title"/>
+<meta content="website" property="og:type"/>
+<meta content="https://tvtropes.org/pmwiki/pmwiki.php/Main/GameMaker" property="og:url"/>
+<meta content="https://static.tvtropes.org/pmwiki/pub/images/pcs-box_5400.jpg" property="og:image"/>
+<meta content='Due to the massive complexity of the majority of major programming languages, and the difficulty of actually learning them in the first place, a small-but-dedicated subgenre of software has arisen: the "game maker." Simply put, a "game maker" is …' property="og:description"/>
+<link href="/img/icons/apple-icon-57x57.png" rel="apple-touch-icon" sizes="57x57" type="image/png"/>
+<link href="/img/icons/apple-icon-60x60.png" rel="apple-touch-icon" sizes="60x60" type="image/png"/>
+<link href="/img/icons/apple-icon-72x72.png" rel="apple-touch-icon" sizes="72x72" type="image/png"/>
+<link href="/img/icons/apple-icon-76x76.png" rel="apple-touch-icon" sizes="76x76" type="image/png"/>
+<link href="/img/icons/apple-icon-114x114.png" rel="apple-touch-icon" sizes="114x114" type="image/png"/>
+<link href="/img/icons/apple-icon-120x120.png" rel="apple-touch-icon" sizes="120x120" type="image/png"/>
+<link href="/img/icons/apple-icon-144x144.png" rel="apple-touch-icon" sizes="144x144" type="image/png"/>
+<link href="/img/icons/apple-icon-152x152.png" rel="apple-touch-icon" sizes="152x152" type="image/png"/>
+<link href="/img/icons/apple-icon-180x180.png" rel="apple-touch-icon" sizes="180x180" type="image/png"/>
+<link href="/img/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/img/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/img/icons/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png"/>
+<link href="/img/icons/favicon-192x192.png" rel="icon" sizes="192x192" type="image/png"/>
+<meta content="width=device-width, initial-scale=1" id="viewport" name="viewport"/>
+<script>
+                var propertag = {};
+                propertag.cmd = [];
+            </script>
+<link href="/design/assets/bundle.css?rev=c58d8df02f09262390bbd03db7921fc35c6af306" rel="stylesheet"/>
+<script>
+                function object(objectId) {
+                    if (document.getElementById && document.getElementById(objectId)) {
+                        return document.getElementById(objectId);
+                    } else if (document.all && document.all(objectId)) {
+                        return document.all(objectId);
+                    } else if (document.layers && document.layers[objectId]) {
+                        return document.layers[objectId];
+                    } else {
+                        return false;
+                    }
+                }
+
+                // JAVASCRIPT COOKIES CODE: for getting and setting user viewing preferences
+                var cookies = {
+                    create: function (name, value, days2expire, path) {
+                        var date = new Date();
+                        date.setTime(date.getTime() + (days2expire * 24 * 60 * 60 * 1000));
+                        var expires = date.toUTCString();
+                        document.cookie = name + '=' + value + ';' + 'expires=' + expires + ';' + 'path=' + path + ';';
+                    },
+										createWithExpire: function(name, value, expires, path) {
+												document.cookie = name + '=' + value + ';' + 'expires=' + expires + ';' + 'path=' + path + ';';
+										},
+                    read: function (name) {
+                        var cookie_value = "",
+                            current_cookie = "",
+                            name_expr = name + "=",
+                            all_cookies = document.cookie.split(';'),
+                            n = all_cookies.length;
+
+                        for (var i = 0; i < n; i++) {
+                            current_cookie = all_cookies[i].trim();
+                            if (current_cookie.indexOf(name_expr) === 0) {
+                                cookie_value = current_cookie.substring(name_expr.length, current_cookie.length);
+                                break;
+                            }
+                        }
+                        return cookie_value;
+                    },
+                    update: function (name, val) {
+                        this.create(name, val, 300, "/");
+                    },
+                    remove: function (name) {
+                        document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
+                    }
+                };
+
+                function updateUserPrefs() {
+                    //GENERAL: detect and set browser, if not cookied (will be treated like a user-preference and added to the #user-pref element)
+                    if( !cookies.read('user-browser') ){
+                        var broswer = '';
+
+                        if(navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPod/i) ){
+                            browser = 'iOS';
+                        } else if (/Opera[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'opera';
+                        } else if (/MSIE (\d+\.\d+);/.test(navigator.userAgent)) {
+                            browser = 'MSIE';
+                        } else if (/Navigator[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'netscape';
+                        } else if (/Chrome[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'chrome';
+                        } else if (/Safari[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'safari';
+                            /Version[\/\s](\d+\.\d+)/.test(navigator.userAgent);
+                            browserVersion = new Number(RegExp.$1);
+                        } else if (/Firefox[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'firefox';
+                        } else {
+                            browser = 'internet_explorer';
+                        }
+                        cookies.create('user-browser',browser,1,'/');
+                        document.getElementById('user-prefs').classList.add('browser-' + browser);
+                    } else {
+                        document.getElementById('user-prefs').classList.add('browser-' + cookies.read('user-browser'));
+                    }
+
+                    //update user preference settings
+                    if (cookies.read('wide-load') !== '') document.getElementById('user-prefs').classList.add('wide-load');
+                    if (cookies.read('night-vision') !== '') document.getElementById('user-prefs').classList.add('night-vision');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('user-prefs').classList.add('sticky-header');
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('user-prefs').classList.add('show-spoilers');
+                    if (cookies.read('folders-open') !== '') document.getElementById('user-prefs').classList.add('folders-open');
+                    if (cookies.read('lefthand-sidebar') !== '') document.getElementById('user-prefs').classList.add('lefthand-sidebar');
+                    if (cookies.read('highlight-links') !== '') document.getElementById('user-prefs').classList.add('highlight-links');
+                    if (cookies.read('forum-gingerbread') !== '') document.getElementById('user-prefs').classList.add('forum-gingerbread');
+                    if (cookies.read('shared-avatars') !== '') document.getElementById('user-prefs').classList.add('shared-avatars');
+                    if (cookies.read('new-search') !== '') document.getElementById('user-prefs').classList.add('new-search');
+                    if (cookies.read('stop-auto-play-video') !== '') document.getElementById('user-prefs').classList.add('stop-auto-play-video');
+
+                    //desktop view on mobile
+                    if (cookies.read('desktop-on-mobile') !== ''){
+                        document.getElementById('user-prefs').classList.add('desktop-on-mobile');
+
+                        var viewport = document.querySelector("meta[name=viewport]");
+                        viewport.setAttribute('content', 'width=1000');
+                    }
+
+                }
+
+                function updateDesktopPrefs() {
+                    if (cookies.read('wide-load') !== '') document.getElementById('sidebar-toggle-wideload').classList.add('active');
+                    if (cookies.read('night-vision') !== '') document.getElementById('sidebar-toggle-nightvision').classList.add('active');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('sidebar-toggle-stickyheader').classList.add('active');
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('sidebar-toggle-showspoilers').classList.add('active');
+
+                }
+
+                function updateMobilePrefs() {
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('mobile-toggle-showspoilers').classList.add('active');
+                    if (cookies.read('night-vision') !== '') document.getElementById('mobile-toggle-nightvision').classList.add('active');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('mobile-toggle-stickyheader').classList.add('active');
+                    if (cookies.read('highlight-links') !== '') document.getElementById('mobile-toggle-highlightlinks').classList.add('active');
+
+                }
+
+
+                if (document.cookie.indexOf("scroll0=") < 0) {
+                    // do nothing
+                } else {
+                    console.log('ads removed by scroll.com');
+                    var adsRemovedWith = 'scroll';
+                    var style = document.createElement('style');
+                    style.innerHTML = '#header-ad, .proper-ad-unit, .square_ad, .sb-ad-unit { display: none !important; } ';
+                    document.head.appendChild(style);
+                }
+            </script>
+<script type="text/javascript">
+
+                var tvtropes_config = {
+                    astri_stream_enabled : "",
+                    is_logged_in         : "",
+                    handle               : "",
+                    get_astri_stream     : "",
+										revnum               : "c58d8df02f09262390bbd03db7921fc35c6af306",
+										img_domain           : "https://static.tvtropes.org",
+										adblock              : "1",
+										adblock_url          : "propermessage.io",
+										pause_editing        : "0",
+										pause_editing_msg    : "",
+										pause_site_changes   : ""
+                };
+            </script>
+<script type="text/javascript">
+						  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+						  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+						  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+						  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+						  ga('create', 'UA-3821842-1', 'auto');
+						  ga('send', 'pageview');
+
+						</script>
+</head>
+<body class="">
+<i id="user-prefs"></i>
+<script>updateUserPrefs();</script>
+<div id="fb-root"></div>
+<div id="modal-box"></div>
+<header class="headroom-element" id="main-header-bar">
+<div id="main-header-bar-inner">
+<span class="header-spacer" id="header-spacer-left"></span>
+<a class="mobile-menu-toggle-button tablet-on" href="#mobile-menu" id="main-mobile-toggle"><span></span><span></span><span></span></a>
+<a class="no-dev" href="/" id="main-header-logoButton"></a>
+<span class="header-spacer" id="header-spacer-right"></span>
+<nav class="tablet-off" id="main-header-nav">
+<a href="/pmwiki/pmwiki.php/Main/Tropes">Tropes</a>
+<a href="/pmwiki/pmwiki.php/Main/Media">Media</a>
+<a class="nav-browse" href="/pmwiki/browse.php">Browse</a>
+<a href="/pmwiki/index_report.php">Indexes</a>
+<a href="/pmwiki/topics.php">Forums</a>
+<a class="nav-browse" href="/pmwiki/recent_videos.php">Videos</a>
+</nav>
+<div id="main-header-bar-right">
+<div class="font-xs mobile-off" id="signup-login-box">
+<a class="hover-underline bold" data-modal-target="signup" href="/pmwiki/login.php">Join</a>
+<a class="hover-underline bold" data-modal-target="login" href="/pmwiki/login.php">Login</a>
+</div>
+<div class="mobile-on inline" id="signup-login-mobileToggle">
+<a data-modal-target="login" href="/pmwiki/login.php"><i class="fa fa-user"></i></a>
+</div>
+<div id="search-box">
+<form action="/pmwiki/search_result.php" class="search">
+<input class="search-box" name="q" placeholder="Search" required="" type="text" value=""/>
+<input class="submit-button" type="submit" value=""/>
+<input name="search_type" type="hidden" value="article"/>
+<input name="page_type" type="hidden" value="all"/>
+<input name="cx" type="hidden" value="partner-pub-6610802604051523:amzitfn8e7v"/>
+<input name="cof" type="hidden" value="FORID:10"/>
+<input name="ie" type="hidden" value="ISO-8859-1"/>
+<input name="siteurl" type="hidden" value=""/>
+<input name="ref" type="hidden" value=""/>
+<input name="ss" type="hidden" value=""/>
+</form>
+<a class="mobile-on mobile-search-toggle close-x" href="#close-search"><i class="fa fa-close"></i></a>
+</div>
+<div id="random-box">
+<a class="button-random-trope" href="/pmwiki/pmwiki.php/Main/PseudoCrisis" onclick="ga('send', 'event', 'button', 'click', 'random trope');" rel="nofollow"></a>
+<a class="button-random-media" href="/pmwiki/pmwiki.php/Film/TheKarateKidPartIII" onclick="ga('send', 'event', 'button', 'click', 'random media');" rel="nofollow"></a>
+</div>
+</div>
+</div>
+<div class="tablet-on" id="mobile-menu"><div class="mobile-menu-options">
+<div class="nav-wrapper">
+<a class="xl" href="/pmwiki/pmwiki.php/Main/Tropes">Tropes</a>
+<a class="xl" href="/pmwiki/pmwiki.php/Main/Media">Media</a>
+<a class="xl" href="/pmwiki/browse.php">Browse</a>
+<a class="xl" href="/pmwiki/index_report.php">Indexes</a>
+<a class="xl" href="/pmwiki/topics.php">Forums</a>
+<a class="xl" href="/pmwiki/recent_videos.php">Videos</a>
+<a href="/pmwiki/query.php?type=att">Ask The Tropers</a>
+<a href="/pmwiki/query.php?type=tf">Trope Finder</a>
+<a href="/pmwiki/query.php?type=ykts">You Know That Show...</a>
+<a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a>
+<a data-click-toggle="active" href="#tools">Tools <i class="fa fa-chevron-down"></i></a>
+<div class="tools-dropdown mobile-dropdown-linkList">
+<a href="/pmwiki/cutlist.php">Cut List</a>
+<a href="/pmwiki/changes.php">New Edits</a>
+<a href="/pmwiki/recent_edit_reasons.php">Edit Reasons</a>
+<a href="/pmwiki/launches.php">Launches</a>
+<a href="/pmwiki/img_list.php">Images List</a>
+<a href="/pmwiki/crown_activity.php">Crowner Activity</a>
+<a href="/pmwiki/no_types.php">Un-typed Pages</a>
+<a href="/pmwiki/page_type_audit.php">Recent Page Type Changes</a>
+</div>
+<a data-click-toggle="active" href="#hq">Tropes HQ <i class="fa fa-chevron-down"></i></a>
+<div class="tools-dropdown mobile-dropdown-linkList">
+<a href="/pmwiki/about.php">About Us</a>
+<a href="/pmwiki/contact.php">Contact Us</a>
+<a href="mailto:advertising@proper.io">Advertise</a>
+<a href="/pmwiki/dmca.php">DMCA Notice</a>
+<a href="/pmwiki/privacypolicy.php">Privacy Policy</a>
+</div>
+<a href="/pmwiki/ad-free-subscribe.php">Go Ad-Free</a>
+<div class="toggle-switches">
+<ul class="mobile-menu display-toggles">
+<li>Show Spoilers <div class="display-toggle show-spoilers" id="mobile-toggle-showspoilers"></div></li>
+<li>Night Vision <div class="display-toggle night-vision" id="mobile-toggle-nightvision"></div></li>
+<li>Sticky Header <div class="display-toggle sticky-header" id="mobile-toggle-stickyheader"></div></li>
+<li>Highlight Links <div class="display-toggle highlight-links" id="mobile-toggle-highlightlinks"></div></li>
+</ul>
+<script>updateMobilePrefs();</script>
+</div>
+</div>
+</div>
+</div>
+</header>
+<div class="mobile-on" id="homepage-introBox-mobile">
+<a href="/"><img class="logo-small" src="/images/logo-white-big.png"/></a>
+<form action="/pmwiki/search_result.php" class="search" style="margin:10px -5px -6px -5px;">
+<input class="search-box" name="q" placeholder="Search" required="" type="text" value=""/>
+<input class="submit-button" type="submit" value=""/>
+<input name="search_type" type="hidden" value="article"/>
+<input name="page_type" type="hidden" value="all"/>
+<input name="cx" type="hidden" value="partner-pub-6610802604051523:amzitfn8e7v"/>
+<input name="cof" type="hidden" value="FORID:10"/>
+<input name="ie" type="hidden" value="ISO-8859-1"/>
+<input name="siteurl" type="hidden" value=""/>
+<input name="ref" type="hidden" value=""/>
+<input name="ss" type="hidden" value=""/>
+</form>
+</div>
+<div class="ad" id="header-ad-wrapper">
+<div id="header-ad">
+<div class="ad-size-970x90 atf_banner">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_1"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_1'); });</script> </div>
+</div> </div>
+</div>
+</div>
+<div id="main-container">
+<div class="action-bar mobile-off" id="action-bar-top">
+<div class="action-bar-right">
+<p>Follow TV Tropes</p>
+<a class="button-fb" href="https://www.facebook.com/TVTropes">
+<i class="fa fa-facebook"></i></a>
+<a class="button-tw" href="https://www.twitter.com/TVTropes">
+<i class="fa fa-twitter"></i></a>
+<a class="button-re" href="https://www.reddit.com/r/TVTropes">
+<i class="fa fa-reddit-alien"></i></a>
+</div>
+<nav class="actions-wrapper" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<ul class="page-actions" id="top_main_list">
+<li class="link-edit">
+<a class="article-edit-button" data-modal-target="login" href="/pmwiki/pmwiki.php/Main/GameMaker?action=edit" rel="nofollow">
+<i class="fa fa-pencil"></i> Edit Page</a></li><li class="link-related"><a href="/pmwiki/relatedsearch.php?term=Main/GameMaker">
+<i class="fa fa-share-alt"></i> Related</a></li><li class="link-history"><a href="/pmwiki/article_history.php?article=Main.GameMaker">
+<i class="fa fa-history"></i> History</a></li><li class="link-discussion"><a href="/pmwiki/remarks.php?trope=Main.GameMaker">
+<i class="fa fa-comment"></i> Discussion</a></li> </ul>
+<button class="nav__dropdown-toggle" id="top_more_button" onclick="toggle_more_menu('top');" type="button">More</button>
+<ul class="more_menu hidden_more_list" id="top_more_list">
+<li class="link-todo tuck-always more_list_item"><a data-modal-target="login" href="#todo"><i class="fa fa-check-circle"></i> To Do</a></li><li class="link-pageSource tuck-always more_list_item"><a data-modal-target="login" href="/pmwiki/pmwiki.php/Main/GameMaker?action=source" rel="nofollow" target="_blank"><i class="fa fa-code"></i> Page Source</a></li> </ul>
+</nav>
+<div class="WikiWordModalStub"></div>
+<div class="ImgUploadModalStub" data-page-type="Article"></div>
+<div class="login-alert" style="display: none;">
+You need to <a href="/pmwiki/login.php" style="color:#21A0E8">login</a> to do this. <a href="/pmwiki/login.php?tab=register_account" style="color:#21A0E8">Get Known</a> if you don't have an account
+</div>
+</div>
+<div class="page-Article" id="main-content">
+<article class="with-sidebar" id="main-entry">
+<input id="groupname-hidden" type="hidden" value="Main"/>
+<input id="title-hidden" type="hidden" value="GameMaker"/>
+<input id="article_id" type="hidden" value="10191"/>
+<input id="logged_in" type="hidden" value="false"/>
+<p class="hidden" id="current_url">http://tvtropes.org/pmwiki/pmwiki.php/Main/GameMaker</p>
+<meta content="" itemprop="datePublished"/>
+<meta content="" itemprop="articleSection"/>
+<meta content="" itemprop="image"/>
+<a class="watch-button" data-modal-target="login" href="#watch">Follow<span>ing</span></a>
+<h1 class="entry-title" itemprop="headline">
+Game Maker
+</h1>
+<script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+                "@type": "ListItem",
+                "position": 1,
+                "name": "tvtropes.org",
+                "item": "https://tvtropes.org"
+            },{
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Tropes",
+                "item": "https://tvtropes.org/pmwiki/pmwiki.php/Main/Tropes"
+            },{
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Game Maker"            }]
+        }
+    </script>
+<a class="mobile-actionbar-toggle mobile-on" data-click-toggle="active" href="#mobile-actions-toggle" id="mobile-actionbar-toggle">
+<p class="tiny-off">Go To</p><span></span><span></span><span></span><i class="fa fa-pencil"></i></a>
+<nav class="mobile-actions-wrapper mobile-on" id="mobile-actions-bar"></nav>
+<div class="modal fade hidden-until-active" id="editLockModal">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button aria-label="Close" class="close" data-dismiss="modal" type="button"> <span aria-hidden="true">×</span></button>
+<h4 class="modal-title">Edit Locked</h4>
+</div>
+<div class="modal-body">
+<div class="row">
+<div class="body">
+<div class="danger troper_locked_message"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<nav class="body-options" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<ul class="subpage-links">
+<li>
+<a class="subpage-link curr-subpage" href="/pmwiki/pmwiki.php/Main/GameMaker" title="The Main page">
+<span class="wrapper"><span class="spi main-page"></span>Main</span></a>
+</li>
+<li>
+<a class="subpage-link" href="/pmwiki/pmwiki.php/Laconic/GameMaker" title="The Laconic page">
+<span class="wrapper"><span class="spi laconic-icon"></span>Laconic</span></a>
+</li>
+<li class="create-subpage dropdown">
+<a aria-expanded="false" class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);" role="button">
+<span class="wrapper">Create New <i class="fa fa-plus-circle"></i></span>
+</a>
+<select onchange="this.options[this.selectedIndex].value &amp;&amp; (window.location = this.options[this.selectedIndex].value);">
+<option value="">- Create New -</option>
+<option value="/pmwiki/pmwiki.php/Analysis/GameMaker?action=edit">Analysis</option>
+<option value="/pmwiki/pmwiki.php/Characters/GameMaker?action=edit">Characters</option>
+<option value="/pmwiki/pmwiki.php/FanficRecs/GameMaker?action=edit">FanficRecs</option>
+<option value="/pmwiki/pmwiki.php/FanWorks/GameMaker?action=edit">FanWorks</option>
+<option value="/pmwiki/pmwiki.php/Fridge/GameMaker?action=edit">Fridge</option>
+<option value="/pmwiki/pmwiki.php/Haiku/GameMaker?action=edit">Haiku</option>
+<option value="/pmwiki/pmwiki.php/Headscratchers/GameMaker?action=edit">Headscratchers</option>
+<option value="/pmwiki/pmwiki.php/ImageLinks/GameMaker?action=edit">ImageLinks</option>
+<option value="/pmwiki/pmwiki.php/PlayingWith/GameMaker?action=edit">PlayingWith</option>
+<option value="/pmwiki/pmwiki.php/Quotes/GameMaker?action=edit">Quotes</option>
+<option value="/pmwiki/pmwiki.php/Recap/GameMaker?action=edit">Recap</option>
+<option value="/pmwiki/pmwiki.php/ReferencedBy/GameMaker?action=edit">ReferencedBy</option>
+<option value="/pmwiki/pmwiki.php/Synopsis/GameMaker?action=edit">Synopsis</option>
+<option value="/pmwiki/pmwiki.php/Timeline/GameMaker?action=edit">Timeline</option>
+<option value="/pmwiki/pmwiki.php/Trivia/GameMaker?action=edit">Trivia</option>
+<option value="/pmwiki/pmwiki.php/WMG/GameMaker?action=edit">WMG</option>
+<option value="/pmwiki/pmwiki.php/YMMV/GameMaker?action=edit">YMMV</option>
+</select>
+</li>
+</ul>
+</nav>
+<div class="article-content retro-folders" id="main-article">
+<p></p><div class="quoteright" style="width:350px;"><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/PinballConstructionSet" title="/pmwiki/pmwiki.php/VideoGame/PinballConstructionSet"><div class="lazy_load_img_box" style="padding-top:144.57%"><img alt="https://static.tvtropes.org/pmwiki/pub/images/pcs-box_5400.jpg" border="0" class="embeddedimage" height="506" src="https://static.tvtropes.org/pmwiki/pub/images/pcs-box_5400.jpg" width="350"/></div></a></div>
+<div class="acaptionright" style="width:350px;">The <a class="twikilink" href="/pmwiki/pmwiki.php/Main/UrExample" title="/pmwiki/pmwiki.php/Main/UrExample">Ur-Example</a> and <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TropeMaker" title="/pmwiki/pmwiki.php/Main/TropeMaker">Trope Maker</a>.<span class="notelabel" onclick="togglenote('note0mphn');"><sup>note </sup></span><span class="inlinefolder" id="note0mphn" isnote="true" onclick="togglenote('note0mphn');" style="cursor:pointer;font-size:smaller;display:none;">Original pre-<a class="twikilink" href="/pmwiki/pmwiki.php/Creator/ElectronicArts" title="/pmwiki/pmwiki.php/Creator/ElectronicArts">Electronic Arts</a> box art shown.</span></div>
+<div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_1"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_1'); })</script></div></div><p>Due to the massive complexity of the majority of major programming languages, and the difficulty of actually <em>learning</em> them in the first place, a small-but-dedicated subgenre of software has arisen: the "game maker."
+</p><p>Simply put, a "game maker" is a software "toolkit" that usually contains a pre-designed framework for a particular type of game. Often, these toolkits will include art assets, a fairly simple (though robust and versatile) scripting system, and a pre-built "library" of sound effects, visual effects, sprites, and other game-design material.
+</p><p>The intent of the "game-builder's toolkit" concept is to permit even the most inexperienced and computer-unfamiliar person to design, test, and publish a basic game in a matter of minutes (as opposed to days, months, or years).
+</p><p>Such programming toolboxes usually come with some form of tutorial or instruction file, containing a general overview of the toolkit itself, along with some more in-depth (but very casual and easily-followed) instructions that are intended to walk a beginner through creating a very simple "starter" game. A complete, playable version of the tutorial/starter game is most often included with the toolkit, so that the truly-confused first-time user can examine the "finished version" to see how it was put together, and what it's supposed to look like when it's finished.
+</p><div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_2"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_2'); })</script></div></div><p>While it <em>is</em> possible to construct a commercial-quality game using these toolkits, it's often extremely difficult to do so — to save space and time, the art and sounds provided are usually a very small, basic collection, aimed at speeding development rather than enhancing the program.
+</p><p>Contrast with <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/GameEngine" title="/pmwiki/pmwiki.php/UsefulNotes/GameEngine">Game Engine</a>. The main distinction between a <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/GameEngine" title="/pmwiki/pmwiki.php/UsefulNotes/GameEngine">Game Engine</a> and a Game Maker is that Game Makers are very focused on a specific genre or style of game. RPG Maker will <a class="urllink" href="http://www.hbgames.org/forums/index.php?topic=45267.0">rarely<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a> make anything other than <a class="twikilink" href="/pmwiki/pmwiki.php/Main/RolePlayingGame" title="/pmwiki/pmwiki.php/Main/RolePlayingGame">Role Playing Games</a>, whereas a real <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/GameEngine" title="/pmwiki/pmwiki.php/UsefulNotes/GameEngine">Game Engine</a> can make a wide variety of styles of game. Game Makers are a step up from <a class="twikilink" href="/pmwiki/pmwiki.php/Main/LevelEditor" title="/pmwiki/pmwiki.php/Main/LevelEditor">level editing</a>, but not enough to be full-fledged <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/GameEngine" title="/pmwiki/pmwiki.php/UsefulNotes/GameEngine">game engines</a>.
+</p><p>When looking at the games made with these, be warned: <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SturgeonsLaw" title="/pmwiki/pmwiki.php/Main/SturgeonsLaw">Sturgeon's Law</a> is in full force.
+</p><p>The <a class="twikilink" href="/pmwiki/pmwiki.php/Main/StockSoundEffects" title="/pmwiki/pmwiki.php/Main/StockSoundEffects">Stock Sound Effects</a> used in the RPG Maker programs are commonly heard in fangames, and other videos, because they're easy to get.
+</p><div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_3"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_3'); })</script></div></div><p><a class="twikilink" href="/pmwiki/pmwiki.php/JustForFun/IThoughtItMeant" title="/pmwiki/pmwiki.php/JustForFun/IThoughtItMeant">Not to be confused with</a> <a class="urllink" href="http://www.yoyogames.com">Mark Overmars' GameMaker<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a> which is sufficiently complex to be considered a full-fledged 2D <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/GameEngine" title="/pmwiki/pmwiki.php/UsefulNotes/GameEngine">Game Engine</a>, or for that matter <a class="urllink" href="http://www.gb64.com/game.php?id=3072">Garry Kitchen's GameMaker<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a>, a <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/Commodore64" title="/pmwiki/pmwiki.php/UsefulNotes/Commodore64">Commodore 64</a> application released in 1985.
+</p><p></p><hr/><h2>Examples:</h2>
+<p></p><ul><li> The <a class="twikilink" href="/pmwiki/pmwiki.php/Main/UrExample" title="/pmwiki/pmwiki.php/Main/UrExample">Ur-Example</a> and <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TropeMaker" title="/pmwiki/pmwiki.php/Main/TropeMaker">Trope Maker</a> is Bill Budge's <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/PinballConstructionSet" title="/pmwiki/pmwiki.php/VideoGame/PinballConstructionSet">Pinball Construction Set</a>,</em> which came out for the Apple II in 1982. It used a drag-and-drop interface to allow users to make their own <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DigitalPinballTables" title="/pmwiki/pmwiki.php/Main/DigitalPinballTables">Digital Pinball Tables</a>, controlling everything from the layout and colors, to the game logic and physics. It soon became one of <a class="twikilink" href="/pmwiki/pmwiki.php/Creator/ElectronicArts" title="/pmwiki/pmwiki.php/Creator/ElectronicArts">Electronic Arts</a>' launch titles, and its success led to several other titles in EA's <em>Construction Set</em> series.
+<ul><li> A <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SpiritualSuccessor" title="/pmwiki/pmwiki.php/Main/SpiritualSuccessor">Spiritual Successor</a>, <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MacadamBumper" title="/pmwiki/pmwiki.php/VideoGame/MacadamBumper">Macadam Bumper</a>,</em> was released three years later for the <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/AmstradCPC" title="/pmwiki/pmwiki.php/UsefulNotes/AmstradCPC">Amstrad CPC</a>, <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/ZXSpectrum" title="/pmwiki/pmwiki.php/UsefulNotes/ZXSpectrum">ZX Spectrum</a>, <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/MSX" title="/pmwiki/pmwiki.php/UsefulNotes/MSX">MSX</a>, and <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/Commodore64" title="/pmwiki/pmwiki.php/UsefulNotes/Commodore64">Commodore 64</a>. It was later renamed <em>Pinball Wizard</em> and released for the <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/AtariST" title="/pmwiki/pmwiki.php/UsefulNotes/AtariST">Atari ST</a> and <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/IBMPersonalComputer" title="/pmwiki/pmwiki.php/UsefulNotes/IBMPersonalComputer">IBM Personal Computer</a>.
+</li></ul></li><li> <a class="urllink" href="http://www.apgardner.karoo.net/retrib/index.html">Retribution Engine<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a> is an FPS Game Maker program that you could create old style FPS games like <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Doom" title="/pmwiki/pmwiki.php/VideoGame/Doom">Doom</a></em> and <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Quake" title="/pmwiki/pmwiki.php/VideoGame/Quake">Quake</a></em> without any need of coding. You can easily make interactive stages by using its trigger system in the map editor as well as making custom models for guns and characters. It's very easy to use and really unheard of.
+</li><li> <a class="urllink" href="http://www.momorprods.com/rgd2/us/index.htm">Ray Game Designer II<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a> as well as the first one can make old-gen 3D games without much coding knowledge, good for amateurs.
+</li><li> <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/RPGMaker" title="/pmwiki/pmwiki.php/UsefulNotes/RPGMaker">RPG Maker</a> is, obviously, for <a class="twikilink" href="/pmwiki/pmwiki.php/Main/RolePlayingGame" title="/pmwiki/pmwiki.php/Main/RolePlayingGame">Role Playing Games</a>. The latest version is RPG Maker MV. For the Japanese, a demo of RPG Maker VX Ace with caps on how many items of each type you can use is available, and it is assumed that they can be changed into fully-featured "registered versions" after the actual release. The English version has full functionality for 30 days before it expires and you'd have to buy it. The previous versions, RPG Maker VX and RPG Maker XP, were released similarly. Prior versions, including RPG Maker 95 (97?) were never officially translated into English. RPG Maker 2000 and 2003 weren't officially released in English until <em>2015</em>.
+<ul><li> One important thing to note with RPG Maker, at least with earlier versions, is that level-ups and stat growth have much less effect in RPG Maker than in many real RPGs. It would be extremely difficult and require a great deal of trickery to make a game with the very dramatic power escalation of a <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/FinalFantasy" title="/pmwiki/pmwiki.php/Franchise/FinalFantasy">Final Fantasy</a></em> title, for instance.
+</li><li> The three most recent entries in the series; XP, VX and VX Ace; come equipped with Ruby scripting that allows people making a game in the maker to drastically alter the in-game engine, which allows for numerous different types of games (a common alteration being changing the front-view turn-based battle system the three of them share and making it a side-view active-time battle system à la the <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/FinalFantasy" title="/pmwiki/pmwiki.php/Franchise/FinalFantasy">Final Fantasy</a></em> franchise). The most recent entry in the series, MV, come with Javascript and has the ability to have either side or front view battle.
+</li><li> There is now a free version, known as <a class="urllink" href="http://tryace.rpgmakerweb.com/download-lite/">RPGMaker VX Ace Lite<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a>, which has no time limit (previous trials locked you out 30 days after downloading them). The major changes are that it puts a cap on how many characters and items you can have, but there's still enough for a good game.
+</li></ul></li><li> <a class="urllink" href="http://www.adventuregamestudio.co.uk/">Adventure Game Studio<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a> is a fairly robust toolkit for making <a class="twikilink" href="/pmwiki/pmwiki.php/Creator/Sierra" title="/pmwiki/pmwiki.php/Creator/Sierra">Sierra</a>- and <a class="twikilink" href="/pmwiki/pmwiki.php/Creator/LucasArts" title="/pmwiki/pmwiki.php/Creator/LucasArts">LucasArts</a>-style point-and-click adventure games. The Web site features listings of games made with AGS; some good, some bad. It's actually pretty impressive how far someone can push the engine (e.g., <a class="twikilink" href="/pmwiki/pmwiki.php/Creator/BenCroshaw" title="/pmwiki/pmwiki.php/Creator/BenCroshaw">Ben "Yahtzee" Croshaw</a>'s platform action games).
+</li><li> <a class="urllink" href="http://hamsterrepublic.com/ohrrpgce/index.php/Main_Page.html">OHRRPGCE<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a> (<em><a class="twikilink" href="/pmwiki/pmwiki.php/Main/OverlyLongName" title="/pmwiki/pmwiki.php/Main/OverlyLongName">Official Hamster Republic Role-Playing Game Construction Engine</a></em>) is a freeware, open-source editor that was originally a DOS application, but has now been ported to FreeBASIC for support with new Operating Systems. It boasts flexibility and a powerful scripting engine, though has strict limitations that still exist from the DOS versions. The games made use a <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FinalFantasyIV" title="/pmwiki/pmwiki.php/VideoGame/FinalFantasyIV">Final Fantasy IV</a></em>-style or turn-by-turn battle engine, with potential for complex attacks. Graphics must be drawn by the user, but this has encouraged creativity. The engine is suited for any style of game, though as it's name suggests it was originally developed for creating <a class="twikilink" href="/pmwiki/pmwiki.php/Main/EasternRPG" title="/pmwiki/pmwiki.php/Main/EasternRPG">Eastern RPGs</a>. It has a library of both high quality titles and quick fun distractions.
+</li><li> <a class="urllink" href="http://www.sawbladesoftware.com/">Power Game Factory<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a> is the premier game creation program for Mac OS X, best suited for <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Platformer" title="/pmwiki/pmwiki.php/Main/Platformer">platformers</a> such as <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/SuperMarioBros" title="/pmwiki/pmwiki.php/Franchise/SuperMarioBros">Super Mario Bros.</a>.</em> or <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Contra" title="/pmwiki/pmwiki.php/VideoGame/Contra">Contra</a></em>. Sprites, sounds, enemy behavior and more can be customized, and parallax scrolling is supported for backgrounds. The latest version, 1.1, allows two sizes for background tiles: 64×64 and 32×32 pixels. It also includes <em>two</em> complete games: <em>Greenland Invasion</em> and <em>Zombie Holiday</em>.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MUGEN" title="/pmwiki/pmwiki.php/VideoGame/MUGEN">M.U.G.E.N</a></em> is the most robust engine for 2D <a class="twikilink" href="/pmwiki/pmwiki.php/Main/FightingGame" title="/pmwiki/pmwiki.php/Main/FightingGame">Fighting Games</a> out there, sporting a huge variety of features that enable makers to do damn near anything with it. There are a few full games out there, mostly fan games like <em>Brutal Paws of Fury Remix</em> and <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/MortalKombat" title="/pmwiki/pmwiki.php/Franchise/MortalKombat">Mortal Kombat</a>: Integral</em>, but far more common are stand-alone characters that can simply be plugged into the engine and used against each other in an <a class="twikilink" href="/pmwiki/pmwiki.php/Main/UltimateShowdownOfUltimateDestiny" title="/pmwiki/pmwiki.php/Main/UltimateShowdownOfUltimateDestiny">anything-goes slugfest</a>.
+<ul><li> As far as commercial software goes, Agetec released the <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FighterMaker" title="/pmwiki/pmwiki.php/VideoGame/FighterMaker">Fighter Maker</a></em> games for the PlayStation and PS2. They didn't necessarily allow you to create a full game from scratch, the fighting engine you're given to work with is pretty basic, and creating fluid, realistic animations for moves was an extremely long and often tedious process, with the tradeoff being that if you could think it up, you could put it in the game.
+</li><li> There're other fighting game engines on the net but aren't so functional or known as <em>M.U.G.E.N.</em> One of them is <em>UFGE</em><span class="notelabel" onclick="togglenote('note1diw6');"><sup>note </sup></span><span class="inlinefolder" id="note1diw6" isnote="true" onclick="togglenote('note1diw6');" style="cursor:pointer;font-size:smaller;display:none;">The acronym stands for "Ultimate Fighting Game Engine"</span> that works similar than <em>M.U.G.E.N.</em> and even has some exclusive features like <a class="twikilink" href="/pmwiki/pmwiki.php/Main/CheatCode" title="/pmwiki/pmwiki.php/Main/CheatCode">Cheat Codes</a> to <a class="twikilink" href="/pmwiki/pmwiki.php/Main/UnlockableContent" title="/pmwiki/pmwiki.php/Main/UnlockableContent">unlock characters and stages</a>, but is very slow and not much used. The only known user is <a class="urllink" href="http://maximoff.alreadyread.net/">G.M.Spectre<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a>, who made various fullgames using <em>UFGE</em> like <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheKingOfFighters" title="/pmwiki/pmwiki.php/VideoGame/TheKingOfFighters">The King of Fighters</a> 20XX</em> (an <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AffectionateParody" title="/pmwiki/pmwiki.php/Main/AffectionateParody">Affectionate Parody</a> to KOF series) as well others based on <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/MortalKombat" title="/pmwiki/pmwiki.php/Franchise/MortalKombat">Mortal Kombat</a></em>, <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/StreetFighter" title="/pmwiki/pmwiki.php/Franchise/StreetFighter">Street Fighter</a></em>, <a class="twikilink" href="/pmwiki/pmwiki.php/Creator/Marvel" title="/pmwiki/pmwiki.php/Creator/Marvel">Marvel</a> and <a class="twikilink" href="/pmwiki/pmwiki.php/Creator/DCComics" title="/pmwiki/pmwiki.php/Creator/DCComics">DC Comics</a>, various of them mixed in <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Crossover" title="/pmwiki/pmwiki.php/Main/Crossover">crossover</a> games.
+</li><li> The <a class="twikilink" href="/pmwiki/pmwiki.php/Main/UrExample" title="/pmwiki/pmwiki.php/Main/UrExample">Ur-Example</a> of this genre is <em>KOF '91</em>, an engine that is known as the predecessor (and probably the inspiration) for <em>M.U.G.E.N.</em> Actually abandoned, there's a creator who made a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SpiritualSuccessor" title="/pmwiki/pmwiki.php/Main/SpiritualSuccessor">Spiritual Successor</a>: <em>KOFFE</em>, who takes this engine and updated to actual standards.
+</li></ul></li><li> <em><a class="urllink" href="http://en.wikipedia.org/wiki/SEUCK">Shoot-Em-Up Construction Kit<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a></em>, or <em>SEUCK</em> for short, was the starting point for quite a few Amiga, Commodore 64 and Atari ST public domain games.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/RenPy" title="/pmwiki/pmwiki.php/UsefulNotes/RenPy">Ren'Py</a></em> is a <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/Python" title="/pmwiki/pmwiki.php/UsefulNotes/Python">Python-based</a> engine designed with <a class="twikilink" href="/pmwiki/pmwiki.php/Main/VisualNovel" title="/pmwiki/pmwiki.php/Main/VisualNovel">Visual Novels</a> in mind. It doesn't come with many resources; you have to provide your own art and music. However, the engine is very flexible, and its functions can be expanded if one is handy with Python. There are just over 300 games already made for the engine.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/ZeldaClassic" title="/pmwiki/pmwiki.php/VideoGame/ZeldaClassic">Zelda Classic</a></em> started life as simply a faithful reverse-engineered version of the original <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheLegendOfZeldaI" title="/pmwiki/pmwiki.php/VideoGame/TheLegendOfZeldaI">Legend of Zelda</a></em>, but quickly grew into an engine for creating one's own Zelda-style games based on the <em>Zelda 1</em> engine. The current development versions add scripting to the mix of features.
+</li><li> <em>Open Zelda</em> is based on the <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheLegendOfZeldaALinkToThePast" title="/pmwiki/pmwiki.php/VideoGame/TheLegendOfZeldaALinkToThePast">A Link To The Past</a></em> engine and used scripting from the start.
+</li><li> <a class="urllink" href="http://www.graalonline.com/">Graal Online<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a> started as an online <em>Zelda 3</em> clone; now it's hosting servers for anyone who can make about $100 a year. Hypothetically free if you bring in enough subscribers — sadly, last check they frown on their developers letting people play for free...
+</li><li> While on the subject of Zelda, there's also the <em><a class="urllink" href="http://www.solarus-games.org/">Solarus Engine<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a></em>, originally created specifically for the remake of a fangame, <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheLegendOfZeldaMysteryOfSolarus" title="/pmwiki/pmwiki.php/VideoGame/TheLegendOfZeldaMysteryOfSolarus">The Legend of Zelda: Mystery of Solarus</a></em>, by the author of the said game, but has since then evolved into a full fledged Game Maker with focus on ARPGs. And it's open source, too.
+</li><li> <em><a class="urllink" href="http://www.scirra.com/">Construct Classic<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a></em> (formerly known as simply <em>Construct</em>) is a point-and-click system with some very deep systems for performing events and actions. Can get simple games up in as little as five minutes. Somewhat buggy due to its continual development state. Though the official developers are no longer working on it, members of the community are making new updates for it, probably until its successor catches up in terms of functionality. Speaking of which...
+<ul><li> <em><a class="urllink" href="http://www.scirra.com/forum/viewforum.php?f=35">Construct 2<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a></em>, while effectively in primitive, bare-bones state, is basically a complete re-do of the original, but with a much better codebase thanks to the developers learning tons from their experiences with developing the original Construct. A licencing system is planned, though the fact that it won't be free is offset by the fact that its developers will be able to work on it full-time, resulting in faster and better updates. Designed with a modular exporting system which has the potential to allow exporting games to every platform under the sun, the first and current exporter is HTML5, as it is a reasonable multi-platform starting point, effectively making Construct 2 the first native HTML5 game maker. Despite its current development state, the Construct community has <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SerialEscalation" title="/pmwiki/pmwiki.php/Main/SerialEscalation">demonstrated its usual habit of defying limitations</a> and <a class="urllink" href="http://www.scirra.com/forum/viewtopic.php?f=35&amp;t=8476">made some neat stuff anyway.<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a>
+</li></ul></li><li> <a class="urllink" href="https://store.steampowered.com/app/857320/SRPG_Studio/">SRPG Studio<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a> is a program for creating <a class="twikilink" href="/pmwiki/pmwiki.php/Main/StrategyRPG" title="/pmwiki/pmwiki.php/Main/StrategyRPG">Strategy RPG</a> games- primarily ones based on the <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FireEmblem" title="/pmwiki/pmwiki.php/VideoGame/FireEmblem">Fire Emblem</a></em> series. Indeed, the similarities between the mechanics of <em>Fire Emblem</em> and SRPG Studio are significant enough that the original creator of <em>Fire Emblem</em> and <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TearRingSaga" title="/pmwiki/pmwiki.php/VideoGame/TearRingSaga">Tear Ring Saga</a></em> used it to create a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SpiritualSuccessor" title="/pmwiki/pmwiki.php/Main/SpiritualSuccessor">Spiritual Successor</a> to both, <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/VestariaSaga" title="/pmwiki/pmwiki.php/VideoGame/VestariaSaga">Vestaria Saga</a></em>.
+</li><li> <a class="urllink" href="http://www.adrift.org.uk/cgi/new/adrift.cgi">ADRIFT<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a>, <a class="urllink" href="http://www.tads.org/">TADS<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a>, and <a class="urllink" href="http://inform7.com">Inform 7<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a> are currently the most popular entry points for <a class="twikilink" href="/pmwiki/pmwiki.php/Main/InteractiveFiction" title="/pmwiki/pmwiki.php/Main/InteractiveFiction">Interactive Fiction</a> designers. ADRIFT is perhaps slightly easier for the novice, as its environment simply slots all game elements into various nested menus without scripting, but older versions hits their limits fairly quickly when the designer tries something out of the ordinary (a problem that Adrift 5 is supposed to address). Inform 7 is really more of a language than a game maker, but it's one of the friendliest languages out there (natural language statements! Playable rooms within a minute!) and it scales very nicely with the programmer's experience. TADS is the most complex of the three, allowing for full object-oriented programming of game logic. All three handle very sophisticated levels of grammar parsing of commands.
+<ul><li> For those who want something even easier, there's the <a class="urllink" href="http://www.ragsgame.com/Downloads.aspx">RAGS suite<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a>, which is basically point and click!
+</li><li> This is not a new idea either. There were at least two products released for the <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/ColorComputer" title="/pmwiki/pmwiki.php/UsefulNotes/ColorComputer">Color Computer</a> which allowed a user to specify vocabulary, rooms, items, and characters and then generated a BASIC program that implemented the game.
+</li></ul></li><li> <a class="urllink" href="http://www.stencyl.com/">Stencyl<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a> is a finished after years of waiting product that is sort of a Game Engine for Game Makers. It has some of the functionality of a Game Engine, but rather than making a game, you use it to make a "Kit". Kits define the basic behavior of the style of game, like <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ShootEmUp" title="/pmwiki/pmwiki.php/Main/ShootEmUp">Shoot Em Ups</a> or <a class="twikilink" href="/pmwiki/pmwiki.php/Main/PlatformGame" title="/pmwiki/pmwiki.php/Main/PlatformGame">Platform Games</a>. Then, it becomes a Game Maker for that particular style of game.
+</li><li> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/OlderThanTheNES" title="/pmwiki/pmwiki.php/Main/OlderThanTheNES">Older Than the NES</a>: Quicksilva released a program called <em>Games Designer</em> for the ZX Spectrum in 1983. It was fairly rudimentary, and rubbish, and it could only make four different types of shoot-em-ups, meaning that it may well have inspired <em>SEUCK</em>, but it was a designer and it did the job.
+</li><li> <em>The Quill</em>, and its later upgrade <em>PAWS</em>, were Text Adventure (British for <a class="twikilink" href="/pmwiki/pmwiki.php/Main/InteractiveFiction" title="/pmwiki/pmwiki.php/Main/InteractiveFiction">Interactive Fiction</a>) creators of similar vintage.
+</li><li> Another of the earliest was <em>Adventure Construction Set</em>, released by Electronic Arts for <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/Commodore64" title="/pmwiki/pmwiki.php/UsefulNotes/Commodore64">Commodore 64</a> and <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/AppleII" title="/pmwiki/pmwiki.php/UsefulNotes/AppleII">Apple ][</a> in 1985.
+</li><li> <a class="urllink" href="http://sudslore.org/">SUDS<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a> [Single User Dungeon System] is a text adventure maker for Windows.
+</li><li> <a class="urllink" href="http://www.bladeengine.com/">Blade<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a> is another <a class="twikilink" href="/pmwiki/pmwiki.php/Main/VisualNovel" title="/pmwiki/pmwiki.php/Main/VisualNovel">Visual Novel</a> engine.
+</li><li> There are a veritable ton of <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/AceAttorney" title="/pmwiki/pmwiki.php/Franchise/AceAttorney">Ace Attorney</a></em> case makers on various fansites around the Internet; some complex, some not-so complex.
+<ul><li> One of the most prominent is <a class="urllink" href="http://www.pywright.com/wordpress/">PyWright<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a>, which is the engine used for, among other fangames, <em><a class="twikilink" href="/pmwiki/pmwiki.php/VisualNovel/ApolloJusticeAceAttorneyCase5TurnaboutSubstitution" title="/pmwiki/pmwiki.php/VisualNovel/ApolloJusticeAceAttorneyCase5TurnaboutSubstitution">Turnabout Substitution</a></em>, <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/PhoenixWrightAceAttorneyConflictOfInterest" title="/pmwiki/pmwiki.php/VideoGame/PhoenixWrightAceAttorneyConflictOfInterest">Conflict of Interest</a></em>, and <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/PhoenixWrightAceAttorneyTheContemptOfCourt" title="/pmwiki/pmwiki.php/VideoGame/PhoenixWrightAceAttorneyTheContemptOfCourt">The Contempt of Court</a></em>.
+</li></ul></li><li> World Builder was a popular graphic adventure game maker in the black-and-white <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/AppleMacintosh" title="/pmwiki/pmwiki.php/UsefulNotes/AppleMacintosh">Macintosh</a> era, and was best known for the commercial game <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/EnchantedScepters" title="/pmwiki/pmwiki.php/VideoGame/EnchantedScepters">Enchanted Scepters</a></em> (among amateur authors, Ray Dunakin and Louise Hope are probably the most noted). Its creator went on to found Cyberflix Interactive and develop an <a class="twikilink" href="/pmwiki/pmwiki.php/Main/FullMotionVideo" title="/pmwiki/pmwiki.php/Main/FullMotionVideo">FMV Game</a> engine called Dream Factory.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Stepmania" title="/pmwiki/pmwiki.php/VideoGame/Stepmania">Stepmania</a></em> is a vanilla build of <a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DanceDanceRevolution" title="/pmwiki/pmwiki.php/VideoGame/DanceDanceRevolution">Dance Dance Revolution</a>, allowing people to make their own rhythm games from it. Hell, it's what <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/InTheGroove" title="/pmwiki/pmwiki.php/VideoGame/InTheGroove">In the Groove</a></em> and <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Mungyodance" title="/pmwiki/pmwiki.php/VideoGame/Mungyodance">Mungyodance</a></em> were built off of.
+</li><li> In the same vein as Stepmania, <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Osu" title="/pmwiki/pmwiki.php/VideoGame/Osu">osu!</a></em> is a game engine for <a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/EliteBeatAgents" title="/pmwiki/pmwiki.php/VideoGame/EliteBeatAgents">Elite Beat Agents</a> tap-style games, but has since been extended to also support Taiko Drum Master and other minigame-style gameplay. Anyone can write their own tap charts to go with any song they desire, and if they're extra-creative, create custom backdrops and animations for the song. The latest build can also support story branching and can change the story outcome based on how well you're playing, just like the real games- so if you're ultra-creative, you can code up something like <a class="urllink" href="https://www.youtube.com/watch?v=vYHCceCQnj8">this<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a>.
+</li><li> There's also "Taiko-san Jiro" for creating <a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TaikoNoTatsujin" title="/pmwiki/pmwiki.php/VideoGame/TaikoNoTatsujin">Taiko no Tatsujin</a>-style games, but it's only available in Japanese.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/WarioWare" title="/pmwiki/pmwiki.php/VideoGame/WarioWare">WarioWare</a> DIY</em> is a Game Maker that offers an easy-but-effective game making engine, though the games are limited to the four- to eight-second duration the series is known for. A <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GameMod" title="/pmwiki/pmwiki.php/Main/GameMod">hack</a>, however, can be used to create "boss-type" games, which have no time limit.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/UnlimitedAdventures" title="/pmwiki/pmwiki.php/VideoGame/UnlimitedAdventures">Unlimited Adventures</a></em> allows to create <a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/GoldBox" title="/pmwiki/pmwiki.php/VideoGame/GoldBox">Gold Box</a>-style RPG games.
+</li><li> The <a class="urllink" href="http://www.rpgtoolkit.com/">RPG Toolkit<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a>. You can make other types of games with it, but it's pretty hard. The learning curve for the programming language is steep, too, since (as of Version 3.0) it's now based entirely on C++.
+</li><li> <em>Captain Gamemaker</em> was an early example, which made a list of 30 bad titles in PC Gamer UK circa 1997. A quick glance at Google turns up no results for it, but it was definitely there.
+</li><li> The Mission Architect in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/CityOfHeroes" title="/pmwiki/pmwiki.php/VideoGame/CityOfHeroes">City of Heroes</a></em> can be considered to be one of these. It allows a player to create a story arc with up to five missions, and for each mission chose from a list of maps, populate them with enemies and <a class="twikilink" href="/pmwiki/pmwiki.php/Main/VideoGameSetpiece" title="/pmwiki/pmwiki.php/Main/VideoGameSetpiece">setpieces</a>, set player objectives, write dialog for NPCs, mission briefings and debriefings, and such. The author can even use the same character creator that was used for making his own player character to create custom NPCs for use in his missions.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/NeverwinterNights" title="/pmwiki/pmwiki.php/VideoGame/NeverwinterNights">Neverwinter Nights</a></em> came bundled with a toolkit from which sprang a large modding community, supported by Bioware completely. Many module series were pretty clearly superior to the original game.
+</li><li> Also on the <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/AppleII" title="/pmwiki/pmwiki.php/UsefulNotes/AppleII">Apple ][</a> were <em><a class="createlink" href="/pmwiki/pmwiki.php/Main/ArcadeMachine" title="/pmwiki/pmwiki.php/Main/ArcadeMachine">Arcade Machine</a></em>, which used a positively Byzantine system to create shoot-em-up games.
+<ul><li> And then there was <em><a class="createlink" href="/pmwiki/pmwiki.php/Main/MazeCraze" title="/pmwiki/pmwiki.php/Main/MazeCraze">Maze Craze</a>,</em> which essentially just allowed you to create new boards and sprites for <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/PacMan" title="/pmwiki/pmwiki.php/VideoGame/PacMan">Pac-Man</a>.</em>
+</li></ul></li><li> Any <a class="twikilink" href="/pmwiki/pmwiki.php/Creator/Bethesda" title="/pmwiki/pmwiki.php/Creator/Bethesda">Bethesda</a> game based on the Gamebryo <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/GameEngine" title="/pmwiki/pmwiki.php/UsefulNotes/GameEngine">Game Engine</a> (<em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheElderScrollsIIIMorrowind" title="/pmwiki/pmwiki.php/VideoGame/TheElderScrollsIIIMorrowind">Morrowind</a></em>, <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheElderScrollsIVOblivion" title="/pmwiki/pmwiki.php/VideoGame/TheElderScrollsIVOblivion">Oblivion</a></em>, and <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Fallout3" title="/pmwiki/pmwiki.php/VideoGame/Fallout3">Fallout 3</a></em>) have editing tools released by Bethesda that have full functionality with which they created the game, allowing Total Conversion <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GameMod" title="/pmwiki/pmwiki.php/Main/GameMod">Mods</a> to be created. (In addition, <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FalloutNewVegas" title="/pmwiki/pmwiki.php/VideoGame/FalloutNewVegas">Fallout: New Vegas</a></em> can be edited with the <em>Fallout 3</em> version of the editor.) <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Nehrim" title="/pmwiki/pmwiki.php/VideoGame/Nehrim">Nehrim</a></em> is one such example of a mod (in this case, using the <em>Oblivion</em> Engine).
+</li><li> <em>Atmosphir</em> is a game maker that as of this writing includes platforming, multiplayer coop, multiplayer battle, and racing. Despite all these genres, it is not yet a full-fledged <em><a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/GameEngine" title="/pmwiki/pmwiki.php/UsefulNotes/GameEngine">Game Engine</a></em>.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Touhou" title="/pmwiki/pmwiki.php/VideoGame/Touhou">Touhou</a> Danmakufu</em>, a tool for making <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Touhou" title="/pmwiki/pmwiki.php/VideoGame/Touhou">Touhou</a></em>-like <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ShootEmUp" title="/pmwiki/pmwiki.php/Main/ShootEmUp">Shoot 'Em Ups</a>.
+</li><li> <a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/BYOND" title="/pmwiki/pmwiki.php/VideoGame/BYOND">BYOND</a> is a 2-D online game engine <a class="urllink" href="http://www.byond.com/">available for free<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a>. It's a hybrid between a full-service <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GameMaker" title="/pmwiki/pmwiki.php/Main/GameMaker">Game Maker</a> and a programming IDE. Gameplay customization is achieved through writing Python-like code, but you can build a graphical map and wander through it with your friends before you write a single line of code.
+</li><li> The level editor that comes with <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/KnyttStories" title="/pmwiki/pmwiki.php/VideoGame/KnyttStories">Knytt Stories</a></em> could be considered a tool for making <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Metroidvania" title="/pmwiki/pmwiki.php/Main/Metroidvania">Metroidvania</a> games (among other things). Download it <a class="urllink" href="http://nifflas.ni2.se/games/Knytt%20Stories%20121.zip">here<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a>.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/WarcraftIII" title="/pmwiki/pmwiki.php/VideoGame/WarcraftIII">Warcraft III</a></em> has a map designer that can be considered this, why? it's a RTS map maker that was used to create things as varied as a Freak'n <em>racing game</em> and <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DefenseOfTheAncients" title="/pmwiki/pmwiki.php/VideoGame/DefenseOfTheAncients">Defense of the Ancients: All-Stars</a></em>. a MOBA.
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/StarcraftII" title="/pmwiki/pmwiki.php/VideoGame/StarcraftII">Starcraft II</a></em>s map editor is a much more flexible version. For instance, while in <em>Warcraft III</em> you'd always be stuck with its regular interface, <em>Starcraft II</em>'s map editor lets you forgo even that, letting you create games that have nothing in common with said game.
+</li></ul></li><li> <em><a class="urllink" href="http://www.hardcoregaming101.net/dezaemon/dezaemon.htm">Dezaemon<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a></em>, a series of <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ShootEmUp" title="/pmwiki/pmwiki.php/Main/ShootEmUp">Shoot 'em Up</a> creators by Athena for various platforms in the 1990s.
+</li><li> <em><a class="urllink" href="http://www.yolkfolk.com/dizzyage/">DizzyAGE<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a></em> is an editor for the <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Dizzy" title="/pmwiki/pmwiki.php/VideoGame/Dizzy">Dizzy</a></em> adventure games.
+</li><li> <a class="urllink" href="http://www.engine001.com/">Engine 001<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a>. It exists, but someone else will have to add its features.
+</li><li> <a class="urllink" href="http://www.game-editor.com">Game Editor<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a> is an open-source, user-friendly tool for creating videogames for various Microsoft and Apple systems (Windows, Pocket PC, Windows Mobile, iPhone, iPad and Mac OS X; also compatible with Linux-based systems). It also has C-based scripting implemented for the more advanced programmers.
+</li><li> The freeware program <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Fraxy" title="/pmwiki/pmwiki.php/VideoGame/Fraxy">Fraxy</a></em> mainly focuses on shmup bosses but does have capabilty to make much more complex senarios.
+</li><li> <a class="urllink" href="http://flowlab.io">Flowlab<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a> is a hybrid game maker/game engine that runs in your web browser and creates games that run on Flash, iPhones, and iPads.
+</li><li> <a class="urllink" href="http://twinery.org/">Twine<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a> is a program for making <a class="twikilink" href="/pmwiki/pmwiki.php/Main/InteractiveFiction" title="/pmwiki/pmwiki.php/Main/InteractiveFiction">Interactive Fiction</a> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Gamebooks" title="/pmwiki/pmwiki.php/Main/Gamebooks">Gamebooks</a>. It's probably the simplest game maker in existence; as one review puts it, "if you can type words and occasionally put brackets around some of those words, you can make a Twine game." No coding skills necessary, although HTML/CSS knowledge will help with making more complex games.
+</li><li> <a class="urllink" href="http://www.headcannon.com/HCGE/">HCGE (Headcannon Game Engine)<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a> is a game engine developed by Simon "Stealth" Thomley, and while it has many other uses, it is often used to near-perfectly replicate the game play engines used in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MegaMan7" title="/pmwiki/pmwiki.php/VideoGame/MegaMan7">Mega Man 7</a></em>, as well as the <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SonicTheHedgehog" title="/pmwiki/pmwiki.php/VideoGame/SonicTheHedgehog">Sonic the Hedgehog</a></em> series.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SuperMarioMaker" title="/pmwiki/pmwiki.php/VideoGame/SuperMarioMaker">Super Mario Maker</a></em> is Nintendo's (<a class="twikilink" href="/pmwiki/pmwiki.php/Main/ROMHack" title="/pmwiki/pmwiki.php/Main/ROMHack">official</a>) response to this. The game allows anyone to create their own levels in the styles of the original <em>Super Mario Bros.</em>, <em>Super Mario Bros. 3</em>, <em>Super Mario World</em>, and <em>New Super Mario Bros. U</em>. <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SuperMarioMaker2" title="/pmwiki/pmwiki.php/VideoGame/SuperMarioMaker2">Super Mario Maker 2</a></em> adds in a style for <em>Super Mario 3D World</em>.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/ProjectSpark" title="/pmwiki/pmwiki.php/VideoGame/ProjectSpark">Project Spark</a></em> is a game maker for the Xbox family of systems and PC, allowing you to create a variety of games with its resources.
+</li><li> Like idle games like <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/CookieClicker" title="/pmwiki/pmwiki.php/VideoGame/CookieClicker">Cookie Clicker</a></em> and wish you can write something like that without going from ground up? Orteil has released the game engine as <em><a class="urllink" href="http://orteil.dashnet.org/experiments/idlegamemaker/help">Idle Game Maker<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a></em>, where you can now create games just like his. All you need to do is bring your own graphics and configuration script, and the engine does the rest.
+</li><li> <a class="urllink" href="http://www.src-srpg.jpn.org/">SRC ~Simulation RPG Construction~<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a> is a C++-based program that lets the user create their own <a class="twikilink" href="/pmwiki/pmwiki.php/Main/StrategyRPG" title="/pmwiki/pmwiki.php/Main/StrategyRPG">Strategy RPG</a> games; it's clearly intended mainly for <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SuperRobotWars" title="/pmwiki/pmwiki.php/VideoGame/SuperRobotWars">Super Robot Wars</a></em>-style games<span class="notelabel" onclick="togglenote('note25uo1');"><sup>note </sup></span><span class="inlinefolder" id="note25uo1" isnote="true" onclick="togglenote('note25uo1');" style="cursor:pointer;font-size:smaller;display:none;">As seen by the fact that it has rules for mechs that imitate all kinds of <em>SRW</em> standards, one can code Seishin/Spirit Command-type "spells", and even the cut-in animations implemented later resemble the <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/GameBoyAdvance" title="/pmwiki/pmwiki.php/UsefulNotes/GameBoyAdvance">GBA</a> and <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/NintendoDS" title="/pmwiki/pmwiki.php/UsefulNotes/NintendoDS">DS</a>-era games</span>, but is robust enough that one can still be used to create games more in line with <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FireEmblem" title="/pmwiki/pmwiki.php/VideoGame/FireEmblem">Fire Emblem</a></em> and other traditional fantasy fare. Its biggest flaws are the fact that it's exclusively in Japanese, creating character stats can be pretty time-consuming, and it hasn't been updated since 2011.
+</li><li> Cryptic Games has a program called the Foundry that is connected to both <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/StarTrekOnline" title="/pmwiki/pmwiki.php/VideoGame/StarTrekOnline">Star Trek Online</a></em> and <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Neverwinter" title="/pmwiki/pmwiki.php/VideoGame/Neverwinter">Neverwinter</a></em> which allows players to create their own missions for the game. The Foundry for <em>STO</em> is much more rudimentary than it is for <em>Neverwinter</em>, but both of them are used for the same purpose.
+</li><li> <a class="urllink" href="http://www.clickteam.com/">Clickteam<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a> has mad a number of Windows-based game maker programs since the mid-90's. The first version of this program was <em>Klik and Play</em>, which allowed game makers to make simple one-panel stages. It was obviously meant for younger players, but much more advanced versions were released over the years - <em>The Games Factory</em>, <em>Click and Create/Multimedia Fusion Express</em>, <em>Multimedia Fusion</em> and it's current incarnation <em>Clickteam Fusion 2.5</em>. A number of very popular indie games have been made via <em>Clickteam Fusion 2.5</em>, including <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FreedomPlanet" title="/pmwiki/pmwiki.php/VideoGame/FreedomPlanet">Freedom Planet</a></em>, <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheAngryVideoGameNerdAdventures" title="/pmwiki/pmwiki.php/VideoGame/TheAngryVideoGameNerdAdventures">The Angry Video Game Nerd Adventures</a></em> and the <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FiveNightsAtFreddys" title="/pmwiki/pmwiki.php/VideoGame/FiveNightsAtFreddys">Five Nights at Freddy's</a></em> saga.
+</li><li> <a class="urllink" href="http://www.lexaloffle.com/pico-8.php">PICO-8<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a> is a "fantasy console" that allows one to write their own small <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Retraux" title="/pmwiki/pmwiki.php/Main/Retraux">Retraux</a> style games in Lua. It comes with several size limitations, as well as a very small fixed colour palette to work with, but despite this, several impressive games and tech demos have been made. Games can be exported as a .PNG "cartridge", as HTML5, or published on the official website, the latter two allowing them to be playable in a web browser.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MegaMaker" title="/pmwiki/pmwiki.php/VideoGame/MegaMaker">Mega Maker</a></em> is a freeware game that allows players to make their own <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MegaManClassic" title="/pmwiki/pmwiki.php/VideoGame/MegaManClassic">Mega Man (Classic)</a></em> levels.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/OpenBOR" title="/pmwiki/pmwiki.php/VideoGame/OpenBOR">OpenBOR</a></em> is an engine for <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BeatEmUp" title="/pmwiki/pmwiki.php/Main/BeatEmUp">Beat 'em Up</a>, in which you can make your own version of your favourite games as well making new ones, being known as the <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MUGEN" title="/pmwiki/pmwiki.php/VideoGame/MUGEN">M.U.G.E.N</a></em> of this genre. The engine is based on the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GameMod" title="/pmwiki/pmwiki.php/Main/GameMod">Game Mod</a> <em>Beats of Rage</em>, a mixture of <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/StreetsOfRage" title="/pmwiki/pmwiki.php/VideoGame/StreetsOfRage">Streets of Rage</a></em> with <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheKingOfFighters" title="/pmwiki/pmwiki.php/VideoGame/TheKingOfFighters">The King of Fighters</a></em> with its own story. After the success of the game, the engine was released and after that a lot of games were made under diverse franchises and with compatibility with <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/SegaDreamcast" title="/pmwiki/pmwiki.php/UsefulNotes/SegaDreamcast">Sega Dreamcast</a> and <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/PlayStation2" title="/pmwiki/pmwiki.php/UsefulNotes/PlayStation2">PlayStation 2</a>.
+</li></ul><hr/>
+</div>
+<div class="square_ad footer-article-ad main_2" data-isolated="0"></div>
+<div class="section-links" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<div class="titles">
+<div><h3 class="text-center text-uppercase">Previous</h3></div>
+<div><h3 class="text-center text-uppercase">Index</h3></div>
+<div><h3 class="text-center text-uppercase">Next</h3></div>
+</div>
+<div class="links">
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/FogOfWar">Fog of War</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/PagesNeedingExampleSorting">Pages Needing Example Sorting</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/GameplayAllyImmortality">Gameplay Ally Immortality</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/GameMod">Game Mod</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/VideoGameCulture">Video Game Culture</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/GameMusic">Game Music</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/StandardFPSGuns">Standard FPS Guns</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/UsefulNotes/NorthAmerica">UsefulNotes/North America</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/HiddenObjectGame">Hidden Object Game</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/FlipScreenScrolling">Flip-Screen Scrolling</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/OlderThanTheNES">Older Than the NES</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/GameOver">Game Over</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/EscortGame">Escort Game</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/VideoGameGenres">Video Game Genres</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/IoGame">.io Game</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="outer_ads_by_salon_wrapper" id="exco_player_insert_div">
+</div>
+</article>
+<div id="main-content-sidebar"><div class="sidebar-item display-options">
+<ul class="sidebar display-toggles">
+<li>Show Spoilers <div class="display-toggle show-spoilers" id="sidebar-toggle-showspoilers"></div></li>
+<li>Night Vision <div class="display-toggle night-vision" id="sidebar-toggle-nightvision"></div></li>
+<li>Sticky Header <div class="display-toggle sticky-header" id="sidebar-toggle-stickyheader"></div></li>
+<li>Wide Load <div class="display-toggle wide-load" id="sidebar-toggle-wideload"></div></li>
+</ul>
+<script>updateDesktopPrefs();</script>
+</div>
+<div class="sidebar-item ad sb-ad-unit">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_2"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_2'); });</script> </div>
+</div></div>
+<div class="sidebar-item quick-links" itemtype="http://schema.org/SiteNavigationElement">
+<p class="sidebar-item-title" data-title="Important Links">Important Links</p>
+<div class="padded">
+<a href="/pmwiki/query.php?type=att">Ask The Tropers</a>
+<a href="/pmwiki/query.php?type=tf">Trope Finder</a>
+<a href="/pmwiki/query.php?type=ykts">You Know That Show...</a>
+<a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a>
+<a href="/pmwiki/review_activity.php">Reviews</a>
+<a data-modal-target="login" href="/pmwiki/lbs.php">Live Blogs</a>
+<a href="/pmwiki/ad-free-subscribe.php">Go Ad Free!</a> </div>
+</div>
+<div class="sidebar-item sb-ad-unit">
+<div class="sidebar-section">
+<div class="square_ad ad-size-300x600 ad-section text-center">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_3"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_3'); });</script> </div>
+</div> </div>
+</div>
+</div>
+<div class="sidebar-item">
+<p class="sidebar-item-title" data-title="Crucial Browsing">Crucial Browsing</p>
+<ul class="padded font-s" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><a data-click-toggle="active" href="javascript:void(0);">Genre</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/ActionAdventureTropes" title="Main/ActionAdventureTropes">Action Adventure</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ComedyTropes" title="Main/ComedyTropes">Comedy</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CommercialsTropes" title="Main/CommercialsTropes">Commercials</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CrimeAndPunishmentTropes" title="Main/CrimeAndPunishmentTropes">Crime &amp; Punishment</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DramaTropes" title="Main/DramaTropes">Drama</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/HorrorTropes" title="Main/HorrorTropes">Horror</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LoveTropes" title="Main/LoveTropes">Love</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NewsTropes" title="Main/NewsTropes">News</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ProfessionalWrestling" title="Main/ProfessionalWrestling">Professional Wrestling</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SpeculativeFictionTropes" title="Main/SpeculativeFictionTropes">Speculative Fiction</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SportsStoryTropes" title="Main/SportsStoryTropes">Sports Story</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/WarTropes" title="Main/WarTropes">War</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Media</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/Media" title="Main/Media">All Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/AnimationTropes" title="Main/AnimationTropes">Animation (Western)</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Anime" title="Main/Anime">Anime</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ComicBookTropes" title="Main/ComicBookTropes">Comic Book</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FanFic" title="FanFic/FanFics">Fan Fics</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Film" title="Main/Film">Film</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/GameTropes" title="Main/GameTropes">Game</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Literature" title="Main/Literature">Literature</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MusicAndSoundEffects" title="Main/MusicAndSoundEffects">Music And Sound Effects</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NewMediaTropes" title="Main/NewMediaTropes">New Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/PrintMediaTropes" title="Main/PrintMediaTropes">Print Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Radio" title="Main/Radio">Radio</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SequentialArt" title="Main/SequentialArt">Sequential Art</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TabletopGames" title="Main/TabletopGames">Tabletop Games</a></li>
+<li><a href="/pmwiki/pmwiki.php/UsefulNotes/Television" title="Main/Television">Television</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Theater" title="Main/Theater">Theater</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/VideogameTropes" title="Main/VideogameTropes">Videogame</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Webcomics" title="Main/Webcomics">Webcomics</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Narrative</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/UniversalTropes" title="Main/UniversalTropes">Universal</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/AppliedPhlebotinum" title="Main/AppliedPhlebotinum">Applied Phlebotinum</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CharacterizationTropes" title="Main/CharacterizationTropes">Characterization</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Characters" title="Main/Characters">Characters</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CharactersAsDevice" title="Main/CharactersAsDevice">Characters As Device</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Dialogue" title="Main/Dialogue">Dialogue</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Motifs" title="Main/Motifs">Motifs</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NarrativeDevices" title="Main/NarrativeDevices">Narrative Devices</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Paratext" title="Main/Paratext">Paratext</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Plots" title="Main/Plots">Plots</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Settings" title="Main/Settings">Settings</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Spectacle" title="Main/Spectacle">Spectacle</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Other Categories</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/BritishTellyTropes" title="Main/BritishTellyTropes">British Telly</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TheContributors" title="Main/TheContributors">The Contributors</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CreatorSpeak" title="Main/CreatorSpeak">Creator Speak</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Creators" title="Main/Creators">Creators</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DerivativeWorks" title="Main/DerivativeWorks">Derivative Works</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LanguageTropes" title="Main/LanguageTropes">Language</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LawsAndFormulas" title="Main/LawsAndFormulas">Laws And Formulas</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ShowBusiness" title="Main/ShowBusiness">Show Business</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SplitPersonalityTropes" title="Main/SplitPersonalityTropes">Split Personality</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/StockRoom" title="Main/StockRoom">Stock Room</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TropeTropes" title="Main/TropeTropes">Trope</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Tropes" title="Main/Tropes">Tropes</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TruthAndLies" title="Main/TruthAndLies">Truth And Lies</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TruthInTelevision" title="Main/TruthInTelevision">Truth In Television</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Topical Tropes</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/BetrayalTropes" title="Main/BetrayalTropes">Betrayal</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CensorshipTropes" title="Main/CensorshipTropes">Censorship</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CombatTropes" title="Main/CombatTropes">Combat</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DeathTropes" title="Main/DeathTropes">Death</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FamilyTropes" title="Main/FamilyTropes">Family</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FateAndProphecyTropes" title="Main/FateAndProphecyTropes">Fate And Prophecy</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FoodTropes" title="Main/FoodTropes">Food</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/HolidayTropes" title="Main/HolidayTropes">Holiday</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MemoryTropes" title="Main/MemoryTropes">Memory</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MoneyTropes" title="Main/MoneyTropes">Money</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MoralityTropes" title="Main/MoralityTropes">Morality</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/PoliticsTropes" title="Main/PoliticsTropes">Politics</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ReligionTropes" title="Main/ReligionTropes">Religion</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SchoolTropes" title="Main/SchoolTropes">School</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="sidebar-item showcase">
+<p class="sidebar-item-title" data-title="Community Showcase">Community Showcase <a class="bubble float-right hover-blue" href="/pmwiki/showcase.php">More</a></p>
+<p class="community-showcase">
+<a href="https://sharetv.com/shows/echo_chamber" onclick="trackOutboundLink('https://sharetv.com/shows/echo_chamber');" target="_blank">
+<img alt="" class="lazy-image" data-src="/images/communityShowcase-echochamber.jpg"/></a>
+<a href="/pmwiki/pmwiki.php/Webcomic/TwistedTropes">
+<img alt="" class="lazy-image" data-src="/img/howlandsc-side.jpg"/></a>
+</p>
+</div>
+<div class="sidebar-item sb-ad-unit" id="stick-cont">
+<div class="sidebar-section" id="stick-bar">
+<div class="square_ad ad-size-300x600 ad-section text-center">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_4"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_4'); });</script> </div>
+</div> </div>
+</div>
+</div>
+</div>
+</div>
+<div class="action-bar tablet-off" id="action-bar-bottom">
+<a class="scroll-to-top dead-button" href="#top-of-page" onclick="$('html, body').animate({scrollTop : 0},500);">Top</a>
+</div>
+</div>
+<div class="proper-ad-unit ad-sticky">
+<div id="proper-ad-tvtropes_sticky_ad"> <script>propertag.cmd.push(function() { proper_display('tvtropes_sticky_ad'); });</script> </div>
+</div>
+<footer id="main-footer">
+<div id="main-footer-inner">
+<div class="footer-left">
+<a class="img-link" href="/"><img alt="TV Tropes" class="lazy-image" data-src="/img/tvtropes-footer-logo.png" title="TV Tropes"/></a>
+<form action="index.html" class="navbar-form newsletter-signup validate modal-replies" data-ajax-get="/ajax/subscribe_email.php" id="cse-search-box-mobile" name="" role="">
+<button class="btn-submit newsletter-signup-submit-button" id="subscribe-btn" type="submit"><i class="fa fa-paper-plane"></i></button>
+<input class="form-control" id="subscription-email" name="q" placeholder="Subscribe" size="31" type="text" validate-type="email" value=""/>
+</form>
+<ul class="social-buttons">
+<li><a class="btn fb" href="https://www.facebook.com/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-facebook']);" target="_blank"><i class="fa fa-facebook"></i></a></li>
+<li><a class="btn tw" href="https://www.twitter.com/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-twitter']);" target="_blank"><i class="fa fa-twitter"></i></a> </li>
+<li><a class="btn rd" href="https://www.reddit.com/r/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-reddit']);" target="_blank"><i class="fa fa-reddit-alien"></i></a></li>
+</ul>
+</div>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">TVTropes</h4></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Administrivia">About TVTropes</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TheGoalsOfTVTropes">TVTropes Goals</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TheTropingCode">Troping Code</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TVTropesCustoms">TVTropes Customs</a></li>
+<li><a href="/pmwiki/pmwiki.php/JustForFun/TropesOfLegend">Tropes of Legend</a></li>
+<li><a href="/pmwiki/ad-free-subscribe.php">Go Ad-Free</a></li>
+</ul>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">Community</h4></li>
+<li><a href="/pmwiki/query.php?type=att">Ask The Tropers</a></li>
+<li><a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a></li>
+<li><a href="/pmwiki/query.php?type=tf">Trope Finder</a></li>
+<li><a href="/pmwiki/query.php?type=ykts">You Know That Show</a></li>
+<li><a data-modal-target="login" href="/pmwiki/lbs.php">Live Blogs</a></li>
+<li><a href="/pmwiki/review_activity.php">Reviews</a></li>
+<li><a href="/pmwiki/topics.php">Forum</a></li>
+</ul>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">Tropes HQ</h4></li>
+<li><a href="/pmwiki/about.php">About Us</a></li>
+<li><a href="/pmwiki/contact.php">Contact Us</a></li>
+<li><a href="/pmwiki/dmca.php">DMCA Notice</a></li>
+<li><a href="/pmwiki/privacypolicy.php">Privacy Policy</a></li>
+</ul>
+</div>
+<div class="text-center gutter-top gutter-bottom tablet-on" id="desktop-on-mobile-toggle">
+<a href="/pmwiki/switchDeviceCss.php?mobileVersion=1" rel="nofollow">Switch to <span class="txt-desktop">Desktop</span><span class="txt-mobile">Mobile</span> Version</a>
+</div>
+<div class="legal">
+<p>TVTropes is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License. <br/>Permissions beyond the scope of this license may be available from <a href="mailto:thestaff@tvtropes.org" rel="cc:morePermissions" xmlns:cc="http://creativecommons.org/ns#"> thestaff@tvtropes.org</a>.</p>
+<br/>
+<div class="privacy_wrapper">
+</div>
+</div>
+</footer>
+<style>
+      div.fc-ccpa-root {
+        position: absolute !important;
+        bottom: 93px !important;
+        margin: auto !important;
+        width: 100% !important;
+        z-index: 9999 !important;
+      }
+      .fc-ccpa-root .fc-dns-dialog .fc-dns-link p{
+        outline: none !important;
+        text-decoration: underline !important;
+        font-size: .7em !important;
+        font-family: sans-serif !important;
+      }
+      .fc-ccpa-root .fc-dns-dialog .fc-dns-link .fc-button-background {
+        background: none !important;
+      }
+    </style>
+<div class="full-screen" id="_pm_videoViewer">
+<a class="close" href="#close" id="_pm_videoViewer-close"></a>
+<div class="_pmvv-body">
+<div class="_pmvv-vidbox">
+<video class="video-js vjs-default-skin vjs-16-9" data-video-id="" id="overlay-video-player-box">
+</video>
+<div class="_pmvv-vidbox-desc">
+<h1 id="overlay-title"></h1>
+<p class="_pmvv-vidbox-descTxt" id="overlay-descrip">
+</p>
+<div class="rating-row" data-video-id="">
+<input name="is_logged_in" type="hidden" value="0"/>
+<p>How well does it match the trope?</p>
+<div id="star-rating-group">
+<div class="trope-rate">
+<input id="lamp5" name="rate" type="radio" value="5"/>
+<label for="lamp5" title="Absolutely"></label>
+<input id="lamp4" name="rate" type="radio" value="4"/>
+<label for="lamp4" title="Yes"></label>
+<input id="lamp3" name="rate" type="radio" value="3"/>
+<label for="lamp3" title="Kind of"></label>
+<input id="lamp2" name="rate" type="radio" value="2"/>
+<label for="lamp2" title="Not really"></label>
+<input id="lamp1" name="rate" type="radio" value="1"/>
+<label for="lamp1" title="No"></label>
+</div>
+<div id="star-rating-total">
+</div>
+</div>
+</div>
+<div class="example-media-row">
+<div class="example-overlay">
+<p>Example of:</p>
+<div id="overlay-trope"> / </div>
+</div>
+<div class="media-sources-overlay example-overlay">
+<p>Media sources:</p>
+<div id="overlay-media"> / </div>
+</div>
+</div>
+<p class="_pmvv-vidbox-stats text-right font-s" style="padding-top:8px; border-top: solid 1px rgba(255,255,255,0.2)">
+<a class="float-right" data-modal-target="login" href="#video-feedback">Report</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+        window.special_ops =  {
+            member : 'no',
+            isolated : 0,
+            tags : ['unknown']
+        };
+    </script>
+<script type="text/javascript">
+
+        var cleanCreativeEnabled = "";
+        var donation = "";
+        var live_ads = "1";
+        var img_domain = "https://static.tvtropes.org";
+        var snoozed = cookies.read('snoozedabm');
+        var snoozable = "";
+
+        if (adsRemovedWith) {
+            live_ads = 0;
+        }
+
+        var elem = document.createElement('script');
+        elem.async = true;
+
+        elem.src = '/design/assets/bundle.js?rev=c58d8df02f09262390bbd03db7921fc35c6af306';
+
+        elem.onload = function() {
+                                 }
+        document.getElementsByTagName('head')[0].appendChild(elem);
+
+    </script>
+<script type="text/javascript">
+      function send_analytics_event(user_type, donation){
+          // if(user_type == 'uncached' || user_type == 'cached'){
+          //   ga('send', 'event', 'caching', 'load', user_type, {'nonInteraction': 1});
+          //   return;
+          // }
+          var event_name = user_type;
+
+          if(donation == 'true'){
+              event_name += "_donation"
+          }else if(typeof(valid_user) == 'undefined'){
+              event_name += "_blocked"
+          }else if(valid_user == true){
+              event_name += "_unblocked";
+          }else{
+              event_name = "_unknown"
+          }
+          ga('send', 'event', 'ads', 'load', event_name, {'nonInteraction': 1});
+      }
+
+    
+    send_analytics_event("guest", "false");
+      </script>
+</body>
+</html>

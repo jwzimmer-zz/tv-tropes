@@ -1,0 +1,1058 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Divide and Conquer - TV Tropes</title>
+<meta content="The Divide and Conquer trope as used in popular culture. Why work when you can get someone else to do the work for you? A favored tactic of The Chessmaster, …" name="description"/>
+<link href="https://tvtropes.org/pmwiki/pmwiki.php/Main/DivideAndConquer" rel="canonical"/>
+<link href="/img/icons/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="@tvtropes" name="twitter:site"/>
+<meta content="@tvtropes" name="twitter:owner"/>
+<meta content="Divide and Conquer - TV Tropes" name="twitter:title"/>
+<meta content="The Divide and Conquer trope as used in popular culture. Why work when you can get someone else to do the work for you? A favored tactic of The Chessmaster, …" name="twitter:description"/>
+<meta content="https://static.tvtropes.org/logo_blue_small.png" name="twitter:image:src"/>
+<meta content="TV Tropes" property="og:site_name"/>
+<meta content="en_US" property="og:locale"/>
+<meta content="https://www.facebook.com/tvtropes" property="article:publisher"/>
+<meta content="Divide and Conquer - TV Tropes" property="og:title"/>
+<meta content="website" property="og:type"/>
+<meta content="https://tvtropes.org/pmwiki/pmwiki.php/Main/DivideAndConquer" property="og:url"/>
+<meta content="https://static.tvtropes.org/logo_blue_small.png" property="og:image"/>
+<meta content="Why work when you can get someone else to do the work for you? A favored tactic of The Chessmaster, both villain and Anti-Hero, is to get two of your enemies to fight each other instead of you. If one wins, he should be weakened enough from …" property="og:description"/>
+<link href="/img/icons/apple-icon-57x57.png" rel="apple-touch-icon" sizes="57x57" type="image/png"/>
+<link href="/img/icons/apple-icon-60x60.png" rel="apple-touch-icon" sizes="60x60" type="image/png"/>
+<link href="/img/icons/apple-icon-72x72.png" rel="apple-touch-icon" sizes="72x72" type="image/png"/>
+<link href="/img/icons/apple-icon-76x76.png" rel="apple-touch-icon" sizes="76x76" type="image/png"/>
+<link href="/img/icons/apple-icon-114x114.png" rel="apple-touch-icon" sizes="114x114" type="image/png"/>
+<link href="/img/icons/apple-icon-120x120.png" rel="apple-touch-icon" sizes="120x120" type="image/png"/>
+<link href="/img/icons/apple-icon-144x144.png" rel="apple-touch-icon" sizes="144x144" type="image/png"/>
+<link href="/img/icons/apple-icon-152x152.png" rel="apple-touch-icon" sizes="152x152" type="image/png"/>
+<link href="/img/icons/apple-icon-180x180.png" rel="apple-touch-icon" sizes="180x180" type="image/png"/>
+<link href="/img/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/img/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/img/icons/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png"/>
+<link href="/img/icons/favicon-192x192.png" rel="icon" sizes="192x192" type="image/png"/>
+<meta content="width=device-width, initial-scale=1" id="viewport" name="viewport"/>
+<script>
+                var propertag = {};
+                propertag.cmd = [];
+            </script>
+<link href="/design/assets/bundle.css?rev=c58d8df02f09262390bbd03db7921fc35c6af306" rel="stylesheet"/>
+<script>
+                function object(objectId) {
+                    if (document.getElementById && document.getElementById(objectId)) {
+                        return document.getElementById(objectId);
+                    } else if (document.all && document.all(objectId)) {
+                        return document.all(objectId);
+                    } else if (document.layers && document.layers[objectId]) {
+                        return document.layers[objectId];
+                    } else {
+                        return false;
+                    }
+                }
+
+                // JAVASCRIPT COOKIES CODE: for getting and setting user viewing preferences
+                var cookies = {
+                    create: function (name, value, days2expire, path) {
+                        var date = new Date();
+                        date.setTime(date.getTime() + (days2expire * 24 * 60 * 60 * 1000));
+                        var expires = date.toUTCString();
+                        document.cookie = name + '=' + value + ';' + 'expires=' + expires + ';' + 'path=' + path + ';';
+                    },
+										createWithExpire: function(name, value, expires, path) {
+												document.cookie = name + '=' + value + ';' + 'expires=' + expires + ';' + 'path=' + path + ';';
+										},
+                    read: function (name) {
+                        var cookie_value = "",
+                            current_cookie = "",
+                            name_expr = name + "=",
+                            all_cookies = document.cookie.split(';'),
+                            n = all_cookies.length;
+
+                        for (var i = 0; i < n; i++) {
+                            current_cookie = all_cookies[i].trim();
+                            if (current_cookie.indexOf(name_expr) === 0) {
+                                cookie_value = current_cookie.substring(name_expr.length, current_cookie.length);
+                                break;
+                            }
+                        }
+                        return cookie_value;
+                    },
+                    update: function (name, val) {
+                        this.create(name, val, 300, "/");
+                    },
+                    remove: function (name) {
+                        document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
+                    }
+                };
+
+                function updateUserPrefs() {
+                    //GENERAL: detect and set browser, if not cookied (will be treated like a user-preference and added to the #user-pref element)
+                    if( !cookies.read('user-browser') ){
+                        var broswer = '';
+
+                        if(navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPod/i) ){
+                            browser = 'iOS';
+                        } else if (/Opera[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'opera';
+                        } else if (/MSIE (\d+\.\d+);/.test(navigator.userAgent)) {
+                            browser = 'MSIE';
+                        } else if (/Navigator[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'netscape';
+                        } else if (/Chrome[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'chrome';
+                        } else if (/Safari[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'safari';
+                            /Version[\/\s](\d+\.\d+)/.test(navigator.userAgent);
+                            browserVersion = new Number(RegExp.$1);
+                        } else if (/Firefox[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'firefox';
+                        } else {
+                            browser = 'internet_explorer';
+                        }
+                        cookies.create('user-browser',browser,1,'/');
+                        document.getElementById('user-prefs').classList.add('browser-' + browser);
+                    } else {
+                        document.getElementById('user-prefs').classList.add('browser-' + cookies.read('user-browser'));
+                    }
+
+                    //update user preference settings
+                    if (cookies.read('wide-load') !== '') document.getElementById('user-prefs').classList.add('wide-load');
+                    if (cookies.read('night-vision') !== '') document.getElementById('user-prefs').classList.add('night-vision');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('user-prefs').classList.add('sticky-header');
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('user-prefs').classList.add('show-spoilers');
+                    if (cookies.read('folders-open') !== '') document.getElementById('user-prefs').classList.add('folders-open');
+                    if (cookies.read('lefthand-sidebar') !== '') document.getElementById('user-prefs').classList.add('lefthand-sidebar');
+                    if (cookies.read('highlight-links') !== '') document.getElementById('user-prefs').classList.add('highlight-links');
+                    if (cookies.read('forum-gingerbread') !== '') document.getElementById('user-prefs').classList.add('forum-gingerbread');
+                    if (cookies.read('shared-avatars') !== '') document.getElementById('user-prefs').classList.add('shared-avatars');
+                    if (cookies.read('new-search') !== '') document.getElementById('user-prefs').classList.add('new-search');
+                    if (cookies.read('stop-auto-play-video') !== '') document.getElementById('user-prefs').classList.add('stop-auto-play-video');
+
+                    //desktop view on mobile
+                    if (cookies.read('desktop-on-mobile') !== ''){
+                        document.getElementById('user-prefs').classList.add('desktop-on-mobile');
+
+                        var viewport = document.querySelector("meta[name=viewport]");
+                        viewport.setAttribute('content', 'width=1000');
+                    }
+
+                }
+
+                function updateDesktopPrefs() {
+                    if (cookies.read('wide-load') !== '') document.getElementById('sidebar-toggle-wideload').classList.add('active');
+                    if (cookies.read('night-vision') !== '') document.getElementById('sidebar-toggle-nightvision').classList.add('active');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('sidebar-toggle-stickyheader').classList.add('active');
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('sidebar-toggle-showspoilers').classList.add('active');
+
+                }
+
+                function updateMobilePrefs() {
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('mobile-toggle-showspoilers').classList.add('active');
+                    if (cookies.read('night-vision') !== '') document.getElementById('mobile-toggle-nightvision').classList.add('active');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('mobile-toggle-stickyheader').classList.add('active');
+                    if (cookies.read('highlight-links') !== '') document.getElementById('mobile-toggle-highlightlinks').classList.add('active');
+
+                }
+
+
+                if (document.cookie.indexOf("scroll0=") < 0) {
+                    // do nothing
+                } else {
+                    console.log('ads removed by scroll.com');
+                    var adsRemovedWith = 'scroll';
+                    var style = document.createElement('style');
+                    style.innerHTML = '#header-ad, .proper-ad-unit, .square_ad, .sb-ad-unit { display: none !important; } ';
+                    document.head.appendChild(style);
+                }
+            </script>
+<script type="text/javascript">
+
+                var tvtropes_config = {
+                    astri_stream_enabled : "",
+                    is_logged_in         : "",
+                    handle               : "",
+                    get_astri_stream     : "",
+										revnum               : "c58d8df02f09262390bbd03db7921fc35c6af306",
+										img_domain           : "https://static.tvtropes.org",
+										adblock              : "1",
+										adblock_url          : "propermessage.io",
+										pause_editing        : "0",
+										pause_editing_msg    : "",
+										pause_site_changes   : ""
+                };
+            </script>
+<script type="text/javascript">
+						  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+						  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+						  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+						  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+						  ga('create', 'UA-3821842-1', 'auto');
+						  ga('send', 'pageview');
+
+						</script>
+</head>
+<body class="">
+<i id="user-prefs"></i>
+<script>updateUserPrefs();</script>
+<div id="fb-root"></div>
+<div id="modal-box"></div>
+<header class="headroom-element" id="main-header-bar">
+<div id="main-header-bar-inner">
+<span class="header-spacer" id="header-spacer-left"></span>
+<a class="mobile-menu-toggle-button tablet-on" href="#mobile-menu" id="main-mobile-toggle"><span></span><span></span><span></span></a>
+<a class="no-dev" href="/" id="main-header-logoButton"></a>
+<span class="header-spacer" id="header-spacer-right"></span>
+<nav class="tablet-off" id="main-header-nav">
+<a href="/pmwiki/pmwiki.php/Main/Tropes">Tropes</a>
+<a href="/pmwiki/pmwiki.php/Main/Media">Media</a>
+<a class="nav-browse" href="/pmwiki/browse.php">Browse</a>
+<a href="/pmwiki/index_report.php">Indexes</a>
+<a href="/pmwiki/topics.php">Forums</a>
+<a class="nav-browse" href="/pmwiki/recent_videos.php">Videos</a>
+</nav>
+<div id="main-header-bar-right">
+<div class="font-xs mobile-off" id="signup-login-box">
+<a class="hover-underline bold" data-modal-target="signup" href="/pmwiki/login.php">Join</a>
+<a class="hover-underline bold" data-modal-target="login" href="/pmwiki/login.php">Login</a>
+</div>
+<div class="mobile-on inline" id="signup-login-mobileToggle">
+<a data-modal-target="login" href="/pmwiki/login.php"><i class="fa fa-user"></i></a>
+</div>
+<div id="search-box">
+<form action="/pmwiki/search_result.php" class="search">
+<input class="search-box" name="q" placeholder="Search" required="" type="text" value=""/>
+<input class="submit-button" type="submit" value=""/>
+<input name="search_type" type="hidden" value="article"/>
+<input name="page_type" type="hidden" value="all"/>
+<input name="cx" type="hidden" value="partner-pub-6610802604051523:amzitfn8e7v"/>
+<input name="cof" type="hidden" value="FORID:10"/>
+<input name="ie" type="hidden" value="ISO-8859-1"/>
+<input name="siteurl" type="hidden" value=""/>
+<input name="ref" type="hidden" value=""/>
+<input name="ss" type="hidden" value=""/>
+</form>
+<a class="mobile-on mobile-search-toggle close-x" href="#close-search"><i class="fa fa-close"></i></a>
+</div>
+<div id="random-box">
+<a class="button-random-trope" href="/pmwiki/pmwiki.php/Main/Superhero" onclick="ga('send', 'event', 'button', 'click', 'random trope');" rel="nofollow"></a>
+<a class="button-random-media" href="/pmwiki/pmwiki.php/Creator/DannyBoyle" onclick="ga('send', 'event', 'button', 'click', 'random media');" rel="nofollow"></a>
+</div>
+</div>
+</div>
+<div class="tablet-on" id="mobile-menu"><div class="mobile-menu-options">
+<div class="nav-wrapper">
+<a class="xl" href="/pmwiki/pmwiki.php/Main/Tropes">Tropes</a>
+<a class="xl" href="/pmwiki/pmwiki.php/Main/Media">Media</a>
+<a class="xl" href="/pmwiki/browse.php">Browse</a>
+<a class="xl" href="/pmwiki/index_report.php">Indexes</a>
+<a class="xl" href="/pmwiki/topics.php">Forums</a>
+<a class="xl" href="/pmwiki/recent_videos.php">Videos</a>
+<a href="/pmwiki/query.php?type=att">Ask The Tropers</a>
+<a href="/pmwiki/query.php?type=tf">Trope Finder</a>
+<a href="/pmwiki/query.php?type=ykts">You Know That Show...</a>
+<a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a>
+<a data-click-toggle="active" href="#tools">Tools <i class="fa fa-chevron-down"></i></a>
+<div class="tools-dropdown mobile-dropdown-linkList">
+<a href="/pmwiki/cutlist.php">Cut List</a>
+<a href="/pmwiki/changes.php">New Edits</a>
+<a href="/pmwiki/recent_edit_reasons.php">Edit Reasons</a>
+<a href="/pmwiki/launches.php">Launches</a>
+<a href="/pmwiki/img_list.php">Images List</a>
+<a href="/pmwiki/crown_activity.php">Crowner Activity</a>
+<a href="/pmwiki/no_types.php">Un-typed Pages</a>
+<a href="/pmwiki/page_type_audit.php">Recent Page Type Changes</a>
+</div>
+<a data-click-toggle="active" href="#hq">Tropes HQ <i class="fa fa-chevron-down"></i></a>
+<div class="tools-dropdown mobile-dropdown-linkList">
+<a href="/pmwiki/about.php">About Us</a>
+<a href="/pmwiki/contact.php">Contact Us</a>
+<a href="mailto:advertising@proper.io">Advertise</a>
+<a href="/pmwiki/dmca.php">DMCA Notice</a>
+<a href="/pmwiki/privacypolicy.php">Privacy Policy</a>
+</div>
+<a href="/pmwiki/ad-free-subscribe.php">Go Ad-Free</a>
+<div class="toggle-switches">
+<ul class="mobile-menu display-toggles">
+<li>Show Spoilers <div class="display-toggle show-spoilers" id="mobile-toggle-showspoilers"></div></li>
+<li>Night Vision <div class="display-toggle night-vision" id="mobile-toggle-nightvision"></div></li>
+<li>Sticky Header <div class="display-toggle sticky-header" id="mobile-toggle-stickyheader"></div></li>
+<li>Highlight Links <div class="display-toggle highlight-links" id="mobile-toggle-highlightlinks"></div></li>
+</ul>
+<script>updateMobilePrefs();</script>
+</div>
+</div>
+</div>
+</div>
+</header>
+<div class="mobile-on" id="homepage-introBox-mobile">
+<a href="/"><img class="logo-small" src="/images/logo-white-big.png"/></a>
+<form action="/pmwiki/search_result.php" class="search" style="margin:10px -5px -6px -5px;">
+<input class="search-box" name="q" placeholder="Search" required="" type="text" value=""/>
+<input class="submit-button" type="submit" value=""/>
+<input name="search_type" type="hidden" value="article"/>
+<input name="page_type" type="hidden" value="all"/>
+<input name="cx" type="hidden" value="partner-pub-6610802604051523:amzitfn8e7v"/>
+<input name="cof" type="hidden" value="FORID:10"/>
+<input name="ie" type="hidden" value="ISO-8859-1"/>
+<input name="siteurl" type="hidden" value=""/>
+<input name="ref" type="hidden" value=""/>
+<input name="ss" type="hidden" value=""/>
+</form>
+</div>
+<div class="ad" id="header-ad-wrapper">
+<div id="header-ad">
+<div class="ad-size-970x90 atf_banner">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_1"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_1'); });</script> </div>
+</div> </div>
+</div>
+</div>
+<div id="main-container">
+<div class="action-bar mobile-off" id="action-bar-top">
+<div class="action-bar-right">
+<p>Follow TV Tropes</p>
+<a class="button-fb" href="https://www.facebook.com/TVTropes">
+<i class="fa fa-facebook"></i></a>
+<a class="button-tw" href="https://www.twitter.com/TVTropes">
+<i class="fa fa-twitter"></i></a>
+<a class="button-re" href="https://www.reddit.com/r/TVTropes">
+<i class="fa fa-reddit-alien"></i></a>
+</div>
+<nav class="actions-wrapper" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<ul class="page-actions" id="top_main_list">
+<li class="link-edit">
+<a class="article-edit-button" data-modal-target="login" href="/pmwiki/pmwiki.php/Main/DivideAndConquer?action=edit" rel="nofollow">
+<i class="fa fa-pencil"></i> Edit Page</a></li><li class="link-related"><a href="/pmwiki/relatedsearch.php?term=Main/DivideAndConquer">
+<i class="fa fa-share-alt"></i> Related</a></li><li class="link-history"><a href="/pmwiki/article_history.php?article=Main.DivideAndConquer">
+<i class="fa fa-history"></i> History</a></li><li class="link-discussion"><a href="/pmwiki/remarks.php?trope=Main.DivideAndConquer">
+<i class="fa fa-comment"></i> Discussion</a></li> </ul>
+<button class="nav__dropdown-toggle" id="top_more_button" onclick="toggle_more_menu('top');" type="button">More</button>
+<ul class="more_menu hidden_more_list" id="top_more_list">
+<li class="link-todo tuck-always more_list_item"><a data-modal-target="login" href="#todo"><i class="fa fa-check-circle"></i> To Do</a></li><li class="link-pageSource tuck-always more_list_item"><a data-modal-target="login" href="/pmwiki/pmwiki.php/Main/DivideAndConquer?action=source" rel="nofollow" target="_blank"><i class="fa fa-code"></i> Page Source</a></li> </ul>
+</nav>
+<div class="WikiWordModalStub"></div>
+<div class="ImgUploadModalStub" data-page-type="Article"></div>
+<div class="login-alert" style="display: none;">
+You need to <a href="/pmwiki/login.php" style="color:#21A0E8">login</a> to do this. <a href="/pmwiki/login.php?tab=register_account" style="color:#21A0E8">Get Known</a> if you don't have an account
+</div>
+</div>
+<div class="page-Article" id="main-content">
+<article class="with-sidebar" id="main-entry">
+<input id="groupname-hidden" type="hidden" value="Main"/>
+<input id="title-hidden" type="hidden" value="DivideAndConquer"/>
+<input id="article_id" type="hidden" value="8726"/>
+<input id="logged_in" type="hidden" value="false"/>
+<p class="hidden" id="current_url">http://tvtropes.org/pmwiki/pmwiki.php/Main/DivideAndConquer</p>
+<meta content="" itemprop="datePublished"/>
+<meta content="" itemprop="articleSection"/>
+<meta content="" itemprop="image"/>
+<a class="watch-button" data-modal-target="login" href="#watch">Follow<span>ing</span></a>
+<h1 class="entry-title" itemprop="headline">
+Divide and Conquer
+</h1>
+<script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+                "@type": "ListItem",
+                "position": 1,
+                "name": "tvtropes.org",
+                "item": "https://tvtropes.org"
+            },{
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Tropes",
+                "item": "https://tvtropes.org/pmwiki/pmwiki.php/Main/Tropes"
+            },{
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Divide and Conquer"            }]
+        }
+    </script>
+<a class="mobile-actionbar-toggle mobile-on" data-click-toggle="active" href="#mobile-actions-toggle" id="mobile-actionbar-toggle">
+<p class="tiny-off">Go To</p><span></span><span></span><span></span><i class="fa fa-pencil"></i></a>
+<nav class="mobile-actions-wrapper mobile-on" id="mobile-actions-bar"></nav>
+<div class="modal fade hidden-until-active" id="editLockModal">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button aria-label="Close" class="close" data-dismiss="modal" type="button"> <span aria-hidden="true">×</span></button>
+<h4 class="modal-title">Edit Locked</h4>
+</div>
+<div class="modal-body">
+<div class="row">
+<div class="body">
+<div class="danger troper_locked_message"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<nav class="body-options" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<ul class="subpage-links">
+<li>
+<a class="subpage-link curr-subpage" href="/pmwiki/pmwiki.php/Main/DivideAndConquer" title="The Main page">
+<span class="wrapper"><span class="spi main-page"></span>Main</span></a>
+</li>
+<li>
+<a class="subpage-link" href="/pmwiki/pmwiki.php/Laconic/DivideAndConquer" title="The Laconic page">
+<span class="wrapper"><span class="spi laconic-icon"></span>Laconic</span></a>
+</li>
+<li>
+<a class="subpage-link" href="/pmwiki/pmwiki.php/Quotes/DivideAndConquer" title="The Quotes page">
+<span class="wrapper"><span class="spi quotes"></span>Quotes</span></a>
+</li>
+<li>
+<a class="subpage-link" href="/pmwiki/pmwiki.php/VideoGame/DivideAndConquer" title="The VideoGame page">
+<span class="wrapper"><span class="spi videogame"></span>VideoGame</span></a>
+</li>
+<li class="create-subpage dropdown">
+<a aria-expanded="false" class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);" role="button">
+<span class="wrapper">Create New <i class="fa fa-plus-circle"></i></span>
+</a>
+<select onchange="this.options[this.selectedIndex].value &amp;&amp; (window.location = this.options[this.selectedIndex].value);">
+<option value="">- Create New -</option>
+<option value="/pmwiki/pmwiki.php/Analysis/DivideAndConquer?action=edit">Analysis</option>
+<option value="/pmwiki/pmwiki.php/Characters/DivideAndConquer?action=edit">Characters</option>
+<option value="/pmwiki/pmwiki.php/FanficRecs/DivideAndConquer?action=edit">FanficRecs</option>
+<option value="/pmwiki/pmwiki.php/FanWorks/DivideAndConquer?action=edit">FanWorks</option>
+<option value="/pmwiki/pmwiki.php/Fridge/DivideAndConquer?action=edit">Fridge</option>
+<option value="/pmwiki/pmwiki.php/Haiku/DivideAndConquer?action=edit">Haiku</option>
+<option value="/pmwiki/pmwiki.php/Headscratchers/DivideAndConquer?action=edit">Headscratchers</option>
+<option value="/pmwiki/pmwiki.php/ImageLinks/DivideAndConquer?action=edit">ImageLinks</option>
+<option value="/pmwiki/pmwiki.php/PlayingWith/DivideAndConquer?action=edit">PlayingWith</option>
+<option value="/pmwiki/pmwiki.php/Recap/DivideAndConquer?action=edit">Recap</option>
+<option value="/pmwiki/pmwiki.php/ReferencedBy/DivideAndConquer?action=edit">ReferencedBy</option>
+<option value="/pmwiki/pmwiki.php/Synopsis/DivideAndConquer?action=edit">Synopsis</option>
+<option value="/pmwiki/pmwiki.php/Timeline/DivideAndConquer?action=edit">Timeline</option>
+<option value="/pmwiki/pmwiki.php/Trivia/DivideAndConquer?action=edit">Trivia</option>
+<option value="/pmwiki/pmwiki.php/WMG/DivideAndConquer?action=edit">WMG</option>
+<option value="/pmwiki/pmwiki.php/YMMV/DivideAndConquer?action=edit">YMMV</option>
+</select>
+</li>
+</ul>
+</nav>
+<div class="article-content retro-folders" id="main-article">
+<p></p><div class="indent"><em>"Siamese fighting fish — fascinating creatures. <a class="twikilink" href="/pmwiki/pmwiki.php/Main/FearlessFool" title="/pmwiki/pmwiki.php/Main/FearlessFool">Brave, but on the whole, stupid.</a> Yes, they're stupid. Except for the occasional one, such as we have here, who lets the other two fight. While he waits. <a class="twikilink" href="/pmwiki/pmwiki.php/Main/VictoryByEndurance" title="/pmwiki/pmwiki.php/Main/VictoryByEndurance">Waits until the survivor is so exhausted that he cannot defend himself, and then like SPECTRE... he strikes!</a>"</em>
+<div class="indent">— <strong><a class="twikilink" href="/pmwiki/pmwiki.php/Film/JamesBond" title="/pmwiki/pmwiki.php/Film/JamesBond">Ernst Stavro Blofeld</a></strong>, <em><a class="twikilink" href="/pmwiki/pmwiki.php/Film/FromRussiaWithLove" title="/pmwiki/pmwiki.php/Film/FromRussiaWithLove">From Russia with Love</a></em>
+</div></div><p>Why work when you can get someone else to do the work for you? A favored tactic of <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TheChessmaster" title="/pmwiki/pmwiki.php/Main/TheChessmaster">The Chessmaster</a>, both villain and <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AntiHero" title="/pmwiki/pmwiki.php/Main/AntiHero">Anti-Hero</a>, is to get <a class="twikilink" href="/pmwiki/pmwiki.php/Main/LetsYouAndHimFight" title="/pmwiki/pmwiki.php/Main/LetsYouAndHimFight">two of your enemies to fight each other</a> instead of you. If one wins, he should be weakened enough from battle that you can knock him off before he recovers.
+</p><div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_1"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_1'); })</script></div></div><p>Most often, this is when the villain decides to let another, unaffiliated villain absorb the majority of the Hero's time and energy. Truly skilled use of this trope is when the villain can break up the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/FiveManBand" title="/pmwiki/pmwiki.php/Main/FiveManBand">Five-Man Band</a>.
+</p><p><a class="twikilink" href="/pmwiki/pmwiki.php/Main/ThePowerOfFriendship" title="/pmwiki/pmwiki.php/Main/ThePowerOfFriendship">The Power of Friendship</a> is a powerful thing. Some villains realize its strength after getting beaten by it too many times, so they try to <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AHouseDivided" title="/pmwiki/pmwiki.php/Main/AHouseDivided">somehow</a> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DividedWeFall" title="/pmwiki/pmwiki.php/Main/DividedWeFall">split up whatever team of heroes they're facing</a>. This might involve getting two heroes to <a class="twikilink" href="/pmwiki/pmwiki.php/Main/HatePlague" title="/pmwiki/pmwiki.php/Main/HatePlague">hate each other</a>, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AchillesInHisTent" title="/pmwiki/pmwiki.php/Main/AchillesInHisTent">getting one hero to hate the others</a>, or otherwise forcing the team to split up. <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TheLancer" title="/pmwiki/pmwiki.php/Main/TheLancer">The Lancer</a> is a common target of this tactic.
+</p><p>On the opposite side, it's the usual hero tactic when <a class="twikilink" href="/pmwiki/pmwiki.php/Main/LegionOfDoom" title="/pmwiki/pmwiki.php/Main/LegionOfDoom">their enemies try working together</a>. Of course, they're usually much easier to divide, since not only do they typically lack <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ThePowerOfFriendship" title="/pmwiki/pmwiki.php/Main/ThePowerOfFriendship">The Power of Friendship</a>, but they're probably already planning to double-cross each other anyway. By contrast, when the villain sets two groups of heroes against each other, they're much more likely to figure it out and team up.
+</p><div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_2"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_2'); })</script></div></div><p>Compare <a class="twikilink" href="/pmwiki/pmwiki.php/Main/LetsYouAndHimFight" title="/pmwiki/pmwiki.php/Main/LetsYouAndHimFight">Let's You and Him Fight</a> and <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SetAMookToKillAMook" title="/pmwiki/pmwiki.php/Main/SetAMookToKillAMook">Set a Mook to Kill a Mook</a>. Contrast <a class="twikilink" href="/pmwiki/pmwiki.php/Main/EnemyMine" title="/pmwiki/pmwiki.php/Main/EnemyMine">Enemy Mine</a> and <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DefeatMeansFriendship" title="/pmwiki/pmwiki.php/Main/DefeatMeansFriendship">Defeat Means Friendship</a>. #9 in <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/TheThirtySixStratagems" title="/pmwiki/pmwiki.php/UsefulNotes/TheThirtySixStratagems">The Thirty-Six Stratagems</a>, making this one of <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TheOldestTricksInTheBook" title="/pmwiki/pmwiki.php/Main/TheOldestTricksInTheBook">The Oldest Tricks in the Book</a>.
+</p><p>Not to be confused with the <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/ThirdAgeTotalWar" title="/pmwiki/pmwiki.php/VideoGame/ThirdAgeTotalWar">Third Age: Total War</a></em> sub-mod of <a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DivideAndConquer" title="/pmwiki/pmwiki.php/VideoGame/DivideAndConquer">the same name</a>.
+</p><p></p><hr/><h2>Examples:</h2>
+<p></p><div class="folderlabel" onclick="toggleAllFolders();">    open/close all folders  </div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder0');">    Anime &amp; Manga </div><div class="folder" id="folder0" isfolder="true" style="display:block;">
+<ul><li> This is the goal of Yugi in <em><a class="twikilink" href="/pmwiki/pmwiki.php/Anime/TenchiMuyo" title="/pmwiki/pmwiki.php/Anime/TenchiMuyo">Tenchi In Tokyo</a></em>.
+</li><li> In the <em><a class="twikilink" href="/pmwiki/pmwiki.php/Manga/YuGiOh" title="/pmwiki/pmwiki.php/Manga/YuGiOh">Yu-Gi-Oh!</a></em> manga's "Death-T" arc, one of the challenges is a room being gradually filled with huge falling blocks. It's intended to force the heroes to think only of themselves rather than trying to save their friends.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/Manga/Monster" title="/pmwiki/pmwiki.php/Manga/Monster">Monster</a></em>, one of Johan's most common strategies is to get different groups of people to fight against one another. <span class="spoiler" title="you can set spoilers visible by default on your profile">In the finale, he has guns distributed around an entire town and gets everyone to start shooting everyone else.</span>
+</li><li> Naraku from <em><a class="twikilink" href="/pmwiki/pmwiki.php/Manga/InuYasha" title="/pmwiki/pmwiki.php/Manga/InuYasha">Inuyasha</a></em> tried several times to put Sango against the others by threatening the life (<a class="twikilink" href="/pmwiki/pmwiki.php/Main/Undead" title="/pmwiki/pmwiki.php/Main/Undead">or some such</a>) of her little brother. The first time, he managed to make her steal Inuyasha's <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BFS" title="/pmwiki/pmwiki.php/Main/BFS">Tessaiga</a>, but she's gotten wiser since. He also uses various tricks to physically split up the team so he can take them out one by one.
+</li><li> Team Rocket use this plan a few times to catch the <a class="twikilink" href="/pmwiki/pmwiki.php/Anime/Pokemon" title="/pmwiki/pmwiki.php/Anime/Pokemon">Pokémon</a> of the episode and almost get away with it until the last minute.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Anime/CodeGeass" title="/pmwiki/pmwiki.php/Anime/CodeGeass">Code Geass</a></em>: The strategy Schneizel uses twice on Lelouch: <span class="spoiler" title="you can set spoilers visible by default on your profile">first, to make him believe Suzaku betrayed him by having him arrested during the meeting, and the second time by getting the Black Knights to betray him</span>.
+</li><li> The description above says "contrast <a class="twikilink" href="/pmwiki/pmwiki.php/Main/EnemyMine" title="/pmwiki/pmwiki.php/Main/EnemyMine">Enemy Mine</a>", but in <em><a class="twikilink" href="/pmwiki/pmwiki.php/Manga/SoulEater" title="/pmwiki/pmwiki.php/Manga/SoulEater">Soul Eater</a></em>, Medusa actually managed to <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DivideAndConquer" title="/pmwiki/pmwiki.php/Main/DivideAndConquer">Divide and Conquer</a> by means of <a class="twikilink" href="/pmwiki/pmwiki.php/Main/EnemyMine" title="/pmwiki/pmwiki.php/Main/EnemyMine">Enemy Mine</a>. And although she didn't tell them, the people she was "helping" found it obvious that this is her plan.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/LightNovel/BakaAndTestSummonTheBeasts" title="/pmwiki/pmwiki.php/LightNovel/BakaAndTestSummonTheBeasts">Baka and Test: Summon the Beasts</a></em>, Class F utilizes this against Class A during a summoner war. They use favors gained from defeating the other classes, or deception in the case of Class C, to have them wear down Class A before the fight. Class F nearly succeeds with it, until the school starts to break down, causing the Class F rep to be distracted momentarily.
+</li><li> Aizen's plan in the Soul Society arc of <em><a class="twikilink" href="/pmwiki/pmwiki.php/Manga/Bleach" title="/pmwiki/pmwiki.php/Manga/Bleach">Bleach</a></em> incorporates large amounts of this. He has Ichimaru let Ichigo's crew escape, so the thirteen squads spend their time and energy fighting them. At the same time, he manipulates Rukia's execution to cause splits within the thirteen squads, and after <a class="twikilink" href="/pmwiki/pmwiki.php/Main/FakingTheDead" title="/pmwiki/pmwiki.php/Main/FakingTheDead">faking his own death</a>, manipulates Hinamori into attacking Ichimaru, Kira, and Hitsugaya. All of these things manage to divert attention from his machinations, and if it wasn't for <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SpannerInTheWorks" title="/pmwiki/pmwiki.php/Main/SpannerInTheWorks">Ichigo doing a little better than expected</a> and Captain Unohana realising something was wrong with his 'dead' body, Aizen's plan would have succeeded, he would have escaped scot-free, and a significant amount of his enemies would be dead.
+</li><li> This is Baron Omatsuri's M.O. <span class="spoiler" title="you can set spoilers visible by default on your profile">(Carnation Lily, actually)</span> in <em><a class="twikilink" href="/pmwiki/pmwiki.php/Manga/OnePiece" title="/pmwiki/pmwiki.php/Manga/OnePiece">One Piece</a></em>. He disguises his island as a resort for pirate crews, where they would play activities and games that are actually designed to cause infighting among the crews. He's so good at this that he succeeds with the Straw Hats, who have an almost familial bond among each other. When captain Luffy finds out about this, he gets so gravely offended that <span class="spoiler" title="you can set spoilers visible by default on your profile">though it's <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Filler" title="/pmwiki/pmwiki.php/Main/Filler">not canon</a>, Carnation Lily is Luffy's first direct kill in the series.</span>
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/Anime/LegendOfGalacticHeroes" title="/pmwiki/pmwiki.php/Anime/LegendOfGalacticHeroes">Legend of Galactic Heroes</a></em> this is the key to Reinhardt and Oberstein's strategies to win both the Imperial Civil War and the Long War:
+<ul><li> In the Imperial Civil War, Reinhardt's faction captured Ovlesser, one of the best commanders of the Lippstadt League... And then Oberstein sent him to the League's stronghold of Geiersburg without getting him to defect or brainwashing him while announcing that Ovlesser's men had been executed. The League's leaders promptly execute Ovlesser (who had not found out of the apparent execution until he arrived to Geiersburg), getting the League's officers to start suspecting each other and lowering the morale of the soldiers to the point that, coupled with <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BadBoss" title="/pmwiki/pmwiki.php/Main/BadBoss">the incompetence and pride of their noble-born leaders</a>, they ended up mutinying during Reinhardt's final assault.
+</li><li> As the above was happening, the Free Planets Alliance would have been able to rebuild their fleet, decimated in the latest battles, and maybe even attack, so Reinhardt freed a number of prisoners as a sign of goodwill... and to insert a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Mole" title="/pmwiki/pmwiki.php/Main/Mole">Mole</a>, who promptly used the mistrust between the corrupt politicians and the competent members of the military to have admiral Greenhill launch a coup, thus triggering the Alliance Civil War when Yang and his men refused to join the junta out of respect for the ideals of democracy.
+</li><li> After the Long War ended in an Imperial victory but with the Alliance still independent, Oberstein manipulated the Alliance politicians into believing that Yang was assembling a clandestine military force to take over and restart the war (in fact, Yang <em>was</em> assembling a clandestine military force... <a class="twikilink" href="/pmwiki/pmwiki.php/Main/RightForTheWrongReasons" title="/pmwiki/pmwiki.php/Main/RightForTheWrongReasons">but to counter the Imperial fleet in case the war restarted</a>), leading to Yang's arrest and attempted execution and his men freeing him, leaving the Alliance divided and giving the empire the excuse to invade.
+</li><li> As the war started, Reinhardt <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TheReasonYouSuckSpeech" title="/pmwiki/pmwiki.php/Main/TheReasonYouSuckSpeech">gave an epic speech in which he blamed the Alliance's leadership for restarting the war by violating their own laws to try and kill Yang</a> (conventiently ignoring Oberstein's involvement) and asked Yang and his men to join him to restore justice, thus preventing a reconciliation between the Alliance government and <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TheStrategist" title="/pmwiki/pmwiki.php/Main/TheStrategist">the one military commander who could stop Reinhardt's fleet</a>.
+</li></ul></li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder1');">    Audio Play </div><div class="folder" id="folder1" isfolder="true" style="display:block;">
+<ul><li> The conflict in the <em><a class="twikilink" href="/pmwiki/pmwiki.php/AudioPlay/BlakesSeven" title="/pmwiki/pmwiki.php/AudioPlay/BlakesSeven">Blake's 7</a></em> audio "Fractures" comes from the pre-existing weaknesses in the Liberator crew, which are exploited by sabotage to the power system so they must split up to fix it. Isolated, they can be slowly pushed into paranoia.
+</li></ul></div>
+<div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_3"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_3'); })</script></div></div><p></p><div class="folderlabel" onclick="togglefolder('folder2');">    Comic Books </div><div class="folder" id="folder2" isfolder="true" style="display:block;">
+<ul><li> Bane, of <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/Batman" title="/pmwiki/pmwiki.php/Franchise/Batman">Batman</a></em> extraction, is legendary for this. Aware that he couldn't take Batman in a straight fight, he instead released dozens of inmates from Arkham Asylum, leading Batman to run himself ragged for months until Bane showed up in the Batcave and "<a class="twikilink" href="/pmwiki/pmwiki.php/ComicBook/Knightfall" title="/pmwiki/pmwiki.php/ComicBook/Knightfall">broke the Bat</a>."
+</li><li> In one issue of <em><a class="twikilink" href="/pmwiki/pmwiki.php/ComicBook/IncredibleHercules" title="/pmwiki/pmwiki.php/ComicBook/IncredibleHercules">Incredible Hercules</a></em>, Malekith combines this with <a class="twikilink" href="/pmwiki/pmwiki.php/Main/LetsYouAndHimFight" title="/pmwiki/pmwiki.php/Main/LetsYouAndHimFight">Let's You and Him Fight</a> to weaken both Hercules and Thor sufficiently that his secret weapon will be able to defeat them easily. His plan fails ignominiously due to him <a class="twikilink" href="/pmwiki/pmwiki.php/Main/FailedASpotCheck" title="/pmwiki/pmwiki.php/Main/FailedASpotCheck">not being aware</a> that Zeus was standing right there when he sprang this trap.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/ComicBook/Asterix" title="/pmwiki/pmwiki.php/ComicBook/Asterix">Asterix and the Roman Agent</a></em>, this is the natural gift of the titular Tortuous Convolvulus (French: Tullius Détritus), who foments conflicts between the inhabitants of the little Gaulish village that come close to enabling Caesar to take it.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/ComicBook/MyLittlePonyFriendshipIsMagicIDW" title="/pmwiki/pmwiki.php/ComicBook/MyLittlePonyFriendshipIsMagicIDW">My Little Pony: Friendship is Magic (IDW)</a></em>, the changelings separate the group with a cave-in and start causing feuds between them through the use of disguises and personal insults. <span class="spoiler" title="you can set spoilers visible by default on your profile"><a class="twikilink" href="/pmwiki/pmwiki.php/Main/BreakingTheFellowship" title="/pmwiki/pmwiki.php/Main/BreakingTheFellowship">It works.</a></span>
+</li><li> Occurs in <em><a class="twikilink" href="/pmwiki/pmwiki.php/ComicBook/Swordquest" title="/pmwiki/pmwiki.php/ComicBook/Swordquest">Swordquest: Waterworld</a></em> when <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TheRival" title="/pmwiki/pmwiki.php/Main/TheRival">The Rival</a> convinces two warring factions to settle their dispute with a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/CombatByChampion" title="/pmwiki/pmwiki.php/Main/CombatByChampion">Combat by Champion</a> between the two protagonists, who <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ContrivedCoincidence" title="/pmwiki/pmwiki.php/Main/ContrivedCoincidence">just happen to be on opposite sides and have forgotten who they were before.</a>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/MarvelUniverse" title="/pmwiki/pmwiki.php/Franchise/MarvelUniverse">Marvel Universe</a></em>: This is a favored tactic of the Skrulls, right from Day 1. They pretend to be someone, and use that to sow conflict and discord, either banking on Marvel's superheroes being fractuous, or the sheer gullibility of the Marvel public (or both). They nearly broke up the Avengers in the 60s by pretending to be the original Avengers, and telling the current team they'd screwed up. Where the Skrulls tend to fail is getting overconfident, and revealing themselves when they think they've got the upper hand, at which point the heroes overcome whatever issues the Skrulls caused in favour of beating the stuffing out of them.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder3');">    Fanfic </div><div class="folder" id="folder3" isfolder="true" style="display:block;">
+<ul><li> In the <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/TheHungerGames" title="/pmwiki/pmwiki.php/Literature/TheHungerGames">The Hunger Games</a></em>/<em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/Angel" title="/pmwiki/pmwiki.php/Series/Angel">Angel</a></em> crossover "<a class="urllink" href="https://www.fanfiction.net/s/10718717/1/Demon-s-Games">Demon's Games<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a>", Coin appears to be setting up Gale for this purpose, suggesting a disapproval of Angel's decision to spare the human Peacekeepers by suggesting to Gale that Angel's belief in redemption will come back to bite them.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder4');">    Films — Animation </div><div class="folder" id="folder4" isfolder="true" style="display:block;">
+<ul><li> In the backstory of <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/EquestriaGirls" title="/pmwiki/pmwiki.php/WesternAnimation/EquestriaGirls">Equestria Girls</a></em>, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AlphaBitch" title="/pmwiki/pmwiki.php/Main/AlphaBitch">Sunset Shimmer</a> divided the Human Mane Five by sabotaging their friendship with false emails and text messages, along with separating the student body into cliques so they couldn't unite against her.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/MyLittlePonyEquestriaGirlsRainbowRocks" title="/pmwiki/pmwiki.php/WesternAnimation/MyLittlePonyEquestriaGirlsRainbowRocks">My Little Pony: Equestria Girls  Rainbow Rocks</a></em>, the Dazzlings turn the whole school, including the staff, against each other with their <a class="twikilink" href="/pmwiki/pmwiki.php/Main/HatePlague" title="/pmwiki/pmwiki.php/Main/HatePlague">Hate Plague</a>-inducing <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MindControlMusic" title="/pmwiki/pmwiki.php/Main/MindControlMusic">Mind-Control Music</a>, with the exception of Sunset, the Rainbooms, and Vinyl Scratch. They also manage to <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AppleOfDiscord" title="/pmwiki/pmwiki.php/Main/AppleOfDiscord">sabotage the mane characters' plans so that they argue</a> and generate further negative emotions for the Dazzlings to feed on.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder5');">    Films — Live-Action </div><div class="folder" id="folder5" isfolder="true" style="display:block;">
+<ul><li> Helmut Zemo does this to Captain America and Iron Man in <em><a class="twikilink" href="/pmwiki/pmwiki.php/Film/CaptainAmericaCivilWar" title="/pmwiki/pmwiki.php/Film/CaptainAmericaCivilWar">Captain America: Civil War</a></em>, using Bucky Barnes to exacerbate their existing tensions about the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SuperRegistrationAct" title="/pmwiki/pmwiki.php/Main/SuperRegistrationAct">Super Registration Act</a>, with the final blow being to reveal <span class="spoiler" title="you can set spoilers visible by default on your profile">that Bucky killed Tony's parents back when he was the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BrainwashedAndCrazy" title="/pmwiki/pmwiki.php/Main/BrainwashedAndCrazy">Winter Soldier</a>, which Steve had figured out but said nothing about</span>. The real twist is that <span class="spoiler" title="you can set spoilers visible by default on your profile">Zemo actually has no larger <a class="twikilink" href="/pmwiki/pmwiki.php/Main/EvilPlan" title="/pmwiki/pmwiki.php/Main/EvilPlan">Evil Plan</a>; dividing the Avengers was his entire goal all along, as he holds them responsible for the death of his family in <a class="twikilink" href="/pmwiki/pmwiki.php/Film/AvengersAgeOfUltron" title="/pmwiki/pmwiki.php/Film/AvengersAgeOfUltron">Sokovia</a></span>.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/Film/TheDarkKnight" title="/pmwiki/pmwiki.php/Film/TheDarkKnight">The Dark Knight</a></em>, this is the Joker's strategy: get Batman so riled up with the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BlackAndGreyMorality" title="/pmwiki/pmwiki.php/Main/BlackAndGreyMorality">Black and Grey Morality</a>, fighting the police <em>and</em> trying to redeem Harvey Dent, he can barely take on the Joker.
+</li><li> This is a key element in <em><a class="twikilink" href="/pmwiki/pmwiki.php/Film/AFistfulOfDollars" title="/pmwiki/pmwiki.php/Film/AFistfulOfDollars">A Fistful of Dollars</a></em>, which got the plot from Kurosawa's <em><a class="twikilink" href="/pmwiki/pmwiki.php/Film/Yojimbo" title="/pmwiki/pmwiki.php/Film/Yojimbo">Yojimbo</a></em> which in turn got it from a 1930 gangster film called <em>Roadhouse Nights</em> which was based on <a class="twikilink" href="/pmwiki/pmwiki.php/Creator/DashiellHammett" title="/pmwiki/pmwiki.php/Creator/DashiellHammett">Dashiell Hammett</a>'s novel <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/RedHarvest" title="/pmwiki/pmwiki.php/Literature/RedHarvest">Red Harvest</a></em>. The same plot was used in the western <em><a class="twikilink" href="/pmwiki/pmwiki.php/Film/Django" title="/pmwiki/pmwiki.php/Film/Django">Django</a></em>, <em><a class="twikilink" href="/pmwiki/pmwiki.php/Film/LastManStanding" title="/pmwiki/pmwiki.php/Film/LastManStanding">Last Man Standing</a></em>, and <em><a class="twikilink" href="/pmwiki/pmwiki.php/Film/DesertHeat" title="/pmwiki/pmwiki.php/Film/DesertHeat">Desert Heat</a></em>.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/Film/HangmenAlsoDie" title="/pmwiki/pmwiki.php/Film/HangmenAlsoDie">Hangmen Also Die!</a></em>, the Germans' plan is to sow division among the Czechoslovakian populace by executing hostages until <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/ReinhardHeydrich" title="/pmwiki/pmwiki.php/UsefulNotes/ReinhardHeydrich">Heydrich</a>'s killer is caught, counting on the people to disagree about whether the killer should be sacrificed to save the hostages. <span class="spoiler" title="you can set spoilers visible by default on your profile">They are moderately successful; the people do indeed get into arguments about whether he should turn himself in, but ultimately nobody is willing to collaborate with the Nazis by selling him out.</span>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Film/JamesBond" title="/pmwiki/pmwiki.php/Film/JamesBond">James Bond</a></em> has a lot of it. Three deal with USSR x USA, <em><a class="twikilink" href="/pmwiki/pmwiki.php/Film/FromRussiaWithLove" title="/pmwiki/pmwiki.php/Film/FromRussiaWithLove">From Russia with Love</a></em> - source of the page quote -, <em><a class="twikilink" href="/pmwiki/pmwiki.php/Film/YouOnlyLiveTwice" title="/pmwiki/pmwiki.php/Film/YouOnlyLiveTwice">You Only Live Twice</a></em> and <em><a class="twikilink" href="/pmwiki/pmwiki.php/Film/TheSpyWhoLovedMe" title="/pmwiki/pmwiki.php/Film/TheSpyWhoLovedMe">The Spy Who Loved Me</a></em> (first two are Blofeld-led SPECTRE).
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Film/TomorrowNeverDies" title="/pmwiki/pmwiki.php/Film/TomorrowNeverDies">Tomorrow Never Dies</a></em> has the villain trying to get <a class="twikilink" href="/pmwiki/pmwiki.php/Main/WorldWarIII" title="/pmwiki/pmwiki.php/Main/WorldWarIII">World War III</a> between the UK and China, just to get broadcasting rights in the latter.
+</li><li> This also seems to be Quantum's strategy in the <a class="twikilink" href="/pmwiki/pmwiki.php/Film/CasinoRoyale2006" title="/pmwiki/pmwiki.php/Film/CasinoRoyale2006">new</a> <a class="twikilink" href="/pmwiki/pmwiki.php/Film/QuantumOfSolace" title="/pmwiki/pmwiki.php/Film/QuantumOfSolace">movies</a>: get Bond so paranoid about his superiors, and so confused by the abrupt shift into a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/WorldHalfEmpty" title="/pmwiki/pmwiki.php/Main/WorldHalfEmpty">World Half Empty</a> with a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BlackAndGreyMorality" title="/pmwiki/pmwiki.php/Main/BlackAndGreyMorality">Black and Grey Morality</a>, he ends up failing to defeat them. <span class="spoiler" title="you can set spoilers visible by default on your profile"><a class="twikilink" href="/pmwiki/pmwiki.php/Film/Spectre" title="/pmwiki/pmwiki.php/Film/Spectre">It's later revealed</a> that Quantum was an arm of SPECTRE, so they follow the same strategy.</span>
+</li></ul></li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/Film/Legion" title="/pmwiki/pmwiki.php/Film/Legion">Legion</a></em> after <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ArchangelMichael" title="/pmwiki/pmwiki.php/Main/ArchangelMichael">Michael</a> helps the group of travelers stranded in the isolated desert diner fight off a horde of heaven sent abominations, they begin fighting each other as paranoia and suspicion get the better of them, and old grudges resurface.
+<div class="indent"> <em>(After fighting off the horde.)</em>
+</div><div class="indent"> <strong>Michael:</strong> That was a test of our strength. Next will be a test of our weaknesses.
+</div></li><li> Used in <em><a class="twikilink" href="/pmwiki/pmwiki.php/Film/LuckyNumberSlevin" title="/pmwiki/pmwiki.php/Film/LuckyNumberSlevin">Lucky Number Slevin</a></em>, which is unfortunately a huge spoiler. <span class="spoiler" title="you can set spoilers visible by default on your profile">Slevin had been playing a con the entire movie to kill both the mob bosses by setting them against each other. He also puts himself in the middle of it by appearing like a harmless bystander, but eventually he gets his revenge for the murder of his parents, two decades in the making.</span>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Film/RobinHood2010" title="/pmwiki/pmwiki.php/Film/RobinHood2010">Robin Hood (2010)</a></em>: This is Philip's plan to conquer England. He sends his agent, Godfrey (who's a friend of England's king, John) and has him act in John's name to incite the barons against him. It almost works, but Robin exposes this plan before he can invade, uniting them against Philip.
+</li><li> Used in <em><a class="twikilink" href="/pmwiki/pmwiki.php/Film/Serenity" title="/pmwiki/pmwiki.php/Film/Serenity">Serenity</a></em>, where Mal pits <span class="spoiler" title="you can set spoilers visible by default on your profile">the Alliance and the Reavers</span> against each other to buy enough time to <span class="spoiler" title="you can set spoilers visible by default on your profile">broadcast the secret of Miranda to the entire verse</span>.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Film/SicarioDayOfTheSoldado" title="/pmwiki/pmwiki.php/Film/SicarioDayOfTheSoldado">Sicario: Day of the Soldado</a></em>: This is the strategy the US government decides on to fight the drug cartels in Mexico-use <a class="twikilink" href="/pmwiki/pmwiki.php/Main/FalseFlagOperation" title="/pmwiki/pmwiki.php/Main/FalseFlagOperation">false flag operations</a> so they all turn against each other.
+</li><li> In the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/FilmOfTheBook" title="/pmwiki/pmwiki.php/Main/FilmOfTheBook">Film of the Book</a> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Film/TheSumOfAllFears" title="/pmwiki/pmwiki.php/Film/TheSumOfAllFears">The Sum of All Fears</a></em>, "You don't fight Russia and America. You get Russia and America to fight each other... and destroy each other."
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/Film/TheTerrorOfTinyTown" title="/pmwiki/pmwiki.php/Film/TheTerrorOfTinyTown">The Terror of Tiny Town</a></em>, Bat Haines pits two rival ranching families against each other; planning to trigger a range war so they wipe each other out and he can acquire both properties cheaply in the aftermath.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/Film/TheThing1982" title="/pmwiki/pmwiki.php/Film/TheThing1982">The Thing (1982)</a></em>, The Thing realizes it can't win against a united camp, so it tries to sow paranoia and distrust among them. It frames Macready as a Thing to keep the remaining humans from being united under his leadership and assimilates <span class="spoiler" title="you can set spoilers visible by default on your profile"><a class="twikilink" href="/pmwiki/pmwiki.php/Main/NiceGuy" title="/pmwiki/pmwiki.php/Main/NiceGuy">Norris</a> and <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TheStoner" title="/pmwiki/pmwiki.php/Main/TheStoner">Palmer</a>, the two least likely to be suspected as Things.</span>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Film/XMen1" title="/pmwiki/pmwiki.php/Film/XMen1">X-Men</a></em>: Toad employs this on a tactical level. Since he's outnumbered 3-to-1 after Mystique goes to fight Wolverine, he takes Cyclops, Storm, and Jean Grey on all at once. His first move is to knock out Cyclops, lock him up, and kick Storm and Jean away from each other. Toad then throws Storm to the next floor to force Jean to fight him alone, immobilizes her, and then lays a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/NoHoldsBarredBeatdown" title="/pmwiki/pmwiki.php/Main/NoHoldsBarredBeatdown">No-Holds-Barred Beatdown</a> on Storm. It doesn't quite work since Storm turns out to be more durable than he anticipated.
+</li><li> The Hellfire Club tries to do this by engineering the Cuban Missile Crisis in <em><a class="twikilink" href="/pmwiki/pmwiki.php/Film/XMenFirstClass" title="/pmwiki/pmwiki.php/Film/XMenFirstClass">X-Men: First Class</a></em>.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder6');">    Jokes </div><div class="folder" id="folder6" isfolder="true" style="display:block;">
+<ul><li> <a class="urllink" href="http://www.huffingtonpost.com/stan-sorscher/wealth-inequality_b_1656698.html">This joke<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a> emerged not long after the Global Financial Crisis struck:
+<div class="indent">A CEO, a Tea Party member and a public employee sit at a table, with 12 cookies on a plate. The CEO grabs 11 cookies and tells the Tea Party member, "You better watch him. He wants your cookie."
+</div></li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder7');">    Literature </div><div class="folder" id="folder7" isfolder="true" style="display:block;">
+<ul><li> May not be entirely accurate, but Mordeth in <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/TheWheelOfTime" title="/pmwiki/pmwiki.php/Literature/TheWheelOfTime">The Wheel of Time</a></em> seems to have managed to pull this on an entire city.
+</li><li> From <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/StarWarsLegends" title="/pmwiki/pmwiki.php/Franchise/StarWarsLegends">Star Wars Legends</a>:</em>
+<ul><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/OutboundFlight" title="/pmwiki/pmwiki.php/Literature/OutboundFlight">Outbound Flight</a></em>, this is sort of what Commander Thrawn did. Sort of. Due to his <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BatmanGambit" title="/pmwiki/pmwiki.php/Main/BatmanGambit">Batman Gambit</a>, the entire Vagaari fleet came out of space near where Outbound Flight was trying to decide what to do about him. The Vagaari being probably the most unambiguously evil side Zahn has ever written, they attack Outbound Flight, and the Jedi at its weapons stations sense the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/HumanShield" title="/pmwiki/pmwiki.php/Main/HumanShield">Living Shields</a> on the outsides of the ships, so they use the Force to more or less scramble the minds of the Vagaari. Then Thrawn triggers the second programming level in the droids he'd arranged to be on the Vagaari ship so that they slaughter the Vagaari high command, while also cuing the droid starfighters to buzz the Vagaari ships and shoot <em>between</em> the hostages. Being in such close contact with beings being slaughtered <em>en masse</em>, the Jedi are stunned and can't react in time to prevent Thrawn shooting out all of the weapon stations, killing most of them.
+<ul><li> Outbound Flight wasn't his enemy in the same way that the Vagaari were, even if its commander took an instant hatred to him. If that commander <em>hadn't</em> been a budding megalomaniac, or if Thrawn hadn't followed his standard policy of shooting out the weapons systems of anyone who he distrusted but wasn't all-out enemies with, the major problems probably would not have happened.
+</li></ul></li><li> The overarching plot of the first four books of the <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/XWingSeries" title="/pmwiki/pmwiki.php/Literature/XWingSeries">X-Wing Series</a></em> has Imperial spymaster Ysanne Isard unleashing a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SyntheticPlague" title="/pmwiki/pmwiki.php/Main/SyntheticPlague">Synthetic Plague</a> on the imperial capital of Coruscant just before the Rebels capture it. The plague has two main characteristics - it is gruesomely lethal to most alien races, and easily cured with <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MagicAntidote" title="/pmwiki/pmwiki.php/Main/MagicAntidote">bacta</a>. The net result is that the New Republic gets to bankrupt itself trying to fight the Krytos virus, all while resentment and paranoia over why humans are immune to it threatens to tear apart the multi-species coalition. Later in the same series, Warlord Zsinj has a brilliant scheme to invoke this by using extremely quick <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Brainwashing" title="/pmwiki/pmwiki.php/Main/Brainwashing">Brainwashing</a> on members of various species to create fake terrorist threats, supposedly along species lines.
+<div class="indent"><strong>Wedge:</strong> This morning at six hundred hours, I was obliged to relieve every Twi'lek aboard <em>Mon Remonda</em> of active duty. And that, I think, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BatmanGambit" title="/pmwiki/pmwiki.php/Main/BatmanGambit">is what Zsinj wanted</a>. [...] It'll cripple the entire New Republic. Right now, it's one species making up a fraction of one percent of the New Republic population. But suddenly <a class="twikilink" href="/pmwiki/pmwiki.php/Main/FantasticRacism" title="/pmwiki/pmwiki.php/Main/FantasticRacism">we have a precedent that divides them from the New Republic</a>. [...] In six months, a year, the New Republic consists of humans on one side, nonhumans on the other, no possible trust or interdependence between them... and Zsinj can march in and take what he wants.
+</div></li><li> This was how the Republic <em>survived</em> as long as it did. Various incarnations of the Sith Empire tried to conquer the Republic, and were a brutal state built on warfare and individual prowess. Your average Sith or Imperial soldier could more than outclass their Republic or Jedi counterpart. But the Sith also ran on <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ChronicBackstabbingDisorder" title="/pmwiki/pmwiki.php/Main/ChronicBackstabbingDisorder">Chronic Backstabbing Disorder</a> and <a class="twikilink" href="/pmwiki/pmwiki.php/Main/KlingonPromotion" title="/pmwiki/pmwiki.php/Main/KlingonPromotion">Klingon Promotion</a>, and their non-Force-wielding underlings emulated their Sith masters. Engineering even a small amount of dissent in the ranks tended to get the Empire imploding before it caused too much damage to the Republic. It was only when Palpatine embraced this tactic himself by engineering the Clone Wars (essentially a Republic civil war) that the Republic collapsed.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/TalesFromTheMosEisleyCantina" title="/pmwiki/pmwiki.php/Literature/TalesFromTheMosEisleyCantina">Tales from the Mos Eisley Cantina</a></em>: In "The Moisture Farmer's Tale", the titular character tries to make peace with the Sand People. He realizes that they will leave moisture farmers' alone if offered some water, and attack them as the farms have been unintentionally encroaching on their land. However, while getting a woman who they had recently kidnapped released, stormtroopers attack the Sand People, destroying that possibility. She then tells him that the Empire wants them all divided with trouble on the planet, as then they won't unite or realize that the Empire is the real enemy. He decides to join the Rebellion over this, and hopes to show the others this is true.
+</li><li> This is how Joshua leads the Israelites to take over most of Canaan in <a class="twikilink" href="/pmwiki/pmwiki.php/Literature/TheBible" title="/pmwiki/pmwiki.php/Literature/TheBible">The Bible</a>.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/Conqueror" title="/pmwiki/pmwiki.php/Literature/Conqueror">Conqueror</a></em>:
+<ul><li> In the first book, Wen Chao keeps up hostilities between the Mongols and Tartars to keep both sides weak and thus allow the Chin to extract tribute from them. Unfortunately for him, the Mongols manage to win the war under <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/GenghisKhan" title="/pmwiki/pmwiki.php/UsefulNotes/GenghisKhan">Temujin</a>, who quickly ends the practise.
+</li><li> In the second book, the Chin emperor refuses to send aid to Emperor Wei of Xi Xia when the latter is attacked by the Mongols, specifically saying that it's better for one's enemies to fight each other.
+</li></ul></li><li> The entire point of <a class="twikilink" href="/pmwiki/pmwiki.php/Creator/TomClancy" title="/pmwiki/pmwiki.php/Creator/TomClancy">Tom Clancy</a>'s <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/TheSumOfAllFears" title="/pmwiki/pmwiki.php/Literature/TheSumOfAllFears">The Sum of All Fears</a></em>, where Arab nationalists nuke Denver in order to start <a class="twikilink" href="/pmwiki/pmwiki.php/Main/WorldWarIII" title="/pmwiki/pmwiki.php/Main/WorldWarIII">World War III</a> between US and USSR. It nearly works, despite the fact that there is no reason to suspect the Russians given the lack of a missile launch, built primarily on President Fowler's personal dislike of Jack Ryan, and assisted by former East German Stassi agents working with the terrorists posing as officers in the Red Army, and trick a tank brigade in East Berlin into attacking an American base in West Berlin. Those involved in the terrorist plot are also unwittingly helped by an American mole in the Politburo whose been feeding the U.S. false information in the hopes of destabilizing the current government in the USSR so he can grab power for himself.
+</li><li> Inverted in Harry Turtledove's <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/WorldWar" title="/pmwiki/pmwiki.php/Literature/WorldWar">World War</a></em> series, as the invading aliens' millennia-old unifications means their technology has been purposely stagnated by the government to prevent disruptive changes in society, while humans being disunited and constantly at war with each other means we're able to change much quicker.
+</li><li> This is the strategy David from <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/Animorphs" title="/pmwiki/pmwiki.php/Literature/Animorphs">Animorphs</a> </em> uses once he goes <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SixthRangerTraitor" title="/pmwiki/pmwiki.php/Main/SixthRangerTraitor">Sixth Ranger Traitor</a>. Well aware that he's just one morpher against six, he opts to split the team up and take them down one by one. This strategy is wildly successful, and leads to him defeating (and very nearly killing) four of the six Animorphs in a single night.
+</li><li> The "true" villains of <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/ASongOfIceAndFire" title="/pmwiki/pmwiki.php/Literature/ASongOfIceAndFire">A Song of Ice and Fire</a></em>, Varys and Littlefinger, both do this in order to further their goals. Both of them work to instigate a civil war between the various houses of Westeros, having them destroy each other so that they have little chance of ultimately opposing their goals. And when things appear to stabilize, they just give another light push to get things to fall apart again. The difference between Littlefinger and Varys, however, is that Varys is creating the power vacuums for House Targaryen to take back the throne, while Littlefinger is aiming to <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TakeOverTheWorld" title="/pmwiki/pmwiki.php/Main/TakeOverTheWorld">take over Westeros</a> for himself.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/Uprooted" title="/pmwiki/pmwiki.php/Literature/Uprooted">Uprooted</a></em>, the neighboring countries of Polnya and Rosya are constantly tense and wary of each other, and for the past twenty years in particular there's been simmering enmity over an incident where the Queen of Polnya either ran away with or was abducted by a Rosyan prince, and both were subsequently lost in the malevolent Wood that lies on the border. <span class="spoiler" title="you can set spoilers visible by default on your profile">The Wood itself engineered that incident and a whole bunch of others to make sure the two countries <em>stay</em> antagonistic. That way they will first off, not form an alliance versus the Wood, and second, weaken themselves against each other so that they're softer targets.</span>
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/HaloGlasslands" title="/pmwiki/pmwiki.php/Literature/HaloGlasslands">Halo: Glasslands</a></em> and <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/HaloTheThursdayWar" title="/pmwiki/pmwiki.php/Literature/HaloTheThursdayWar">Halo: The Thursday War</a></em>, the Office of Naval Intelligence <em>thinks</em> they're doing this to the Sangheili/Elites. In practice, they're actually just making it harder for the pro-human Sangheili to prevent their anti-human counterparts from attacking human worlds; in fact, ONI's machinations inadvertently contribute to the formation of the most powerful anti-human Covenant remnant.
+</li><li> <em><a class="createlink" href="/pmwiki/pmwiki.php/Main/TheHoundOfTheDUrbervilles" title="/pmwiki/pmwiki.php/Main/TheHoundOfTheDUrbervilles">The Hound Of The D Urbervilles</a></em> features a two-way version of this, with a pair rival criminal masterminds each trying to pit a great detective against the other (although one of them is rather incompetent at it, turning himself into a much more obvious target than his rival). The eventual winner is <span class="spoiler" title="you can set spoilers visible by default on your profile"> the detective himself. The masterminds wind up getting each other killed, meaning he pulls an <em>accidental</em> version of this trope</span>.
+<ul><li> And incidentally, the great detective being manipulated is none other than Sherlock Holmes, the less competent mastermind is Professor Moriarty, and the plot ultimately culminates at Reichenbach Falls.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/TheSilerianTrilogy" title="/pmwiki/pmwiki.php/Literature/TheSilerianTrilogy">The Silerian Trilogy</a></em>: Tansen uses this tactic when fighting the Society, setting various waterlords against each other with false flag attacks.
+</li><li> <a class="twikilink" href="/pmwiki/pmwiki.php/Creator/IsaacAsimov" title="/pmwiki/pmwiki.php/Creator/IsaacAsimov">Isaac Asimov</a>'s "<a class="twikilink" href="/pmwiki/pmwiki.php/Literature/InAGoodCause" title="/pmwiki/pmwiki.php/Literature/InAGoodCause">In a Good Cause</a>": When <a class="twikilink" href="/pmwiki/pmwiki.php/Main/FirstContact" title="/pmwiki/pmwiki.php/Main/FirstContact">First Contact</a> with the Diaboli was first established, the human race came pre-divided. Many governments were quick to declare alliances with the Diaboli, and it took decades of political maneuvering to ensure no other human government would be allied with the Diaboli by the time Earth went to war against them, conquering the first alien race. Except the trope is inverted: the wars amongst humans have actually made them stronger, giving humanity the upper hand against the united aliens.
+<ul><li> <em>Militarily</em> stronger, that is (and — which turns out to be an important plot point — <em>only</em> if no faction on the divided side decides it is a better bet to support the united side). It is acknowledged that being united is generally a preferable state, and in fact <span class="spoiler" title="you can set spoilers visible by default on your profile"> the seeming turned opponent to human <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TheFederation" title="/pmwiki/pmwiki.php/Main/TheFederation">Federation</a> at the end reveals that he still wants it, and now that the aliens have been defeated, the situation is right for such a call to be made and heeded.</span>
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/AfterDoomsday" title="/pmwiki/pmwiki.php/Literature/AfterDoomsday">After Doomsday</a></em> by <a class="twikilink" href="/pmwiki/pmwiki.php/Creator/PoulAnderson" title="/pmwiki/pmwiki.php/Creator/PoulAnderson">Poul Anderson</a>. Earth has been destroyed, apparently by the Kandemir in retaliation for a secret aid agreement between the Soviet government and their enemies the Vorlakka (the Soviets will build weapons in exchange for secret instruction in Vorlakkan technology). When one of the human survivors confronts a Kandemiran intelligence officer with the accusation, he points out that they'd hardly go to the trouble when there's a more efficient method they've used before—approach the United States and tell them what the Soviets are doing. Why expend Kandemirian lives to conquer Earth <a class="twikilink" href="/pmwiki/pmwiki.php/Main/HumansAreMorons" title="/pmwiki/pmwiki.php/Main/HumansAreMorons">when humans would be willing to do half the job for them</a>?
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder8');">    Live-Action TV </div><div class="folder" id="folder8" isfolder="true" style="display:block;">
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/BuffyTheVampireSlayer" title="/pmwiki/pmwiki.php/Series/BuffyTheVampireSlayer">Buffy the Vampire Slayer</a></em>: Spike (inspired by <a class="twikilink" href="/pmwiki/pmwiki.php/Music/TheBeatles" title="/pmwiki/pmwiki.php/Music/TheBeatles">The Beatles</a>) tries it at the end of Season 4 at the behest of the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BigBad" title="/pmwiki/pmwiki.php/Main/BigBad">Big Bad</a> Adam, which initially works quite well. Unfortunately, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DidntThinkThisThrough" title="/pmwiki/pmwiki.php/Main/DidntThinkThisThrough">its only then that he realizes that another part of Adam's plan</a> involved the Scoobies sharing information. So he had to convince them to talk to each other again, whereupon they figured out what's going on and reconcile.
+<ul><li> This is the official motto of a league of assassins, the Order of Taraka.
+</li></ul></li><li> The number of times they've done this in <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/PowerRangers" title="/pmwiki/pmwiki.php/Franchise/PowerRangers">Power Rangers</a></em> is beyond counting. Often more than once in the same season.
+</li><li> Michael pulls one of these about every third episode of <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/BurnNotice" title="/pmwiki/pmwiki.php/Series/BurnNotice">Burn Notice</a></em>. It is used against him in one episode. The big bad uses technology and manipulation to issolate Michael from his team and family. The light dawns when his brother shows up to read him the riot act for ignoring their attempts to contact him. Michael realizes his phone has been tampered with.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/TheTwilightZone1959" title="/pmwiki/pmwiki.php/Series/TheTwilightZone1959">The Twilight Zone (1959)</a></em> episode "<span class="spoiler" title="you can set spoilers visible by default on your profile"> The Monsters Are Due On Maple Street</span>", aliens do this, taking advantage of the fact that <a class="twikilink" href="/pmwiki/pmwiki.php/Main/HumansAreBastards" title="/pmwiki/pmwiki.php/Main/HumansAreBastards">Humans Are Bastards</a>. <span class="spoiler" title="you can set spoilers visible by default on your profile">An ordinary street, in an ordinary town, suffers a sudden and inexplicable power outage, with a few suspicious items still functioning. The neighborhood gets together and comes to the somewhat strange conclusion that alien invaders are messing with things, and then start accusing each other of being in league with the invaders.</span> End result: mass hysteria. Cut to two <a class="twikilink" href="/pmwiki/pmwiki.php/Main/HumanAlien" title="/pmwiki/pmwiki.php/Main/HumanAlien">Human Aliens</a> on a hill overlooking Maple Street, marveling at how they won't have to fire a single shot, the humans can easily be tricked into killing each other!
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/StargateAtlantis" title="/pmwiki/pmwiki.php/Series/StargateAtlantis">Stargate Atlantis</a></em>, McKay reactivates the Replicators' programming that causes them to attack the Wraith. Unfortunately, it backfires pretty badly when the Replicators determine that the most efficient way to wipe out the Wraith is to eliminate <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ImAHumanitarian" title="/pmwiki/pmwiki.php/Main/ImAHumanitarian">their food supply</a>.
+</li><li> Sir Humphrey Appleby in <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/YesMinister" title="/pmwiki/pmwiki.php/Series/YesMinister">Yes, Minister</a></em> mentions (as we see in the Real Life section below) that this was British policy in decolonization to "keep us from having a policy about them."
+<ul><li> in another episode, Sir Humphrey states that British opposition to the European Union is based on the long standing policy of keeping Europe divided so as not to threaten the UK.
+</li></ul></li><li> In the eighth season finale of <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/Bones" title="/pmwiki/pmwiki.php/Series/Bones">Bones</a></em>, <span class="spoiler" title="you can set spoilers visible by default on your profile"> Christopher Pelant uses this tactic on Booth, blackmailing him by threatening to go on a new killing spree if he married Brennan. The season ends with Brennan and Booth both devastated, and Booth unable to even tell her why he had to break off their engagement</span>.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/Lexx" title="/pmwiki/pmwiki.php/Series/Lexx">Lexx</a></em>, His Divine Shadow <span class="spoiler" title="you can set spoilers visible by default on your profile">the last survivor of the Insect Civilization</span> used this strategy to defeat his true enemy <span class="spoiler" title="you can set spoilers visible by default on your profile">humanity. He set up a brutal theocracy centered around slavish devotion to himself. After thousands of years, most of the humans in the Light Universe were under his rule, with resistance all but stamped out. By the end, his followers were so indoctrinated that they literally fed themselves to him when he asked. In his own words, he "used humans to defeat themselves."</span>
+</li><li> A common tactic of the Federation's enemies in <a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/StarTrek" title="/pmwiki/pmwiki.php/Franchise/StarTrek">Star Trek</a>:
+<ul><li> This is the strategy that <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TheEmpire" title="/pmwiki/pmwiki.php/Main/TheEmpire">the Dominion</a> uses in their campaign to take over the Alpha Quadrant—they use shape-shifting infiltrators to set the major powers against each other so that they'll weaken each other and be in worse shape to withstand the eventual invasion.
+</li><li> This is the Romulan Empire's <a class="twikilink" href="/pmwiki/pmwiki.php/Main/PlanetOfHats" title="/pmwiki/pmwiki.php/Main/PlanetOfHats">hat</a>. Throughout every series, they're constantly trying to play their opponents off each other or break up the Federation-Klingon alliance to make it easier to conquer them in the long run. Indeed the <a class="twikilink" href="/pmwiki/pmwiki.php/Series/StarTrekEnterprise" title="/pmwiki/pmwiki.php/Series/StarTrekEnterprise">first chronological introduction</a> of the Romulans was their use of drone ships to try and spark wars between Earth, Vulcan, the Andorians, and the Tellarities. However, like almost all their attempts at this trope, it backfired spectacularly and resulted in the formation of <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TheFederation" title="/pmwiki/pmwiki.php/Main/TheFederation">The Federation</a>.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/Braindead2016" title="/pmwiki/pmwiki.php/Series/Braindead2016">Braindead 2016</a></em>: When they get him forcibly drunk <a class="twikilink" href="/pmwiki/pmwiki.php/Main/InVinoVeritas" title="/pmwiki/pmwiki.php/Main/InVinoVeritas">so he'll be truthful</a>, a bug-infected man explains the bugs make people become more extreme in their views so they'll fight each other to a greater degree, and make it easier for them to conquer humanity.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder9');">    Myths And Folklore </div><div class="folder" id="folder9" isfolder="true" style="display:block;">
+<ul><li> One of Aesop's fables tells of a lion who was unable to hunt down a herd of cattle since the cattle would always stick together as a group. That is, until the lion gets the idea of spreading gossip among the cattle to get them to fight and separate allowing said lion to attack the cattle one by one.
+</li><li> A Chinese folk tale tells of a stork and a clam locked in an endless struggle; the clam's clamped its shell around the stork's beak, planning on starving the stork to death and escaping afterwards, while the stork plans on eating the clam once it dies of thirst and lets go. A passing farmer comes along and catches the duo for dinner.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder10');">    Professional Wrestling </div><div class="folder" id="folder10" isfolder="true" style="display:block;">
+<ul><li> When <a class="twikilink" href="/pmwiki/pmwiki.php/Wrestling/VinceMcMahon" title="/pmwiki/pmwiki.php/Wrestling/VinceMcMahon">Vince</a> Jr bought out the W<a class="twikilink" href="/pmwiki/pmwiki.php/Wrestling/WorldWrestlingFederation" title="/pmwiki/pmwiki.php/Wrestling/WorldWrestlingFederation">WWF</a>, his father supposedly sent out letters to various <a class="twikilink" href="/pmwiki/pmwiki.php/Wrestling/NationalWrestlingAlliance" title="/pmwiki/pmwiki.php/Wrestling/NationalWrestlingAlliance">NWA</a> promoters telling them that his son was coming for them next and to get ready. Whatever the case, the territories knew Vince McMahon Jr was aiming to drive them all out of business but too many promoters were making money hand over foot, too confident in their ability to keep doing so, too paranoid to trust someone else not to mess up their cash flow and thus refused to take on Vince Jr as a united force, allowing him to destroy the territories one by one, with <a class="twikilink" href="/pmwiki/pmwiki.php/Wrestling/CMLL" title="/pmwiki/pmwiki.php/Wrestling/CMLL">EMLL</a> outright <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ScrewThisImOuttaHere" title="/pmwiki/pmwiki.php/Main/ScrewThisImOuttaHere">abandoning the Alliance</a> when it got news it would have to go against the WWWF. Eventually, Jim Crockett decided that NWA would unite against McMahon whether the members liked it or not and <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DoingItWrong" title="/pmwiki/pmwiki.php/Main/DoingItWrong">ended up</a> shutting down <a class="twikilink" href="/pmwiki/pmwiki.php/Main/NotSoDifferent" title="/pmwiki/pmwiki.php/Main/NotSoDifferent">more territories than Vince Jr himself</a>.
+</li><li> As director of wrestling operations, this was <a class="twikilink" href="/pmwiki/pmwiki.php/Wrestling/MontelVontaviousPorter" title="/pmwiki/pmwiki.php/Wrestling/MontelVontaviousPorter">MVP</a>'s default strategy to dealing with wrestlers who opposed his rule of <a class="twikilink" href="/pmwiki/pmwiki.php/Wrestling/TNA" title="/pmwiki/pmwiki.php/Wrestling/TNA">TNA</a>. Forcing them to fight each other under penalty of termination was so effective it took a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DeusExMachina" title="/pmwiki/pmwiki.php/Main/DeusExMachina">Deus ex Machina</a> to stop him, though the tactic turned out to work on the (weakened) group too when <a class="twikilink" href="/pmwiki/pmwiki.php/Wrestling/BobbyRoode" title="/pmwiki/pmwiki.php/Wrestling/BobbyRoode">Bobby Roode</a> eventually turned <a class="twikilink" href="/pmwiki/pmwiki.php/Wrestling/BobbyLashley" title="/pmwiki/pmwiki.php/Wrestling/BobbyLashley">Bobby Lashley</a> and MVP against each other, despite MVP recognizing the tactic and telling King and Lashley <a class="twikilink" href="/pmwiki/pmwiki.php/Main/LampshadeHanging" title="/pmwiki/pmwiki.php/Main/LampshadeHanging">not to fall for it.</a>
+</li><li> When Valkyrie's defacto leader Allysin Kay rejected SoCal Val's offer to join with Valifornia, Val dipped into her pocket book to entice to more agreeable April Hunter into performing the merger while paying Sweet Saraya, who played a key part in Valkyrie's formation and had been working on an off for them for three years, to preoccupy Kay.</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder11');">    Tabletop Games </div><div class="folder" id="folder11" isfolder="true" style="display:block;">
+<ul><li> Any good <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/Risk" title="/pmwiki/pmwiki.php/TabletopGame/Risk">Risk</a></em> player has done this.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/Paranoia" title="/pmwiki/pmwiki.php/TabletopGame/Paranoia">Paranoia</a></em>: Friend Computer would like to remind all citizens that this is an effective way of dealing with commie mutant traitors. Also that knowledge of such techniques is treason.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder12');">    Theatre </div><div class="folder" id="folder12" isfolder="true" style="display:block;">
+<ul><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/Theatre/TheGoldenApple" title="/pmwiki/pmwiki.php/Theatre/TheGoldenApple">The Golden Apple</a></em>, Ulysses invokes this tactic by name, splitting the people of Rhododendron on the issue of Helen to win her back from them.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/Theatre/MarginForError" title="/pmwiki/pmwiki.php/Theatre/MarginForError">Margin for Error</a></em>, Otto Horst claims that this is his best propaganda strategy for Nazism in America:
+<div class="indent"><strong>Horst</strong>: No, Baron, my best bet is to create conflict among creeds and colors. Then step in, when they're exhausted, and take the whole country over—<em>bang!</em> Next week I attack the Catholics, Masons, Negroes, and Café Society. <br/><strong>Max</strong>: Perhaps you'd better just purge Elsa Maxwell, and leave the rest to Hitler.
+</div></li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder13');">    Video Games </div><div class="folder" id="folder13" isfolder="true" style="display:block;">
+<ul><li> Very common tactic players use in video games that allow <a class="twikilink" href="/pmwiki/pmwiki.php/Main/NPC" title="/pmwiki/pmwiki.php/Main/NPC">NPCs</a> to fight each other, such as <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/HalfLife" title="/pmwiki/pmwiki.php/VideoGame/HalfLife">Half-Life</a></em> (letting Combine fight Zombies, HECU to fight aliens) and <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/Halo" title="/pmwiki/pmwiki.php/Franchise/Halo">Halo</a></em> (letting the Flood take out the Covenant). It can be traced back at least as far as <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Doom" title="/pmwiki/pmwiki.php/VideoGame/Doom">Doom</a></em>, where "monster infighting" was crucial to beating some parts. Doom 2, for example, has a Spider Mastermind and a Cyberdemon right next to each other. The only effective way to survive is to get them fighting each other.
+<ul><li> There's an entire room devoted to this in Doom 2's eighth level, "Tricks and Traps". Fifty Barons of Hell, one Cyberdemon... four Invulnerability Orbs. Grab an Orb, get their attention, and hope that the Cyberdemon can take out most of the Barons before the weight of numbers kills him.
+</li></ul></li><li> <span class="spoiler" title="you can set spoilers visible by default on your profile"> Sturm</span> attempts to do this in the first <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/AdvanceWars" title="/pmwiki/pmwiki.php/VideoGame/AdvanceWars">Advance Wars</a></em>. He tried to get the nations of Orange Star, Blue Moon, Green Earth and Yellow Comet to engage in a brutal war that would leave all sides devastated, so he could sweep in with his own forces and conquer all of Wars World.
+</li><li> Kerrigan does this to <em><span class="spoiler" title="you can set spoilers visible by default on your profile">everyone</span></em> in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Starcraft" title="/pmwiki/pmwiki.php/VideoGame/Starcraft">Starcraft</a> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ExpansionPack" title="/pmwiki/pmwiki.php/Main/ExpansionPack">Brood War</a></em>.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DevilMayCry" title="/pmwiki/pmwiki.php/VideoGame/DevilMayCry">Devil May Cry</a> 3</em>: <span class="spoiler" title="you can set spoilers visible by default on your profile">Jester/Arkham</span>.
+</li><li> Any Pit player worth his weight in salt does this as well when deploying <a class="twikilink" href="/pmwiki/pmwiki.php/Main/LimitBreak" title="/pmwiki/pmwiki.php/Main/LimitBreak">Palutena's Army</a> in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SuperSmashBrosBrawl" title="/pmwiki/pmwiki.php/VideoGame/SuperSmashBrosBrawl">Super Smash Bros. Brawl</a></em>. It's one of the few Final Smashes that allows the user to move and act freely with his own moveset during its execution. The reason it falls here is that the Centurions are dangerous in their own right, and the player has to choose to either focus on dodging them or dodging Pit, though a skilled player can do both for the most part.
+</li><li> By the end of <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/KingdomHeartsII" title="/pmwiki/pmwiki.php/VideoGame/KingdomHeartsII">Kingdom Hearts II</a></em>, Sora is too busy dealing with the Nobodies and Organization XIII to properly deal with Maleficent, Pete and the Heartless.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/AceCombat5TheUnsungWar" title="/pmwiki/pmwiki.php/VideoGame/AceCombat5TheUnsungWar">Ace Combat 5: The Unsung War</a></em> has this as the driving force behind its plot. 15 years before the game began, the country of Belka tried to take over the world and failed, eventually setting off 7 nuclear weapons <em>on their own cities</em> to stave off the approaching allied forces that included Osea and Yuktobania. In the present day, Yuktobania attacks Osea, and the two are plunged into a bitter war that drags on until nobody can remember why they're fighting. After the player's squadron is betrayed, the truth is revealed: <span class="spoiler" title="you can set spoilers visible by default on your profile"> Belka, the country that was defeated 15 years earlier, was behind the whole thing. They started the war in hopes that it would eventually exhaust both of the other superpowers, and helped to escalate it at several key points. After rescuing the Osean president and Yuktobanian Prime Minister (and getting them to stage a peace rally in order to end the war), the Razgriz Squadron takes down the Belkans' last superweapon, ending the threat for good.</span>
+</li><li> An element of gameplay in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FinalFantasyXIII" title="/pmwiki/pmwiki.php/VideoGame/FinalFantasyXIII">Final Fantasy XIII</a></em>. Because of the different alignments enemies can have (Cocoon monsters, Pulse Machines, Pulse Monsters), occasionally the player will find two factions of monsters fighting each other. They can then fight the stronger enemy alongside the second enemy, then when the first enemy is defeated, the second enemy is weakened.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SilentStorm" title="/pmwiki/pmwiki.php/VideoGame/SilentStorm">Silent Storm</a></em>, Thor's Hammer is trying exactly that with the Allies and the Axis. While they didn't start the war, they are taking advantage or it by supplying both sides with advanced weapons, while keeping the best goodies for themselves.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/HaegemoniaLegionsOfIron" title="/pmwiki/pmwiki.php/VideoGame/HaegemoniaLegionsOfIron">Haegemonia: Legions of Iron</a></em>, the Darzok use this method to break up their enemies. They convince a Kariak general to rebel against the Human-Kariak alliance, allowing them to build up their forces while the Kariak fight among each other.
+</li><li> Probably one of the better ways to deal with enemies in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/BioShock1" title="/pmwiki/pmwiki.php/VideoGame/BioShock1">BioShock</a></em>, particularly the Big Daddies. Just casually goad a Splicer into attacking you while you're standing near one of the lumbering Daddies. More than likely one of their attacks will hit him instead of you, and after that you can honestly just slide on over to the sidelines while they go at each other.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/TheElderScrolls" title="/pmwiki/pmwiki.php/Franchise/TheElderScrolls">The Elder Scrolls</a></em>, this is a favored tactic of the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ANaziByAnyOtherName" title="/pmwiki/pmwiki.php/Main/ANaziByAnyOtherName">Thalmor</a>, the extremist ruling party and <a class="twikilink" href="/pmwiki/pmwiki.php/Main/StateSec" title="/pmwiki/pmwiki.php/Main/StateSec">State Sec</a> of the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AntiHumanAlliance" title="/pmwiki/pmwiki.php/Main/AntiHumanAlliance">Aldmeri Dominion</a>. <a class="twikilink" href="/pmwiki/pmwiki.php/Main/StealingTheCredit" title="/pmwiki/pmwiki.php/Main/StealingTheCredit">Taking credit</a> for resolving the <a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheElderScrollsIVOblivion" title="/pmwiki/pmwiki.php/VideoGame/TheElderScrollsIVOblivion">Oblivion Crisis</a> within their homeland made them popular enough to seize numerous leadership positions. They would then <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ManipulativeBastard" title="/pmwiki/pmwiki.php/Main/ManipulativeBastard">manipulate events</a> over the next two centuries to destabilize the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/VestigialEmpire" title="/pmwiki/pmwiki.php/Main/VestigialEmpire">crumbling Cyrodiilic Empire</a>. After seceding, annexing Valenwood, and gaining Elsweyr as a client state, they incited the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/LizardFolk" title="/pmwiki/pmwiki.php/Main/LizardFolk">Argonians</a> into invading Morrowind to <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TheDogBitesBack" title="/pmwiki/pmwiki.php/Main/TheDogBitesBack">get revenge</a> for thousands of years of slavery at the hands of the Dunmer, costing the Empire two more provinces. The Dominion then engaged the Empire in the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GreatOffscreenWar" title="/pmwiki/pmwiki.php/Main/GreatOffscreenWar">Great War</a> prior to the events of <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheElderScrollsVSkyrim" title="/pmwiki/pmwiki.php/VideoGame/TheElderScrollsVSkyrim">Skyrim</a></em>, but were fought to a stalemate by the surprisingly resilient Empire, especially after they brought in their <a class="twikilink" href="/pmwiki/pmwiki.php/Main/HornyVikings" title="/pmwiki/pmwiki.php/Main/HornyVikings">Nord</a> reinforcements from Skyrim. Knowing that victory would be too costly, the Dominion settled for peace treaty known as the White-Gold Concordat. However, in an attempt to further destabilize the Empire, they forced divisive terms into the treaty including the Empire ceding half of Hammerfell to the Dominion and a ban on <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DeityOfHumanOrigin" title="/pmwiki/pmwiki.php/Main/DeityOfHumanOrigin">Talos</a> worship, the most popular deity among the Nords. Hammerfell quickly seceded from the Empire (and managed to beat back the Thalmor on their own, gaining independence in the process) and Skyrim erupted into <a class="twikilink" href="/pmwiki/pmwiki.php/Main/CivilWar" title="/pmwiki/pmwiki.php/Main/CivilWar">Civil War</a>, further weakening the Empire. During <em>Skyrim</em>, it is also revealed that they <span class="spoiler" title="you can set spoilers visible by default on your profile">are doing everything in their power to ensure that the civil war drags on for as long as possible, severely weakening both sides and depleting their resources in preparation for the inevitable second Great War</span>.
+</li><li> In <a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/NeverwinterNights2" title="/pmwiki/pmwiki.php/VideoGame/NeverwinterNights2">Neverwinter Nights 2</a>, there is a section where a group of Fire Giants want to kill a nearby Dragon and the Dragon wants to kill the Fire Giants that have been harassing it. They both request your aid to deal with the other, and they both have something valuable that you may wish to take (for the Fire Giants, it's a quest item. For the Dragon, it's a massive pile of gold). No matter who you ally with, in the end you're given the option to betray both of them and let them duke it out with each other. Whichever side survives will be in a weakened state, thus allowing you to easily finish them off.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/BlazBlue" title="/pmwiki/pmwiki.php/VideoGame/BlazBlue">BlazBlue</a></em>: The seat of "Ministerial Secretary to <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Jerkass" title="/pmwiki/pmwiki.php/Main/Jerkass">Jin Kisaragi</a>" falls into this trope due to its effects on two of the girls involved. <span class="spoiler" title="you can set spoilers visible by default on your profile">This was deliberately invoked by <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BigBad" title="/pmwiki/pmwiki.php/Main/BigBad">Hazama</a> / <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ManipulativeBastard" title="/pmwiki/pmwiki.php/Main/ManipulativeBastard">Yuuki</a> Terumi to make both girls more compliant with his whims, and for the most part it worked.</span>
+<ul><li> Noel Vermillion was offered the seat six months prior to her graduation as a means to restore prestige to her family, and took it with the blessing of her friends. This is a bad thing, since Jin had come off the war a massive jackass (<a class="twikilink" href="/pmwiki/pmwiki.php/Main/TookALevelInJerkass" title="/pmwiki/pmwiki.php/Main/TookALevelInJerkass">well, more than prior</a>), and used her as a means to vent his frustrations. <span class="spoiler" title="you can set spoilers visible by default on your profile"> This was for the sake of <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Mindrape" title="/pmwiki/pmwiki.php/Main/Mindrape">mindraping</a> her into the Sword of the Godslayer at a later time, using Jin's horrid mentality and ingrained disdain for her as a means to wear her down, going so far as to cut her off from her two friends.</span>
+</li><li> Tsubaki Yayoi, who was more competent at this role (and who was originally <em>supposed</em> to receive it), was delegated to the Zero Squadron instead. She loves Jin, but could not follow, and was left "cleaning up the trash". <span class="spoiler" title="you can set spoilers visible by default on your profile">A side-effect of Noel getting the job was that Tsubaki would become lonely due to being cut off from her friends and harbor jealousy over Noel getting the job, and this was his in-road to <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Mindrape" title="/pmwiki/pmwiki.php/Main/Mindrape">mindraping</a> her into a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BrainwashedAndCrazy" title="/pmwiki/pmwiki.php/Main/BrainwashedAndCrazy">Brainwashed and Crazy</a> loyalist to the NOL.</span> In the end, Tsubaki tries to accost Noel over the resulting jealousy, going so far as to <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MurderTheHypotenuse" title="/pmwiki/pmwiki.php/Main/MurderTheHypotenuse">try to kill her</a>.
+</li><li> An important thing to note is that this conflict is so integral to the plot of <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/BlazBlueContinuumShift" title="/pmwiki/pmwiki.php/VideoGame/BlazBlueContinuumShift">BlazBlue: Continuum Shift</a></em> that if anyone - <em>anyone</em> - were to mend the girls' psyches, everything <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DidntSeeThatComing" title="/pmwiki/pmwiki.php/Main/DidntSeeThatComing">would fall apart</a>. Fortunately, just about the rest of the cast is indifferent to or despises Tsubaki, indifferent to or despises Noel, could give a shit less about them both, or is exploiting their relationship for their own ends. <span class="spoiler" title="you can set spoilers visible by default on your profile">The exception is Makoto Nanaya, their common friend, who signed on with NOL Intelligence and proved <em>dangerously</em> competent at her job, forcing Terumi to <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ReassignedToAntarctica" title="/pmwiki/pmwiki.php/Main/ReassignedToAntarctica">send her to Ibukido</a>, her assignment <a class="twikilink" href="/pmwiki/pmwiki.php/Main/UriahGambit" title="/pmwiki/pmwiki.php/Main/UriahGambit">meant to dead-end her job or have her killed from seithr overexposure or cauldron timefuckery</a>. <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ReassignmentBackfire" title="/pmwiki/pmwiki.php/Main/ReassignmentBackfire">Even THAT failed to do her in, and instead made her even more dangerous to the overall scheme</a>, forcing Hazama to take matters into his own hands. As proof that the entire plot was completely brittle to Makoto's touch, in Arcade mode Terumi interfered after Makoto knocked Noel out to move the poor girl into the tempering phase ahead of schedule - he literally had no choice, as Makoto was going to talk some sense into Noel after she came to, and had subdued Tsubaki earlier to keep her from killing Noel. <a class="twikilink" href="/pmwiki/pmwiki.php/Main/VillainousBreakdown" title="/pmwiki/pmwiki.php/Main/VillainousBreakdown">Suffice it to say he didn't take it well</a>.</span>
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/GalacticCivilizations" title="/pmwiki/pmwiki.php/VideoGame/GalacticCivilizations">Galactic Civilizations</a> 2</em> is known for its rather ruthless and diverse AI (which only cheats if you ask it to). It has been known to produce some <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MagnificentBastard" title="/pmwiki/pmwiki.php/Main/MagnificentBastard">Magnificent Bastard</a> moments, where one AI empire will not declare war on you, but instead convince/bribe two (or more) other empires to do so. They tend to mock you in your moments of death (should you be killed) by revealing this fact. And it doesn't even know who the player is, so it even pulls these on other AIs.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/MassEffect" title="/pmwiki/pmwiki.php/Franchise/MassEffect">Mass Effect</a></em> this is <em>the</em> M.O. of the Reapers, the big bulletpoint at the top of the plan behind every invasion. Starting by using the Citadel to decapitate galactic governments, followed by shutting down the Mass Relays to isolate systems from one another so they cannot receive help. Nevermind their Indoctrination tricks to further divide those who oppose them long before the Reapers actually appear on the field. It's a <em>brutally</em> efficient demonstration of the trope. If not for the Protheans deciding to throw a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SpannerInTheWorks" title="/pmwiki/pmwiki.php/Main/SpannerInTheWorks">Spanner in the Works</a>, who knows how long the cycle could have gone on for?
+</li><li> The kett of <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MassEffectAndromeda" title="/pmwiki/pmwiki.php/VideoGame/MassEffectAndromeda">Mass Effect: Andromeda</a></em> used this when they started their war with the angara. Initially pretending to be peaceful, they abducted and killed the angaran ambassadors, then claimed it was retaliation for the angara attacking them, while delivering contradictory accounts of which planet the attacks came from. The angara were too caught up blaming one another to notice the fact their ambassadors had been murdered, and the kett used this to kill their leaders. For the next seventy-odd years the angara, despite knowing what had happened soon enough, still were <a class="twikilink" href="/pmwiki/pmwiki.php/Main/WeAreStrugglingTogether" title="/pmwiki/pmwiki.php/Main/WeAreStrugglingTogether">unable to get their act together</a>.
+</li><li> Not a gameplay element, but Caesar from <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FalloutNewVegas" title="/pmwiki/pmwiki.php/VideoGame/FalloutNewVegas">Fallout: New Vegas</a></em> cites this as how he was able to take the puny Blackfoot tribe ... and conquer 85 others. This is a deliberate homage to the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/RealLife" title="/pmwiki/pmwiki.php/Main/RealLife">Real Life</a> Caesar, as is the entire nation he's trying to found.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MightAndMagic" title="/pmwiki/pmwiki.php/VideoGame/MightAndMagic">Might and Magic</a> VII</em> involves this on the Dark path — at one point in the game, you are asked to recruit a new arbiter, who will oversee negotiations between the countries of Erathia and Tularea regarding a contested territory. The Light choice of arbiter helps arrange a reasonable compromise, and reminds the two of the real common enemy. The Dark choice allows the negotiations to break down and a full-scale war to erupt... which is in your favour, since making that choice allies you with the aforementioned real common enemy.
+</li><li> The end game of Darth Vitiate in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/KnightsOfTheOldRepublic" title="/pmwiki/pmwiki.php/VideoGame/KnightsOfTheOldRepublic">Knights of the Old Republic</a></em> and <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/StarWarsTheOldRepublic" title="/pmwiki/pmwiki.php/VideoGame/StarWarsTheOldRepublic">Star Wars: The Old Republic</a></em>. Set himself up as Emperor of the Sith, use the Sith to contract with the Mandalorians, use the Mandalorians against the Republic (devastating both) while staying hidden. Divide the Jedi using the war (which accounts for the protagonists of the first two games), by turning Revan, Malak, and their followers. When that plan didn't work, lie low and spend the next <em>three centuries</em> in hiding, then use the Sith Empire against the Republic and Jedi. But the Sith empire he allegedly ruled was just a ruse - he was <em>embezzling</em> from it the entire time to fund and build an entirely new Empire on the side under the identity of "Valkorian." The end game was to destroy both the Republic and Sith empires, then use the Eternal Empire to wipe up what's left and/or destroy the whole universe and set himself up as <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AGodAmI" title="/pmwiki/pmwiki.php/Main/AGodAmI">A God Am I</a>.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/EternalDarkness" title="/pmwiki/pmwiki.php/VideoGame/EternalDarkness">Eternal Darkness</a></em> lets you cast the Bind spell, which effectively brainwashes enemies into fighting for you. Even without this magick, enemies who serve opposing Ancients will still fight amongst themselves assuming that you don't run into the fray and give them a common foe.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder14');">    Web Animation </div><div class="folder" id="folder14" isfolder="true" style="display:block;">
+<ul><li> The <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BigBad" title="/pmwiki/pmwiki.php/Main/BigBad">Big Bad</a> of <em><a class="twikilink" href="/pmwiki/pmwiki.php/WebAnimation/RWBY" title="/pmwiki/pmwiki.php/WebAnimation/RWBY">RWBY</a></em> has the goal of destroying humanity from the shadows. One of her best tools for this goal is to divide mankind with doubt and anger until they turn on each other. Her <a class="twikilink" href="/pmwiki/pmwiki.php/Main/VillainSong" title="/pmwiki/pmwiki.php/Main/VillainSong">Villain Song</a> is even titled "Divide". <span class="spoiler" title="you can set spoilers visible by default on your profile">It's also a vital component of her ultimate plan to summon the gods back to Remnant and put <a class="twikilink" href="/pmwiki/pmwiki.php/Main/HumanityOnTrial" title="/pmwiki/pmwiki.php/Main/HumanityOnTrial">Humanity on Trial</a>. If humanity is found in harmony, their magic will be restored, but if they are found divided, the gods will <a class="twikilink" href="/pmwiki/pmwiki.php/Main/KillEmAll" title="/pmwiki/pmwiki.php/Main/KillEmAll">wipe them from the face of the planet</a>. Salem has ensured that as long as she lives, humanity will never be in harmony, and her <a class="twikilink" href="/pmwiki/pmwiki.php/Main/CompleteImmortality" title="/pmwiki/pmwiki.php/Main/CompleteImmortality">Complete Immortality</a> has made that goal <a class="twikilink" href="/pmwiki/pmwiki.php/Main/InvincibleVillain" title="/pmwiki/pmwiki.php/Main/InvincibleVillain">hopeless</a>.</span>
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder15');">    Webcomics </div><div class="folder" id="folder15" isfolder="true" style="display:block;">
+<ul><li> Seems to be the main strategy of the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BigBad" title="/pmwiki/pmwiki.php/Main/BigBad">Big Bad</a>, Snadhya'rune Vel'Sharen, in <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/Drowtales" title="/pmwiki/pmwiki.php/Webcomic/Drowtales">Drowtales</a></em>. She doesn't have enough followers to take over the Drow race uncontested, so instead, her agents have been secretly manipulating all the major factions across the underworld into destroying one another so that she can fill the power vacuum.
+</li><li> Happens all over the place in <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/TheOrderOfTheStick" title="/pmwiki/pmwiki.php/Webcomic/TheOrderOfTheStick">The Order of the Stick</a></em>. First you have the Inter Fiend Cooperation Commission, who seek to keep the battles between The Order, The Linear Guild, and Team Evil going as part of their <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GambitRoulette" title="/pmwiki/pmwiki.php/Main/GambitRoulette">Gambit Roulette</a>. On a smaller level, General Tarquin is poised to take over the entire Western continent this way. In an inversion, he's going to keep the continent split amongst himself and his confederates so that no one country is seen as a threat or a tempting prize.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder16');">    Web Original </div><div class="folder" id="folder16" isfolder="true" style="display:block;">
+<ul><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/Roleplay/TheGamersAlliance" title="/pmwiki/pmwiki.php/Roleplay/TheGamersAlliance">The Gamer's Alliance</a></em>, the mage <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TheChessmaster" title="/pmwiki/pmwiki.php/Main/TheChessmaster">Jemuel</a> plays both the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TheAlliance" title="/pmwiki/pmwiki.php/Main/TheAlliance">Grand Alliance</a> and the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TheEmpire" title="/pmwiki/pmwiki.php/Main/TheEmpire">Yamato Empire</a> against each other during the Great War in order to carve his empire while the two are busy fighting. He succeeds, crushes the remaining Yamatian troops in the kingdom and frames the Alliance in the eyes of the populace for causing a catastrophe which has devastated a part of the continent.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder17');">    Western Animation </div><div class="folder" id="folder17" isfolder="true" style="display:block;">
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/ThunderCats1985" title="/pmwiki/pmwiki.php/WesternAnimation/ThunderCats1985">ThunderCats</a></em> invoked example: in one episode Lion-O is bodyguarding some old peasant and fights off an attacker, who turns out to be Tigra. And the peasant turns out to be Mumm-Ra, who told Lion-O that a thief would attack him and told Tigra that a thief was following him. The end result was that Lion-O's magic sword was broken because he battled a fellow Cat.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/JusticeLeague" title="/pmwiki/pmwiki.php/WesternAnimation/JusticeLeague">Justice League</a></em>:
+<ul><li> Grodd did this with the Justice League in "Secret Society".
+</li><li> We are treated to a <a class="twikilink" href="/pmwiki/pmwiki.php/SugarWiki/MomentOfAwesome" title="/pmwiki/pmwiki.php/SugarWiki/MomentOfAwesome">Moment of Awesome</a> when <span class="spoiler" title="you can set spoilers visible by default on your profile">Batman takes out the Injustice League like this. <em>While chained up in the basement</em>.</span>
+</li></ul></li><li> Shego manages to pull this off in the <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/KimPossible" title="/pmwiki/pmwiki.php/WesternAnimation/KimPossible">Kim Possible</a></em> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MadeForTVMovie" title="/pmwiki/pmwiki.php/Main/MadeForTVMovie">Made-for-TV Movie</a> "A Sitch In Time" by having Ron's mother get a job that requires their family to move.
+<div class="indent">"As a team, you two (Ron and Kim) are actually pretty solid. Why? Don't know; don't care."
+</div></li><li> Done (as a reference to the Beatles, once again!) in an episode of <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/ThePowerPuffGirls" title="/pmwiki/pmwiki.php/WesternAnimation/ThePowerPuffGirls">The Powerpuff Girls</a></em>.
+</li><li> Not only was this the plot of the first episode of <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/TeenTitans" title="/pmwiki/pmwiki.php/WesternAnimation/TeenTitans">Teen Titans</a></em>, it was also the title!
+</li><li> In the <a class="twikilink" href="/pmwiki/pmwiki.php/Creator/Filmation" title="/pmwiki/pmwiki.php/Creator/Filmation">Filmation</a> film, <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/FlashGordon1979" title="/pmwiki/pmwiki.php/WesternAnimation/FlashGordon1979">Flash Gordon: The Greatest Adventure of All</a></em>, this is how Ming keeps control of the planet Mongo, although they phrase it as "separate and rule".
+</li><li> Discord in <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/MyLittlePonyFriendshipIsMagic" title="/pmwiki/pmwiki.php/WesternAnimation/MyLittlePonyFriendshipIsMagic">My Little Pony: Friendship Is Magic</a></em> splits up the Mane Six physically when they enter his hedge maze. He takes the opportunity to <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MindRape" title="/pmwiki/pmwiki.php/Main/MindRape">Mind Rape</a> them one by one to split up their friendship as well.
+</li><li> The Shadoens in <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/RoswellConspiracies" title="/pmwiki/pmwiki.php/WesternAnimation/RoswellConspiracies">Roswell Conspiracies: Aliens, Myths and Legends</a></em> have a goal to conquer Earth, which would be much harder if all the aliens there were working together and with the humans. To prevent that, they sent an agent to pose as the head of the Alliance and keep tensions and between the various alien races and the humans high, and hostilities simmering.
+</li><li> This is exploited and said word-for-word in an episode of <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/TheAdventuresOfSuperMarioBros3" title="/pmwiki/pmwiki.php/WesternAnimation/TheAdventuresOfSuperMarioBros3">The Adventures of Super Mario Bros. 3</a></em>. The Koopas paint half the townsfolk red and half blue, and spark riots between them.
+</li><li> Lampshaded but averted in <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/BatmanUnderTheRedHood" title="/pmwiki/pmwiki.php/WesternAnimation/BatmanUnderTheRedHood">Batman: Under the Red Hood</a></em>. When Black Mask asks why Batman isn't after the Red Hood, Ms Li thinks he's waiting to see which side will win, so he can take on the winner. However Black Mask knows that Batman doesn't work that way, and so must be reluctant to take on the Red Hood for his own reasons.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/Recess" title="/pmwiki/pmwiki.php/WesternAnimation/Recess">Recess</a>,</em> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/LovableJock" title="/pmwiki/pmwiki.php/Main/LovableJock">Vince</a> and <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TheSmartGuy" title="/pmwiki/pmwiki.php/Main/TheSmartGuy">Gretchen</a> are running against each other for class president, which is naturally <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SeriousBusiness" title="/pmwiki/pmwiki.php/Main/SeriousBusiness">Serious Business</a>. The voters are divided along gender lines (except for Gus and Mikey, who refuse to choose between their friends), so <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ClassClown" title="/pmwiki/pmwiki.php/Main/ClassClown">T.J.</a>, representing Vince, convinces <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AlphaBitch" title="/pmwiki/pmwiki.php/Main/AlphaBitch">Ashley A.</a> to run and divide the girls' vote. <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TheBigGuy" title="/pmwiki/pmwiki.php/Main/TheBigGuy">Spinelli</a> recognizes the tactic and gets her to drop out in exchange for promising an important post in Gretchen's government.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder18');">    Real Life </div><div class="folder" id="folder18" isfolder="true" style="display:block;">
+<ul><li> Divide and Conquer has been a tried and true tactic of empires throughout history. <a class="twikilink" href="/pmwiki/pmwiki.php/Wiki/TheOtherWiki" title="/pmwiki/pmwiki.php/Wiki/TheOtherWiki">The Other Wiki</a> has <a class="urllink" href="http://en.wikipedia.org/wiki/Divide_and_rule">a more comprehensive explanation<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a> of Divide and Rule and its uses.
+<ul><li> This was the favorite tactic of Julius Caesar, arguably the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TropeNamers" title="/pmwiki/pmwiki.php/Main/TropeNamers">trope namer</a>. His motto was Divide et Impera, which translates to "Divide and Rule"<span class="notelabel" onclick="togglenote('note0gr5w');"><sup>note </sup></span><span class="inlinefolder" id="note0gr5w" isnote="true" onclick="togglenote('note0gr5w');" style="cursor:pointer;font-size:smaller;display:none;">or "Divide and Order", but that makes significantly less sense</span> . Caesar would ally with one tribe in Gaul (modern France) and pit them against others to win. This was the reason the Gauls lost, or at least it sure helped.
+<ul><li> This has always been characteristic of Roman conquest, since their early wars within Italy. Once conquered or "allied" a city-state would be bound by contract to Rome and forbidden to form any kind of alliance (including marriage) with their former allies. By the time Rome controlled the whole of Italy, they had over 150 contracts with various states, none of which had any formal links to one another other than as allies of Rome.
+</li></ul></li><li> The war between the <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/EasternRomanEmpire" title="/pmwiki/pmwiki.php/UsefulNotes/EasternRomanEmpire">Eastern Roman Empire</a> and Sassanid Persia that took place from 602 to 628 weakened both countries so much that the Arabs were able to invade and conquer all of Persia and half of the Eastern Roman Empire. The Arabs did not actually instigate the conflict, as they were still a disorganized bunch of tribes, but they took advantage of the situation, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/OutsideContextProblem" title="/pmwiki/pmwiki.php/Main/OutsideContextProblem">being united under Islam soon afterwards</a>.
+</li><li> Henry VII, in order to eventually subjugate the Irish clans, used a ploy called Surrender and Regrant. Any Irish tribal leader who swore loyalty to Henry ("Surrender"), would be given their lands back, plus an English aristocratic title ("Regrant"). English titles are inherited by the eldest son (or nearest male relative), whereas Irish clan titles were inherited by a successor chosen by a representative body of the clan. This meant that, further down the line, the inheritance would be fought over between the claimant under English law and the claimant under Irish clan law, giving the English an opportunity to "intervene".
+</li><li> This is also the primary reason that tiny expeditions of conquistadors were able to single-handedly obtain victory over entire American subcontinents, by sowing confusion and playing different native powers against each other. (Smallpox and guns helped, too.)
+</li><li> Jiang Jieshi's schtick, and that of his eventual rival Mao Zedong. Both were shrewd and calculating politicians, and used this strategy to great effect as they bribed, back-stabbed, assassinated, out-cliqued and out-manoeuvred their rivals in their scrambles to be the top dogs within their party-factions-governments. Likewise they maintained their power in this way: both <a class="twikilink" href="/pmwiki/pmwiki.php/Main/VetinariJobSecurity" title="/pmwiki/pmwiki.php/Main/VetinariJobSecurity">played on factional rivalries to safeguard their own positions.</a> The problems with this kind of government became apparent during the course of the post-WWII Civil War when Jiang's paranoia, heavy workload, and <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GeneralFailure" title="/pmwiki/pmwiki.php/Main/GeneralFailure">military incompetence</a> came to a head: when taken with Jiang's poor administration and strategic decision-making, the Army's lack of co-ordination - due to factional rivalries and the resultant lack of coordination between Armies, Divisions, Brigades and <a class="twikilink" href="/pmwiki/pmwiki.php/Main/UpToEleven" title="/pmwiki/pmwiki.php/Main/UpToEleven">sometimes even the Battalions within them</a> - proved fatal. Once Mao's armies broke his line at the Yangtze and swept into South China, the majority of Jiang's remaining forces defected or simply melted away. For his own part Mao learned not to tolerate any kind of factionalism within the Army, though he continued to Divide and Conquer his political would-be/could-be/might-be rivals well into the senility of his old age.
+</li><li> The Dutch, French and English East India Companies had low (think 10%) and ever-decreasing numbers of European personnel which eventually, after the Sepoy (Indian Soldier) Rebellion of 1857 resulted in the English East India Company being dissolved and replaced by the British Raj, which directly administered two-thirds of the subcontinent's territory and population with an Indian Civil Service of no more than 2000 men. Only the very top level of the administration was British, and the remaining third of the subcontinent was governed by states loyal to the British Crown
+</li><li> A literal example occurred during <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/TheAmericanRevolution" title="/pmwiki/pmwiki.php/UsefulNotes/TheAmericanRevolution">The American Revolution</a>, when Britain tried to take over the Hudson River valley in order to physically cut off New England from the rest of the Thirteen Colonies.
+</li><li> Bismarckian Germany did the same thing in the late 19th century, keeping France isolated from their natural allies, Russia and the UK.
+<ul><li> While Bismarck's policy of keeping France isolated (which included a secret Russo-German treaty) may be interpreted as an example of this, Russia and the UK cannot by any stretch of the imagination be described as France's natural allies. France and the UK had in fact continually been at war for centuries and within the past century France had waged several wars against Russia (the Napoleonic Wars of the Second, Third, and Fourth coalition, the 1812 Invasion, the Wars of Liberation and the Crimean War) and their one notable alliance (1807-1812) had turned sour very quickly; France was also traditionally sympathetic to Poland. At Bismarck's time there were some pretty serious collisions of interest between Britain and France (especially in the carving up of Africa) and Britain and Russia (e. g. over Central Asia and the Dardanelles), but no direct conflicts of interest between Germany and Britain or Germany and Russia. This changed after the end of Bismarck's chancellorship as under Wilhelm II Germany took a much more active role as a colonial power, expanded its navy enough to cause concerns in London, and let the relationship to Russia cool off by supporting its ally Austria-Hungary in the Balkans.
+</li></ul></li><li> <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/RedOctober" title="/pmwiki/pmwiki.php/UsefulNotes/RedOctober">Red October</a> and the fall of the Czarist and Provisional Russian governments was effectively due to Germany successfully using public discontent to undermine the power of the Pro-Allies factions in Russia in the hopes of reaction against them that would open the door to a German-dominated Eastern Europe.
+</li><li> A big part of why Japan was able to just seize Manchuria from its warlord Zhang Xueliang in 1931, nab bits of Inner Mongolia from 1931-37, and occupy the North China Plain without too much hassle from 1937-45. <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/ChiangKaiShek" title="/pmwiki/pmwiki.php/UsefulNotes/ChiangKaiShek">Chiang Kai-shek</a> tested his forces against those of Japan in the 1932 Battle of Shanghai and, with their horrible performance, saw vindicated his conviction that he would have been unable to contest the Japanese annexation of Zhang's territory in an open war. He immediately ordered a <em>massive</em> program of armament that could well have seen his army very-nearly on-par with <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/KatanasOfTheRisingSun" title="/pmwiki/pmwiki.php/UsefulNotes/KatanasOfTheRisingSun">that of Japan's</a> by 1942, and strove to avoid a war until then - given <a class="twikilink" href="/pmwiki/pmwiki.php/Main/PatrioticFervor" title="/pmwiki/pmwiki.php/Main/PatrioticFervor">the nature of his Nationalist Party regime</a> it's hard to imagine him not declaring war on them eventually. When the war <em>did</em> break out in 1937 and his half-reformed forces were driven off the North China Plain and the Lower Yangzi, the Japanese allowed the <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/MaoZedong" title="/pmwiki/pmwiki.php/UsefulNotes/MaoZedong">Chinese Communist Party</a> to basically take control of all the areas of the plain that Japan didn't want and/or couldn't control - the two maintained unofficial truces throughout the war, with the sole exception of a brief battle in 1940 ('the Hundred Regiments offensive') which had been ordered at the insistence of <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/JosephStalin" title="/pmwiki/pmwiki.php/UsefulNotes/JosephStalin">Joseph Stalin</a>.
+</li><li> The German-led Axis took advantage of this during their invasion of Yugoslavia in WWII by rallying the country's neighbors to help invade and by arming the radicalized minorities (most notably the Croats with some Slovene, local Hungarian, and Albanian support) against the Serbian-dominated Royal government. It worked devastatingly well - <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GoneHorriblyRight" title="/pmwiki/pmwiki.php/Main/GoneHorriblyRight">probably too well</a>, if the subsequent bloodshed and the resulting rise of the Partisans and the Chetniks and their effective tying up of hundreds of thousands of Axis troops shows. Some of the Croatian groups the Nazis stirred up were also such fanatically brutal killers that <em><a class="twikilink" href="/pmwiki/pmwiki.php/Main/EvenEvilHasStandards" title="/pmwiki/pmwiki.php/Main/EvenEvilHasStandards">even SS death squads were sickened by them</a></em>, and left the Serbs burning for revenge...
+<ul><li> The Nazis used the same trick to rise to power in their own country, splitting German minorities apart to make a takeover possible, as depicted in the aptly named US propaganda film <a class="urllink" href="https://youtu.be/vGAqYNFQdZ4?t=7m16s">"Don't Be a Sucker."<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a>
+</li></ul></li><li> The Soviets tried to do this throughout their history (and started before the Soviet Union even existed yet) by trying to drive wedges between their enemies, whoever they might be at the time. In <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/WorldWarI" title="/pmwiki/pmwiki.php/UsefulNotes/WorldWarI">World War I</a>, they tried to pull Germany, Austria-Hungary, Bulgaria, and the various White Factions apart and incite revolution in at least one of them. Before, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/FalseFriend" title="/pmwiki/pmwiki.php/Main/FalseFriend">during</a>, and after <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/WorldWarII" title="/pmwiki/pmwiki.php/UsefulNotes/WorldWarII">World War II</a>, they believed that pitting the West against the Germans would leave a power vaccum that would effectively cement Soviet dominance (<a class="twikilink" href="/pmwiki/pmwiki.php/Main/NiceJobFixingItVillain" title="/pmwiki/pmwiki.php/Main/NiceJobFixingItVillain">which was thwarted by Hitler's paranoia and decision to strike at the USSR first</a>). And in the Cold War they generally tried to keep the West and the Chinese from coming to any kind of agreement while trying to undermine the solidarity of the Western powers themselves.
+<ul><li> They also divided up the Stan countries so that they couldnt unite.
+</li><li> This was countered by United States opening up (relatively) friendly relations with China despite their ideological incompatibility, as each considered the Soviets to be the greater threat (America seeing them as such because the USSR was simply more powerful than China, and China because the USSR was literally right next door to them).
+</li><li> <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/NorthKorea" title="/pmwiki/pmwiki.php/UsefulNotes/NorthKorea">North Korea</a> pursued a strategy of playing the Soviet Union and China against each other, ensuring that North Korea would always be backed by a major communist power whilst also avoiding becoming a subservient puppet state to either country. <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TheGreatPoliticsMessUp" title="/pmwiki/pmwiki.php/Main/TheGreatPoliticsMessUp">The Great Politics Mess-Up</a> was a huge disaster for North Korea, since it meant they were now stuck with China and couldn't periodically switch their loyalties to another communist power. The solution? Nuclear weapons! And essentially extorting Chinese support based on the prospect of millions of North Korean refugees flooding over the border in the event that the regime were to ever fall.
+</li></ul></li><li> The United Kingdom was quite successful in this in their centuries-long struggle with France. Usually that took the shape of creating a balance of power in Europe by supporting France's enemies, which kept the French occupied and enabled the British to conquer their enemies' overseas possessions. In some cases Britain would then get out of the war after achieving their aims, much to the chagrin of their erstwhile allies, e. g. in the War of Spanish Succession and the Seven Years' War.
+</li><li> Talleyrand was a past master at this. As Napoleon's foreign minister he managed France's successful diplomatic efforts to prevent e. g. Prussia from joining the Third Coalition (which it came close to after French troops had violated Prussian territory) and Austria the Fourth. In 1813 and 1814 Napoleon by his intransigent refusal to make any concessions at all forged the coalition of Britain, Russia, Prussia and Austria and also ensured that it would not break up before his abdication. But during the subsequent Congress of Vienna Talleyrand once again played off the other powers against each other (mainly Britain and Austria against Russia and Prussia) and secured terms more favourable to France than most would have dared to hope for.
+</li></ul></li><li> Large companies have been known to do this as well. During the <a class="urllink" href="http://en.wikipedia.org/wiki/Great_Southwest_Railroad_Strike_of_1886">Great Southwest Railroad Strike of 1886<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a>, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/RailroadBaron" title="/pmwiki/pmwiki.php/Main/RailroadBaron">Railroad Baron</a> Jay Gould allegedly boasted that he could "hire one half of the working class to kill the other half."
+</li><li> In recent years, divide-and-conquer has been used in <a class="twikilink" href="/pmwiki/pmwiki.php/Main/CultureWar" title="/pmwiki/pmwiki.php/Main/CultureWar">Culture War</a> politics by <a class="twikilink" href="/pmwiki/pmwiki.php/Main/PropagandaMachine" title="/pmwiki/pmwiki.php/Main/PropagandaMachine">spin doctors</a> such as Karl Rove and Lynton Crosby, in the form of 'wedge politics' (or dog-whistle politics in Australia).
+</li><li> During decolonisation, <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/TheBritishEmpire" title="/pmwiki/pmwiki.php/UsefulNotes/TheBritishEmpire">The British Empire</a> used partition multiple times:
+<ol><li> Partition of Ireland into the <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/Ireland" title="/pmwiki/pmwiki.php/UsefulNotes/Ireland">Irish Free State</a> (later the Republic of Ireland) and <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/NorthernIreland" title="/pmwiki/pmwiki.php/UsefulNotes/NorthernIreland">Northern Ireland</a> in 1922,
+</li><li> Partition of <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/TheRaj" title="/pmwiki/pmwiki.php/UsefulNotes/TheRaj">The Raj</a> into <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/India" title="/pmwiki/pmwiki.php/UsefulNotes/India">India</a> and <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/Pakistan" title="/pmwiki/pmwiki.php/UsefulNotes/Pakistan">Pakistan</a> in 1947, with East Pakistan fighting West Pakistan into becoming Bangladesh in 1971.
+</li></ol><ul><li> The Durand Line separated Afghanistan and Pakistan, dividing the Pashtuns.
+</li></ul><ol><li> Partition of Mandate Palestine into <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/ArabIsraeliConflict" title="/pmwiki/pmwiki.php/UsefulNotes/ArabIsraeliConflict">Israel and Palestine</a> (although the second bit didn't get off the ground) in 1948.
+</li><li> With France, it pretty much carved up the whole Middle East with the Sykes-Picot Agreement and with the rest of Europe, drew arbitrary lines in Africa in their Scramble for Africa. This caused ethnic conflicts that can be seen today.
+</li></ol><ul><li> Some people would say that the recent terrorist attacks in Europe can be seen as karma as tragic as they are.
+</li><li> Arguably, the manner in which <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/Yemen" title="/pmwiki/pmwiki.php/UsefulNotes/Yemen">Yemen</a> was decolonised counts as well, although that's a more complicated story.
+</li><li> Why? Well, as it turns out, <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/YesMinister" title="/pmwiki/pmwiki.php/Series/YesMinister">Yes, Minister</a></em> isn't that far wrong: the Foreign Office, recognising that Britain could no longer hold on to these territories (or in the case of Ireland, most of it), still wanted to maintain some semblance of British influence without being too bothered about the details. So they set things up so they could play powers against each other when they wanted to be engaged, while allowing them to formally "deplore" all the nastiness on the ground (recall that even in Ireland, the formal British military and police were not the major violent players on the Unionist/Loyalist side even at the height of <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/TheTroubles" title="/pmwiki/pmwiki.php/UsefulNotes/TheTroubles">The Troubles</a>).
+</li></ul></li><li> The Aztecs used an inverted version of this; whenever they conquered an area, they seperated it into tribes and city states as appropriate, then informed the conquered peoples that they would need to provide tribute in the form of human sacrifices. However, the tribute did not need to be their own people; it was perfectly acceptable to raid their neighbors for extra sacrifices. This had a combined effect of not only draining conquered peoples of their troops and fighting power, but of making them more or less as resentful to each other as they were to their masters. Even if they could get up enough strength to try breaking free, they would have no allies. The worst the Aztecs had to fear was multiple tribes or cities independently getting enough strength to rebel then simultaneously rebelling, which was fairly unlikely — until <a class="twikilink" href="/pmwiki/pmwiki.php/Main/OutsideContextProblem" title="/pmwiki/pmwiki.php/Main/OutsideContextProblem">the Spanish</a> showed up and demonstrated that they could play the same game themselves.
+</li><li> A major part of why <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/WorldWarI" title="/pmwiki/pmwiki.php/UsefulNotes/WorldWarI">World War I</a> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/HomeByChristmas" title="/pmwiki/pmwiki.php/Main/HomeByChristmas">went as long as it did instead of actually ending before Christmas</a>: the Triple Alliance's strategic plan called for holding off the Russians with the Austro-Hungarian forces and token German troops while hitting France with most of the German troops on the north and the entire Italian army at south, kicking France out of the war and allowing to hit Russia with <em>all</em> their forces before they could fully mobilize and before Britain could meaningfully intervene... Except Italy, that had been Austria's enemy for almost half a century before the signing of the Triple Alliance, was sensible enough to British overtures it stayed neutral with a cheap excuse (Austria-Hungary had made the first declaration of war, and the Triple Alliance was a <em>defensive</em> alliance), allowing France to barely stop the German offensive. To top <em>that</em> off, the Entente powers were later able to get Italy to intervene on <em>their</em> side by promising them the Austro-Hungarian border territories claimed by Italy and a share of the German colonies.
+</li><li> One of the reasons why people of different backgrounds in America cannot come together and demand equal opportunities for everyone can best be surmised by this quote by president Lyndon Johnson:
+<div class="indent">If you can convince the lowest white man hes better than the best colored man, he wont notice youre picking his pocket. Hell, give him somebody to look down on, and hell empty his pockets for you.
+</div></li></ul></div>
+<hr/>
+</div>
+<div class="square_ad footer-article-ad main_2" data-isolated="0"></div>
+<div class="section-links" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<div class="titles">
+<div><h3 class="text-center text-uppercase">Previous</h3></div>
+<div><h3 class="text-center text-uppercase">Index</h3></div>
+<div><h3 class="text-center text-uppercase">Next</h3></div>
+</div>
+<div class="links">
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/DefensiveFeintTrap">Defensive Feint Trap</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/TheOldestTricksInTheBook">The Oldest Tricks in the Book</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/EngineeredHeroics">Engineered Heroics</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/DeceasedFallGuyGambit">Deceased Fall-Guy Gambit</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/ThePlan">The Plan</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/EngineeredPublicConfession">Engineered Public Confession</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/DisabilityAsAnExcuseForJerkassery">Disability as an Excuse for Jerkassery</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/Plots">Plots</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/DividedWeFall">Divided We Fall</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/DislikesTheNewGuy">Dislikes the New Guy</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/DiscordTropes">Discord Tropes</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/DividedWeFall">Divided We Fall</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Film/FromRussiaWithLove">From Russia with Love</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/QuoteSource/LiveActionFilms">QuoteSource/Live-Action Films</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Film/TheFugitive">The Fugitive</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="outer_ads_by_salon_wrapper" id="exco_player_insert_div">
+</div>
+</article>
+<div id="main-content-sidebar"><div class="sidebar-item display-options">
+<ul class="sidebar display-toggles">
+<li>Show Spoilers <div class="display-toggle show-spoilers" id="sidebar-toggle-showspoilers"></div></li>
+<li>Night Vision <div class="display-toggle night-vision" id="sidebar-toggle-nightvision"></div></li>
+<li>Sticky Header <div class="display-toggle sticky-header" id="sidebar-toggle-stickyheader"></div></li>
+<li>Wide Load <div class="display-toggle wide-load" id="sidebar-toggle-wideload"></div></li>
+</ul>
+<script>updateDesktopPrefs();</script>
+</div>
+<div class="sidebar-item ad sb-ad-unit">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_2"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_2'); });</script> </div>
+</div></div>
+<div class="sidebar-item quick-links" itemtype="http://schema.org/SiteNavigationElement">
+<p class="sidebar-item-title" data-title="Important Links">Important Links</p>
+<div class="padded">
+<a href="/pmwiki/query.php?type=att">Ask The Tropers</a>
+<a href="/pmwiki/query.php?type=tf">Trope Finder</a>
+<a href="/pmwiki/query.php?type=ykts">You Know That Show...</a>
+<a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a>
+<a href="/pmwiki/review_activity.php">Reviews</a>
+<a data-modal-target="login" href="/pmwiki/lbs.php">Live Blogs</a>
+<a href="/pmwiki/ad-free-subscribe.php">Go Ad Free!</a> </div>
+</div>
+<div class="sidebar-item sb-ad-unit">
+<div class="sidebar-section">
+<div class="square_ad ad-size-300x600 ad-section text-center">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_3"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_3'); });</script> </div>
+</div> </div>
+</div>
+</div>
+<div class="sidebar-item">
+<p class="sidebar-item-title" data-title="Crucial Browsing">Crucial Browsing</p>
+<ul class="padded font-s" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><a data-click-toggle="active" href="javascript:void(0);">Genre</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/ActionAdventureTropes" title="Main/ActionAdventureTropes">Action Adventure</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ComedyTropes" title="Main/ComedyTropes">Comedy</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CommercialsTropes" title="Main/CommercialsTropes">Commercials</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CrimeAndPunishmentTropes" title="Main/CrimeAndPunishmentTropes">Crime &amp; Punishment</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DramaTropes" title="Main/DramaTropes">Drama</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/HorrorTropes" title="Main/HorrorTropes">Horror</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LoveTropes" title="Main/LoveTropes">Love</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NewsTropes" title="Main/NewsTropes">News</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ProfessionalWrestling" title="Main/ProfessionalWrestling">Professional Wrestling</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SpeculativeFictionTropes" title="Main/SpeculativeFictionTropes">Speculative Fiction</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SportsStoryTropes" title="Main/SportsStoryTropes">Sports Story</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/WarTropes" title="Main/WarTropes">War</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Media</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/Media" title="Main/Media">All Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/AnimationTropes" title="Main/AnimationTropes">Animation (Western)</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Anime" title="Main/Anime">Anime</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ComicBookTropes" title="Main/ComicBookTropes">Comic Book</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FanFic" title="FanFic/FanFics">Fan Fics</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Film" title="Main/Film">Film</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/GameTropes" title="Main/GameTropes">Game</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Literature" title="Main/Literature">Literature</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MusicAndSoundEffects" title="Main/MusicAndSoundEffects">Music And Sound Effects</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NewMediaTropes" title="Main/NewMediaTropes">New Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/PrintMediaTropes" title="Main/PrintMediaTropes">Print Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Radio" title="Main/Radio">Radio</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SequentialArt" title="Main/SequentialArt">Sequential Art</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TabletopGames" title="Main/TabletopGames">Tabletop Games</a></li>
+<li><a href="/pmwiki/pmwiki.php/UsefulNotes/Television" title="Main/Television">Television</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Theater" title="Main/Theater">Theater</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/VideogameTropes" title="Main/VideogameTropes">Videogame</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Webcomics" title="Main/Webcomics">Webcomics</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Narrative</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/UniversalTropes" title="Main/UniversalTropes">Universal</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/AppliedPhlebotinum" title="Main/AppliedPhlebotinum">Applied Phlebotinum</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CharacterizationTropes" title="Main/CharacterizationTropes">Characterization</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Characters" title="Main/Characters">Characters</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CharactersAsDevice" title="Main/CharactersAsDevice">Characters As Device</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Dialogue" title="Main/Dialogue">Dialogue</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Motifs" title="Main/Motifs">Motifs</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NarrativeDevices" title="Main/NarrativeDevices">Narrative Devices</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Paratext" title="Main/Paratext">Paratext</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Plots" title="Main/Plots">Plots</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Settings" title="Main/Settings">Settings</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Spectacle" title="Main/Spectacle">Spectacle</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Other Categories</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/BritishTellyTropes" title="Main/BritishTellyTropes">British Telly</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TheContributors" title="Main/TheContributors">The Contributors</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CreatorSpeak" title="Main/CreatorSpeak">Creator Speak</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Creators" title="Main/Creators">Creators</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DerivativeWorks" title="Main/DerivativeWorks">Derivative Works</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LanguageTropes" title="Main/LanguageTropes">Language</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LawsAndFormulas" title="Main/LawsAndFormulas">Laws And Formulas</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ShowBusiness" title="Main/ShowBusiness">Show Business</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SplitPersonalityTropes" title="Main/SplitPersonalityTropes">Split Personality</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/StockRoom" title="Main/StockRoom">Stock Room</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TropeTropes" title="Main/TropeTropes">Trope</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Tropes" title="Main/Tropes">Tropes</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TruthAndLies" title="Main/TruthAndLies">Truth And Lies</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TruthInTelevision" title="Main/TruthInTelevision">Truth In Television</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Topical Tropes</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/BetrayalTropes" title="Main/BetrayalTropes">Betrayal</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CensorshipTropes" title="Main/CensorshipTropes">Censorship</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CombatTropes" title="Main/CombatTropes">Combat</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DeathTropes" title="Main/DeathTropes">Death</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FamilyTropes" title="Main/FamilyTropes">Family</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FateAndProphecyTropes" title="Main/FateAndProphecyTropes">Fate And Prophecy</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FoodTropes" title="Main/FoodTropes">Food</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/HolidayTropes" title="Main/HolidayTropes">Holiday</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MemoryTropes" title="Main/MemoryTropes">Memory</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MoneyTropes" title="Main/MoneyTropes">Money</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MoralityTropes" title="Main/MoralityTropes">Morality</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/PoliticsTropes" title="Main/PoliticsTropes">Politics</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ReligionTropes" title="Main/ReligionTropes">Religion</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SchoolTropes" title="Main/SchoolTropes">School</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="sidebar-item showcase">
+<p class="sidebar-item-title" data-title="Community Showcase">Community Showcase <a class="bubble float-right hover-blue" href="/pmwiki/showcase.php">More</a></p>
+<p class="community-showcase">
+<a href="https://sharetv.com/shows/echo_chamber" onclick="trackOutboundLink('https://sharetv.com/shows/echo_chamber');" target="_blank">
+<img alt="" class="lazy-image" data-src="/images/communityShowcase-echochamber.jpg"/></a>
+<a href="/pmwiki/pmwiki.php/Webcomic/TwistedTropes">
+<img alt="" class="lazy-image" data-src="/img/howlandsc-side.jpg"/></a>
+</p>
+</div>
+<div class="sidebar-item sb-ad-unit" id="stick-cont">
+<div class="sidebar-section" id="stick-bar">
+<div class="square_ad ad-size-300x600 ad-section text-center">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_4"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_4'); });</script> </div>
+</div> </div>
+</div>
+</div>
+</div>
+</div>
+<div class="action-bar tablet-off" id="action-bar-bottom">
+<a class="scroll-to-top dead-button" href="#top-of-page" onclick="$('html, body').animate({scrollTop : 0},500);">Top</a>
+</div>
+</div>
+<div class="proper-ad-unit ad-sticky">
+<div id="proper-ad-tvtropes_sticky_ad"> <script>propertag.cmd.push(function() { proper_display('tvtropes_sticky_ad'); });</script> </div>
+</div>
+<footer id="main-footer">
+<div id="main-footer-inner">
+<div class="footer-left">
+<a class="img-link" href="/"><img alt="TV Tropes" class="lazy-image" data-src="/img/tvtropes-footer-logo.png" title="TV Tropes"/></a>
+<form action="index.html" class="navbar-form newsletter-signup validate modal-replies" data-ajax-get="/ajax/subscribe_email.php" id="cse-search-box-mobile" name="" role="">
+<button class="btn-submit newsletter-signup-submit-button" id="subscribe-btn" type="submit"><i class="fa fa-paper-plane"></i></button>
+<input class="form-control" id="subscription-email" name="q" placeholder="Subscribe" size="31" type="text" validate-type="email" value=""/>
+</form>
+<ul class="social-buttons">
+<li><a class="btn fb" href="https://www.facebook.com/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-facebook']);" target="_blank"><i class="fa fa-facebook"></i></a></li>
+<li><a class="btn tw" href="https://www.twitter.com/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-twitter']);" target="_blank"><i class="fa fa-twitter"></i></a> </li>
+<li><a class="btn rd" href="https://www.reddit.com/r/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-reddit']);" target="_blank"><i class="fa fa-reddit-alien"></i></a></li>
+</ul>
+</div>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">TVTropes</h4></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Administrivia">About TVTropes</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TheGoalsOfTVTropes">TVTropes Goals</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TheTropingCode">Troping Code</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TVTropesCustoms">TVTropes Customs</a></li>
+<li><a href="/pmwiki/pmwiki.php/JustForFun/TropesOfLegend">Tropes of Legend</a></li>
+<li><a href="/pmwiki/ad-free-subscribe.php">Go Ad-Free</a></li>
+</ul>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">Community</h4></li>
+<li><a href="/pmwiki/query.php?type=att">Ask The Tropers</a></li>
+<li><a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a></li>
+<li><a href="/pmwiki/query.php?type=tf">Trope Finder</a></li>
+<li><a href="/pmwiki/query.php?type=ykts">You Know That Show</a></li>
+<li><a data-modal-target="login" href="/pmwiki/lbs.php">Live Blogs</a></li>
+<li><a href="/pmwiki/review_activity.php">Reviews</a></li>
+<li><a href="/pmwiki/topics.php">Forum</a></li>
+</ul>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">Tropes HQ</h4></li>
+<li><a href="/pmwiki/about.php">About Us</a></li>
+<li><a href="/pmwiki/contact.php">Contact Us</a></li>
+<li><a href="/pmwiki/dmca.php">DMCA Notice</a></li>
+<li><a href="/pmwiki/privacypolicy.php">Privacy Policy</a></li>
+</ul>
+</div>
+<div class="text-center gutter-top gutter-bottom tablet-on" id="desktop-on-mobile-toggle">
+<a href="/pmwiki/switchDeviceCss.php?mobileVersion=1" rel="nofollow">Switch to <span class="txt-desktop">Desktop</span><span class="txt-mobile">Mobile</span> Version</a>
+</div>
+<div class="legal">
+<p>TVTropes is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License. <br/>Permissions beyond the scope of this license may be available from <a href="mailto:thestaff@tvtropes.org" rel="cc:morePermissions" xmlns:cc="http://creativecommons.org/ns#"> thestaff@tvtropes.org</a>.</p>
+<br/>
+<div class="privacy_wrapper">
+</div>
+</div>
+</footer>
+<style>
+      div.fc-ccpa-root {
+        position: absolute !important;
+        bottom: 93px !important;
+        margin: auto !important;
+        width: 100% !important;
+        z-index: 9999 !important;
+      }
+      .fc-ccpa-root .fc-dns-dialog .fc-dns-link p{
+        outline: none !important;
+        text-decoration: underline !important;
+        font-size: .7em !important;
+        font-family: sans-serif !important;
+      }
+      .fc-ccpa-root .fc-dns-dialog .fc-dns-link .fc-button-background {
+        background: none !important;
+      }
+    </style>
+<div class="full-screen" id="_pm_videoViewer">
+<a class="close" href="#close" id="_pm_videoViewer-close"></a>
+<div class="_pmvv-body">
+<div class="_pmvv-vidbox">
+<video class="video-js vjs-default-skin vjs-16-9" data-video-id="" id="overlay-video-player-box">
+</video>
+<div class="_pmvv-vidbox-desc">
+<h1 id="overlay-title"></h1>
+<p class="_pmvv-vidbox-descTxt" id="overlay-descrip">
+</p>
+<div class="rating-row" data-video-id="">
+<input name="is_logged_in" type="hidden" value="0"/>
+<p>How well does it match the trope?</p>
+<div id="star-rating-group">
+<div class="trope-rate">
+<input id="lamp5" name="rate" type="radio" value="5"/>
+<label for="lamp5" title="Absolutely"></label>
+<input id="lamp4" name="rate" type="radio" value="4"/>
+<label for="lamp4" title="Yes"></label>
+<input id="lamp3" name="rate" type="radio" value="3"/>
+<label for="lamp3" title="Kind of"></label>
+<input id="lamp2" name="rate" type="radio" value="2"/>
+<label for="lamp2" title="Not really"></label>
+<input id="lamp1" name="rate" type="radio" value="1"/>
+<label for="lamp1" title="No"></label>
+</div>
+<div id="star-rating-total">
+</div>
+</div>
+</div>
+<div class="example-media-row">
+<div class="example-overlay">
+<p>Example of:</p>
+<div id="overlay-trope"> / </div>
+</div>
+<div class="media-sources-overlay example-overlay">
+<p>Media sources:</p>
+<div id="overlay-media"> / </div>
+</div>
+</div>
+<p class="_pmvv-vidbox-stats text-right font-s" style="padding-top:8px; border-top: solid 1px rgba(255,255,255,0.2)">
+<a class="float-right" data-modal-target="login" href="#video-feedback">Report</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+        window.special_ops =  {
+            member : 'no',
+            isolated : 0,
+            tags : ['videogame']
+        };
+    </script>
+<script type="text/javascript">
+
+        var cleanCreativeEnabled = "";
+        var donation = "";
+        var live_ads = "1";
+        var img_domain = "https://static.tvtropes.org";
+        var snoozed = cookies.read('snoozedabm');
+        var snoozable = "";
+
+        if (adsRemovedWith) {
+            live_ads = 0;
+        }
+
+        var elem = document.createElement('script');
+        elem.async = true;
+
+        elem.src = '/design/assets/bundle.js?rev=c58d8df02f09262390bbd03db7921fc35c6af306';
+
+        elem.onload = function() {
+                                 }
+        document.getElementsByTagName('head')[0].appendChild(elem);
+
+    </script>
+<script type="text/javascript">
+      function send_analytics_event(user_type, donation){
+          // if(user_type == 'uncached' || user_type == 'cached'){
+          //   ga('send', 'event', 'caching', 'load', user_type, {'nonInteraction': 1});
+          //   return;
+          // }
+          var event_name = user_type;
+
+          if(donation == 'true'){
+              event_name += "_donation"
+          }else if(typeof(valid_user) == 'undefined'){
+              event_name += "_blocked"
+          }else if(valid_user == true){
+              event_name += "_unblocked";
+          }else{
+              event_name = "_unknown"
+          }
+          ga('send', 'event', 'ads', 'load', event_name, {'nonInteraction': 1});
+      }
+
+    
+    send_analytics_event("guest", "false");
+      </script>
+</body>
+</html>

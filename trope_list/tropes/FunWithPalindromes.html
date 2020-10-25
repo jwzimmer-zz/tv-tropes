@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Fun with Palindromes - TV Tropes</title>
+<meta content="The Fun with Palindromes trope as used in popular culture. Palindrome is a word sequence that can be read backwards but remains the same. Just as writers …" name="description"/>
+<link href="https://tvtropes.org/pmwiki/pmwiki.php/Main/FunWithPalindromes" rel="canonical"/>
+<link href="/img/icons/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="@tvtropes" name="twitter:site"/>
+<meta content="@tvtropes" name="twitter:owner"/>
+<meta content="Fun with Palindromes - TV Tropes" name="twitter:title"/>
+<meta content="The Fun with Palindromes trope as used in popular culture. Palindrome is a word sequence that can be read backwards but remains the same. Just as writers …" name="twitter:description"/>
+<meta content="https://static.tvtropes.org/logo_blue_small.png" name="twitter:image:src"/>
+<meta content="TV Tropes" property="og:site_name"/>
+<meta content="en_US" property="og:locale"/>
+<meta content="https://www.facebook.com/tvtropes" property="article:publisher"/>
+<meta content="Fun with Palindromes - TV Tropes" property="og:title"/>
+<meta content="website" property="og:type"/>
+<meta content="https://tvtropes.org/pmwiki/pmwiki.php/Main/FunWithPalindromes" property="og:url"/>
+<meta content="https://static.tvtropes.org/logo_blue_small.png" property="og:image"/>
+<meta content="Palindrome is a word sequence that can be read backwards but remains the same. Just as writers like to play with anagrams, acronyms and initialisms, so indeed do they seize opportunities to use palindromes. However, since it's hard to come up …" property="og:description"/>
+<link href="/img/icons/apple-icon-57x57.png" rel="apple-touch-icon" sizes="57x57" type="image/png"/>
+<link href="/img/icons/apple-icon-60x60.png" rel="apple-touch-icon" sizes="60x60" type="image/png"/>
+<link href="/img/icons/apple-icon-72x72.png" rel="apple-touch-icon" sizes="72x72" type="image/png"/>
+<link href="/img/icons/apple-icon-76x76.png" rel="apple-touch-icon" sizes="76x76" type="image/png"/>
+<link href="/img/icons/apple-icon-114x114.png" rel="apple-touch-icon" sizes="114x114" type="image/png"/>
+<link href="/img/icons/apple-icon-120x120.png" rel="apple-touch-icon" sizes="120x120" type="image/png"/>
+<link href="/img/icons/apple-icon-144x144.png" rel="apple-touch-icon" sizes="144x144" type="image/png"/>
+<link href="/img/icons/apple-icon-152x152.png" rel="apple-touch-icon" sizes="152x152" type="image/png"/>
+<link href="/img/icons/apple-icon-180x180.png" rel="apple-touch-icon" sizes="180x180" type="image/png"/>
+<link href="/img/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/img/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/img/icons/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png"/>
+<link href="/img/icons/favicon-192x192.png" rel="icon" sizes="192x192" type="image/png"/>
+<meta content="width=device-width, initial-scale=1" id="viewport" name="viewport"/>
+<script>
+                var propertag = {};
+                propertag.cmd = [];
+            </script>
+<link href="/design/assets/bundle.css?rev=c58d8df02f09262390bbd03db7921fc35c6af306" rel="stylesheet"/>
+<script>
+                function object(objectId) {
+                    if (document.getElementById && document.getElementById(objectId)) {
+                        return document.getElementById(objectId);
+                    } else if (document.all && document.all(objectId)) {
+                        return document.all(objectId);
+                    } else if (document.layers && document.layers[objectId]) {
+                        return document.layers[objectId];
+                    } else {
+                        return false;
+                    }
+                }
+
+                // JAVASCRIPT COOKIES CODE: for getting and setting user viewing preferences
+                var cookies = {
+                    create: function (name, value, days2expire, path) {
+                        var date = new Date();
+                        date.setTime(date.getTime() + (days2expire * 24 * 60 * 60 * 1000));
+                        var expires = date.toUTCString();
+                        document.cookie = name + '=' + value + ';' + 'expires=' + expires + ';' + 'path=' + path + ';';
+                    },
+										createWithExpire: function(name, value, expires, path) {
+												document.cookie = name + '=' + value + ';' + 'expires=' + expires + ';' + 'path=' + path + ';';
+										},
+                    read: function (name) {
+                        var cookie_value = "",
+                            current_cookie = "",
+                            name_expr = name + "=",
+                            all_cookies = document.cookie.split(';'),
+                            n = all_cookies.length;
+
+                        for (var i = 0; i < n; i++) {
+                            current_cookie = all_cookies[i].trim();
+                            if (current_cookie.indexOf(name_expr) === 0) {
+                                cookie_value = current_cookie.substring(name_expr.length, current_cookie.length);
+                                break;
+                            }
+                        }
+                        return cookie_value;
+                    },
+                    update: function (name, val) {
+                        this.create(name, val, 300, "/");
+                    },
+                    remove: function (name) {
+                        document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
+                    }
+                };
+
+                function updateUserPrefs() {
+                    //GENERAL: detect and set browser, if not cookied (will be treated like a user-preference and added to the #user-pref element)
+                    if( !cookies.read('user-browser') ){
+                        var broswer = '';
+
+                        if(navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPod/i) ){
+                            browser = 'iOS';
+                        } else if (/Opera[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'opera';
+                        } else if (/MSIE (\d+\.\d+);/.test(navigator.userAgent)) {
+                            browser = 'MSIE';
+                        } else if (/Navigator[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'netscape';
+                        } else if (/Chrome[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'chrome';
+                        } else if (/Safari[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'safari';
+                            /Version[\/\s](\d+\.\d+)/.test(navigator.userAgent);
+                            browserVersion = new Number(RegExp.$1);
+                        } else if (/Firefox[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'firefox';
+                        } else {
+                            browser = 'internet_explorer';
+                        }
+                        cookies.create('user-browser',browser,1,'/');
+                        document.getElementById('user-prefs').classList.add('browser-' + browser);
+                    } else {
+                        document.getElementById('user-prefs').classList.add('browser-' + cookies.read('user-browser'));
+                    }
+
+                    //update user preference settings
+                    if (cookies.read('wide-load') !== '') document.getElementById('user-prefs').classList.add('wide-load');
+                    if (cookies.read('night-vision') !== '') document.getElementById('user-prefs').classList.add('night-vision');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('user-prefs').classList.add('sticky-header');
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('user-prefs').classList.add('show-spoilers');
+                    if (cookies.read('folders-open') !== '') document.getElementById('user-prefs').classList.add('folders-open');
+                    if (cookies.read('lefthand-sidebar') !== '') document.getElementById('user-prefs').classList.add('lefthand-sidebar');
+                    if (cookies.read('highlight-links') !== '') document.getElementById('user-prefs').classList.add('highlight-links');
+                    if (cookies.read('forum-gingerbread') !== '') document.getElementById('user-prefs').classList.add('forum-gingerbread');
+                    if (cookies.read('shared-avatars') !== '') document.getElementById('user-prefs').classList.add('shared-avatars');
+                    if (cookies.read('new-search') !== '') document.getElementById('user-prefs').classList.add('new-search');
+                    if (cookies.read('stop-auto-play-video') !== '') document.getElementById('user-prefs').classList.add('stop-auto-play-video');
+
+                    //desktop view on mobile
+                    if (cookies.read('desktop-on-mobile') !== ''){
+                        document.getElementById('user-prefs').classList.add('desktop-on-mobile');
+
+                        var viewport = document.querySelector("meta[name=viewport]");
+                        viewport.setAttribute('content', 'width=1000');
+                    }
+
+                }
+
+                function updateDesktopPrefs() {
+                    if (cookies.read('wide-load') !== '') document.getElementById('sidebar-toggle-wideload').classList.add('active');
+                    if (cookies.read('night-vision') !== '') document.getElementById('sidebar-toggle-nightvision').classList.add('active');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('sidebar-toggle-stickyheader').classList.add('active');
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('sidebar-toggle-showspoilers').classList.add('active');
+
+                }
+
+                function updateMobilePrefs() {
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('mobile-toggle-showspoilers').classList.add('active');
+                    if (cookies.read('night-vision') !== '') document.getElementById('mobile-toggle-nightvision').classList.add('active');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('mobile-toggle-stickyheader').classList.add('active');
+                    if (cookies.read('highlight-links') !== '') document.getElementById('mobile-toggle-highlightlinks').classList.add('active');
+
+                }
+
+
+                if (document.cookie.indexOf("scroll0=") < 0) {
+                    // do nothing
+                } else {
+                    console.log('ads removed by scroll.com');
+                    var adsRemovedWith = 'scroll';
+                    var style = document.createElement('style');
+                    style.innerHTML = '#header-ad, .proper-ad-unit, .square_ad, .sb-ad-unit { display: none !important; } ';
+                    document.head.appendChild(style);
+                }
+            </script>
+<script type="text/javascript">
+
+                var tvtropes_config = {
+                    astri_stream_enabled : "",
+                    is_logged_in         : "",
+                    handle               : "",
+                    get_astri_stream     : "",
+										revnum               : "c58d8df02f09262390bbd03db7921fc35c6af306",
+										img_domain           : "https://static.tvtropes.org",
+										adblock              : "1",
+										adblock_url          : "propermessage.io",
+										pause_editing        : "0",
+										pause_editing_msg    : "",
+										pause_site_changes   : ""
+                };
+            </script>
+<script type="text/javascript">
+						  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+						  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+						  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+						  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+						  ga('create', 'UA-3821842-1', 'auto');
+						  ga('send', 'pageview');
+
+						</script>
+</head>
+<body class="">
+<i id="user-prefs"></i>
+<script>updateUserPrefs();</script>
+<div id="fb-root"></div>
+<div id="modal-box"></div>
+<header class="headroom-element" id="main-header-bar">
+<div id="main-header-bar-inner">
+<span class="header-spacer" id="header-spacer-left"></span>
+<a class="mobile-menu-toggle-button tablet-on" href="#mobile-menu" id="main-mobile-toggle"><span></span><span></span><span></span></a>
+<a class="no-dev" href="/" id="main-header-logoButton"></a>
+<span class="header-spacer" id="header-spacer-right"></span>
+<nav class="tablet-off" id="main-header-nav">
+<a href="/pmwiki/pmwiki.php/Main/Tropes">Tropes</a>
+<a href="/pmwiki/pmwiki.php/Main/Media">Media</a>
+<a class="nav-browse" href="/pmwiki/browse.php">Browse</a>
+<a href="/pmwiki/index_report.php">Indexes</a>
+<a href="/pmwiki/topics.php">Forums</a>
+<a class="nav-browse" href="/pmwiki/recent_videos.php">Videos</a>
+</nav>
+<div id="main-header-bar-right">
+<div class="font-xs mobile-off" id="signup-login-box">
+<a class="hover-underline bold" data-modal-target="signup" href="/pmwiki/login.php">Join</a>
+<a class="hover-underline bold" data-modal-target="login" href="/pmwiki/login.php">Login</a>
+</div>
+<div class="mobile-on inline" id="signup-login-mobileToggle">
+<a data-modal-target="login" href="/pmwiki/login.php"><i class="fa fa-user"></i></a>
+</div>
+<div id="search-box">
+<form action="/pmwiki/search_result.php" class="search">
+<input class="search-box" name="q" placeholder="Search" required="" type="text" value=""/>
+<input class="submit-button" type="submit" value=""/>
+<input name="search_type" type="hidden" value="article"/>
+<input name="page_type" type="hidden" value="all"/>
+<input name="cx" type="hidden" value="partner-pub-6610802604051523:amzitfn8e7v"/>
+<input name="cof" type="hidden" value="FORID:10"/>
+<input name="ie" type="hidden" value="ISO-8859-1"/>
+<input name="siteurl" type="hidden" value=""/>
+<input name="ref" type="hidden" value=""/>
+<input name="ss" type="hidden" value=""/>
+</form>
+<a class="mobile-on mobile-search-toggle close-x" href="#close-search"><i class="fa fa-close"></i></a>
+</div>
+<div id="random-box">
+<a class="button-random-trope" href="/pmwiki/pmwiki.php/Main/BladeRun" onclick="ga('send', 'event', 'button', 'click', 'random trope');" rel="nofollow"></a>
+<a class="button-random-media" href="/pmwiki/pmwiki.php/Series/WinnersAndLosers" onclick="ga('send', 'event', 'button', 'click', 'random media');" rel="nofollow"></a>
+</div>
+</div>
+</div>
+<div class="tablet-on" id="mobile-menu"><div class="mobile-menu-options">
+<div class="nav-wrapper">
+<a class="xl" href="/pmwiki/pmwiki.php/Main/Tropes">Tropes</a>
+<a class="xl" href="/pmwiki/pmwiki.php/Main/Media">Media</a>
+<a class="xl" href="/pmwiki/browse.php">Browse</a>
+<a class="xl" href="/pmwiki/index_report.php">Indexes</a>
+<a class="xl" href="/pmwiki/topics.php">Forums</a>
+<a class="xl" href="/pmwiki/recent_videos.php">Videos</a>
+<a href="/pmwiki/query.php?type=att">Ask The Tropers</a>
+<a href="/pmwiki/query.php?type=tf">Trope Finder</a>
+<a href="/pmwiki/query.php?type=ykts">You Know That Show...</a>
+<a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a>
+<a data-click-toggle="active" href="#tools">Tools <i class="fa fa-chevron-down"></i></a>
+<div class="tools-dropdown mobile-dropdown-linkList">
+<a href="/pmwiki/cutlist.php">Cut List</a>
+<a href="/pmwiki/changes.php">New Edits</a>
+<a href="/pmwiki/recent_edit_reasons.php">Edit Reasons</a>
+<a href="/pmwiki/launches.php">Launches</a>
+<a href="/pmwiki/img_list.php">Images List</a>
+<a href="/pmwiki/crown_activity.php">Crowner Activity</a>
+<a href="/pmwiki/no_types.php">Un-typed Pages</a>
+<a href="/pmwiki/page_type_audit.php">Recent Page Type Changes</a>
+</div>
+<a data-click-toggle="active" href="#hq">Tropes HQ <i class="fa fa-chevron-down"></i></a>
+<div class="tools-dropdown mobile-dropdown-linkList">
+<a href="/pmwiki/about.php">About Us</a>
+<a href="/pmwiki/contact.php">Contact Us</a>
+<a href="mailto:advertising@proper.io">Advertise</a>
+<a href="/pmwiki/dmca.php">DMCA Notice</a>
+<a href="/pmwiki/privacypolicy.php">Privacy Policy</a>
+</div>
+<a href="/pmwiki/ad-free-subscribe.php">Go Ad-Free</a>
+<div class="toggle-switches">
+<ul class="mobile-menu display-toggles">
+<li>Show Spoilers <div class="display-toggle show-spoilers" id="mobile-toggle-showspoilers"></div></li>
+<li>Night Vision <div class="display-toggle night-vision" id="mobile-toggle-nightvision"></div></li>
+<li>Sticky Header <div class="display-toggle sticky-header" id="mobile-toggle-stickyheader"></div></li>
+<li>Highlight Links <div class="display-toggle highlight-links" id="mobile-toggle-highlightlinks"></div></li>
+</ul>
+<script>updateMobilePrefs();</script>
+</div>
+</div>
+</div>
+</div>
+</header>
+<div class="mobile-on" id="homepage-introBox-mobile">
+<a href="/"><img class="logo-small" src="/images/logo-white-big.png"/></a>
+<form action="/pmwiki/search_result.php" class="search" style="margin:10px -5px -6px -5px;">
+<input class="search-box" name="q" placeholder="Search" required="" type="text" value=""/>
+<input class="submit-button" type="submit" value=""/>
+<input name="search_type" type="hidden" value="article"/>
+<input name="page_type" type="hidden" value="all"/>
+<input name="cx" type="hidden" value="partner-pub-6610802604051523:amzitfn8e7v"/>
+<input name="cof" type="hidden" value="FORID:10"/>
+<input name="ie" type="hidden" value="ISO-8859-1"/>
+<input name="siteurl" type="hidden" value=""/>
+<input name="ref" type="hidden" value=""/>
+<input name="ss" type="hidden" value=""/>
+</form>
+</div>
+<div class="ad" id="header-ad-wrapper">
+<div id="header-ad">
+<div class="ad-size-970x90 atf_banner">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_1"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_1'); });</script> </div>
+</div> </div>
+</div>
+</div>
+<div id="main-container">
+<div class="action-bar mobile-off" id="action-bar-top">
+<div class="action-bar-right">
+<p>Follow TV Tropes</p>
+<a class="button-fb" href="https://www.facebook.com/TVTropes">
+<i class="fa fa-facebook"></i></a>
+<a class="button-tw" href="https://www.twitter.com/TVTropes">
+<i class="fa fa-twitter"></i></a>
+<a class="button-re" href="https://www.reddit.com/r/TVTropes">
+<i class="fa fa-reddit-alien"></i></a>
+</div>
+<nav class="actions-wrapper" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<ul class="page-actions" id="top_main_list">
+<li class="link-edit">
+<a class="article-edit-button" data-modal-target="login" href="/pmwiki/pmwiki.php/Main/FunWithPalindromes?action=edit" rel="nofollow">
+<i class="fa fa-pencil"></i> Edit Page</a></li><li class="link-related"><a href="/pmwiki/relatedsearch.php?term=Main/FunWithPalindromes">
+<i class="fa fa-share-alt"></i> Related</a></li><li class="link-history"><a href="/pmwiki/article_history.php?article=Main.FunWithPalindromes">
+<i class="fa fa-history"></i> History</a></li><li class="link-discussion"><a href="/pmwiki/remarks.php?trope=Main.FunWithPalindromes">
+<i class="fa fa-comment"></i> Discussion</a></li> </ul>
+<button class="nav__dropdown-toggle" id="top_more_button" onclick="toggle_more_menu('top');" type="button">More</button>
+<ul class="more_menu hidden_more_list" id="top_more_list">
+<li class="link-todo tuck-always more_list_item"><a data-modal-target="login" href="#todo"><i class="fa fa-check-circle"></i> To Do</a></li><li class="link-pageSource tuck-always more_list_item"><a data-modal-target="login" href="/pmwiki/pmwiki.php/Main/FunWithPalindromes?action=source" rel="nofollow" target="_blank"><i class="fa fa-code"></i> Page Source</a></li> </ul>
+</nav>
+<div class="WikiWordModalStub"></div>
+<div class="ImgUploadModalStub" data-page-type="Article"></div>
+<div class="login-alert" style="display: none;">
+You need to <a href="/pmwiki/login.php" style="color:#21A0E8">login</a> to do this. <a href="/pmwiki/login.php?tab=register_account" style="color:#21A0E8">Get Known</a> if you don't have an account
+</div>
+</div>
+<div class="page-Article" id="main-content">
+<article class="with-sidebar" id="main-entry">
+<input id="groupname-hidden" type="hidden" value="Main"/>
+<input id="title-hidden" type="hidden" value="FunWithPalindromes"/>
+<input id="article_id" type="hidden" value="289220"/>
+<input id="logged_in" type="hidden" value="false"/>
+<p class="hidden" id="current_url">http://tvtropes.org/pmwiki/pmwiki.php/Main/FunWithPalindromes</p>
+<meta content="" itemprop="datePublished"/>
+<meta content="" itemprop="articleSection"/>
+<meta content="" itemprop="image"/>
+<a class="watch-button" data-modal-target="login" href="#watch">Follow<span>ing</span></a>
+<h1 class="entry-title" itemprop="headline">
+Fun with Palindromes
+</h1>
+<script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+                "@type": "ListItem",
+                "position": 1,
+                "name": "tvtropes.org",
+                "item": "https://tvtropes.org"
+            },{
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Tropes",
+                "item": "https://tvtropes.org/pmwiki/pmwiki.php/Main/Tropes"
+            },{
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Fun with Palindromes"            }]
+        }
+    </script>
+<a class="mobile-actionbar-toggle mobile-on" data-click-toggle="active" href="#mobile-actions-toggle" id="mobile-actionbar-toggle">
+<p class="tiny-off">Go To</p><span></span><span></span><span></span><i class="fa fa-pencil"></i></a>
+<nav class="mobile-actions-wrapper mobile-on" id="mobile-actions-bar"></nav>
+<div class="modal fade hidden-until-active" id="editLockModal">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button aria-label="Close" class="close" data-dismiss="modal" type="button"> <span aria-hidden="true">×</span></button>
+<h4 class="modal-title">Edit Locked</h4>
+</div>
+<div class="modal-body">
+<div class="row">
+<div class="body">
+<div class="danger troper_locked_message"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<nav class="body-options" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<ul class="subpage-links">
+<li>
+<a class="subpage-link curr-subpage" href="/pmwiki/pmwiki.php/Main/FunWithPalindromes" title="The Main page">
+<span class="wrapper"><span class="spi main-page"></span>Main</span></a>
+</li>
+<li>
+<a class="subpage-link" href="/pmwiki/pmwiki.php/Laconic/FunWithPalindromes" title="The Laconic page">
+<span class="wrapper"><span class="spi laconic-icon"></span>Laconic</span></a>
+</li>
+<li class="create-subpage dropdown">
+<a aria-expanded="false" class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);" role="button">
+<span class="wrapper">Create New <i class="fa fa-plus-circle"></i></span>
+</a>
+<select onchange="this.options[this.selectedIndex].value &amp;&amp; (window.location = this.options[this.selectedIndex].value);">
+<option value="">- Create New -</option>
+<option value="/pmwiki/pmwiki.php/Analysis/FunWithPalindromes?action=edit">Analysis</option>
+<option value="/pmwiki/pmwiki.php/Characters/FunWithPalindromes?action=edit">Characters</option>
+<option value="/pmwiki/pmwiki.php/FanficRecs/FunWithPalindromes?action=edit">FanficRecs</option>
+<option value="/pmwiki/pmwiki.php/FanWorks/FunWithPalindromes?action=edit">FanWorks</option>
+<option value="/pmwiki/pmwiki.php/Fridge/FunWithPalindromes?action=edit">Fridge</option>
+<option value="/pmwiki/pmwiki.php/Haiku/FunWithPalindromes?action=edit">Haiku</option>
+<option value="/pmwiki/pmwiki.php/Headscratchers/FunWithPalindromes?action=edit">Headscratchers</option>
+<option value="/pmwiki/pmwiki.php/ImageLinks/FunWithPalindromes?action=edit">ImageLinks</option>
+<option value="/pmwiki/pmwiki.php/PlayingWith/FunWithPalindromes?action=edit">PlayingWith</option>
+<option value="/pmwiki/pmwiki.php/Quotes/FunWithPalindromes?action=edit">Quotes</option>
+<option value="/pmwiki/pmwiki.php/Recap/FunWithPalindromes?action=edit">Recap</option>
+<option value="/pmwiki/pmwiki.php/ReferencedBy/FunWithPalindromes?action=edit">ReferencedBy</option>
+<option value="/pmwiki/pmwiki.php/Synopsis/FunWithPalindromes?action=edit">Synopsis</option>
+<option value="/pmwiki/pmwiki.php/Timeline/FunWithPalindromes?action=edit">Timeline</option>
+<option value="/pmwiki/pmwiki.php/Trivia/FunWithPalindromes?action=edit">Trivia</option>
+<option value="/pmwiki/pmwiki.php/WMG/FunWithPalindromes?action=edit">WMG</option>
+<option value="/pmwiki/pmwiki.php/YMMV/FunWithPalindromes?action=edit">YMMV</option>
+</select>
+</li>
+</ul>
+</nav>
+<div class="article-content retro-folders" id="main-article">
+<p></p><div class="indent"><em>"Madam, I'm Adam—Too hot to hoot <br/>No lemons, no melon—Too bad I hid a boot <br/>Lisa Bonet ate no basil—Warsaw was raw <br/>Was it a car or a cat I saw?"</em>
+<div class="indent">— <strong><a class="twikilink" href="/pmwiki/pmwiki.php/Music/WeirdAlYankovic" title="/pmwiki/pmwiki.php/Music/WeirdAlYankovic">"Weird Al" Yankovic</a></strong>, "Bob"
+</div></div><p>Palindrome is a word sequence that can be read backwards but remains the same. Just as writers like to play with <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SignificantAnagram" title="/pmwiki/pmwiki.php/Main/SignificantAnagram">anagrams</a>, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/FunWithAcronyms" title="/pmwiki/pmwiki.php/Main/FunWithAcronyms">acronyms and initialisms</a>, so indeed do they seize opportunities to use palindromes. However, since it's hard to come up with a palindrome—let alone a meaningful one—it's unlikely to be a plot point, and is usually a result of the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/RuleOfFun" title="/pmwiki/pmwiki.php/Main/RuleOfFun">Rule of Fun</a>.
+</p><div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_1"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_1'); })</script></div></div><p>Not to be confused with <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SdrawkcabName" title="/pmwiki/pmwiki.php/Main/SdrawkcabName">Sdrawkcab Name</a>, though the two can overlap a little. <a class="twikilink" href="/pmwiki/pmwiki.php/JustForFun/IThoughtItMeant" title="/pmwiki/pmwiki.php/JustForFun/IThoughtItMeant">Has nothing to do with</a> <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/SarahPalin" title="/pmwiki/pmwiki.php/UsefulNotes/SarahPalin">Sarah Palin</a>.
+</p><hr/><h2>Examples:</h2>
+<p></p><div class="folderlabel" onclick="toggleAllFolders();">    open/close all folders  </div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder0');">    Advertising </div><div class="folder" id="folder0" isfolder="true" style="display:block;">
+<ul><li> Some German palindromic brands:
+<ul><li> "Maoam": sweets (Haribo Group), name is artificial
+</li><li> "Xox": cookies, name symbolizes windmills
+</li><li> "Omo": detergent (Unilever)
+</li></ul></li><li> The drug "Xanax" (=Alprazolam, a benzodiazepin anxiolytic).
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder1');">    Anime and Manga </div><div class="folder" id="folder1" isfolder="true" style="display:block;">
+<ul><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/Anime/BNABrandNewAnimal" title="/pmwiki/pmwiki.php/Anime/BNABrandNewAnimal">BNA: Brand New Animal</a></em> Nazuna takes pride in the fact that her name is a palindrome in syllabic Japanese (なずな), she's also <span class="spoiler" title="you can set spoilers visible by default on your profile"> a duplicitous <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Kitsune" title="/pmwiki/pmwiki.php/Main/Kitsune">Kitsune</a> passing as a god while herself being manipulated by her cult's leader and his corporate backer.</span>
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder2');">    Comic Books </div><div class="folder" id="folder2" isfolder="true" style="display:block;">
+<ul><li> A 2011 issue of the comic book <em><a class="twikilink" href="/pmwiki/pmwiki.php/ComicBook/Zatanna" title="/pmwiki/pmwiki.php/ComicBook/Zatanna">Zatanna</a></em> had the sorceress (who pronounces the words in her spells backwards) going up against a villain with time-reversal powers, that allowed him to negate her spells by having them sound like normal words. She got around his powers by casting spells in palindromes (such as "Nurses Run" causing him to be stampeded by an army of running nurses).
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/ComicBook/ArkhamAsylumLivingHell" title="/pmwiki/pmwiki.php/ComicBook/ArkhamAsylumLivingHell">Arkham Asylum: Living Hell</a></em>, the Joker proposed killing everyone in Gotham City whose name was a palindrome while flipping through a phone book. And if it seems improbable that he would actually find <em>anyone</em> fitting that parameter within Gotham City, he then <em>immediately</em> spots "Nora Baron"<span class="notelabel" onclick="togglenote('note0d9qv');"><sup>* </sup></span><span class="inlinefolder" id="note0d9qv" isnote="true" onclick="togglenote('note0d9qv');" style="cursor:pointer;font-size:smaller;display:none;"><a class="twikilink" href="/pmwiki/pmwiki.php/Main/FridgeLogic" title="/pmwiki/pmwiki.php/Main/FridgeLogic">Which wouldn't obviously be a palindrome to anyone reading the phone book, as it would be listed as Baron, Nora</a></span>...
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/ComicBook/Bamse" title="/pmwiki/pmwiki.php/ComicBook/Bamse">Bamse</a></em>, Lille Skutt's wife is called "Nina Kanin" (meaning "Nina Rabbit").
+</li><li> A <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/Superman" title="/pmwiki/pmwiki.php/Franchise/Superman">Superman</a></em> comic had Mr. Mxyzptlk changing his name to Mxypyxm so he couldn't be tricked into saying his name backwards. Though that would mean saying his name would <em>always</em> be saying it backwards.
+</li><li> Leaving these at crime scenes was the schtick of <a class="twikilink" href="/pmwiki/pmwiki.php/ComicBook/Nightwing" title="/pmwiki/pmwiki.php/ComicBook/Nightwing">Nightwing</a> villain Torque. He was called that because Bludhaven's crime boss Blockbuster <em>twisted his head</em> around.
+</li></ul></div>
+<div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_2"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_2'); })</script></div></div><p></p><div class="folderlabel" onclick="togglefolder('folder3');">     Film </div><div class="folder" id="folder3" isfolder="true" style="display:block;">
+<ul><li> The protagonist of <em><a class="twikilink" href="/pmwiki/pmwiki.php/Film/DeskSet" title="/pmwiki/pmwiki.php/Film/DeskSet">Desk Set</a></em> is given a test which includes identifying "Able was I ere I saw Elba" as a palindrome. This leads to some banter about how Napoleon likely never said that, and Adam probably never said "Madam, I'm Adam" either.
+</li><li> The title of <em><a class="twikilink" href="/pmwiki/pmwiki.php/Film/Tenet" title="/pmwiki/pmwiki.php/Film/Tenet">Tenet</a></em>, as well as several key names in the plot, as taken from the Latin <a class="urllink" href="https://en.wikipedia.org/wiki/Sator_Square">Sator Square<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a> made up of palindromes.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder4');">    Literature </div><div class="folder" id="folder4" isfolder="true" style="display:block;">
+<ul><li> Demitri Martin's book <em><a class="twikilink" href="/pmwiki/pmwiki.php/Main/ExactlyWhatItSaysOnTheTin" title="/pmwiki/pmwiki.php/Main/ExactlyWhatItSaysOnTheTin">This Is A Book</a></em> contains the 224-word-long palindrome poem mentioned below.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/AngelsAndDemons" title="/pmwiki/pmwiki.php/Literature/AngelsAndDemons">Angels &amp; Demons</a></em> contains a variant in the form of ambigrams, which read the same when turned upside down.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/CallahansCrosstimeSaloon" title="/pmwiki/pmwiki.php/Literature/CallahansCrosstimeSaloon">Callahan's Legacy</a></em> by <a class="twikilink" href="/pmwiki/pmwiki.php/Creator/SpiderRobinson" title="/pmwiki/pmwiki.php/Creator/SpiderRobinson">Spider Robinson</a>, every chapter title is a palindrome. Notably, the chapter in which <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/NikolaTesla" title="/pmwiki/pmwiki.php/UsefulNotes/NikolaTesla">Nikola Tesla</a> visits the bar glories in the title, "I, Madam, I Made Radio. So I Dared. Am I Mad? Am I?" And the subversion in the chapter named "Rettebs, I Flahd Noces, Eh? Tu, But the Second Half is Better..."
+</li><li> Otto Tibbit (and his sister Hannah) in <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/NurseryCrime" title="/pmwiki/pmwiki.php/Literature/NurseryCrime">Nursery Crime</a></em>.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/TheStormlightArchive" title="/pmwiki/pmwiki.php/Literature/TheStormlightArchive">The Stormlight Archive</a></em>:
+<ul><li> The series uses palindromes and near-palindromes as a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ThemeNaming" title="/pmwiki/pmwiki.php/Main/ThemeNaming">Theme Naming</a> scheme, this is justified in-universe because the world's major religion considers symmetry to be holy. Notably all the historical names of the various countries are palindromes, although by modern times they've drifted. Similarly, every letter in written Alethi is symmetrical about its horizontal centerline and all the major cities are built around symmetrical patterns. Also, the hardback edition of the first book has 1001 pages (not counting the extras at the back). Though you have to know that "th" and "sh" are single letters in the Vorin women's script to recognize some of the palindromes. In the second book it's explained that "h" can stand in for any other consonant.
+</li><li> Most modern Alethi names are contractions of a palindrome plus a suffix. Adolin, for example, is a contraction of "Adoda" ("light") and "lin" ("born unto"). Some Alethi use actual palindromes as names, which is a minor blasphemy as it implies more holiness than humans are supposed to have.
+</li></ul></li><li> American cartoonist Jon Agee wrote and illustrated four books full of palindromic cartoons: <em>Go Hang a Salami! I'm a Lasagna Hog!</em>, <em>Palindromania!</em>, <em>So Many Dynamos!</em> and <em>Sit on a Potato Pan, Otis!</em>.
+</li><li> Another picture book, <em>Lid Off a Daffodil</em> (not by Agee), is a collection of palindromes.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/Holes" title="/pmwiki/pmwiki.php/Literature/Holes">Holes</a></em>, the main character, Stanley Yelnats IV, is so named because his great-great-grandmother noticed that Yelnats was Stanley spelled backwards, and so decided to name her boy Stanley. Needless to say, it stuck.
+</li><li> <em><a class="urllink" href="http://spinelessbooks.com/2002/palindrome/">2002: A Palindrome Story<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a></em> is a wholly palindromic short story.
+</li><li> Adah in <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/ThePoisonwoodBible" title="/pmwiki/pmwiki.php/Literature/ThePoisonwoodBible">The Poisonwood Bible</a></em> makes palindromes whenever <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SwitchingPOV" title="/pmwiki/pmwiki.php/Main/SwitchingPOV">she narrates the plot</a>, due to hemiplegia supposedly messing with her mind and making her thoughts go backwards.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/Ulysses" title="/pmwiki/pmwiki.php/Literature/Ulysses">Ulysses</a></em>, at one point, has two characters conversing in palindromes. <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DeconstructorFleet" title="/pmwiki/pmwiki.php/Main/DeconstructorFleet">But of course it has.</a>
+</li><li> A German example (it's <em>much</em> harder to do it in German!): <em>Oh Cello voll Echo</em>, palindrome poems by Herbert Pfeiffer.
+</li><li> In Richard Lederer's <em>Anguished English,</em> there's an interview with Doctor Otto, who speaks only in palindromes. (Example: "Evil is a name of a foeman, as I live.") (Lederer makes it easier on himself by only having the answers be palindromes, not the questions. E.g. "Which do you like better, math or science?" "I prefer pi.")
+</li><li> The title of <a class="twikilink" href="/pmwiki/pmwiki.php/Creator/NealStephenson" title="/pmwiki/pmwiki.php/Creator/NealStephenson">Neal Stephenson's</a> work: <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/Seveneves" title="/pmwiki/pmwiki.php/Literature/Seveneves">Seveneves</a></em>. It was originally published on May 19, 2015 (5/19/15 in the American dating convention).
+</li><li> German illustrated "Stern" had some solve-yourself crime-puzzles for the reader. In one a company CEO suspects his accountant named Siegeis of foul play, and calls him up. Just in case he will be murdered, he drops a few completely made up palindrome hints ("Timaxamit", "Nasotosan") to his secretary (and to the readers, who don't know the visitor). <a class="twikilink" href="/pmwiki/pmwiki.php/Main/InsaneTrollLogic" title="/pmwiki/pmwiki.php/Main/InsaneTrollLogic">(Any idiot would have called the cops at once, but OK, then there were no solve-yourself crime-puzzle.)</a>
+</li><li> Used in the solution to one <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/EncyclopediaBrown" title="/pmwiki/pmwiki.php/Literature/EncyclopediaBrown">Encyclopedia Brown</a></em> story. One student wanted to let the teacher know who had broken a globe but without being seen as a snitch. He therefore completed a captioning assignment using only palindromes. The guilty parties were the two students whose names were palindromes.
+</li><li> Lawrence Levine's 1980 novel <em>Dr. Awkward &amp; Olson in Oslo</em> is a complete palindrome.
+</li><li> <a class="twikilink" href="/pmwiki/pmwiki.php/Creator/MargaretAtwood" title="/pmwiki/pmwiki.php/Creator/MargaretAtwood">Margaret Atwood's</a> "Madd Addam" (last book of the like-named trilogy).
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/TitansForest" title="/pmwiki/pmwiki.php/Literature/TitansForest">Titan's Forest</a></em>: Understorians use names that read the same when said forwards or backwards — Canopians adopted into Understorey society "mirror" their old names to achieve this effect — to represent the ability to move both up and down the great trees. Exceptions to this, such as Frog and <span class="spoiler" title="you can set spoilers visible by default on your profile">her eventual reincarnation</span>, deliberately adopt asymmetric names to symbolize their desire to only move up towards Canopy.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder5');">     Live Action TV </div><div class="folder" id="folder5" isfolder="true" style="display:block;">
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/Monk" title="/pmwiki/pmwiki.php/Series/Monk">Monk</a></em>:
+<ul><li> After Monk's psychiatrist passes away, he has difficulty finding a new one. Then comes Dr. Neven Bell. His first name is the same forwards as it is backwards, thus, Monk approves. Though he points out that it's not a true palindrome as his name backwards would be neveN.
+</li><li> The killer in the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TieInNovel" title="/pmwiki/pmwiki.php/Main/TieInNovel">Tie-In Novel</a> <em>Mr. Monk Is Cleaned Out</em> is a Bernard Madoff <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Expy" title="/pmwiki/pmwiki.php/Main/Expy">Expy</a> named <strong>Bob Sebes</strong>, who defrauded investors with a Ponzi scheme in his <strong>Reinier</strong> Investment Fund. His wife's name is <strong>Anna</strong>.
+</li></ul></li><li> "Able was I, ere I saw Elba" was the palindrome that appeared in <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/IDreamOfJeannie" title="/pmwiki/pmwiki.php/Series/IDreamOfJeannie">I Dream of Jeannie</a></em>.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/MontyPythonsFlyingCircus" title="/pmwiki/pmwiki.php/Series/MontyPythonsFlyingCircus">Monty Python's Flying Circus</a></em>: In the classic 'Dead Parrot' sketch, the shifty pet shop owner is called out by the irate customer for claiming they were in Ipswich and not Bolton. He tries to palm it off as a pun, and when he's called out on that, he claims it was a palindrome. The customer testily replies, "The palindrome of Bolton would be 'Notlob'!"
+</li><li> The PBS science show <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/Nova" title="/pmwiki/pmwiki.php/Series/Nova">Nova</a></em> featured a documentary on the building of the Panama canal. Its title was taken from one of the most famous palindromes in history: "A Man, a Plan, a Canal...Panama!"
+</li><li> Lampshaded in <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/TheMiddleMan" title="/pmwiki/pmwiki.php/Series/TheMiddleMan">The Middle Man</a></em> with a villain called The Palindrome (whose name turns out to be <span class="spoiler" title="you can set spoilers visible by default on your profile">Ivan Avi</span>), who leaves hints in the form of palindromes.
+<div class="indent"><strong>The Middleman:</strong> Typical supervillain horse feathers. <a class="twikilink" href="/pmwiki/pmwiki.php/Main/JustBetweenYouAndMe" title="/pmwiki/pmwiki.php/Main/JustBetweenYouAndMe">Can't wait to hear this guy's monologue</a>. "I am the Palindrome, feel my power! Power my feel, PALINDROME THE AM I!" <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SeenItAll" title="/pmwiki/pmwiki.php/Main/SeenItAll">Peter-pipin' weirdos</a>.
+</div></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/Jeopardy" title="/pmwiki/pmwiki.php/Series/Jeopardy">Jeopardy!</a></em>: 1994 4-time champion and 1995 Tournament Of Champions winner Ryan "Fritz" Holznagel has been well-known for making unusual palindromic wagers in Final Jeopardy (e.g. $7,117), having done so in 3 of his 5 regular games and all his TOC games. When he uncovered a Daily Double in the final game of the TOC, he stopped to ask Alex Trebek if a $1,111 wager was possible.
+</li><li> Colombian TV show "La Tele" was revamped with the palindromic name "La Tele Letal", which in Spanish means "The Lethal Television".
+</li><li> Once on <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/NCIS" title="/pmwiki/pmwiki.php/Series/NCIS">NCIS</a></em> when the team has dealings with <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BadassIsraeli" title="/pmwiki/pmwiki.php/Main/BadassIsraeli">Mossad</a>, Tony DiNozzo comments on a meeting between NCIS Agent Tim McGee and Mossad Officer Amit Hadar.
+<div class="indent"> "Tim, Amit. Palindromic pals."
+</div></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/Probe" title="/pmwiki/pmwiki.php/Series/Probe">Probe</a></em>'s "<a class="twikilink" href="/pmwiki/pmwiki.php/Recap/ProbeUntouchedByHumanHands" title="/pmwiki/pmwiki.php/Recap/ProbeUntouchedByHumanHands">Untouched by Human Hands</a>": Austin uses a discovery of palindromic math as an excuse to interrupt Mickey's date. <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BookEnds" title="/pmwiki/pmwiki.php/Main/BookEnds">At the end of the episode</a>, Mickey asks him what a palindromic prime is, which he defines as a number that is only divisible by itself and eleven.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder6');">    Music </div><div class="folder" id="folder6" isfolder="true" style="display:block;">
+<ul><li> <a class="twikilink" href="/pmwiki/pmwiki.php/Music/TheyMightBeGiants" title="/pmwiki/pmwiki.php/Music/TheyMightBeGiants">They Might Be Giants</a> have a song called "I Palindrome I," which features:
+<ul><li> Letter palindromes
+<div class="indent">"Egad, a base tone denotes a bad age"
+</div></li><li> Word palindromes
+<div class="indent">"'Son, I am able,' she said, 'though you scare me.' 'Watch,' said I. 'Beloved,' I said, 'watch me scare you, though.' Said she: 'Able am I, son."
+</div></li><li> "Conceptual" palindromes: references to springs and ouroboros/amphisbaena.
+</li><li> Musical palindromes: The bridge of the song is a <a class="urllink" href="http://en.wikipedia.org/wiki/Crab_canon">crab canon.<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a>
+</li><li> Even the length of the song is a palindrome: 2:02.
+</li></ul></li><li> <a class="twikilink" href="/pmwiki/pmwiki.php/Music/WeirdAlYankovic" title="/pmwiki/pmwiki.php/Music/WeirdAlYankovic">"Weird Al" Yankovic</a>'s "Bob", a homage to <a class="twikilink" href="/pmwiki/pmwiki.php/Music/BobDylan" title="/pmwiki/pmwiki.php/Music/BobDylan">Bob Dylan</a>'s "Subterranean Homesick Blues", is written entirely in palindromes.
+</li><li> The title of Nada Surf's <a class="twikilink" href="/pmwiki/pmwiki.php/Main/CoverAlbum" title="/pmwiki/pmwiki.php/Main/CoverAlbum">Cover Album</a>, <em>If I Had a Hi-Fi</em> (by coincidence the same palindrome appears in the above Weird Al song).
+</li><li> Perhaps not intentional but <em><a class="twikilink" href="/pmwiki/pmwiki.php/Music/ABBA" title="/pmwiki/pmwiki.php/Music/ABBA">ABBA</a></em> (itself a palindrome name, taken from the initials of the first names of their line-up) had a hit song called "S.O.S."
+<ul><li> Note that the logo of <em>ABBA</em> is even a visual palindrome, due to the fact that Benny held his "B" wrong side during the photoshoot, and when they found out, they thought it was a great idea and <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ThrowItIn" title="/pmwiki/pmwiki.php/Main/ThrowItIn">kept it as official logo.</a>
+</li></ul></li><li> <a class="twikilink" href="/pmwiki/pmwiki.php/Music/GratefulDead" title="/pmwiki/pmwiki.php/Music/GratefulDead">Grateful Dead</a>'s 1969 album <em>Aoxomoxoa</em>.
+</li><li> German punk band "Abwärts" debut album "Amok Koma".
+</li><li> <em>Satan Oscillate My Metallic Sonatas</em> is the title of both a track by Luke Vibert and an EP by <a class="twikilink" href="/pmwiki/pmwiki.php/Music/Soundgarden" title="/pmwiki/pmwiki.php/Music/Soundgarden">Soundgarden</a>.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder7');">     Radio  </div><div class="folder" id="folder7" isfolder="true" style="display:block;">
+<p></p><ul><li> Finnish humoristic radio series <em>Alivaltiosihteeri</em> always includes the weekly palindrome. Given that Finnish is crazy adaptable to such, the palindromes tend to be five words minimum, and can be outrageously long. For example...
+<ul><li> <em>Emme loassa jorise, sir. Ojassa olemme.</em> (28.2.2001) ("Not in muck we blather, sir. In a ditch we are.")
+</li><li> <em>Allia vaanii visio: jano-juomisia kai Simo ujona joisi, viinaa vailla.</em> (2.12.98) ("Alli is haunted by a vision: drinks for thirst would Simo shyly drink, lacking vodka.")
+</li><li> <em>Alli O., nai, pitsa laadi! Anna, Assi, nuoret! Naisia tässä iässä taisi Antero unissaan naida alasti pianolla.</em> (13.9.95) ("Alli O, marry, make a pizza! Anna, Assi, youth! Women at this age did Antero perhaps in his sleep lay, naked on top of a piano.")
+</li></ul></li></ul></div>
+<div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_3"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_3'); })</script></div></div><p></p><div class="folderlabel" onclick="togglefolder('folder8');">    Stand-Up Comedy </div><div class="folder" id="folder8" isfolder="true" style="display:block;">
+<ul><li> <a class="twikilink" href="/pmwiki/pmwiki.php/Creator/DemetriMartin" title="/pmwiki/pmwiki.php/Creator/DemetriMartin">Demetri Martin</a> wrote a <a class="urllink" href="https://www.youtube.com/watch?v=0hUHDIOazIU&amp;t=3m30s">224 word palindrome<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a> for his "If I" comedy segment.
+<div class="indent"><em>Dammit I'm mad. <br/>Evil is a deed as I live. <br/>God, am I reviled? I rise, my bed on a sun, I melt. <br/>To be not one man emanating is sad. I piss. <br/>Alas, it is so late. Who stops to help? <br/>Man, it is hot. I'm in it. I tell. <br/>I am not a devil. I level "Mad Dog". <br/>Ah, say burning is, as a deified gulp, <br/>In my halo of a mired rum tin. <br/>I erase many men. Oh, to be man, a sin. <br/>Is evil in a clam? In a trap? <br/>No. It is open. On it I was stuck. <br/>Rats peed on hope. Elsewhere dips a web. <br/>Be still if I fill its ebb. <br/>Ew, a spider... eh? <br/>We sleep. Oh no! <br/>Deep, stark cuts saw it in one position. <br/>Part animal, can I live? Sin is a name. <br/>Both, one... my names are in it. Murder? I'm a fool. <br/>A hymn I plug, deified as a sign in ruby ash, <br/>A Goddam level I lived at. <br/>On mail let it in. I'm it. <br/>Oh, sit in ample hot spots. Oh wet! <br/>A loss it is alas (sip). I'd assign it a name. <br/>Name not one bottle minus an ode by me: <br/>"Sir, I deliver. I'm a dog" <br/>Evil is a deed as I live. <br/>Dammit I'm mad.</em>
+</div></li><li> <a class="urllink" href="http://en.wikipedia.org/wiki/Hannah_Gadsby">Hannah Gadsby<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a> plays with this trope in one of her earlier <a class="urllink" href="http://youtu.be/t5ijqc5t6Sk?t=23s">live performances.<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a>
+<dl><dd><div class="indent"> "My name's Hannah. That's a palindrome. [...] My entire family have palindromic names. We've got <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ComicallyMissingThePoint" title="/pmwiki/pmwiki.php/Main/ComicallyMissingThePoint">Mum, Dad, Nan, Pop</a>...
+</div><div class="indent"> ... and <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BaitAndSwitchComment" title="/pmwiki/pmwiki.php/Main/BaitAndSwitchComment">my brother Kayak</a>."
+</div></dd></dl></li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder9');">    Video Games </div><div class="folder" id="folder9" isfolder="true" style="display:block;">
+<ul><li> The third case of <em><a class="twikilink" href="/pmwiki/pmwiki.php/VisualNovel/PhoenixWrightAceAttorneyTrialsAndTribulations" title="/pmwiki/pmwiki.php/VisualNovel/PhoenixWrightAceAttorneyTrialsAndTribulations">Phoenix Wright: Ace Attorney - Trials and Tribulations</a></em> has Blue Screens Inc., a computer firm where all of the employees have palindromes for names.
+</li><li> <a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/TheLegendOfZelda" title="/pmwiki/pmwiki.php/Franchise/TheLegendOfZelda">The Legend of Zelda</a>:
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheLegendOfZeldaOracleGames" title="/pmwiki/pmwiki.php/VideoGame/TheLegendOfZeldaOracleGames">The Legend of Zelda: Oracle of Ages</a></em> features Symmetry City, whose survival depends on the total equality between the two sides. The name of the artifact that mantains the balance? Tuni nut!
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheLegendOfZeldaMajorasMask" title="/pmwiki/pmwiki.php/VideoGame/TheLegendOfZeldaMajorasMask">The Legend of Zelda: Majora's Mask's</a></em> Stone Temple theme music was a palindrome. It made the an already strange temple even stranger.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheLegendOfZeldaALinkBetweenWorlds" title="/pmwiki/pmwiki.php/VideoGame/TheLegendOfZeldaALinkBetweenWorlds">The Legend of Zelda: A Link Between Worlds</a></em>: Seres's name is a palindrome.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/Pokemon" title="/pmwiki/pmwiki.php/Franchise/Pokemon">Pokémon</a></em>:
+<ul><li> Girafarig has a palindrome name, in both English and Japanese (Kirinriki), because it has <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AHeadAtEachEnd" title="/pmwiki/pmwiki.php/Main/AHeadAtEachEnd">A Head at Each End</a>.
+</li><li> The passwords for the Rocket Headquarters on Five Island in the remakes of <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/PokemonRedAndBlue" title="/pmwiki/pmwiki.php/VideoGame/PokemonRedAndBlue">Red and Blue</a></em> are "Goldeen need log" and "Yes, nah, Chansey".
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/KingdomOfLoathing" title="/pmwiki/pmwiki.php/VideoGame/KingdomOfLoathing">Kingdom of Loathing</a></em> features an area called the Palindome, in which each adventure revolves around palindromes in some way. You encounter a Taco Cat, the brothers Bob Racecar and Racecar Bob, and get involved in fruit-based combat ("No, sir, away! A papaya war is on!"). A quest also requires you to face a mini-boss here named Dr. Awkward in order to get your hands on <a class="twikilink" href="/pmwiki/pmwiki.php/Main/PlotCoupon" title="/pmwiki/pmwiki.php/Main/PlotCoupon">the Staff of Fats</a>.
+</li><li> The Japanese name of the antagonist of <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/EarthboundBeginnings" title="/pmwiki/pmwiki.php/VideoGame/EarthboundBeginnings">Mother</a></em> and <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Earthbound" title="/pmwiki/pmwiki.php/VideoGame/Earthbound">Mother 2</a></em>, ギーグ (<em>giigu</em>), is officially transliterated as Gyiyg.
+</li><li> At various random points in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/AdVerbum" title="/pmwiki/pmwiki.php/VideoGame/AdVerbum">Ad Verbum</a></em>, the Wizard of Wordplay will wander into the current room, make a palindromic pronouncement, and then reverse out of the room again.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder10');">    Webcomics </div><div class="folder" id="folder10" isfolder="true" style="display:block;">
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/Palindramas" title="/pmwiki/pmwiki.php/Webcomic/Palindramas">Palindramas</a></em> probably has more examples than every other work put together.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder11');">    Western Animation </div><div class="folder" id="folder11" isfolder="true" style="display:block;">
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/TheSimpsons" title="/pmwiki/pmwiki.php/WesternAnimation/TheSimpsons">The Simpsons</a></em>:
+<ul><li> In "They Saved Lisa's Brain", the Springfield members of <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/Mensa" title="/pmwiki/pmwiki.php/UsefulNotes/Mensa">Mensa</a> have new palindrome discoveries on their meeting agenda. Comic Book Guy's mention of "Rise to vote, sir" is misinterpreted as an actual request for a democratic procedure until Lisa, who understood, pointed it out.
+</li><li> One of the very first episodes, "Bart the Genius", Bart cheats on an exam and finds himself transferred to an advanced class. One of the advanced class students liked to make up palindromes on the fly. He greeted Bart with "O Memsahib Bart, rabbi has memo."
+</li><li> In "The Otto Show", after Otto's fired and the kids find out Skinner's the new bus driver, he says, "Otto, that's one palindrome you won't be hearing for a while."
+</li></ul></li><li> The <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/PhineasAndFerb" title="/pmwiki/pmwiki.php/WesternAnimation/PhineasAndFerb">Phineas and Ferb</a></em> episode "My Fair Goalie" featured Professor Ross Eforp, creator of football X7. Unfortunately, "anti-palindrome" hysteria forced him to spend his life in hiding.
+</li><li> A <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/RobotChicken" title="/pmwiki/pmwiki.php/WesternAnimation/RobotChicken">Robot Chicken</a></em> skit has Batman face <a class="urllink" href="https://www.youtube.com/watch?v=N5F66JwLq90">Palindrome,<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a> a villain who speaks entirely in these, as a parody of some of his more outlandish villains. <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ActuallyPrettyFunny" title="/pmwiki/pmwiki.php/Main/ActuallyPrettyFunny">Batman actually claps</a> after the villain launches into a very long palindromic soliloquy.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder12');">    Other </div><div class="folder" id="folder12" isfolder="true" style="display:block;">
+<ul><li> On <a class="twikilink" href="/pmwiki/pmwiki.php/Wiki/ThisVeryWiki" title="/pmwiki/pmwiki.php/Wiki/ThisVeryWiki">This Very Wiki</a>: <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TropeReport" title="/pmwiki/pmwiki.php/Main/TropeReport">Trope Report</a>.
+<ul><li> It's also noted on the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TechnologyMarchesOn" title="/pmwiki/pmwiki.php/Main/TechnologyMarchesOn">Technology Marches On</a> page that the lack of home stereo systems these days makes the ever popular palindrome "If I had a hi-fi" a somewhat dated palindrome.
+</li></ul></li><li> A 1934 New York <em>Sun</em> review of a Max Reger string quartet: "Reger might be epitomized as a composer whose name is the same either forward or backward, and whose music, curiously, often displays the same characteristic."
+</li><li> A bit of self-ref: You can use "palindrome" quite well in a French or Russian palindrome: "Он дивен, палиндром: и ни морд, ни лап не видно" (It's wonderful, a palindrome: and neither muzzles, nor paws are visible, Cyril Reshetnikow)
+</li><li> mdadm, a Linux command.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder13');">    Real Life </div><div class="folder" id="folder13" isfolder="true" style="display:block;">
+<ul><li> <a class="urllink" href="http://en.wikipedia.org/wiki/Revilo_P._Oliver">Revilo P. Oliver,<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a> the fascist professor. One of his articles was denounced as a transparent fraud because the palindrome looked suspicious, but according to Oliver, it was a family custom that went back six generations.
+</li><li> American actor Robert Trebor chose his stage name by palindromizing his first name (his real last name is Schenkman).
+</li><li> Ditto British actor Steve Evets (né Murphy).
+</li><li> The word for a fear or distaste for palindromes was deliberately constructed to be "aibohphobia."
+</li><li> "Able was I. I saw Elba." ~Napoleon Bonaparte
+</li></ul></div>
+<p></p><hr/>
+</div>
+<div class="square_ad footer-article-ad main_2" data-isolated="0"></div>
+<div class="section-links" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<div class="titles">
+<div><h3 class="text-center text-uppercase">Previous</h3></div>
+<div><h3 class="text-center text-uppercase">Index</h3></div>
+<div><h3 class="text-center text-uppercase">Next</h3></div>
+</div>
+<div class="links">
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/FunWithHomophones">Fun with Homophones</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/LanguageTropes">Language Tropes</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/FunWithSubtitles">Fun with Subtitles</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/Franks2000InchTV">Frank's 2000 Inch TV</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/QuoteSource/Music">QuoteSource/Music</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/HandyMan">Handy Man</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="outer_ads_by_salon_wrapper" id="exco_player_insert_div">
+</div>
+</article>
+<div id="main-content-sidebar"><div class="sidebar-item display-options">
+<ul class="sidebar display-toggles">
+<li>Show Spoilers <div class="display-toggle show-spoilers" id="sidebar-toggle-showspoilers"></div></li>
+<li>Night Vision <div class="display-toggle night-vision" id="sidebar-toggle-nightvision"></div></li>
+<li>Sticky Header <div class="display-toggle sticky-header" id="sidebar-toggle-stickyheader"></div></li>
+<li>Wide Load <div class="display-toggle wide-load" id="sidebar-toggle-wideload"></div></li>
+</ul>
+<script>updateDesktopPrefs();</script>
+</div>
+<div class="sidebar-item ad sb-ad-unit">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_2"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_2'); });</script> </div>
+</div></div>
+<div class="sidebar-item quick-links" itemtype="http://schema.org/SiteNavigationElement">
+<p class="sidebar-item-title" data-title="Important Links">Important Links</p>
+<div class="padded">
+<a href="/pmwiki/query.php?type=att">Ask The Tropers</a>
+<a href="/pmwiki/query.php?type=tf">Trope Finder</a>
+<a href="/pmwiki/query.php?type=ykts">You Know That Show...</a>
+<a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a>
+<a href="/pmwiki/review_activity.php">Reviews</a>
+<a data-modal-target="login" href="/pmwiki/lbs.php">Live Blogs</a>
+<a href="/pmwiki/ad-free-subscribe.php">Go Ad Free!</a> </div>
+</div>
+<div class="sidebar-item sb-ad-unit">
+<div class="sidebar-section">
+<div class="square_ad ad-size-300x600 ad-section text-center">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_3"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_3'); });</script> </div>
+</div> </div>
+</div>
+</div>
+<div class="sidebar-item">
+<p class="sidebar-item-title" data-title="Crucial Browsing">Crucial Browsing</p>
+<ul class="padded font-s" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><a data-click-toggle="active" href="javascript:void(0);">Genre</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/ActionAdventureTropes" title="Main/ActionAdventureTropes">Action Adventure</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ComedyTropes" title="Main/ComedyTropes">Comedy</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CommercialsTropes" title="Main/CommercialsTropes">Commercials</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CrimeAndPunishmentTropes" title="Main/CrimeAndPunishmentTropes">Crime &amp; Punishment</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DramaTropes" title="Main/DramaTropes">Drama</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/HorrorTropes" title="Main/HorrorTropes">Horror</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LoveTropes" title="Main/LoveTropes">Love</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NewsTropes" title="Main/NewsTropes">News</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ProfessionalWrestling" title="Main/ProfessionalWrestling">Professional Wrestling</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SpeculativeFictionTropes" title="Main/SpeculativeFictionTropes">Speculative Fiction</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SportsStoryTropes" title="Main/SportsStoryTropes">Sports Story</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/WarTropes" title="Main/WarTropes">War</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Media</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/Media" title="Main/Media">All Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/AnimationTropes" title="Main/AnimationTropes">Animation (Western)</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Anime" title="Main/Anime">Anime</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ComicBookTropes" title="Main/ComicBookTropes">Comic Book</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FanFic" title="FanFic/FanFics">Fan Fics</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Film" title="Main/Film">Film</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/GameTropes" title="Main/GameTropes">Game</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Literature" title="Main/Literature">Literature</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MusicAndSoundEffects" title="Main/MusicAndSoundEffects">Music And Sound Effects</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NewMediaTropes" title="Main/NewMediaTropes">New Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/PrintMediaTropes" title="Main/PrintMediaTropes">Print Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Radio" title="Main/Radio">Radio</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SequentialArt" title="Main/SequentialArt">Sequential Art</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TabletopGames" title="Main/TabletopGames">Tabletop Games</a></li>
+<li><a href="/pmwiki/pmwiki.php/UsefulNotes/Television" title="Main/Television">Television</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Theater" title="Main/Theater">Theater</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/VideogameTropes" title="Main/VideogameTropes">Videogame</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Webcomics" title="Main/Webcomics">Webcomics</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Narrative</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/UniversalTropes" title="Main/UniversalTropes">Universal</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/AppliedPhlebotinum" title="Main/AppliedPhlebotinum">Applied Phlebotinum</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CharacterizationTropes" title="Main/CharacterizationTropes">Characterization</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Characters" title="Main/Characters">Characters</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CharactersAsDevice" title="Main/CharactersAsDevice">Characters As Device</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Dialogue" title="Main/Dialogue">Dialogue</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Motifs" title="Main/Motifs">Motifs</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NarrativeDevices" title="Main/NarrativeDevices">Narrative Devices</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Paratext" title="Main/Paratext">Paratext</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Plots" title="Main/Plots">Plots</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Settings" title="Main/Settings">Settings</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Spectacle" title="Main/Spectacle">Spectacle</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Other Categories</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/BritishTellyTropes" title="Main/BritishTellyTropes">British Telly</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TheContributors" title="Main/TheContributors">The Contributors</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CreatorSpeak" title="Main/CreatorSpeak">Creator Speak</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Creators" title="Main/Creators">Creators</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DerivativeWorks" title="Main/DerivativeWorks">Derivative Works</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LanguageTropes" title="Main/LanguageTropes">Language</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LawsAndFormulas" title="Main/LawsAndFormulas">Laws And Formulas</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ShowBusiness" title="Main/ShowBusiness">Show Business</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SplitPersonalityTropes" title="Main/SplitPersonalityTropes">Split Personality</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/StockRoom" title="Main/StockRoom">Stock Room</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TropeTropes" title="Main/TropeTropes">Trope</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Tropes" title="Main/Tropes">Tropes</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TruthAndLies" title="Main/TruthAndLies">Truth And Lies</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TruthInTelevision" title="Main/TruthInTelevision">Truth In Television</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Topical Tropes</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/BetrayalTropes" title="Main/BetrayalTropes">Betrayal</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CensorshipTropes" title="Main/CensorshipTropes">Censorship</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CombatTropes" title="Main/CombatTropes">Combat</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DeathTropes" title="Main/DeathTropes">Death</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FamilyTropes" title="Main/FamilyTropes">Family</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FateAndProphecyTropes" title="Main/FateAndProphecyTropes">Fate And Prophecy</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FoodTropes" title="Main/FoodTropes">Food</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/HolidayTropes" title="Main/HolidayTropes">Holiday</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MemoryTropes" title="Main/MemoryTropes">Memory</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MoneyTropes" title="Main/MoneyTropes">Money</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MoralityTropes" title="Main/MoralityTropes">Morality</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/PoliticsTropes" title="Main/PoliticsTropes">Politics</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ReligionTropes" title="Main/ReligionTropes">Religion</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SchoolTropes" title="Main/SchoolTropes">School</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="sidebar-item showcase">
+<p class="sidebar-item-title" data-title="Community Showcase">Community Showcase <a class="bubble float-right hover-blue" href="/pmwiki/showcase.php">More</a></p>
+<p class="community-showcase">
+<a href="https://sharetv.com/shows/echo_chamber" onclick="trackOutboundLink('https://sharetv.com/shows/echo_chamber');" target="_blank">
+<img alt="" class="lazy-image" data-src="/images/communityShowcase-echochamber.jpg"/></a>
+<a href="/pmwiki/pmwiki.php/Webcomic/TwistedTropes">
+<img alt="" class="lazy-image" data-src="/img/howlandsc-side.jpg"/></a>
+</p>
+</div>
+<div class="sidebar-item sb-ad-unit" id="stick-cont">
+<div class="sidebar-section" id="stick-bar">
+<div class="square_ad ad-size-300x600 ad-section text-center">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_4"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_4'); });</script> </div>
+</div> </div>
+</div>
+</div>
+</div>
+</div>
+<div class="action-bar tablet-off" id="action-bar-bottom">
+<a class="scroll-to-top dead-button" href="#top-of-page" onclick="$('html, body').animate({scrollTop : 0},500);">Top</a>
+</div>
+</div>
+<div class="proper-ad-unit ad-sticky">
+<div id="proper-ad-tvtropes_sticky_ad"> <script>propertag.cmd.push(function() { proper_display('tvtropes_sticky_ad'); });</script> </div>
+</div>
+<footer id="main-footer">
+<div id="main-footer-inner">
+<div class="footer-left">
+<a class="img-link" href="/"><img alt="TV Tropes" class="lazy-image" data-src="/img/tvtropes-footer-logo.png" title="TV Tropes"/></a>
+<form action="index.html" class="navbar-form newsletter-signup validate modal-replies" data-ajax-get="/ajax/subscribe_email.php" id="cse-search-box-mobile" name="" role="">
+<button class="btn-submit newsletter-signup-submit-button" id="subscribe-btn" type="submit"><i class="fa fa-paper-plane"></i></button>
+<input class="form-control" id="subscription-email" name="q" placeholder="Subscribe" size="31" type="text" validate-type="email" value=""/>
+</form>
+<ul class="social-buttons">
+<li><a class="btn fb" href="https://www.facebook.com/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-facebook']);" target="_blank"><i class="fa fa-facebook"></i></a></li>
+<li><a class="btn tw" href="https://www.twitter.com/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-twitter']);" target="_blank"><i class="fa fa-twitter"></i></a> </li>
+<li><a class="btn rd" href="https://www.reddit.com/r/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-reddit']);" target="_blank"><i class="fa fa-reddit-alien"></i></a></li>
+</ul>
+</div>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">TVTropes</h4></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Administrivia">About TVTropes</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TheGoalsOfTVTropes">TVTropes Goals</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TheTropingCode">Troping Code</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TVTropesCustoms">TVTropes Customs</a></li>
+<li><a href="/pmwiki/pmwiki.php/JustForFun/TropesOfLegend">Tropes of Legend</a></li>
+<li><a href="/pmwiki/ad-free-subscribe.php">Go Ad-Free</a></li>
+</ul>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">Community</h4></li>
+<li><a href="/pmwiki/query.php?type=att">Ask The Tropers</a></li>
+<li><a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a></li>
+<li><a href="/pmwiki/query.php?type=tf">Trope Finder</a></li>
+<li><a href="/pmwiki/query.php?type=ykts">You Know That Show</a></li>
+<li><a data-modal-target="login" href="/pmwiki/lbs.php">Live Blogs</a></li>
+<li><a href="/pmwiki/review_activity.php">Reviews</a></li>
+<li><a href="/pmwiki/topics.php">Forum</a></li>
+</ul>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">Tropes HQ</h4></li>
+<li><a href="/pmwiki/about.php">About Us</a></li>
+<li><a href="/pmwiki/contact.php">Contact Us</a></li>
+<li><a href="/pmwiki/dmca.php">DMCA Notice</a></li>
+<li><a href="/pmwiki/privacypolicy.php">Privacy Policy</a></li>
+</ul>
+</div>
+<div class="text-center gutter-top gutter-bottom tablet-on" id="desktop-on-mobile-toggle">
+<a href="/pmwiki/switchDeviceCss.php?mobileVersion=1" rel="nofollow">Switch to <span class="txt-desktop">Desktop</span><span class="txt-mobile">Mobile</span> Version</a>
+</div>
+<div class="legal">
+<p>TVTropes is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License. <br/>Permissions beyond the scope of this license may be available from <a href="mailto:thestaff@tvtropes.org" rel="cc:morePermissions" xmlns:cc="http://creativecommons.org/ns#"> thestaff@tvtropes.org</a>.</p>
+<br/>
+<div class="privacy_wrapper">
+</div>
+</div>
+</footer>
+<style>
+      div.fc-ccpa-root {
+        position: absolute !important;
+        bottom: 93px !important;
+        margin: auto !important;
+        width: 100% !important;
+        z-index: 9999 !important;
+      }
+      .fc-ccpa-root .fc-dns-dialog .fc-dns-link p{
+        outline: none !important;
+        text-decoration: underline !important;
+        font-size: .7em !important;
+        font-family: sans-serif !important;
+      }
+      .fc-ccpa-root .fc-dns-dialog .fc-dns-link .fc-button-background {
+        background: none !important;
+      }
+    </style>
+<div class="full-screen" id="_pm_videoViewer">
+<a class="close" href="#close" id="_pm_videoViewer-close"></a>
+<div class="_pmvv-body">
+<div class="_pmvv-vidbox">
+<video class="video-js vjs-default-skin vjs-16-9" data-video-id="" id="overlay-video-player-box">
+</video>
+<div class="_pmvv-vidbox-desc">
+<h1 id="overlay-title"></h1>
+<p class="_pmvv-vidbox-descTxt" id="overlay-descrip">
+</p>
+<div class="rating-row" data-video-id="">
+<input name="is_logged_in" type="hidden" value="0"/>
+<p>How well does it match the trope?</p>
+<div id="star-rating-group">
+<div class="trope-rate">
+<input id="lamp5" name="rate" type="radio" value="5"/>
+<label for="lamp5" title="Absolutely"></label>
+<input id="lamp4" name="rate" type="radio" value="4"/>
+<label for="lamp4" title="Yes"></label>
+<input id="lamp3" name="rate" type="radio" value="3"/>
+<label for="lamp3" title="Kind of"></label>
+<input id="lamp2" name="rate" type="radio" value="2"/>
+<label for="lamp2" title="Not really"></label>
+<input id="lamp1" name="rate" type="radio" value="1"/>
+<label for="lamp1" title="No"></label>
+</div>
+<div id="star-rating-total">
+</div>
+</div>
+</div>
+<div class="example-media-row">
+<div class="example-overlay">
+<p>Example of:</p>
+<div id="overlay-trope"> / </div>
+</div>
+<div class="media-sources-overlay example-overlay">
+<p>Media sources:</p>
+<div id="overlay-media"> / </div>
+</div>
+</div>
+<p class="_pmvv-vidbox-stats text-right font-s" style="padding-top:8px; border-top: solid 1px rgba(255,255,255,0.2)">
+<a class="float-right" data-modal-target="login" href="#video-feedback">Report</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+        window.special_ops =  {
+            member : 'no',
+            isolated : 0,
+            tags : ['unknown']
+        };
+    </script>
+<script type="text/javascript">
+
+        var cleanCreativeEnabled = "";
+        var donation = "";
+        var live_ads = "1";
+        var img_domain = "https://static.tvtropes.org";
+        var snoozed = cookies.read('snoozedabm');
+        var snoozable = "";
+
+        if (adsRemovedWith) {
+            live_ads = 0;
+        }
+
+        var elem = document.createElement('script');
+        elem.async = true;
+
+        elem.src = '/design/assets/bundle.js?rev=c58d8df02f09262390bbd03db7921fc35c6af306';
+
+        elem.onload = function() {
+                                 }
+        document.getElementsByTagName('head')[0].appendChild(elem);
+
+    </script>
+<script type="text/javascript">
+      function send_analytics_event(user_type, donation){
+          // if(user_type == 'uncached' || user_type == 'cached'){
+          //   ga('send', 'event', 'caching', 'load', user_type, {'nonInteraction': 1});
+          //   return;
+          // }
+          var event_name = user_type;
+
+          if(donation == 'true'){
+              event_name += "_donation"
+          }else if(typeof(valid_user) == 'undefined'){
+              event_name += "_blocked"
+          }else if(valid_user == true){
+              event_name += "_unblocked";
+          }else{
+              event_name = "_unknown"
+          }
+          ga('send', 'event', 'ads', 'load', event_name, {'nonInteraction': 1});
+      }
+
+    
+    send_analytics_event("guest", "false");
+      </script>
+</body>
+</html>

@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Viewer-Friendly Interface - TV Tropes</title>
+<meta content="The Viewer-Friendly Interface trope as used in popular culture. Any computer interface that is designed to be seen on television, as opposed to actually be …" name="description"/>
+<link href="https://tvtropes.org/pmwiki/pmwiki.php/Main/ViewerFriendlyInterface" rel="canonical"/>
+<link href="/img/icons/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="@tvtropes" name="twitter:site"/>
+<meta content="@tvtropes" name="twitter:owner"/>
+<meta content="Viewer-Friendly Interface - TV Tropes" name="twitter:title"/>
+<meta content="The Viewer-Friendly Interface trope as used in popular culture. Any computer interface that is designed to be seen on television, as opposed to actually be …" name="twitter:description"/>
+<meta content="https://static.tvtropes.org/pmwiki/pub/images/ed6042c661fabba94fedde14ca4699e4.jpg" name="twitter:image:src"/>
+<meta content="TV Tropes" property="og:site_name"/>
+<meta content="en_US" property="og:locale"/>
+<meta content="https://www.facebook.com/tvtropes" property="article:publisher"/>
+<meta content="Viewer-Friendly Interface - TV Tropes" property="og:title"/>
+<meta content="website" property="og:type"/>
+<meta content="https://tvtropes.org/pmwiki/pmwiki.php/Main/ViewerFriendlyInterface" property="og:url"/>
+<meta content="https://static.tvtropes.org/pmwiki/pub/images/ed6042c661fabba94fedde14ca4699e4.jpg" property="og:image"/>
+<meta content="Any computer interface that is designed to be seen on television, as opposed to actually be useful for the user. Key tenets:  All Fonts must be huge, and the resolution must be ridiculously low. This doesn't apply when displaying program code, …" property="og:description"/>
+<link href="/img/icons/apple-icon-57x57.png" rel="apple-touch-icon" sizes="57x57" type="image/png"/>
+<link href="/img/icons/apple-icon-60x60.png" rel="apple-touch-icon" sizes="60x60" type="image/png"/>
+<link href="/img/icons/apple-icon-72x72.png" rel="apple-touch-icon" sizes="72x72" type="image/png"/>
+<link href="/img/icons/apple-icon-76x76.png" rel="apple-touch-icon" sizes="76x76" type="image/png"/>
+<link href="/img/icons/apple-icon-114x114.png" rel="apple-touch-icon" sizes="114x114" type="image/png"/>
+<link href="/img/icons/apple-icon-120x120.png" rel="apple-touch-icon" sizes="120x120" type="image/png"/>
+<link href="/img/icons/apple-icon-144x144.png" rel="apple-touch-icon" sizes="144x144" type="image/png"/>
+<link href="/img/icons/apple-icon-152x152.png" rel="apple-touch-icon" sizes="152x152" type="image/png"/>
+<link href="/img/icons/apple-icon-180x180.png" rel="apple-touch-icon" sizes="180x180" type="image/png"/>
+<link href="/img/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/img/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/img/icons/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png"/>
+<link href="/img/icons/favicon-192x192.png" rel="icon" sizes="192x192" type="image/png"/>
+<meta content="width=device-width, initial-scale=1" id="viewport" name="viewport"/>
+<script>
+                var propertag = {};
+                propertag.cmd = [];
+            </script>
+<link href="/design/assets/bundle.css?rev=c58d8df02f09262390bbd03db7921fc35c6af306" rel="stylesheet"/>
+<script>
+                function object(objectId) {
+                    if (document.getElementById && document.getElementById(objectId)) {
+                        return document.getElementById(objectId);
+                    } else if (document.all && document.all(objectId)) {
+                        return document.all(objectId);
+                    } else if (document.layers && document.layers[objectId]) {
+                        return document.layers[objectId];
+                    } else {
+                        return false;
+                    }
+                }
+
+                // JAVASCRIPT COOKIES CODE: for getting and setting user viewing preferences
+                var cookies = {
+                    create: function (name, value, days2expire, path) {
+                        var date = new Date();
+                        date.setTime(date.getTime() + (days2expire * 24 * 60 * 60 * 1000));
+                        var expires = date.toUTCString();
+                        document.cookie = name + '=' + value + ';' + 'expires=' + expires + ';' + 'path=' + path + ';';
+                    },
+										createWithExpire: function(name, value, expires, path) {
+												document.cookie = name + '=' + value + ';' + 'expires=' + expires + ';' + 'path=' + path + ';';
+										},
+                    read: function (name) {
+                        var cookie_value = "",
+                            current_cookie = "",
+                            name_expr = name + "=",
+                            all_cookies = document.cookie.split(';'),
+                            n = all_cookies.length;
+
+                        for (var i = 0; i < n; i++) {
+                            current_cookie = all_cookies[i].trim();
+                            if (current_cookie.indexOf(name_expr) === 0) {
+                                cookie_value = current_cookie.substring(name_expr.length, current_cookie.length);
+                                break;
+                            }
+                        }
+                        return cookie_value;
+                    },
+                    update: function (name, val) {
+                        this.create(name, val, 300, "/");
+                    },
+                    remove: function (name) {
+                        document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
+                    }
+                };
+
+                function updateUserPrefs() {
+                    //GENERAL: detect and set browser, if not cookied (will be treated like a user-preference and added to the #user-pref element)
+                    if( !cookies.read('user-browser') ){
+                        var broswer = '';
+
+                        if(navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPod/i) ){
+                            browser = 'iOS';
+                        } else if (/Opera[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'opera';
+                        } else if (/MSIE (\d+\.\d+);/.test(navigator.userAgent)) {
+                            browser = 'MSIE';
+                        } else if (/Navigator[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'netscape';
+                        } else if (/Chrome[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'chrome';
+                        } else if (/Safari[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'safari';
+                            /Version[\/\s](\d+\.\d+)/.test(navigator.userAgent);
+                            browserVersion = new Number(RegExp.$1);
+                        } else if (/Firefox[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'firefox';
+                        } else {
+                            browser = 'internet_explorer';
+                        }
+                        cookies.create('user-browser',browser,1,'/');
+                        document.getElementById('user-prefs').classList.add('browser-' + browser);
+                    } else {
+                        document.getElementById('user-prefs').classList.add('browser-' + cookies.read('user-browser'));
+                    }
+
+                    //update user preference settings
+                    if (cookies.read('wide-load') !== '') document.getElementById('user-prefs').classList.add('wide-load');
+                    if (cookies.read('night-vision') !== '') document.getElementById('user-prefs').classList.add('night-vision');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('user-prefs').classList.add('sticky-header');
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('user-prefs').classList.add('show-spoilers');
+                    if (cookies.read('folders-open') !== '') document.getElementById('user-prefs').classList.add('folders-open');
+                    if (cookies.read('lefthand-sidebar') !== '') document.getElementById('user-prefs').classList.add('lefthand-sidebar');
+                    if (cookies.read('highlight-links') !== '') document.getElementById('user-prefs').classList.add('highlight-links');
+                    if (cookies.read('forum-gingerbread') !== '') document.getElementById('user-prefs').classList.add('forum-gingerbread');
+                    if (cookies.read('shared-avatars') !== '') document.getElementById('user-prefs').classList.add('shared-avatars');
+                    if (cookies.read('new-search') !== '') document.getElementById('user-prefs').classList.add('new-search');
+                    if (cookies.read('stop-auto-play-video') !== '') document.getElementById('user-prefs').classList.add('stop-auto-play-video');
+
+                    //desktop view on mobile
+                    if (cookies.read('desktop-on-mobile') !== ''){
+                        document.getElementById('user-prefs').classList.add('desktop-on-mobile');
+
+                        var viewport = document.querySelector("meta[name=viewport]");
+                        viewport.setAttribute('content', 'width=1000');
+                    }
+
+                }
+
+                function updateDesktopPrefs() {
+                    if (cookies.read('wide-load') !== '') document.getElementById('sidebar-toggle-wideload').classList.add('active');
+                    if (cookies.read('night-vision') !== '') document.getElementById('sidebar-toggle-nightvision').classList.add('active');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('sidebar-toggle-stickyheader').classList.add('active');
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('sidebar-toggle-showspoilers').classList.add('active');
+
+                }
+
+                function updateMobilePrefs() {
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('mobile-toggle-showspoilers').classList.add('active');
+                    if (cookies.read('night-vision') !== '') document.getElementById('mobile-toggle-nightvision').classList.add('active');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('mobile-toggle-stickyheader').classList.add('active');
+                    if (cookies.read('highlight-links') !== '') document.getElementById('mobile-toggle-highlightlinks').classList.add('active');
+
+                }
+
+
+                if (document.cookie.indexOf("scroll0=") < 0) {
+                    // do nothing
+                } else {
+                    console.log('ads removed by scroll.com');
+                    var adsRemovedWith = 'scroll';
+                    var style = document.createElement('style');
+                    style.innerHTML = '#header-ad, .proper-ad-unit, .square_ad, .sb-ad-unit { display: none !important; } ';
+                    document.head.appendChild(style);
+                }
+            </script>
+<script type="text/javascript">
+
+                var tvtropes_config = {
+                    astri_stream_enabled : "",
+                    is_logged_in         : "",
+                    handle               : "",
+                    get_astri_stream     : "",
+										revnum               : "c58d8df02f09262390bbd03db7921fc35c6af306",
+										img_domain           : "https://static.tvtropes.org",
+										adblock              : "1",
+										adblock_url          : "propermessage.io",
+										pause_editing        : "0",
+										pause_editing_msg    : "",
+										pause_site_changes   : ""
+                };
+            </script>
+<script type="text/javascript">
+						  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+						  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+						  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+						  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+						  ga('create', 'UA-3821842-1', 'auto');
+						  ga('send', 'pageview');
+
+						</script>
+</head>
+<body class="">
+<i id="user-prefs"></i>
+<script>updateUserPrefs();</script>
+<div id="fb-root"></div>
+<div id="modal-box"></div>
+<header class="headroom-element" id="main-header-bar">
+<div id="main-header-bar-inner">
+<span class="header-spacer" id="header-spacer-left"></span>
+<a class="mobile-menu-toggle-button tablet-on" href="#mobile-menu" id="main-mobile-toggle"><span></span><span></span><span></span></a>
+<a class="no-dev" href="/" id="main-header-logoButton"></a>
+<span class="header-spacer" id="header-spacer-right"></span>
+<nav class="tablet-off" id="main-header-nav">
+<a href="/pmwiki/pmwiki.php/Main/Tropes">Tropes</a>
+<a href="/pmwiki/pmwiki.php/Main/Media">Media</a>
+<a class="nav-browse" href="/pmwiki/browse.php">Browse</a>
+<a href="/pmwiki/index_report.php">Indexes</a>
+<a href="/pmwiki/topics.php">Forums</a>
+<a class="nav-browse" href="/pmwiki/recent_videos.php">Videos</a>
+</nav>
+<div id="main-header-bar-right">
+<div class="font-xs mobile-off" id="signup-login-box">
+<a class="hover-underline bold" data-modal-target="signup" href="/pmwiki/login.php">Join</a>
+<a class="hover-underline bold" data-modal-target="login" href="/pmwiki/login.php">Login</a>
+</div>
+<div class="mobile-on inline" id="signup-login-mobileToggle">
+<a data-modal-target="login" href="/pmwiki/login.php"><i class="fa fa-user"></i></a>
+</div>
+<div id="search-box">
+<form action="/pmwiki/search_result.php" class="search">
+<input class="search-box" name="q" placeholder="Search" required="" type="text" value=""/>
+<input class="submit-button" type="submit" value=""/>
+<input name="search_type" type="hidden" value="article"/>
+<input name="page_type" type="hidden" value="all"/>
+<input name="cx" type="hidden" value="partner-pub-6610802604051523:amzitfn8e7v"/>
+<input name="cof" type="hidden" value="FORID:10"/>
+<input name="ie" type="hidden" value="ISO-8859-1"/>
+<input name="siteurl" type="hidden" value=""/>
+<input name="ref" type="hidden" value=""/>
+<input name="ss" type="hidden" value=""/>
+</form>
+<a class="mobile-on mobile-search-toggle close-x" href="#close-search"><i class="fa fa-close"></i></a>
+</div>
+<div id="random-box">
+<a class="button-random-trope" href="/pmwiki/pmwiki.php/Main/ReversePolarity" onclick="ga('send', 'event', 'button', 'click', 'random trope');" rel="nofollow"></a>
+<a class="button-random-media" href="/pmwiki/pmwiki.php/Film/DayOfTheAnimals" onclick="ga('send', 'event', 'button', 'click', 'random media');" rel="nofollow"></a>
+</div>
+</div>
+</div>
+<div class="tablet-on" id="mobile-menu"><div class="mobile-menu-options">
+<div class="nav-wrapper">
+<a class="xl" href="/pmwiki/pmwiki.php/Main/Tropes">Tropes</a>
+<a class="xl" href="/pmwiki/pmwiki.php/Main/Media">Media</a>
+<a class="xl" href="/pmwiki/browse.php">Browse</a>
+<a class="xl" href="/pmwiki/index_report.php">Indexes</a>
+<a class="xl" href="/pmwiki/topics.php">Forums</a>
+<a class="xl" href="/pmwiki/recent_videos.php">Videos</a>
+<a href="/pmwiki/query.php?type=att">Ask The Tropers</a>
+<a href="/pmwiki/query.php?type=tf">Trope Finder</a>
+<a href="/pmwiki/query.php?type=ykts">You Know That Show...</a>
+<a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a>
+<a data-click-toggle="active" href="#tools">Tools <i class="fa fa-chevron-down"></i></a>
+<div class="tools-dropdown mobile-dropdown-linkList">
+<a href="/pmwiki/cutlist.php">Cut List</a>
+<a href="/pmwiki/changes.php">New Edits</a>
+<a href="/pmwiki/recent_edit_reasons.php">Edit Reasons</a>
+<a href="/pmwiki/launches.php">Launches</a>
+<a href="/pmwiki/img_list.php">Images List</a>
+<a href="/pmwiki/crown_activity.php">Crowner Activity</a>
+<a href="/pmwiki/no_types.php">Un-typed Pages</a>
+<a href="/pmwiki/page_type_audit.php">Recent Page Type Changes</a>
+</div>
+<a data-click-toggle="active" href="#hq">Tropes HQ <i class="fa fa-chevron-down"></i></a>
+<div class="tools-dropdown mobile-dropdown-linkList">
+<a href="/pmwiki/about.php">About Us</a>
+<a href="/pmwiki/contact.php">Contact Us</a>
+<a href="mailto:advertising@proper.io">Advertise</a>
+<a href="/pmwiki/dmca.php">DMCA Notice</a>
+<a href="/pmwiki/privacypolicy.php">Privacy Policy</a>
+</div>
+<a href="/pmwiki/ad-free-subscribe.php">Go Ad-Free</a>
+<div class="toggle-switches">
+<ul class="mobile-menu display-toggles">
+<li>Show Spoilers <div class="display-toggle show-spoilers" id="mobile-toggle-showspoilers"></div></li>
+<li>Night Vision <div class="display-toggle night-vision" id="mobile-toggle-nightvision"></div></li>
+<li>Sticky Header <div class="display-toggle sticky-header" id="mobile-toggle-stickyheader"></div></li>
+<li>Highlight Links <div class="display-toggle highlight-links" id="mobile-toggle-highlightlinks"></div></li>
+</ul>
+<script>updateMobilePrefs();</script>
+</div>
+</div>
+</div>
+</div>
+</header>
+<div class="mobile-on" id="homepage-introBox-mobile">
+<a href="/"><img class="logo-small" src="/images/logo-white-big.png"/></a>
+<form action="/pmwiki/search_result.php" class="search" style="margin:10px -5px -6px -5px;">
+<input class="search-box" name="q" placeholder="Search" required="" type="text" value=""/>
+<input class="submit-button" type="submit" value=""/>
+<input name="search_type" type="hidden" value="article"/>
+<input name="page_type" type="hidden" value="all"/>
+<input name="cx" type="hidden" value="partner-pub-6610802604051523:amzitfn8e7v"/>
+<input name="cof" type="hidden" value="FORID:10"/>
+<input name="ie" type="hidden" value="ISO-8859-1"/>
+<input name="siteurl" type="hidden" value=""/>
+<input name="ref" type="hidden" value=""/>
+<input name="ss" type="hidden" value=""/>
+</form>
+</div>
+<div class="ad" id="header-ad-wrapper">
+<div id="header-ad">
+<div class="ad-size-970x90 atf_banner">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_1"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_1'); });</script> </div>
+</div> </div>
+</div>
+</div>
+<div id="main-container">
+<div class="action-bar mobile-off" id="action-bar-top">
+<div class="action-bar-right">
+<p>Follow TV Tropes</p>
+<a class="button-fb" href="https://www.facebook.com/TVTropes">
+<i class="fa fa-facebook"></i></a>
+<a class="button-tw" href="https://www.twitter.com/TVTropes">
+<i class="fa fa-twitter"></i></a>
+<a class="button-re" href="https://www.reddit.com/r/TVTropes">
+<i class="fa fa-reddit-alien"></i></a>
+</div>
+<nav class="actions-wrapper" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<ul class="page-actions" id="top_main_list">
+<li class="link-edit">
+<a class="article-edit-button" data-modal-target="login" href="/pmwiki/pmwiki.php/Main/ViewerFriendlyInterface?action=edit" rel="nofollow">
+<i class="fa fa-pencil"></i> Edit Page</a></li><li class="link-related"><a href="/pmwiki/relatedsearch.php?term=Main/ViewerFriendlyInterface">
+<i class="fa fa-share-alt"></i> Related</a></li><li class="link-history"><a href="/pmwiki/article_history.php?article=Main.ViewerFriendlyInterface">
+<i class="fa fa-history"></i> History</a></li><li class="link-discussion"><a href="/pmwiki/remarks.php?trope=Main.ViewerFriendlyInterface">
+<i class="fa fa-comment"></i> Discussion</a></li> </ul>
+<button class="nav__dropdown-toggle" id="top_more_button" onclick="toggle_more_menu('top');" type="button">More</button>
+<ul class="more_menu hidden_more_list" id="top_more_list">
+<li class="link-todo tuck-always more_list_item"><a data-modal-target="login" href="#todo"><i class="fa fa-check-circle"></i> To Do</a></li><li class="link-pageSource tuck-always more_list_item"><a data-modal-target="login" href="/pmwiki/pmwiki.php/Main/ViewerFriendlyInterface?action=source" rel="nofollow" target="_blank"><i class="fa fa-code"></i> Page Source</a></li> </ul>
+</nav>
+<div class="WikiWordModalStub"></div>
+<div class="ImgUploadModalStub" data-page-type="Article"></div>
+<div class="login-alert" style="display: none;">
+You need to <a href="/pmwiki/login.php" style="color:#21A0E8">login</a> to do this. <a href="/pmwiki/login.php?tab=register_account" style="color:#21A0E8">Get Known</a> if you don't have an account
+</div>
+</div>
+<div class="page-Article" id="main-content">
+<article class="with-sidebar" id="main-entry">
+<input id="groupname-hidden" type="hidden" value="Main"/>
+<input id="title-hidden" type="hidden" value="ViewerFriendlyInterface"/>
+<input id="article_id" type="hidden" value="7611"/>
+<input id="logged_in" type="hidden" value="false"/>
+<p class="hidden" id="current_url">http://tvtropes.org/pmwiki/pmwiki.php/Main/ViewerFriendlyInterface</p>
+<meta content="" itemprop="datePublished"/>
+<meta content="" itemprop="articleSection"/>
+<meta content="" itemprop="image"/>
+<a class="watch-button" data-modal-target="login" href="#watch">Follow<span>ing</span></a>
+<h1 class="entry-title" itemprop="headline">
+Viewer-Friendly Interface
+</h1>
+<script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+                "@type": "ListItem",
+                "position": 1,
+                "name": "tvtropes.org",
+                "item": "https://tvtropes.org"
+            },{
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Tropes",
+                "item": "https://tvtropes.org/pmwiki/pmwiki.php/Main/Tropes"
+            },{
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Viewer-Friendly Interface"            }]
+        }
+    </script>
+<a class="mobile-actionbar-toggle mobile-on" data-click-toggle="active" href="#mobile-actions-toggle" id="mobile-actionbar-toggle">
+<p class="tiny-off">Go To</p><span></span><span></span><span></span><i class="fa fa-pencil"></i></a>
+<nav class="mobile-actions-wrapper mobile-on" id="mobile-actions-bar"></nav>
+<div class="modal fade hidden-until-active" id="editLockModal">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button aria-label="Close" class="close" data-dismiss="modal" type="button"> <span aria-hidden="true">×</span></button>
+<h4 class="modal-title">Edit Locked</h4>
+</div>
+<div class="modal-body">
+<div class="row">
+<div class="body">
+<div class="danger troper_locked_message"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<nav class="body-options" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<ul class="subpage-links">
+<li>
+<a class="subpage-link curr-subpage" href="/pmwiki/pmwiki.php/Main/ViewerFriendlyInterface" title="The Main page">
+<span class="wrapper"><span class="spi main-page"></span>Main</span></a>
+</li>
+<li>
+<a class="subpage-link" href="/pmwiki/pmwiki.php/Laconic/ViewerFriendlyInterface" title="The Laconic page">
+<span class="wrapper"><span class="spi laconic-icon"></span>Laconic</span></a>
+</li>
+<li class="create-subpage dropdown">
+<a aria-expanded="false" class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);" role="button">
+<span class="wrapper">Create New <i class="fa fa-plus-circle"></i></span>
+</a>
+<select onchange="this.options[this.selectedIndex].value &amp;&amp; (window.location = this.options[this.selectedIndex].value);">
+<option value="">- Create New -</option>
+<option value="/pmwiki/pmwiki.php/Analysis/ViewerFriendlyInterface?action=edit">Analysis</option>
+<option value="/pmwiki/pmwiki.php/Characters/ViewerFriendlyInterface?action=edit">Characters</option>
+<option value="/pmwiki/pmwiki.php/FanficRecs/ViewerFriendlyInterface?action=edit">FanficRecs</option>
+<option value="/pmwiki/pmwiki.php/FanWorks/ViewerFriendlyInterface?action=edit">FanWorks</option>
+<option value="/pmwiki/pmwiki.php/Fridge/ViewerFriendlyInterface?action=edit">Fridge</option>
+<option value="/pmwiki/pmwiki.php/Haiku/ViewerFriendlyInterface?action=edit">Haiku</option>
+<option value="/pmwiki/pmwiki.php/Headscratchers/ViewerFriendlyInterface?action=edit">Headscratchers</option>
+<option value="/pmwiki/pmwiki.php/ImageLinks/ViewerFriendlyInterface?action=edit">ImageLinks</option>
+<option value="/pmwiki/pmwiki.php/PlayingWith/ViewerFriendlyInterface?action=edit">PlayingWith</option>
+<option value="/pmwiki/pmwiki.php/Quotes/ViewerFriendlyInterface?action=edit">Quotes</option>
+<option value="/pmwiki/pmwiki.php/Recap/ViewerFriendlyInterface?action=edit">Recap</option>
+<option value="/pmwiki/pmwiki.php/ReferencedBy/ViewerFriendlyInterface?action=edit">ReferencedBy</option>
+<option value="/pmwiki/pmwiki.php/Synopsis/ViewerFriendlyInterface?action=edit">Synopsis</option>
+<option value="/pmwiki/pmwiki.php/Timeline/ViewerFriendlyInterface?action=edit">Timeline</option>
+<option value="/pmwiki/pmwiki.php/Trivia/ViewerFriendlyInterface?action=edit">Trivia</option>
+<option value="/pmwiki/pmwiki.php/WMG/ViewerFriendlyInterface?action=edit">WMG</option>
+<option value="/pmwiki/pmwiki.php/YMMV/ViewerFriendlyInterface?action=edit">YMMV</option>
+</select>
+</li>
+</ul>
+</nav>
+<div class="article-content retro-folders" id="main-article">
+<p>
+</p><div class="quoteright" style="width:300px;"><a class="twikilink" href="/pmwiki/pmwiki.php/Series/Dexter" title="/pmwiki/pmwiki.php/Series/Dexter"><div class="lazy_load_img_box" style="padding-top:153.67%"><img alt="https://static.tvtropes.org/pmwiki/pub/images/ed6042c661fabba94fedde14ca4699e4.jpg" border="0" class="embeddedimage" height="461" src="https://static.tvtropes.org/pmwiki/pub/images/ed6042c661fabba94fedde14ca4699e4.jpg" width="300"/></div></a></div>
+<div class="acaptionright" style="width:300px;">"How nice of my phone to tell me what button I literally <em>just pressed</em>. <a class="twikilink" href="/pmwiki/pmwiki.php/Main/FridgeLogic" title="/pmwiki/pmwiki.php/Main/FridgeLogic">Wait</a>, since when do phones have a button for ignoring a text message?!?"</div>
+<p></p><div class="indent"><strong>Casey:</strong> I'm installing 'Cinema-OS', the operating system used in the movies. <br/><strong>Andy:</strong> Any downsides? <br/><strong>Casey:</strong> Yeah, it can't show any font under 72 point.
+<div class="indent">— <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/CaseyAndAndy" title="/pmwiki/pmwiki.php/Webcomic/CaseyAndAndy">Casey and Andy</a></em> <a class="urllink" href="http://www.galactanet.com/comic/view.php?strip=163">#163<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a>
+</div></div><p>
+</p><div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_1"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_1'); })</script></div></div><p>Any computer interface that is designed to be seen on television, as opposed to actually be useful for the user.
+</p><p><strong>Key tenets:</strong>
+</p><ul><li> All <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/Fonts" title="/pmwiki/pmwiki.php/UsefulNotes/Fonts">Fonts</a> must be huge, and the resolution must be ridiculously low. This doesn't apply when displaying program code, which must be too small to read.
+</li><li> All applications must be run almost full screen — there is no multitasking on television. Windows may show in the background, but they might as well be wallpaper for all anyone uses them. Conversely, even where the user is trying to concentrate on doing just one thing, it will not be possible to quite eliminate the off-putting spinning graphics and useless other windows.
+</li><li> All makers of police database software must put extra effort in making the user interface have pizazz. The UI must have distracting and superfluous widgets, animations, and nonsensical bits of technical-sounding text and random numbers.
+</li><div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_2"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_2'); })</script></div></div><li> The application interfaces must not conform to any established UI development standards. They must not share common interface conventions even between themselves (for instance, the facial recognition database cannot in any way function like or resemble the ballistics matching database).
+</li><li> Superfluous animation and sound is required. When sending an e-mail, for example, it is useful to have an animation of the message folding itself into an envelope and flying off into the ether, accompanied by a synthesized woman's voice informing the user that the email is being sent. When searching through any database (such as a fingerprint database), it is useful to flash an image of each search failure just to let you know the program is working. (In <a class="twikilink" href="/pmwiki/pmwiki.php/Main/RealLife" title="/pmwiki/pmwiki.php/Main/RealLife">Real Life</a>, this would increase the search time by a factor of 10 or more.)
+</li><div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_3"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_3'); })</script></div></div><li> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/HighlyVisiblePassword" title="/pmwiki/pmwiki.php/Main/HighlyVisiblePassword">Passwords are never obscured by asterisks as they are typed</a>. <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ThePasswordIsAlwaysSwordfish" title="/pmwiki/pmwiki.php/Main/ThePasswordIsAlwaysSwordfish">Passwords are always simple, non-case-sensitive English words</a>, and never a random combination of numbers and letters.
+</li><li> Text being displayed, such as incoming email, must appear on the screen one letter at a time, as if it is typed in right then.
+</li><li> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BeepingComputers" title="/pmwiki/pmwiki.php/Main/BeepingComputers">Bleeping sound effects</a> accompany every button press, action and event to make sure everyone understands that computer interaction is happening.
+</li><li> All computers running in a scientific institution display a spinning DNA helix, positioned in a top corner, at all times. Atoms with electrons on fixed paths are a popular alternative.
+</li><li> If the interface talks, you can expect it to audibly announce every single function and command, no matter how irrelevant or routine.
+</li><li> Any kind of graphics manipulation software will be positively controlled with keyboard only, and the amount of clicking noises is the sole factor determining the effectiveness of operation. All manipulation is done on rectangles, which are selected automatically and then zoom in to fill the screen, line by line. <a class="twikilink" href="/pmwiki/pmwiki.php/Main/EnhanceButton" title="/pmwiki/pmwiki.php/Main/EnhanceButton">Arbitrary zooms and other image enhancements</a> work instantly and on any input; a single pixel of source from a surveillance camera is just about enough to extract a hidden message written with a substance only visible in ultraviolet light.
+</li><li> Computer equipment is highly sensitive to concerned looks, grunting "hmmm"s, and crossed arms. Two or three people possessing the above, standing behind the person operating the computer, will immediately unlock just the right functions needed in the software.
+</li><li> Every operation for the computer brings up a titled progress bar. This bar will be enormous, color-coded, will obscure the entire screen, and will always say something like "Cracking Into Pentagon: 45% Complete." And, most unbelievably for anyone who has used a real computer, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ArsonMurderandJaywalking" title="/pmwiki/pmwiki.php/Main/ArsonMurderandJaywalking">this progress bar will be</a> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ExactProgressBar" title="/pmwiki/pmwiki.php/Main/ExactProgressBar">entirely accurate</a>.
+</li><li> During the database search, the items from the DB will be compared side-to-side with the search query on the screen with the speed of several items per second. Which, while may appear superhumanly fast for regular viewer, is actually cripplingly slow for a computer. This doesn't prevent the search from being finished in several seconds though, regardless of the supposed size of the DB and the complexity of the comparison.
+</li><li> Computers can tell what type of file you have not just down to the file extension, but <em>what it does</em>, providing such prompts as "Downloading Virus" or "Uploading Medicine." As shown in the example above, computers can also calculate how long things will take and how far you have got even when it is a hit-or-miss event like finding the top secret plans or Cracking Into Pentagon.
+</li><li> Touch-screens may be prominently involved, though most aren't installed the right way: they're nearly vertical when they should be nearly flat. It has been proven that constantly raising your hand to touch a screen over a long period of time is unnatural and uncomfortable, to the extent that those in the field have dubbed it "gorilla arm."
+</li><li> The presence of malware on a network triggers effects such as melting, channel swapping and white noise on all monitors connected to the network.
+</li><li> Because ALL your users are important, not just the legitimate ones, people caught trying to hack in will be shown blazing skull graphics and screaming sound effects, rather than say just cutting off their access or reporting the illegal access attempt to the control room.
+</li></ul><p>Often, a Viewer Friendly Interface is a frontend for an <a class="twikilink" href="/pmwiki/pmwiki.php/Main/OmniscientDatabase" title="/pmwiki/pmwiki.php/Main/OmniscientDatabase">Omniscient Database</a>, and often made of <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BeepingComputers" title="/pmwiki/pmwiki.php/Main/BeepingComputers">Beeping Computers</a> with <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MagicFloppyDisk" title="/pmwiki/pmwiki.php/Main/MagicFloppyDisk">Magic Floppy Disk</a> drives. For <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ScienceFiction" title="/pmwiki/pmwiki.php/Main/ScienceFiction">Science Fiction</a>, however, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/OurGraphicsWillSuckInTheFuture" title="/pmwiki/pmwiki.php/Main/OurGraphicsWillSuckInTheFuture">Our Graphics Will Suck in the Future</a>.
+</p><p>Can be <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TruthInTelevision" title="/pmwiki/pmwiki.php/Main/TruthInTelevision">Truth in Television</a>, as programmers would like you to know that <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TheCoconutEffect" title="/pmwiki/pmwiki.php/Main/TheCoconutEffect">"Yes, the computer is working."</a> In fact, computers have been around long enough that some glaring examples are actually <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AluminumChristmasTrees" title="/pmwiki/pmwiki.php/Main/AluminumChristmasTrees">Aluminum Christmas Trees</a>.
+</p><p>Contrast with <a class="twikilink" href="/pmwiki/pmwiki.php/Main/UnusualUserInterface" title="/pmwiki/pmwiki.php/Main/UnusualUserInterface">Unusual User Interface</a>. Also see <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TechnologyPorn" title="/pmwiki/pmwiki.php/Main/TechnologyPorn">Technology Porn</a>, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/PopUpTexting" title="/pmwiki/pmwiki.php/Main/PopUpTexting">Pop-Up Texting</a>, and <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ExtremeGraphicalRepresentation" title="/pmwiki/pmwiki.php/Main/ExtremeGraphicalRepresentation">Extreme Graphical Representation</a>.
+</p><hr/><h2>Examples:</h2>
+<div class="folderlabel" onclick="toggleAllFolders();">    open/close all folders  </div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder0');">    Anime and Manga </div><div class="folder" id="folder0" isfolder="true" style="display:block;">
+<ul><li> In the <em><a class="twikilink" href="/pmwiki/pmwiki.php/Anime/YuGiOh" title="/pmwiki/pmwiki.php/Anime/YuGiOh">Yu-Gi-Oh!</a></em> anime, Kaiba goes to his <a class="twikilink" href="/pmwiki/pmwiki.php/Main/HackerCave" title="/pmwiki/pmwiki.php/Main/HackerCave">Hacker Cave</a> and uses a computer that follows almost all of the above rules to break into Pegasus's secret database (it does multitask, but then again the screen is 2 by 3 metres). Seeing as it's also commenting on his mood, it might be more advanced than it looks like.
+</li><li> The Magi from <em><a class="twikilink" href="/pmwiki/pmwiki.php/Anime/NeonGenesisEvangelion" title="/pmwiki/pmwiki.php/Anime/NeonGenesisEvangelion">Neon Genesis Evangelion</a></em> use a particularly flashy multi-layered holographic interface, and see fit to blank out every display in <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TheWarRoom" title="/pmwiki/pmwiki.php/Main/TheWarRoom">Central Dogma</a> if something bad happens. Which it inevitably does. With great frequency.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Manga/DeathNote" title="/pmwiki/pmwiki.php/Manga/DeathNote">Death Note</a></em>:
+<ul><li> Averted when Light accesses his father's computer. He uses an interface that looks a lot like MS Windows.
+</li><li> L's Apple-style interfaces, particularly in the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/HackerCave" title="/pmwiki/pmwiki.php/Main/HackerCave">Hacker Cave</a>, border on this, but they stop short of being downright impractical. Let's say he programmed in the GUIs to amuse himself during a slow week.
+</li></ul></li><li> Another notable aversion in <em><a class="twikilink" href="/pmwiki/pmwiki.php/LightNovel/HaruhiSuzumiya" title="/pmwiki/pmwiki.php/LightNovel/HaruhiSuzumiya">The Melancholy of Haruhi Suzumiya</a></em>, which doesn't use anything more complex than Windows XP. This includes computer-heavy episode <em>The day of Sagittarius</em>, in which Yuki hacks a multiplayer game on the fly by typing C++ code extremely fast in an enormous amount of command line windows in, yes, Windows XP. What she appeared to have actually programmed is a patch that would modify the game when executed, even while the game was running. On the command line, the second to last command is "C:\&gt; bcc32 -W SimInject.cc", which compiled whatever she wrote, and the last one is "C:\&gt; SimInject.exe", executing it. Aside from all the windows she used to apparently write only one file, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ShownTheirWork" title="/pmwiki/pmwiki.php/Main/ShownTheirWork">computers do work this way.</a>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Anime/RODTheTV" title="/pmwiki/pmwiki.php/Anime/RODTheTV">R.O.D the TV</a></em> has an interesting aversion. Nenene is shown asleep at her computer and, when the view shifts to view the monitor, we see that it is open to a simple and extremely accurate word processor, and whenever she types (Or falls asleep on the keyboard with her head pressing one of the keys) it types as a real computer would.
+</li><li> Often played for comedy in <em><a class="twikilink" href="/pmwiki/pmwiki.php/Anime/TengenToppaGurrenLagann" title="/pmwiki/pmwiki.php/Anime/TengenToppaGurrenLagann">Tengen Toppa Gurren Lagann</a></em> with Gunmen interfaces sprouting a number of whimsical, spontaneously generated, and often personal icons, like when Kamina first tried to pilot the Gurren and the monitors seemed to be displaying a "No Kaminas" sign.
+</li><li> Many <em><a class="twikilink" href="/pmwiki/pmwiki.php/Main/RealRobotGenre" title="/pmwiki/pmwiki.php/Main/RealRobotGenre">Real Robot</a></em> shows seem to have bizarrely simple cockpit configurations... how the hell can you make a <a class="twikilink" href="/pmwiki/pmwiki.php/Anime/MobileFighterGGundam" title="/pmwiki/pmwiki.php/Anime/MobileFighterGGundam">giant robot fence with a steering wheel</a> or even fight at all in a melee combat using only two joysticks and some pedals?
+</li><li> The aesthetic of the <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/GhostInTheShell" title="/pmwiki/pmwiki.php/Franchise/GhostInTheShell">Ghost in the Shell</a></em> anime franchise is partly defined by its distinct manner of visualizing the Net and human-computer interaction, replete with oversized flashing letters, completion bars, dials, meters and windows floating in space. Also, the OS wars seem to be over - every single computer display uses the same look.
+</li><li> Partially averted and partially played straight in <em><a class="twikilink" href="/pmwiki/pmwiki.php/Anime/DigimonAdventure" title="/pmwiki/pmwiki.php/Anime/DigimonAdventure">Digimon Adventure</a></em>. Koushiro's laptop is a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BlandNameProduct" title="/pmwiki/pmwiki.php/Main/BlandNameProduct">Bland-Name Product</a> of Apple's products and generally does a good job of behaving as such, but occasionally things in the vein of this trope happen, like Gennai walking across the screen to deliver a spoken message. In the second and <a class="twikilink" href="/pmwiki/pmwiki.php/Anime/DigimonAdventure02" title="/pmwiki/pmwiki.php/Anime/DigimonAdventure02">fourth</a> films, the computers there are Windows 95/98 and generally act the part, again with a few viewer-friendly oddities like the captured and emailed Kuramon in the fourth appearing on the desktop and being moved by Koushiro into a virtual refrigerator sitting in the middle of said desktop, and all the emails in the second opening up of their own accord upon receipt.
+</li><li> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/PlayedForLaughs" title="/pmwiki/pmwiki.php/Main/PlayedForLaughs">Played for Laughs</a> in <em>Gundam Evolve 10</em>, a CG short based off of <em><a class="twikilink" href="/pmwiki/pmwiki.php/Anime/MobileSuitGundamZZ" title="/pmwiki/pmwiki.php/Anime/MobileSuitGundamZZ">Mobile Suit Gundam ZZ</a></em>. Judau is in his ZZ-GR, talking to Roux through a video screen, when a new message starts to appear. An annoyed Roux grabs the new message frame and tries to shut it by physically squeezing it, growling "Stay out of this!" She manages to squash it down into a sound only transmission, but can't keep a grip on it and falls on her butt as it assumes its proper place on Judau's screen.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder1');">    Comic Books </div><div class="folder" id="folder1" isfolder="true" style="display:block;">
+<ul><li> One of the reasons you so rarely see computers used in comic books is that it's virtually impossible to make the display look even half way decent. <em><a class="twikilink" href="/pmwiki/pmwiki.php/ComicBook/AllStarSuperman" title="/pmwiki/pmwiki.php/ComicBook/AllStarSuperman">All-Star Superman</a></em> showed a monitor head-on once, displaying a word processor with letters that took up half the screen.
+</li><li> Oracle's computer interface in <em><a class="twikilink" href="/pmwiki/pmwiki.php/ComicBook/BirdsOfPrey" title="/pmwiki/pmwiki.php/ComicBook/BirdsOfPrey">Birds of Prey</a></em> looks nothing like a normal OS, but instead seems to be something she created herself (it often prominently features her "mask" logo). Probably justified in that she is a computer genius doing highly unique work, and is perfectly capable of making software especially suited to her purposes.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/ComicBook/TheTransformersLastStandOfTheWreckers" title="/pmwiki/pmwiki.php/ComicBook/TheTransformersLastStandOfTheWreckers">The Transformers: Last Stand of the Wreckers</a></em>, Verity types up a farewell letter on her laptop. In the trade paperback, writer James Roberts comments that he can never look at that panel without thinking 'Dear Ultra Magnus, by the time you read this you'll have discovered that I have a thing for oversized fonts...'
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder2');">    Films — Animation </div><div class="folder" id="folder2" isfolder="true" style="display:block;">
+<ul><li> Computers in <em><a class="twikilink" href="/pmwiki/pmwiki.php/Animation/SkyBlue" title="/pmwiki/pmwiki.php/Animation/SkyBlue">Sky Blue</a></em> follow this trope; however, since the text is in English but the original dialogue is in Korean, it's questionable how viewer-friendly it was for the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TargetAudience" title="/pmwiki/pmwiki.php/Main/TargetAudience">Target Audience</a>.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/TheIncredibles" title="/pmwiki/pmwiki.php/WesternAnimation/TheIncredibles">The Incredibles</a></em>. Let's start with the fact that what's apparently meant to be Syndrome's "master computer" is the only thing in the room it's in. Then there's the usual huge text even though the screen itself probably dwarfs some of the ones the film was shown on in theaters; the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/HighlyVisiblePassword" title="/pmwiki/pmwiki.php/Main/HighlyVisiblePassword">Highly Visible Password</a> (which happens to be <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ThePasswordIsAlwaysSwordfish" title="/pmwiki/pmwiki.php/Main/ThePasswordIsAlwaysSwordfish">the codename of the project</a>); the fact that the most plot-relevant information instantly comes up like a slideshow without any searching (except when Mr. Incredible checks to see if the locations of his wife and Frozone are known)... the whole thing pretty much touches every base and slides into home.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/DespicableMe" title="/pmwiki/pmwiki.php/WesternAnimation/DespicableMe">Despicable Me</a></em> plays with this. While the "CookieOS" that controls the cookie robots is fairly normal, it does mean that a completely functional GUI operating system was created specifically for the purpose of controlling the robots.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder3');">    Films — Live-Action </div><div class="folder" id="folder3" isfolder="true" style="display:block;">
+<ul><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/JurassicPark" title="/pmwiki/pmwiki.php/Franchise/JurassicPark">Jurassic Park</a></em>, Lex sees a graphical, 3D representation of a file system, which she immediately identifies as UNIX. Surprisingly, this actually <em>is</em> a real UNIX program, a Silicon Graphics file browser called <a class="urllink" href="https://en.m.wikipedia.org/wiki/Fsn_(file_manager)">fsn<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a> designed mostly to show off. But it seems unlikely that even the most dedicated young hacker (of that time) would have seen it, and it certainly is not visually particularly UNIX-like.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/BridgetJones" title="/pmwiki/pmwiki.php/Literature/BridgetJones">Bridget Jones's Diary</a></em>, featuring messages displayed one letter at a time. This is actually real, if outdated. You can still find programs that allow for realtime chat that show exactly what is typed, when it's typed, but your average person wouldn't use one.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/Film/AVPAlienVsPredator" title="/pmwiki/pmwiki.php/Film/AVPAlienVsPredator">AVP: Alien vs. Predator</a></em> - when this sort of thing would usually require a modicum of human intervention - a computer announces by way of bright red flashing that it's detected an "unusual heat signature" and then zooms in on the satellite photos of the source and generates a map which shortly thereafter becomes a plot point.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Film/IronMan1" title="/pmwiki/pmwiki.php/Film/IronMan1">Iron Man</a></em> embraced this trope with enthusiasm, though to be fair, this <em>is</em> Tony Stark's home and company..when an 'outside' computer was used, it used a mostly text-based interface, and unwieldy keyboard commands. (F11 then "Control + I"?)
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Film/Hackers" title="/pmwiki/pmwiki.php/Film/Hackers">Hackers</a></em>, in which the Gibson supercomputer represents the various virus and hacking activities with super-flashy 3-D graphics. It has been noted that many of the basic viruses and techniques demonstated are based on real information, horribly extrapolated; it has been theorized that the visual displays were a cross between making these highly technical activities interesting to <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Muggles" title="/pmwiki/pmwiki.php/Main/Muggles">the average person</a>, and a kind of <a class="twikilink" href="/pmwiki/pmwiki.php/Main/LampshadeHanging" title="/pmwiki/pmwiki.php/Main/LampshadeHanging">Lampshade Hanging</a>.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Film/IndependenceDay" title="/pmwiki/pmwiki.php/Film/IndependenceDay">Independence Day</a></em>
+<ul><li> The F/A-18 fighter's display is not only much more advanced than most F/A-18 HUDs, but also is kind enough to tell you why a missile didn't fire in detail.
+</li><li> The "Uploading Virus" progress bar.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Film/Avatar" title="/pmwiki/pmwiki.php/Film/Avatar">Avatar</a></em> uses a variation of this trope. The interface itself is rather small and unassuming, but things like reports, diagrams, false color images and security feeds are rendered in uber-definition. And let's not get into that "brain synching" screen with the synapses.
+</li><li> Generally <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Averted" title="/pmwiki/pmwiki.php/Main/Averted">averted</a> in <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/TheMatrix" title="/pmwiki/pmwiki.php/Franchise/TheMatrix">The Matrix</a></em> trilogy. A particular example is in <em><a class="twikilink" href="/pmwiki/pmwiki.php/Film/TheMatrixReloaded" title="/pmwiki/pmwiki.php/Film/TheMatrixReloaded">The Matrix Reloaded</a></em>, with Trinity working with a bog-standard Unix command-line interface to launch what is a plausible-looking attack. (The famous green-scrolling effect may well be an attempt to develop the most viewer (or at least user) <em>unfriendly</em> interface. There is comparatively little "real-life" UI shown - a holographic display on board the ships - but most of what's left is handled by jacking in.)
+</li><li> Averted, for the most part, in the Swedish versions of <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/TheMillenniumTrilogy" title="/pmwiki/pmwiki.php/Literature/TheMillenniumTrilogy">The Millennium Trilogy</a></em> films, with both Blomkvist's and Salander's computers clearly being Apple computers that actually run <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/MacOS" title="/pmwiki/pmwiki.php/UsefulNotes/MacOS">macOS</a>. All of the software that both of them run are standard Mac applications, with the particular exception of Salander's hacking program being different, appearing to instead be more <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/UNIX" title="/pmwiki/pmwiki.php/UsefulNotes/UNIX">UNIX</a> based.
+</li><li> Used in <a class="twikilink" href="/pmwiki/pmwiki.php/Film/Transformers" title="/pmwiki/pmwiki.php/Film/Transformers">Transformers</a> when Frenzy is hacking into the Air Force One computer.
+</li><li> The movie <em><a class="twikilink" href="/pmwiki/pmwiki.php/Film/Salt" title="/pmwiki/pmwiki.php/Film/Salt">Salt</a></em> has a Nuclear Launch Sequence progress bar. It stops partway through for a 'reconfirm identity' check.
+</li><li> The SHIELD Helicarrier of <em><a class="twikilink" href="/pmwiki/pmwiki.php/Film/TheAvengers2012" title="/pmwiki/pmwiki.php/Film/TheAvengers2012">The Avengers (2012)</a></em> has a few giant vertically-mounted touchscreens for agents Fury and Hill to use, which feature giant spinning holograms of the Helicarrier, Earth, or just some moving wiggly lines. Background drones get keyboards and joysticks on their machines. The "captain's" screens are specifically designed for a person with normal eyesight, which is lampshaded by <a class="twikilink" href="/pmwiki/pmwiki.php/Film/IronMan" title="/pmwiki/pmwiki.php/Film/IronMan">Tony Stark</a> when he covers one eye and tries to see all the screens around him and then asks how Nick Fury can see them with just one eye. (<a class="twikilink" href="/pmwiki/pmwiki.php/Main/TakeAThirdOption" title="/pmwiki/pmwiki.php/Main/TakeAThirdOption">He turns</a>, according to Maria Hill.)
+</li><li> Both <em><a class="twikilink" href="/pmwiki/pmwiki.php/Film/TheAmazingSpiderMan" title="/pmwiki/pmwiki.php/Film/TheAmazingSpiderMan">The Amazing Spider-Man</a></em> and <a class="twikilink" href="/pmwiki/pmwiki.php/Film/TheAmazingSpiderMan2" title="/pmwiki/pmwiki.php/Film/TheAmazingSpiderMan2">its sequel</a> feature very advanced-looking computer interfaces: touch-screens everywhere, giant fonts, and holograms all over the place. Even a <em>carjacker</em> does his work with a touch-screen key-descrambler device. <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MegaCorp" title="/pmwiki/pmwiki.php/Main/MegaCorp">Oscorp</a> must have its sinister tendrils in every technology-pie in New York.
+</li><li> In the <em><a class="twikilink" href="/pmwiki/pmwiki.php/Film/DeathNote" title="/pmwiki/pmwiki.php/Film/DeathNote">Death Note</a></em> live-action movies, the police database Light hacks into — or maybe the hacking program itself — has ridiculously flashy and impractical graphics.
+</li><li> Played straight in <em><a class="twikilink" href="/pmwiki/pmwiki.php/Film/Chappie" title="/pmwiki/pmwiki.php/Film/Chappie">Chappie</a></em>. Whenever complex computer processes are seen, they're shown in a BIOS-like interface that spells out exactly what's currently happening. One glaring example of this trope also shows up <span class="spoiler" title="you can set spoilers visible by default on your profile"> when the Moose is taken into action by Vincent Moore. Even though he's using a helmet with a visor to control it, three monitors are there in front of him just to show us what's happening.</span>
+</li><li> The space center's supercomputer in <a class="twikilink" href="/pmwiki/pmwiki.php/Film/TheMartian" title="/pmwiki/pmwiki.php/Film/TheMartian">The Martian</a> says "Calculations Correct" in 72-point font when the calculations for <span class="spoiler" title="you can set spoilers visible by default on your profile">the retrieval mission</span> are made.
+</li><li> When the monster breaks into the research facility in <em><a class="createlink" href="/pmwiki/pmwiki.php/Film/PeterBenchleysCreature" title="/pmwiki/pmwiki.php/Film/PeterBenchleysCreature">Peter Benchleys Creature</a></em>, an audible alarm goes off, which is perfectly plausible. What makes it this trope is that a video screen starts flashing "SECURITY BREACH" in big bold letters, as if the base's staff are too clueless to recognize that the alarm actually <em>means</em> something.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/Film/Skyfall" title="/pmwiki/pmwiki.php/Film/Skyfall">Skyfall</a></em>, the mainframe computer is incredibly user friendly. As it is being hacked by a software program, a data visualization program maps the code of the software in real time, displaying the code as a moving 3D model. As the hacking software is using "a polymorphic engine to mutate the code", the data visualization software shows the 3D code mutating as if it were a biological organism. While points on the 3D display correspond to hexadecimal code, the code mutating in real time causes the corresponding hexadecimal display to move rapidly. Bond notices the hexademical code goes beyond the letter F, as if displaying a new programming standard that includes the letters G, H, N, R, and U. When the software recognizes one of the points of code is a "data feed," the 3D code representation turns red and transforms into a 3D representation of a city map. Then, as the building security is being breached, the "System Security Breach" warning pops up.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/Film/Swordfish" title="/pmwiki/pmwiki.php/Film/Swordfish">Swordfish</a></em>, Stanley's software is labelled "Worm Generation Tool" so that we know what kind of program this is. The text "Assembling Replicator Objects" lets us know what it is doing, assembling a computer worm put together with a convenient drag and drop GUI. As Stanley switches between typing and viewing code on six monitors, the main monitor displays a 3D visual representation of a cube with an octahedron in the center. A series of smaller cubes, with code scrolling rapidly across, are placed onto the corners of the cube, then, more cubes are placed on the edges of the cube, until there are twenty cubes surrounding the cube that is surrounding the octahedron. With a beep, the larger cube brings in the smaller cubes to hug the octahedron, causing it to glow bright, with the word "Complete" blinking above it in green letters. Stanley considers this a success, but he does not have access to any such cube and octahedron software when hacking into the Department of Defense, with a welcome screen showing "Department of Defense" in large letters. Here, he must type in a bunch of code relating to IP addresses that go well above 255. "Access Denied" flashes on the screen in red letters. Typing through a menu of commands, "Access Denied" flashes upon the screen, then again, and again, until finally, he hits enter. The "Department of Defense" screen appears again, and "Access Granted" appears on the screen in green letters, letting the audience know, indeed, Stanley has successfully accessed the Department of Defense computers.
+</li><li> Arguably justified in <em><a class="createlink" href="/pmwiki/pmwiki.php/Film/LongtimeCompanion" title="/pmwiki/pmwiki.php/Film/LongtimeCompanion">Longtime Companion</a></em> by Sean's deteriorating health, as vision problems were commonly associated with AIDS at the time.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/Film/CriesFromTheHeart" title="/pmwiki/pmwiki.php/Film/CriesFromTheHeart">Cries from the Heart</a></em>, everything Michael types is in a massive font size. It could be that Terry set it up like that to make it easier for him to see, but in one scene, he starts typing in a document that's being used to compose a memo, and while the memo is in smaller letters, Michael's words are as huge as ever.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder4');">    Literature </div><div class="folder" id="folder4" isfolder="true" style="display:block;">
+<ul><li> The Pemalite ship in <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/Animorphs" title="/pmwiki/pmwiki.php/Literature/Animorphs">Animorphs</a></em>.
+</li><li> A rare literary example occurs in <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/DigitalFortress" title="/pmwiki/pmwiki.php/Literature/DigitalFortress">Digital Fortress</a></em>.
+</li><li> In one <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/Relativity" title="/pmwiki/pmwiki.php/Literature/Relativity">Relativity</a></em> story, a henchman who decides to try his hand at full-blown villainy feels it necessary to install a giant digital display to show the heroes how much time they have left before the convoluted deathtrap kills them.
+</li><li> The novel <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/JurassicPark" title="/pmwiki/pmwiki.php/Literature/JurassicPark">Jurassic Park</a></em> avoids the movie's extreme graphic display by presenting a basic command prompt. <a class="twikilink" href="/pmwiki/pmwiki.php/Creator/MichaelCrichton" title="/pmwiki/pmwiki.php/Creator/MichaelCrichton">Michael Crichton</a> apparently enjoyed the movie interface, as the book for <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/TheLostWorld1995" title="/pmwiki/pmwiki.php/Literature/TheLostWorld1995">The Lost World (1995)</a></em> uses a highly sophisticated mosaic display. It also <a class="twikilink" href="/pmwiki/pmwiki.php/Main/LampshadeHanging" title="/pmwiki/pmwiki.php/Main/LampshadeHanging">winks and nods</a> at the uselessness of the movie's 3D display, since the resident whiz kid is unable to use it, it is horribly cumbersome, and it's actually just a severe distraction as the characters are trying to barricade themselves from the dinosaur attack.
+</li><li> The space ship the protagonists spend most of <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/WillSaveTheGalaxyForFood" title="/pmwiki/pmwiki.php/Literature/WillSaveTheGalaxyForFood">Will Save the Galaxy for Food</a></em> has a control system described as "straight out of a poorly researched movie." As an absurdly opulent model, the pilot's controls are designed to look good to the owner rather than to actually be usable. This results in all those practical dials and switches being removed and everything but the control sticks being run from a touch screen, and some critical systems like weapon countermeasures being hidden in submenues..
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder5');">    Live Action TV </div><div class="folder" id="folder5" isfolder="true" style="display:block;">
+<ul><li> All the shows in the <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/CSI" title="/pmwiki/pmwiki.php/Series/CSI">CSI</a></em> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SeriesFranchise" title="/pmwiki/pmwiki.php/Main/SeriesFranchise">franchise</a> use an AFIS front-end that fits all the key tenets.
+<ul><li> One specific episode of <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/CSI" title="/pmwiki/pmwiki.php/Series/CSI">CSI</a></em> used a highly graphics-intensive program that allowed the user to recreate a location and then set it on fire, for the purposes of investigating possible arson cases. Rather than just crunch numbers and return a near-instant result, it actually <em>animated</em> the fire in real-time.
+</li><li> It's taken to ridiculous extremes in <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/CSIMiami" title="/pmwiki/pmwiki.php/Series/CSIMiami">CSI: Miami</a></em>, which have computers that look like Star Trek with red and blue mood lighting and a similar font, yet fit the flashy artistic direction.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/CSINY" title="/pmwiki/pmwiki.php/Series/CSINY">CSI: NY</a></em> is not nearly as exaggerated, but still a couple steps beyond practical.
+</li><li> Although the original <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/CSI" title="/pmwiki/pmwiki.php/Series/CSI">CSI</a></em> is terribly guilty of color-coordinated (neon-blue on black, since you ask), display-each-hit search screens, <em>CSI: Miami</em> is considerably worse. Whenever a suspect's information comes up on screen on glaring green over orange, it displays a blank form upon which letters pop in one at a time, Power Point-style, making viewers and investigators wait several seconds before reading anything useful.
+</li></ul></li><li> <a class="twikilink" href="/pmwiki/pmwiki.php/Series/Dexter" title="/pmwiki/pmwiki.php/Series/Dexter">Dexter</a> zig-zags on this trope:
+<ul><li> Sometimes people will be seen using computers in a fairly normal fashion - for example, Dexter's home computer, which changes around a bit but mostly looks like some brand of Linux, or <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/MacOS" title="/pmwiki/pmwiki.php/UsefulNotes/MacOS">macOS</a>.
+</li><li> Then we go into his lab, where everything is designed for blind fools and the computer knows to helpfully label every sample in 72pt text.
+</li><li> Cell phones, however, fall squarely under this trope. A call from someone will very clearly show the caller's name. Not so bad, but when someone chooses to "ignore" it, the word "IGNORE" appears and takes up the entire screen. This extends to text messages, which in real life usually doesn't have a function to ignore. Also, a message as short as "MEET ME" will take up the entire screen.
+</li></ul></li><li> The highly advanced LCARS interface used in the Next Generation era of the <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/StarTrek" title="/pmwiki/pmwiki.php/Franchise/StarTrek">Star Trek</a></em> franchise is totally unwieldy and would be impossible for a real person to navigate with any kind of efficiency. It would be particularly impossible for anyone to navigate the menu systems by touch, though we see users do this several times (most obviously in <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/StarTrekTheNextGeneration" title="/pmwiki/pmwiki.php/Series/StarTrekTheNextGeneration">Star Trek: The Next Generation</a></em>, "<a class="twikilink" href="/pmwiki/pmwiki.php/Main/ClipShow" title="/pmwiki/pmwiki.php/Main/ClipShow">Shades</a> of Gray").
+<ul><li> There have been several attempts by people who don't realize this fact to actually implement LCARS UI skins for their computers. They never catch on, because even though they make some concessions to reality, they just don't work that well.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/Bones" title="/pmwiki/pmwiki.php/Series/Bones">Bones</a></em> frequently makes use of Angela's "mainframe", complete with <a class="twikilink" href="/pmwiki/pmwiki.php/Main/OmniscientDatabase" title="/pmwiki/pmwiki.php/Main/OmniscientDatabase">Omniscient Database</a> and holographic display (despite all this modern technology, everything in it usually has a yellow tint), although we don't see the screen of the stylus-controlled tablet device she uses for input. The tablet's interface must be pretty viewer-friendly, because she can create entirely new simulations on the spot with a few strokes of the stylus.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/LawAndOrderSVU" title="/pmwiki/pmwiki.php/Series/LawAndOrderSVU">Law &amp; Order: SVU</a></em> embraces this trope more and more every season, to the point of invoking <a class="twikilink" href="/pmwiki/pmwiki.php/Main/EarlyInstallmentWeirdness" title="/pmwiki/pmwiki.php/Main/EarlyInstallmentWeirdness">Early Installment Weirdness</a> when going back and watching older episodes where they had to actually get off their asses and do some actual police work once in awhile.
+</li><li> Early in the show, <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/Castle" title="/pmwiki/pmwiki.php/Series/Castle">Castle</a></em> would speculate about the cool TV-friendly software and equipment they were going to use, only to be disappointed by the mundane stuff actually used by the police. The police would then lampshade the trope and Castle falling for it. Later, <em>Castle</em> started playing the trope straight, showing computer forensics with Hollywood-friendly graphical interfaces.
+</li><li> Mid-1990s television seems to be particularly susceptible to this trope; for example, the show <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/Animorphs" title="/pmwiki/pmwiki.php/Series/Animorphs">Animorphs</a></em> did this with regularity.
+</li><li> Averted in an episode of <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/LaFemmeNikita" title="/pmwiki/pmwiki.php/Series/LaFemmeNikita">La Femme Nikita</a></em>. The screens have about the font size you'd expect on a real computer, so that things have to be shown in close-up, and the series's computer geek, as <a class="twikilink" href="/pmwiki/pmwiki.php/Main/VoiceWithAnInternetConnection" title="/pmwiki/pmwiki.php/Main/VoiceWithAnInternetConnection">Voice with an Internet Connection</a>, first explains to Nikita how to find a process ID and then tells her to type in "kill -9" to make it stop—bog-standard UNIX.
+</li><li> The SGC dialing computer in <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/StargateSG1" title="/pmwiki/pmwiki.php/Series/StargateSG1">Stargate SG-1</a></em> is remarkably flashy for something supposedly '<a class="twikilink" href="/pmwiki/pmwiki.php/Main/MacGyvering" title="/pmwiki/pmwiki.php/Main/MacGyvering">MacGyvered</a>' together by military scientists and technicians to interface with advanced and unknown technology. It's impossible to show on a still image, but the Stargate glyphs are animated, flying out of the picture of the top chevron and into their cells. That said, the Ancients seem to have been addicted to <a class="twikilink" href="/pmwiki/pmwiki.php/Main/HolographicTerminal" title="/pmwiki/pmwiki.php/Main/HolographicTerminal">fancy holograms</a>, so maybe it's their influence seeping through.
+<ul><li> The interface was '<a class="twikilink" href="/pmwiki/pmwiki.php/Main/MacGyvering" title="/pmwiki/pmwiki.php/Main/MacGyvering">MacGyvered</a>' over a period of <em>decades</em>. Presumably the programmers had a lot of time on their hands in between epiphanies.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/Firefly" title="/pmwiki/pmwiki.php/Series/Firefly">Firefly</a></em>:
+<ul><li> Averted with <em>Serenity's</em> rather simplistic and basic user interface. On the other hand, the interface in Inara's shuttle and the various Alliance computers are much more complex and gimmicky.
+</li><li> One episode ("Trash") also subverts this trope. When Kaylee and Zoe are trying to install a new hardware part to change the direction of the trash shuttle, the screen shows a Windows 2000 "Found New Hardware" screen.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/EleventhHour" title="/pmwiki/pmwiki.php/Series/EleventhHour">Eleventh Hour</a></em> (UK): The third episode features a program which "decrypts" a scientist's encoded mathematical formulas... Into an animated presentation complete with 3d special effects.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/NCIS" title="/pmwiki/pmwiki.php/Series/NCIS">NCIS</a></em> plays this trope semi-straight. Many of the interfaces are somewhat realistic, except for some big text inserted to help viewers (and possibly Gibbs) see what is going on. This approach also applies to the accompanying <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TechnoBabble" title="/pmwiki/pmwiki.php/Main/TechnoBabble">Techno Babble</a>. It's not that far off the mark, but the non-geek members of the cast (everyone except McGee and Abby) usually ask for a translation.
+<ul><li> There is this once-an-episode scenario:
+</li></ul><div class="indent"><strong>Gibbs:</strong> Zoom in on that. * points to something on screen*
+</div><div class="indent"><strong>Abby:</strong> * type type type*
+</div><ul><li> In the episode where they are being hacked, the monitor shows the message "Firewall connection breached" above the larger letters, "Instrusion Detection - Firewall Breach", with random windows popping up with visible scripts scrolling down the screen. To stop this hacking attempt, Abby begins typing on the keyboard, and McGee joins her, until both are typing rapidly on the same keyboard. Think about that for a second.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/NCISLosAngeles" title="/pmwiki/pmwiki.php/Series/NCISLosAngeles">NCIS: Los Angeles</a></em> uses an OS that <em>looks</em> like MovieOS, but is based on Perceptive Pixel's actual multitouch system. Another episode subverts this with <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ProductPlacement" title="/pmwiki/pmwiki.php/Main/ProductPlacement">Product Placement</a> for Windows 8 and the Microsoft Surface tablet.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/Ghostwriter" title="/pmwiki/pmwiki.php/Series/Ghostwriter">Ghostwriter</a></em> famously had a word processor that was just a blue screen with large text, typical of early programs like WordStar. <em>The New Ghostwriter Mysteries</em> used a more typical word processor, but the text was still impractically large for standard use.
+</li><li> Norton's supercomputer in <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/WarOfTheWorlds1988" title="/pmwiki/pmwiki.php/Series/WarOfTheWorlds1988">War of the Worlds (1988)</a></em> never seemed to show the same interface twice.
+</li><li> The G&amp;G Network on <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/Profit" title="/pmwiki/pmwiki.php/Series/Profit">Profit</a></em> was designed with a punch-button interface (complete with a giant fake hand pressing the button on the screen), an organization system based on a slow-moving-but-cool-looking hallway theme, and only was able to depict people in cube-format... Still, it was cool how they exploded when people get fired.
+</li><li> In the British miniseries <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/TheLastEnemy" title="/pmwiki/pmwiki.php/Series/TheLastEnemy">The Last Enemy</a></em> every computer reads every single word on the screen in a synthesised voice, <em>even those the user typed in themselves</em>. Apparently <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TwentyMinutesIntoTheFuture" title="/pmwiki/pmwiki.php/Main/TwentyMinutesIntoTheFuture">20 Minutes into the Future</a> default computer settings assume impared vision and are very difficult to change.
+</li><li> The CBC kids' spy show <em>Spynet</em> had the main character (a spy) infiltrating villains' homes (normal suburban houses) and hacking their computers (Windows 95). An amusing aversion.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/PersonOfInterest" title="/pmwiki/pmwiki.php/Series/PersonOfInterest">Person of Interest</a>:</em> in scenes showing the world from The Machine's point of view, there are lines of text and graphic boxes <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ColorCodedForYourConvenience" title="/pmwiki/pmwiki.php/Main/ColorCodedForYourConvenience">Color-Coded for Your Convenience</a>. A real system wouldn't need visual displays like these, but they help the viewer understand what The Machine is "thinking."
+</li><li> Every single screen on <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/Leverage" title="/pmwiki/pmwiki.php/Series/Leverage">Leverage</a></em>, and we mean <em>every single one</em> is like this. Everything from alerts to notifications to confirmations appear in GIANT CAPSLOCK LETTERS and bright, vivid colours that take up half the screen.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/TheSarahJaneAdventures" title="/pmwiki/pmwiki.php/Series/TheSarahJaneAdventures">The Sarah Jane Adventures</a></em>: Sarah Jane's computer, Mister Smith, is almost always displaying a fancy spinning pattern that does little of relevance. Since he's a sapient alien supercomputer with processing power to spare, it may just be due to his own enjoyment. He also plays a loud fanfare whenever he activates.
+</li><li> Parodied mercilessly, along with every other aspect of TV Computers, in <a class="twikilink" href="/pmwiki/pmwiki.php/Creator/CharlieBrooker" title="/pmwiki/pmwiki.php/Creator/CharlieBrooker">Charlie Brooker</a>'s <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/ATouchOfCloth" title="/pmwiki/pmwiki.php/Series/ATouchOfCloth">A Touch of Cloth</a></em>. The OS is <em>ridiculously</em> grandiose, has voice control, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MagicalComputer" title="/pmwiki/pmwiki.php/Main/MagicalComputer">and allows the detectives to alter history</a>, going so far as to <em>grab a piece of physical evidence from a video playback</em>. It's all in service of <a class="twikilink" href="/pmwiki/pmwiki.php/Main/RuleOfFunny" title="/pmwiki/pmwiki.php/Main/RuleOfFunny">Rule of Funny</a>, of course, so they don't use this to - say - warn the victims ahead of time...
+</li><li> Averted by the 2nd episode of <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/TheBlacklist" title="/pmwiki/pmwiki.php/Series/TheBlacklist">The Blacklist</a></em>, where a polygraph program is seen running on a Windows 8 desktop. Not even the funky Metro shell.
+</li><li> Averted in <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/MysteryScienceTheater3000" title="/pmwiki/pmwiki.php/Series/MysteryScienceTheater3000">Mystery Science Theater 3000</a></em> episode featuring <em><a class="twikilink" href="/pmwiki/pmwiki.php/Film/Mitchell" title="/pmwiki/pmwiki.php/Film/Mitchell">Mitchell</a></em>. When Mike is trying to help Gypsy get Joel out, he's forced to use MS-DOS just to bring up the manual, griping that he hates these things as he does.
+</li><li> A medieval version in <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/GameOfThrones" title="/pmwiki/pmwiki.php/Series/GameOfThrones">Game of Thrones</a></em>. In <a class="twikilink" href="/pmwiki/pmwiki.php/Literature/ASongOfIceAndFire" title="/pmwiki/pmwiki.php/Literature/ASongOfIceAndFire">the novels</a> there's reference to the tiny writing used by maesters when sending a message by raven. In the TV series however, each message scroll is always large enough for the audience to read, and only conveys the bare minimum needed by the plot, as opposed to the reams of information that need to be conveyed in the novels.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder6');">    Tabletop Games </div><div class="folder" id="folder6" isfolder="true" style="display:block;">
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/Shadowrun" title="/pmwiki/pmwiki.php/TabletopGame/Shadowrun">Shadowrun</a></em> relies heavily on this, despite being a primarily non-visual medium, for all its computer systems. The game's <a class="twikilink" href="/pmwiki/pmwiki.php/Main/EverythingIsOnline" title="/pmwiki/pmwiki.php/Main/EverythingIsOnline">Matrix network</a> has networks set up so that text files are large pages full of text, the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/HollywoodHacking" title="/pmwiki/pmwiki.php/Main/HollywoodHacking">Hollywood Hacking</a> is done by making actual attacks on representations of the network, etc. The <a class="twikilink" href="/pmwiki/pmwiki.php/Main/InUniverse" title="/pmwiki/pmwiki.php/Main/InUniverse">In-Universe</a> explanation for this is that the corporations running the Matrix have tried to "idiot proof" it by making it simple and obvious. However, since it also needs to make the game mechanics possible without being too easy, this results in an interface that is so painfully manual that nobody would actually want to use it in real life. To interact with a device or anything that has a local server, you have to get physically close to it in the real world, then go into <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Cyberspace" title="/pmwiki/pmwiki.php/Main/Cyberspace">Cyberspace</a> and interact with it, such as manually turning the burner icons on a glowing digital stove to remotely heat an oven.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder7');">    Video Games </div><div class="folder" id="folder7" isfolder="true" style="display:block;">
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/MassEffect" title="/pmwiki/pmwiki.php/Franchise/MassEffect">Mass Effect</a></em> has Virtual Intelligences. They are advanced computers with a humanoid hologram instead of a screen and they can respond to and produce normal speech, sort of like IBM's Watson. They were likely added so players didn't have to do a whole bunch of reading when encountering a machine.
+</li><li> The game <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Uplink" title="/pmwiki/pmwiki.php/VideoGame/Uplink">Uplink</a></em> is a simulation of <a class="twikilink" href="/pmwiki/pmwiki.php/Main/HollywoodHacking" title="/pmwiki/pmwiki.php/Main/HollywoodHacking">Hollywood Hacking</a>. It has a UI set at a resolution low enough that you can, provides highly visible progress bars for <em>everything</em>, scrolls a list of attempted passwords (complete with <a class="twikilink" href="/pmwiki/pmwiki.php/Main/PasswordSlotMachine" title="/pmwiki/pmwiki.php/Main/PasswordSlotMachine">individual letters locking into place</a>) when hacking, and has an animation of dialing IP addresses. Your computer is also fully capable of recording a person's voice and generating a voice recording convincing enough to fool a biometric system. While this <em>may</em> be possible in <a class="twikilink" href="/pmwiki/pmwiki.php/Main/RealLife" title="/pmwiki/pmwiki.php/Main/RealLife">Real Life</a>, the program somehow transforms a tiny sample of the person's voice, such as "Hello! Hello! Who's there?", into <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ThePasswordIsAlwaysSwordfish" title="/pmwiki/pmwiki.php/Main/ThePasswordIsAlwaysSwordfish">the always used password</a> "<a class="twikilink" href="/pmwiki/pmwiki.php/Film/Sneakers" title="/pmwiki/pmwiki.php/Film/Sneakers">Hello. I'm am the systems administrator. My voice is my passport. Verify me.</a>" How would it even come close to that?
+</li><li> Justified in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Doom3" title="/pmwiki/pmwiki.php/VideoGame/Doom3">Doom 3</a></em>, because in this game you can actually move the screens' cursor to interact with them, and it would be difficult to interact with an user interface that didn't featured huge controls and fonts.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VisualNovel/Ever17" title="/pmwiki/pmwiki.php/VisualNovel/Ever17">Ever 17</a></em> has Sora and her holographic interfaces. Justified in that Sora is both meant to provide comprehensible visual information to theme park guests and is herself a holographically projected AI made for the purpose.
+</li><li> Many <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/CommandAndConquer" title="/pmwiki/pmwiki.php/VideoGame/CommandAndConquer">Command &amp; Conquer</a></em> games have blinking displays with cool sound effects, both in the GUI and the cinematics. This is especially common in the Tiberium series, from video conferencing to AI advisers.
+</li><li> The briefings in <em><a class="createlink" href="/pmwiki/pmwiki.php/VideoGames/AceCombat5TheUnsungWar" title="/pmwiki/pmwiki.php/VideoGames/AceCombat5TheUnsungWar">Ace Combat 5</a></em> and possibly the other Ace Combat games are filled with flashy satellite maps, random popup windows, and <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BeepingComputers" title="/pmwiki/pmwiki.php/Main/BeepingComputers">computer sound effects</a>
+</li><li> The <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/DeadSpace" title="/pmwiki/pmwiki.php/Franchise/DeadSpace">Dead Space</a></em> series suits have blinking lights on their <em>spines</em> to indicate Isaac's vitality and project a holographic interface in front of his face. The latter is angled to seem like it's meant for his eyes but the screen elements are <em>huge</em> to the point that he would have to turn his head to see them completely (and it <em>lacks</em> a vital sign reading like the one on his back). Both are clearly visible to the player whose viewpoint <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AlwaysOverTheShoulder" title="/pmwiki/pmwiki.php/Main/AlwaysOverTheShoulder">overlooks his shoulder</a> and one could argue that they would be useful for coworkers in the suits' original mining context.
+</li><li> Parodied in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/KrushKillNDestroy" title="/pmwiki/pmwiki.php/VideoGame/KrushKillNDestroy">Krush Kill n' Destroy</a></em>. The user interface shown during briefings has a section with useless or funny text on the side including showing random numbers.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Fallout2" title="/pmwiki/pmwiki.php/VideoGame/Fallout2">Fallout 2</a></em>, you would expect the Gecko reactor computer system to be fairly streamlined and designed for professionals, but judging from some dialog choices, you are occasionally asking and giving instructions in regular narrative, to which it responds in narrative. It can be justified as the PC thinking out loud, though. Later, when you request the location of the Oil Rig from the Navarro mainframe, it first gives you exact coordinates and distances, then offers layman terms (off the coast, out in the ocean) then explains that if the layman terms are too complicated for you, nothing else it can do would help.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DeusExHumanRevolution" title="/pmwiki/pmwiki.php/VideoGame/DeusExHumanRevolution">Deus Ex: Human Revolution</a></em>, hacking takes you directly to the email, which conveniently always only has 2-5 emails in the inbox for you to look at. The Tai Yong Medical area justifies this with TYM having an insanely strict email policy that limits all employees to 4 emails maximum (including the one telling them they're approaching capacity), which is simultaneously absurd while sounding exactly like something an efficiency-obsessed executive would come up with. This also helps explain why so much personal information is found on portable devices; people have to keep the excess mail <em>somewhere</em>.
+</li><li> One of the hallmarks of <a class="twikilink" href="/pmwiki/pmwiki.php/Main/PortingDisaster" title="/pmwiki/pmwiki.php/Main/PortingDisaster">poorly done console-to-PC ports</a> is interface elements that aren't changed to reflect that the game is being played on a smaller monitor closer to the viewer's face as opposed to a much larger but farther away TV. This got better when consoles started supporting HDTV (which uses similar display standards and technology to computer monitors), but it still crops up from time to time.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/KingdomHeartsII" title="/pmwiki/pmwiki.php/VideoGame/KingdomHeartsII">Kingdom Hearts II</a></em> this is largely averted with the computer under Ansem's castle; most of the time, you can't tell exactly what that computer is doing, and the font is too small to read. <span class="spoiler" title="you can set spoilers visible by default on your profile">However, there is a secret scene in later versions of KH2 where someone wearing an Organization XIII coat is entering passwords into a computer to access a hidden chamber, though, where the passwords are shown clearly and in huge font, and they're the original names of members 2 through 6 of the Organization. Except that the last password entered was "Another", not "Xehanort"...</span>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SOMA" title="/pmwiki/pmwiki.php/VideoGame/SOMA">SOMA</a></em> goes both ways with this trope.
+<ul><li> In the beginning, most of the computers resemble a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BrandX" title="/pmwiki/pmwiki.php/Main/BrandX">Brand X</a> Windows desktop, but the various systems at David Munshi's lab show rapidly scrolling lines of text and 3D models rotating back and forth.
+</li><li> In <span class="spoiler" title="you can set spoilers visible by default on your profile"> 2104</span>, the Pathos-II <a class="twikilink" href="/pmwiki/pmwiki.php/Main/UnderwaterBase" title="/pmwiki/pmwiki.php/Main/UnderwaterBase">Underwater Base</a> uses computers bearing windows with huge buttons and little else on-screen, mostly shown <a class="twikilink" href="/pmwiki/pmwiki.php/Main/RasterVision" title="/pmwiki/pmwiki.php/Main/RasterVision">with lines across the monitors.</a>
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Code7" title="/pmwiki/pmwiki.php/VideoGame/Code7">Code 7</a></em> is a meta-example. Not only is it possible to deactivate glitches to reduce seizures for epileptic people, it even has a <em>mode for blind players</em> where the game reads out everything. It also allows the player to change the text size and colours in case of reading issues or colour blindness. Conveniently, most files and mails are easily accessible as well with only very few interactions needed to reach them.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder8');">    Webcomics </div><div class="folder" id="folder8" isfolder="true" style="display:block;">
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/CaseyAndAndy" title="/pmwiki/pmwiki.php/Webcomic/CaseyAndAndy">Casey and Andy</a></em> has a strip about Casey installing "CinemaOS" on his computer, the features of which he lists as the ability to "instantly access any devices, all programs work perfectly, and you can hack into incredibly secure networks". When asked if it has any downsides, he says "It can't show any font under 72 point."
+</li><li> The geek-oriented <a class="urllink" href="http://ars.userfriendly.org/cartoons/?id=20010111">User Friendly<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a> strip has an entire <a class="twikilink" href="/pmwiki/pmwiki.php/Main/StoryArc" title="/pmwiki/pmwiki.php/Main/StoryArc">Story Arc</a> focused around Miranda producing <em>MovieOS</em> that functions exactly like those described above, and then fails to keep it from falling into the wrong hands. Among other things, it was designed to have all its security features disabled by typing "OVERRIDE".
+</li><li> Parodied by <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/Chainsawsuit" title="/pmwiki/pmwiki.php/Webcomic/Chainsawsuit">chainsawsuit</a></em> <a class="urllink" href="http://chainsawsuit.com/comic/2016/07/28/advanced-computer-problems/">here<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a>.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder9');">    Web Original </div><div class="folder" id="folder9" isfolder="true" style="display:block;">
+<ul><li> Even independent films aren't exempt from this! The <a class="twikilink" href="/pmwiki/pmwiki.php/Website/YouTube" title="/pmwiki/pmwiki.php/Website/YouTube">YouTube</a> film <em>Bradley's Summer</em>, created as a project by middle school students, uses an enormous font in an AOL Instant Messenger conversation so it is readable to the viewers.
+</li><li> Computer usability guru Jakob Nielsen has written a list of the <a class="urllink" href="http://www.useit.com/alertbox/film-ui-bloopers.html">Top 10 Usability Bloopers in the Movies<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a>
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder10');">    Western Animation </div><div class="folder" id="folder10" isfolder="true" style="display:block;">
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/BatmanTheBraveAndTheBold" title="/pmwiki/pmwiki.php/WesternAnimation/BatmanTheBraveAndTheBold">Batman: The Brave and the Bold</a></em>: Batman and Red Tornado's computer display the commands in huge red capital letters that fill the entire screen and are occasionally accompanied by computer voice repeating what we can clearly read.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/TheFairlyOddParents" title="/pmwiki/pmwiki.php/WesternAnimation/TheFairlyOddParents">The Fairly OddParents</a></em> - Timmy wishes himself inside of a computer. What he sees essentially is everything defined above, from extremely graphical email programs and colour coded progress bars that take up the entire screen to what is essentially a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/HollywoodHacking" title="/pmwiki/pmwiki.php/Main/HollywoodHacking">physical manifestation of a computer virus</a>.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/Gargoyles" title="/pmwiki/pmwiki.php/WesternAnimation/Gargoyles">Gargoyles</a></em>: Preston Vogel is uploading a virus in <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AirborneAircraftCarrier" title="/pmwiki/pmwiki.php/Main/AirborneAircraftCarrier">Fortress Two</a>'s computer. We see a laptop displaying a huge yellow progress bar on a blue background.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder11');">    Real Life </div><div class="folder" id="folder11" isfolder="true" style="display:block;">
+<ul><li> This is the principle behind the "<a class="urllink" href="http://en.wikipedia.org/wiki/10-foot_user_interface">10-foot user interface<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a>", used for televisions and media servers, where the user is expected to be sitting across the room with a remote, rather than at a desk with keyboard and mouse. Large fonts are used for readability, many functions are available on the remote control, and any onscreen buttons are large and sparse. Similar constraints influence the UI designed for netbooks, tablets, and smartphones, such as like MeeGo's <em>Clutter</em>, Ubuntu's <em>Unity</em>, and the UIs of Android and iOS. These devices tend to have small screens and somewhat limited resolution as well as less processing power compared to their larger and more powerful counterparts.
+</li><li> One of the main criticism of Windows 8 is that the "live tiles" screen is like this. It was <em>supposed</em> to unify the user experience between phones, tablets, and personal computers, but the result was a system with <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MasterOfNone" title="/pmwiki/pmwiki.php/Main/MasterOfNone">the disadvantages of all and none of the advantages of the one you were using</a>. It was most annoying on PC, because you're trying to run what's clearly a touchscreen interface with a mouse and everything has multiple extra steps.
+</li><li> Most antivirus programs display on screen the name of the exact file they are scanning. You'll have about 1/20th of a second to read each one, but then you probably only care about (a) a rough idea of where it's up to (especially if it's going through directories in alphabetical order), and (b) any file it pauses on.
+</li><li> As mentioned above, the evolution of a user-friendly interface is very much <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TruthInTelevision" title="/pmwiki/pmwiki.php/Main/TruthInTelevision">Truth in Television</a>. Old-style (as in, room-sized) computers didn't necessarily have any way to indicate whether or not a particular program was being run, and therefore many a computer programmer would leave their station for a snack and come back to find that their in-progress project was interrupted in favor of someone else's (or accidentally reset their own program because it was impossible to distinguish between a working and non-working process).
+</li><li> Certain cell phones or mobile devices designed for the elderly or those in general with low vision tend to have buttons with large text and large display sizes like the one seen in the page image.
+</li><li> Some volunteer computing programs (including SETI@home and Rosetta@home) have screensavers with visualisation of their work.
+</li></ul></div>
+<p></p><hr/>
+</div>
+<div class="square_ad footer-article-ad main_2" data-isolated="0"></div>
+<div class="section-links" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<div class="titles">
+<div><h3 class="text-center text-uppercase">Previous</h3></div>
+<div><h3 class="text-center text-uppercase">Index</h3></div>
+<div><h3 class="text-center text-uppercase">Next</h3></div>
+</div>
+<div class="links">
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/FreakierThanFiction">Freakier Than Fiction</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/TheShadesOfFact">The Shades of Fact</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/BasedOnATrueStory">Based on a True Story</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/ThingOMeter">Thing-O-Meter</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/MagicalComputer">Magical Computer</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/WetwareBody">Wetware Body</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/TronLines">Tron Lines</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/RuleOfPerception">Rule of Perception</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/VisibleInvisibility">Visible Invisibility</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/SerialKillerKiller">Serial-Killer Killer</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/ImageSource/LiveActionTV">ImageSource/Live-Action TV</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Series/TheDickVanDykeShow">The Dick Van Dyke Show</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="outer_ads_by_salon_wrapper" id="exco_player_insert_div">
+</div>
+</article>
+<div id="main-content-sidebar"><div class="sidebar-item display-options">
+<ul class="sidebar display-toggles">
+<li>Show Spoilers <div class="display-toggle show-spoilers" id="sidebar-toggle-showspoilers"></div></li>
+<li>Night Vision <div class="display-toggle night-vision" id="sidebar-toggle-nightvision"></div></li>
+<li>Sticky Header <div class="display-toggle sticky-header" id="sidebar-toggle-stickyheader"></div></li>
+<li>Wide Load <div class="display-toggle wide-load" id="sidebar-toggle-wideload"></div></li>
+</ul>
+<script>updateDesktopPrefs();</script>
+</div>
+<div class="sidebar-item ad sb-ad-unit">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_2"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_2'); });</script> </div>
+</div></div>
+<div class="sidebar-item quick-links" itemtype="http://schema.org/SiteNavigationElement">
+<p class="sidebar-item-title" data-title="Important Links">Important Links</p>
+<div class="padded">
+<a href="/pmwiki/query.php?type=att">Ask The Tropers</a>
+<a href="/pmwiki/query.php?type=tf">Trope Finder</a>
+<a href="/pmwiki/query.php?type=ykts">You Know That Show...</a>
+<a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a>
+<a href="/pmwiki/review_activity.php">Reviews</a>
+<a data-modal-target="login" href="/pmwiki/lbs.php">Live Blogs</a>
+<a href="/pmwiki/ad-free-subscribe.php">Go Ad Free!</a> </div>
+</div>
+<div class="sidebar-item sb-ad-unit">
+<div class="sidebar-section">
+<div class="square_ad ad-size-300x600 ad-section text-center">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_3"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_3'); });</script> </div>
+</div> </div>
+</div>
+</div>
+<div class="sidebar-item">
+<p class="sidebar-item-title" data-title="Crucial Browsing">Crucial Browsing</p>
+<ul class="padded font-s" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><a data-click-toggle="active" href="javascript:void(0);">Genre</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/ActionAdventureTropes" title="Main/ActionAdventureTropes">Action Adventure</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ComedyTropes" title="Main/ComedyTropes">Comedy</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CommercialsTropes" title="Main/CommercialsTropes">Commercials</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CrimeAndPunishmentTropes" title="Main/CrimeAndPunishmentTropes">Crime &amp; Punishment</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DramaTropes" title="Main/DramaTropes">Drama</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/HorrorTropes" title="Main/HorrorTropes">Horror</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LoveTropes" title="Main/LoveTropes">Love</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NewsTropes" title="Main/NewsTropes">News</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ProfessionalWrestling" title="Main/ProfessionalWrestling">Professional Wrestling</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SpeculativeFictionTropes" title="Main/SpeculativeFictionTropes">Speculative Fiction</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SportsStoryTropes" title="Main/SportsStoryTropes">Sports Story</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/WarTropes" title="Main/WarTropes">War</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Media</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/Media" title="Main/Media">All Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/AnimationTropes" title="Main/AnimationTropes">Animation (Western)</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Anime" title="Main/Anime">Anime</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ComicBookTropes" title="Main/ComicBookTropes">Comic Book</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FanFic" title="FanFic/FanFics">Fan Fics</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Film" title="Main/Film">Film</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/GameTropes" title="Main/GameTropes">Game</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Literature" title="Main/Literature">Literature</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MusicAndSoundEffects" title="Main/MusicAndSoundEffects">Music And Sound Effects</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NewMediaTropes" title="Main/NewMediaTropes">New Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/PrintMediaTropes" title="Main/PrintMediaTropes">Print Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Radio" title="Main/Radio">Radio</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SequentialArt" title="Main/SequentialArt">Sequential Art</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TabletopGames" title="Main/TabletopGames">Tabletop Games</a></li>
+<li><a href="/pmwiki/pmwiki.php/UsefulNotes/Television" title="Main/Television">Television</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Theater" title="Main/Theater">Theater</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/VideogameTropes" title="Main/VideogameTropes">Videogame</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Webcomics" title="Main/Webcomics">Webcomics</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Narrative</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/UniversalTropes" title="Main/UniversalTropes">Universal</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/AppliedPhlebotinum" title="Main/AppliedPhlebotinum">Applied Phlebotinum</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CharacterizationTropes" title="Main/CharacterizationTropes">Characterization</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Characters" title="Main/Characters">Characters</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CharactersAsDevice" title="Main/CharactersAsDevice">Characters As Device</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Dialogue" title="Main/Dialogue">Dialogue</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Motifs" title="Main/Motifs">Motifs</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NarrativeDevices" title="Main/NarrativeDevices">Narrative Devices</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Paratext" title="Main/Paratext">Paratext</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Plots" title="Main/Plots">Plots</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Settings" title="Main/Settings">Settings</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Spectacle" title="Main/Spectacle">Spectacle</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Other Categories</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/BritishTellyTropes" title="Main/BritishTellyTropes">British Telly</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TheContributors" title="Main/TheContributors">The Contributors</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CreatorSpeak" title="Main/CreatorSpeak">Creator Speak</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Creators" title="Main/Creators">Creators</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DerivativeWorks" title="Main/DerivativeWorks">Derivative Works</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LanguageTropes" title="Main/LanguageTropes">Language</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LawsAndFormulas" title="Main/LawsAndFormulas">Laws And Formulas</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ShowBusiness" title="Main/ShowBusiness">Show Business</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SplitPersonalityTropes" title="Main/SplitPersonalityTropes">Split Personality</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/StockRoom" title="Main/StockRoom">Stock Room</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TropeTropes" title="Main/TropeTropes">Trope</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Tropes" title="Main/Tropes">Tropes</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TruthAndLies" title="Main/TruthAndLies">Truth And Lies</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TruthInTelevision" title="Main/TruthInTelevision">Truth In Television</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Topical Tropes</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/BetrayalTropes" title="Main/BetrayalTropes">Betrayal</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CensorshipTropes" title="Main/CensorshipTropes">Censorship</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CombatTropes" title="Main/CombatTropes">Combat</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DeathTropes" title="Main/DeathTropes">Death</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FamilyTropes" title="Main/FamilyTropes">Family</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FateAndProphecyTropes" title="Main/FateAndProphecyTropes">Fate And Prophecy</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FoodTropes" title="Main/FoodTropes">Food</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/HolidayTropes" title="Main/HolidayTropes">Holiday</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MemoryTropes" title="Main/MemoryTropes">Memory</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MoneyTropes" title="Main/MoneyTropes">Money</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MoralityTropes" title="Main/MoralityTropes">Morality</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/PoliticsTropes" title="Main/PoliticsTropes">Politics</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ReligionTropes" title="Main/ReligionTropes">Religion</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SchoolTropes" title="Main/SchoolTropes">School</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="sidebar-item showcase">
+<p class="sidebar-item-title" data-title="Community Showcase">Community Showcase <a class="bubble float-right hover-blue" href="/pmwiki/showcase.php">More</a></p>
+<p class="community-showcase">
+<a href="https://sharetv.com/shows/echo_chamber" onclick="trackOutboundLink('https://sharetv.com/shows/echo_chamber');" target="_blank">
+<img alt="" class="lazy-image" data-src="/images/communityShowcase-echochamber.jpg"/></a>
+<a href="/pmwiki/pmwiki.php/Webcomic/TwistedTropes">
+<img alt="" class="lazy-image" data-src="/img/howlandsc-side.jpg"/></a>
+</p>
+</div>
+<div class="sidebar-item sb-ad-unit" id="stick-cont">
+<div class="sidebar-section" id="stick-bar">
+<div class="square_ad ad-size-300x600 ad-section text-center">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_4"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_4'); });</script> </div>
+</div> </div>
+</div>
+</div>
+</div>
+</div>
+<div class="action-bar tablet-off" id="action-bar-bottom">
+<a class="scroll-to-top dead-button" href="#top-of-page" onclick="$('html, body').animate({scrollTop : 0},500);">Top</a>
+</div>
+</div>
+<div class="proper-ad-unit ad-sticky">
+<div id="proper-ad-tvtropes_sticky_ad"> <script>propertag.cmd.push(function() { proper_display('tvtropes_sticky_ad'); });</script> </div>
+</div>
+<footer id="main-footer">
+<div id="main-footer-inner">
+<div class="footer-left">
+<a class="img-link" href="/"><img alt="TV Tropes" class="lazy-image" data-src="/img/tvtropes-footer-logo.png" title="TV Tropes"/></a>
+<form action="index.html" class="navbar-form newsletter-signup validate modal-replies" data-ajax-get="/ajax/subscribe_email.php" id="cse-search-box-mobile" name="" role="">
+<button class="btn-submit newsletter-signup-submit-button" id="subscribe-btn" type="submit"><i class="fa fa-paper-plane"></i></button>
+<input class="form-control" id="subscription-email" name="q" placeholder="Subscribe" size="31" type="text" validate-type="email" value=""/>
+</form>
+<ul class="social-buttons">
+<li><a class="btn fb" href="https://www.facebook.com/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-facebook']);" target="_blank"><i class="fa fa-facebook"></i></a></li>
+<li><a class="btn tw" href="https://www.twitter.com/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-twitter']);" target="_blank"><i class="fa fa-twitter"></i></a> </li>
+<li><a class="btn rd" href="https://www.reddit.com/r/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-reddit']);" target="_blank"><i class="fa fa-reddit-alien"></i></a></li>
+</ul>
+</div>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">TVTropes</h4></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Administrivia">About TVTropes</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TheGoalsOfTVTropes">TVTropes Goals</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TheTropingCode">Troping Code</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TVTropesCustoms">TVTropes Customs</a></li>
+<li><a href="/pmwiki/pmwiki.php/JustForFun/TropesOfLegend">Tropes of Legend</a></li>
+<li><a href="/pmwiki/ad-free-subscribe.php">Go Ad-Free</a></li>
+</ul>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">Community</h4></li>
+<li><a href="/pmwiki/query.php?type=att">Ask The Tropers</a></li>
+<li><a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a></li>
+<li><a href="/pmwiki/query.php?type=tf">Trope Finder</a></li>
+<li><a href="/pmwiki/query.php?type=ykts">You Know That Show</a></li>
+<li><a data-modal-target="login" href="/pmwiki/lbs.php">Live Blogs</a></li>
+<li><a href="/pmwiki/review_activity.php">Reviews</a></li>
+<li><a href="/pmwiki/topics.php">Forum</a></li>
+</ul>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">Tropes HQ</h4></li>
+<li><a href="/pmwiki/about.php">About Us</a></li>
+<li><a href="/pmwiki/contact.php">Contact Us</a></li>
+<li><a href="/pmwiki/dmca.php">DMCA Notice</a></li>
+<li><a href="/pmwiki/privacypolicy.php">Privacy Policy</a></li>
+</ul>
+</div>
+<div class="text-center gutter-top gutter-bottom tablet-on" id="desktop-on-mobile-toggle">
+<a href="/pmwiki/switchDeviceCss.php?mobileVersion=1" rel="nofollow">Switch to <span class="txt-desktop">Desktop</span><span class="txt-mobile">Mobile</span> Version</a>
+</div>
+<div class="legal">
+<p>TVTropes is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License. <br/>Permissions beyond the scope of this license may be available from <a href="mailto:thestaff@tvtropes.org" rel="cc:morePermissions" xmlns:cc="http://creativecommons.org/ns#"> thestaff@tvtropes.org</a>.</p>
+<br/>
+<div class="privacy_wrapper">
+</div>
+</div>
+</footer>
+<style>
+      div.fc-ccpa-root {
+        position: absolute !important;
+        bottom: 93px !important;
+        margin: auto !important;
+        width: 100% !important;
+        z-index: 9999 !important;
+      }
+      .fc-ccpa-root .fc-dns-dialog .fc-dns-link p{
+        outline: none !important;
+        text-decoration: underline !important;
+        font-size: .7em !important;
+        font-family: sans-serif !important;
+      }
+      .fc-ccpa-root .fc-dns-dialog .fc-dns-link .fc-button-background {
+        background: none !important;
+      }
+    </style>
+<div class="full-screen" id="_pm_videoViewer">
+<a class="close" href="#close" id="_pm_videoViewer-close"></a>
+<div class="_pmvv-body">
+<div class="_pmvv-vidbox">
+<video class="video-js vjs-default-skin vjs-16-9" data-video-id="" id="overlay-video-player-box">
+</video>
+<div class="_pmvv-vidbox-desc">
+<h1 id="overlay-title"></h1>
+<p class="_pmvv-vidbox-descTxt" id="overlay-descrip">
+</p>
+<div class="rating-row" data-video-id="">
+<input name="is_logged_in" type="hidden" value="0"/>
+<p>How well does it match the trope?</p>
+<div id="star-rating-group">
+<div class="trope-rate">
+<input id="lamp5" name="rate" type="radio" value="5"/>
+<label for="lamp5" title="Absolutely"></label>
+<input id="lamp4" name="rate" type="radio" value="4"/>
+<label for="lamp4" title="Yes"></label>
+<input id="lamp3" name="rate" type="radio" value="3"/>
+<label for="lamp3" title="Kind of"></label>
+<input id="lamp2" name="rate" type="radio" value="2"/>
+<label for="lamp2" title="Not really"></label>
+<input id="lamp1" name="rate" type="radio" value="1"/>
+<label for="lamp1" title="No"></label>
+</div>
+<div id="star-rating-total">
+</div>
+</div>
+</div>
+<div class="example-media-row">
+<div class="example-overlay">
+<p>Example of:</p>
+<div id="overlay-trope"> / </div>
+</div>
+<div class="media-sources-overlay example-overlay">
+<p>Media sources:</p>
+<div id="overlay-media"> / </div>
+</div>
+</div>
+<p class="_pmvv-vidbox-stats text-right font-s" style="padding-top:8px; border-top: solid 1px rgba(255,255,255,0.2)">
+<a class="float-right" data-modal-target="login" href="#video-feedback">Report</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+        window.special_ops =  {
+            member : 'no',
+            isolated : 0,
+            tags : ['unknown']
+        };
+    </script>
+<script type="text/javascript">
+
+        var cleanCreativeEnabled = "";
+        var donation = "";
+        var live_ads = "1";
+        var img_domain = "https://static.tvtropes.org";
+        var snoozed = cookies.read('snoozedabm');
+        var snoozable = "";
+
+        if (adsRemovedWith) {
+            live_ads = 0;
+        }
+
+        var elem = document.createElement('script');
+        elem.async = true;
+
+        elem.src = '/design/assets/bundle.js?rev=c58d8df02f09262390bbd03db7921fc35c6af306';
+
+        elem.onload = function() {
+                                 }
+        document.getElementsByTagName('head')[0].appendChild(elem);
+
+    </script>
+<script type="text/javascript">
+      function send_analytics_event(user_type, donation){
+          // if(user_type == 'uncached' || user_type == 'cached'){
+          //   ga('send', 'event', 'caching', 'load', user_type, {'nonInteraction': 1});
+          //   return;
+          // }
+          var event_name = user_type;
+
+          if(donation == 'true'){
+              event_name += "_donation"
+          }else if(typeof(valid_user) == 'undefined'){
+              event_name += "_blocked"
+          }else if(valid_user == true){
+              event_name += "_unblocked";
+          }else{
+              event_name = "_unknown"
+          }
+          ga('send', 'event', 'ads', 'load', event_name, {'nonInteraction': 1});
+      }
+
+    
+    send_analytics_event("guest", "false");
+      </script>
+</body>
+</html>

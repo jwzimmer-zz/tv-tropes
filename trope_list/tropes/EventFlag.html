@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Event Flag - TV Tropes</title>
+<meta content="A condition in game programming that causes a variable to change. Event Flags are set off when certain events take place — Boss Battles, Cutscenes, …" name="description"/>
+<link href="https://tvtropes.org/pmwiki/pmwiki.php/Main/EventFlag" rel="canonical"/>
+<link href="/img/icons/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="@tvtropes" name="twitter:site"/>
+<meta content="@tvtropes" name="twitter:owner"/>
+<meta content="Event Flag - TV Tropes" name="twitter:title"/>
+<meta content="A condition in game programming that causes a variable to change. Event Flags are set off when certain events take place — Boss Battles, Cutscenes, …" name="twitter:description"/>
+<meta content="https://static.tvtropes.org/logo_blue_small.png" name="twitter:image:src"/>
+<meta content="TV Tropes" property="og:site_name"/>
+<meta content="en_US" property="og:locale"/>
+<meta content="https://www.facebook.com/tvtropes" property="article:publisher"/>
+<meta content="Event Flag - TV Tropes" property="og:title"/>
+<meta content="website" property="og:type"/>
+<meta content="https://tvtropes.org/pmwiki/pmwiki.php/Main/EventFlag" property="og:url"/>
+<meta content="https://static.tvtropes.org/logo_blue_small.png" property="og:image"/>
+<meta content="A condition in game programming that causes a variable to change. Event Flags are set off when certain events take place — Boss Battles, Cutscenes, leveling up, One Ups — anything that's important to the plot or to your stats. Flags …" property="og:description"/>
+<link href="/img/icons/apple-icon-57x57.png" rel="apple-touch-icon" sizes="57x57" type="image/png"/>
+<link href="/img/icons/apple-icon-60x60.png" rel="apple-touch-icon" sizes="60x60" type="image/png"/>
+<link href="/img/icons/apple-icon-72x72.png" rel="apple-touch-icon" sizes="72x72" type="image/png"/>
+<link href="/img/icons/apple-icon-76x76.png" rel="apple-touch-icon" sizes="76x76" type="image/png"/>
+<link href="/img/icons/apple-icon-114x114.png" rel="apple-touch-icon" sizes="114x114" type="image/png"/>
+<link href="/img/icons/apple-icon-120x120.png" rel="apple-touch-icon" sizes="120x120" type="image/png"/>
+<link href="/img/icons/apple-icon-144x144.png" rel="apple-touch-icon" sizes="144x144" type="image/png"/>
+<link href="/img/icons/apple-icon-152x152.png" rel="apple-touch-icon" sizes="152x152" type="image/png"/>
+<link href="/img/icons/apple-icon-180x180.png" rel="apple-touch-icon" sizes="180x180" type="image/png"/>
+<link href="/img/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/img/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/img/icons/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png"/>
+<link href="/img/icons/favicon-192x192.png" rel="icon" sizes="192x192" type="image/png"/>
+<meta content="width=device-width, initial-scale=1" id="viewport" name="viewport"/>
+<script>
+                var propertag = {};
+                propertag.cmd = [];
+            </script>
+<link href="/design/assets/bundle.css?rev=c58d8df02f09262390bbd03db7921fc35c6af306" rel="stylesheet"/>
+<script>
+                function object(objectId) {
+                    if (document.getElementById && document.getElementById(objectId)) {
+                        return document.getElementById(objectId);
+                    } else if (document.all && document.all(objectId)) {
+                        return document.all(objectId);
+                    } else if (document.layers && document.layers[objectId]) {
+                        return document.layers[objectId];
+                    } else {
+                        return false;
+                    }
+                }
+
+                // JAVASCRIPT COOKIES CODE: for getting and setting user viewing preferences
+                var cookies = {
+                    create: function (name, value, days2expire, path) {
+                        var date = new Date();
+                        date.setTime(date.getTime() + (days2expire * 24 * 60 * 60 * 1000));
+                        var expires = date.toUTCString();
+                        document.cookie = name + '=' + value + ';' + 'expires=' + expires + ';' + 'path=' + path + ';';
+                    },
+										createWithExpire: function(name, value, expires, path) {
+												document.cookie = name + '=' + value + ';' + 'expires=' + expires + ';' + 'path=' + path + ';';
+										},
+                    read: function (name) {
+                        var cookie_value = "",
+                            current_cookie = "",
+                            name_expr = name + "=",
+                            all_cookies = document.cookie.split(';'),
+                            n = all_cookies.length;
+
+                        for (var i = 0; i < n; i++) {
+                            current_cookie = all_cookies[i].trim();
+                            if (current_cookie.indexOf(name_expr) === 0) {
+                                cookie_value = current_cookie.substring(name_expr.length, current_cookie.length);
+                                break;
+                            }
+                        }
+                        return cookie_value;
+                    },
+                    update: function (name, val) {
+                        this.create(name, val, 300, "/");
+                    },
+                    remove: function (name) {
+                        document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
+                    }
+                };
+
+                function updateUserPrefs() {
+                    //GENERAL: detect and set browser, if not cookied (will be treated like a user-preference and added to the #user-pref element)
+                    if( !cookies.read('user-browser') ){
+                        var broswer = '';
+
+                        if(navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPod/i) ){
+                            browser = 'iOS';
+                        } else if (/Opera[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'opera';
+                        } else if (/MSIE (\d+\.\d+);/.test(navigator.userAgent)) {
+                            browser = 'MSIE';
+                        } else if (/Navigator[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'netscape';
+                        } else if (/Chrome[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'chrome';
+                        } else if (/Safari[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'safari';
+                            /Version[\/\s](\d+\.\d+)/.test(navigator.userAgent);
+                            browserVersion = new Number(RegExp.$1);
+                        } else if (/Firefox[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'firefox';
+                        } else {
+                            browser = 'internet_explorer';
+                        }
+                        cookies.create('user-browser',browser,1,'/');
+                        document.getElementById('user-prefs').classList.add('browser-' + browser);
+                    } else {
+                        document.getElementById('user-prefs').classList.add('browser-' + cookies.read('user-browser'));
+                    }
+
+                    //update user preference settings
+                    if (cookies.read('wide-load') !== '') document.getElementById('user-prefs').classList.add('wide-load');
+                    if (cookies.read('night-vision') !== '') document.getElementById('user-prefs').classList.add('night-vision');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('user-prefs').classList.add('sticky-header');
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('user-prefs').classList.add('show-spoilers');
+                    if (cookies.read('folders-open') !== '') document.getElementById('user-prefs').classList.add('folders-open');
+                    if (cookies.read('lefthand-sidebar') !== '') document.getElementById('user-prefs').classList.add('lefthand-sidebar');
+                    if (cookies.read('highlight-links') !== '') document.getElementById('user-prefs').classList.add('highlight-links');
+                    if (cookies.read('forum-gingerbread') !== '') document.getElementById('user-prefs').classList.add('forum-gingerbread');
+                    if (cookies.read('shared-avatars') !== '') document.getElementById('user-prefs').classList.add('shared-avatars');
+                    if (cookies.read('new-search') !== '') document.getElementById('user-prefs').classList.add('new-search');
+                    if (cookies.read('stop-auto-play-video') !== '') document.getElementById('user-prefs').classList.add('stop-auto-play-video');
+
+                    //desktop view on mobile
+                    if (cookies.read('desktop-on-mobile') !== ''){
+                        document.getElementById('user-prefs').classList.add('desktop-on-mobile');
+
+                        var viewport = document.querySelector("meta[name=viewport]");
+                        viewport.setAttribute('content', 'width=1000');
+                    }
+
+                }
+
+                function updateDesktopPrefs() {
+                    if (cookies.read('wide-load') !== '') document.getElementById('sidebar-toggle-wideload').classList.add('active');
+                    if (cookies.read('night-vision') !== '') document.getElementById('sidebar-toggle-nightvision').classList.add('active');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('sidebar-toggle-stickyheader').classList.add('active');
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('sidebar-toggle-showspoilers').classList.add('active');
+
+                }
+
+                function updateMobilePrefs() {
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('mobile-toggle-showspoilers').classList.add('active');
+                    if (cookies.read('night-vision') !== '') document.getElementById('mobile-toggle-nightvision').classList.add('active');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('mobile-toggle-stickyheader').classList.add('active');
+                    if (cookies.read('highlight-links') !== '') document.getElementById('mobile-toggle-highlightlinks').classList.add('active');
+
+                }
+
+
+                if (document.cookie.indexOf("scroll0=") < 0) {
+                    // do nothing
+                } else {
+                    console.log('ads removed by scroll.com');
+                    var adsRemovedWith = 'scroll';
+                    var style = document.createElement('style');
+                    style.innerHTML = '#header-ad, .proper-ad-unit, .square_ad, .sb-ad-unit { display: none !important; } ';
+                    document.head.appendChild(style);
+                }
+            </script>
+<script type="text/javascript">
+
+                var tvtropes_config = {
+                    astri_stream_enabled : "",
+                    is_logged_in         : "",
+                    handle               : "",
+                    get_astri_stream     : "",
+										revnum               : "c58d8df02f09262390bbd03db7921fc35c6af306",
+										img_domain           : "https://static.tvtropes.org",
+										adblock              : "1",
+										adblock_url          : "propermessage.io",
+										pause_editing        : "0",
+										pause_editing_msg    : "",
+										pause_site_changes   : ""
+                };
+            </script>
+<script type="text/javascript">
+						  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+						  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+						  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+						  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+						  ga('create', 'UA-3821842-1', 'auto');
+						  ga('send', 'pageview');
+
+						</script>
+</head>
+<body class="">
+<i id="user-prefs"></i>
+<script>updateUserPrefs();</script>
+<div id="fb-root"></div>
+<div id="modal-box"></div>
+<header class="headroom-element" id="main-header-bar">
+<div id="main-header-bar-inner">
+<span class="header-spacer" id="header-spacer-left"></span>
+<a class="mobile-menu-toggle-button tablet-on" href="#mobile-menu" id="main-mobile-toggle"><span></span><span></span><span></span></a>
+<a class="no-dev" href="/" id="main-header-logoButton"></a>
+<span class="header-spacer" id="header-spacer-right"></span>
+<nav class="tablet-off" id="main-header-nav">
+<a href="/pmwiki/pmwiki.php/Main/Tropes">Tropes</a>
+<a href="/pmwiki/pmwiki.php/Main/Media">Media</a>
+<a class="nav-browse" href="/pmwiki/browse.php">Browse</a>
+<a href="/pmwiki/index_report.php">Indexes</a>
+<a href="/pmwiki/topics.php">Forums</a>
+<a class="nav-browse" href="/pmwiki/recent_videos.php">Videos</a>
+</nav>
+<div id="main-header-bar-right">
+<div class="font-xs mobile-off" id="signup-login-box">
+<a class="hover-underline bold" data-modal-target="signup" href="/pmwiki/login.php">Join</a>
+<a class="hover-underline bold" data-modal-target="login" href="/pmwiki/login.php">Login</a>
+</div>
+<div class="mobile-on inline" id="signup-login-mobileToggle">
+<a data-modal-target="login" href="/pmwiki/login.php"><i class="fa fa-user"></i></a>
+</div>
+<div id="search-box">
+<form action="/pmwiki/search_result.php" class="search">
+<input class="search-box" name="q" placeholder="Search" required="" type="text" value=""/>
+<input class="submit-button" type="submit" value=""/>
+<input name="search_type" type="hidden" value="article"/>
+<input name="page_type" type="hidden" value="all"/>
+<input name="cx" type="hidden" value="partner-pub-6610802604051523:amzitfn8e7v"/>
+<input name="cof" type="hidden" value="FORID:10"/>
+<input name="ie" type="hidden" value="ISO-8859-1"/>
+<input name="siteurl" type="hidden" value=""/>
+<input name="ref" type="hidden" value=""/>
+<input name="ss" type="hidden" value=""/>
+</form>
+<a class="mobile-on mobile-search-toggle close-x" href="#close-search"><i class="fa fa-close"></i></a>
+</div>
+<div id="random-box">
+<a class="button-random-trope" href="/pmwiki/pmwiki.php/Main/TheMinionMaster" onclick="ga('send', 'event', 'button', 'click', 'random trope');" rel="nofollow"></a>
+<a class="button-random-media" href="/pmwiki/pmwiki.php/Film/TheFourFeathers" onclick="ga('send', 'event', 'button', 'click', 'random media');" rel="nofollow"></a>
+</div>
+</div>
+</div>
+<div class="tablet-on" id="mobile-menu"><div class="mobile-menu-options">
+<div class="nav-wrapper">
+<a class="xl" href="/pmwiki/pmwiki.php/Main/Tropes">Tropes</a>
+<a class="xl" href="/pmwiki/pmwiki.php/Main/Media">Media</a>
+<a class="xl" href="/pmwiki/browse.php">Browse</a>
+<a class="xl" href="/pmwiki/index_report.php">Indexes</a>
+<a class="xl" href="/pmwiki/topics.php">Forums</a>
+<a class="xl" href="/pmwiki/recent_videos.php">Videos</a>
+<a href="/pmwiki/query.php?type=att">Ask The Tropers</a>
+<a href="/pmwiki/query.php?type=tf">Trope Finder</a>
+<a href="/pmwiki/query.php?type=ykts">You Know That Show...</a>
+<a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a>
+<a data-click-toggle="active" href="#tools">Tools <i class="fa fa-chevron-down"></i></a>
+<div class="tools-dropdown mobile-dropdown-linkList">
+<a href="/pmwiki/cutlist.php">Cut List</a>
+<a href="/pmwiki/changes.php">New Edits</a>
+<a href="/pmwiki/recent_edit_reasons.php">Edit Reasons</a>
+<a href="/pmwiki/launches.php">Launches</a>
+<a href="/pmwiki/img_list.php">Images List</a>
+<a href="/pmwiki/crown_activity.php">Crowner Activity</a>
+<a href="/pmwiki/no_types.php">Un-typed Pages</a>
+<a href="/pmwiki/page_type_audit.php">Recent Page Type Changes</a>
+</div>
+<a data-click-toggle="active" href="#hq">Tropes HQ <i class="fa fa-chevron-down"></i></a>
+<div class="tools-dropdown mobile-dropdown-linkList">
+<a href="/pmwiki/about.php">About Us</a>
+<a href="/pmwiki/contact.php">Contact Us</a>
+<a href="mailto:advertising@proper.io">Advertise</a>
+<a href="/pmwiki/dmca.php">DMCA Notice</a>
+<a href="/pmwiki/privacypolicy.php">Privacy Policy</a>
+</div>
+<a href="/pmwiki/ad-free-subscribe.php">Go Ad-Free</a>
+<div class="toggle-switches">
+<ul class="mobile-menu display-toggles">
+<li>Show Spoilers <div class="display-toggle show-spoilers" id="mobile-toggle-showspoilers"></div></li>
+<li>Night Vision <div class="display-toggle night-vision" id="mobile-toggle-nightvision"></div></li>
+<li>Sticky Header <div class="display-toggle sticky-header" id="mobile-toggle-stickyheader"></div></li>
+<li>Highlight Links <div class="display-toggle highlight-links" id="mobile-toggle-highlightlinks"></div></li>
+</ul>
+<script>updateMobilePrefs();</script>
+</div>
+</div>
+</div>
+</div>
+</header>
+<div class="mobile-on" id="homepage-introBox-mobile">
+<a href="/"><img class="logo-small" src="/images/logo-white-big.png"/></a>
+<form action="/pmwiki/search_result.php" class="search" style="margin:10px -5px -6px -5px;">
+<input class="search-box" name="q" placeholder="Search" required="" type="text" value=""/>
+<input class="submit-button" type="submit" value=""/>
+<input name="search_type" type="hidden" value="article"/>
+<input name="page_type" type="hidden" value="all"/>
+<input name="cx" type="hidden" value="partner-pub-6610802604051523:amzitfn8e7v"/>
+<input name="cof" type="hidden" value="FORID:10"/>
+<input name="ie" type="hidden" value="ISO-8859-1"/>
+<input name="siteurl" type="hidden" value=""/>
+<input name="ref" type="hidden" value=""/>
+<input name="ss" type="hidden" value=""/>
+</form>
+</div>
+<div class="ad" id="header-ad-wrapper">
+<div id="header-ad">
+<div class="ad-size-970x90 atf_banner">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_1"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_1'); });</script> </div>
+</div> </div>
+</div>
+</div>
+<div id="main-container">
+<div class="action-bar mobile-off" id="action-bar-top">
+<div class="action-bar-right">
+<p>Follow TV Tropes</p>
+<a class="button-fb" href="https://www.facebook.com/TVTropes">
+<i class="fa fa-facebook"></i></a>
+<a class="button-tw" href="https://www.twitter.com/TVTropes">
+<i class="fa fa-twitter"></i></a>
+<a class="button-re" href="https://www.reddit.com/r/TVTropes">
+<i class="fa fa-reddit-alien"></i></a>
+</div>
+<nav class="actions-wrapper" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<ul class="page-actions" id="top_main_list">
+<li class="link-edit">
+<a class="article-edit-button" data-modal-target="login" href="/pmwiki/pmwiki.php/Main/EventFlag?action=edit" rel="nofollow">
+<i class="fa fa-pencil"></i> Edit Page</a></li><li class="link-related"><a href="/pmwiki/relatedsearch.php?term=Main/EventFlag">
+<i class="fa fa-share-alt"></i> Related</a></li><li class="link-history"><a href="/pmwiki/article_history.php?article=Main.EventFlag">
+<i class="fa fa-history"></i> History</a></li><li class="link-discussion"><a href="/pmwiki/remarks.php?trope=Main.EventFlag">
+<i class="fa fa-comment"></i> Discussion</a></li> </ul>
+<button class="nav__dropdown-toggle" id="top_more_button" onclick="toggle_more_menu('top');" type="button">More</button>
+<ul class="more_menu hidden_more_list" id="top_more_list">
+<li class="link-todo tuck-always more_list_item"><a data-modal-target="login" href="#todo"><i class="fa fa-check-circle"></i> To Do</a></li><li class="link-pageSource tuck-always more_list_item"><a data-modal-target="login" href="/pmwiki/pmwiki.php/Main/EventFlag?action=source" rel="nofollow" target="_blank"><i class="fa fa-code"></i> Page Source</a></li> </ul>
+</nav>
+<div class="WikiWordModalStub"></div>
+<div class="ImgUploadModalStub" data-page-type="Article"></div>
+<div class="login-alert" style="display: none;">
+You need to <a href="/pmwiki/login.php" style="color:#21A0E8">login</a> to do this. <a href="/pmwiki/login.php?tab=register_account" style="color:#21A0E8">Get Known</a> if you don't have an account
+</div>
+</div>
+<div class="page-Article" id="main-content">
+<article class="with-sidebar" id="main-entry">
+<input id="groupname-hidden" type="hidden" value="Main"/>
+<input id="title-hidden" type="hidden" value="EventFlag"/>
+<input id="article_id" type="hidden" value="2064"/>
+<input id="logged_in" type="hidden" value="false"/>
+<p class="hidden" id="current_url">http://tvtropes.org/pmwiki/pmwiki.php/Main/EventFlag</p>
+<meta content="" itemprop="datePublished"/>
+<meta content="" itemprop="articleSection"/>
+<meta content="" itemprop="image"/>
+<a class="watch-button" data-modal-target="login" href="#watch">Follow<span>ing</span></a>
+<h1 class="entry-title" itemprop="headline">
+Event Flag
+</h1>
+<script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+                "@type": "ListItem",
+                "position": 1,
+                "name": "tvtropes.org",
+                "item": "https://tvtropes.org"
+            },{
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Tropes",
+                "item": "https://tvtropes.org/pmwiki/pmwiki.php/Main/Tropes"
+            },{
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Event Flag"            }]
+        }
+    </script>
+<a class="mobile-actionbar-toggle mobile-on" data-click-toggle="active" href="#mobile-actions-toggle" id="mobile-actionbar-toggle">
+<p class="tiny-off">Go To</p><span></span><span></span><span></span><i class="fa fa-pencil"></i></a>
+<nav class="mobile-actions-wrapper mobile-on" id="mobile-actions-bar"></nav>
+<div class="modal fade hidden-until-active" id="editLockModal">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button aria-label="Close" class="close" data-dismiss="modal" type="button"> <span aria-hidden="true">×</span></button>
+<h4 class="modal-title">Edit Locked</h4>
+</div>
+<div class="modal-body">
+<div class="row">
+<div class="body">
+<div class="danger troper_locked_message"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<nav class="body-options" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<ul class="subpage-links">
+<li>
+<a class="subpage-link curr-subpage" href="/pmwiki/pmwiki.php/Main/EventFlag" title="The Main page">
+<span class="wrapper"><span class="spi main-page"></span>Main</span></a>
+</li>
+<li>
+<a class="subpage-link" href="/pmwiki/pmwiki.php/Laconic/EventFlag" title="The Laconic page">
+<span class="wrapper"><span class="spi laconic-icon"></span>Laconic</span></a>
+</li>
+<li>
+<a class="subpage-link video-examples-tab" href="/pmwiki/pmwiki.php/VideoExamples/EventFlag" title="Video Examples">
+<img alt="play" class="" src="/images/play-button-logo.png"/>
+<span class="wrapper">VideoExamples</span>
+</a>
+</li>
+<li class="create-subpage dropdown">
+<a aria-expanded="false" class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);" role="button">
+<span class="wrapper">Create New <i class="fa fa-plus-circle"></i></span>
+</a>
+<select onchange="this.options[this.selectedIndex].value &amp;&amp; (window.location = this.options[this.selectedIndex].value);">
+<option value="">- Create New -</option>
+<option value="/pmwiki/pmwiki.php/Analysis/EventFlag?action=edit">Analysis</option>
+<option value="/pmwiki/pmwiki.php/Characters/EventFlag?action=edit">Characters</option>
+<option value="/pmwiki/pmwiki.php/FanficRecs/EventFlag?action=edit">FanficRecs</option>
+<option value="/pmwiki/pmwiki.php/FanWorks/EventFlag?action=edit">FanWorks</option>
+<option value="/pmwiki/pmwiki.php/Fridge/EventFlag?action=edit">Fridge</option>
+<option value="/pmwiki/pmwiki.php/Haiku/EventFlag?action=edit">Haiku</option>
+<option value="/pmwiki/pmwiki.php/Headscratchers/EventFlag?action=edit">Headscratchers</option>
+<option value="/pmwiki/pmwiki.php/ImageLinks/EventFlag?action=edit">ImageLinks</option>
+<option value="/pmwiki/pmwiki.php/PlayingWith/EventFlag?action=edit">PlayingWith</option>
+<option value="/pmwiki/pmwiki.php/Quotes/EventFlag?action=edit">Quotes</option>
+<option value="/pmwiki/pmwiki.php/Recap/EventFlag?action=edit">Recap</option>
+<option value="/pmwiki/pmwiki.php/ReferencedBy/EventFlag?action=edit">ReferencedBy</option>
+<option value="/pmwiki/pmwiki.php/Synopsis/EventFlag?action=edit">Synopsis</option>
+<option value="/pmwiki/pmwiki.php/Timeline/EventFlag?action=edit">Timeline</option>
+<option value="/pmwiki/pmwiki.php/Trivia/EventFlag?action=edit">Trivia</option>
+<option value="/pmwiki/pmwiki.php/WMG/EventFlag?action=edit">WMG</option>
+<option value="/pmwiki/pmwiki.php/YMMV/EventFlag?action=edit">YMMV</option>
+</select>
+</li>
+</ul>
+</nav>
+<div class="article-content retro-folders" id="main-article">
+<p></p><div class="indent"><em>"Jellies? Never seen 'em before, but now that you mention it, they're right out the door!"</em>
+<div class="indent">— <em><strong><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/CaveStory" title="/pmwiki/pmwiki.php/VideoGame/CaveStory">Cave Story</a></strong></em>'s entry for this trope
+</div></div><p>A condition in game programming that causes a variable to change. Event Flags are set off when certain events take place — <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BossBattle" title="/pmwiki/pmwiki.php/Main/BossBattle">Boss Battles</a>, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Cutscene" title="/pmwiki/pmwiki.php/Main/Cutscene">Cutscenes</a>, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/CharacterLevel" title="/pmwiki/pmwiki.php/Main/CharacterLevel">leveling up</a>, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/OneUp" title="/pmwiki/pmwiki.php/Main/OneUp">One Ups</a> — anything that's important to the plot or to your stats. Flags can also trigger anything, from changing a character's status to activating subquests or side-plots to adjusting what sort of <a class="twikilink" href="/pmwiki/pmwiki.php/Main/RandomEncounters" title="/pmwiki/pmwiki.php/Main/RandomEncounters">Random Encounters</a> show up.
+</p><div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_1"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_1'); })</script></div></div><p>It's important to note that there need not be any logical connection between the action and the results. Sometimes there is a relationship, as when the completion of one quest makes you eligible for others, but very often the game programmers just decided to enforce the order of events. If the door to the Black Tower is impenetrably sealed, but spontaneously unlocks itself after you <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TwentyBearAsses" title="/pmwiki/pmwiki.php/Main/TwentyBearAsses">give 10 flowers</a> to a completely unrelated NPC on the other side of the world, an Event Flag is the little chunk of computer code that made it happen.
+</p><p>Setting off certain Event Flags is necessary for the computer to know when you've won most games. (In the case of a game with <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MultipleEndings" title="/pmwiki/pmwiki.php/Main/MultipleEndings">Multiple Endings</a>, which Event Flags are set off will usually decide what ending you get<span class="notelabel" onclick="togglenote('note03wf1');"><sup>note </sup></span><span class="inlinefolder" id="note03wf1" isnote="true" onclick="togglenote('note03wf1');" style="cursor:pointer;font-size:smaller;display:none;">the main other possible criteria being your <a class="twikilink" href="/pmwiki/pmwiki.php/Main/KarmaMeter" title="/pmwiki/pmwiki.php/Main/KarmaMeter">Karma Meter</a>, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/FactionSpecificEndings" title="/pmwiki/pmwiki.php/Main/FactionSpecificEndings">what faction you're in</a>, what final level you're playing (some games have more than one), which <a class="twikilink" href="/pmwiki/pmwiki.php/Main/FinalBoss" title="/pmwiki/pmwiki.php/Main/FinalBoss">Final Boss</a> you're facing (again, quite a few games have more than one), or <a class="twikilink" href="/pmwiki/pmwiki.php/Main/LastSecondEndingChoice" title="/pmwiki/pmwiki.php/Main/LastSecondEndingChoice">which option you picked from the drop-down menu in the penultimate cutscene</a> — and all of these can, depending on the game, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DistinctionWithoutADifference" title="/pmwiki/pmwiki.php/Main/DistinctionWithoutADifference">boil down to a set of Event Flags anyways</a></span>.) <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SequenceBreaking" title="/pmwiki/pmwiki.php/Main/SequenceBreaking">Sequence Breaking</a> in the wrong places can make the game <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Unwinnable" title="/pmwiki/pmwiki.php/Main/Unwinnable">Unwinnable</a> if a flag that was supposed to be triggered gets stuck in the wrong state.
+</p><div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_2"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_2'); })</script></div></div><p>Generally, a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BrokenBridge" title="/pmwiki/pmwiki.php/Main/BrokenBridge">Broken Bridge</a> is "repaired" by an event flag, and an unsolvable puzzle <a class="twikilink" href="/pmwiki/pmwiki.php/Main/EnterSolutionHere" title="/pmwiki/pmwiki.php/Main/EnterSolutionHere">gets its solution from it</a> as well. Event flags are also how a game knows when <a class="twikilink" href="/pmwiki/pmwiki.php/Main/YouShouldntKnowThisAlready" title="/pmwiki/pmwiki.php/Main/YouShouldntKnowThisAlready">You Shouldn't Know This Already</a>.
+</p><p>The term is often used for gags in anime and Japanese games, where <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GenreSavvy" title="/pmwiki/pmwiki.php/Main/GenreSavvy">Genre Savvy</a> characters talk about needing to <a class="twikilink" href="/pmwiki/pmwiki.php/Main/InvokedTrope" title="/pmwiki/pmwiki.php/Main/InvokedTrope">set off flags</a> for <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BreakingTheFourthWall" title="/pmwiki/pmwiki.php/Main/BreakingTheFourthWall">the plot</a> or <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DatingSim" title="/pmwiki/pmwiki.php/Main/DatingSim">relationships</a> to move in a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/EarnYourHappyEnding" title="/pmwiki/pmwiki.php/Main/EarnYourHappyEnding">favored direction</a>. More commonly, it is a joke about <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TemptingFate" title="/pmwiki/pmwiki.php/Main/TemptingFate">Tempting Fate</a>, where once a certain event has been set off, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Troperrific" title="/pmwiki/pmwiki.php/Main/Troperrific">something inevitable</a> will follow.<span class="notelabel" onclick="togglenote('note198yc');"><sup>note </sup></span><span class="inlinefolder" id="note198yc" isnote="true" onclick="togglenote('note198yc');" style="cursor:pointer;font-size:smaller;display:none;">In this situation, when going through said playthroughs, it is a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MemeticMutation" title="/pmwiki/pmwiki.php/Main/MemeticMutation">Memetic Mutation</a> in the Japanese community.</span> Anybody who talks about <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Retirony" title="/pmwiki/pmwiki.php/Main/Retirony">what they're going to do after a war</a>, for example, has <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DeadManWalking" title="/pmwiki/pmwiki.php/Main/DeadManWalking">set a death flag</a>.
+</p><hr/><div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_3"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_3'); })</script></div></div><h2>Examples:</h2>
+<p></p><div class="folderlabel" onclick="toggleAllFolders();">    open/close all folders  </div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder0');">    Action </div><div class="folder" id="folder0" isfolder="true" style="display:block;">
+<ul><li> A bug in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/CastlevaniaPortraitOfRuin" title="/pmwiki/pmwiki.php/VideoGame/CastlevaniaPortraitOfRuin">Castlevania: Portrait of Ruin</a></em> makes the game <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Unwinnable" title="/pmwiki/pmwiki.php/Main/Unwinnable">Unwinnable</a> this way: Death has some dialogue immediately after you beat him, and at the end of the dialogue, his "boss beaten" event flag is set. However, if you skip the cutscene, the flag never gets set, so re-entering the room seals the doors just as if you had a boss battle, but the boss never appears; you are locked in the room until you reset the game. Worse yet, if you went back out of the room to take advantage of the nearby savepoint, you can't get <em>through</em> the room, which is where the rest of the game is, and the only recourse is to restart the file.
+</li><li> In one <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TIEFighter" title="/pmwiki/pmwiki.php/VideoGame/TIEFighter">TIE Fighter</a></em> mission, a different set of enemies would appear depending on the order in which the player destroyed his first two targets.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Soulcaster" title="/pmwiki/pmwiki.php/VideoGame/Soulcaster">Soulcaster</a></em> and <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SoulcasterII" title="/pmwiki/pmwiki.php/VideoGame/SoulcasterII">Soulcaster II</a></em> make heavy use of event flags for controlling traps, ambushes, monster spawns, and other such triggers.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/BatmanArkhamCity" title="/pmwiki/pmwiki.php/VideoGame/BatmanArkhamCity">Batman: Arkham City</a></em>: If you try and sequence break by blowing up the six Titan containers before visiting Bane, you'll find one of them is missing. Only by talking to Bane is the event flag to make it appear set.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder1');">    Adventure </div><div class="folder" id="folder1" isfolder="true" style="display:block;">
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/Metroid" title="/pmwiki/pmwiki.php/Franchise/Metroid">Metroid</a></em>
+<ul><li> In both <a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Metroid1" title="/pmwiki/pmwiki.php/VideoGame/Metroid1">the first game</a> and <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MetroidZeroMission" title="/pmwiki/pmwiki.php/VideoGame/MetroidZeroMission">Zero Mission</a></em>, you have the fights with <a class="twikilink" href="/pmwiki/pmwiki.php/Main/EliteMooks" title="/pmwiki/pmwiki.php/Main/EliteMooks">Ridley and Kraid</a>, which are required to open the way to <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ElaborateUndergroundBase" title="/pmwiki/pmwiki.php/Main/ElaborateUndergroundBase">Tourian</a> and thus the end of the game.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MetroidIIReturnOfSamus" title="/pmwiki/pmwiki.php/VideoGame/MetroidIIReturnOfSamus">Return of Samus</a></em> you have to clear a section of the game world of Metroids before the path forward is cleared of purple liquid, allowing you to advance. <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MetroidSamusReturns" title="/pmwiki/pmwiki.php/VideoGame/MetroidSamusReturns">Samus Returns</a></em> changes this to collecting Metroid DNA that is automatically collected from among the drops during the Metroid's death scene.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SuperMetroid" title="/pmwiki/pmwiki.php/VideoGame/SuperMetroid">Super Metroid</a></em>, the large crashed ship is supposed to be entered from the west; a boss fight there triggers an event flag which turns the power on. Through heavy-duty <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SequenceBreaking" title="/pmwiki/pmwiki.php/Main/SequenceBreaking">Sequence Breaking</a>, it can also be entered from the east, but it will be completely empty until this flag is triggered. Also, the method of reaching Tourian makes a comeback.
+</li><li> The <a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MetroidPrimeTrilogy" title="/pmwiki/pmwiki.php/VideoGame/MetroidPrimeTrilogy">Metroid Prime Trilogy</a> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/EnforcedTrope" title="/pmwiki/pmwiki.php/Main/EnforcedTrope">Enforces</a> this starting with later releases of <a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MetroidPrime" title="/pmwiki/pmwiki.php/VideoGame/MetroidPrime">the first game</a>, whose updates included measures to prevent <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SequenceBreaking" title="/pmwiki/pmwiki.php/Main/SequenceBreaking">Sequence Breaking</a>.
+<ul><li> A particularly egregious example in the first game are the prevention measures to acquire the Plasma Beam early: A pile of Bendezium in front of the door in the Japanese and PAL versions, and the NTSC Player's Choice version locks the door in addition to the Bendezium pile until you have the Grapple Beam.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MetroidPrime2Echoes" title="/pmwiki/pmwiki.php/VideoGame/MetroidPrime2Echoes">Echoes</a></em>, <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MetroidPrime3Corruption" title="/pmwiki/pmwiki.php/VideoGame/MetroidPrime3Corruption">Corruption</a></em>, as well as <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MetroidFusion" title="/pmwiki/pmwiki.php/VideoGame/MetroidFusion">Metroid Fusion</a></em>, all run on a mix of this trope and <a class="twikilink" href="/pmwiki/pmwiki.php/Main/YouCantThwartStageOne" title="/pmwiki/pmwiki.php/Main/YouCantThwartStageOne">You Can't Thwart Stage One</a>. For example, in <em>Echoes</em> you can't enter the Dark Temples without acquiring three Keys, most of which require you to acquire the various upgrades in their respective portions of the game, and restoring the Sanctuary Temple is required to get the Light Suit, which opens up most of the Sky Temple Keys.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MetroidOtherM" title="/pmwiki/pmwiki.php/VideoGame/MetroidOtherM">Metroid: Other M</a></em> has the infamous Authorization system and how it directly leads to the first (and so far only) time an official entry in the series had what fans call a Hell Run.<span class="notelabel" onclick="togglenote('note2kx6m');"><sup>note </sup></span><span class="inlinefolder" id="note2kx6m" isnote="true" onclick="togglenote('note2kx6m');" style="cursor:pointer;font-size:smaller;display:none;">Forced travel through extreme temperature areas without the Varia Suit. The first known Hell Run was a hack of <em>Super Metroid</em> called "Super Metroid Redesign" which hid the Ice Beam, required to get the Varia Suit, behind a gauntlet of heated rooms.</span> It was mitigated somewhat by greatly reducing the rate of heat damage in those areas in comparison to the heated areas you're NOT supposed to be in yet, but the fans were still enraged that the developers did that.
+</li></ul></li></ul></li><li> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Lampshaded" title="/pmwiki/pmwiki.php/Main/Lampshaded">Lampshaded</a> in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FlowerSunAndRain" title="/pmwiki/pmwiki.php/VideoGame/FlowerSunAndRain">Flower, Sun and Rain</a></em>. In Scenario 4, there's a point when you will probably have already figured out the solution to a puzzle, but aren't actually offered the chance to solve it. You first have to talk to Stephen Charbonie, who, as part of his <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Cloudcuckoolander" title="/pmwiki/pmwiki.php/Main/Cloudcuckoolander">usual bizarre rant</a> will mention that "digital games also need flags" and that he's going to "trigger a flag for you." From then on, he mentions "flags" every time he allows you to progress further.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheLegendOfZeldaMajorasMask" title="/pmwiki/pmwiki.php/VideoGame/TheLegendOfZeldaMajorasMask">The Legend of Zelda: Majora's Mask</a></em> has four odd instances of buggered event flags, three of which are well known in the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SpeedRun" title="/pmwiki/pmwiki.php/Main/SpeedRun">Speed Runner</a> community:
+<ul><li> In the Link Trial dungeon of the Moon, playing the Song of Storms in front of the Gossip Stone before the Iron Knuckle room makes the ladder appear automatically, allowing you to skip the puzzle.
+</li><li> In the same dungeon playing the same song for the Gossip Stone on the left of the Iron Knuckle room unlocks the door in the next room, allowing you to skip a different puzzle.
+</li><li> The Owl Statue Warp Glitch relies on this. It involves triggering an out-of-bounds statue that sets one event flag without setting any others<span class="notelabel" onclick="togglenote('note3ms37');"><sup>note </sup></span><span class="inlinefolder" id="note3ms37" isnote="true" onclick="togglenote('note3ms37');" style="cursor:pointer;font-size:smaller;display:none;">There is one event flag that is set when you trigger any one statue, which decides whether or not the map will come up or if a generic "you can't warp yet" message will appear. On top of this each individual statue has an identifier event flag that tells the map whether or not that statue can be warped to. The out-of-bounds Owl Statue in Clock Town triggers the first event flag but has no identifier event flag, so the game doesn't know where to put the cursor on the map screen. People have since figured out how to "game" this by placing the cursor at specific places on the pause screen and then playing the song to position the cursor in ways that will allow them to warp to areas they've yet to visit</span>, allowing you to basically warp anywhere and <a class="twikilink" href="/pmwiki/pmwiki.php/Main/OpeningTheSandbox" title="/pmwiki/pmwiki.php/Main/OpeningTheSandbox">frigging obliterate the sandbox</a>.
+</li><li> Approaching the fence to Great Bay will trigger a message from Tatl (the one that tells you a horse could jump it), which oddly also sets the flag to plant a Magic Bean in the soil outside the Astral Observatory. Since it gets you inside the observatory it can be useful if you neglected to write down the Bomber's password and don't feel like <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ThatOneSidequest" title="/pmwiki/pmwiki.php/Main/ThatOneSidequest">chasing the little buggers for a second time</a>.
+</li></ul></li><li> Partway through <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheLegendOfZeldaTheWindWaker" title="/pmwiki/pmwiki.php/VideoGame/TheLegendOfZeldaTheWindWaker">The Legend of Zelda: The Wind Waker</a></em>, you're asked to provide a password to get back inside Tetra's pirate ship. However, even if you solve the password riddle perfectly, capital letters and all, the game still won't let you into the ship until you view the correct cutscene where Link overhears the password from two pirates (thus triggering the event flag). It's <a class="twikilink" href="/pmwiki/pmwiki.php/Main/HandWave" title="/pmwiki/pmwiki.php/Main/HandWave">Hand Waved</a> that there is a very specific and precise way the password needs to be pronounced for it to pass, and that even if Link guessed the word he wouldn't know how to pronounce it until he overheard it from the pirates.
+</li><li> Opening the portal to <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TheVeryDefinitelyFinalDungeon" title="/pmwiki/pmwiki.php/Main/TheVeryDefinitelyFinalDungeon">Black Castle</a> in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/AnUntitledStory" title="/pmwiki/pmwiki.php/VideoGame/AnUntitledStory">An Untitled Story</a></em> requires the player to talk to the girl on LongBeach. Aside from this, these two things are otherwise mostly unrelated.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MetroidOtherM" title="/pmwiki/pmwiki.php/VideoGame/MetroidOtherM">Metroid: Other M</a></em> gives Samus upgrades merely for being in the right place with the right event flags triggered. Most noticeably, this happens with the Grapple Beam and the Wave Beam.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/PeasantsQuest" title="/pmwiki/pmwiki.php/VideoGame/PeasantsQuest">Peasant's Quest</a></em>, an event flag is triggered by talking to Mendelev at the shooting range. Saying "haldo" to Dongolev before talking to Mendelev will trigger the following response:
+<div class="indent"><strong>Dongolev</strong>: "<a class="twikilink" href="/pmwiki/pmwiki.php/Main/BreakingTheFourthWall" title="/pmwiki/pmwiki.php/Main/BreakingTheFourthWall">What'd you read that in the PQ Strategy Guide</a>? Go talk to my brother first."
+</div></li><li> In the AGD Interactive <a class="twikilink" href="/pmwiki/pmwiki.php/Main/FanRemake" title="/pmwiki/pmwiki.php/Main/FanRemake">Fan Remake</a> of <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/KingsQuestIIRomancingTheThrone" title="/pmwiki/pmwiki.php/VideoGame/KingsQuestIIRomancingTheThrone">King's Quest II: Romancing the Throne</a></em>, at one point the player is supposed to trade a pearl to an unscrupulous merchant for a mermaid's shell comb. However, you have to talk to the merchant first to find out that he's interested in pearls; offering him the pearl straight out will result in the same "No thanks" message he gives if you offer him anything else in your inventory.
+</li><li> Averted at one point in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Myst" title="/pmwiki/pmwiki.php/VideoGame/Myst">Myst</a></em>. You might expect an event flag preventing you from starting a new game, flipping a couple levers, snagging a book page and toddling off to the library to enter a code and thereby win the entire game in less than two minutes. You would be wrong. The final combination code to beat the game is the same every time. As long as you know what to do, you don't have to solve any other puzzles.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/ArmedAndDelirious" title="/pmwiki/pmwiki.php/VideoGame/ArmedAndDelirious">Armed &amp; Delirious</a></em>, the goal is to reach <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BigBad" title="/pmwiki/pmwiki.php/Main/BigBad">the Rabbit</a>'s communications room so Granny can find her recipe book. It is possible to reach that room before the end of the game, but if you do so, the Rabbit will be absent and Granny won't be able to find her recipe book. Once you've "rescued" all the family members, the Rabbit will appear in the room, allowing Granny to interrogate him on the location of the book, ending the game.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder2');">    First Person Shooter </div><div class="folder" id="folder2" isfolder="true" style="display:block;">
+<ul><li> The scripting system introduced in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Hexen" title="/pmwiki/pmwiki.php/VideoGame/Hexen">Hexen</a></em> allowed for event flags that affect other maps. The important ones are usually obvious by stating that part of a puzzle is solved by pulling a switch, but there's sometimes less visible ones such as crossing two specific lines in a map to raise a set of stairs in the associated hub's level.
+</li><li> In one level of <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MedalOfHonorFrontline" title="/pmwiki/pmwiki.php/VideoGame/MedalOfHonorFrontline">Medal of Honor: Frontline</a></em>, you have to blow up several trucks. The last truck doesn't appear until you get the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/PlotCoupon" title="/pmwiki/pmwiki.php/Main/PlotCoupon">deployment roster</a>. Destroying it collapses a girder, creating a ramp over the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BrokenBridge" title="/pmwiki/pmwiki.php/Main/BrokenBridge">otherwise insurmountable wall</a> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DirectContinuousLevels" title="/pmwiki/pmwiki.php/Main/DirectContinuousLevels">to the next level</a>.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Left4Dead" title="/pmwiki/pmwiki.php/VideoGame/Left4Dead">Left 4 Dead</a></em> uses event flags mainly in finales. Until you trigger the button/radio/whatever to start the finale, you are stuck where you are until you start the event. <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Left4Dead2" title="/pmwiki/pmwiki.php/VideoGame/Left4Dead2">Left 4 Dead 2</a></em> has two finales that are triggered by riding an elevator down to the lower floor but sometimes, due to a glitch or lag online, the finale event fails to start, thus the flag is never triggered. However, there's an object that can be "activated" to trigger the finale flag as a failsafe should the first flag fail in triggering.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder3');">    Platform </div><div class="folder" id="folder3" isfolder="true" style="display:block;">
+<ul><li> One spot in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SuperPaperMario" title="/pmwiki/pmwiki.php/VideoGame/SuperPaperMario">Super Paper Mario</a></em> can only be passed via <a class="twikilink" href="/pmwiki/pmwiki.php/Main/StupidityIsTheOnlyOption" title="/pmwiki/pmwiki.php/Main/StupidityIsTheOnlyOption">deliberate stupidity</a>. If you try to delay doing what will trigger the bad event, the character you are conversing with will eventually <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BreakingTheFourthWall" title="/pmwiki/pmwiki.php/Main/BreakingTheFourthWall">bring up event flags</a>.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/PrinceOfPersia1" title="/pmwiki/pmwiki.php/VideoGame/PrinceOfPersia1">Prince Of Persia 1</a></em>, one might expect that picking up the sword in the first level is an event flag (because you can't very well enter a sword fight without it). Turns out that it's not; through <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SequenceBreaking" title="/pmwiki/pmwiki.php/Main/SequenceBreaking">trickery</a>, you can enter the second level even without the sword, at which point you'll magically be able to swordfight anyway.
+<ul><li> One walkthrough, purporting to be a translation of the ancient tale of the protagonist, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/HandWave" title="/pmwiki/pmwiki.php/Main/HandWave">Hand Waves</a> this by explaining that the story splits into two different versions at this place, and speculating that the Prince might have (in the quick version) found the sword on the stairs.
+</li></ul></li><li> One point in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/CaveStory" title="/pmwiki/pmwiki.php/VideoGame/CaveStory">Cave Story</a></em> has a pretty transparent event flag—there's only critters and bats outside when you first enter Grasstown, but once you've talked to Chaco and she mentions you need to kill a Giant Jelly, the entire place is now magically filled with flying Jellyfish (including several visible from her doorstep).
+<ul><li> And, of course, it takes an Event Flag to trigger this Event Flag. You need to have gotten the Fireball from Santa first or she asks if you met Santa yet.
+</li><li> Also in the Core Chamber: Curly notices something interesting and wants you to come look at it, and the cutscene leading directly to the Boss Fight is triggered when you go talk to her. It's significant because <span class="spoiler" title="you can set spoilers visible by default on your profile">if you don't collect a hidden item in that room before triggering this event flag, you forfeit your chance at getting the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MultipleEndings" title="/pmwiki/pmwiki.php/Main/MultipleEndings">good ending</a></span>.
+</li><li> Dr. Booster in the Labyrinth as well. <span class="spoiler" title="you can set spoilers visible by default on your profile">If you talk to him after he falls into a pit, he dies, and the hidden item in the Core Chamber doesn't appear. If you instead leap over the pit, he gets better later on.</span>
+</li></ul></li><li> The first <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Rayman1995" title="/pmwiki/pmwiki.php/VideoGame/Rayman1995">Rayman</a></em> game plays with the concept a little. First of all, event flags only affect the level in which you are. Secondly, the event that sets the flag is just getting into some area; this may mean anything from collecting a powerup through walking a platform up to leap of faith. Moreover, the effects of flag being set are sometimes visible immediately - the game is not above spawning enemies just behind you, and edutainment spinoffs spawn killing obstacles directly into you when you select a wrong answer - but sometimes the only thing you get to know is that you set a flag, due to a distinctive sound - that is, if you play with sound.
+</li><li> If you play <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SonicBoom" title="/pmwiki/pmwiki.php/VideoGame/SonicBoom">Sonic Boom: Rise Of Lyric</a></em> while using Knuckles' <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GoodBadBugs" title="/pmwiki/pmwiki.php/Main/GoodBadBugs">game-shattering infinite jump glitch</a> it's actually hard to <em>not</em> avoid missing event flags. This can have mixed results: you can <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SpeedRun" title="/pmwiki/pmwiki.php/Main/SpeedRun">Speed Run</a> the game in under an hour, dodge entire sections of the game, render it <a class="twikilink" href="/pmwiki/pmwiki.php/Main/UnwinnableByMistake" title="/pmwiki/pmwiki.php/Main/UnwinnableByMistake">Unwinnable by Mistake</a>, find yourself lost in a void that failed to load the level textures, or enter 2D or mach-speed sections with the normal camera and controls. Unsurprisingly a lot of the <em><a class="twikilink" href="/pmwiki/pmwiki.php/WebVideo/GameGrumps" title="/pmwiki/pmwiki.php/WebVideo/GameGrumps">Game Grumps</a></em> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GuideDangIt" title="/pmwiki/pmwiki.php/Main/GuideDangIt">Guide Dang It!</a> confusion during their play of the game came from missing event flags that triggered crucial elements or exposition.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/HollowKnight" title="/pmwiki/pmwiki.php/VideoGame/HollowKnight">Hollow Knight</a></em>, the Forgotten Crossroads becomes the Infected Crossroads once you break one of the three seals holding the Infection back. If you take too long to do this, however, the game will get impatient and instead trigger it as soon as you get the Monarch Wings from fighting the Broken Vessel, with no explanation.
+</li><li> Version 1.00 of <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SpyroYearOfTheDragon" title="/pmwiki/pmwiki.php/VideoGame/SpyroYearOfTheDragon">Spyro: Year of the Dragon</a></em> has a <em>horrid</em> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GameBreakingBug" title="/pmwiki/pmwiki.php/Main/GameBreakingBug">Game-Breaking Bug</a> that is caused by one of these. If you enter any of the speedways and get either the Time Trial or Race egg without getting the other, leave the speedway, and then save and quit or power down the console, the egg you didn't get becomes <a class="twikilink" href="/pmwiki/pmwiki.php/Main/PermanentlyMissableContent" title="/pmwiki/pmwiki.php/Main/PermanentlyMissableContent">permanently unobtainable</a> <em>which renders getting <a class="twikilink" href="/pmwiki/pmwiki.php/Main/OneHundredPercentCompletion" title="/pmwiki/pmwiki.php/Main/OneHundredPercentCompletion">100% Completion</a> on that save impossible</em>. What happens is the event flag that marks the egg you didn't get as "obtained" is set, but the flag that marks it as obtained in your atlas is not: now getting the egg won't mark your atlas as complete or add to your egg total since the game thinks you have the egg. The only way to fix it is to restart that entire save and take care to not repeat the glitch, or get your hands on a later version of the game where the glitch was fixed and obtain it on that copy.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder4');">    RPG </div><div class="folder" id="folder4" isfolder="true" style="display:block;">
+<ul><li> An infamous bug is found in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/UltimaVIIPartII" title="/pmwiki/pmwiki.php/VideoGame/UltimaVIIPartII">Ultima VII Part II</a></em>, Serpent Isle. In a haunted house near a lighthouse you visit early in the game, speaking to certain ghosts shows you dialogue from much, much later in the game. This information is useless at that point and doesn't really make sense yet, but more importantly that conversation sets a few event flags that may cause future areas to become impassable.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/RuneFactory" title="/pmwiki/pmwiki.php/VideoGame/RuneFactory">Rune Factory</a> 2</em> has only a very few of these. Those it lacks often lead to rather humorous conversations where villagers ask what you think about their <a class="twikilink" href="/pmwiki/pmwiki.php/Main/LoveInterest" title="/pmwiki/pmwiki.php/Main/LoveInterest">Love Interest</a> <em>after you've married her</em>. And you still respond with "i dunno lol".
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/RuneFactory4" title="/pmwiki/pmwiki.php/VideoGame/RuneFactory4">Rune Factory 4</a></em> continues this spartan tradition by having <a class="twikilink" href="/pmwiki/pmwiki.php/Main/NPC" title="/pmwiki/pmwiki.php/Main/NPC">NPCs</a> greet you in a way that acknowledges you are in a relationship and/or expecting a child, then following it up with, "...so have you found anyone special yet?" A few other wallbangers include Dylas asking Frey if she will be his friend when she's his wife and the mother of his child, characters commenting that you're dating Dylas if you trigger the "Smiling Practice" event after tying the knot with another bachelor, and Leon continuing to refer to Frey as his girlfriend even after putting a ring on her finger.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheElderScrollsIVOblivion" title="/pmwiki/pmwiki.php/VideoGame/TheElderScrollsIVOblivion">The Elder Scrolls IV: Oblivion</a></em> is just about run by event flags, ranging from new enemies suddenly appearing based on your level and/or <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ScriptedEvent" title="/pmwiki/pmwiki.php/Main/ScriptedEvent">reaching a certain point in a quest</a> all the way to keeping track of what every NPC is supposed to be doing at any given time of in-game day. However, some of these event flags are notoriously prone to glitching, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GameBreakingBug" title="/pmwiki/pmwiki.php/Main/GameBreakingBug">sometimes with disastrous results</a>.
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Fallout3" title="/pmwiki/pmwiki.php/VideoGame/Fallout3">Fallout 3</a></em> upgraded that engine with a more sophisticated AI system, allowing for more flexible scheduling, conditionals and parameters. There's now quadruple redundancy possible, with event flags set by triggers, spell effects, dialog or AI. A dialog can set an AI flag, which will execute and set a Global variable, which will be checked when a door or object is triggered or a spell times out...and many other possible permutations and chained event flags. Unfortunately, this inconsistency makes it easier to break and harder to debug the chain, which a study of the game in the Construction Set shows many designers have done...
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Fallout4" title="/pmwiki/pmwiki.php/VideoGame/Fallout4">Fallout 4</a></em> has such a sequence trigger only after you progress a certain point in the main quest. <span class="spoiler" title="you can set spoilers visible by default on your profile"> Entering Fort Hagen before you track down Kellogg with Dogmeat and Valentine will see the elevator that normally gets you down to the lower levels of the fort blocked by impassible boards.</span>
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SkiesOfArcadia" title="/pmwiki/pmwiki.php/VideoGame/SkiesOfArcadia">Skies of Arcadia</a></em> has event flags. This presents a problem if you use a cheat to find all discoveries before going to the ice continent, as the discovery of a city on the continent is an event flag - you cannot progress in the game and have to start over.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/PhantasyStar" title="/pmwiki/pmwiki.php/VideoGame/PhantasyStar">Phantasy Star</a></em> relies heavily on event flags, to the point where you won't be able to access a chest that should be in plain sight until a person tells the characters about it.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/EarthBound" title="/pmwiki/pmwiki.php/VideoGame/EarthBound">EarthBound</a></em> uses event flags to an insane level. Random people you have to talk to to trigger events miles away, state changes that are never obvious...there are so many <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GuideDangIt" title="/pmwiki/pmwiki.php/Main/GuideDangIt">Guide Dang It!</a> event flags in the game, Nintendo decided to include a guide with the game. Thankfully, the sequel improves massively.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Albion" title="/pmwiki/pmwiki.php/VideoGame/Albion">Albion</a></em>'s Beloveno Arc depends entirely on event flags, that are set off when talking to certain people in a certain order, a certain amount of times. For example, while collecting information on a plot to assassinate the council president, the player will be prompted to talk to a certain NPC once he discussed the issue with two particular individuals. Talking to the NPC in question, will trigger the assassination. If the president was warned before that happens, the attempt will be thwarted and the player will be rewarded for their service. Othervise, he will be killed.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SepterraCore" title="/pmwiki/pmwiki.php/VideoGame/SepterraCore">Septerra Core</a></em>, Maya's father won't know that <span class="spoiler" title="you can set spoilers visible by default on your profile">Tori is in Outlaw Canyon</span> until you ask Azziz the same question (he answers "I don't know, ask your father.") Lo and behold, <span class="spoiler" title="you can set spoilers visible by default on your profile">Tori</span> shows up in <span class="spoiler" title="you can set spoilers visible by default on your profile">Outlaw Canyon</span> instantly after talking to Maya's father.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Terraria" title="/pmwiki/pmwiki.php/VideoGame/Terraria">Terraria</a></em> boss fights and some other events happen using these flags. Examples include:
+<ul><li> Breaking a shadow orb may trigger (possibly with a delay) a landing meteorite or a goblin army, and breaking three shadow orbs summons an Eater of Worlds.
+</li><li> You have to reach a certain amount of max HP before blood moons start to appear. Max HP also triggers some boss and NPC appearances.
+</li></ul></li><li> Gen V of <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/Pokemon" title="/pmwiki/pmwiki.php/Franchise/Pokemon">Pokémon</a></em> makes use of these in an attempt to prevent cheating. It's why using a <a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/GameShark" title="/pmwiki/pmwiki.php/VideoGame/GameShark">GameShark</a> for things like a Liberty Pass to get Victini will give you the item, but you can't use it. You have to trigger the Wondercard first. Getting the item from Wi-Fi or the Entrelink triggers the Wondercard which will allow the associated event to occur. The Event Flags exist in all the games, but sharking is easier in earlier gens because just getting the item triggers the flag. There's no Wondercard to trigger when getting the item.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/YuGiOhMonsterCapsuleGB" title="/pmwiki/pmwiki.php/VideoGame/YuGiOhMonsterCapsuleGB">Yu-Gi-Oh! Monster Capsule GB</a></em>, these crop up in-story in the various RPG worlds, signified by a chime.
+</li><li> Justified in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/PaperMarioTheThousandYearDoor" title="/pmwiki/pmwiki.php/VideoGame/PaperMarioTheThousandYearDoor">Paper Mario: The Thousand-Year Door</a></em> when you have to learn <span class="spoiler" title="you can set spoilers visible by default on your profile">Doopliss's</span> name, which serves as his weakness. Unfortunately for anyone who already knows the name, you also need the <em>lowercase letter P from his hideout</em> to use in the name entry screen to fill it out properly. And in case you haven't noticed, in the previous appearances of the Name Entry screen, yes, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/InterfaceScrew" title="/pmwiki/pmwiki.php/Main/InterfaceScrew">you have been missing that one single letter</a> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DevelopersForesight" title="/pmwiki/pmwiki.php/Main/DevelopersForesight">since the beginning of the game</a>.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Undertale" title="/pmwiki/pmwiki.php/VideoGame/Undertale">Undertale</a></em> has a few interesting ones:
+<ul><li> Many <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BossBattle" title="/pmwiki/pmwiki.php/Main/BossBattle">Boss Battles</a> and other important obstacles may trigger event flags on their completion that remove <a class="twikilink" href="/pmwiki/pmwiki.php/Main/RandomEncounters" title="/pmwiki/pmwiki.php/Main/RandomEncounters">Random Encounters</a> from preceding areas and add various NPCs standing around for the player to talk with (often the same monsters).
+</li><li> There's one that causes <span class="spoiler" title="you can set spoilers visible by default on your profile">the reflections in Waterfall's puddles to show the Fallen Child instead of Frisk</span>. There was <a class="twikilink" href="/pmwiki/pmwiki.php/Main/UrbanLegendOfZelda" title="/pmwiki/pmwiki.php/Main/UrbanLegendOfZelda">a rumor</a> that this would happen after <span class="spoiler" title="you can set spoilers visible by default on your profile">completing the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/KillEmAll" title="/pmwiki/pmwiki.php/Main/KillEmAll">Kill 'Em All</a> route and selling your SOUL</span>, but in reality, the flag is <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DummiedOut" title="/pmwiki/pmwiki.php/Main/DummiedOut">Dummied Out</a> and can only be activated through <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DebugMode" title="/pmwiki/pmwiki.php/Main/DebugMode">Debug Mode</a>.
+</li><li> The last flag that can lock you out of the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/PacifistRun" title="/pmwiki/pmwiki.php/Main/PacifistRun">Pacifist Run</a> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GoldenEnding" title="/pmwiki/pmwiki.php/Main/GoldenEnding">Golden Ending</a> occurs slightly <em>before</em> the flag that disables the last remaining <a class="twikilink" href="/pmwiki/pmwiki.php/Main/RandomEncounters" title="/pmwiki/pmwiki.php/Main/RandomEncounters">Random Encounters</a>. This means that, if you time it right, you can engage in a bit of <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ScriptBreaking" title="/pmwiki/pmwiki.php/Main/ScriptBreaking">Script Breaking</a> and get the "pacifist" ending after killing monsters in the CORE, or even <em>wiping them out entirely</em>.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/NocturneRebirth" title="/pmwiki/pmwiki.php/VideoGame/NocturneRebirth">Nocturne: Rebirth</a></em> has an interesting one after beating the Wind Guardian. After beating the boss, the next three dungeons become available at the same time. However, the story will progress each time you either complete the first half of a dungeon or defeat a boss. This can lead to a strange situation where the player can complete the first halves of two different dungeons, which will cause them to fight Idith and the Maxwell trio bosses before they fully complete any of the dungeons.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DragonAgeInquisition" title="/pmwiki/pmwiki.php/VideoGame/DragonAgeInquisition">Dragon Age: Inquisition</a></em> has an unusual one in the form of Cullen's romance. While other characters with whom the Inquisitor may choose to have a relationship can be romanced fairly quickly, a romance with Cullen is tied to the actual plot. Any Inquisitor can flirt with him in Haven, although if they're not a female human or elf, that's as far as it will go. After the Inquisition moves to Skyhold, the romance can continue but is forced to move slowly by the events of the plot; completing major events and quests will trigger the event flags to allow the relationship to continue growing.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FinalFantasyIV" title="/pmwiki/pmwiki.php/VideoGame/FinalFantasyIV">Final Fantasy IV</a></em> has two great exploits involving event flags, one caused by skipping a flag and the other caused by triggering one earlier than usual:
+<ul><li> By abusing tents and saving it's possible to walk past Mist and enter from the right, allowing you to skip the destruction of the town and actually explore it much earlier than usual. The shop there sells mid-game items that can be equipped by Rydia, giving the level 1 Summoner twice the raw attack power of the level 10 Cecil and turning her into a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/CrutchCharacter" title="/pmwiki/pmwiki.php/Main/CrutchCharacter">walking</a> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MasterOfAll" title="/pmwiki/pmwiki.php/Main/MasterOfAll">nuclear</a> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DiskOneNuke" title="/pmwiki/pmwiki.php/Main/DiskOneNuke">bomb</a> for much of the game.
+</li><li> Casting Warp <em>immediately</em> after regaining control after defeating Golbez allows you to walk up and "take" the crystal, which triggers the same event flag as taking the next crystal (this is because in the game's code, those two crystals are actually the same object with the same coded properties). With this event flag triggered the Sealed Cave completed event will happen the second you enter, letting you completely avoid one of the game's more annoying dungeons and the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GoddamnedBoss" title="/pmwiki/pmwiki.php/Main/GoddamnedBoss">infernal Trap Doors</a> that are found throughout. Unsurprisingly, this is a favored tactic of <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Speedrun" title="/pmwiki/pmwiki.php/Main/Speedrun">Speedrunners</a>.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Persona3" title="/pmwiki/pmwiki.php/VideoGame/Persona3">Persona 3</a></em> has a lot of these in regards to the Social Links the player can form throughout the game. One example is that you can't start the Hermit link until you get the copy of "Innocent Sin Online" from Junpei.
+</li><li> In <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GameMaker" title="/pmwiki/pmwiki.php/Main/GameMaker">RPG Maker</a>, event flags are known as "switches" and are the most basic of all the mechanics one must learn in order to make a functional game. RPG Maker also features a more advanced version of switches called "variables". These are far more versatile as they can be assigned to a pre-determined value i.e characters' stats, items in inventory, money held, play time, etc. Variables are best used along Conditional Branches that grant the game the ability to know if a certain condition is met in order to allow progression.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder5');">    Shoot-em-up </div><div class="folder" id="folder5" isfolder="true" style="display:block;">
+<ul><li> Area 7 of <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/RefleX" title="/pmwiki/pmwiki.php/VideoGame/RefleX">RefleX</a></em> features <span class="spoiler" title="you can set spoilers visible by default on your profile">ZODIAC Virgo trapping the Phoenix and firing upon it until it's destroyed, causing the Phoenix to transform into ZODIAC Ophiuchus. However, this <em>only</em> happens if you let the Phoenix's shield meter run out first in a last-ditch defense attempt; those who have advance knowledge of the cutscene may be tempted to just not shield at all, only to learn the hard way that not having an empty shield meter when the Phoenix is destroyed results in a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GameOver" title="/pmwiki/pmwiki.php/Main/GameOver">Game Over</a>.</span>
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder6');">    Strategy </div><div class="folder" id="folder6" isfolder="true" style="display:block;">
+<ul><li> Several of the <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TotalWar" title="/pmwiki/pmwiki.php/VideoGame/TotalWar">Total War</a></em> series games (notably <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/RomeTotalWar" title="/pmwiki/pmwiki.php/VideoGame/RomeTotalWar">Rome</a></em>) have their historical progression events driven by the actions of one faction - eliminate that faction and history stands still for everyone else. This is often a lot more noticeable in realism mods like Europa Barborum, if only because a lot more happens on the back of the event flags.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/OmertaCityOfGangsters" title="/pmwiki/pmwiki.php/VideoGame/OmertaCityOfGangsters">Omerta: City of Gangsters</a></em> uses event flags to <a class="twikilink" href="/pmwiki/pmwiki.php/Main/LevelUp" title="/pmwiki/pmwiki.php/Main/LevelUp">Level Up</a> your gangsters. Usually, these happen after a significant battle between your gang and the enemy you're fighting. The stages of the game tell you beforehand if a Level Up event flag is coming.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder7');">    Survival Horror </div><div class="folder" id="folder7" isfolder="true" style="display:block;">
+<p></p><ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FridayThe13thTheGame" title="/pmwiki/pmwiki.php/VideoGame/FridayThe13thTheGame">Friday the 13th: The Game</a></em> has one in reference to one of the ones from most of the movies. <span class="spoiler" title="you can set spoilers visible by default on your profile">Namely, Jason cannot be killed without first being subjected to a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DramaticUnmask" title="/pmwiki/pmwiki.php/Main/DramaticUnmask">Dramatic Unmask</a> (accomplished by hitting him enough times with certain weapons). In the films, Jason's <a class="twikilink" href="/pmwiki/pmwiki.php/Main/FacialHorror" title="/pmwiki/pmwiki.php/Main/FacialHorror">face being revealed</a> was one of these that happened at some point in the climax with a few exceptions.</span>
+</li><li> A popular <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DiskOneNuke" title="/pmwiki/pmwiki.php/Main/DiskOneNuke">Disk One Nuking</a> tactic in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/ResidentEvil5" title="/pmwiki/pmwiki.php/VideoGame/ResidentEvil5">Resident Evil 5</a></em> relies on avoiding these. Level 3-1 is a massive sprawling area of islands loaded with treasure and ammo pickups (including a rocket launcher) and there are no enemies unless you trigger one of several event flags that spawn them. It's very easy to memorize where the trigger points are, meaning you can keep loading your save and farming money and ammo unchallenged: within the hour you'll have accumulated enough money to <em>buy every upgrade in the game</em>.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder8');">    Visual Novel </div><div class="folder" id="folder8" isfolder="true" style="display:block;">
+<ul><li> Chiaki Nanami from <em><a class="twikilink" href="/pmwiki/pmwiki.php/VisualNovel/Danganronpa2GoodbyeDespair" title="/pmwiki/pmwiki.php/VisualNovel/Danganronpa2GoodbyeDespair">Danganronpa 2: Goodbye Despair</a></em> (who is the Ultimate Gamer and talks in video game metaphors a lot) will sometimes comment that you have "raised the flag" with her if you give her a present that she likes.
+</li><li> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ClosetGeek" title="/pmwiki/pmwiki.php/Main/ClosetGeek">Makise Kurisu</a> in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VisualNovel/SteinsGate" title="/pmwiki/pmwiki.php/VisualNovel/SteinsGate">Steins;Gate</a></em> mentions a love flag to Okabe as he gets close to another girl. But <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Tsundere" title="/pmwiki/pmwiki.php/Main/Tsundere">tellingly</a> she'll only mention this if you've raised the flags for the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TrueEnding" title="/pmwiki/pmwiki.php/Main/TrueEnding">True Ending</a>, which also serves as <em>her</em> ending.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder9');">    Other Media </div><div class="folder" id="folder9" isfolder="true" style="display:block;">
+<ul><li> The whole premise behind the anime/manga <em><a class="twikilink" href="/pmwiki/pmwiki.php/Manga/TheWorldGodOnlyKnows" title="/pmwiki/pmwiki.php/Manga/TheWorldGodOnlyKnows">The World God Only Knows</a></em> is based on setting flags. The main character, Keima, is a hardcore <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DatingSim" title="/pmwiki/pmwiki.php/Main/DatingSim">Dating Sim</a> otaku so interactions with other characters, mundane everyday tasks and random events all end up being flags.
+</li><li> A running joke in <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/HikoninSentaiAkibaranger" title="/pmwiki/pmwiki.php/Series/HikoninSentaiAkibaranger">Hikonin Sentai Akibaranger</a></em>, a <a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/SuperSentai" title="/pmwiki/pmwiki.php/Franchise/SuperSentai">Super Sentai</a> parody. Not only is it mentioned in the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ThemeSong" title="/pmwiki/pmwiki.php/Main/ThemeSong">Theme Song</a>, but Akiba Red remarks e.g. in the first episode that every time an enemy commander leaves saying something like "I leave it to you", this is a flag for the heroes to defeat the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MonsterOfTheWeek" title="/pmwiki/pmwiki.php/Main/MonsterOfTheWeek">Monster of the Week</a>. Sure enough, the Rangers suddenly start winning. However, the show also likes to play with the rules of sentai. When they expect the archvillain to <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MakeMyMonsterGrow" title="/pmwiki/pmwiki.php/Main/MakeMyMonsterGrow">embiggen</a> the monster after its first apparent destruction, it doesn't. The monster is really dead. The team <em>complains about that,</em> just because it's not how it's supposed to go.
+<ul><li> Near the end of the first series, the heroes are trying to avoid triggering event flags for the series to end but <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ExecutiveMeddling" title="/pmwiki/pmwiki.php/Main/ExecutiveMeddling">Executive Meddling</a> is trying to thwart them. The final enemy begins spitting out death flags left and right as the team panics and tries to stop him. "<a class="twikilink" href="/pmwiki/pmwiki.php/Main/JustBetweenYouAndMe" title="/pmwiki/pmwiki.php/Main/JustBetweenYouAndMe">Before you die, I'll tell you this</a>!" *Rangers panic* "<a class="twikilink" href="/pmwiki/pmwiki.php/Main/NothingCanStopUsNow" title="/pmwiki/pmwiki.php/Main/NothingCanStopUsNow">My new armor is all-powerful</a>!" *Rangers panic more* <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Retirony" title="/pmwiki/pmwiki.php/Main/Retirony">"And after I kill you, I'm going to go</a> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/FatalFamilyPhoto" title="/pmwiki/pmwiki.php/Main/FatalFamilyPhoto">see my fiancee</a>!" *Rangers go into full-on <a class="twikilink" href="/pmwiki/pmwiki.php/Main/OhCrap" title="/pmwiki/pmwiki.php/Main/OhCrap">Oh, Crap!</a> mode*
+</li><li> In the second series, Malshina takes over the <a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/SuperSentai" title="/pmwiki/pmwiki.php/Franchise/SuperSentai">Super Sentai</a> franchise and makes a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/VillainWorld" title="/pmwiki/pmwiki.php/Main/VillainWorld">Villain World</a>. Red realizes he has to act <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GenreBlind" title="/pmwiki/pmwiki.php/Main/GenreBlind">Genre Blind</a> because death flags are now victory flags! When they were losing to a monster, loudly talks about what he's going to do after the battle as everyone panics and tells him he's dooming himself, and finally his attack gets through. <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SuddenDownerEnding" title="/pmwiki/pmwiki.php/Main/SuddenDownerEnding">Eventually the whole team dies from Hakase accidentally setting off a death flag for them to make a</a> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/HeroicSacrifice" title="/pmwiki/pmwiki.php/Main/HeroicSacrifice">Heroic Sacrifice</a>, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/PaintingTheMedium" title="/pmwiki/pmwiki.php/Main/PaintingTheMedium">complete with a flag popping up on screen</a>.
+</li></ul></li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/Manga/SeitokaiYakuindomo" title="/pmwiki/pmwiki.php/Manga/SeitokaiYakuindomo">Seitokai Yakuindomo</a>,</em> Takatoshi's extreme case of <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ObliviousToLove" title="/pmwiki/pmwiki.php/Main/ObliviousToLove">Oblivious to Love</a> toward his <a class="twikilink" href="/pmwiki/pmwiki.php/Main/UnwantedHarem" title="/pmwiki/pmwiki.php/Main/UnwantedHarem">Unwanted Harem</a> has led him to be called the "Flag Crusher" by Uomi. It was <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MemeticMutation" title="/pmwiki/pmwiki.php/Main/MemeticMutation">quickly appropriated</a> by the fandom.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/Manga/DailyLifeWithMonsterGirl" title="/pmwiki/pmwiki.php/Manga/DailyLifeWithMonsterGirl">Daily Life with Monster Girl</a></em>, when Kimihito tries to prove <span class="spoiler" title="you can set spoilers visible by default on your profile">he isn't going to die</span>, he starts spouting off Death Flags ranging from the oldest ones in the book to <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ShoutOut" title="/pmwiki/pmwiki.php/Main/ShoutOut">Shout Outs</a>. This is lampshaded by <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SnakePeople" title="/pmwiki/pmwiki.php/Main/SnakePeople">Miia</a>, who urges him to stop saying Death Flags for fear of <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TemptingFate" title="/pmwiki/pmwiki.php/Main/TemptingFate">Tempting Fate</a>.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/KamenRiderFourze" title="/pmwiki/pmwiki.php/Series/KamenRiderFourze">Kamen Rider Fourze</a></em>'s <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TheMovie" title="/pmwiki/pmwiki.php/Main/TheMovie">Movie</a>, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TheBigGuy" title="/pmwiki/pmwiki.php/Main/TheBigGuy">Shun</a> pulls a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GoThroughMe" title="/pmwiki/pmwiki.php/Main/GoThroughMe">Go Through Me</a> moment for the rest of the heroes, which <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DeadpanSnarker" title="/pmwiki/pmwiki.php/Main/DeadpanSnarker">JK</a> outright labels an almost assured death flag. Shun responds that he can't die until he gets back to Earth and has one last date with <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TheChick" title="/pmwiki/pmwiki.php/Main/TheChick">Miu</a>; JK quietly mutters "He just keeps raising that flag..."
+</li><li> Referenced in the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BeachEpisode" title="/pmwiki/pmwiki.php/Main/BeachEpisode">Beach Episode</a> of <em><a class="twikilink" href="/pmwiki/pmwiki.php/LightNovel/HaiyoreNyarkoSan" title="/pmwiki/pmwiki.php/LightNovel/HaiyoreNyarkoSan">Haiyore! Nyarko-san</a></em>, where <a class="twikilink" href="/pmwiki/pmwiki.php/Main/UnluckyEverydude" title="/pmwiki/pmwiki.php/Main/UnluckyEverydude">Mahiro</a> tries to cheer <a class="twikilink" href="/pmwiki/pmwiki.php/Main/FieryRedhead" title="/pmwiki/pmwiki.php/Main/FieryRedhead">Cuko</a> up following the depressing events of the previous episode<span class="notelabel" onclick="togglenote('note4nhup');"><sup>note </sup></span><span class="inlinefolder" id="note4nhup" isnote="true" onclick="togglenote('note4nhup');" style="cursor:pointer;font-size:smaller;display:none;">Wherein she had to destroy the next-gen gaming console of her dreams</span>. Cuko thanks him, but says that he's wasting his time if he thinks he can raise any romance flags with her; Mahiro responds "Don't worry, if any flags like that pop up I'll tear them down myself."
+</li><li> Souta Hatate from <em><a class="twikilink" href="/pmwiki/pmwiki.php/LightNovel/IfHerFlagBreaks" title="/pmwiki/pmwiki.php/LightNovel/IfHerFlagBreaks">If Her Flag Breaks</a></em> has the ability to see flags over most people's heads, and alter them to change their fate, such as replacing a death flag with a romance one to keep Akane from dying after she falls through a second story floor in an old apartment complex he was using.
+</li><li> Sakura Kokoro of <em><a class="twikilink" href="/pmwiki/pmwiki.php/Roleplay/NoMatterWhatHappensIStillWontBecomeAnAnimeCharacter" title="/pmwiki/pmwiki.php/Roleplay/NoMatterWhatHappensIStillWontBecomeAnAnimeCharacter">No Matter What Happens, I Still Won't Become An Anime Character</a></em> fame has to try her best to avoid these flags, lest she fall into a plot causing a gameover.
+</li><li> Kirito in <em><a class="twikilink" href="/pmwiki/pmwiki.php/Fanfic/SAOTheEroge" title="/pmwiki/pmwiki.php/Fanfic/SAOTheEroge">SAO: The Eroge</a></em> sees multiple flags activate as he goes his way through Sword Art Online and meets the girls that end up joining his <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BattleHarem" title="/pmwiki/pmwiki.php/Main/BattleHarem">Battle Harem</a>.
+</li></ul></div>
+<hr/>
+</div>
+<div class="lazy-video-script">
+<a id="VideoExamples"></a>
+<div> </div>
+<div class="video-examples has-thumbnails">
+<div class="video-examples-header">
+<a class="font-s float-right text-blue" data-modal-target="login" href="#feedback">Feedback</a>
+<h3 class="bold">Video Example(s):</h3>
+</div>
+<div class="video-examples-featured">
+<a class="video-launch-link video-overlay-link featured-widget-vid" data-video-approval="APPROVED" data-video-average-rating="3.62" data-video-descrip="Do you recognize all the references?" data-video-id="tzrurg" data-video-media-sources="Manga/DailyLifeWithMonsterGirl" data-video-rating-count="8" data-video-thumbnail="https://i.vimeocdn.com/video/797496237_640x360.jpg?r=pad" data-video-title="Death Flag overload" data-video-trope="Main/EventFlag" data-video-tropename="Event Flag" data-video-troper-rating="" data-video-url="https://player.vimeo.com/external/347226968.sd.mp4?s=e6664af1b4357b336545bc8c1955a72d69856151&amp;profile_id=165&amp;oauth2_token_id=1043337761" href="#video-link">
+<div class="featured-widget-vid-iframe">
+<video class="video-js vjs-default-skin vjs-16-9" controls="" data-setup='{"ga": {"eventsToTrack": ["error"]}}' id="featured-video-player">
+</video>
+</div>
+</a>
+<h2 class="bold font-l">Death Flag overload</h2>
+<p class="_pmvv-vidbox-descTxt">
+Do you recognize all the references? </p>
+</div>
+</div>
+</div>
+<div class="alt-titles section section-fact">
+<h3>
+<strong>Alternative Title(s):</strong>
+<span>Event Flags</span> </h3>
+</div>
+<div class="square_ad footer-article-ad main_2" data-isolated="0"></div>
+<div class="section-links" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<div class="titles">
+<div><h3 class="text-center text-uppercase">Previous</h3></div>
+<div><h3 class="text-center text-uppercase">Index</h3></div>
+<div><h3 class="text-center text-uppercase">Next</h3></div>
+</div>
+<div class="links">
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/ChoiceAndConsequenceSystem">Choice-and-Consequence System</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/InteractiveStorytellingTropes">Interactive Storytelling Tropes</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/MultipleGameOpenings">Multiple Game Openings</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/EarnYourBadEnding">Earn Your Bad Ending</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/VisualNovelTropes">Visual Novel Tropes</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/GuideDangIt">Guide Dang It!</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/DiscardAndDraw">Discard and Draw</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/GameMechanics">Game Mechanics</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/ExperiencePoints">Experience Points</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/CompressedHair">Compressed Hair</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/QuoteSource/Internet">QuoteSource/Internet</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/Limerick">Limerick</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/VideoGame/CaveStory">Cave Story</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/QuoteSource/VideoGames">QuoteSource/Video Games</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/LevelDrain">Level Drain</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/DisappointedByTheMotive">Disappointed by the Motive</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/VideoSource/AnimeAndManga">VideoSource/Anime &amp; Manga</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/FunbagAirbag">Funbag Airbag</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/EssenceDrop">Essence Drop</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/VideoGameTropes">Video Game Tropes</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/EvolutionaryRetcon">Evolutionary Retcon</a>
+</li>
+</ul>
+</div>
+</div>
+</article>
+<div id="main-content-sidebar"><div class="sidebar-item display-options">
+<ul class="sidebar display-toggles">
+<li>Show Spoilers <div class="display-toggle show-spoilers" id="sidebar-toggle-showspoilers"></div></li>
+<li>Night Vision <div class="display-toggle night-vision" id="sidebar-toggle-nightvision"></div></li>
+<li>Sticky Header <div class="display-toggle sticky-header" id="sidebar-toggle-stickyheader"></div></li>
+<li>Wide Load <div class="display-toggle wide-load" id="sidebar-toggle-wideload"></div></li>
+</ul>
+<script>updateDesktopPrefs();</script>
+</div>
+<div class="sidebar-item ad sb-ad-unit">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_2"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_2'); });</script> </div>
+</div></div>
+<div class="sidebar-item quick-links" itemtype="http://schema.org/SiteNavigationElement">
+<p class="sidebar-item-title" data-title="Important Links">Important Links</p>
+<div class="padded">
+<a href="/pmwiki/query.php?type=att">Ask The Tropers</a>
+<a href="/pmwiki/query.php?type=tf">Trope Finder</a>
+<a href="/pmwiki/query.php?type=ykts">You Know That Show...</a>
+<a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a>
+<a href="/pmwiki/review_activity.php">Reviews</a>
+<a data-modal-target="login" href="/pmwiki/lbs.php">Live Blogs</a>
+<a href="/pmwiki/ad-free-subscribe.php">Go Ad Free!</a> </div>
+</div>
+<div class="sidebar-item sb-ad-unit">
+<div class="sidebar-section">
+<div class="square_ad ad-size-300x600 ad-section text-center">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_3"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_3'); });</script> </div>
+</div> </div>
+</div>
+</div>
+<div class="sidebar-item">
+<p class="sidebar-item-title" data-title="Crucial Browsing">Crucial Browsing</p>
+<ul class="padded font-s" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><a data-click-toggle="active" href="javascript:void(0);">Genre</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/ActionAdventureTropes" title="Main/ActionAdventureTropes">Action Adventure</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ComedyTropes" title="Main/ComedyTropes">Comedy</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CommercialsTropes" title="Main/CommercialsTropes">Commercials</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CrimeAndPunishmentTropes" title="Main/CrimeAndPunishmentTropes">Crime &amp; Punishment</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DramaTropes" title="Main/DramaTropes">Drama</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/HorrorTropes" title="Main/HorrorTropes">Horror</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LoveTropes" title="Main/LoveTropes">Love</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NewsTropes" title="Main/NewsTropes">News</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ProfessionalWrestling" title="Main/ProfessionalWrestling">Professional Wrestling</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SpeculativeFictionTropes" title="Main/SpeculativeFictionTropes">Speculative Fiction</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SportsStoryTropes" title="Main/SportsStoryTropes">Sports Story</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/WarTropes" title="Main/WarTropes">War</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Media</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/Media" title="Main/Media">All Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/AnimationTropes" title="Main/AnimationTropes">Animation (Western)</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Anime" title="Main/Anime">Anime</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ComicBookTropes" title="Main/ComicBookTropes">Comic Book</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FanFic" title="FanFic/FanFics">Fan Fics</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Film" title="Main/Film">Film</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/GameTropes" title="Main/GameTropes">Game</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Literature" title="Main/Literature">Literature</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MusicAndSoundEffects" title="Main/MusicAndSoundEffects">Music And Sound Effects</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NewMediaTropes" title="Main/NewMediaTropes">New Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/PrintMediaTropes" title="Main/PrintMediaTropes">Print Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Radio" title="Main/Radio">Radio</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SequentialArt" title="Main/SequentialArt">Sequential Art</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TabletopGames" title="Main/TabletopGames">Tabletop Games</a></li>
+<li><a href="/pmwiki/pmwiki.php/UsefulNotes/Television" title="Main/Television">Television</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Theater" title="Main/Theater">Theater</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/VideogameTropes" title="Main/VideogameTropes">Videogame</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Webcomics" title="Main/Webcomics">Webcomics</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Narrative</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/UniversalTropes" title="Main/UniversalTropes">Universal</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/AppliedPhlebotinum" title="Main/AppliedPhlebotinum">Applied Phlebotinum</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CharacterizationTropes" title="Main/CharacterizationTropes">Characterization</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Characters" title="Main/Characters">Characters</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CharactersAsDevice" title="Main/CharactersAsDevice">Characters As Device</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Dialogue" title="Main/Dialogue">Dialogue</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Motifs" title="Main/Motifs">Motifs</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NarrativeDevices" title="Main/NarrativeDevices">Narrative Devices</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Paratext" title="Main/Paratext">Paratext</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Plots" title="Main/Plots">Plots</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Settings" title="Main/Settings">Settings</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Spectacle" title="Main/Spectacle">Spectacle</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Other Categories</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/BritishTellyTropes" title="Main/BritishTellyTropes">British Telly</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TheContributors" title="Main/TheContributors">The Contributors</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CreatorSpeak" title="Main/CreatorSpeak">Creator Speak</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Creators" title="Main/Creators">Creators</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DerivativeWorks" title="Main/DerivativeWorks">Derivative Works</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LanguageTropes" title="Main/LanguageTropes">Language</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LawsAndFormulas" title="Main/LawsAndFormulas">Laws And Formulas</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ShowBusiness" title="Main/ShowBusiness">Show Business</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SplitPersonalityTropes" title="Main/SplitPersonalityTropes">Split Personality</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/StockRoom" title="Main/StockRoom">Stock Room</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TropeTropes" title="Main/TropeTropes">Trope</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Tropes" title="Main/Tropes">Tropes</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TruthAndLies" title="Main/TruthAndLies">Truth And Lies</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TruthInTelevision" title="Main/TruthInTelevision">Truth In Television</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Topical Tropes</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/BetrayalTropes" title="Main/BetrayalTropes">Betrayal</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CensorshipTropes" title="Main/CensorshipTropes">Censorship</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CombatTropes" title="Main/CombatTropes">Combat</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DeathTropes" title="Main/DeathTropes">Death</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FamilyTropes" title="Main/FamilyTropes">Family</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FateAndProphecyTropes" title="Main/FateAndProphecyTropes">Fate And Prophecy</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FoodTropes" title="Main/FoodTropes">Food</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/HolidayTropes" title="Main/HolidayTropes">Holiday</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MemoryTropes" title="Main/MemoryTropes">Memory</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MoneyTropes" title="Main/MoneyTropes">Money</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MoralityTropes" title="Main/MoralityTropes">Morality</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/PoliticsTropes" title="Main/PoliticsTropes">Politics</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ReligionTropes" title="Main/ReligionTropes">Religion</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SchoolTropes" title="Main/SchoolTropes">School</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="sidebar-item showcase">
+<p class="sidebar-item-title" data-title="Community Showcase">Community Showcase <a class="bubble float-right hover-blue" href="/pmwiki/showcase.php">More</a></p>
+<p class="community-showcase">
+<a href="https://sharetv.com/shows/echo_chamber" onclick="trackOutboundLink('https://sharetv.com/shows/echo_chamber');" target="_blank">
+<img alt="" class="lazy-image" data-src="/images/communityShowcase-echochamber.jpg"/></a>
+<a href="/pmwiki/pmwiki.php/Webcomic/TwistedTropes">
+<img alt="" class="lazy-image" data-src="/img/howlandsc-side.jpg"/></a>
+</p>
+</div>
+<div class="sidebar-item sb-ad-unit" id="stick-cont">
+<div class="sidebar-section" id="stick-bar">
+<div class="square_ad ad-size-300x600 ad-section text-center">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_4"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_4'); });</script> </div>
+</div> </div>
+</div>
+</div>
+</div>
+</div>
+<div class="action-bar tablet-off" id="action-bar-bottom">
+<a class="scroll-to-top dead-button" href="#top-of-page" onclick="$('html, body').animate({scrollTop : 0},500);">Top</a>
+</div>
+</div>
+<div class="proper-ad-unit ad-sticky">
+<div id="proper-ad-tvtropes_sticky_ad"> <script>propertag.cmd.push(function() { proper_display('tvtropes_sticky_ad'); });</script> </div>
+</div>
+<footer id="main-footer">
+<div id="main-footer-inner">
+<div class="footer-left">
+<a class="img-link" href="/"><img alt="TV Tropes" class="lazy-image" data-src="/img/tvtropes-footer-logo.png" title="TV Tropes"/></a>
+<form action="index.html" class="navbar-form newsletter-signup validate modal-replies" data-ajax-get="/ajax/subscribe_email.php" id="cse-search-box-mobile" name="" role="">
+<button class="btn-submit newsletter-signup-submit-button" id="subscribe-btn" type="submit"><i class="fa fa-paper-plane"></i></button>
+<input class="form-control" id="subscription-email" name="q" placeholder="Subscribe" size="31" type="text" validate-type="email" value=""/>
+</form>
+<ul class="social-buttons">
+<li><a class="btn fb" href="https://www.facebook.com/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-facebook']);" target="_blank"><i class="fa fa-facebook"></i></a></li>
+<li><a class="btn tw" href="https://www.twitter.com/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-twitter']);" target="_blank"><i class="fa fa-twitter"></i></a> </li>
+<li><a class="btn rd" href="https://www.reddit.com/r/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-reddit']);" target="_blank"><i class="fa fa-reddit-alien"></i></a></li>
+</ul>
+</div>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">TVTropes</h4></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Administrivia">About TVTropes</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TheGoalsOfTVTropes">TVTropes Goals</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TheTropingCode">Troping Code</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TVTropesCustoms">TVTropes Customs</a></li>
+<li><a href="/pmwiki/pmwiki.php/JustForFun/TropesOfLegend">Tropes of Legend</a></li>
+<li><a href="/pmwiki/ad-free-subscribe.php">Go Ad-Free</a></li>
+</ul>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">Community</h4></li>
+<li><a href="/pmwiki/query.php?type=att">Ask The Tropers</a></li>
+<li><a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a></li>
+<li><a href="/pmwiki/query.php?type=tf">Trope Finder</a></li>
+<li><a href="/pmwiki/query.php?type=ykts">You Know That Show</a></li>
+<li><a data-modal-target="login" href="/pmwiki/lbs.php">Live Blogs</a></li>
+<li><a href="/pmwiki/review_activity.php">Reviews</a></li>
+<li><a href="/pmwiki/topics.php">Forum</a></li>
+</ul>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">Tropes HQ</h4></li>
+<li><a href="/pmwiki/about.php">About Us</a></li>
+<li><a href="/pmwiki/contact.php">Contact Us</a></li>
+<li><a href="/pmwiki/dmca.php">DMCA Notice</a></li>
+<li><a href="/pmwiki/privacypolicy.php">Privacy Policy</a></li>
+</ul>
+</div>
+<div class="text-center gutter-top gutter-bottom tablet-on" id="desktop-on-mobile-toggle">
+<a href="/pmwiki/switchDeviceCss.php?mobileVersion=1" rel="nofollow">Switch to <span class="txt-desktop">Desktop</span><span class="txt-mobile">Mobile</span> Version</a>
+</div>
+<div class="legal">
+<p>TVTropes is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License. <br/>Permissions beyond the scope of this license may be available from <a href="mailto:thestaff@tvtropes.org" rel="cc:morePermissions" xmlns:cc="http://creativecommons.org/ns#"> thestaff@tvtropes.org</a>.</p>
+<br/>
+<div class="privacy_wrapper">
+</div>
+</div>
+</footer>
+<style>
+      div.fc-ccpa-root {
+        position: absolute !important;
+        bottom: 93px !important;
+        margin: auto !important;
+        width: 100% !important;
+        z-index: 9999 !important;
+      }
+      .fc-ccpa-root .fc-dns-dialog .fc-dns-link p{
+        outline: none !important;
+        text-decoration: underline !important;
+        font-size: .7em !important;
+        font-family: sans-serif !important;
+      }
+      .fc-ccpa-root .fc-dns-dialog .fc-dns-link .fc-button-background {
+        background: none !important;
+      }
+    </style>
+<div class="full-screen" id="_pm_videoViewer">
+<a class="close" href="#close" id="_pm_videoViewer-close"></a>
+<div class="_pmvv-body">
+<div class="_pmvv-vidbox">
+<video class="video-js vjs-default-skin vjs-16-9" data-video-id="tzrurg" id="overlay-video-player-box">
+</video>
+<div class="_pmvv-vidbox-desc">
+<h1 id="overlay-title">Death Flag overload</h1>
+<p class="_pmvv-vidbox-descTxt" id="overlay-descrip">
+Do you recognize all the references?	</p>
+<div class="rating-row" data-video-id="tzrurg">
+<input name="is_logged_in" type="hidden" value="0"/>
+<p>How well does it match the trope?</p>
+<div id="star-rating-group">
+<div class="trope-rate">
+<input id="lamp5" name="rate" type="radio" value="5"/>
+<label for="lamp5" title="Absolutely"></label>
+<input id="lamp4" name="rate" type="radio" value="4"/>
+<label for="lamp4" title="Yes"></label>
+<input id="lamp3" name="rate" type="radio" value="3"/>
+<label for="lamp3" title="Kind of"></label>
+<input id="lamp2" name="rate" type="radio" value="2"/>
+<label for="lamp2" title="Not really"></label>
+<input id="lamp1" name="rate" type="radio" value="1"/>
+<label for="lamp1" title="No"></label>
+</div>
+<div id="star-rating-total">
+3.62 (8 votes)
+</div>
+</div>
+</div>
+<div class="example-media-row">
+<div class="example-overlay">
+<p>Example of:</p>
+<div id="overlay-trope">Main / EventFlag</div>
+</div>
+<div class="media-sources-overlay example-overlay">
+<p>Media sources:</p>
+<div id="overlay-media">Main / EventFlag</div>
+</div>
+</div>
+<p class="_pmvv-vidbox-stats text-right font-s" style="padding-top:8px; border-top: solid 1px rgba(255,255,255,0.2)">
+<a class="float-right" data-modal-target="login" href="#video-feedback">Report</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+        window.special_ops =  {
+            member : 'no',
+            isolated : 0,
+            tags : ['unknown']
+        };
+    </script>
+<script type="text/javascript">
+
+        var cleanCreativeEnabled = "";
+        var donation = "";
+        var live_ads = "1";
+        var img_domain = "https://static.tvtropes.org";
+        var snoozed = cookies.read('snoozedabm');
+        var snoozable = "";
+
+        if (adsRemovedWith) {
+            live_ads = 0;
+        }
+
+        var elem = document.createElement('script');
+        elem.async = true;
+
+        elem.src = '/design/assets/bundle.js?rev=c58d8df02f09262390bbd03db7921fc35c6af306';
+
+        elem.onload = function() {
+                                 }
+        document.getElementsByTagName('head')[0].appendChild(elem);
+
+    </script>
+<script type="text/javascript">
+      function send_analytics_event(user_type, donation){
+          // if(user_type == 'uncached' || user_type == 'cached'){
+          //   ga('send', 'event', 'caching', 'load', user_type, {'nonInteraction': 1});
+          //   return;
+          // }
+          var event_name = user_type;
+
+          if(donation == 'true'){
+              event_name += "_donation"
+          }else if(typeof(valid_user) == 'undefined'){
+              event_name += "_blocked"
+          }else if(valid_user == true){
+              event_name += "_unblocked";
+          }else{
+              event_name = "_unknown"
+          }
+          ga('send', 'event', 'ads', 'load', event_name, {'nonInteraction': 1});
+      }
+
+    
+    send_analytics_event("guest", "false");
+      </script>
+</body>
+</html>

@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Excalibur in the Rust - TV Tropes</title>
+<meta content="A Sub-Trope of the Cool Sword, the Excalibur in the Rust has an outward appearance which belies its awesome nature. It looks like an entirely ordinary, non- …" name="description"/>
+<link href="https://tvtropes.org/pmwiki/pmwiki.php/Main/ExcaliburInTheRust" rel="canonical"/>
+<link href="/img/icons/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="@tvtropes" name="twitter:site"/>
+<meta content="@tvtropes" name="twitter:owner"/>
+<meta content="Excalibur in the Rust - TV Tropes" name="twitter:title"/>
+<meta content="A Sub-Trope of the Cool Sword, the Excalibur in the Rust has an outward appearance which belies its awesome nature. It looks like an entirely ordinary, non- …" name="twitter:description"/>
+<meta content="https://static.tvtropes.org/logo_blue_small.png" name="twitter:image:src"/>
+<meta content="TV Tropes" property="og:site_name"/>
+<meta content="en_US" property="og:locale"/>
+<meta content="https://www.facebook.com/tvtropes" property="article:publisher"/>
+<meta content="Excalibur in the Rust - TV Tropes" property="og:title"/>
+<meta content="website" property="og:type"/>
+<meta content="https://tvtropes.org/pmwiki/pmwiki.php/Main/ExcaliburInTheRust" property="og:url"/>
+<meta content="https://static.tvtropes.org/logo_blue_small.png" property="og:image"/>
+<meta content="A Sub-Trope of the Cool Sword, the Excalibur in the Rust has an outward appearance which belies its awesome nature. It looks like an entirely ordinary, non-Cool sword. In fact, it's extremely likely to be in an apparent state of extreme disrepair …" property="og:description"/>
+<link href="/img/icons/apple-icon-57x57.png" rel="apple-touch-icon" sizes="57x57" type="image/png"/>
+<link href="/img/icons/apple-icon-60x60.png" rel="apple-touch-icon" sizes="60x60" type="image/png"/>
+<link href="/img/icons/apple-icon-72x72.png" rel="apple-touch-icon" sizes="72x72" type="image/png"/>
+<link href="/img/icons/apple-icon-76x76.png" rel="apple-touch-icon" sizes="76x76" type="image/png"/>
+<link href="/img/icons/apple-icon-114x114.png" rel="apple-touch-icon" sizes="114x114" type="image/png"/>
+<link href="/img/icons/apple-icon-120x120.png" rel="apple-touch-icon" sizes="120x120" type="image/png"/>
+<link href="/img/icons/apple-icon-144x144.png" rel="apple-touch-icon" sizes="144x144" type="image/png"/>
+<link href="/img/icons/apple-icon-152x152.png" rel="apple-touch-icon" sizes="152x152" type="image/png"/>
+<link href="/img/icons/apple-icon-180x180.png" rel="apple-touch-icon" sizes="180x180" type="image/png"/>
+<link href="/img/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/img/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/img/icons/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png"/>
+<link href="/img/icons/favicon-192x192.png" rel="icon" sizes="192x192" type="image/png"/>
+<meta content="width=device-width, initial-scale=1" id="viewport" name="viewport"/>
+<script>
+                var propertag = {};
+                propertag.cmd = [];
+            </script>
+<link href="/design/assets/bundle.css?rev=c58d8df02f09262390bbd03db7921fc35c6af306" rel="stylesheet"/>
+<script>
+                function object(objectId) {
+                    if (document.getElementById && document.getElementById(objectId)) {
+                        return document.getElementById(objectId);
+                    } else if (document.all && document.all(objectId)) {
+                        return document.all(objectId);
+                    } else if (document.layers && document.layers[objectId]) {
+                        return document.layers[objectId];
+                    } else {
+                        return false;
+                    }
+                }
+
+                // JAVASCRIPT COOKIES CODE: for getting and setting user viewing preferences
+                var cookies = {
+                    create: function (name, value, days2expire, path) {
+                        var date = new Date();
+                        date.setTime(date.getTime() + (days2expire * 24 * 60 * 60 * 1000));
+                        var expires = date.toUTCString();
+                        document.cookie = name + '=' + value + ';' + 'expires=' + expires + ';' + 'path=' + path + ';';
+                    },
+										createWithExpire: function(name, value, expires, path) {
+												document.cookie = name + '=' + value + ';' + 'expires=' + expires + ';' + 'path=' + path + ';';
+										},
+                    read: function (name) {
+                        var cookie_value = "",
+                            current_cookie = "",
+                            name_expr = name + "=",
+                            all_cookies = document.cookie.split(';'),
+                            n = all_cookies.length;
+
+                        for (var i = 0; i < n; i++) {
+                            current_cookie = all_cookies[i].trim();
+                            if (current_cookie.indexOf(name_expr) === 0) {
+                                cookie_value = current_cookie.substring(name_expr.length, current_cookie.length);
+                                break;
+                            }
+                        }
+                        return cookie_value;
+                    },
+                    update: function (name, val) {
+                        this.create(name, val, 300, "/");
+                    },
+                    remove: function (name) {
+                        document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
+                    }
+                };
+
+                function updateUserPrefs() {
+                    //GENERAL: detect and set browser, if not cookied (will be treated like a user-preference and added to the #user-pref element)
+                    if( !cookies.read('user-browser') ){
+                        var broswer = '';
+
+                        if(navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPod/i) ){
+                            browser = 'iOS';
+                        } else if (/Opera[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'opera';
+                        } else if (/MSIE (\d+\.\d+);/.test(navigator.userAgent)) {
+                            browser = 'MSIE';
+                        } else if (/Navigator[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'netscape';
+                        } else if (/Chrome[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'chrome';
+                        } else if (/Safari[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'safari';
+                            /Version[\/\s](\d+\.\d+)/.test(navigator.userAgent);
+                            browserVersion = new Number(RegExp.$1);
+                        } else if (/Firefox[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'firefox';
+                        } else {
+                            browser = 'internet_explorer';
+                        }
+                        cookies.create('user-browser',browser,1,'/');
+                        document.getElementById('user-prefs').classList.add('browser-' + browser);
+                    } else {
+                        document.getElementById('user-prefs').classList.add('browser-' + cookies.read('user-browser'));
+                    }
+
+                    //update user preference settings
+                    if (cookies.read('wide-load') !== '') document.getElementById('user-prefs').classList.add('wide-load');
+                    if (cookies.read('night-vision') !== '') document.getElementById('user-prefs').classList.add('night-vision');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('user-prefs').classList.add('sticky-header');
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('user-prefs').classList.add('show-spoilers');
+                    if (cookies.read('folders-open') !== '') document.getElementById('user-prefs').classList.add('folders-open');
+                    if (cookies.read('lefthand-sidebar') !== '') document.getElementById('user-prefs').classList.add('lefthand-sidebar');
+                    if (cookies.read('highlight-links') !== '') document.getElementById('user-prefs').classList.add('highlight-links');
+                    if (cookies.read('forum-gingerbread') !== '') document.getElementById('user-prefs').classList.add('forum-gingerbread');
+                    if (cookies.read('shared-avatars') !== '') document.getElementById('user-prefs').classList.add('shared-avatars');
+                    if (cookies.read('new-search') !== '') document.getElementById('user-prefs').classList.add('new-search');
+                    if (cookies.read('stop-auto-play-video') !== '') document.getElementById('user-prefs').classList.add('stop-auto-play-video');
+
+                    //desktop view on mobile
+                    if (cookies.read('desktop-on-mobile') !== ''){
+                        document.getElementById('user-prefs').classList.add('desktop-on-mobile');
+
+                        var viewport = document.querySelector("meta[name=viewport]");
+                        viewport.setAttribute('content', 'width=1000');
+                    }
+
+                }
+
+                function updateDesktopPrefs() {
+                    if (cookies.read('wide-load') !== '') document.getElementById('sidebar-toggle-wideload').classList.add('active');
+                    if (cookies.read('night-vision') !== '') document.getElementById('sidebar-toggle-nightvision').classList.add('active');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('sidebar-toggle-stickyheader').classList.add('active');
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('sidebar-toggle-showspoilers').classList.add('active');
+
+                }
+
+                function updateMobilePrefs() {
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('mobile-toggle-showspoilers').classList.add('active');
+                    if (cookies.read('night-vision') !== '') document.getElementById('mobile-toggle-nightvision').classList.add('active');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('mobile-toggle-stickyheader').classList.add('active');
+                    if (cookies.read('highlight-links') !== '') document.getElementById('mobile-toggle-highlightlinks').classList.add('active');
+
+                }
+
+
+                if (document.cookie.indexOf("scroll0=") < 0) {
+                    // do nothing
+                } else {
+                    console.log('ads removed by scroll.com');
+                    var adsRemovedWith = 'scroll';
+                    var style = document.createElement('style');
+                    style.innerHTML = '#header-ad, .proper-ad-unit, .square_ad, .sb-ad-unit { display: none !important; } ';
+                    document.head.appendChild(style);
+                }
+            </script>
+<script type="text/javascript">
+
+                var tvtropes_config = {
+                    astri_stream_enabled : "",
+                    is_logged_in         : "",
+                    handle               : "",
+                    get_astri_stream     : "",
+										revnum               : "c58d8df02f09262390bbd03db7921fc35c6af306",
+										img_domain           : "https://static.tvtropes.org",
+										adblock              : "1",
+										adblock_url          : "propermessage.io",
+										pause_editing        : "0",
+										pause_editing_msg    : "",
+										pause_site_changes   : ""
+                };
+            </script>
+<script type="text/javascript">
+						  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+						  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+						  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+						  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+						  ga('create', 'UA-3821842-1', 'auto');
+						  ga('send', 'pageview');
+
+						</script>
+</head>
+<body class="">
+<i id="user-prefs"></i>
+<script>updateUserPrefs();</script>
+<div id="fb-root"></div>
+<div id="modal-box"></div>
+<header class="headroom-element" id="main-header-bar">
+<div id="main-header-bar-inner">
+<span class="header-spacer" id="header-spacer-left"></span>
+<a class="mobile-menu-toggle-button tablet-on" href="#mobile-menu" id="main-mobile-toggle"><span></span><span></span><span></span></a>
+<a class="no-dev" href="/" id="main-header-logoButton"></a>
+<span class="header-spacer" id="header-spacer-right"></span>
+<nav class="tablet-off" id="main-header-nav">
+<a href="/pmwiki/pmwiki.php/Main/Tropes">Tropes</a>
+<a href="/pmwiki/pmwiki.php/Main/Media">Media</a>
+<a class="nav-browse" href="/pmwiki/browse.php">Browse</a>
+<a href="/pmwiki/index_report.php">Indexes</a>
+<a href="/pmwiki/topics.php">Forums</a>
+<a class="nav-browse" href="/pmwiki/recent_videos.php">Videos</a>
+</nav>
+<div id="main-header-bar-right">
+<div class="font-xs mobile-off" id="signup-login-box">
+<a class="hover-underline bold" data-modal-target="signup" href="/pmwiki/login.php">Join</a>
+<a class="hover-underline bold" data-modal-target="login" href="/pmwiki/login.php">Login</a>
+</div>
+<div class="mobile-on inline" id="signup-login-mobileToggle">
+<a data-modal-target="login" href="/pmwiki/login.php"><i class="fa fa-user"></i></a>
+</div>
+<div id="search-box">
+<form action="/pmwiki/search_result.php" class="search">
+<input class="search-box" name="q" placeholder="Search" required="" type="text" value=""/>
+<input class="submit-button" type="submit" value=""/>
+<input name="search_type" type="hidden" value="article"/>
+<input name="page_type" type="hidden" value="all"/>
+<input name="cx" type="hidden" value="partner-pub-6610802604051523:amzitfn8e7v"/>
+<input name="cof" type="hidden" value="FORID:10"/>
+<input name="ie" type="hidden" value="ISO-8859-1"/>
+<input name="siteurl" type="hidden" value=""/>
+<input name="ref" type="hidden" value=""/>
+<input name="ss" type="hidden" value=""/>
+</form>
+<a class="mobile-on mobile-search-toggle close-x" href="#close-search"><i class="fa fa-close"></i></a>
+</div>
+<div id="random-box">
+<a class="button-random-trope" href="/pmwiki/pmwiki.php/Main/NoseNuggets" onclick="ga('send', 'event', 'button', 'click', 'random trope');" rel="nofollow"></a>
+<a class="button-random-media" href="/pmwiki/pmwiki.php/Music/AmericanBeauty" onclick="ga('send', 'event', 'button', 'click', 'random media');" rel="nofollow"></a>
+</div>
+</div>
+</div>
+<div class="tablet-on" id="mobile-menu"><div class="mobile-menu-options">
+<div class="nav-wrapper">
+<a class="xl" href="/pmwiki/pmwiki.php/Main/Tropes">Tropes</a>
+<a class="xl" href="/pmwiki/pmwiki.php/Main/Media">Media</a>
+<a class="xl" href="/pmwiki/browse.php">Browse</a>
+<a class="xl" href="/pmwiki/index_report.php">Indexes</a>
+<a class="xl" href="/pmwiki/topics.php">Forums</a>
+<a class="xl" href="/pmwiki/recent_videos.php">Videos</a>
+<a href="/pmwiki/query.php?type=att">Ask The Tropers</a>
+<a href="/pmwiki/query.php?type=tf">Trope Finder</a>
+<a href="/pmwiki/query.php?type=ykts">You Know That Show...</a>
+<a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a>
+<a data-click-toggle="active" href="#tools">Tools <i class="fa fa-chevron-down"></i></a>
+<div class="tools-dropdown mobile-dropdown-linkList">
+<a href="/pmwiki/cutlist.php">Cut List</a>
+<a href="/pmwiki/changes.php">New Edits</a>
+<a href="/pmwiki/recent_edit_reasons.php">Edit Reasons</a>
+<a href="/pmwiki/launches.php">Launches</a>
+<a href="/pmwiki/img_list.php">Images List</a>
+<a href="/pmwiki/crown_activity.php">Crowner Activity</a>
+<a href="/pmwiki/no_types.php">Un-typed Pages</a>
+<a href="/pmwiki/page_type_audit.php">Recent Page Type Changes</a>
+</div>
+<a data-click-toggle="active" href="#hq">Tropes HQ <i class="fa fa-chevron-down"></i></a>
+<div class="tools-dropdown mobile-dropdown-linkList">
+<a href="/pmwiki/about.php">About Us</a>
+<a href="/pmwiki/contact.php">Contact Us</a>
+<a href="mailto:advertising@proper.io">Advertise</a>
+<a href="/pmwiki/dmca.php">DMCA Notice</a>
+<a href="/pmwiki/privacypolicy.php">Privacy Policy</a>
+</div>
+<a href="/pmwiki/ad-free-subscribe.php">Go Ad-Free</a>
+<div class="toggle-switches">
+<ul class="mobile-menu display-toggles">
+<li>Show Spoilers <div class="display-toggle show-spoilers" id="mobile-toggle-showspoilers"></div></li>
+<li>Night Vision <div class="display-toggle night-vision" id="mobile-toggle-nightvision"></div></li>
+<li>Sticky Header <div class="display-toggle sticky-header" id="mobile-toggle-stickyheader"></div></li>
+<li>Highlight Links <div class="display-toggle highlight-links" id="mobile-toggle-highlightlinks"></div></li>
+</ul>
+<script>updateMobilePrefs();</script>
+</div>
+</div>
+</div>
+</div>
+</header>
+<div class="mobile-on" id="homepage-introBox-mobile">
+<a href="/"><img class="logo-small" src="/images/logo-white-big.png"/></a>
+<form action="/pmwiki/search_result.php" class="search" style="margin:10px -5px -6px -5px;">
+<input class="search-box" name="q" placeholder="Search" required="" type="text" value=""/>
+<input class="submit-button" type="submit" value=""/>
+<input name="search_type" type="hidden" value="article"/>
+<input name="page_type" type="hidden" value="all"/>
+<input name="cx" type="hidden" value="partner-pub-6610802604051523:amzitfn8e7v"/>
+<input name="cof" type="hidden" value="FORID:10"/>
+<input name="ie" type="hidden" value="ISO-8859-1"/>
+<input name="siteurl" type="hidden" value=""/>
+<input name="ref" type="hidden" value=""/>
+<input name="ss" type="hidden" value=""/>
+</form>
+</div>
+<div class="ad" id="header-ad-wrapper">
+<div id="header-ad">
+<div class="ad-size-970x90 atf_banner">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_1"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_1'); });</script> </div>
+</div> </div>
+</div>
+</div>
+<div id="main-container">
+<div class="action-bar mobile-off" id="action-bar-top">
+<div class="action-bar-right">
+<p>Follow TV Tropes</p>
+<a class="button-fb" href="https://www.facebook.com/TVTropes">
+<i class="fa fa-facebook"></i></a>
+<a class="button-tw" href="https://www.twitter.com/TVTropes">
+<i class="fa fa-twitter"></i></a>
+<a class="button-re" href="https://www.reddit.com/r/TVTropes">
+<i class="fa fa-reddit-alien"></i></a>
+</div>
+<nav class="actions-wrapper" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<ul class="page-actions" id="top_main_list">
+<li class="link-edit">
+<a class="article-edit-button" data-modal-target="login" href="/pmwiki/pmwiki.php/Main/ExcaliburInTheRust?action=edit" rel="nofollow">
+<i class="fa fa-pencil"></i> Edit Page</a></li><li class="link-related"><a href="/pmwiki/relatedsearch.php?term=Main/ExcaliburInTheRust">
+<i class="fa fa-share-alt"></i> Related</a></li><li class="link-history"><a href="/pmwiki/article_history.php?article=Main.ExcaliburInTheRust">
+<i class="fa fa-history"></i> History</a></li><li class="link-discussion"><a href="/pmwiki/remarks.php?trope=Main.ExcaliburInTheRust">
+<i class="fa fa-comment"></i> Discussion</a></li> </ul>
+<button class="nav__dropdown-toggle" id="top_more_button" onclick="toggle_more_menu('top');" type="button">More</button>
+<ul class="more_menu hidden_more_list" id="top_more_list">
+<li class="link-todo tuck-always more_list_item"><a data-modal-target="login" href="#todo"><i class="fa fa-check-circle"></i> To Do</a></li><li class="link-pageSource tuck-always more_list_item"><a data-modal-target="login" href="/pmwiki/pmwiki.php/Main/ExcaliburInTheRust?action=source" rel="nofollow" target="_blank"><i class="fa fa-code"></i> Page Source</a></li> </ul>
+</nav>
+<div class="WikiWordModalStub"></div>
+<div class="ImgUploadModalStub" data-page-type="Article"></div>
+<div class="login-alert" style="display: none;">
+You need to <a href="/pmwiki/login.php" style="color:#21A0E8">login</a> to do this. <a href="/pmwiki/login.php?tab=register_account" style="color:#21A0E8">Get Known</a> if you don't have an account
+</div>
+</div>
+<div class="page-Article" id="main-content">
+<article class="with-sidebar" id="main-entry">
+<input id="groupname-hidden" type="hidden" value="Main"/>
+<input id="title-hidden" type="hidden" value="ExcaliburInTheRust"/>
+<input id="article_id" type="hidden" value="75965"/>
+<input id="logged_in" type="hidden" value="false"/>
+<p class="hidden" id="current_url">http://tvtropes.org/pmwiki/pmwiki.php/Main/ExcaliburInTheRust</p>
+<meta content="" itemprop="datePublished"/>
+<meta content="" itemprop="articleSection"/>
+<meta content="" itemprop="image"/>
+<a class="watch-button" data-modal-target="login" href="#watch">Follow<span>ing</span></a>
+<h1 class="entry-title" itemprop="headline">
+Excalibur in the Rust
+</h1>
+<script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+                "@type": "ListItem",
+                "position": 1,
+                "name": "tvtropes.org",
+                "item": "https://tvtropes.org"
+            },{
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Tropes",
+                "item": "https://tvtropes.org/pmwiki/pmwiki.php/Main/Tropes"
+            },{
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Excalibur in the Rust"            }]
+        }
+    </script>
+<a class="mobile-actionbar-toggle mobile-on" data-click-toggle="active" href="#mobile-actions-toggle" id="mobile-actionbar-toggle">
+<p class="tiny-off">Go To</p><span></span><span></span><span></span><i class="fa fa-pencil"></i></a>
+<nav class="mobile-actions-wrapper mobile-on" id="mobile-actions-bar"></nav>
+<div class="modal fade hidden-until-active" id="editLockModal">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button aria-label="Close" class="close" data-dismiss="modal" type="button"> <span aria-hidden="true">×</span></button>
+<h4 class="modal-title">Edit Locked</h4>
+</div>
+<div class="modal-body">
+<div class="row">
+<div class="body">
+<div class="danger troper_locked_message"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<nav class="body-options" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<ul class="subpage-links">
+<li>
+<a class="subpage-link curr-subpage" href="/pmwiki/pmwiki.php/Main/ExcaliburInTheRust" title="The Main page">
+<span class="wrapper"><span class="spi main-page"></span>Main</span></a>
+</li>
+<li>
+<a class="subpage-link" href="/pmwiki/pmwiki.php/Laconic/ExcaliburInTheRust" title="The Laconic page">
+<span class="wrapper"><span class="spi laconic-icon"></span>Laconic</span></a>
+</li>
+<li>
+<a class="subpage-link" href="/pmwiki/pmwiki.php/PlayingWith/ExcaliburInTheRust" title="The PlayingWith page">
+<span class="wrapper">PlayingWith</span></a>
+</li>
+<li class="create-subpage dropdown">
+<a aria-expanded="false" class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);" role="button">
+<span class="wrapper">Create New <i class="fa fa-plus-circle"></i></span>
+</a>
+<select onchange="this.options[this.selectedIndex].value &amp;&amp; (window.location = this.options[this.selectedIndex].value);">
+<option value="">- Create New -</option>
+<option value="/pmwiki/pmwiki.php/Analysis/ExcaliburInTheRust?action=edit">Analysis</option>
+<option value="/pmwiki/pmwiki.php/Characters/ExcaliburInTheRust?action=edit">Characters</option>
+<option value="/pmwiki/pmwiki.php/FanficRecs/ExcaliburInTheRust?action=edit">FanficRecs</option>
+<option value="/pmwiki/pmwiki.php/FanWorks/ExcaliburInTheRust?action=edit">FanWorks</option>
+<option value="/pmwiki/pmwiki.php/Fridge/ExcaliburInTheRust?action=edit">Fridge</option>
+<option value="/pmwiki/pmwiki.php/Haiku/ExcaliburInTheRust?action=edit">Haiku</option>
+<option value="/pmwiki/pmwiki.php/Headscratchers/ExcaliburInTheRust?action=edit">Headscratchers</option>
+<option value="/pmwiki/pmwiki.php/ImageLinks/ExcaliburInTheRust?action=edit">ImageLinks</option>
+<option value="/pmwiki/pmwiki.php/Quotes/ExcaliburInTheRust?action=edit">Quotes</option>
+<option value="/pmwiki/pmwiki.php/Recap/ExcaliburInTheRust?action=edit">Recap</option>
+<option value="/pmwiki/pmwiki.php/ReferencedBy/ExcaliburInTheRust?action=edit">ReferencedBy</option>
+<option value="/pmwiki/pmwiki.php/Synopsis/ExcaliburInTheRust?action=edit">Synopsis</option>
+<option value="/pmwiki/pmwiki.php/Timeline/ExcaliburInTheRust?action=edit">Timeline</option>
+<option value="/pmwiki/pmwiki.php/Trivia/ExcaliburInTheRust?action=edit">Trivia</option>
+<option value="/pmwiki/pmwiki.php/WMG/ExcaliburInTheRust?action=edit">WMG</option>
+<option value="/pmwiki/pmwiki.php/YMMV/ExcaliburInTheRust?action=edit">YMMV</option>
+</select>
+</li>
+</ul>
+</nav>
+<div class="article-content retro-folders" id="main-article">
+<p></p><div class="quoteright" style="width:164px;"><a class="twikilink" href="/pmwiki/pmwiki.php/ComicBook/TheLegendOfZeldaALinkToThePast" title="/pmwiki/pmwiki.php/ComicBook/TheLegendOfZeldaALinkToThePast"><div class="lazy_load_img_box" style="padding-top:221.95%"><img alt="https://static.tvtropes.org/pmwiki/pub/images/mastersword_moss_1395.JPG" border="0" class="embeddedimage" height="364" src="https://static.tvtropes.org/pmwiki/pub/images/mastersword_moss_1395.JPG" width="164"/></div></a></div>
+<div class="acaptionright" style="width:164px;"><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheLegendOfZeldaALinkToThePast" title="/pmwiki/pmwiki.php/VideoGame/TheLegendOfZeldaALinkToThePast">And the Master Sword sleeps again... FOREVER</a>!<span class="notelabel" onclick="togglenote('note0d3j7');"><sup>note </sup></span><span class="inlinefolder" id="note0d3j7" isnote="true" onclick="togglenote('note0d3j7');" style="cursor:pointer;font-size:smaller;display:none;"><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheLegendOfZeldaOracleOfAges" title="/pmwiki/pmwiki.php/VideoGame/TheLegendOfZeldaOracleOfAges">But</a> <a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheLegendOfZeldaOracleOfSeasons" title="/pmwiki/pmwiki.php/VideoGame/TheLegendOfZeldaOracleOfSeasons">not</a> <a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheLegendOfZeldaALinkBetweenWorlds" title="/pmwiki/pmwiki.php/VideoGame/TheLegendOfZeldaALinkBetweenWorlds">really.</a></span></div>
+<div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_1"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_1'); })</script></div></div><p>A <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SubTrope" title="/pmwiki/pmwiki.php/Main/SubTrope">Sub-Trope</a> of the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/CoolSword" title="/pmwiki/pmwiki.php/Main/CoolSword">Cool Sword</a>, the Excalibur in the Rust has an outward appearance which <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MoreThanMeetsTheEye" title="/pmwiki/pmwiki.php/Main/MoreThanMeetsTheEye">belies its awesome nature</a>. It looks like an entirely ordinary, non-Cool sword. In fact, it's extremely likely to be in an apparent state of extreme disrepair. Getting it back into working order may require a visit to the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/UltimateBlacksmith" title="/pmwiki/pmwiki.php/Main/UltimateBlacksmith">Ultimate Blacksmith</a>.
+</p><p>If it appears in a video game, it may be a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/LethalJokeItem" title="/pmwiki/pmwiki.php/Main/LethalJokeItem">Lethal Joke Item</a>, especially if it's originally listed as "<a class="twikilink" href="/pmwiki/pmwiki.php/Main/ElementalCrafting" title="/pmwiki/pmwiki.php/Main/ElementalCrafting">Rusty Iron</a> Sword" or similar.
+</p><p>Compare to <a class="twikilink" href="/pmwiki/pmwiki.php/Main/WhatAPieceOfJunk" title="/pmwiki/pmwiki.php/Main/WhatAPieceOfJunk">What a Piece of Junk</a>. If someone who doesn't recognize its true value throws it away, or sticks it in the basement with all the other worthless junk, it's the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GrailInTheGarbage" title="/pmwiki/pmwiki.php/Main/GrailInTheGarbage">Grail in the Garbage</a>. See also <a class="twikilink" href="/pmwiki/pmwiki.php/Main/WreckedWeapon" title="/pmwiki/pmwiki.php/Main/WreckedWeapon">Wrecked Weapon</a>. Compare and contrast the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/NerfArm" title="/pmwiki/pmwiki.php/Main/NerfArm">Nerf Arm</a>, which doesn't even look like a weapon, poorly maintained or otherwise, but serves just as well as one.
+</p><div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_2"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_2'); })</script></div></div><p></p><hr/><h2>Examples:</h2>
+<p></p><div class="folderlabel" onclick="toggleAllFolders();">    open/close all folders  </div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder0');">    Anime &amp; Manga </div><div class="folder" id="folder0" isfolder="true" style="display:block;">
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Anime/TenchiMuyo" title="/pmwiki/pmwiki.php/Anime/TenchiMuyo">Tenchi Muyo!</a></em>: When Tenchi first sees the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/LaserBlade" title="/pmwiki/pmwiki.php/Main/LaserBlade">Master Key</a>, a physical blade had been affixed to the hilt. This blade is in a state of extreme disrepair, prompting Tenchi to exclaim, "What a rusty old piece of junk!" after breaking it on a rock... which then splits in two. Which is just as well since it was originally a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/LaserBlade" title="/pmwiki/pmwiki.php/Main/LaserBlade">Laser Blade</a>.
+</li><li> In the hands of anyone except <em><a class="twikilink" href="/pmwiki/pmwiki.php/Manga/InuYasha" title="/pmwiki/pmwiki.php/Manga/InuYasha">Inuyasha</a></em>, Tessaiga looks like a katana that has seen better days. It's also quite dull, though it's still almost indestructible. When Inu-Yasha wields it, the blade takes its <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BFS" title="/pmwiki/pmwiki.php/Main/BFS">true form</a>. Bonus points for Inu-Yasha calling it "<em>a piece of junk</em>" constantly in the two episodes that featured him gaining it.
+</li><li> Saito's sword, Derflinger, in <em><a class="twikilink" href="/pmwiki/pmwiki.php/LightNovel/TheFamiliarOfZero" title="/pmwiki/pmwiki.php/LightNovel/TheFamiliarOfZero">The Familiar of Zero</a></em> is a rusty piece of junk sold cheap by a store owner. Despite this it can talk, absorb magic attacks, and even control the body of its wielder if they're unconscious. It is eventually revealed that <span class="spoiler" title="you can set spoilers visible by default on your profile">Derflinger is a "spirit sword". The rusted sword wielded by Saito is simply a vessel for its powers; when the blade is broken, Derflinger can transfer its powers to another completely ordinary sword</span>.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Manga/Bleach" title="/pmwiki/pmwiki.php/Manga/Bleach">Bleach</a></em>:
+<ul><li> Most <a class="twikilink" href="/pmwiki/pmwiki.php/Main/EmpathicWeapon" title="/pmwiki/pmwiki.php/Main/EmpathicWeapon">zanpakutou</a> look utterly ordinary when sealed, only revealing a special look when they release their powers. The two zanpakutou that exist in permanent shikai form also fit this trope. Ichigo's zanpakutou looks half-finished, missing both a hilt and a cross-guard, and Kenpachi's is a chipped, pitted mess. Several zanpakutou also look completely ordinary when released, as well, and it's only when the power activates that the true nature and incredible power of the weapons are revealed.
+</li><li> Yamamoto's bankai played this as straight as possible. On the outside, it looked like a burnt out, rusty sword. It was also the strongest bankai in existence, with <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ThePowerOfTheSun" title="/pmwiki/pmwiki.php/Main/ThePowerOfTheSun">The Power of the Sun</a> and capable of destroying the world if activated for too long. And its power is concentrated on the edge of the blade, to the extent that a single cut would be enough to obliterate the victim's <em>soul</em>.
+</li></ul></li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/LightNovel/Slayers" title="/pmwiki/pmwiki.php/LightNovel/Slayers">Slayers</a></em>, Gourry wields a normal-looking sword that suited him just fine. But if he were to take off the blade he can turn it into the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/LaserBlade" title="/pmwiki/pmwiki.php/Main/LaserBlade">Sword of Light</a>.
+</li><li> In a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/FieldOfBlades" title="/pmwiki/pmwiki.php/Main/FieldOfBlades">Field of Blades</a> in <em><a class="twikilink" href="/pmwiki/pmwiki.php/Manga/KingOfBanditJing" title="/pmwiki/pmwiki.php/Manga/KingOfBanditJing">King of Bandit Jing</a></em>, each claiming to be <a class="twikilink" href="/pmwiki/pmwiki.php/Main/StockWeaponNames" title="/pmwiki/pmwiki.php/Main/StockWeaponNames">Excalibur</a>, Jing finds that the <em>real</em> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Excalibur" title="/pmwiki/pmwiki.php/Main/Excalibur">Excalibur</a> is not a worn sword but a key to the resident <a class="twikilink" href="/pmwiki/pmwiki.php/Main/HumongousMecha" title="/pmwiki/pmwiki.php/Main/HumongousMecha">Humongous Mecha</a>.
+</li><li> Variation in <em><a class="twikilink" href="/pmwiki/pmwiki.php/Anime/YuGiOh" title="/pmwiki/pmwiki.php/Anime/YuGiOh">Yu-Gi-Oh!</a></em>. Rafael's cards are so old that the ink is fading and the edges are frayed. That doesn't change the fact that he has one of the most powerful decks in the series.
+</li><li> Inverted <em>hilariously</em> with <a class="twikilink" href="/pmwiki/pmwiki.php/Main/LaughingMad" title="/pmwiki/pmwiki.php/Main/LaughingMad">Excalibur</a> of <em><a class="twikilink" href="/pmwiki/pmwiki.php/Manga/SoulEater" title="/pmwiki/pmwiki.php/Manga/SoulEater">Soul Eater</a></em>; initially it seems to be a gloriously <a class="twikilink" href="/pmwiki/pmwiki.php/Main/CoolSword" title="/pmwiki/pmwiki.php/Main/CoolSword">Cool Sword</a>, but once it's pulled from the stone, it's revealed to be an <a class="twikilink" href="/pmwiki/pmwiki.php/Main/EquippableAlly" title="/pmwiki/pmwiki.php/Main/EquippableAlly">Equippable Ally</a><span class="notelabel" onclick="togglenote('note1ofi5');"><sup>note </sup></span><span class="inlinefolder" id="note1ofi5" isnote="true" onclick="togglenote('note1ofi5');" style="cursor:pointer;font-size:smaller;display:none;">Theoretically the <em>perfect</em> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/EquippableAlly" title="/pmwiki/pmwiki.php/Main/EquippableAlly">Equippable Ally</a>, since he's capable of synchronizing with any possible wielder and his power surpasses even that of a Death Scythe by a large margin.</span>... who wears a tiny <a class="twikilink" href="/pmwiki/pmwiki.php/Main/NiceHat" title="/pmwiki/pmwiki.php/Main/NiceHat">top hat</a> and stands at half the height of any other character. Not to mention he's <em><a class="twikilink" href="/pmwiki/pmwiki.php/Main/PhraseCatcher" title="/pmwiki/pmwiki.php/Main/PhraseCatcher">so annoying.</a></em> <span class="spoiler" title="you can set spoilers visible by default on your profile">It's implied that some of the annoying behavior is actually an act to keep people from abusing Excalibur's incredible power.</span>
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/Manga/BlackClover" title="/pmwiki/pmwiki.php/Manga/BlackClover">Black Clover</a></em>, Asta's Grimoire looks rather tattered and dirty. The huge sword it manifests is also covered in rust. This belies the Grimoire's true nature as the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AntiMagic" title="/pmwiki/pmwiki.php/Main/AntiMagic">Five-leaf Clover Grimoire</a>. The rusty sword it summons is a powerful weapon that dispels and reflects magic. <span class="spoiler" title="you can set spoilers visible by default on your profile">It turns out the "rust" is actually the essence of <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AntiMagic" title="/pmwiki/pmwiki.php/Main/AntiMagic">Anti-Magic</a>. When "Licht" reclaims one of Asta's swords for his own use, the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AntiMagic" title="/pmwiki/pmwiki.php/Main/AntiMagic">Anti-Magic</a> crumbles away revealing the sword's true form as a powerful shining blade.</span>
+</li><li> Gundam Barbatos from <em><a class="twikilink" href="/pmwiki/pmwiki.php/Anime/MobileSuitGundamIronBloodedOrphans" title="/pmwiki/pmwiki.php/Anime/MobileSuitGundamIronBloodedOrphans">Mobile Suit Gundam: Iron-Blooded Orphans</a></em> is a centuries old mobile suit reduced to being a jury-rigged reactor. After being hastily repaired so it can be piloted in a desperate situation, it quickly proves why the Gundams were able to end the Calamity War.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder1');">    Comic Books </div><div class="folder" id="folder1" isfolder="true" style="display:block;">
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/TheLegendOfZelda" title="/pmwiki/pmwiki.php/Franchise/TheLegendOfZelda">The Legend of Zelda</a></em>:
+<ul><li> Pictured above is the Master Sword, the iconic blade from the games, as pictured in the last panel of the <em><a class="twikilink" href="/pmwiki/pmwiki.php/Magazine/NintendoPower" title="/pmwiki/pmwiki.php/Magazine/NintendoPower">Nintendo Power</a></em> <em><a class="twikilink" href="/pmwiki/pmwiki.php/ComicBook/TheLegendOfZeldaALinkToThePast" title="/pmwiki/pmwiki.php/ComicBook/TheLegendOfZeldaALinkToThePast">comic adaptation</a></em>. The comic hews to the idea of centuries passing between games: after Link triumphs over Ganon, he returns the sword to await the next hero. This is implied to be a <em>long</em> time coming.
+</li><li> When Link actually <strong>FINDS</strong> the Master Sword in the <a class="twikilink" href="/pmwiki/pmwiki.php/Manga/TheLegendOfZelda" title="/pmwiki/pmwiki.php/Manga/TheLegendOfZelda">Akira Himekawa manga</a> version, it's shown in a similar state to its comic counterpart above. The rust and growth fall away and the sword is drawn as if it were newly forged.
+</li></ul></li><li> An issue of Marvel's <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/LaffALympics" title="/pmwiki/pmwiki.php/WesternAnimation/LaffALympics">Laff-A-Lympics</a></em> oomic book has participants from the three teams transposed to the moon to compete against a moon man (named Murray) for Earth but not before he gives them special belts that negate their lack of gravity. One event is to pull a feather from a rock, which thanks to the gravity belts Dread Baron can't do, even with help from Dynomutt and Quick Draw McGraw. The final event is to pull out a sword with the tip just barely implanted in another rock which nobody can do until Boo Boo Bear arrives sans belt and easily pulls the sword out.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder2');">    Fan Works </div><div class="folder" id="folder2" isfolder="true" style="display:block;">
+<ul><li> In <em>Ghosts of the Past</em>, sequel to <em><a class="twikilink" href="/pmwiki/pmwiki.php/Fanfic/ChildOfTheStorm" title="/pmwiki/pmwiki.php/Fanfic/ChildOfTheStorm">Child of the Storm</a></em>, Harry encounters Ván, the Sword of Hope, designed to <span class="spoiler" title="you can set spoilers visible by default on your profile"> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/NoSell" title="/pmwiki/pmwiki.php/Main/NoSell">No-Sell</a> Phoenix Fire</span> and defeat Surtur — or to be more accurate, he encounters a depiction of it on the statue of its one and only wielder: Frey, the First King of Asgard. Despite this function, and the fact that it was forged from Uru and Vibranium, going by the replica in Frey's tomb, it doesn't look at all special, with the narration specifically noting that aside from a brief inscription of its name near the hilt, it could be mistaken for any random long-sword.
+</li><li> Kyon's <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AncestralWeapon" title="/pmwiki/pmwiki.php/Main/AncestralWeapon">Ancestral Weapon</a> is this in <em><a class="twikilink" href="/pmwiki/pmwiki.php/FanFic/KyonBigDamnHero" title="/pmwiki/pmwiki.php/FanFic/KyonBigDamnHero">Kyon: Big Damn Hero</a></em>. <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Subverted" title="/pmwiki/pmwiki.php/Main/Subverted">Subverted</a> in that the sword actually <em>is</em> in a state of disrepair, to the point of being completely non-functional (only the hilt has survived) until Yuki gives it <a class="twikilink" href="/pmwiki/pmwiki.php/Main/LaserBlade" title="/pmwiki/pmwiki.php/Main/LaserBlade">some upgrades</a>.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/Fanfic/TheBridgeHumanitysStand" title="/pmwiki/pmwiki.php/Fanfic/TheBridgeHumanitysStand">The Bridge: Humanity's Stand</a></em>, scientist Joanna Johnson reveals an old, rusted sword that she theorizes may have been Excalibur itself, as well as other legendary swords such as Durendal, Caledfwlch, and Caladbolg. When the weapon is properly infused with mana, it turns into a pristine, glowing, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AbsurdlySharpBlade" title="/pmwiki/pmwiki.php/Main/AbsurdlySharpBlade">Absurdly Sharp Blade</a>, but reverts to its unimpressive, rusted form once it's no longer being fed mana.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/Roleplay/ADragonOfTheNorth" title="/pmwiki/pmwiki.php/Roleplay/ADragonOfTheNorth">A Dragon of the North</a></em>, Jon acquires a rusty sword for a pittance in the Vale, and Littlefinger (who owns the shop) even offers to make it a more fair deal. Then Jon manages to clean up the sword and it turns out to be Blackfyre, the sword of the Targaryen kings. Littlefinger proceeds to waste himself in one of his brothels for two days straight, and becomes the laughingstock of King's Landing for having such an important sword in his hands and selling it so cheap.
+</li></ul></div>
+<div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_3"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_3'); })</script></div></div><p></p><div class="folderlabel" onclick="togglefolder('folder3');">    Films — Live-Action </div><div class="folder" id="folder3" isfolder="true" style="display:block;">
+<ul><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/Film/ConanTheBarbarian1982" title="/pmwiki/pmwiki.php/Film/ConanTheBarbarian1982">Conan the Barbarian</a></em>, the Atlantean Sword looks like a solid piece of rust when Conan first finds it in the tomb. That might just be the decayed scabbard, though, since Conan just whacks the sword on stone a few times and the crud comes right off.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/Film/Krull" title="/pmwiki/pmwiki.php/Film/Krull">Krull</a></em>, the Glaive is initially trapped in a lava pit and covered in stone. When Prince Colwyn, the hero destined to wield it, retrieves it, the stone crumbles away to reveal the Glaive for the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ImpossiblyCoolWeapon" title="/pmwiki/pmwiki.php/Main/ImpossiblyCoolWeapon">Impossibly Cool Weapon</a> that it truly is.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder4');">    Folklore </div><div class="folder" id="folder4" isfolder="true" style="display:block;">
+<ul><li> In Rumanian Folklore it's a very popular theme with the Hero discovering that the decrepit/rusty looking sword/horse/armour/piece of equipment is actually the needed magical item, not the brand spanking new one next to it. More often than not the decrepit item/animal belonged to the Hero's father. The horse turns out to be able to speak and to actually be a lot smarter and knowledgeable than the hero and practically verbose compared to him/her <span class="notelabel" onclick="togglenote('note2recb');"><sup>note </sup></span><span class="inlinefolder" id="note2recb" isnote="true" onclick="togglenote('note2recb');" style="cursor:pointer;font-size:smaller;display:none;">in at least one instance the hero is a heroine who goes through a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GenderBender" title="/pmwiki/pmwiki.php/Main/GenderBender">Gender Bender</a> in the end</span>.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder5');">    Literature </div><div class="folder" id="folder5" isfolder="true" style="display:block;">
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/Discworld" title="/pmwiki/pmwiki.php/Literature/Discworld">Discworld</a></em>: The absolutely ordinary-looking, non-magical sword wielded by Carrot Ironfoundersson. Does not gleam, has minor chips along the edge, and <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AbsurdlySharpBlade" title="/pmwiki/pmwiki.php/Main/AbsurdlySharpBlade">sharp enough</a> to effortlessly nail someone to a marble pillar. His ancestors had explicitly wanted a sword that was really good at <em>killing people</em> rather than looking good. It is also implied that it has taken on a quasi-magical nature that is far beyond mundane magic weaponry by virtue of being wielded for a good cause by a good man who by all rights should be a king but refuses to be one. One book states that such a sword could cut through a dozen magical swords like butter. Technically, it's a subversion, as the sword is so powerful because it is utterly lacking in magic, making it more real than the rest of the Disc, which cannot exist without magical power.
+</li><li> Of course the eponymous blade in <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/TheSwordOfShannaraTrilogy" title="/pmwiki/pmwiki.php/Literature/TheSwordOfShannaraTrilogy">The Sword of Shannara</a></em> is this, just a well-made if nondescript weapon actually found and overlooked by the heroes as they ransack a sack of junk looking for anything useful. They soon realize their mistake and spend half the book chasing after the luckless gnome they'd let take it away.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/TheChroniclesOfPrydain" title="/pmwiki/pmwiki.php/Literature/TheChroniclesOfPrydain">The Chronicles of Prydain</a></em>:
+<ul><li> Dyrnwyn, the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/CoolSword" title="/pmwiki/pmwiki.php/Main/CoolSword">Cool Sword</a> in the books, is stained black with the blood of innocents its previous wielder killed.
+</li><li> A nonmagical version: Taran makes a sword with a blacksmith, and initially wants to cast it away because it's ugly and has chips in it. It proves very powerful, and he wields it against Dorath, who is using Taran's previous beautiful sword, and it utterly shatters Dorath's sword. When Taran's blacksmith mentor asked him to test his new ugly sword despite his disappointment, Taran tried to shatter it against an anvil...and split the anvil.
+</li></ul></li><li> Fyodor in the <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/ForgottenRealms" title="/pmwiki/pmwiki.php/TabletopGame/ForgottenRealms">Starlight and Shadows</a></em> trilogy has a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BFS" title="/pmwiki/pmwiki.php/Main/BFS">two-handed sword, clearly too heavy</a>... and <em>blunt</em>. Far too many people didn't think it was serious until they learned a few little details: first, it's enchanted and works as if was sharp enough for any purpose except "friendly fire". Second, while most people can lift it with a visible effort, the owner is built like a smith (and was one) and always carries the damn thing with him, so he can use the ugly piece of metal as intended. Third, as <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TheBerserker" title="/pmwiki/pmwiki.php/Main/TheBerserker">The Berserker</a>, in rage he swings it with enough strength to crash a minor golem and enough speed to hit a superhumanly fast drow fencer.
+</li><li> In <em>Oathbreakers</em>, of the <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/HeraldsOfValdemar" title="/pmwiki/pmwiki.php/Literature/HeraldsOfValdemar">Heralds of Valdemar</a></em> series, the long-lost Singing Sword of Rethwellan that is used to identify the country's rightful king is discovered to be none other than a rusty, dirty old sword that Kethry picked up along the wayside.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/TheDresdenFiles" title="/pmwiki/pmwiki.php/Literature/TheDresdenFiles">The Dresden Files</a></em>
+<ul><li> The Knights of the Cross have three swords that can burn faeries, kill demons, and help dispatch all manner of supernatural nasties. These three swords are fairly plain, save for the Nail from the Cross embedded in the hilt. <span class="spoiler" title="you can set spoilers visible by default on your profile"> Turns out that all of these swords are actually pretty famous, because they're <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Excalibur" title="/pmwiki/pmwiki.php/Main/Excalibur">Excalibur</a>, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Kusanagi" title="/pmwiki/pmwiki.php/Main/Kusanagi">Kusanagi</a>, and <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Durandal" title="/pmwiki/pmwiki.php/Main/Durandal">Durandal</a></span>. So this a very good example of the trope.
+</li><li> Taken further with <span class="spoiler" title="you can set spoilers visible by default on your profile">Kusanagi, the Sword of Faith, in <em>Skin Game</em> because one person who took it into her custody misused the sacred blade and muted its power, the sword is easily shattered. Now, nothing more than a hilt with a bit of metal at the end and the Nail inside, it fell into the hands of a man strong and pure in faith that good can overcome evil, one person can make a difference, and is willing to die for his faith, the Sword reforged itself into the image of his faith. It now appears as a beam of white angelic light with a soft hum about it, or to be precise, a lightsaber. A genuine holy lightsaber from nothing more than a hilt of a broken blade</span>.
+</li></ul></li><li> In the <em>Conrad Stargard</em> series by <a class="twikilink" href="/pmwiki/pmwiki.php/Creator/LeoFrankowski" title="/pmwiki/pmwiki.php/Creator/LeoFrankowski">Leo Frankowski</a>, Conrad finds a sword forged with watering techniques (a powerful blacksmith's art known in the Near East but not in Poland), and buys it from a sword dealer who has no idea that this watered sword is anything special. It turns out to be more special than even Conrad expects, as it's an <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AbsurdlySharpBlade" title="/pmwiki/pmwiki.php/Main/AbsurdlySharpBlade">Absurdly Sharp Blade</a> planted there by his time-traveling cousin for Conrad to pick up.
+</li><li> Played with in <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/TheLordOfTheRings" title="/pmwiki/pmwiki.php/Literature/TheLordOfTheRings">The Lord of the Rings</a></em>. When the hobbits first see what's left of Narsil, it's broken in half and doesn't look very impressive. After it's reforged into Andúril, however, it's said to be beautiful and obviously belonging to a King.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/TouhouKourindouCuriositiesOfLotusAsia" title="/pmwiki/pmwiki.php/Literature/TouhouKourindouCuriositiesOfLotusAsia">Touhou Kourindou ~ Curiosities of Lotus Asia</a></em>, the pile of iron scrap <a class="twikilink" href="/pmwiki/pmwiki.php/Main/KleptomaniacHero" title="/pmwiki/pmwiki.php/Main/KleptomaniacHero">Marisa</a> has been collecting since she was little includes the <a class="twikilink" href="/pmwiki/pmwiki.php/Myth/JapaneseMythology" title="/pmwiki/pmwiki.php/Myth/JapaneseMythology">Kusanagi</a>. She trades it to Rinnosuke in exchange for his reforging her Mini-Hakkero with <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Hihiirokane" title="/pmwiki/pmwiki.php/Main/Hihiirokane">Hihi'irokane</a>; ironically enough, Kusanagi was forged using Hihi'irokane.
+</li><li> Abstract Weapon in <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/Ra" title="/pmwiki/pmwiki.php/Literature/Ra">Ra</a></em> might be the physical embodiment of the concept of weaponry, capable of being any weapon ever conceived, and every weapon never conceived, but in its default state it takes the form of an unassuming, extremely crude-looking, albeit massive, dull rusted executioner's blade.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder6');">    Live-Action TV </div><div class="folder" id="folder6" isfolder="true" style="display:block;">
+<ul><li> Sikanda, the magical sword from <em>Tales from <a class="twikilink" href="/pmwiki/pmwiki.php/Literature/TheNeverendingStory" title="/pmwiki/pmwiki.php/Literature/TheNeverendingStory">The Neverending Story</a></em>, true to the book.
+</li><li> Sort of played in <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/Merlin2008" title="/pmwiki/pmwiki.php/Series/Merlin2008">Merlin</a></em> where a plain looking sword is transformed into Excalibur by the dragon's breath.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/TokusouSentaiDekaranger" title="/pmwiki/pmwiki.php/Series/TokusouSentaiDekaranger">Tokusou Sentai Dekaranger</a></em>: Commander Kruger carries around an old sword that looks chipped and battered - but when he <a class="twikilink" href="/pmwiki/pmwiki.php/Main/LetsGetDangerous" title="/pmwiki/pmwiki.php/Main/LetsGetDangerous">gets dangerous</a> for the first time, it does too, transforming into a much more impressive blade. The same goes for the <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/PowerRangersSPD" title="/pmwiki/pmwiki.php/Series/PowerRangersSPD">Power Rangers S.P.D.</a></em> version.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/SuperSentai" title="/pmwiki/pmwiki.php/Franchise/SuperSentai">Super Sentai</a></em>:
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/SamuraiSentaiShinkenger" title="/pmwiki/pmwiki.php/Series/SamuraiSentaiShinkenger">Samurai Sentai Shinkenger</a></em>: The Kyoryu Disk, when first found, is an inert disk containing only a cryptic message from the founding Shinken Red. Its power was drained to seal the Kusari Ayakashi general Manpuku, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BigBad" title="/pmwiki/pmwiki.php/Main/BigBad">Big Bad</a> du jour of the movie who was unsealed by the overall Big Bad's summer power surge. Takeru restores it by slotting it onto his sword and stabbing said sword into the kanji on Manpuku's body left by the seal. Its power restored, the Kyoryu Disk can now be used to transform the Shinkenmaru into the very powerful Kyoryumaru, able to infinitely lengthen its blade to smash into enemies and act as a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/WhipSword" title="/pmwiki/pmwiki.php/Main/WhipSword">Whip Sword</a>. On top of that, it can transform <a class="twikilink" href="/pmwiki/pmwiki.php/Main/HumongousMecha" title="/pmwiki/pmwiki.php/Main/HumongousMecha">Shinken-Oh</a>'s Daishinken into the Kyoryu Origami (A mecha version of itself), which combines with Shinken-Oh as a new helmet and a BFS to swing.
+</li><li> Its <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/PowerRangersSamurai" title="/pmwiki/pmwiki.php/Series/PowerRangersSamurai">Power Rangers Samurai</a></em> counterpart, the Shark Disk (Saban, like some fans, thought the Kyoryu Origami looked more like an ambulatory shark than a dinosaur), was apparently similarly inert though in this case it was offlined by battle damage and said to have been mended by the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SixthRanger" title="/pmwiki/pmwiki.php/Main/SixthRanger">Sixth Ranger</a> using the same powers and skills he used to repair certain Zords and complete the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SuperMode" title="/pmwiki/pmwiki.php/Main/SuperMode">Super Mode</a>-granting Black Box.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/VRTroopers" title="/pmwiki/pmwiki.php/Series/VRTroopers">VR Troopers</a></em> had an <a class="twikilink" href="/pmwiki/pmwiki.php/Main/EvilWeapon" title="/pmwiki/pmwiki.php/Main/EvilWeapon">Evil Weapon</a> called the Millennium Sabre that the villains wanted in one episode. Many similarly-stored ancient swords turned out not to be the one, but the most rusted, brittle-looking relic turned out to be the real deal. One day every thousand years, its full power awakens and it becomes the expected ornate, shiny weapon, while its wielder becomes an invincible warrior.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/KamenRiderExAid" title="/pmwiki/pmwiki.php/Series/KamenRiderExAid">Kamen Rider Ex-Aid</a></em>: In Kamen Rider Brave's debut episode, he finds a rusty sword in a stone<span class="notelabel" onclick="togglenote('note30wtv');"><sup>note </sup></span><span class="inlinefolder" id="note30wtv" isnote="true" onclick="togglenote('note30wtv');" style="cursor:pointer;font-size:smaller;display:none;"><a class="twikilink" href="/pmwiki/pmwiki.php/Main/SuspiciouslySpecificDenial" title="/pmwiki/pmwiki.php/Main/SuspiciouslySpecificDenial">That totally isn't just</a> <a class="twikilink" href="/pmwiki/pmwiki.php/Series/KamenRiderKuuga" title="/pmwiki/pmwiki.php/Series/KamenRiderKuuga">Kamen Rider Kuuga</a>'s <a class="twikilink" href="/pmwiki/pmwiki.php/Main/PropRecycling" title="/pmwiki/pmwiki.php/Main/PropRecycling">Titan Sword painted rust red</a></span> and pulls it out, at which point it transforms into his <a class="twikilink" href="/pmwiki/pmwiki.php/Main/WeaponOfChoice" title="/pmwiki/pmwiki.php/Main/WeaponOfChoice">Weapon of Choice</a>, the Gashacon Sword. Since <em>Ex-Aid</em> is themed around <a class="twikilink" href="/pmwiki/pmwiki.php/Main/VideoGames" title="/pmwiki/pmwiki.php/Main/VideoGames">Video Games</a> (and Brave specifically <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Homage" title="/pmwiki/pmwiki.php/Main/Homage">Homages</a> old-school <a class="twikilink" href="/pmwiki/pmwiki.php/Main/RolePlayingGame" title="/pmwiki/pmwiki.php/Main/RolePlayingGame">Role Playing Games</a> like <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DragonQuest" title="/pmwiki/pmwiki.php/VideoGame/DragonQuest">Dragon Quest</a></em> and <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FinalFantasy" title="/pmwiki/pmwiki.php/VideoGame/FinalFantasy">Final Fantasy</a></em>), this is more than likely a nod to this trope's prominence in the RPG genre.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder7');">    Tabletop Games </div><div class="folder" id="folder7" isfolder="true" style="display:block;">
+<ul><li> The Templars' swords in <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/Deadlands" title="/pmwiki/pmwiki.php/TabletopGame/Deadlands">Deadlands</a>: Hell on Earth</em> are their iconic weapons and often relic or magically empowered. Physically, they are whatever kind of sword you can scavenge in a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AfterTheEnd" title="/pmwiki/pmwiki.php/Main/AfterTheEnd">post-apocalyptic</a> world, most often stolen from ruined museums.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/DungeonsAndDragons" title="/pmwiki/pmwiki.php/TabletopGame/DungeonsAndDragons">Dungeons &amp; Dragons</a></em>:
+<ul><li> A classic trait of Legacy weapons; they always appear to be something much less than what they truly are.
+</li><li> Often invoked with Glamered weapons, which can change appearance to look like any object of similar size and shape. Doing so also hides the weapon's magical aura, making it a perfect disguise. That rust covered blade you found might be a legendary weapon, but if you just cast Detect Magic on it and toss in on the junk heap, you'll never know.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Magazine/Dragon" title="/pmwiki/pmwiki.php/Magazine/Dragon">Dragon</a></em> magazine #14 article "Interview with a Rust Monster": A <a class="twikilink" href="/pmwiki/pmwiki.php/Main/PC" title="/pmwiki/pmwiki.php/Main/PC">PC</a> party unknowingly carries the Sword of Toshio. "[It] looks like an ordinary sword, bent and worn from use. But in the hands of a samurai, it takes on its true appearance as a katana of great power."
+</li><li> The Holy Avenger is an ordinary +2 longsword until a paladin gets a hold of it. (+5, bonuses against evil beings, etc., etc.)
+</li></ul></li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/Pathfinder" title="/pmwiki/pmwiki.php/TabletopGame/Pathfinder">Pathfinder</a></em>, a possible enchantment is "Rusting". Only found on magical weapons, it makes the weapon look rusty and tarnished, but actually makes it <em>immune</em> to even magical rust and allows the wielder to casting Rusting Grasp on an enemy with a critical hit.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder8');">    Video Games </div><div class="folder" id="folder8" isfolder="true" style="display:block;">
+<ul><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SecretOfMana" title="/pmwiki/pmwiki.php/VideoGame/SecretOfMana">Secret of Mana</a></em>, the player acquires a rusty old sword at the beginning of the game, which is none other than the game's legendary Mana Sword. According to the opening scroll, it actually is Excalibur, as well as many other swords of legend.
+<ul><li> It also happens in the first <em>Seiken Densetsu</em> game (<em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FinalFantasyAdventure" title="/pmwiki/pmwiki.php/VideoGame/FinalFantasyAdventure">Final Fantasy Adventure</a></em>), and the same twist applies: it's the Mana Sword. The remake doesn't let you wield it, but it opens the path to the Dime Tower in both versions of the game.
+</li></ul></li><li> Something of an interesting version in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DragonsDogma" title="/pmwiki/pmwiki.php/VideoGame/DragonsDogma">Dragon's Dogma</a></em>. Many basic weapons come in "rust" varieties (Rust Daggers, for example). These seem like <a class="twikilink" href="/pmwiki/pmwiki.php/Main/JokeItem" title="/pmwiki/pmwiki.php/Main/JokeItem">Joke Items</a> at first, but once the player begins to upgrade them, they become much more powerful. While still having a generally lower damage output, they become capable of inflicting numerous useful status ailments on your enemies. The best part? They're still called "Rust Daggers" (etc.) regardless of how much you improve them. <a class="twikilink" href="/pmwiki/pmwiki.php/Main/FridgeLogic" title="/pmwiki/pmwiki.php/Main/FridgeLogic">Guess the weaponsmith figured out how to</a> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Main/FridgeLogic" title="/pmwiki/pmwiki.php/Main/FridgeLogic">weaponize rust</a></em>.
+</li><li> All of the "base" versions of the Relic/Mythic/Empyrean/Aeonic (REMA) weapons in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FinalFantasyXI" title="/pmwiki/pmwiki.php/VideoGame/FinalFantasyXI">Final Fantasy XI</a></em> are poor choices for ordinary use, but the Relic line of weapons is the purest example of this trope. The base version of the Relics are dilapidated weapons recovered from Dynamis zones, and all have a DMG of 1 and delay of 999, making them completely useless and, bar none, the worst weapons in the game. The arduous quests to restore them to full glory, however, results in some of the best weapons in the game (indeed, the absolute best weapons in the game before the rest of the REMA weapons were gradually introduced). The relic sword is a literal example, with its fully upgraded version being Excalibur.
+</li><li> Divine Vengeance in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DungeonsAndDragonsOnline" title="/pmwiki/pmwiki.php/VideoGame/DungeonsAndDragonsOnline">Dungeons &amp; Dragons Online</a></em> gains powers for a Lawful character, more if he's a paladin, and even more if he's an epic-level paladin. Both are probably inspired by the tabletop Holy Avenger (see above). Pale Justice in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/IcewindDale" title="/pmwiki/pmwiki.php/VideoGame/IcewindDale">Icewind Dale</a></em> is an extremely powerful sword for paladins, and looks exactly like an ordinary longsword.
+<ul><li> A sidequest during the <em>Icewind Dale</em> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/EasingIntoTheAdventure" title="/pmwiki/pmwiki.php/Main/EasingIntoTheAdventure">prologue</a> has you retrieving a broken heirloom sword for a villager named Jhonen (no, not <strong>that</strong> <a class="twikilink" href="/pmwiki/pmwiki.php/Creator/JhonenVasquez" title="/pmwiki/pmwiki.php/Creator/JhonenVasquez">Jhonen</a>). In the last chapter, if you did this quest, you can talk to him again to find out that the sword magically reforged itself sometime while you were off doing the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BuffySpeak" title="/pmwiki/pmwiki.php/Main/BuffySpeak">adventury</a> thing. Not being a fighter himself, he's only too happy to hand over the rather nice <a class="twikilink" href="/pmwiki/pmwiki.php/Main/InfinityPlusOneSword" title="/pmwiki/pmwiki.php/Main/InfinityPlusOneSword">Reforged Sword of Aihonen</a> to help you out against the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BigBad" title="/pmwiki/pmwiki.php/Main/BigBad">Big Bad</a>. And it doesn't stop there, either - if you bring it with you into <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ExpansionPack" title="/pmwiki/pmwiki.php/Main/ExpansionPack">Heart of Winter</a>, about halfway through you meet an NPC who will upgrade it even further.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DragonQuestIX" title="/pmwiki/pmwiki.php/VideoGame/DragonQuestIX">Dragon Quest IX</a></em> features the Rusty equipment, the first piece of which you're likely to find is the Rusty Sword towards the end of the game. It's not much use at first, but add a little glass powder and some <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Unobtainium" title="/pmwiki/pmwiki.php/Main/Unobtainium">Unobtainium</a> (<a class="twikilink" href="/pmwiki/pmwiki.php/Main/Orichalcum" title="/pmwiki/pmwiki.php/Main/Orichalcum">Orichalcum</a>, in this case) and you get the third best sword in the game. And then the rest of the equipment is also the third best of its type in the game. It is very difficult <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GuideDangIt" title="/pmwiki/pmwiki.php/Main/GuideDangIt">to find anything other than the sword.</a>
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DragonQuestVI" title="/pmwiki/pmwiki.php/VideoGame/DragonQuestVI">Dragon Quest VI</a></em> has the Sword of Ramias.
+</li></ul></li><li> The Falcata from <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/RomancingSaGa" title="/pmwiki/pmwiki.php/VideoGame/RomancingSaGa">Romancing SaGa</a></em> which becomes the Demonbrand.
+</li><li> Various rusted weapons can be found at a low chance in the <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MonsterHunter" title="/pmwiki/pmwiki.php/VideoGame/MonsterHunter">Monster Hunter</a></em> series by mining them or from quest drops. They usually tend to subvert this trope in being generic iron swords, hammers, et al. On the off chance you're lucky, you'll get a "Rusted" or "Worn" weapon which, with a lot of work in getting parts to break the rust, become some powerful weapons. In particular are the Eternal Hate and the Divine Exodus, two Sword and Shield weapons with the highest Dragon attributes in Tri, bar none.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/GloryOfHeracles" title="/pmwiki/pmwiki.php/VideoGame/GloryOfHeracles">Glory of Heracles</a></em> often hands you Rusty items. These are useless until you visit a Polisher, who scours the rust off. Usually you get pretty decent gear out of it. Sometimes subverted in that the rust is so far gone all you get is Scrap Iron. The first sword in the DS game gets buffed to an Infinity Minus One Sword before the final dungeon, and one more time by the Blacksmith God, Hapheastus, right before the Big Bad into an Infinity Plus One Sword.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SoulOfTheSamurai" title="/pmwiki/pmwiki.php/VideoGame/SoulOfTheSamurai">Soul of the Samurai</a></em> (known as <em><a class="createlink" href="/pmwiki/pmwiki.php/VideoGame/RoninBlade" title="/pmwiki/pmwiki.php/VideoGame/RoninBlade">Ronin Blade</a></em> in Europe), <a class="twikilink" href="/pmwiki/pmwiki.php/Main/PlayerCharacter" title="/pmwiki/pmwiki.php/Main/PlayerCharacter">Kotaro</a> can find a rusty sword. It is the <em>weakest</em> katana in the game, even worse than your starting sword, but if you <em>do</em> manage to obtain it and follow an advice given by an NPC a few levels earlier, you can bring the rusty sword to the resident <a class="twikilink" href="/pmwiki/pmwiki.php/Main/UltimateBlacksmith" title="/pmwiki/pmwiki.php/Main/UltimateBlacksmith">Ultimate Blacksmith</a> who, by the time you can start the game's final mission, will have turned it into the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/InfinityPlusOneSword" title="/pmwiki/pmwiki.php/Main/InfinityPlusOneSword">Supreme Katana Of Greater Asskickery</a>, which will have a blade as long as the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BFS" title="/pmwiki/pmwiki.php/Main/BFS">nodachi</a>, swing as fast as the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DeathOfAThousandCuts" title="/pmwiki/pmwiki.php/Main/DeathOfAThousandCuts">wakizashi</a> and hit as hard as the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/InfinityMinusOneSword" title="/pmwiki/pmwiki.php/Main/InfinityMinusOneSword">Infinity -1 Sword</a> you'll get by sticking to the story without going out of your way to find fancier blades.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/WorldOfWarcraft" title="/pmwiki/pmwiki.php/VideoGame/WorldOfWarcraft">World of Warcraft</a></em> one of the most powerful knives in the game when it was introduced looked exactly like a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GrievousBottleyHarm" title="/pmwiki/pmwiki.php/Main/GrievousBottleyHarm">small broken bottle</a>. There are also a few magical maces that just look like unadorned bones.
+</li><li> Many of the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/InfinityPlusOneSword" title="/pmwiki/pmwiki.php/Main/InfinityPlusOneSword">Celestial Weapons</a> from <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FinalFantasyX" title="/pmwiki/pmwiki.php/VideoGame/FinalFantasyX">Final Fantasy X</a></em> start off looking this way and being rather useless, but with a little polish, some sharpening, and a number of mini-games, their true worth will be revealed.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/AssassinsCreedII" title="/pmwiki/pmwiki.php/VideoGame/AssassinsCreedII">Assassin's Creed II</a></em>, the Sword of Altair (best weapon in the game) is actually the simplest and least-adorned weapon in the entire game, especially when compared with the exceptionally ornate blades and hilts of the other sabers, scimitars, and rapiers Ezio can buy. The only real adornment on the blade is a subtle eagle-head carving in the sword's pommel.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/LunarTheSilverStar" title="/pmwiki/pmwiki.php/VideoGame/LunarTheSilverStar">Lunar: The Silver Star</a></em>, Althena's Sword (so named for the goddess of Lunar) can only be wielded by her champion, the Dragonmaster—but has been lost since the last known Dragonmaster, Dyne, died. <span class="spoiler" title="you can set spoilers visible by default on your profile"> From <em>Silver Star Story</em> onward, the games make it into a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ChekhovsGun" title="/pmwiki/pmwiki.php/Main/ChekhovsGun">Chekhov's Gun</a> — it's been hiding in plain sight, crusted over with debris and buried to the hilt in Dyne's monument right outside the (mostly) <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SilentProtagonist" title="/pmwiki/pmwiki.php/Main/SilentProtagonist">Silent Protagonist</a> Alex's own village. After proving himself as the next Dragonmaster, Alex is able to draw Althena's Sword <a class="twikilink" href="/pmwiki/pmwiki.php/Main/OnlyTheChosenMayWield" title="/pmwiki/pmwiki.php/Main/OnlyTheChosenMayWield">from the stone</a> and reveal its true power.</span>
+<ul><li> In the sequel, <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/LunarEternalBlue" title="/pmwiki/pmwiki.php/VideoGame/LunarEternalBlue">Lunar: Eternal Blue</a></em>, Althena's Sword <span class="spoiler" title="you can set spoilers visible by default on your profile"> is being carried by once-<a class="twikilink" href="/pmwiki/pmwiki.php/Main/TeamPet" title="/pmwiki/pmwiki.php/Main/TeamPet">Team Pet</a> Nall, now grown up and in human form. Astute gamers will recognize it right off the bat, even though the distinctive carved golden handle is wrapped up in bandages. Nall later deems not-so-<a class="twikilink" href="/pmwiki/pmwiki.php/Main/SilentProtagonist" title="/pmwiki/pmwiki.php/Main/SilentProtagonist">Silent Protagonist</a> Hiro worthy of wielding it, despite him not technically passing the Dragonmaster trials.</span>
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DarkSouls" title="/pmwiki/pmwiki.php/VideoGame/DarkSouls">Dark Souls</a></em> has the Greatsword of Artorias. You can create a weaker, "cursed" version by combining the Soul of Sif with any +10 straight sword, but to get your hands on the real deal, you have to combine the soul with one of those useless broken swords that the weakest enemies in the game drop, which you have no business even picking up in the first place, much less upgrading to +10.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/Videogame/DarkSoulsII" title="/pmwiki/pmwiki.php/Videogame/DarkSoulsII">Dark Souls II</a></em> the Red Rust equipment (sword, scimitar, and shield) definitely look like they've seen better days, but they are still very good weapons. The Greatsword also looks chipped and worn out, but it's still a huge sword that can chop up enemies real good.
+<ul><li> From the same game's Crown of the Old Iron King DLC we have the Majestic Greatsword, a sword from the Iron King's collection that looks so old it's practically fossilized. <span class="spoiler" title="you can set spoilers visible by default on your profile"> It also happens to be Artorias' Greatsword from the first game, and when wielded left-handed lets you adopt his spinning and flipping fighting style from Artorias of the Abyss.</span>
+</li><li> All of the Old Knight equipment is quite strong, however the downside is that it's so old and rusty that it's literally falling apart, and has extremely low durability.
+</li></ul></li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/GoldenSunTheLostAge" title="/pmwiki/pmwiki.php/VideoGame/GoldenSunTheLostAge">Golden Sun: The Lost Age</a></em>, you can find rusty weapons in certain patches of shallow water in the ocean as soon as you get the ship. If you take these to Sunshine the Blacksmith, he will agree to fix them up, resulting in weapons that are reasonably good for that part of the game.
+<ul><li> Mind you, you find a good majority of the first set of rusted weapons when you get into "Triton's pieces" part of the game, and by the time you actually get around to finding more of them you mostly have weapons that overpower the crafted ones. That's not to say later in the game.
+</li></ul></li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FireEmblemAwakening" title="/pmwiki/pmwiki.php/VideoGame/FireEmblemAwakening">Fire Emblem: Awakening</a></em>, <span class="spoiler" title="you can set spoilers visible by default on your profile"><a class="twikilink" href="/pmwiki/pmwiki.php/Main/SecretCharacter" title="/pmwiki/pmwiki.php/Main/SecretCharacter">Priam</a>'s</span> Ragnell is visibly worn, with a dulled blade and cracks all over. While not the infinite-use juggernaut that it was when <span class="spoiler" title="you can set spoilers visible by default on your profile">his ancestor</span> <a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FireEmblemPathOfRadiance" title="/pmwiki/pmwiki.php/VideoGame/FireEmblemPathOfRadiance">Ike</a> wielded it, it's still a highly powerful top-rank weapon. The fact he uses its ranged attack by <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ThrowingYourSwordAlwaysWorks" title="/pmwiki/pmwiki.php/Main/ThrowingYourSwordAlwaysWorks">throwing it at the enemies</a> probably doesn't help.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FireEmblemFates" title="/pmwiki/pmwiki.php/VideoGame/FireEmblemFates">Fire Emblem Fates</a></em>, the Yato sword, while boasting respectable stats, has a very aged and rustic look to it. Around halfway through each campaign, the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/PlayerCharacter" title="/pmwiki/pmwiki.php/Main/PlayerCharacter">Player Character</a> would be tasked with visiting the Rainbow Sage to unlock its true power, changing its form depending on which kingdom you've allied yourself with. <span class="spoiler" title="you can set spoilers visible by default on your profile">Its true form, the Omega Yato, can only be achieved in the <em>Revelation</em> campaign after uniting both Hoshido and Nohr against a common foe.</span>
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FireEmblemGaiden" title="/pmwiki/pmwiki.php/VideoGame/FireEmblemGaiden">Fire Emblem Echoes: Shadows of Valentia</a></em> the player can obtain rusted weapons from beating monsters. Rarely, some rusted weapons that can be forged into Sol, Luna or Astra can be obtained this way, and Sol, Luna and Astra are <a class="twikilink" href="/pmwiki/pmwiki.php/Main/InfinityPlusOneSword" title="/pmwiki/pmwiki.php/Main/InfinityPlusOneSword">Infinity+1 weapons</a>.
+</li><li> Appears in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/HalfMinuteHero" title="/pmwiki/pmwiki.php/VideoGame/HalfMinuteHero">Half-Minute Hero</a></em>'s Hero 30 mode late in the game. <span class="spoiler" title="you can set spoilers visible by default on your profile">It becomes the ultimate weapon if you refuse to kill Sasha after she becomes a zombie.</span>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Boktai" title="/pmwiki/pmwiki.php/VideoGame/Boktai">Boktai 2</a></em> had a ridiculously weak sword, spear, and mallet free for the taking from treasure chests after the first boss. These items also have a chance of nullifying defense, and when that happens their low attack levels do <em>tons</em> of damage against 0 defense.
+<ul><li> You could also craft them into moderately average weapons with the same abilities if you were good enough at sword smithing.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/TheElderScrolls" title="/pmwiki/pmwiki.php/Franchise/TheElderScrolls">The Elder Scrolls</a></em>:
+<ul><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheElderScrollsIIIMorrowind" title="/pmwiki/pmwiki.php/VideoGame/TheElderScrollsIIIMorrowind">Morrowind</a></em>, you may stumble upon a unique "Rusty Dagger" in a tomb with pitiful stats which will break after a single hit. However, return it to a specific shrine to Mehrunes Dagon, and the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/OurGodsAreDifferent" title="/pmwiki/pmwiki.php/Main/OurGodsAreDifferent">Daedric Prince</a> of <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DestroyerDeity" title="/pmwiki/pmwiki.php/Main/DestroyerDeity">Destruction</a> will restore it to its true, <em>powerful</em> glory as <a class="twikilink" href="/pmwiki/pmwiki.php/Main/LegendaryWeapon" title="/pmwiki/pmwiki.php/Main/LegendaryWeapon">Mehrunes' Razor</a>.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheElderScrollsVSkyrim" title="/pmwiki/pmwiki.php/VideoGame/TheElderScrollsVSkyrim">Skyrim</a></em>
+<ul><li> Mehrunes Razor is this once again, this time having been <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DismantledMacGuffin" title="/pmwiki/pmwiki.php/Main/DismantledMacGuffin">broken into pieces</a> and the pieces placed in the care of members of a group dedicated to opposing Mehrunes Dagon. After <a class="twikilink" href="/pmwiki/pmwiki.php/Main/CrueltyIsTheOnlyOption" title="/pmwiki/pmwiki.php/Main/CrueltyIsTheOnlyOption">liberating</a> the pieces, you will travel to Dagon's shrine with a servant of Dagon. Dagon will reforge the blade, but only if you kill his servant. (Then, just <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ForTheEvulz" title="/pmwiki/pmwiki.php/Main/ForTheEvulz">For the Evulz</a>, he'll sic two <a class="twikilink" href="/pmwiki/pmwiki.php/Main/OurDemonsAreDifferent" title="/pmwiki/pmwiki.php/Main/OurDemonsAreDifferent">Dremora</a> on you.)
+</li><li> The <a class="twikilink" href="/pmwiki/pmwiki.php/Main/CarryABigStick" title="/pmwiki/pmwiki.php/Main/CarryABigStick">Mace of Molag Bal</a> is initially found as a rusty piece of scrap. However, Molag Bal (Daedric Prince of <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TheCorrupter" title="/pmwiki/pmwiki.php/Main/TheCorrupter">Domination and Corruption</a>) <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ViolenceIsTheOnlyOption" title="/pmwiki/pmwiki.php/Main/ViolenceIsTheOnlyOption">forces the player to kill</a> a priest of Boethiah (another Daedric Prince and rival of Molag Bal) before he'll restore it.
+</li></ul></li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Videogame/BreathOfFireIV" title="/pmwiki/pmwiki.php/Videogame/BreathOfFireIV">Breath of Fire IV</a></em> has a rusted sword that will upgrade into a much more powerful sword, the Slayer, if Scias uses it to kill 1000 enemies.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FalloutNewVegas" title="/pmwiki/pmwiki.php/VideoGame/FalloutNewVegas">Fallout: New Vegas</a></em> the game simulates item condition and it is common to find some some great weapons in really poor shape. The straightest example though is the Infinity +1 sword Mercy. It's an incredibly rusted looking grenade machine gun you find in a death claw filled cave. However it shoots 40mm grenades rather than 25mm, making it nearly twice as powerful.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FinalFantasyXIV" title="/pmwiki/pmwiki.php/VideoGame/FinalFantasyXIV">Final Fantasy XIV</a></em>:
+<ul><li> Certain dungeons will drop ancient, broken equipment that has an effective level several below its actual level requirement. A player with a relevant crafting class can repair it, making it into <em>the</em> best equipment available for its level. Shame none of it is very useful once you hit the level cap...
+</li><li> Also, the quests to acquire each class's <a class="twikilink" href="/pmwiki/pmwiki.php/Main/InfinityPlusOneSword" title="/pmwiki/pmwiki.php/Main/InfinityPlusOneSword">Relic Weapon</a> first involves tracking down the old, broken thing and then jumping through some hoops with <a class="twikilink" href="/pmwiki/pmwiki.php/Main/UltimateBlacksmith" title="/pmwiki/pmwiki.php/Main/UltimateBlacksmith">Gerolt</a> to restore it to its former glory.
+</li></ul></li><li> In the <a class="urllink" href="http://zeldawiki.org/File:BotW_NA_Logo.png">title logo<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a><small>◊</small> and E3 2016 trailer for <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheLegendOfZeldaBreathOfTheWild" title="/pmwiki/pmwiki.php/VideoGame/TheLegendOfZeldaBreathOfTheWild">The Legend of Zelda: Breath of the Wild</a></em>, the Master Sword is shown rusted and heavily chipped. This is somewhat consistent with the portrayal of the Master Sword from <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheLegendOfZeldaTheWindWaker" title="/pmwiki/pmwiki.php/VideoGame/TheLegendOfZeldaTheWindWaker">The Legend of Zelda: The Wind Waker</a></em> where the sword was stuck at the bottom of the ocean, its power to ward evil having been sealed by Ganondorf eliminating the guardians of the temples used to keep the sword empowered. Although in the game itself <span class="spoiler" title="you can set spoilers visible by default on your profile"> it's an inversion; the sword is in such a damaged state because Link used up all of its power slaughtering a <em>ridiculous</em> number of monsters. Leaving the sword in its pedestal for 100 years allowed it to repair itself so that it would be usable when Link finds it again.</span>
+<ul><li> Played straight with the vaious rusted weapons and shields that you can find strewn in the wilderness, having belonged to adventurers and soldiers who had long since perished during the Calamity a century prior. Link can use them as they are, though they're weak and not very durable. However, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/HelpfulMook" title="/pmwiki/pmwiki.php/Main/HelpfulMook">Rock Octoroks</a> on Death Mountain are capable of <a class="urllink" href="https://www.youtube.com/watch?v=Ip62hAQwKos">cleaning them and spitting them out if they inhale them.<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a> These restored weapons and shields can be anywhere from as weak as the Traveller weapons to as powerful as Royal weaponry.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Overwatch" title="/pmwiki/pmwiki.php/VideoGame/Overwatch">Overwatch</a></em> has the armor of the Crusader's fallen commander, Balderich, which appears as two skins for Reinhardt. As a skin, even though it's covered in ivy, moss, and rust in its Greifhardt form, it is still formidable and capable. Reinhardt later cleans it up and repairs it to full functionality.
+</li><li> The Burial Blade from <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Bloodborne" title="/pmwiki/pmwiki.php/VideoGame/Bloodborne">Bloodborne</a></em> hasn't been used since Gherman took control of the Hunter's Dream and certainly looks pretty ramshackle even by the standards of a lot of the equipment in the game. <span class="spoiler" title="you can set spoilers visible by default on your profile">It doesn't stop it from being a source of constant rage at how powerful it if you decide to fight Gherman at the end, and the version you can get after the battle is easily one of the strongest Skill weapons in the game.</span>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/GodOfWarPS4" title="/pmwiki/pmwiki.php/VideoGame/GodOfWarPS4">God of War (PS4)</a></em>: Kratos had kept <span class="spoiler" title="you can set spoilers visible by default on your profile">the Blades of Chaos from <a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/GodOfWarI" title="/pmwiki/pmwiki.php/VideoGame/GodOfWarI">the first game</a>. After not being used for centuries, they look worn out and rusty. Once he wields them again, they light up with their trademark flames and are immediately shown to be as deadly as ever (and can be upgraded to eventually lose the rust).</span>
+</li><li> A lot of powerful magical weapons in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/PillarsOfEternityIIDeadfire" title="/pmwiki/pmwiki.php/VideoGame/PillarsOfEternityIIDeadfire">Pillars of Eternity II: Deadfire</a></em>. Ordinary items can become spontaneously enchanted in various ways — Xoti's sickle and Edér's Saints War armor are two examples where the wielder knows for certain they were never deliberately enchanted — which leads to a few of these. Other examples include a broom that makes a great quarterstaff, a shiv carved from a copper beer stein that grants some seriously powerful <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BoozeBasedBuff" title="/pmwiki/pmwiki.php/Main/BoozeBasedBuff">Booze-Based Buff</a> (at <a class="twikilink" href="/pmwiki/pmwiki.php/Main/HangoverSensitivity" title="/pmwiki/pmwiki.php/Main/HangoverSensitivity">a price</a>), and a chunk of wood dipped in pitch, covered in glass shards, and blessed by the Goddess of Vengeance. Downplayed by the Huana magical weapons; though made of wood, bone, obsidian, and other "stone age" materials, they are very well-made and intricately carved, making it obvious they are more than the materials they are crafted from.
+</li><li> In the tutorial mission of <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Starbound" title="/pmwiki/pmwiki.php/VideoGame/Starbound">Starbound</a></em> the Player Character is given a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/StarterEquipment" title="/pmwiki/pmwiki.php/Main/StarterEquipment">Broken Broadsword</a>, which looks visibly dented and chipped and has the worst stats of any melee weapon in the game. You will want to switch to another weapon as soon as you can, but you will not want to throw it away entirely as it can become the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/InfinityPlusOneSword" title="/pmwiki/pmwiki.php/Main/InfinityPlusOneSword">Protector's Broadsword</a> <span class="spoiler" title="you can set spoilers visible by default on your profile">once you rescue The Baron much later in the game as he can help you reforge it.</span>
+</li><li> The player character's weapon in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/HollowKnight" title="/pmwiki/pmwiki.php/VideoGame/HollowKnight">Hollow Knight</a></em> starts off dull, cracked, and doing not very much damage at all, described as "blunt with age and wear". The resident <a class="twikilink" href="/pmwiki/pmwiki.php/Main/UltimateBlacksmith" title="/pmwiki/pmwiki.php/Main/UltimateBlacksmith">Ultimate Blacksmith</a> can upgrade it into stronger and fancier-looking forms, culminating in the exquisite-looking and incredibly damaging Pure Nail. <span class="spoiler" title="you can set spoilers visible by default on your profile">The blacksmith will outright ask you to <strong>kill him</strong> after this upgrade, as he believes he has nothing left to live for after forging a weapon of such caliber.</span>
+<div class="indent"><em>"The ultimate weapon of Hallownest. Crafted to perfection, this ancient nail reveals its true form."</em>
+</div></li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder9');">    Visual Novels </div><div class="folder" id="folder9" isfolder="true" style="display:block;">
+<ul><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VisualNovel/FateStayNight" title="/pmwiki/pmwiki.php/VisualNovel/FateStayNight">Fate/stay night</a></em>, Gilgamesh pulls out a somewhat goofy-looking drill-like sword. This sword quickly loses all jokes about it, as it is actually Ea, <strong>the single</strong> most powerful weapon in the entire <a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/Nasuverse" title="/pmwiki/pmwiki.php/Franchise/Nasuverse">Nasuverse</a>, and at full power it is capable of <a class="twikilink" href="/pmwiki/pmwiki.php/Main/EarthShatteringKaboom" title="/pmwiki/pmwiki.php/Main/EarthShatteringKaboom">ending the world in a single blow</a>.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder10');">    Web Comics </div><div class="folder" id="folder10" isfolder="true" style="display:block;">
+<ul><li> On <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/TheOrderOfTheStick" title="/pmwiki/pmwiki.php/Webcomic/TheOrderOfTheStick">The Order of the Stick</a></em>, the Crimson Mantle looks like an old red cape almost in tatter (because the majority of its previous owners met a violent death). It's in fact a powerful <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ArtifactOfDoom" title="/pmwiki/pmwiki.php/Main/ArtifactOfDoom">Artifact of Doom</a>.
+</li><li> Averted by Madison Vrax, of <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/CassiopeiaQuinn" title="/pmwiki/pmwiki.php/Webcomic/CassiopeiaQuinn">Cassiopeia Quinn</a></em>, who wins a historic sword as a trophy, whereupon it starts to shed its corroded patina. No one, including Madison herself, understands why this is happening, or exactly WHAT is happening
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder11');">    Western Animation </div><div class="folder" id="folder11" isfolder="true" style="display:block;">
+<ul><li> Minor <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/WinxClub" title="/pmwiki/pmwiki.php/WesternAnimation/WinxClub">Winx Club</a></em> example: during a defence lesson, Professor <span class="spoiler" title="you can set spoilers visible by default on your profile">(Impostor!)</span> Avalon instructs Bloom and another student to pick two magic swords and spar, and Bloom's shiny sword is <em>shattered</em> by the chipped one chosen by the other. The other sword happened to have survived an <em>extremely</em> powerful attack, and that single chip (the <em>only</em> sign of disrepair) was where the attack had hit and <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MoreThanMeetsTheEye" title="/pmwiki/pmwiki.php/Main/MoreThanMeetsTheEye">the sign it was the better sword</a>.
+</li><li> One episode of <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/Ben10" title="/pmwiki/pmwiki.php/WesternAnimation/Ben10">Ben 10</a></em> has the heroes fighting against the Forever Knights to obtain a five thousand year old superweapon of a sword. By the time both parties reach the hidden weapon, <span class="spoiler" title="you can set spoilers visible by default on your profile"><a class="twikilink" href="/pmwiki/pmwiki.php/Main/RealityEnsues" title="/pmwiki/pmwiki.php/Main/RealityEnsues">it was so old that it crumbled to dust as soon as the Forever Knight drew the blade</a></span>.
+</li><li> Lula from <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/DaveTheBarbarian" title="/pmwiki/pmwiki.php/WesternAnimation/DaveTheBarbarian">Dave the Barbarian</a></em> is a magic <a class="twikilink" href="/pmwiki/pmwiki.php/Main/LivingWeapon" title="/pmwiki/pmwiki.php/Main/LivingWeapon">Living Weapon</a> who went two thousand years without use before Dave found her and was never treated in that time or sense. She can shoot magic lightning, but in her own words, she's about as sharp as a bowling ball.
+</li></ul></div>
+<hr/>
+</div>
+<div class="square_ad footer-article-ad main_2" data-isolated="0"></div>
+<div class="section-links" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<div class="titles">
+<div><h3 class="text-center text-uppercase">Previous</h3></div>
+<div><h3 class="text-center text-uppercase">Index</h3></div>
+<div><h3 class="text-center text-uppercase">Next</h3></div>
+</div>
+<div class="links">
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/EdibleTreasure">Edible Treasure</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/OneMansTrashIsAnothersTreasure">One Man's Trash Is Another's Treasure</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/GrailInTheGarbage">Grail in the Garbage</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/EnfantTerrible">Enfant Terrible</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/MoreThanMeetsTheEye">More than Meets the Eye</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/FasterThanTheyLook">Faster Than They Look</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/EveryJapaneseSwordIsAKatana">Every Japanese Sword is a Katana</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/SwordTropes">Sword Tropes</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/FieldOfBlades">Field of Blades</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/ExcaliburInTheStone">Excalibur in the Stone</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/WeaponsAndWieldingTropes">Weapons and Wielding Tropes</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/ImplausibleFencingPowers">Implausible Fencing Powers</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/ComicBook/TheLegendOfZeldaALinkToThePast">The Legend of Zelda: A Link to the Past</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/ImageSource/ComicBooks">ImageSource/Comic Books</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/ComicBook/LegendsOfBaldursGate">Legends of Baldur's Gate</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="outer_ads_by_salon_wrapper" id="exco_player_insert_div">
+</div>
+</article>
+<div id="main-content-sidebar"><div class="sidebar-item display-options">
+<ul class="sidebar display-toggles">
+<li>Show Spoilers <div class="display-toggle show-spoilers" id="sidebar-toggle-showspoilers"></div></li>
+<li>Night Vision <div class="display-toggle night-vision" id="sidebar-toggle-nightvision"></div></li>
+<li>Sticky Header <div class="display-toggle sticky-header" id="sidebar-toggle-stickyheader"></div></li>
+<li>Wide Load <div class="display-toggle wide-load" id="sidebar-toggle-wideload"></div></li>
+</ul>
+<script>updateDesktopPrefs();</script>
+</div>
+<div class="sidebar-item ad sb-ad-unit">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_2"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_2'); });</script> </div>
+</div></div>
+<div class="sidebar-item quick-links" itemtype="http://schema.org/SiteNavigationElement">
+<p class="sidebar-item-title" data-title="Important Links">Important Links</p>
+<div class="padded">
+<a href="/pmwiki/query.php?type=att">Ask The Tropers</a>
+<a href="/pmwiki/query.php?type=tf">Trope Finder</a>
+<a href="/pmwiki/query.php?type=ykts">You Know That Show...</a>
+<a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a>
+<a href="/pmwiki/review_activity.php">Reviews</a>
+<a data-modal-target="login" href="/pmwiki/lbs.php">Live Blogs</a>
+<a href="/pmwiki/ad-free-subscribe.php">Go Ad Free!</a> </div>
+</div>
+<div class="sidebar-item sb-ad-unit">
+<div class="sidebar-section">
+<div class="square_ad ad-size-300x600 ad-section text-center">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_3"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_3'); });</script> </div>
+</div> </div>
+</div>
+</div>
+<div class="sidebar-item">
+<p class="sidebar-item-title" data-title="Crucial Browsing">Crucial Browsing</p>
+<ul class="padded font-s" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><a data-click-toggle="active" href="javascript:void(0);">Genre</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/ActionAdventureTropes" title="Main/ActionAdventureTropes">Action Adventure</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ComedyTropes" title="Main/ComedyTropes">Comedy</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CommercialsTropes" title="Main/CommercialsTropes">Commercials</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CrimeAndPunishmentTropes" title="Main/CrimeAndPunishmentTropes">Crime &amp; Punishment</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DramaTropes" title="Main/DramaTropes">Drama</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/HorrorTropes" title="Main/HorrorTropes">Horror</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LoveTropes" title="Main/LoveTropes">Love</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NewsTropes" title="Main/NewsTropes">News</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ProfessionalWrestling" title="Main/ProfessionalWrestling">Professional Wrestling</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SpeculativeFictionTropes" title="Main/SpeculativeFictionTropes">Speculative Fiction</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SportsStoryTropes" title="Main/SportsStoryTropes">Sports Story</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/WarTropes" title="Main/WarTropes">War</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Media</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/Media" title="Main/Media">All Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/AnimationTropes" title="Main/AnimationTropes">Animation (Western)</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Anime" title="Main/Anime">Anime</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ComicBookTropes" title="Main/ComicBookTropes">Comic Book</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FanFic" title="FanFic/FanFics">Fan Fics</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Film" title="Main/Film">Film</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/GameTropes" title="Main/GameTropes">Game</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Literature" title="Main/Literature">Literature</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MusicAndSoundEffects" title="Main/MusicAndSoundEffects">Music And Sound Effects</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NewMediaTropes" title="Main/NewMediaTropes">New Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/PrintMediaTropes" title="Main/PrintMediaTropes">Print Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Radio" title="Main/Radio">Radio</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SequentialArt" title="Main/SequentialArt">Sequential Art</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TabletopGames" title="Main/TabletopGames">Tabletop Games</a></li>
+<li><a href="/pmwiki/pmwiki.php/UsefulNotes/Television" title="Main/Television">Television</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Theater" title="Main/Theater">Theater</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/VideogameTropes" title="Main/VideogameTropes">Videogame</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Webcomics" title="Main/Webcomics">Webcomics</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Narrative</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/UniversalTropes" title="Main/UniversalTropes">Universal</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/AppliedPhlebotinum" title="Main/AppliedPhlebotinum">Applied Phlebotinum</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CharacterizationTropes" title="Main/CharacterizationTropes">Characterization</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Characters" title="Main/Characters">Characters</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CharactersAsDevice" title="Main/CharactersAsDevice">Characters As Device</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Dialogue" title="Main/Dialogue">Dialogue</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Motifs" title="Main/Motifs">Motifs</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NarrativeDevices" title="Main/NarrativeDevices">Narrative Devices</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Paratext" title="Main/Paratext">Paratext</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Plots" title="Main/Plots">Plots</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Settings" title="Main/Settings">Settings</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Spectacle" title="Main/Spectacle">Spectacle</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Other Categories</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/BritishTellyTropes" title="Main/BritishTellyTropes">British Telly</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TheContributors" title="Main/TheContributors">The Contributors</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CreatorSpeak" title="Main/CreatorSpeak">Creator Speak</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Creators" title="Main/Creators">Creators</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DerivativeWorks" title="Main/DerivativeWorks">Derivative Works</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LanguageTropes" title="Main/LanguageTropes">Language</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LawsAndFormulas" title="Main/LawsAndFormulas">Laws And Formulas</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ShowBusiness" title="Main/ShowBusiness">Show Business</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SplitPersonalityTropes" title="Main/SplitPersonalityTropes">Split Personality</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/StockRoom" title="Main/StockRoom">Stock Room</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TropeTropes" title="Main/TropeTropes">Trope</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Tropes" title="Main/Tropes">Tropes</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TruthAndLies" title="Main/TruthAndLies">Truth And Lies</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TruthInTelevision" title="Main/TruthInTelevision">Truth In Television</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Topical Tropes</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/BetrayalTropes" title="Main/BetrayalTropes">Betrayal</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CensorshipTropes" title="Main/CensorshipTropes">Censorship</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CombatTropes" title="Main/CombatTropes">Combat</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DeathTropes" title="Main/DeathTropes">Death</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FamilyTropes" title="Main/FamilyTropes">Family</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FateAndProphecyTropes" title="Main/FateAndProphecyTropes">Fate And Prophecy</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FoodTropes" title="Main/FoodTropes">Food</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/HolidayTropes" title="Main/HolidayTropes">Holiday</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MemoryTropes" title="Main/MemoryTropes">Memory</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MoneyTropes" title="Main/MoneyTropes">Money</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MoralityTropes" title="Main/MoralityTropes">Morality</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/PoliticsTropes" title="Main/PoliticsTropes">Politics</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ReligionTropes" title="Main/ReligionTropes">Religion</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SchoolTropes" title="Main/SchoolTropes">School</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="sidebar-item showcase">
+<p class="sidebar-item-title" data-title="Community Showcase">Community Showcase <a class="bubble float-right hover-blue" href="/pmwiki/showcase.php">More</a></p>
+<p class="community-showcase">
+<a href="https://sharetv.com/shows/echo_chamber" onclick="trackOutboundLink('https://sharetv.com/shows/echo_chamber');" target="_blank">
+<img alt="" class="lazy-image" data-src="/images/communityShowcase-echochamber.jpg"/></a>
+<a href="/pmwiki/pmwiki.php/Webcomic/TwistedTropes">
+<img alt="" class="lazy-image" data-src="/img/howlandsc-side.jpg"/></a>
+</p>
+</div>
+<div class="sidebar-item sb-ad-unit" id="stick-cont">
+<div class="sidebar-section" id="stick-bar">
+<div class="square_ad ad-size-300x600 ad-section text-center">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_4"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_4'); });</script> </div>
+</div> </div>
+</div>
+</div>
+</div>
+</div>
+<div class="action-bar tablet-off" id="action-bar-bottom">
+<a class="scroll-to-top dead-button" href="#top-of-page" onclick="$('html, body').animate({scrollTop : 0},500);">Top</a>
+</div>
+</div>
+<div class="proper-ad-unit ad-sticky">
+<div id="proper-ad-tvtropes_sticky_ad"> <script>propertag.cmd.push(function() { proper_display('tvtropes_sticky_ad'); });</script> </div>
+</div>
+<footer id="main-footer">
+<div id="main-footer-inner">
+<div class="footer-left">
+<a class="img-link" href="/"><img alt="TV Tropes" class="lazy-image" data-src="/img/tvtropes-footer-logo.png" title="TV Tropes"/></a>
+<form action="index.html" class="navbar-form newsletter-signup validate modal-replies" data-ajax-get="/ajax/subscribe_email.php" id="cse-search-box-mobile" name="" role="">
+<button class="btn-submit newsletter-signup-submit-button" id="subscribe-btn" type="submit"><i class="fa fa-paper-plane"></i></button>
+<input class="form-control" id="subscription-email" name="q" placeholder="Subscribe" size="31" type="text" validate-type="email" value=""/>
+</form>
+<ul class="social-buttons">
+<li><a class="btn fb" href="https://www.facebook.com/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-facebook']);" target="_blank"><i class="fa fa-facebook"></i></a></li>
+<li><a class="btn tw" href="https://www.twitter.com/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-twitter']);" target="_blank"><i class="fa fa-twitter"></i></a> </li>
+<li><a class="btn rd" href="https://www.reddit.com/r/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-reddit']);" target="_blank"><i class="fa fa-reddit-alien"></i></a></li>
+</ul>
+</div>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">TVTropes</h4></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Administrivia">About TVTropes</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TheGoalsOfTVTropes">TVTropes Goals</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TheTropingCode">Troping Code</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TVTropesCustoms">TVTropes Customs</a></li>
+<li><a href="/pmwiki/pmwiki.php/JustForFun/TropesOfLegend">Tropes of Legend</a></li>
+<li><a href="/pmwiki/ad-free-subscribe.php">Go Ad-Free</a></li>
+</ul>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">Community</h4></li>
+<li><a href="/pmwiki/query.php?type=att">Ask The Tropers</a></li>
+<li><a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a></li>
+<li><a href="/pmwiki/query.php?type=tf">Trope Finder</a></li>
+<li><a href="/pmwiki/query.php?type=ykts">You Know That Show</a></li>
+<li><a data-modal-target="login" href="/pmwiki/lbs.php">Live Blogs</a></li>
+<li><a href="/pmwiki/review_activity.php">Reviews</a></li>
+<li><a href="/pmwiki/topics.php">Forum</a></li>
+</ul>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">Tropes HQ</h4></li>
+<li><a href="/pmwiki/about.php">About Us</a></li>
+<li><a href="/pmwiki/contact.php">Contact Us</a></li>
+<li><a href="/pmwiki/dmca.php">DMCA Notice</a></li>
+<li><a href="/pmwiki/privacypolicy.php">Privacy Policy</a></li>
+</ul>
+</div>
+<div class="text-center gutter-top gutter-bottom tablet-on" id="desktop-on-mobile-toggle">
+<a href="/pmwiki/switchDeviceCss.php?mobileVersion=1" rel="nofollow">Switch to <span class="txt-desktop">Desktop</span><span class="txt-mobile">Mobile</span> Version</a>
+</div>
+<div class="legal">
+<p>TVTropes is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License. <br/>Permissions beyond the scope of this license may be available from <a href="mailto:thestaff@tvtropes.org" rel="cc:morePermissions" xmlns:cc="http://creativecommons.org/ns#"> thestaff@tvtropes.org</a>.</p>
+<br/>
+<div class="privacy_wrapper">
+</div>
+</div>
+</footer>
+<style>
+      div.fc-ccpa-root {
+        position: absolute !important;
+        bottom: 93px !important;
+        margin: auto !important;
+        width: 100% !important;
+        z-index: 9999 !important;
+      }
+      .fc-ccpa-root .fc-dns-dialog .fc-dns-link p{
+        outline: none !important;
+        text-decoration: underline !important;
+        font-size: .7em !important;
+        font-family: sans-serif !important;
+      }
+      .fc-ccpa-root .fc-dns-dialog .fc-dns-link .fc-button-background {
+        background: none !important;
+      }
+    </style>
+<div class="full-screen" id="_pm_videoViewer">
+<a class="close" href="#close" id="_pm_videoViewer-close"></a>
+<div class="_pmvv-body">
+<div class="_pmvv-vidbox">
+<video class="video-js vjs-default-skin vjs-16-9" data-video-id="" id="overlay-video-player-box">
+</video>
+<div class="_pmvv-vidbox-desc">
+<h1 id="overlay-title"></h1>
+<p class="_pmvv-vidbox-descTxt" id="overlay-descrip">
+</p>
+<div class="rating-row" data-video-id="">
+<input name="is_logged_in" type="hidden" value="0"/>
+<p>How well does it match the trope?</p>
+<div id="star-rating-group">
+<div class="trope-rate">
+<input id="lamp5" name="rate" type="radio" value="5"/>
+<label for="lamp5" title="Absolutely"></label>
+<input id="lamp4" name="rate" type="radio" value="4"/>
+<label for="lamp4" title="Yes"></label>
+<input id="lamp3" name="rate" type="radio" value="3"/>
+<label for="lamp3" title="Kind of"></label>
+<input id="lamp2" name="rate" type="radio" value="2"/>
+<label for="lamp2" title="Not really"></label>
+<input id="lamp1" name="rate" type="radio" value="1"/>
+<label for="lamp1" title="No"></label>
+</div>
+<div id="star-rating-total">
+</div>
+</div>
+</div>
+<div class="example-media-row">
+<div class="example-overlay">
+<p>Example of:</p>
+<div id="overlay-trope"> / </div>
+</div>
+<div class="media-sources-overlay example-overlay">
+<p>Media sources:</p>
+<div id="overlay-media"> / </div>
+</div>
+</div>
+<p class="_pmvv-vidbox-stats text-right font-s" style="padding-top:8px; border-top: solid 1px rgba(255,255,255,0.2)">
+<a class="float-right" data-modal-target="login" href="#video-feedback">Report</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+        window.special_ops =  {
+            member : 'no',
+            isolated : 0,
+            tags : ['videogame']
+        };
+    </script>
+<script type="text/javascript">
+
+        var cleanCreativeEnabled = "";
+        var donation = "";
+        var live_ads = "1";
+        var img_domain = "https://static.tvtropes.org";
+        var snoozed = cookies.read('snoozedabm');
+        var snoozable = "";
+
+        if (adsRemovedWith) {
+            live_ads = 0;
+        }
+
+        var elem = document.createElement('script');
+        elem.async = true;
+
+        elem.src = '/design/assets/bundle.js?rev=c58d8df02f09262390bbd03db7921fc35c6af306';
+
+        elem.onload = function() {
+                                 }
+        document.getElementsByTagName('head')[0].appendChild(elem);
+
+    </script>
+<script type="text/javascript">
+      function send_analytics_event(user_type, donation){
+          // if(user_type == 'uncached' || user_type == 'cached'){
+          //   ga('send', 'event', 'caching', 'load', user_type, {'nonInteraction': 1});
+          //   return;
+          // }
+          var event_name = user_type;
+
+          if(donation == 'true'){
+              event_name += "_donation"
+          }else if(typeof(valid_user) == 'undefined'){
+              event_name += "_blocked"
+          }else if(valid_user == true){
+              event_name += "_unblocked";
+          }else{
+              event_name = "_unknown"
+          }
+          ga('send', 'event', 'ads', 'load', event_name, {'nonInteraction': 1});
+      }
+
+    
+    send_analytics_event("guest", "false");
+      </script>
+</body>
+</html>

@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Ragdoll Physics - TV Tropes</title>
+<meta content="The Ragdoll Physics trope as used in popular culture. For a long time, most advancements in video game realism have been in visuals; adding detail and …" name="description"/>
+<link href="https://tvtropes.org/pmwiki/pmwiki.php/Main/RagdollPhysics" rel="canonical"/>
+<link href="/img/icons/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="@tvtropes" name="twitter:site"/>
+<meta content="@tvtropes" name="twitter:owner"/>
+<meta content="Ragdoll Physics - TV Tropes" name="twitter:title"/>
+<meta content="The Ragdoll Physics trope as used in popular culture. For a long time, most advancements in video game realism have been in visuals; adding detail and …" name="twitter:description"/>
+<meta content="https://static.tvtropes.org/logo_blue_small.png" name="twitter:image:src"/>
+<meta content="TV Tropes" property="og:site_name"/>
+<meta content="en_US" property="og:locale"/>
+<meta content="https://www.facebook.com/tvtropes" property="article:publisher"/>
+<meta content="Ragdoll Physics - TV Tropes" property="og:title"/>
+<meta content="website" property="og:type"/>
+<meta content="https://tvtropes.org/pmwiki/pmwiki.php/Main/RagdollPhysics" property="og:url"/>
+<meta content="https://static.tvtropes.org/logo_blue_small.png" property="og:image"/>
+<meta content="For a long time, most advancements in video game realism have been in visuals; adding detail and resolution to the environments simulated. A recent trend, however, is to increase the realism of objects, their physical properties, and how they …" property="og:description"/>
+<link href="/img/icons/apple-icon-57x57.png" rel="apple-touch-icon" sizes="57x57" type="image/png"/>
+<link href="/img/icons/apple-icon-60x60.png" rel="apple-touch-icon" sizes="60x60" type="image/png"/>
+<link href="/img/icons/apple-icon-72x72.png" rel="apple-touch-icon" sizes="72x72" type="image/png"/>
+<link href="/img/icons/apple-icon-76x76.png" rel="apple-touch-icon" sizes="76x76" type="image/png"/>
+<link href="/img/icons/apple-icon-114x114.png" rel="apple-touch-icon" sizes="114x114" type="image/png"/>
+<link href="/img/icons/apple-icon-120x120.png" rel="apple-touch-icon" sizes="120x120" type="image/png"/>
+<link href="/img/icons/apple-icon-144x144.png" rel="apple-touch-icon" sizes="144x144" type="image/png"/>
+<link href="/img/icons/apple-icon-152x152.png" rel="apple-touch-icon" sizes="152x152" type="image/png"/>
+<link href="/img/icons/apple-icon-180x180.png" rel="apple-touch-icon" sizes="180x180" type="image/png"/>
+<link href="/img/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/img/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/img/icons/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png"/>
+<link href="/img/icons/favicon-192x192.png" rel="icon" sizes="192x192" type="image/png"/>
+<meta content="width=device-width, initial-scale=1" id="viewport" name="viewport"/>
+<script>
+                var propertag = {};
+                propertag.cmd = [];
+            </script>
+<link href="/design/assets/bundle.css?rev=c58d8df02f09262390bbd03db7921fc35c6af306" rel="stylesheet"/>
+<script>
+                function object(objectId) {
+                    if (document.getElementById && document.getElementById(objectId)) {
+                        return document.getElementById(objectId);
+                    } else if (document.all && document.all(objectId)) {
+                        return document.all(objectId);
+                    } else if (document.layers && document.layers[objectId]) {
+                        return document.layers[objectId];
+                    } else {
+                        return false;
+                    }
+                }
+
+                // JAVASCRIPT COOKIES CODE: for getting and setting user viewing preferences
+                var cookies = {
+                    create: function (name, value, days2expire, path) {
+                        var date = new Date();
+                        date.setTime(date.getTime() + (days2expire * 24 * 60 * 60 * 1000));
+                        var expires = date.toUTCString();
+                        document.cookie = name + '=' + value + ';' + 'expires=' + expires + ';' + 'path=' + path + ';';
+                    },
+										createWithExpire: function(name, value, expires, path) {
+												document.cookie = name + '=' + value + ';' + 'expires=' + expires + ';' + 'path=' + path + ';';
+										},
+                    read: function (name) {
+                        var cookie_value = "",
+                            current_cookie = "",
+                            name_expr = name + "=",
+                            all_cookies = document.cookie.split(';'),
+                            n = all_cookies.length;
+
+                        for (var i = 0; i < n; i++) {
+                            current_cookie = all_cookies[i].trim();
+                            if (current_cookie.indexOf(name_expr) === 0) {
+                                cookie_value = current_cookie.substring(name_expr.length, current_cookie.length);
+                                break;
+                            }
+                        }
+                        return cookie_value;
+                    },
+                    update: function (name, val) {
+                        this.create(name, val, 300, "/");
+                    },
+                    remove: function (name) {
+                        document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
+                    }
+                };
+
+                function updateUserPrefs() {
+                    //GENERAL: detect and set browser, if not cookied (will be treated like a user-preference and added to the #user-pref element)
+                    if( !cookies.read('user-browser') ){
+                        var broswer = '';
+
+                        if(navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPod/i) ){
+                            browser = 'iOS';
+                        } else if (/Opera[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'opera';
+                        } else if (/MSIE (\d+\.\d+);/.test(navigator.userAgent)) {
+                            browser = 'MSIE';
+                        } else if (/Navigator[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'netscape';
+                        } else if (/Chrome[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'chrome';
+                        } else if (/Safari[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'safari';
+                            /Version[\/\s](\d+\.\d+)/.test(navigator.userAgent);
+                            browserVersion = new Number(RegExp.$1);
+                        } else if (/Firefox[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'firefox';
+                        } else {
+                            browser = 'internet_explorer';
+                        }
+                        cookies.create('user-browser',browser,1,'/');
+                        document.getElementById('user-prefs').classList.add('browser-' + browser);
+                    } else {
+                        document.getElementById('user-prefs').classList.add('browser-' + cookies.read('user-browser'));
+                    }
+
+                    //update user preference settings
+                    if (cookies.read('wide-load') !== '') document.getElementById('user-prefs').classList.add('wide-load');
+                    if (cookies.read('night-vision') !== '') document.getElementById('user-prefs').classList.add('night-vision');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('user-prefs').classList.add('sticky-header');
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('user-prefs').classList.add('show-spoilers');
+                    if (cookies.read('folders-open') !== '') document.getElementById('user-prefs').classList.add('folders-open');
+                    if (cookies.read('lefthand-sidebar') !== '') document.getElementById('user-prefs').classList.add('lefthand-sidebar');
+                    if (cookies.read('highlight-links') !== '') document.getElementById('user-prefs').classList.add('highlight-links');
+                    if (cookies.read('forum-gingerbread') !== '') document.getElementById('user-prefs').classList.add('forum-gingerbread');
+                    if (cookies.read('shared-avatars') !== '') document.getElementById('user-prefs').classList.add('shared-avatars');
+                    if (cookies.read('new-search') !== '') document.getElementById('user-prefs').classList.add('new-search');
+                    if (cookies.read('stop-auto-play-video') !== '') document.getElementById('user-prefs').classList.add('stop-auto-play-video');
+
+                    //desktop view on mobile
+                    if (cookies.read('desktop-on-mobile') !== ''){
+                        document.getElementById('user-prefs').classList.add('desktop-on-mobile');
+
+                        var viewport = document.querySelector("meta[name=viewport]");
+                        viewport.setAttribute('content', 'width=1000');
+                    }
+
+                }
+
+                function updateDesktopPrefs() {
+                    if (cookies.read('wide-load') !== '') document.getElementById('sidebar-toggle-wideload').classList.add('active');
+                    if (cookies.read('night-vision') !== '') document.getElementById('sidebar-toggle-nightvision').classList.add('active');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('sidebar-toggle-stickyheader').classList.add('active');
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('sidebar-toggle-showspoilers').classList.add('active');
+
+                }
+
+                function updateMobilePrefs() {
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('mobile-toggle-showspoilers').classList.add('active');
+                    if (cookies.read('night-vision') !== '') document.getElementById('mobile-toggle-nightvision').classList.add('active');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('mobile-toggle-stickyheader').classList.add('active');
+                    if (cookies.read('highlight-links') !== '') document.getElementById('mobile-toggle-highlightlinks').classList.add('active');
+
+                }
+
+
+                if (document.cookie.indexOf("scroll0=") < 0) {
+                    // do nothing
+                } else {
+                    console.log('ads removed by scroll.com');
+                    var adsRemovedWith = 'scroll';
+                    var style = document.createElement('style');
+                    style.innerHTML = '#header-ad, .proper-ad-unit, .square_ad, .sb-ad-unit { display: none !important; } ';
+                    document.head.appendChild(style);
+                }
+            </script>
+<script type="text/javascript">
+
+                var tvtropes_config = {
+                    astri_stream_enabled : "",
+                    is_logged_in         : "",
+                    handle               : "",
+                    get_astri_stream     : "",
+										revnum               : "c58d8df02f09262390bbd03db7921fc35c6af306",
+										img_domain           : "https://static.tvtropes.org",
+										adblock              : "1",
+										adblock_url          : "propermessage.io",
+										pause_editing        : "0",
+										pause_editing_msg    : "",
+										pause_site_changes   : ""
+                };
+            </script>
+<script type="text/javascript">
+						  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+						  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+						  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+						  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+						  ga('create', 'UA-3821842-1', 'auto');
+						  ga('send', 'pageview');
+
+						</script>
+</head>
+<body class="">
+<i id="user-prefs"></i>
+<script>updateUserPrefs();</script>
+<div id="fb-root"></div>
+<div id="modal-box"></div>
+<header class="headroom-element" id="main-header-bar">
+<div id="main-header-bar-inner">
+<span class="header-spacer" id="header-spacer-left"></span>
+<a class="mobile-menu-toggle-button tablet-on" href="#mobile-menu" id="main-mobile-toggle"><span></span><span></span><span></span></a>
+<a class="no-dev" href="/" id="main-header-logoButton"></a>
+<span class="header-spacer" id="header-spacer-right"></span>
+<nav class="tablet-off" id="main-header-nav">
+<a href="/pmwiki/pmwiki.php/Main/Tropes">Tropes</a>
+<a href="/pmwiki/pmwiki.php/Main/Media">Media</a>
+<a class="nav-browse" href="/pmwiki/browse.php">Browse</a>
+<a href="/pmwiki/index_report.php">Indexes</a>
+<a href="/pmwiki/topics.php">Forums</a>
+<a class="nav-browse" href="/pmwiki/recent_videos.php">Videos</a>
+</nav>
+<div id="main-header-bar-right">
+<div class="font-xs mobile-off" id="signup-login-box">
+<a class="hover-underline bold" data-modal-target="signup" href="/pmwiki/login.php">Join</a>
+<a class="hover-underline bold" data-modal-target="login" href="/pmwiki/login.php">Login</a>
+</div>
+<div class="mobile-on inline" id="signup-login-mobileToggle">
+<a data-modal-target="login" href="/pmwiki/login.php"><i class="fa fa-user"></i></a>
+</div>
+<div id="search-box">
+<form action="/pmwiki/search_result.php" class="search">
+<input class="search-box" name="q" placeholder="Search" required="" type="text" value=""/>
+<input class="submit-button" type="submit" value=""/>
+<input name="search_type" type="hidden" value="article"/>
+<input name="page_type" type="hidden" value="all"/>
+<input name="cx" type="hidden" value="partner-pub-6610802604051523:amzitfn8e7v"/>
+<input name="cof" type="hidden" value="FORID:10"/>
+<input name="ie" type="hidden" value="ISO-8859-1"/>
+<input name="siteurl" type="hidden" value=""/>
+<input name="ref" type="hidden" value=""/>
+<input name="ss" type="hidden" value=""/>
+</form>
+<a class="mobile-on mobile-search-toggle close-x" href="#close-search"><i class="fa fa-close"></i></a>
+</div>
+<div id="random-box">
+<a class="button-random-trope" href="/pmwiki/pmwiki.php/Main/AttackReflector" onclick="ga('send', 'event', 'button', 'click', 'random trope');" rel="nofollow"></a>
+<a class="button-random-media" href="/pmwiki/pmwiki.php/Creator/YoshihiroTatsumi" onclick="ga('send', 'event', 'button', 'click', 'random media');" rel="nofollow"></a>
+</div>
+</div>
+</div>
+<div class="tablet-on" id="mobile-menu"><div class="mobile-menu-options">
+<div class="nav-wrapper">
+<a class="xl" href="/pmwiki/pmwiki.php/Main/Tropes">Tropes</a>
+<a class="xl" href="/pmwiki/pmwiki.php/Main/Media">Media</a>
+<a class="xl" href="/pmwiki/browse.php">Browse</a>
+<a class="xl" href="/pmwiki/index_report.php">Indexes</a>
+<a class="xl" href="/pmwiki/topics.php">Forums</a>
+<a class="xl" href="/pmwiki/recent_videos.php">Videos</a>
+<a href="/pmwiki/query.php?type=att">Ask The Tropers</a>
+<a href="/pmwiki/query.php?type=tf">Trope Finder</a>
+<a href="/pmwiki/query.php?type=ykts">You Know That Show...</a>
+<a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a>
+<a data-click-toggle="active" href="#tools">Tools <i class="fa fa-chevron-down"></i></a>
+<div class="tools-dropdown mobile-dropdown-linkList">
+<a href="/pmwiki/cutlist.php">Cut List</a>
+<a href="/pmwiki/changes.php">New Edits</a>
+<a href="/pmwiki/recent_edit_reasons.php">Edit Reasons</a>
+<a href="/pmwiki/launches.php">Launches</a>
+<a href="/pmwiki/img_list.php">Images List</a>
+<a href="/pmwiki/crown_activity.php">Crowner Activity</a>
+<a href="/pmwiki/no_types.php">Un-typed Pages</a>
+<a href="/pmwiki/page_type_audit.php">Recent Page Type Changes</a>
+</div>
+<a data-click-toggle="active" href="#hq">Tropes HQ <i class="fa fa-chevron-down"></i></a>
+<div class="tools-dropdown mobile-dropdown-linkList">
+<a href="/pmwiki/about.php">About Us</a>
+<a href="/pmwiki/contact.php">Contact Us</a>
+<a href="mailto:advertising@proper.io">Advertise</a>
+<a href="/pmwiki/dmca.php">DMCA Notice</a>
+<a href="/pmwiki/privacypolicy.php">Privacy Policy</a>
+</div>
+<a href="/pmwiki/ad-free-subscribe.php">Go Ad-Free</a>
+<div class="toggle-switches">
+<ul class="mobile-menu display-toggles">
+<li>Show Spoilers <div class="display-toggle show-spoilers" id="mobile-toggle-showspoilers"></div></li>
+<li>Night Vision <div class="display-toggle night-vision" id="mobile-toggle-nightvision"></div></li>
+<li>Sticky Header <div class="display-toggle sticky-header" id="mobile-toggle-stickyheader"></div></li>
+<li>Highlight Links <div class="display-toggle highlight-links" id="mobile-toggle-highlightlinks"></div></li>
+</ul>
+<script>updateMobilePrefs();</script>
+</div>
+</div>
+</div>
+</div>
+</header>
+<div class="mobile-on" id="homepage-introBox-mobile">
+<a href="/"><img class="logo-small" src="/images/logo-white-big.png"/></a>
+<form action="/pmwiki/search_result.php" class="search" style="margin:10px -5px -6px -5px;">
+<input class="search-box" name="q" placeholder="Search" required="" type="text" value=""/>
+<input class="submit-button" type="submit" value=""/>
+<input name="search_type" type="hidden" value="article"/>
+<input name="page_type" type="hidden" value="all"/>
+<input name="cx" type="hidden" value="partner-pub-6610802604051523:amzitfn8e7v"/>
+<input name="cof" type="hidden" value="FORID:10"/>
+<input name="ie" type="hidden" value="ISO-8859-1"/>
+<input name="siteurl" type="hidden" value=""/>
+<input name="ref" type="hidden" value=""/>
+<input name="ss" type="hidden" value=""/>
+</form>
+</div>
+<div class="ad" id="header-ad-wrapper">
+<div id="header-ad">
+<div class="ad-size-970x90 atf_banner">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_1"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_1'); });</script> </div>
+</div> </div>
+</div>
+</div>
+<div id="main-container">
+<div class="action-bar mobile-off" id="action-bar-top">
+<div class="action-bar-right">
+<p>Follow TV Tropes</p>
+<a class="button-fb" href="https://www.facebook.com/TVTropes">
+<i class="fa fa-facebook"></i></a>
+<a class="button-tw" href="https://www.twitter.com/TVTropes">
+<i class="fa fa-twitter"></i></a>
+<a class="button-re" href="https://www.reddit.com/r/TVTropes">
+<i class="fa fa-reddit-alien"></i></a>
+</div>
+<nav class="actions-wrapper" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<ul class="page-actions" id="top_main_list">
+<li class="link-edit">
+<a class="article-edit-button" data-modal-target="login" href="/pmwiki/pmwiki.php/Main/RagdollPhysics?action=edit" rel="nofollow">
+<i class="fa fa-pencil"></i> Edit Page</a></li><li class="link-related"><a href="/pmwiki/relatedsearch.php?term=Main/RagdollPhysics">
+<i class="fa fa-share-alt"></i> Related</a></li><li class="link-history"><a href="/pmwiki/article_history.php?article=Main.RagdollPhysics">
+<i class="fa fa-history"></i> History</a></li><li class="link-discussion"><a href="/pmwiki/remarks.php?trope=Main.RagdollPhysics">
+<i class="fa fa-comment"></i> Discussion</a></li> </ul>
+<button class="nav__dropdown-toggle" id="top_more_button" onclick="toggle_more_menu('top');" type="button">More</button>
+<ul class="more_menu hidden_more_list" id="top_more_list">
+<li class="link-todo tuck-always more_list_item"><a data-modal-target="login" href="#todo"><i class="fa fa-check-circle"></i> To Do</a></li><li class="link-pageSource tuck-always more_list_item"><a data-modal-target="login" href="/pmwiki/pmwiki.php/Main/RagdollPhysics?action=source" rel="nofollow" target="_blank"><i class="fa fa-code"></i> Page Source</a></li> </ul>
+</nav>
+<div class="WikiWordModalStub"></div>
+<div class="ImgUploadModalStub" data-page-type="Article"></div>
+<div class="login-alert" style="display: none;">
+You need to <a href="/pmwiki/login.php" style="color:#21A0E8">login</a> to do this. <a href="/pmwiki/login.php?tab=register_account" style="color:#21A0E8">Get Known</a> if you don't have an account
+</div>
+</div>
+<div class="page-Article" id="main-content">
+<article class="with-sidebar" id="main-entry">
+<input id="groupname-hidden" type="hidden" value="Main"/>
+<input id="title-hidden" type="hidden" value="RagdollPhysics"/>
+<input id="article_id" type="hidden" value="5349"/>
+<input id="logged_in" type="hidden" value="false"/>
+<p class="hidden" id="current_url">http://tvtropes.org/pmwiki/pmwiki.php/Main/RagdollPhysics</p>
+<meta content="" itemprop="datePublished"/>
+<meta content="" itemprop="articleSection"/>
+<meta content="" itemprop="image"/>
+<a class="watch-button" data-modal-target="login" href="#watch">Follow<span>ing</span></a>
+<h1 class="entry-title" itemprop="headline">
+Ragdoll Physics
+</h1>
+<script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+                "@type": "ListItem",
+                "position": 1,
+                "name": "tvtropes.org",
+                "item": "https://tvtropes.org"
+            },{
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Tropes",
+                "item": "https://tvtropes.org/pmwiki/pmwiki.php/Main/Tropes"
+            },{
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Ragdoll Physics"            }]
+        }
+    </script>
+<a class="mobile-actionbar-toggle mobile-on" data-click-toggle="active" href="#mobile-actions-toggle" id="mobile-actionbar-toggle">
+<p class="tiny-off">Go To</p><span></span><span></span><span></span><i class="fa fa-pencil"></i></a>
+<nav class="mobile-actions-wrapper mobile-on" id="mobile-actions-bar"></nav>
+<div class="modal fade hidden-until-active" id="editLockModal">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button aria-label="Close" class="close" data-dismiss="modal" type="button"> <span aria-hidden="true">×</span></button>
+<h4 class="modal-title">Edit Locked</h4>
+</div>
+<div class="modal-body">
+<div class="row">
+<div class="body">
+<div class="danger troper_locked_message"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<nav class="body-options" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<ul class="subpage-links">
+<li>
+<a class="subpage-link curr-subpage" href="/pmwiki/pmwiki.php/Main/RagdollPhysics" title="The Main page">
+<span class="wrapper"><span class="spi main-page"></span>Main</span></a>
+</li>
+<li class="create-subpage dropdown">
+<a aria-expanded="false" class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);" role="button">
+<span class="wrapper">Create New <i class="fa fa-plus-circle"></i></span>
+</a>
+<select onchange="this.options[this.selectedIndex].value &amp;&amp; (window.location = this.options[this.selectedIndex].value);">
+<option value="">- Create New -</option>
+<option value="/pmwiki/pmwiki.php/Analysis/RagdollPhysics?action=edit">Analysis</option>
+<option value="/pmwiki/pmwiki.php/Characters/RagdollPhysics?action=edit">Characters</option>
+<option value="/pmwiki/pmwiki.php/FanficRecs/RagdollPhysics?action=edit">FanficRecs</option>
+<option value="/pmwiki/pmwiki.php/FanWorks/RagdollPhysics?action=edit">FanWorks</option>
+<option value="/pmwiki/pmwiki.php/Fridge/RagdollPhysics?action=edit">Fridge</option>
+<option value="/pmwiki/pmwiki.php/Haiku/RagdollPhysics?action=edit">Haiku</option>
+<option value="/pmwiki/pmwiki.php/Headscratchers/RagdollPhysics?action=edit">Headscratchers</option>
+<option value="/pmwiki/pmwiki.php/ImageLinks/RagdollPhysics?action=edit">ImageLinks</option>
+<option value="/pmwiki/pmwiki.php/Laconic/RagdollPhysics?action=edit">Laconic</option>
+<option value="/pmwiki/pmwiki.php/PlayingWith/RagdollPhysics?action=edit">PlayingWith</option>
+<option value="/pmwiki/pmwiki.php/Quotes/RagdollPhysics?action=edit">Quotes</option>
+<option value="/pmwiki/pmwiki.php/Recap/RagdollPhysics?action=edit">Recap</option>
+<option value="/pmwiki/pmwiki.php/ReferencedBy/RagdollPhysics?action=edit">ReferencedBy</option>
+<option value="/pmwiki/pmwiki.php/Synopsis/RagdollPhysics?action=edit">Synopsis</option>
+<option value="/pmwiki/pmwiki.php/Timeline/RagdollPhysics?action=edit">Timeline</option>
+<option value="/pmwiki/pmwiki.php/Trivia/RagdollPhysics?action=edit">Trivia</option>
+<option value="/pmwiki/pmwiki.php/WMG/RagdollPhysics?action=edit">WMG</option>
+<option value="/pmwiki/pmwiki.php/YMMV/RagdollPhysics?action=edit">YMMV</option>
+</select>
+</li>
+</ul>
+</nav>
+<div class="article-content retro-folders" id="main-article">
+<p>For a long time, most advancements in video game realism have been in visuals; adding detail and resolution to the environments simulated. A recent trend, however, is to increase the realism of objects, their physical properties, and how they move.
+</p><p>In practice, this means simulated objects that are not fixed in place; they break if struck, slide if pushed, and follow parabolic trajectories if thrown. The first objects to get the treatment were projectiles, like grenades, but the practice has expanded to include the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DieChairDie" title="/pmwiki/pmwiki.php/Main/DieChairDie">majority of objects</a> found in the game world. Especially enemies, be they alive or formerly alive.
+</p><div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_1"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_1'); })</script></div></div><p>Since simulating the complex interchange of balance and animation required to actually pick up an object is beyond the flexibility of most present game engines, many games that allow object manipulation employ some form of invisible force: a tractor beam or telekinesis are the most popular choices.
+</p><p>The name comes from the somewhat unrealistic action of dead enemies. They are not usually modeled with realistic joint stiffness or motion ranges, causing their limbs to bend at impossible angles (without breaking) and flop randomly in response to stimuli like explosions. Perhaps a telling view of the attitudes of many gamers, corpses get a lot of attention whenever physics engines are discussed.
+</p><p>Compare <a class="twikilink" href="/pmwiki/pmwiki.php/Main/WreakingHavok" title="/pmwiki/pmwiki.php/Main/WreakingHavok">Wreaking Havok</a> - the two often overlap. For modelling of soft materials like hair, flesh, and cloth see <a class="twikilink" href="/pmwiki/pmwiki.php/Main/JigglePhysics" title="/pmwiki/pmwiki.php/Main/JigglePhysics">Jiggle Physics</a>.
+</p><div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_2"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_2'); })</script></div></div><hr/><h2>Examples:</h2>
+<p></p><div class="folderlabel" onclick="toggleAllFolders();">    open/close all folders  </div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder0');">     Action Adventure Games  </div><div class="folder" id="folder0" isfolder="true" style="display:block;">
+<p></p><ul><li> Whenever you died in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SpiderMan2" title="/pmwiki/pmwiki.php/VideoGame/SpiderMan2">Spider-Man 2</a></em>, Webhead would go limp and sometimes even keep getting hit and flying around. This was also true of normal enemies after you pummel them into submission. Given that they could still be hit after being defeated, one can have a lot of fun smacking them into different positions if you're feeling vindictive.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/TombRaider" title="/pmwiki/pmwiki.php/Franchise/TombRaider">Tomb Raider</a></em>:
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TombRaiderLegend" title="/pmwiki/pmwiki.php/VideoGame/TombRaiderLegend">Tomb Raider: Legend</a></em> does a fair job with its physics engine. Many of the classic block and switch type puzzles now rely on levers and ballistics as much as brute force. However, Lara Croft's ragdoll death physics are somewhat ropey in both <em>Legend</em> and <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TombRaiderAnniversary" title="/pmwiki/pmwiki.php/VideoGame/TombRaiderAnniversary">Anniversary</a></em>.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TombRaiderUnderworld" title="/pmwiki/pmwiki.php/VideoGame/TombRaiderUnderworld">Tomb Raider: Underworld</a></em>, using the hammer results either in hilarious this or <a class="twikilink" href="/pmwiki/pmwiki.php/Main/LudicrousGibs" title="/pmwiki/pmwiki.php/Main/LudicrousGibs">zombie rain</a>.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DawnOfMana" title="/pmwiki/pmwiki.php/VideoGame/DawnOfMana">Dawn of Mana</a></em> relied heavily on this mechanic; while it was possible to get through most levels simply by killing enemies normally, the only way to power up your character and rack up a decent score on the levels was by knocking or throwing the environment - crates, rocks, other enemies, etc. - into the enemies and attacking them while they were stunned. Crashing things into each other causes enemies to panic and drop medals that increase Keldric's stats, and the only way you can power him up besides earning badges.
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FinalFantasyCrystalChroniclesTheCrystalBearers" title="/pmwiki/pmwiki.php/VideoGame/FinalFantasyCrystalChroniclesTheCrystalBearers">Final Fantasy Crystal Chronicles: The Crystal Bearers</a></em> used a similar mechanic for its battle system.
+</li></ul></li><li> <a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Lugaru" title="/pmwiki/pmwiki.php/VideoGame/Lugaru">Lugaru</a>'s ragdoll physics can sometimes make the enemy rabbits fly into the air when hit, and one attack causes <em>your</em> character to ragdoll if it doesn't connect at the right time.
+<ul><li> Its sequel, <em>Overgrowth,</em> improves upon ragdolls; notably, procedural animation allows characters to "partially" ragdoll so they'll stumble a bit and catch themselves when hit, or try to protect their faces as they're falling.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/PeterJacksonsKingKong" title="/pmwiki/pmwiki.php/VideoGame/PeterJacksonsKingKong">Peter Jackson's King Kong: The Official Game of the Movie</a></em> features this. Aside from determining how enemies fall down when killed, it also allows for objects to be pushed back when hit with thrown objects (such as a dead enemy pushing another one off a cliff) and giant insects to dangle from a wall when impaled on a spear.
+</li><li> In a first for the <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/TheLegendOfZelda" title="/pmwiki/pmwiki.php/Franchise/TheLegendOfZelda">Zelda</a></em> series, <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheLegendOfZeldaBreathOfTheWild" title="/pmwiki/pmwiki.php/VideoGame/TheLegendOfZeldaBreathOfTheWild">The Legend of Zelda: Breath of the Wild</a></em> uses ragdoll physics. Not only does Link go limp upon death or after a hard hit, enemies also do so.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder1');">     Fighting Games  </div><div class="folder" id="folder1" isfolder="true" style="display:block;">
+<p></p><ul><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Toribash" title="/pmwiki/pmwiki.php/VideoGame/Toribash">Toribash</a></em>, all a fighter's muscles will go limp when a body part is removed, producing a ragdoll effect. However, you can lock them back into place the following turn and continue the battle, even without a head.
+</li><li> In <em>Rag Doll Kung Fu</em>, the characters act like this the whole time, even before they are defeated.
+</li></ul><p></p></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder2');">     First-Person Shooter  </div><div class="folder" id="folder2" isfolder="true" style="display:block;">
+<p></p><ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DeusExInvisibleWar" title="/pmwiki/pmwiki.php/VideoGame/DeusExInvisibleWar">Deus Ex: Invisible War</a></em> to a hilarious effect. If you have master computer hacking skills and take control of a turret, you can have a lot of fun seeing enemies distort and stretch while ragdolling as you pump their corpses full of lead with the turret.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/AlphaPrime" title="/pmwiki/pmwiki.php/VideoGame/AlphaPrime">Alpha Prime</a></em> uses weird ragdoll physics in which many enemies will, when killed, flop down in a <em>sitting</em> position, and won't budge even if repeatedly hit with a hammer.
+</li><li> If a player died while jetting in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TribesVengeance" title="/pmwiki/pmwiki.php/VideoGame/TribesVengeance">Tribes: Vengeance</a></em>, the jet would continue to run until the energy ran out, propelling them around.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/HalfLife2" title="/pmwiki/pmwiki.php/VideoGame/HalfLife2">Half-Life 2</a></em> turns the manipulation of the environment into a powerful tool and weapon for the player; especially appropriate since protagonist Gordon Freeman is a physicist. The Gravity Gun allows many objects of reasonable mass to be lifted, thrown and shoved about for many offensive and defensive purposes.
+<ul><li> The Gravity Gun also gets temporarily powered up at one point, allowing you to lift and throw nearly anything, including <em>corpses</em> (and technically living soldiers, but grabbing them with it is an instant kill).
+</li><li> Valve's Source engine always uses <a class="twikilink" href="/pmwiki/pmwiki.php/Main/WreakingHavok" title="/pmwiki/pmwiki.php/Main/WreakingHavok">Havok</a> physics, and pretty much every game they've made (<em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TeamFortress2" title="/pmwiki/pmwiki.php/VideoGame/TeamFortress2">Team Fortress 2</a>, <a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Left4Dead" title="/pmwiki/pmwiki.php/VideoGame/Left4Dead">Left 4 Dead</a></em>, and <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/HalfLife" title="/pmwiki/pmwiki.php/VideoGame/HalfLife">Half-Life</a></em>) shows you just how every kill falls.
+</li><li> Slightly tweaked in <em>Episode Two</em> - ragdolls now behave more like actual corpses than human-shaped pieces of rubber.
+<ul><li> Whenever somebody creates a comedic <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Machinima" title="/pmwiki/pmwiki.php/Main/Machinima">machinima</a> using <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/GarrysMod" title="/pmwiki/pmwiki.php/VideoGame/GarrysMod">Garry's Mod</a></em>, expect there to be wacky ragdoll flailing for no reason other than <a class="twikilink" href="/pmwiki/pmwiki.php/Main/RuleOfFunny" title="/pmwiki/pmwiki.php/Main/RuleOfFunny">because it's funny to watch.</a> Notable examples include <em><a class="twikilink" href="/pmwiki/pmwiki.php/Fanfic/HalfLifeFullLifeConsequences" title="/pmwiki/pmwiki.php/Fanfic/HalfLifeFullLifeConsequences">Half-Life: Full Life Consequences</a></em> and <em><a class="twikilink" href="/pmwiki/pmwiki.php/Machinima/TheGmodIdiotBox" title="/pmwiki/pmwiki.php/Machinima/TheGmodIdiotBox">The Gmod Idiot Box</a></em>.
+</li></ul></li></ul></li><li> The <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MetroidPrime" title="/pmwiki/pmwiki.php/VideoGame/MetroidPrime">Metroid Prime</a></em> games uses ragdoll physics when you kill a Space Pirate. If there's a slanted walkway, they will slide down after they die. The same physics would later be used for Samus in <em>Metroid Prime 2</em>'s multiplayer when she was killed by a missile or her corpse fell off of something. If you wangle it, you can also see this in action in single player.
+</li><li> The <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TropeMaker" title="/pmwiki/pmwiki.php/Main/TropeMaker">very first game</a> to feature realistic, real-time physics was <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/JurassicParkTrespasser" title="/pmwiki/pmwiki.php/VideoGame/JurassicParkTrespasser">Jurassic Park: Trespasser</a></em> - in fact, it was more realistic than most today's games (e.g. you could pick up objects with your physical hand) and applied even more extensively (the dinosaurs were all animated <em>entirely</em> via ragdoll physics rather than the more standard keyframe animation other games use), but this resulted in rather clunky and unwieldy controls, and dinos that, when their bodies weren't compressing in on themselves, moved like they had alcohol for blood.
+</li><li> Epic's other core franchise, <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Unreal" title="/pmwiki/pmwiki.php/VideoGame/Unreal">Unreal</a></em>, has been getting much the same treatment as of <a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/UnrealTournament2004" title="/pmwiki/pmwiki.php/VideoGame/UnrealTournament2004">UT2003/2004</a>. In those games the ragdoll physics of slain foes were nothing short of wonky. In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/UnrealTournamentIII" title="/pmwiki/pmwiki.php/VideoGame/UnrealTournamentIII">Unreal Tournament III</a></em>, the physics have been reworked so that the ragdoll physics are less WTF-invoking, but they still have their moments. There's also a PhysX map pack floating around which features <a class="twikilink" href="/pmwiki/pmwiki.php/Main/WreakingHavok" title="/pmwiki/pmwiki.php/Main/WreakingHavok">heavily destructible environments,</a> one of which is <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ExactlyWhatItSaysOnTheTin" title="/pmwiki/pmwiki.php/Main/ExactlyWhatItSaysOnTheTin">CTF-Tornado.</a> These maps aren't so much meant to be played seriously as they are tech demos; this is because the sheer amount of ragdoll physics in play will put strain on even the best computers.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Doom" title="/pmwiki/pmwiki.php/VideoGame/Doom">Doom</a> 3</em> also features these. In combination with the comparably bulky build of the characters and enemies, and the fact that for some reason ragdoll elbows do not fold at all, it often results in comical corpse positions. It's not immediately noticeable due to the fact that almost every corpse <a class="twikilink" href="/pmwiki/pmwiki.php/Main/EverythingFades" title="/pmwiki/pmwiki.php/Main/EverythingFades">starts fading away almost before they even hit the ground</a>, though.
+</li><li> Happens when you use the Telekinesis Plasmid in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/BioShock1" title="/pmwiki/pmwiki.php/VideoGame/BioShock1">BioShock</a></em> on corpses - whether splicer or Big Daddy.
+<ul><li> The <a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/BioShock2" title="/pmwiki/pmwiki.php/VideoGame/BioShock2">sequel</a> eventually <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GrievousHarmWithABody" title="/pmwiki/pmwiki.php/Main/GrievousHarmWithABody">lets you do the same with live ones.</a>
+</li></ul></li><li> This feature in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Dystopia" title="/pmwiki/pmwiki.php/VideoGame/Dystopia">Dystopia</a></em> has lead to the unusual defense tactic of making barricades out of random physics objects.
+</li><li> Most zombies have pretty nifty ragdoll effects after death in both <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Left4Dead" title="/pmwiki/pmwiki.php/VideoGame/Left4Dead">Left 4 Dead</a></em> games where their bodies would bend and twist depending how and where they died. In the first game, killing a Smoker or Hunter via headshot would cause an extremely hilarious ragdoll effect where their bodies literally go flying 50 feet across the room or go spinning in the air for a few seconds. This was fixed in the sequel which now makes the Hunter and Smoker just fall over. The extreme ragdoll effect can still be seen if a special infected goes into a deep river and gets instantly killed (even during spawn mode in VS). Survivors killed by a Tank's punch could also ragdoll and get sent flying.
+<ul><li> Previously, due to graphical limitations, zombies would not gib or ragdoll upon death due to an explosive, just disappear into a puff of red mist. With the improved graphic engine of <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Left4Dead2" title="/pmwiki/pmwiki.php/VideoGame/Left4Dead2">Left 4 Dead 2</a></em>, they now gib and ragdoll freely, which creates some pretty impressive explosions, where chunks of meat go flying in every direction. In addition, the developers also included ragdolling <em>intestines</em> that would comically follow and flop with the torso they originated with. While killed survivors would ragdoll in the first game, the sequel disables it and has the survivor use a set animation so that the animation used from a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MagicalDefibrillator" title="/pmwiki/pmwiki.php/Main/MagicalDefibrillator">Magical Defibrillator</a> can play correctly.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Painkiller" title="/pmwiki/pmwiki.php/VideoGame/Painkiller">Painkiller</a></em> uses ragdoll physics heavily - enemies' bodies will fly in any direction, depending on how and where they're hit (if they don't <a class="twikilink" href="/pmwiki/pmwiki.php/Main/LudicrousGibs" title="/pmwiki/pmwiki.php/Main/LudicrousGibs">gib</a> that is) and tumble to the ground, dropping their weapons. Also barrels, urns, chests and other objects will roll around, break on sufficiently hard impact and promptly explode (or break) if something else explodes within a certain distance of them. <em>Their</em> gibs also obey the same laws. Then of course there's the famous stakegun which fires large wooden stakes which can not only impale enemies in spectacular ways, but will also <em>pin them to walls</em> leaving their bodies to helplessly dangle.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TeamFortress2" title="/pmwiki/pmwiki.php/VideoGame/TeamFortress2">Team Fortress 2</a></em> uses ragdoll physics both to normality and to hilarity. Backstab a sniper? He's either on the floor in front of you or half-way across the map. Recent updates to the game have downplayed this, however - backstabs and headshots now trigger specific death animations, with the corpse only ragdolling once they hit the ground.
+<ul><li> And then there's the Sandman, a replacement baseball bat for the Scout. It's taunt can send corpses <a class="urllink" href="https://www.youtube.com/watch?v=Ci2oRg4RFvw">flying across the map.<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a>
+</li><li> This is due to the way that the Source engine reads damage—any damage in excess of what is required to kill a character is converted into force on the ragdoll. This is what leads to hilarity such as the bodies of lightweight classes getting launched into low orbit by the Direct Hit—it does just enough damage to kill them but usually not enough to turn them into <a class="twikilink" href="/pmwiki/pmwiki.php/Main/LudicrousGibs" title="/pmwiki/pmwiki.php/Main/LudicrousGibs">Ludicrous Gibs</a>, and so launches them skyward for several seconds.
+</li></ul></li><li> The <a class="twikilink" href="/pmwiki/pmwiki.php/Main/UpdatedRerelease" title="/pmwiki/pmwiki.php/Main/UpdatedRerelease">Updated Rereleases</a> of <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SeriousSam" title="/pmwiki/pmwiki.php/VideoGame/SeriousSam">Serious Sam</a> TFE/TSE</em> now include ragdolling corpses thanks to the newest iteration of the Serious Engine. Notable in that it gives actual weight to the bodies - even <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TheGoomba" title="/pmwiki/pmwiki.php/Main/TheGoomba">Beheaded Rocketeers</a> hit the ground with a satisfyingly visible "thump".
+</li><li> Ragdolled corpses in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/PerfectDark" title="/pmwiki/pmwiki.php/VideoGame/PerfectDark">Perfect Dark</a> Zero</em> sometimes float and bounce around as if in zero gravity.
+</li><li> The <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FirstEncounterAssaultRecon" title="/pmwiki/pmwiki.php/VideoGame/FirstEncounterAssaultRecon">First Encounter Assault Recon</a></em> series utilizes this. It typically results in dead enemies embedding their limbs into walls upon death.
+</li><li> Anytime a character dies in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Vietcong" title="/pmwiki/pmwiki.php/VideoGame/Vietcong">Vietcong</a> 2</em>, his corpse ragdolls. Can fall into <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Narm" title="/pmwiki/pmwiki.php/Main/Narm">narmy</a> territory at times.
+</li><li> The <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/CommandAndConquerRenegade" title="/pmwiki/pmwiki.php/VideoGame/CommandAndConquerRenegade">Command &amp; Conquer: Renegade</a></em> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/FanRemake" title="/pmwiki/pmwiki.php/Main/FanRemake">Fan Remake</a> uses the Unreal engine, but does not have player gibs. Most deaths by traditional bullet weapons have varied death animations, such as the victim clutching their stomach and falling over, or looking like they just took an invisible clothesline mid-stride. Fire <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ManOnFire" title="/pmwiki/pmwiki.php/Main/ManOnFire">does what you might expect</a>, while Tiberium weapons behave a bit like <a class="twikilink" href="/pmwiki/pmwiki.php/Main/HollywoodAcid" title="/pmwiki/pmwiki.php/Main/HollywoodAcid">Hollywood Acid</a>. Explosives, however, will cheerfully launch a ragdoll thirty feet into the air with a particularly powerful blast. A shot from the mobile artillery gun can punt dead infantry clear to the skybox.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Halo2" title="/pmwiki/pmwiki.php/VideoGame/Halo2">Halo 2</a></em> was the first entry in the <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/Halo" title="/pmwiki/pmwiki.php/Franchise/Halo">Halo</a></em> franchise to implement somewhat realistic physics with the then-new Havok engine, and for the most part it added to the immersiveness of the game. However, its ragdolls were extremely unrealistic to the point of comedy. The Master Chief tended to kick himself in the butt every time he died, and Elites would tend to flail comically. Also there are some <a class="urllink" href="https://www.youtube.com/watch?v=slqK5uBYUek">interesting glitches<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a> you can set off with a Scorpion and a regenerating Covenant barricade...
+<ul><li> And then there's what happens in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/HaloReach" title="/pmwiki/pmwiki.php/VideoGame/HaloReach">Halo: Reach</a></em> if you <a class="urllink" href="https://www.youtube.com/watch?v=HzHx9THtgYA">ragdoll while entering a gravity lift<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a>!
+</li></ul></li><li> Players killed in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/WarBrokers" title="/pmwiki/pmwiki.php/VideoGame/WarBrokers">War Brokers</a></em> go limp and continue flying. The game also has a crash test dummy which shows off the player model.
+</li></ul><p></p></div>
+<div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_3"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_3'); })</script></div></div><p></p><div class="folderlabel" onclick="togglefolder('folder3');">     Beat 'em Ups  </div><div class="folder" id="folder3" isfolder="true" style="display:block;">
+<p></p><ul><li> Enemy corpses in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MadWorld" title="/pmwiki/pmwiki.php/VideoGame/MadWorld">MadWorld</a></em> will go limp once you kill them. If the enemies are sliced into bits as part of the finisher, each body part will ragdoll individually. You can then <a class="twikilink" href="/pmwiki/pmwiki.php/Main/VideoGameCrueltyPotential" title="/pmwiki/pmwiki.php/Main/VideoGameCrueltyPotential">chop up the bits even further</a> with a well-placed vertical chainsaw, if you want.
+</li></ul><p></p></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder4');">     MMORPGs  </div><div class="folder" id="folder4" isfolder="true" style="display:block;">
+<p></p><ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/CityOfHeroes" title="/pmwiki/pmwiki.php/VideoGame/CityOfHeroes">City of Heroes</a></em> added ragdoll physics to its handling of foes in late 2005, but the implementation is not perfect, as attested to by how many times you see a body draped over a non-existent railing. In fact, due to not-quite perfect ragdoll physics it's possible to knock enemies into some kind of barrier and "trap" them as the computer tries to figure out how they should be falling, thus rendering them helpless. Of course, sometimes the ragdoll physics fails entirely. If you can defeat an enemy before they enter combat with you, such as with an Assassin's Strike, they'll occasionally just stand there until they <a class="twikilink" href="/pmwiki/pmwiki.php/Main/EverythingFades" title="/pmwiki/pmwiki.php/Main/EverythingFades">fade away</a>.
+</li></ul><p></p></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder5');">     Platform Games  </div><div class="folder" id="folder5" isfolder="true" style="display:block;">
+<p></p><ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/N" title="/pmwiki/pmwiki.php/VideoGame/N">N</a></em> is a free 2D game that enjoys ragdolling the player whenever they die.
+</li><li> The <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/Nintendo64" title="/pmwiki/pmwiki.php/UsefulNotes/Nintendo64">Nintendo 64</a> game <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/RocketRobotOnWheels" title="/pmwiki/pmwiki.php/VideoGame/RocketRobotOnWheels">Rocket: Robot on Wheels</a></em> was an earlier game to utilize physics, with the "tractor beam" variant. Interesting, the tractor beam allowed for some unusual consequences of the engine: Picking up a sufficiently round (or rolling) object, and wedging a floating platform between it and Rocket through the tractor beam, allowed you to roll along the platform on the object!
+</li></ul><p></p></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder6');">     Puzzle Games  </div><div class="folder" id="folder6" isfolder="true" style="display:block;">
+<p></p><ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/StairDismount" title="/pmwiki/pmwiki.php/VideoGame/StairDismount">Stair Dismount</a></em> (originally named <em>Porrasturvat</em>) is notable for being one of the first games to use ragdoll physics as a gameplay feature. The game is mostly about kicking a ragdoll down a set of stairs, watching it fall down and seeing how much damage you can cause.
+</li><li> <em><a class="createlink" href="/pmwiki/pmwiki.php/VideoGame/RagdollCannon" title="/pmwiki/pmwiki.php/VideoGame/RagdollCannon">Ragdoll Cannon</a></em> and its sequels are IOS and Android games that focus on this trope. You shoot the ragdoll out of the cannon at targets in each level.
+</li></ul><p></p></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder7');">     Racing Games  </div><div class="folder" id="folder7" isfolder="true" style="display:block;">
+<p></p><ul><li> The <strong>whole point</strong> of the <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FlatOut" title="/pmwiki/pmwiki.php/VideoGame/FlatOut">FlatOut</a></em> games is to crash your car in such fashion that the driver's body is ejected in spectacular fashion. The game even includes a mode where you use the driver as a human bowling ball.
+<ul><li> Similarly, <em>Truck Dismount</em> and <em>Stairs Dismount</em> are all about just how much damage you can do to a poor human figure by making it fall down a bunch of stairs or crashing a truck against a barrier. Notable in that the figure falls and writhes a little slowly for ragdoll physics, but the game <em>highlights in red</em> the parts that are being currently damaged. Of course, the games are extremely fun.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Trials" title="/pmwiki/pmwiki.php/VideoGame/Trials">Trials</a> HD</em> has your driver ragdoll upon crashing. Trials Evolution takes it a step further by allowing you to perform a bailout move which throws your driver off the bike in a last ditch attempt to cross the finish line or a checkpoint. If you have a lot of momentum going, you can fling yourself incredibly far. Some custom made tracks involve using the bailout move to hurl your drive across large portions of the track and bounce off many objects to hit the finish line.
+</li></ul><p></p></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder8');">     Role-Playing Games  </div><div class="folder" id="folder8" isfolder="true" style="display:block;">
+<p></p><ul><li> Corpses in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheElderScrollsIVOblivion" title="/pmwiki/pmwiki.php/VideoGame/TheElderScrollsIVOblivion">The Elder Scrolls IV: Oblivion</a></em> very much follow this trope. The rest of the world is not so realistic: arrows lodge in glass as if it were wood, and shooting a clay pitcher will cause it to move, but not break.
+<ul><li> Doubly so in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheElderScrollsVSkyrim" title="/pmwiki/pmwiki.php/VideoGame/TheElderScrollsVSkyrim">Skyrim</a></em>, where the physics engine can <a class="urllink" href="https://www.youtube.com/watch?v=7ZIiDS_RYVY">do some<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a> <a class="urllink" href="https://www.youtube.com/watch?v=7x9Qw1KSyIs&amp;list=LLxvXtj-uENUUIgHdzg4R7hw&amp;index=2&amp;feature=plpp_video">wonky things<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a>.
+</li></ul></li><li> Done to the extreme in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/VampireTheMasqueradeBloodlines" title="/pmwiki/pmwiki.php/VideoGame/VampireTheMasqueradeBloodlines"> Vampire: The Masquerade  Bloodlines</a></em>: hitting your enemies with melee attacks causes them to go flying and land sprawled out. This led to the awesome sight of slashing a vampire with a katana and watching him go spiralling sideways out a window, breaking it, and plunging three stories.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/MassEffect" title="/pmwiki/pmwiki.php/Franchise/MassEffect">Mass Effect</a></em> utilizes ragdoll physics mainly in death animations, but there also <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GravityScrew" title="/pmwiki/pmwiki.php/Main/GravityScrew">zero-G levels</a> where enemies, when shot or meleed, will simply float away, bouncing off architecture and characters.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DemonsSouls" title="/pmwiki/pmwiki.php/VideoGame/DemonsSouls">Demon's Souls</a></em> and the first <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DarkSouls" title="/pmwiki/pmwiki.php/VideoGame/DarkSouls">Dark Souls</a></em> have a bit of a wonky implementation of them, with all corpse-leaving enemies rather light, resulting in Stone Giants who, upon death, apparently turn into cardboard and keep getting stuck on your foot.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DiabloIII" title="/pmwiki/pmwiki.php/VideoGame/DiabloIII">Diablo III</a></em> has implimented ragdoll physics, meaning that if a mook is hit or killed with enough force, they (or <em>bits</em> of them) will go hurtling across the screen. When they turn out in greater numbers, your character gets to play the part of a human bowling ball.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TitanQuest" title="/pmwiki/pmwiki.php/VideoGame/TitanQuest">Titan Quest</a></em> has some pretty good special effects. Do enough damage and monsters will start flying. Kill a skeleton and its bones will spill all around the room. Same applies to the spiritual sequel <em><a class="twikilink" href="/pmwiki/pmwiki.php/Videogame/GrimDawn" title="/pmwiki/pmwiki.php/Videogame/GrimDawn">Grim Dawn</a></em>, with twice the satisfaction thanks to the brutal attacks you can deliver.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder9');">     Shoot Em Ups  </div><div class="folder" id="folder9" isfolder="true" style="display:block;">
+<p></p><ul><li> The freeware game <em><a class="urllink" href="http://www.soldat.pl">Soldat<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a></em> proves that ragdoll physics are fun no matter how many dimensions you use...
+</li></ul><p></p></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder10');">     Simulation Games  </div><div class="folder" id="folder10" isfolder="true" style="display:block;">
+<p></p><ul><li> <em>Off-Road Velociraptor Safari</em> features you driving a truck, attacking raptors with a ball-and-chain strapped to the back. And the raptors ragdoll awesomely when hit.
+</li><li> There's an early example to using ragdoll physics in the game called <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Carmageddon" title="/pmwiki/pmwiki.php/VideoGame/Carmageddon">Carmageddon</a> 2</em> from 1998. There's a quite good physics engine implemented in the game, which allows the player to run over pedestrians more realistically than in the first piece of the series. If you hit them only with low speed they're just tumble down and may get a limb severed (while you gain a "<a class="twikilink" href="/pmwiki/pmwiki.php/Main/VideoGameCrueltyPotential" title="/pmwiki/pmwiki.php/Main/VideoGameCrueltyPotential">Can-n-Mouse Bonus</a>"). Hit them at very high speeds they can burst to pieces, and their limbs spread in every directions, even without the "Explosive Civilians" or "Dismemberfest" powerups running.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/GoatSimulator" title="/pmwiki/pmwiki.php/VideoGame/GoatSimulator">Goat Simulator</a></em>, both the goats and the humans will flop around when knocked over, although this is exaggerated on purpose due to <a class="twikilink" href="/pmwiki/pmwiki.php/Main/RuleOfFunny" title="/pmwiki/pmwiki.php/Main/RuleOfFunny">Rule of Funny</a>.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/Videogame/MechWarrior" title="/pmwiki/pmwiki.php/Videogame/MechWarrior">MechWarrior Living Legends</a></em>, destroying a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/HumongousMecha" title="/pmwiki/pmwiki.php/Main/HumongousMecha">battlemech</a>'s legs will cause them to ragdoll, but still leave them in control of the mech's torso and weaponry. More often than not, the legged mech will crumple face-first into the ground, but they will sometimes fall into a good position, i.e. propped up against a wall, where they can continue to fire. Amusingly, you can still fire your <a class="twikilink" href="/pmwiki/pmwiki.php/Main/JumpJetPack" title="/pmwiki/pmwiki.php/Main/JumpJetPack">Jump Jet Pack</a> while ragdolled, leading to legged mechs twirling through the air uncontrollably as they attempt to chase down the jerk that shot their legs off. Killing <a class="twikilink" href="/pmwiki/pmwiki.php/Main/PoweredArmor" title="/pmwiki/pmwiki.php/Main/PoweredArmor">Powered Armor</a> players as they're using their jetpack causes them spin end over end with the pack still firing, causing their limbs to splay out due to the centrifugal acceleration.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/VisceraCleanupDetail" title="/pmwiki/pmwiki.php/VideoGame/VisceraCleanupDetail">Viscera Cleanup Detail</a></em> uses it as part of the main game mechanics. Limbs flopping around tend to get in the way when trying to fill a bin with body parts (though it does keep things interesting). Bigger alien bodies can be hard to put into the incinerator for the same reason. Thankfully the developers include the welder on such levels, providing an alternate means of dealing with those particular messes.
+</li></ul><p></p></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder11');">     Sports Games  </div><div class="folder" id="folder11" isfolder="true" style="display:block;">
+<p></p><ul><li> THQ's <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/WWEVideoGames" title="/pmwiki/pmwiki.php/VideoGame/WWEVideoGames">WWE SmackDown!</a></em> series has all the wrestlers mimic the way <a class="twikilink" href="/pmwiki/pmwiki.php/Wrestling/DwayneJohnson" title="/pmwiki/pmwiki.php/Wrestling/DwayneJohnson">the Rock</a> sells the Stone Cold Stunner. Given that in real life, the Rock does a full backflip when hit with the finisher of <a class="twikilink" href="/pmwiki/pmwiki.php/Wrestling/StoneColdSteveAustin" title="/pmwiki/pmwiki.php/Wrestling/StoneColdSteveAustin">"Stone Cold" Steve Austin</a>, this becomes hilarious when you hit someone like, say, <a class="twikilink" href="/pmwiki/pmwiki.php/Wrestling/Umaga" title="/pmwiki/pmwiki.php/Wrestling/Umaga">Umaga</a>, with the Stone Cold Stunner.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Skate" title="/pmwiki/pmwiki.php/VideoGame/Skate">Skate</a></em> has a robust ragdoll system for the skater, and the heavily sim-based gameplay relies upon it - so much as a small bump in the head will knock the player off the board. <em>Skate 2</em> and <em>3</em> have an entire mode, entitled "Hall of Meat", dedicated to throwing yourself off buildings and getting points for how much damage is caused. <em>Skate 3</em> is also notorious for how the physics engine is <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GoodBadBugs" title="/pmwiki/pmwiki.php/Main/GoodBadBugs">hilariously broken</a>. <a class="urllink" href="https://www.youtube.com/watch?v=UaUR6u8nHoM">Case in point.<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a>
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder12');">     Stealth-Based Games  </div><div class="folder" id="folder12" isfolder="true" style="display:block;">
+<p></p><ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/ThiefDeadlyShadows" title="/pmwiki/pmwiki.php/VideoGame/ThiefDeadlyShadows">Thief: Deadly Shadows</a></em> uses a particularly strange form of ragdoll physics. If an NPC gets knocked out, they will often crumple into a position that should only be possible for someone without a skeleton.
+</li><li> The <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Hitman" title="/pmwiki/pmwiki.php/VideoGame/Hitman">Hitman</a></em> series incorporated the engine's ragdoll physics into the assassination/stealth aspect of the game. For example, putting a bullet through the head of a guard sitting in a chair would often result in him remaining in a sitting (if somewhat slouched) position. Unless other guards got up really close to him, he'd still register as "alive," resulting in no alarm being triggered.
+<ul><li> This was pretty amusingly implemented in the early games, where you could send enemies flying 50 feet with some of the more powerful weapons. Even 47's trademark dual "Silverballer" .45s were enough to make someone go cartwheeling backwards, and if you were accurate enough to repeatedly land hits on them whilst they were midair it could make for some truly amazing death flights. This was somewhat important for the gameplay; if you used the silenced Ballers to shoot an enemy, for instance, it could propel them into the line of sight of their comrades, ruining your chance for the top stealth ratings.
+</li><li> In fact, <a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/HitmanCodename47" title="/pmwiki/pmwiki.php/VideoGame/HitmanCodename47">the first game</a> is the first successful game ever to use ragdoll physics (the first one to actually use it was <em>Jurassic Park: Trespasser</em> mentioned previously). As part of the learning process, the earlier games were known to have somewhat extreme physics however (such as an Elephant Gun being able to cause a mook to soar up in the air and over a ten-foot wall, if done at the right angle).
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/BatmanArkhamAsylum" title="/pmwiki/pmwiki.php/VideoGame/BatmanArkhamAsylum">Batman: Arkham Asylum</a></em> - <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Mooks" title="/pmwiki/pmwiki.php/Main/Mooks">Mooks</a> falling from a height land in all kinds of unrealistic and decidedly uncomfortable positions (and most are just unconscious, not dead). Sometimes they remain twitching weirdly forever.
+<ul><li> If the mook lands in a way where they glitch through a wall or have too unrealistic a pose, the game will pop them out of existence. Sometimes even right in front of you.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/AssassinsCreedI" title="/pmwiki/pmwiki.php/VideoGame/AssassinsCreedI">Assassin's Creed I</a></em> engine uses ragdoll for the dead. However, it is far too common for the body to start twitching in ridiculous forms for minutes and sometimes they just won't stop.
+<ul><li> It also led to rather rediculous happenings in <a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/AssassinsCreed" title="/pmwiki/pmwiki.php/Franchise/AssassinsCreed">the series</a> when the player loots corpses on slopes. as the player usually bumps the corpse when they get close enough to loot sending the body down the ramp. Not only has this have bodies raining off the tops of buildings but also once started the looting doesn't have to stop when the corpse moves so the player is left looting thin air.
+</li></ul></li></ul><p></p></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder13');">     Strategy  </div><div class="folder" id="folder13" isfolder="true" style="display:block;">
+<p></p><ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/ValkyriaChronicles" title="/pmwiki/pmwiki.php/VideoGame/ValkyriaChronicles">Valkyria Chronicles</a></em> has soldiers ragdoll when they are hit by an explosion, run over by a tank, or lose all their HP. If they survive, they'll just get back up again, but if not, their body tends to reset into a more natural looking pose once the camera's off them.
+<ul><li> Ragdolling models also ignore some soft invisible walls (the sides of ramps, small cliffs, ect.) which can lead to <a class="twikilink" href="/pmwiki/pmwiki.php/Main/FinalDeath" title="/pmwiki/pmwiki.php/Main/FinalDeath">tragedy</a> when an injured unit falls off a walkway and is suddenly a lot closer to the enemy than to you.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/StarcraftIIHeartOfTheSwarm" title="/pmwiki/pmwiki.php/VideoGame/StarcraftIIHeartOfTheSwarm">Starcraft II Heart Of The Swarm</a></em> replaced the static death animations for many units with ragdoll physics, allowing corpses and bits of corpses and interact with the level. It's quite impressive to see an Untralisk explode and one of their kaiser blades bounce over a cliff then skid down a ramp past the rest of your squad.
+</li><li> The <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TotalWar" title="/pmwiki/pmwiki.php/VideoGame/TotalWar">Total War</a></em> series uses normal animations for most deaths, but soldiers hit (or nearly hit) by artillery are flung away by ragdoll — as are ones hit by a cavalry charge, leading to slightly absurd situations where a unit is charged in the flank and dissolves in a bow wave of flying corpses.
+</li></ul><p></p></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder14');">     Survival Horror  </div><div class="folder" id="folder14" isfolder="true" style="display:block;">
+<p></p><ul><li> The <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Penumbra" title="/pmwiki/pmwiki.php/VideoGame/Penumbra">Penumbra</a></em> series actually avoids this quite well, allowing the player to realistically move almost every object imaginable and it's essential for puzzles and evading enemies. However, picking up a dead demonic dog will allow them to jiggle around ridiculously, and a falling human corpse is a perfect example of this trope.
+</li></ul><p></p></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder15');">     Third-Person Shooter  </div><div class="folder" id="folder15" isfolder="true" style="display:block;">
+<p></p><ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DestroyAllHumans" title="/pmwiki/pmwiki.php/VideoGame/DestroyAllHumans">Destroy All Humans!</a></em> is a pastiche of classic fifties "alien invasion" films casting the player as the invader. The main character can toss people, livestock, and eventually, cars, tanks and buses around with his "<a class="twikilink" href="/pmwiki/pmwiki.php/Main/PsychicPowers" title="/pmwiki/pmwiki.php/Main/PsychicPowers">psychokinesis</a>". His saucer has an "abduction beam" that does much the same job.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FreedomFighters" title="/pmwiki/pmwiki.php/VideoGame/FreedomFighters">Freedom Fighters</a></em> also has ragdoll physics. Soviet soldiers come out flying after they receive the impact of a nearby explosion.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/PsiOpsTheMindgateConspiracy" title="/pmwiki/pmwiki.php/VideoGame/PsiOpsTheMindgateConspiracy">Psi-Ops: The Mindgate Conspiracy</a></em> blends telekinesis, pyrokinesis, and mind draining into a beautiful tapestry of turning living guards into bloody smears on a wall.
+</li><li> Oddly enough, the <em><a class="twikilink" href="/pmwiki/pmwiki.php/Anime/TransformersArmada" title="/pmwiki/pmwiki.php/Anime/TransformersArmada">Transformers Armada</a></em> game for the Playstation 2 saw heavy use of this mechanic. Seeing a giant battle-robot flop limply down a hill spoils the atmosphere a little.
+</li><li> The ragdoll physics in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/GearsOfWar" title="/pmwiki/pmwiki.php/VideoGame/GearsOfWar">Gears of War</a></em> were so ludicrous (heavily armored soldiers and giant supertough alien bugs turn into wobbly blobs of chewy flesh as soon as they hit <a class="twikilink" href="/pmwiki/pmwiki.php/Main/CriticalExistenceFailure" title="/pmwiki/pmwiki.php/Main/CriticalExistenceFailure">Critical Existence Failure</a>) that a Japanese artist felt compelled to <a class="urllink" href="http://safebooru.donmai.us/post/show/327702">make a comic about it<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a>.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SecondSight" title="/pmwiki/pmwiki.php/VideoGame/SecondSight">Second Sight</a></em> uses this in conjunciton with <a class="twikilink" href="/pmwiki/pmwiki.php/Main/PsychicPowers" title="/pmwiki/pmwiki.php/Main/PsychicPowers">Psychic Powers</a>. The result is hours of fun. Although sometimes it does result in <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Mook" title="/pmwiki/pmwiki.php/Main/Mook">mook</a> corpses becoming stuck in walls.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MaxPayne" title="/pmwiki/pmwiki.php/VideoGame/MaxPayne">Max Payne</a> 2</em> featured a number of pseudo-cutscenes which revolved around the camera zooming in on someone you'd just shot so that you could watch the physics in action. Often the bad guys who triggered this event would be set up so that they ran at you across a plank high up between buildings or something, to make for truly epic slow-motion plummeting.
+</li><li> One more modern innovation, and arguably one of the most important in animating characters during death or physical interaction, is Euphoria. A spinoff from the Endorphin animation engine, Euphoria is essentially ragdoll physics mixed with various behavioral animations that allow the characters to freely move themselves. This means that they'll try to protect their head when falling, tumble down steps instead of simply sliding down, potentially grab objects and hold on to avoid falling, clutch at wounds, and realistically stumble, fall, and catch themselves when injured. The only games to use this so far have been <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheForceUnleashed" title="/pmwiki/pmwiki.php/VideoGame/TheForceUnleashed">The Force Unleashed</a></em> and its sequel, <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/GrandTheftAutoIV" title="/pmwiki/pmwiki.php/VideoGame/GrandTheftAutoIV">Grand Theft Auto IV</a></em> and <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/GrandTheftAutoV" title="/pmwiki/pmwiki.php/VideoGame/GrandTheftAutoV">V</a></em>, <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/RedDeadRedemption" title="/pmwiki/pmwiki.php/VideoGame/RedDeadRedemption">Red Dead Redemption</a></em> and its sequel, <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MaxPayne" title="/pmwiki/pmwiki.php/VideoGame/MaxPayne">Max Payne</a> 3</em>, and a football game called <em>Backbreaker</em>. Noticeably, only one of these is not a third-person action game and all but two are third-person shooters from Rockstar.
+</li><li> The <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SaintsRow" title="/pmwiki/pmwiki.php/VideoGame/SaintsRow">Saints Row</a></em> games make hilariously over-the-top use of ragdoll physics in the "<a class="twikilink" href="/pmwiki/pmwiki.php/Main/StagedPedestrianAccident" title="/pmwiki/pmwiki.php/Main/StagedPedestrianAccident">insurance fraud</a>" diversion. The Playa/Boss goes flying a ridiculously long way from being hit by a car, even more so in the later games.
+</li></ul><p></p></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder16');">     Non-Video Game Examples  </div><div class="folder" id="folder16" isfolder="true" style="display:block;">
+<p></p><ul><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/Theatre/AVeryPotterMusical" title="/pmwiki/pmwiki.php/Theatre/AVeryPotterMusical">A Very Potter Musical</a></em> Draco occasionally moves around like this.
+</li><li> Many live action films and TV shows will use life-sized dolls as stand-ins for falls in place of stunt doubles. Especially when the impact is going to be shown on-screen. Done <em>well,</em> it gives a quite visceral and gruesome effect. Done <em>badly</em>... <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SpecialEffectsFailure" title="/pmwiki/pmwiki.php/Main/SpecialEffectsFailure">Not so much</a>. Comedic works take advantage of just how fake this looks and play it  often exaggerated  for laughs, with rag dolls being thrown up in the air during fight scenes, or otherwise getting flung around in a way that is quite obviously fake.
+</li></ul><p></p></div>
+<hr/>
+</div>
+<div class="square_ad footer-article-ad main_2" data-isolated="0"></div>
+<div class="section-links" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<div class="titles">
+<div><h3 class="text-center text-uppercase">Previous</h3></div>
+<div><h3 class="text-center text-uppercase">Index</h3></div>
+<div><h3 class="text-center text-uppercase">Next</h3></div>
+</div>
+<div class="links">
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/ProjectilePlatforms">Projectile Platforms</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/VideoGamePhysics">Video Game Physics</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/RecoilBoost">Recoil Boost</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/PuppeteerParasite">Puppeteer Parasite</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/DollsAndPuppetsTropes">Dolls and Puppets Tropes</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/SockPuppet">Sock Puppet</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="outer_ads_by_salon_wrapper" id="exco_player_insert_div">
+</div>
+</article>
+<div id="main-content-sidebar"><div class="sidebar-item display-options">
+<ul class="sidebar display-toggles">
+<li>Show Spoilers <div class="display-toggle show-spoilers" id="sidebar-toggle-showspoilers"></div></li>
+<li>Night Vision <div class="display-toggle night-vision" id="sidebar-toggle-nightvision"></div></li>
+<li>Sticky Header <div class="display-toggle sticky-header" id="sidebar-toggle-stickyheader"></div></li>
+<li>Wide Load <div class="display-toggle wide-load" id="sidebar-toggle-wideload"></div></li>
+</ul>
+<script>updateDesktopPrefs();</script>
+</div>
+<div class="sidebar-item ad sb-ad-unit">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_2"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_2'); });</script> </div>
+</div></div>
+<div class="sidebar-item quick-links" itemtype="http://schema.org/SiteNavigationElement">
+<p class="sidebar-item-title" data-title="Important Links">Important Links</p>
+<div class="padded">
+<a href="/pmwiki/query.php?type=att">Ask The Tropers</a>
+<a href="/pmwiki/query.php?type=tf">Trope Finder</a>
+<a href="/pmwiki/query.php?type=ykts">You Know That Show...</a>
+<a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a>
+<a href="/pmwiki/review_activity.php">Reviews</a>
+<a data-modal-target="login" href="/pmwiki/lbs.php">Live Blogs</a>
+<a href="/pmwiki/ad-free-subscribe.php">Go Ad Free!</a> </div>
+</div>
+<div class="sidebar-item sb-ad-unit">
+<div class="sidebar-section">
+<div class="square_ad ad-size-300x600 ad-section text-center">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_3"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_3'); });</script> </div>
+</div> </div>
+</div>
+</div>
+<div class="sidebar-item">
+<p class="sidebar-item-title" data-title="Crucial Browsing">Crucial Browsing</p>
+<ul class="padded font-s" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><a data-click-toggle="active" href="javascript:void(0);">Genre</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/ActionAdventureTropes" title="Main/ActionAdventureTropes">Action Adventure</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ComedyTropes" title="Main/ComedyTropes">Comedy</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CommercialsTropes" title="Main/CommercialsTropes">Commercials</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CrimeAndPunishmentTropes" title="Main/CrimeAndPunishmentTropes">Crime &amp; Punishment</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DramaTropes" title="Main/DramaTropes">Drama</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/HorrorTropes" title="Main/HorrorTropes">Horror</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LoveTropes" title="Main/LoveTropes">Love</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NewsTropes" title="Main/NewsTropes">News</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ProfessionalWrestling" title="Main/ProfessionalWrestling">Professional Wrestling</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SpeculativeFictionTropes" title="Main/SpeculativeFictionTropes">Speculative Fiction</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SportsStoryTropes" title="Main/SportsStoryTropes">Sports Story</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/WarTropes" title="Main/WarTropes">War</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Media</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/Media" title="Main/Media">All Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/AnimationTropes" title="Main/AnimationTropes">Animation (Western)</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Anime" title="Main/Anime">Anime</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ComicBookTropes" title="Main/ComicBookTropes">Comic Book</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FanFic" title="FanFic/FanFics">Fan Fics</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Film" title="Main/Film">Film</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/GameTropes" title="Main/GameTropes">Game</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Literature" title="Main/Literature">Literature</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MusicAndSoundEffects" title="Main/MusicAndSoundEffects">Music And Sound Effects</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NewMediaTropes" title="Main/NewMediaTropes">New Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/PrintMediaTropes" title="Main/PrintMediaTropes">Print Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Radio" title="Main/Radio">Radio</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SequentialArt" title="Main/SequentialArt">Sequential Art</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TabletopGames" title="Main/TabletopGames">Tabletop Games</a></li>
+<li><a href="/pmwiki/pmwiki.php/UsefulNotes/Television" title="Main/Television">Television</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Theater" title="Main/Theater">Theater</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/VideogameTropes" title="Main/VideogameTropes">Videogame</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Webcomics" title="Main/Webcomics">Webcomics</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Narrative</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/UniversalTropes" title="Main/UniversalTropes">Universal</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/AppliedPhlebotinum" title="Main/AppliedPhlebotinum">Applied Phlebotinum</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CharacterizationTropes" title="Main/CharacterizationTropes">Characterization</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Characters" title="Main/Characters">Characters</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CharactersAsDevice" title="Main/CharactersAsDevice">Characters As Device</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Dialogue" title="Main/Dialogue">Dialogue</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Motifs" title="Main/Motifs">Motifs</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NarrativeDevices" title="Main/NarrativeDevices">Narrative Devices</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Paratext" title="Main/Paratext">Paratext</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Plots" title="Main/Plots">Plots</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Settings" title="Main/Settings">Settings</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Spectacle" title="Main/Spectacle">Spectacle</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Other Categories</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/BritishTellyTropes" title="Main/BritishTellyTropes">British Telly</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TheContributors" title="Main/TheContributors">The Contributors</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CreatorSpeak" title="Main/CreatorSpeak">Creator Speak</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Creators" title="Main/Creators">Creators</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DerivativeWorks" title="Main/DerivativeWorks">Derivative Works</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LanguageTropes" title="Main/LanguageTropes">Language</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LawsAndFormulas" title="Main/LawsAndFormulas">Laws And Formulas</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ShowBusiness" title="Main/ShowBusiness">Show Business</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SplitPersonalityTropes" title="Main/SplitPersonalityTropes">Split Personality</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/StockRoom" title="Main/StockRoom">Stock Room</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TropeTropes" title="Main/TropeTropes">Trope</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Tropes" title="Main/Tropes">Tropes</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TruthAndLies" title="Main/TruthAndLies">Truth And Lies</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TruthInTelevision" title="Main/TruthInTelevision">Truth In Television</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Topical Tropes</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/BetrayalTropes" title="Main/BetrayalTropes">Betrayal</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CensorshipTropes" title="Main/CensorshipTropes">Censorship</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CombatTropes" title="Main/CombatTropes">Combat</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DeathTropes" title="Main/DeathTropes">Death</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FamilyTropes" title="Main/FamilyTropes">Family</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FateAndProphecyTropes" title="Main/FateAndProphecyTropes">Fate And Prophecy</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FoodTropes" title="Main/FoodTropes">Food</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/HolidayTropes" title="Main/HolidayTropes">Holiday</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MemoryTropes" title="Main/MemoryTropes">Memory</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MoneyTropes" title="Main/MoneyTropes">Money</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MoralityTropes" title="Main/MoralityTropes">Morality</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/PoliticsTropes" title="Main/PoliticsTropes">Politics</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ReligionTropes" title="Main/ReligionTropes">Religion</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SchoolTropes" title="Main/SchoolTropes">School</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="sidebar-item showcase">
+<p class="sidebar-item-title" data-title="Community Showcase">Community Showcase <a class="bubble float-right hover-blue" href="/pmwiki/showcase.php">More</a></p>
+<p class="community-showcase">
+<a href="https://sharetv.com/shows/echo_chamber" onclick="trackOutboundLink('https://sharetv.com/shows/echo_chamber');" target="_blank">
+<img alt="" class="lazy-image" data-src="/images/communityShowcase-echochamber.jpg"/></a>
+<a href="/pmwiki/pmwiki.php/Webcomic/TwistedTropes">
+<img alt="" class="lazy-image" data-src="/img/howlandsc-side.jpg"/></a>
+</p>
+</div>
+<div class="sidebar-item sb-ad-unit" id="stick-cont">
+<div class="sidebar-section" id="stick-bar">
+<div class="square_ad ad-size-300x600 ad-section text-center">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_4"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_4'); });</script> </div>
+</div> </div>
+</div>
+</div>
+</div>
+</div>
+<div class="action-bar tablet-off" id="action-bar-bottom">
+<a class="scroll-to-top dead-button" href="#top-of-page" onclick="$('html, body').animate({scrollTop : 0},500);">Top</a>
+</div>
+</div>
+<div class="proper-ad-unit ad-sticky">
+<div id="proper-ad-tvtropes_sticky_ad"> <script>propertag.cmd.push(function() { proper_display('tvtropes_sticky_ad'); });</script> </div>
+</div>
+<footer id="main-footer">
+<div id="main-footer-inner">
+<div class="footer-left">
+<a class="img-link" href="/"><img alt="TV Tropes" class="lazy-image" data-src="/img/tvtropes-footer-logo.png" title="TV Tropes"/></a>
+<form action="index.html" class="navbar-form newsletter-signup validate modal-replies" data-ajax-get="/ajax/subscribe_email.php" id="cse-search-box-mobile" name="" role="">
+<button class="btn-submit newsletter-signup-submit-button" id="subscribe-btn" type="submit"><i class="fa fa-paper-plane"></i></button>
+<input class="form-control" id="subscription-email" name="q" placeholder="Subscribe" size="31" type="text" validate-type="email" value=""/>
+</form>
+<ul class="social-buttons">
+<li><a class="btn fb" href="https://www.facebook.com/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-facebook']);" target="_blank"><i class="fa fa-facebook"></i></a></li>
+<li><a class="btn tw" href="https://www.twitter.com/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-twitter']);" target="_blank"><i class="fa fa-twitter"></i></a> </li>
+<li><a class="btn rd" href="https://www.reddit.com/r/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-reddit']);" target="_blank"><i class="fa fa-reddit-alien"></i></a></li>
+</ul>
+</div>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">TVTropes</h4></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Administrivia">About TVTropes</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TheGoalsOfTVTropes">TVTropes Goals</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TheTropingCode">Troping Code</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TVTropesCustoms">TVTropes Customs</a></li>
+<li><a href="/pmwiki/pmwiki.php/JustForFun/TropesOfLegend">Tropes of Legend</a></li>
+<li><a href="/pmwiki/ad-free-subscribe.php">Go Ad-Free</a></li>
+</ul>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">Community</h4></li>
+<li><a href="/pmwiki/query.php?type=att">Ask The Tropers</a></li>
+<li><a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a></li>
+<li><a href="/pmwiki/query.php?type=tf">Trope Finder</a></li>
+<li><a href="/pmwiki/query.php?type=ykts">You Know That Show</a></li>
+<li><a data-modal-target="login" href="/pmwiki/lbs.php">Live Blogs</a></li>
+<li><a href="/pmwiki/review_activity.php">Reviews</a></li>
+<li><a href="/pmwiki/topics.php">Forum</a></li>
+</ul>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">Tropes HQ</h4></li>
+<li><a href="/pmwiki/about.php">About Us</a></li>
+<li><a href="/pmwiki/contact.php">Contact Us</a></li>
+<li><a href="/pmwiki/dmca.php">DMCA Notice</a></li>
+<li><a href="/pmwiki/privacypolicy.php">Privacy Policy</a></li>
+</ul>
+</div>
+<div class="text-center gutter-top gutter-bottom tablet-on" id="desktop-on-mobile-toggle">
+<a href="/pmwiki/switchDeviceCss.php?mobileVersion=1" rel="nofollow">Switch to <span class="txt-desktop">Desktop</span><span class="txt-mobile">Mobile</span> Version</a>
+</div>
+<div class="legal">
+<p>TVTropes is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License. <br/>Permissions beyond the scope of this license may be available from <a href="mailto:thestaff@tvtropes.org" rel="cc:morePermissions" xmlns:cc="http://creativecommons.org/ns#"> thestaff@tvtropes.org</a>.</p>
+<br/>
+<div class="privacy_wrapper">
+</div>
+</div>
+</footer>
+<style>
+      div.fc-ccpa-root {
+        position: absolute !important;
+        bottom: 93px !important;
+        margin: auto !important;
+        width: 100% !important;
+        z-index: 9999 !important;
+      }
+      .fc-ccpa-root .fc-dns-dialog .fc-dns-link p{
+        outline: none !important;
+        text-decoration: underline !important;
+        font-size: .7em !important;
+        font-family: sans-serif !important;
+      }
+      .fc-ccpa-root .fc-dns-dialog .fc-dns-link .fc-button-background {
+        background: none !important;
+      }
+    </style>
+<div class="full-screen" id="_pm_videoViewer">
+<a class="close" href="#close" id="_pm_videoViewer-close"></a>
+<div class="_pmvv-body">
+<div class="_pmvv-vidbox">
+<video class="video-js vjs-default-skin vjs-16-9" data-video-id="" id="overlay-video-player-box">
+</video>
+<div class="_pmvv-vidbox-desc">
+<h1 id="overlay-title"></h1>
+<p class="_pmvv-vidbox-descTxt" id="overlay-descrip">
+</p>
+<div class="rating-row" data-video-id="">
+<input name="is_logged_in" type="hidden" value="0"/>
+<p>How well does it match the trope?</p>
+<div id="star-rating-group">
+<div class="trope-rate">
+<input id="lamp5" name="rate" type="radio" value="5"/>
+<label for="lamp5" title="Absolutely"></label>
+<input id="lamp4" name="rate" type="radio" value="4"/>
+<label for="lamp4" title="Yes"></label>
+<input id="lamp3" name="rate" type="radio" value="3"/>
+<label for="lamp3" title="Kind of"></label>
+<input id="lamp2" name="rate" type="radio" value="2"/>
+<label for="lamp2" title="Not really"></label>
+<input id="lamp1" name="rate" type="radio" value="1"/>
+<label for="lamp1" title="No"></label>
+</div>
+<div id="star-rating-total">
+</div>
+</div>
+</div>
+<div class="example-media-row">
+<div class="example-overlay">
+<p>Example of:</p>
+<div id="overlay-trope"> / </div>
+</div>
+<div class="media-sources-overlay example-overlay">
+<p>Media sources:</p>
+<div id="overlay-media"> / </div>
+</div>
+</div>
+<p class="_pmvv-vidbox-stats text-right font-s" style="padding-top:8px; border-top: solid 1px rgba(255,255,255,0.2)">
+<a class="float-right" data-modal-target="login" href="#video-feedback">Report</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+        window.special_ops =  {
+            member : 'no',
+            isolated : 0,
+            tags : ['videogame']
+        };
+    </script>
+<script type="text/javascript">
+
+        var cleanCreativeEnabled = "";
+        var donation = "";
+        var live_ads = "1";
+        var img_domain = "https://static.tvtropes.org";
+        var snoozed = cookies.read('snoozedabm');
+        var snoozable = "";
+
+        if (adsRemovedWith) {
+            live_ads = 0;
+        }
+
+        var elem = document.createElement('script');
+        elem.async = true;
+
+        elem.src = '/design/assets/bundle.js?rev=c58d8df02f09262390bbd03db7921fc35c6af306';
+
+        elem.onload = function() {
+                                 }
+        document.getElementsByTagName('head')[0].appendChild(elem);
+
+    </script>
+<script type="text/javascript">
+      function send_analytics_event(user_type, donation){
+          // if(user_type == 'uncached' || user_type == 'cached'){
+          //   ga('send', 'event', 'caching', 'load', user_type, {'nonInteraction': 1});
+          //   return;
+          // }
+          var event_name = user_type;
+
+          if(donation == 'true'){
+              event_name += "_donation"
+          }else if(typeof(valid_user) == 'undefined'){
+              event_name += "_blocked"
+          }else if(valid_user == true){
+              event_name += "_unblocked";
+          }else{
+              event_name = "_unknown"
+          }
+          ga('send', 'event', 'ads', 'load', event_name, {'nonInteraction': 1});
+      }
+
+    
+    send_analytics_event("guest", "false");
+      </script>
+</body>
+</html>

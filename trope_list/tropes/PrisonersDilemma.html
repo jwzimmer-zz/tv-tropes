@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Prisoner's Dilemma - TV Tropes</title>
+<meta content="The Prisoner's Dilemma trope as used in popular culture. A situation arises where two or more characters have two choices: cooperate with each other, or …" name="description"/>
+<link href="https://tvtropes.org/pmwiki/pmwiki.php/Main/PrisonersDilemma" rel="canonical"/>
+<link href="/img/icons/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="@tvtropes" name="twitter:site"/>
+<meta content="@tvtropes" name="twitter:owner"/>
+<meta content="Prisoner's Dilemma - TV Tropes" name="twitter:title"/>
+<meta content="The Prisoner's Dilemma trope as used in popular culture. A situation arises where two or more characters have two choices: cooperate with each other, or …" name="twitter:description"/>
+<meta content="https://static.tvtropes.org/pmwiki/pub/images/20100605_crop2.gif" name="twitter:image:src"/>
+<meta content="TV Tropes" property="og:site_name"/>
+<meta content="en_US" property="og:locale"/>
+<meta content="https://www.facebook.com/tvtropes" property="article:publisher"/>
+<meta content="Prisoner's Dilemma - TV Tropes" property="og:title"/>
+<meta content="website" property="og:type"/>
+<meta content="https://tvtropes.org/pmwiki/pmwiki.php/Main/PrisonersDilemma" property="og:url"/>
+<meta content="https://static.tvtropes.org/pmwiki/pub/images/20100605_crop2.gif" property="og:image"/>
+<meta content="A situation arises where two or more characters have two choices: cooperate with each other, or betray each other. Unfortunately for them, although everyone cooperating would be better than everyone betraying, each of them would individually be …" property="og:description"/>
+<link href="/img/icons/apple-icon-57x57.png" rel="apple-touch-icon" sizes="57x57" type="image/png"/>
+<link href="/img/icons/apple-icon-60x60.png" rel="apple-touch-icon" sizes="60x60" type="image/png"/>
+<link href="/img/icons/apple-icon-72x72.png" rel="apple-touch-icon" sizes="72x72" type="image/png"/>
+<link href="/img/icons/apple-icon-76x76.png" rel="apple-touch-icon" sizes="76x76" type="image/png"/>
+<link href="/img/icons/apple-icon-114x114.png" rel="apple-touch-icon" sizes="114x114" type="image/png"/>
+<link href="/img/icons/apple-icon-120x120.png" rel="apple-touch-icon" sizes="120x120" type="image/png"/>
+<link href="/img/icons/apple-icon-144x144.png" rel="apple-touch-icon" sizes="144x144" type="image/png"/>
+<link href="/img/icons/apple-icon-152x152.png" rel="apple-touch-icon" sizes="152x152" type="image/png"/>
+<link href="/img/icons/apple-icon-180x180.png" rel="apple-touch-icon" sizes="180x180" type="image/png"/>
+<link href="/img/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/img/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/img/icons/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png"/>
+<link href="/img/icons/favicon-192x192.png" rel="icon" sizes="192x192" type="image/png"/>
+<meta content="width=device-width, initial-scale=1" id="viewport" name="viewport"/>
+<script>
+                var propertag = {};
+                propertag.cmd = [];
+            </script>
+<link href="/design/assets/bundle.css?rev=c58d8df02f09262390bbd03db7921fc35c6af306" rel="stylesheet"/>
+<script>
+                function object(objectId) {
+                    if (document.getElementById && document.getElementById(objectId)) {
+                        return document.getElementById(objectId);
+                    } else if (document.all && document.all(objectId)) {
+                        return document.all(objectId);
+                    } else if (document.layers && document.layers[objectId]) {
+                        return document.layers[objectId];
+                    } else {
+                        return false;
+                    }
+                }
+
+                // JAVASCRIPT COOKIES CODE: for getting and setting user viewing preferences
+                var cookies = {
+                    create: function (name, value, days2expire, path) {
+                        var date = new Date();
+                        date.setTime(date.getTime() + (days2expire * 24 * 60 * 60 * 1000));
+                        var expires = date.toUTCString();
+                        document.cookie = name + '=' + value + ';' + 'expires=' + expires + ';' + 'path=' + path + ';';
+                    },
+										createWithExpire: function(name, value, expires, path) {
+												document.cookie = name + '=' + value + ';' + 'expires=' + expires + ';' + 'path=' + path + ';';
+										},
+                    read: function (name) {
+                        var cookie_value = "",
+                            current_cookie = "",
+                            name_expr = name + "=",
+                            all_cookies = document.cookie.split(';'),
+                            n = all_cookies.length;
+
+                        for (var i = 0; i < n; i++) {
+                            current_cookie = all_cookies[i].trim();
+                            if (current_cookie.indexOf(name_expr) === 0) {
+                                cookie_value = current_cookie.substring(name_expr.length, current_cookie.length);
+                                break;
+                            }
+                        }
+                        return cookie_value;
+                    },
+                    update: function (name, val) {
+                        this.create(name, val, 300, "/");
+                    },
+                    remove: function (name) {
+                        document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
+                    }
+                };
+
+                function updateUserPrefs() {
+                    //GENERAL: detect and set browser, if not cookied (will be treated like a user-preference and added to the #user-pref element)
+                    if( !cookies.read('user-browser') ){
+                        var broswer = '';
+
+                        if(navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPod/i) ){
+                            browser = 'iOS';
+                        } else if (/Opera[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'opera';
+                        } else if (/MSIE (\d+\.\d+);/.test(navigator.userAgent)) {
+                            browser = 'MSIE';
+                        } else if (/Navigator[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'netscape';
+                        } else if (/Chrome[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'chrome';
+                        } else if (/Safari[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'safari';
+                            /Version[\/\s](\d+\.\d+)/.test(navigator.userAgent);
+                            browserVersion = new Number(RegExp.$1);
+                        } else if (/Firefox[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'firefox';
+                        } else {
+                            browser = 'internet_explorer';
+                        }
+                        cookies.create('user-browser',browser,1,'/');
+                        document.getElementById('user-prefs').classList.add('browser-' + browser);
+                    } else {
+                        document.getElementById('user-prefs').classList.add('browser-' + cookies.read('user-browser'));
+                    }
+
+                    //update user preference settings
+                    if (cookies.read('wide-load') !== '') document.getElementById('user-prefs').classList.add('wide-load');
+                    if (cookies.read('night-vision') !== '') document.getElementById('user-prefs').classList.add('night-vision');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('user-prefs').classList.add('sticky-header');
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('user-prefs').classList.add('show-spoilers');
+                    if (cookies.read('folders-open') !== '') document.getElementById('user-prefs').classList.add('folders-open');
+                    if (cookies.read('lefthand-sidebar') !== '') document.getElementById('user-prefs').classList.add('lefthand-sidebar');
+                    if (cookies.read('highlight-links') !== '') document.getElementById('user-prefs').classList.add('highlight-links');
+                    if (cookies.read('forum-gingerbread') !== '') document.getElementById('user-prefs').classList.add('forum-gingerbread');
+                    if (cookies.read('shared-avatars') !== '') document.getElementById('user-prefs').classList.add('shared-avatars');
+                    if (cookies.read('new-search') !== '') document.getElementById('user-prefs').classList.add('new-search');
+                    if (cookies.read('stop-auto-play-video') !== '') document.getElementById('user-prefs').classList.add('stop-auto-play-video');
+
+                    //desktop view on mobile
+                    if (cookies.read('desktop-on-mobile') !== ''){
+                        document.getElementById('user-prefs').classList.add('desktop-on-mobile');
+
+                        var viewport = document.querySelector("meta[name=viewport]");
+                        viewport.setAttribute('content', 'width=1000');
+                    }
+
+                }
+
+                function updateDesktopPrefs() {
+                    if (cookies.read('wide-load') !== '') document.getElementById('sidebar-toggle-wideload').classList.add('active');
+                    if (cookies.read('night-vision') !== '') document.getElementById('sidebar-toggle-nightvision').classList.add('active');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('sidebar-toggle-stickyheader').classList.add('active');
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('sidebar-toggle-showspoilers').classList.add('active');
+
+                }
+
+                function updateMobilePrefs() {
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('mobile-toggle-showspoilers').classList.add('active');
+                    if (cookies.read('night-vision') !== '') document.getElementById('mobile-toggle-nightvision').classList.add('active');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('mobile-toggle-stickyheader').classList.add('active');
+                    if (cookies.read('highlight-links') !== '') document.getElementById('mobile-toggle-highlightlinks').classList.add('active');
+
+                }
+
+
+                if (document.cookie.indexOf("scroll0=") < 0) {
+                    // do nothing
+                } else {
+                    console.log('ads removed by scroll.com');
+                    var adsRemovedWith = 'scroll';
+                    var style = document.createElement('style');
+                    style.innerHTML = '#header-ad, .proper-ad-unit, .square_ad, .sb-ad-unit { display: none !important; } ';
+                    document.head.appendChild(style);
+                }
+            </script>
+<script type="text/javascript">
+
+                var tvtropes_config = {
+                    astri_stream_enabled : "",
+                    is_logged_in         : "",
+                    handle               : "",
+                    get_astri_stream     : "",
+										revnum               : "c58d8df02f09262390bbd03db7921fc35c6af306",
+										img_domain           : "https://static.tvtropes.org",
+										adblock              : "1",
+										adblock_url          : "propermessage.io",
+										pause_editing        : "0",
+										pause_editing_msg    : "",
+										pause_site_changes   : ""
+                };
+            </script>
+<script type="text/javascript">
+						  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+						  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+						  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+						  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+						  ga('create', 'UA-3821842-1', 'auto');
+						  ga('send', 'pageview');
+
+						</script>
+</head>
+<body class="">
+<i id="user-prefs"></i>
+<script>updateUserPrefs();</script>
+<div id="fb-root"></div>
+<div id="modal-box"></div>
+<header class="headroom-element" id="main-header-bar">
+<div id="main-header-bar-inner">
+<span class="header-spacer" id="header-spacer-left"></span>
+<a class="mobile-menu-toggle-button tablet-on" href="#mobile-menu" id="main-mobile-toggle"><span></span><span></span><span></span></a>
+<a class="no-dev" href="/" id="main-header-logoButton"></a>
+<span class="header-spacer" id="header-spacer-right"></span>
+<nav class="tablet-off" id="main-header-nav">
+<a href="/pmwiki/pmwiki.php/Main/Tropes">Tropes</a>
+<a href="/pmwiki/pmwiki.php/Main/Media">Media</a>
+<a class="nav-browse" href="/pmwiki/browse.php">Browse</a>
+<a href="/pmwiki/index_report.php">Indexes</a>
+<a href="/pmwiki/topics.php">Forums</a>
+<a class="nav-browse" href="/pmwiki/recent_videos.php">Videos</a>
+</nav>
+<div id="main-header-bar-right">
+<div class="font-xs mobile-off" id="signup-login-box">
+<a class="hover-underline bold" data-modal-target="signup" href="/pmwiki/login.php">Join</a>
+<a class="hover-underline bold" data-modal-target="login" href="/pmwiki/login.php">Login</a>
+</div>
+<div class="mobile-on inline" id="signup-login-mobileToggle">
+<a data-modal-target="login" href="/pmwiki/login.php"><i class="fa fa-user"></i></a>
+</div>
+<div id="search-box">
+<form action="/pmwiki/search_result.php" class="search">
+<input class="search-box" name="q" placeholder="Search" required="" type="text" value=""/>
+<input class="submit-button" type="submit" value=""/>
+<input name="search_type" type="hidden" value="article"/>
+<input name="page_type" type="hidden" value="all"/>
+<input name="cx" type="hidden" value="partner-pub-6610802604051523:amzitfn8e7v"/>
+<input name="cof" type="hidden" value="FORID:10"/>
+<input name="ie" type="hidden" value="ISO-8859-1"/>
+<input name="siteurl" type="hidden" value=""/>
+<input name="ref" type="hidden" value=""/>
+<input name="ss" type="hidden" value=""/>
+</form>
+<a class="mobile-on mobile-search-toggle close-x" href="#close-search"><i class="fa fa-close"></i></a>
+</div>
+<div id="random-box">
+<a class="button-random-trope" href="/pmwiki/pmwiki.php/Main/NotSoForgottenBirthday" onclick="ga('send', 'event', 'button', 'click', 'random trope');" rel="nofollow"></a>
+<a class="button-random-media" href="/pmwiki/pmwiki.php/Franchise/MachineRobo" onclick="ga('send', 'event', 'button', 'click', 'random media');" rel="nofollow"></a>
+</div>
+</div>
+</div>
+<div class="tablet-on" id="mobile-menu"><div class="mobile-menu-options">
+<div class="nav-wrapper">
+<a class="xl" href="/pmwiki/pmwiki.php/Main/Tropes">Tropes</a>
+<a class="xl" href="/pmwiki/pmwiki.php/Main/Media">Media</a>
+<a class="xl" href="/pmwiki/browse.php">Browse</a>
+<a class="xl" href="/pmwiki/index_report.php">Indexes</a>
+<a class="xl" href="/pmwiki/topics.php">Forums</a>
+<a class="xl" href="/pmwiki/recent_videos.php">Videos</a>
+<a href="/pmwiki/query.php?type=att">Ask The Tropers</a>
+<a href="/pmwiki/query.php?type=tf">Trope Finder</a>
+<a href="/pmwiki/query.php?type=ykts">You Know That Show...</a>
+<a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a>
+<a data-click-toggle="active" href="#tools">Tools <i class="fa fa-chevron-down"></i></a>
+<div class="tools-dropdown mobile-dropdown-linkList">
+<a href="/pmwiki/cutlist.php">Cut List</a>
+<a href="/pmwiki/changes.php">New Edits</a>
+<a href="/pmwiki/recent_edit_reasons.php">Edit Reasons</a>
+<a href="/pmwiki/launches.php">Launches</a>
+<a href="/pmwiki/img_list.php">Images List</a>
+<a href="/pmwiki/crown_activity.php">Crowner Activity</a>
+<a href="/pmwiki/no_types.php">Un-typed Pages</a>
+<a href="/pmwiki/page_type_audit.php">Recent Page Type Changes</a>
+</div>
+<a data-click-toggle="active" href="#hq">Tropes HQ <i class="fa fa-chevron-down"></i></a>
+<div class="tools-dropdown mobile-dropdown-linkList">
+<a href="/pmwiki/about.php">About Us</a>
+<a href="/pmwiki/contact.php">Contact Us</a>
+<a href="mailto:advertising@proper.io">Advertise</a>
+<a href="/pmwiki/dmca.php">DMCA Notice</a>
+<a href="/pmwiki/privacypolicy.php">Privacy Policy</a>
+</div>
+<a href="/pmwiki/ad-free-subscribe.php">Go Ad-Free</a>
+<div class="toggle-switches">
+<ul class="mobile-menu display-toggles">
+<li>Show Spoilers <div class="display-toggle show-spoilers" id="mobile-toggle-showspoilers"></div></li>
+<li>Night Vision <div class="display-toggle night-vision" id="mobile-toggle-nightvision"></div></li>
+<li>Sticky Header <div class="display-toggle sticky-header" id="mobile-toggle-stickyheader"></div></li>
+<li>Highlight Links <div class="display-toggle highlight-links" id="mobile-toggle-highlightlinks"></div></li>
+</ul>
+<script>updateMobilePrefs();</script>
+</div>
+</div>
+</div>
+</div>
+</header>
+<div class="mobile-on" id="homepage-introBox-mobile">
+<a href="/"><img class="logo-small" src="/images/logo-white-big.png"/></a>
+<form action="/pmwiki/search_result.php" class="search" style="margin:10px -5px -6px -5px;">
+<input class="search-box" name="q" placeholder="Search" required="" type="text" value=""/>
+<input class="submit-button" type="submit" value=""/>
+<input name="search_type" type="hidden" value="article"/>
+<input name="page_type" type="hidden" value="all"/>
+<input name="cx" type="hidden" value="partner-pub-6610802604051523:amzitfn8e7v"/>
+<input name="cof" type="hidden" value="FORID:10"/>
+<input name="ie" type="hidden" value="ISO-8859-1"/>
+<input name="siteurl" type="hidden" value=""/>
+<input name="ref" type="hidden" value=""/>
+<input name="ss" type="hidden" value=""/>
+</form>
+</div>
+<div class="ad" id="header-ad-wrapper">
+<div id="header-ad">
+<div class="ad-size-970x90 atf_banner">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_1"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_1'); });</script> </div>
+</div> </div>
+</div>
+</div>
+<div id="main-container">
+<div class="action-bar mobile-off" id="action-bar-top">
+<div class="action-bar-right">
+<p>Follow TV Tropes</p>
+<a class="button-fb" href="https://www.facebook.com/TVTropes">
+<i class="fa fa-facebook"></i></a>
+<a class="button-tw" href="https://www.twitter.com/TVTropes">
+<i class="fa fa-twitter"></i></a>
+<a class="button-re" href="https://www.reddit.com/r/TVTropes">
+<i class="fa fa-reddit-alien"></i></a>
+</div>
+<nav class="actions-wrapper" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<ul class="page-actions" id="top_main_list">
+<li class="link-edit">
+<a class="article-edit-button" data-modal-target="login" href="/pmwiki/pmwiki.php/Main/PrisonersDilemma?action=edit" rel="nofollow">
+<i class="fa fa-pencil"></i> Edit Page</a></li><li class="link-related"><a href="/pmwiki/relatedsearch.php?term=Main/PrisonersDilemma">
+<i class="fa fa-share-alt"></i> Related</a></li><li class="link-history"><a href="/pmwiki/article_history.php?article=Main.PrisonersDilemma">
+<i class="fa fa-history"></i> History</a></li><li class="link-discussion"><a href="/pmwiki/remarks.php?trope=Main.PrisonersDilemma">
+<i class="fa fa-comment"></i> Discussion</a></li> </ul>
+<button class="nav__dropdown-toggle" id="top_more_button" onclick="toggle_more_menu('top');" type="button">More</button>
+<ul class="more_menu hidden_more_list" id="top_more_list">
+<li class="link-todo tuck-always more_list_item"><a data-modal-target="login" href="#todo"><i class="fa fa-check-circle"></i> To Do</a></li><li class="link-pageSource tuck-always more_list_item"><a data-modal-target="login" href="/pmwiki/pmwiki.php/Main/PrisonersDilemma?action=source" rel="nofollow" target="_blank"><i class="fa fa-code"></i> Page Source</a></li> </ul>
+</nav>
+<div class="WikiWordModalStub"></div>
+<div class="ImgUploadModalStub" data-page-type="Article"></div>
+<div class="login-alert" style="display: none;">
+You need to <a href="/pmwiki/login.php" style="color:#21A0E8">login</a> to do this. <a href="/pmwiki/login.php?tab=register_account" style="color:#21A0E8">Get Known</a> if you don't have an account
+</div>
+</div>
+<div class="page-Article" id="main-content">
+<article class="with-sidebar" id="main-entry">
+<input id="groupname-hidden" type="hidden" value="Main"/>
+<input id="title-hidden" type="hidden" value="PrisonersDilemma"/>
+<input id="article_id" type="hidden" value="561357"/>
+<input id="logged_in" type="hidden" value="false"/>
+<p class="hidden" id="current_url">http://tvtropes.org/pmwiki/pmwiki.php/Main/PrisonersDilemma</p>
+<meta content="" itemprop="datePublished"/>
+<meta content="" itemprop="articleSection"/>
+<meta content="" itemprop="image"/>
+<a class="watch-button" data-modal-target="login" href="#watch">Follow<span>ing</span></a>
+<h1 class="entry-title" itemprop="headline">
+Prisoner's Dilemma
+</h1>
+<script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+                "@type": "ListItem",
+                "position": 1,
+                "name": "tvtropes.org",
+                "item": "https://tvtropes.org"
+            },{
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Tropes",
+                "item": "https://tvtropes.org/pmwiki/pmwiki.php/Main/Tropes"
+            },{
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Prisoner's Dilemma"            }]
+        }
+    </script>
+<a class="mobile-actionbar-toggle mobile-on" data-click-toggle="active" href="#mobile-actions-toggle" id="mobile-actionbar-toggle">
+<p class="tiny-off">Go To</p><span></span><span></span><span></span><i class="fa fa-pencil"></i></a>
+<nav class="mobile-actions-wrapper mobile-on" id="mobile-actions-bar"></nav>
+<div class="modal fade hidden-until-active" id="editLockModal">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button aria-label="Close" class="close" data-dismiss="modal" type="button"> <span aria-hidden="true">×</span></button>
+<h4 class="modal-title">Edit Locked</h4>
+</div>
+<div class="modal-body">
+<div class="row">
+<div class="body">
+<div class="danger troper_locked_message"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<nav class="body-options" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<ul class="subpage-links">
+<li>
+<a class="subpage-link curr-subpage" href="/pmwiki/pmwiki.php/Main/PrisonersDilemma" title="The Main page">
+<span class="wrapper"><span class="spi main-page"></span>Main</span></a>
+</li>
+<li>
+<a class="subpage-link" href="/pmwiki/pmwiki.php/Laconic/PrisonersDilemma" title="The Laconic page">
+<span class="wrapper"><span class="spi laconic-icon"></span>Laconic</span></a>
+</li>
+<li class="create-subpage dropdown">
+<a aria-expanded="false" class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);" role="button">
+<span class="wrapper">Create New <i class="fa fa-plus-circle"></i></span>
+</a>
+<select onchange="this.options[this.selectedIndex].value &amp;&amp; (window.location = this.options[this.selectedIndex].value);">
+<option value="">- Create New -</option>
+<option value="/pmwiki/pmwiki.php/Analysis/PrisonersDilemma?action=edit">Analysis</option>
+<option value="/pmwiki/pmwiki.php/Characters/PrisonersDilemma?action=edit">Characters</option>
+<option value="/pmwiki/pmwiki.php/FanficRecs/PrisonersDilemma?action=edit">FanficRecs</option>
+<option value="/pmwiki/pmwiki.php/FanWorks/PrisonersDilemma?action=edit">FanWorks</option>
+<option value="/pmwiki/pmwiki.php/Fridge/PrisonersDilemma?action=edit">Fridge</option>
+<option value="/pmwiki/pmwiki.php/Haiku/PrisonersDilemma?action=edit">Haiku</option>
+<option value="/pmwiki/pmwiki.php/Headscratchers/PrisonersDilemma?action=edit">Headscratchers</option>
+<option value="/pmwiki/pmwiki.php/ImageLinks/PrisonersDilemma?action=edit">ImageLinks</option>
+<option value="/pmwiki/pmwiki.php/PlayingWith/PrisonersDilemma?action=edit">PlayingWith</option>
+<option value="/pmwiki/pmwiki.php/Quotes/PrisonersDilemma?action=edit">Quotes</option>
+<option value="/pmwiki/pmwiki.php/Recap/PrisonersDilemma?action=edit">Recap</option>
+<option value="/pmwiki/pmwiki.php/ReferencedBy/PrisonersDilemma?action=edit">ReferencedBy</option>
+<option value="/pmwiki/pmwiki.php/Synopsis/PrisonersDilemma?action=edit">Synopsis</option>
+<option value="/pmwiki/pmwiki.php/Timeline/PrisonersDilemma?action=edit">Timeline</option>
+<option value="/pmwiki/pmwiki.php/Trivia/PrisonersDilemma?action=edit">Trivia</option>
+<option value="/pmwiki/pmwiki.php/WMG/PrisonersDilemma?action=edit">WMG</option>
+<option value="/pmwiki/pmwiki.php/YMMV/PrisonersDilemma?action=edit">YMMV</option>
+</select>
+</li>
+</ul>
+</nav>
+<div class="article-content retro-folders" id="main-article">
+<p>
+</p><div class="quoteright" style="width:350px;"><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/SaturdayMorningBreakfastCereal" title="/pmwiki/pmwiki.php/Webcomic/SaturdayMorningBreakfastCereal"><div class="lazy_load_img_box" style="padding-top:68.57%"><img alt="https://static.tvtropes.org/pmwiki/pub/images/20100605_crop2.gif" border="0" class="embeddedimage" height="240" src="https://static.tvtropes.org/pmwiki/pub/images/20100605_crop2.gif" width="350"/></div></a></div>
+<p></p><div class="indent"><em>"Just think of it as a game. Whoever talks first is the winner."</em>
+<div class="indent">— <strong>Sam Kennedy</strong>, <em><a class="twikilink" href="/pmwiki/pmwiki.php/Film/MurderByNumbers" title="/pmwiki/pmwiki.php/Film/MurderByNumbers">Murder by Numbers</a></em>
+</div></div><div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_1"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_1'); })</script></div></div><p>A situation arises where two or more characters have two choices: cooperate with each other, or betray each other. Unfortunately for them, although everyone cooperating would be better than everyone betraying, each of them would <em>individually</em> be better off betraying. Furthermore, they are unable to communicate with each other, and each must therefore make his choice in ignorance of the other person's choice, and knowing that the other person will be ignorant of his choice until all choices have been made and tallied. This usually leads them to betray en masse leaving everyone worse off, but in some instances they can overcome this and cooperate, usually by trust or commitment.
+</p><p>The classic example is two prisoners (hence the name) who are caught and are being charged with some minor offence that the prosecution can prove. But the prosecution wants them for some other crime for which it has no proof. So an offer is made to each prisoner: if he rats out his partner, no charges will be pressed and he will go free...unless his partner rats him out too. If that happens, both get charged with the bigger crime. If both stay quiet, they both get time for the minor charge; if one partner remains silent and the other betrays him, the one who tattled on his partner will go free while his partner is charged with both crimes. Although both cooperating is better than both betraying, it is individually better to betray no matter what your partner does. If you ever get into one of these situations, you'd better hope the other person doesn't have <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ChronicBackstabbingDisorder" title="/pmwiki/pmwiki.php/Main/ChronicBackstabbingDisorder">Chronic Backstabbing Disorder</a>.
+</p><div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_2"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_2'); })</script></div></div><p>Note that for cops, a common tactic of <a class="twikilink" href="/pmwiki/pmwiki.php/Main/LyingToThePerp" title="/pmwiki/pmwiki.php/Main/LyingToThePerp">Lying to the Perp</a> involves pretending the other guy talked.
+</p><p><a class="twikilink" href="/pmwiki/pmwiki.php/Wiki/TheOtherWiki" title="/pmwiki/pmwiki.php/Wiki/TheOtherWiki">The Other Wiki</a> has <a class="urllink" href="http://en.wikipedia.org/wiki/Prisoner%27s_dilemma">more information<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a> about the subject.
+</p><p>See <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MexicanStandoff" title="/pmwiki/pmwiki.php/Main/MexicanStandoff">Mexican Standoff</a> for a more specific example of this trope. Related to <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ColdEquation" title="/pmwiki/pmwiki.php/Main/ColdEquation">Cold Equation</a>, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MortonsFork" title="/pmwiki/pmwiki.php/Main/MortonsFork">Morton's Fork</a>, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TeethClenchedTeamwork" title="/pmwiki/pmwiki.php/Main/TeethClenchedTeamwork">Teeth-Clenched Teamwork</a>, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/WeAreStrugglingTogether" title="/pmwiki/pmwiki.php/Main/WeAreStrugglingTogether">We ARE Struggling Together</a> and <a class="twikilink" href="/pmwiki/pmwiki.php/Main/InevitableMutualBetrayal" title="/pmwiki/pmwiki.php/Main/InevitableMutualBetrayal">Inevitable Mutual Betrayal</a>. Possibly related to <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AHouseDivided" title="/pmwiki/pmwiki.php/Main/AHouseDivided">A House Divided</a>. Contrast <a class="twikilink" href="/pmwiki/pmwiki.php/Main/RatsInABox" title="/pmwiki/pmwiki.php/Main/RatsInABox">Rats in a Box</a> and <a class="twikilink" href="/pmwiki/pmwiki.php/Main/PowerOfTrust" title="/pmwiki/pmwiki.php/Main/PowerOfTrust">Power of Trust</a>.
+</p><p></p><hr/><div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_3"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_3'); })</script></div></div><h2>Examples:</h2>
+<p></p><div class="folderlabel" onclick="toggleAllFolders();">    open/close all folders  </div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder0');">    Comic Books </div><div class="folder" id="folder0" isfolder="true" style="display:block;">
+<ul><li> Discussed in <em><a class="twikilink" href="/pmwiki/pmwiki.php/ComicBook/TomStrong" title="/pmwiki/pmwiki.php/ComicBook/TomStrong">Tom Strong</a></em>. Tom, attempting to prevent his world from being taken over by super-advanced Aztecs, is captured by them and released by their cyber-god, who asks to be released from his virtual prison in return. Though Tom is wary that the god will continue to take over parallel worlds, he keeps the bargain. The god chooses to quit the Aztec conquest, ruling the worlds that have already been conquered, and explains to Tom why he chose to trust him based on this dilemma.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/ComicBook/TheIncredibleHercules" title="/pmwiki/pmwiki.php/ComicBook/TheIncredibleHercules">The Incredible Hercules</a></em>, both Hercules and his partner Amadeus Cho are captured by the Greek god Hephaestus. <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SadisticChoice" title="/pmwiki/pmwiki.php/Main/SadisticChoice">The rooms they're trapped in both have a switch which will open the other cell's door and allow escape, but will flood the room of the person who pressed it with a gas</a> that not even Hercules can survive. Once the countdown starts, both <a class="twikilink" href="/pmwiki/pmwiki.php/Main/HeterosexualLifePartners" title="/pmwiki/pmwiki.php/Main/HeterosexualLifePartners">Herc and Cho</a> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ActOfTrueLove" title="/pmwiki/pmwiki.php/Main/ActOfTrueLove">press their buttons instantly</a>, setting each other free. Hilariously, Hephaestus hadn't considered this possiblity and was highly irritated.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder1');">    Fan Works </div><div class="folder" id="folder1" isfolder="true" style="display:block;">
+<ul><li> In chapter 33 of <em><a class="twikilink" href="/pmwiki/pmwiki.php/Fanfic/HarryPotterAndTheMethodsOfRationality" title="/pmwiki/pmwiki.php/Fanfic/HarryPotterAndTheMethodsOfRationality">Harry Potter and the Methods of Rationality</a></em>, Harry and Draco find themselves in one of these in the combat games — due to how the scores stand, they need to work together to beat Hermione, and <em>only after</em> beating her can they turn on each other to determine the final winner. If their armies pick each other off beforehand "accidentally", that'll make the final battle that much easier... but if they do too much of that, they won't beat Hermione in the first place. Cue flashbacks to rationality training, in which Harry taught Draco about <em>the</em> Prisoner's Dilemma, and pointed out many ways that it could be bypassed — for example, as Draco immediately pointed out, a pair of Death Eaters would never defect, because the Dark Lord would kill them for their betrayal. But in this case, none of these ways apply — including, to Harry's disappointment, the "we're similar enough that we'll surely make the same choice" method — so they need to come up with another solution. <span class="spoiler" title="you can set spoilers visible by default on your profile">They <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TakeAThirdOption" title="/pmwiki/pmwiki.php/Main/TakeAThirdOption">Take a Third Option</a> and <a class="twikilink" href="/pmwiki/pmwiki.php/Main/LoopholeAbuse" title="/pmwiki/pmwiki.php/Main/LoopholeAbuse">abuse the loopholes</a> in how the scoring system handles <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Turncoat" title="/pmwiki/pmwiki.php/Main/Turncoat">turncoat</a> soldiers.</span>
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder2');">    Literature </div><div class="folder" id="folder2" isfolder="true" style="display:block;">
+<ul><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/TheLongEarth" title="/pmwiki/pmwiki.php/Literature/TheLongEarth">The Long Earth</a></em>, selection pressure from being spread among countless alternate Earths and interacting with sapient but very alien nonhumans creates a hyperintelligent <a class="twikilink" href="/pmwiki/pmwiki.php/Main/HumanSubspecies" title="/pmwiki/pmwiki.php/Main/HumanSubspecies">Human Subspecies</a>, and the government orders their largest concentration nuked. As the setting lacks an inter-dimensional communication system, the officer-in-charge has to decide whether or not to carry out the order. <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TheHero" title="/pmwiki/pmwiki.php/Main/TheHero">The Hero</a> gives them a damned good reason to do <em>no such thing</em>:
+<div class="indent">I guess my final point is a practical one. <em>You can't get them all</em>, here today. Doctor, you say you can hunt the rest down. I doubt it. They're too smart. They'll find ways to evade us we haven't even thought of. You won't kill them all. <em>But they'll remember you tried.</em>
+</div></li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/TheNexusSeries" title="/pmwiki/pmwiki.php/Literature/TheNexusSeries">The Nexus Series</a></em>, this is stated to be the nature of the human/posthuman divide. Posthumans are used to an ongoing pogrom, so they hit baselines whenever and wherever they see the opportunity.
+<div class="indent">...in Iterated Prisoners Dilemma, the winning strategy is to cooperate with strangers. But if you meet someone whos betrayed you in the past, whos defected against you, you betray them. If you treat them this way, if you treat posthumans as slaves, if you torture them, if you make them prisoners Youll drive them to want revenge. Youll make them paranoid and angry. You may drive them insane. Youll create the war that none of us can win. Prisoners dilemma is always iterated in the real world. Defection is a sound strategy when youre playing against defectors.
+</div></li><li> <a class="twikilink" href="/pmwiki/pmwiki.php/Website/AtomicRockets" title="/pmwiki/pmwiki.php/Website/AtomicRockets">Atomic Rockets</a> has a <strong>whole lot</strong> of them gathered in one place <a class="urllink" href="http://www.projectrho.com/public_html/rocket/aliens.php#id--Alien_Contact--The_Fermi_Paradox--Exterminomachy_and_Consequences">here.<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a>
+</li><li> Shows up (and is referred to by name) in the climax of <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/StarTrekFederation" title="/pmwiki/pmwiki.php/Literature/StarTrekFederation">Star Trek: Federation</a></em>. The two <em>Enterprise</em>s are trapped inside the multisingularity. Neither has enough power to escape on their own. Either could maneuver so as to steal spatial distortion from the other, which would enable their ship to escape while dooming the other. Alternately, they could maneuver so as to essentially bounce a distortion wave between them, which if they get the timing perfect will enable both ships to steal spatial distortion from the singularity itself, but will destroy both ships if the timing is off. But neither <em>Enterprise</em> has working comms, so they have no way of knowing what the other is going to do.
+</li><li> The climax of the <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/Xanth" title="/pmwiki/pmwiki.php/Literature/Xanth">Xanth</a></em> novel <em>Golem in the Gears</em> consists literally of four characters repeatedly playing a formalized Prisoner's Dilemma game with each other in order to prove a point that cooperating can pay off.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/FirstContact" title="/pmwiki/pmwiki.php/Literature/FirstContact">First Contact</a></em>: The human ship and the unknown alien ship find themselves stuck in one. If they can arrange a rendezvous and both go home, then each race learns of the other's existence and the possibility of peaceful trade is kept open. But if one of the ships leaves for home and the other tails it back, then the pursuer will learn the location of the pursued's homeworld, giving their race an overwhelming strategic advantage in any potential war. Finally, if the ships fire on each other, then at best one ship makes it home with knowledge of the other race's existence but little to no information on their location or capabilities, and more likely both ships annihilate each other and each race remains ignorant of the other's existence.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder3');">    Films - Live-Action </div><div class="folder" id="folder3" isfolder="true" style="display:block;">
+<ul><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/Film/Drive" title="/pmwiki/pmwiki.php/Film/Drive">Drive</a></em>, Nino and the Driver would be better off if the Driver gave the money back and promised never to talk about it, and Nino left him alone. Of course Nino can't trust him, and decides it's better to kill him.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Film/TheDarkKnight" title="/pmwiki/pmwiki.php/Film/TheDarkKnight">The Dark Knight</a></em> has an explicit but a little more sadistic Prisoner's Dilemma with actual prisoners. In the boat sequence, each boat has a detonator to a bomb on the other boat. If they blow the other boat, their own bomb is disarmed. One prisoner even hints at one of the usual solutions to Prisoner's Dilemmas committing not to blow the other boat by ditching the detonator. Of course this being the Joker, he has a secondary detonator set to blow both boats if they cooperate, which Batman stops him from doing.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/Film/TheEdukators" title="/pmwiki/pmwiki.php/Film/TheEdukators">The Edukators</a></em>, when Jan and Julie got caught breaking and entering by Hardenberg in his house, it would be better for all of them if Hardenberg could credibly promise not to tell anyone about it and they chose not to kidnap him.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/Film/MurderByNumbers" title="/pmwiki/pmwiki.php/Film/MurderByNumbers">Murder by Numbers</a></em> the detectives try to pull a classic Prisoner's Dilemma in the interrogation scene, but the trust between the prisoners and the arrival of the lawyers prevents the defection.
+</li><li> In the French film <em><a class="createlink" href="/pmwiki/pmwiki.php/Film/TwoDaysOneNight" title="/pmwiki/pmwiki.php/Film/TwoDaysOneNight">Two Days One Night</a></em>, the owners of a factory offer the employees a bonus if they agree to fire the protagonist, who happens to be the least productive employee (due to her clinical depression). In the long run, it might be better for the employees to stand together and preserve their collective bargaining power. However, in the short run, many of the employees really need the bonus money, and thus vote almost unanimously to fire the protagonist.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/Film/OceansEight" title="/pmwiki/pmwiki.php/Film/OceansEight">Ocean's 8</a></em> Debbie Ocean ended up on the wrong side of one with her art dealer/scammer boyfriend Claude Becker. They were both arrested for the scam but while she stayed silent, he not only talked by framed her as the mastermind for what had been his scam. So he got off and she was locked up for five years.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder4');">    Live-Action TV </div><div class="folder" id="folder4" isfolder="true" style="display:block;">
+<ul><li> This was an element of gameplay in <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/TheMole" title="/pmwiki/pmwiki.php/Series/TheMole">The Mole</a></em>. It was better for contestants to work together and give maximum effort in challenges, because that increased the pot that they were playing for. However, since <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TheMole" title="/pmwiki/pmwiki.php/Main/TheMole">The Mole</a> was sabotaging the game, and players who incorrectly guessed the identity of The Mole faced risk of elimination in the quiz at the end of the episode, contestants would sometimes sabotage challenges in order to draw false suspicion on themselves.
+</li><li> Several game shows have made use of this mechanic as an endgame, such as <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/Shafted" title="/pmwiki/pmwiki.php/Series/Shafted">Shafted</a></em>, <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/FriendOrFoe" title="/pmwiki/pmwiki.php/Series/FriendOrFoe">Friend or Foe</a></em>, <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/GoldenBalls" title="/pmwiki/pmwiki.php/Series/GoldenBalls">Golden Balls</a></em>, and <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/TakeItAll" title="/pmwiki/pmwiki.php/Series/TakeItAll">Take It All</a></em>. In any case, a pair of contestants must choose to either share a jackpot, or take it for themselves. If one contestant chooses to take it, they take all the money and the other player gets nothing. If both choose to take it, they both walk away with nothing. Of the examples, all of them used this in combination with a system that eliminated players throughout the game. <em>Friend or Foe</em> however, did this once to every team throughout the game, either after they were eliminated (as a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ConsolationPrize" title="/pmwiki/pmwiki.php/Main/ConsolationPrize">Consolation Prize</a>), and once more with the winners at the end of the show (as the second half of a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BonusRound" title="/pmwiki/pmwiki.php/Main/BonusRound">Bonus Round</a>).
+<ul><li> The <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/TheBachelor" title="/pmwiki/pmwiki.php/Series/TheBachelor">The Bachelor</a></em>/<em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/TheBachelorette" title="/pmwiki/pmwiki.php/Series/TheBachelorette">The Bachelorette</a></em> spin-off <em>Bachelor Pad</em> featured this mechanic with a $250,000 jackpot between the final couple, but <em>being divided among all the eliminated contestants</em> if they both chose to steal.
+</li></ul></li><li> In an episode of <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/TheCommish" title="/pmwiki/pmwiki.php/Series/TheCommish">The Commish</a></em> Tony uses the dilemma to trap a couple of killers. He has them brought in and kept for hours without food or drink. He explains the dilemma to one, who won't talk, so Tony lets him go. Then he has the DA go into the other holding room and offer the second guy whatever food he wants. The first guy sees the second guy through the office window, with the DA frantically scribbling down what he's saying, and thinks that the second guy is ratting him out, so the first guy blames the second one for the actual murder.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/MidsomerMurders" title="/pmwiki/pmwiki.php/Series/MidsomerMurders">Midsomer Murders</a></em>: Barnaby uses the trope in one episode to get two individual murderers not to confess, but to witness that they saw the other committing a murder.
+</li><li> In the <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/Quantico" title="/pmwiki/pmwiki.php/Series/Quantico">Quantico</a></em> episode "Cover", FBI Academy Deputy Director Miranda Shaw uses a variant as a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SecretTestOfCharacter" title="/pmwiki/pmwiki.php/Main/SecretTestOfCharacter">Secret Test of Character</a>. After getting her FBI cadets pissed off at each other, she tells them that they are to vote for three candidates to be cut from the training program. Refuse to vote, and she cuts ten. Alex tries to get her classmates to abstain, but Simon chickens out. Truth is, Miranda wasn't planning to cut <em>anyone</em>: the correct response was to stick with each other regardless of personal feelings, and she gives Simon and the candidates about to follow his lead a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/WhatTheHellHero" title="/pmwiki/pmwiki.php/Main/WhatTheHellHero">What the Hell, Hero?</a> speech and threatens him with expulsion if he makes another mistake like that.
+</li><li> The <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/Castle" title="/pmwiki/pmwiki.php/Series/Castle">Castle</a></em> episode "The Double Down" unusually presents the dilemma from the <em>interrogators'</em> perspective. The team realizes that two seemingly unconnected murders were prearranged to be done by the person who had motive for the <em>other</em> murder, in order to provide airtight alibis for the one they would be suspected of. Unfortunately they don't have any hard evidence, so if both suspects keep mum they can't prove the theory. To solve it, Ryan and Esposito tell the weaker link while Castle and Beckett are interrogating him that his partner has <em>already</em> given him up to save his own skin, which convinces the bluffed suspect to confess.
+</li><li> This was frequently invoked on <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/Jeopardy" title="/pmwiki/pmwiki.php/Series/Jeopardy">Jeopardy!</a></em> in situations where there is a tie for first place going into the Final Jeopardy! round. The two tied contestants have no choice but to bet either <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AllOrNothing" title="/pmwiki/pmwiki.php/Main/AllOrNothing">All or Nothing</a> on the Final Jeopardy! clue, depending on how much they trust the other to bet $0. In the best-case scenario, both bet $0 and are declared co-champions regardless of whether they get Final Jeopardy! right or wrong; worst-case scenario is that they both zero out on an incorrect response and the third contestant wins (unless they too bet everything). However, since ties for first place (and hence the co-champion rule) were abolished at the start of Season 31, this can no longer be done without leading to a Tiebreaker clue.
+</li><li> The <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/RizzoliAndIsles" title="/pmwiki/pmwiki.php/Series/RizzoliAndIsles">Rizzoli &amp; Isles</a></em> episode "All For One" involves three suspects involved in a hit-and-run of a teacher at their high school. The three suspects were all best friends along with another girl whom had attempted suicide after the teacher had pressured her into sex and tried to get her expelled, leaving her in a coma. Since Massachusetts law only allows for the prosecution of the driver, the three suspects are interrogated separately to admit who was driving the car. <span class="spoiler" title="you can set spoilers visible by default on your profile"> Despite knowing they faced prison for murder, all three suspects claimed to be the driver to protect the other two when interrogated. This left the detectives unable to identify the driver and forced to let the girls go free, resulting in the three of them beating the Dilemma.</span>
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder5');">    Video Games </div><div class="folder" id="folder5" isfolder="true" style="display:block;">
+<ul><li> A variant of the game appears in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheTalosPrinciple" title="/pmwiki/pmwiki.php/VideoGame/TheTalosPrinciple">The Talos Principle</a></em>'s expansion <em>Road to Gehenna</em> on the message board that you explore within the game world. This version is meant as a combination game and social experiment, and has somewhat unconventional rules: if both participants "betray", each earns two points. If both "co-operate", neither person earns any points. If one betrays and the other co-operates, the former receives one point and the latter three points. Whoever has the most points at the end of the round loses. In contrast to the original dilemma, the participants are able to communicate beforehand, making the game more about bluffing than principles. Because of the way the points are awarded, the only way to win is to convince the opponent to co-operate while you betray (after which point, both parties will sensibly betray until the game ends).
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/KnightsOfTheOldRepublic" title="/pmwiki/pmwiki.php/VideoGame/KnightsOfTheOldRepublic">Knights of the Old Republic</a></em>, a computer trying to determine if the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/PlayerCharacter" title="/pmwiki/pmwiki.php/Main/PlayerCharacter">Player Character</a> is authorized to access it proposes a Prisoner's Dilemma scenario and asks the PC what they would do. In this case, betraying their companion is the "right" choice because it works out better for you no matter what the companion does, but the PC can reject the computer's moral vision and still gain access.
+</li><li> One of the games in <em><a class="twikilink" href="/pmwiki/pmwiki.php/Creator/JackboxGames" title="/pmwiki/pmwiki.php/Creator/JackboxGames">The Jackbox Party Pack 3</a></em>, <em>Trivia Murder Party</em>, has a minigame based on this scenario called "Decisions, Decisions". The host leaves a pile of money for the people in the game to take. If at least one person takes the money, anyone who didn't take it dies. If <em>everyone</em> takes the money, <em>everyone</em> dies. The only scenario where everyone is kept alive is if absolutely nobody takes any money, but would you really trust your friends to cooperate with you, especially if it involves more than 2 people?
+</li><li> This is present as a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MiniGame" title="/pmwiki/pmwiki.php/Main/MiniGame">Mini-Game</a> in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/UniversalPaperclips" title="/pmwiki/pmwiki.php/VideoGame/UniversalPaperclips">Universal Paperclips</a></em> where your Paperclip maximizer AI runs a simulation of it, among other decision theory games. The player doesn't pick one of the choices — instead, it chooses one of a variety of different strategies (such as a Greedy algorithm which tries to take the choice with the potential most points), pits all the strategies against each other in the dilemma scenario, and receives a resource depending on how well said strategy scored. <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SortingAlgorithmOfWeaponEffectiveness" title="/pmwiki/pmwiki.php/Main/SortingAlgorithmOfWeaponEffectiveness">You unlock new strategies in a pretty much perfectly ascending order of average effectiveness.</a>
+</li><li> A minor character in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/BaldursGateII" title="/pmwiki/pmwiki.php/VideoGame/BaldursGateII">Baldur's Gate II</a></em> will ask the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/PlayerCharacter" title="/pmwiki/pmwiki.php/Main/PlayerCharacter">Player Character</a> how they would respond to a modified version where a pair of siblings are captured by a sadistic wizard in individual cells and each given the option of pressing a button in their cell or not. If only one person presses the button, the other goes free, but if both or neither presses the button both die. Depending on your answer, the character will 'reward' you with a challenging but rewarding battle or a zero effort battle with no reward. Alternatively...
+<div class="indent"><strong>Minsc:</strong> This is silly, buttons is not how one escapes dungeons! I would smash the button, and rain down beatings on the wizard liberally for playing such a trick!
+</div></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DeadByDaylight" title="/pmwiki/pmwiki.php/VideoGame/DeadByDaylight">Dead by Daylight</a></em>:
+<ul><li> The Pig's gimmick is called Jigsaw's Baptism; she places the Reverse Bear Traps iconic to the <em><a class="twikilink" href="/pmwiki/pmwiki.php/Film/Saw" title="/pmwiki/pmwiki.php/Film/Saw">Saw</a></em> series onto Survivors she downs. These traps are inactive until a generator on the map has been completed. Once that happens, the trapped Survivor has only a limited amount of time to remove the trap or die. This means the other Survivors can either hold off on generators to avoid risk to their teammate, or keep going and potentially doom them while saving themselves.
+</li><li> The Plague's power, Vile Purge, consists of her vomiting on Survivors. If the vomit is not cleansed by using Pools of Devotion, fountains scattered around the map, the Survivor will eventually become a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/OneHitPointWonder" title="/pmwiki/pmwiki.php/Main/OneHitPointWonder">One-Hit Point Wonder</a> until they do and spread the sickness to any other Survivor or environmental item they interact with. Cleansing the illness, however, allows the Plague to go to whichever fountain was used and upgrade her Vile Purge to Corrupt Purge, changing her vomit to red and allowing it to damage Survivors she hits instead of infecting them. The choice for Survivors then becomes either don't cleanse and heal, meaning the Plague can down them in one hit instead of two, or cleanse and potentially give the Plague a <em>much</em> more dangerous ranged attack.
+</li></ul></li><li> A sidequest in <em><a class="twikilink" href="/pmwiki/pmwiki.php/Videogame/Destiny2" title="/pmwiki/pmwiki.php/Videogame/Destiny2">Destiny 2</a></em> involves a group of <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SpacePirates" title="/pmwiki/pmwiki.php/Main/SpacePirates">Fallen</a> who have been captured by the robotic Vex. As part of an experiment, the Vex put the Fallen through a variant of this experiment, offering to allow any Fallen who would kill their companions to go free. <a class="twikilink" href="/pmwiki/pmwiki.php/Main/UndyingLoyalty" title="/pmwiki/pmwiki.php/Main/UndyingLoyalty">None of the Fallen would turn on their fellows</a>.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder6');">    Visual Novels </div><div class="folder" id="folder6" isfolder="true" style="display:block;">
+<ul><li> This is the basis behind the Nonary Game: Ambidex Edition in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VisualNovel/ZeroEscape" title="/pmwiki/pmwiki.php/VisualNovel/ZeroEscape">Zero Escape</a>: <a class="twikilink" href="/pmwiki/pmwiki.php/VisualNovel/VirtuesLastReward" title="/pmwiki/pmwiki.php/VisualNovel/VirtuesLastReward">Virtue's Last Reward</a></em>, and Phi spends about 3 minutes explaining the concept to Sigma. The object is to escape the facility with 9 Bracelet Points, and the only way to get BP is to vote at the end of each round either for or against the people whom you cleared the round with. If both sides vote "ally," then both gain 2 BP; if one side votes "betray" while the other votes "ally," then the betraying side gains 3 BP and the betrayed loses 2. If both decide to betray, then neither will gain any BP for that round (which becomes a problem since the door to escape can only open once, meaning someone who played smarter could reach 9 BP before you do). Failing to vote causes the system to automatically vote "ally" on your behalf, which would seem to be an easy solution — but <em>both</em> sides failing to vote results in death by lethal injection via the point-counting bracelets worn by the players (which also happens to be the punishment for dropping to 0 BP). Funnily enough, after finishing her explanation, Sigma concludes that they should vote to ally, and Phi instead insists on betraying.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VisualNovel/DanganronpaTriggerHappyHavoc" title="/pmwiki/pmwiki.php/VisualNovel/DanganronpaTriggerHappyHavoc">Danganronpa: Trigger Happy Havoc</a></em>, Celestia Ludenberg references the concept and uses the example of two countries building their military strength under fear of betrayal from the other to explain the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DeadlyGame" title="/pmwiki/pmwiki.php/Main/DeadlyGame">School Life of Mutual Killing</a> that the 15 students have been forced into (in which uniting together against The Mastermind would be ideal, but none can escape the possibility of someone cracking under the pressure of wanting to escape the school by choosing to kill someone else).
+</li></ul></div>
+<p>
+</p><p></p><div class="folderlabel" onclick="togglefolder('folder8');">    Web Original </div><div class="folder" id="folder8" isfolder="true" style="display:block;">
+<ul><li> <a class="urllink" href="http://www.iterated-prisoners-dilemma.net/">This website<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a> lets people run a simulation of this game against a computer opponent that follows a pre-selected strategy. The most common strategy is called "Tit for Tat"; i.e. repeating the action your opponent did last round.
+</li><li> <a class="urllink" href="http://ncase.me/trust/">The Evolution of Trust<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a> is an interactive version of this puzzle, with different 'AIs' and the potential for miscommunication added to the mix.
+</li><li> <a class="urllink" href="https://www.youtube.com/watch?v=biYN968QMzA">This video<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a> has it as the main theme. A man, Luc, commits a murder and asks his friends to help him cover it up. Between the three, who can he trust? <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TheCasanova" title="/pmwiki/pmwiki.php/Main/TheCasanova">Mathieu the "Fuckboy", who would dump him for the nearest girl</a>, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MiserAdvisor" title="/pmwiki/pmwiki.php/Main/MiserAdvisor">Thomas the "Skinflint" who keeps track of every penny owed to him</a>, or <a class="twikilink" href="/pmwiki/pmwiki.php/Main/NotCheatingUnlessYouGetCaught" title="/pmwiki/pmwiki.php/Main/NotCheatingUnlessYouGetCaught">William the "Cheater", who cheats and manipulates at every game due to being obsessed with victory</a>? The answer is: <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TrueCompanions" title="/pmwiki/pmwiki.php/Main/TrueCompanions">all of them</a>. Of course, William is aware of the Dilemma and that they will likely face it, and decides to cheat - after all, if nobody rats anyone out, they'll be free men. So they pass off Mathieu, their strongest willed member for their weakest in the face of the assistant detective, Pierre. He tells them to NOT get their lawyer, and instead ask if the alleged rat called his lawyer before confessing, calling the lead detective's bluff. And in the event that Luc would denounce himself out of loyalty to the others, William <a class="twikilink" href="/pmwiki/pmwiki.php/Main/CrazyPrepared" title="/pmwiki/pmwiki.php/Main/CrazyPrepared">gave him false coordinates and location for the location where they buried the corpse, which would render any confession false, null and void</a>. At the end, William admits that the Prisoner's Dilemma is infallible due to the very premise of lack of communication between the suspects, which eventually leads them to betray each other. But what if <span class="spoiler" title="you can set spoilers visible by default on your profile">there was a fifth person, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TheReliableOne" title="/pmwiki/pmwiki.php/Main/TheReliableOne">Pierre the "Loyal" one</a>, who <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DetectiveMole" title="/pmwiki/pmwiki.php/Main/DetectiveMole">joined the police and rose to assistant detective</a> at William's behest, putting in place a system to communicate the fact that nobody talked - such as, say, smacking a prison door in anger?</span>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/LetsPlay/UnoTheMovie" title="/pmwiki/pmwiki.php/LetsPlay/UnoTheMovie">Uno: The Movie</a></em> features <a class="twikilink" href="/pmwiki/pmwiki.php/Creator/AchievementHunter" title="/pmwiki/pmwiki.php/Creator/AchievementHunter">five men</a> playing a game of <em>Uno</em> that, thanks to a ridiculous set of house rules, lasts for over two and a half hours. After around the forty minutes or so, each of the guys just wants the game to end, and talk about cooperating with each other to do so. The problem is, they can't help but continue to screw each other over in the vain hope of winning.
+<div class="indent"> <strong>Gavin:</strong> We all want to go home, but nobody wants to lose!
+</div></li><li> <a class="twikilink" href="/pmwiki/pmwiki.php/Podcast/TheAdventureZoneBalance" title="/pmwiki/pmwiki.php/Podcast/TheAdventureZoneBalance">The Adventure Zone</a> has Trust or Forsake in The Suffering Game arc, which is this trope. <span class="spoiler" title="you can set spoilers visible by default on your profile">But even when the heroes get the best outcome, they end up forsaking friendly people they had met earlier.</span>
+</li><li> <a class="twikilink" href="/pmwiki/pmwiki.php/WebVideo/JubileeMedia" title="/pmwiki/pmwiki.php/WebVideo/JubileeMedia">Jubilee Media</a>'s video series <em>Human Theory</em> presents a version of this, in which two groups of people agree to choose a colour (red or blue), revealing their choices simultaneously. Each group receives a small cash prize if both choose blue, and nothing if both choose red, but should only one group choose red, that group receives a large cash prize and the other group nothing at all. This series tends to zigzag between <a class="twikilink" href="/pmwiki/pmwiki.php/Main/HobbesWasRight" title="/pmwiki/pmwiki.php/Main/HobbesWasRight">Hobbes Was Right</a> and <a class="twikilink" href="/pmwiki/pmwiki.php/Main/RousseauWasRight" title="/pmwiki/pmwiki.php/Main/RousseauWasRight">Rousseau Was Right</a> in the outcomes, although the latter less frequently, as it often only takes one selfish/distrustful participant to thwart a mutually beneficial result.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder9');">    Western Animation </div><div class="folder" id="folder9" isfolder="true" style="display:block;">
+<ul><li> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/PlayedForLaughs" title="/pmwiki/pmwiki.php/Main/PlayedForLaughs">Played for Laughs</a> when the titular <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/Dilbert" title="/pmwiki/pmwiki.php/WesternAnimation/Dilbert">Dilbert</a></em> is accused of a crime and offered a chance to confess for a lighter sentence. He cites The Prisoner's Dilemma by name and taunts the interrogator, pointing out that since he and all his co-workers are aware of it none of them will talk and they'll all go free. The interrogator just shrugs and opens the curtains, showing <em>every single one of his co-workers</em> all gleefully ratting on Dilbert. For bonus points, none of them actually committed a crime and they all know it; they just ratted out Dilbert because <a class="twikilink" href="/pmwiki/pmwiki.php/Main/RuleOfFunny" title="/pmwiki/pmwiki.php/Main/RuleOfFunny">it's just that kind of show</a>.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/BobsBurgers" title="/pmwiki/pmwiki.php/WesternAnimation/BobsBurgers">Bob's Burgers</a></em>: Season 5 finale, "The Oeder Games" has Mr. Fischoeder doing this to his tenants. When they join together against him to have a strike because he is unreasonably raising their rent, he offers them a game: a water balloon fight in which the last man standing gets 50% off their rent permanently, while all the others will get their rents raised. Bob can see right through the ruse by which there's only one winner and many losers, but the other tenants, including his own family are quick to join the game and turn against each other, which is worse than Bob's plan which could result in nobody getting their rents raised.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder10');">     Other </div><div class="folder" id="folder10" isfolder="true" style="display:block;">
+<ul><li> Some cases of <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SiblingRivalry" title="/pmwiki/pmwiki.php/Main/SiblingRivalry">Sibling Rivalry</a> could be considered a variant of this: while, logically, if two or more people are stuck with each other all the time, it would make the most sense for everyone to be nice to each other, as that makes it the most pleasant for everyone involved. That said, you can't really expect a 5 year old to figure this out.
+</li></ul></div>
+<hr/>
+</div>
+<div class="square_ad footer-article-ad main_2" data-isolated="0"></div>
+<div class="section-links" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<div class="titles">
+<div><h3 class="text-center text-uppercase">Previous</h3></div>
+<div><h3 class="text-center text-uppercase">Index</h3></div>
+<div><h3 class="text-center text-uppercase">Next</h3></div>
+</div>
+<div class="links">
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/ThePowerOfLanguage">The Power of Language</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/PhilosophyTropes">Philosophy Tropes</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/PuffOfLogic">Puff of Logic</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/ThePerryMasonMethod">The Perry Mason Method</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/PerpSweating">Perp Sweating</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/RabidCop">Rabid Cop</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/PrisonerExchange">Prisoner Exchange</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/WeAreNotAlone/TropesMToP">WeAreNotAlone/Tropes M to P</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/PrivateDetective">Private Detective</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/PrinciplesZealot">Principles Zealot</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/CynicismTropes">Cynicism Tropes</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/ThePromisedLand">The Promised Land</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/PleaseShootTheMessenger">Please Shoot the Messenger</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/BetrayalTropes">Betrayal Tropes</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/ProperlyParanoid">Properly Paranoid</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/ProphecyTwist">Prophecy Twist</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/ImageSource/Webcomics">ImageSource/Webcomics</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/SesquipedalianLoquaciousness">Sesquipedalian Loquaciousness</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/PoorCommunicationKills">Poor Communication Kills</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/DiscordTropes">Discord Tropes</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/PropertyLine">Property Line</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="outer_ads_by_salon_wrapper" id="exco_player_insert_div">
+</div>
+</article>
+<div id="main-content-sidebar"><div class="sidebar-item display-options">
+<ul class="sidebar display-toggles">
+<li>Show Spoilers <div class="display-toggle show-spoilers" id="sidebar-toggle-showspoilers"></div></li>
+<li>Night Vision <div class="display-toggle night-vision" id="sidebar-toggle-nightvision"></div></li>
+<li>Sticky Header <div class="display-toggle sticky-header" id="sidebar-toggle-stickyheader"></div></li>
+<li>Wide Load <div class="display-toggle wide-load" id="sidebar-toggle-wideload"></div></li>
+</ul>
+<script>updateDesktopPrefs();</script>
+</div>
+<div class="sidebar-item ad sb-ad-unit">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_2"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_2'); });</script> </div>
+</div></div>
+<div class="sidebar-item quick-links" itemtype="http://schema.org/SiteNavigationElement">
+<p class="sidebar-item-title" data-title="Important Links">Important Links</p>
+<div class="padded">
+<a href="/pmwiki/query.php?type=att">Ask The Tropers</a>
+<a href="/pmwiki/query.php?type=tf">Trope Finder</a>
+<a href="/pmwiki/query.php?type=ykts">You Know That Show...</a>
+<a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a>
+<a href="/pmwiki/review_activity.php">Reviews</a>
+<a data-modal-target="login" href="/pmwiki/lbs.php">Live Blogs</a>
+<a href="/pmwiki/ad-free-subscribe.php">Go Ad Free!</a> </div>
+</div>
+<div class="sidebar-item sb-ad-unit">
+<div class="sidebar-section">
+<div class="square_ad ad-size-300x600 ad-section text-center">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_3"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_3'); });</script> </div>
+</div> </div>
+</div>
+</div>
+<div class="sidebar-item">
+<p class="sidebar-item-title" data-title="Crucial Browsing">Crucial Browsing</p>
+<ul class="padded font-s" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><a data-click-toggle="active" href="javascript:void(0);">Genre</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/ActionAdventureTropes" title="Main/ActionAdventureTropes">Action Adventure</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ComedyTropes" title="Main/ComedyTropes">Comedy</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CommercialsTropes" title="Main/CommercialsTropes">Commercials</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CrimeAndPunishmentTropes" title="Main/CrimeAndPunishmentTropes">Crime &amp; Punishment</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DramaTropes" title="Main/DramaTropes">Drama</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/HorrorTropes" title="Main/HorrorTropes">Horror</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LoveTropes" title="Main/LoveTropes">Love</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NewsTropes" title="Main/NewsTropes">News</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ProfessionalWrestling" title="Main/ProfessionalWrestling">Professional Wrestling</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SpeculativeFictionTropes" title="Main/SpeculativeFictionTropes">Speculative Fiction</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SportsStoryTropes" title="Main/SportsStoryTropes">Sports Story</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/WarTropes" title="Main/WarTropes">War</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Media</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/Media" title="Main/Media">All Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/AnimationTropes" title="Main/AnimationTropes">Animation (Western)</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Anime" title="Main/Anime">Anime</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ComicBookTropes" title="Main/ComicBookTropes">Comic Book</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FanFic" title="FanFic/FanFics">Fan Fics</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Film" title="Main/Film">Film</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/GameTropes" title="Main/GameTropes">Game</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Literature" title="Main/Literature">Literature</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MusicAndSoundEffects" title="Main/MusicAndSoundEffects">Music And Sound Effects</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NewMediaTropes" title="Main/NewMediaTropes">New Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/PrintMediaTropes" title="Main/PrintMediaTropes">Print Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Radio" title="Main/Radio">Radio</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SequentialArt" title="Main/SequentialArt">Sequential Art</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TabletopGames" title="Main/TabletopGames">Tabletop Games</a></li>
+<li><a href="/pmwiki/pmwiki.php/UsefulNotes/Television" title="Main/Television">Television</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Theater" title="Main/Theater">Theater</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/VideogameTropes" title="Main/VideogameTropes">Videogame</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Webcomics" title="Main/Webcomics">Webcomics</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Narrative</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/UniversalTropes" title="Main/UniversalTropes">Universal</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/AppliedPhlebotinum" title="Main/AppliedPhlebotinum">Applied Phlebotinum</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CharacterizationTropes" title="Main/CharacterizationTropes">Characterization</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Characters" title="Main/Characters">Characters</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CharactersAsDevice" title="Main/CharactersAsDevice">Characters As Device</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Dialogue" title="Main/Dialogue">Dialogue</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Motifs" title="Main/Motifs">Motifs</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NarrativeDevices" title="Main/NarrativeDevices">Narrative Devices</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Paratext" title="Main/Paratext">Paratext</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Plots" title="Main/Plots">Plots</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Settings" title="Main/Settings">Settings</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Spectacle" title="Main/Spectacle">Spectacle</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Other Categories</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/BritishTellyTropes" title="Main/BritishTellyTropes">British Telly</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TheContributors" title="Main/TheContributors">The Contributors</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CreatorSpeak" title="Main/CreatorSpeak">Creator Speak</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Creators" title="Main/Creators">Creators</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DerivativeWorks" title="Main/DerivativeWorks">Derivative Works</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LanguageTropes" title="Main/LanguageTropes">Language</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LawsAndFormulas" title="Main/LawsAndFormulas">Laws And Formulas</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ShowBusiness" title="Main/ShowBusiness">Show Business</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SplitPersonalityTropes" title="Main/SplitPersonalityTropes">Split Personality</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/StockRoom" title="Main/StockRoom">Stock Room</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TropeTropes" title="Main/TropeTropes">Trope</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Tropes" title="Main/Tropes">Tropes</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TruthAndLies" title="Main/TruthAndLies">Truth And Lies</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TruthInTelevision" title="Main/TruthInTelevision">Truth In Television</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Topical Tropes</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/BetrayalTropes" title="Main/BetrayalTropes">Betrayal</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CensorshipTropes" title="Main/CensorshipTropes">Censorship</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CombatTropes" title="Main/CombatTropes">Combat</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DeathTropes" title="Main/DeathTropes">Death</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FamilyTropes" title="Main/FamilyTropes">Family</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FateAndProphecyTropes" title="Main/FateAndProphecyTropes">Fate And Prophecy</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FoodTropes" title="Main/FoodTropes">Food</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/HolidayTropes" title="Main/HolidayTropes">Holiday</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MemoryTropes" title="Main/MemoryTropes">Memory</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MoneyTropes" title="Main/MoneyTropes">Money</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MoralityTropes" title="Main/MoralityTropes">Morality</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/PoliticsTropes" title="Main/PoliticsTropes">Politics</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ReligionTropes" title="Main/ReligionTropes">Religion</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SchoolTropes" title="Main/SchoolTropes">School</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="sidebar-item showcase">
+<p class="sidebar-item-title" data-title="Community Showcase">Community Showcase <a class="bubble float-right hover-blue" href="/pmwiki/showcase.php">More</a></p>
+<p class="community-showcase">
+<a href="https://sharetv.com/shows/echo_chamber" onclick="trackOutboundLink('https://sharetv.com/shows/echo_chamber');" target="_blank">
+<img alt="" class="lazy-image" data-src="/images/communityShowcase-echochamber.jpg"/></a>
+<a href="/pmwiki/pmwiki.php/Webcomic/TwistedTropes">
+<img alt="" class="lazy-image" data-src="/img/howlandsc-side.jpg"/></a>
+</p>
+</div>
+<div class="sidebar-item sb-ad-unit" id="stick-cont">
+<div class="sidebar-section" id="stick-bar">
+<div class="square_ad ad-size-300x600 ad-section text-center">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_4"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_4'); });</script> </div>
+</div> </div>
+</div>
+</div>
+</div>
+</div>
+<div class="action-bar tablet-off" id="action-bar-bottom">
+<a class="scroll-to-top dead-button" href="#top-of-page" onclick="$('html, body').animate({scrollTop : 0},500);">Top</a>
+</div>
+</div>
+<div class="proper-ad-unit ad-sticky">
+<div id="proper-ad-tvtropes_sticky_ad"> <script>propertag.cmd.push(function() { proper_display('tvtropes_sticky_ad'); });</script> </div>
+</div>
+<footer id="main-footer">
+<div id="main-footer-inner">
+<div class="footer-left">
+<a class="img-link" href="/"><img alt="TV Tropes" class="lazy-image" data-src="/img/tvtropes-footer-logo.png" title="TV Tropes"/></a>
+<form action="index.html" class="navbar-form newsletter-signup validate modal-replies" data-ajax-get="/ajax/subscribe_email.php" id="cse-search-box-mobile" name="" role="">
+<button class="btn-submit newsletter-signup-submit-button" id="subscribe-btn" type="submit"><i class="fa fa-paper-plane"></i></button>
+<input class="form-control" id="subscription-email" name="q" placeholder="Subscribe" size="31" type="text" validate-type="email" value=""/>
+</form>
+<ul class="social-buttons">
+<li><a class="btn fb" href="https://www.facebook.com/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-facebook']);" target="_blank"><i class="fa fa-facebook"></i></a></li>
+<li><a class="btn tw" href="https://www.twitter.com/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-twitter']);" target="_blank"><i class="fa fa-twitter"></i></a> </li>
+<li><a class="btn rd" href="https://www.reddit.com/r/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-reddit']);" target="_blank"><i class="fa fa-reddit-alien"></i></a></li>
+</ul>
+</div>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">TVTropes</h4></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Administrivia">About TVTropes</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TheGoalsOfTVTropes">TVTropes Goals</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TheTropingCode">Troping Code</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TVTropesCustoms">TVTropes Customs</a></li>
+<li><a href="/pmwiki/pmwiki.php/JustForFun/TropesOfLegend">Tropes of Legend</a></li>
+<li><a href="/pmwiki/ad-free-subscribe.php">Go Ad-Free</a></li>
+</ul>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">Community</h4></li>
+<li><a href="/pmwiki/query.php?type=att">Ask The Tropers</a></li>
+<li><a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a></li>
+<li><a href="/pmwiki/query.php?type=tf">Trope Finder</a></li>
+<li><a href="/pmwiki/query.php?type=ykts">You Know That Show</a></li>
+<li><a data-modal-target="login" href="/pmwiki/lbs.php">Live Blogs</a></li>
+<li><a href="/pmwiki/review_activity.php">Reviews</a></li>
+<li><a href="/pmwiki/topics.php">Forum</a></li>
+</ul>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">Tropes HQ</h4></li>
+<li><a href="/pmwiki/about.php">About Us</a></li>
+<li><a href="/pmwiki/contact.php">Contact Us</a></li>
+<li><a href="/pmwiki/dmca.php">DMCA Notice</a></li>
+<li><a href="/pmwiki/privacypolicy.php">Privacy Policy</a></li>
+</ul>
+</div>
+<div class="text-center gutter-top gutter-bottom tablet-on" id="desktop-on-mobile-toggle">
+<a href="/pmwiki/switchDeviceCss.php?mobileVersion=1" rel="nofollow">Switch to <span class="txt-desktop">Desktop</span><span class="txt-mobile">Mobile</span> Version</a>
+</div>
+<div class="legal">
+<p>TVTropes is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License. <br/>Permissions beyond the scope of this license may be available from <a href="mailto:thestaff@tvtropes.org" rel="cc:morePermissions" xmlns:cc="http://creativecommons.org/ns#"> thestaff@tvtropes.org</a>.</p>
+<br/>
+<div class="privacy_wrapper">
+</div>
+</div>
+</footer>
+<style>
+      div.fc-ccpa-root {
+        position: absolute !important;
+        bottom: 93px !important;
+        margin: auto !important;
+        width: 100% !important;
+        z-index: 9999 !important;
+      }
+      .fc-ccpa-root .fc-dns-dialog .fc-dns-link p{
+        outline: none !important;
+        text-decoration: underline !important;
+        font-size: .7em !important;
+        font-family: sans-serif !important;
+      }
+      .fc-ccpa-root .fc-dns-dialog .fc-dns-link .fc-button-background {
+        background: none !important;
+      }
+    </style>
+<div class="full-screen" id="_pm_videoViewer">
+<a class="close" href="#close" id="_pm_videoViewer-close"></a>
+<div class="_pmvv-body">
+<div class="_pmvv-vidbox">
+<video class="video-js vjs-default-skin vjs-16-9" data-video-id="" id="overlay-video-player-box">
+</video>
+<div class="_pmvv-vidbox-desc">
+<h1 id="overlay-title"></h1>
+<p class="_pmvv-vidbox-descTxt" id="overlay-descrip">
+</p>
+<div class="rating-row" data-video-id="">
+<input name="is_logged_in" type="hidden" value="0"/>
+<p>How well does it match the trope?</p>
+<div id="star-rating-group">
+<div class="trope-rate">
+<input id="lamp5" name="rate" type="radio" value="5"/>
+<label for="lamp5" title="Absolutely"></label>
+<input id="lamp4" name="rate" type="radio" value="4"/>
+<label for="lamp4" title="Yes"></label>
+<input id="lamp3" name="rate" type="radio" value="3"/>
+<label for="lamp3" title="Kind of"></label>
+<input id="lamp2" name="rate" type="radio" value="2"/>
+<label for="lamp2" title="Not really"></label>
+<input id="lamp1" name="rate" type="radio" value="1"/>
+<label for="lamp1" title="No"></label>
+</div>
+<div id="star-rating-total">
+</div>
+</div>
+</div>
+<div class="example-media-row">
+<div class="example-overlay">
+<p>Example of:</p>
+<div id="overlay-trope"> / </div>
+</div>
+<div class="media-sources-overlay example-overlay">
+<p>Media sources:</p>
+<div id="overlay-media"> / </div>
+</div>
+</div>
+<p class="_pmvv-vidbox-stats text-right font-s" style="padding-top:8px; border-top: solid 1px rgba(255,255,255,0.2)">
+<a class="float-right" data-modal-target="login" href="#video-feedback">Report</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+        window.special_ops =  {
+            member : 'no',
+            isolated : 0,
+            tags : ['unknown']
+        };
+    </script>
+<script type="text/javascript">
+
+        var cleanCreativeEnabled = "";
+        var donation = "";
+        var live_ads = "1";
+        var img_domain = "https://static.tvtropes.org";
+        var snoozed = cookies.read('snoozedabm');
+        var snoozable = "";
+
+        if (adsRemovedWith) {
+            live_ads = 0;
+        }
+
+        var elem = document.createElement('script');
+        elem.async = true;
+
+        elem.src = '/design/assets/bundle.js?rev=c58d8df02f09262390bbd03db7921fc35c6af306';
+
+        elem.onload = function() {
+                                 }
+        document.getElementsByTagName('head')[0].appendChild(elem);
+
+    </script>
+<script type="text/javascript">
+      function send_analytics_event(user_type, donation){
+          // if(user_type == 'uncached' || user_type == 'cached'){
+          //   ga('send', 'event', 'caching', 'load', user_type, {'nonInteraction': 1});
+          //   return;
+          // }
+          var event_name = user_type;
+
+          if(donation == 'true'){
+              event_name += "_donation"
+          }else if(typeof(valid_user) == 'undefined'){
+              event_name += "_blocked"
+          }else if(valid_user == true){
+              event_name += "_unblocked";
+          }else{
+              event_name = "_unknown"
+          }
+          ga('send', 'event', 'ads', 'load', event_name, {'nonInteraction': 1});
+      }
+
+    
+    send_analytics_event("guest", "false");
+      </script>
+</body>
+</html>

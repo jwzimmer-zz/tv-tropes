@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Achievement System - TV Tropes</title>
+<meta content="The Achievement System trope as used in popular culture. Any centralized in-game listing of optional objectives that records various milestones and feats the …" name="description"/>
+<link href="https://tvtropes.org/pmwiki/pmwiki.php/Main/AchievementSystem" rel="canonical"/>
+<link href="/img/icons/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="@tvtropes" name="twitter:site"/>
+<meta content="@tvtropes" name="twitter:owner"/>
+<meta content="Achievement System - TV Tropes" name="twitter:title"/>
+<meta content="The Achievement System trope as used in popular culture. Any centralized in-game listing of optional objectives that records various milestones and feats the …" name="twitter:description"/>
+<meta content="https://static.tvtropes.org/pmwiki/pub/images/achieveunlock3hq.png" name="twitter:image:src"/>
+<meta content="TV Tropes" property="og:site_name"/>
+<meta content="en_US" property="og:locale"/>
+<meta content="https://www.facebook.com/tvtropes" property="article:publisher"/>
+<meta content="Achievement System - TV Tropes" property="og:title"/>
+<meta content="website" property="og:type"/>
+<meta content="https://tvtropes.org/pmwiki/pmwiki.php/Main/AchievementSystem" property="og:url"/>
+<meta content="https://static.tvtropes.org/pmwiki/pub/images/achieveunlock3hq.png" property="og:image"/>
+<meta content="Any centralized in-game listing of optional objectives that records various milestones and feats the player may have accomplished while playing a Video Game; this is not so much about the individual achievements by themselves, but the game's …" property="og:description"/>
+<link href="/img/icons/apple-icon-57x57.png" rel="apple-touch-icon" sizes="57x57" type="image/png"/>
+<link href="/img/icons/apple-icon-60x60.png" rel="apple-touch-icon" sizes="60x60" type="image/png"/>
+<link href="/img/icons/apple-icon-72x72.png" rel="apple-touch-icon" sizes="72x72" type="image/png"/>
+<link href="/img/icons/apple-icon-76x76.png" rel="apple-touch-icon" sizes="76x76" type="image/png"/>
+<link href="/img/icons/apple-icon-114x114.png" rel="apple-touch-icon" sizes="114x114" type="image/png"/>
+<link href="/img/icons/apple-icon-120x120.png" rel="apple-touch-icon" sizes="120x120" type="image/png"/>
+<link href="/img/icons/apple-icon-144x144.png" rel="apple-touch-icon" sizes="144x144" type="image/png"/>
+<link href="/img/icons/apple-icon-152x152.png" rel="apple-touch-icon" sizes="152x152" type="image/png"/>
+<link href="/img/icons/apple-icon-180x180.png" rel="apple-touch-icon" sizes="180x180" type="image/png"/>
+<link href="/img/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/img/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/img/icons/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png"/>
+<link href="/img/icons/favicon-192x192.png" rel="icon" sizes="192x192" type="image/png"/>
+<meta content="width=device-width, initial-scale=1" id="viewport" name="viewport"/>
+<script>
+                var propertag = {};
+                propertag.cmd = [];
+            </script>
+<link href="/design/assets/bundle.css?rev=c58d8df02f09262390bbd03db7921fc35c6af306" rel="stylesheet"/>
+<script>
+                function object(objectId) {
+                    if (document.getElementById && document.getElementById(objectId)) {
+                        return document.getElementById(objectId);
+                    } else if (document.all && document.all(objectId)) {
+                        return document.all(objectId);
+                    } else if (document.layers && document.layers[objectId]) {
+                        return document.layers[objectId];
+                    } else {
+                        return false;
+                    }
+                }
+
+                // JAVASCRIPT COOKIES CODE: for getting and setting user viewing preferences
+                var cookies = {
+                    create: function (name, value, days2expire, path) {
+                        var date = new Date();
+                        date.setTime(date.getTime() + (days2expire * 24 * 60 * 60 * 1000));
+                        var expires = date.toUTCString();
+                        document.cookie = name + '=' + value + ';' + 'expires=' + expires + ';' + 'path=' + path + ';';
+                    },
+										createWithExpire: function(name, value, expires, path) {
+												document.cookie = name + '=' + value + ';' + 'expires=' + expires + ';' + 'path=' + path + ';';
+										},
+                    read: function (name) {
+                        var cookie_value = "",
+                            current_cookie = "",
+                            name_expr = name + "=",
+                            all_cookies = document.cookie.split(';'),
+                            n = all_cookies.length;
+
+                        for (var i = 0; i < n; i++) {
+                            current_cookie = all_cookies[i].trim();
+                            if (current_cookie.indexOf(name_expr) === 0) {
+                                cookie_value = current_cookie.substring(name_expr.length, current_cookie.length);
+                                break;
+                            }
+                        }
+                        return cookie_value;
+                    },
+                    update: function (name, val) {
+                        this.create(name, val, 300, "/");
+                    },
+                    remove: function (name) {
+                        document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
+                    }
+                };
+
+                function updateUserPrefs() {
+                    //GENERAL: detect and set browser, if not cookied (will be treated like a user-preference and added to the #user-pref element)
+                    if( !cookies.read('user-browser') ){
+                        var broswer = '';
+
+                        if(navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPod/i) ){
+                            browser = 'iOS';
+                        } else if (/Opera[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'opera';
+                        } else if (/MSIE (\d+\.\d+);/.test(navigator.userAgent)) {
+                            browser = 'MSIE';
+                        } else if (/Navigator[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'netscape';
+                        } else if (/Chrome[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'chrome';
+                        } else if (/Safari[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'safari';
+                            /Version[\/\s](\d+\.\d+)/.test(navigator.userAgent);
+                            browserVersion = new Number(RegExp.$1);
+                        } else if (/Firefox[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'firefox';
+                        } else {
+                            browser = 'internet_explorer';
+                        }
+                        cookies.create('user-browser',browser,1,'/');
+                        document.getElementById('user-prefs').classList.add('browser-' + browser);
+                    } else {
+                        document.getElementById('user-prefs').classList.add('browser-' + cookies.read('user-browser'));
+                    }
+
+                    //update user preference settings
+                    if (cookies.read('wide-load') !== '') document.getElementById('user-prefs').classList.add('wide-load');
+                    if (cookies.read('night-vision') !== '') document.getElementById('user-prefs').classList.add('night-vision');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('user-prefs').classList.add('sticky-header');
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('user-prefs').classList.add('show-spoilers');
+                    if (cookies.read('folders-open') !== '') document.getElementById('user-prefs').classList.add('folders-open');
+                    if (cookies.read('lefthand-sidebar') !== '') document.getElementById('user-prefs').classList.add('lefthand-sidebar');
+                    if (cookies.read('highlight-links') !== '') document.getElementById('user-prefs').classList.add('highlight-links');
+                    if (cookies.read('forum-gingerbread') !== '') document.getElementById('user-prefs').classList.add('forum-gingerbread');
+                    if (cookies.read('shared-avatars') !== '') document.getElementById('user-prefs').classList.add('shared-avatars');
+                    if (cookies.read('new-search') !== '') document.getElementById('user-prefs').classList.add('new-search');
+                    if (cookies.read('stop-auto-play-video') !== '') document.getElementById('user-prefs').classList.add('stop-auto-play-video');
+
+                    //desktop view on mobile
+                    if (cookies.read('desktop-on-mobile') !== ''){
+                        document.getElementById('user-prefs').classList.add('desktop-on-mobile');
+
+                        var viewport = document.querySelector("meta[name=viewport]");
+                        viewport.setAttribute('content', 'width=1000');
+                    }
+
+                }
+
+                function updateDesktopPrefs() {
+                    if (cookies.read('wide-load') !== '') document.getElementById('sidebar-toggle-wideload').classList.add('active');
+                    if (cookies.read('night-vision') !== '') document.getElementById('sidebar-toggle-nightvision').classList.add('active');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('sidebar-toggle-stickyheader').classList.add('active');
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('sidebar-toggle-showspoilers').classList.add('active');
+
+                }
+
+                function updateMobilePrefs() {
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('mobile-toggle-showspoilers').classList.add('active');
+                    if (cookies.read('night-vision') !== '') document.getElementById('mobile-toggle-nightvision').classList.add('active');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('mobile-toggle-stickyheader').classList.add('active');
+                    if (cookies.read('highlight-links') !== '') document.getElementById('mobile-toggle-highlightlinks').classList.add('active');
+
+                }
+
+
+                if (document.cookie.indexOf("scroll0=") < 0) {
+                    // do nothing
+                } else {
+                    console.log('ads removed by scroll.com');
+                    var adsRemovedWith = 'scroll';
+                    var style = document.createElement('style');
+                    style.innerHTML = '#header-ad, .proper-ad-unit, .square_ad, .sb-ad-unit { display: none !important; } ';
+                    document.head.appendChild(style);
+                }
+            </script>
+<script type="text/javascript">
+
+                var tvtropes_config = {
+                    astri_stream_enabled : "",
+                    is_logged_in         : "",
+                    handle               : "",
+                    get_astri_stream     : "",
+										revnum               : "c58d8df02f09262390bbd03db7921fc35c6af306",
+										img_domain           : "https://static.tvtropes.org",
+										adblock              : "1",
+										adblock_url          : "propermessage.io",
+										pause_editing        : "0",
+										pause_editing_msg    : "",
+										pause_site_changes   : ""
+                };
+            </script>
+<script type="text/javascript">
+						  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+						  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+						  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+						  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+						  ga('create', 'UA-3821842-1', 'auto');
+						  ga('send', 'pageview');
+
+						</script>
+</head>
+<body class="">
+<i id="user-prefs"></i>
+<script>updateUserPrefs();</script>
+<div id="fb-root"></div>
+<div id="modal-box"></div>
+<header class="headroom-element" id="main-header-bar">
+<div id="main-header-bar-inner">
+<span class="header-spacer" id="header-spacer-left"></span>
+<a class="mobile-menu-toggle-button tablet-on" href="#mobile-menu" id="main-mobile-toggle"><span></span><span></span><span></span></a>
+<a class="no-dev" href="/" id="main-header-logoButton"></a>
+<span class="header-spacer" id="header-spacer-right"></span>
+<nav class="tablet-off" id="main-header-nav">
+<a href="/pmwiki/pmwiki.php/Main/Tropes">Tropes</a>
+<a href="/pmwiki/pmwiki.php/Main/Media">Media</a>
+<a class="nav-browse" href="/pmwiki/browse.php">Browse</a>
+<a href="/pmwiki/index_report.php">Indexes</a>
+<a href="/pmwiki/topics.php">Forums</a>
+<a class="nav-browse" href="/pmwiki/recent_videos.php">Videos</a>
+</nav>
+<div id="main-header-bar-right">
+<div class="font-xs mobile-off" id="signup-login-box">
+<a class="hover-underline bold" data-modal-target="signup" href="/pmwiki/login.php">Join</a>
+<a class="hover-underline bold" data-modal-target="login" href="/pmwiki/login.php">Login</a>
+</div>
+<div class="mobile-on inline" id="signup-login-mobileToggle">
+<a data-modal-target="login" href="/pmwiki/login.php"><i class="fa fa-user"></i></a>
+</div>
+<div id="search-box">
+<form action="/pmwiki/search_result.php" class="search">
+<input class="search-box" name="q" placeholder="Search" required="" type="text" value=""/>
+<input class="submit-button" type="submit" value=""/>
+<input name="search_type" type="hidden" value="article"/>
+<input name="page_type" type="hidden" value="all"/>
+<input name="cx" type="hidden" value="partner-pub-6610802604051523:amzitfn8e7v"/>
+<input name="cof" type="hidden" value="FORID:10"/>
+<input name="ie" type="hidden" value="ISO-8859-1"/>
+<input name="siteurl" type="hidden" value=""/>
+<input name="ref" type="hidden" value=""/>
+<input name="ss" type="hidden" value=""/>
+</form>
+<a class="mobile-on mobile-search-toggle close-x" href="#close-search"><i class="fa fa-close"></i></a>
+</div>
+<div id="random-box">
+<a class="button-random-trope" href="/pmwiki/pmwiki.php/Main/SuckECheeses" onclick="ga('send', 'event', 'button', 'click', 'random trope');" rel="nofollow"></a>
+<a class="button-random-media" href="/pmwiki/pmwiki.php/Creator/NicoleOliver" onclick="ga('send', 'event', 'button', 'click', 'random media');" rel="nofollow"></a>
+</div>
+</div>
+</div>
+<div class="tablet-on" id="mobile-menu"><div class="mobile-menu-options">
+<div class="nav-wrapper">
+<a class="xl" href="/pmwiki/pmwiki.php/Main/Tropes">Tropes</a>
+<a class="xl" href="/pmwiki/pmwiki.php/Main/Media">Media</a>
+<a class="xl" href="/pmwiki/browse.php">Browse</a>
+<a class="xl" href="/pmwiki/index_report.php">Indexes</a>
+<a class="xl" href="/pmwiki/topics.php">Forums</a>
+<a class="xl" href="/pmwiki/recent_videos.php">Videos</a>
+<a href="/pmwiki/query.php?type=att">Ask The Tropers</a>
+<a href="/pmwiki/query.php?type=tf">Trope Finder</a>
+<a href="/pmwiki/query.php?type=ykts">You Know That Show...</a>
+<a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a>
+<a data-click-toggle="active" href="#tools">Tools <i class="fa fa-chevron-down"></i></a>
+<div class="tools-dropdown mobile-dropdown-linkList">
+<a href="/pmwiki/cutlist.php">Cut List</a>
+<a href="/pmwiki/changes.php">New Edits</a>
+<a href="/pmwiki/recent_edit_reasons.php">Edit Reasons</a>
+<a href="/pmwiki/launches.php">Launches</a>
+<a href="/pmwiki/img_list.php">Images List</a>
+<a href="/pmwiki/crown_activity.php">Crowner Activity</a>
+<a href="/pmwiki/no_types.php">Un-typed Pages</a>
+<a href="/pmwiki/page_type_audit.php">Recent Page Type Changes</a>
+</div>
+<a data-click-toggle="active" href="#hq">Tropes HQ <i class="fa fa-chevron-down"></i></a>
+<div class="tools-dropdown mobile-dropdown-linkList">
+<a href="/pmwiki/about.php">About Us</a>
+<a href="/pmwiki/contact.php">Contact Us</a>
+<a href="mailto:advertising@proper.io">Advertise</a>
+<a href="/pmwiki/dmca.php">DMCA Notice</a>
+<a href="/pmwiki/privacypolicy.php">Privacy Policy</a>
+</div>
+<a href="/pmwiki/ad-free-subscribe.php">Go Ad-Free</a>
+<div class="toggle-switches">
+<ul class="mobile-menu display-toggles">
+<li>Show Spoilers <div class="display-toggle show-spoilers" id="mobile-toggle-showspoilers"></div></li>
+<li>Night Vision <div class="display-toggle night-vision" id="mobile-toggle-nightvision"></div></li>
+<li>Sticky Header <div class="display-toggle sticky-header" id="mobile-toggle-stickyheader"></div></li>
+<li>Highlight Links <div class="display-toggle highlight-links" id="mobile-toggle-highlightlinks"></div></li>
+</ul>
+<script>updateMobilePrefs();</script>
+</div>
+</div>
+</div>
+</div>
+</header>
+<div class="mobile-on" id="homepage-introBox-mobile">
+<a href="/"><img class="logo-small" src="/images/logo-white-big.png"/></a>
+<form action="/pmwiki/search_result.php" class="search" style="margin:10px -5px -6px -5px;">
+<input class="search-box" name="q" placeholder="Search" required="" type="text" value=""/>
+<input class="submit-button" type="submit" value=""/>
+<input name="search_type" type="hidden" value="article"/>
+<input name="page_type" type="hidden" value="all"/>
+<input name="cx" type="hidden" value="partner-pub-6610802604051523:amzitfn8e7v"/>
+<input name="cof" type="hidden" value="FORID:10"/>
+<input name="ie" type="hidden" value="ISO-8859-1"/>
+<input name="siteurl" type="hidden" value=""/>
+<input name="ref" type="hidden" value=""/>
+<input name="ss" type="hidden" value=""/>
+</form>
+</div>
+<div class="ad" id="header-ad-wrapper">
+<div id="header-ad">
+<div class="ad-size-970x90 atf_banner">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_1"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_1'); });</script> </div>
+</div> </div>
+</div>
+</div>
+<div id="main-container">
+<div class="action-bar mobile-off" id="action-bar-top">
+<div class="action-bar-right">
+<p>Follow TV Tropes</p>
+<a class="button-fb" href="https://www.facebook.com/TVTropes">
+<i class="fa fa-facebook"></i></a>
+<a class="button-tw" href="https://www.twitter.com/TVTropes">
+<i class="fa fa-twitter"></i></a>
+<a class="button-re" href="https://www.reddit.com/r/TVTropes">
+<i class="fa fa-reddit-alien"></i></a>
+</div>
+<nav class="actions-wrapper" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<ul class="page-actions" id="top_main_list">
+<li class="link-edit">
+<a class="article-edit-button" data-modal-target="login" href="/pmwiki/pmwiki.php/Main/AchievementSystem?action=edit" rel="nofollow">
+<i class="fa fa-pencil"></i> Edit Page</a></li><li class="link-related"><a href="/pmwiki/relatedsearch.php?term=Main/AchievementSystem">
+<i class="fa fa-share-alt"></i> Related</a></li><li class="link-history"><a href="/pmwiki/article_history.php?article=Main.AchievementSystem">
+<i class="fa fa-history"></i> History</a></li><li class="link-discussion"><a href="/pmwiki/remarks.php?trope=Main.AchievementSystem">
+<i class="fa fa-comment"></i> Discussion</a></li> </ul>
+<button class="nav__dropdown-toggle" id="top_more_button" onclick="toggle_more_menu('top');" type="button">More</button>
+<ul class="more_menu hidden_more_list" id="top_more_list">
+<li class="link-todo tuck-always more_list_item"><a data-modal-target="login" href="#todo"><i class="fa fa-check-circle"></i> To Do</a></li><li class="link-pageSource tuck-always more_list_item"><a data-modal-target="login" href="/pmwiki/pmwiki.php/Main/AchievementSystem?action=source" rel="nofollow" target="_blank"><i class="fa fa-code"></i> Page Source</a></li> </ul>
+</nav>
+<div class="WikiWordModalStub"></div>
+<div class="ImgUploadModalStub" data-page-type="Article"></div>
+<div class="login-alert" style="display: none;">
+You need to <a href="/pmwiki/login.php" style="color:#21A0E8">login</a> to do this. <a href="/pmwiki/login.php?tab=register_account" style="color:#21A0E8">Get Known</a> if you don't have an account
+</div>
+</div>
+<div class="page-Article" id="main-content">
+<article class="with-sidebar" id="main-entry">
+<input id="groupname-hidden" type="hidden" value="Main"/>
+<input id="title-hidden" type="hidden" value="AchievementSystem"/>
+<input id="article_id" type="hidden" value="431107"/>
+<input id="logged_in" type="hidden" value="false"/>
+<p class="hidden" id="current_url">http://tvtropes.org/pmwiki/pmwiki.php/Main/AchievementSystem</p>
+<meta content="" itemprop="datePublished"/>
+<meta content="" itemprop="articleSection"/>
+<meta content="" itemprop="image"/>
+<a class="watch-button" data-modal-target="login" href="#watch">Follow<span>ing</span></a>
+<h1 class="entry-title" itemprop="headline">
+Achievement System
+</h1>
+<script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+                "@type": "ListItem",
+                "position": 1,
+                "name": "tvtropes.org",
+                "item": "https://tvtropes.org"
+            },{
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Tropes",
+                "item": "https://tvtropes.org/pmwiki/pmwiki.php/Main/Tropes"
+            },{
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Achievement System"            }]
+        }
+    </script>
+<a class="mobile-actionbar-toggle mobile-on" data-click-toggle="active" href="#mobile-actions-toggle" id="mobile-actionbar-toggle">
+<p class="tiny-off">Go To</p><span></span><span></span><span></span><i class="fa fa-pencil"></i></a>
+<nav class="mobile-actions-wrapper mobile-on" id="mobile-actions-bar"></nav>
+<div class="modal fade hidden-until-active" id="editLockModal">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button aria-label="Close" class="close" data-dismiss="modal" type="button"> <span aria-hidden="true">×</span></button>
+<h4 class="modal-title">Edit Locked</h4>
+</div>
+<div class="modal-body">
+<div class="row">
+<div class="body">
+<div class="danger troper_locked_message"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<nav class="body-options" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<ul class="subpage-links">
+<li>
+<a class="subpage-link curr-subpage" href="/pmwiki/pmwiki.php/Main/AchievementSystem" title="The Main page">
+<span class="wrapper"><span class="spi main-page"></span>Main</span></a>
+</li>
+<li>
+<a class="subpage-link" href="/pmwiki/pmwiki.php/Laconic/AchievementSystem" title="The Laconic page">
+<span class="wrapper"><span class="spi laconic-icon"></span>Laconic</span></a>
+</li>
+<li>
+<a class="subpage-link" href="/pmwiki/pmwiki.php/ImageLinks/AchievementSystem" title="The ImageLinks page">
+<span class="wrapper">ImageLinks</span></a>
+</li>
+<li>
+<a class="subpage-link video-examples-tab" href="/pmwiki/pmwiki.php/VideoExamples/AchievementSystem" title="Video Examples">
+<img alt="play" class="" src="/images/play-button-logo.png"/>
+<span class="wrapper">VideoExamples</span>
+</a>
+</li>
+<li class="create-subpage dropdown">
+<a aria-expanded="false" class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);" role="button">
+<span class="wrapper">Create New <i class="fa fa-plus-circle"></i></span>
+</a>
+<select onchange="this.options[this.selectedIndex].value &amp;&amp; (window.location = this.options[this.selectedIndex].value);">
+<option value="">- Create New -</option>
+<option value="/pmwiki/pmwiki.php/Analysis/AchievementSystem?action=edit">Analysis</option>
+<option value="/pmwiki/pmwiki.php/Characters/AchievementSystem?action=edit">Characters</option>
+<option value="/pmwiki/pmwiki.php/FanficRecs/AchievementSystem?action=edit">FanficRecs</option>
+<option value="/pmwiki/pmwiki.php/FanWorks/AchievementSystem?action=edit">FanWorks</option>
+<option value="/pmwiki/pmwiki.php/Fridge/AchievementSystem?action=edit">Fridge</option>
+<option value="/pmwiki/pmwiki.php/Haiku/AchievementSystem?action=edit">Haiku</option>
+<option value="/pmwiki/pmwiki.php/Headscratchers/AchievementSystem?action=edit">Headscratchers</option>
+<option value="/pmwiki/pmwiki.php/PlayingWith/AchievementSystem?action=edit">PlayingWith</option>
+<option value="/pmwiki/pmwiki.php/Quotes/AchievementSystem?action=edit">Quotes</option>
+<option value="/pmwiki/pmwiki.php/Recap/AchievementSystem?action=edit">Recap</option>
+<option value="/pmwiki/pmwiki.php/ReferencedBy/AchievementSystem?action=edit">ReferencedBy</option>
+<option value="/pmwiki/pmwiki.php/Synopsis/AchievementSystem?action=edit">Synopsis</option>
+<option value="/pmwiki/pmwiki.php/Timeline/AchievementSystem?action=edit">Timeline</option>
+<option value="/pmwiki/pmwiki.php/Trivia/AchievementSystem?action=edit">Trivia</option>
+<option value="/pmwiki/pmwiki.php/WMG/AchievementSystem?action=edit">WMG</option>
+<option value="/pmwiki/pmwiki.php/YMMV/AchievementSystem?action=edit">YMMV</option>
+</select>
+</li>
+</ul>
+</nav>
+<div class="article-content retro-folders" id="main-article">
+<p>
+</p><div class="quoteright" style="width:269px;"><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/AchievementUnlocked" title="/pmwiki/pmwiki.php/VideoGame/AchievementUnlocked"><div class="lazy_load_img_box" style="padding-top:116.73%"><img alt="https://static.tvtropes.org/pmwiki/pub/images/achieveunlock3hq.png" border="0" class="embeddedimage" height="314" src="https://static.tvtropes.org/pmwiki/pub/images/achieveunlock3hq.png" width="269"/></div></a></div>
+<div class="acaptionright" style="width:269px;">999: Caption Captain  Read the caption on Achievement System.</div>
+
+
+
+
+Any centralized in-game listing of optional objectives that records various milestones and feats the player may have accomplished while playing a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/VideoGame" title="/pmwiki/pmwiki.php/Main/VideoGame">Video Game</a>; this is not so much about the individual achievements by themselves, but the game's means for tracking and recording (and, sometimes, rewarding) them.
+<div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_1"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_1'); })</script></div></div><p>Many achievements are things that the player will inevitably accomplish during a typical playthrough (e.g. complete the story mode, defeat Y number of enemies, etc.), but the achievements themselves do not need to be relevant to game or story progression; some may involve <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SideQuest" title="/pmwiki/pmwiki.php/Main/SideQuest">Side Quests</a> (e.g. trade in those <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TwentyBearAsses" title="/pmwiki/pmwiki.php/Main/TwentyBearAsses">20 Bear Asses</a> for that <a class="twikilink" href="/pmwiki/pmwiki.php/Main/InfinityPlusOneSword" title="/pmwiki/pmwiki.php/Main/InfinityPlusOneSword">Infinity +1 Sword</a>), or obscure things that the player might not even think about (e.g. fall for that <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ShmuckBait" title="/pmwiki/pmwiki.php/Main/ShmuckBait">Shmuck Bait</a>) or realize were even possible (or sane) to attempt in the first place (e.g. defeat the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BonusBoss" title="/pmwiki/pmwiki.php/Main/BonusBoss">Bonus Boss</a> with only the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/JokeWeapon" title="/pmwiki/pmwiki.php/Main/JokeWeapon">Joke Weapon</a>).
+</p><p>Note that not all achievements are fully revealed to the player ahead of time, as some of them may invariably <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Spoiler" title="/pmwiki/pmwiki.php/Main/Spoiler">spoil</a> certain <a class="twikilink" href="/pmwiki/pmwiki.php/Main/PlotTwist" title="/pmwiki/pmwiki.php/Main/PlotTwist">Plot Twists</a> or <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TheReveal" title="/pmwiki/pmwiki.php/Main/TheReveal">surprises</a> if the player knows them going in; e.g. an objective like "defeat <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TheLancer" title="/pmwiki/pmwiki.php/Main/TheLancer">The Lancer</a> after his <a class="twikilink" href="/pmwiki/pmwiki.php/Main/FaceHeelTurn" title="/pmwiki/pmwiki.php/Main/FaceHeelTurn">FaceHeel Turn</a> in chapter 16" is decidedly spoiler material; a censored hint like "defeat ??? during chapter ???", much less so. Some achievements may even be <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GuideDangIt" title="/pmwiki/pmwiki.php/Main/GuideDangIt">kept secret entirely</a> (hopefully only until the player has reached the relevant section of the game, so they can come back for it later).
+</p><div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_2"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_2'); })</script></div></div><p>Note that some achievements may require multiple playthroughs to acquire, since it's entirely possible for developers to create achievements that are mutually exclusive from each other; similarly, some achievements can require multiple playthroughs due to becoming <a class="twikilink" href="/pmwiki/pmwiki.php/Main/PermanentlyMissableContent" title="/pmwiki/pmwiki.php/Main/PermanentlyMissableContent">lost forever</a> if the player missed their opportunity to obtain it (like performing a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/NoDamageRun" title="/pmwiki/pmwiki.php/Main/NoDamageRun">No-Damage Run</a> in a specific level or <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BossBattle" title="/pmwiki/pmwiki.php/Main/BossBattle">Boss Battle</a> with no rematch). Many games may also include <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ThatOneAchievement" title="/pmwiki/pmwiki.php/Main/ThatOneAchievement">one achievement</a> for <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GottaCatchThemAll" title="/pmwiki/pmwiki.php/Main/GottaCatchThemAll">collecting all other achievements</a>  the game's official stamp of <a class="twikilink" href="/pmwiki/pmwiki.php/Main/HundredPercentCompletion" title="/pmwiki/pmwiki.php/Main/HundredPercentCompletion">100% Completion</a>. For a detailed list of most common achievement templates, see <a class="twikilink" href="/pmwiki/pmwiki.php/Analysis/VideoGameAchievements" title="/pmwiki/pmwiki.php/Analysis/VideoGameAchievements">Video Game Achievements</a>.
+</p><p>A <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SubTrope" title="/pmwiki/pmwiki.php/Main/SubTrope">Sub-Trope</a> of <a class="twikilink" href="/pmwiki/pmwiki.php/Main/CosmeticAward" title="/pmwiki/pmwiki.php/Main/CosmeticAward">Cosmetic Award</a> (in the same way that a forest is related to an individual tree).
+</p><p></p><div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_3"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_3'); })</script></div></div><h2>Examples of platforms requiring an achievement system:</h2>
+<p></p><ul><li> Microsoft is the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TropeCodifier" title="/pmwiki/pmwiki.php/Main/TropeCodifier">Trope Codifier</a> with its <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/Xbox360" title="/pmwiki/pmwiki.php/UsefulNotes/Xbox360">Xbox 360</a> game console and <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/XboxLiveArcade" title="/pmwiki/pmwiki.php/UsefulNotes/XboxLiveArcade">Xbox Live Arcade</a> service, where all 360 games include a list of "Achievements"; each achievement has a specific point value (roughly indicative of its difficulty) which contributes to the player's overall (system-wide) "Gamerscore". In the case of achievements with spoilers (or just achievements the devs don't want anyone knowing about), the developers can hide their names, descriptions, and point values until the player acquires them. It has since expanded to cover PC games (initially via Games for Windows Live service and later via Xbox on Windows for Windows 8.x/RT and later 10), mobile games (via Xbox on Windows Phone), and <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/XboxOne" title="/pmwiki/pmwiki.php/UsefulNotes/XboxOne">Xbox One</a> (which also has "challenges"<span class="notelabel" onclick="togglenote('note0ua6c');"><sup>note </sup></span><span class="inlinefolder" id="note0ua6c" isnote="true" onclick="togglenote('note0ua6c');" style="cursor:pointer;font-size:smaller;display:none;">limited-time achievements which provide in-game rewards, but does not contribute to anyone's Gamerscore</span> and <em>media achievements</em><span class="notelabel" onclick="togglenote('note110wz');"><sup>note </sup></span><span class="inlinefolder" id="note110wz" isnote="true" onclick="togglenote('note110wz');" style="cursor:pointer;font-size:smaller;display:none;">which also does not contribute to anyone's Gamerscore</span>).
+</li><li> Games on Sony's <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/PlayStation3" title="/pmwiki/pmwiki.php/UsefulNotes/PlayStation3">PlayStation 3</a>, <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/PlayStation4" title="/pmwiki/pmwiki.php/UsefulNotes/PlayStation4">PlayStation 4</a> and <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/PlayStationVita" title="/pmwiki/pmwiki.php/UsefulNotes/PlayStationVita">Play Station Vita</a> include a "Trophy" list, with individual tasks graded from Bronze through Platinum depending on their relative difficulty. For some trophies, their details may be hidden until the player acquires them (or reaches a certain point in gameplay) to avoid leaking potential spoilers. The player's Trophy List is also accessible through their online profile.
+</li><li> <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/Steam" title="/pmwiki/pmwiki.php/UsefulNotes/Steam">Steam</a> also has an achievement system more similar to the Microsoft example, it was even used in some Steam Events to get rewards, but unlike other examples where there's some sort of scoreboard based on points based on difficulty, your scoreboard only has the number of achievements, the percentage of achievements that you got across all games, and the number of games you got all of them, Steam's system is more complicated due to developers being able to add more achievements to their games at will, and Valve admits that since cheating on computers is easier than in consoles, they can't do much with them and they gave up using them on events, also, being able to copy and paste save files is a legit way to prevent you from losing your progress, but can be used to get all the achievements at once.
+</li></ul><p>Note that although it's not an official requirement, many games distributed via Valve's <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/Steam" title="/pmwiki/pmwiki.php/UsefulNotes/Steam">Steam</a> often include achievement systems anyway, as the same games may also be ported to the Xbox or PlayStation consoles.
+</p><p></p><hr/><h2>Individual game examples:</h2>
+<p>Note that for the sake of brevity, we'll limit this list to <em>only</em> games whose achievement system is voluntarily implemented, i.e. exceeds requirements imposed by the game platform.
+</p><p></p><ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MassEffect1" title="/pmwiki/pmwiki.php/VideoGame/MassEffect1">Mass Effect</a></em> implements Achievement as per Xbox 360 standard, but also gives almost all Achievements an in-game benefit, such as permanent passive boosts or unlocking a bonus talent to choose upon starting a new playthrough. Several Achievements in the series also carry benefits in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MassEffect2" title="/pmwiki/pmwiki.php/VideoGame/MassEffect2">Mass Effect 2</a></em> and <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MassEffect3" title="/pmwiki/pmwiki.php/VideoGame/MassEffect3">Mass Effect 3</a></em>.
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MassEffect3" title="/pmwiki/pmwiki.php/VideoGame/MassEffect3">Mass Effect 3</a></em> also has a challenge system in its multiplayer mode, granting cosmetic banners and titles.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/AceCombat5TheUnsungWar" title="/pmwiki/pmwiki.php/VideoGame/AceCombat5TheUnsungWar">Ace Combat 5: The Unsung War</a></em> and <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/AceCombatZeroTheBelkanWar" title="/pmwiki/pmwiki.php/VideoGame/AceCombatZeroTheBelkanWar">Ace Combat Zero: The Belkan War</a></em> (on the <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/PlayStation2" title="/pmwiki/pmwiki.php/UsefulNotes/PlayStation2">PlayStation 2</a>) included a number of <a class="urllink" href="http://acecombat.wikia.com/wiki/Medals">medals<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a> that could be earned by completing story missions and beating certain challenges across multiple playthroughs; the medals can be viewed from the main menu.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FinalFantasyXII" title="/pmwiki/pmwiki.php/VideoGame/FinalFantasyXII">Final Fantasy XII</a></em> had the "Sky Pirate's Den", a screen that collects sprites commemorating such tasks as completing the main story, getting all characters to a certain experience level, or defeating Elite Marks. Each sprite's description states the task it was awarded for.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/StarOceanTillTheEndOfTime" title="/pmwiki/pmwiki.php/VideoGame/StarOceanTillTheEndOfTime">Star Ocean: Till the End of Time</a></em> is one of the earlier games to use this system in the form of Battle Trophies. From easier ones such as "Fight X number of battles" to harder ones like "Defeat X bosses within X minutes in hardest difficulty with single character". <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/StarOceanTheLastHope" title="/pmwiki/pmwiki.php/VideoGame/StarOceanTheLastHope">Star Ocean: The Last Hope</a></em> also has its own Battle Trophies but for each character instead of for everyone. Both games will reward the player once certain amount of trophies percentages have been reached.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FTLFasterThanLight" title="/pmwiki/pmwiki.php/VideoGame/FTLFasterThanLight">FTL: Faster Than Light</a></em> has an internal system for achievements that also acts as the mechanism for unlocking new ships and deck layouts as they are completed.
+</li><li> There's a trophy system in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/GranblueFantasy" title="/pmwiki/pmwiki.php/VideoGame/GranblueFantasy">Granblue Fantasy</a></em>. Players earn them through things like completing an event storyline or beating a raid a certain amount of times. They give tangible rewards for the player to use, usually in the form of crystals. You can also set them as your title in your profile. Notable is the trophy for recruiting all ten of <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BadassCrew" title="/pmwiki/pmwiki.php/Main/BadassCrew">the Eternals</a> which when set as the player's title, gives all of them a small attack and HP boost in gameplay.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Minecraft" title="/pmwiki/pmwiki.php/VideoGame/Minecraft">Minecraft</a></em> has its own system of "advancements" that are unlocked in a branching chain (for example, you have to smelt iron ore before you can make a bucket or iron pick), which start over on each new single-player world you create or server you join. The real purpose of this was to give clueless players a general idea of what they can do in the game, with the prerequisites hinting at how.
+</li><li> Indie game <em><a class="createlink" href="/pmwiki/pmwiki.php/VideoGame/GalaxySaver" title="/pmwiki/pmwiki.php/VideoGame/GalaxySaver">Galaxy Saver</a></em> on the <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/NintendoDS" title="/pmwiki/pmwiki.php/UsefulNotes/NintendoDS">Nintendo DS</a>/<a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/Nintendo3DS" title="/pmwiki/pmwiki.php/UsefulNotes/Nintendo3DS">3DS</a> calls its list of achievements "Military Awards", many of which involve destroying X number of a given enemy type.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/LittleBigPlanet" title="/pmwiki/pmwiki.php/VideoGame/LittleBigPlanet">LittleBigPlanet</a></em> has this starting from the second game, in the form of Pins. Pins are given out for all sorts of minor and major things, including time spent in your Pod, time spent playing story levels, ratings given to community levels, versus levels finished with friends, levels completed in a row without dying, and even <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AchievementMockery" title="/pmwiki/pmwiki.php/Main/AchievementMockery">more dubious achievements</a> like coming in last in races, dying in community levels, or drowning. There's also an assortment of Secret Pins that have no real use beyond <a class="twikilink" href="/pmwiki/pmwiki.php/Main/CosmeticAward" title="/pmwiki/pmwiki.php/Main/CosmeticAward">looking cool under your profile picture</a>, for doing things like wearing the Jack-o-Lantern head on Halloween, playing on developer birthdays, or getting the Platinum trophy. In addition to the Platinum trophy pin, some other Pins are also tied to PSN Trophies.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MarioAndLuigiDreamTeam" title="/pmwiki/pmwiki.php/VideoGame/MarioAndLuigiDreamTeam">Mario &amp; Luigi: Dream Team</a></em> has the Expert Challenges, which give you points for things like dodging a certain number of enemies, winning fights against each monster without getting hit and using special attacks successfully. This eventually unlocks some useful items.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MarioAndLuigiPaperJam" title="/pmwiki/pmwiki.php/VideoGame/MarioAndLuigiPaperJam">Mario &amp; Luigi: Paper Jam</a></em> also uses Expert Challenges like its predecessor. They're rather handily divided into separate categories for easy sorting. These earn you points that can be traded in for unique equipment.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MarvelVsCapcom3" title="/pmwiki/pmwiki.php/VideoGame/MarvelVsCapcom3">Marvel vs. Capcom 3</a></em>, in addition to the platform-standard achievement/trophy system, has a list of "Titles" and "Icons" the player can assign to their in-game profile; the player can see the requirements for unlocking individual titles (generally by beating the game's story mode with <a class="twikilink" href="/pmwiki/pmwiki.php/Main/LoadsAndLoadsOfCharacters" title="/pmwiki/pmwiki.php/Main/LoadsAndLoadsOfCharacters">various characters</a>).
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/NeedForSpeedMostWanted" title="/pmwiki/pmwiki.php/VideoGame/NeedForSpeedMostWanted">Need for Speed: Most Wanted</a></em> <a class="twikilink" href="/pmwiki/pmwiki.php/Creator/CriterionGames" title="/pmwiki/pmwiki.php/Creator/CriterionGames">2012</a> has a large number of license plate designs that each require accomplishing certain tasks in multiplayer on top of the normal achievements/trophies for Xbox 360 / Playstation 3. <em>Most Wanted U</em> on the achievement system-agnostic <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/WiiU" title="/pmwiki/pmwiki.php/UsefulNotes/WiiU">Wii U</a> has four exclusive license plate designs based on finding <a class="twikilink" href="/pmwiki/pmwiki.php/Main/EasterEggs" title="/pmwiki/pmwiki.php/Main/EasterEggs">Easter Eggs</a>.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/PlayStationAllStarsBattleRoyale" title="/pmwiki/pmwiki.php/VideoGame/PlayStationAllStarsBattleRoyale">PlayStation All-Stars Battle Royale</a></em> (in addition to the PS3 Trophy system) allows the player to select a variety of icons and backgrounds for their in-game profile and customize each character's intro/outro lines or Minion, which are unlocked primarily by accumulating enough points with specific characters (a few others are purchasable DLC).
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/PokemonBlack2AndWhite2" title="/pmwiki/pmwiki.php/VideoGame/PokemonBlack2AndWhite2">Pokémon Black 2 and White 2</a></em>, the player is given a "Medal Box" early and one medal to initially fill it with. As they progress through the game, an NPC named Mr. Medal may appear in a Pokémon Center to award more medals for completing various achievements, and provide hints about future medals. The medals themselves are color-coded into various categories (battling, trading, etc.), the decoration of which roughly reflects its difficulty, and there are a total of 255 throughout the game.
+<ul><li> The medal system returns in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/PokemonXAndY" title="/pmwiki/pmwiki.php/VideoGame/PokemonXAndY">Pokémon X and Y</a></em>, but is only seen on the Global Link site.
+</li></ul></li><li> While the <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/PlayStation3" title="/pmwiki/pmwiki.php/UsefulNotes/PlayStation3">PS3</a> and <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/XBox360" title="/pmwiki/pmwiki.php/UsefulNotes/XBox360">Xbox 360</a> versions of the <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Skylanders" title="/pmwiki/pmwiki.php/VideoGame/Skylanders">Skylanders</a></em> games feature system-standard Trophies and Achievements, the Wii version includes them as a list of "Accolades". In addition, <em>Skylanders: Giants</em> adds "Quests" which are nine achievements specific to each individual figurine (three of them unique to each element, and one unique to that specific character); completing these unlocks metallic <a class="twikilink" href="/pmwiki/pmwiki.php/Main/NiceHat" title="/pmwiki/pmwiki.php/Main/NiceHat">Top Hats</a> (bronze, silver, gold) for that specific figure to wear. Quests are saved with the actual figurine, even the ones <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ChuckCunninghamSyndrome" title="/pmwiki/pmwiki.php/Main/ChuckCunninghamSyndrome">not officially part of the Giants lineup</a>.
+</li><li> The <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SuperSmashBros" title="/pmwiki/pmwiki.php/VideoGame/SuperSmashBros">Super Smash Bros.</a></em> games starting with <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SuperSmashBrosBrawl" title="/pmwiki/pmwiki.php/VideoGame/SuperSmashBrosBrawl">Brawl</a></em> include "Challenges" grids, each of which unlocks a cosmetic award (such as trophies or music for the player's collection). The player may check details of any achievement that is horizontally adjacent to one they've already acquired, and they also have a limited number of 'hammer' items that can be used to unlock an award without having to complete the objective for it. Other games by <a class="twikilink" href="/pmwiki/pmwiki.php/Creator/MasahiroSakurai" title="/pmwiki/pmwiki.php/Creator/MasahiroSakurai">Masahiro Sakurai</a>, <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/KirbyAirRide" title="/pmwiki/pmwiki.php/VideoGame/KirbyAirRide">Kirby Air Ride</a></em> and <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/KidIcarusUprising" title="/pmwiki/pmwiki.php/VideoGame/KidIcarusUprising">Kid Icarus: Uprising</a></em>, have similar Challenge grids.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/WarioLandShakeIt" title="/pmwiki/pmwiki.php/VideoGame/WarioLandShakeIt">Wario Land: Shake It!</a></em> has multiple challenges for each level and boss battle that can be optionally completed. Once all are completed for a level/boss battle, the music for said level/boss is added to the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SoundTest" title="/pmwiki/pmwiki.php/Main/SoundTest">Sound Test</a>.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/WiiSportsResort" title="/pmwiki/pmwiki.php/VideoGame/WiiSportsResort">Wii Sports Resort</a></em>, every sporting event has a list of five "stamps" awarded for such things like getting a perfect score, performing certain tasks like fighting their opponent to a draw in Swordplay, popping balloons while air touring the island, or hitting hidden fruit targets in Archery.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Xenoblade" title="/pmwiki/pmwiki.php/VideoGame/Xenoblade">Xenoblade</a></em> has a large variety of internal achievements that grant <a class="twikilink" href="/pmwiki/pmwiki.php/Main/NonCombatEXP" title="/pmwiki/pmwiki.php/Main/NonCombatEXP">Non-Combat EXP</a> when completed. They're split in 2 categories, Trials and Records, with the former largely relating to the various sidequests and latter being mostly combat based. Only the latter carry over to <a class="twikilink" href="/pmwiki/pmwiki.php/Main/NewGamePlus" title="/pmwiki/pmwiki.php/Main/NewGamePlus">New Game+</a>, possibly because the former are more tied to the overall story progress and the latter generally have further stretching goals.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/WorldInConflict" title="/pmwiki/pmwiki.php/VideoGame/WorldInConflict">World in Conflict</a></em> multiplayer, you gain medals and badges for various scoring points or winning matches, among other things. Medals and badges are tiered bronze, silver, and gold; the screen that displays them also explains (via tooltips) the requirements for unlocking them. You can also view players' medals in their public online profiles on the Massgate service website.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/VagrantStory" title="/pmwiki/pmwiki.php/VideoGame/VagrantStory">Vagrant Story</a></em> was one of the earliest examples of this. You actually had to go through several menus to find it in the "gazette" and many of the titles you got were extremely difficult to achieve. One was for getting through the game without saving, for example.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/KidIcarusUprising" title="/pmwiki/pmwiki.php/VideoGame/KidIcarusUprising">Kid Icarus: Uprising</a></em>: The game has Sakurai's signature "achievement wall" called Treasure Hunt.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Bayonetta" title="/pmwiki/pmwiki.php/VideoGame/Bayonetta">Bayonetta</a></em>: Achievement/Trophy data is accessible from the in-game menu, where they are referred to as "Umbran Tears of Blood". Other Umbran Tears of Blood are items found in the possession of crows hidden throughout various levels, and both combined are part a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/CollectionSidequest" title="/pmwiki/pmwiki.php/Main/CollectionSidequest">Collection Sidequest</a>. The Umbran Tears come back in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Bayonetta2" title="/pmwiki/pmwiki.php/VideoGame/Bayonetta2">Bayonetta 2</a></em>, although there are less of them this time (only 30 achievements compared to the first game's 50).
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/AnimalCrossing" title="/pmwiki/pmwiki.php/VideoGame/AnimalCrossing">Animal Crossing</a>: New Leaf</em>, Badges are handed out by Phineas the sea lion, who will visit your town whenever you qualify for a badge. They're awarded for things like completing a certain percentage of your bug/fish/diving encyclopedia, saving a lot of <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GlobalCurrency" title="/pmwiki/pmwiki.php/Main/GlobalCurrency">bells</a> in your bank account, doing a lot of villager side-quests, or just playing the game for long enough, and each category has Badges available in bronze, silver, and gold versions.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Implosion" title="/pmwiki/pmwiki.php/VideoGame/Implosion">Implosion</a></em>: You can earn badges by completing levels under vaious conditions, some of which are designed to appeal to <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ChallengeGamer" title="/pmwiki/pmwiki.php/Main/ChallengeGamer">Challenge Gamers</a> and <a class="twikilink" href="/pmwiki/pmwiki.php/Main/HundredPercentCompletion" title="/pmwiki/pmwiki.php/Main/HundredPercentCompletion">100% Completionists</a>. In addition to expected conditions like completing the level "naked" (equipping no extra battle gear) or without damage, there are "Zero Knockdown" badges and one badge whose conditions are hidden until you earn it. Badges can then be used to collect rare ARKs or weapons.
+</li><li> Armor Games' <em>Indestructo-</em> series of games has had medals for in-game achievements ever since <em>Indestructotank 2</em>.
+<ul><li> <em>IndestructoTank 2</em>: Max Combo (20, 40, 60), Total Kills (250, 1,000, 2,000) and completing the Classic, Enhanced and Adventure Modes at Easy, Medium and Hard levels.
+</li><li> <em>IndestructoTank A.E.</em>: Solo Star (max out all enemies in a Standard game), Chain Champ (25, 50 and 75 Combo), Free Flyer (launch your tank more than 90 feet in the air), Ducking Dirk and Pimpin' Pacifist (last for 30 or 60 seconds in Quick Play without destroying any aircraft)
+</li><li> <em>In3structoTank!</em>: Completing Adventure and Standard modes, getting 5,000 points in the Pindestructotank pinball game, getting 33/66/99 Combos, getting 100/250/500 kills, and beating Whizzkid or General Betton in one minute or less.
+</li><li> <em>IndestructoCopter</em>: Great/Expert/Ace Gunner (beat Easy/Medium/Hard mode), last for 5 minutes or get 30 combos in Challenge mode, Hot Shot (get a perfect score in level 4 in Easy/Medium/Hard mode)
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/AchievementUnlocked" title="/pmwiki/pmwiki.php/VideoGame/AchievementUnlocked">Achievement Unlocked</a></em> is a series of games parodying achievements, featuring such absurd "achievements" like starting the game, <em>not moving your character</em>, changing graphics quality and other more substantial feats.
+</li><li> While all the games in the <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/AssassinsCreed" title="/pmwiki/pmwiki.php/VideoGame/AssassinsCreed">Assassin's Creed</a></em> series have featured Xbox Achievements, <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/AssassinsCreedIVBlackFlag" title="/pmwiki/pmwiki.php/VideoGame/AssassinsCreedIVBlackFlag">Assassin's Creed IV: Black Flag</a></em> is the first to have an internal set of achievements, called Abstergo Challenges.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TalesOfMajEyal" title="/pmwiki/pmwiki.php/VideoGame/TalesOfMajEyal">Tales of Maj'Eyal</a></em> has a total of over <strong>1500</strong> <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/Steam" title="/pmwiki/pmwiki.php/UsefulNotes/Steam">Steam</a> achievements, a lot. As of 2013-12-15 this is more achievements than Steam can handle properly, which results in Steam often forgetting what achievements the player has. Appromixately three-quarter of the achievements is under the 1% level, and the hardest ones are actually at <em>0%</em>.
+<ul><li> It also tracks acheivements separately on its own servers for all players with an online account (including those who didn't buy the Steam version). Notably, most achievements have multiple versions for the different difficulty levels (excluding the easiest modes for which no achievements are awarded), and the <a class="createlink" href="/pmwiki/pmwiki.php/Main/TE4" title="/pmwiki/pmwiki.php/Main/TE4">TE 4</a> server awards the achievement for all difficulty settings less than your own, but Steam only awards them for that exact difficulty. Resynching achievements from <a class="createlink" href="/pmwiki/pmwiki.php/Main/TE4" title="/pmwiki/pmwiki.php/Main/TE4">TE 4</a> is needed to unlock the extra achievements on Steam.
+</li></ul></li><li> The <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Borderlands" title="/pmwiki/pmwiki.php/VideoGame/Borderlands">Borderlands</a></em> series:
+<ul><li> The first game, <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Borderlands1" title="/pmwiki/pmwiki.php/VideoGame/Borderlands1">Borderlands 1</a></em>, has Challenges that can be completed for XP.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Borderlands2" title="/pmwiki/pmwiki.php/VideoGame/Borderlands2">Borderlands 2</a></em> has "Badass Ranks" that when completed can be traded in for a small but permanent upgrade bonus to stats that apply to all characters in your profile.
+</li></ul></li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/AdVentureCapitalist" title="/pmwiki/pmwiki.php/VideoGame/AdVentureCapitalist">Ad Venture Capitalist</a></em>, achievements are functional: they increase your businesses' profit multipliers.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/WorldOfWarcraft" title="/pmwiki/pmwiki.php/VideoGame/WorldOfWarcraft">World of Warcraft</a></em> gained its achievement system during the <em>Wrath of the Lich King</em> expansion. In addition to the cosmetic "points" for achievement, players can also unlock in-game items or titles for performing certain achievements. Older achievements that have since been <a class="twikilink" href="/pmwiki/pmwiki.php/Main/PermanentlyMissableContent" title="/pmwiki/pmwiki.php/Main/PermanentlyMissableContent">lost forever</a> are relegated to the "Legacy" or "Feat of Strength" sections.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DeadlyRoomsOfDeath" title="/pmwiki/pmwiki.php/VideoGame/DeadlyRoomsOfDeath">DROD 5: The Second Sky</a></em> is the first title in the series with an achievement system. They are referred to in-game as "challenges", and a number are indeed awarded for completing individual puzzles under <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SelfImposedChallenge" title="/pmwiki/pmwiki.php/Main/SelfImposedChallenge">Self-Imposed Challenge</a> conditions. Others are awarded for progression in the storyline or completing optional levels, so that maxing one's achievement list is the true sign of having <a class="twikilink" href="/pmwiki/pmwiki.php/Main/HundredPerCentCompletion" title="/pmwiki/pmwiki.php/Main/HundredPerCentCompletion">completed everything in the game</a>.
+</li><li> A rare <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Pinball" title="/pmwiki/pmwiki.php/Main/Pinball">Pinball</a> example: <a class="twikilink" href="/pmwiki/pmwiki.php/Creator/Gottlieb" title="/pmwiki/pmwiki.php/Creator/Gottlieb">Gottlieb</a>'s <em><a class="twikilink" href="/pmwiki/pmwiki.php/Pinball/ShaqAttaq" title="/pmwiki/pmwiki.php/Pinball/ShaqAttaq">Shaq Attaq</a></em> has five "Hidden Features", each of which is awarded after performing a certain feat in the game. An end-of-game bonus is given for the number of Hidden Features found; getting all five awards an extra <em>one billion</em> points.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Videogame/PlanetSide" title="/pmwiki/pmwiki.php/Videogame/PlanetSide">PlanetSide</a> 2</em> has Directives, achievements that are earned from completing various objectives, i.e kills with weapons, spotting enemies, and so on. Completing Directives grants account-wide <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BraggingRightsReward" title="/pmwiki/pmwiki.php/Main/BraggingRightsReward">but meaningless</a> "Directive Score" and unlocks unique items, such as <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AceCustom" title="/pmwiki/pmwiki.php/Main/AceCustom">specially modified variants</a> of standard-issue weapons, unique <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TronLines" title="/pmwiki/pmwiki.php/Main/TronLines">Tron Lines</a> for vehicles, or camouflage. Additionally, the popular Recursion Stat-tracker <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GameMod" title="/pmwiki/pmwiki.php/Main/GameMod">Game Mod</a> tracks kill and support achievements when the user is logged into Recursion, which run the gamut from simple double-kills to making players fall to their death to killstreaks of <a class="twikilink" href="/pmwiki/pmwiki.php/Main/OneManArmy" title="/pmwiki/pmwiki.php/Main/OneManArmy">five hundred</a>. Recursion achievements can be earned repeatedly, so you might get a dozen killstreak-related achievements in one session.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/BunnyMustDie" title="/pmwiki/pmwiki.php/VideoGame/BunnyMustDie">Bunny Must Die! Chelsea and the 7 Devils</a></em> feature them in its Game Record, split between Bunny and Chelsea, and features a slew of challenges for the player to perform. Some include clearing the game under an hour, completing the game with 100% completion, defeating bosses with a certain weapon, or not taking damage in certain boss battles. Unfortunately, the achievement requirements are hidden, so players are clueless on what the requirements are unless they stumble on across them by accident or looking it up online.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FairyBloomFreesia" title="/pmwiki/pmwiki.php/VideoGame/FairyBloomFreesia">Fairy Bloom Freesia</a></em>: The things that award achievements include defeating a large number of enemies, dealing high amounts of damage in a single hit, to getting a very high combo count;
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Astebreed" title="/pmwiki/pmwiki.php/VideoGame/Astebreed">Astebreed</a></em>: The feats for its achievements range from completing the tutorial stage, clearing the game without dying, to no damage running the game, and they are split between difficulties.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FreedomPlanet" title="/pmwiki/pmwiki.php/VideoGame/FreedomPlanet">Freedom Planet</a></em> features over fifty to unlock. They range from defeating a boss with a certain attack, to speedrunning the game, to playing through the Adventure Mode without losing a life.
+</li><li> Interestingly, the <a class="twikilink" href="/pmwiki/pmwiki.php/Website/Kickstarter" title="/pmwiki/pmwiki.php/Website/Kickstarter">Kickstarter</a> for <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/BloodstainedRitualOfTheNight" title="/pmwiki/pmwiki.php/VideoGame/BloodstainedRitualOfTheNight">Bloodstained: Ritual of the Night</a></em> features achievements. By spreading the word through doing things like following their <a class="twikilink" href="/pmwiki/pmwiki.php/Website/YouTube" title="/pmwiki/pmwiki.php/Website/YouTube">YouTube</a> channel, Liking their Facebook page, and gaining Twitter followers, the page is updated with Backer Achievements. Unlocking these achievements will contribute toward additional non-stretch goals such as automatically unlocking certain stretch goals, adding in humorous cheat codes, an alternate <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Retraux" title="/pmwiki/pmwiki.php/Main/Retraux">Retraux</a> soundtrack, or the chance to see Koji Igarashi cosplay.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MitsurugiKamuiHikae" title="/pmwiki/pmwiki.php/VideoGame/MitsurugiKamuiHikae">Mitsurugi Kamui Hikae</a></em> has over thirty in-game achievements to unlock, and they can be unlocked by performing feats such as clearing the game on a certain difficulty, defeating bosses, and using a technique a certain number of times.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FalloutNewVegas" title="/pmwiki/pmwiki.php/VideoGame/FalloutNewVegas">Fallout: New Vegas</a></em> has the game-wide Steam/360 achievements (required) <em>and</em> character-specific Challenges (not required), hence exceeding requirements imposed by the game platform.
+</li><li> The site <a class="twikilink" href="/pmwiki/pmwiki.php/WebSite/RetroAchievements" title="/pmwiki/pmwiki.php/WebSite/RetroAchievements">Retro Achievements</a> uses modified emulators to add achievements to a whole host of classic games.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/RatchetAndClank" title="/pmwiki/pmwiki.php/Franchise/RatchetAndClank">Ratchet &amp; Clank</a></em> games have the Skill Point system - do unintuitive things to get points which you can use to spend on cheats and costumes. When the series got Trophy support, they kept the Skill Points but there are a lot fewer.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/KenkaBancho" title="/pmwiki/pmwiki.php/VideoGame/KenkaBancho">Kenka Bancho</a></em> has titles you unlock by thinking completely out of the box, such as staying the full seven days without leaving your room. Good luck.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/EndlessOcean" title="/pmwiki/pmwiki.php/VideoGame/EndlessOcean">Endless Ocean</a>: Blue World</em> has Titles, special nicknames you can assign to your character that unlock by accomplishing various tasks. Some of the Titles come with physical rewards as well, like new diving equipment.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Lunarosse" title="/pmwiki/pmwiki.php/VideoGame/Lunarosse">Lunarosse</a></em>: One made in <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/RPGMaker" title="/pmwiki/pmwiki.php/UsefulNotes/RPGMaker">RPG Maker</a> example. The ones you get by default are mostly for show, but the ones you have to work for can unlock new moves, items and equipment.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/NexusClash" title="/pmwiki/pmwiki.php/VideoGame/NexusClash">Nexus Clash</a></em> has an achievement system based on badges that are granted by a variety of sources. Some grant small rewards for visiting locations important to the series' <a class="twikilink" href="/pmwiki/pmwiki.php/Main/WorldBuilding" title="/pmwiki/pmwiki.php/Main/WorldBuilding">backstory</a>, but most are based on <a class="twikilink" href="/pmwiki/pmwiki.php/Main/StatGrinding" title="/pmwiki/pmwiki.php/Main/StatGrinding">Stat Grinding</a>. Doing just about <em>any</em> action can get you badges, and doing enough of it gets you more Character Points to spend on skills. Since Character Points can be spent on anything, this bridges on <a class="twikilink" href="/pmwiki/pmwiki.php/Main/RefugeInAudacity" title="/pmwiki/pmwiki.php/Main/RefugeInAudacity">Refuge in Audacity</a> when, for instance, a character who has murdered enough angels gains the ability to repair damaged doors and electrical grids.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/ValkyriaChronicles" title="/pmwiki/pmwiki.php/VideoGame/ValkyriaChronicles">Valkyria Chronicles</a></em> is just old enough that it is not part of the PS3 trophy system. Instead, it has a set of medals that are awarded for clearing specific missions that represent Squad 7's role in major campaigns or completing conditions like defeating a large number of enemies or achieving the highest rank on all stages. The two sequels on PSP have a similar system. The PS4 Remastered version of the first game merges these medals into the trophy system.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MedalOfHonorVanguard" title="/pmwiki/pmwiki.php/VideoGame/MedalOfHonorVanguard">Medal of Honor: Vanguard</a></em> awards medals after the end of each Operation, these include medals for: completing missions without dying, landing in a specific location at the start of the Operation during the parachute jump, getting over a certain number of headshots in a mission, using every type of weapon available in the mission, and obtaining enough of the other medals.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Miitopia" title="/pmwiki/pmwiki.php/VideoGame/Miitopia">Miitopia</a></em> gives medals to keep track of the party's progress, like leveling up a class to level 25 or visiting some areas.
+</li><li> Starting with the collector's edition of <em>Dire Grove</em>, most of the <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MysteryCaseFiles" title="/pmwiki/pmwiki.php/VideoGame/MysteryCaseFiles">Mystery Case Files</a></em> games award achievements upon various things lke clearing all the puzzles without skipping or finding X objects within Y seconds.
+</li><li> The <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MatchThreeGame" title="/pmwiki/pmwiki.php/Main/MatchThreeGame">Match-Three Game</a> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Chuzzle" title="/pmwiki/pmwiki.php/VideoGame/Chuzzle">Chuzzle</a></em> has various achievements to collect, usually dealing with combos.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Disgaea5AllianceOfVengeance" title="/pmwiki/pmwiki.php/VideoGame/Disgaea5AllianceOfVengeance">Disgaea 5</a> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/UpdatedRerelease" title="/pmwiki/pmwiki.php/Main/UpdatedRerelease">Complete</a></em> on the <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/NintendoSwitch" title="/pmwiki/pmwiki.php/UsefulNotes/NintendoSwitch">Nintendo Switch</a> has a carbon copy of the aforementioned PlayStation Trophy system built into the game itself due to the Switch not possessing an innate achievement system.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Idolish7" title="/pmwiki/pmwiki.php/VideoGame/Idolish7">Idolish 7</a></em>, The player is given several rewards upon achieving certain goals such as meeting a combo requirement, getting a certain rank, or playing a song a certain number of times. There are also the bonus-giving badges which are also awarded to players upon reaching specific milestones.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MadMax2015" title="/pmwiki/pmwiki.php/VideoGame/MadMax2015">Mad Max</a></em> structures its level-up scheme as an internal achievement system, earning levels through various actions instead of grinding for <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ExperiencePoints" title="/pmwiki/pmwiki.php/Main/ExperiencePoints">Experience Points</a>. However some of these achievements, particularly the combat-related ones, are repeatable, so if you really want you can go collect <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TwentyBearAsses" title="/pmwiki/pmwiki.php/Main/TwentyBearAsses">Thirty Car Bumpers</a> for levels. You have to be intentionally avoiding a <em>lot</em> of content to have to rely on grinding to unlock your upgrades, though.
+</li><li> In a non-video game example, the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ClickbaitGag" title="/pmwiki/pmwiki.php/Main/ClickbaitGag">Clickbait Gag</a> site <em><a class="twikilink" href="/pmwiki/pmwiki.php/Website/Clickhole" title="/pmwiki/pmwiki.php/Website/Clickhole">Clickhole</a></em> keeps track of how many times you've clicked on it, <a class="urllink" href="http://www.clickhole.com/achievement-hole/">marking each milestone as you reach it<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a>. It resets when you reach the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Cap" title="/pmwiki/pmwiki.php/Main/Cap">Cap</a> of 9,999 clicks.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Battlerite" title="/pmwiki/pmwiki.php/VideoGame/Battlerite">Battlerite</a></em> gives Achievements for things like raising your profile level, raising your champions' levels (both for reaching a milestone of total champion levels and raising a certain amount of champions of a specific category to level 10), collecting Legendary equipment, and <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SocializationBonus" title="/pmwiki/pmwiki.php/Main/SocializationBonus">adding friends</a>. These come with rewards such as <a class="twikilink" href="/pmwiki/pmwiki.php/Main/LootBoxes" title="/pmwiki/pmwiki.php/Main/LootBoxes">chests</a> and currency.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FireEmblemWarriors" title="/pmwiki/pmwiki.php/VideoGame/FireEmblemWarriors">Fire Emblem Warriors</a></em>, the player gets Badges for completing certain events, such as clearing Story Mode on Hard and Lunatic Difficulties, beating History Mode maps, hitting a milestone, or completing character specific actions. The player gets more Badges to earn the more DLC Packs (based around <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FireEmblemFates" title="/pmwiki/pmwiki.php/VideoGame/FireEmblemFates">Fire Emblem Fates</a></em>, <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FireEmblemShadowDragonAndTheBladeOfLight" title="/pmwiki/pmwiki.php/VideoGame/FireEmblemShadowDragonAndTheBladeOfLight">Fire Emblem: Shadow Dragon</a></em>, and <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FireEmblemAwakening" title="/pmwiki/pmwiki.php/VideoGame/FireEmblemAwakening">Fire Emblem Awakening</a></em>) they have downloaded, culminating in a Badge existing when you get all the Badges, DLC included.
+</li><li> The Steam achievements in '<a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TeamFortress2" title="/pmwiki/pmwiki.php/VideoGame/TeamFortress2">Team Fortress 2</a>'' were originally the only way to unlock additional gear for your characters. You can still obtain all of the original 27 unlockables this way, which is handy since the sheer number of items in the random drop pool now means the odds of finding those particular ones by the time you reach the necessary milestones to unlock them are slim.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/RuneScape" title="/pmwiki/pmwiki.php/VideoGame/RuneScape">RuneScape</a></em> has an achievement system. The first achievements that were added to the game are categorized into different sets based on area and difficulty level that give rewards for completing them. In 2017 the achievement system was reworked to include the requirements for getting the completionist capes as well as adding large number of new achievements for leveling up skills, defeating bosses, and many other things. Most achievements now add to a score called your <a class="createlink" href="/pmwiki/pmwiki.php/Main/RuneScore" title="/pmwiki/pmwiki.php/Main/RuneScore">Rune Score</a>. Although many achievement sets have rewards for finishing them, the <a class="createlink" href="/pmwiki/pmwiki.php/Main/RuneScore" title="/pmwiki/pmwiki.php/Main/RuneScore">Rune Score</a> is only for bragging rights.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/Halo" title="/pmwiki/pmwiki.php/Franchise/Halo">Halo</a>: <a class="twikilink" href="/pmwiki/pmwiki.php/Main/CompilationRerelease" title="/pmwiki/pmwiki.php/Main/CompilationRerelease">The Master Chief Collection</a></em> has a total gamerscore of <strong>6000</strong>, with 600 achievements in all. This is due to having 1000 available for each game. (The <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Halo2" title="/pmwiki/pmwiki.php/VideoGame/Halo2">Halo 2</a> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/UpdatedRerelease" title="/pmwiki/pmwiki.php/Main/UpdatedRerelease">Anniversary</a></em> multiplayer is counted seperately from the standard <em>Halo 2</em> multiplayer)
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Portal2" title="/pmwiki/pmwiki.php/VideoGame/Portal2">Portal 2</a></em> used it's achievement system for a good gag in Chapter 9:
+<div class="indent"> <strong>GlaDOS:</strong> Well, this is the part where he kills us!
+</div><div class="indent"> <strong>Wheatley:</strong> Hello! This is the part where I kill you!
+</div><div class="indent"> <strong>CHAPTER 9: The Part Where He Kills You</strong>
+</div><div class="indent"> <strong>Achievement Unlocked:</strong> The Part Where He Kills You
+</div></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/EternalTwilight" title="/pmwiki/pmwiki.php/VideoGame/EternalTwilight">Eternal Twilight</a></em>: Each save file keeps track of various "Trophies" based on player accomplishments, which come with prizes. Most of the prizes are junk items to be converted into essence, though there are rare items such as AP increasing items, new recipes, and accessories.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SushiStrikerTheWayOfSushido" title="/pmwiki/pmwiki.php/VideoGame/SushiStrikerTheWayOfSushido">Sushi Striker: The Way of Sushido</a></em> has the Triumph system consisting of 15 categories, all of which are numerical (such as winning X battles, doing X damage in one attack, or collecting X <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Mons" title="/pmwiki/pmwiki.php/Main/Mons">Sushi Sprites</a>). Each category contains 9 Triumphs, each of which have a higher numerical requirement than the last and, fitting the game's conveyor belt sushi theme, take the form of colored plates in order of how they're traditionally priced in a conveyor belt sushi restaurant. The game will ask you to get a certain number of Triumphs of particular ranks; if you can fulfill those requirements, your Striker Rank will increase. In addition to rewards given out at each Striker Rank promotion, the higher your Striker Rank, the more likely Sushi Sprites will join you, with most of the late-game and postgame Sushi Sprites requiring a minimum Striker Rank to recruit.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SuperMarioOdyssey" title="/pmwiki/pmwiki.php/VideoGame/SuperMarioOdyssey">Super Mario Odyssey</a></em> has a list of various achievements that you can complete once you finish the game, such as collecting various kinds of Power Moons (for example, by Ground Pounding or through wearing certain clothes), collecting souvenirs or costumes, or even by jumping or throwing your hat enough times. For each achievement, you earn a Power Moon.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SuperMarioBros1" title="/pmwiki/pmwiki.php/VideoGame/SuperMarioBros1">Super Mario Bros.</a></em>is one of the earlier games to feature an achievement system with the Deluxe version for the <a class="createlink" href="/pmwiki/pmwiki.php/Main/GameBoy" title="/pmwiki/pmwiki.php/Main/GameBoy">Game Boy</a> Color, in the form of the album. By doing various tasks, like finishing the game or defeating enemies, you can complete the album with pictures or medals related to your achievement that you can even comment and print thanks to the <a class="createlink" href="/pmwiki/pmwiki.php/Main/GameBoy" title="/pmwiki/pmwiki.php/Main/GameBoy">Game Boy</a> Printer! However the print option has been removed in the 3DS Virtual Console release due to the obvious incompatibility with the Printer. Also in Virtual Console version, due to the removal of Multiplayer, 2 pictures has been permanently locked, making 100% completion legitimately impossible on 3DS.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DungeonsAndDragonsChroniclesOfMystara" title="/pmwiki/pmwiki.php/VideoGame/DungeonsAndDragonsChroniclesOfMystara">Dungeons &amp; Dragons: Chronicles of Mystara</a></em> has an in-game achievement system in addition to the Steam Achievements. By accomplishing various achievements, such as completing the game, using various abilities often enough, or inflicting certain effects on monsters, the player levels up and gains points that can be used to unlock items in the gallery.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Fanfic/MyHuntsmanAcademia" title="/pmwiki/pmwiki.php/Fanfic/MyHuntsmanAcademia">My Huntsman Academia</a></em> has a list of "achievements" listed at the end of major battles. Clearing certain objectives will award CP (Character Points) for readers to invest into Izuku's stats and skills. However, the exact achievements aren't revealed to readers until after the fight is won. In addition, certain achievements <a class="twikilink" href="/pmwiki/pmwiki.php/Main/FireForgedFriends" title="/pmwiki/pmwiki.php/Main/FireForgedFriends">can improve his relationships with the people he fights alongside.</a>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/LuigisMansion3" title="/pmwiki/pmwiki.php/VideoGame/LuigisMansion3">Luigi's Mansion 3</a></em> has four different types of achievements: Collection, Hotel, Battle and Scarescraper. The collection achievements relate to collecting all the gems on each floor and the type of money you amass. Hotel achievements are more miscellaneous, involving such things as riding the elevator 50 times, finding and interacting certain objects, etc. Battle achievements involve defeating different types of ghosts while Scarescraper achievements revolve around clearing floors and defeating rare ghosts.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Hades" title="/pmwiki/pmwiki.php/VideoGame/Hades">Hades</a></em> has an in-game system called the Fates' Prophecies, a document that grants rewards for completing the game in various fashions or gathering different resources such as, for example, picking up every available boon from a single god.
+</li><li> The <em><a class="twikilink" href="/pmwiki/pmwiki.php/Pinball/WillyWonkaAndTheChocolateFactory" title="/pmwiki/pmwiki.php/Pinball/WillyWonkaAndTheChocolateFactory">Willy Wonka &amp; the Chocolate Factory</a></em> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Pinball" title="/pmwiki/pmwiki.php/Main/Pinball">pinball</a> machine awards gumballs to the player after completing certain tasks, ranging from amassing enough bumper hits to the Herculean task of cashing in a full "scrumdiddlyumptious" <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Combos" title="/pmwiki/pmwiki.php/Main/Combos">combo</a>. One random achievement will also award a Golden Ticket (one of five needed to reach the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/WizardMode" title="/pmwiki/pmwiki.php/Main/WizardMode">Wizard Mode</a>).
+</li><li> Similarly, <a class="twikilink" href="/pmwiki/pmwiki.php/Creator/Stern" title="/pmwiki/pmwiki.php/Creator/Stern">Stern</a>'s <em><a class="twikilink" href="/pmwiki/pmwiki.php/Pinball/JurassicParkStern" title="/pmwiki/pmwiki.php/Pinball/JurassicParkStern">Jurassic Park</a></em> machine bestows fossils to the player for certain milestones, ranging from finishing a T-Rex mode to completing a mini-<a class="twikilink" href="/pmwiki/pmwiki.php/Main/WizardMode" title="/pmwiki/pmwiki.php/Main/WizardMode">Wizard Mode</a>. They're grouped into four sets, and each one has a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SetBonus" title="/pmwiki/pmwiki.php/Main/SetBonus">Set Bonus</a> awarding an increasing amount of points and another benefit (such as an extra ball).
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/Pinball/AvengersInfinityQuest" title="/pmwiki/pmwiki.php/Pinball/AvengersInfinityQuest">Avengers: Infinity Quest</a></em>, achieving specific goals (like getting an Infinity Gem or successfully finishing a Hawkeye Challenge) awards a trophy that boosts <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Combos" title="/pmwiki/pmwiki.php/Main/Combos">combo</a> scoring. There are three potential colors  bronze, silver, and gold  that depend on precisely how well the player did (and reward them more accordingly).
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FormulaRacer" title="/pmwiki/pmwiki.php/VideoGame/FormulaRacer">Formula Racer</a></em>: The first game has 24 achievements, the second has 16. You can earn them for things like winning a race with wrong tires, getting in the top 5 without hitting other cars, reaching 268 mph, and so on.
+</li></ul><hr/><strong>Achievement Unlocked: <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DescribeTopicHere" title="/pmwiki/pmwiki.php/Main/DescribeTopicHere">Achievement System Described</a></strong>.
+<hr/>
+</div>
+<div class="lazy-video-script">
+<a id="VideoExamples"></a>
+<div> </div>
+<div class="video-examples has-thumbnails">
+<div class="video-examples-header">
+<a class="font-s float-right text-blue" data-modal-target="login" href="#feedback">Feedback</a>
+<h3 class="bold">Video Example(s):</h3>
+</div>
+<div class="video-examples-featured">
+<a class="video-launch-link video-overlay-link featured-widget-vid" data-video-approval="APPROVED" data-video-average-rating="5.00" data-video-descrip="Finding King MacFrights' secret treasure trove awards an achievement in addition to all the gold and gem." data-video-id="xn5zjo" data-video-media-sources="VideoGame/LuigisMansion3" data-video-rating-count="3" data-video-thumbnail="https://i.vimeocdn.com/video/844983822_640x360.jpg?r=pad" data-video-title="Royal coffers achievement " data-video-trope="Main/AchievementSystem" data-video-tropename="Achievement System" data-video-troper-rating="" data-video-url="https://player.vimeo.com/external/383522953.sd.mp4?s=fa48e401bab24d06df988e5c275e1f44aa117398&amp;profile_id=164&amp;oauth2_token_id=1043337761" href="#video-link">
+<div class="featured-widget-vid-iframe">
+<video class="video-js vjs-default-skin vjs-16-9" controls="" data-setup='{"ga": {"eventsToTrack": ["error"]}}' id="featured-video-player">
+</video>
+</div>
+</a>
+<h2 class="bold font-l">Royal coffers achievement </h2>
+<p class="_pmvv-vidbox-descTxt">
+Finding King MacFrights' secret treasure trove awards an achievement in addition to all the gold and gem. </p>
+</div>
+</div>
+</div>
+<div class="alt-titles section section-fact">
+<h3>
+<strong>Alternative Title(s):</strong>
+<span>Video Game Achievements</span>, <span>Achievement</span>, <span>Achievements System</span> </h3>
+</div>
+<div class="square_ad footer-article-ad main_2" data-isolated="0"></div>
+<div class="section-links" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<div class="titles">
+<div><h3 class="text-center text-uppercase">Previous</h3></div>
+<div><h3 class="text-center text-uppercase">Index</h3></div>
+<div><h3 class="text-center text-uppercase">Next</h3></div>
+</div>
+<div class="links">
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/HundredPercentHeroismRating">100% Heroism Rating</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/VideoGameRewards">Video Game Rewards</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/AndYourRewardIsClothes">And Your Reward Is Clothes</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/AchievementMockery">Achievement Mockery</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/VideoGameCulture">Video Game Culture</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/AdvancedMovementTechnique">Advanced Movement Technique</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/AcePilot">Ace Pilot</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/WeAreNotAlone/TropesZeroToD">WeAreNotAlone/Tropes 0 to D</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/AcmeProducts">Acme Products</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/VideoGame/AchievementUnlocked">Achievement Unlocked</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/ImageSource/VideoGamesAToL">ImageSource/Video Games (A to L)</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/VideoGame/ActRaiser">ActRaiser</a>
+</li>
+</ul>
+</div>
+</div>
+</article>
+<div id="main-content-sidebar"><div class="sidebar-item display-options">
+<ul class="sidebar display-toggles">
+<li>Show Spoilers <div class="display-toggle show-spoilers" id="sidebar-toggle-showspoilers"></div></li>
+<li>Night Vision <div class="display-toggle night-vision" id="sidebar-toggle-nightvision"></div></li>
+<li>Sticky Header <div class="display-toggle sticky-header" id="sidebar-toggle-stickyheader"></div></li>
+<li>Wide Load <div class="display-toggle wide-load" id="sidebar-toggle-wideload"></div></li>
+</ul>
+<script>updateDesktopPrefs();</script>
+</div>
+<div class="sidebar-item ad sb-ad-unit">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_2"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_2'); });</script> </div>
+</div></div>
+<div class="sidebar-item quick-links" itemtype="http://schema.org/SiteNavigationElement">
+<p class="sidebar-item-title" data-title="Important Links">Important Links</p>
+<div class="padded">
+<a href="/pmwiki/query.php?type=att">Ask The Tropers</a>
+<a href="/pmwiki/query.php?type=tf">Trope Finder</a>
+<a href="/pmwiki/query.php?type=ykts">You Know That Show...</a>
+<a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a>
+<a href="/pmwiki/review_activity.php">Reviews</a>
+<a data-modal-target="login" href="/pmwiki/lbs.php">Live Blogs</a>
+<a href="/pmwiki/ad-free-subscribe.php">Go Ad Free!</a> </div>
+</div>
+<div class="sidebar-item sb-ad-unit">
+<div class="sidebar-section">
+<div class="square_ad ad-size-300x600 ad-section text-center">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_3"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_3'); });</script> </div>
+</div> </div>
+</div>
+</div>
+<div class="sidebar-item">
+<p class="sidebar-item-title" data-title="Crucial Browsing">Crucial Browsing</p>
+<ul class="padded font-s" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><a data-click-toggle="active" href="javascript:void(0);">Genre</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/ActionAdventureTropes" title="Main/ActionAdventureTropes">Action Adventure</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ComedyTropes" title="Main/ComedyTropes">Comedy</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CommercialsTropes" title="Main/CommercialsTropes">Commercials</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CrimeAndPunishmentTropes" title="Main/CrimeAndPunishmentTropes">Crime &amp; Punishment</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DramaTropes" title="Main/DramaTropes">Drama</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/HorrorTropes" title="Main/HorrorTropes">Horror</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LoveTropes" title="Main/LoveTropes">Love</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NewsTropes" title="Main/NewsTropes">News</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ProfessionalWrestling" title="Main/ProfessionalWrestling">Professional Wrestling</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SpeculativeFictionTropes" title="Main/SpeculativeFictionTropes">Speculative Fiction</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SportsStoryTropes" title="Main/SportsStoryTropes">Sports Story</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/WarTropes" title="Main/WarTropes">War</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Media</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/Media" title="Main/Media">All Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/AnimationTropes" title="Main/AnimationTropes">Animation (Western)</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Anime" title="Main/Anime">Anime</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ComicBookTropes" title="Main/ComicBookTropes">Comic Book</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FanFic" title="FanFic/FanFics">Fan Fics</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Film" title="Main/Film">Film</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/GameTropes" title="Main/GameTropes">Game</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Literature" title="Main/Literature">Literature</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MusicAndSoundEffects" title="Main/MusicAndSoundEffects">Music And Sound Effects</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NewMediaTropes" title="Main/NewMediaTropes">New Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/PrintMediaTropes" title="Main/PrintMediaTropes">Print Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Radio" title="Main/Radio">Radio</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SequentialArt" title="Main/SequentialArt">Sequential Art</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TabletopGames" title="Main/TabletopGames">Tabletop Games</a></li>
+<li><a href="/pmwiki/pmwiki.php/UsefulNotes/Television" title="Main/Television">Television</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Theater" title="Main/Theater">Theater</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/VideogameTropes" title="Main/VideogameTropes">Videogame</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Webcomics" title="Main/Webcomics">Webcomics</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Narrative</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/UniversalTropes" title="Main/UniversalTropes">Universal</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/AppliedPhlebotinum" title="Main/AppliedPhlebotinum">Applied Phlebotinum</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CharacterizationTropes" title="Main/CharacterizationTropes">Characterization</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Characters" title="Main/Characters">Characters</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CharactersAsDevice" title="Main/CharactersAsDevice">Characters As Device</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Dialogue" title="Main/Dialogue">Dialogue</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Motifs" title="Main/Motifs">Motifs</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NarrativeDevices" title="Main/NarrativeDevices">Narrative Devices</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Paratext" title="Main/Paratext">Paratext</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Plots" title="Main/Plots">Plots</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Settings" title="Main/Settings">Settings</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Spectacle" title="Main/Spectacle">Spectacle</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Other Categories</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/BritishTellyTropes" title="Main/BritishTellyTropes">British Telly</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TheContributors" title="Main/TheContributors">The Contributors</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CreatorSpeak" title="Main/CreatorSpeak">Creator Speak</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Creators" title="Main/Creators">Creators</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DerivativeWorks" title="Main/DerivativeWorks">Derivative Works</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LanguageTropes" title="Main/LanguageTropes">Language</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LawsAndFormulas" title="Main/LawsAndFormulas">Laws And Formulas</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ShowBusiness" title="Main/ShowBusiness">Show Business</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SplitPersonalityTropes" title="Main/SplitPersonalityTropes">Split Personality</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/StockRoom" title="Main/StockRoom">Stock Room</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TropeTropes" title="Main/TropeTropes">Trope</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Tropes" title="Main/Tropes">Tropes</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TruthAndLies" title="Main/TruthAndLies">Truth And Lies</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TruthInTelevision" title="Main/TruthInTelevision">Truth In Television</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Topical Tropes</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/BetrayalTropes" title="Main/BetrayalTropes">Betrayal</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CensorshipTropes" title="Main/CensorshipTropes">Censorship</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CombatTropes" title="Main/CombatTropes">Combat</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DeathTropes" title="Main/DeathTropes">Death</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FamilyTropes" title="Main/FamilyTropes">Family</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FateAndProphecyTropes" title="Main/FateAndProphecyTropes">Fate And Prophecy</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FoodTropes" title="Main/FoodTropes">Food</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/HolidayTropes" title="Main/HolidayTropes">Holiday</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MemoryTropes" title="Main/MemoryTropes">Memory</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MoneyTropes" title="Main/MoneyTropes">Money</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MoralityTropes" title="Main/MoralityTropes">Morality</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/PoliticsTropes" title="Main/PoliticsTropes">Politics</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ReligionTropes" title="Main/ReligionTropes">Religion</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SchoolTropes" title="Main/SchoolTropes">School</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="sidebar-item showcase">
+<p class="sidebar-item-title" data-title="Community Showcase">Community Showcase <a class="bubble float-right hover-blue" href="/pmwiki/showcase.php">More</a></p>
+<p class="community-showcase">
+<a href="https://sharetv.com/shows/echo_chamber" onclick="trackOutboundLink('https://sharetv.com/shows/echo_chamber');" target="_blank">
+<img alt="" class="lazy-image" data-src="/images/communityShowcase-echochamber.jpg"/></a>
+<a href="/pmwiki/pmwiki.php/Webcomic/TwistedTropes">
+<img alt="" class="lazy-image" data-src="/img/howlandsc-side.jpg"/></a>
+</p>
+</div>
+<div class="sidebar-item sb-ad-unit" id="stick-cont">
+<div class="sidebar-section" id="stick-bar">
+<div class="square_ad ad-size-300x600 ad-section text-center">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_4"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_4'); });</script> </div>
+</div> </div>
+</div>
+</div>
+</div>
+</div>
+<div class="action-bar tablet-off" id="action-bar-bottom">
+<a class="scroll-to-top dead-button" href="#top-of-page" onclick="$('html, body').animate({scrollTop : 0},500);">Top</a>
+</div>
+</div>
+<div class="proper-ad-unit ad-sticky">
+<div id="proper-ad-tvtropes_sticky_ad"> <script>propertag.cmd.push(function() { proper_display('tvtropes_sticky_ad'); });</script> </div>
+</div>
+<footer id="main-footer">
+<div id="main-footer-inner">
+<div class="footer-left">
+<a class="img-link" href="/"><img alt="TV Tropes" class="lazy-image" data-src="/img/tvtropes-footer-logo.png" title="TV Tropes"/></a>
+<form action="index.html" class="navbar-form newsletter-signup validate modal-replies" data-ajax-get="/ajax/subscribe_email.php" id="cse-search-box-mobile" name="" role="">
+<button class="btn-submit newsletter-signup-submit-button" id="subscribe-btn" type="submit"><i class="fa fa-paper-plane"></i></button>
+<input class="form-control" id="subscription-email" name="q" placeholder="Subscribe" size="31" type="text" validate-type="email" value=""/>
+</form>
+<ul class="social-buttons">
+<li><a class="btn fb" href="https://www.facebook.com/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-facebook']);" target="_blank"><i class="fa fa-facebook"></i></a></li>
+<li><a class="btn tw" href="https://www.twitter.com/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-twitter']);" target="_blank"><i class="fa fa-twitter"></i></a> </li>
+<li><a class="btn rd" href="https://www.reddit.com/r/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-reddit']);" target="_blank"><i class="fa fa-reddit-alien"></i></a></li>
+</ul>
+</div>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">TVTropes</h4></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Administrivia">About TVTropes</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TheGoalsOfTVTropes">TVTropes Goals</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TheTropingCode">Troping Code</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TVTropesCustoms">TVTropes Customs</a></li>
+<li><a href="/pmwiki/pmwiki.php/JustForFun/TropesOfLegend">Tropes of Legend</a></li>
+<li><a href="/pmwiki/ad-free-subscribe.php">Go Ad-Free</a></li>
+</ul>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">Community</h4></li>
+<li><a href="/pmwiki/query.php?type=att">Ask The Tropers</a></li>
+<li><a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a></li>
+<li><a href="/pmwiki/query.php?type=tf">Trope Finder</a></li>
+<li><a href="/pmwiki/query.php?type=ykts">You Know That Show</a></li>
+<li><a data-modal-target="login" href="/pmwiki/lbs.php">Live Blogs</a></li>
+<li><a href="/pmwiki/review_activity.php">Reviews</a></li>
+<li><a href="/pmwiki/topics.php">Forum</a></li>
+</ul>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">Tropes HQ</h4></li>
+<li><a href="/pmwiki/about.php">About Us</a></li>
+<li><a href="/pmwiki/contact.php">Contact Us</a></li>
+<li><a href="/pmwiki/dmca.php">DMCA Notice</a></li>
+<li><a href="/pmwiki/privacypolicy.php">Privacy Policy</a></li>
+</ul>
+</div>
+<div class="text-center gutter-top gutter-bottom tablet-on" id="desktop-on-mobile-toggle">
+<a href="/pmwiki/switchDeviceCss.php?mobileVersion=1" rel="nofollow">Switch to <span class="txt-desktop">Desktop</span><span class="txt-mobile">Mobile</span> Version</a>
+</div>
+<div class="legal">
+<p>TVTropes is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License. <br/>Permissions beyond the scope of this license may be available from <a href="mailto:thestaff@tvtropes.org" rel="cc:morePermissions" xmlns:cc="http://creativecommons.org/ns#"> thestaff@tvtropes.org</a>.</p>
+<br/>
+<div class="privacy_wrapper">
+</div>
+</div>
+</footer>
+<style>
+      div.fc-ccpa-root {
+        position: absolute !important;
+        bottom: 93px !important;
+        margin: auto !important;
+        width: 100% !important;
+        z-index: 9999 !important;
+      }
+      .fc-ccpa-root .fc-dns-dialog .fc-dns-link p{
+        outline: none !important;
+        text-decoration: underline !important;
+        font-size: .7em !important;
+        font-family: sans-serif !important;
+      }
+      .fc-ccpa-root .fc-dns-dialog .fc-dns-link .fc-button-background {
+        background: none !important;
+      }
+    </style>
+<div class="full-screen" id="_pm_videoViewer">
+<a class="close" href="#close" id="_pm_videoViewer-close"></a>
+<div class="_pmvv-body">
+<div class="_pmvv-vidbox">
+<video class="video-js vjs-default-skin vjs-16-9" data-video-id="xn5zjo" id="overlay-video-player-box">
+</video>
+<div class="_pmvv-vidbox-desc">
+<h1 id="overlay-title">Royal coffers achievement </h1>
+<p class="_pmvv-vidbox-descTxt" id="overlay-descrip">
+Finding King MacFrights' secret treasure trove awards an achievement in addition to all the gold and gem.	</p>
+<div class="rating-row" data-video-id="xn5zjo">
+<input name="is_logged_in" type="hidden" value="0"/>
+<p>How well does it match the trope?</p>
+<div id="star-rating-group">
+<div class="trope-rate">
+<input id="lamp5" name="rate" type="radio" value="5"/>
+<label for="lamp5" title="Absolutely"></label>
+<input id="lamp4" name="rate" type="radio" value="4"/>
+<label for="lamp4" title="Yes"></label>
+<input id="lamp3" name="rate" type="radio" value="3"/>
+<label for="lamp3" title="Kind of"></label>
+<input id="lamp2" name="rate" type="radio" value="2"/>
+<label for="lamp2" title="Not really"></label>
+<input id="lamp1" name="rate" type="radio" value="1"/>
+<label for="lamp1" title="No"></label>
+</div>
+<div id="star-rating-total">
+5 (3 votes)
+</div>
+</div>
+</div>
+<div class="example-media-row">
+<div class="example-overlay">
+<p>Example of:</p>
+<div id="overlay-trope">Main / AchievementSystem</div>
+</div>
+<div class="media-sources-overlay example-overlay">
+<p>Media sources:</p>
+<div id="overlay-media">Main / AchievementSystem</div>
+</div>
+</div>
+<p class="_pmvv-vidbox-stats text-right font-s" style="padding-top:8px; border-top: solid 1px rgba(255,255,255,0.2)">
+<a class="float-right" data-modal-target="login" href="#video-feedback">Report</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+        window.special_ops =  {
+            member : 'no',
+            isolated : 0,
+            tags : ['videogame']
+        };
+    </script>
+<script type="text/javascript">
+
+        var cleanCreativeEnabled = "";
+        var donation = "";
+        var live_ads = "1";
+        var img_domain = "https://static.tvtropes.org";
+        var snoozed = cookies.read('snoozedabm');
+        var snoozable = "";
+
+        if (adsRemovedWith) {
+            live_ads = 0;
+        }
+
+        var elem = document.createElement('script');
+        elem.async = true;
+
+        elem.src = '/design/assets/bundle.js?rev=c58d8df02f09262390bbd03db7921fc35c6af306';
+
+        elem.onload = function() {
+                                 }
+        document.getElementsByTagName('head')[0].appendChild(elem);
+
+    </script>
+<script type="text/javascript">
+      function send_analytics_event(user_type, donation){
+          // if(user_type == 'uncached' || user_type == 'cached'){
+          //   ga('send', 'event', 'caching', 'load', user_type, {'nonInteraction': 1});
+          //   return;
+          // }
+          var event_name = user_type;
+
+          if(donation == 'true'){
+              event_name += "_donation"
+          }else if(typeof(valid_user) == 'undefined'){
+              event_name += "_blocked"
+          }else if(valid_user == true){
+              event_name += "_unblocked";
+          }else{
+              event_name = "_unknown"
+          }
+          ga('send', 'event', 'ads', 'load', event_name, {'nonInteraction': 1});
+      }
+
+    
+    send_analytics_event("guest", "false");
+      </script>
+</body>
+</html>

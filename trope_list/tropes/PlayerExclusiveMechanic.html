@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Player-Exclusive Mechanic - TV Tropes</title>
+<meta content="The Player-Exclusive Mechanic trope as used in popular culture. Designing Video Game A.I. is hard. Some are so competent as to render the game Nintendo Hard …" name="description"/>
+<link href="https://tvtropes.org/pmwiki/pmwiki.php/Main/PlayerExclusiveMechanic" rel="canonical"/>
+<link href="/img/icons/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="@tvtropes" name="twitter:site"/>
+<meta content="@tvtropes" name="twitter:owner"/>
+<meta content="Player-Exclusive Mechanic - TV Tropes" name="twitter:title"/>
+<meta content="The Player-Exclusive Mechanic trope as used in popular culture. Designing Video Game A.I. is hard. Some are so competent as to render the game Nintendo Hard …" name="twitter:description"/>
+<meta content="https://static.tvtropes.org/logo_blue_small.png" name="twitter:image:src"/>
+<meta content="TV Tropes" property="og:site_name"/>
+<meta content="en_US" property="og:locale"/>
+<meta content="https://www.facebook.com/tvtropes" property="article:publisher"/>
+<meta content="Player-Exclusive Mechanic - TV Tropes" property="og:title"/>
+<meta content="website" property="og:type"/>
+<meta content="https://tvtropes.org/pmwiki/pmwiki.php/Main/PlayerExclusiveMechanic" property="og:url"/>
+<meta content="https://static.tvtropes.org/logo_blue_small.png" property="og:image"/>
+<meta content="Designing Video Game A.I. is hard. Some are so competent as to render the game Nintendo Hard, while others are blatantly stupid. But in general, you expect computer-controlled characters in multiplayer games to be capable of doing everything the …" property="og:description"/>
+<link href="/img/icons/apple-icon-57x57.png" rel="apple-touch-icon" sizes="57x57" type="image/png"/>
+<link href="/img/icons/apple-icon-60x60.png" rel="apple-touch-icon" sizes="60x60" type="image/png"/>
+<link href="/img/icons/apple-icon-72x72.png" rel="apple-touch-icon" sizes="72x72" type="image/png"/>
+<link href="/img/icons/apple-icon-76x76.png" rel="apple-touch-icon" sizes="76x76" type="image/png"/>
+<link href="/img/icons/apple-icon-114x114.png" rel="apple-touch-icon" sizes="114x114" type="image/png"/>
+<link href="/img/icons/apple-icon-120x120.png" rel="apple-touch-icon" sizes="120x120" type="image/png"/>
+<link href="/img/icons/apple-icon-144x144.png" rel="apple-touch-icon" sizes="144x144" type="image/png"/>
+<link href="/img/icons/apple-icon-152x152.png" rel="apple-touch-icon" sizes="152x152" type="image/png"/>
+<link href="/img/icons/apple-icon-180x180.png" rel="apple-touch-icon" sizes="180x180" type="image/png"/>
+<link href="/img/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/img/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/img/icons/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png"/>
+<link href="/img/icons/favicon-192x192.png" rel="icon" sizes="192x192" type="image/png"/>
+<meta content="width=device-width, initial-scale=1" id="viewport" name="viewport"/>
+<script>
+                var propertag = {};
+                propertag.cmd = [];
+            </script>
+<link href="/design/assets/bundle.css?rev=c58d8df02f09262390bbd03db7921fc35c6af306" rel="stylesheet"/>
+<script>
+                function object(objectId) {
+                    if (document.getElementById && document.getElementById(objectId)) {
+                        return document.getElementById(objectId);
+                    } else if (document.all && document.all(objectId)) {
+                        return document.all(objectId);
+                    } else if (document.layers && document.layers[objectId]) {
+                        return document.layers[objectId];
+                    } else {
+                        return false;
+                    }
+                }
+
+                // JAVASCRIPT COOKIES CODE: for getting and setting user viewing preferences
+                var cookies = {
+                    create: function (name, value, days2expire, path) {
+                        var date = new Date();
+                        date.setTime(date.getTime() + (days2expire * 24 * 60 * 60 * 1000));
+                        var expires = date.toUTCString();
+                        document.cookie = name + '=' + value + ';' + 'expires=' + expires + ';' + 'path=' + path + ';';
+                    },
+										createWithExpire: function(name, value, expires, path) {
+												document.cookie = name + '=' + value + ';' + 'expires=' + expires + ';' + 'path=' + path + ';';
+										},
+                    read: function (name) {
+                        var cookie_value = "",
+                            current_cookie = "",
+                            name_expr = name + "=",
+                            all_cookies = document.cookie.split(';'),
+                            n = all_cookies.length;
+
+                        for (var i = 0; i < n; i++) {
+                            current_cookie = all_cookies[i].trim();
+                            if (current_cookie.indexOf(name_expr) === 0) {
+                                cookie_value = current_cookie.substring(name_expr.length, current_cookie.length);
+                                break;
+                            }
+                        }
+                        return cookie_value;
+                    },
+                    update: function (name, val) {
+                        this.create(name, val, 300, "/");
+                    },
+                    remove: function (name) {
+                        document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
+                    }
+                };
+
+                function updateUserPrefs() {
+                    //GENERAL: detect and set browser, if not cookied (will be treated like a user-preference and added to the #user-pref element)
+                    if( !cookies.read('user-browser') ){
+                        var broswer = '';
+
+                        if(navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPod/i) ){
+                            browser = 'iOS';
+                        } else if (/Opera[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'opera';
+                        } else if (/MSIE (\d+\.\d+);/.test(navigator.userAgent)) {
+                            browser = 'MSIE';
+                        } else if (/Navigator[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'netscape';
+                        } else if (/Chrome[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'chrome';
+                        } else if (/Safari[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'safari';
+                            /Version[\/\s](\d+\.\d+)/.test(navigator.userAgent);
+                            browserVersion = new Number(RegExp.$1);
+                        } else if (/Firefox[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'firefox';
+                        } else {
+                            browser = 'internet_explorer';
+                        }
+                        cookies.create('user-browser',browser,1,'/');
+                        document.getElementById('user-prefs').classList.add('browser-' + browser);
+                    } else {
+                        document.getElementById('user-prefs').classList.add('browser-' + cookies.read('user-browser'));
+                    }
+
+                    //update user preference settings
+                    if (cookies.read('wide-load') !== '') document.getElementById('user-prefs').classList.add('wide-load');
+                    if (cookies.read('night-vision') !== '') document.getElementById('user-prefs').classList.add('night-vision');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('user-prefs').classList.add('sticky-header');
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('user-prefs').classList.add('show-spoilers');
+                    if (cookies.read('folders-open') !== '') document.getElementById('user-prefs').classList.add('folders-open');
+                    if (cookies.read('lefthand-sidebar') !== '') document.getElementById('user-prefs').classList.add('lefthand-sidebar');
+                    if (cookies.read('highlight-links') !== '') document.getElementById('user-prefs').classList.add('highlight-links');
+                    if (cookies.read('forum-gingerbread') !== '') document.getElementById('user-prefs').classList.add('forum-gingerbread');
+                    if (cookies.read('shared-avatars') !== '') document.getElementById('user-prefs').classList.add('shared-avatars');
+                    if (cookies.read('new-search') !== '') document.getElementById('user-prefs').classList.add('new-search');
+                    if (cookies.read('stop-auto-play-video') !== '') document.getElementById('user-prefs').classList.add('stop-auto-play-video');
+
+                    //desktop view on mobile
+                    if (cookies.read('desktop-on-mobile') !== ''){
+                        document.getElementById('user-prefs').classList.add('desktop-on-mobile');
+
+                        var viewport = document.querySelector("meta[name=viewport]");
+                        viewport.setAttribute('content', 'width=1000');
+                    }
+
+                }
+
+                function updateDesktopPrefs() {
+                    if (cookies.read('wide-load') !== '') document.getElementById('sidebar-toggle-wideload').classList.add('active');
+                    if (cookies.read('night-vision') !== '') document.getElementById('sidebar-toggle-nightvision').classList.add('active');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('sidebar-toggle-stickyheader').classList.add('active');
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('sidebar-toggle-showspoilers').classList.add('active');
+
+                }
+
+                function updateMobilePrefs() {
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('mobile-toggle-showspoilers').classList.add('active');
+                    if (cookies.read('night-vision') !== '') document.getElementById('mobile-toggle-nightvision').classList.add('active');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('mobile-toggle-stickyheader').classList.add('active');
+                    if (cookies.read('highlight-links') !== '') document.getElementById('mobile-toggle-highlightlinks').classList.add('active');
+
+                }
+
+
+                if (document.cookie.indexOf("scroll0=") < 0) {
+                    // do nothing
+                } else {
+                    console.log('ads removed by scroll.com');
+                    var adsRemovedWith = 'scroll';
+                    var style = document.createElement('style');
+                    style.innerHTML = '#header-ad, .proper-ad-unit, .square_ad, .sb-ad-unit { display: none !important; } ';
+                    document.head.appendChild(style);
+                }
+            </script>
+<script type="text/javascript">
+
+                var tvtropes_config = {
+                    astri_stream_enabled : "",
+                    is_logged_in         : "",
+                    handle               : "",
+                    get_astri_stream     : "",
+										revnum               : "c58d8df02f09262390bbd03db7921fc35c6af306",
+										img_domain           : "https://static.tvtropes.org",
+										adblock              : "1",
+										adblock_url          : "propermessage.io",
+										pause_editing        : "0",
+										pause_editing_msg    : "",
+										pause_site_changes   : ""
+                };
+            </script>
+<script type="text/javascript">
+						  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+						  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+						  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+						  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+						  ga('create', 'UA-3821842-1', 'auto');
+						  ga('send', 'pageview');
+
+						</script>
+</head>
+<body class="">
+<i id="user-prefs"></i>
+<script>updateUserPrefs();</script>
+<div id="fb-root"></div>
+<div id="modal-box"></div>
+<header class="headroom-element" id="main-header-bar">
+<div id="main-header-bar-inner">
+<span class="header-spacer" id="header-spacer-left"></span>
+<a class="mobile-menu-toggle-button tablet-on" href="#mobile-menu" id="main-mobile-toggle"><span></span><span></span><span></span></a>
+<a class="no-dev" href="/" id="main-header-logoButton"></a>
+<span class="header-spacer" id="header-spacer-right"></span>
+<nav class="tablet-off" id="main-header-nav">
+<a href="/pmwiki/pmwiki.php/Main/Tropes">Tropes</a>
+<a href="/pmwiki/pmwiki.php/Main/Media">Media</a>
+<a class="nav-browse" href="/pmwiki/browse.php">Browse</a>
+<a href="/pmwiki/index_report.php">Indexes</a>
+<a href="/pmwiki/topics.php">Forums</a>
+<a class="nav-browse" href="/pmwiki/recent_videos.php">Videos</a>
+</nav>
+<div id="main-header-bar-right">
+<div class="font-xs mobile-off" id="signup-login-box">
+<a class="hover-underline bold" data-modal-target="signup" href="/pmwiki/login.php">Join</a>
+<a class="hover-underline bold" data-modal-target="login" href="/pmwiki/login.php">Login</a>
+</div>
+<div class="mobile-on inline" id="signup-login-mobileToggle">
+<a data-modal-target="login" href="/pmwiki/login.php"><i class="fa fa-user"></i></a>
+</div>
+<div id="search-box">
+<form action="/pmwiki/search_result.php" class="search">
+<input class="search-box" name="q" placeholder="Search" required="" type="text" value=""/>
+<input class="submit-button" type="submit" value=""/>
+<input name="search_type" type="hidden" value="article"/>
+<input name="page_type" type="hidden" value="all"/>
+<input name="cx" type="hidden" value="partner-pub-6610802604051523:amzitfn8e7v"/>
+<input name="cof" type="hidden" value="FORID:10"/>
+<input name="ie" type="hidden" value="ISO-8859-1"/>
+<input name="siteurl" type="hidden" value=""/>
+<input name="ref" type="hidden" value=""/>
+<input name="ss" type="hidden" value=""/>
+</form>
+<a class="mobile-on mobile-search-toggle close-x" href="#close-search"><i class="fa fa-close"></i></a>
+</div>
+<div id="random-box">
+<a class="button-random-trope" href="/pmwiki/pmwiki.php/Main/RaisedByNatives" onclick="ga('send', 'event', 'button', 'click', 'random trope');" rel="nofollow"></a>
+<a class="button-random-media" href="/pmwiki/pmwiki.php/Podcast/BlackJackJustice" onclick="ga('send', 'event', 'button', 'click', 'random media');" rel="nofollow"></a>
+</div>
+</div>
+</div>
+<div class="tablet-on" id="mobile-menu"><div class="mobile-menu-options">
+<div class="nav-wrapper">
+<a class="xl" href="/pmwiki/pmwiki.php/Main/Tropes">Tropes</a>
+<a class="xl" href="/pmwiki/pmwiki.php/Main/Media">Media</a>
+<a class="xl" href="/pmwiki/browse.php">Browse</a>
+<a class="xl" href="/pmwiki/index_report.php">Indexes</a>
+<a class="xl" href="/pmwiki/topics.php">Forums</a>
+<a class="xl" href="/pmwiki/recent_videos.php">Videos</a>
+<a href="/pmwiki/query.php?type=att">Ask The Tropers</a>
+<a href="/pmwiki/query.php?type=tf">Trope Finder</a>
+<a href="/pmwiki/query.php?type=ykts">You Know That Show...</a>
+<a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a>
+<a data-click-toggle="active" href="#tools">Tools <i class="fa fa-chevron-down"></i></a>
+<div class="tools-dropdown mobile-dropdown-linkList">
+<a href="/pmwiki/cutlist.php">Cut List</a>
+<a href="/pmwiki/changes.php">New Edits</a>
+<a href="/pmwiki/recent_edit_reasons.php">Edit Reasons</a>
+<a href="/pmwiki/launches.php">Launches</a>
+<a href="/pmwiki/img_list.php">Images List</a>
+<a href="/pmwiki/crown_activity.php">Crowner Activity</a>
+<a href="/pmwiki/no_types.php">Un-typed Pages</a>
+<a href="/pmwiki/page_type_audit.php">Recent Page Type Changes</a>
+</div>
+<a data-click-toggle="active" href="#hq">Tropes HQ <i class="fa fa-chevron-down"></i></a>
+<div class="tools-dropdown mobile-dropdown-linkList">
+<a href="/pmwiki/about.php">About Us</a>
+<a href="/pmwiki/contact.php">Contact Us</a>
+<a href="mailto:advertising@proper.io">Advertise</a>
+<a href="/pmwiki/dmca.php">DMCA Notice</a>
+<a href="/pmwiki/privacypolicy.php">Privacy Policy</a>
+</div>
+<a href="/pmwiki/ad-free-subscribe.php">Go Ad-Free</a>
+<div class="toggle-switches">
+<ul class="mobile-menu display-toggles">
+<li>Show Spoilers <div class="display-toggle show-spoilers" id="mobile-toggle-showspoilers"></div></li>
+<li>Night Vision <div class="display-toggle night-vision" id="mobile-toggle-nightvision"></div></li>
+<li>Sticky Header <div class="display-toggle sticky-header" id="mobile-toggle-stickyheader"></div></li>
+<li>Highlight Links <div class="display-toggle highlight-links" id="mobile-toggle-highlightlinks"></div></li>
+</ul>
+<script>updateMobilePrefs();</script>
+</div>
+</div>
+</div>
+</div>
+</header>
+<div class="mobile-on" id="homepage-introBox-mobile">
+<a href="/"><img class="logo-small" src="/images/logo-white-big.png"/></a>
+<form action="/pmwiki/search_result.php" class="search" style="margin:10px -5px -6px -5px;">
+<input class="search-box" name="q" placeholder="Search" required="" type="text" value=""/>
+<input class="submit-button" type="submit" value=""/>
+<input name="search_type" type="hidden" value="article"/>
+<input name="page_type" type="hidden" value="all"/>
+<input name="cx" type="hidden" value="partner-pub-6610802604051523:amzitfn8e7v"/>
+<input name="cof" type="hidden" value="FORID:10"/>
+<input name="ie" type="hidden" value="ISO-8859-1"/>
+<input name="siteurl" type="hidden" value=""/>
+<input name="ref" type="hidden" value=""/>
+<input name="ss" type="hidden" value=""/>
+</form>
+</div>
+<div class="ad" id="header-ad-wrapper">
+<div id="header-ad">
+<div class="ad-size-970x90 atf_banner">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_1"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_1'); });</script> </div>
+</div> </div>
+</div>
+</div>
+<div id="main-container">
+<div class="action-bar mobile-off" id="action-bar-top">
+<div class="action-bar-right">
+<p>Follow TV Tropes</p>
+<a class="button-fb" href="https://www.facebook.com/TVTropes">
+<i class="fa fa-facebook"></i></a>
+<a class="button-tw" href="https://www.twitter.com/TVTropes">
+<i class="fa fa-twitter"></i></a>
+<a class="button-re" href="https://www.reddit.com/r/TVTropes">
+<i class="fa fa-reddit-alien"></i></a>
+</div>
+<nav class="actions-wrapper" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<ul class="page-actions" id="top_main_list">
+<li class="link-edit">
+<a class="article-edit-button" data-modal-target="login" href="/pmwiki/pmwiki.php/Main/PlayerExclusiveMechanic?action=edit" rel="nofollow">
+<i class="fa fa-pencil"></i> Edit Page</a></li><li class="link-related"><a href="/pmwiki/relatedsearch.php?term=Main/PlayerExclusiveMechanic">
+<i class="fa fa-share-alt"></i> Related</a></li><li class="link-history"><a href="/pmwiki/article_history.php?article=Main.PlayerExclusiveMechanic">
+<i class="fa fa-history"></i> History</a></li><li class="link-discussion"><a href="/pmwiki/remarks.php?trope=Main.PlayerExclusiveMechanic">
+<i class="fa fa-comment"></i> Discussion</a></li> </ul>
+<button class="nav__dropdown-toggle" id="top_more_button" onclick="toggle_more_menu('top');" type="button">More</button>
+<ul class="more_menu hidden_more_list" id="top_more_list">
+<li class="link-todo tuck-always more_list_item"><a data-modal-target="login" href="#todo"><i class="fa fa-check-circle"></i> To Do</a></li><li class="link-pageSource tuck-always more_list_item"><a data-modal-target="login" href="/pmwiki/pmwiki.php/Main/PlayerExclusiveMechanic?action=source" rel="nofollow" target="_blank"><i class="fa fa-code"></i> Page Source</a></li> </ul>
+</nav>
+<div class="WikiWordModalStub"></div>
+<div class="ImgUploadModalStub" data-page-type="Article"></div>
+<div class="login-alert" style="display: none;">
+You need to <a href="/pmwiki/login.php" style="color:#21A0E8">login</a> to do this. <a href="/pmwiki/login.php?tab=register_account" style="color:#21A0E8">Get Known</a> if you don't have an account
+</div>
+</div>
+<div class="page-Article" id="main-content">
+<article class="with-sidebar" id="main-entry">
+<input id="groupname-hidden" type="hidden" value="Main"/>
+<input id="title-hidden" type="hidden" value="PlayerExclusiveMechanic"/>
+<input id="article_id" type="hidden" value="436411"/>
+<input id="logged_in" type="hidden" value="false"/>
+<p class="hidden" id="current_url">http://tvtropes.org/pmwiki/pmwiki.php/Main/PlayerExclusiveMechanic</p>
+<meta content="" itemprop="datePublished"/>
+<meta content="" itemprop="articleSection"/>
+<meta content="" itemprop="image"/>
+<a class="watch-button" data-modal-target="login" href="#watch">Follow<span>ing</span></a>
+<h1 class="entry-title" itemprop="headline">
+Player-Exclusive Mechanic
+</h1>
+<script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+                "@type": "ListItem",
+                "position": 1,
+                "name": "tvtropes.org",
+                "item": "https://tvtropes.org"
+            },{
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Tropes",
+                "item": "https://tvtropes.org/pmwiki/pmwiki.php/Main/Tropes"
+            },{
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Player-Exclusive Mechanic"            }]
+        }
+    </script>
+<a class="mobile-actionbar-toggle mobile-on" data-click-toggle="active" href="#mobile-actions-toggle" id="mobile-actionbar-toggle">
+<p class="tiny-off">Go To</p><span></span><span></span><span></span><i class="fa fa-pencil"></i></a>
+<nav class="mobile-actions-wrapper mobile-on" id="mobile-actions-bar"></nav>
+<div class="modal fade hidden-until-active" id="editLockModal">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button aria-label="Close" class="close" data-dismiss="modal" type="button"> <span aria-hidden="true">×</span></button>
+<h4 class="modal-title">Edit Locked</h4>
+</div>
+<div class="modal-body">
+<div class="row">
+<div class="body">
+<div class="danger troper_locked_message"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<nav class="body-options" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<ul class="subpage-links">
+<li>
+<a class="subpage-link curr-subpage" href="/pmwiki/pmwiki.php/Main/PlayerExclusiveMechanic" title="The Main page">
+<span class="wrapper"><span class="spi main-page"></span>Main</span></a>
+</li>
+<li>
+<a class="subpage-link" href="/pmwiki/pmwiki.php/Laconic/PlayerExclusiveMechanic" title="The Laconic page">
+<span class="wrapper"><span class="spi laconic-icon"></span>Laconic</span></a>
+</li>
+<li class="create-subpage dropdown">
+<a aria-expanded="false" class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);" role="button">
+<span class="wrapper">Create New <i class="fa fa-plus-circle"></i></span>
+</a>
+<select onchange="this.options[this.selectedIndex].value &amp;&amp; (window.location = this.options[this.selectedIndex].value);">
+<option value="">- Create New -</option>
+<option value="/pmwiki/pmwiki.php/Analysis/PlayerExclusiveMechanic?action=edit">Analysis</option>
+<option value="/pmwiki/pmwiki.php/Characters/PlayerExclusiveMechanic?action=edit">Characters</option>
+<option value="/pmwiki/pmwiki.php/FanficRecs/PlayerExclusiveMechanic?action=edit">FanficRecs</option>
+<option value="/pmwiki/pmwiki.php/FanWorks/PlayerExclusiveMechanic?action=edit">FanWorks</option>
+<option value="/pmwiki/pmwiki.php/Fridge/PlayerExclusiveMechanic?action=edit">Fridge</option>
+<option value="/pmwiki/pmwiki.php/Haiku/PlayerExclusiveMechanic?action=edit">Haiku</option>
+<option value="/pmwiki/pmwiki.php/Headscratchers/PlayerExclusiveMechanic?action=edit">Headscratchers</option>
+<option value="/pmwiki/pmwiki.php/ImageLinks/PlayerExclusiveMechanic?action=edit">ImageLinks</option>
+<option value="/pmwiki/pmwiki.php/PlayingWith/PlayerExclusiveMechanic?action=edit">PlayingWith</option>
+<option value="/pmwiki/pmwiki.php/Quotes/PlayerExclusiveMechanic?action=edit">Quotes</option>
+<option value="/pmwiki/pmwiki.php/Recap/PlayerExclusiveMechanic?action=edit">Recap</option>
+<option value="/pmwiki/pmwiki.php/ReferencedBy/PlayerExclusiveMechanic?action=edit">ReferencedBy</option>
+<option value="/pmwiki/pmwiki.php/Synopsis/PlayerExclusiveMechanic?action=edit">Synopsis</option>
+<option value="/pmwiki/pmwiki.php/Timeline/PlayerExclusiveMechanic?action=edit">Timeline</option>
+<option value="/pmwiki/pmwiki.php/Trivia/PlayerExclusiveMechanic?action=edit">Trivia</option>
+<option value="/pmwiki/pmwiki.php/WMG/PlayerExclusiveMechanic?action=edit">WMG</option>
+<option value="/pmwiki/pmwiki.php/YMMV/PlayerExclusiveMechanic?action=edit">YMMV</option>
+</select>
+</li>
+</ul>
+</nav>
+<div class="article-content retro-folders" id="main-article">
+<p>Designing <a class="twikilink" href="/pmwiki/pmwiki.php/Main/VideoGameAI" title="/pmwiki/pmwiki.php/Main/VideoGameAI">Video Game A.I.</a> is hard. Some are so competent as to render the game <a class="twikilink" href="/pmwiki/pmwiki.php/Main/NintendoHard" title="/pmwiki/pmwiki.php/Main/NintendoHard">Nintendo Hard</a>, while others are <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ArtificialStupidity" title="/pmwiki/pmwiki.php/Main/ArtificialStupidity">blatantly stupid</a>. But in general, you expect computer-controlled characters in multiplayer games to be capable of doing everything the player can. This trope is for when they can't.
+</p><p>This is not about the player exploiting <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GoodBadBug" title="/pmwiki/pmwiki.php/Main/GoodBadBug">Good Bad Bugs</a>, but rather when the item or ability in question is explicitly designed to be capable of something that both the AI and the player can do (sometimes depending on context), but the AI for some reason does not. This can be particularly infuriating (or alternatively, worthy of relief) if the action is an interface command. In some cases this may be an <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AntiFrustrationFeature" title="/pmwiki/pmwiki.php/Main/AntiFrustrationFeature">Anti-Frustration Feature</a>, or a case of <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DynamicDifficulty" title="/pmwiki/pmwiki.php/Main/DynamicDifficulty">Dynamic Difficulty</a> where the computer only starts using them when you get good. Sometimes general difficulty setting choice (the "Easy", "Hard", etc. settings) may also regulate what they can and cannot do.
+</p><div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_1"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_1'); })</script></div></div><p>Common forms include:
+</p><ul><li> Many non-<a class="twikilink" href="/pmwiki/pmwiki.php/Main/FightingGame" title="/pmwiki/pmwiki.php/Main/FightingGame">Fighting Games</a> featuring a block/counter mechanic only have the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/PlayerCharacter" title="/pmwiki/pmwiki.php/Main/PlayerCharacter">Player Character</a> able to do it.
+</li><li> Computer characters frequently can't crouch or jump.
+</li></ul><p>Do note that this trope is clearer to see in multiplayer and/or competitive games (such as fighting, racing, rhythm, etc), since we can gauge out what the computer characters can, and should, do in any given situation. In single-player/non-competitive games (mainly action, platformers, etc.) the players are supposed to do things that the enemies cannot (and vice versa) and thus it's universal — the exception of this is the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MirrorBoss" title="/pmwiki/pmwiki.php/Main/MirrorBoss">Mirror Boss</a> or <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SuperPoweredMooks" title="/pmwiki/pmwiki.php/Main/SuperPoweredMooks">Super Powered Mooks</a>, in which those characters look and act the same as the PC, except for some technical differences (whether they have an access to the things that the PC normally doesn't — <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SecretAIMoves" title="/pmwiki/pmwiki.php/Main/SecretAIMoves">Secret A.I. Moves</a> — or conversely, they cannot do some things the PC can — this trope).
+</p><div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_2"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_2'); })</script></div></div><p>Another case is when a player character in the non-competitive games suddenly becomes a boss (especially when there's a selection of playable characters), or when a boss is <a class="twikilink" href="/pmwiki/pmwiki.php/Main/PromotedToPlayable" title="/pmwiki/pmwiki.php/Main/PromotedToPlayable">Promoted to Playable</a>; this follows the same convention as above. Just as bosses with <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SecretAIMoves" title="/pmwiki/pmwiki.php/Main/SecretAIMoves">Secret A.I. Moves</a> are liable to have a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/RedemptionDemotion" title="/pmwiki/pmwiki.php/Main/RedemptionDemotion">Redemption Demotion</a> when they're playable, bosses with this trope will have a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/RedemptionPromotion" title="/pmwiki/pmwiki.php/Main/RedemptionPromotion">Redemption Promotion</a>.
+</p><p>Yet another case (in line with the above) is when you have someone who's normally playable as a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/NonPlayerCompanion" title="/pmwiki/pmwiki.php/Main/NonPlayerCompanion">Non-Player Companion</a>, or vice versa. When it happens, said someone may not be able to use their full potential and abilities as opposed to when they're controlled directly by the player.
+</p><p>Also note that, in some cases, both this trope and <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SecretAIMoves" title="/pmwiki/pmwiki.php/Main/SecretAIMoves">Secret A.I. Moves</a> can appear together.
+</p><p>The supertrope to some forms of <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TacticalDoorUse" title="/pmwiki/pmwiki.php/Main/TacticalDoorUse">Tactical Door Use</a>. Compare <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ArtificialStupidity" title="/pmwiki/pmwiki.php/Main/ArtificialStupidity">Artificial Stupidity</a> (aka "Player Exclusive Tactics") and <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AIRoulette" title="/pmwiki/pmwiki.php/Main/AIRoulette">A.I. Roulette</a> (the latter when the AI chooses not to use the action randomly). Contrast <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ArtificialBrilliance" title="/pmwiki/pmwiki.php/Main/ArtificialBrilliance">Artificial Brilliance</a>, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MyRulesAreNotYourRules" title="/pmwiki/pmwiki.php/Main/MyRulesAreNotYourRules">My Rules Are Not Your Rules</a>, and <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SecretAIMoves" title="/pmwiki/pmwiki.php/Main/SecretAIMoves">Secret A.I. Moves</a>. This can potentially result in <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GameplayDerailment" title="/pmwiki/pmwiki.php/Main/GameplayDerailment">Gameplay Derailment</a>.
+</p><div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_3"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_3'); })</script></div></div><hr/><h2>Examples:</h2>
+<p></p><div class="folderlabel" onclick="toggleAllFolders();">    open/close all folders  </div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder0');">    4X Games </div><div class="folder" id="folder0" isfolder="true" style="display:block;">
+<ul><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MasterOfOrion" title="/pmwiki/pmwiki.php/VideoGame/MasterOfOrion">Master of Orion</a></em> the computer can't direct more than one attack per turn. That means when you and the AI are busily blowing up the helpless civilians on each other's planets you can get several times as much damage in with a smaller fleet.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Civilization" title="/pmwiki/pmwiki.php/VideoGame/Civilization">Civilization</a></em>:
+<ul><li> The AI has a mixed history for nukes. Some versions never let the AI use them. <a class="twikilink" href="/pmwiki/pmwiki.php/Main/NotPlayingFairWithResources" title="/pmwiki/pmwiki.php/Main/NotPlayingFairWithResources">Others have the AI spawn them out of thin air.</a> Later versions tend to play fair.
+</li><li> AI players will never (or almost never) propose defensive pacts or permanent alliances, meaning they won't form alliances with other AI players. This helps prevent the game from being (too much of) an exercise in <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GangUpOnTheHuman" title="/pmwiki/pmwiki.php/Main/GangUpOnTheHuman">Gang Up on the Human</a>.
+</li></ul></li><li> Only the players have to deal with naval attrition in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/EuropaUniversalis" title="/pmwiki/pmwiki.php/VideoGame/EuropaUniversalis">Europa Universalis</a></em> since the AI simply cannot handle it.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder1');">    Action Adventure </div><div class="folder" id="folder1" isfolder="true" style="display:block;">
+<ul><li> The original <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/AssassinsCreedI" title="/pmwiki/pmwiki.php/VideoGame/AssassinsCreedI">Assassin's Creed I</a></em> had the player character instantly drown if they attempted to swim, while the AI didn't even attempt to enter the water. In <a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/AssassinsCreed" title="/pmwiki/pmwiki.php/Franchise/AssassinsCreed">all other installments</a>, the player character can swim, but enemies still drown instantly, allowing for easy getaways if the player is ever able to swim away. No justification is given for why even characters armored as lightly as the player have <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SuperDrowningSkills" title="/pmwiki/pmwiki.php/Main/SuperDrowningSkills">Super Drowning Skills</a>, even though the game lampshades the player's new ability.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder2');">    Beat Em Up </div><div class="folder" id="folder2" isfolder="true" style="display:block;">
+<ul><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DynastyWarriors" title="/pmwiki/pmwiki.php/VideoGame/DynastyWarriors">Dynasty Warriors</a> 7</em>, players with a character's <a class="twikilink" href="/pmwiki/pmwiki.php/Main/WeaponOfChoice" title="/pmwiki/pmwiki.php/Main/WeaponOfChoice">EX Weapon</a> equipped gains access to the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SignatureMove" title="/pmwiki/pmwiki.php/Main/SignatureMove">Ex Attack</a> when a player performs a certain charge attack. Which the computer doesn't use.
+<ul><li> Also the player can change weapons<span class="notelabel" onclick="togglenote('note0jg8j');"><sup>note </sup></span><span class="inlinefolder" id="note0jg8j" isnote="true" onclick="togglenote('note0jg8j');" style="cursor:pointer;font-size:smaller;display:none;">from a sword to a spear </span> for better range, attack power or just because. The AI on the other hand are stuck with the same weapon.
+<ul><li> Which was fixed in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DynastyWarriors" title="/pmwiki/pmwiki.php/VideoGame/DynastyWarriors">Dynasty Warriors</a> 8</em>, at least partially. The AI is still stuck with the same weapon, but they can switch it to another alignment <span class="notelabel" onclick="togglenote('note16b24');"><sup>note </sup></span><span class="inlinefolder" id="note16b24" isnote="true" onclick="togglenote('note16b24');" style="cursor:pointer;font-size:smaller;display:none;">(Man, Heaven or Earth) </span>in order to either get an advantage on the player, or at least cover their weakness to the player's weapons alignment. So no extra reach or attack power for the AI, but they can now cover against Storm Rush.
+</li></ul></li></ul></li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder3');">    Card Games </div><div class="folder" id="folder3" isfolder="true" style="display:block;">
+<ul><li> At lower difficulty levels, the AI in the <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/MagicTheGathering" title="/pmwiki/pmwiki.php/TabletopGame/MagicTheGathering">Magic: The Gathering</a>: Duels of the Planeswalkers</em> games will never activate the "pumping" (paying mana to temporarily increase power and toughness) abilities of certain creatures.
+</li><li> Setting Trap Cards in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/YuGiOhDarkDuelStories" title="/pmwiki/pmwiki.php/VideoGame/YuGiOhDarkDuelStories">Yu-Gi-Oh! Dark Duel Stories</a></em>. No AI duelist in the game, even the bonus bosses, possesses a Trap Card in their decks. Therefore the mechanic is solely usable by the player.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder4');">    Fighting Games </div><div class="folder" id="folder4" isfolder="true" style="display:block;">
+<ul><li> In the arcade version of <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/StreetFighterII" title="/pmwiki/pmwiki.php/VideoGame/StreetFighterII">Street Fighter II</a>: Champion Edition</em>, the AI-controlled Sagat would never use the Tiger Knee special. Meanwhile, the player character had no problem doing this. Apparently it was an unfinished special move that lacked new sprites, sounds and needed a unique button combination. It was later fixed for <em>Street Fighter II: Turbo</em> and every incarnation since.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder5');">    First-Person Shooters </div><div class="folder" id="folder5" isfolder="true" style="display:block;">
+<ul><li> In the original <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/HalfLife1" title="/pmwiki/pmwiki.php/VideoGame/HalfLife1">Half Life 1</a></em>, Gordon Freeman can climb ladders and duck to fit through crawl spaces; the other NPCs cannot (other than animals small enough to fit in the crawlspaces). This limits, for example, how far Barneys can accompany you as backup.
+</li><li> AI players in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Left4Dead" title="/pmwiki/pmwiki.php/VideoGame/Left4Dead">Left 4 Dead</a></em> and <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Left4Dead2" title="/pmwiki/pmwiki.php/VideoGame/Left4Dead2">Left 4 Dead 2</a></em> can do nearly everything the player can, except for inflicting Friendly Fire damage and wield thrown weapons like pipe bombs or Molotov cocktails.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Halo2" title="/pmwiki/pmwiki.php/VideoGame/Halo2">Halo 2</a></em>: A human player flying a Banshee in campaign can use a fuel-rod cannon as a secondary attack. The AI can't. This was rectified in subsequent <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/Halo" title="/pmwiki/pmwiki.php/Franchise/Halo">Halo</a></em> games.
+</li><li> In the <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Borderlands" title="/pmwiki/pmwiki.php/VideoGame/Borderlands">Borderlands</a></em> series the AI will never intentionally target <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ExplodingBarrels" title="/pmwiki/pmwiki.php/Main/ExplodingBarrels">Exploding Barrels</a> (though they may still hit them when they were aiming at the player).
+</li><li> Bots in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TeamFortress2" title="/pmwiki/pmwiki.php/VideoGame/TeamFortress2">Team Fortress 2</a></em> cannot use unlockable weapons. Even with just stock, Engineer bots cannot haul buildings (instead detonating their old ones when the time comes to move the rear lines forward) and Soldiers/Demomen cannot <a class="twikilink" href="/pmwiki/pmwiki.php/Main/RocketJump" title="/pmwiki/pmwiki.php/Main/RocketJump">Rocket Jump</a>.
+</li><li> AI Heisters in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Payday2" title="/pmwiki/pmwiki.php/VideoGame/Payday2">PAYDAY 2</a></em> cannot do most of the actions the players would use the "Use" key for, such as carrying loot bags, picking locks, placing drills, etc. They can still help teammates get back up from being downed, but they do so with unique animations and voice lines that don't show up when a human player helps up another player.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/CounterStrike" title="/pmwiki/pmwiki.php/VideoGame/CounterStrike">Counter-Strike</a></em>, both the FAMAS and the Glock 17 have a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SecondaryFire" title="/pmwiki/pmwiki.php/Main/SecondaryFire">alternate fire</a> burst mode that only human players are able to use. But if you give a bot a FAMAS or the Glock while they are on burst fire mode, the bots will try to use them, but not to the effect a human player can.
+</li><li> The developers of <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Killzone" title="/pmwiki/pmwiki.php/VideoGame/Killzone">Killzone</a> 3</em> were unable to program the AI to use the jetpacks with any level of competence. This lead them to disabling three of the game's jetpack-centered maps in the game's Botzone mode.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder6');">    Platformers </div><div class="folder" id="folder6" isfolder="true" style="display:block;">
+<ul><li> Some secret characters in the <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/Castlevania" title="/pmwiki/pmwiki.php/Franchise/Castlevania">Castlevania</a></em> series are bosses that you eventually fight in their respective games; some of them have moves that they don't use by the boss versions (meanwhile the majority of them have <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SecretAIMoves" title="/pmwiki/pmwiki.php/Main/SecretAIMoves">Secret A.I. Moves</a>).
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MegaManZX" title="/pmwiki/pmwiki.php/VideoGame/MegaManZX">Mega Man ZX</a> Advent</em>, where <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DittoFighter" title="/pmwiki/pmwiki.php/Main/DittoFighter">you can copy the forms of the bosses themselves</a> instead of merely <a class="twikilink" href="/pmwiki/pmwiki.php/Main/PowerCopying" title="/pmwiki/pmwiki.php/Main/PowerCopying">Power Copying</a> like in previous games; Atlas (in Ashe's story) as a boss couldn't fire her fire bombs forwards like Ashe could with her form.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MegaManX" title="/pmwiki/pmwiki.php/VideoGame/MegaManX">Mega Man X</a></em>, whenever Zero becomes a boss, he never uses any move he can acquire from the bosses (not even his standard 3 slash combo); he uses <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SecretAIMoves" title="/pmwiki/pmwiki.php/Main/SecretAIMoves">moves the player can never use instead.</a>
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/KirbysDreamLand3" title="/pmwiki/pmwiki.php/VideoGame/KirbysDreamLand3">Kirby's Dream Land 3</a></em>, a computer-controlled Gooey cannot use <a class="twikilink" href="/pmwiki/pmwiki.php/Main/PowerCopying" title="/pmwiki/pmwiki.php/Main/PowerCopying">Power Copying</a> like he can when the second player controls him.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder7');">    Racing Games </div><div class="folder" id="folder7" isfolder="true" style="display:block;">
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/CrashTeamRacing" title="/pmwiki/pmwiki.php/VideoGame/CrashTeamRacing">Crash Team Racing</a></em>:
+<ul><li> The computer-generated racers will never use shortcuts (when there is any), not using certain weapons normally available for players (turbo boosts, warp balls, bubble barriers, etc) nor will they leave trap weapons when they're offscreen.
+</li><li> The beakers (normally a trap weapon) is able to be thrown forward, and the roller bombs (normally a forward-fire weapon) can be rolled backward. None of the computer characters do this.
+</li><li> The boss racers in the Adventure Mode works differently; they still leave trap weapons (<a class="twikilink" href="/pmwiki/pmwiki.php/Main/TheComputerIsACheatingBastard" title="/pmwiki/pmwiki.php/Main/TheComputerIsACheatingBastard">constantly</a>) even when they're far behind or in front of you (and in Pinstripe's case, he also rolls the bombs backwards) but the other limitations above apply.
+</li><li> It truly becomes a challenge in the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TimeTrial" title="/pmwiki/pmwiki.php/Main/TimeTrial">Time Trial</a> mode against Oxide's ghost when he's able to use shortcuts in the track.
+</li></ul></li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/LEGORacers" title="/pmwiki/pmwiki.php/VideoGame/LEGORacers">LEGO Racers</a></em> the AI opponents never achieve the level two turbo start, never power-slide when turning, and with one exception never use track shortcuts. The exception is <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ThatOneBoss" title="/pmwiki/pmwiki.php/Main/ThatOneBoss">Veronica Voltage</a>, opponent in the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TimeTrial" title="/pmwiki/pmwiki.php/Main/TimeTrial">Time Trial</a> mode, who is also <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MyRulesAreNotYourRules" title="/pmwiki/pmwiki.php/Main/MyRulesAreNotYourRules">immune to track edge friction</a> (rendering beating her <a class="twikilink" href="/pmwiki/pmwiki.php/Main/NintendoHard" title="/pmwiki/pmwiki.php/Main/NintendoHard">Nintendo Hard</a>).
+</li><li> Quite possibly the most infamous example is <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/BigRigsOverTheRoadRacing" title="/pmwiki/pmwiki.php/VideoGame/BigRigsOverTheRoadRacing">Big Rigs: Over the Road Racing</a></em>. In this racing <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ObviousBeta" title="/pmwiki/pmwiki.php/Main/ObviousBeta">"game"</a>, <em>moving</em> is a Player Exclusive Mechanic. Corrected in a patch, where the AI can now move, but actually crossing the finish line is still firmly in the player-only domain.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SuperMarioKart" title="/pmwiki/pmwiki.php/VideoGame/SuperMarioKart">Super Mario Kart</a>,</em> opponents in a race are unable to use items generated from item boxes. The AI compensates in <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SecretAIMoves" title="/pmwiki/pmwiki.php/Main/SecretAIMoves">several</a> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TheComputerIsACheatingBastard" title="/pmwiki/pmwiki.php/Main/TheComputerIsACheatingBastard">ways</a>.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/Videogame/ForzaMotorsport" title="/pmwiki/pmwiki.php/Videogame/ForzaMotorsport">Forza Motorsport</a> 3</em> and previous games, NPC opponents would not upgrade their vehicle, leading to most races in your upgraded and tuned vehicle being ludicrously easy. Odd, when the entire game is about sim racing with heavy customization. <em>Forza 4</em> and onward correct the issue, with NPC opponents in the singleplayer upgrading their vehicle to each race's maximum Performance Index rating.
+</li><li> In Top Gear for the SNES, the player (or players) each get three nitros per race. The AI opponents are not allowed any at all. This game also holds an exception to the player exclusive mechanic - the player has fuel, and must pit on the longer races to refuel. The AI opponents naturally don't have this mechanic and don't have to pit at all. However, in one player mode, the screen that would be player 2's is used by an AI literally named "Computer". Computer not only has to pit, but indeed consumes fuel faster than the player even if the player is driving the car with the highest fuel consumption! Computer's immunity does not extend to allowing it to use nitro, however.
+</li><li> AI racers in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/JakXCombatRacing" title="/pmwiki/pmwiki.php/VideoGame/JakXCombatRacing">Jak X Combat Racing</a></em> never get the Supernova weapon. This is very justified, given that the Supernova instantly destroys every vehicle in front of the user and races would consist of a constant chain of deaths if the AI had access to it.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/PacManWorldRally" title="/pmwiki/pmwiki.php/VideoGame/PacManWorldRally">Pac-Man World Rally</a></em> has two examples:
+<ul><li> The Guardian item, only obtained via powersliding. Consider that opponents <em>never</em> powerslide (aside from the "buggy"-looking instance in Toc-Man's Factory). As a result, outside of Battle mode, only the player can get an item that grants full protection against all hazards except for bottomless pits without the need of Pac-Mobile.
+</li><li> For some reason, only human players can activate Pac-Dot or Fruit switches, as AI opponents will just drive right over them with nothing happening.
+</li></ul></li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder8');">    Real-Time Strategy </div><div class="folder" id="folder8" isfolder="true" style="display:block;">
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Warcraft" title="/pmwiki/pmwiki.php/VideoGame/Warcraft">Warcraft</a> III</em>: While the standard AI will hire zeppelins (and occasionally use them, but only if there is no other way to reach an enemy base), they will never buy ships, mercenaries, or neutral shop items, or use instant-reviving taverns.
+</li><li> The <a class="twikilink" href="/pmwiki/pmwiki.php/Main/LevelEditor" title="/pmwiki/pmwiki.php/Main/LevelEditor">Level Editor</a> for <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/StarCraftI" title="/pmwiki/pmwiki.php/VideoGame/StarCraftI">StarCraft I</a></em> has several grades of AI available for map builders. The ones labeled "Campaign Easy" and "Campaign Medium" are restricted on what units and buildings they are allowed to construct (for instance, "Zerg Campaign Easy" will only build basic zerg units such as zerglings and mutalisks). Mind you, these were designed for the early stages of the singleplayer campaigns, where the player is also restricted in what units to build, so in the original context it was more a matter of keeping the playing field level. It only really qualifies for this trope if these AI settings are used in a game without an equivalent restriction on the human player.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DawnOfWar" title="/pmwiki/pmwiki.php/VideoGame/DawnOfWar">Dawn of War</a></em>: Several moves/upgrades are never used by the AI, such as ork Burna Bombs, various morale-reducing abilities, or Tau commander weapons. That last one is particularly stupid, as it deprives them of both a short-range anti-infantry and long-range anti-armor.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/CommandAndConquerTiberianSun" title="/pmwiki/pmwiki.php/VideoGame/CommandAndConquerTiberianSun">Command &amp; Conquer: Tiberian Sun</a></em> and <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/CommandAndConquerRedAlert2" title="/pmwiki/pmwiki.php/VideoGame/CommandAndConquerRedAlert2">Command &amp; Conquer: Red Alert 2</a></em>, the rules.ini files had a special flag called "AIBuildThis = no" on some of the units/structures that the player could build.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/EmpireEarth" title="/pmwiki/pmwiki.php/VideoGame/EmpireEarth">Empire Earth</a></em>: In skirmish matches, the AI never builds wonders (which give map-wide bonuses) or heroes (which give local bonuses to units). The idea of clearing out defensive towers before landing transports also eludes them from the Stone Age to the Space Age.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder9');">    Roguelike Games </div><div class="folder" id="folder9" isfolder="true" style="display:block;">
+<ul><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FTLFasterThanLight" title="/pmwiki/pmwiki.php/VideoGame/FTLFasterThanLight">FTL: Faster Than Light</a></em>, the player is capable of doing a number of things that enemy ships and crew should be capable of doing, but don't for some reason:
+<ul><li> You can manually fire your weapons or have them fire as soon as they're ready. Enemy ships can only fire weapons as soon as possible, missing out on the opportunity to perform a coordinated <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AlphaStrike" title="/pmwiki/pmwiki.php/Main/AlphaStrike">Alpha Strike</a> against you.
+</li><li> You deploy your cloak manually. Enemy ships always use it as soon as it's fully recharged, tactics be damned.
+</li><li> Enemy crew are programmed to take specific actions depending on context. If an enemy crew member has started attacking an upgraded door, they will continue to do so until they breach it, even if another door in the same room is opened up, <em>even if</em> that door goes to the same place they're trying to go to; meanwhile you can always simply have your crew stop attacking and do something else. Furthermore, enemy crew will avoid oxygen-deprived rooms at all costs even if it is essential to do so (like repairing the ship's shield system), while you can just freely move your crew across an airless room to get to where they need to go.
+</li></ul></li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/EnterTheGungeon" title="/pmwiki/pmwiki.php/VideoGame/EnterTheGungeon">Enter the Gungeon</a></em>, players have Blanks, which clear the screen of enemy bullets and stop them firing for a moment, like a shmup <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SmartBomb" title="/pmwiki/pmwiki.php/Main/SmartBomb">Smart Bomb</a> without the damage. <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AvertedTrope" title="/pmwiki/pmwiki.php/Main/AvertedTrope">Bosses will also use Blanks</a> when their health reaches certain thresholds, clearing out player attacks and setting themselves up for their next phase.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/NetHack" title="/pmwiki/pmwiki.php/VideoGame/NetHack">NetHack</a></em> pretty much anything the player can do NPCs can as well, including not only using any available items, but using them in creative ways. However, there are a few exceptions, some to make the game fair and some because the developers felt it wasn't worth the programming effort:
+<ul><li> Items NPCs won't use:
+<ul><li> Scrolls of genocide, which would be an instant game over. NPCs won't even genocide the player's pet.
+</li><li> Rings of conflict or taming items, which could turn the player's pet and neutral NPCs against the player.
+</li><li> Wishing items, which could be used to gain powerful items.
+</li></ul></li><li> The player can periodically pray to their god for healing, regardless of their class. Even NPC clerics can't do this; they can only cast cleric spells.
+</li><li> There are several methods of scaring monsters so that they won't attack you, or won't even step onto a particular square. None of these work on the player.
+</li></ul></li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder10');">    Role-Playing Games </div><div class="folder" id="folder10" isfolder="true" style="display:block;">
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Solatorobo" title="/pmwiki/pmwiki.php/VideoGame/Solatorobo">Solatorobo</a></em>: During the racing portions of the game, enemies never drift into turns, collect but don't use the speed-boosting crystals, and use items infrequently.
+</li><li> Almost all items in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Persona3" title="/pmwiki/pmwiki.php/VideoGame/Persona3">Persona 3</a></em>. This is exceedingly frustrating, due to the game's <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ManualLeaderAIParty" title="/pmwiki/pmwiki.php/Main/ManualLeaderAIParty">Manual Leader, A.I. Party</a>. Despite a shared item pool, your party cannot use anything but the two weakest healing items. As such, if your character is incapacitated through a status effect and you don't have a member that knows the counterspell, you're left as a passive observer until it wears off.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/Pokemon" title="/pmwiki/pmwiki.php/Franchise/Pokemon">Pokémon</a></em>:
+<ul><li> In the main series games, the player has access to an increasingly wide range of items that can be used in battle at will, while the vast majority of opponents use no items at all, and those who do only do have very specific items used at regular times. (Most commonly are gym leaders and Elite Four members with a pre-determined number of full restores, and occasionally another 'strong trainer' will use a stat-raising item such as an X Attack.)
+</li><li> Also in the main series, the player seems to be the only trainer to be able to foresee the Pokémon his/her opponent will use next and switch the active Pokémon without taking a turn if necessary. This is called the "Shift" battle style and it's enabled by default on the options screen. However it only works in single-player mode Single Battles against the AI. In multiplayer battles, or those at <a class="twikilink" href="/pmwiki/pmwiki.php/Main/EndgamePlus" title="/pmwiki/pmwiki.php/Main/EndgamePlus">post-game battle facilities</a> you don't get the opportunity for a free switch-out when your opponent sends in their next Pokemon.
+</li><li> And more broadly, the player is able to switch out their Pokemon any time, but AI opponents almost never do; while they've been capable of it since the first generation, it's limited to only certain trainer types and driven by probability, meaning most players will likely not see it. In later generations it's more likely to happen when the opponent has no usable attacking moves (e.g., the player's Pokemon is immune to all attack types the opponent has), but it's still quite rare, leading many players to not realise it's even possible for years.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/PokemonColosseum" title="/pmwiki/pmwiki.php/VideoGame/PokemonColosseum">Pokémon Colosseum</a></em> and <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/PokemonXDGaleOfDarkness" title="/pmwiki/pmwiki.php/VideoGame/PokemonXDGaleOfDarkness">Pokémon XD: Gale of Darkness</a></em>, the player can use the "Call" command on Shadow Pokémon that have entered Hyper/Reverse mode (which occurs during the purification process) or on their sleeping Pokémon to wake them up. In <em>XD</em>, the player can also use the Call command to raise their Pokémon's accuracy for free.
+</li><li> In the <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/PokemonMysteryDungeon" title="/pmwiki/pmwiki.php/VideoGame/PokemonMysteryDungeon">Pokémon Mystery Dungeon</a></em> spinoff series, holding and using items is not player-exclusive. However, having an <em>inventory</em> is — enemy mons only have access to the "held item" slot, and can't store anything more than that. <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AntiFrustrationFeatures" title="/pmwiki/pmwiki.php/Main/AntiFrustrationFeatures">This is probably because it would be really annoying.</a> It's also justified in-game by the fact that you have a bag to hold those items in. Enemies obviously don't have such a convenience.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/PokemonGO" title="/pmwiki/pmwiki.php/VideoGame/PokemonGO">Pokémon GO</a></em>:
+<ul><li> There are some moves that can induce status changes such as buffs or debuffs; and those are only limited to PvP use. During Raids or Gyms, the moves are completely different — and are more often than not, horrid. This is because if a Raid Boss is capable of spamming something like, Leaf Tornado to constantly lower your attack or Ancient Power to buff itself, it quickly becomes annoying and sometimes, makes shortmans virtually impossible.
+</li><li> AI opponents in Raids or Rocket battles cannot use exclusive moves from events such as Psystrike for Mewtwo, Blast Burn for Charizard or Meteor Mash for Metagross. Instead, they will only have their regular movepool.
+</li></ul></li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FinalFantasyXIII" title="/pmwiki/pmwiki.php/VideoGame/FinalFantasyXIII">Final Fantasy XIII</a></em>: AI controlled characters will never use full ATB skills and since you can't change characters in-battle, you're stuck with only using 1 character's full ATB skill each fight.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/GranblueFantasy" title="/pmwiki/pmwiki.php/VideoGame/GranblueFantasy">Granblue Fantasy</a></em>: If you use a Light character against a Dark enemy and vice-versa, your team will always receive 75% from the opposition's damage while enemies receive 150% from your party. In other words, you will always deal more damage, and the enemies will deal lesser damage to you in a Light versus Dark matchup. This can be used for the players' advantage when <a class="twikilink" href="/pmwiki/pmwiki.php/Main/NeverMessWithGranny" title="/pmwiki/pmwiki.php/Main/NeverMessWithGranny">fighting Granny</a> in unlocking Tier 4 classes.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/MassEffect" title="/pmwiki/pmwiki.php/Franchise/MassEffect">Mass Effect</a></em> plays with this trope - the first game usually builds enemies from the same stat and skill templates as the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ManualLeaderAIParty" title="/pmwiki/pmwiki.php/Main/ManualLeaderAIParty">squad</a>, with a few <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SecretAIMoves" title="/pmwiki/pmwiki.php/Main/SecretAIMoves">Secret AI Races</a> such as batarians, and also exclusive equipment here and there on both sides - the exceptions to this rule are obvious - <a class="twikilink" href="/pmwiki/pmwiki.php/Main/EverythingsDeaderWithZombies" title="/pmwiki/pmwiki.php/Main/EverythingsDeaderWithZombies">Husks, Thorian Creepers</a>, and the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/FinalBoss" title="/pmwiki/pmwiki.php/Main/FinalBoss">Final Boss</a> to name but three. But <a class="twikilink" href="/pmwiki/pmwiki.php/Main/PlayerCharacter" title="/pmwiki/pmwiki.php/Main/PlayerCharacter">Shepard</a> has almost exclusive access to Unity/First Aid in all three games, which revives and restores the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/HitPoints" title="/pmwiki/pmwiki.php/Main/HitPoints">Hit Points</a> of the entire team. <a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MassEffect3" title="/pmwiki/pmwiki.php/VideoGame/MassEffect3">Mass Effect 3</a> allows <a class="twikilink" href="/pmwiki/pmwiki.php/Main/HeroOfAnotherStory" title="/pmwiki/pmwiki.php/Main/HeroOfAnotherStory">other player characters</a> to use the ability with a radius restriction with the Medi-Gel Transmitter <a class="twikilink" href="/pmwiki/pmwiki.php/Main/PowersAsPrograms" title="/pmwiki/pmwiki.php/Main/PowersAsPrograms">Gear</a>, but, being playable, it's still played straight. And they never meet <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TheHero" title="/pmwiki/pmwiki.php/Main/TheHero">Shepard</a>, anyway - preventing an aversion of <a class="twikilink" href="/pmwiki/pmwiki.php/Main/WeCannotGoOnWithoutYou" title="/pmwiki/pmwiki.php/Main/WeCannotGoOnWithoutYou">We Cannot Go On Without You</a>, as the third game adds a new, more shooter-conventional revival mechanic which is still this trope.
+<ul><li> The <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MirrorBoss" title="/pmwiki/pmwiki.php/Main/MirrorBoss">final battle</a> and Armax Arsenal Arena <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BonusBoss" title="/pmwiki/pmwiki.php/Main/BonusBoss">Bonus Boss</a> of the Citadel DLC both use both this and <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SecretAIMoves" title="/pmwiki/pmwiki.php/Main/SecretAIMoves">Secret A.I. Moves</a> in spades. <span class="spoiler" title="you can set spoilers visible by default on your profile"> Shepard's clone</span> cannot use some mechanics such as shooter-conventional revives, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/LastChanceHitPoint" title="/pmwiki/pmwiki.php/Main/LastChanceHitPoint">shield and health gates</a>, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/RealTimeWeaponChange" title="/pmwiki/pmwiki.php/Main/RealTimeWeaponChange">Real-Time Weapon Change</a> (or even <a class="twikilink" href="/pmwiki/pmwiki.php/Main/RealTimeWithPause" title="/pmwiki/pmwiki.php/Main/RealTimeWithPause">non-real-time</a>) and <span class="spoiler" title="you can set spoilers visible by default on your profile"> Brooks</span> doesn't get the unshielded ragdoll and biotic protection that Shepard's AI teammates get, but they get the ability to use First Aid as an <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AutoRevive" title="/pmwiki/pmwiki.php/Main/AutoRevive">Auto-Revive</a> for both <span class="spoiler" title="you can set spoilers visible by default on your profile"> him/her and Brooks</span>, restore <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DeflectorShields" title="/pmwiki/pmwiki.php/Main/DeflectorShields">Deflector Shields</a> with it, as well as get a full heal under fire <a class="twikilink" href="/pmwiki/pmwiki.php/Main/EasierThanEasy" title="/pmwiki/pmwiki.php/Main/EasierThanEasy">even on Narrative</a> (which would logically be <a class="twikilink" href="/pmwiki/pmwiki.php/Main/HarderThanHard" title="/pmwiki/pmwiki.php/Main/HarderThanHard">Insanity</a> for the enemy) up to five times before going down, and <span class="spoiler" title="you can set spoilers visible by default on your profile"> Brooks</span> hits hard with her Crusader shotgun on high difficulties, while Shepard's squad would do <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ScratchDamage" title="/pmwiki/pmwiki.php/Main/ScratchDamage">Scratch Damage</a> on as low as Normal. The Heavy Melee clash would technically count as a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SecretAIMoves" title="/pmwiki/pmwiki.php/Main/SecretAIMoves">Secret AI Move</a>, as mechanically, <span class="spoiler" title="you can set spoilers visible by default on your profile"> the clone</span> initiates it, and the player breaks free by mashing the melee button. This goes so far as the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BonusBoss" title="/pmwiki/pmwiki.php/Main/BonusBoss">Bonus Boss</a>, consisting of versions of <span class="spoiler" title="you can set spoilers visible by default on your profile"> the clone</span> of every <a class="twikilink" href="/pmwiki/pmwiki.php/Main/CharacterClass" title="/pmwiki/pmwiki.php/Main/CharacterClass">Character Class</a>, being unable to clash with classes that don't wield the appropriate Omni-Blade or have mastery of their <span class="spoiler" title="you can set spoilers visible by default on your profile"> Lazarus gifted, in this instance</span> biotic powers beyond one bonus power.
+</li></ul></li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheElderScrollsIVOblivion" title="/pmwiki/pmwiki.php/VideoGame/TheElderScrollsIVOblivion">The Elder Scrolls IV: Oblivion</a></em>, NPCs are incapable of scaling uneven ground (be it jumping up or climbing down) and will be forced to switch to either magic or bows to attack the enemy. It's possible to endlessly kite the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/CityGuards" title="/pmwiki/pmwiki.php/Main/CityGuards">City Guards</a> by placing a rock or fence between you and them and just jump over it, while they have to walk all the way around it. Fixed in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheElderScrollsVSkyrim" title="/pmwiki/pmwiki.php/VideoGame/TheElderScrollsVSkyrim">The Elder Scrolls V: Skyrim</a></em>, where NPCs can scale small walls, albeit often taking <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ArtificialStupidity" title="/pmwiki/pmwiki.php/Main/ArtificialStupidity">stupid paths</a> to do so.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder11');">    Simulation Games </div><div class="folder" id="folder11" isfolder="true" style="display:block;">
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/X" title="/pmwiki/pmwiki.php/VideoGame/X">X-Universe</a></em> series:
+<ul><li> Non-player-piloted ships never use their WASD strafing thrusters. It makes more sense in <em>X2: The Threat</em> and previous games where its an optional ship upgrade, but less so in latter games where it's a built-in component on every ship
+</li><li> <em>X3: Terran Conflict</em> introduced M7M missile frigates and M8 bombers to the <em>X</em> series, both of which are designed to fight by <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MacrossMissileMassacre" title="/pmwiki/pmwiki.php/Main/MacrossMissileMassacre">pouring enormous salvos of missiles into the target</a> from well beyond gun range. The player can remotely command their M7Ms and M8s to do so using the Barrage command, but AI ones use the same AI as every other ship class, meaning they will fire missiles rarely and singly. This goes for both <a class="twikilink" href="/pmwiki/pmwiki.php/Main/NPC" title="/pmwiki/pmwiki.php/Main/NPC">NPCs</a> and <a class="twikilink" href="/pmwiki/pmwiki.php/Main/PlayerMooks" title="/pmwiki/pmwiki.php/Main/PlayerMooks">Player Mooks</a>, and is fixed in the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ExpansionPack" title="/pmwiki/pmwiki.php/Main/ExpansionPack">Expansion Pack</a> <em>Albion Prelude</em>.
+</li><li> Only the player is capable of causing NPCs to bail out of their ship. Every NPC-on-NPC battle ends with at least one death. The behavior is rectified in the <em>Xtended</em> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GameMod" title="/pmwiki/pmwiki.php/Main/GameMod">Game Mod</a> for <em>X3: Terran Conflict</em>, where NPCs can cause each other to bail out. However, it can cause some <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DiscOneNuke" title="/pmwiki/pmwiki.php/Main/DiscOneNuke">Disc One Nukes</a>, such as finding an abandoned military <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SpaceFighter" title="/pmwiki/pmwiki.php/Main/SpaceFighter">Space Fighter</a> worth 1,000,000+ credits waiting to be claimed after the pilot bailed out during a pirate attack.
+</li></ul></li><li> The Yellow Squadron in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/AceCombat04ShatteredSkies" title="/pmwiki/pmwiki.php/VideoGame/AceCombat04ShatteredSkies">Ace Combat 04: Shattered Skies</a></em> cannot fire QAAM missiles, even though they fly one of the few plane models in the game that can carry these missiles. That's because QAAMs are ridiculously overpowered in <em>AC04</em> (one shot kill plus nearly impossible to shake off), and if the Yellows were allowed to use them, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TheComputerIsACheatingBastard" title="/pmwiki/pmwiki.php/Main/TheComputerIsACheatingBastard">in addition to their other advantages</a>, the game would become literally unwinnable.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/OperationFlashpoint" title="/pmwiki/pmwiki.php/VideoGame/OperationFlashpoint">Operation Flashpoint</a></em>: With good aim and a lot of luck, you can shoot down enemy helicopters with pretty much any weapon by shooting the crew through the windshield when they line up for a pass, or simply filling the vehicle with holes until its engine quits. Of course, you'll never last long enough to do so if you stand out in the open, but if some good cover is at hand and you have the nerve to try, it's possible. The AI never try to shoot at helicopters with anything but guided anti-aircraft missiles.
+</li><li> In the <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/EscapeVelocity" title="/pmwiki/pmwiki.php/VideoGame/EscapeVelocity">Escape Velocity</a></em> series, AI ships will generally only pursue the player or halt and fire long-ranged weapons, never performing any of the various tricks that relied on momentum (notably the "Monty Python", where the player accelerates away from the enemy and turns around, essentially coasting in reverse while firing all weapons). They also generally would not <a class="twikilink" href="/pmwiki/pmwiki.php/Main/HyperspeedEscape" title="/pmwiki/pmwiki.php/Main/HyperspeedEscape">jump out of the system during combat</a>, except for certain mission bosses.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder12');">    Tabletop Games </div><div class="folder" id="folder12" isfolder="true" style="display:block;">
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/DungeonsAndDragons" title="/pmwiki/pmwiki.php/TabletopGame/DungeonsAndDragons">Dungeons &amp; Dragons</a> 3rd Edition</em>: The Action Points mechanic (most prominently featured in the <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/Eberron" title="/pmwiki/pmwiki.php/TabletopGame/Eberron">Eberron</a></em> campaign setting) gives player characters a pool of points at each level which serve as a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/LuckManipulationMechanic" title="/pmwiki/pmwiki.php/Main/LuckManipulationMechanic">Luck Manipulation Mechanic</a>. <a class="twikilink" href="/pmwiki/pmwiki.php/Main/NPC" title="/pmwiki/pmwiki.php/Main/NPC">NPCs</a> normally do not receive action points, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DownplayedTrope" title="/pmwiki/pmwiki.php/Main/DownplayedTrope">but can gain a limited stock by selecting abilities which increase the size of the user's action point pool</a>. It's recommended that the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GameMaster" title="/pmwiki/pmwiki.php/Main/GameMaster">Game Master</a> do this only rarely, for NPCs who are particularly larger-than-life.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder13');">    Turn-Based Strategy </div><div class="folder" id="folder13" isfolder="true" style="display:block;">
+<ul><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TenMinuteSpaceStrategy" title="/pmwiki/pmwiki.php/VideoGame/TenMinuteSpaceStrategy">Ten Minute Space Strategy</a></em>, building space stations is something only players' colonizers can do. AI colonizers are limited to founding colonies on planets.
+</li><li> In the <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/FireEmblem" title="/pmwiki/pmwiki.php/Franchise/FireEmblem">Fire Emblem</a></em> series:
+<ul><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FireEmblemPathOfRadiance" title="/pmwiki/pmwiki.php/VideoGame/FireEmblemPathOfRadiance">Fire Emblem: Path of Radiance</a></em>, <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FireEmblemRadiantDawn" title="/pmwiki/pmwiki.php/VideoGame/FireEmblemRadiantDawn">Fire Emblem: Radiant Dawn</a></em>, <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FireEmblemFates" title="/pmwiki/pmwiki.php/VideoGame/FireEmblemFates">Fire Emblem Fates</a></em>, <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FireEmblemGaiden" title="/pmwiki/pmwiki.php/VideoGame/FireEmblemGaiden">Fire Emblem Echoes: Shadows of Valentia</a></em>, and <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FireEmblemThreeHouses" title="/pmwiki/pmwiki.php/VideoGame/FireEmblemThreeHouses">Fire Emblem: Three Houses</a></em>, only the player can make use of <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ItemCrafting" title="/pmwiki/pmwiki.php/Main/ItemCrafting">Item Crafting</a> to forge powerful custom weapons. In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FireEmblemShadowDragonAndTheBladeOfLight" title="/pmwiki/pmwiki.php/VideoGame/FireEmblemShadowDragonAndTheBladeOfLight">Fire Emblem: Shadow Dragon</a></em>, <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FireEmblemMysteryOfTheEmblem" title="/pmwiki/pmwiki.php/VideoGame/FireEmblemMysteryOfTheEmblem">Fire Emblem: New Mystery of the Emblem</a></em>, <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FireEmblemAwakening" title="/pmwiki/pmwiki.php/VideoGame/FireEmblemAwakening">Fire Emblem Awakening</a></em>, and <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FireEmblemHeroes" title="/pmwiki/pmwiki.php/VideoGame/FireEmblemHeroes">Fire Emblem Heroes</a></em>, you aren't so lucky.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FireEmblemAwakening" title="/pmwiki/pmwiki.php/VideoGame/FireEmblemAwakening">Fire Emblem Awakening</a></em>'s signature Pair Up and Dual Combat mechanics are for player use only. The Risen may love their <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ZergRush" title="/pmwiki/pmwiki.php/Main/ZergRush">Zerg Rush</a> on the map, but individual fights nearly always end up being two of you versus one of them. Unfortunately for the players, <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FireEmblemFates" title="/pmwiki/pmwiki.php/VideoGame/FireEmblemFates">Fire Emblem Fates</a></em> gives the ability to the enemy.
+</li></ul></li><li> The AI in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FinalFantasyTactics" title="/pmwiki/pmwiki.php/VideoGame/FinalFantasyTactics">Final Fantasy Tactics</a></em> is designed to <em>never</em> use "<a class="twikilink" href="/pmwiki/pmwiki.php/Main/FaceHeelTurn" title="/pmwiki/pmwiki.php/Main/FaceHeelTurn">Invitation</a>" abilities, even if the character has access to them, and even if the unit is confused. The player is free to use them on any generic non-boss unit (except a few oddballs like Ultima Demons) that they like. If one digs in the game code a little, it's revealed that the player's party is actually inherently immune to the Invitation status in the first place, which makes it odd that there's one piece of headgear that grants immunity to it...
+</li></ul></div>
+<hr/>
+</div>
+<div class="square_ad footer-article-ad main_2" data-isolated="0"></div>
+<div class="section-links" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<div class="titles">
+<div><h3 class="text-center text-uppercase">Previous</h3></div>
+<div><h3 class="text-center text-uppercase">Index</h3></div>
+<div><h3 class="text-center text-uppercase">Next</h3></div>
+</div>
+<div class="links">
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/NoticeThis">Notice This</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/VideoGameDifficultyTropes">Video Game Difficulty Tropes</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/PlayerNudge">Player Nudge</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/PerpetualBeta">Perpetual Beta</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/ErrorIndex">Error Index</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/PortingDisaster">Porting Disaster</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/PingPongNaivete">Ping Pong Naïveté</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/StupidityTropes">Stupidity Tropes</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/PlotSensitiveSnoopingSkills">Plot-Sensitive Snooping Skills</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="outer_ads_by_salon_wrapper" id="exco_player_insert_div">
+</div>
+</article>
+<div id="main-content-sidebar"><div class="sidebar-item display-options">
+<ul class="sidebar display-toggles">
+<li>Show Spoilers <div class="display-toggle show-spoilers" id="sidebar-toggle-showspoilers"></div></li>
+<li>Night Vision <div class="display-toggle night-vision" id="sidebar-toggle-nightvision"></div></li>
+<li>Sticky Header <div class="display-toggle sticky-header" id="sidebar-toggle-stickyheader"></div></li>
+<li>Wide Load <div class="display-toggle wide-load" id="sidebar-toggle-wideload"></div></li>
+</ul>
+<script>updateDesktopPrefs();</script>
+</div>
+<div class="sidebar-item ad sb-ad-unit">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_2"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_2'); });</script> </div>
+</div></div>
+<div class="sidebar-item quick-links" itemtype="http://schema.org/SiteNavigationElement">
+<p class="sidebar-item-title" data-title="Important Links">Important Links</p>
+<div class="padded">
+<a href="/pmwiki/query.php?type=att">Ask The Tropers</a>
+<a href="/pmwiki/query.php?type=tf">Trope Finder</a>
+<a href="/pmwiki/query.php?type=ykts">You Know That Show...</a>
+<a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a>
+<a href="/pmwiki/review_activity.php">Reviews</a>
+<a data-modal-target="login" href="/pmwiki/lbs.php">Live Blogs</a>
+<a href="/pmwiki/ad-free-subscribe.php">Go Ad Free!</a> </div>
+</div>
+<div class="sidebar-item sb-ad-unit">
+<div class="sidebar-section">
+<div class="square_ad ad-size-300x600 ad-section text-center">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_3"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_3'); });</script> </div>
+</div> </div>
+</div>
+</div>
+<div class="sidebar-item">
+<p class="sidebar-item-title" data-title="Crucial Browsing">Crucial Browsing</p>
+<ul class="padded font-s" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><a data-click-toggle="active" href="javascript:void(0);">Genre</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/ActionAdventureTropes" title="Main/ActionAdventureTropes">Action Adventure</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ComedyTropes" title="Main/ComedyTropes">Comedy</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CommercialsTropes" title="Main/CommercialsTropes">Commercials</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CrimeAndPunishmentTropes" title="Main/CrimeAndPunishmentTropes">Crime &amp; Punishment</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DramaTropes" title="Main/DramaTropes">Drama</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/HorrorTropes" title="Main/HorrorTropes">Horror</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LoveTropes" title="Main/LoveTropes">Love</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NewsTropes" title="Main/NewsTropes">News</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ProfessionalWrestling" title="Main/ProfessionalWrestling">Professional Wrestling</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SpeculativeFictionTropes" title="Main/SpeculativeFictionTropes">Speculative Fiction</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SportsStoryTropes" title="Main/SportsStoryTropes">Sports Story</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/WarTropes" title="Main/WarTropes">War</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Media</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/Media" title="Main/Media">All Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/AnimationTropes" title="Main/AnimationTropes">Animation (Western)</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Anime" title="Main/Anime">Anime</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ComicBookTropes" title="Main/ComicBookTropes">Comic Book</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FanFic" title="FanFic/FanFics">Fan Fics</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Film" title="Main/Film">Film</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/GameTropes" title="Main/GameTropes">Game</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Literature" title="Main/Literature">Literature</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MusicAndSoundEffects" title="Main/MusicAndSoundEffects">Music And Sound Effects</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NewMediaTropes" title="Main/NewMediaTropes">New Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/PrintMediaTropes" title="Main/PrintMediaTropes">Print Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Radio" title="Main/Radio">Radio</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SequentialArt" title="Main/SequentialArt">Sequential Art</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TabletopGames" title="Main/TabletopGames">Tabletop Games</a></li>
+<li><a href="/pmwiki/pmwiki.php/UsefulNotes/Television" title="Main/Television">Television</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Theater" title="Main/Theater">Theater</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/VideogameTropes" title="Main/VideogameTropes">Videogame</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Webcomics" title="Main/Webcomics">Webcomics</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Narrative</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/UniversalTropes" title="Main/UniversalTropes">Universal</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/AppliedPhlebotinum" title="Main/AppliedPhlebotinum">Applied Phlebotinum</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CharacterizationTropes" title="Main/CharacterizationTropes">Characterization</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Characters" title="Main/Characters">Characters</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CharactersAsDevice" title="Main/CharactersAsDevice">Characters As Device</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Dialogue" title="Main/Dialogue">Dialogue</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Motifs" title="Main/Motifs">Motifs</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NarrativeDevices" title="Main/NarrativeDevices">Narrative Devices</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Paratext" title="Main/Paratext">Paratext</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Plots" title="Main/Plots">Plots</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Settings" title="Main/Settings">Settings</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Spectacle" title="Main/Spectacle">Spectacle</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Other Categories</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/BritishTellyTropes" title="Main/BritishTellyTropes">British Telly</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TheContributors" title="Main/TheContributors">The Contributors</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CreatorSpeak" title="Main/CreatorSpeak">Creator Speak</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Creators" title="Main/Creators">Creators</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DerivativeWorks" title="Main/DerivativeWorks">Derivative Works</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LanguageTropes" title="Main/LanguageTropes">Language</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LawsAndFormulas" title="Main/LawsAndFormulas">Laws And Formulas</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ShowBusiness" title="Main/ShowBusiness">Show Business</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SplitPersonalityTropes" title="Main/SplitPersonalityTropes">Split Personality</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/StockRoom" title="Main/StockRoom">Stock Room</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TropeTropes" title="Main/TropeTropes">Trope</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Tropes" title="Main/Tropes">Tropes</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TruthAndLies" title="Main/TruthAndLies">Truth And Lies</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TruthInTelevision" title="Main/TruthInTelevision">Truth In Television</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Topical Tropes</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/BetrayalTropes" title="Main/BetrayalTropes">Betrayal</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CensorshipTropes" title="Main/CensorshipTropes">Censorship</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CombatTropes" title="Main/CombatTropes">Combat</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DeathTropes" title="Main/DeathTropes">Death</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FamilyTropes" title="Main/FamilyTropes">Family</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FateAndProphecyTropes" title="Main/FateAndProphecyTropes">Fate And Prophecy</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FoodTropes" title="Main/FoodTropes">Food</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/HolidayTropes" title="Main/HolidayTropes">Holiday</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MemoryTropes" title="Main/MemoryTropes">Memory</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MoneyTropes" title="Main/MoneyTropes">Money</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MoralityTropes" title="Main/MoralityTropes">Morality</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/PoliticsTropes" title="Main/PoliticsTropes">Politics</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ReligionTropes" title="Main/ReligionTropes">Religion</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SchoolTropes" title="Main/SchoolTropes">School</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="sidebar-item showcase">
+<p class="sidebar-item-title" data-title="Community Showcase">Community Showcase <a class="bubble float-right hover-blue" href="/pmwiki/showcase.php">More</a></p>
+<p class="community-showcase">
+<a href="https://sharetv.com/shows/echo_chamber" onclick="trackOutboundLink('https://sharetv.com/shows/echo_chamber');" target="_blank">
+<img alt="" class="lazy-image" data-src="/images/communityShowcase-echochamber.jpg"/></a>
+<a href="/pmwiki/pmwiki.php/Webcomic/TwistedTropes">
+<img alt="" class="lazy-image" data-src="/img/howlandsc-side.jpg"/></a>
+</p>
+</div>
+<div class="sidebar-item sb-ad-unit" id="stick-cont">
+<div class="sidebar-section" id="stick-bar">
+<div class="square_ad ad-size-300x600 ad-section text-center">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_4"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_4'); });</script> </div>
+</div> </div>
+</div>
+</div>
+</div>
+</div>
+<div class="action-bar tablet-off" id="action-bar-bottom">
+<a class="scroll-to-top dead-button" href="#top-of-page" onclick="$('html, body').animate({scrollTop : 0},500);">Top</a>
+</div>
+</div>
+<div class="proper-ad-unit ad-sticky">
+<div id="proper-ad-tvtropes_sticky_ad"> <script>propertag.cmd.push(function() { proper_display('tvtropes_sticky_ad'); });</script> </div>
+</div>
+<footer id="main-footer">
+<div id="main-footer-inner">
+<div class="footer-left">
+<a class="img-link" href="/"><img alt="TV Tropes" class="lazy-image" data-src="/img/tvtropes-footer-logo.png" title="TV Tropes"/></a>
+<form action="index.html" class="navbar-form newsletter-signup validate modal-replies" data-ajax-get="/ajax/subscribe_email.php" id="cse-search-box-mobile" name="" role="">
+<button class="btn-submit newsletter-signup-submit-button" id="subscribe-btn" type="submit"><i class="fa fa-paper-plane"></i></button>
+<input class="form-control" id="subscription-email" name="q" placeholder="Subscribe" size="31" type="text" validate-type="email" value=""/>
+</form>
+<ul class="social-buttons">
+<li><a class="btn fb" href="https://www.facebook.com/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-facebook']);" target="_blank"><i class="fa fa-facebook"></i></a></li>
+<li><a class="btn tw" href="https://www.twitter.com/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-twitter']);" target="_blank"><i class="fa fa-twitter"></i></a> </li>
+<li><a class="btn rd" href="https://www.reddit.com/r/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-reddit']);" target="_blank"><i class="fa fa-reddit-alien"></i></a></li>
+</ul>
+</div>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">TVTropes</h4></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Administrivia">About TVTropes</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TheGoalsOfTVTropes">TVTropes Goals</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TheTropingCode">Troping Code</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TVTropesCustoms">TVTropes Customs</a></li>
+<li><a href="/pmwiki/pmwiki.php/JustForFun/TropesOfLegend">Tropes of Legend</a></li>
+<li><a href="/pmwiki/ad-free-subscribe.php">Go Ad-Free</a></li>
+</ul>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">Community</h4></li>
+<li><a href="/pmwiki/query.php?type=att">Ask The Tropers</a></li>
+<li><a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a></li>
+<li><a href="/pmwiki/query.php?type=tf">Trope Finder</a></li>
+<li><a href="/pmwiki/query.php?type=ykts">You Know That Show</a></li>
+<li><a data-modal-target="login" href="/pmwiki/lbs.php">Live Blogs</a></li>
+<li><a href="/pmwiki/review_activity.php">Reviews</a></li>
+<li><a href="/pmwiki/topics.php">Forum</a></li>
+</ul>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">Tropes HQ</h4></li>
+<li><a href="/pmwiki/about.php">About Us</a></li>
+<li><a href="/pmwiki/contact.php">Contact Us</a></li>
+<li><a href="/pmwiki/dmca.php">DMCA Notice</a></li>
+<li><a href="/pmwiki/privacypolicy.php">Privacy Policy</a></li>
+</ul>
+</div>
+<div class="text-center gutter-top gutter-bottom tablet-on" id="desktop-on-mobile-toggle">
+<a href="/pmwiki/switchDeviceCss.php?mobileVersion=1" rel="nofollow">Switch to <span class="txt-desktop">Desktop</span><span class="txt-mobile">Mobile</span> Version</a>
+</div>
+<div class="legal">
+<p>TVTropes is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License. <br/>Permissions beyond the scope of this license may be available from <a href="mailto:thestaff@tvtropes.org" rel="cc:morePermissions" xmlns:cc="http://creativecommons.org/ns#"> thestaff@tvtropes.org</a>.</p>
+<br/>
+<div class="privacy_wrapper">
+</div>
+</div>
+</footer>
+<style>
+      div.fc-ccpa-root {
+        position: absolute !important;
+        bottom: 93px !important;
+        margin: auto !important;
+        width: 100% !important;
+        z-index: 9999 !important;
+      }
+      .fc-ccpa-root .fc-dns-dialog .fc-dns-link p{
+        outline: none !important;
+        text-decoration: underline !important;
+        font-size: .7em !important;
+        font-family: sans-serif !important;
+      }
+      .fc-ccpa-root .fc-dns-dialog .fc-dns-link .fc-button-background {
+        background: none !important;
+      }
+    </style>
+<div class="full-screen" id="_pm_videoViewer">
+<a class="close" href="#close" id="_pm_videoViewer-close"></a>
+<div class="_pmvv-body">
+<div class="_pmvv-vidbox">
+<video class="video-js vjs-default-skin vjs-16-9" data-video-id="" id="overlay-video-player-box">
+</video>
+<div class="_pmvv-vidbox-desc">
+<h1 id="overlay-title"></h1>
+<p class="_pmvv-vidbox-descTxt" id="overlay-descrip">
+</p>
+<div class="rating-row" data-video-id="">
+<input name="is_logged_in" type="hidden" value="0"/>
+<p>How well does it match the trope?</p>
+<div id="star-rating-group">
+<div class="trope-rate">
+<input id="lamp5" name="rate" type="radio" value="5"/>
+<label for="lamp5" title="Absolutely"></label>
+<input id="lamp4" name="rate" type="radio" value="4"/>
+<label for="lamp4" title="Yes"></label>
+<input id="lamp3" name="rate" type="radio" value="3"/>
+<label for="lamp3" title="Kind of"></label>
+<input id="lamp2" name="rate" type="radio" value="2"/>
+<label for="lamp2" title="Not really"></label>
+<input id="lamp1" name="rate" type="radio" value="1"/>
+<label for="lamp1" title="No"></label>
+</div>
+<div id="star-rating-total">
+</div>
+</div>
+</div>
+<div class="example-media-row">
+<div class="example-overlay">
+<p>Example of:</p>
+<div id="overlay-trope"> / </div>
+</div>
+<div class="media-sources-overlay example-overlay">
+<p>Media sources:</p>
+<div id="overlay-media"> / </div>
+</div>
+</div>
+<p class="_pmvv-vidbox-stats text-right font-s" style="padding-top:8px; border-top: solid 1px rgba(255,255,255,0.2)">
+<a class="float-right" data-modal-target="login" href="#video-feedback">Report</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+        window.special_ops =  {
+            member : 'no',
+            isolated : 0,
+            tags : ['videogame']
+        };
+    </script>
+<script type="text/javascript">
+
+        var cleanCreativeEnabled = "";
+        var donation = "";
+        var live_ads = "1";
+        var img_domain = "https://static.tvtropes.org";
+        var snoozed = cookies.read('snoozedabm');
+        var snoozable = "";
+
+        if (adsRemovedWith) {
+            live_ads = 0;
+        }
+
+        var elem = document.createElement('script');
+        elem.async = true;
+
+        elem.src = '/design/assets/bundle.js?rev=c58d8df02f09262390bbd03db7921fc35c6af306';
+
+        elem.onload = function() {
+                                 }
+        document.getElementsByTagName('head')[0].appendChild(elem);
+
+    </script>
+<script type="text/javascript">
+      function send_analytics_event(user_type, donation){
+          // if(user_type == 'uncached' || user_type == 'cached'){
+          //   ga('send', 'event', 'caching', 'load', user_type, {'nonInteraction': 1});
+          //   return;
+          // }
+          var event_name = user_type;
+
+          if(donation == 'true'){
+              event_name += "_donation"
+          }else if(typeof(valid_user) == 'undefined'){
+              event_name += "_blocked"
+          }else if(valid_user == true){
+              event_name += "_unblocked";
+          }else{
+              event_name = "_unknown"
+          }
+          ga('send', 'event', 'ads', 'load', event_name, {'nonInteraction': 1});
+      }
+
+    
+    send_analytics_event("guest", "false");
+      </script>
+</body>
+</html>

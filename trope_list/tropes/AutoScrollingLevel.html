@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Auto-Scrolling Level - TV Tropes</title>
+<meta content="The Auto-Scrolling Level trope as used in popular culture. A level in a Platform Game where the screen scrolls at a constant rate (like in rail shooters), no …" name="description"/>
+<link href="https://tvtropes.org/pmwiki/pmwiki.php/Main/AutoScrollingLevel" rel="canonical"/>
+<link href="/img/icons/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="@tvtropes" name="twitter:site"/>
+<meta content="@tvtropes" name="twitter:owner"/>
+<meta content="Auto-Scrolling Level - TV Tropes" name="twitter:title"/>
+<meta content="The Auto-Scrolling Level trope as used in popular culture. A level in a Platform Game where the screen scrolls at a constant rate (like in rail shooters), no …" name="twitter:description"/>
+<meta content="https://static.tvtropes.org/logo_blue_small.png" name="twitter:image:src"/>
+<meta content="TV Tropes" property="og:site_name"/>
+<meta content="en_US" property="og:locale"/>
+<meta content="https://www.facebook.com/tvtropes" property="article:publisher"/>
+<meta content="Auto-Scrolling Level - TV Tropes" property="og:title"/>
+<meta content="website" property="og:type"/>
+<meta content="https://tvtropes.org/pmwiki/pmwiki.php/Main/AutoScrollingLevel" property="og:url"/>
+<meta content="https://static.tvtropes.org/logo_blue_small.png" property="og:image"/>
+<meta content="A level in a Platform Game where the screen scrolls at a constant rate (like in rail shooters), no matter where the player runs or jumps to. This doesn't make any sense at all, but since you didn't care when you were 12, why start now? Generally …" property="og:description"/>
+<link href="/img/icons/apple-icon-57x57.png" rel="apple-touch-icon" sizes="57x57" type="image/png"/>
+<link href="/img/icons/apple-icon-60x60.png" rel="apple-touch-icon" sizes="60x60" type="image/png"/>
+<link href="/img/icons/apple-icon-72x72.png" rel="apple-touch-icon" sizes="72x72" type="image/png"/>
+<link href="/img/icons/apple-icon-76x76.png" rel="apple-touch-icon" sizes="76x76" type="image/png"/>
+<link href="/img/icons/apple-icon-114x114.png" rel="apple-touch-icon" sizes="114x114" type="image/png"/>
+<link href="/img/icons/apple-icon-120x120.png" rel="apple-touch-icon" sizes="120x120" type="image/png"/>
+<link href="/img/icons/apple-icon-144x144.png" rel="apple-touch-icon" sizes="144x144" type="image/png"/>
+<link href="/img/icons/apple-icon-152x152.png" rel="apple-touch-icon" sizes="152x152" type="image/png"/>
+<link href="/img/icons/apple-icon-180x180.png" rel="apple-touch-icon" sizes="180x180" type="image/png"/>
+<link href="/img/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/img/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/img/icons/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png"/>
+<link href="/img/icons/favicon-192x192.png" rel="icon" sizes="192x192" type="image/png"/>
+<meta content="width=device-width, initial-scale=1" id="viewport" name="viewport"/>
+<script>
+                var propertag = {};
+                propertag.cmd = [];
+            </script>
+<link href="/design/assets/bundle.css?rev=c58d8df02f09262390bbd03db7921fc35c6af306" rel="stylesheet"/>
+<script>
+                function object(objectId) {
+                    if (document.getElementById && document.getElementById(objectId)) {
+                        return document.getElementById(objectId);
+                    } else if (document.all && document.all(objectId)) {
+                        return document.all(objectId);
+                    } else if (document.layers && document.layers[objectId]) {
+                        return document.layers[objectId];
+                    } else {
+                        return false;
+                    }
+                }
+
+                // JAVASCRIPT COOKIES CODE: for getting and setting user viewing preferences
+                var cookies = {
+                    create: function (name, value, days2expire, path) {
+                        var date = new Date();
+                        date.setTime(date.getTime() + (days2expire * 24 * 60 * 60 * 1000));
+                        var expires = date.toUTCString();
+                        document.cookie = name + '=' + value + ';' + 'expires=' + expires + ';' + 'path=' + path + ';';
+                    },
+										createWithExpire: function(name, value, expires, path) {
+												document.cookie = name + '=' + value + ';' + 'expires=' + expires + ';' + 'path=' + path + ';';
+										},
+                    read: function (name) {
+                        var cookie_value = "",
+                            current_cookie = "",
+                            name_expr = name + "=",
+                            all_cookies = document.cookie.split(';'),
+                            n = all_cookies.length;
+
+                        for (var i = 0; i < n; i++) {
+                            current_cookie = all_cookies[i].trim();
+                            if (current_cookie.indexOf(name_expr) === 0) {
+                                cookie_value = current_cookie.substring(name_expr.length, current_cookie.length);
+                                break;
+                            }
+                        }
+                        return cookie_value;
+                    },
+                    update: function (name, val) {
+                        this.create(name, val, 300, "/");
+                    },
+                    remove: function (name) {
+                        document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
+                    }
+                };
+
+                function updateUserPrefs() {
+                    //GENERAL: detect and set browser, if not cookied (will be treated like a user-preference and added to the #user-pref element)
+                    if( !cookies.read('user-browser') ){
+                        var broswer = '';
+
+                        if(navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPod/i) ){
+                            browser = 'iOS';
+                        } else if (/Opera[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'opera';
+                        } else if (/MSIE (\d+\.\d+);/.test(navigator.userAgent)) {
+                            browser = 'MSIE';
+                        } else if (/Navigator[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'netscape';
+                        } else if (/Chrome[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'chrome';
+                        } else if (/Safari[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'safari';
+                            /Version[\/\s](\d+\.\d+)/.test(navigator.userAgent);
+                            browserVersion = new Number(RegExp.$1);
+                        } else if (/Firefox[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'firefox';
+                        } else {
+                            browser = 'internet_explorer';
+                        }
+                        cookies.create('user-browser',browser,1,'/');
+                        document.getElementById('user-prefs').classList.add('browser-' + browser);
+                    } else {
+                        document.getElementById('user-prefs').classList.add('browser-' + cookies.read('user-browser'));
+                    }
+
+                    //update user preference settings
+                    if (cookies.read('wide-load') !== '') document.getElementById('user-prefs').classList.add('wide-load');
+                    if (cookies.read('night-vision') !== '') document.getElementById('user-prefs').classList.add('night-vision');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('user-prefs').classList.add('sticky-header');
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('user-prefs').classList.add('show-spoilers');
+                    if (cookies.read('folders-open') !== '') document.getElementById('user-prefs').classList.add('folders-open');
+                    if (cookies.read('lefthand-sidebar') !== '') document.getElementById('user-prefs').classList.add('lefthand-sidebar');
+                    if (cookies.read('highlight-links') !== '') document.getElementById('user-prefs').classList.add('highlight-links');
+                    if (cookies.read('forum-gingerbread') !== '') document.getElementById('user-prefs').classList.add('forum-gingerbread');
+                    if (cookies.read('shared-avatars') !== '') document.getElementById('user-prefs').classList.add('shared-avatars');
+                    if (cookies.read('new-search') !== '') document.getElementById('user-prefs').classList.add('new-search');
+                    if (cookies.read('stop-auto-play-video') !== '') document.getElementById('user-prefs').classList.add('stop-auto-play-video');
+
+                    //desktop view on mobile
+                    if (cookies.read('desktop-on-mobile') !== ''){
+                        document.getElementById('user-prefs').classList.add('desktop-on-mobile');
+
+                        var viewport = document.querySelector("meta[name=viewport]");
+                        viewport.setAttribute('content', 'width=1000');
+                    }
+
+                }
+
+                function updateDesktopPrefs() {
+                    if (cookies.read('wide-load') !== '') document.getElementById('sidebar-toggle-wideload').classList.add('active');
+                    if (cookies.read('night-vision') !== '') document.getElementById('sidebar-toggle-nightvision').classList.add('active');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('sidebar-toggle-stickyheader').classList.add('active');
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('sidebar-toggle-showspoilers').classList.add('active');
+
+                }
+
+                function updateMobilePrefs() {
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('mobile-toggle-showspoilers').classList.add('active');
+                    if (cookies.read('night-vision') !== '') document.getElementById('mobile-toggle-nightvision').classList.add('active');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('mobile-toggle-stickyheader').classList.add('active');
+                    if (cookies.read('highlight-links') !== '') document.getElementById('mobile-toggle-highlightlinks').classList.add('active');
+
+                }
+
+
+                if (document.cookie.indexOf("scroll0=") < 0) {
+                    // do nothing
+                } else {
+                    console.log('ads removed by scroll.com');
+                    var adsRemovedWith = 'scroll';
+                    var style = document.createElement('style');
+                    style.innerHTML = '#header-ad, .proper-ad-unit, .square_ad, .sb-ad-unit { display: none !important; } ';
+                    document.head.appendChild(style);
+                }
+            </script>
+<script type="text/javascript">
+
+                var tvtropes_config = {
+                    astri_stream_enabled : "",
+                    is_logged_in         : "",
+                    handle               : "",
+                    get_astri_stream     : "",
+										revnum               : "c58d8df02f09262390bbd03db7921fc35c6af306",
+										img_domain           : "https://static.tvtropes.org",
+										adblock              : "1",
+										adblock_url          : "propermessage.io",
+										pause_editing        : "0",
+										pause_editing_msg    : "",
+										pause_site_changes   : ""
+                };
+            </script>
+<script type="text/javascript">
+						  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+						  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+						  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+						  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+						  ga('create', 'UA-3821842-1', 'auto');
+						  ga('send', 'pageview');
+
+						</script>
+</head>
+<body class="">
+<i id="user-prefs"></i>
+<script>updateUserPrefs();</script>
+<div id="fb-root"></div>
+<div id="modal-box"></div>
+<header class="headroom-element" id="main-header-bar">
+<div id="main-header-bar-inner">
+<span class="header-spacer" id="header-spacer-left"></span>
+<a class="mobile-menu-toggle-button tablet-on" href="#mobile-menu" id="main-mobile-toggle"><span></span><span></span><span></span></a>
+<a class="no-dev" href="/" id="main-header-logoButton"></a>
+<span class="header-spacer" id="header-spacer-right"></span>
+<nav class="tablet-off" id="main-header-nav">
+<a href="/pmwiki/pmwiki.php/Main/Tropes">Tropes</a>
+<a href="/pmwiki/pmwiki.php/Main/Media">Media</a>
+<a class="nav-browse" href="/pmwiki/browse.php">Browse</a>
+<a href="/pmwiki/index_report.php">Indexes</a>
+<a href="/pmwiki/topics.php">Forums</a>
+<a class="nav-browse" href="/pmwiki/recent_videos.php">Videos</a>
+</nav>
+<div id="main-header-bar-right">
+<div class="font-xs mobile-off" id="signup-login-box">
+<a class="hover-underline bold" data-modal-target="signup" href="/pmwiki/login.php">Join</a>
+<a class="hover-underline bold" data-modal-target="login" href="/pmwiki/login.php">Login</a>
+</div>
+<div class="mobile-on inline" id="signup-login-mobileToggle">
+<a data-modal-target="login" href="/pmwiki/login.php"><i class="fa fa-user"></i></a>
+</div>
+<div id="search-box">
+<form action="/pmwiki/search_result.php" class="search">
+<input class="search-box" name="q" placeholder="Search" required="" type="text" value=""/>
+<input class="submit-button" type="submit" value=""/>
+<input name="search_type" type="hidden" value="article"/>
+<input name="page_type" type="hidden" value="all"/>
+<input name="cx" type="hidden" value="partner-pub-6610802604051523:amzitfn8e7v"/>
+<input name="cof" type="hidden" value="FORID:10"/>
+<input name="ie" type="hidden" value="ISO-8859-1"/>
+<input name="siteurl" type="hidden" value=""/>
+<input name="ref" type="hidden" value=""/>
+<input name="ss" type="hidden" value=""/>
+</form>
+<a class="mobile-on mobile-search-toggle close-x" href="#close-search"><i class="fa fa-close"></i></a>
+</div>
+<div id="random-box">
+<a class="button-random-trope" href="/pmwiki/pmwiki.php/Main/TheSvengali" onclick="ga('send', 'event', 'button', 'click', 'random trope');" rel="nofollow"></a>
+<a class="button-random-media" href="/pmwiki/pmwiki.php/WebVideo/YouCanPlayThis" onclick="ga('send', 'event', 'button', 'click', 'random media');" rel="nofollow"></a>
+</div>
+</div>
+</div>
+<div class="tablet-on" id="mobile-menu"><div class="mobile-menu-options">
+<div class="nav-wrapper">
+<a class="xl" href="/pmwiki/pmwiki.php/Main/Tropes">Tropes</a>
+<a class="xl" href="/pmwiki/pmwiki.php/Main/Media">Media</a>
+<a class="xl" href="/pmwiki/browse.php">Browse</a>
+<a class="xl" href="/pmwiki/index_report.php">Indexes</a>
+<a class="xl" href="/pmwiki/topics.php">Forums</a>
+<a class="xl" href="/pmwiki/recent_videos.php">Videos</a>
+<a href="/pmwiki/query.php?type=att">Ask The Tropers</a>
+<a href="/pmwiki/query.php?type=tf">Trope Finder</a>
+<a href="/pmwiki/query.php?type=ykts">You Know That Show...</a>
+<a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a>
+<a data-click-toggle="active" href="#tools">Tools <i class="fa fa-chevron-down"></i></a>
+<div class="tools-dropdown mobile-dropdown-linkList">
+<a href="/pmwiki/cutlist.php">Cut List</a>
+<a href="/pmwiki/changes.php">New Edits</a>
+<a href="/pmwiki/recent_edit_reasons.php">Edit Reasons</a>
+<a href="/pmwiki/launches.php">Launches</a>
+<a href="/pmwiki/img_list.php">Images List</a>
+<a href="/pmwiki/crown_activity.php">Crowner Activity</a>
+<a href="/pmwiki/no_types.php">Un-typed Pages</a>
+<a href="/pmwiki/page_type_audit.php">Recent Page Type Changes</a>
+</div>
+<a data-click-toggle="active" href="#hq">Tropes HQ <i class="fa fa-chevron-down"></i></a>
+<div class="tools-dropdown mobile-dropdown-linkList">
+<a href="/pmwiki/about.php">About Us</a>
+<a href="/pmwiki/contact.php">Contact Us</a>
+<a href="mailto:advertising@proper.io">Advertise</a>
+<a href="/pmwiki/dmca.php">DMCA Notice</a>
+<a href="/pmwiki/privacypolicy.php">Privacy Policy</a>
+</div>
+<a href="/pmwiki/ad-free-subscribe.php">Go Ad-Free</a>
+<div class="toggle-switches">
+<ul class="mobile-menu display-toggles">
+<li>Show Spoilers <div class="display-toggle show-spoilers" id="mobile-toggle-showspoilers"></div></li>
+<li>Night Vision <div class="display-toggle night-vision" id="mobile-toggle-nightvision"></div></li>
+<li>Sticky Header <div class="display-toggle sticky-header" id="mobile-toggle-stickyheader"></div></li>
+<li>Highlight Links <div class="display-toggle highlight-links" id="mobile-toggle-highlightlinks"></div></li>
+</ul>
+<script>updateMobilePrefs();</script>
+</div>
+</div>
+</div>
+</div>
+</header>
+<div class="mobile-on" id="homepage-introBox-mobile">
+<a href="/"><img class="logo-small" src="/images/logo-white-big.png"/></a>
+<form action="/pmwiki/search_result.php" class="search" style="margin:10px -5px -6px -5px;">
+<input class="search-box" name="q" placeholder="Search" required="" type="text" value=""/>
+<input class="submit-button" type="submit" value=""/>
+<input name="search_type" type="hidden" value="article"/>
+<input name="page_type" type="hidden" value="all"/>
+<input name="cx" type="hidden" value="partner-pub-6610802604051523:amzitfn8e7v"/>
+<input name="cof" type="hidden" value="FORID:10"/>
+<input name="ie" type="hidden" value="ISO-8859-1"/>
+<input name="siteurl" type="hidden" value=""/>
+<input name="ref" type="hidden" value=""/>
+<input name="ss" type="hidden" value=""/>
+</form>
+</div>
+<div class="ad" id="header-ad-wrapper">
+<div id="header-ad">
+<div class="ad-size-970x90 atf_banner">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_1"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_1'); });</script> </div>
+</div> </div>
+</div>
+</div>
+<div id="main-container">
+<div class="action-bar mobile-off" id="action-bar-top">
+<div class="action-bar-right">
+<p>Follow TV Tropes</p>
+<a class="button-fb" href="https://www.facebook.com/TVTropes">
+<i class="fa fa-facebook"></i></a>
+<a class="button-tw" href="https://www.twitter.com/TVTropes">
+<i class="fa fa-twitter"></i></a>
+<a class="button-re" href="https://www.reddit.com/r/TVTropes">
+<i class="fa fa-reddit-alien"></i></a>
+</div>
+<nav class="actions-wrapper" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<ul class="page-actions" id="top_main_list">
+<li class="link-edit">
+<a class="article-edit-button" data-modal-target="login" href="/pmwiki/pmwiki.php/Main/AutoScrollingLevel?action=edit" rel="nofollow">
+<i class="fa fa-pencil"></i> Edit Page</a></li><li class="link-related"><a href="/pmwiki/relatedsearch.php?term=Main/AutoScrollingLevel">
+<i class="fa fa-share-alt"></i> Related</a></li><li class="link-history"><a href="/pmwiki/article_history.php?article=Main.AutoScrollingLevel">
+<i class="fa fa-history"></i> History</a></li><li class="link-discussion"><a href="/pmwiki/remarks.php?trope=Main.AutoScrollingLevel">
+<i class="fa fa-comment"></i> Discussion</a></li> </ul>
+<button class="nav__dropdown-toggle" id="top_more_button" onclick="toggle_more_menu('top');" type="button">More</button>
+<ul class="more_menu hidden_more_list" id="top_more_list">
+<li class="link-todo tuck-always more_list_item"><a data-modal-target="login" href="#todo"><i class="fa fa-check-circle"></i> To Do</a></li><li class="link-pageSource tuck-always more_list_item"><a data-modal-target="login" href="/pmwiki/pmwiki.php/Main/AutoScrollingLevel?action=source" rel="nofollow" target="_blank"><i class="fa fa-code"></i> Page Source</a></li> </ul>
+</nav>
+<div class="WikiWordModalStub"></div>
+<div class="ImgUploadModalStub" data-page-type="Article"></div>
+<div class="login-alert" style="display: none;">
+You need to <a href="/pmwiki/login.php" style="color:#21A0E8">login</a> to do this. <a href="/pmwiki/login.php?tab=register_account" style="color:#21A0E8">Get Known</a> if you don't have an account
+</div>
+</div>
+<div class="page-Article" id="main-content">
+<article class="with-sidebar" id="main-entry">
+<input id="groupname-hidden" type="hidden" value="Main"/>
+<input id="title-hidden" type="hidden" value="AutoScrollingLevel"/>
+<input id="article_id" type="hidden" value="342255"/>
+<input id="logged_in" type="hidden" value="false"/>
+<p class="hidden" id="current_url">http://tvtropes.org/pmwiki/pmwiki.php/Main/AutoScrollingLevel</p>
+<meta content="" itemprop="datePublished"/>
+<meta content="" itemprop="articleSection"/>
+<meta content="" itemprop="image"/>
+<a class="watch-button" data-modal-target="login" href="#watch">Follow<span>ing</span></a>
+<h1 class="entry-title" itemprop="headline">
+Auto-Scrolling Level
+</h1>
+<script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+                "@type": "ListItem",
+                "position": 1,
+                "name": "tvtropes.org",
+                "item": "https://tvtropes.org"
+            },{
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Tropes",
+                "item": "https://tvtropes.org/pmwiki/pmwiki.php/Main/Tropes"
+            },{
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Auto-Scrolling Level"            }]
+        }
+    </script>
+<a class="mobile-actionbar-toggle mobile-on" data-click-toggle="active" href="#mobile-actions-toggle" id="mobile-actionbar-toggle">
+<p class="tiny-off">Go To</p><span></span><span></span><span></span><i class="fa fa-pencil"></i></a>
+<nav class="mobile-actions-wrapper mobile-on" id="mobile-actions-bar"></nav>
+<div class="modal fade hidden-until-active" id="editLockModal">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button aria-label="Close" class="close" data-dismiss="modal" type="button"> <span aria-hidden="true">×</span></button>
+<h4 class="modal-title">Edit Locked</h4>
+</div>
+<div class="modal-body">
+<div class="row">
+<div class="body">
+<div class="danger troper_locked_message"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<nav class="body-options" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<ul class="subpage-links">
+<li>
+<a class="subpage-link curr-subpage" href="/pmwiki/pmwiki.php/Main/AutoScrollingLevel" title="The Main page">
+<span class="wrapper"><span class="spi main-page"></span>Main</span></a>
+</li>
+<li>
+<a class="subpage-link" href="/pmwiki/pmwiki.php/Laconic/AutoScrollingLevel" title="The Laconic page">
+<span class="wrapper"><span class="spi laconic-icon"></span>Laconic</span></a>
+</li>
+<li class="create-subpage dropdown">
+<a aria-expanded="false" class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);" role="button">
+<span class="wrapper">Create New <i class="fa fa-plus-circle"></i></span>
+</a>
+<select onchange="this.options[this.selectedIndex].value &amp;&amp; (window.location = this.options[this.selectedIndex].value);">
+<option value="">- Create New -</option>
+<option value="/pmwiki/pmwiki.php/Analysis/AutoScrollingLevel?action=edit">Analysis</option>
+<option value="/pmwiki/pmwiki.php/Characters/AutoScrollingLevel?action=edit">Characters</option>
+<option value="/pmwiki/pmwiki.php/FanficRecs/AutoScrollingLevel?action=edit">FanficRecs</option>
+<option value="/pmwiki/pmwiki.php/FanWorks/AutoScrollingLevel?action=edit">FanWorks</option>
+<option value="/pmwiki/pmwiki.php/Fridge/AutoScrollingLevel?action=edit">Fridge</option>
+<option value="/pmwiki/pmwiki.php/Haiku/AutoScrollingLevel?action=edit">Haiku</option>
+<option value="/pmwiki/pmwiki.php/Headscratchers/AutoScrollingLevel?action=edit">Headscratchers</option>
+<option value="/pmwiki/pmwiki.php/ImageLinks/AutoScrollingLevel?action=edit">ImageLinks</option>
+<option value="/pmwiki/pmwiki.php/PlayingWith/AutoScrollingLevel?action=edit">PlayingWith</option>
+<option value="/pmwiki/pmwiki.php/Quotes/AutoScrollingLevel?action=edit">Quotes</option>
+<option value="/pmwiki/pmwiki.php/Recap/AutoScrollingLevel?action=edit">Recap</option>
+<option value="/pmwiki/pmwiki.php/ReferencedBy/AutoScrollingLevel?action=edit">ReferencedBy</option>
+<option value="/pmwiki/pmwiki.php/Synopsis/AutoScrollingLevel?action=edit">Synopsis</option>
+<option value="/pmwiki/pmwiki.php/Timeline/AutoScrollingLevel?action=edit">Timeline</option>
+<option value="/pmwiki/pmwiki.php/Trivia/AutoScrollingLevel?action=edit">Trivia</option>
+<option value="/pmwiki/pmwiki.php/WMG/AutoScrollingLevel?action=edit">WMG</option>
+<option value="/pmwiki/pmwiki.php/YMMV/AutoScrollingLevel?action=edit">YMMV</option>
+</select>
+</li>
+</ul>
+</nav>
+<div class="article-content retro-folders" id="main-article">
+<p></p><div class="indent"><em>"There's a stage where the screen keeps scrolling up. If you're caught at the bottom, you die. In Trevor Belmont's world, what killed him? The T.V. Screen?"</em>
+<div class="indent">— <strong><a class="twikilink" href="/pmwiki/pmwiki.php/WebVideo/TheAngryVideoGameNerd" title="/pmwiki/pmwiki.php/WebVideo/TheAngryVideoGameNerd">The Angry Video Game Nerd</a></strong> on <em><a class="twikilink" href="/pmwiki/pmwiki.php/Videogame/CastlevaniaIIIDraculasCurse" title="/pmwiki/pmwiki.php/Videogame/CastlevaniaIIIDraculasCurse">Castlevania III: Dracula's Curse</a></em>
+</div></div><p>A level in a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/PlatformGame" title="/pmwiki/pmwiki.php/Main/PlatformGame">Platform Game</a> where the screen scrolls at a constant rate (like in <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ShootEmUp" title="/pmwiki/pmwiki.php/Main/ShootEmUp">rail shooters</a>), no matter where the player runs or jumps to. This doesn't make any sense at all, but since you didn't care when you were 12, why start now?
+</p><div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_1"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_1'); })</script></div></div><p>Generally, the gameplay in these levels shifts from exploration towards a more "survivalist" task of avoiding a combination of fixed and moving obstacles. The player must choose between moving forward early, at the risk of running afoul of some not-yet-seen obstacles, or waiting to move later, where he runs the risk of being forced to move by the level's scrolling at a moment when the obstacles are more dangerous.
+</p><p>Often you will be mortally crushed if you get caught between the advancing side of the screen and a stationary wall, making the screen boundary a kind of <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AdvancingWallOfDoom" title="/pmwiki/pmwiki.php/Main/AdvancingWallOfDoom">Advancing Wall of Doom</a>. Only occasionally are these kinds of levels coupled with an <em>actual</em> Advancing Wall Of Doom, providing some justification for the enforced scrolling. Some of the time it is stated or implied in the story that there is an offscreen Advancing Wall Of Doom. It might also just mean that there is a limited amount of time for the character to reach his destination and running short of that is tantamount to failing. In vertical-scrolling levels, there will be an ever-rising bottomless pit, and solid platforms that fall below the edge of the screen will be consumed by an <a class="twikilink" href="/pmwiki/pmwiki.php/Main/NothingIsScarier" title="/pmwiki/pmwiki.php/Main/NothingIsScarier">unknown</a> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/FridgeHorror" title="/pmwiki/pmwiki.php/Main/FridgeHorror">force</a>.
+</p><div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_2"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_2'); })</script></div></div><p>These levels can be <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ThatOneLevel" title="/pmwiki/pmwiki.php/Main/ThatOneLevel">a bit aggravating</a> to play, particularly when combined with any number of <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ClassicVideoGameScrewYous" title="/pmwiki/pmwiki.php/Main/ClassicVideoGameScrewYous">Classic Video Game "Screw You"s</a>.
+</p><p>Often times, you can't simply fast-forward the scrolling by advancing in the direction of it, forcing you to deal with whatever speed the screen is moving at. As such, Auto-Scrolling Levels are the bane of many <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Speedrun" title="/pmwiki/pmwiki.php/Main/Speedrun">speedrunners</a> and impatient players.
+</p><p>When the entire game is one of these, it's an <a class="twikilink" href="/pmwiki/pmwiki.php/Main/EndlessRunningGame" title="/pmwiki/pmwiki.php/Main/EndlessRunningGame">Endless Running Game</a>. Whether <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MinecartMadness" title="/pmwiki/pmwiki.php/Main/MinecartMadness">Minecart Madness</a> is a subtrope is debatable; similar to endless runners, these levels force the character to move a fixed speed, challenging the player to jump, duck, and/or attack at the right times. If this occurs during a boss battle, you may be fighting an <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AdvancingBossOfDoom" title="/pmwiki/pmwiki.php/Main/AdvancingBossOfDoom">Advancing Boss of Doom</a> or a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GetBackHereBoss" title="/pmwiki/pmwiki.php/Main/GetBackHereBoss">"Get Back Here!" Boss</a>.
+</p><p></p><hr/><div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_3"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_3'); })</script></div></div><h2>Video Game Examples:</h2>
+<p></p><ul><li> Many levels in most <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/SuperMarioBros" title="/pmwiki/pmwiki.php/Franchise/SuperMarioBros">Super Mario Bros.</a></em> games are of this type.
+<ul><li> The auto-scrolling levels in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SuperMarioBros3" title="/pmwiki/pmwiki.php/VideoGame/SuperMarioBros3">Super Mario Bros. 3</a></em> include 1-4, 3-6, 5-6, 5-9, 6-2, 6-7, 7-4 and all the airship, tank and navy levels. <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ThatOneLevel" title="/pmwiki/pmwiki.php/Main/ThatOneLevel">The air force level</a> auto-scrolls <em>significantly</em> faster than any other level in the game.
+</li><li> The <em>Super Mario Bros.</em> <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/GameAndWatch" title="/pmwiki/pmwiki.php/UsefulNotes/GameAndWatch">Game &amp; Watch</a> from the 80s is fixed scrolling, the first example of this trope in the <em>Mario</em> series.
+</li><li> The autoscrolling levels in <em>Super Mario World 2: <a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/YoshisIsland" title="/pmwiki/pmwiki.php/VideoGame/YoshisIsland">Yoshi's Island</a></em> include 1-5, E-1, 6-5, 6-Secret and parts of 2-1 and 6-8. <em>Yoshi's Island DS</em> has these in 2-6, 2-Secret, 3-1,3-2, 4-1, 4-3, 5-1, 4-Secret and 5-5. In both games, the scrolling screen will go in all sorts of different directions, crossing the same part of the level more than once in more than one different direction, and there's no justification of any sort.
+</li><li> Inverted in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SuperMarioGalaxy" title="/pmwiki/pmwiki.php/VideoGame/SuperMarioGalaxy">Super Mario Galaxy</a></em>. Only a part of the level is manifested physically, meaning that stepping outside the solid area drops you in a bottomless pit. Since the ratio of the solid ground moves constantly, this gives the net effect the same as a fixed scrolling screen.
+</li><li> Inverted in parts of <em>Super Mario World</em> and <em>New Super Mario Bros.</em> with some castle levels having crawling block platforms.
+</li><li> Justified in level 7-3 of <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/NewSuperMarioBros1" title="/pmwiki/pmwiki.php/VideoGame/NewSuperMarioBros1">New Super Mario Bros.</a></em>, where the entire level takes place on the back on a giant Wiggler.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SuperMario3DLand" title="/pmwiki/pmwiki.php/VideoGame/SuperMario3DLand">Super Mario 3D Land</a></em> and <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SuperMario3DWorld" title="/pmwiki/pmwiki.php/VideoGame/SuperMario3DWorld">Super Mario 3D World</a></em>, both playing exactly like the 2D Mario games except on a 3D plane, have these.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SuperMarioMaker" title="/pmwiki/pmwiki.php/VideoGame/SuperMarioMaker">Super Mario Maker</a></em> lets you create these in its course creator. There are three speeds to choose from, represented by a tortoise, a hare, and a cheetah.
+</li></ul></li></ul><ul><li> Many levels in <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/Kirby" title="/pmwiki/pmwiki.php/Franchise/Kirby">Kirby's Dream Land 2</a></em> and <em>3</em>. <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/KirbySuperStar" title="/pmwiki/pmwiki.php/VideoGame/KirbySuperStar">Kirby Super Star</a></em> had two sections like this in the "Revenge of Meta Knight" subgame, as well as one such section in "Dyna Blade", a hidden room in "The Great Cave Offensive", and the Nova Shootout section in "Milky Way Wishes". And then there was that horizontal section in Stage 1 of Rock Star in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Kirby64TheCrystalShards" title="/pmwiki/pmwiki.php/VideoGame/Kirby64TheCrystalShards">Kirby 64: The Crystal Shards</a></em>.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/DonkeyKong" title="/pmwiki/pmwiki.php/Franchise/DonkeyKong">Donkey Kong</a></em>:
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DonkeyKongCountry3DixieKongsDoubleTrouble" title="/pmwiki/pmwiki.php/VideoGame/DonkeyKongCountry3DixieKongsDoubleTrouble">Donkey Kong Country 3: Dixie Kong's Double Trouble!</a></em> has "Ripsaw Rage" and "Kong-Fused Cliffs", which have a giant saw and the rope you're climbing burning as <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AdvancingWallOfDoom" title="/pmwiki/pmwiki.php/Main/AdvancingWallOfDoom">Advancing Walls of Doom</a>, respectively.
+</li><li> Rocket barrel levels, mine cart segments and barrel cannon sequences in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DonkeyKongCountryReturns" title="/pmwiki/pmwiki.php/VideoGame/DonkeyKongCountryReturns">Donkey Kong Country Returns</a></em> and <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DonkeyKongCountryTropicalFreeze" title="/pmwiki/pmwiki.php/VideoGame/DonkeyKongCountryTropicalFreeze">Donkey Kong Country: Tropical Freeze</a></em>. The second game offers a unique twist: certain segments will provide a Camera Perspective Switch.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DistortedTravesty" title="/pmwiki/pmwiki.php/VideoGame/DistortedTravesty">Distorted Travesty</a> 3</em> has plenty of these segments. Always justified by being chased, or an <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AdvancingWallOfDoom" title="/pmwiki/pmwiki.php/Main/AdvancingWallOfDoom">Advancing Wall of Doom</a> or <a class="urllink" href="https://www.youtube.com/watch?v=2F-5Kyz3JoQ">riding something<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SonicTheHedgehog" title="/pmwiki/pmwiki.php/VideoGame/SonicTheHedgehog">Sonic the Hedgehog</a></em>:
+</li></ul><dl><dd><ul><li> In Angel Island Zone, Act 2 of <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Sonic3AndKnuckles" title="/pmwiki/pmwiki.php/VideoGame/Sonic3AndKnuckles">Sonic the Hedgehog 3</a></em>, there's a portion before the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BossBattle" title="/pmwiki/pmwiki.php/Main/BossBattle">Boss Battle</a> where the screen starts scrolling to the right, then Robotnik's airship starts dropping bombs at you. If you let off the speed for a second, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AdvancingWallOfDoom" title="/pmwiki/pmwiki.php/Main/AdvancingWallOfDoom">you'll drift too far left and get hit</a>. All you have to do is hold right for a few seconds until the barrage stops.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Sonic3AndKnuckles" title="/pmwiki/pmwiki.php/VideoGame/Sonic3AndKnuckles">Sonic &amp; Knuckles</a></em>, during the Boss Battle in Mushroom Hill Zone, Act 2, the screen scrolls right, forcing you to leap over spiked hurdles to pursue Robotnik. Later in the same game, the screen starts scrolling to the right during the boss battle of <a class="twikilink" href="/pmwiki/pmwiki.php/Main/LethalLavaLand" title="/pmwiki/pmwiki.php/Main/LethalLavaLand">Lava Reef</a> Zone, Act 2. The real danger of this area is simply jumping from platform to platform to keep up with the screen.
+</li></ul></dd></dl><dl><dd><ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SonicTheHedgehog2006" title="/pmwiki/pmwiki.php/VideoGame/SonicTheHedgehog2006">Sonic the Hedgehog (2006)</a></em> features areas of Sonic's levels that have been dubbed by one speedrun as "Mach Speed Zones." Sonic is forced to run forward, jumping and dodging obstacles, and can not leave his assigned course by too much or get hit by too many objects unless he wants to <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ObviousBeta" title="/pmwiki/pmwiki.php/Main/ObviousBeta">breakdance into oblivion</a>.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SonicLostWorld" title="/pmwiki/pmwiki.php/VideoGame/SonicLostWorld">Sonic Lost World</a></em> throws in one more, for old time's sake: Desert Ruins Zone 4 scrolls forward at a slow pace with a whirlwind at the back that will kill Sonic if he touches it.
+</li><li> The 8-bit version of the original Sonic the Hedgehog on <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/SegaMasterSystem" title="/pmwiki/pmwiki.php/UsefulNotes/SegaMasterSystem">Master System</a> and <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/GameGear" title="/pmwiki/pmwiki.php/UsefulNotes/GameGear">Game Gear</a> featured an auto-scrolling level in <a class="urllink" href="https://youtu.be/pNCtZbD-GEs?t=167">Bridge Zone Act 2<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a>. YMMV on whether this was a welcome variation to the regular gameplay or not.
+</li></ul></dd></dl><ul><li> The Jet Bike levels from the <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MegaManX" title="/pmwiki/pmwiki.php/VideoGame/MegaManX">Mega Man X</a></em> series. <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ThatOneLevel" title="/pmwiki/pmwiki.php/Main/ThatOneLevel">Fans do not want to remember.</a>
+<ul><li> In <em>X6</em>, the hidden sub-stage of Metal Shark Player's recycling facility stage has a crushing ceiling AND forced scrolling! <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SarcasmMode" title="/pmwiki/pmwiki.php/Main/SarcasmMode">Joy!</a>
+</li><li> Burn Rooster's stage from <em>X8.</em> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/NintendoHard" title="/pmwiki/pmwiki.php/Main/NintendoHard">Many had nightmares.</a>
+</li><li> The jetboard sections in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MegaMan8" title="/pmwiki/pmwiki.php/VideoGame/MegaMan8">Mega Man 8</a></em> are particularly irritating.
+</li><li> The fixed scrolling in Stage 1 of Dr. Wily's Castle in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MegaMan2" title="/pmwiki/pmwiki.php/VideoGame/MegaMan2">Mega Man 2</a></em> is brief, but very annoying the first time. 80% of the level scrolls normally, until the end when it suddenly begins to move on its own at a rate that's only slightly slower than the player's movement. The transition seemingly happens in the middle of a jump between two one-block-wide platforms and if the unprepared player doesn't simply miss and fall into the bottomless pit, he'll soon be knocked in anyway when a giant dragon that takes up 1/3 of the screen flies in behind him.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MegaMan4" title="/pmwiki/pmwiki.php/VideoGame/MegaMan4">Mega Man 4</a></em>, the third level of Dr. Cossack's fortress is one of these. It had a decent number of ways to slow you down to the screen's speed and was for the most part a pretty decent level. The <a class="twikilink" href="/pmwiki/pmwiki.php/SugarWiki/AwesomeMusic" title="/pmwiki/pmwiki.php/SugarWiki/AwesomeMusic">Awesome Music</a> <a class="urllink" href="https://www.youtube.com/watch?v=MlRGotA3Yzs&amp;feature=related">doesn't hurt, either<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a>.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MegaMan5" title="/pmwiki/pmwiki.php/VideoGame/MegaMan5">Mega Man 5</a></em>, there is a section at the latter half of Gyro Man's stage that is exactly this, and you must dodge the spikes that you are approaching.
+</li><li> The first section of Tengu Man's stage in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MegaManAndBass" title="/pmwiki/pmwiki.php/VideoGame/MegaManAndBass">Mega Man &amp; Bass</a></em> auto-scrolls, and you must hop on fast-popping balloons to boot.
+</li><li> From <a class="twikilink" href="/pmwiki/pmwiki.php/Main/RomHack" title="/pmwiki/pmwiki.php/Main/RomHack">Rom Hack</a> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Rockman4MinusInfinity" title="/pmwiki/pmwiki.php/VideoGame/Rockman4MinusInfinity">Rockman 4 Minus Infinity</a></em>:
+<ul><li> Sections of Skull Man's stage. It has <em>every kind of platform</em> from the Mega Man series. Plenty of lives will be lost on those sections.
+</li><li> Wily Stage 2's second half. It has an <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Homage" title="/pmwiki/pmwiki.php/Main/Homage">Homage</a> to the <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Gradius" title="/pmwiki/pmwiki.php/VideoGame/Gradius">Gradius</a></em> series' High Speed Zone stages. It even comes with the shutting doors and a song from the NES <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Gradius" title="/pmwiki/pmwiki.php/VideoGame/Gradius">Gradius</a> 2</em> soundtrack.
+</li></ul></li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/WonderBoyIIIMonsterLair" title="/pmwiki/pmwiki.php/VideoGame/WonderBoyIIIMonsterLair">Wonder Boy III: Monster Lair</a></em> alternates between autoscrolling platform stages and <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ShootEmUp" title="/pmwiki/pmwiki.php/Main/ShootEmUp">Shoot 'em Up</a> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BossBattle" title="/pmwiki/pmwiki.php/Main/BossBattle">boss battles</a>.
+</li><li> In <em><a class="createlink" href="/pmwiki/pmwiki.php/VideoGame/ShonenJump" title="/pmwiki/pmwiki.php/VideoGame/ShonenJump">Shonen Jump</a>'s <a class="twikilink" href="/pmwiki/pmwiki.php/Manga/OnePiece" title="/pmwiki/pmwiki.php/Manga/OnePiece">One Piece</a></em> Rogue Town Part 2 is basically this, replete with enemies, obstacles, spike pits, falling platforms and some tricky jumps. Missing any of the various platforms means falling to your doom.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SuperSmashBros" title="/pmwiki/pmwiki.php/VideoGame/SuperSmashBros">Super Smash Bros.</a></em>:
+<ul><li> The series features entire arenas that scroll through a continuous loop of level elements, including:
+<ul><li> Icicle Mountain in <em>Melee</em>.
+</li><li> Rumble Falls and Mushroomy Kingdom in <em>Brawl</em>.
+</li><li> Dream Land and Pac-Land in <em>3DS</em> and <em>Wii U</em>, respectively.
+</li></ul></li><li> One assistance character in <em>Brawl</em>, the Devil, makes non-scrolling stages suddenly start scrolling in random directions for a little while. This is the only <a class="twikilink" href="/pmwiki/pmwiki.php/Main/InterfaceScrew" title="/pmwiki/pmwiki.php/Main/InterfaceScrew">Interface Screw</a> that can hurt the computer, because if you get scrolled too far off of the screen you'll die.
+</li><li> Some of the most <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ThatOneLevel" title="/pmwiki/pmwiki.php/Main/ThatOneLevel">annoying platforming segments</a> in the <em>Subspace Emissary</em> mode of Brawl featured this too. The worst ones also included traps that would <em>fling you offscreen</em> if you made one misstep. Even if you can keep up with the scrolling camera admist the hordes of <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GoddamnBats" title="/pmwiki/pmwiki.php/Main/GoddamnBats">Goddamn Bats</a>, trying to <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GottaCatchEmAll" title="/pmwiki/pmwiki.php/Main/GottaCatchEmAll">collect the trophies and other goodies to earn 100%</a> <em>at the same time</em> almost reaches controller-breaking levels of frustration - especially on the hardest difficulties, with more traps, more knockback, and <em>faster scrolling</em>.
+</li></ul></li><li> Every level in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/BalloonKid" title="/pmwiki/pmwiki.php/VideoGame/BalloonKid">Balloon Kid</a></em> is one of these.
+</li><li> The Subwarine levels in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/WarioLand" title="/pmwiki/pmwiki.php/VideoGame/WarioLand">Wario Land</a></em> The Shake Dimension are these. The first Wario Land has one of these as the first level in the Oven Canyon zone.
+</li><li> Preceding the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/FinalBoss" title="/pmwiki/pmwiki.php/Main/FinalBoss">Final Boss</a> in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/EccoTheDolphin" title="/pmwiki/pmwiki.php/VideoGame/EccoTheDolphin">Ecco the Dolphin</a></em> is a forced-scroll level combined with <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TheMaze" title="/pmwiki/pmwiki.php/Main/TheMaze">The Maze</a>; it takes place underwater and scrolls up, down, sideways, doubles on itself, and <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MarathonLevel" title="/pmwiki/pmwiki.php/Main/MarathonLevel">lasts a good five minutes</a>. The only break the game cuts you is the level also continually regenerates your health, due to it being a giant meat grinder. Unfortunately, losing to the boss sends you back to the maze again... It even actively tries to fake you out at certain points, making you think you have to go a certain way and then turning back and trying to crush you when you do go that way. Or even making a tiny part of a chamber the only safe place where you won't get crushed. Almost no one will make it through the first time, due to the need to <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TrialAndErrorGameplay" title="/pmwiki/pmwiki.php/Main/TrialAndErrorGameplay">memorize the correct path in some places</a>. The sequel <em>Tides of Time</em> has at least four on hard mode. All other modes at least two.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TinyToonAdventuresBusterBustsLoose" title="/pmwiki/pmwiki.php/VideoGame/TinyToonAdventuresBusterBustsLoose">Tiny Toon Adventures Buster Busts Loose</a></em> for the <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/SuperNintendoEntertainmentSystem" title="/pmwiki/pmwiki.php/UsefulNotes/SuperNintendoEntertainmentSystem">SNES</a> has some levels where <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AdvancingWallOfDoom" title="/pmwiki/pmwiki.php/Main/AdvancingWallOfDoom">the edge of the screen kills you</a>.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/LittleNemoTheDreamMaster" title="/pmwiki/pmwiki.php/VideoGame/LittleNemoTheDreamMaster">Little Nemo: The Dream Master</a></em> gave us House of Toys, a level that took place on the back of a moving toy train set where you had to survive divebombing toy airplanes, bombs dropped by toy hot air balloons and plenty of <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SpikesOfDoom" title="/pmwiki/pmwiki.php/Main/SpikesOfDoom">instant death spikes</a> on <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DescendingCeiling" title="/pmwiki/pmwiki.php/Main/DescendingCeiling">descending ceilings</a>. <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BubblyClouds" title="/pmwiki/pmwiki.php/Main/BubblyClouds">Cloud Ruins</a> has a section where the screen suddenly starts scrolling up, and then where it goes back down again; in both cases the bottom of the screen becomes deadly.
+</li><li> The first <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Rayman" title="/pmwiki/pmwiki.php/VideoGame/Rayman">Rayman</a></em> game has a few of these, semi-justified by a raising water level or some <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AdvancingWallOfDoom" title="/pmwiki/pmwiki.php/Main/AdvancingWallOfDoom">big enemy chasing you</a> (Moskito with a huge spiked ball, and Mr. Stone in a later level).
+<ul><li> An interesting variation: soon after acquiring a temporary flight powerup from a hippie, the start of one part of the level immediately places the eponymous hero in a situation where he has to use his helicopter hair to cut the frayed sections of two ropes, in order to drop the rocks they carry into the slowly sinking water beneath, before they drag the faster-falling ceiling below the surface... Perhaps it's better to show than to tell? (starting at around 2:25 in <a class="urllink" href="https://www.youtube.com/watch?v=y3anfBkIcn0&amp;fmt=18">this video<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a>)
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Rayman3HoodlumHavoc" title="/pmwiki/pmwiki.php/VideoGame/Rayman3HoodlumHavoc">Rayman 3: Hoodlum Havoc</a></em>, after you blow up the furnace in Hoodlum Headquarters, you have to climb up a tall tower while lava rises below you.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/RaymanOrigins" title="/pmwiki/pmwiki.php/VideoGame/RaymanOrigins">Rayman Origins</a></em> has some too, especially in the Tricky Treasure challenges. Once again, semi-justified by having the level start falling apart behind the treasure chest.
+</li><li> The music stages in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/RaymanLegends" title="/pmwiki/pmwiki.php/VideoGame/RaymanLegends">Rayman Legends</a></em>, which are justified because of <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MusicalGameplay" title="/pmwiki/pmwiki.php/Main/MusicalGameplay">their gimmick.</a>
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Creator/Nitrome" title="/pmwiki/pmwiki.php/Creator/Nitrome">Cave Chaos</a></em> replicates the effect, but at the same time shows you what the hell's happening: the floating platforms behind you are constantly breaking apart and dropping into the depths below. And to keep you from getting too far ahead, the ground ahead of you is constantly <em>assembling</em> out of pieces coming from offscreen. Get particularly far behind, and you may find yourself jumping from falling piece to falling piece just before each vanishes off the bottom of the screen.
+</li><li> The overhead River stage in <em>Adventures of Tom Sawyer</em>, and the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BossBattle" title="/pmwiki/pmwiki.php/Main/BossBattle">Boss Battle</a> in the Sky stage.
+</li><li> The final level in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Braid" title="/pmwiki/pmwiki.php/VideoGame/Braid">Braid</a></em>.
+</li><li> The final stage of <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Jumper" title="/pmwiki/pmwiki.php/VideoGame/Jumper">Jumper</a></em> is a vertical version of this.
+</li><li> The Tower, The Panic Room, and The Final Challenge in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/VVVVVV" title="/pmwiki/pmwiki.php/VideoGame/VVVVVV">VVVVVV</a></em>. <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SpikesOfDoom" title="/pmwiki/pmwiki.php/Main/SpikesOfDoom">Spikes of Doom</a> appear when you near the top or bottom of the vertically scrolling screen. Also, The Tower is one of the stages available as a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TimeTrial" title="/pmwiki/pmwiki.php/Main/TimeTrial">Time Trial</a>.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/KidChameleon" title="/pmwiki/pmwiki.php/VideoGame/KidChameleon">Kid Chameleon</a></em> had a few of these that are <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AdvancingWallOfDoom" title="/pmwiki/pmwiki.php/Main/AdvancingWallOfDoom">Advancing Walls Of</a> <strong><a class="twikilink" href="/pmwiki/pmwiki.php/Main/ThisIsADrill" title="/pmwiki/pmwiki.php/Main/ThisIsADrill">DRILLS</a></strong>, including a cruel one that had a choice of two paths at the end, not knowing where they go. One path leads to a sign saying "TOO BAD" with no exit and you just get squished by it.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Purple" title="/pmwiki/pmwiki.php/VideoGame/Purple">Purple</a></em> features this in stages 2-3 and 5-2, with the latter even having multi-directional scrolling.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/CastlevaniaIIIDraculasCurse" title="/pmwiki/pmwiki.php/VideoGame/CastlevaniaIIIDraculasCurse">Castlevania III: Dracula's Curse</a></em> has several automatically scrolling vertical shafts. In the case of Blocks 5-0B and 9-03, the scrolling is discontinuous—every few seconds the tower trembles and sinks a bit into the ground.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/PuttPutt" title="/pmwiki/pmwiki.php/VideoGame/PuttPutt">Putt-Putt</a> Goes to the Moon</em> has the minigame <em>Bear Stormin'</em>, which plays this straight for the entire game. This was later recycled as <em>Circus Stormin'</em> in <em>Putt-Putt and <a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FattyBear" title="/pmwiki/pmwiki.php/VideoGame/FattyBear">Fatty Bear</a>'s Activity Pack</em>. <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SurpriseDifficulty" title="/pmwiki/pmwiki.php/Main/SurpriseDifficulty">Despite being in games made for children, they can get brutally difficult.</a>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DistortedTravesty" title="/pmwiki/pmwiki.php/VideoGame/DistortedTravesty">Distorted Travesty</a></em> loves this trope, forcing you to race through already sadistically brutal <a class="twikilink" href="/pmwiki/pmwiki.php/Main/PlatformHell" title="/pmwiki/pmwiki.php/Main/PlatformHell">Platform Hell</a> sections while a wall of instakill spikes follows behind or beneath you so fast a single mistake will force you to repeat the whole section.
+</li><li> Seen in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/NewSuperMarisaLand" title="/pmwiki/pmwiki.php/VideoGame/NewSuperMarisaLand">New Super Marisa Land</a></em>. Which makes sense as it's essentially a Super Mario clone.
+</li><li> The first cave escape stage in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/AladdinCapcom" title="/pmwiki/pmwiki.php/VideoGame/AladdinCapcom">Aladdin (Capcom)</a></em>. Actually both cave escape stages scroll automatically, but only the first has platforming.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Klonoa" title="/pmwiki/pmwiki.php/VideoGame/Klonoa">Klonoa</a> Advance</em> 1 and 2 have some auto-scroll levels.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/AtomicRunnerChelnov" title="/pmwiki/pmwiki.php/VideoGame/AtomicRunnerChelnov">Atomic Runner Chelnov</a></em> is entirely made of these (<a class="twikilink" href="/pmwiki/pmwiki.php/Main/BossBattle" title="/pmwiki/pmwiki.php/Main/BossBattle">Boss Battles</a> excepted), being essentially a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/HorizontalScrollingShooter" title="/pmwiki/pmwiki.php/Main/HorizontalScrollingShooter">Horizontal Scrolling Shooter</a>/<a class="twikilink" href="/pmwiki/pmwiki.php/Main/PlatformGame" title="/pmwiki/pmwiki.php/Main/PlatformGame">Platform Game</a> hybrid.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/JackieChansActionKungFu" title="/pmwiki/pmwiki.php/VideoGame/JackieChansActionKungFu">Jackie Chan's Action Kung Fu</a></em> has a few stages where the screen starts scrolling to the right, with pillars shooting up from the ground in places.
+</li><li> Though a top-down non-platform game, <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DevilWorld" title="/pmwiki/pmwiki.php/VideoGame/DevilWorld">Devil World</a></em> features this as its main gimmick. The Devils on the edges of the screen move a frame over the maze, trying to crush Tamagon between the frame and the maze walls.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SuperMarioFusionRevival" title="/pmwiki/pmwiki.php/VideoGame/SuperMarioFusionRevival">Super Mario Fusion Revival</a></em>
+<ul><li> World 2-S5: Arabian Night. It takes place in the rooftops of an Saudi Arabian village at night. Watch out for the saber-tossing mooks and the crows.
+</li><li> World 3-4: Venomous Void. It is full of dangerous electric seaweed and electric jellyfish.
+</li></ul></li><li> This is every level in the vertically scrolling <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/RaptorCallOfTheShadows" title="/pmwiki/pmwiki.php/VideoGame/RaptorCallOfTheShadows">Raptor: Call of the Shadows</a></em>, in which the player pilots a fighter jet through enemy territories. It is at least somewhat justified, as an airborne jet can hardly be expected to remain stationary with respect to the ground.
+</li><li> Occurs in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/PlaystationAllStarsBattleRoyale" title="/pmwiki/pmwiki.php/VideoGame/PlaystationAllStarsBattleRoyale">Playstation All Stars Battle Royale</a></em> on <a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/InFamous" title="/pmwiki/pmwiki.php/VideoGame/InFamous">Alden's Tower</a>, though at least it's done periodically.
+</li><li> Multiple levels in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Nihilumbra" title="/pmwiki/pmwiki.php/VideoGame/Nihilumbra">Nihilumbra</a></em> have you chased by <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AdvancingWallOfDoom" title="/pmwiki/pmwiki.php/Main/AdvancingWallOfDoom">The Void.</a>
+</li><li> The collapsing castle stage in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheJungleBook" title="/pmwiki/pmwiki.php/VideoGame/TheJungleBook">The Jungle Book</a></em> for SNES.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/BatmanSunsoft" title="/pmwiki/pmwiki.php/VideoGame/BatmanSunsoft">Batman: Return of the Joker</a></em> for NES has auto-scrolling in Stages 1-2 (<a class="twikilink" href="/pmwiki/pmwiki.php/Main/RoofHopping" title="/pmwiki/pmwiki.php/Main/RoofHopping">Roof Hopping</a> while being bombarded by an airship), 4-1 (<a class="twikilink" href="/pmwiki/pmwiki.php/Main/TraintopBattle" title="/pmwiki/pmwiki.php/Main/TraintopBattle">Traintop Battle</a>) and 6-2 (tank battle). The <a class="twikilink" href="/pmwiki/pmwiki.php/Main/LiftOfDoom" title="/pmwiki/pmwiki.php/Main/LiftOfDoom">Lift of Doom</a> areas are also inescapable until the lift stops rising.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/OneWayHeroics" title="/pmwiki/pmwiki.php/VideoGame/OneWayHeroics">One Way Heroics</a></em> is a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Roguelike" title="/pmwiki/pmwiki.php/Main/Roguelike">Roguelike</a> that operates on this principle. You're forced to keep moving forward to avoid getting swallowed up by the encroaching darkness. Every move you take, whether it's to attack, talk to NPCs, use items, or change your equipment, moves the level forward. If you get caught on the left side of the screen, you die, and the game is over.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Something" title="/pmwiki/pmwiki.php/VideoGame/Something">Something</a> series</em>:
+<ul><li> The secret exit route in Skulls Cave.
+</li><li> Perilous Ice, which is made even more dangerous because of ice physics. Luckily, Yoshi is there to make things easier. You need him for the Switch Palace Exit.
+</li><li> Vertical Chao, where Mario has to ride on a tiny platform and has to dodge many enemies and obstacles.
+</li><li> Vile Vine, where Luigi has to climb a green apple vine and dodge obstacles at the same time. To get the secret exit, Luigi has to beat the green apple vine in a race.
+</li><li> Above the World is found in the Special World. Luigi has to dodge Flying Wigglers and use acorns to climb to the top. It's also a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MarathonLevel" title="/pmwiki/pmwiki.php/Main/MarathonLevel">Marathon Level</a>.
+</li></ul></li><li> The boat level in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheFlintstonesTheRescueOfDinoAndHoppy" title="/pmwiki/pmwiki.php/VideoGame/TheFlintstonesTheRescueOfDinoAndHoppy">The Flintstones: The Rescue Of Dino &amp; Hoppy</a></em>.
+</li><li> The MCP mission in <a class="twikilink" href="/pmwiki/pmwiki.php/Creator/MidwayGames" title="/pmwiki/pmwiki.php/Creator/MidwayGames">Bally/Midway's</a> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TRON" title="/pmwiki/pmwiki.php/VideoGame/TRON">TRON</a></em> arcade game.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TronMazeATron" title="/pmwiki/pmwiki.php/VideoGame/TronMazeATron">TRON Maze-a-Tron</a></em>, the maze constantly scrolls in one direction, with the player changing directions whenever he touches a Flip-Flop chip. Being scrolled off the screen doesn't cause you to lose a life, but it does put you back at the level's starting point.
+</li><li> Two of the levels from Ubisoft's <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheSmurfs2" title="/pmwiki/pmwiki.php/VideoGame/TheSmurfs2">The Smurfs 2</a></em> constantly scroll upwards, forcing the player to move upwards to avoid falling off the screen.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheAdventuresOfLomax" title="/pmwiki/pmwiki.php/VideoGame/TheAdventuresOfLomax">The Adventures of Lomax</a></em>, the boss stages in the first 3 worlds are like this.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/ShovelKnight" title="/pmwiki/pmwiki.php/VideoGame/ShovelKnight">Shovel Knight</a></em> has three auto-scrolling screens, each containing unique mechanics to up the frustration.
+<ul><li> Clockwork Tower: The bottom of the screen has <a class="twikilink" href="/pmwiki/pmwiki.php/Main/LedgeBats" title="/pmwiki/pmwiki.php/Main/LedgeBats">rockets that knock you off the ladder and platforms</a>, half of the platforms move across the screen, and the other half are conveyor belts pointed the wrong way.
+</li><li> Flying Machine: A wind is constantly blowing against the direction of travel, slowing you down. Most of the platforms are also temporary and will fall seconds after you touch them.
+</li><li> Tower of Fate: Half of the screen has slowly moving platforms that will block you from continuing and move slowly, meaning a missed opening is quickly fatal. The second half consists of digging your way upwards through the dirt while dodging exploding rats.
+</li></ul></li><li> The first part of the final level of <em>Papa Louie 2: When Burgers Attack</em> contains an actual <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AdvancingWallOfDoom" title="/pmwiki/pmwiki.php/Main/AdvancingWallOfDoom">Advancing Wall of Doom</a>, complete with pickets on top.
+</li><li> To dodge the thorns and Munchers at the beginning of Muncher Mountain in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SuperMarioWorldPiranhaIsland" title="/pmwiki/pmwiki.php/VideoGame/SuperMarioWorldPiranhaIsland">Super Mario World: Piranha Island</a></em>, Mario must board a rocket pipe barrel and navigate his way to the end of the segment. Like the rocket barrel segments in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DonkeyKongCountryReturns" title="/pmwiki/pmwiki.php/VideoGame/DonkeyKongCountryReturns">Donkey Kong Country Returns</a></em>, Mario dies if the pipe touches anything hazardous.
+</li><li> "Raw Fish Rampage" in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheAngryVideoGameNerdIIAssimilation" title="/pmwiki/pmwiki.php/VideoGame/TheAngryVideoGameNerdIIAssimilation">The Angry Video Game Nerd II: ASSimilation</a></em>, with added challenge provided by conveyor belts.
+</li><li> The <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/Atari2600" title="/pmwiki/pmwiki.php/UsefulNotes/Atari2600">Atari 2600</a> game <em>Entombed</em> by U.S. Games, where you must escape a series of scrolling mazes without being trapped in them.
+</li><li> The (sorta) surgery sim games <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TraumaCenter" title="/pmwiki/pmwiki.php/VideoGame/TraumaCenter">Trauma Center</a> Under the Knife/Second Opinion</em> and <em>New Blood</em> have Pempti and Soma, respectively, be called this. Pempti can only be damaged when it takes an action, and only for a single point of damage each time, meaning the operation is essentially the same speed every time. Soma can be constantly drained and is essentially harmless unless you aren't paying attention, meaning most of the fight is just holding A and keeping the drain on it.
+</li><li> The <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DennisTheMenace" title="/pmwiki/pmwiki.php/VideoGame/DennisTheMenace">Dennis the Menace</a></em> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/LicensedGame" title="/pmwiki/pmwiki.php/Main/LicensedGame">Licensed Game</a> for the <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/SuperNintendoEntertainmentSystem" title="/pmwiki/pmwiki.php/UsefulNotes/SuperNintendoEntertainmentSystem">SNES</a> features two auto-scrolling levels in the second world, The Park. While dodging enemies, you have to make sure that Dennis' dog, Ruff stays close, because you will need him to make certain jumps. If you fail to make these jumps, you'll have to start the level from the beginning, and because the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TimedMission" title="/pmwiki/pmwiki.php/Main/TimedMission">time limit</a> doesn't reset when Dennis loses a life, it may run out, resulting in <a class="twikilink" href="/pmwiki/pmwiki.php/Main/NonStandardGameOver" title="/pmwiki/pmwiki.php/Main/NonStandardGameOver">Dennis losing all of his lives</a>. These levels go on for about five minutes if you don't lose a life. If you do, they can go on for over twenty minutes.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Levelhead" title="/pmwiki/pmwiki.php/VideoGame/Levelhead">Levelhead</a></em>: Levels like "Dune Doom Dream" and "Quick Fire" require the player to keep up with the camera or die off-screen.
+</li></ul><hr/><h2>Non-Video Game Examples:</h2>
+<p><span class="asscaps"><a class="twikilink" href="/pmwiki/pmwiki.php/Main/Pinball" title="/pmwiki/pmwiki.php/Main/Pinball">Pinball</a></span>
+</p><ul><li> The <a class="twikilink" href="/pmwiki/pmwiki.php/Main/VideoMode" title="/pmwiki/pmwiki.php/Main/VideoMode">Video Mode</a> for <a class="twikilink" href="/pmwiki/pmwiki.php/Creator/Gottlieb" title="/pmwiki/pmwiki.php/Creator/Gottlieb">Gottlieb</a>'s <em><a class="twikilink" href="/pmwiki/pmwiki.php/Pinball/SuperMarioBros" title="/pmwiki/pmwiki.php/Pinball/SuperMarioBros">Super Mario Bros.</a></em> and <em><a class="twikilink" href="/pmwiki/pmwiki.php/Pinball/SuperMarioBrosMushroomWorld" title="/pmwiki/pmwiki.php/Pinball/SuperMarioBrosMushroomWorld">Super Mario Bros. Mushroom World</a></em> have a simplified version of <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SuperMarioBros1" title="/pmwiki/pmwiki.php/VideoGame/SuperMarioBros1">Super Mario Bros.</a></em>, where Mario moves automatically across the screen. The flipper buttons are used to either make him jump or to run faster.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Pinball/SuperMarioBrosMushroomWorld" title="/pmwiki/pmwiki.php/Pinball/SuperMarioBrosMushroomWorld">Super Mario Bros. Mushroom World</a></em> also has a Frog Mario swimming game, where Mario moves automatically and the player makes him swim up and down to avoid enemies.
+</li><li> The <a class="twikilink" href="/pmwiki/pmwiki.php/Main/VideoMode" title="/pmwiki/pmwiki.php/Main/VideoMode">Video Mode</a> for <em><a class="twikilink" href="/pmwiki/pmwiki.php/Pinball/DoctorWho" title="/pmwiki/pmwiki.php/Pinball/DoctorWho">Doctor Who</a></em> has the chosen Doctor escaping from Daleks, jumping to avoid obstacles in his path.
+</li></ul><p></p><hr/><div class="indent"><strong>Cranky Kong:</strong> "A bit aggravating," they call these auto-scrolling levels? Back in my day, we didn't have <em>any</em> scrolling whatsoever — just one static screen, maybe a different static screen for different levels! And we <em>liked</em> it, by gum!
+</div><hr/>
+</div>
+<div class="alt-titles section section-fact">
+<h3>
+<strong>Alternative Title(s):</strong>
+<span>Forced Scrolling</span>, <span>Auto Scrolling</span>, <span>Fixed Scrolling Level</span> </h3>
+</div>
+<div class="square_ad footer-article-ad main_2" data-isolated="0"></div>
+<div class="section-links" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<div class="titles">
+<div><h3 class="text-center text-uppercase">Previous</h3></div>
+<div><h3 class="text-center text-uppercase">Index</h3></div>
+<div><h3 class="text-center text-uppercase">Next</h3></div>
+</div>
+<div class="links">
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/ArtificialBrilliance">Artificial Brilliance</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/VideoGameDifficultyTropes">Video Game Difficulty Tropes</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/AdvancingWallOfDoom">Advancing Wall of Doom</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/AutomaticLevel">Automatic Level</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/VideoGameSettings">Video Game Settings</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/BandLand">Band Land</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/OneUp">1-Up</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/QuoteSource/Internet">QuoteSource/Internet</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/BleepDammit">*Bleep*-dammit!</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="outer_ads_by_salon_wrapper" id="exco_player_insert_div">
+</div>
+</article>
+<div id="main-content-sidebar"><div class="sidebar-item display-options">
+<ul class="sidebar display-toggles">
+<li>Show Spoilers <div class="display-toggle show-spoilers" id="sidebar-toggle-showspoilers"></div></li>
+<li>Night Vision <div class="display-toggle night-vision" id="sidebar-toggle-nightvision"></div></li>
+<li>Sticky Header <div class="display-toggle sticky-header" id="sidebar-toggle-stickyheader"></div></li>
+<li>Wide Load <div class="display-toggle wide-load" id="sidebar-toggle-wideload"></div></li>
+</ul>
+<script>updateDesktopPrefs();</script>
+</div>
+<div class="sidebar-item ad sb-ad-unit">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_2"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_2'); });</script> </div>
+</div></div>
+<div class="sidebar-item quick-links" itemtype="http://schema.org/SiteNavigationElement">
+<p class="sidebar-item-title" data-title="Important Links">Important Links</p>
+<div class="padded">
+<a href="/pmwiki/query.php?type=att">Ask The Tropers</a>
+<a href="/pmwiki/query.php?type=tf">Trope Finder</a>
+<a href="/pmwiki/query.php?type=ykts">You Know That Show...</a>
+<a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a>
+<a href="/pmwiki/review_activity.php">Reviews</a>
+<a data-modal-target="login" href="/pmwiki/lbs.php">Live Blogs</a>
+<a href="/pmwiki/ad-free-subscribe.php">Go Ad Free!</a> </div>
+</div>
+<div class="sidebar-item sb-ad-unit">
+<div class="sidebar-section">
+<div class="square_ad ad-size-300x600 ad-section text-center">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_3"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_3'); });</script> </div>
+</div> </div>
+</div>
+</div>
+<div class="sidebar-item">
+<p class="sidebar-item-title" data-title="Crucial Browsing">Crucial Browsing</p>
+<ul class="padded font-s" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><a data-click-toggle="active" href="javascript:void(0);">Genre</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/ActionAdventureTropes" title="Main/ActionAdventureTropes">Action Adventure</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ComedyTropes" title="Main/ComedyTropes">Comedy</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CommercialsTropes" title="Main/CommercialsTropes">Commercials</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CrimeAndPunishmentTropes" title="Main/CrimeAndPunishmentTropes">Crime &amp; Punishment</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DramaTropes" title="Main/DramaTropes">Drama</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/HorrorTropes" title="Main/HorrorTropes">Horror</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LoveTropes" title="Main/LoveTropes">Love</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NewsTropes" title="Main/NewsTropes">News</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ProfessionalWrestling" title="Main/ProfessionalWrestling">Professional Wrestling</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SpeculativeFictionTropes" title="Main/SpeculativeFictionTropes">Speculative Fiction</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SportsStoryTropes" title="Main/SportsStoryTropes">Sports Story</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/WarTropes" title="Main/WarTropes">War</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Media</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/Media" title="Main/Media">All Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/AnimationTropes" title="Main/AnimationTropes">Animation (Western)</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Anime" title="Main/Anime">Anime</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ComicBookTropes" title="Main/ComicBookTropes">Comic Book</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FanFic" title="FanFic/FanFics">Fan Fics</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Film" title="Main/Film">Film</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/GameTropes" title="Main/GameTropes">Game</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Literature" title="Main/Literature">Literature</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MusicAndSoundEffects" title="Main/MusicAndSoundEffects">Music And Sound Effects</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NewMediaTropes" title="Main/NewMediaTropes">New Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/PrintMediaTropes" title="Main/PrintMediaTropes">Print Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Radio" title="Main/Radio">Radio</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SequentialArt" title="Main/SequentialArt">Sequential Art</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TabletopGames" title="Main/TabletopGames">Tabletop Games</a></li>
+<li><a href="/pmwiki/pmwiki.php/UsefulNotes/Television" title="Main/Television">Television</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Theater" title="Main/Theater">Theater</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/VideogameTropes" title="Main/VideogameTropes">Videogame</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Webcomics" title="Main/Webcomics">Webcomics</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Narrative</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/UniversalTropes" title="Main/UniversalTropes">Universal</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/AppliedPhlebotinum" title="Main/AppliedPhlebotinum">Applied Phlebotinum</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CharacterizationTropes" title="Main/CharacterizationTropes">Characterization</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Characters" title="Main/Characters">Characters</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CharactersAsDevice" title="Main/CharactersAsDevice">Characters As Device</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Dialogue" title="Main/Dialogue">Dialogue</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Motifs" title="Main/Motifs">Motifs</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NarrativeDevices" title="Main/NarrativeDevices">Narrative Devices</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Paratext" title="Main/Paratext">Paratext</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Plots" title="Main/Plots">Plots</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Settings" title="Main/Settings">Settings</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Spectacle" title="Main/Spectacle">Spectacle</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Other Categories</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/BritishTellyTropes" title="Main/BritishTellyTropes">British Telly</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TheContributors" title="Main/TheContributors">The Contributors</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CreatorSpeak" title="Main/CreatorSpeak">Creator Speak</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Creators" title="Main/Creators">Creators</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DerivativeWorks" title="Main/DerivativeWorks">Derivative Works</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LanguageTropes" title="Main/LanguageTropes">Language</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LawsAndFormulas" title="Main/LawsAndFormulas">Laws And Formulas</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ShowBusiness" title="Main/ShowBusiness">Show Business</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SplitPersonalityTropes" title="Main/SplitPersonalityTropes">Split Personality</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/StockRoom" title="Main/StockRoom">Stock Room</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TropeTropes" title="Main/TropeTropes">Trope</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Tropes" title="Main/Tropes">Tropes</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TruthAndLies" title="Main/TruthAndLies">Truth And Lies</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TruthInTelevision" title="Main/TruthInTelevision">Truth In Television</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Topical Tropes</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/BetrayalTropes" title="Main/BetrayalTropes">Betrayal</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CensorshipTropes" title="Main/CensorshipTropes">Censorship</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CombatTropes" title="Main/CombatTropes">Combat</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DeathTropes" title="Main/DeathTropes">Death</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FamilyTropes" title="Main/FamilyTropes">Family</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FateAndProphecyTropes" title="Main/FateAndProphecyTropes">Fate And Prophecy</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FoodTropes" title="Main/FoodTropes">Food</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/HolidayTropes" title="Main/HolidayTropes">Holiday</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MemoryTropes" title="Main/MemoryTropes">Memory</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MoneyTropes" title="Main/MoneyTropes">Money</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MoralityTropes" title="Main/MoralityTropes">Morality</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/PoliticsTropes" title="Main/PoliticsTropes">Politics</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ReligionTropes" title="Main/ReligionTropes">Religion</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SchoolTropes" title="Main/SchoolTropes">School</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="sidebar-item showcase">
+<p class="sidebar-item-title" data-title="Community Showcase">Community Showcase <a class="bubble float-right hover-blue" href="/pmwiki/showcase.php">More</a></p>
+<p class="community-showcase">
+<a href="https://sharetv.com/shows/echo_chamber" onclick="trackOutboundLink('https://sharetv.com/shows/echo_chamber');" target="_blank">
+<img alt="" class="lazy-image" data-src="/images/communityShowcase-echochamber.jpg"/></a>
+<a href="/pmwiki/pmwiki.php/Webcomic/TwistedTropes">
+<img alt="" class="lazy-image" data-src="/img/howlandsc-side.jpg"/></a>
+</p>
+</div>
+<div class="sidebar-item sb-ad-unit" id="stick-cont">
+<div class="sidebar-section" id="stick-bar">
+<div class="square_ad ad-size-300x600 ad-section text-center">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_4"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_4'); });</script> </div>
+</div> </div>
+</div>
+</div>
+</div>
+</div>
+<div class="action-bar tablet-off" id="action-bar-bottom">
+<a class="scroll-to-top dead-button" href="#top-of-page" onclick="$('html, body').animate({scrollTop : 0},500);">Top</a>
+</div>
+</div>
+<div class="proper-ad-unit ad-sticky">
+<div id="proper-ad-tvtropes_sticky_ad"> <script>propertag.cmd.push(function() { proper_display('tvtropes_sticky_ad'); });</script> </div>
+</div>
+<footer id="main-footer">
+<div id="main-footer-inner">
+<div class="footer-left">
+<a class="img-link" href="/"><img alt="TV Tropes" class="lazy-image" data-src="/img/tvtropes-footer-logo.png" title="TV Tropes"/></a>
+<form action="index.html" class="navbar-form newsletter-signup validate modal-replies" data-ajax-get="/ajax/subscribe_email.php" id="cse-search-box-mobile" name="" role="">
+<button class="btn-submit newsletter-signup-submit-button" id="subscribe-btn" type="submit"><i class="fa fa-paper-plane"></i></button>
+<input class="form-control" id="subscription-email" name="q" placeholder="Subscribe" size="31" type="text" validate-type="email" value=""/>
+</form>
+<ul class="social-buttons">
+<li><a class="btn fb" href="https://www.facebook.com/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-facebook']);" target="_blank"><i class="fa fa-facebook"></i></a></li>
+<li><a class="btn tw" href="https://www.twitter.com/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-twitter']);" target="_blank"><i class="fa fa-twitter"></i></a> </li>
+<li><a class="btn rd" href="https://www.reddit.com/r/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-reddit']);" target="_blank"><i class="fa fa-reddit-alien"></i></a></li>
+</ul>
+</div>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">TVTropes</h4></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Administrivia">About TVTropes</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TheGoalsOfTVTropes">TVTropes Goals</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TheTropingCode">Troping Code</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TVTropesCustoms">TVTropes Customs</a></li>
+<li><a href="/pmwiki/pmwiki.php/JustForFun/TropesOfLegend">Tropes of Legend</a></li>
+<li><a href="/pmwiki/ad-free-subscribe.php">Go Ad-Free</a></li>
+</ul>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">Community</h4></li>
+<li><a href="/pmwiki/query.php?type=att">Ask The Tropers</a></li>
+<li><a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a></li>
+<li><a href="/pmwiki/query.php?type=tf">Trope Finder</a></li>
+<li><a href="/pmwiki/query.php?type=ykts">You Know That Show</a></li>
+<li><a data-modal-target="login" href="/pmwiki/lbs.php">Live Blogs</a></li>
+<li><a href="/pmwiki/review_activity.php">Reviews</a></li>
+<li><a href="/pmwiki/topics.php">Forum</a></li>
+</ul>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">Tropes HQ</h4></li>
+<li><a href="/pmwiki/about.php">About Us</a></li>
+<li><a href="/pmwiki/contact.php">Contact Us</a></li>
+<li><a href="/pmwiki/dmca.php">DMCA Notice</a></li>
+<li><a href="/pmwiki/privacypolicy.php">Privacy Policy</a></li>
+</ul>
+</div>
+<div class="text-center gutter-top gutter-bottom tablet-on" id="desktop-on-mobile-toggle">
+<a href="/pmwiki/switchDeviceCss.php?mobileVersion=1" rel="nofollow">Switch to <span class="txt-desktop">Desktop</span><span class="txt-mobile">Mobile</span> Version</a>
+</div>
+<div class="legal">
+<p>TVTropes is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License. <br/>Permissions beyond the scope of this license may be available from <a href="mailto:thestaff@tvtropes.org" rel="cc:morePermissions" xmlns:cc="http://creativecommons.org/ns#"> thestaff@tvtropes.org</a>.</p>
+<br/>
+<div class="privacy_wrapper">
+</div>
+</div>
+</footer>
+<style>
+      div.fc-ccpa-root {
+        position: absolute !important;
+        bottom: 93px !important;
+        margin: auto !important;
+        width: 100% !important;
+        z-index: 9999 !important;
+      }
+      .fc-ccpa-root .fc-dns-dialog .fc-dns-link p{
+        outline: none !important;
+        text-decoration: underline !important;
+        font-size: .7em !important;
+        font-family: sans-serif !important;
+      }
+      .fc-ccpa-root .fc-dns-dialog .fc-dns-link .fc-button-background {
+        background: none !important;
+      }
+    </style>
+<div class="full-screen" id="_pm_videoViewer">
+<a class="close" href="#close" id="_pm_videoViewer-close"></a>
+<div class="_pmvv-body">
+<div class="_pmvv-vidbox">
+<video class="video-js vjs-default-skin vjs-16-9" data-video-id="" id="overlay-video-player-box">
+</video>
+<div class="_pmvv-vidbox-desc">
+<h1 id="overlay-title"></h1>
+<p class="_pmvv-vidbox-descTxt" id="overlay-descrip">
+</p>
+<div class="rating-row" data-video-id="">
+<input name="is_logged_in" type="hidden" value="0"/>
+<p>How well does it match the trope?</p>
+<div id="star-rating-group">
+<div class="trope-rate">
+<input id="lamp5" name="rate" type="radio" value="5"/>
+<label for="lamp5" title="Absolutely"></label>
+<input id="lamp4" name="rate" type="radio" value="4"/>
+<label for="lamp4" title="Yes"></label>
+<input id="lamp3" name="rate" type="radio" value="3"/>
+<label for="lamp3" title="Kind of"></label>
+<input id="lamp2" name="rate" type="radio" value="2"/>
+<label for="lamp2" title="Not really"></label>
+<input id="lamp1" name="rate" type="radio" value="1"/>
+<label for="lamp1" title="No"></label>
+</div>
+<div id="star-rating-total">
+</div>
+</div>
+</div>
+<div class="example-media-row">
+<div class="example-overlay">
+<p>Example of:</p>
+<div id="overlay-trope"> / </div>
+</div>
+<div class="media-sources-overlay example-overlay">
+<p>Media sources:</p>
+<div id="overlay-media"> / </div>
+</div>
+</div>
+<p class="_pmvv-vidbox-stats text-right font-s" style="padding-top:8px; border-top: solid 1px rgba(255,255,255,0.2)">
+<a class="float-right" data-modal-target="login" href="#video-feedback">Report</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+        window.special_ops =  {
+            member : 'no',
+            isolated : 0,
+            tags : ['unknown']
+        };
+    </script>
+<script type="text/javascript">
+
+        var cleanCreativeEnabled = "";
+        var donation = "";
+        var live_ads = "1";
+        var img_domain = "https://static.tvtropes.org";
+        var snoozed = cookies.read('snoozedabm');
+        var snoozable = "";
+
+        if (adsRemovedWith) {
+            live_ads = 0;
+        }
+
+        var elem = document.createElement('script');
+        elem.async = true;
+
+        elem.src = '/design/assets/bundle.js?rev=c58d8df02f09262390bbd03db7921fc35c6af306';
+
+        elem.onload = function() {
+                                 }
+        document.getElementsByTagName('head')[0].appendChild(elem);
+
+    </script>
+<script type="text/javascript">
+      function send_analytics_event(user_type, donation){
+          // if(user_type == 'uncached' || user_type == 'cached'){
+          //   ga('send', 'event', 'caching', 'load', user_type, {'nonInteraction': 1});
+          //   return;
+          // }
+          var event_name = user_type;
+
+          if(donation == 'true'){
+              event_name += "_donation"
+          }else if(typeof(valid_user) == 'undefined'){
+              event_name += "_blocked"
+          }else if(valid_user == true){
+              event_name += "_unblocked";
+          }else{
+              event_name = "_unknown"
+          }
+          ga('send', 'event', 'ads', 'load', event_name, {'nonInteraction': 1});
+      }
+
+    
+    send_analytics_event("guest", "false");
+      </script>
+</body>
+</html>

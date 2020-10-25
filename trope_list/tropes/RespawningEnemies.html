@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Respawning Enemies - TV Tropes</title>
+<meta content="The Respawning Enemies trope as used in popular culture. Hooray, you have managed to defeat the enemies that attacked you in this room. Don't get too cocky!" name="description"/>
+<link href="https://tvtropes.org/pmwiki/pmwiki.php/Main/RespawningEnemies" rel="canonical"/>
+<link href="/img/icons/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="@tvtropes" name="twitter:site"/>
+<meta content="@tvtropes" name="twitter:owner"/>
+<meta content="Respawning Enemies - TV Tropes" name="twitter:title"/>
+<meta content="The Respawning Enemies trope as used in popular culture. Hooray, you have managed to defeat the enemies that attacked you in this room. Don't get too cocky!" name="twitter:description"/>
+<meta content="https://static.tvtropes.org/logo_blue_small.png" name="twitter:image:src"/>
+<meta content="TV Tropes" property="og:site_name"/>
+<meta content="en_US" property="og:locale"/>
+<meta content="https://www.facebook.com/tvtropes" property="article:publisher"/>
+<meta content="Respawning Enemies - TV Tropes" property="og:title"/>
+<meta content="website" property="og:type"/>
+<meta content="https://tvtropes.org/pmwiki/pmwiki.php/Main/RespawningEnemies" property="og:url"/>
+<meta content="https://static.tvtropes.org/logo_blue_small.png" property="og:image"/>
+<meta content="Hooray, you have managed to defeat the enemies that attacked you in this room. Don't get too cocky! Because when you return to this room later on, the enemies are fine and well again. May even happen in games where levels aren't based on rooms, …" property="og:description"/>
+<link href="/img/icons/apple-icon-57x57.png" rel="apple-touch-icon" sizes="57x57" type="image/png"/>
+<link href="/img/icons/apple-icon-60x60.png" rel="apple-touch-icon" sizes="60x60" type="image/png"/>
+<link href="/img/icons/apple-icon-72x72.png" rel="apple-touch-icon" sizes="72x72" type="image/png"/>
+<link href="/img/icons/apple-icon-76x76.png" rel="apple-touch-icon" sizes="76x76" type="image/png"/>
+<link href="/img/icons/apple-icon-114x114.png" rel="apple-touch-icon" sizes="114x114" type="image/png"/>
+<link href="/img/icons/apple-icon-120x120.png" rel="apple-touch-icon" sizes="120x120" type="image/png"/>
+<link href="/img/icons/apple-icon-144x144.png" rel="apple-touch-icon" sizes="144x144" type="image/png"/>
+<link href="/img/icons/apple-icon-152x152.png" rel="apple-touch-icon" sizes="152x152" type="image/png"/>
+<link href="/img/icons/apple-icon-180x180.png" rel="apple-touch-icon" sizes="180x180" type="image/png"/>
+<link href="/img/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/img/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/img/icons/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png"/>
+<link href="/img/icons/favicon-192x192.png" rel="icon" sizes="192x192" type="image/png"/>
+<meta content="width=device-width, initial-scale=1" id="viewport" name="viewport"/>
+<script>
+                var propertag = {};
+                propertag.cmd = [];
+            </script>
+<link href="/design/assets/bundle.css?rev=c58d8df02f09262390bbd03db7921fc35c6af306" rel="stylesheet"/>
+<script>
+                function object(objectId) {
+                    if (document.getElementById && document.getElementById(objectId)) {
+                        return document.getElementById(objectId);
+                    } else if (document.all && document.all(objectId)) {
+                        return document.all(objectId);
+                    } else if (document.layers && document.layers[objectId]) {
+                        return document.layers[objectId];
+                    } else {
+                        return false;
+                    }
+                }
+
+                // JAVASCRIPT COOKIES CODE: for getting and setting user viewing preferences
+                var cookies = {
+                    create: function (name, value, days2expire, path) {
+                        var date = new Date();
+                        date.setTime(date.getTime() + (days2expire * 24 * 60 * 60 * 1000));
+                        var expires = date.toUTCString();
+                        document.cookie = name + '=' + value + ';' + 'expires=' + expires + ';' + 'path=' + path + ';';
+                    },
+										createWithExpire: function(name, value, expires, path) {
+												document.cookie = name + '=' + value + ';' + 'expires=' + expires + ';' + 'path=' + path + ';';
+										},
+                    read: function (name) {
+                        var cookie_value = "",
+                            current_cookie = "",
+                            name_expr = name + "=",
+                            all_cookies = document.cookie.split(';'),
+                            n = all_cookies.length;
+
+                        for (var i = 0; i < n; i++) {
+                            current_cookie = all_cookies[i].trim();
+                            if (current_cookie.indexOf(name_expr) === 0) {
+                                cookie_value = current_cookie.substring(name_expr.length, current_cookie.length);
+                                break;
+                            }
+                        }
+                        return cookie_value;
+                    },
+                    update: function (name, val) {
+                        this.create(name, val, 300, "/");
+                    },
+                    remove: function (name) {
+                        document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
+                    }
+                };
+
+                function updateUserPrefs() {
+                    //GENERAL: detect and set browser, if not cookied (will be treated like a user-preference and added to the #user-pref element)
+                    if( !cookies.read('user-browser') ){
+                        var broswer = '';
+
+                        if(navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPod/i) ){
+                            browser = 'iOS';
+                        } else if (/Opera[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'opera';
+                        } else if (/MSIE (\d+\.\d+);/.test(navigator.userAgent)) {
+                            browser = 'MSIE';
+                        } else if (/Navigator[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'netscape';
+                        } else if (/Chrome[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'chrome';
+                        } else if (/Safari[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'safari';
+                            /Version[\/\s](\d+\.\d+)/.test(navigator.userAgent);
+                            browserVersion = new Number(RegExp.$1);
+                        } else if (/Firefox[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'firefox';
+                        } else {
+                            browser = 'internet_explorer';
+                        }
+                        cookies.create('user-browser',browser,1,'/');
+                        document.getElementById('user-prefs').classList.add('browser-' + browser);
+                    } else {
+                        document.getElementById('user-prefs').classList.add('browser-' + cookies.read('user-browser'));
+                    }
+
+                    //update user preference settings
+                    if (cookies.read('wide-load') !== '') document.getElementById('user-prefs').classList.add('wide-load');
+                    if (cookies.read('night-vision') !== '') document.getElementById('user-prefs').classList.add('night-vision');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('user-prefs').classList.add('sticky-header');
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('user-prefs').classList.add('show-spoilers');
+                    if (cookies.read('folders-open') !== '') document.getElementById('user-prefs').classList.add('folders-open');
+                    if (cookies.read('lefthand-sidebar') !== '') document.getElementById('user-prefs').classList.add('lefthand-sidebar');
+                    if (cookies.read('highlight-links') !== '') document.getElementById('user-prefs').classList.add('highlight-links');
+                    if (cookies.read('forum-gingerbread') !== '') document.getElementById('user-prefs').classList.add('forum-gingerbread');
+                    if (cookies.read('shared-avatars') !== '') document.getElementById('user-prefs').classList.add('shared-avatars');
+                    if (cookies.read('new-search') !== '') document.getElementById('user-prefs').classList.add('new-search');
+                    if (cookies.read('stop-auto-play-video') !== '') document.getElementById('user-prefs').classList.add('stop-auto-play-video');
+
+                    //desktop view on mobile
+                    if (cookies.read('desktop-on-mobile') !== ''){
+                        document.getElementById('user-prefs').classList.add('desktop-on-mobile');
+
+                        var viewport = document.querySelector("meta[name=viewport]");
+                        viewport.setAttribute('content', 'width=1000');
+                    }
+
+                }
+
+                function updateDesktopPrefs() {
+                    if (cookies.read('wide-load') !== '') document.getElementById('sidebar-toggle-wideload').classList.add('active');
+                    if (cookies.read('night-vision') !== '') document.getElementById('sidebar-toggle-nightvision').classList.add('active');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('sidebar-toggle-stickyheader').classList.add('active');
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('sidebar-toggle-showspoilers').classList.add('active');
+
+                }
+
+                function updateMobilePrefs() {
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('mobile-toggle-showspoilers').classList.add('active');
+                    if (cookies.read('night-vision') !== '') document.getElementById('mobile-toggle-nightvision').classList.add('active');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('mobile-toggle-stickyheader').classList.add('active');
+                    if (cookies.read('highlight-links') !== '') document.getElementById('mobile-toggle-highlightlinks').classList.add('active');
+
+                }
+
+
+                if (document.cookie.indexOf("scroll0=") < 0) {
+                    // do nothing
+                } else {
+                    console.log('ads removed by scroll.com');
+                    var adsRemovedWith = 'scroll';
+                    var style = document.createElement('style');
+                    style.innerHTML = '#header-ad, .proper-ad-unit, .square_ad, .sb-ad-unit { display: none !important; } ';
+                    document.head.appendChild(style);
+                }
+            </script>
+<script type="text/javascript">
+
+                var tvtropes_config = {
+                    astri_stream_enabled : "",
+                    is_logged_in         : "",
+                    handle               : "",
+                    get_astri_stream     : "",
+										revnum               : "c58d8df02f09262390bbd03db7921fc35c6af306",
+										img_domain           : "https://static.tvtropes.org",
+										adblock              : "1",
+										adblock_url          : "propermessage.io",
+										pause_editing        : "0",
+										pause_editing_msg    : "",
+										pause_site_changes   : ""
+                };
+            </script>
+<script type="text/javascript">
+						  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+						  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+						  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+						  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+						  ga('create', 'UA-3821842-1', 'auto');
+						  ga('send', 'pageview');
+
+						</script>
+</head>
+<body class="">
+<i id="user-prefs"></i>
+<script>updateUserPrefs();</script>
+<div id="fb-root"></div>
+<div id="modal-box"></div>
+<header class="headroom-element" id="main-header-bar">
+<div id="main-header-bar-inner">
+<span class="header-spacer" id="header-spacer-left"></span>
+<a class="mobile-menu-toggle-button tablet-on" href="#mobile-menu" id="main-mobile-toggle"><span></span><span></span><span></span></a>
+<a class="no-dev" href="/" id="main-header-logoButton"></a>
+<span class="header-spacer" id="header-spacer-right"></span>
+<nav class="tablet-off" id="main-header-nav">
+<a href="/pmwiki/pmwiki.php/Main/Tropes">Tropes</a>
+<a href="/pmwiki/pmwiki.php/Main/Media">Media</a>
+<a class="nav-browse" href="/pmwiki/browse.php">Browse</a>
+<a href="/pmwiki/index_report.php">Indexes</a>
+<a href="/pmwiki/topics.php">Forums</a>
+<a class="nav-browse" href="/pmwiki/recent_videos.php">Videos</a>
+</nav>
+<div id="main-header-bar-right">
+<div class="font-xs mobile-off" id="signup-login-box">
+<a class="hover-underline bold" data-modal-target="signup" href="/pmwiki/login.php">Join</a>
+<a class="hover-underline bold" data-modal-target="login" href="/pmwiki/login.php">Login</a>
+</div>
+<div class="mobile-on inline" id="signup-login-mobileToggle">
+<a data-modal-target="login" href="/pmwiki/login.php"><i class="fa fa-user"></i></a>
+</div>
+<div id="search-box">
+<form action="/pmwiki/search_result.php" class="search">
+<input class="search-box" name="q" placeholder="Search" required="" type="text" value=""/>
+<input class="submit-button" type="submit" value=""/>
+<input name="search_type" type="hidden" value="article"/>
+<input name="page_type" type="hidden" value="all"/>
+<input name="cx" type="hidden" value="partner-pub-6610802604051523:amzitfn8e7v"/>
+<input name="cof" type="hidden" value="FORID:10"/>
+<input name="ie" type="hidden" value="ISO-8859-1"/>
+<input name="siteurl" type="hidden" value=""/>
+<input name="ref" type="hidden" value=""/>
+<input name="ss" type="hidden" value=""/>
+</form>
+<a class="mobile-on mobile-search-toggle close-x" href="#close-search"><i class="fa fa-close"></i></a>
+</div>
+<div id="random-box">
+<a class="button-random-trope" href="/pmwiki/pmwiki.php/Main/GetBackToTheFuture" onclick="ga('send', 'event', 'button', 'click', 'random trope');" rel="nofollow"></a>
+<a class="button-random-media" href="/pmwiki/pmwiki.php/Manga/WChange" onclick="ga('send', 'event', 'button', 'click', 'random media');" rel="nofollow"></a>
+</div>
+</div>
+</div>
+<div class="tablet-on" id="mobile-menu"><div class="mobile-menu-options">
+<div class="nav-wrapper">
+<a class="xl" href="/pmwiki/pmwiki.php/Main/Tropes">Tropes</a>
+<a class="xl" href="/pmwiki/pmwiki.php/Main/Media">Media</a>
+<a class="xl" href="/pmwiki/browse.php">Browse</a>
+<a class="xl" href="/pmwiki/index_report.php">Indexes</a>
+<a class="xl" href="/pmwiki/topics.php">Forums</a>
+<a class="xl" href="/pmwiki/recent_videos.php">Videos</a>
+<a href="/pmwiki/query.php?type=att">Ask The Tropers</a>
+<a href="/pmwiki/query.php?type=tf">Trope Finder</a>
+<a href="/pmwiki/query.php?type=ykts">You Know That Show...</a>
+<a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a>
+<a data-click-toggle="active" href="#tools">Tools <i class="fa fa-chevron-down"></i></a>
+<div class="tools-dropdown mobile-dropdown-linkList">
+<a href="/pmwiki/cutlist.php">Cut List</a>
+<a href="/pmwiki/changes.php">New Edits</a>
+<a href="/pmwiki/recent_edit_reasons.php">Edit Reasons</a>
+<a href="/pmwiki/launches.php">Launches</a>
+<a href="/pmwiki/img_list.php">Images List</a>
+<a href="/pmwiki/crown_activity.php">Crowner Activity</a>
+<a href="/pmwiki/no_types.php">Un-typed Pages</a>
+<a href="/pmwiki/page_type_audit.php">Recent Page Type Changes</a>
+</div>
+<a data-click-toggle="active" href="#hq">Tropes HQ <i class="fa fa-chevron-down"></i></a>
+<div class="tools-dropdown mobile-dropdown-linkList">
+<a href="/pmwiki/about.php">About Us</a>
+<a href="/pmwiki/contact.php">Contact Us</a>
+<a href="mailto:advertising@proper.io">Advertise</a>
+<a href="/pmwiki/dmca.php">DMCA Notice</a>
+<a href="/pmwiki/privacypolicy.php">Privacy Policy</a>
+</div>
+<a href="/pmwiki/ad-free-subscribe.php">Go Ad-Free</a>
+<div class="toggle-switches">
+<ul class="mobile-menu display-toggles">
+<li>Show Spoilers <div class="display-toggle show-spoilers" id="mobile-toggle-showspoilers"></div></li>
+<li>Night Vision <div class="display-toggle night-vision" id="mobile-toggle-nightvision"></div></li>
+<li>Sticky Header <div class="display-toggle sticky-header" id="mobile-toggle-stickyheader"></div></li>
+<li>Highlight Links <div class="display-toggle highlight-links" id="mobile-toggle-highlightlinks"></div></li>
+</ul>
+<script>updateMobilePrefs();</script>
+</div>
+</div>
+</div>
+</div>
+</header>
+<div class="mobile-on" id="homepage-introBox-mobile">
+<a href="/"><img class="logo-small" src="/images/logo-white-big.png"/></a>
+<form action="/pmwiki/search_result.php" class="search" style="margin:10px -5px -6px -5px;">
+<input class="search-box" name="q" placeholder="Search" required="" type="text" value=""/>
+<input class="submit-button" type="submit" value=""/>
+<input name="search_type" type="hidden" value="article"/>
+<input name="page_type" type="hidden" value="all"/>
+<input name="cx" type="hidden" value="partner-pub-6610802604051523:amzitfn8e7v"/>
+<input name="cof" type="hidden" value="FORID:10"/>
+<input name="ie" type="hidden" value="ISO-8859-1"/>
+<input name="siteurl" type="hidden" value=""/>
+<input name="ref" type="hidden" value=""/>
+<input name="ss" type="hidden" value=""/>
+</form>
+</div>
+<div class="ad" id="header-ad-wrapper">
+<div id="header-ad">
+<div class="ad-size-970x90 atf_banner">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_1"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_1'); });</script> </div>
+</div> </div>
+</div>
+</div>
+<div id="main-container">
+<div class="action-bar mobile-off" id="action-bar-top">
+<div class="action-bar-right">
+<p>Follow TV Tropes</p>
+<a class="button-fb" href="https://www.facebook.com/TVTropes">
+<i class="fa fa-facebook"></i></a>
+<a class="button-tw" href="https://www.twitter.com/TVTropes">
+<i class="fa fa-twitter"></i></a>
+<a class="button-re" href="https://www.reddit.com/r/TVTropes">
+<i class="fa fa-reddit-alien"></i></a>
+</div>
+<nav class="actions-wrapper" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<ul class="page-actions" id="top_main_list">
+<li class="link-edit">
+<a class="article-edit-button" data-modal-target="login" href="/pmwiki/pmwiki.php/Main/RespawningEnemies?action=edit" rel="nofollow">
+<i class="fa fa-pencil"></i> Edit Page</a></li><li class="link-related"><a href="/pmwiki/relatedsearch.php?term=Main/RespawningEnemies">
+<i class="fa fa-share-alt"></i> Related</a></li><li class="link-history"><a href="/pmwiki/article_history.php?article=Main.RespawningEnemies">
+<i class="fa fa-history"></i> History</a></li><li class="link-discussion"><a href="/pmwiki/remarks.php?trope=Main.RespawningEnemies">
+<i class="fa fa-comment"></i> Discussion</a></li> </ul>
+<button class="nav__dropdown-toggle" id="top_more_button" onclick="toggle_more_menu('top');" type="button">More</button>
+<ul class="more_menu hidden_more_list" id="top_more_list">
+<li class="link-todo tuck-always more_list_item"><a data-modal-target="login" href="#todo"><i class="fa fa-check-circle"></i> To Do</a></li><li class="link-pageSource tuck-always more_list_item"><a data-modal-target="login" href="/pmwiki/pmwiki.php/Main/RespawningEnemies?action=source" rel="nofollow" target="_blank"><i class="fa fa-code"></i> Page Source</a></li> </ul>
+</nav>
+<div class="WikiWordModalStub"></div>
+<div class="ImgUploadModalStub" data-page-type="Article"></div>
+<div class="login-alert" style="display: none;">
+You need to <a href="/pmwiki/login.php" style="color:#21A0E8">login</a> to do this. <a href="/pmwiki/login.php?tab=register_account" style="color:#21A0E8">Get Known</a> if you don't have an account
+</div>
+</div>
+<div class="page-Article" id="main-content">
+<article class="with-sidebar" id="main-entry">
+<input id="groupname-hidden" type="hidden" value="Main"/>
+<input id="title-hidden" type="hidden" value="RespawningEnemies"/>
+<input id="article_id" type="hidden" value="5494"/>
+<input id="logged_in" type="hidden" value="false"/>
+<p class="hidden" id="current_url">http://tvtropes.org/pmwiki/pmwiki.php/Main/RespawningEnemies</p>
+<meta content="" itemprop="datePublished"/>
+<meta content="" itemprop="articleSection"/>
+<meta content="" itemprop="image"/>
+<a class="watch-button" data-modal-target="login" href="#watch">Follow<span>ing</span></a>
+<h1 class="entry-title" itemprop="headline">
+Respawning Enemies
+</h1>
+<script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+                "@type": "ListItem",
+                "position": 1,
+                "name": "tvtropes.org",
+                "item": "https://tvtropes.org"
+            },{
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Tropes",
+                "item": "https://tvtropes.org/pmwiki/pmwiki.php/Main/Tropes"
+            },{
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Respawning Enemies"            }]
+        }
+    </script>
+<a class="mobile-actionbar-toggle mobile-on" data-click-toggle="active" href="#mobile-actions-toggle" id="mobile-actionbar-toggle">
+<p class="tiny-off">Go To</p><span></span><span></span><span></span><i class="fa fa-pencil"></i></a>
+<nav class="mobile-actions-wrapper mobile-on" id="mobile-actions-bar"></nav>
+<div class="modal fade hidden-until-active" id="editLockModal">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button aria-label="Close" class="close" data-dismiss="modal" type="button"> <span aria-hidden="true">×</span></button>
+<h4 class="modal-title">Edit Locked</h4>
+</div>
+<div class="modal-body">
+<div class="row">
+<div class="body">
+<div class="danger troper_locked_message"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<nav class="body-options" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<ul class="subpage-links">
+<li>
+<a class="subpage-link curr-subpage" href="/pmwiki/pmwiki.php/Main/RespawningEnemies" title="The Main page">
+<span class="wrapper"><span class="spi main-page"></span>Main</span></a>
+</li>
+<li>
+<a class="subpage-link" href="/pmwiki/pmwiki.php/Laconic/RespawningEnemies" title="The Laconic page">
+<span class="wrapper"><span class="spi laconic-icon"></span>Laconic</span></a>
+</li>
+<li class="create-subpage dropdown">
+<a aria-expanded="false" class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);" role="button">
+<span class="wrapper">Create New <i class="fa fa-plus-circle"></i></span>
+</a>
+<select onchange="this.options[this.selectedIndex].value &amp;&amp; (window.location = this.options[this.selectedIndex].value);">
+<option value="">- Create New -</option>
+<option value="/pmwiki/pmwiki.php/Analysis/RespawningEnemies?action=edit">Analysis</option>
+<option value="/pmwiki/pmwiki.php/Characters/RespawningEnemies?action=edit">Characters</option>
+<option value="/pmwiki/pmwiki.php/FanficRecs/RespawningEnemies?action=edit">FanficRecs</option>
+<option value="/pmwiki/pmwiki.php/FanWorks/RespawningEnemies?action=edit">FanWorks</option>
+<option value="/pmwiki/pmwiki.php/Fridge/RespawningEnemies?action=edit">Fridge</option>
+<option value="/pmwiki/pmwiki.php/Haiku/RespawningEnemies?action=edit">Haiku</option>
+<option value="/pmwiki/pmwiki.php/Headscratchers/RespawningEnemies?action=edit">Headscratchers</option>
+<option value="/pmwiki/pmwiki.php/ImageLinks/RespawningEnemies?action=edit">ImageLinks</option>
+<option value="/pmwiki/pmwiki.php/PlayingWith/RespawningEnemies?action=edit">PlayingWith</option>
+<option value="/pmwiki/pmwiki.php/Quotes/RespawningEnemies?action=edit">Quotes</option>
+<option value="/pmwiki/pmwiki.php/Recap/RespawningEnemies?action=edit">Recap</option>
+<option value="/pmwiki/pmwiki.php/ReferencedBy/RespawningEnemies?action=edit">ReferencedBy</option>
+<option value="/pmwiki/pmwiki.php/Synopsis/RespawningEnemies?action=edit">Synopsis</option>
+<option value="/pmwiki/pmwiki.php/Timeline/RespawningEnemies?action=edit">Timeline</option>
+<option value="/pmwiki/pmwiki.php/Trivia/RespawningEnemies?action=edit">Trivia</option>
+<option value="/pmwiki/pmwiki.php/WMG/RespawningEnemies?action=edit">WMG</option>
+<option value="/pmwiki/pmwiki.php/YMMV/RespawningEnemies?action=edit">YMMV</option>
+</select>
+</li>
+</ul>
+</nav>
+<div class="article-content retro-folders" id="main-article">
+<p></p><div class="indent"><em>"Infinite bad guys from a small door. Way to rip off the clown car."</em>
+<div class="indent">— <strong>Comic Book Guy</strong>, <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheSimpsonsGame" title="/pmwiki/pmwiki.php/VideoGame/TheSimpsonsGame">The Simpsons Game</a></em>
+</div></div><p>Hooray, you have managed to defeat the enemies that attacked you in this room. Don't get too cocky! Because when you return to this room later on, the enemies are fine and well again.
+</p><p>May even happen in games where levels aren't based on rooms, but set in one big area; in this case, the enemies respawn in a set position after a set period of time. Or possibly as soon as you move out of sight/attack range.
+</p><div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_1"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_1'); })</script></div></div><p><strong>Respawning enemies come in several varieties:</strong>
+</p><ul><li> Enemies that respawn when a certain time limit has passed.
+</li><li> Enemies that respawn every time a room is reentered.
+</li><li> Enemies that respawn when they're scrolled off screen.
+</li><li> Enemies that respawn when the game is saved and reloaded.
+</li></ul><p>Bosses are exempt from this. Bonus and other items usually don't respawn this way, unless something <a class="twikilink" href="/pmwiki/pmwiki.php/Main/RandomlyDrops" title="/pmwiki/pmwiki.php/Main/RandomlyDrops">Randomly Drops</a>, then you're expected to come back and fight the same enemy over and over until the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/RandomNumberGod" title="/pmwiki/pmwiki.php/Main/RandomNumberGod">Random Number God</a> smiles in your favor.
+</p><p>This could be pleasurable for people who like to endlessly slaughter things, mildly to extremely tedious for most people, and <em>absolutely horrible</em> for people who feel guilty about killing them (which prompts the question: why are you playing a game that requires you to do exactly that?).
+</p><p>With very few exceptions, this applies to every online combat game ever created. (One of those exceptions: some early MUDs removed slain enemies from the game semi-permanently; they would only return when the game was reset.)
+</p><div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_2"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_2'); })</script></div></div><p>Compare <a class="twikilink" href="/pmwiki/pmwiki.php/Main/PuzzleReset" title="/pmwiki/pmwiki.php/Main/PuzzleReset">Puzzle Reset</a>, which applies to more than just enemies. Contrast <a class="twikilink" href="/pmwiki/pmwiki.php/Main/RevivingEnemy" title="/pmwiki/pmwiki.php/Main/RevivingEnemy">Reviving Enemy</a>, in which an enemy gets back up rather than replaced. See also <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MookMaker" title="/pmwiki/pmwiki.php/Main/MookMaker">Mook Maker</a>.
+</p><hr/><h2>Examples:</h2>
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/Halo" title="/pmwiki/pmwiki.php/Franchise/Halo">Halo</a></em>:
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/HaloCombatEvolved" title="/pmwiki/pmwiki.php/VideoGame/HaloCombatEvolved">Halo: Combat Evolved</a></em> approaches this, especially in the Library, <em>especially</em> on Legendary difficulty level. The Flood will eventually stop respawning but in some areas it takes a <em>really</em> long time and killing them all can take more ammo than you have available.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Halo2" title="/pmwiki/pmwiki.php/VideoGame/Halo2">Halo 2</a></em>, the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ThatOneBoss" title="/pmwiki/pmwiki.php/Main/ThatOneBoss">Prophet of Regret</a> and Tartarus both have respawning reinforcements.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Zool" title="/pmwiki/pmwiki.php/VideoGame/Zool">Zool</a></em> and its sequel, <em>Zool 2</em>.
+</li><li> The Nightmare difficulty in the <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Doom" title="/pmwiki/pmwiki.php/VideoGame/Doom">Doom</a></em> games has this as part of what makes it so hard, where <em>any</em> enemy that leaves a corpse would get back up after a random interval that could be anywhere from eight seconds to five minutes (usually closer to the former).
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SyphonFilter" title="/pmwiki/pmwiki.php/VideoGame/SyphonFilter">Syphon Filter</a></em> games have this with specific opponents, which are known as "Magic Guards" to the fans.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/StarFox" title="/pmwiki/pmwiki.php/Franchise/StarFox">Star Fox</a></em>:
+<ul><div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_3"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_3'); })</script></div></div><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/StarFoxAssault" title="/pmwiki/pmwiki.php/VideoGame/StarFoxAssault">Star Fox: Assault</a></em> handwaves it with generators that will teleport in enemy reinforcements, and actually makes a point about airborne enemy presence being possibly overwhelming for your teammates due to this, so if you take too long, you'll have to take to the skies and shoot down baddies for a while. Unfortunately, a large number of generators can only be reached by foot or tank, making these levels a prime example of how the game didn't have enough air combat for the series.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/StarFoxAdventures" title="/pmwiki/pmwiki.php/VideoGame/StarFoxAdventures">Star Fox Adventures</a></em> did this ridiculously often, usually only a few seconds after you'd defeated the enemies in the first place.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/GuildWars" title="/pmwiki/pmwiki.php/VideoGame/GuildWars">Guild Wars</a></em> averts it though, no enemy will ever respawn while the players are still in the instance, and the entire game is instanced.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Xenosaga" title="/pmwiki/pmwiki.php/VideoGame/Xenosaga">Xenosaga</a></em> did this as well, though in varying amounts over the different games.
+</li><li> The normal monsters in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Xenoblade" title="/pmwiki/pmwiki.php/VideoGame/Xenoblade">Xenoblade</a></em> will respawn immediately if you warp to a different area, reload a save, or allow a large amount of time to pass. The stronger unique monsters can respawn in the same ways, but it's random, as opposed to guaranteed.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Videogame/AloneInTheDarkTheNewNightmare" title="/pmwiki/pmwiki.php/Videogame/AloneInTheDarkTheNewNightmare">Alone in the Dark: The New Nightmare</a></em> had plenty of monsters that would spontaneously regenerate when the player left the room and returned. Not too big a deal, until you find out that health and ammunition items <em>don't</em> self replenish. Ever. This serves as an outstanding example of why the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/RespawningEnemies" title="/pmwiki/pmwiki.php/Main/RespawningEnemies">Respawning Enemies</a> trope is so rarely used in <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SurvivalHorror" title="/pmwiki/pmwiki.php/Main/SurvivalHorror">Survival Horror</a>.
+<ul><li> The <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/GameBoyColor" title="/pmwiki/pmwiki.php/UsefulNotes/GameBoyColor">Game Boy Color</a> version of the same game did the same thing, but also sported RPG-style <a class="twikilink" href="/pmwiki/pmwiki.php/Main/RandomEncounters" title="/pmwiki/pmwiki.php/Main/RandomEncounters">Random Encounters</a> that thrust the player into a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/FightWoosh" title="/pmwiki/pmwiki.php/Main/FightWoosh">dedicated combat zone</a>. Unfortunately, there are also no melee attacks and no way to flee these monster battles, so running out of ammunition during a fight renders the game <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Unwinnable" title="/pmwiki/pmwiki.php/Main/Unwinnable">unwinnable</a>.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/ResidentEvilCodeVeronica" title="/pmwiki/pmwiki.php/VideoGame/ResidentEvilCodeVeronica">Resident Evil  Code: Veronica</a></em> also does this somewhat, exacerbated by the scarcity of ammo. Enemies don't exactly respawn every time you leave an area and return (save for those <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GoddamnedBats" title="/pmwiki/pmwiki.php/Main/GoddamnedBats">goddamned moths</a>), but several rooms and passageways you've already cleared out are scripted to fill back up with enemies again after certain events, giving the player incentive to do as little backtracking as possible.
+</li><li> In the <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/RuneFactory" title="/pmwiki/pmwiki.php/VideoGame/RuneFactory">Rune Factory</a></em> series, the monsters are re-created every few seconds, unless you destroy the generators in each room.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/CallOfDuty" title="/pmwiki/pmwiki.php/VideoGame/CallOfDuty">Call of Duty</a></em>:
+<ul><li> <em>1</em> and <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/CallOfDuty2" title="/pmwiki/pmwiki.php/VideoGame/CallOfDuty2">2</a></em> do this to a ridiculous degree,<span class="notelabel" onclick="togglenote('note0ac1i');"><sup>note </sup></span><span class="inlinefolder" id="note0ac1i" isnote="true" onclick="togglenote('note0ac1i');" style="cursor:pointer;font-size:smaller;display:none;">and would spam complaints in the console if the player could see <a class="twikilink" href="/pmwiki/pmwiki.php/Main/OffscreenTeleportation" title="/pmwiki/pmwiki.php/Main/OffscreenTeleportation">where it was trying to spawn all those enemies from</a></span> sometimes with odds as lopsided as ten-to-one, particularly during <a class="twikilink" href="/pmwiki/pmwiki.php/Main/HoldTheLine" title="/pmwiki/pmwiki.php/Main/HoldTheLine">Hold the Line</a> missions. The intention is for the player to do an aggressive push to reach the objectives, and be pressured with lots of targets to shoot at while in defense <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TimedMission" title="/pmwiki/pmwiki.php/Main/TimedMission">until the timer runs out</a>. Turtling or losing the initiative will always result in a stalemate at best, or being eventually overrun at worst. <em>United Offensive</em>, the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ExpansionPack" title="/pmwiki/pmwiki.php/Main/ExpansionPack">Expansion Pack</a> for the first game, is particularly criticized for using this system: it's bad enough that every one in three Germans is now a barely-stoppable avatar of death at <em>any</em> range because they get <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GameBreaker" title="/pmwiki/pmwiki.php/Main/GameBreaker">the amazing Gewehr 43</a>; add on that he'll respawn in five seconds every time you think you've taken care of him but your <a class="twikilink" href="/pmwiki/pmwiki.php/Main/HealThyself" title="/pmwiki/pmwiki.php/Main/HealThyself">medkits</a> won't, and it gets really frustrating.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/ModernWarfare" title="/pmwiki/pmwiki.php/VideoGame/ModernWarfare">Modern Warfare</a></em> also did it, but at a slower rate than the previous games, outside of one segment in the first US Marines mission, "Charlie Don't Surf", in which a veritable swarm of insurgents assault you and your squad in the TV station.
+</li><li> <em>Modern Warfare 2</em> went to great lengths to avoid this trope, and the dev team swore up and down that almost every group of enemies was finite, if only you had enough ammo to hold out; this is particularly highlighted in Special Ops mode, where a decent chunk of missions simply involve clearing a map of enemies, with an on-screen counter showing you how many are left. So when the game does finally give in to it during the <em>Second Sun</em> segment of the campaign, it's highly amusing: Due to an EMP, helicopters are literally falling out of the sky. As soon as the sergeant tells you to "Get to cover!", the game begins aiming for you with a never-ending rain of Blackhawks, Hinds, and even Hornets until you find that cover. Keep your eyes on the sky and step lively.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/CallOfDutyBlackOps" title="/pmwiki/pmwiki.php/VideoGame/CallOfDutyBlackOps">Call of Duty: Black Ops</a></em> brought it back in various places.
+<ul><li> One of the most often (rightfully) complained about parts is the hallway at the end of <em>Executive Order</em>, where it seems the entire Red Army is hanging out somewhere behind a corner.
+</li><li> The Khe Sanh level is one of the other most-complained areas of the game for throwing the <em>entire</em> NVA at you, which is bad enough on Normal but becomes an absolute nightmare when you foolishly try to play the level on Veteran. When attempting to descend the hill, all mooks begin to assault you. If, by the grace of God, you make it down the hill and into a bunker, be prepared to run out of ammo before advancing because there are 10-plus enemies that respawn continuously and consecutively. On top of that, the only way to advance is to kick (yes, kick) napalm barrels into the trenches. This wouldn't be a problem if the trench, filled with thousands of enemies, was not refilled with Vietcong shooting at you as you stand up to kick the barrel, an action you cannot avoid, if you wish to advance (or if the game made a better attempt to explain what you're actually supposed to do, but <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GuideDangIt" title="/pmwiki/pmwiki.php/Main/GuideDangIt">that's a different trope</a>).
+</li></ul></li><li> Roebuck from <em>World at War</em> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/LampshadeHanging" title="/pmwiki/pmwiki.php/Main/LampshadeHanging">lampshades</a> this; when under attack by infinitely-respawning Japanese soldiers (who even get camouflaged hatches to crawl out from underneath, since the Marine levels are too open for them to always have a corner to spawn behind), he may shout "Where did they come from?!"
+</li><li> Despite the <em>Modern Warfare 2</em> example above, due to the major turnover at Infinity Ward, this trope comes back into effect in <em>Modern Warfare 3</em>.
+</li></ul></li><li> Endless respawning enemies often occur in the <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MedalOfHonor" title="/pmwiki/pmwiki.php/VideoGame/MedalOfHonor">Medal of Honor</a></em> games, particularly "Escape from Trondheim" and "The Communications Blackout" in <em>Allied Assault</em>, and the bridge level in <em>Frontline</em>. They usually spawn <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BehindTheBlack" title="/pmwiki/pmwiki.php/Main/BehindTheBlack">Behind the Black</a>, but can sometimes teleport in in plain sight.
+</li><li> Being a similar game, <em>Homefront</em> sometimes uses infinite respawners. Not always, fortunately (they're often limited and run out after a few waves), but when it does it tends to stretch your willing suspension of disbelief - how, for instance, does a survivalist ranch house <em>hundreds</em> of people, all pouring out to replace their fallen as you snipe them from a nearby church?
+</li><li> Most 2D <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/MegaMan" title="/pmwiki/pmwiki.php/Franchise/MegaMan">Mega Man</a></em> games have enemies respawning the very moment their position is scrolled off-screen.
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MegaManX7" title="/pmwiki/pmwiki.php/VideoGame/MegaManX7">Mega Man X7</a></em> is notable in this regard in that, if you stood around after killing a foe, the player could see it respawn right before them.
+</li></ul></li><li> Also applies to the NES series of <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/NinjaGaiden" title="/pmwiki/pmwiki.php/VideoGame/NinjaGaiden">Ninja Gaiden</a></em>. If you position yourself just right, you can literally see an enemy respawn after you killed it and can just stand around all day killing enemies that just keep coming.
+<ul><li> Many rooms in the Xbox reboot have enemies respawn upon reentry.
+</li></ul></li><li> Every <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/TheLegendOfZelda" title="/pmwiki/pmwiki.php/Franchise/TheLegendOfZelda">The Legend of Zelda</a></em> game uses respawning enemies, who can drop items. Generally they don't respawn until you go a few screens away and come back.
+<ul><li> In the original <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheLegendOfZelda" title="/pmwiki/pmwiki.php/VideoGame/TheLegendOfZelda">The Legend of Zelda</a></em>, it was possible to save yourself a lot of fighting if you knew that enemies only respawn <em>if you kill all of them on a screen</em>. If you killed all the enemies but one, it would stay like that for the rest of the session, making it a lot safer to walk through the rooms you've cleaned out.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheLegendOfZeldaTheWindWaker" title="/pmwiki/pmwiki.php/VideoGame/TheLegendOfZeldaTheWindWaker">Wind Waker</a></em>, the Miniblins in the second visit to the Forsaken Fortress do this endlessly in the rooms they appear in, making it so that the room can never be emptied of enemies, although it makes those areas great for Rupee and Spoils grinding.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheLegendOfZeldaBreathOfTheWild" title="/pmwiki/pmwiki.php/VideoGame/TheLegendOfZeldaBreathOfTheWild">Breath of the Wild</a></em>, monsters stay dead for a long time. However, every time a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BadMoonRising" title="/pmwiki/pmwiki.php/Main/BadMoonRising">Blood Moon</a> comes around, it revives <em>everything</em>.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/Castlevania" title="/pmwiki/pmwiki.php/Franchise/Castlevania">Castlevania</a></em>:
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/CastlevaniaLamentOfInnocence" title="/pmwiki/pmwiki.php/VideoGame/CastlevaniaLamentOfInnocence">Castlevania: Lament of Innocence</a></em>. Upon entering a room for the first time, you can't leave until you kill all of the enemies. They'll respawn eventually, but don't have to be killed, and <em>Lament's</em> control system makes it very easy to bypass them. On the "Crazy" difficulty level, not only are there more enemies, they respawn every time you enter a room.
+</li><li> In most, if not all, other <em>Castlevania</em> games, enemies respawn when you leave, then re-enter a room.
+</li></ul></li><li> In <a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/RetroMud" title="/pmwiki/pmwiki.php/VideoGame/RetroMud">Retro Mud</a> enemies spawn after a certain timer, rather than when you leave the room. Usually allows for some banter in between farming.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Metroid" title="/pmwiki/pmwiki.php/VideoGame/Metroid">Metroid</a></em> does it immediately after leaving the room. Such mechanics may be referred to as "Metroid-style" when appearing in other games.
+<ul><li> In the <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MetroidPrime" title="/pmwiki/pmwiki.php/VideoGame/MetroidPrime">Metroid Prime</a></em> series, at least, they don't respawn until you've moved at least two rooms away, and in some rooms will spawn in different places depending on which way you come in, as it would suck to have <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GoddamnedBats" title="/pmwiki/pmwiki.php/Main/GoddamnedBats">Shriekbats</a> in your face as soon as the door opens.
+</li><li> <em>Metroid Prime 3: Corruption</em> has a room with respawning aerotroopers guarding an anti-air turret. To expose the turret's weak point, you must pull three switches on raised platforms, and the enemies can reset the switches. The only way to win is to ignore the enemies and do it as quickly as possible.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MetroidFusion" title="/pmwiki/pmwiki.php/VideoGame/MetroidFusion">Metroid Fusion</a></em> put a little explanation into this game mechanic, in that the bodies of dead enemies keep getting reposessed by more <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TheVirus" title="/pmwiki/pmwiki.php/Main/TheVirus">X-Parasites</a>. In fact, if you don't gather the X-Parasite left behind after killing an enemy, it will do just that without waiting for you to leave.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FreedomFighters" title="/pmwiki/pmwiki.php/VideoGame/FreedomFighters">Freedom Fighters</a></em> will send in an armored car or transport helicopter to <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MookMaker" title="/pmwiki/pmwiki.php/Main/MookMaker">bring in new troops</a> in some levels. <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DefiedTrope" title="/pmwiki/pmwiki.php/Main/DefiedTrope">They can be stopped by blowing up the bridge they travel across or their refueling pad.</a>
+</li><li> In the <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SystemShock" title="/pmwiki/pmwiki.php/VideoGame/SystemShock">System Shock</a></em> games and their spiritual successor <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Bioshock1" title="/pmwiki/pmwiki.php/VideoGame/Bioshock1">Bioshock</a></em>, enemies will reappear in previously cleared areas. This is a mixed blessing, as although you need resources to beat them, you can also <em>get</em> resources from them, as well as research them. Since this game is part RPG, this would be the equivalent of <a class="twikilink" href="/pmwiki/pmwiki.php/Main/LevelGrinding" title="/pmwiki/pmwiki.php/Main/LevelGrinding">Level Grinding</a>. It's also far less annoying than other games, since there are far fewer enemies in these areas when you revisit them.
+<ul><li> There is one particular area in <em>Bioshock</em> where Spider Splicers keep respawning right after you kill one. They climb out of a dark hole in the ceiling that's inaccessible to the player.
+</li><li> In an odd <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Bioshock1" title="/pmwiki/pmwiki.php/VideoGame/Bioshock1">Bioshock</a></em> glitch, <span class="spoiler" title="you can set spoilers visible by default on your profile"> Sander Cohen will respawn and try to do you in if you mess with his quadtych <em>after</em> you've killed him at his apartment.</span>
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MetalGear" title="/pmwiki/pmwiki.php/VideoGame/MetalGear">Metal Gear</a></em>:
+<ul><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MetalGearSolid2SonsOfLiberty" title="/pmwiki/pmwiki.php/VideoGame/MetalGearSolid2SonsOfLiberty">Metal Gear Solid 2: Sons of Liberty</a></em>: During a cutscene in the first part of the game, Otacon informs you that there are a little over twenty enemies on the tanker. No matter how many dozens or even hundreds of the bad guys you chew through and dump overboard, however, there are always more to take their place. Later in the game there's a similar situation where the enemy's forces are supposed to be low, and yet no matter how many you blow up, stab, or otherwise obliterate there are always replacement guards.
+</li><li> Used in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MetalGearSolid4" title="/pmwiki/pmwiki.php/VideoGame/MetalGearSolid4">Metal Gear Solid 4</a></em> as enemies in a few areas will constantly spawn, however there are places in the game that have a ridiculous amount of enemies spawn one after another that it can be mistaken that the whole game has it.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MetalGearSolid" title="/pmwiki/pmwiki.php/VideoGame/MetalGearSolid">Metal Gear Solid</a></em>'s Communications Tower, the enemy is on permanent alert until you fight your way to the top.
+</li><li> The rooftops in the original <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MetalGear" title="/pmwiki/pmwiki.php/VideoGame/MetalGear">Metal Gear</a></em> had infinitely respawning jetpack soldiers. When you recover your gear after being captured, it has a transponder planted in it that will constantly summon enemies until you discard it.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Wizardry" title="/pmwiki/pmwiki.php/VideoGame/Wizardry">Wizardry</a> 8</em> - not only your enemies respawn when you leave the area or go to sleep, they always "evolve" to match your level.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Stranglehold" title="/pmwiki/pmwiki.php/VideoGame/Stranglehold">Stranglehold</a></em>, the final showdown against Wong has the bad guy's men coming in waves every time that Wong was out of the room.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/GeometryWars" title="/pmwiki/pmwiki.php/VideoGame/GeometryWars">Geometry Wars</a></em> is an example of the "period of time" version of this trope.
+</li><li> Many minor enemies in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/LittleBigAdventure" title="/pmwiki/pmwiki.php/VideoGame/LittleBigAdventure">Little Big Adventure</a></em> games respawn when you leave the scene and re-enter it. This can work <em>for</em> you, though, since the enemies often leave money/life/magic bonuses when killed.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/AlienVsPredator" title="/pmwiki/pmwiki.php/Franchise/AlienVsPredator">Aliens vs Predator</a></em> for the PC, human and xenomorph enemies continuously respawn throughout the level, making it impossible to clear an area, and forcing the player to always be on alert for attack from all sides.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/EarthBound" title="/pmwiki/pmwiki.php/VideoGame/EarthBound">EarthBound</a></em> possess a unique respawn system where enemies would be arranged in a mostly random fashion as you traverse an area and would respawn in areas a short distance off screen. While it means that there is no limit to the amount of enemies in a level, it is actually a system that's heavily beneficial to the player. The obvious application being that it is very easy to grind when you want, but since the enemies were randomized each time you moved away from and returned to an area, you could /choose/ whether or not you encountered certain enemies or groups of enemies by waiting till you found a bunch you were willing to fight (or not fight).
+</li><li> Most monsters in the <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Klonoa" title="/pmwiki/pmwiki.php/VideoGame/Klonoa">Klonoa</a></em> series respawn extremely quickly. It sometimes takes only a second or less for a portal to drop off another enemy after you've destroyed the last one. This also serves as a handy <a class="twikilink" href="/pmwiki/pmwiki.php/Main/PuzzleReset" title="/pmwiki/pmwiki.php/Main/PuzzleReset">Puzzle Reset</a>, as you use enemies in jumping puzzles; it is possible, and occasionally required, to continuously grab and jump off a single constantly respawning enemy.
+</li><li> The first <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/BaldursGate" title="/pmwiki/pmwiki.php/VideoGame/BaldursGate">Baldur's Gate</a></em> game had some areas with enemies respawning wherever the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/FogOfWar" title="/pmwiki/pmwiki.php/Main/FogOfWar">Fog of War</a> was. While this might have been plausible in some games, <em>BG</em> had the player controlling a party of up to six characters, which allowed you to fully encircle one spot and then watch as fresh <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TheGoomba" title="/pmwiki/pmwiki.php/Main/TheGoomba">monsters</a> seemed to appear out of thin air atop the corpses of their kin every time you brought a character back in range of the spawnpoint. Thankfully toned down quite a bit in the sequel.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FinalFantasyTacticsA2" title="/pmwiki/pmwiki.php/VideoGame/FinalFantasyTacticsA2">Final Fantasy Tactics A2</a></em> uses this in a rather creative manner. In one chain quest, you have to kill a specified number of a specified type of enemy and turn them in to the apprentice chef to complete the mission. If all of the type of enemy you want to kill are not on the field, more will spawn in at regular intervals, provided the enemy party has room. If this is the case, you are more than welcome to kill the undesired type if it means getting the desired type to spawn. Some math skills are required, as you must turn in the exact number needed.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheElderScrollsIIDaggerfall" title="/pmwiki/pmwiki.php/VideoGame/TheElderScrollsIIDaggerfall">The Elder Scrolls II: Daggerfall</a></em>. Every dungeon is a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ClowncarGrave" title="/pmwiki/pmwiki.php/Main/ClowncarGrave">Clowncar Grave</a>. It doesn't matter how many in-game days it took to spelunk any dungeon: soon as you leave, new tenants have already moved in.
+<ul><li> Don't forget that being in a city while having a bounty causes infinite numbers of guards to spawn, <em>each single one of them</em> yelling <strong>HALT! HALT! HALT!</strong>
+</li></ul></li><li> Certain levels in the <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/LEGOStarWars" title="/pmwiki/pmwiki.php/VideoGame/LEGOStarWars">LEGO Star Wars</a></em> games will keep sending squads of mooks after you until a certain goal is completed, be it building a path or killing the guy who keeps calling in the mooks.
+<ul><li> This was kept up throughout the Lego series, and the one level in each game in which you <em>can't</em> stem the flow of infinitely respawning baddies is usually the most hated in the game: Defense of Kashyyyk <em>(Lego Star Wars)</em>, Pursuing the Ark <em>(Lego Indiana Jones)</em>, and A Poisonous Appointment <em>(Lego Batman)</em>.
+</li></ul></li><li> In the original <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Turok" title="/pmwiki/pmwiki.php/VideoGame/Turok">Turok</a></em> game, enemies (even dinosaurs) would be teleported right in front of you without any explanation.
+<ul><li> In the sequel, enemies respawn when you die and respawn or return from a save portal.
+</li></ul></li><li> Lampshaded in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DeadRising" title="/pmwiki/pmwiki.php/VideoGame/DeadRising">Dead Rising</a></em>— when you kill what should have been the last zombie in <em>the entire city</em>, much less the mall the game takes place in, you get an achievement (the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ExactlyWhatItSaysOnTheTin" title="/pmwiki/pmwiki.php/Main/ExactlyWhatItSaysOnTheTin">aptly-named</a> "Zombie Genocider") and the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/InfinityPlusOneSword" title="/pmwiki/pmwiki.php/Main/InfinityPlusOneSword">Real Mega Buster</a>.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Left4Dead" title="/pmwiki/pmwiki.php/VideoGame/Left4Dead">Left 4 Dead</a></em> does this, with the only enemy that doesn't respawn being witches (being close to <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DemonicSpiders" title="/pmwiki/pmwiki.php/Main/DemonicSpiders">Demonic Spiders</a> themselves due to using a 1-hit-KO attack on the survivor that alerts them) and tanks (<a class="twikilink" href="/pmwiki/pmwiki.php/Main/LightningBruiser" title="/pmwiki/pmwiki.php/Main/LightningBruiser">Lightning Bruisers</a> which take considerable amounts of time to kill). One of the Special Infected even weaponizes this, by way of coating survivors in bile which forces more zombies to spawn in and swarm them.
+</li><li> Most maps of <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FinalFantasyXIIRevenantWings" title="/pmwiki/pmwiki.php/VideoGame/FinalFantasyXIIRevenantWings">Final Fantasy XII: Revenant Wings</a></em> have this. This mostly just keeps it from being overly easy, but there are a few times where you can have difficulty killing them faster than they spawn.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/GodOfWarI" title="/pmwiki/pmwiki.php/VideoGame/GodOfWarI">God of War</a></em>, there is a segment in which you must push a cage up a slope while fending off infinitely respawning enemies. Getting hit causes you to release the cage, letting it slide back down the slope.
+</li><li> A really bad offender is <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DarkForcesSaga" title="/pmwiki/pmwiki.php/VideoGame/DarkForcesSaga">Dark Forces</a></em>; after clearing out a room you can turn your back on the wall and a storm trooper will almost invariably spring into existence between your back and said wall. This is sort of OK until the game starts respawing enemies carrying concussion rifles, the shots of which are practically impossible to dodge and knock off 10% of your total hitpoints.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/WarioLand" title="/pmwiki/pmwiki.php/VideoGame/WarioLand">Wario Land</a> The Shake Dimension</em> had this on a per room basis in the huge levels.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/KingdomHearts" title="/pmwiki/pmwiki.php/Franchise/KingdomHearts">Kingdom Hearts</a></em> games have enemies that appear while fighting, but they aren't random; there's a set amount of enemies that will appear and then you'll have "cleared" the area. You need to go three screens away and come back to get them to reappear, except in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/KingdomHeartsBirthBySleep" title="/pmwiki/pmwiki.php/VideoGame/KingdomHeartsBirthBySleep">Kingdom Hearts: Birth by Sleep</a></em>, where it is only one screen.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FinalFantasyXII" title="/pmwiki/pmwiki.php/VideoGame/FinalFantasyXII">Final Fantasy XII</a></em>'s enemies generally won't respawn unless you go several screens away and come back, but there are some lower-level enemies in each area that will indeed keep coming back.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/YoshisIsland" title="/pmwiki/pmwiki.php/VideoGame/YoshisIsland">Yoshi's Island</a></em> had certain spots (usually pipes) where enemies will keep spawning unless Yoshi has six eggs. Their only purpose is to provide Yoshi with more eggs, and it's always an easy enemy like a Shy Guy. Boss battles usually also have infinite respawns for the same reason. As a bonus, these enemies were appropriately named in the players guide under a fake genus, Edibilus Boringus.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/GoldenEye1997" title="/pmwiki/pmwiki.php/VideoGame/GoldenEye1997">GoldenEye (1997)</a></em>, as mentioned in the intro. Example: the first Severnaya bunker level, where you will inevitably trip the alarm and have to fight endless waves of <a class="twikilink" href="/pmwiki/pmwiki.php/Main/EliteMooks" title="/pmwiki/pmwiki.php/Main/EliteMooks">Elite Mooks</a> to escape.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MickeyMousecapade" title="/pmwiki/pmwiki.php/VideoGame/MickeyMousecapade">Mickey Mousecapade</a></em> was especially cruel with this on levels where you have to backtrack. For example, jumping up to the next screen, only to fall back down into the previous room with all the enemies respawned, :lands on respawned enemy:, :dies:. Even the instant-death-on-contact <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Miniboss" title="/pmwiki/pmwiki.php/Main/Miniboss">minibosses</a> respawned, which meant that you could get stuck in an <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Unwinnable" title="/pmwiki/pmwiki.php/Main/Unwinnable">Unwinnable</a> situation if you missed the key in the castle.
+</li><li> Some enemies, such as Raiders, in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Fallout3" title="/pmwiki/pmwiki.php/VideoGame/Fallout3">Fallout 3</a></em> respawn after a few days if you kill them (as long as they are outside). Interestingly, if you enslave a Raider rather than killing him, he will never respawn.
+<ul><li> You can also kill enemies and drag their bodies to a location that their enemies spawn, allowing for massive cross faction battles every time you re-enter that area.
+</li><li> Some animals and Feral Ghouls respawn after a few days in <a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FalloutNewVegas" title="/pmwiki/pmwiki.php/VideoGame/FalloutNewVegas">Fallout: New Vegas</a>. In the case of <em>Old World Blues</em>, the outdoor enemies regenerate about every other day, sometimes in random positions, and those are often toughies such as Lobotomites, Night Stalkers, or robots, that will burn through your limited supplies of ammo.
+</li></ul></li><li> Many rooms in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Killer7" title="/pmwiki/pmwiki.php/VideoGame/Killer7">Killer7</a></em> have one or two heaven smiles that keep teleporting in with a chuckle. Handy for collecting blood.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/BanjoTooie" title="/pmwiki/pmwiki.php/VideoGame/BanjoTooie">Banjo-Tooie</a></em> had every foe respawning, save bosses. This was both a blessing and a curse compared to the previous game, as you had to deal with the mostly 1-hit-kill foes again and again, but it also meant Honeycombs were unlimited, unlike the predecessor with limited foes on each stage and therefore limited life.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/EternalSonata" title="/pmwiki/pmwiki.php/VideoGame/EternalSonata">Eternal Sonata</a></em>, rid the area of Mooks, leave, and return.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SuperMarioBros2" title="/pmwiki/pmwiki.php/VideoGame/SuperMarioBros2">Super Mario Bros. 2</a></em>, and probably <em>Doki Doki Panic</em>, as well, enemies respawn from <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BehindTheBlack" title="/pmwiki/pmwiki.php/Main/BehindTheBlack">Behind the Black</a> as you move around. This can be helpful, as certain areas might easily be made <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Unwinnable" title="/pmwiki/pmwiki.php/Main/Unwinnable">Unwinnable</a> otherwise.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/EtrianOdyssey" title="/pmwiki/pmwiki.php/VideoGame/EtrianOdyssey">Etrian Odyssey</a></em>, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/NintendoHard" title="/pmwiki/pmwiki.php/Main/NintendoHard">even the bosses respawn</a> after a few days.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/HelloKitty" title="/pmwiki/pmwiki.php/Franchise/HelloKitty">Hello Kitty</a> Online</em> you just <a class="twikilink" href="/pmwiki/pmwiki.php/Main/NeverSayDie" title="/pmwiki/pmwiki.php/Main/NeverSayDie">put enemies to sleep</a> in the first place, so to respawn, they merely wake up.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/LaMulana" title="/pmwiki/pmwiki.php/VideoGame/LaMulana">La-Mulana</a></em> has these. Considering that most of the enemies in that game are classified as <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GoddamnedBats" title="/pmwiki/pmwiki.php/Main/GoddamnedBats">Goddamned Bats</a> and main character can get easily kicked back to the other screen, it can cause frustration quite frequently.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/GliderPRO" title="/pmwiki/pmwiki.php/VideoGame/GliderPRO">Glider PRO</a></em>, balloons, copters and darts are the only things you can shoot down with rubber bands. The moment one leaves the screen, either by reaching the edge or being shot down, it respawns after a fixed interval, or perhaps immediately. (The same enemies would also respawn in <em>Glider 4.0</em>, but in entirely random locations.)
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MonsterHunter" title="/pmwiki/pmwiki.php/VideoGame/MonsterHunter">Monster Hunter</a></em>, this will vary. Usually, enemies will not respawn. Sometimes, enemies will respawn for a pretty long time, but eventually stop. Rarely, they will never stop spawning, and there will always be multiples of them in that zone. This can be bad when the enemies in question are <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DemonicSpiders" title="/pmwiki/pmwiki.php/Main/DemonicSpiders">particularly dangerous</a> or <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GoddamnedBats" title="/pmwiki/pmwiki.php/Main/GoddamnedBats">annoying</a>.
+<ul><li> In <em>Monster Hunter Freedom Unite</em>, the monsters that aren't on your kill list only respawn once (except <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GoddamnedBats" title="/pmwiki/pmwiki.php/Main/GoddamnedBats">Vespoid &amp; Honrnetaur</a>) and when you come back the third time, they're completely gone. If you're going for 'kill X number of Y' missions, they'll respawn in a different place (again, only once). Good thing to remember if you're trying to get rid of a very big annoying monster using a weak weapon.
+</li></ul></li><li> Committing sufficiently violent crimes (or hopping the fence at the naval base) in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/GrandTheftAuto" title="/pmwiki/pmwiki.php/VideoGame/GrandTheftAuto">Grand Theft Auto</a></em> games will spawn an endless supply of enemies, until you sufficiently reduce your wanted level.
+</li><li> You can clear rooms in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/VagrantStory" title="/pmwiki/pmwiki.php/VideoGame/VagrantStory">Vagrant Story</a></em>, but if you come back a little bit later, they'll be occupied again.
+</li><li> The game tie-in for <em><a class="twikilink" href="/pmwiki/pmwiki.php/Film/Avatar" title="/pmwiki/pmwiki.php/Film/Avatar">Avatar</a></em> is particularly bad in this regard: You can clear a room, turn around, and find viperwolves or Na'vi where there was no way for some to get in...not to mention that the Na'vi and RDA forces are supposed to both be somewhat limited in size, raising questions about how you managed to personally kill or see the deaths of what should be a large fraction of your opponent's forces...
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Persona3" title="/pmwiki/pmwiki.php/VideoGame/Persona3">Persona 3</a></em>, enemies slowly respawn on individual Tartarus floors. The longer you stay on a floor, the higher the chance that <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ColorCodedForYourConvenience" title="/pmwiki/pmwiki.php/Main/ColorCodedForYourConvenience">red Shadows</a>, the stronger type, will appear - handy for <a class="twikilink" href="/pmwiki/pmwiki.php/Main/LevelGrinding" title="/pmwiki/pmwiki.php/Main/LevelGrinding">Level Grinding</a>. Be careful, as staying too long makes <a class="twikilink" href="/pmwiki/pmwiki.php/Main/StalkedByTheBell" title="/pmwiki/pmwiki.php/Main/StalkedByTheBell">the Reaper show up</a>.
+</li><li> The Antlions of <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/HalfLife2" title="/pmwiki/pmwiki.php/VideoGame/HalfLife2">Half-Life 2</a></em> are the only enemy in the series that do this. It gets to be an asset once they're on your side, especially since you may have <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GoddamnedBats" title="/pmwiki/pmwiki.php/Main/GoddamnedBats">developed such twitch reflexes by then</a> that you wind up killing several anyway.
+</li><li> (possibly) <a class="twikilink" href="/pmwiki/pmwiki.php/Main/LampShaded" title="/pmwiki/pmwiki.php/Main/LampShaded">Lamp Shaded</a> in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/STALKER" title="/pmwiki/pmwiki.php/VideoGame/STALKER">STALKER</a></em> when people talk about ruins they keep clearing of bandits and mutants, who keep coming back. As one person on <a class="twikilink" href="/pmwiki/pmwiki.php/Website/FourChan" title="/pmwiki/pmwiki.php/Website/FourChan">4chan</a> put it:
+<div class="indent"> "<a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/ModernWarfare" title="/pmwiki/pmwiki.php/VideoGame/ModernWarfare">Fifty thousand people used to live here</a>, now it's an infinitely respawning bandit town."
+</div></li><li> Generally <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FurFighters" title="/pmwiki/pmwiki.php/VideoGame/FurFighters">Fur Fighters</a></em> is quite good at avoiding this trope but one level, which was based in hell so it gets away with it, had Elite Mooks spawn all over the place while you avoid cannon fire from tanks and then destroy said tanks.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SoldierOfFortune" title="/pmwiki/pmwiki.php/VideoGame/SoldierOfFortune">Soldier of Fortune</a></em>, making too much noise causes enemies to randomly "teleport in", sometimes in plain sight. The Unfair difficulty turns this <a class="twikilink" href="/pmwiki/pmwiki.php/Main/UpToEleven" title="/pmwiki/pmwiki.php/Main/UpToEleven">Up to Eleven</a>.
+</li><li> In <em><a class="createlink" href="/pmwiki/pmwiki.php/VideoGame/Golvellius" title="/pmwiki/pmwiki.php/VideoGame/Golvellius">Golvellius</a></em>, enemies would respawn any time there were less than the maximum number of enemies on the screen. This actually worked to the player's advantage as you needed a lot of gold, which could be obtained from killing enemies.
+</li><li> Used in the <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/WingCommander" title="/pmwiki/pmwiki.php/VideoGame/WingCommander">Wing Commander</a></em> games several times:
+<ul><li> In <em>Wing Commander III</em>, in the final <a class="twikilink" href="/pmwiki/pmwiki.php/Main/WaveMotionGun" title="/pmwiki/pmwiki.php/Main/WaveMotionGun">Behemoth</a> defense mission, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MegaNeko" title="/pmwiki/pmwiki.php/Main/MegaNeko">Kilrathi</a> fighters respawn infinitely until <span class="spoiler" title="you can set spoilers visible by default on your profile">the Behemoth is destroyed</span>.
+</li><li> In the final mission of the same game, the Strakha ace "Stalker" will respawn just before going to the planet until your final wingman is no longer present, to ensure you fly the final leg of the run alone.
+</li><li> In <em>Wing Commander IV</em>, an infinite number of Border Worlds bombers will spawn if you refuse the second opportunity to defect from Confed until the <em>Lexington</em> is destroyed.
+</li><li> One mid-game mission in <em>Wing Commander Prophecy</em> feature infinitely respawning Nephilim fighters. The goal not to kill them all, but to keep your fighter and the <em>Midway</em> alive until the carrier is ready to jump out.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SuperStarWars" title="/pmwiki/pmwiki.php/VideoGame/SuperStarWars">Super Star Wars</a></em> also has these, most prominently on the 3rd level, where you need to get to the top of the Sandcrawler. If you fall down, you will find that all the Jawas you have killed are there again, and even the various mounted guns on the side of the vehicle have been mysteriously repaired. In fact, the <em>Super Star Wars</em> games have enemies that respawn after a second or two <em>on screen</em>.
+</li><li> On the hardest difficulty of <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DukeNukem3D" title="/pmwiki/pmwiki.php/VideoGame/DukeNukem3D">Duke Nukem 3D</a></em> enemies will constantly respawn unless blown up. The <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/StarshipTroopers" title="/pmwiki/pmwiki.php/Franchise/StarshipTroopers">Starship Troopers</a></em> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GameMod" title="/pmwiki/pmwiki.php/Main/GameMod">Game Mod</a> of it uses enemies that respawn on all difficulties.
+</li><li> Non-boss enemies in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/WorldOfWarcraft" title="/pmwiki/pmwiki.php/VideoGame/WorldOfWarcraft">World of Warcraft</a></em> eventually respawn, as do outdoor raid bosses. For normal outdoor enemies the speed is dependent on the number of players in the region, and in extreme cases can lead to people being assailed by the enemy they killed seconds earlier. Respawns used to be a major annoyance in dungeons after a wipe, but now the shortened length of dungeons has made it less problematic. Maruadon in particular had people get lost in there, die, then get lost again because with enemies respawning they could no longer tell where they'd already been. Rare spawn enemies operate on their own timers, which in the case of the much sought after and aptly named <em>Time-Lost</em> Proto Drake is erratic but very long.
+</li><li> A staple of <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Roguelike" title="/pmwiki/pmwiki.php/Main/Roguelike">Roguelikes</a>, enemies can often be seen to appear out of thin air. In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/NetHack" title="/pmwiki/pmwiki.php/VideoGame/NetHack">NetHack</a></em>, however, it's actually possible to render monsters extinct by personally butchering (or simply causing the game to spawn) 120 of them.
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SlashEmExtended" title="/pmwiki/pmwiki.php/VideoGame/SlashEmExtended">Slash'EM Extended</a></em> starts out with a slow respawn rate, but the more turns passed in a game, the faster it becomes. Hurrying to get the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MacGuffin" title="/pmwiki/pmwiki.php/Main/MacGuffin">Amulet of Yendor</a> doesn't help; as soon as the player acquires it, the respawn rate is set to its maximum and doesn't go down ever again. Yes, this means new monsters get created every couple of turns.
+</li></ul></li><li> Enemies in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TrialsOfMana" title="/pmwiki/pmwiki.php/VideoGame/TrialsOfMana">Trials of Mana</a></em> respawn after your party moves two screens away. Nice if you need to backtrack a short distance after entering a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/EmptyRoomPsych" title="/pmwiki/pmwiki.php/Main/EmptyRoomPsych">dead-end room.</a>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Prototype" title="/pmwiki/pmwiki.php/VideoGame/Prototype">[PROTOTYPE]</a></em> does this understandably as the in-game Manhattan <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SpaceCompression" title="/pmwiki/pmwiki.php/Main/SpaceCompression">very much downsized</a>, therefore you'd run out of things to kill very quickly with your obscenely powerful abilities. Most of the entity regeneration occurs off-camera.
+<ul><li> Structures are special in a certain way. They take a few minutes to reset after destroyed, but you must also be far away enough for the physical structure to respawn. If you stick around nearby, the structure will remain destroyed and not spawn enemies, but its area influence will reset and take effect, therefore <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Mooks" title="/pmwiki/pmwiki.php/Main/Mooks">mooks</a> that spawn in the influence will continue to do so.
+</li></ul></li><li> Enemies in the <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/ResidentEvil" title="/pmwiki/pmwiki.php/Franchise/ResidentEvil">Resident Evil</a></em> series only respawn after a room's been cleared in response to story events, and even then almost always only when you have to pass through those specific rooms. It's pretty handy if you <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GuideDangIt" title="/pmwiki/pmwiki.php/Main/GuideDangIt">don't know where the game wants you to go</a>: If you see monsters, that's probably where you have to go next.
+<ul><li> Somewhat played straight in most remakes of the original game. Not only will zombies get back up if you don't blow their head off or burn their body, they will quite literally <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TurnRed" title="/pmwiki/pmwiki.php/Main/TurnRed">Turn Red</a>, turning into dreaded Crimson Heads, which are much faster, stronger, and take many more hits. Luckily they don't get back up after going down a second time, but it is best just to avoid letting get up the first time due to the fact you don't even get enough ammo to handle all the enemies once.
+</li></ul></li><li> The <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Kirby" title="/pmwiki/pmwiki.php/VideoGame/Kirby">Kirby</a></em> series is an interesting example. In most of the games, enemies will always respawn offscreen. This means that if you defeat an enemy, backtrack a little, then head back forward, the enemy will be there again. It's quite useful for if you accidentally kill an enemy whose ability you want to have, so it makes the game much more convenient in that respect.
+<ul><li> One old <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SpriteComic" title="/pmwiki/pmwiki.php/Main/SpriteComic">Sprite Comic</a> even lampshaded this and used it as a plot point: when a friendly Waddle Dee sacrificed himself to save Kirby, Kirby brought him back by <em>walking offscreen.</em>
+</li></ul></li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/LegacyOfTheWizard" title="/pmwiki/pmwiki.php/VideoGame/LegacyOfTheWizard">Legacy of the Wizard</a></em>, circles will appear at the spots where enemies respawn a few seconds before they do.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/WarioWorld" title="/pmwiki/pmwiki.php/VideoGame/WarioWorld">Wario World</a></em>, enemies respawn if you go offscreen from their spawn point.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/NutsAndMilk" title="/pmwiki/pmwiki.php/VideoGame/NutsAndMilk">Nuts &amp; Milk</a></em>, Nuts could respawn in a few seconds after drowning in the water at the bottom of the screen.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/BurgerTime" title="/pmwiki/pmwiki.php/VideoGame/BurgerTime">BurgerTime</a></em>, enemies respawn around the edges of the screen a few seconds after getting squashed.
+</li><li> In the Wii version of <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/ABoyAndHisBlob" title="/pmwiki/pmwiki.php/VideoGame/ABoyAndHisBlob">A Boy and His Blob</a></em>, enemies that are important puzzle elements respawn shortly after being killed.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DiabloII" title="/pmwiki/pmwiki.php/VideoGame/DiabloII">Diablo II</a></em>, enemies respawn when leaving the game and coming back. In online games, the map will also change. Both online and offline, what enemies appear in which area can change. Also of note is that bosses also reappear like normal enemies.
+</li><li> The <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SyphonFilter" title="/pmwiki/pmwiki.php/VideoGame/SyphonFilter">Syphon Filter</a></em> series has its share of respawning enemies, which can sometimes be observed appearing via <a class="twikilink" href="/pmwiki/pmwiki.php/Main/EnemyDetectingRadar" title="/pmwiki/pmwiki.php/Main/EnemyDetectingRadar">Enemy-Detecting Radar</a>, but <em>The Omega Strain</em> is a noticable example, as every level has infinitely respawning enemies. If the player has a sharp eye, they will occasionally see enemies spawning <em>out of thin air,</em> which makes some escort missions exceedingly tough.
+</li><li> The <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Descent" title="/pmwiki/pmwiki.php/VideoGame/Descent">Descent</a></em> series has the purple-veined walls that spawn a wave of enemies when triggered by an <a class="twikilink" href="/pmwiki/pmwiki.php/Main/EventFlag" title="/pmwiki/pmwiki.php/Main/EventFlag">Event Flag</a>. On most difficulties, they stop producing after three or so waves, but on Insane starting with the second game, they can generate indefinitely.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/KeithCourageInAlphaZones" title="/pmwiki/pmwiki.php/VideoGame/KeithCourageInAlphaZones">Keith Courage in Alpha Zones</a></em>, enemies spawn continuously if you hold in one position, which is useful for money grinding on the overworld levels.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/PAYDAYTheHeist" title="/pmwiki/pmwiki.php/VideoGame/PAYDAYTheHeist">PAYDAY: The Heist</a></em> has cops and SWAT units spawn continuously during assault waves and fewer spawns during the lulls between assaults. They usually spawn in places you can't reach, similar to how <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Left4Dead" title="/pmwiki/pmwiki.php/VideoGame/Left4Dead">Left 4 Dead</a></em> does it. In levels where cameras are involved, shooting out cameras reduces the intensity of the spawn waves by forcing the cops to spawn farther away since without the cameras, the police can't know where you exactly are.
+</li><li> In the <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/ABugsLife" title="/pmwiki/pmwiki.php/WesternAnimation/ABugsLife">A Bug's Life</a></em> video game, enemies will respawn after a few seconds... unless you collect and kill them with the Gold Berry powerup, in which they will stay dead. This is one of the parts necessary for getting <a class="twikilink" href="/pmwiki/pmwiki.php/Main/OneHundredPercentCompletion" title="/pmwiki/pmwiki.php/Main/OneHundredPercentCompletion">100% Completion</a> in that level, too.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/BombJack" title="/pmwiki/pmwiki.php/VideoGame/BombJack">Mighty Bomb Jack</a></em>, a mummy would spawn on the nearest platform whenever less than four enemies were on screen. The original <em>Bomb Jack</em> also had enemies respawning after they were collected as coins.
+</li><li> In <em>The Last Mission</em>, enemies respawn whenever the player leaves the room. The annoying part about this is that some of these enemies will block the main unit's path from where it is impossible to attack them frontally, forcing the player to make a complicated detour to attack them from the other side.
+</li><li> Done by necessity in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Messiah" title="/pmwiki/pmwiki.php/VideoGame/Messiah">Messiah</a></em>. Many puzzles in the game involve possessing the right person and using them to accomplish something, and you cannot possess dead people, so characters tend to respawn to prevent <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Unwinnable" title="/pmwiki/pmwiki.php/Main/Unwinnable">Unwinnable</a> situations.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/ShiningWisdom" title="/pmwiki/pmwiki.php/VideoGame/ShiningWisdom">Shining Wisdom</a></em> has most enemies respawn once you've moved down a length of a screen. What's odd is that not all the enemies reappear and sometimes they'll be in different areas which just makes it seem like the game is playing with you. However the respawn in partially annoying when you're changing floors in dungeons; as enemies tend to appear around the entrance and if you're hit you're likely to be knock back into the entrance, back to the last floor you where on.
+</li><li> Spending too much time on a particular stage in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Hexen" title="/pmwiki/pmwiki.php/VideoGame/Hexen">Hexen</a></em>' will cause more enemies to teleport in. In the beginning, it's only a few Ettins, but by the end of the game you'll get Afrits and Centaurs (as well as Reivers in the Necropolis,) and in the Deathkings of the Dark Citadel expansion enemies will teleport in by the dozens and almost any enemy type is fair game (though it's still usually Ettins.)
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SuperMario64" title="/pmwiki/pmwiki.php/VideoGame/SuperMario64">Super Mario 64</a></em>, specific enemies (Piranha Plants and Bob-ombs, for example) respawn after you move away so they're offscreen and wait for a few seconds. You only get items from them the first time, but select enemies and items respawn.
+</li><li> Other <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/SuperMarioBros" title="/pmwiki/pmwiki.php/Franchise/SuperMarioBros">Super Mario Bros.</a></em> series games usually avoid this; the respawning enemies are either part of an <a class="twikilink" href="/pmwiki/pmwiki.php/Main/EternalEngine" title="/pmwiki/pmwiki.php/Main/EternalEngine">Eternal Engine</a> (or an enemy-spawning device in general) and you only get items from the first few, or they respawn when they provide a way to progress through a level to prevent an <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Unwinnable" title="/pmwiki/pmwiki.php/Main/Unwinnable">Unwinnable</a> situation.
+</li><li> In <em>Plan B</em> for the <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/BBCMicro" title="/pmwiki/pmwiki.php/UsefulNotes/BBCMicro">BBC Micro</a>, the often numerous <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MechaMooks" title="/pmwiki/pmwiki.php/Main/MechaMooks">Mecha-Mooks</a> in each room spawn and respawn quickly in random locations.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/CommandAndConquerRenegade" title="/pmwiki/pmwiki.php/VideoGame/CommandAndConquerRenegade">Command &amp; Conquer: Renegade</a></em>, there are officers constantly calling new troops, and in the later levels enemies simply appearing out of thin air. In a possible <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GoodBadBugs" title="/pmwiki/pmwiki.php/Main/GoodBadBugs">Good Bad Bug</a>, the point they appear at can be blown up, stopping the respawning.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Qwak" title="/pmwiki/pmwiki.php/VideoGame/Qwak">Qwak</a></em>: In the original <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/BBCMicro" title="/pmwiki/pmwiki.php/UsefulNotes/BBCMicro">BBC Micro</a> version, enemies would respawn <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TurnsRed" title="/pmwiki/pmwiki.php/Main/TurnsRed">faster and tougher</a> a few seconds after they were killed. This was removed entirely in later versions.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TorchlightII" title="/pmwiki/pmwiki.php/VideoGame/TorchlightII">TorchlightII</a></em> only saves the state of the three most recent world maps and three most recent dungeons. Visiting another will clear the earliest one, so it can be revisited for more <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ItemFarming" title="/pmwiki/pmwiki.php/Main/ItemFarming">loot</a> and <a class="twikilink" href="/pmwiki/pmwiki.php/Main/LevelGrinding" title="/pmwiki/pmwiki.php/Main/LevelGrinding">experience</a>, or to force certain <a class="twikilink" href="/pmwiki/pmwiki.php/Main/RandomDrops" title="/pmwiki/pmwiki.php/Main/RandomDrops">Random Drops</a>.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Putty" title="/pmwiki/pmwiki.php/VideoGame/Putty">Putty</a></em>, not only will enemies respawn after a while (sometimes on top of you), so will the Bots if they suffer mishaps.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MiniNinjas" title="/pmwiki/pmwiki.php/VideoGame/MiniNinjas">Mini Ninjas</a></em>, the actual enemies only respawn when revisiting a level, but there's a much more <a class="twikilink" href="/pmwiki/pmwiki.php/JustForFun/Egregious" title="/pmwiki/pmwiki.php/JustForFun/Egregious">egregious</a> example with the fishes you can catch. You've been fishing in a single spot and there's no more fishes? Just turn around and when you'll look back at the same spot, there will be fishes again.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FarCry2" title="/pmwiki/pmwiki.php/VideoGame/FarCry2">Far Cry 2</a></em>, every cleared outpost will be filled with enemies again, once you go away far enough. It's worse if you draw attention on you in a weapon-restricted area though. The two factions will start an all-out war against you, spawning new mooks to keep their numbers up whenever you kill one of them. The only way to stop them running at you is to flee from the area.
+<ul><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FarCry4" title="/pmwiki/pmwiki.php/VideoGame/FarCry4">Far Cry 4</a></em>, meanwhile, liberated outposts, fortresses, and belltowers will remain cleared, but enemies will still spawn on the open road at random.
+</li></ul></li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheAdventuresOfLomax" title="/pmwiki/pmwiki.php/VideoGame/TheAdventuresOfLomax">The Adventures of Lomax</a></em>, the enemies have a fascinating tendency of appearing (and sometimes even disappearing) where you were a second ago the first moment the spawn area is off-screen.
+</li><li> In <em><a class="createlink" href="/pmwiki/pmwiki.php/VideoGame/Kolibri" title="/pmwiki/pmwiki.php/VideoGame/Kolibri">Kolibri</a></em>, most enemies respawn once their starting positions scroll off screen. The non-linear level design makes this annoying.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Anime/TenkaiKnights" title="/pmwiki/pmwiki.php/Anime/TenkaiKnights">Tenkai Knights</a>: Brave Battle</em> has enemies that respawn in their original locations shortly after being killed, which makes no logical sense in missions whose formula is "Defeat N Corrupted soldiers."
+</li><li> An area of Silver's Kingdom Valley level in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SonicTheHedgehog2006" title="/pmwiki/pmwiki.php/VideoGame/SonicTheHedgehog2006">Sonic the Hedgehog (2006)</a></em> has two enemies that you can down, only for two more to come down onto the opposite side. Defeat those and two more will come down on the opposite side of them and so on and so forth.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/HolyUmbrella" title="/pmwiki/pmwiki.php/VideoGame/HolyUmbrella">Holy Umbrella</a></em>, enemies will respawn as soon as their spawn point is offscreen.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Bug" title="/pmwiki/pmwiki.php/VideoGame/Bug">Bug</a></em>: Most enemies do not respawn, however there are exceptions, usually those enemies that suddenly pop up from the foreground/background for an ambush. Those will respawn as soon as you scroll off the screen far enough from their ambush point. There's also one section in Quaria with never-ending streams of starfish that bounce down a slope.
+</li><li> Inverted in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Turrican" title="/pmwiki/pmwiki.php/VideoGame/Turrican">Turrican</a></em> games on the C64. Here, if you move an enemy off screen, then come back, the enemy is gone forever. Unfortunately the same applies to bonus items.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheWolfAndTheWaves" title="/pmwiki/pmwiki.php/VideoGame/TheWolfAndTheWaves">The Wolf And The Waves</a></em>: Any zombies or bunnies you kill will respawn somewhere else on the island.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/Videogame/MightAndMagic" title="/pmwiki/pmwiki.php/Videogame/MightAndMagic">Might and Magic</a></em> <em>VII and VIII</em> the enemies will usually respawn after certain in-game time has passed. The exact time depends on the map and the type of the location; dungeons have usually shorter respawning times than the open landscape. There are some exceptions to this however; some locations will stay empty after killing everything there, usually due to plot/quest reasons (such as the Castle Harmondale in <em>VII</em>) and some will respawn the enemies right away after quitting the place (The Pit in <em>VII</em>, aggravantingly enough).
+</li><li> In the <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/SuperNintendoEntertainmentSystem" title="/pmwiki/pmwiki.php/UsefulNotes/SuperNintendoEntertainmentSystem">SNES</a> version of <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/CoolSpot" title="/pmwiki/pmwiki.php/VideoGame/CoolSpot">Cool Spot</a></em>, the enemies that Spot destroys respawn after he loses a life. They don't respawn in the <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/SegaGenesis" title="/pmwiki/pmwiki.php/UsefulNotes/SegaGenesis">Genesis</a> version.
+</li><li> In <em>Little Red Hood</em>, the goblins instantly respawn when killed.
+</li></ul><p></p><h2> Non-Video Gaming Examples</h2>
+<ul><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/TheHungerGames" title="/pmwiki/pmwiki.php/Literature/TheHungerGames">The Hunger Games</a></em>, <span class="spoiler" title="you can set spoilers visible by default on your profile"> the dead tributes are returned as half-human, half-wolf "mutations" to attack the surviving players (Or they are simply modified to look like them, it is never truly explained).</span> In <em>Catching Fire</em>, the Quarter Quell course sends fresh monsters at the tributes for one specific hour per day.
+</li><li> The Table top game <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/SuperDungeonExplore" title="/pmwiki/pmwiki.php/TabletopGame/SuperDungeonExplore">Super Dungeon Explore</a></em> exploits this trope as its primary game mechanic, with "spawning points" serving as the primary objective of heroes and the source of never ending waves of <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Mooks" title="/pmwiki/pmwiki.php/Main/Mooks">mooks</a>, and one or two <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MiniBoss" title="/pmwiki/pmwiki.php/Main/MiniBoss">MiniBosses</a>.
+</li><li> Certain scenarios in <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/DescentJourneysInTheDark" title="/pmwiki/pmwiki.php/TabletopGame/DescentJourneysInTheDark">Descent: Journeys in the Dark</a></em> allow the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GameMaster" title="/pmwiki/pmwiki.php/Main/GameMaster">Overlord</a> to respawn monsters at their starting locations after they have been killed by the heroes.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/JourneyToChaos" title="/pmwiki/pmwiki.php/Literature/JourneyToChaos">Journey to Chaos</a></em>: Monsters are created by a natural phenomenon called "mana mutation". No matter how many are killed by hunters and the like there will always be more. Studying this monster re-spawning is a major plot point in both <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/LoomingShadow" title="/pmwiki/pmwiki.php/Literature/LoomingShadow">Looming Shadow</a></em> as well as <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/ManaMutationMenace" title="/pmwiki/pmwiki.php/Literature/ManaMutationMenace">Mana Mutation Menace</a></em>.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/TrogdorTheBoardGame" title="/pmwiki/pmwiki.php/TabletopGame/TrogdorTheBoardGame">Trogdor!! The Board Game</a></em>, whenever the peasants move there's a chance that more peasants will spawn from any un-burninated cottage.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/Zombicide" title="/pmwiki/pmwiki.php/TabletopGame/Zombicide">Zombicide</a></em>, the undead spawn from specific points every turn. Even better, characters have an experience track that progresses with each kill and grants them new abilities whenever they pass a threshold. But when that happens, the spawn points are designed to <a class="twikilink" href="/pmwiki/pmwiki.php/Main/LevelUp" title="/pmwiki/pmwiki.php/Main/LevelUp">Level Up</a> as well and release more and/or tougher ennemies.
+</li><li> In the first phase of the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/WizardMode" title="/pmwiki/pmwiki.php/Main/WizardMode">Wizard Mode</a> of the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/PhysicalPinballTable" title="/pmwiki/pmwiki.php/Main/PhysicalPinballTable">Physical Pinball Table</a> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Pinball/TalesOfTheArabianNights" title="/pmwiki/pmwiki.php/Pinball/TalesOfTheArabianNights">Tales of the Arabian Nights</a></em>, <span class="spoiler" title="you can set spoilers visible by default on your profile">you'll have to vanquish the evil genie's skeleton army by shooting lit lanes, and you need to hit three of them within a brief period of time to defeat his minions and advance to the second phase for a face-to-face final showdown with the villain himself. If you take too long to make the needed shots after taking down at least one of the three skeletons, they will respawn until a max of three are present, as shown in the scoring display</span>.
+</li><li> In <a class="twikilink" href="/pmwiki/pmwiki.php/Creator/ZenStudios" title="/pmwiki/pmwiki.php/Creator/ZenStudios">Zen Studios</a>' <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DigitalPinballTables" title="/pmwiki/pmwiki.php/Main/DigitalPinballTables">Digital Pinball Table</a> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DoomZenStudios" title="/pmwiki/pmwiki.php/VideoGame/DoomZenStudios">DOOM</a></em>, in order to finish a demon battle, once you've killed the demon leader or eliminated all demon drop targets, you need to hurry up and destroy the remaining demons, because if you don't, at most one drop target or the leader will respawn.
+</li></ul><p></p><hr/>
+</div>
+<div class="square_ad footer-article-ad main_2" data-isolated="0"></div>
+<div class="section-links" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<div class="titles">
+<div><h3 class="text-center text-uppercase">Previous</h3></div>
+<div><h3 class="text-center text-uppercase">Index</h3></div>
+<div><h3 class="text-center text-uppercase">Next</h3></div>
+</div>
+<div class="links">
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/RelaxOVision">Relax-o-Vision</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/ThisIndexHappenedOffscreen">This Index Happened Offscreen</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/SequelNonEntity">Sequel Non-Entity</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/ReinventingTheWheel">Reinventing the Wheel</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/VideoGameDifficultyTropes">Video Game Difficulty Tropes</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/RevivingEnemy">Reviving Enemy</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/RatStomp">Rat Stomp</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/VideogameCharacters">Video Game Characters</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/RevivingEnemy">Reviving Enemy</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/MultiPlatform">Multi-Platform</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/QuoteSource/VideoGames">QuoteSource/Video Games</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/SuspiciouslyCrackedWall">Suspiciously Cracked Wall</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="outer_ads_by_salon_wrapper" id="exco_player_insert_div">
+</div>
+</article>
+<div id="main-content-sidebar"><div class="sidebar-item display-options">
+<ul class="sidebar display-toggles">
+<li>Show Spoilers <div class="display-toggle show-spoilers" id="sidebar-toggle-showspoilers"></div></li>
+<li>Night Vision <div class="display-toggle night-vision" id="sidebar-toggle-nightvision"></div></li>
+<li>Sticky Header <div class="display-toggle sticky-header" id="sidebar-toggle-stickyheader"></div></li>
+<li>Wide Load <div class="display-toggle wide-load" id="sidebar-toggle-wideload"></div></li>
+</ul>
+<script>updateDesktopPrefs();</script>
+</div>
+<div class="sidebar-item ad sb-ad-unit">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_2"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_2'); });</script> </div>
+</div></div>
+<div class="sidebar-item quick-links" itemtype="http://schema.org/SiteNavigationElement">
+<p class="sidebar-item-title" data-title="Important Links">Important Links</p>
+<div class="padded">
+<a href="/pmwiki/query.php?type=att">Ask The Tropers</a>
+<a href="/pmwiki/query.php?type=tf">Trope Finder</a>
+<a href="/pmwiki/query.php?type=ykts">You Know That Show...</a>
+<a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a>
+<a href="/pmwiki/review_activity.php">Reviews</a>
+<a data-modal-target="login" href="/pmwiki/lbs.php">Live Blogs</a>
+<a href="/pmwiki/ad-free-subscribe.php">Go Ad Free!</a> </div>
+</div>
+<div class="sidebar-item sb-ad-unit">
+<div class="sidebar-section">
+<div class="square_ad ad-size-300x600 ad-section text-center">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_3"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_3'); });</script> </div>
+</div> </div>
+</div>
+</div>
+<div class="sidebar-item">
+<p class="sidebar-item-title" data-title="Crucial Browsing">Crucial Browsing</p>
+<ul class="padded font-s" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><a data-click-toggle="active" href="javascript:void(0);">Genre</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/ActionAdventureTropes" title="Main/ActionAdventureTropes">Action Adventure</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ComedyTropes" title="Main/ComedyTropes">Comedy</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CommercialsTropes" title="Main/CommercialsTropes">Commercials</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CrimeAndPunishmentTropes" title="Main/CrimeAndPunishmentTropes">Crime &amp; Punishment</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DramaTropes" title="Main/DramaTropes">Drama</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/HorrorTropes" title="Main/HorrorTropes">Horror</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LoveTropes" title="Main/LoveTropes">Love</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NewsTropes" title="Main/NewsTropes">News</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ProfessionalWrestling" title="Main/ProfessionalWrestling">Professional Wrestling</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SpeculativeFictionTropes" title="Main/SpeculativeFictionTropes">Speculative Fiction</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SportsStoryTropes" title="Main/SportsStoryTropes">Sports Story</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/WarTropes" title="Main/WarTropes">War</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Media</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/Media" title="Main/Media">All Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/AnimationTropes" title="Main/AnimationTropes">Animation (Western)</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Anime" title="Main/Anime">Anime</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ComicBookTropes" title="Main/ComicBookTropes">Comic Book</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FanFic" title="FanFic/FanFics">Fan Fics</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Film" title="Main/Film">Film</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/GameTropes" title="Main/GameTropes">Game</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Literature" title="Main/Literature">Literature</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MusicAndSoundEffects" title="Main/MusicAndSoundEffects">Music And Sound Effects</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NewMediaTropes" title="Main/NewMediaTropes">New Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/PrintMediaTropes" title="Main/PrintMediaTropes">Print Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Radio" title="Main/Radio">Radio</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SequentialArt" title="Main/SequentialArt">Sequential Art</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TabletopGames" title="Main/TabletopGames">Tabletop Games</a></li>
+<li><a href="/pmwiki/pmwiki.php/UsefulNotes/Television" title="Main/Television">Television</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Theater" title="Main/Theater">Theater</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/VideogameTropes" title="Main/VideogameTropes">Videogame</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Webcomics" title="Main/Webcomics">Webcomics</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Narrative</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/UniversalTropes" title="Main/UniversalTropes">Universal</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/AppliedPhlebotinum" title="Main/AppliedPhlebotinum">Applied Phlebotinum</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CharacterizationTropes" title="Main/CharacterizationTropes">Characterization</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Characters" title="Main/Characters">Characters</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CharactersAsDevice" title="Main/CharactersAsDevice">Characters As Device</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Dialogue" title="Main/Dialogue">Dialogue</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Motifs" title="Main/Motifs">Motifs</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NarrativeDevices" title="Main/NarrativeDevices">Narrative Devices</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Paratext" title="Main/Paratext">Paratext</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Plots" title="Main/Plots">Plots</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Settings" title="Main/Settings">Settings</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Spectacle" title="Main/Spectacle">Spectacle</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Other Categories</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/BritishTellyTropes" title="Main/BritishTellyTropes">British Telly</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TheContributors" title="Main/TheContributors">The Contributors</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CreatorSpeak" title="Main/CreatorSpeak">Creator Speak</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Creators" title="Main/Creators">Creators</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DerivativeWorks" title="Main/DerivativeWorks">Derivative Works</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LanguageTropes" title="Main/LanguageTropes">Language</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LawsAndFormulas" title="Main/LawsAndFormulas">Laws And Formulas</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ShowBusiness" title="Main/ShowBusiness">Show Business</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SplitPersonalityTropes" title="Main/SplitPersonalityTropes">Split Personality</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/StockRoom" title="Main/StockRoom">Stock Room</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TropeTropes" title="Main/TropeTropes">Trope</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Tropes" title="Main/Tropes">Tropes</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TruthAndLies" title="Main/TruthAndLies">Truth And Lies</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TruthInTelevision" title="Main/TruthInTelevision">Truth In Television</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Topical Tropes</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/BetrayalTropes" title="Main/BetrayalTropes">Betrayal</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CensorshipTropes" title="Main/CensorshipTropes">Censorship</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CombatTropes" title="Main/CombatTropes">Combat</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DeathTropes" title="Main/DeathTropes">Death</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FamilyTropes" title="Main/FamilyTropes">Family</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FateAndProphecyTropes" title="Main/FateAndProphecyTropes">Fate And Prophecy</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FoodTropes" title="Main/FoodTropes">Food</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/HolidayTropes" title="Main/HolidayTropes">Holiday</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MemoryTropes" title="Main/MemoryTropes">Memory</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MoneyTropes" title="Main/MoneyTropes">Money</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MoralityTropes" title="Main/MoralityTropes">Morality</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/PoliticsTropes" title="Main/PoliticsTropes">Politics</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ReligionTropes" title="Main/ReligionTropes">Religion</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SchoolTropes" title="Main/SchoolTropes">School</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="sidebar-item showcase">
+<p class="sidebar-item-title" data-title="Community Showcase">Community Showcase <a class="bubble float-right hover-blue" href="/pmwiki/showcase.php">More</a></p>
+<p class="community-showcase">
+<a href="https://sharetv.com/shows/echo_chamber" onclick="trackOutboundLink('https://sharetv.com/shows/echo_chamber');" target="_blank">
+<img alt="" class="lazy-image" data-src="/images/communityShowcase-echochamber.jpg"/></a>
+<a href="/pmwiki/pmwiki.php/Webcomic/TwistedTropes">
+<img alt="" class="lazy-image" data-src="/img/howlandsc-side.jpg"/></a>
+</p>
+</div>
+<div class="sidebar-item sb-ad-unit" id="stick-cont">
+<div class="sidebar-section" id="stick-bar">
+<div class="square_ad ad-size-300x600 ad-section text-center">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_4"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_4'); });</script> </div>
+</div> </div>
+</div>
+</div>
+</div>
+</div>
+<div class="action-bar tablet-off" id="action-bar-bottom">
+<a class="scroll-to-top dead-button" href="#top-of-page" onclick="$('html, body').animate({scrollTop : 0},500);">Top</a>
+</div>
+</div>
+<div class="proper-ad-unit ad-sticky">
+<div id="proper-ad-tvtropes_sticky_ad"> <script>propertag.cmd.push(function() { proper_display('tvtropes_sticky_ad'); });</script> </div>
+</div>
+<footer id="main-footer">
+<div id="main-footer-inner">
+<div class="footer-left">
+<a class="img-link" href="/"><img alt="TV Tropes" class="lazy-image" data-src="/img/tvtropes-footer-logo.png" title="TV Tropes"/></a>
+<form action="index.html" class="navbar-form newsletter-signup validate modal-replies" data-ajax-get="/ajax/subscribe_email.php" id="cse-search-box-mobile" name="" role="">
+<button class="btn-submit newsletter-signup-submit-button" id="subscribe-btn" type="submit"><i class="fa fa-paper-plane"></i></button>
+<input class="form-control" id="subscription-email" name="q" placeholder="Subscribe" size="31" type="text" validate-type="email" value=""/>
+</form>
+<ul class="social-buttons">
+<li><a class="btn fb" href="https://www.facebook.com/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-facebook']);" target="_blank"><i class="fa fa-facebook"></i></a></li>
+<li><a class="btn tw" href="https://www.twitter.com/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-twitter']);" target="_blank"><i class="fa fa-twitter"></i></a> </li>
+<li><a class="btn rd" href="https://www.reddit.com/r/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-reddit']);" target="_blank"><i class="fa fa-reddit-alien"></i></a></li>
+</ul>
+</div>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">TVTropes</h4></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Administrivia">About TVTropes</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TheGoalsOfTVTropes">TVTropes Goals</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TheTropingCode">Troping Code</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TVTropesCustoms">TVTropes Customs</a></li>
+<li><a href="/pmwiki/pmwiki.php/JustForFun/TropesOfLegend">Tropes of Legend</a></li>
+<li><a href="/pmwiki/ad-free-subscribe.php">Go Ad-Free</a></li>
+</ul>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">Community</h4></li>
+<li><a href="/pmwiki/query.php?type=att">Ask The Tropers</a></li>
+<li><a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a></li>
+<li><a href="/pmwiki/query.php?type=tf">Trope Finder</a></li>
+<li><a href="/pmwiki/query.php?type=ykts">You Know That Show</a></li>
+<li><a data-modal-target="login" href="/pmwiki/lbs.php">Live Blogs</a></li>
+<li><a href="/pmwiki/review_activity.php">Reviews</a></li>
+<li><a href="/pmwiki/topics.php">Forum</a></li>
+</ul>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">Tropes HQ</h4></li>
+<li><a href="/pmwiki/about.php">About Us</a></li>
+<li><a href="/pmwiki/contact.php">Contact Us</a></li>
+<li><a href="/pmwiki/dmca.php">DMCA Notice</a></li>
+<li><a href="/pmwiki/privacypolicy.php">Privacy Policy</a></li>
+</ul>
+</div>
+<div class="text-center gutter-top gutter-bottom tablet-on" id="desktop-on-mobile-toggle">
+<a href="/pmwiki/switchDeviceCss.php?mobileVersion=1" rel="nofollow">Switch to <span class="txt-desktop">Desktop</span><span class="txt-mobile">Mobile</span> Version</a>
+</div>
+<div class="legal">
+<p>TVTropes is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License. <br/>Permissions beyond the scope of this license may be available from <a href="mailto:thestaff@tvtropes.org" rel="cc:morePermissions" xmlns:cc="http://creativecommons.org/ns#"> thestaff@tvtropes.org</a>.</p>
+<br/>
+<div class="privacy_wrapper">
+</div>
+</div>
+</footer>
+<style>
+      div.fc-ccpa-root {
+        position: absolute !important;
+        bottom: 93px !important;
+        margin: auto !important;
+        width: 100% !important;
+        z-index: 9999 !important;
+      }
+      .fc-ccpa-root .fc-dns-dialog .fc-dns-link p{
+        outline: none !important;
+        text-decoration: underline !important;
+        font-size: .7em !important;
+        font-family: sans-serif !important;
+      }
+      .fc-ccpa-root .fc-dns-dialog .fc-dns-link .fc-button-background {
+        background: none !important;
+      }
+    </style>
+<div class="full-screen" id="_pm_videoViewer">
+<a class="close" href="#close" id="_pm_videoViewer-close"></a>
+<div class="_pmvv-body">
+<div class="_pmvv-vidbox">
+<video class="video-js vjs-default-skin vjs-16-9" data-video-id="" id="overlay-video-player-box">
+</video>
+<div class="_pmvv-vidbox-desc">
+<h1 id="overlay-title"></h1>
+<p class="_pmvv-vidbox-descTxt" id="overlay-descrip">
+</p>
+<div class="rating-row" data-video-id="">
+<input name="is_logged_in" type="hidden" value="0"/>
+<p>How well does it match the trope?</p>
+<div id="star-rating-group">
+<div class="trope-rate">
+<input id="lamp5" name="rate" type="radio" value="5"/>
+<label for="lamp5" title="Absolutely"></label>
+<input id="lamp4" name="rate" type="radio" value="4"/>
+<label for="lamp4" title="Yes"></label>
+<input id="lamp3" name="rate" type="radio" value="3"/>
+<label for="lamp3" title="Kind of"></label>
+<input id="lamp2" name="rate" type="radio" value="2"/>
+<label for="lamp2" title="Not really"></label>
+<input id="lamp1" name="rate" type="radio" value="1"/>
+<label for="lamp1" title="No"></label>
+</div>
+<div id="star-rating-total">
+</div>
+</div>
+</div>
+<div class="example-media-row">
+<div class="example-overlay">
+<p>Example of:</p>
+<div id="overlay-trope"> / </div>
+</div>
+<div class="media-sources-overlay example-overlay">
+<p>Media sources:</p>
+<div id="overlay-media"> / </div>
+</div>
+</div>
+<p class="_pmvv-vidbox-stats text-right font-s" style="padding-top:8px; border-top: solid 1px rgba(255,255,255,0.2)">
+<a class="float-right" data-modal-target="login" href="#video-feedback">Report</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+        window.special_ops =  {
+            member : 'no',
+            isolated : 0,
+            tags : ['unknown']
+        };
+    </script>
+<script type="text/javascript">
+
+        var cleanCreativeEnabled = "";
+        var donation = "";
+        var live_ads = "1";
+        var img_domain = "https://static.tvtropes.org";
+        var snoozed = cookies.read('snoozedabm');
+        var snoozable = "";
+
+        if (adsRemovedWith) {
+            live_ads = 0;
+        }
+
+        var elem = document.createElement('script');
+        elem.async = true;
+
+        elem.src = '/design/assets/bundle.js?rev=c58d8df02f09262390bbd03db7921fc35c6af306';
+
+        elem.onload = function() {
+                                 }
+        document.getElementsByTagName('head')[0].appendChild(elem);
+
+    </script>
+<script type="text/javascript">
+      function send_analytics_event(user_type, donation){
+          // if(user_type == 'uncached' || user_type == 'cached'){
+          //   ga('send', 'event', 'caching', 'load', user_type, {'nonInteraction': 1});
+          //   return;
+          // }
+          var event_name = user_type;
+
+          if(donation == 'true'){
+              event_name += "_donation"
+          }else if(typeof(valid_user) == 'undefined'){
+              event_name += "_blocked"
+          }else if(valid_user == true){
+              event_name += "_unblocked";
+          }else{
+              event_name = "_unknown"
+          }
+          ga('send', 'event', 'ads', 'load', event_name, {'nonInteraction': 1});
+      }
+
+    
+    send_analytics_event("guest", "false");
+      </script>
+</body>
+</html>

@@ -1,0 +1,1112 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Check-Point Starvation - TV Tropes</title>
+<meta content="Check-Point Starvation occurs when in a Video Game, the player must go for an extended period of time without Check Points or Save Points. Its purpose, when …" name="description"/>
+<link href="https://tvtropes.org/pmwiki/pmwiki.php/Main/CheckPointStarvation" rel="canonical"/>
+<link href="/img/icons/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="@tvtropes" name="twitter:site"/>
+<meta content="@tvtropes" name="twitter:owner"/>
+<meta content="Check-Point Starvation - TV Tropes" name="twitter:title"/>
+<meta content="Check-Point Starvation occurs when in a Video Game, the player must go for an extended period of time without Check Points or Save Points. Its purpose, when …" name="twitter:description"/>
+<meta content="https://static.tvtropes.org/pmwiki/pub/images/checkpoint_starvation_3.png" name="twitter:image:src"/>
+<meta content="TV Tropes" property="og:site_name"/>
+<meta content="en_US" property="og:locale"/>
+<meta content="https://www.facebook.com/tvtropes" property="article:publisher"/>
+<meta content="Check-Point Starvation - TV Tropes" property="og:title"/>
+<meta content="website" property="og:type"/>
+<meta content="https://tvtropes.org/pmwiki/pmwiki.php/Main/CheckPointStarvation" property="og:url"/>
+<meta content="https://static.tvtropes.org/pmwiki/pub/images/checkpoint_starvation_3.png" property="og:image"/>
+<meta content="Check-Point Starvation occurs when in a Video Game, the player must go for an extended period of time without Check Points or Save Points. Its purpose, when done intentionally, is to add difficulty to the game. In the most extreme cases, the …" property="og:description"/>
+<link href="/img/icons/apple-icon-57x57.png" rel="apple-touch-icon" sizes="57x57" type="image/png"/>
+<link href="/img/icons/apple-icon-60x60.png" rel="apple-touch-icon" sizes="60x60" type="image/png"/>
+<link href="/img/icons/apple-icon-72x72.png" rel="apple-touch-icon" sizes="72x72" type="image/png"/>
+<link href="/img/icons/apple-icon-76x76.png" rel="apple-touch-icon" sizes="76x76" type="image/png"/>
+<link href="/img/icons/apple-icon-114x114.png" rel="apple-touch-icon" sizes="114x114" type="image/png"/>
+<link href="/img/icons/apple-icon-120x120.png" rel="apple-touch-icon" sizes="120x120" type="image/png"/>
+<link href="/img/icons/apple-icon-144x144.png" rel="apple-touch-icon" sizes="144x144" type="image/png"/>
+<link href="/img/icons/apple-icon-152x152.png" rel="apple-touch-icon" sizes="152x152" type="image/png"/>
+<link href="/img/icons/apple-icon-180x180.png" rel="apple-touch-icon" sizes="180x180" type="image/png"/>
+<link href="/img/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/img/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/img/icons/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png"/>
+<link href="/img/icons/favicon-192x192.png" rel="icon" sizes="192x192" type="image/png"/>
+<meta content="width=device-width, initial-scale=1" id="viewport" name="viewport"/>
+<script>
+                var propertag = {};
+                propertag.cmd = [];
+            </script>
+<link href="/design/assets/bundle.css?rev=c58d8df02f09262390bbd03db7921fc35c6af306" rel="stylesheet"/>
+<script>
+                function object(objectId) {
+                    if (document.getElementById && document.getElementById(objectId)) {
+                        return document.getElementById(objectId);
+                    } else if (document.all && document.all(objectId)) {
+                        return document.all(objectId);
+                    } else if (document.layers && document.layers[objectId]) {
+                        return document.layers[objectId];
+                    } else {
+                        return false;
+                    }
+                }
+
+                // JAVASCRIPT COOKIES CODE: for getting and setting user viewing preferences
+                var cookies = {
+                    create: function (name, value, days2expire, path) {
+                        var date = new Date();
+                        date.setTime(date.getTime() + (days2expire * 24 * 60 * 60 * 1000));
+                        var expires = date.toUTCString();
+                        document.cookie = name + '=' + value + ';' + 'expires=' + expires + ';' + 'path=' + path + ';';
+                    },
+										createWithExpire: function(name, value, expires, path) {
+												document.cookie = name + '=' + value + ';' + 'expires=' + expires + ';' + 'path=' + path + ';';
+										},
+                    read: function (name) {
+                        var cookie_value = "",
+                            current_cookie = "",
+                            name_expr = name + "=",
+                            all_cookies = document.cookie.split(';'),
+                            n = all_cookies.length;
+
+                        for (var i = 0; i < n; i++) {
+                            current_cookie = all_cookies[i].trim();
+                            if (current_cookie.indexOf(name_expr) === 0) {
+                                cookie_value = current_cookie.substring(name_expr.length, current_cookie.length);
+                                break;
+                            }
+                        }
+                        return cookie_value;
+                    },
+                    update: function (name, val) {
+                        this.create(name, val, 300, "/");
+                    },
+                    remove: function (name) {
+                        document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
+                    }
+                };
+
+                function updateUserPrefs() {
+                    //GENERAL: detect and set browser, if not cookied (will be treated like a user-preference and added to the #user-pref element)
+                    if( !cookies.read('user-browser') ){
+                        var broswer = '';
+
+                        if(navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPod/i) ){
+                            browser = 'iOS';
+                        } else if (/Opera[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'opera';
+                        } else if (/MSIE (\d+\.\d+);/.test(navigator.userAgent)) {
+                            browser = 'MSIE';
+                        } else if (/Navigator[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'netscape';
+                        } else if (/Chrome[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'chrome';
+                        } else if (/Safari[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'safari';
+                            /Version[\/\s](\d+\.\d+)/.test(navigator.userAgent);
+                            browserVersion = new Number(RegExp.$1);
+                        } else if (/Firefox[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'firefox';
+                        } else {
+                            browser = 'internet_explorer';
+                        }
+                        cookies.create('user-browser',browser,1,'/');
+                        document.getElementById('user-prefs').classList.add('browser-' + browser);
+                    } else {
+                        document.getElementById('user-prefs').classList.add('browser-' + cookies.read('user-browser'));
+                    }
+
+                    //update user preference settings
+                    if (cookies.read('wide-load') !== '') document.getElementById('user-prefs').classList.add('wide-load');
+                    if (cookies.read('night-vision') !== '') document.getElementById('user-prefs').classList.add('night-vision');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('user-prefs').classList.add('sticky-header');
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('user-prefs').classList.add('show-spoilers');
+                    if (cookies.read('folders-open') !== '') document.getElementById('user-prefs').classList.add('folders-open');
+                    if (cookies.read('lefthand-sidebar') !== '') document.getElementById('user-prefs').classList.add('lefthand-sidebar');
+                    if (cookies.read('highlight-links') !== '') document.getElementById('user-prefs').classList.add('highlight-links');
+                    if (cookies.read('forum-gingerbread') !== '') document.getElementById('user-prefs').classList.add('forum-gingerbread');
+                    if (cookies.read('shared-avatars') !== '') document.getElementById('user-prefs').classList.add('shared-avatars');
+                    if (cookies.read('new-search') !== '') document.getElementById('user-prefs').classList.add('new-search');
+                    if (cookies.read('stop-auto-play-video') !== '') document.getElementById('user-prefs').classList.add('stop-auto-play-video');
+
+                    //desktop view on mobile
+                    if (cookies.read('desktop-on-mobile') !== ''){
+                        document.getElementById('user-prefs').classList.add('desktop-on-mobile');
+
+                        var viewport = document.querySelector("meta[name=viewport]");
+                        viewport.setAttribute('content', 'width=1000');
+                    }
+
+                }
+
+                function updateDesktopPrefs() {
+                    if (cookies.read('wide-load') !== '') document.getElementById('sidebar-toggle-wideload').classList.add('active');
+                    if (cookies.read('night-vision') !== '') document.getElementById('sidebar-toggle-nightvision').classList.add('active');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('sidebar-toggle-stickyheader').classList.add('active');
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('sidebar-toggle-showspoilers').classList.add('active');
+
+                }
+
+                function updateMobilePrefs() {
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('mobile-toggle-showspoilers').classList.add('active');
+                    if (cookies.read('night-vision') !== '') document.getElementById('mobile-toggle-nightvision').classList.add('active');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('mobile-toggle-stickyheader').classList.add('active');
+                    if (cookies.read('highlight-links') !== '') document.getElementById('mobile-toggle-highlightlinks').classList.add('active');
+
+                }
+
+
+                if (document.cookie.indexOf("scroll0=") < 0) {
+                    // do nothing
+                } else {
+                    console.log('ads removed by scroll.com');
+                    var adsRemovedWith = 'scroll';
+                    var style = document.createElement('style');
+                    style.innerHTML = '#header-ad, .proper-ad-unit, .square_ad, .sb-ad-unit { display: none !important; } ';
+                    document.head.appendChild(style);
+                }
+            </script>
+<script type="text/javascript">
+
+                var tvtropes_config = {
+                    astri_stream_enabled : "",
+                    is_logged_in         : "",
+                    handle               : "",
+                    get_astri_stream     : "",
+										revnum               : "c58d8df02f09262390bbd03db7921fc35c6af306",
+										img_domain           : "https://static.tvtropes.org",
+										adblock              : "1",
+										adblock_url          : "propermessage.io",
+										pause_editing        : "0",
+										pause_editing_msg    : "",
+										pause_site_changes   : ""
+                };
+            </script>
+<script type="text/javascript">
+						  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+						  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+						  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+						  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+						  ga('create', 'UA-3821842-1', 'auto');
+						  ga('send', 'pageview');
+
+						</script>
+</head>
+<body class="">
+<i id="user-prefs"></i>
+<script>updateUserPrefs();</script>
+<div id="fb-root"></div>
+<div id="modal-box"></div>
+<header class="headroom-element" id="main-header-bar">
+<div id="main-header-bar-inner">
+<span class="header-spacer" id="header-spacer-left"></span>
+<a class="mobile-menu-toggle-button tablet-on" href="#mobile-menu" id="main-mobile-toggle"><span></span><span></span><span></span></a>
+<a class="no-dev" href="/" id="main-header-logoButton"></a>
+<span class="header-spacer" id="header-spacer-right"></span>
+<nav class="tablet-off" id="main-header-nav">
+<a href="/pmwiki/pmwiki.php/Main/Tropes">Tropes</a>
+<a href="/pmwiki/pmwiki.php/Main/Media">Media</a>
+<a class="nav-browse" href="/pmwiki/browse.php">Browse</a>
+<a href="/pmwiki/index_report.php">Indexes</a>
+<a href="/pmwiki/topics.php">Forums</a>
+<a class="nav-browse" href="/pmwiki/recent_videos.php">Videos</a>
+</nav>
+<div id="main-header-bar-right">
+<div class="font-xs mobile-off" id="signup-login-box">
+<a class="hover-underline bold" data-modal-target="signup" href="/pmwiki/login.php">Join</a>
+<a class="hover-underline bold" data-modal-target="login" href="/pmwiki/login.php">Login</a>
+</div>
+<div class="mobile-on inline" id="signup-login-mobileToggle">
+<a data-modal-target="login" href="/pmwiki/login.php"><i class="fa fa-user"></i></a>
+</div>
+<div id="search-box">
+<form action="/pmwiki/search_result.php" class="search">
+<input class="search-box" name="q" placeholder="Search" required="" type="text" value=""/>
+<input class="submit-button" type="submit" value=""/>
+<input name="search_type" type="hidden" value="article"/>
+<input name="page_type" type="hidden" value="all"/>
+<input name="cx" type="hidden" value="partner-pub-6610802604051523:amzitfn8e7v"/>
+<input name="cof" type="hidden" value="FORID:10"/>
+<input name="ie" type="hidden" value="ISO-8859-1"/>
+<input name="siteurl" type="hidden" value=""/>
+<input name="ref" type="hidden" value=""/>
+<input name="ss" type="hidden" value=""/>
+</form>
+<a class="mobile-on mobile-search-toggle close-x" href="#close-search"><i class="fa fa-close"></i></a>
+</div>
+<div id="random-box">
+<a class="button-random-trope" href="/pmwiki/pmwiki.php/Main/WrittenRoar" onclick="ga('send', 'event', 'button', 'click', 'random trope');" rel="nofollow"></a>
+<a class="button-random-media" href="/pmwiki/pmwiki.php/Literature/FallFromGrace" onclick="ga('send', 'event', 'button', 'click', 'random media');" rel="nofollow"></a>
+</div>
+</div>
+</div>
+<div class="tablet-on" id="mobile-menu"><div class="mobile-menu-options">
+<div class="nav-wrapper">
+<a class="xl" href="/pmwiki/pmwiki.php/Main/Tropes">Tropes</a>
+<a class="xl" href="/pmwiki/pmwiki.php/Main/Media">Media</a>
+<a class="xl" href="/pmwiki/browse.php">Browse</a>
+<a class="xl" href="/pmwiki/index_report.php">Indexes</a>
+<a class="xl" href="/pmwiki/topics.php">Forums</a>
+<a class="xl" href="/pmwiki/recent_videos.php">Videos</a>
+<a href="/pmwiki/query.php?type=att">Ask The Tropers</a>
+<a href="/pmwiki/query.php?type=tf">Trope Finder</a>
+<a href="/pmwiki/query.php?type=ykts">You Know That Show...</a>
+<a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a>
+<a data-click-toggle="active" href="#tools">Tools <i class="fa fa-chevron-down"></i></a>
+<div class="tools-dropdown mobile-dropdown-linkList">
+<a href="/pmwiki/cutlist.php">Cut List</a>
+<a href="/pmwiki/changes.php">New Edits</a>
+<a href="/pmwiki/recent_edit_reasons.php">Edit Reasons</a>
+<a href="/pmwiki/launches.php">Launches</a>
+<a href="/pmwiki/img_list.php">Images List</a>
+<a href="/pmwiki/crown_activity.php">Crowner Activity</a>
+<a href="/pmwiki/no_types.php">Un-typed Pages</a>
+<a href="/pmwiki/page_type_audit.php">Recent Page Type Changes</a>
+</div>
+<a data-click-toggle="active" href="#hq">Tropes HQ <i class="fa fa-chevron-down"></i></a>
+<div class="tools-dropdown mobile-dropdown-linkList">
+<a href="/pmwiki/about.php">About Us</a>
+<a href="/pmwiki/contact.php">Contact Us</a>
+<a href="mailto:advertising@proper.io">Advertise</a>
+<a href="/pmwiki/dmca.php">DMCA Notice</a>
+<a href="/pmwiki/privacypolicy.php">Privacy Policy</a>
+</div>
+<a href="/pmwiki/ad-free-subscribe.php">Go Ad-Free</a>
+<div class="toggle-switches">
+<ul class="mobile-menu display-toggles">
+<li>Show Spoilers <div class="display-toggle show-spoilers" id="mobile-toggle-showspoilers"></div></li>
+<li>Night Vision <div class="display-toggle night-vision" id="mobile-toggle-nightvision"></div></li>
+<li>Sticky Header <div class="display-toggle sticky-header" id="mobile-toggle-stickyheader"></div></li>
+<li>Highlight Links <div class="display-toggle highlight-links" id="mobile-toggle-highlightlinks"></div></li>
+</ul>
+<script>updateMobilePrefs();</script>
+</div>
+</div>
+</div>
+</div>
+</header>
+<div class="mobile-on" id="homepage-introBox-mobile">
+<a href="/"><img class="logo-small" src="/images/logo-white-big.png"/></a>
+<form action="/pmwiki/search_result.php" class="search" style="margin:10px -5px -6px -5px;">
+<input class="search-box" name="q" placeholder="Search" required="" type="text" value=""/>
+<input class="submit-button" type="submit" value=""/>
+<input name="search_type" type="hidden" value="article"/>
+<input name="page_type" type="hidden" value="all"/>
+<input name="cx" type="hidden" value="partner-pub-6610802604051523:amzitfn8e7v"/>
+<input name="cof" type="hidden" value="FORID:10"/>
+<input name="ie" type="hidden" value="ISO-8859-1"/>
+<input name="siteurl" type="hidden" value=""/>
+<input name="ref" type="hidden" value=""/>
+<input name="ss" type="hidden" value=""/>
+</form>
+</div>
+<div class="ad" id="header-ad-wrapper">
+<div id="header-ad">
+<div class="ad-size-970x90 atf_banner">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_1"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_1'); });</script> </div>
+</div> </div>
+</div>
+</div>
+<div id="main-container">
+<div class="action-bar mobile-off" id="action-bar-top">
+<div class="action-bar-right">
+<p>Follow TV Tropes</p>
+<a class="button-fb" href="https://www.facebook.com/TVTropes">
+<i class="fa fa-facebook"></i></a>
+<a class="button-tw" href="https://www.twitter.com/TVTropes">
+<i class="fa fa-twitter"></i></a>
+<a class="button-re" href="https://www.reddit.com/r/TVTropes">
+<i class="fa fa-reddit-alien"></i></a>
+</div>
+<nav class="actions-wrapper" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<ul class="page-actions" id="top_main_list">
+<li class="link-edit">
+<a class="article-edit-button" data-modal-target="login" href="/pmwiki/pmwiki.php/Main/CheckPointStarvation?action=edit" rel="nofollow">
+<i class="fa fa-pencil"></i> Edit Page</a></li><li class="link-related"><a href="/pmwiki/relatedsearch.php?term=Main/CheckPointStarvation">
+<i class="fa fa-share-alt"></i> Related</a></li><li class="link-history"><a href="/pmwiki/article_history.php?article=Main.CheckPointStarvation">
+<i class="fa fa-history"></i> History</a></li><li class="link-discussion"><a href="/pmwiki/remarks.php?trope=Main.CheckPointStarvation">
+<i class="fa fa-comment"></i> Discussion</a></li> </ul>
+<button class="nav__dropdown-toggle" id="top_more_button" onclick="toggle_more_menu('top');" type="button">More</button>
+<ul class="more_menu hidden_more_list" id="top_more_list">
+<li class="link-todo tuck-always more_list_item"><a data-modal-target="login" href="#todo"><i class="fa fa-check-circle"></i> To Do</a></li><li class="link-pageSource tuck-always more_list_item"><a data-modal-target="login" href="/pmwiki/pmwiki.php/Main/CheckPointStarvation?action=source" rel="nofollow" target="_blank"><i class="fa fa-code"></i> Page Source</a></li> </ul>
+</nav>
+<div class="WikiWordModalStub"></div>
+<div class="ImgUploadModalStub" data-page-type="Article"></div>
+<div class="login-alert" style="display: none;">
+You need to <a href="/pmwiki/login.php" style="color:#21A0E8">login</a> to do this. <a href="/pmwiki/login.php?tab=register_account" style="color:#21A0E8">Get Known</a> if you don't have an account
+</div>
+</div>
+<div class="page-Article" id="main-content">
+<article class="with-sidebar" id="main-entry">
+<input id="groupname-hidden" type="hidden" value="Main"/>
+<input id="title-hidden" type="hidden" value="CheckPointStarvation"/>
+<input id="article_id" type="hidden" value="291173"/>
+<input id="logged_in" type="hidden" value="false"/>
+<p class="hidden" id="current_url">http://tvtropes.org/pmwiki/pmwiki.php/Main/CheckPointStarvation</p>
+<meta content="" itemprop="datePublished"/>
+<meta content="" itemprop="articleSection"/>
+<meta content="" itemprop="image"/>
+<a class="watch-button" data-modal-target="login" href="#watch">Follow<span>ing</span></a>
+<h1 class="entry-title" itemprop="headline">
+Check-Point Starvation
+</h1>
+<script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+                "@type": "ListItem",
+                "position": 1,
+                "name": "tvtropes.org",
+                "item": "https://tvtropes.org"
+            },{
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Tropes",
+                "item": "https://tvtropes.org/pmwiki/pmwiki.php/Main/Tropes"
+            },{
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Check-Point Starvation"            }]
+        }
+    </script>
+<a class="mobile-actionbar-toggle mobile-on" data-click-toggle="active" href="#mobile-actions-toggle" id="mobile-actionbar-toggle">
+<p class="tiny-off">Go To</p><span></span><span></span><span></span><i class="fa fa-pencil"></i></a>
+<nav class="mobile-actions-wrapper mobile-on" id="mobile-actions-bar"></nav>
+<div class="modal fade hidden-until-active" id="editLockModal">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button aria-label="Close" class="close" data-dismiss="modal" type="button"> <span aria-hidden="true">×</span></button>
+<h4 class="modal-title">Edit Locked</h4>
+</div>
+<div class="modal-body">
+<div class="row">
+<div class="body">
+<div class="danger troper_locked_message"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<nav class="body-options" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<ul class="subpage-links">
+<li>
+<a class="subpage-link curr-subpage" href="/pmwiki/pmwiki.php/Main/CheckPointStarvation" title="The Main page">
+<span class="wrapper"><span class="spi main-page"></span>Main</span></a>
+</li>
+<li>
+<a class="subpage-link" href="/pmwiki/pmwiki.php/Laconic/CheckPointStarvation" title="The Laconic page">
+<span class="wrapper"><span class="spi laconic-icon"></span>Laconic</span></a>
+</li>
+<li>
+<a class="subpage-link" href="/pmwiki/pmwiki.php/Quotes/CheckPointStarvation" title="The Quotes page">
+<span class="wrapper"><span class="spi quotes"></span>Quotes</span></a>
+</li>
+<li>
+<a class="subpage-link" href="/pmwiki/pmwiki.php/PlayingWith/CheckPointStarvation" title="The PlayingWith page">
+<span class="wrapper">PlayingWith</span></a>
+</li>
+<li class="create-subpage dropdown">
+<a aria-expanded="false" class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);" role="button">
+<span class="wrapper">Create New <i class="fa fa-plus-circle"></i></span>
+</a>
+<select onchange="this.options[this.selectedIndex].value &amp;&amp; (window.location = this.options[this.selectedIndex].value);">
+<option value="">- Create New -</option>
+<option value="/pmwiki/pmwiki.php/Analysis/CheckPointStarvation?action=edit">Analysis</option>
+<option value="/pmwiki/pmwiki.php/Characters/CheckPointStarvation?action=edit">Characters</option>
+<option value="/pmwiki/pmwiki.php/FanficRecs/CheckPointStarvation?action=edit">FanficRecs</option>
+<option value="/pmwiki/pmwiki.php/FanWorks/CheckPointStarvation?action=edit">FanWorks</option>
+<option value="/pmwiki/pmwiki.php/Fridge/CheckPointStarvation?action=edit">Fridge</option>
+<option value="/pmwiki/pmwiki.php/Haiku/CheckPointStarvation?action=edit">Haiku</option>
+<option value="/pmwiki/pmwiki.php/Headscratchers/CheckPointStarvation?action=edit">Headscratchers</option>
+<option value="/pmwiki/pmwiki.php/ImageLinks/CheckPointStarvation?action=edit">ImageLinks</option>
+<option value="/pmwiki/pmwiki.php/Recap/CheckPointStarvation?action=edit">Recap</option>
+<option value="/pmwiki/pmwiki.php/ReferencedBy/CheckPointStarvation?action=edit">ReferencedBy</option>
+<option value="/pmwiki/pmwiki.php/Synopsis/CheckPointStarvation?action=edit">Synopsis</option>
+<option value="/pmwiki/pmwiki.php/Timeline/CheckPointStarvation?action=edit">Timeline</option>
+<option value="/pmwiki/pmwiki.php/Trivia/CheckPointStarvation?action=edit">Trivia</option>
+<option value="/pmwiki/pmwiki.php/WMG/CheckPointStarvation?action=edit">WMG</option>
+<option value="/pmwiki/pmwiki.php/YMMV/CheckPointStarvation?action=edit">YMMV</option>
+</select>
+</li>
+</ul>
+</nav>
+<div class="article-content retro-folders" id="main-article">
+<p>
+</p><p></p><div class="quoteright" style="width:350px;"><a class="twikilink" href="/pmwiki/pmwiki.php/WebAnimation/DorklyOriginals" title="/pmwiki/pmwiki.php/WebAnimation/DorklyOriginals"><div class="lazy_load_img_box" style="padding-top:63.14%"><img alt="https://static.tvtropes.org/pmwiki/pub/images/checkpoint_starvation_3.png" border="0" class="embeddedimage" height="221" src="https://static.tvtropes.org/pmwiki/pub/images/checkpoint_starvation_3.png" width="350"/></div></a></div>
+<p></p><div class="indent"><em>DAMMIT I JUST WANT TO FIND A SAVE POINT SO I CAN GET TO BED</em>
+<div class="indent">— <strong><a class="twikilink" href="/pmwiki/pmwiki.php/Website/Cracked" title="/pmwiki/pmwiki.php/Website/Cracked">Cracked</a>.com</strong>, "<a class="urllink" href="http://www.cracked.com/article_16196_the-7-commandments-all-video-games-should-obey.html">The 7 Commandments All Video Games Should Obey<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a>", on <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MetroidPrime" title="/pmwiki/pmwiki.php/VideoGame/MetroidPrime">Metroid Prime</a></em>
+</div></div><div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_1"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_1'); })</script></div></div><p>Check-Point Starvation occurs when in a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/VideoGame" title="/pmwiki/pmwiki.php/Main/VideoGame">Video Game</a>, the player must go for an extended period of time without <a class="twikilink" href="/pmwiki/pmwiki.php/Main/CheckPoint" title="/pmwiki/pmwiki.php/Main/CheckPoint">Check Points</a> or <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SavePoint" title="/pmwiki/pmwiki.php/Main/SavePoint">Save Points</a>. Its purpose, when done intentionally, is to add difficulty to the game.
+</p><p>In the most extreme cases, the player may be required to beat the entire game with one life, though going <em>that</em> far with this trope is mostly unheard of. Outside of <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Roguelike" title="/pmwiki/pmwiki.php/Main/Roguelike">Roguelikes</a>, one-life marathon games are almost exclusive to the 8-bit era, and even then it was pretty uncommon — except as a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SelfImposedChallenge" title="/pmwiki/pmwiki.php/Main/SelfImposedChallenge">Self-Imposed Challenge</a> or the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/HarderThanHard" title="/pmwiki/pmwiki.php/Main/HarderThanHard">highest difficulty level</a>.
+</p><p>This can occasionally slip in very story-heavy games, possibly by accident. It's particularly common in the introduction for the game, as <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Exposition" title="/pmwiki/pmwiki.php/Main/Exposition">Exposition</a> can be interspersed with tutorials or gameplay without a save function.
+</p><p>Not to be confused with <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SaveGameLimits" title="/pmwiki/pmwiki.php/Main/SaveGameLimits">Save-Game Limits</a>, when the game imposes limits on when and where (and how) you can save the game, though these two sometimes overlap. Use of the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SuspendSave" title="/pmwiki/pmwiki.php/Main/SuspendSave">Suspend Save</a> in particular allows a developer to enforce Checkpoint Starvation while still allowing the player to take breaks, by creating temporary save points that will get deleted upon resumption.
+</p><div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_2"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_2'); })</script></div></div><p>Compare <a class="twikilink" href="/pmwiki/pmwiki.php/Main/RespawnPoint" title="/pmwiki/pmwiki.php/Main/RespawnPoint">Respawn Point</a>, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MarathonLevel" title="/pmwiki/pmwiki.php/Main/MarathonLevel">Marathon Level</a>, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MarathonBoss" title="/pmwiki/pmwiki.php/Main/MarathonBoss">Marathon Boss</a>, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/FinalDeathMode" title="/pmwiki/pmwiki.php/Main/FinalDeathMode">Final Death Mode</a>, and <a class="twikilink" href="/pmwiki/pmwiki.php/Main/PointOfNoContinues" title="/pmwiki/pmwiki.php/Main/PointOfNoContinues">Point of No Continues</a>. Contrast <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DeathIsASlapOnTheWrist" title="/pmwiki/pmwiki.php/Main/DeathIsASlapOnTheWrist">Death Is a Slap on the Wrist</a> and <a class="twikilink" href="/pmwiki/pmwiki.php/Main/RespawnOnTheSpot" title="/pmwiki/pmwiki.php/Main/RespawnOnTheSpot">Respawn on the Spot</a>. Often causes <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AntiPoopSocking" title="/pmwiki/pmwiki.php/Main/AntiPoopSocking">poopsocking</a>.
+</p><hr/><h2>Examples:</h2>
+<p></p><div class="folderlabel" onclick="toggleAllFolders();">    open/close all folders  </div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder0');">    Action Adventure </div><div class="folder" id="folder0" isfolder="true" style="display:block;">
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/CaveStory" title="/pmwiki/pmwiki.php/VideoGame/CaveStory">Cave Story</a></em>'s <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BrutalBonusLevel" title="/pmwiki/pmwiki.php/Main/BrutalBonusLevel">Brutal Bonus Level</a> not only is <a class="twikilink" href="/pmwiki/pmwiki.php/Main/NintendoHard" title="/pmwiki/pmwiki.php/Main/NintendoHard">Nintendo Hard</a>, but the player is required to do it all in one go, including its two bosses, one of which has four forms.
+</li><li> The entire final section of <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Ico" title="/pmwiki/pmwiki.php/VideoGame/Ico">ICO</a></em> has to be played in a single sitting, <span class="spoiler" title="you can set spoilers visible by default on your profile">since the save mechanic depends on Yorda and Ico holding hands, and Yorda has been petrified and spirited away by the Queen</span>. This actually adds a marvelous sense of fear and urgency to the already dark and eerie sequence, <span class="spoiler" title="you can set spoilers visible by default on your profile">and makes the player that much more desperate to find her again</span>.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/LaMulana" title="/pmwiki/pmwiki.php/VideoGame/LaMulana">La-Mulana</a></em>:
+<ul><li> In the original version, the Grail Point in the Shrine of the Mother permanently disappears once it becomes <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TheVeryDefinitelyFinalDungeon" title="/pmwiki/pmwiki.php/Main/TheVeryDefinitelyFinalDungeon">The Very Definitely Final Dungeon</a>. The remake makes players use a new checkpoint there.
+</li><li> Having no checkpoints is one thing that makes Hell Temple <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BrutalBonusLevel" title="/pmwiki/pmwiki.php/Main/BrutalBonusLevel">Hell Temple</a>.
+</li><li> Using checkpoints at all requires you to buy a few items <em>and</em> explore the ruins to obtain the Grail. This makes the early game a bit frustrating.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheLegendOfZeldaMajorasMask" title="/pmwiki/pmwiki.php/VideoGame/TheLegendOfZeldaMajorasMask">The Legend of Zelda: Majora's Mask</a></em>: After the opening cinematics, the player must go through the first path as a Deku until they finally reach the Clock Tower, which for a beginning player can take around 15 minutes, and is then followed by a waiting period which, due to the nature of saving in the game, lasts another 32 minutes. Luckily, you can pass the time more quickly by interacting with one of the two dancing scarecrows, and in the 3DS remake, the Owl Statues activate simply by examining them rather than needing to be struck with Link's sword.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/LuigisMansion" title="/pmwiki/pmwiki.php/VideoGame/LuigisMansion">Luigi's Mansion</a></em>'s fourth zone opens with the titular mansion getting plunged into a blackout, which not only brings the ghosts back and then some, but also drives the Toads, who save your progress, out of the house. Luigi needs to get the power back on before the player can save again normally, and due to the blackout, ghosts are now present in every room you've cleared, and respawn every time you reenter one. You are allowed <em>one</em> save, however, if you go into the Telephone Room and answer a call that turns out to be from Toad.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/LuigisMansionDarkMoon" title="/pmwiki/pmwiki.php/VideoGame/LuigisMansionDarkMoon">Luigi's Mansion: Dark Moon</a></em> has no mid-level checkpoints whatsoever and levels can take over half an hour on the first playthrough. The game isn't particularly difficult, but if you're playing poorly and getting unlucky with heart drops...
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/Metroid" title="/pmwiki/pmwiki.php/Franchise/Metroid">Metroid</a></em>:
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Metroid1" title="/pmwiki/pmwiki.php/VideoGame/Metroid1">Metroid 1</a></em>: Since this game precedes the introduction of Save Stations in the series, there are five checkpoints in the entire game, and all of them are at the start of each area you enter.
+</li><li> In the first <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MetroidPrime" title="/pmwiki/pmwiki.php/VideoGame/MetroidPrime">Metroid Prime</a></em> game, there's the beginning of <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ThatOneLevel" title="/pmwiki/pmwiki.php/Main/ThatOneLevel">Phazon Mines</a>. There's a save station near the entrance. It's the last one for a long time, and getting to the next one requires getting past <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DeathCourse" title="/pmwiki/pmwiki.php/Main/DeathCourse">a gauntlet of shadow troops, mega turrets, wave and ice troopers</a>, and two <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MiniBoss" title="/pmwiki/pmwiki.php/Main/MiniBoss">Mini-Boss</a> battles against an <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GiantMook" title="/pmwiki/pmwiki.php/Main/GiantMook">elite pirate</a> and a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/InvisibleMonsters" title="/pmwiki/pmwiki.php/Main/InvisibleMonsters">cloaked drone</a>. The entire segment usually <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MarathonLevel" title="/pmwiki/pmwiki.php/Main/MarathonLevel">takes an hour or more to complete</a>. If you happen to not realize that there was one there (and is completely possible since it is tucked away in the opposite side of the entrance), then the last save point would be Samus' ship (or the south-east corner of the Chozo Ruins).
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MetroidPrime2Echoes" title="/pmwiki/pmwiki.php/VideoGame/MetroidPrime2Echoes">Metroid Prime 2: Echoes</a></em> is infamous for having few life-restoring save points and a dark world that actively drains your life for much of the game. You can restore your life at the Light Beacons, but some areas like the Ing Hive/Sanctuary Fortress distance these ridiculously. The worst one however, is in the submerged part of Torvus Bog where you have to open three locks to gain access to the lowest levels, where the Gravity Boost (and the Alpha Blogg) is. Opening the last lock makes it impossible to get to the save station without the Gravity Boost...and the Alpha Blogg is right between the Gravity Boost and the save station.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MetroidPrime3Corruption" title="/pmwiki/pmwiki.php/VideoGame/MetroidPrime3Corruption">Metroid Prime 3: Corruption</a></em> has two areas:
+<ul><li> The GFS Valhalla. The only save point is Samus's gunship, left at the docking area, so the entire area has to be explored in one run without dying.
+</li><li> Once you hit <span class="spoiler" title="you can set spoilers visible by default on your profile"> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/VeryDefinitelyFinalDungeon" title="/pmwiki/pmwiki.php/Main/VeryDefinitelyFinalDungeon">Phaaze</a></span>, your ship locks you out, forcing you to finish the game in one go. Fortunately, there is a checkpoint once you reach the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/FinalBoss" title="/pmwiki/pmwiki.php/Main/FinalBoss">Final Boss</a>, so if you die fighting it you go back to the start of the fight.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MetroidFusion" title="/pmwiki/pmwiki.php/VideoGame/MetroidFusion">Metroid Fusion</a></em> has this before Yakuza, the giant spider boss. The power in the station goes out, so the only save point is your ship. The boss is fairly tough and requires navigating a maze full of Space Pirate disguised X parasites. There are also two power ups in the area. Dying at any point means traveling halfway across the station and collecting everything again. Less frustrating than most examples here, but definitely qualifies. Particularly bad because there <em>is</em> a checkpoint nearby, it's just useless because the power is off. It is by far the worst section of the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SelfImposedChallenge" title="/pmwiki/pmwiki.php/Main/SelfImposedChallenge">1% run</a>, which basically means having to avoid picking up any extra missile/health tanks throughout the game. The previously mentioned obstacles are now major obstacles. One of, if not the, hardest boss in the game is capable of killing Samus in one hit, and even if you manage to somehow defeat the boss, the enemies in the very next room, between you and the save point, are the first mooks that can kill Samus in one hit without any extra energy tanks.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MilonsSecretCastle" title="/pmwiki/pmwiki.php/VideoGame/MilonsSecretCastle">Milon's Secret Castle</a></em>: It appears, at first, that dying once sends you back to the beginning of the game. However, you actually <em>can</em> continue: <em>with a code</em> (although you can only do this if you've defeated the first boss (!)). It's also the same way in the Game Boy port, but instead of a cheat code, the game gives you a password immediately after a game over.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/PrinceOfPersiaTheTwoThrones" title="/pmwiki/pmwiki.php/VideoGame/PrinceOfPersiaTheTwoThrones">Prince of Persia: The Two Thrones</a></em> had a platforming sequence, a chariot sequence, and then a long boss fight with nary a checkpoint; a death meant replaying all of the above over again.
+</li><li> The first save point in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SphinxAndTheCursedMummy" title="/pmwiki/pmwiki.php/VideoGame/SphinxAndTheCursedMummy">Sphinx and the Cursed Mummy</a></em> is a remarkably long ways into the tutorial. The problem with this is not in the time it takes to get to it, however, but the fact that the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/NoobCave" title="/pmwiki/pmwiki.php/Main/NoobCave">Noob Cave</a> is actually filled with surprisingly <em>dangerous</em> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Mooks" title="/pmwiki/pmwiki.php/Main/Mooks">Mooks</a> that are very likely to make mincemeat of someone playing the game for the first time. Dying boots you back to the last save. No save? Have fun going through the 45-minute-long tutorial dungeon again!
+</li><li> The <a class="twikilink" href="/pmwiki/pmwiki.php/Main/UnexpectedGameplayChange" title="/pmwiki/pmwiki.php/Main/UnexpectedGameplayChange">motorbike levels</a> in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TombRaiderLegend" title="/pmwiki/pmwiki.php/VideoGame/TombRaiderLegend">Tomb Raider: Legend</a></em> are this. The levels loop until you kill a certain number of enemies. Combine the fact that on the harder difficulty levels some enemies can knock off <em>half of your life bar</em> with one shot, and that Lara apparently took shooting lessons from <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ImperialStormtrooperMarksmanshipAcademy" title="/pmwiki/pmwiki.php/Main/ImperialStormtrooperMarksmanshipAcademy">the Empire's finest</a>, and it becomes clear why these sections are an exercise in keyboard smashing.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/AnUntitledStory" title="/pmwiki/pmwiki.php/VideoGame/AnUntitledStory">An Untitled Story</a></em>, on regular mode and higher, cuts one save point from BlackCastle. On masterful mode and higher, another one disappears. This means you need to complete a good three quarters of this incredibly lengthy area without saving.
+</li><li> You made it to the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/FinalBoss" title="/pmwiki/pmwiki.php/Main/FinalBoss">Final Boss</a> of <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheForceUnleashed" title="/pmwiki/pmwiki.php/VideoGame/TheForceUnleashed">The Force Unleashed</a></em>? Well then, you better not turn the game off until you've beaten him, that is unless you feel like replaying a tedious platforming section and the fight with the <em><a class="twikilink" href="/pmwiki/pmwiki.php/Main/TheDragon" title="/pmwiki/pmwiki.php/Main/TheDragon">previous</a></em> boss all over again on your next try.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder1');">    Action Game </div><div class="folder" id="folder1" isfolder="true" style="display:block;">
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/BombermanActZero" title="/pmwiki/pmwiki.php/VideoGame/BombermanActZero">Bomberman Act:Zero</a></em>'s single-player campaign had 99 levels with no save points whatsoever. If the player dies or shuts off their <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/Xbox360" title="/pmwiki/pmwiki.php/UsefulNotes/Xbox360">Xbox 360</a> at any point in the game, they have to start the whole thing from the beginning.
+</li><li> The final stages of certain <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/Castlevania" title="/pmwiki/pmwiki.php/Franchise/Castlevania">Castlevania</a></em> games, such as <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SuperCastlevaniaIV" title="/pmwiki/pmwiki.php/VideoGame/SuperCastlevaniaIV">Super Castlevania IV</a></em>. The most notable offender was in the international versions of <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/CastlevaniaIIIDraculasCurse" title="/pmwiki/pmwiki.php/VideoGame/CastlevaniaIIIDraculasCurse">Castlevania III: Dracula's Curse</a></em>, which if the player died against Dracula, he/she would have to restart from A-2 instead of A-3 (like in the Japanese version). Special mention goes to <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Castlevania64" title="/pmwiki/pmwiki.php/VideoGame/Castlevania64">Castlevania 64</a></em>'s Duel Tower stage, where the developers <em>forgot to add save points</em>. Thankfully they fixed this for the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MissionPackSequel" title="/pmwiki/pmwiki.php/Main/MissionPackSequel">sort-of-but-not-really sequel</a> <em>Legacy Of Darkness</em>.
+</li><li> In the doujin game <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/CrescentPaleMist" title="/pmwiki/pmwiki.php/VideoGame/CrescentPaleMist">Crescent Pale Mist</a></em>, checkpoints only appear <em>BEFORE</em> a boss fight, meaning that dying before reaching the boss results in starting the Chapter all over again. Have fun <em>not</em> dying in <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TheMaze" title="/pmwiki/pmwiki.php/Main/TheMaze">Chapters 3 and 4</a>.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DeadRising" title="/pmwiki/pmwiki.php/VideoGame/DeadRising">Dead Rising</a></em> features a little of this in its main scenario (there are no soft checkpoints between going between sections of the mall or before fighting bosses), but Infinity Mode does not feature a single checkpoint nor way to save your game. As the sole objective of Infinity mode is to survive as long as you can, this can lead to trouble. One achievement requires you to stay alive for the real-time equivalent of <em>fourteen hours</em> - and when the game was released, the <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/XBox360" title="/pmwiki/pmwiki.php/UsefulNotes/XBox360">Xbox 360</a> was going through incredibly high rates of getting the RROD. Thankfully, its sequels fixed this problem: <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DeadRising2" title="/pmwiki/pmwiki.php/VideoGame/DeadRising2">Dead Rising 2</a></em> introduced checkpoints before going into different areas or fighting bosses, and <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DeadRising2" title="/pmwiki/pmwiki.php/VideoGame/DeadRising2">Dead Rising 2</a>: Off the Record</em> changed Infinity Mode to Sandbox Mode, adding the ability to save as well as checkpoints.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DevilMayCry" title="/pmwiki/pmwiki.php/VideoGame/DevilMayCry">Devil May Cry</a></em>: In the first three games, check points must be bought in the form of yellow orbs. They are quite expensive in the first playthrough, and if you run out, any death will send you back to the beginning of the mission.
+</li><li> Checkpoints in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/GodHand" title="/pmwiki/pmwiki.php/VideoGame/GodHand">God Hand</a></em> are invisible, so you can't tell if there are any in a level until you die. Generally, they're where the game loads a new screen (but not always)... which means that any level where the game doesn't have to load a new area, like "Flying Pyramid", has to be done in one go.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/NinjaGaiden" title="/pmwiki/pmwiki.php/VideoGame/NinjaGaiden">Ninja Gaiden</a></em>:
+<ul><li> The first <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/NES" title="/pmwiki/pmwiki.php/UsefulNotes/NES">NES</a> game sends you back to Stage 6-1 if you die on any of the final bosses.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/NinjaGaiden" title="/pmwiki/pmwiki.php/VideoGame/NinjaGaiden">Ninja Gaiden</a> Sigma 2</em> has a few passages involve several long and tough fights without the possibility to save in-between. Most notably the last parts of chapter 13 (including the very grueling stairway fight), 14 (the graveyard fights), and the first half of chapter 16 (a long straight corridor). The latter two have an appearance of <a class="twikilink" href="/pmwiki/pmwiki.php/Main/RecurringBoss" title="/pmwiki/pmwiki.php/Main/RecurringBoss">Recurring Bosses</a> out of nowhere without the usual auto-save. These passages are stressing in Normal but get <em>really</em> sadistic in Master Ninja.
+</li></ul></li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder2');">    First Person Shooter </div><div class="folder" id="folder2" isfolder="true" style="display:block;">
+<ul><li> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/HarderThanHard" title="/pmwiki/pmwiki.php/Main/HarderThanHard">Nightmare Mode</a> in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/AliensVsPredator2010" title="/pmwiki/pmwiki.php/VideoGame/AliensVsPredator2010">Aliens vs. Predator (2010)</a></em> disables the checkpoint system, meaning you get bumped back to the very beginning of the mission if you ever die (which, given the enemy's increased damage output, happens a lot).
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Battlefield3" title="/pmwiki/pmwiki.php/VideoGame/Battlefield3">Battlefield 3</a></em> has a few levels with a severe lack of checkpoints. The worst few involve playing a cutscene or introductory section before the actual combat.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/BioshockInfinite" title="/pmwiki/pmwiki.php/VideoGame/BioshockInfinite">Bioshock Infinite</a></em> relies entirely on autosave, and while it does save fairly often early on, the further into the game you go, the fewer save points there are. Not always noticeable on a regular playthrough, but on 1999 mode? Frustrating to no end.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Borderlands" title="/pmwiki/pmwiki.php/VideoGame/Borderlands">Borderlands</a></em> and <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Borderlands2" title="/pmwiki/pmwiki.php/VideoGame/Borderlands2">Borderlands 2</a></em> have a variant. There are plenty of New-U auto save points, and if you die in combat you respawn at one of those. However, when you quit, you respawn at the nearest Fast Travel station, and there is usually only one per map. This can be annoying if you need to quit before finishing a mission. The <em>Borderlands</em> DLC campaigns have it even worse: there is only one single Fast Travel <em>in the entire campaign</em>, and it's typically set a ways away from the crossroads leading to other maps, so if you simply <em>have</em> to quit the game in the middle of a mission set far from the initial map, you'll be forced to slog <em>aaaallll</em> the way over to the mission objective's location again.<span class="notelabel" onclick="togglenote('note0ysak');"><sup>note </sup></span><span class="inlinefolder" id="note0ysak" isnote="true" onclick="togglenote('note0ysak');" style="cursor:pointer;font-size:smaller;display:none;"><a class="twikilink" href="/pmwiki/pmwiki.php/Administrivia/TropesAreTools" title="/pmwiki/pmwiki.php/Administrivia/TropesAreTools">On a silver lining</a>, if you're done with a mission and have to turn it in at the DLC's first map, something that happens often, it's a trivial matter to quit and re-load instead of plodding the entire way back.</span>
+</li><li> The original <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/CallOfDuty" title="/pmwiki/pmwiki.php/VideoGame/CallOfDuty">Call of Duty</a></em> did not have checkpoints nearly as often as its later sequels, which made things all the more difficult considering it was also before the series used <a class="twikilink" href="/pmwiki/pmwiki.php/Main/RegeneratingHealth" title="/pmwiki/pmwiki.php/Main/RegeneratingHealth">Regenerating Health</a>. Fortunately, the first game also still allows you to make traditional saves and quicksaves whenever you want.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DarkForces" title="/pmwiki/pmwiki.php/VideoGame/DarkForces">Dark Forces</a></em> does not allow in-level saving that is common in first-person shooters. If Kyle gets killed, one extra life is consumed to respawn him at a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/CheckPoint" title="/pmwiki/pmwiki.php/Main/CheckPoint">Checkpoint</a>, which is only as inconvenient as running back to the spot is. Lose all your lives or abort the mission, however, and you'll have to start the level all over again.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FarCry" title="/pmwiki/pmwiki.php/VideoGame/FarCry">Far Cry</a></em>
+<ul><li> The original game features large, open levels with checkpoint saves and <em>nothing</em> else. Worse, if you wander off the beaten path or take a route other than the one the developers expected you to take, then it is entirely possible to miss the save point. The game contains a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DummiedOut" title="/pmwiki/pmwiki.php/Main/DummiedOut">Dummied Out</a> quicksave feature, presumably as a developer tool, which can be modded back in with a one-line config file tweak. Doing so (and using it) makes it very obvious how tightly the levels are tuned and paced around the save points, and <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GameBreaker" title="/pmwiki/pmwiki.php/Main/GameBreaker">completely changes the game balance</a>, so the starvation is likely intentional even if it is annoying.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FarCry2" title="/pmwiki/pmwiki.php/VideoGame/FarCry2">Far Cry 2</a></em> features no autosaves of any variety - the game only prompts you to save when you use a save point in either faction's headquarters or a cleared safehouse, if you pass the time by sleeping in a safehouse, or after riding between bus stations. This isn't restricting at all on PC, since there are also manual saves through the pause menu and a quicksave button. On consoles, however, this is a maddening restriction given the amount of time you need to spend even driving between save points and wherever a mission starts from, tells you to go, or ends at.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/GhostRecon" title="/pmwiki/pmwiki.php/VideoGame/GhostRecon">Ghost Recon</a></em>:
+<ul><li> <em>Advanced Warfighter</em> can have rather long times between checkpoints, along with some of the levels being <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MarathonLevel" title="/pmwiki/pmwiki.php/Main/MarathonLevel">very long in themselves</a>. This is especially painful on Hard difficulty, where nearly all enemy shots are a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/OneHitKill" title="/pmwiki/pmwiki.php/Main/OneHitKill">One-Hit Kill</a> to the player.
+</li><li> <em>Future Soldier</em> has checkpoints that, while perfectly fine for the lower difficulties, are spaced out just far enough to make things potentially tedious for those playing on Elite difficulty, especially if the level has a tactical challenge that requires playing on Elite. Unlocking the "Fixed Stock" attachment for singleplayer, one of the best attachments in the game, is considered one of the hardest things to do in the game, mostly because you have to <a class="twikilink" href="/pmwiki/pmwiki.php/Main/StealthBasedMission" title="/pmwiki/pmwiki.php/Main/StealthBasedMission">go through nearly all of the final mission without being detected</a> on Elite difficulty, with only one or two checkpoints to fall back on if you screw up at any point during it.
+</li></ul></li><li> Enforced with the Iron Skull from <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/Halo" title="/pmwiki/pmwiki.php/Franchise/Halo">Halo</a></em>. It's an <a class="twikilink" href="/pmwiki/pmwiki.php/Main/EasterEgg" title="/pmwiki/pmwiki.php/Main/EasterEgg">Easter Egg</a> that, if activated, forces the player to start the whole level over if they die, or sometimes just at when you last received a new directive. This holds true still for co-op mode, which normally respawns a dead player at his partner's location, but with Iron on forces them both to restart.
+</li><li> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/WhatCouldHaveBeen" title="/pmwiki/pmwiki.php/Main/WhatCouldHaveBeen">Originally</a>, <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Left4Dead" title="/pmwiki/pmwiki.php/VideoGame/Left4Dead">Left 4 Dead</a></em> would have the players start at the beginning of a campaign if they failed. <a class="twikilink" href="/pmwiki/pmwiki.php/Main/NintendoHard" title="/pmwiki/pmwiki.php/Main/NintendoHard">Yes, a usually hour-long campaign consisting of 3-5 sections and one Tank can send you all the way back</a>. Thankfully, Valve caught on to how frustrating it was from play testing and added checkpoints at the beginning of each section.
+</li><li> Brought back for a while in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Left4Dead2" title="/pmwiki/pmwiki.php/VideoGame/Left4Dead2">Left 4 Dead 2</a></em> for the "Iron Man" mutation. Not only is the game under Realism rules (no glows, no respawning in closets, Witches kill instantly), but if the whole team wipes out, the team is kicked back to the <em>lobby</em>. The Swamp Fever campaign in the same game is the least played due to how long each map can be and even the final map has you going on a long trek before you can get to the finale. Dying here means making that long trek to the finale all over again. Thanks to the ability to create custom levels for both <em>Left 4 Dead</em> games, some user made campaigns can go on for far too long before you reach the next safe house and dying means having that entire run completely wasted as you're sent back to the start.
+</li><li> The first three <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MedalOfHonor" title="/pmwiki/pmwiki.php/VideoGame/MedalOfHonor">Medal of Honor</a></em> console games had no in-level checkpoints. This was a major problem with the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MarathonLevel" title="/pmwiki/pmwiki.php/Main/MarathonLevel">longer levels</a> in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MedalOfHonorFrontline" title="/pmwiki/pmwiki.php/VideoGame/MedalOfHonorFrontline">Frontline</a></em>. In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MedalOfHonorRisingSun" title="/pmwiki/pmwiki.php/VideoGame/MedalOfHonorRisingSun">Rising Sun</a></em>, you often go two or three whole levels between checkpoints to save the game.
+<ul><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MedalOfHonorVanguard" title="/pmwiki/pmwiki.php/VideoGame/MedalOfHonorVanguard">Medal of Honor: Vanguard</a></em>, both of the levels in Operation Varsity ('Endgame' and 'The Crucible'), have very long intervals between checkpoints. Two sections in peticular are especially bad when it comes to checkpoints. The first is the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/HoldTheLine" title="/pmwiki/pmwiki.php/Main/HoldTheLine">Hold the Line</a> section in 'Endgame', which is very long and does not have any checkpoints between the start of it and the end. The second is the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SniperDuel" title="/pmwiki/pmwiki.php/Main/SniperDuel">Sniper Duel</a> section in 'The Crucible', which is very difficult and long and does not have any checkpoints between the start and the end, what's worse is that the next section after it also doesn't have any checkpoints, meaning if the player dies there, they have to go restart from the beginning of the sniper section.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/PerfectDark" title="/pmwiki/pmwiki.php/VideoGame/PerfectDark">Perfect Dark</a> Zero</em> has only 2 checkpoints per mission; one at the very beginning, and one about 3/4ths through or before the end level boss fight. This is fine for the shorter missions, but very noticeable on the longer ones. The difficulty level will also determine the amount of mid-level checkpoints available for missions. All of them are available on Agent and Special Agent, Perfect Agent will have 8 out of 13 checkpoints removed and Dark Agent will have all but the one for the tutorial level removed. Dark Agent also removes <a class="twikilink" href="/pmwiki/pmwiki.php/Main/RegeneratingHealth" title="/pmwiki/pmwiki.php/Main/RegeneratingHealth">Regenerating Health</a> and all body armor pickups, which can make many missions that were already long and/or hard even harder than before.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Resistance" title="/pmwiki/pmwiki.php/VideoGame/Resistance">Resistance</a>: Fall Of Man</em>: each level only had 1 or 2 checkpoints, with many major firefights between each checkpoint. Given how quickly you can go from full health to completely dead in this game, it's very common to get booted back 15-20 minutes of progress just as you're about to hit the next checkpoint. The sequels used a much more conventional and forgiving checkpoint system.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TronTwoPointOh" title="/pmwiki/pmwiki.php/VideoGame/TronTwoPointOh">Tron 2.0</a></em>: Autosaving only occurred at the start of a level, no matter how large said level was<span class="notelabel" onclick="togglenote('note1siv3');"><sup>note </sup></span><span class="inlinefolder" id="note1siv3" isnote="true" onclick="togglenote('note1siv3');" style="cursor:pointer;font-size:smaller;display:none;">Fortunately, you could quicksave whenever you wanted, except...</span>. Saving did not exist at all during the lightcycle matches.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/PAYDAY2" title="/pmwiki/pmwiki.php/VideoGame/PAYDAY2">PAYDAY 2</a></em> had Pro Jobs, before they were removed with "Hoxton's Housewarming Party" in October 2016. They'd give increased payment and experience from normal heists, but with the caveat that failing <em>any</em> day of the heist kicked you back out to the lobby to select a new heist.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/WolfensteinIITheNewColossus" title="/pmwiki/pmwiki.php/VideoGame/WolfensteinIITheNewColossus">Wolfenstein II: The New Colossus</a></em> ups the ante with the <em>Mein Leben</em> difficulty setting. Challenge-wise it is about the same level as the next hardest mode<span class="notelabel" onclick="togglenote('note24rei');"><sup>note </sup></span><span class="inlinefolder" id="note24rei" isnote="true" onclick="togglenote('note24rei');" style="cursor:pointer;font-size:smaller;display:none;">I am Death Incarnate</span>, but with the added catch of the player only having one life to try and beat the game <em>without checkpoints or being able to save at all</em>. Dying or quitting halfway boots the player back to the main menu and wipes their progress, essentially turning the whole game into a massive <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MarathonLevel" title="/pmwiki/pmwiki.php/Main/MarathonLevel">Marathon Level</a> that must be beaten in one sitting.
+</li></ul></div>
+<div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_3"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_3'); })</script></div></div><p></p><div class="folderlabel" onclick="togglefolder('folder3');">    Miscellaneous Games </div><div class="folder" id="folder3" isfolder="true" style="display:block;">
+<ul><li> None of the <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Action52" title="/pmwiki/pmwiki.php/VideoGame/Action52">Action 52</a></em> games have checkpoints, so you start from the beginning of the level if you die.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/ChimpsOnABlimp" title="/pmwiki/pmwiki.php/VideoGame/ChimpsOnABlimp">Chimps On A Blimp</a></em>: There are no save points at all, and every death sends the player back to the opening cutscene. Possibly <a class="twikilink" href="/pmwiki/pmwiki.php/Main/PlayedForLaughs" title="/pmwiki/pmwiki.php/Main/PlayedForLaughs">Played for Laughs</a>.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/GettingOverItWithBennettFoddy" title="/pmwiki/pmwiki.php/VideoGame/GettingOverItWithBennettFoddy">Getting Over It with Bennett Foddy</a></em> has no checkpoints; if you fall, you fall, and must climb back up again from however far you fell - potentially as far as the very beginning of the game.
+</li><li> Plenty of the old 8-bit games on the <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/ZXSpectrum" title="/pmwiki/pmwiki.php/UsefulNotes/ZXSpectrum">ZX Spectrum</a> and the like had no save points (48K was barely enough RAM for the game, never mind save states, and saving on the tape was normally impractical). Most egregious in the space shooter cum word puzzler cum history lesson <em>Starion</em>, a 243-level (counting each time zone as one level, a fair measurement) marathon with, in the original version, a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GameBreakingBug" title="/pmwiki/pmwiki.php/Main/GameBreakingBug">Game-Breaking Bug</a> somewhere around the 200th. Allowing five minutes a zone — easy when the word to assemble is "D", more difficult when it's "OBERAMMERGAU" — you're still looking at <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BladderOfSteel" title="/pmwiki/pmwiki.php/Main/BladderOfSteel">the better part of a day's solid play</a>. With no saves.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Superman64" title="/pmwiki/pmwiki.php/VideoGame/Superman64">Superman 64</a></em>: The maze levels have no checkpoints whatsoever; die at any point in a maze level and you must start over.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder4');">    Platform Game </div><div class="folder" id="folder4" isfolder="true" style="display:block;">
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/AdventureIsland" title="/pmwiki/pmwiki.php/VideoGame/AdventureIsland">Adventure Island</a> II</em> and <em>III</em> had no checkpoints within stages, in contrast to four for each level in <em>Adventure Island I</em>. However, the stages are shorter.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheAngryVideoGameNerdAdventures" title="/pmwiki/pmwiki.php/VideoGame/TheAngryVideoGameNerdAdventures">The Angry Video Game Nerd Adventures</a></em>, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/HarderThanHard" title="/pmwiki/pmwiki.php/Main/HarderThanHard">Fucking Impossible and YOLO modes</a> omit all checkpoints from the level, in addition to disabling saving, turning you into a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/OneHitPointWonder" title="/pmwiki/pmwiki.php/Main/OneHitPointWonder">One-Hit Point Wonder</a>, and limiting you to five lives and <em>one life</em> respectively.
+</li><li> The first <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/CaptainComic" title="/pmwiki/pmwiki.php/VideoGame/CaptainComic">Captain Comic</a></em> game has no ability to save. Fortunately, it can be finished in under an hour. The sequel isn't much better. You can save your game, but it only has two locations to reappear at on load, requiring lots of backtracking.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/DonkeyKong" title="/pmwiki/pmwiki.php/Franchise/DonkeyKong">Donkey Kong</a></em>:
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DonkeyKongCountry1" title="/pmwiki/pmwiki.php/VideoGame/DonkeyKongCountry1">Donkey Kong Country</a></em> for the Game Boy Color has modes unlocked after beating the game that allows for playthroughs of the game with either the halfway point barrel or the kong barrels removed, and is needed to 102% the game.
+</li><li> Both <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DonkeyKongCountry2DiddysKongQuest" title="/pmwiki/pmwiki.php/VideoGame/DonkeyKongCountry2DiddysKongQuest">Donkey Kong Country 2: Diddy's Kong Quest</a></em> and <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DonkeyKongCountry3DixieKongsDoubleTrouble" title="/pmwiki/pmwiki.php/VideoGame/DonkeyKongCountry3DixieKongsDoubleTrouble">Donkey Kong Country 3: Dixie Kong's Double Trouble!</a></em> have cheats which <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SelfImposedChallenge" title="/pmwiki/pmwiki.php/Main/SelfImposedChallenge">remove</a> all the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/CheckPoint" title="/pmwiki/pmwiki.php/Main/CheckPoint">Check Points</a> in the levels.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DonkeyKong64" title="/pmwiki/pmwiki.php/VideoGame/DonkeyKong64">Donkey Kong 64</a></em>, entering a new area within a world counts as a checkpoint, so it's normally not an issue. However, in Hideout Helm, because there are no indoor areas, you'll be sent to the beginning if you lose a life anywhere outside the Battle Arena. The time limit (which will be determined depending on how many blueprints were collected over the course of the game) further complicates this, because if you do lose a life the time limit will <em>not</em> reset; and if it runs out it will not only send the player back to the start as well, but also will reset all the progress done. The trope only stops being an issue after you complete the world's mission, as it will eliminate the time limit and, after a bit more progress, you'll finally find a warp panel to connect it to the one from the start and thus enable the world's only shortcut.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DonkeyKongCountryReturns" title="/pmwiki/pmwiki.php/VideoGame/DonkeyKongCountryReturns">Donkey Kong Country Returns</a></em> has a level (Muncher Marathon) that has an <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AdvancingWallOfDoom" title="/pmwiki/pmwiki.php/Main/AdvancingWallOfDoom">Advancing Wall of Doom</a> made of spiders. Once you hit the checkpoint, you can finish the level in 30 seconds. Everywhere before that, if you die, you are back to square one. Near the end of the game, level 8-5's first stretch is quite a long and difficult one.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DonkeyKongCountryTropicalFreeze" title="/pmwiki/pmwiki.php/VideoGame/DonkeyKongCountryTropicalFreeze">Donkey Kong Country: Tropical Freeze</a></em> has the secret level 4-B, which is not only devoid of checkpoints but is an underwater maze with scarce supplies of air bubbles, meaning that the Kongs cannot get lost for too long. And once Hard Mode is unlocked, <em>all levels</em> are devoid of checkpoints as well.
+</li><li> Both <em>Returns</em> and <em>Tropical Freeze</em> also have the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BrutalBonusLevel" title="/pmwiki/pmwiki.php/Main/BrutalBonusLevel">Temples</a>. There are no checkpoints. For <em>any of them</em>. And the majority of them are <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MarathonLevel" title="/pmwiki/pmwiki.php/Main/MarathonLevel">5-8 minutes</a> of pure old-school platforming. Then there are the Golden Temple and Secret Seclusion levels, unlocked after conquering all Temple levels and defeating the respective <a class="twikilink" href="/pmwiki/pmwiki.php/Main/FinalBoss" title="/pmwiki/pmwiki.php/Main/FinalBoss">Final Bosses</a>, which lack checkpoints as well.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Frogger" title="/pmwiki/pmwiki.php/VideoGame/Frogger">Frogger: He's Back!</a></em> had a startling lack of checkpoints in its levels—when Frogger loses a life, runs out of time, or collected a frog, the player was sent back to the starting point of the level. Considering the levels are large and mazelike in their design and Frogger is a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/OneHitPointWonder" title="/pmwiki/pmwiki.php/Main/OneHitPointWonder">One-Hit Point Wonder</a>, this is a huge problem.
+</li><li> This is the most common complaint with <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/JakIIRenegade" title="/pmwiki/pmwiki.php/VideoGame/JakIIRenegade">Jak II</a></em> and probably the most contributing factor to <a class="twikilink" href="/pmwiki/pmwiki.php/Main/NintendoHard" title="/pmwiki/pmwiki.php/Main/NintendoHard">its difficulty</a>. Most if not all of city missions just have to be done in one go, and platforming segments have unholy distance between respawn points as well.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/IWannaBeTheGuy" title="/pmwiki/pmwiki.php/VideoGame/IWannaBeTheGuy">I Wanna Be the Guy</a></em>: The only difference between difficulty levels is how far apart the save points are. "Impossible" mode requires you to beat the entire game without save points.<span class="notelabel" onclick="togglenote('note3ffzw');"><sup>note </sup></span><span class="inlinefolder" id="note3ffzw" isnote="true" onclick="togglenote('note3ffzw');" style="cursor:pointer;font-size:smaller;display:none;">There actually <em>is</em> a way to save on Impossible. The "evil" save point (a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ChestMonster" title="/pmwiki/pmwiki.php/Main/ChestMonster">Chest Monster</a>) that appears near the end of the game is still there on Impossible, and due to a glitch you have exactly <em>one frame</em> of animation to save on it after its death.</span>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheLegendOfSpyro" title="/pmwiki/pmwiki.php/VideoGame/TheLegendOfSpyro">The Legend of Spyro</a></em> games - well, the first two - were <em>terrible</em> about this. Say you just got done fighting one of the game's most exhaustive battles, not counting the ten that came before it, and you're sure you're near the boss - then you get called away for dinner and shut down the game. It has no manual save feature, but that must mean it saves your progress on its own, right? <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TemptingFate" title="/pmwiki/pmwiki.php/Main/TemptingFate">I-it wouldn't be so cruel as to make you start from the very beginning of the level again, right? R-right guys?</a>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/LittleBigPlanet" title="/pmwiki/pmwiki.php/VideoGame/LittleBigPlanet">LittleBigPlanet</a></em> has this, not in the story levels, but some community levels only contain a few checkpoints, or sometimes just one Infinite Check Point at the beginning.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MapleStory" title="/pmwiki/pmwiki.php/VideoGame/MapleStory">MapleStory</a></em>: Loves to do this with some particularly nasty Jump Quests, especially the higher level ones (such as the Zakum party quest) which tend to involve roughly five minutes of jumping on platforms barely large enough to walk on, all while dodging falling rocks, poison butts, energy blasts, indestructible monsters, and the occasional bit of lag. If you fail/fall? Congratulations, you get to slowly walk through lava back to the start of the area.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/MegaMan" title="/pmwiki/pmwiki.php/Franchise/MegaMan">Mega Man</a></em>:
+<ul><li> Due to a bug, if you die against the first Fortress Boss (<a class="twikilink" href="/pmwiki/pmwiki.php/Main/ShoutOut" title="/pmwiki/pmwiki.php/Main/ShoutOut">Mothraya</a>) of <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MegaMan4" title="/pmwiki/pmwiki.php/VideoGame/MegaMan4">Mega Man 4</a></em>, Mega Man will restart not at the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BossCorridor" title="/pmwiki/pmwiki.php/Main/BossCorridor">Boss Corridor</a> like every other level, but at the level's midpoint, making the player run through it again.
+</li><li> The checkpoint in Plant Man's level in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MegaMan6" title="/pmwiki/pmwiki.php/VideoGame/MegaMan6">Mega Man 6</a></em> is placed after the first of <em>two</em> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MiniBoss" title="/pmwiki/pmwiki.php/Main/MiniBoss">Mini Bosses</a>, which is soon followed by a much-dreaded lengthy spring section up to the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BossCorridor" title="/pmwiki/pmwiki.php/Main/BossCorridor">Boss Corridor</a>.
+</li><li> The fan game <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MegaManUnlimited" title="/pmwiki/pmwiki.php/VideoGame/MegaManUnlimited">Mega Man Unlimited</a></em> is pretty stingy with checkpoints, and some of the ones that are there are badly placed (for example, right <em>before</em> a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MiniBoss" title="/pmwiki/pmwiki.php/Main/MiniBoss">Mini-Boss</a>).
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/NinjaSenki" title="/pmwiki/pmwiki.php/VideoGame/NinjaSenki">Ninja Senki</a></em>. 16 pretty long stages and no way to save. There are continues if you run out of lives, sure, but the game <em>has</em> to be beaten in one sitting. The level select cheat does make a bit easier, though. <span class="spoiler" title="you can set spoilers visible by default on your profile"> Although doing that essentially prevents you from getting the good ending, as you wouldn't get enough points for it if you start at a level late in the game.</span>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Oddworld" title="/pmwiki/pmwiki.php/VideoGame/Oddworld">Oddworld</a></em>, especially the first game, combined this with <a class="twikilink" href="/pmwiki/pmwiki.php/Main/NintendoHard" title="/pmwiki/pmwiki.php/Main/NintendoHard">Nintendo Hard</a> to produce severe cases of controller-snapping frustration. The developers added more frequent check-points and the ability to quick-save from the pause menu in the second game in response.
+</li><li> Averted with the Atari 2600 classic <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Pitfall" title="/pmwiki/pmwiki.php/VideoGame/Pitfall">Pitfall</a></em> in that you have a total of three lives. <a class="twikilink" href="/pmwiki/pmwiki.php/Main/WordOfGod" title="/pmwiki/pmwiki.php/Main/WordOfGod">Word of God</a> is that the game was originally conceived as only allowing you ONE life to complete the game, yet play testing revealed that it made the game <a class="twikilink" href="/pmwiki/pmwiki.php/Main/NintendoHard" title="/pmwiki/pmwiki.php/Main/NintendoHard">difficult</a>.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Plok" title="/pmwiki/pmwiki.php/VideoGame/Plok">Plok</a></em>: Not one single level in the game has a checkpoint. If you die, you go all the way back to the start of the level you were on, and while this might not seem that bad at first, Plok also has the distinction of being one of the most deceptively and unfairly difficult games on the SNES.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Prehistorik" title="/pmwiki/pmwiki.php/VideoGame/Prehistorik">Prehistorik</a></em> and its predecessor <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TitusTheFox" title="/pmwiki/pmwiki.php/VideoGame/TitusTheFox">Titus the Fox</a></em> give you a code for each level that lets you continue from that level. However, they don't give you that code at the beginning of the level: instead, you have to find it, somewhere in the middle, and quite often hidden in some hard-to-find area. If you almost complete level 4 without finding its code, well, back to level 3 for you.
+</li><li> <a class="twikilink" href="/pmwiki/pmwiki.php/Creator/Cactus" title="/pmwiki/pmwiki.php/Creator/Cactus">cactus</a>' game <em>Saru Ga Daisuki</em> has no save points whatsoever, since the author had no time to implement them (the game was made for a 24-hour competition) and later lost the source code. And it's not a very easy game, or one that's a lot of fun to repeat over and over.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/ShovelKnight" title="/pmwiki/pmwiki.php/VideoGame/ShovelKnight">Shovel Knight</a></em> allows you to <em>destroy</em> most checkpoints for some extra cash, inflicting checkpoint starvation upon <em>yourself</em>. On top of that, beating the game unlocks <a class="twikilink" href="/pmwiki/pmwiki.php/Main/NewGamePlus" title="/pmwiki/pmwiki.php/Main/NewGamePlus">New Game+</a>, which compensates for you getting to keep all of your upgrades from your first playthrough by making a number of changes to increase the game's difficulty, one of them being a reduced number of checkpoints per stage.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SonicTheHedgehog" title="/pmwiki/pmwiki.php/VideoGame/SonicTheHedgehog">Sonic the Hedgehog</a></em>:
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SonicUnleashed" title="/pmwiki/pmwiki.php/VideoGame/SonicUnleashed">Sonic Unleashed</a></em>: In the HD versions of the game, one mission involves getting to the end of Eggmanland, a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/NintendoHard" title="/pmwiki/pmwiki.php/Main/NintendoHard">Nintendo Hard</a> stage that is by far the longest in the game, with the time limit for the first Hot Dog trial being 75 minutes. It has to be done <strong>THREE TIMES</strong> in order to get the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BraggingRightsReward" title="/pmwiki/pmwiki.php/Main/BraggingRightsReward">trophy/achievement</a>. <strong>WITH</strong> the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TimedMission" title="/pmwiki/pmwiki.php/Main/TimedMission">time limit</a> decreasing after each <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DifficultySpike" title="/pmwiki/pmwiki.php/Main/DifficultySpike">succession</a> up to <em>45 minutes</em>. Did we mention that you get no checkpoints at all and dying at any point forces you to restart from the beginning?
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SonicTheHedgehog2006" title="/pmwiki/pmwiki.php/VideoGame/SonicTheHedgehog2006">Sonic the Hedgehog (2006)</a></em> has several stages that lack checkpoints until several minutes in and have little to none afterward. The final stage, End of the World, takes the cake, however, being a grueling <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AllTheWorldsAreAStage" title="/pmwiki/pmwiki.php/Main/AllTheWorldsAreAStage">gauntlet of no less than seven previous levels</a> played back-to-back with <em>no checkpoints whatsoever</em>, and <a class="twikilink" href="/pmwiki/pmwiki.php/Main/OneHitKill" title="/pmwiki/pmwiki.php/Main/OneHitKill">instant-kill</a> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DemonicSpiders" title="/pmwiki/pmwiki.php/Main/DemonicSpiders">black holes</a> popping up everywhere to make things even worse.
+</li><li> Star Light Zone in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SonicTheHedgehog1" title="/pmwiki/pmwiki.php/VideoGame/SonicTheHedgehog1">Sonic the Hedgehog</a></em> has just a single checkpoint placed before the boss in act 3. Just to be even meaner, there are no rings near it and the end of the level is a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/PointOfNoReturn" title="/pmwiki/pmwiki.php/Main/PointOfNoReturn">Point of No Return</a>. The checkpoints were probably removed after Sonic Team realized how much harder the zones before Star Light are.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/SuperMarioBros" title="/pmwiki/pmwiki.php/Franchise/SuperMarioBros">Super Mario Bros.</a></em> series:
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SuperMarioBros1" title="/pmwiki/pmwiki.php/VideoGame/SuperMarioBros1">Super Mario Bros.</a></em> has invisible checkpoints near the middle of most levels, except for castle levels and all of World 8. In some later levels, these checkpoints do more harm than good, as they are often located after the one power-up in the level and <a class="twikilink" href="/pmwiki/pmwiki.php/Main/RatchetScrolling" title="/pmwiki/pmwiki.php/Main/RatchetScrolling">you can't backtrack</a>.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SuperMarioBrosTheLostLevels" title="/pmwiki/pmwiki.php/VideoGame/SuperMarioBrosTheLostLevels">Super Mario Bros.: The Lost Levels</a></em>: Like the original, castles and World 8 have no checkpoints, and this time neither do the extra worlds after 8 (9 and A-D).
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SuperMarioBros2" title="/pmwiki/pmwiki.php/VideoGame/SuperMarioBros2">Super Mario Bros. 2</a></em>: Doorways act as checkpoints, but they are scarce otherwise, which becomes troublesome when the characters have to take a key to a <em>locked</em> door while being chased by a Phanto.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SuperMarioBros3" title="/pmwiki/pmwiki.php/VideoGame/SuperMarioBros3">Super Mario Bros. 3</a></em>: In contrast to the previous three games, the game has no in-level checkpoints. However, the newly-introduced World Map allows the player to use inventory items or sometimes choose a different level to tackle after losing a life. Many of the levels are noticeably shorter as well compared to previous games.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SuperMarioWorld" title="/pmwiki/pmwiki.php/VideoGame/SuperMarioWorld">Super Mario World</a></em>: Most levels have one and only one midway checkpoint. They are actually visible, though some require the player to take hidden paths to reach them. Underwater levels, auto-scrolling levels, and the entirety of the Star World and Special World do not contain a checkpoint.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SuperMarioLand2SixGoldenCoins" title="/pmwiki/pmwiki.php/VideoGame/SuperMarioLand2SixGoldenCoins">Super Mario Land 2: 6 Golden Coins</a></em>: The levels for the most part have checkpoints (bells in this game). However, in Wario's Castle, not only is the level longer than any other with a 3-part boss battle against Wario at the end, but there is no checkpoint at all! There's also Space Zone 2, which is one straight <a class="twikilink" href="/pmwiki/pmwiki.php/Main/UnexpectedGenreChange" title="/pmwiki/pmwiki.php/Main/UnexpectedGenreChange">Unexpected Genre Change</a>.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SuperMario64" title="/pmwiki/pmwiki.php/VideoGame/SuperMario64">Super Mario 64</a></em>: With the exception of checkpoints right before Bowser fights (as well as bosses added in the DS remake) and a few other rare instances, there are no checkpoints. If you fall off the stage and lose a life, it's all the way back to the beginning of the level for you. If you travel into the volcano of <a class="twikilink" href="/pmwiki/pmwiki.php/Main/LethalLavaLand" title="/pmwiki/pmwiki.php/Main/LethalLavaLand">Lethal Lava Land</a> or the pyramid of <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ShiftingSandLand" title="/pmwiki/pmwiki.php/Main/ShiftingSandLand">Shifting Sand Land</a>, you do begin inside the structures if you lose a life before getting a star.
+</li><li> Losing a life in a standard level mission in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SuperMarioSunshine" title="/pmwiki/pmwiki.php/VideoGame/SuperMarioSunshine">Super Mario Sunshine</a></em> will kick you back to that level's entrance in Delfino Plaza. However, the game makes an exception with the obstacle courses (including those of the Sky &amp; Sea variety): You can retry them as many times as lives you have left without needing to re-enter the mission where they're located, let alone having to reach them again. Another exception is made with the final battle (which comes off as a huge relief, considering the very difficult path in Corona Mountain).
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SuperMarioGalaxy" title="/pmwiki/pmwiki.php/VideoGame/SuperMarioGalaxy">Super Mario Galaxy</a></em> and <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SuperMarioGalaxy2" title="/pmwiki/pmwiki.php/VideoGame/SuperMarioGalaxy2">Super Mario Galaxy 2</a></em>
+<ul><li> Some missions are rather long with no checkpoints in them at all, most notably the Daredevil comets, whose primary objective is to finish the stage as a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/OneHitPointWonder" title="/pmwiki/pmwiki.php/Main/OneHitPointWonder">One-Hit Point Wonder</a>. The two most infamous ones are for "The Sinking Lava Spire" in the first game, which requires the player to traverse the longest mission in <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ThatOneLevel" title="/pmwiki/pmwiki.php/Main/ThatOneLevel">That One Level</a>; and "The Perfect Run" in the second, taking place in by far the hardest stage (Grandmaster Galaxy) in a game with a massive <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SequelDifficultySpike" title="/pmwiki/pmwiki.php/Main/SequelDifficultySpike">Sequel Difficulty Spike</a>.
+</li><li> In both games, there's speed run challenges where you have to beat levels quickly due to a stingy time limit while (in the second) collecting stopwatches to add a few more seconds to your timer. None of these challenges have checkpoints at all, so if you screw up, you have to start over from the beginning. There is one exception; one of the speed run levels in the second game takes place in a Bowser level, which is naturally longer than a standard level. There's one checkpoint in that specific challenge because the level is simply too long for players to keep restarting if they fail every time.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SuperMario3DLand" title="/pmwiki/pmwiki.php/VideoGame/SuperMario3DLand">Super Mario 3D Land</a></em> has S8-Crown, which is even longer than Grandmaster Galaxy, and no easier (unless you bring in power-ups). Even the standard last level (at the end of regular World 8) has this; before the checkpoint is a fairly large castle stage, and after it is probably the longest fight against Bowser in the whole series, certainly the longest in 3D.
+</li><li> There are zero checkpoints in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/NewSuperLuigiU" title="/pmwiki/pmwiki.php/VideoGame/NewSuperLuigiU">New Super Luigi U</a></em>. Every stage has a very strict time limit, though, so it doesn't really matter.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SuperMario3DWorld" title="/pmwiki/pmwiki.php/VideoGame/SuperMario3DWorld">Super Mario 3D World</a></em> has this with two levels from World Crown, Champion's Road and Mystery House Marathon. The former is a brutal six part <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MarathonLevel" title="/pmwiki/pmwiki.php/Main/MarathonLevel">Marathon Level</a>, while the latter is <em>another</em> Marathon Level consisting of thirty ten second challenges in a row. Neither of them have checkpoints anywhere. Most levels from the Mushroom and Flower worlds, including the difficult <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BossRush" title="/pmwiki/pmwiki.php/Main/BossRush">Boss Rush</a> level, are devoid of checkpoints as well.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SuperMarioMaker" title="/pmwiki/pmwiki.php/VideoGame/SuperMarioMaker">Super Mario Maker</a></em> at first did not have checkpoints to be placed in levels, until a November 2015 update was added to allow players to place checkpoints in any level. The trope still applies to the pre-built sample levels, as all of them have remained unchanged since the game's release. The 3DS version has them within the base content, and most levels in the story mode (Super Mario Challenge) have them accordingly... except they're useless if you're aiming for the levels' extra objectives, as you won't be allowed to complete them if you respawn from a checkpoint after losing a life (this is done likely to prevent cheating, but it's still a problem if the level is too long).
+</li><li> There are no checkpoints at all in two of <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SuperMarioOdyssey" title="/pmwiki/pmwiki.php/VideoGame/SuperMarioOdyssey">Super Mario Odyssey</a></em>'s post-game areas, "Arrival at Rabbit Ridge" in the Dark Side (a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BossRush" title="/pmwiki/pmwiki.php/Main/BossRush">Boss Rush</a> that pits Mario against the Broodals), and "Long Journey's End" at Culmina Crater in the Darker Side (which is also the longest of these final challenge type levels in a Mario game to date).
+</li><li> A lot of <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SuperMarioWorld" title="/pmwiki/pmwiki.php/VideoGame/SuperMarioWorld">Super Mario World</a></em> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GameMod" title="/pmwiki/pmwiki.php/Main/GameMod">ROM hacks</a> contain this due to having <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MarathonLevel" title="/pmwiki/pmwiki.php/Main/MarathonLevel">Marathon Levels</a>, since by default, Mario World levels can only have one <a class="twikilink" href="/pmwiki/pmwiki.php/Main/CheckPoint" title="/pmwiki/pmwiki.php/Main/CheckPoint">Checkpoint</a>. Of course, players who want to can always <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DefiedTrope" title="/pmwiki/pmwiki.php/Main/DefiedTrope">use save states</a>, which <a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/KaizoMarioWorld" title="/pmwiki/pmwiki.php/VideoGame/KaizoMarioWorld">some developers count on</a>.
+</li><li> The <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SuperMarioWorld" title="/pmwiki/pmwiki.php/VideoGame/SuperMarioWorld">Super Mario World</a></em> hack <em>Touhou Mario</em> has ZERO save points. Or checkpoints. And just one life before you get game over and have to restart EVERYTHING. And this game is <a class="twikilink" href="/pmwiki/pmwiki.php/Main/PlatformHell" title="/pmwiki/pmwiki.php/Main/PlatformHell">Platform Hell</a> meets <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BulletHell" title="/pmwiki/pmwiki.php/Main/BulletHell">Bullet Hell</a> in difficulty, every boss is a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MarathonBoss" title="/pmwiki/pmwiki.php/Main/MarathonBoss">Marathon Boss</a>, and one area has you beat the equivalent of four FULL LENGTH levels and FOUR <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MarathonBoss" title="/pmwiki/pmwiki.php/Main/MarathonBoss">Marathon Bosses</a> in a row! The final bosses have between four and eight phases to them too. You can find it <a class="urllink" href="http://www.smwcentral.net/?p=showhack&amp;id=6586">here<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a>.
+</li></ul></li><li> Checkpoints are very rare to find in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TinyToonAdventuresBustersHiddenTreasure" title="/pmwiki/pmwiki.php/VideoGame/TinyToonAdventuresBustersHiddenTreasure">Tiny Toon Adventures: Buster's Hidden Treasure</a></em>. They are usually after Buster goes through a door that leads to a new part of the level. The final <a class="twikilink" href="/pmwiki/pmwiki.php/Main/EternalEngine" title="/pmwiki/pmwiki.php/Main/EternalEngine">factory</a> stages are a prime example.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TeenageMutantNinjaTurtles" title="/pmwiki/pmwiki.php/VideoGame/TeenageMutantNinjaTurtles">Teenage Mutant Ninja Turtles</a></em>: There are zero checkpoints in the sixth and final stage, the Technodrome. Losing a turtle at any point of the stage will restart you at the beginning of the level.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/VVVVVV" title="/pmwiki/pmwiki.php/VideoGame/VVVVVV">VVVVVV</a></em>:
+<ul><li> Getting the Shiny Trinket in "Prize for the Reckless" requires the player to refrain from using any checkpoint past the room the trinket is in.<span class="notelabel" onclick="togglenote('note4m7vf');"><sup>note </sup></span><span class="inlinefolder" id="note4m7vf" isnote="true" onclick="togglenote('note4m7vf');" style="cursor:pointer;font-size:smaller;display:none;"> The player must activate a moving platform from the top of the screen, and then ride on that moving platform from the bottom. However, traveling from the top to the bottom of that screen normally requires traversing several other screens. Once you leave a screen, all changes made to that screen reset, so the moving platform would no longer be active. The solution is to activate a checkpoint at the bottom of the first screen, make it to the top of that screen without hitting any other checkpoints, activate the moving platform, and finally, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ViolationOfCommonSense" title="/pmwiki/pmwiki.php/Main/ViolationOfCommonSense">kill yourself</a> so that you reappear at the checkpoint at the bottom. Because you never changed screens while respawning, the moving platform is still active, and you can ride it to the Shiny Trinket.</span>
+</li><li> The player level <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/BracketedBackslash" title="/pmwiki/pmwiki.php/VideoGame/BracketedBackslash">Bracketed Backslash</a></em> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SubvertedTrope" title="/pmwiki/pmwiki.php/Main/SubvertedTrope">subverts</a> this with the Side Shaft, its variant of the Tower, which at first looks like a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ThatOneLevel" title="/pmwiki/pmwiki.php/Main/ThatOneLevel">DTTHW clone</a>, meaning it would be an entire dungeon of swerving to avoid spikes with no breaks in between, but it's not. There's still swerving to avoid spikes, there are just breaks in between.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/YoshisIsland" title="/pmwiki/pmwiki.php/VideoGame/YoshisIsland">Yoshi's Island</a></em>:
+<ul><li> <a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SuperMarioWorld2YoshisIsland" title="/pmwiki/pmwiki.php/VideoGame/SuperMarioWorld2YoshisIsland">The first game</a> usually doesn't have this due to multiple middle rings, but it does in the first four extra levels, having no middle rings at all and all of them being quite difficult. The very first regular level doesn't have one either, but it's a relatively small and easy level so it's not a big deal.
+</li><li> There's one point in <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BrutalBonusLevel" title="/pmwiki/pmwiki.php/Main/BrutalBonusLevel">Endless World of Yoshis/Crazy Maze Days</a> in the GBA remake of the first game where this is a problem. You see, there's a long falling section with instant kill spikes, and after that, a checkpoint. Problem is, checkpoints work only once, leaving the player with a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SadisticChoice" title="/pmwiki/pmwiki.php/Main/SadisticChoice">Sadistic Choice</a>; use it straight after the spikes and then hope you don't mess up the next three or four rooms (and in that time, you have to dodge those spikes another two times), or use it after the tricky section has been beaten all three times and you've got the key, in which case once mess up will put you right at the start of the second area.
+</li><li> <em>Yoshi's Island DS</em> has 'Yikes! Boiling Hot!', in which the level has a stretch with THREE ROOMS with no checkpoints in between. Not short rooms, very long rooms equal to a <em>Super Mario Bros 3</em> level in length. Including at least one <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TrialAndErrorGameplay" title="/pmwiki/pmwiki.php/Main/TrialAndErrorGameplay">seemingly blind</a> lava trap. As well as both a finicky rope riding section and one where you to have navigate two lava spitting monsters (their attacks are <a class="twikilink" href="/pmwiki/pmwiki.php/Main/OneHitKill" title="/pmwiki/pmwiki.php/Main/OneHitKill">instant kills</a>, one spiky ball and chain, a sloped platform and instant kil lava in the space of less than a screen.
+</li></ul></li><li> Each of the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BrutalBonusLevel" title="/pmwiki/pmwiki.php/Main/BrutalBonusLevel">special stages</a> in the <em>Battle Kid</em> games have only one functional checkpoint; the one at the end before the stage's <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BonusBoss" title="/pmwiki/pmwiki.php/Main/BonusBoss">Bonus Boss</a>. The checkpoints in the middle of each stage are fake, with each one being unique in its own way:
+<ul><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/BattleKidFortressOfPeril" title="/pmwiki/pmwiki.php/VideoGame/BattleKidFortressOfPeril">Battle Kid: Fortress of Peril</a></em>'s only special stage, the fake checkpoint simply rises up out of the room as you approach it.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/BattleKid2MountainOfTorment" title="/pmwiki/pmwiki.php/VideoGame/BattleKid2MountainOfTorment">Battle Kid 2: Mountain of Torment</a></em>'s first special stage, the fake checkpoint simply changes position each time you approach and chase it. In the second special stage, it appears to work... and then shuts down with an "out of order" message. The third special stage's fake checkpoint <span class="spoiler" title="you can set spoilers visible by default on your profile">is a <a class="twikilink" href="/pmwiki/pmwiki.php/JustForFun/Rickroll" title="/pmwiki/pmwiki.php/JustForFun/Rickroll">Rickroll</a>, complete with a "never gonna save your game" message</span>.
+</li></ul></li><li> A common problem with the <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/JakAndDaxter" title="/pmwiki/pmwiki.php/VideoGame/JakAndDaxter">Jak and Daxter</a></em> games, particularly <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/JakIIRenegade" title="/pmwiki/pmwiki.php/VideoGame/JakIIRenegade">Jak II: Renegade</a></em>. You can go through fifteen-minute sequences sometimes, then die to a slip-up or an unseen projectile and have to start <em>the entire level</em> again. Checkpoints being unmarked didn't help matters.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Valfaris" title="/pmwiki/pmwiki.php/VideoGame/Valfaris">Valfaris</a></em>, like <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/ShovelKnight" title="/pmwiki/pmwiki.php/VideoGame/ShovelKnight">Shovel Knight</a></em>, encourages the player to engage in self-inflicted checkpoint starvation. Checkpoints require Resurrection Idols to activate, and though there are more than enough Idols to activate every checkpoint in the game, holding onto them increases your max health and energy, and at the end of every level is a machine that spits out weapon upgrade materials in exchange for Idols.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder5');">    Puzzle Game </div><div class="folder" id="folder5" isfolder="true" style="display:block;">
+<ul><li> A common criticism of old versions of <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/BendyAndTheInkMachine" title="/pmwiki/pmwiki.php/VideoGame/BendyAndTheInkMachine">Bendy and the Ink Machine</a></em> Chapter 2.
+</li><li> <em>Space <a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/BubbleBobble" title="/pmwiki/pmwiki.php/VideoGame/BubbleBobble">Puzzle Bobble</a></em> (aka <em>Space Bust-a-Move</em>)'s story mode: Unlike other Puzzle Bobble/Bust-A-Move games, if you lose, you have to start over at the beginning of the group of five levels per stage all over again, and that means if you collected a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Macguffin" title="/pmwiki/pmwiki.php/Main/Macguffin">Cosmo Bubble</a> without popping it, you have to do that over again.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheDameWasLoaded" title="/pmwiki/pmwiki.php/VideoGame/TheDameWasLoaded">The Dame Was Loaded</a></em> only has one checkpoint in the main character's office. This normally wouldn't matter, but here the entire game is timed, and going to and fro to save wastes a lot of time, forcing you to be very economical with saving. Given that there are plenty of ways to either fail instantly or fail long-term by not getting the right item for progression in time, the game is quite hard.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheImpossibleQuiz" title="/pmwiki/pmwiki.php/VideoGame/TheImpossibleQuiz">The Impossible Quiz</a></em>: There are over 100 questions with no checkpoints or continues, meaning that a mistake sends the player back to the beginning of the game. The game contains a lot of <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TrialAndErrorGameplay" title="/pmwiki/pmwiki.php/Main/TrialAndErrorGameplay">Trial-and-Error Gameplay</a>, and many of the questions are <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TimedMission" title="/pmwiki/pmwiki.php/Main/TimedMission">timed</a>, with the timer running out on a question counting as a loss. The game does provide "skips" so that the player can get past any question that they think they cannot answer <span class="spoiler" title="you can set spoilers visible by default on your profile"> until the last question, where the player must use <em>every</em> skip that the game offered to pass the question</span>. The sequel goes out of its way to mock the player for even wanting <a class="twikilink" href="/pmwiki/pmwiki.php/Main/CheckPoint" title="/pmwiki/pmwiki.php/Main/CheckPoint">Check Points</a>.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder6');">    Role Playing Game </div><div class="folder" id="folder6" isfolder="true" style="display:block;">
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/AlphaProtocol" title="/pmwiki/pmwiki.php/VideoGame/AlphaProtocol">Alpha Protocol</a></em> only saves at checkpoints, which can be few and far between. "Assault the Triad Hideout" is downright infuriating because of this: it seems to have exactly <em>one</em> checkpoint in the entire mission.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/ArcTheLad" title="/pmwiki/pmwiki.php/VideoGame/ArcTheLad">Arc the Lad</a> II</em> has a notable deficit of save points in some dungeons, with sometimes an hour between saving opportunities; occasional freezing can make things much more frustrating.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/BreathOfFireDragonQuarter" title="/pmwiki/pmwiki.php/VideoGame/BreathOfFireDragonQuarter">Breath of Fire: Dragon Quarter</a></em>: This trope can be invoked with some discretion to the player, unless they are going for <a class="twikilink" href="/pmwiki/pmwiki.php/Main/HundredPercentCompletion" title="/pmwiki/pmwiki.php/Main/HundredPercentCompletion">the highest D-Ratio</a>, in which case the trope applies for the whole game playthrough.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DarkSoulsI" title="/pmwiki/pmwiki.php/VideoGame/DarkSoulsI">Dark Souls</a></em> is downright <em>brutal</em> with bonfire (checkpoint) placement at times.
+<ul><li> You generally only get one or two per level, and some levels have none at all. While you can usually open up shortcuts on subsequent runs through areas and minibosses don't respawn, getting to some bosses can be incredibly difficult. Then after that, most bosses can kill you in one or two hits.
+</li><li> A particularly cruel example is the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/NamesToRunAwayFromReallyFast" title="/pmwiki/pmwiki.php/Main/NamesToRunAwayFromReallyFast">Taurus Demon</a>, the second boss. There are no shortcuts to open up to reach it more easily, so you have to play the whole level again when you get killed by it. And this is <a class="twikilink" href="/pmwiki/pmwiki.php/Main/EarlyGameHell" title="/pmwiki/pmwiki.php/Main/EarlyGameHell">at the start</a>, so the dozens of relatively weak enemies you have to fight are all life-threateningly hard.
+</li><li> While you don't have to play through the whole Tomb of the Giants to get to <a class="twikilink" href="/pmwiki/pmwiki.php/Main/FlunkyBoss" title="/pmwiki/pmwiki.php/Main/FlunkyBoss">Gravelord Nito</a>, you still have to go through a large chunk with some <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DemonicSpiders" title="/pmwiki/pmwiki.php/Main/DemonicSpiders">Demonic Spiders</a> such as the Pinwheel copies and skeleton dogs, which will take longer than actually fighting Nito.
+</li><li> In Quelaag's Domain and the beginning of the Demon's Ruins, there are 2 bonfires almost next to each other, which is rather pointless (although the one in Quelaag's Domain is one of the few bonfires that can be teleported to using the Lordvessel). On the other hand, New Londo Ruins (which is one of the hardest locations in the game, and has an even harder boss) has none.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DarkSouls2" title="/pmwiki/pmwiki.php/VideoGame/DarkSouls2">Dark Souls 2</a></em>:
+<ul><li> No-Man's Wharf is a painstakingly long stage, with several deadly enemies that can easily overpower inexperienced players. There's only one bonfire too, meaning if you die, you'll have to start over.
+</li><li> The Gutter is a cross between The Catacombs and the dreaded Blighttown of the first game. It's essentially one large <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BottomlessPit" title="/pmwiki/pmwiki.php/Main/BottomlessPit">Bottomless Pit</a>, with evil <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GoddamnedBats" title="/pmwiki/pmwiki.php/Main/GoddamnedBats">sentient statues</a> that shoot poison darts at you. If you have a torch, lighting the sconces scattered about makes it significantly easier, but it's still a long trek from start to finish. There are only two bonfires.
+</li></ul></li><li> Keeping a theme running, in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DarkSoulsIII" title="/pmwiki/pmwiki.php/VideoGame/DarkSoulsIII">Dark Souls III</a></em>, you have to go quite a long way into the Catacombs of Carthus before you actually find a bonfire.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DragonQuest" title="/pmwiki/pmwiki.php/VideoGame/DragonQuest">Dragon Quest</a></em> series allows the player to get saved only at a town church. Some towns don't even have one. You can't do a hard save in the field or dungeon, just a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SuspendSave" title="/pmwiki/pmwiki.php/Main/SuspendSave">Suspend Save</a>. Every game since the first, however, has offered the ability to teleport instantly to a town that allows you to save as a relatively low level spell and a very inexpensive item, and also a spell to instantly evacuate dungeons. However, in the 5th game, <em>Hand of the Heavenly Bride</em>, the return-to-save-point spell isn't available until about the halfway point in the game, which can cause issues.
+</li><li> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/HarderThanHard" title="/pmwiki/pmwiki.php/Main/HarderThanHard">Survival</a> difficulty in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Fallout4" title="/pmwiki/pmwiki.php/VideoGame/Fallout4">Fallout 4</a></em> disables manual saves besides a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SuspendSave" title="/pmwiki/pmwiki.php/Main/SuspendSave">Suspend Save</a> and only autosaves when you sleep in a bed. This effectively makes beds <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SavePoint" title="/pmwiki/pmwiki.php/Main/SavePoint">Save Points</a> and since there's no <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ZipMode" title="/pmwiki/pmwiki.php/Main/ZipMode">Fast Travel</a>, you may have quite a distance between saves in remote areas. There are also a few drawbacks to sleeping for more saves instead of because of exhaustion: Sleeping more spends more time, building up hunger and thirst, and lowers Adrenaline, a damage increase you get for kills. Dividing the same amount of sleep into shorter rests keeps you from restoring health and increases risk of disease.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/FinalFantasy" title="/pmwiki/pmwiki.php/Franchise/FinalFantasy">Final Fantasy</a></em> series:
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FinalFantasyI" title="/pmwiki/pmwiki.php/VideoGame/FinalFantasyI">Final Fantasy I</a></em> requires you to go through the Mirage Tower followed by the Floating Fortress with no chance to save in between, making both areas effectively one massive dungeon in practice. The PS1 remake averts it partially with RAM saves (which can be reloaded as long as you don't do something to clear the system's RAM, such as a hard reset), and later remakes avert it entirely by letting you save wherever you want.
+</li><li> The final tower in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FinalFantasyIII" title="/pmwiki/pmwiki.php/VideoGame/FinalFantasyIII">Final Fantasy III</a></em>. After the last save point in a small outdoor area after the third to last dungeon, there are 8 or 9 floors of the Crystal tower, followed by a boss, getting warped to the World of Darkness where there are 4 more tough minibosses, gaining equipment and experience for the final battle, the final boss battle, the entire closing sequence before the player is given another chance to save their game. The <a class="twikilink" href="/pmwiki/pmwiki.php/Main/UpdatedRerelease" title="/pmwiki/pmwiki.php/Main/UpdatedRerelease">Updated Re-release</a> kept this in <em>on behest of the fans</em>.
+</li><li> The beginning of <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FinalFantasyIV" title="/pmwiki/pmwiki.php/VideoGame/FinalFantasyIV">Final Fantasy IV</a></em> requires a lengthy cutscene, a non-controlled battle, another lengthy cutscene, some wandering around, <em>another</em> lengthy cutscene, and finally the prologue before being able to save.
+</li><li> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TheVeryDefinitelyFinalDungeon" title="/pmwiki/pmwiki.php/Main/TheVeryDefinitelyFinalDungeon">The Very Definitely Final Dungeon</a> of <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FinalFantasyV" title="/pmwiki/pmwiki.php/VideoGame/FinalFantasyV">Final Fantasy V</a></em> has one save point early on then none at all until a couple screens before the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/FinalBoss" title="/pmwiki/pmwiki.php/Main/FinalBoss">Final Boss</a>, with roughly half a dozen bosses in between. Oh, and both save points are also guarded by bosses.
+</li><li> The <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GoodBadBugs" title="/pmwiki/pmwiki.php/Main/GoodBadBugs">Airship glitch</a> in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FinalFantasyVI" title="/pmwiki/pmwiki.php/VideoGame/FinalFantasyVI">Final Fantasy VI</a></em> requires a self-imposed version of this — it lets you have the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GlobalAirship" title="/pmwiki/pmwiki.php/Main/GlobalAirship">Global Airship</a> much earlier than you're supposed to, but to activate the glitch you have to get from whatever point you want to have it at, all the way to the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DiscOneFinalDungeon" title="/pmwiki/pmwiki.php/Main/DiscOneFinalDungeon">Disc-One Final Dungeon</a>, without saving even once in between. Which certainly explains why nobody found the glitch in testing.
+</li><li> The <a class="twikilink" href="/pmwiki/pmwiki.php/Main/VeryDefinitelyFinalDungeon" title="/pmwiki/pmwiki.php/Main/VeryDefinitelyFinalDungeon">Northern Crater</a> in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FinalFantasyVII" title="/pmwiki/pmwiki.php/VideoGame/FinalFantasyVII">Final Fantasy VII</a></em> has no save points, but it does have a lot of tough enemies, the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/FinalBoss" title="/pmwiki/pmwiki.php/Main/FinalBoss">Final Boss</a> and a long cutscene. It gives the party one unique item that can create a save point, but the item is glitched and can make the dungeon <a class="twikilink" href="/pmwiki/pmwiki.php/Main/UnwinnableByMistake" title="/pmwiki/pmwiki.php/Main/UnwinnableByMistake">unwinnable</a>, so it's just best to ignore it. Earlier, the whirlwind maze: After the save point, you have a timing puzzle, a few long cutscenes, and a FMV before the next save. There's nothing particularly dangerous in-game there, but this area had a high crash rate in <a class="twikilink" href="/pmwiki/pmwiki.php/Main/PortingDisaster" title="/pmwiki/pmwiki.php/Main/PortingDisaster">the PC version</a>.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FinalFantasyTacticsAdvance" title="/pmwiki/pmwiki.php/VideoGame/FinalFantasyTacticsAdvance">Final Fantasy Tactics Advance</a></em> has several long cutscenes and two battles before the player can save the game.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FinalFantasyX" title="/pmwiki/pmwiki.php/VideoGame/FinalFantasyX">Final Fantasy X</a></em>, immediately after defeating Evrae the party raids the wedding ceremony in Bevelle, going through waves of enemy soldiers and mecha. There is no save point during this assault sequence, and you are likely drained from fighting Evrae. Lose to Bevelle's military and you'll have to fight that giant dragon all over again.
+</li><li> The entire Necrohol of Nabudis in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FinalFantasyXII" title="/pmwiki/pmwiki.php/VideoGame/FinalFantasyXII">Final Fantasy XII</a></em> is devoid of save crystals. This is, shall we say, somewhat inconvenient due to charming things like <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ManaBurn" title="/pmwiki/pmwiki.php/Main/ManaBurn">Mana Burn</a> monsters that turn up out of nowhere, a consistent baknamy <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ZergRush" title="/pmwiki/pmwiki.php/Main/ZergRush">Zerg Rush</a>, and a surprisingly common "rare game" monster. And that's <em>without</em> the monsters from the Chaos/Medallions sidequest.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/GoldenSun" title="/pmwiki/pmwiki.php/VideoGame/GoldenSun">Golden Sun</a></em> lets you save freely in general, but when the characters are in conversation with each other, those conversations last a very long time. And since the game is for the Game Boy Advance, it isn't unusual for the batteries to run out while being caught in the middle of one.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DotHackGUGames" title="/pmwiki/pmwiki.php/VideoGame/DotHackGUGames">.hack//G.U. Volume 3</a></em> has a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BonusDungeon" title="/pmwiki/pmwiki.php/Main/BonusDungeon">Bonus Dungeon</a> that subverts this. For the first 50 floors of the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MarathonLevel" title="/pmwiki/pmwiki.php/Main/MarathonLevel">100 floor dungeon</a>, a player can use checkpoints to return to root town and <a class="twikilink" href="/pmwiki/pmwiki.php/Main/RespawnOnTheSpot" title="/pmwiki/pmwiki.php/Main/RespawnOnTheSpot">return to the exact area in the dungeon</a>. After 50 floors however check point starvation goes into full effect.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/JadeCocoon" title="/pmwiki/pmwiki.php/VideoGame/JadeCocoon">Jade Cocoon</a></em> has you going through the <span class="spoiler" title="you can set spoilers visible by default on your profile"><a class="twikilink" href="/pmwiki/pmwiki.php/Main/FourIsDeath" title="/pmwiki/pmwiki.php/Main/FourIsDeath">4th forest</a> without being able to save the game nor fusing monsters</span> due to story elements, namely that <span class="spoiler" title="you can set spoilers visible by default on your profile">everyone in your village has been <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TakenForGranite" title="/pmwiki/pmwiki.php/Main/TakenForGranite">Taken for Granite</a></span>. The king... sovereign... some-guy-who-seems-to-be-in-charge in the next hub <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Lampshaded" title="/pmwiki/pmwiki.php/Main/Lampshaded">comments on your endurance</a>. The initial save point vanishes once you choose to go to sleep, which kicks off a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DreamSequence" title="/pmwiki/pmwiki.php/Main/DreamSequence">Dream Sequence</a>, a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/HopelessBossFight" title="/pmwiki/pmwiki.php/Main/HopelessBossFight">Hopeless Boss Fight</a>, loads of exposition, a tutorial fight, <em>another</em> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/HopelessBossFight" title="/pmwiki/pmwiki.php/Main/HopelessBossFight">Hopeless Boss Fight</a>, and still more exposition. Sleep to save time? <em>Twenty-four minutes.</em> You can even <em>see</em> the save point at around the 20-minute mark for an extra bit of cruelty.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/LostOdyssey" title="/pmwiki/pmwiki.php/VideoGame/LostOdyssey">Lost Odyssey</a>:</em> It is quite common for save points to be an hour or more apart in dungeons, most of which are awash with random encounters.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MassEffect2" title="/pmwiki/pmwiki.php/VideoGame/MassEffect2">Mass Effect 2</a></em> and <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MassEffect3" title="/pmwiki/pmwiki.php/VideoGame/MassEffect3">Mass Effect 3</a></em> were good about giving you lots of autosaves (usually after every battle and important cutscene), but God help you if you didn't take the time to save obsessively in <a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MassEffect1" title="/pmwiki/pmwiki.php/VideoGame/MassEffect1">the first game</a>. There was maybe one autosave per mission, two if the game was feeling merciful, so if you had shut down two of the three Moon base computers and then died, tah-dah! You're back at the very beginning of the level, having just landed on the moon. The <em>Mass Effect 3</em> finale is pretty bad at this, too. Starting at the moment you <span class="spoiler" title="you can set spoilers visible by default on your profile">get hit by Harbinger's beam</span>, manual saves are disabled, period, and the autosave after finishing the game overwrites any autosaves made during the actual finale. If you want to see more than one ending, better prepare for replaying through that whole section over and over again — complete with the ridiculously slow movement and long unskippable cutscenes.
+</li><li> The prologue of <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/NierAutomata" title="/pmwiki/pmwiki.php/VideoGame/NierAutomata">NieR: Automata</a></em> consists of an <a class="twikilink" href="/pmwiki/pmwiki.php/Main/UnexpectedShmupLevel" title="/pmwiki/pmwiki.php/Main/UnexpectedShmupLevel">Unexpected Shmup Level</a>, a miniboss, an entire level, and a prolonged, multi-stage boss fight, all of which has to be done without dying before the player gets a chance to save (and if the player dies before saving, their save file is basically unusable and has to be deleted or overwritten).
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/OctopathTraveler" title="/pmwiki/pmwiki.php/VideoGame/OctopathTraveler">Octopath Traveler</a></em>, you have to fight your way through an eight-man <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BossRush" title="/pmwiki/pmwiki.php/Main/BossRush">Boss Rush</a> to get to the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TrueFinalBoss" title="/pmwiki/pmwiki.php/Main/TrueFinalBoss">True Final Boss</a>, all without saving.
+</li><li> The <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/PaperMario" title="/pmwiki/pmwiki.php/VideoGame/PaperMario">Paper Mario</a></em> series has saving by use of Save Blocks, which you hit from underneath, thus activating them. But they are very rare.
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/PaperMario64" title="/pmwiki/pmwiki.php/VideoGame/PaperMario64">Paper Mario 64</a></em> does this at the beginning. You go from getting the invitation to going to the castle to finding Peach within the Castle to the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/HopelessBossFight" title="/pmwiki/pmwiki.php/Main/HopelessBossFight">Hopeless Boss Fight</a> with Bowser to lying there near Goomba Village to waking up in a Toad House before you can go outside and find a Save Block. Contrast with the sequel, which has you receive the letter and go to Rogueport. You step onto the dock, and can immediately go over and hit a Save Block.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/PaperMarioTheThousandYearDoor" title="/pmwiki/pmwiki.php/VideoGame/PaperMarioTheThousandYearDoor">Paper Mario: The Thousand-Year Door</a></em> and <em><a class="twikilink" href="/pmwiki/pmwiki.php/Videogame/SuperPaperMario" title="/pmwiki/pmwiki.php/Videogame/SuperPaperMario">Super Paper Mario</a></em>: The <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MarathonLevel" title="/pmwiki/pmwiki.php/Main/MarathonLevel">Pit of 100 Trials</a>, a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ExactlyWhatItSaysOnTheTin" title="/pmwiki/pmwiki.php/Main/ExactlyWhatItSaysOnTheTin">100-room dungeon</a> that provides no way to save progress during an attempt at beating it.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SuperPaperMario" title="/pmwiki/pmwiki.php/VideoGame/SuperPaperMario">Super Paper Mario</a></em> has multiple cutscenes and some gameplay lasting at least twice as long as <em>Paper Mario 1's</em>.
+</li></ul></li><li> The infamous <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BrutalBonusLevel" title="/pmwiki/pmwiki.php/Main/BrutalBonusLevel">Chrysler Buildings</a> in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/ParasiteEve" title="/pmwiki/pmwiki.php/VideoGame/ParasiteEve">Parasite Eve</a></em>, which has no save points anywhere and you're forced to trek up every flight of stairs to progress. Every 10th floor has a boss fight which wins you an elevator key to that floor if you beat the boss. Since the trek to the boss' floor can take a long time, you're left with a tough choice; go back down the stairs to get to the front door (or to the last usable elevator) if you want to save or press on and hope you can beat the next boss without dying.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Persona3" title="/pmwiki/pmwiki.php/VideoGame/Persona3">Persona 3</a></em>:
+<ul><li> The game makes saving difficult because it requires exiting your current level of Tartarus to do so, which means you need to start the current branch over again. However, trying to push too hard could mean getting in over your head, dying, and losing quite a bit of progress. This was changed in the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/UpdatedRerelease" title="/pmwiki/pmwiki.php/Main/UpdatedRerelease">Updated Re-release</a> <em>Persona 3 Portable</em>: by walking up the staircase in the entrance lobby of Tartarus, the player will be given the option to start at the highest floor reached so far.
+</li><li> The trope is played straight with non-Tartarus boss battles, however, and it's possible to put the game into an unwinnable state before the third boss battle, which is when the game starts taking all agency away from the player on the day of a full moon. Were you hoping to upgrade equipment? Not so much. You'll be forced to go through endless cutscenes over and over again until you win.
+</li><li> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/PlayableEpilogue" title="/pmwiki/pmwiki.php/Main/PlayableEpilogue">The Answer</a> is even crueler in this regard. In the base game, checkpoints can be found just before every Tartarus boss, allowing the player to go back down to the first floor to save and prep for the boss without losing their progress. The Answer puts these checkpoints not only <em>after</em> these bosses, but directly <em>behind</em> them, just to taunt you.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Persona4" title="/pmwiki/pmwiki.php/VideoGame/Persona4">Persona 4</a></em> falls into this when confronting the killer. The player needs to go through Magatsu-Inaba, which is technically a one-level dungeon, and then fight the killer. Immediately after this battle, there's several cutscenes, before the player is thrown into a battle against <span class="spoiler" title="you can set spoilers visible by default on your profile">Ameno-Sagiri</span> and further cutscenes, should that battle be won. Losing can result in a good 40 minutes of time having been wasted.
+</li><li> It takes roughly 20 to 30 minutes from starting <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/PokemonMysteryDungeonExplorers" title="/pmwiki/pmwiki.php/VideoGame/PokemonMysteryDungeonExplorers">Pokémon Mystery Dungeon: Explorers</a></em> before you are allowed your first save, not counting the brief unskippable cinematic.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/PokemonColosseum" title="/pmwiki/pmwiki.php/VideoGame/PokemonColosseum">Pokémon Colosseum</a></em>. You can only save at PCs, and it can get really annoying in long levels like Mt.Battle. Fortunately, <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/PokemonXD" title="/pmwiki/pmwiki.php/VideoGame/PokemonXD">Pokémon XD</a></em> gives you the 'save anywhere' ability of the main series games.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Quest64" title="/pmwiki/pmwiki.php/VideoGame/Quest64">Quest 64</a></em>.
+<ul><li> You can't technically <em>die</em> in this game; upon defeat; you keep all experience, but you forfeit all of the items you may have used before you were knocked out. However, there are several caves along the way, which can take anywhere from 20 minutes to 2 hours depending on your spirit levels. The Blue Cave in particular is a rather ridiculous exercise in patience. If you don't have the Healing spell from Water, your chances here are very slim.
+</li><li> The game starts you off at the top of a church. You need to make your way all the way through it, and into the first city just to save. This usually takes about 20 or so minutes, depending if you search for items/exposition.
+</li><li> The remake on the <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/GameBoyColor" title="/pmwiki/pmwiki.php/UsefulNotes/GameBoyColor">Game Boy Color</a> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/QuestBriansJourney" title="/pmwiki/pmwiki.php/VideoGame/QuestBriansJourney">Quest: Brian's Journey</a></em> does it in a different way. You have to go through a very long extended cutscene, about 30 minutes or so. However, this is subverted since you can save at any time outside of a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Cutscene" title="/pmwiki/pmwiki.php/Main/Cutscene">cutscene</a>.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/ResonanceOfFate" title="/pmwiki/pmwiki.php/VideoGame/ResonanceOfFate">Resonance of Fate</a></em> features exactly one permanent save point - your base of operations - that quickly becomes prohibitively hard to return to during an outing. The player can place their own save terminals on the world map fairly easily (and they're encouraged to, as this forms the cornerstone of several other game mechanics) but this is little comfort during dungeons, which are nearly all <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MarathonLevel" title="/pmwiki/pmwiki.php/Main/MarathonLevel">long and resource-taxing by design</a>. Fortunately, the "suspend" option common to handheld game is readily available, as long as one isn't actively being shot at.
+</li><li> This is a major part of the difficulty in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/ShinMegamiTenseiIIINocturne" title="/pmwiki/pmwiki.php/VideoGame/ShinMegamiTenseiIIINocturne">Shin Megami Tensei III: Nocturne</a></em>. Save spots are plentiful, but are <em>always</em> set at extremely long distances between each.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/ShinMegamiTenseiIV" title="/pmwiki/pmwiki.php/VideoGame/ShinMegamiTenseiIV">Shin Megami Tensei IV</a></em> lets you save and reload freely using the Gauntlet. Unfortunately, getting to the point where you gain access to said feature takes about twenty or so minutes of plot. More if you opt to explore Mikado at all.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/StarOceanTheSecondStory" title="/pmwiki/pmwiki.php/VideoGame/StarOceanTheSecondStory">Star Ocean: The Second Story</a></em> and <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/StarOceanTillTheEndOfTime" title="/pmwiki/pmwiki.php/VideoGame/StarOceanTillTheEndOfTime">Star Ocean: Till the End of Time</a></em>: Part of the difficulty of the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BonusDungeon" title="/pmwiki/pmwiki.php/Main/BonusDungeon">Cave of Trials</a> is the complete lack of save points throughout. Sometimes, you can go for literally over an hour between save points- this is particularly annoying when playing during a thunderstorm. Especially <a class="twikilink" href="/pmwiki/pmwiki.php/JustForFun/Egregious" title="/pmwiki/pmwiki.php/JustForFun/Egregious">egregious</a> in the second game, whose variant is far longer and filled with random encounters throughout.
+</li><li> In the <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TalesSeries" title="/pmwiki/pmwiki.php/VideoGame/TalesSeries">Tales Series</a></em>:
+<ul><li> The <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BonusDungeon" title="/pmwiki/pmwiki.php/Main/BonusDungeon">Bonus Dungeon</a> in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TalesOfPhantasia" title="/pmwiki/pmwiki.php/VideoGame/TalesOfPhantasia">Tales of Phantasia</a></em> is a long, difficult <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DungeonCrawling" title="/pmwiki/pmwiki.php/Main/DungeonCrawling">Dungeon Crawl</a> with the only savepoints at the beginning and at the end.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TalesOfBerseria" title="/pmwiki/pmwiki.php/VideoGame/TalesOfBerseria">Tales of Berseria</a></em> is usually fairly liberal with its save points, but the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BonusDungeon" title="/pmwiki/pmwiki.php/Main/BonusDungeon">Bonus Dungeon</a> called the Heavenly Steppes has no save points at all, requiring the player to clear it all in one go. While a player can use the quick save option to stop and come back later, dying in battle means starting the entire dungeon all over again, losing potentially hours of progress. It's one reason why the Heavenly Steppes is a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BrutalBonusLevel" title="/pmwiki/pmwiki.php/Main/BrutalBonusLevel">Brutal Bonus Level</a> of the first order, as it's the hardest dungeon in the game with the most powerful enemies and the best equipment drops. At least there's the option of <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BribingYourWayToVictory" title="/pmwiki/pmwiki.php/Main/BribingYourWayToVictory">Bribing Your Way to Victory</a> with Katz spirits to make the dungeon slightly easier.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheWorldEndsWithYou" title="/pmwiki/pmwiki.php/VideoGame/TheWorldEndsWithYou">The World Ends with You</a></em>:
+<ul><li> The game forces you to play through the entire first twenty-minute (tutorial) chapter before it lets you save... and then for about another ten minutes before you can save freely.
+</li><li> It also features a number of difficult bosses at the end of the game with no opportunity to save in between, although if you die, you can try again without having to repeat battles you've already won. The character Neku Sakuraba remarks beforehand that there may not be any save points for awhile, thus <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BreakingTheFourthWall" title="/pmwiki/pmwiki.php/Main/BreakingTheFourthWall">Breaking the Fourth Wall</a>.
+</li></ul></li><li> In the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/VeryDefinitelyFinalDungeon" title="/pmwiki/pmwiki.php/Main/VeryDefinitelyFinalDungeon">Very Definitely Final Dungeon</a> of <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Ys" title="/pmwiki/pmwiki.php/VideoGame/Ys">Ys</a> V</em>, you have to fight three <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ThatOneBoss" title="/pmwiki/pmwiki.php/Main/ThatOneBoss">very tough</a> bosses, with no save points in between. Unlike previous games where you could save anywhere, this one only allows you to save at inns in town.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder7');">    Shoot Em Up </div><div class="folder" id="folder7" isfolder="true" style="display:block;">
+<ul><li> The developers of <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/RType" title="/pmwiki/pmwiki.php/VideoGame/RType">Super R-Type</a></em> did not put any checkpoints whatsoever in levels. This is, in fact, <em>generous</em>, as dying deprives you of all powerups, and your basic ship is woefully underpowered and poorly protected by default. Starting the level over give you a breather at the beginning to get your Force back up to par to give you a chance. On the downside, dying to a boss means having to work your way back to it.
+</li><li> The final stage of the Famicom port of <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Gradius" title="/pmwiki/pmwiki.php/VideoGame/Gradius">Gradius</a> II</em> has no checkpoints. The stage is a bit shorter than the previous ones, but it is still long and challenging enough that one death is a serious setback.
+</li><li> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ThatOneLevel" title="/pmwiki/pmwiki.php/Main/ThatOneLevel">The ice cube stage</a> in the arcade version of <em>Gradius III</em> (and its PS2 and PSP ports) also lacks checkpoints. If you die on the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/HoldTheLine" title="/pmwiki/pmwiki.php/Main/HoldTheLine">Cube Attack</a> or the boss, you have to navigate the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MobileMaze" title="/pmwiki/pmwiki.php/Main/MobileMaze">Mobile Maze</a> all over again.
+</li><li> Averted to the point of deconstruction in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TouhouKanjudenLegacyOfLunaticKingdom" title="/pmwiki/pmwiki.php/VideoGame/TouhouKanjudenLegacyOfLunaticKingdom">Touhou Kanjuden ~ Legacy of Lunatic Kingdom</a></em>'s "Legacy" mode which gives you unlimited extra lives and splits each stage up into several chapters; if you die you simply restart at the beginning of your current chapter... What that means in practice is that you have to clear a game that, even in Touhou's <a class="twikilink" href="/pmwiki/pmwiki.php/Main/NintendoHard" title="/pmwiki/pmwiki.php/Main/NintendoHard">Nintendo Hard</a> collection, is considered <em>ludicrously</em> hard, with only one life's worth of resources, as opposed to the replenishing <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SmartBomb" title="/pmwiki/pmwiki.php/Main/SmartBomb">Smart Bombs</a> you noramlly get with each death. The effect is not entirely unlike playing a shump version of <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/IWannaBeTheGuy" title="/pmwiki/pmwiki.php/VideoGame/IWannaBeTheGuy">I Wanna Be the Guy</a></em>, which incidentally was <a class="twikilink" href="/pmwiki/pmwiki.php/Main/WordOfGod" title="/pmwiki/pmwiki.php/Main/WordOfGod">Word of God</a>'s inspiration for <em>Legacy of Lunatic Kingdom.</em>
+</li><li> <em>Project Root</em>, a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/NintendoHard" title="/pmwiki/pmwiki.php/Main/NintendoHard">Nintendo Hard</a> free-roaming shmup reminiscent of the <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/StrikeSeries" title="/pmwiki/pmwiki.php/VideoGame/StrikeSeries">Strike Series</a></em>, has no checkpoints at all during missions, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MarathonLevel" title="/pmwiki/pmwiki.php/Main/MarathonLevel">which can be very lengthy</a>, therefore you have to restart from the beginning of the mission once you run out of lives.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder8');">    Simulation Game </div><div class="folder" id="folder8" isfolder="true" style="display:block;">
+<ul><li> In the <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/AnimalCrossing" title="/pmwiki/pmwiki.php/VideoGame/AnimalCrossing">Animal Crossing</a></em> series, the player can save sometime before halfway through the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/JustifiedTutorial" title="/pmwiki/pmwiki.php/Main/JustifiedTutorial">Justified Tutorial</a>. Start a game, create a character, choose a house, and talk to all the villagers and the mayor, and this takes about 20 minutes on a new town file.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheHunterCallOfTheWild" title="/pmwiki/pmwiki.php/VideoGame/TheHunterCallOfTheWild">The Hunter: Call of the Wild</a></em>, the player character can only spawn at outposts, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DeathIsASlapOnTheWrist" title="/pmwiki/pmwiki.php/Main/DeathIsASlapOnTheWrist">and will respawn at the last one if s/he runs out of HP</a>. Problem? They can be HALF AN HOUR'S WALK apart, the primary HP drain is animal attacks, and some animals are hostile and persistent enough to count as <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DemonicSpiders" title="/pmwiki/pmwiki.php/Main/DemonicSpiders">Demonic Spiders</a>.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder9');">    Stealth Based Game </div><div class="folder" id="folder9" isfolder="true" style="display:block;">
+<ul><li> Let's just say that as a rule, due to the nature of stealth games involving you having to get around and usually take down difficult enemies without being caught, and restarting if you do happen to get caught, it is typically in good form to provide the player the ability to save for themselves after getting past a certain point, so they don't have to sneak through the whole level again. The <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/AssassinsCreed" title="/pmwiki/pmwiki.php/Franchise/AssassinsCreed">Assassin's Creed</a></em> series does not allow you to save manually. If you need to go undetected for any reason, and the level is particularly long, good luck, as <a class="twikilink" href="/pmwiki/pmwiki.php/Main/FramingDevice" title="/pmwiki/pmwiki.php/Main/FramingDevice">the Animus</a> will not be giving you much reprieve.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder10');">    Survival Horror </div><div class="folder" id="folder10" isfolder="true" style="display:block;">
+<ul><li> The <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/AmnesiaTheDarkDescent" title="/pmwiki/pmwiki.php/VideoGame/AmnesiaTheDarkDescent">Amnesia: The Dark Descent</a></em> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DownloadableContent" title="/pmwiki/pmwiki.php/Main/DownloadableContent">Downloadable Content</a> <em>Justine</em> only lasts a couple of hours, but you cannot save anywhere, unlike the main game where you could. This is a problem, because the player character is a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/OneHitPointWonder" title="/pmwiki/pmwiki.php/Main/OneHitPointWonder">One-Hit Point Wonder</a> and there are three terrifying and dangerous puzzles you have to survive.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/AlienIsolation" title="/pmwiki/pmwiki.php/VideoGame/AlienIsolation">Alien: Isolation</a></em> has autosaves only during certain level transitions and mostly relies on manual save points that take several seconds to use and do not pause the game while in use. This was done to add tension to the game but became a controversial among players and critics who thought that it improved the game and those who felt that it only added frustration through <a class="twikilink" href="/pmwiki/pmwiki.php/Main/FakeDifficulty" title="/pmwiki/pmwiki.php/Main/FakeDifficulty">Fake Difficulty</a>. Some missions are infamous simply for how far apart the save points are.
+</li><li> One of <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/ColdFear" title="/pmwiki/pmwiki.php/VideoGame/ColdFear">Cold Fear</a></em>'s most maligned features was the save system. The game could only be saved during an automatic prompt before certain plot-relevant scene transitions, with no manual way to save and no indication of when the next one would arrive. An inattentive player who accidentally declines to save won't get another chance to do so until the next prompt, potentially with a tricky puzzle or a boss between.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DeadSpace2" title="/pmwiki/pmwiki.php/VideoGame/DeadSpace2">Dead Space 2</a></em>: This trope is used deliberately in "Hardcore Mode". Specifically, it only allows the player to save three times in the whole game, and there are no checkpoints, other than at the disc change on the <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/Xbox360" title="/pmwiki/pmwiki.php/UsefulNotes/Xbox360">Xbox 360</a> version.
+</li><li> Autosaves in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheEvilWithin" title="/pmwiki/pmwiki.php/VideoGame/TheEvilWithin">The Evil Within</a></em> mostly occur after you've made a lot of progress in a level or before a boss fight. While some gamers consider this an <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AntiFrustrationFeature" title="/pmwiki/pmwiki.php/Main/AntiFrustrationFeature">Anti-Frustration Feature</a>, given the game's difficulty, it still requires you to be extra careful with managing your ammo and health so you won't have to start over from the previous checkpoint. Plus, the only way to manually save the game is through the abandoned morgue which can only be accessed through mirror portals that appear <em>randomly</em> throughout the game.
+</li><li> The sequel, <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheEvilWithin2" title="/pmwiki/pmwiki.php/VideoGame/TheEvilWithin2">The Evil Within 2</a></em>, averts this with checkpoints being much more common as well as more safe houses for you to regularly save. However, it's still played straight when playing the game on <a class="twikilink" href="/pmwiki/pmwiki.php/Main/NintendoHard" title="/pmwiki/pmwiki.php/Main/NintendoHard">Classic Mode</a>. There, the autosave function has been disabled completely and you're only allowed to save 7 times throughout the whole game.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FatalFrame" title="/pmwiki/pmwiki.php/VideoGame/FatalFrame">Fatal Frame</a></em>:
+<ul><li> <em>Fatal Frame I</em> had a savepoint before enterting the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/PointOfNoReturn" title="/pmwiki/pmwiki.php/Main/PointOfNoReturn">Point of No Return</a>. Before reaching the Final Boss location, the player had to walk through a long passage filled with enemies. If the player lost to the Final Boss, they had to start all the way back.
+</li><li> <em>Fatal Frame II</em> was a bit kinder by having a savepoint at the same place, but worse because of the lengthy passage. This passage was longer than the one in the previous game and filled with several Mourners, meaning the player had to choose between wasting film on defeating them or trying to weave past them, risking damage. The <em>only</em> upside to this was, if the player was on an ending where the final battle was against <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BigBad" title="/pmwiki/pmwiki.php/Main/BigBad">Sae</a>, there was an autosave at The Abyss where she is fought.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Videogame/Subnautica" title="/pmwiki/pmwiki.php/Videogame/Subnautica">Subnautica</a></em> has no save points. At all. Instead, the player has a single save-slot per world, and needs to manually save. Frequent saving is recommended, as getting stuck somewhere and realizing your last save point was three hours ago is not fun. On the flipside, saving too often may result in getting stuck and not even being able to get out by reloading.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder11');">    Third Person Shooter </div><div class="folder" id="folder11" isfolder="true" style="display:block;">
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/HitmanBloodMoney" title="/pmwiki/pmwiki.php/VideoGame/HitmanBloodMoney">Hitman: Blood Money</a></em>: Depending on the difficulty level, you can only save a certain amount of times during a single mission. You get 3 different save spots and even if you overwrite the same save spot, it still counts as a save. The previous games allowed saving anywhere, or in the case of <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/HitmanCodename47" title="/pmwiki/pmwiki.php/VideoGame/HitmanCodename47">Codename 47</a></em>, gave two extra lives for a stage.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Hitman2SilentAssassin" title="/pmwiki/pmwiki.php/VideoGame/Hitman2SilentAssassin">Hitman 2: Silent Assassin</a></em> limited your number of saves at higher difficulties (with none at the highest), but did avert this trope at one point: On the game's one <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MarathonLevel" title="/pmwiki/pmwiki.php/Main/MarathonLevel">Marathon Level</a>, it awards you a free save halfway through, even on the highest difficulty.
+</li><li> Usually, losing a life in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/JetForceGemini" title="/pmwiki/pmwiki.php/VideoGame/JetForceGemini">Jet Force Gemini</a></em> put the character's back into the start of the area where he or she was defeated (they all have only three lives each per level, however, so the player has to keep an eye on not dying too often). However, the Interior level of the eighth world (Rith Essa) only consists of one long, marathon-sized area filled with enemies of many kinds, so every time Lupus (the character designated for that specific level) dies he'll have to go all the way until the part of the area where the Drones who killed him are. Luckily, this is also one of the few levels that don't need to be revisited in the future (as long as all Tribals are rescued the first time), as it has no Ship Parts or even optional goodies for Juno or Vela.
+</li><li> Although usually averted in the <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MaxPayne" title="/pmwiki/pmwiki.php/VideoGame/MaxPayne">Max Payne</a></em> series thanks to <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SaveScumming" title="/pmwiki/pmwiki.php/Main/SaveScumming">Quick Saves</a>, the console ports of the first two games were forced to use spaced-out checkpoints. In a game where a single shotgun blast can almost kill Max if you're unlucky, and explosions almost always kill you instantly. It gets worse in <em>Max Payne 3</em> because not even the PC version has quick saves. It's taken to the logical conclusion with Max Payne 3's <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TimeTrial" title="/pmwiki/pmwiki.php/Main/TimeTrial">New York Minute</a> mode, especially on <a class="twikilink" href="/pmwiki/pmwiki.php/Main/HarderThanHard" title="/pmwiki/pmwiki.php/Main/HarderThanHard">Hardcore.</a> You have to play through the entire game <a class="twikilink" href="/pmwiki/pmwiki.php/Main/FinalDeathMode" title="/pmwiki/pmwiki.php/Main/FinalDeathMode">on a single life</a> with a time limit ticking down; the main goal is extending the timer as high as you can through constant headshots and kills, and the cutscenes freeze the timer. But if you die even once, you have to start the entire run all over again.
+</li><li> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ThatOneLevel" title="/pmwiki/pmwiki.php/Main/ThatOneLevel">That One Room</a> in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/ResidentEvil4" title="/pmwiki/pmwiki.php/VideoGame/ResidentEvil4">Resident Evil 4</a></em>'s castle is not only a fair distance from the nearest typewriter, but it has no checkpoints other than the entry point. If you fail, you start the battle from the very beginning. Worse is Chapter 4-1, which is not only extremely long with few checkpoints or save points, but has a larger amount of tough enemies as well.
+</li><li> One of <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SyphonFilter" title="/pmwiki/pmwiki.php/VideoGame/SyphonFilter">Syphon Filter</a>: The Omega Strain</em>'s <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ScrappyMechanic" title="/pmwiki/pmwiki.php/Main/ScrappyMechanic">scrappy mechanics</a> is that unlike previous games, the level remains in the same state when you respawn at a checkpoint, and there's no way to save mid-level either, so if you screw up a mission objective, you have to restart from the beginning of the level.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder12');">    Tower Defense </div><div class="folder" id="folder12" isfolder="true" style="display:block;">
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/BloonsTowerDefense" title="/pmwiki/pmwiki.php/VideoGame/BloonsTowerDefense">Bloons Tower Defense</a></em> has the extreme tracks, which prevent you from saving <strong>at all</strong> unless you're playing the mobile version.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder13');">    Wide Open Sandbox </div><div class="folder" id="folder13" isfolder="true" style="display:block;">
+<ul><li> The <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/GrandTheftAuto" title="/pmwiki/pmwiki.php/VideoGame/GrandTheftAuto">Grand Theft Auto</a></em> series has a lot of this, though it gradually got better.
+<ul><li> The very first game only allowed you to save between levels. The first level, taking about an hour to complete was bad enough, but the final level takes 5-6 hours to grind enough points to complete. That's beyond "I'm going to play, I may be some time" and into skipping meals/sleep to get through in one sitting.
+</li><li> All of the games in the GTA 3 era had zero saving at all except for icons at safehouses, with <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/GrandTheftAutoViceCity" title="/pmwiki/pmwiki.php/VideoGame/GrandTheftAutoViceCity">Grand Theft Auto: Vice City</a></em> being the first to incorporate the ability to purchase new ones to make saving take less driving time. In all of them, failing a mission required you to drive all the way back to the starting location and restart the entire mission; you rarely got the option to skip part of the long drive through the mission. <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/GrandTheftAutoSanAndreas" title="/pmwiki/pmwiki.php/VideoGame/GrandTheftAutoSanAndreas">Grand Theft Auto: San Andreas</a></em> incorporates Vice City's purchasable safe house system and still lacks actual checkpoints within the missions except for the finale.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/GrandTheftAutoIV" title="/pmwiki/pmwiki.php/VideoGame/GrandTheftAutoIV">Grand Theft Auto IV</a></em> introduces autosaves after missions, but if you happen to turn it off, you only have one safehouse in each borough (and you <span class="spoiler" title="you can set spoilers visible by default on your profile"> lose the Broker one early in the game and never get a new one</span>), while the DLC only gives one or two safehouses for each protagonist in the <em>entire city</em>. Thankfully, the game introduced the ability to restart a mission via your in-game phone immediately after failing, but very few do anything but simply start the mission again from the beginning. The Ballad of Gay Tony DLC for IV finally addresses the issue by adding checkpoints, they are still quite scarce, though, each mission usually having one checkpoint.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/GrandTheftAutoV" title="/pmwiki/pmwiki.php/VideoGame/GrandTheftAutoV">Grand Theft Auto V</a></em> finally fixed the problem by introducing checkpoints for all missions, even short side missions that take a few minutes to complete. It also adds a quick save feature to your in-game phone, so you can save at any time (without the mandatory 6 hours of time passed if you save at a safehouse). However, random encounters (even if they include cutscenes) are always a one-shot deal without the option to retry again. Hope you didn't accidentally <a class="twikilink" href="/pmwiki/pmwiki.php/Main/PermanentlyMissableContent" title="/pmwiki/pmwiki.php/Main/PermanentlyMissableContent">kill that potential crew member on the way to the goal.</a>
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Minecraft" title="/pmwiki/pmwiki.php/VideoGame/Minecraft">Minecraft</a></em> has hardcore mode. While technically the game still saves constantly and in real time, the entire world will be deleted if the player dies in hardcore mode.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SaintsRow1" title="/pmwiki/pmwiki.php/VideoGame/SaintsRow1">Saints Row</a></em> had no checkpoints within missions. The hardest missions always, <strong>always</strong>, without fail, started out with a long, boring drive across the whole city before the action started. Have fun doing <strong>that</strong> over and over.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder14');">    Web Comics </div><div class="folder" id="folder14" isfolder="true" style="display:block;">
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/BrawlInTheFamily" title="/pmwiki/pmwiki.php/Webcomic/BrawlInTheFamily">Brawl in the Family</a></em> imagines what it might be like for Mario if his sole "checkpoint" was his birth in <a class="urllink" href="https://www.youtube.com/watch?v=tpeXTgwh7F4">this animated strip<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a>.
+</li></ul></div>
+<hr/>
+</div>
+<div class="alt-titles section section-fact">
+<h3>
+<strong>Alternative Title(s):</strong>
+<span>Start To Save</span> </h3>
+</div>
+<div class="square_ad footer-article-ad main_2" data-isolated="0"></div>
+<div class="section-links" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<div class="titles">
+<div><h3 class="text-center text-uppercase">Previous</h3></div>
+<div><h3 class="text-center text-uppercase">Index</h3></div>
+<div><h3 class="text-center text-uppercase">Next</h3></div>
+</div>
+<div class="links">
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/ChallengeRun">Challenge Run</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/VideoGameDifficultyTropes">Video Game Difficulty Tropes</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/ChestMonster">Chest Monster</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Administrivia/TropesAreTools">Tropes Are Tools</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/FakeDifficulty">Fake Difficulty</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/EscortMission">Escort Mission</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/CharacterTiers">Character Tiers</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/VideoGameCulture">Video Game Culture</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/CheeseStrategy">Cheese Strategy</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/WebAnimation/DorklyOriginals">Dorkly Originals</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/ImageSource/Internet">ImageSource/Internet</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/SaveScumming">Save Scumming</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/CheckPoint">Checkpoint</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/VideoGameTropes">Video Game Tropes</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/ClassChangeLevelReset">Class Change Level Reset</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/BoobsAndButtPose">Boobs-and-Butt Pose</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/QuoteSource/Internet">QuoteSource/Internet</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/ColdTurkeysAreEverywhere">Cold Turkeys Are Everywhere</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="outer_ads_by_salon_wrapper" id="exco_player_insert_div">
+</div>
+</article>
+<div id="main-content-sidebar"><div class="sidebar-item display-options">
+<ul class="sidebar display-toggles">
+<li>Show Spoilers <div class="display-toggle show-spoilers" id="sidebar-toggle-showspoilers"></div></li>
+<li>Night Vision <div class="display-toggle night-vision" id="sidebar-toggle-nightvision"></div></li>
+<li>Sticky Header <div class="display-toggle sticky-header" id="sidebar-toggle-stickyheader"></div></li>
+<li>Wide Load <div class="display-toggle wide-load" id="sidebar-toggle-wideload"></div></li>
+</ul>
+<script>updateDesktopPrefs();</script>
+</div>
+<div class="sidebar-item ad sb-ad-unit">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_2"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_2'); });</script> </div>
+</div></div>
+<div class="sidebar-item quick-links" itemtype="http://schema.org/SiteNavigationElement">
+<p class="sidebar-item-title" data-title="Important Links">Important Links</p>
+<div class="padded">
+<a href="/pmwiki/query.php?type=att">Ask The Tropers</a>
+<a href="/pmwiki/query.php?type=tf">Trope Finder</a>
+<a href="/pmwiki/query.php?type=ykts">You Know That Show...</a>
+<a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a>
+<a href="/pmwiki/review_activity.php">Reviews</a>
+<a data-modal-target="login" href="/pmwiki/lbs.php">Live Blogs</a>
+<a href="/pmwiki/ad-free-subscribe.php">Go Ad Free!</a> </div>
+</div>
+<div class="sidebar-item sb-ad-unit">
+<div class="sidebar-section">
+<div class="square_ad ad-size-300x600 ad-section text-center">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_3"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_3'); });</script> </div>
+</div> </div>
+</div>
+</div>
+<div class="sidebar-item">
+<p class="sidebar-item-title" data-title="Crucial Browsing">Crucial Browsing</p>
+<ul class="padded font-s" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><a data-click-toggle="active" href="javascript:void(0);">Genre</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/ActionAdventureTropes" title="Main/ActionAdventureTropes">Action Adventure</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ComedyTropes" title="Main/ComedyTropes">Comedy</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CommercialsTropes" title="Main/CommercialsTropes">Commercials</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CrimeAndPunishmentTropes" title="Main/CrimeAndPunishmentTropes">Crime &amp; Punishment</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DramaTropes" title="Main/DramaTropes">Drama</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/HorrorTropes" title="Main/HorrorTropes">Horror</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LoveTropes" title="Main/LoveTropes">Love</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NewsTropes" title="Main/NewsTropes">News</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ProfessionalWrestling" title="Main/ProfessionalWrestling">Professional Wrestling</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SpeculativeFictionTropes" title="Main/SpeculativeFictionTropes">Speculative Fiction</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SportsStoryTropes" title="Main/SportsStoryTropes">Sports Story</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/WarTropes" title="Main/WarTropes">War</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Media</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/Media" title="Main/Media">All Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/AnimationTropes" title="Main/AnimationTropes">Animation (Western)</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Anime" title="Main/Anime">Anime</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ComicBookTropes" title="Main/ComicBookTropes">Comic Book</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FanFic" title="FanFic/FanFics">Fan Fics</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Film" title="Main/Film">Film</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/GameTropes" title="Main/GameTropes">Game</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Literature" title="Main/Literature">Literature</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MusicAndSoundEffects" title="Main/MusicAndSoundEffects">Music And Sound Effects</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NewMediaTropes" title="Main/NewMediaTropes">New Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/PrintMediaTropes" title="Main/PrintMediaTropes">Print Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Radio" title="Main/Radio">Radio</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SequentialArt" title="Main/SequentialArt">Sequential Art</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TabletopGames" title="Main/TabletopGames">Tabletop Games</a></li>
+<li><a href="/pmwiki/pmwiki.php/UsefulNotes/Television" title="Main/Television">Television</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Theater" title="Main/Theater">Theater</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/VideogameTropes" title="Main/VideogameTropes">Videogame</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Webcomics" title="Main/Webcomics">Webcomics</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Narrative</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/UniversalTropes" title="Main/UniversalTropes">Universal</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/AppliedPhlebotinum" title="Main/AppliedPhlebotinum">Applied Phlebotinum</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CharacterizationTropes" title="Main/CharacterizationTropes">Characterization</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Characters" title="Main/Characters">Characters</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CharactersAsDevice" title="Main/CharactersAsDevice">Characters As Device</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Dialogue" title="Main/Dialogue">Dialogue</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Motifs" title="Main/Motifs">Motifs</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NarrativeDevices" title="Main/NarrativeDevices">Narrative Devices</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Paratext" title="Main/Paratext">Paratext</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Plots" title="Main/Plots">Plots</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Settings" title="Main/Settings">Settings</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Spectacle" title="Main/Spectacle">Spectacle</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Other Categories</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/BritishTellyTropes" title="Main/BritishTellyTropes">British Telly</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TheContributors" title="Main/TheContributors">The Contributors</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CreatorSpeak" title="Main/CreatorSpeak">Creator Speak</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Creators" title="Main/Creators">Creators</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DerivativeWorks" title="Main/DerivativeWorks">Derivative Works</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LanguageTropes" title="Main/LanguageTropes">Language</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LawsAndFormulas" title="Main/LawsAndFormulas">Laws And Formulas</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ShowBusiness" title="Main/ShowBusiness">Show Business</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SplitPersonalityTropes" title="Main/SplitPersonalityTropes">Split Personality</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/StockRoom" title="Main/StockRoom">Stock Room</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TropeTropes" title="Main/TropeTropes">Trope</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Tropes" title="Main/Tropes">Tropes</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TruthAndLies" title="Main/TruthAndLies">Truth And Lies</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TruthInTelevision" title="Main/TruthInTelevision">Truth In Television</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Topical Tropes</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/BetrayalTropes" title="Main/BetrayalTropes">Betrayal</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CensorshipTropes" title="Main/CensorshipTropes">Censorship</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CombatTropes" title="Main/CombatTropes">Combat</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DeathTropes" title="Main/DeathTropes">Death</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FamilyTropes" title="Main/FamilyTropes">Family</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FateAndProphecyTropes" title="Main/FateAndProphecyTropes">Fate And Prophecy</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FoodTropes" title="Main/FoodTropes">Food</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/HolidayTropes" title="Main/HolidayTropes">Holiday</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MemoryTropes" title="Main/MemoryTropes">Memory</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MoneyTropes" title="Main/MoneyTropes">Money</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MoralityTropes" title="Main/MoralityTropes">Morality</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/PoliticsTropes" title="Main/PoliticsTropes">Politics</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ReligionTropes" title="Main/ReligionTropes">Religion</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SchoolTropes" title="Main/SchoolTropes">School</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="sidebar-item showcase">
+<p class="sidebar-item-title" data-title="Community Showcase">Community Showcase <a class="bubble float-right hover-blue" href="/pmwiki/showcase.php">More</a></p>
+<p class="community-showcase">
+<a href="https://sharetv.com/shows/echo_chamber" onclick="trackOutboundLink('https://sharetv.com/shows/echo_chamber');" target="_blank">
+<img alt="" class="lazy-image" data-src="/images/communityShowcase-echochamber.jpg"/></a>
+<a href="/pmwiki/pmwiki.php/Webcomic/TwistedTropes">
+<img alt="" class="lazy-image" data-src="/img/howlandsc-side.jpg"/></a>
+</p>
+</div>
+<div class="sidebar-item sb-ad-unit" id="stick-cont">
+<div class="sidebar-section" id="stick-bar">
+<div class="square_ad ad-size-300x600 ad-section text-center">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_4"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_4'); });</script> </div>
+</div> </div>
+</div>
+</div>
+</div>
+</div>
+<div class="action-bar tablet-off" id="action-bar-bottom">
+<a class="scroll-to-top dead-button" href="#top-of-page" onclick="$('html, body').animate({scrollTop : 0},500);">Top</a>
+</div>
+</div>
+<div class="proper-ad-unit ad-sticky">
+<div id="proper-ad-tvtropes_sticky_ad"> <script>propertag.cmd.push(function() { proper_display('tvtropes_sticky_ad'); });</script> </div>
+</div>
+<footer id="main-footer">
+<div id="main-footer-inner">
+<div class="footer-left">
+<a class="img-link" href="/"><img alt="TV Tropes" class="lazy-image" data-src="/img/tvtropes-footer-logo.png" title="TV Tropes"/></a>
+<form action="index.html" class="navbar-form newsletter-signup validate modal-replies" data-ajax-get="/ajax/subscribe_email.php" id="cse-search-box-mobile" name="" role="">
+<button class="btn-submit newsletter-signup-submit-button" id="subscribe-btn" type="submit"><i class="fa fa-paper-plane"></i></button>
+<input class="form-control" id="subscription-email" name="q" placeholder="Subscribe" size="31" type="text" validate-type="email" value=""/>
+</form>
+<ul class="social-buttons">
+<li><a class="btn fb" href="https://www.facebook.com/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-facebook']);" target="_blank"><i class="fa fa-facebook"></i></a></li>
+<li><a class="btn tw" href="https://www.twitter.com/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-twitter']);" target="_blank"><i class="fa fa-twitter"></i></a> </li>
+<li><a class="btn rd" href="https://www.reddit.com/r/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-reddit']);" target="_blank"><i class="fa fa-reddit-alien"></i></a></li>
+</ul>
+</div>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">TVTropes</h4></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Administrivia">About TVTropes</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TheGoalsOfTVTropes">TVTropes Goals</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TheTropingCode">Troping Code</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TVTropesCustoms">TVTropes Customs</a></li>
+<li><a href="/pmwiki/pmwiki.php/JustForFun/TropesOfLegend">Tropes of Legend</a></li>
+<li><a href="/pmwiki/ad-free-subscribe.php">Go Ad-Free</a></li>
+</ul>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">Community</h4></li>
+<li><a href="/pmwiki/query.php?type=att">Ask The Tropers</a></li>
+<li><a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a></li>
+<li><a href="/pmwiki/query.php?type=tf">Trope Finder</a></li>
+<li><a href="/pmwiki/query.php?type=ykts">You Know That Show</a></li>
+<li><a data-modal-target="login" href="/pmwiki/lbs.php">Live Blogs</a></li>
+<li><a href="/pmwiki/review_activity.php">Reviews</a></li>
+<li><a href="/pmwiki/topics.php">Forum</a></li>
+</ul>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">Tropes HQ</h4></li>
+<li><a href="/pmwiki/about.php">About Us</a></li>
+<li><a href="/pmwiki/contact.php">Contact Us</a></li>
+<li><a href="/pmwiki/dmca.php">DMCA Notice</a></li>
+<li><a href="/pmwiki/privacypolicy.php">Privacy Policy</a></li>
+</ul>
+</div>
+<div class="text-center gutter-top gutter-bottom tablet-on" id="desktop-on-mobile-toggle">
+<a href="/pmwiki/switchDeviceCss.php?mobileVersion=1" rel="nofollow">Switch to <span class="txt-desktop">Desktop</span><span class="txt-mobile">Mobile</span> Version</a>
+</div>
+<div class="legal">
+<p>TVTropes is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License. <br/>Permissions beyond the scope of this license may be available from <a href="mailto:thestaff@tvtropes.org" rel="cc:morePermissions" xmlns:cc="http://creativecommons.org/ns#"> thestaff@tvtropes.org</a>.</p>
+<br/>
+<div class="privacy_wrapper">
+</div>
+</div>
+</footer>
+<style>
+      div.fc-ccpa-root {
+        position: absolute !important;
+        bottom: 93px !important;
+        margin: auto !important;
+        width: 100% !important;
+        z-index: 9999 !important;
+      }
+      .fc-ccpa-root .fc-dns-dialog .fc-dns-link p{
+        outline: none !important;
+        text-decoration: underline !important;
+        font-size: .7em !important;
+        font-family: sans-serif !important;
+      }
+      .fc-ccpa-root .fc-dns-dialog .fc-dns-link .fc-button-background {
+        background: none !important;
+      }
+    </style>
+<div class="full-screen" id="_pm_videoViewer">
+<a class="close" href="#close" id="_pm_videoViewer-close"></a>
+<div class="_pmvv-body">
+<div class="_pmvv-vidbox">
+<video class="video-js vjs-default-skin vjs-16-9" data-video-id="" id="overlay-video-player-box">
+</video>
+<div class="_pmvv-vidbox-desc">
+<h1 id="overlay-title"></h1>
+<p class="_pmvv-vidbox-descTxt" id="overlay-descrip">
+</p>
+<div class="rating-row" data-video-id="">
+<input name="is_logged_in" type="hidden" value="0"/>
+<p>How well does it match the trope?</p>
+<div id="star-rating-group">
+<div class="trope-rate">
+<input id="lamp5" name="rate" type="radio" value="5"/>
+<label for="lamp5" title="Absolutely"></label>
+<input id="lamp4" name="rate" type="radio" value="4"/>
+<label for="lamp4" title="Yes"></label>
+<input id="lamp3" name="rate" type="radio" value="3"/>
+<label for="lamp3" title="Kind of"></label>
+<input id="lamp2" name="rate" type="radio" value="2"/>
+<label for="lamp2" title="Not really"></label>
+<input id="lamp1" name="rate" type="radio" value="1"/>
+<label for="lamp1" title="No"></label>
+</div>
+<div id="star-rating-total">
+</div>
+</div>
+</div>
+<div class="example-media-row">
+<div class="example-overlay">
+<p>Example of:</p>
+<div id="overlay-trope"> / </div>
+</div>
+<div class="media-sources-overlay example-overlay">
+<p>Media sources:</p>
+<div id="overlay-media"> / </div>
+</div>
+</div>
+<p class="_pmvv-vidbox-stats text-right font-s" style="padding-top:8px; border-top: solid 1px rgba(255,255,255,0.2)">
+<a class="float-right" data-modal-target="login" href="#video-feedback">Report</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+        window.special_ops =  {
+            member : 'no',
+            isolated : 0,
+            tags : ['videogame']
+        };
+    </script>
+<script type="text/javascript">
+
+        var cleanCreativeEnabled = "";
+        var donation = "";
+        var live_ads = "1";
+        var img_domain = "https://static.tvtropes.org";
+        var snoozed = cookies.read('snoozedabm');
+        var snoozable = "";
+
+        if (adsRemovedWith) {
+            live_ads = 0;
+        }
+
+        var elem = document.createElement('script');
+        elem.async = true;
+
+        elem.src = '/design/assets/bundle.js?rev=c58d8df02f09262390bbd03db7921fc35c6af306';
+
+        elem.onload = function() {
+                                 }
+        document.getElementsByTagName('head')[0].appendChild(elem);
+
+    </script>
+<script type="text/javascript">
+      function send_analytics_event(user_type, donation){
+          // if(user_type == 'uncached' || user_type == 'cached'){
+          //   ga('send', 'event', 'caching', 'load', user_type, {'nonInteraction': 1});
+          //   return;
+          // }
+          var event_name = user_type;
+
+          if(donation == 'true'){
+              event_name += "_donation"
+          }else if(typeof(valid_user) == 'undefined'){
+              event_name += "_blocked"
+          }else if(valid_user == true){
+              event_name += "_unblocked";
+          }else{
+              event_name = "_unknown"
+          }
+          ga('send', 'event', 'ads', 'load', event_name, {'nonInteraction': 1});
+      }
+
+    
+    send_analytics_event("guest", "false");
+      </script>
+</body>
+</html>

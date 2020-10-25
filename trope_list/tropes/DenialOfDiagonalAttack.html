@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Denial of Diagonal Attack - TV Tropes</title>
+<meta content="The Denial of Diagonal Attack trope as used in popular culture. A common issue, mostly in older games (though starting to make a comeback with the advent of …" name="description"/>
+<link href="https://tvtropes.org/pmwiki/pmwiki.php/Main/DenialOfDiagonalAttack" rel="canonical"/>
+<link href="/img/icons/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="@tvtropes" name="twitter:site"/>
+<meta content="@tvtropes" name="twitter:owner"/>
+<meta content="Denial of Diagonal Attack - TV Tropes" name="twitter:title"/>
+<meta content="The Denial of Diagonal Attack trope as used in popular culture. A common issue, mostly in older games (though starting to make a comeback with the advent of …" name="twitter:description"/>
+<meta content="https://static.tvtropes.org/logo_blue_small.png" name="twitter:image:src"/>
+<meta content="TV Tropes" property="og:site_name"/>
+<meta content="en_US" property="og:locale"/>
+<meta content="https://www.facebook.com/tvtropes" property="article:publisher"/>
+<meta content="Denial of Diagonal Attack - TV Tropes" property="og:title"/>
+<meta content="website" property="og:type"/>
+<meta content="https://tvtropes.org/pmwiki/pmwiki.php/Main/DenialOfDiagonalAttack" property="og:url"/>
+<meta content="https://static.tvtropes.org/logo_blue_small.png" property="og:image"/>
+<meta content="A common issue, mostly in older games (though starting to make a comeback with the advent of FPS games with horrible controls) where your weapon can fire along only a fixed point on the horizontal axis (i.e., no aiming your shots higher or lower …" property="og:description"/>
+<link href="/img/icons/apple-icon-57x57.png" rel="apple-touch-icon" sizes="57x57" type="image/png"/>
+<link href="/img/icons/apple-icon-60x60.png" rel="apple-touch-icon" sizes="60x60" type="image/png"/>
+<link href="/img/icons/apple-icon-72x72.png" rel="apple-touch-icon" sizes="72x72" type="image/png"/>
+<link href="/img/icons/apple-icon-76x76.png" rel="apple-touch-icon" sizes="76x76" type="image/png"/>
+<link href="/img/icons/apple-icon-114x114.png" rel="apple-touch-icon" sizes="114x114" type="image/png"/>
+<link href="/img/icons/apple-icon-120x120.png" rel="apple-touch-icon" sizes="120x120" type="image/png"/>
+<link href="/img/icons/apple-icon-144x144.png" rel="apple-touch-icon" sizes="144x144" type="image/png"/>
+<link href="/img/icons/apple-icon-152x152.png" rel="apple-touch-icon" sizes="152x152" type="image/png"/>
+<link href="/img/icons/apple-icon-180x180.png" rel="apple-touch-icon" sizes="180x180" type="image/png"/>
+<link href="/img/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/img/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/img/icons/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png"/>
+<link href="/img/icons/favicon-192x192.png" rel="icon" sizes="192x192" type="image/png"/>
+<meta content="width=device-width, initial-scale=1" id="viewport" name="viewport"/>
+<script>
+                var propertag = {};
+                propertag.cmd = [];
+            </script>
+<link href="/design/assets/bundle.css?rev=c58d8df02f09262390bbd03db7921fc35c6af306" rel="stylesheet"/>
+<script>
+                function object(objectId) {
+                    if (document.getElementById && document.getElementById(objectId)) {
+                        return document.getElementById(objectId);
+                    } else if (document.all && document.all(objectId)) {
+                        return document.all(objectId);
+                    } else if (document.layers && document.layers[objectId]) {
+                        return document.layers[objectId];
+                    } else {
+                        return false;
+                    }
+                }
+
+                // JAVASCRIPT COOKIES CODE: for getting and setting user viewing preferences
+                var cookies = {
+                    create: function (name, value, days2expire, path) {
+                        var date = new Date();
+                        date.setTime(date.getTime() + (days2expire * 24 * 60 * 60 * 1000));
+                        var expires = date.toUTCString();
+                        document.cookie = name + '=' + value + ';' + 'expires=' + expires + ';' + 'path=' + path + ';';
+                    },
+										createWithExpire: function(name, value, expires, path) {
+												document.cookie = name + '=' + value + ';' + 'expires=' + expires + ';' + 'path=' + path + ';';
+										},
+                    read: function (name) {
+                        var cookie_value = "",
+                            current_cookie = "",
+                            name_expr = name + "=",
+                            all_cookies = document.cookie.split(';'),
+                            n = all_cookies.length;
+
+                        for (var i = 0; i < n; i++) {
+                            current_cookie = all_cookies[i].trim();
+                            if (current_cookie.indexOf(name_expr) === 0) {
+                                cookie_value = current_cookie.substring(name_expr.length, current_cookie.length);
+                                break;
+                            }
+                        }
+                        return cookie_value;
+                    },
+                    update: function (name, val) {
+                        this.create(name, val, 300, "/");
+                    },
+                    remove: function (name) {
+                        document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
+                    }
+                };
+
+                function updateUserPrefs() {
+                    //GENERAL: detect and set browser, if not cookied (will be treated like a user-preference and added to the #user-pref element)
+                    if( !cookies.read('user-browser') ){
+                        var broswer = '';
+
+                        if(navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPod/i) ){
+                            browser = 'iOS';
+                        } else if (/Opera[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'opera';
+                        } else if (/MSIE (\d+\.\d+);/.test(navigator.userAgent)) {
+                            browser = 'MSIE';
+                        } else if (/Navigator[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'netscape';
+                        } else if (/Chrome[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'chrome';
+                        } else if (/Safari[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'safari';
+                            /Version[\/\s](\d+\.\d+)/.test(navigator.userAgent);
+                            browserVersion = new Number(RegExp.$1);
+                        } else if (/Firefox[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'firefox';
+                        } else {
+                            browser = 'internet_explorer';
+                        }
+                        cookies.create('user-browser',browser,1,'/');
+                        document.getElementById('user-prefs').classList.add('browser-' + browser);
+                    } else {
+                        document.getElementById('user-prefs').classList.add('browser-' + cookies.read('user-browser'));
+                    }
+
+                    //update user preference settings
+                    if (cookies.read('wide-load') !== '') document.getElementById('user-prefs').classList.add('wide-load');
+                    if (cookies.read('night-vision') !== '') document.getElementById('user-prefs').classList.add('night-vision');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('user-prefs').classList.add('sticky-header');
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('user-prefs').classList.add('show-spoilers');
+                    if (cookies.read('folders-open') !== '') document.getElementById('user-prefs').classList.add('folders-open');
+                    if (cookies.read('lefthand-sidebar') !== '') document.getElementById('user-prefs').classList.add('lefthand-sidebar');
+                    if (cookies.read('highlight-links') !== '') document.getElementById('user-prefs').classList.add('highlight-links');
+                    if (cookies.read('forum-gingerbread') !== '') document.getElementById('user-prefs').classList.add('forum-gingerbread');
+                    if (cookies.read('shared-avatars') !== '') document.getElementById('user-prefs').classList.add('shared-avatars');
+                    if (cookies.read('new-search') !== '') document.getElementById('user-prefs').classList.add('new-search');
+                    if (cookies.read('stop-auto-play-video') !== '') document.getElementById('user-prefs').classList.add('stop-auto-play-video');
+
+                    //desktop view on mobile
+                    if (cookies.read('desktop-on-mobile') !== ''){
+                        document.getElementById('user-prefs').classList.add('desktop-on-mobile');
+
+                        var viewport = document.querySelector("meta[name=viewport]");
+                        viewport.setAttribute('content', 'width=1000');
+                    }
+
+                }
+
+                function updateDesktopPrefs() {
+                    if (cookies.read('wide-load') !== '') document.getElementById('sidebar-toggle-wideload').classList.add('active');
+                    if (cookies.read('night-vision') !== '') document.getElementById('sidebar-toggle-nightvision').classList.add('active');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('sidebar-toggle-stickyheader').classList.add('active');
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('sidebar-toggle-showspoilers').classList.add('active');
+
+                }
+
+                function updateMobilePrefs() {
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('mobile-toggle-showspoilers').classList.add('active');
+                    if (cookies.read('night-vision') !== '') document.getElementById('mobile-toggle-nightvision').classList.add('active');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('mobile-toggle-stickyheader').classList.add('active');
+                    if (cookies.read('highlight-links') !== '') document.getElementById('mobile-toggle-highlightlinks').classList.add('active');
+
+                }
+
+
+                if (document.cookie.indexOf("scroll0=") < 0) {
+                    // do nothing
+                } else {
+                    console.log('ads removed by scroll.com');
+                    var adsRemovedWith = 'scroll';
+                    var style = document.createElement('style');
+                    style.innerHTML = '#header-ad, .proper-ad-unit, .square_ad, .sb-ad-unit { display: none !important; } ';
+                    document.head.appendChild(style);
+                }
+            </script>
+<script type="text/javascript">
+
+                var tvtropes_config = {
+                    astri_stream_enabled : "",
+                    is_logged_in         : "",
+                    handle               : "",
+                    get_astri_stream     : "",
+										revnum               : "c58d8df02f09262390bbd03db7921fc35c6af306",
+										img_domain           : "https://static.tvtropes.org",
+										adblock              : "1",
+										adblock_url          : "propermessage.io",
+										pause_editing        : "0",
+										pause_editing_msg    : "",
+										pause_site_changes   : ""
+                };
+            </script>
+<script type="text/javascript">
+						  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+						  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+						  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+						  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+						  ga('create', 'UA-3821842-1', 'auto');
+						  ga('send', 'pageview');
+
+						</script>
+</head>
+<body class="">
+<i id="user-prefs"></i>
+<script>updateUserPrefs();</script>
+<div id="fb-root"></div>
+<div id="modal-box"></div>
+<header class="headroom-element" id="main-header-bar">
+<div id="main-header-bar-inner">
+<span class="header-spacer" id="header-spacer-left"></span>
+<a class="mobile-menu-toggle-button tablet-on" href="#mobile-menu" id="main-mobile-toggle"><span></span><span></span><span></span></a>
+<a class="no-dev" href="/" id="main-header-logoButton"></a>
+<span class="header-spacer" id="header-spacer-right"></span>
+<nav class="tablet-off" id="main-header-nav">
+<a href="/pmwiki/pmwiki.php/Main/Tropes">Tropes</a>
+<a href="/pmwiki/pmwiki.php/Main/Media">Media</a>
+<a class="nav-browse" href="/pmwiki/browse.php">Browse</a>
+<a href="/pmwiki/index_report.php">Indexes</a>
+<a href="/pmwiki/topics.php">Forums</a>
+<a class="nav-browse" href="/pmwiki/recent_videos.php">Videos</a>
+</nav>
+<div id="main-header-bar-right">
+<div class="font-xs mobile-off" id="signup-login-box">
+<a class="hover-underline bold" data-modal-target="signup" href="/pmwiki/login.php">Join</a>
+<a class="hover-underline bold" data-modal-target="login" href="/pmwiki/login.php">Login</a>
+</div>
+<div class="mobile-on inline" id="signup-login-mobileToggle">
+<a data-modal-target="login" href="/pmwiki/login.php"><i class="fa fa-user"></i></a>
+</div>
+<div id="search-box">
+<form action="/pmwiki/search_result.php" class="search">
+<input class="search-box" name="q" placeholder="Search" required="" type="text" value=""/>
+<input class="submit-button" type="submit" value=""/>
+<input name="search_type" type="hidden" value="article"/>
+<input name="page_type" type="hidden" value="all"/>
+<input name="cx" type="hidden" value="partner-pub-6610802604051523:amzitfn8e7v"/>
+<input name="cof" type="hidden" value="FORID:10"/>
+<input name="ie" type="hidden" value="ISO-8859-1"/>
+<input name="siteurl" type="hidden" value=""/>
+<input name="ref" type="hidden" value=""/>
+<input name="ss" type="hidden" value=""/>
+</form>
+<a class="mobile-on mobile-search-toggle close-x" href="#close-search"><i class="fa fa-close"></i></a>
+</div>
+<div id="random-box">
+<a class="button-random-trope" href="/pmwiki/pmwiki.php/Main/DivergentCharacterEvolution" onclick="ga('send', 'event', 'button', 'click', 'random trope');" rel="nofollow"></a>
+<a class="button-random-media" href="/pmwiki/pmwiki.php/VideoGame/DemonsSouls" onclick="ga('send', 'event', 'button', 'click', 'random media');" rel="nofollow"></a>
+</div>
+</div>
+</div>
+<div class="tablet-on" id="mobile-menu"><div class="mobile-menu-options">
+<div class="nav-wrapper">
+<a class="xl" href="/pmwiki/pmwiki.php/Main/Tropes">Tropes</a>
+<a class="xl" href="/pmwiki/pmwiki.php/Main/Media">Media</a>
+<a class="xl" href="/pmwiki/browse.php">Browse</a>
+<a class="xl" href="/pmwiki/index_report.php">Indexes</a>
+<a class="xl" href="/pmwiki/topics.php">Forums</a>
+<a class="xl" href="/pmwiki/recent_videos.php">Videos</a>
+<a href="/pmwiki/query.php?type=att">Ask The Tropers</a>
+<a href="/pmwiki/query.php?type=tf">Trope Finder</a>
+<a href="/pmwiki/query.php?type=ykts">You Know That Show...</a>
+<a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a>
+<a data-click-toggle="active" href="#tools">Tools <i class="fa fa-chevron-down"></i></a>
+<div class="tools-dropdown mobile-dropdown-linkList">
+<a href="/pmwiki/cutlist.php">Cut List</a>
+<a href="/pmwiki/changes.php">New Edits</a>
+<a href="/pmwiki/recent_edit_reasons.php">Edit Reasons</a>
+<a href="/pmwiki/launches.php">Launches</a>
+<a href="/pmwiki/img_list.php">Images List</a>
+<a href="/pmwiki/crown_activity.php">Crowner Activity</a>
+<a href="/pmwiki/no_types.php">Un-typed Pages</a>
+<a href="/pmwiki/page_type_audit.php">Recent Page Type Changes</a>
+</div>
+<a data-click-toggle="active" href="#hq">Tropes HQ <i class="fa fa-chevron-down"></i></a>
+<div class="tools-dropdown mobile-dropdown-linkList">
+<a href="/pmwiki/about.php">About Us</a>
+<a href="/pmwiki/contact.php">Contact Us</a>
+<a href="mailto:advertising@proper.io">Advertise</a>
+<a href="/pmwiki/dmca.php">DMCA Notice</a>
+<a href="/pmwiki/privacypolicy.php">Privacy Policy</a>
+</div>
+<a href="/pmwiki/ad-free-subscribe.php">Go Ad-Free</a>
+<div class="toggle-switches">
+<ul class="mobile-menu display-toggles">
+<li>Show Spoilers <div class="display-toggle show-spoilers" id="mobile-toggle-showspoilers"></div></li>
+<li>Night Vision <div class="display-toggle night-vision" id="mobile-toggle-nightvision"></div></li>
+<li>Sticky Header <div class="display-toggle sticky-header" id="mobile-toggle-stickyheader"></div></li>
+<li>Highlight Links <div class="display-toggle highlight-links" id="mobile-toggle-highlightlinks"></div></li>
+</ul>
+<script>updateMobilePrefs();</script>
+</div>
+</div>
+</div>
+</div>
+</header>
+<div class="mobile-on" id="homepage-introBox-mobile">
+<a href="/"><img class="logo-small" src="/images/logo-white-big.png"/></a>
+<form action="/pmwiki/search_result.php" class="search" style="margin:10px -5px -6px -5px;">
+<input class="search-box" name="q" placeholder="Search" required="" type="text" value=""/>
+<input class="submit-button" type="submit" value=""/>
+<input name="search_type" type="hidden" value="article"/>
+<input name="page_type" type="hidden" value="all"/>
+<input name="cx" type="hidden" value="partner-pub-6610802604051523:amzitfn8e7v"/>
+<input name="cof" type="hidden" value="FORID:10"/>
+<input name="ie" type="hidden" value="ISO-8859-1"/>
+<input name="siteurl" type="hidden" value=""/>
+<input name="ref" type="hidden" value=""/>
+<input name="ss" type="hidden" value=""/>
+</form>
+</div>
+<div class="ad" id="header-ad-wrapper">
+<div id="header-ad">
+<div class="ad-size-970x90 atf_banner">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_1"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_1'); });</script> </div>
+</div> </div>
+</div>
+</div>
+<div id="main-container">
+<div class="action-bar mobile-off" id="action-bar-top">
+<div class="action-bar-right">
+<p>Follow TV Tropes</p>
+<a class="button-fb" href="https://www.facebook.com/TVTropes">
+<i class="fa fa-facebook"></i></a>
+<a class="button-tw" href="https://www.twitter.com/TVTropes">
+<i class="fa fa-twitter"></i></a>
+<a class="button-re" href="https://www.reddit.com/r/TVTropes">
+<i class="fa fa-reddit-alien"></i></a>
+</div>
+<nav class="actions-wrapper" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<ul class="page-actions" id="top_main_list">
+<li class="link-edit">
+<a class="article-edit-button" data-modal-target="login" href="/pmwiki/pmwiki.php/Main/DenialOfDiagonalAttack?action=edit" rel="nofollow">
+<i class="fa fa-pencil"></i> Edit Page</a></li><li class="link-related"><a href="/pmwiki/relatedsearch.php?term=Main/DenialOfDiagonalAttack">
+<i class="fa fa-share-alt"></i> Related</a></li><li class="link-history"><a href="/pmwiki/article_history.php?article=Main.DenialOfDiagonalAttack">
+<i class="fa fa-history"></i> History</a></li><li class="link-discussion"><a href="/pmwiki/remarks.php?trope=Main.DenialOfDiagonalAttack">
+<i class="fa fa-comment"></i> Discussion</a></li> </ul>
+<button class="nav__dropdown-toggle" id="top_more_button" onclick="toggle_more_menu('top');" type="button">More</button>
+<ul class="more_menu hidden_more_list" id="top_more_list">
+<li class="link-todo tuck-always more_list_item"><a data-modal-target="login" href="#todo"><i class="fa fa-check-circle"></i> To Do</a></li><li class="link-pageSource tuck-always more_list_item"><a data-modal-target="login" href="/pmwiki/pmwiki.php/Main/DenialOfDiagonalAttack?action=source" rel="nofollow" target="_blank"><i class="fa fa-code"></i> Page Source</a></li> </ul>
+</nav>
+<div class="WikiWordModalStub"></div>
+<div class="ImgUploadModalStub" data-page-type="Article"></div>
+<div class="login-alert" style="display: none;">
+You need to <a href="/pmwiki/login.php" style="color:#21A0E8">login</a> to do this. <a href="/pmwiki/login.php?tab=register_account" style="color:#21A0E8">Get Known</a> if you don't have an account
+</div>
+</div>
+<div class="page-Article" id="main-content">
+<article class="with-sidebar" id="main-entry">
+<input id="groupname-hidden" type="hidden" value="Main"/>
+<input id="title-hidden" type="hidden" value="DenialOfDiagonalAttack"/>
+<input id="article_id" type="hidden" value="40012"/>
+<input id="logged_in" type="hidden" value="false"/>
+<p class="hidden" id="current_url">http://tvtropes.org/pmwiki/pmwiki.php/Main/DenialOfDiagonalAttack</p>
+<meta content="" itemprop="datePublished"/>
+<meta content="" itemprop="articleSection"/>
+<meta content="" itemprop="image"/>
+<a class="watch-button" data-modal-target="login" href="#watch">Follow<span>ing</span></a>
+<h1 class="entry-title" itemprop="headline">
+Denial of Diagonal Attack
+</h1>
+<script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+                "@type": "ListItem",
+                "position": 1,
+                "name": "tvtropes.org",
+                "item": "https://tvtropes.org"
+            },{
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Tropes",
+                "item": "https://tvtropes.org/pmwiki/pmwiki.php/Main/Tropes"
+            },{
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Denial of Diagonal Attack"            }]
+        }
+    </script>
+<a class="mobile-actionbar-toggle mobile-on" data-click-toggle="active" href="#mobile-actions-toggle" id="mobile-actionbar-toggle">
+<p class="tiny-off">Go To</p><span></span><span></span><span></span><i class="fa fa-pencil"></i></a>
+<nav class="mobile-actions-wrapper mobile-on" id="mobile-actions-bar"></nav>
+<div class="modal fade hidden-until-active" id="editLockModal">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button aria-label="Close" class="close" data-dismiss="modal" type="button"> <span aria-hidden="true">×</span></button>
+<h4 class="modal-title">Edit Locked</h4>
+</div>
+<div class="modal-body">
+<div class="row">
+<div class="body">
+<div class="danger troper_locked_message"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<nav class="body-options" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<ul class="subpage-links">
+<li>
+<a class="subpage-link curr-subpage" href="/pmwiki/pmwiki.php/Main/DenialOfDiagonalAttack" title="The Main page">
+<span class="wrapper"><span class="spi main-page"></span>Main</span></a>
+</li>
+<li>
+<a class="subpage-link" href="/pmwiki/pmwiki.php/Laconic/DenialOfDiagonalAttack" title="The Laconic page">
+<span class="wrapper"><span class="spi laconic-icon"></span>Laconic</span></a>
+</li>
+<li class="create-subpage dropdown">
+<a aria-expanded="false" class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);" role="button">
+<span class="wrapper">Create New <i class="fa fa-plus-circle"></i></span>
+</a>
+<select onchange="this.options[this.selectedIndex].value &amp;&amp; (window.location = this.options[this.selectedIndex].value);">
+<option value="">- Create New -</option>
+<option value="/pmwiki/pmwiki.php/Analysis/DenialOfDiagonalAttack?action=edit">Analysis</option>
+<option value="/pmwiki/pmwiki.php/Characters/DenialOfDiagonalAttack?action=edit">Characters</option>
+<option value="/pmwiki/pmwiki.php/FanficRecs/DenialOfDiagonalAttack?action=edit">FanficRecs</option>
+<option value="/pmwiki/pmwiki.php/FanWorks/DenialOfDiagonalAttack?action=edit">FanWorks</option>
+<option value="/pmwiki/pmwiki.php/Fridge/DenialOfDiagonalAttack?action=edit">Fridge</option>
+<option value="/pmwiki/pmwiki.php/Haiku/DenialOfDiagonalAttack?action=edit">Haiku</option>
+<option value="/pmwiki/pmwiki.php/Headscratchers/DenialOfDiagonalAttack?action=edit">Headscratchers</option>
+<option value="/pmwiki/pmwiki.php/ImageLinks/DenialOfDiagonalAttack?action=edit">ImageLinks</option>
+<option value="/pmwiki/pmwiki.php/PlayingWith/DenialOfDiagonalAttack?action=edit">PlayingWith</option>
+<option value="/pmwiki/pmwiki.php/Quotes/DenialOfDiagonalAttack?action=edit">Quotes</option>
+<option value="/pmwiki/pmwiki.php/Recap/DenialOfDiagonalAttack?action=edit">Recap</option>
+<option value="/pmwiki/pmwiki.php/ReferencedBy/DenialOfDiagonalAttack?action=edit">ReferencedBy</option>
+<option value="/pmwiki/pmwiki.php/Synopsis/DenialOfDiagonalAttack?action=edit">Synopsis</option>
+<option value="/pmwiki/pmwiki.php/Timeline/DenialOfDiagonalAttack?action=edit">Timeline</option>
+<option value="/pmwiki/pmwiki.php/Trivia/DenialOfDiagonalAttack?action=edit">Trivia</option>
+<option value="/pmwiki/pmwiki.php/WMG/DenialOfDiagonalAttack?action=edit">WMG</option>
+<option value="/pmwiki/pmwiki.php/YMMV/DenialOfDiagonalAttack?action=edit">YMMV</option>
+</select>
+</li>
+</ul>
+</nav>
+<div class="article-content retro-folders" id="main-article">
+<p></p><div class="indent"><em>"Wait a second.</em> I can shoot diagonally! <em>YES! What in God's name took them so long to program something like that in!?"</em>
+<div class="indent">— <strong><a class="twikilink" href="/pmwiki/pmwiki.php/WebVideo/SomecallmeJohnny" title="/pmwiki/pmwiki.php/WebVideo/SomecallmeJohnny">SomecallmeJohnny</a></strong> reviewing <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SuperMetroid" title="/pmwiki/pmwiki.php/VideoGame/SuperMetroid">Super Metroid</a></em>.
+</div></div><p>A common issue, mostly in older games (though starting to make a comeback with the advent of FPS games with horrible controls) where your weapon can fire along only a fixed point on the horizontal axis (i.e., no aiming your shots higher or lower to hit something just out of reach). While some games may let you crouch for lower shots, others won't even let you do that. If you're lucky, your character may eventually upgrade to a weapon capable of targeting enemies outside your initial weapon's range of fire, but you will inevitably begin with something that will fire only along a specific point on the X-axis.
+</p><div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_1"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_1'); })</script></div></div><p>As a result of all this, enemies that are crotch-high or shorter are nearly impossible to hit due to an inability to shoot any lower. This can also apply to <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AirborneMook" title="/pmwiki/pmwiki.php/Main/AirborneMook">floating/flying enemies</a> that soar just above your weapon's range and aim for your forehead. Due to the aforementioned fact that some games at least let you crouch for lower shots, the flying/floating variant of this trope is possibly even more common than the "crotch monster" variety (though the crotch monster version still tends to be more annoying when it does appear, since with flying enemies the player can still at least usually be able to jump to shoot at them). Adds a lot of frustration—not only because the enemy is unkillable, but also because it's annoying to see the hero bested by a foe which, for all intents and purposes, he <em>should</em> be able to kill easily if only he could <em>slightly</em> lower his rifle.
+</p><div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_2"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_2'); })</script></div></div><p>Ironically, a variant of the trope can still appear in games where diagonal attacks <em>are</em> allowed (such as simple eight-directional firing), if the angles of attack are still limited enough to leave large blind spots in the player's firing arc, which may render certain configurations of enemies unhittable.
+</p><p>Some games <a class="twikilink" href="/pmwiki/pmwiki.php/Administrivia/TropesAreTools" title="/pmwiki/pmwiki.php/Administrivia/TropesAreTools">account for the limitations of the controls and make it part of the gameplay and challenge</a>. Others... <a class="twikilink" href="/pmwiki/pmwiki.php/Main/FakeDifficulty" title="/pmwiki/pmwiki.php/Main/FakeDifficulty">are not quite so consciously designed</a>.
+</p><p>This is one of the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ClassicVideoGameScrewYous" title="/pmwiki/pmwiki.php/Main/ClassicVideoGameScrewYous">Classic Video Game "Screw You"s</a> and is often part of the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GoddamnedBats" title="/pmwiki/pmwiki.php/Main/GoddamnedBats">Goddamned Bats</a> bag of tricks. One of the main contributing factors in games that are <a class="twikilink" href="/pmwiki/pmwiki.php/Main/NintendoHard" title="/pmwiki/pmwiki.php/Main/NintendoHard">Nintendo Hard</a>. Not to be confused with grid-based games not allowing diagonal attacks (though they may certainly qualify if this is a source of constant frustration) or with actual Denial of Service Attacks.
+</p><div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_3"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_3'); })</script></div></div><hr/><h2>Examples:</h2>
+<ul><li> Apollo from <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Action52" title="/pmwiki/pmwiki.php/VideoGame/Action52">Action 52</a></em>, the leader of the <em>Cheetahmen</em> cast, instead of fighting melee like his companions (and therefore <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GoodBadBugs" title="/pmwiki/pmwiki.php/Main/GoodBadBugs">flying</a>) uses a crossbow. This gives him a tiny vertical range that is too high for every single enemy in his two stages. Virtually the only thing you can attack with him that doesn't randomly spawn flying at your own height is the final boss.
+</li><li> Yes and no in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheBindingOfIsaac" title="/pmwiki/pmwiki.php/VideoGame/TheBindingOfIsaac">The Binding of Isaac</a></em>; the main player (and a few monsters) can only nominally shoot up, down, left, and right, but the player can whip shots by firing while moving.
+<ul><li> There are also certain items that give Isaac a spreadshot pattern, which can negate the need for a true diagonal shot, and some extremely powerful items will let you shoot diagonally.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/CaptainComic" title="/pmwiki/pmwiki.php/VideoGame/CaptainComic">Captain Comic</a></em> cannot duck. <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BellisariosMaxim" title="/pmwiki/pmwiki.php/Main/BellisariosMaxim">You'll need a corkscrew</a> to deal with the enemies that are shorter than you.
+</li><li> The flying/forehead variety is present at all times in the earlier <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/Castlevania" title="/pmwiki/pmwiki.php/Franchise/Castlevania">Castlevania</a></em> games, and walking on stairs effectively removes your ability to deal with crotch monsters. Later games allow diagonal whipping, and some even allow you to <em>spin</em> the whip. However, stairs are still problematic.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/ESWAT" title="/pmwiki/pmwiki.php/VideoGame/ESWAT">ESWAT</a></em>: Especially annoying in the very first mission of the game where in one spot you have to jump from this one platform to another with some guy above you shooting straight down at you.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Galaga" title="/pmwiki/pmwiki.php/VideoGame/Galaga">Galaga</a></em>: though you'd be hard-pressed to find a shoot-'em-up that doesn't employ this trope.
+</li><li> Freeware <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/NinjaSenki" title="/pmwiki/pmwiki.php/VideoGame/NinjaSenki">Ninja Senki</a></em> also features this trope with protagonist's shurikens. Funnily enough, some enemy ninjas and other ranged enemies can attack diagonally.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/GhostsNGoblins" title="/pmwiki/pmwiki.php/VideoGame/GhostsNGoblins">Ghosts 'n Goblins</a></em>: as if this game wasn't hard enough already.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/TheLegendOfZelda" title="/pmwiki/pmwiki.php/Franchise/TheLegendOfZelda">The Legend of Zelda</a></em>:
+<ul><li> In the original <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheLegendOfZeldaI" title="/pmwiki/pmwiki.php/VideoGame/TheLegendOfZeldaI">The Legend of Zelda I</a></em>, Link is only able to move in four directions and his main attack is a straight-forward stab, which makes it difficult to attack things that you'd rather not be standing directly in front of. With a little finesse, you can throw the boomerang diagonally, but that's it.
+</li><li> Later games avoided this by making the sword slash in an arc, and introducing the spinning attack. However, most ranged attacks still only fire four directions.
+</li><li> Averted in the 3D Zeldas.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/MegaMan" title="/pmwiki/pmwiki.php/Franchise/MegaMan">Mega Man</a></em>: the series as a whole is a <em>horrible</em> offender of this trope. More often than not, you can't even shoot up or down, with the exception of certain special weapons. This trope is one of the main reasons the Metal Blades, which <em>could</em> be shot in all eight directions, were such a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GameBreaker" title="/pmwiki/pmwiki.php/Main/GameBreaker">Game-Breaker</a>.
+<ul><li> <a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MegaMan3" title="/pmwiki/pmwiki.php/VideoGame/MegaMan3">Shadow Blade</a> can be aimed in any non-down direction.
+</li><li> <a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MegaMan4" title="/pmwiki/pmwiki.php/VideoGame/MegaMan4">Pharaoh Shot</a> is another aversion.
+</li><li> It wasn't until <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MegaMan5" title="/pmwiki/pmwiki.php/VideoGame/MegaMan5">Mega Man 5</a></em> that the charged shot gained extra vertical spread, finally putting an end to crotch monsters.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MegaMan6" title="/pmwiki/pmwiki.php/VideoGame/MegaMan6">Mega Man 6</a></em>, Knight Crush can be aimed up and down.
+</li><li> Ditto for <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MegaMan7" title="/pmwiki/pmwiki.php/VideoGame/MegaMan7">Mega Man 7</a></em>'s Freeze Cracker, and Danger Wrap can float up.
+</li><li> Bass could fire in 7 directions and later <a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MegaManX" title="/pmwiki/pmwiki.php/VideoGame/MegaManX">Axl</a> could fire in <em>X8</em>, although they <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DoNotRunWithAGun" title="/pmwiki/pmwiki.php/Main/DoNotRunWithAGun">could not run at the same time.</a>
+</li><li> <em>X2</em> has the Magnet Mine which can be guided up and down.
+</li><li> X was a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GameBreaker" title="/pmwiki/pmwiki.php/Main/GameBreaker">Game-Breaker</a> in <em>X7</em> because he would actually aim at his target instead of blindly shooting forward. Floor, ceiling, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/PolygonCeiling" title="/pmwiki/pmwiki.php/Main/PolygonCeiling">Z-axis</a> be damned, you were dead meat once X fired.
+</li><li> Poked fun at by <a class="urllink" href="http://www.duelinganalogs.com/comic/2006/09/06/dr-light-at-the-end-of-the-tunnel/">''Dueling Analogs''<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a>.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MegaMan10" title="/pmwiki/pmwiki.php/VideoGame/MegaMan10">Mega Man 10</a></em> uses this heavily to make certain boss and mini-boss fights "challenging." Downloading Bass reveals just how much of a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Retraux" title="/pmwiki/pmwiki.php/Main/Retraux">Retraux</a> game design crutch this is, as he can shoot up and will destroy these bosses almost instantly.
+</li><li> <em>MMX5</em> and <em>X6</em> allowed you to crouch, partially averting this.
+</li><li> Legends, Zero and ZX series averts this to some extent. Legends has lock-on features, ZX has Model F (who can not only shoot directly up, but has a Buster Edit where you can change the paths of your guns' bullets) and Model P (who can <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BladeSpam" title="/pmwiki/pmwiki.php/Main/BladeSpam">spam kunai knives that spread out</a> until everything in front of you is getting stabbed), ZXA has a number of forms you can use, some of which shoot in 3-way or have <a class="twikilink" href="/pmwiki/pmwiki.php/Main/HomingProjectile" title="/pmwiki/pmwiki.php/Main/HomingProjectile">Homing Projectiles</a> and Zero had a Buster Mod that allowed him to fire in a V, as well as making use of the Rod-type weapons (Including the ones he could rip from his enemies.
+</li><li> Ironically he is one of the few exceptions to this rule in <a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SuperSmashBros" title="/pmwiki/pmwiki.php/VideoGame/SuperSmashBros">Smash Bros.</a> thanks to retaining the Metal Blade. Almost every other character must shoot and throw their projectiles in a single direction (albeit in a small arc once gravity kicks in).
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/StreetfighterXMegaMan" title="/pmwiki/pmwiki.php/VideoGame/StreetfighterXMegaMan">Streetfighter X Mega Man</a></em> has Yoga Inferno which can be aimed up and down.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Rockman4MinusInfinity" title="/pmwiki/pmwiki.php/VideoGame/Rockman4MinusInfinity">Rockman 4 Minus Infinity</a></em> has the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SpreadShot" title="/pmwiki/pmwiki.php/Main/SpreadShot">Pharaoh Shotgun</a> and the Water Cutter, an <em>even more broken</em> Metal Blade.
+</li><li> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SpiritualSuccessor" title="/pmwiki/pmwiki.php/Main/SpiritualSuccessor">Spiritual Successor</a> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TwentyXX" title="/pmwiki/pmwiki.php/VideoGame/TwentyXX">20XX</a></em> has something similar for Nina's basic N-Buster, although by cracking open a weapon crate you can get the Scatterblast, Forkalator or Wave Beam to bypass that.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Rosenkreuzstilette" title="/pmwiki/pmwiki.php/VideoGame/Rosenkreuzstilette">RosenkreuzStilette</a></em> is a clone of the classic Mega Man games, and both of the main protagonists, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TheHero" title="/pmwiki/pmwiki.php/Main/TheHero">Spiritia</a> and <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TheLancer" title="/pmwiki/pmwiki.php/Main/TheLancer">Freudia</a>, lacked the ability to fire any direction other than straight forward with their initial weapon. This in turn makes Lusteatem and Frostklinge the potential game-breakers in their respective games; the latter goes as far as running across whatever surface it hits, making any damnable enemy a head proportion shy of Freudia's Freudenstachel fair game.
+</li><li> The titular heroine of the <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/PC98" title="/pmwiki/pmwiki.php/UsefulNotes/PC98">PC-98</a> game <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Rusty" title="/pmwiki/pmwiki.php/VideoGame/Rusty">Rusty</a></em> has all of the aiming capabilities as Samus from the original NES <em>Metroid</em>.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MetalSlug" title="/pmwiki/pmwiki.php/VideoGame/MetalSlug">Metal Slug</a></em>: You start with a pistol that can only shoot straight right, left, up, or down if you jump and fire. Crouching while shooting is possible (and a good strategy because it's slightly faster), but unless you get the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MoreDakka" title="/pmwiki/pmwiki.php/Main/MoreDakka">Heavy Machine Gun</a> power-up (or the laser gun in <em>6</em> and <em>7</em>), you can't shoot diagonally outside of a vehicle. Not as bad as most examples since grenades can generally take care of anybody in your blind spots.
+<ul><li> You can fire a full 360° in vehicles, however, albeit somewhat awkwardly since there's still only one stick and you generally can't lock the gun. Later games also let you throw grenades diagonally if you play as Eri.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/Metroid" title="/pmwiki/pmwiki.php/Franchise/Metroid">Metroid</a></em>:
+<ul><li> The very first <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Metroid1" title="/pmwiki/pmwiki.php/VideoGame/Metroid1">Metroid 1</a></em> game only let you shoot horizontally and straight up, and you can't duck. The Wave Beam helped deal with this, but you inevitably needed to replace it with the Ice Beam to deal with the Metroids. The Screw Attack was awesome enough to possibly qualify for a partial aversion for flying enemies, but the only other way to deal with crotch monsters was with bombs.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MetroidIIReturnOfSamus" title="/pmwiki/pmwiki.php/VideoGame/MetroidIIReturnOfSamus">Metroid II: Return of Samus</a></em> put a downplay on it by allowing you to duck and fire straight down if you're in midair, and also improving the Screw Attack so it can destroy small monsters at ground level.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SuperMetroid" title="/pmwiki/pmwiki.php/VideoGame/SuperMetroid">Super Metroid</a></em> and beyond averted this further by also allowing Samus to both shoot diagonally and combine collected beam power-ups instead of having them as mutually exclusive. The <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MetroidPrimeTrilogy" title="/pmwiki/pmwiki.php/VideoGame/MetroidPrimeTrilogy">Metroid Prime Trilogy</a></em>, being 3D <a class="twikilink" href="/pmwiki/pmwiki.php/Main/FirstPersonShooter" title="/pmwiki/pmwiki.php/Main/FirstPersonShooter">First Person Shooters</a>, got rid of this problem entirely — as did <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MetroidSamusReturns" title="/pmwiki/pmwiki.php/VideoGame/MetroidSamusReturns">Metroid: Samus Returns</a></em>, the first 2D game in the series to offer a complete free-aim mode.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/NinjaGaiden" title="/pmwiki/pmwiki.php/VideoGame/NinjaGaiden">Ninja Gaiden</a></em> is another example of the flying/forehead variant of this trope, notable if only for the fact that the game's <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GoddamnedBats" title="/pmwiki/pmwiki.php/Main/GoddamnedBats">Goddamned Bats</a> are more deadly than a bazooka blast to the face.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/GoldenEye1997" title="/pmwiki/pmwiki.php/VideoGame/GoldenEye1997">GoldenEye (1997)</a></em> is an <a class="twikilink" href="/pmwiki/pmwiki.php/Main/IncrediblyLamePun" title="/pmwiki/pmwiki.php/Main/IncrediblyLamePun">odd</a> example where this <a class="twikilink" href="/pmwiki/pmwiki.php/Main/InvokedTrope" title="/pmwiki/pmwiki.php/Main/InvokedTrope">trope's invocation</a> is the result of one specific character/enemy and not a glaring, inherent flaw in the game controls: if you're playing multiplayer and your friend picks Oddjob, just declare him the winner and play something else. You could crouch in <em>GoldenEye</em>, but it wasn't a simple button press, so quite a few players (especially those new to the game) had no idea how. Combine this with a crouching Oddjob and it was physically impossible to target him at point blank range. Normally the Oddjob would karate chop you to death in amusement.
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/PerfectDark" title="/pmwiki/pmwiki.php/VideoGame/PerfectDark">Perfect Dark</a></em> thankfully avoided this, because the game automatically aims at stuff lower than yourself. Made fighting short characters like Elvis much easier.
+</li></ul></li><li> The first two <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/ResidentEvil" title="/pmwiki/pmwiki.php/VideoGame/ResidentEvil">Resident Evil</a></em> games are a rare example where the trouble lies within the X-axis instead of the Y. Most 3D games of the time suffer from the issue of quickly and effectively dealing with enemies behind you, but the notable lack of a quick-turnaround feature prior to the third game make Resident Evil a particularly egregious offender.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SuperSmashBros" title="/pmwiki/pmwiki.php/VideoGame/SuperSmashBros">Super Smash Bros.</a></em>: some characters have a much easier time dodging projectile attacks due to small size (Kirby, Pikachu, Pichu), while others (Bowser, DK) might as well not even bother.
+<ul><li> In theory you could use the actual in-game "dodge" move or try to parry, but if the match is hectic enough you might not even know you're being shot at until you've been hit.
+</li><li> This disadvantage is compensated by the bigger characters being generally more powerful and harder to smash, requiring being well over 100% damage to be Smashed in normal conditions.
+</li></ul></li><li> The 3D <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MightAndMagic" title="/pmwiki/pmwiki.php/VideoGame/MightAndMagic">Might and Magic</a></em> games (6, 7, and 8) are a examples of the "FPS games with horrible controls" version of this trope. The Godawful "look up/down" controls were bad to the point of near-uselessness, leaving firing straight ahead as the only viable method of attack. Melee attacks would automatically target anything in range, ranged attacks were usually pretty good about aiming higher at flying enemies, and there were no ridiculously short "crotch monsters" to contend with. Trying to aim at anything more than a foot lower and more than a yard away from you, however, was next to impossible.
+<ul><li> That's why you entered turn-based mode. In regular full-speed mode the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TheComputerIsACheatingBastard" title="/pmwiki/pmwiki.php/Main/TheComputerIsACheatingBastard">AI was given a rather large advantage</a>.
+</li></ul></li><li> It's not until late in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/BionicCommando" title="/pmwiki/pmwiki.php/VideoGame/BionicCommando">Bionic Commando</a> Rearmed</em> that you get a weapon that fired diagonally, and even then it's clumsy. You can fire while crouched to deal with low threats, but you <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ScrappyMechanic" title="/pmwiki/pmwiki.php/Main/ScrappyMechanic">cannot jump at all</a>, so enemies attacking from above remain a major annoyance for the entire game. Oh, and the enemy AI knows that you cannot fire diagonally up, and will take advantage of this fact to remain safe from your attacks.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Iji" title="/pmwiki/pmwiki.php/VideoGame/Iji">Iji</a></em> can't fire while crouched, and more damningly, can't fire while jumping. However, the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BenevolentArchitecture" title="/pmwiki/pmwiki.php/Main/BenevolentArchitecture">game was designed around these limitations</a>; there's really never a point where you NEED to be able to do these things. There are a few weapons that can fire in a spread or hit things not on your horizontal level, but aside from a few secret bits, the spread isn't all that useful.
+<ul><li> Also explained by the game - Iji's nanogun is <a class="twikilink" href="/pmwiki/pmwiki.php/Main/HugeGunTinyGirl" title="/pmwiki/pmwiki.php/Main/HugeGunTinyGirl">so large</a> she can only hold it properly while standing straight - trying to fire while crouched or airborne would result in the recoil knocking her over.
+<ul><li> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/FridgeLogic" title="/pmwiki/pmwiki.php/Main/FridgeLogic">Which becomes ridiculous</a> when you realize that Iji will happily fire a weapon which knocks her over with recoil even while she <em>is</em> standing. You get knocked over frequently anyway with all the rockets flying around, and that blasting yourself across the room with recoil would actually be <em>useful</em> in some instances. In fact, it's required to get some of the secrets!
+</li></ul></li></ul></li><li> Sachen's <em><a class="createlink" href="/pmwiki/pmwiki.php/Main/SilentAssault" title="/pmwiki/pmwiki.php/Main/SilentAssault">Silent Assault</a></em>. You can shoot horizontally and vertically, but not diagonally.
+</li><li> In <em>Sküljagger: Revolt of the Westicans</em>, Storm's non-crouching swings are in an overhead arc, yet only part of the arc will register hits. His crouching attack changes to more of a sideways arc, but can still hit enemies standing slightly lower than him if close enough. Finally, the projectiles granted by red jemeralds only travel horizontally forward.
+</li><li> <em><a class="urllink" href="http://www.newgrounds.com/portal/view/512407">Madness Accelerant<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a></em>. With keyboard controlls, you can only aim in a few directions. A later version added <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GameBreaker" title="/pmwiki/pmwiki.php/Main/GameBreaker">mouse aiming</a> that allowed you to aim anywhere.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DynastyWarriors" title="/pmwiki/pmwiki.php/VideoGame/DynastyWarriors">Dynasty Warriors</a></em> is a 3D variation: characters can attack in the full 360 degrees... but not up or down. This is a big problem when trying to move down staircases or steep hills.
+<ul><li> The <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DynastyWarriorsGundam" title="/pmwiki/pmwiki.php/VideoGame/DynastyWarriorsGundam">Dynasty Warriors: Gundam</a></em> sister series gives the Zaku Tank, which is hip-tall on even the smallest Mobile Suits, a hitbox <a class="twikilink" href="/pmwiki/pmwiki.php/Main/HitboxDissonance" title="/pmwiki/pmwiki.php/Main/HitboxDissonance">about twice as tall as it actually is</a>, just to <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AntiFrustrationFeatures" title="/pmwiki/pmwiki.php/Main/AntiFrustrationFeatures">avoid the crotch-monster problem</a>.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SuperMarioBros" title="/pmwiki/pmwiki.php/VideoGame/SuperMarioBros">Super Mario Bros.</a></em> has a variant: You can attack diagonally, downward. But anything higher than Mario can't be attacked. Not normally a problem, until you've got Lakitu, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/FlyingOnACloud" title="/pmwiki/pmwiki.php/Main/FlyingOnACloud">Flying on a Cloud</a> at the top of the screen <em>constantly</em> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MookMaker" title="/pmwiki/pmwiki.php/Main/MookMaker">spawning Spinies</a>. (You can kill him if you stand high enough to hit him, but he just respawns.)
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/CaveStory" title="/pmwiki/pmwiki.php/VideoGame/CaveStory">Cave Story</a></em>, you can only fire in four directions, though some weapons have spread. However, since the player's character is one of the shortest things around, this is rarely a problem. Except for that one boss designed purposefully to be extremely small.
+<ul><li> There is also the Fireball, which is affected by gravity, bounces, and is rather powerful. However, even a not-so-<a class="twikilink" href="/pmwiki/pmwiki.php/Main/InsurmountableWaistHighFence" title="/pmwiki/pmwiki.php/Main/InsurmountableWaistHighFence">Insurmountable Waist-High Fence</a> or trench makes it virtually impossible to use.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Purple" title="/pmwiki/pmwiki.php/VideoGame/Purple">Purple</a></em> lets you aim only in four directions. What's worse, during the development process, the author promised the finished version to let player aim in eight directions, but that never was implemented.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/LaMulana" title="/pmwiki/pmwiki.php/VideoGame/LaMulana">La-Mulana</a></em>, shurikens can only be fired straight left or right, spears straight down, and flares straight up. Throwing knives (and the dagger) do help get rid of crouching enemies, but the other sub-weapons aren't good for general use. The biggest headache is aiming at the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GoddamnedBats" title="/pmwiki/pmwiki.php/Main/GoddamnedBats">ever-annoying bats</a> that like to randomly head off on a diagonal course.
+</li><li> Non-video game example: <a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/Chess" title="/pmwiki/pmwiki.php/TabletopGame/Chess">Chess</a>. Rooks and Bishops are this to each other. Pawns can <em>only</em> attack diagonally.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DragonSlayer" title="/pmwiki/pmwiki.php/VideoGame/DragonSlayer">Dragon Slayer</a></em> doesn't allow the player to move or attack diagonally before accumulating 30,000 experience points. Monsters are under no such restriction.
+</li><li> The NES version of <em>Super <a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Pitfall" title="/pmwiki/pmwiki.php/VideoGame/Pitfall">Pitfall</a></em> allows you to crouch and shoot, but not at the same time. This means certain enemies can only be killed by climbing slightly down a ladder.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Tutankham" title="/pmwiki/pmwiki.php/VideoGame/Tutankham">Tutankham</a></em>, though nothing in the game could move diagonally, the player was denied any kind of vertical attack.
+</li><li> The cannons in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Netstorm" title="/pmwiki/pmwiki.php/VideoGame/Netstorm">Netstorm</a></em> can only fire in the four basic directions, to balance out their high power and long range.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Vanguard" title="/pmwiki/pmwiki.php/VideoGame/Vanguard">Vanguard</a></em> allowed 8-way movement, but only 4-way firing. However, this is more generous than most later <a class="twikilink" href="/pmwiki/pmwiki.php/Main/HorizontalScrollingShooter" title="/pmwiki/pmwiki.php/Main/HorizontalScrollingShooter">Horizontal Scrolling Shooters</a> (but <em>Vanguard</em> was not a pure <a class="twikilink" href="/pmwiki/pmwiki.php/Main/HorizontalScrollingShooter" title="/pmwiki/pmwiki.php/Main/HorizontalScrollingShooter">Horizontal Scrolling Shooter</a>).
+</li><li> <em><a class="createlink" href="/pmwiki/pmwiki.php/VideoGame/MetalMutant" title="/pmwiki/pmwiki.php/VideoGame/MetalMutant">Metal Mutant</a></em>: Switching into one of your three forms—each of which has different weapons, with different ranges—mainly depends on which weapon can even <em>reach</em> the enemy you're currently fighting.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/ElevatorAction" title="/pmwiki/pmwiki.php/VideoGame/ElevatorAction">Elevator Action</a></em>, enemies can shoot from a prone position, while the player cannot. In fact the player cannot even drop prone, being limited to crouching only.
+</li><li> In the original <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/StarTropics" title="/pmwiki/pmwiki.php/VideoGame/StarTropics">StarTropics</a></em>, Mike and all enemies are restricted to grid-like movement and attacks, only able to move or shoot horizontally or vertically.<span class="notelabel" onclick="togglenote('note00bvi');"><sup>note </sup></span><span class="inlinefolder" id="note00bvi" isnote="true" onclick="togglenote('note00bvi');" style="cursor:pointer;font-size:smaller;display:none;">In the sequel, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/RevengeOfTheSequel" title="/pmwiki/pmwiki.php/Main/RevengeOfTheSequel">Zoda's Revenge</a>, this restriction is no longer present - all enemies and Mike now have freeform movement and can shoot in 8 directions</span>
+</li><li> <a class="twikilink" href="/pmwiki/pmwiki.php/Creator/TelenetJapan" title="/pmwiki/pmwiki.php/Creator/TelenetJapan">Telenet Japan</a>'s 1986 computer game <em>Final Zone</em> gave the player character two (not very smart) AI teammates, but none of them could attack in any direction except upward.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/AlexKidd" title="/pmwiki/pmwiki.php/VideoGame/AlexKidd">Alex Kidd</a> in High-Tech World</em> has a very bad case of this: Alex Kidd can only attack horizontally, but the ninja can throw shurikens from any angle.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MagicalChase" title="/pmwiki/pmwiki.php/VideoGame/MagicalChase">Magical Chase</a></em>'s heroine Ripple by herself can only shoot forward. Power-ups like the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SpreadShot" title="/pmwiki/pmwiki.php/Main/SpreadShot">3-Way</a> can fix this.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/RollingThunder" title="/pmwiki/pmwiki.php/VideoGame/RollingThunder">Rolling Thunder</a></em> traditionally only lets you fire forward. <em>Rolling Thunder 3</em> lets you shoot diagonally upward, but only when you're on the ground and with your basic pistol.
+</li><li> The <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/StarControl" title="/pmwiki/pmwiki.php/VideoGame/StarControl">Star Control</a></em> series has only a discrete number of rotational positions for ships (usually 16). If you are not in the line of fire of any direction they can point, you cannot be hit. Battles between experts tend to use this as a form of <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GunKata" title="/pmwiki/pmwiki.php/Main/GunKata">Gun Kata</a>.
+</li><li> <em>Cyber-Lip</em> for the <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/NeoGeo" title="/pmwiki/pmwiki.php/UsefulNotes/NeoGeo">Neo Geo</a> doesn't allow players to aim their shots diagonally.
+</li><li> This is a problem in <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/Pokemon" title="/pmwiki/pmwiki.php/Franchise/Pokemon">Pokémon</a></em> triple battles in Gen V and beyond. If you're on one of the sides, you won't be able to target your attack at the opponent Pokemon on the far other side from you unless you are using certain attacks (most of which are flying).
+</li><li> <em>Space Zap</em> only lets the player's immobile fortress shoot in a direct horizontal or vertical line; fortunately, most enemies happen to attack along these very lines.
+</li><li> In the platform game <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Stinkoman20X6" title="/pmwiki/pmwiki.php/VideoGame/Stinkoman20X6">Stinkoman 20X6</a></em> the projectiles you shoot are affected by gravity, however the tiny enemies known as "My Benj" require you to stand far enough away to hit them.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Disgaea" title="/pmwiki/pmwiki.php/VideoGame/Disgaea">Disgaea</a></em>'s gun weapons can only shoot in the four cardinal directions, as a trade-off for having more range than any other weapon type; other weapons that can attack more than one panel away <em>can</em> hit diagonals. However, equipping a particular Evility will allow guns to fire diagonally, and even then this only affects their basic attack, not their special skills.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/WarioWare" title="/pmwiki/pmwiki.php/VideoGame/WarioWare">WarioWare</a></em>'s <em>Pyoro</em> minigame twists this trope forty-five degrees. Your tongue/seeds will <em>only</em> fire diagonally, while the beans you're trying to hit fall from above.
+</li></ul><hr/>
+</div>
+<div class="square_ad footer-article-ad main_2" data-isolated="0"></div>
+<div class="section-links" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<div class="titles">
+<div><h3 class="text-center text-uppercase">Previous</h3></div>
+<div><h3 class="text-center text-uppercase">Index</h3></div>
+<div><h3 class="text-center text-uppercase">Next</h3></div>
+</div>
+<div class="links">
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/DeathCourse">Death Course</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/VideoGameDifficultyTropes">Video Game Difficulty Tropes</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/DiminishingReturnsForBalance">Diminishing Returns for Balance</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="outer_ads_by_salon_wrapper" id="exco_player_insert_div">
+</div>
+</article>
+<div id="main-content-sidebar"><div class="sidebar-item display-options">
+<ul class="sidebar display-toggles">
+<li>Show Spoilers <div class="display-toggle show-spoilers" id="sidebar-toggle-showspoilers"></div></li>
+<li>Night Vision <div class="display-toggle night-vision" id="sidebar-toggle-nightvision"></div></li>
+<li>Sticky Header <div class="display-toggle sticky-header" id="sidebar-toggle-stickyheader"></div></li>
+<li>Wide Load <div class="display-toggle wide-load" id="sidebar-toggle-wideload"></div></li>
+</ul>
+<script>updateDesktopPrefs();</script>
+</div>
+<div class="sidebar-item ad sb-ad-unit">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_2"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_2'); });</script> </div>
+</div></div>
+<div class="sidebar-item quick-links" itemtype="http://schema.org/SiteNavigationElement">
+<p class="sidebar-item-title" data-title="Important Links">Important Links</p>
+<div class="padded">
+<a href="/pmwiki/query.php?type=att">Ask The Tropers</a>
+<a href="/pmwiki/query.php?type=tf">Trope Finder</a>
+<a href="/pmwiki/query.php?type=ykts">You Know That Show...</a>
+<a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a>
+<a href="/pmwiki/review_activity.php">Reviews</a>
+<a data-modal-target="login" href="/pmwiki/lbs.php">Live Blogs</a>
+<a href="/pmwiki/ad-free-subscribe.php">Go Ad Free!</a> </div>
+</div>
+<div class="sidebar-item sb-ad-unit">
+<div class="sidebar-section">
+<div class="square_ad ad-size-300x600 ad-section text-center">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_3"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_3'); });</script> </div>
+</div> </div>
+</div>
+</div>
+<div class="sidebar-item">
+<p class="sidebar-item-title" data-title="Crucial Browsing">Crucial Browsing</p>
+<ul class="padded font-s" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><a data-click-toggle="active" href="javascript:void(0);">Genre</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/ActionAdventureTropes" title="Main/ActionAdventureTropes">Action Adventure</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ComedyTropes" title="Main/ComedyTropes">Comedy</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CommercialsTropes" title="Main/CommercialsTropes">Commercials</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CrimeAndPunishmentTropes" title="Main/CrimeAndPunishmentTropes">Crime &amp; Punishment</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DramaTropes" title="Main/DramaTropes">Drama</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/HorrorTropes" title="Main/HorrorTropes">Horror</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LoveTropes" title="Main/LoveTropes">Love</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NewsTropes" title="Main/NewsTropes">News</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ProfessionalWrestling" title="Main/ProfessionalWrestling">Professional Wrestling</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SpeculativeFictionTropes" title="Main/SpeculativeFictionTropes">Speculative Fiction</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SportsStoryTropes" title="Main/SportsStoryTropes">Sports Story</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/WarTropes" title="Main/WarTropes">War</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Media</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/Media" title="Main/Media">All Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/AnimationTropes" title="Main/AnimationTropes">Animation (Western)</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Anime" title="Main/Anime">Anime</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ComicBookTropes" title="Main/ComicBookTropes">Comic Book</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FanFic" title="FanFic/FanFics">Fan Fics</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Film" title="Main/Film">Film</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/GameTropes" title="Main/GameTropes">Game</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Literature" title="Main/Literature">Literature</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MusicAndSoundEffects" title="Main/MusicAndSoundEffects">Music And Sound Effects</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NewMediaTropes" title="Main/NewMediaTropes">New Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/PrintMediaTropes" title="Main/PrintMediaTropes">Print Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Radio" title="Main/Radio">Radio</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SequentialArt" title="Main/SequentialArt">Sequential Art</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TabletopGames" title="Main/TabletopGames">Tabletop Games</a></li>
+<li><a href="/pmwiki/pmwiki.php/UsefulNotes/Television" title="Main/Television">Television</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Theater" title="Main/Theater">Theater</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/VideogameTropes" title="Main/VideogameTropes">Videogame</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Webcomics" title="Main/Webcomics">Webcomics</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Narrative</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/UniversalTropes" title="Main/UniversalTropes">Universal</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/AppliedPhlebotinum" title="Main/AppliedPhlebotinum">Applied Phlebotinum</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CharacterizationTropes" title="Main/CharacterizationTropes">Characterization</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Characters" title="Main/Characters">Characters</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CharactersAsDevice" title="Main/CharactersAsDevice">Characters As Device</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Dialogue" title="Main/Dialogue">Dialogue</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Motifs" title="Main/Motifs">Motifs</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NarrativeDevices" title="Main/NarrativeDevices">Narrative Devices</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Paratext" title="Main/Paratext">Paratext</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Plots" title="Main/Plots">Plots</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Settings" title="Main/Settings">Settings</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Spectacle" title="Main/Spectacle">Spectacle</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Other Categories</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/BritishTellyTropes" title="Main/BritishTellyTropes">British Telly</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TheContributors" title="Main/TheContributors">The Contributors</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CreatorSpeak" title="Main/CreatorSpeak">Creator Speak</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Creators" title="Main/Creators">Creators</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DerivativeWorks" title="Main/DerivativeWorks">Derivative Works</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LanguageTropes" title="Main/LanguageTropes">Language</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LawsAndFormulas" title="Main/LawsAndFormulas">Laws And Formulas</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ShowBusiness" title="Main/ShowBusiness">Show Business</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SplitPersonalityTropes" title="Main/SplitPersonalityTropes">Split Personality</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/StockRoom" title="Main/StockRoom">Stock Room</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TropeTropes" title="Main/TropeTropes">Trope</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Tropes" title="Main/Tropes">Tropes</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TruthAndLies" title="Main/TruthAndLies">Truth And Lies</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TruthInTelevision" title="Main/TruthInTelevision">Truth In Television</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Topical Tropes</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/BetrayalTropes" title="Main/BetrayalTropes">Betrayal</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CensorshipTropes" title="Main/CensorshipTropes">Censorship</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CombatTropes" title="Main/CombatTropes">Combat</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DeathTropes" title="Main/DeathTropes">Death</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FamilyTropes" title="Main/FamilyTropes">Family</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FateAndProphecyTropes" title="Main/FateAndProphecyTropes">Fate And Prophecy</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FoodTropes" title="Main/FoodTropes">Food</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/HolidayTropes" title="Main/HolidayTropes">Holiday</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MemoryTropes" title="Main/MemoryTropes">Memory</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MoneyTropes" title="Main/MoneyTropes">Money</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MoralityTropes" title="Main/MoralityTropes">Morality</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/PoliticsTropes" title="Main/PoliticsTropes">Politics</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ReligionTropes" title="Main/ReligionTropes">Religion</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SchoolTropes" title="Main/SchoolTropes">School</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="sidebar-item showcase">
+<p class="sidebar-item-title" data-title="Community Showcase">Community Showcase <a class="bubble float-right hover-blue" href="/pmwiki/showcase.php">More</a></p>
+<p class="community-showcase">
+<a href="https://sharetv.com/shows/echo_chamber" onclick="trackOutboundLink('https://sharetv.com/shows/echo_chamber');" target="_blank">
+<img alt="" class="lazy-image" data-src="/images/communityShowcase-echochamber.jpg"/></a>
+<a href="/pmwiki/pmwiki.php/Webcomic/TwistedTropes">
+<img alt="" class="lazy-image" data-src="/img/howlandsc-side.jpg"/></a>
+</p>
+</div>
+<div class="sidebar-item sb-ad-unit" id="stick-cont">
+<div class="sidebar-section" id="stick-bar">
+<div class="square_ad ad-size-300x600 ad-section text-center">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_4"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_4'); });</script> </div>
+</div> </div>
+</div>
+</div>
+</div>
+</div>
+<div class="action-bar tablet-off" id="action-bar-bottom">
+<a class="scroll-to-top dead-button" href="#top-of-page" onclick="$('html, body').animate({scrollTop : 0},500);">Top</a>
+</div>
+</div>
+<div class="proper-ad-unit ad-sticky">
+<div id="proper-ad-tvtropes_sticky_ad"> <script>propertag.cmd.push(function() { proper_display('tvtropes_sticky_ad'); });</script> </div>
+</div>
+<footer id="main-footer">
+<div id="main-footer-inner">
+<div class="footer-left">
+<a class="img-link" href="/"><img alt="TV Tropes" class="lazy-image" data-src="/img/tvtropes-footer-logo.png" title="TV Tropes"/></a>
+<form action="index.html" class="navbar-form newsletter-signup validate modal-replies" data-ajax-get="/ajax/subscribe_email.php" id="cse-search-box-mobile" name="" role="">
+<button class="btn-submit newsletter-signup-submit-button" id="subscribe-btn" type="submit"><i class="fa fa-paper-plane"></i></button>
+<input class="form-control" id="subscription-email" name="q" placeholder="Subscribe" size="31" type="text" validate-type="email" value=""/>
+</form>
+<ul class="social-buttons">
+<li><a class="btn fb" href="https://www.facebook.com/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-facebook']);" target="_blank"><i class="fa fa-facebook"></i></a></li>
+<li><a class="btn tw" href="https://www.twitter.com/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-twitter']);" target="_blank"><i class="fa fa-twitter"></i></a> </li>
+<li><a class="btn rd" href="https://www.reddit.com/r/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-reddit']);" target="_blank"><i class="fa fa-reddit-alien"></i></a></li>
+</ul>
+</div>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">TVTropes</h4></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Administrivia">About TVTropes</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TheGoalsOfTVTropes">TVTropes Goals</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TheTropingCode">Troping Code</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TVTropesCustoms">TVTropes Customs</a></li>
+<li><a href="/pmwiki/pmwiki.php/JustForFun/TropesOfLegend">Tropes of Legend</a></li>
+<li><a href="/pmwiki/ad-free-subscribe.php">Go Ad-Free</a></li>
+</ul>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">Community</h4></li>
+<li><a href="/pmwiki/query.php?type=att">Ask The Tropers</a></li>
+<li><a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a></li>
+<li><a href="/pmwiki/query.php?type=tf">Trope Finder</a></li>
+<li><a href="/pmwiki/query.php?type=ykts">You Know That Show</a></li>
+<li><a data-modal-target="login" href="/pmwiki/lbs.php">Live Blogs</a></li>
+<li><a href="/pmwiki/review_activity.php">Reviews</a></li>
+<li><a href="/pmwiki/topics.php">Forum</a></li>
+</ul>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">Tropes HQ</h4></li>
+<li><a href="/pmwiki/about.php">About Us</a></li>
+<li><a href="/pmwiki/contact.php">Contact Us</a></li>
+<li><a href="/pmwiki/dmca.php">DMCA Notice</a></li>
+<li><a href="/pmwiki/privacypolicy.php">Privacy Policy</a></li>
+</ul>
+</div>
+<div class="text-center gutter-top gutter-bottom tablet-on" id="desktop-on-mobile-toggle">
+<a href="/pmwiki/switchDeviceCss.php?mobileVersion=1" rel="nofollow">Switch to <span class="txt-desktop">Desktop</span><span class="txt-mobile">Mobile</span> Version</a>
+</div>
+<div class="legal">
+<p>TVTropes is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License. <br/>Permissions beyond the scope of this license may be available from <a href="mailto:thestaff@tvtropes.org" rel="cc:morePermissions" xmlns:cc="http://creativecommons.org/ns#"> thestaff@tvtropes.org</a>.</p>
+<br/>
+<div class="privacy_wrapper">
+</div>
+</div>
+</footer>
+<style>
+      div.fc-ccpa-root {
+        position: absolute !important;
+        bottom: 93px !important;
+        margin: auto !important;
+        width: 100% !important;
+        z-index: 9999 !important;
+      }
+      .fc-ccpa-root .fc-dns-dialog .fc-dns-link p{
+        outline: none !important;
+        text-decoration: underline !important;
+        font-size: .7em !important;
+        font-family: sans-serif !important;
+      }
+      .fc-ccpa-root .fc-dns-dialog .fc-dns-link .fc-button-background {
+        background: none !important;
+      }
+    </style>
+<div class="full-screen" id="_pm_videoViewer">
+<a class="close" href="#close" id="_pm_videoViewer-close"></a>
+<div class="_pmvv-body">
+<div class="_pmvv-vidbox">
+<video class="video-js vjs-default-skin vjs-16-9" data-video-id="" id="overlay-video-player-box">
+</video>
+<div class="_pmvv-vidbox-desc">
+<h1 id="overlay-title"></h1>
+<p class="_pmvv-vidbox-descTxt" id="overlay-descrip">
+</p>
+<div class="rating-row" data-video-id="">
+<input name="is_logged_in" type="hidden" value="0"/>
+<p>How well does it match the trope?</p>
+<div id="star-rating-group">
+<div class="trope-rate">
+<input id="lamp5" name="rate" type="radio" value="5"/>
+<label for="lamp5" title="Absolutely"></label>
+<input id="lamp4" name="rate" type="radio" value="4"/>
+<label for="lamp4" title="Yes"></label>
+<input id="lamp3" name="rate" type="radio" value="3"/>
+<label for="lamp3" title="Kind of"></label>
+<input id="lamp2" name="rate" type="radio" value="2"/>
+<label for="lamp2" title="Not really"></label>
+<input id="lamp1" name="rate" type="radio" value="1"/>
+<label for="lamp1" title="No"></label>
+</div>
+<div id="star-rating-total">
+</div>
+</div>
+</div>
+<div class="example-media-row">
+<div class="example-overlay">
+<p>Example of:</p>
+<div id="overlay-trope"> / </div>
+</div>
+<div class="media-sources-overlay example-overlay">
+<p>Media sources:</p>
+<div id="overlay-media"> / </div>
+</div>
+</div>
+<p class="_pmvv-vidbox-stats text-right font-s" style="padding-top:8px; border-top: solid 1px rgba(255,255,255,0.2)">
+<a class="float-right" data-modal-target="login" href="#video-feedback">Report</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+        window.special_ops =  {
+            member : 'no',
+            isolated : 0,
+            tags : ['unknown']
+        };
+    </script>
+<script type="text/javascript">
+
+        var cleanCreativeEnabled = "";
+        var donation = "";
+        var live_ads = "1";
+        var img_domain = "https://static.tvtropes.org";
+        var snoozed = cookies.read('snoozedabm');
+        var snoozable = "";
+
+        if (adsRemovedWith) {
+            live_ads = 0;
+        }
+
+        var elem = document.createElement('script');
+        elem.async = true;
+
+        elem.src = '/design/assets/bundle.js?rev=c58d8df02f09262390bbd03db7921fc35c6af306';
+
+        elem.onload = function() {
+                                 }
+        document.getElementsByTagName('head')[0].appendChild(elem);
+
+    </script>
+<script type="text/javascript">
+      function send_analytics_event(user_type, donation){
+          // if(user_type == 'uncached' || user_type == 'cached'){
+          //   ga('send', 'event', 'caching', 'load', user_type, {'nonInteraction': 1});
+          //   return;
+          // }
+          var event_name = user_type;
+
+          if(donation == 'true'){
+              event_name += "_donation"
+          }else if(typeof(valid_user) == 'undefined'){
+              event_name += "_blocked"
+          }else if(valid_user == true){
+              event_name += "_unblocked";
+          }else{
+              event_name = "_unknown"
+          }
+          ga('send', 'event', 'ads', 'load', event_name, {'nonInteraction': 1});
+      }
+
+    
+    send_analytics_event("guest", "false");
+      </script>
+</body>
+</html>

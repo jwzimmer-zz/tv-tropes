@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Real-Time with Pause - TV Tropes</title>
+<meta content="The Real-Time with Pause trope as used in popular culture. The vast majority of video games can be said to fall into one of two groups by the way they deal …" name="description"/>
+<link href="https://tvtropes.org/pmwiki/pmwiki.php/Main/RealTimeWithPause" rel="canonical"/>
+<link href="/img/icons/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="@tvtropes" name="twitter:site"/>
+<meta content="@tvtropes" name="twitter:owner"/>
+<meta content="Real-Time with Pause - TV Tropes" name="twitter:title"/>
+<meta content="The Real-Time with Pause trope as used in popular culture. The vast majority of video games can be said to fall into one of two groups by the way they deal …" name="twitter:description"/>
+<meta content="https://static.tvtropes.org/logo_blue_small.png" name="twitter:image:src"/>
+<meta content="TV Tropes" property="og:site_name"/>
+<meta content="en_US" property="og:locale"/>
+<meta content="https://www.facebook.com/tvtropes" property="article:publisher"/>
+<meta content="Real-Time with Pause - TV Tropes" property="og:title"/>
+<meta content="website" property="og:type"/>
+<meta content="https://tvtropes.org/pmwiki/pmwiki.php/Main/RealTimeWithPause" property="og:url"/>
+<meta content="https://static.tvtropes.org/logo_blue_small.png" property="og:image"/>
+<meta content="The vast majority of video games can be said to fall into one of two groups by the way they deal with the flow of time. The first group is turn-based games, which play like chess or Monopoly: The game is sliced into pieces so that each player can …" property="og:description"/>
+<link href="/img/icons/apple-icon-57x57.png" rel="apple-touch-icon" sizes="57x57" type="image/png"/>
+<link href="/img/icons/apple-icon-60x60.png" rel="apple-touch-icon" sizes="60x60" type="image/png"/>
+<link href="/img/icons/apple-icon-72x72.png" rel="apple-touch-icon" sizes="72x72" type="image/png"/>
+<link href="/img/icons/apple-icon-76x76.png" rel="apple-touch-icon" sizes="76x76" type="image/png"/>
+<link href="/img/icons/apple-icon-114x114.png" rel="apple-touch-icon" sizes="114x114" type="image/png"/>
+<link href="/img/icons/apple-icon-120x120.png" rel="apple-touch-icon" sizes="120x120" type="image/png"/>
+<link href="/img/icons/apple-icon-144x144.png" rel="apple-touch-icon" sizes="144x144" type="image/png"/>
+<link href="/img/icons/apple-icon-152x152.png" rel="apple-touch-icon" sizes="152x152" type="image/png"/>
+<link href="/img/icons/apple-icon-180x180.png" rel="apple-touch-icon" sizes="180x180" type="image/png"/>
+<link href="/img/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/img/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/img/icons/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png"/>
+<link href="/img/icons/favicon-192x192.png" rel="icon" sizes="192x192" type="image/png"/>
+<meta content="width=device-width, initial-scale=1" id="viewport" name="viewport"/>
+<script>
+                var propertag = {};
+                propertag.cmd = [];
+            </script>
+<link href="/design/assets/bundle.css?rev=c58d8df02f09262390bbd03db7921fc35c6af306" rel="stylesheet"/>
+<script>
+                function object(objectId) {
+                    if (document.getElementById && document.getElementById(objectId)) {
+                        return document.getElementById(objectId);
+                    } else if (document.all && document.all(objectId)) {
+                        return document.all(objectId);
+                    } else if (document.layers && document.layers[objectId]) {
+                        return document.layers[objectId];
+                    } else {
+                        return false;
+                    }
+                }
+
+                // JAVASCRIPT COOKIES CODE: for getting and setting user viewing preferences
+                var cookies = {
+                    create: function (name, value, days2expire, path) {
+                        var date = new Date();
+                        date.setTime(date.getTime() + (days2expire * 24 * 60 * 60 * 1000));
+                        var expires = date.toUTCString();
+                        document.cookie = name + '=' + value + ';' + 'expires=' + expires + ';' + 'path=' + path + ';';
+                    },
+										createWithExpire: function(name, value, expires, path) {
+												document.cookie = name + '=' + value + ';' + 'expires=' + expires + ';' + 'path=' + path + ';';
+										},
+                    read: function (name) {
+                        var cookie_value = "",
+                            current_cookie = "",
+                            name_expr = name + "=",
+                            all_cookies = document.cookie.split(';'),
+                            n = all_cookies.length;
+
+                        for (var i = 0; i < n; i++) {
+                            current_cookie = all_cookies[i].trim();
+                            if (current_cookie.indexOf(name_expr) === 0) {
+                                cookie_value = current_cookie.substring(name_expr.length, current_cookie.length);
+                                break;
+                            }
+                        }
+                        return cookie_value;
+                    },
+                    update: function (name, val) {
+                        this.create(name, val, 300, "/");
+                    },
+                    remove: function (name) {
+                        document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
+                    }
+                };
+
+                function updateUserPrefs() {
+                    //GENERAL: detect and set browser, if not cookied (will be treated like a user-preference and added to the #user-pref element)
+                    if( !cookies.read('user-browser') ){
+                        var broswer = '';
+
+                        if(navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPod/i) ){
+                            browser = 'iOS';
+                        } else if (/Opera[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'opera';
+                        } else if (/MSIE (\d+\.\d+);/.test(navigator.userAgent)) {
+                            browser = 'MSIE';
+                        } else if (/Navigator[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'netscape';
+                        } else if (/Chrome[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'chrome';
+                        } else if (/Safari[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'safari';
+                            /Version[\/\s](\d+\.\d+)/.test(navigator.userAgent);
+                            browserVersion = new Number(RegExp.$1);
+                        } else if (/Firefox[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'firefox';
+                        } else {
+                            browser = 'internet_explorer';
+                        }
+                        cookies.create('user-browser',browser,1,'/');
+                        document.getElementById('user-prefs').classList.add('browser-' + browser);
+                    } else {
+                        document.getElementById('user-prefs').classList.add('browser-' + cookies.read('user-browser'));
+                    }
+
+                    //update user preference settings
+                    if (cookies.read('wide-load') !== '') document.getElementById('user-prefs').classList.add('wide-load');
+                    if (cookies.read('night-vision') !== '') document.getElementById('user-prefs').classList.add('night-vision');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('user-prefs').classList.add('sticky-header');
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('user-prefs').classList.add('show-spoilers');
+                    if (cookies.read('folders-open') !== '') document.getElementById('user-prefs').classList.add('folders-open');
+                    if (cookies.read('lefthand-sidebar') !== '') document.getElementById('user-prefs').classList.add('lefthand-sidebar');
+                    if (cookies.read('highlight-links') !== '') document.getElementById('user-prefs').classList.add('highlight-links');
+                    if (cookies.read('forum-gingerbread') !== '') document.getElementById('user-prefs').classList.add('forum-gingerbread');
+                    if (cookies.read('shared-avatars') !== '') document.getElementById('user-prefs').classList.add('shared-avatars');
+                    if (cookies.read('new-search') !== '') document.getElementById('user-prefs').classList.add('new-search');
+                    if (cookies.read('stop-auto-play-video') !== '') document.getElementById('user-prefs').classList.add('stop-auto-play-video');
+
+                    //desktop view on mobile
+                    if (cookies.read('desktop-on-mobile') !== ''){
+                        document.getElementById('user-prefs').classList.add('desktop-on-mobile');
+
+                        var viewport = document.querySelector("meta[name=viewport]");
+                        viewport.setAttribute('content', 'width=1000');
+                    }
+
+                }
+
+                function updateDesktopPrefs() {
+                    if (cookies.read('wide-load') !== '') document.getElementById('sidebar-toggle-wideload').classList.add('active');
+                    if (cookies.read('night-vision') !== '') document.getElementById('sidebar-toggle-nightvision').classList.add('active');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('sidebar-toggle-stickyheader').classList.add('active');
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('sidebar-toggle-showspoilers').classList.add('active');
+
+                }
+
+                function updateMobilePrefs() {
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('mobile-toggle-showspoilers').classList.add('active');
+                    if (cookies.read('night-vision') !== '') document.getElementById('mobile-toggle-nightvision').classList.add('active');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('mobile-toggle-stickyheader').classList.add('active');
+                    if (cookies.read('highlight-links') !== '') document.getElementById('mobile-toggle-highlightlinks').classList.add('active');
+
+                }
+
+
+                if (document.cookie.indexOf("scroll0=") < 0) {
+                    // do nothing
+                } else {
+                    console.log('ads removed by scroll.com');
+                    var adsRemovedWith = 'scroll';
+                    var style = document.createElement('style');
+                    style.innerHTML = '#header-ad, .proper-ad-unit, .square_ad, .sb-ad-unit { display: none !important; } ';
+                    document.head.appendChild(style);
+                }
+            </script>
+<script type="text/javascript">
+
+                var tvtropes_config = {
+                    astri_stream_enabled : "",
+                    is_logged_in         : "",
+                    handle               : "",
+                    get_astri_stream     : "",
+										revnum               : "c58d8df02f09262390bbd03db7921fc35c6af306",
+										img_domain           : "https://static.tvtropes.org",
+										adblock              : "1",
+										adblock_url          : "propermessage.io",
+										pause_editing        : "0",
+										pause_editing_msg    : "",
+										pause_site_changes   : ""
+                };
+            </script>
+<script type="text/javascript">
+						  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+						  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+						  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+						  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+						  ga('create', 'UA-3821842-1', 'auto');
+						  ga('send', 'pageview');
+
+						</script>
+</head>
+<body class="">
+<i id="user-prefs"></i>
+<script>updateUserPrefs();</script>
+<div id="fb-root"></div>
+<div id="modal-box"></div>
+<header class="headroom-element" id="main-header-bar">
+<div id="main-header-bar-inner">
+<span class="header-spacer" id="header-spacer-left"></span>
+<a class="mobile-menu-toggle-button tablet-on" href="#mobile-menu" id="main-mobile-toggle"><span></span><span></span><span></span></a>
+<a class="no-dev" href="/" id="main-header-logoButton"></a>
+<span class="header-spacer" id="header-spacer-right"></span>
+<nav class="tablet-off" id="main-header-nav">
+<a href="/pmwiki/pmwiki.php/Main/Tropes">Tropes</a>
+<a href="/pmwiki/pmwiki.php/Main/Media">Media</a>
+<a class="nav-browse" href="/pmwiki/browse.php">Browse</a>
+<a href="/pmwiki/index_report.php">Indexes</a>
+<a href="/pmwiki/topics.php">Forums</a>
+<a class="nav-browse" href="/pmwiki/recent_videos.php">Videos</a>
+</nav>
+<div id="main-header-bar-right">
+<div class="font-xs mobile-off" id="signup-login-box">
+<a class="hover-underline bold" data-modal-target="signup" href="/pmwiki/login.php">Join</a>
+<a class="hover-underline bold" data-modal-target="login" href="/pmwiki/login.php">Login</a>
+</div>
+<div class="mobile-on inline" id="signup-login-mobileToggle">
+<a data-modal-target="login" href="/pmwiki/login.php"><i class="fa fa-user"></i></a>
+</div>
+<div id="search-box">
+<form action="/pmwiki/search_result.php" class="search">
+<input class="search-box" name="q" placeholder="Search" required="" type="text" value=""/>
+<input class="submit-button" type="submit" value=""/>
+<input name="search_type" type="hidden" value="article"/>
+<input name="page_type" type="hidden" value="all"/>
+<input name="cx" type="hidden" value="partner-pub-6610802604051523:amzitfn8e7v"/>
+<input name="cof" type="hidden" value="FORID:10"/>
+<input name="ie" type="hidden" value="ISO-8859-1"/>
+<input name="siteurl" type="hidden" value=""/>
+<input name="ref" type="hidden" value=""/>
+<input name="ss" type="hidden" value=""/>
+</form>
+<a class="mobile-on mobile-search-toggle close-x" href="#close-search"><i class="fa fa-close"></i></a>
+</div>
+<div id="random-box">
+<a class="button-random-trope" href="/pmwiki/pmwiki.php/Main/RussianReversal" onclick="ga('send', 'event', 'button', 'click', 'random trope');" rel="nofollow"></a>
+<a class="button-random-media" href="/pmwiki/pmwiki.php/Fanfic/TheSweetieChroniclesFragments" onclick="ga('send', 'event', 'button', 'click', 'random media');" rel="nofollow"></a>
+</div>
+</div>
+</div>
+<div class="tablet-on" id="mobile-menu"><div class="mobile-menu-options">
+<div class="nav-wrapper">
+<a class="xl" href="/pmwiki/pmwiki.php/Main/Tropes">Tropes</a>
+<a class="xl" href="/pmwiki/pmwiki.php/Main/Media">Media</a>
+<a class="xl" href="/pmwiki/browse.php">Browse</a>
+<a class="xl" href="/pmwiki/index_report.php">Indexes</a>
+<a class="xl" href="/pmwiki/topics.php">Forums</a>
+<a class="xl" href="/pmwiki/recent_videos.php">Videos</a>
+<a href="/pmwiki/query.php?type=att">Ask The Tropers</a>
+<a href="/pmwiki/query.php?type=tf">Trope Finder</a>
+<a href="/pmwiki/query.php?type=ykts">You Know That Show...</a>
+<a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a>
+<a data-click-toggle="active" href="#tools">Tools <i class="fa fa-chevron-down"></i></a>
+<div class="tools-dropdown mobile-dropdown-linkList">
+<a href="/pmwiki/cutlist.php">Cut List</a>
+<a href="/pmwiki/changes.php">New Edits</a>
+<a href="/pmwiki/recent_edit_reasons.php">Edit Reasons</a>
+<a href="/pmwiki/launches.php">Launches</a>
+<a href="/pmwiki/img_list.php">Images List</a>
+<a href="/pmwiki/crown_activity.php">Crowner Activity</a>
+<a href="/pmwiki/no_types.php">Un-typed Pages</a>
+<a href="/pmwiki/page_type_audit.php">Recent Page Type Changes</a>
+</div>
+<a data-click-toggle="active" href="#hq">Tropes HQ <i class="fa fa-chevron-down"></i></a>
+<div class="tools-dropdown mobile-dropdown-linkList">
+<a href="/pmwiki/about.php">About Us</a>
+<a href="/pmwiki/contact.php">Contact Us</a>
+<a href="mailto:advertising@proper.io">Advertise</a>
+<a href="/pmwiki/dmca.php">DMCA Notice</a>
+<a href="/pmwiki/privacypolicy.php">Privacy Policy</a>
+</div>
+<a href="/pmwiki/ad-free-subscribe.php">Go Ad-Free</a>
+<div class="toggle-switches">
+<ul class="mobile-menu display-toggles">
+<li>Show Spoilers <div class="display-toggle show-spoilers" id="mobile-toggle-showspoilers"></div></li>
+<li>Night Vision <div class="display-toggle night-vision" id="mobile-toggle-nightvision"></div></li>
+<li>Sticky Header <div class="display-toggle sticky-header" id="mobile-toggle-stickyheader"></div></li>
+<li>Highlight Links <div class="display-toggle highlight-links" id="mobile-toggle-highlightlinks"></div></li>
+</ul>
+<script>updateMobilePrefs();</script>
+</div>
+</div>
+</div>
+</div>
+</header>
+<div class="mobile-on" id="homepage-introBox-mobile">
+<a href="/"><img class="logo-small" src="/images/logo-white-big.png"/></a>
+<form action="/pmwiki/search_result.php" class="search" style="margin:10px -5px -6px -5px;">
+<input class="search-box" name="q" placeholder="Search" required="" type="text" value=""/>
+<input class="submit-button" type="submit" value=""/>
+<input name="search_type" type="hidden" value="article"/>
+<input name="page_type" type="hidden" value="all"/>
+<input name="cx" type="hidden" value="partner-pub-6610802604051523:amzitfn8e7v"/>
+<input name="cof" type="hidden" value="FORID:10"/>
+<input name="ie" type="hidden" value="ISO-8859-1"/>
+<input name="siteurl" type="hidden" value=""/>
+<input name="ref" type="hidden" value=""/>
+<input name="ss" type="hidden" value=""/>
+</form>
+</div>
+<div class="ad" id="header-ad-wrapper">
+<div id="header-ad">
+<div class="ad-size-970x90 atf_banner">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_1"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_1'); });</script> </div>
+</div> </div>
+</div>
+</div>
+<div id="main-container">
+<div class="action-bar mobile-off" id="action-bar-top">
+<div class="action-bar-right">
+<p>Follow TV Tropes</p>
+<a class="button-fb" href="https://www.facebook.com/TVTropes">
+<i class="fa fa-facebook"></i></a>
+<a class="button-tw" href="https://www.twitter.com/TVTropes">
+<i class="fa fa-twitter"></i></a>
+<a class="button-re" href="https://www.reddit.com/r/TVTropes">
+<i class="fa fa-reddit-alien"></i></a>
+</div>
+<nav class="actions-wrapper" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<ul class="page-actions" id="top_main_list">
+<li class="link-edit">
+<a class="article-edit-button" data-modal-target="login" href="/pmwiki/pmwiki.php/Main/RealTimeWithPause?action=edit" rel="nofollow">
+<i class="fa fa-pencil"></i> Edit Page</a></li><li class="link-related"><a href="/pmwiki/relatedsearch.php?term=Main/RealTimeWithPause">
+<i class="fa fa-share-alt"></i> Related</a></li><li class="link-history"><a href="/pmwiki/article_history.php?article=Main.RealTimeWithPause">
+<i class="fa fa-history"></i> History</a></li><li class="link-discussion"><a href="/pmwiki/remarks.php?trope=Main.RealTimeWithPause">
+<i class="fa fa-comment"></i> Discussion</a></li> </ul>
+<button class="nav__dropdown-toggle" id="top_more_button" onclick="toggle_more_menu('top');" type="button">More</button>
+<ul class="more_menu hidden_more_list" id="top_more_list">
+<li class="link-todo tuck-always more_list_item"><a data-modal-target="login" href="#todo"><i class="fa fa-check-circle"></i> To Do</a></li><li class="link-pageSource tuck-always more_list_item"><a data-modal-target="login" href="/pmwiki/pmwiki.php/Main/RealTimeWithPause?action=source" rel="nofollow" target="_blank"><i class="fa fa-code"></i> Page Source</a></li> </ul>
+</nav>
+<div class="WikiWordModalStub"></div>
+<div class="ImgUploadModalStub" data-page-type="Article"></div>
+<div class="login-alert" style="display: none;">
+You need to <a href="/pmwiki/login.php" style="color:#21A0E8">login</a> to do this. <a href="/pmwiki/login.php?tab=register_account" style="color:#21A0E8">Get Known</a> if you don't have an account
+</div>
+</div>
+<div class="page-Article" id="main-content">
+<article class="with-sidebar" id="main-entry">
+<input id="groupname-hidden" type="hidden" value="Main"/>
+<input id="title-hidden" type="hidden" value="RealTimeWithPause"/>
+<input id="article_id" type="hidden" value="41727"/>
+<input id="logged_in" type="hidden" value="false"/>
+<p class="hidden" id="current_url">http://tvtropes.org/pmwiki/pmwiki.php/Main/RealTimeWithPause</p>
+<meta content="" itemprop="datePublished"/>
+<meta content="" itemprop="articleSection"/>
+<meta content="" itemprop="image"/>
+<a class="watch-button" data-modal-target="login" href="#watch">Follow<span>ing</span></a>
+<h1 class="entry-title" itemprop="headline">
+Real-Time with Pause
+</h1>
+<script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+                "@type": "ListItem",
+                "position": 1,
+                "name": "tvtropes.org",
+                "item": "https://tvtropes.org"
+            },{
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Tropes",
+                "item": "https://tvtropes.org/pmwiki/pmwiki.php/Main/Tropes"
+            },{
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Real-Time with Pause"            }]
+        }
+    </script>
+<a class="mobile-actionbar-toggle mobile-on" data-click-toggle="active" href="#mobile-actions-toggle" id="mobile-actionbar-toggle">
+<p class="tiny-off">Go To</p><span></span><span></span><span></span><i class="fa fa-pencil"></i></a>
+<nav class="mobile-actions-wrapper mobile-on" id="mobile-actions-bar"></nav>
+<div class="modal fade hidden-until-active" id="editLockModal">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button aria-label="Close" class="close" data-dismiss="modal" type="button"> <span aria-hidden="true">×</span></button>
+<h4 class="modal-title">Edit Locked</h4>
+</div>
+<div class="modal-body">
+<div class="row">
+<div class="body">
+<div class="danger troper_locked_message"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<nav class="body-options" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<ul class="subpage-links">
+<li>
+<a class="subpage-link curr-subpage" href="/pmwiki/pmwiki.php/Main/RealTimeWithPause" title="The Main page">
+<span class="wrapper"><span class="spi main-page"></span>Main</span></a>
+</li>
+<li>
+<a class="subpage-link" href="/pmwiki/pmwiki.php/Laconic/RealTimeWithPause" title="The Laconic page">
+<span class="wrapper"><span class="spi laconic-icon"></span>Laconic</span></a>
+</li>
+<li class="create-subpage dropdown">
+<a aria-expanded="false" class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);" role="button">
+<span class="wrapper">Create New <i class="fa fa-plus-circle"></i></span>
+</a>
+<select onchange="this.options[this.selectedIndex].value &amp;&amp; (window.location = this.options[this.selectedIndex].value);">
+<option value="">- Create New -</option>
+<option value="/pmwiki/pmwiki.php/Analysis/RealTimeWithPause?action=edit">Analysis</option>
+<option value="/pmwiki/pmwiki.php/Characters/RealTimeWithPause?action=edit">Characters</option>
+<option value="/pmwiki/pmwiki.php/FanficRecs/RealTimeWithPause?action=edit">FanficRecs</option>
+<option value="/pmwiki/pmwiki.php/FanWorks/RealTimeWithPause?action=edit">FanWorks</option>
+<option value="/pmwiki/pmwiki.php/Fridge/RealTimeWithPause?action=edit">Fridge</option>
+<option value="/pmwiki/pmwiki.php/Haiku/RealTimeWithPause?action=edit">Haiku</option>
+<option value="/pmwiki/pmwiki.php/Headscratchers/RealTimeWithPause?action=edit">Headscratchers</option>
+<option value="/pmwiki/pmwiki.php/ImageLinks/RealTimeWithPause?action=edit">ImageLinks</option>
+<option value="/pmwiki/pmwiki.php/PlayingWith/RealTimeWithPause?action=edit">PlayingWith</option>
+<option value="/pmwiki/pmwiki.php/Quotes/RealTimeWithPause?action=edit">Quotes</option>
+<option value="/pmwiki/pmwiki.php/Recap/RealTimeWithPause?action=edit">Recap</option>
+<option value="/pmwiki/pmwiki.php/ReferencedBy/RealTimeWithPause?action=edit">ReferencedBy</option>
+<option value="/pmwiki/pmwiki.php/Synopsis/RealTimeWithPause?action=edit">Synopsis</option>
+<option value="/pmwiki/pmwiki.php/Timeline/RealTimeWithPause?action=edit">Timeline</option>
+<option value="/pmwiki/pmwiki.php/Trivia/RealTimeWithPause?action=edit">Trivia</option>
+<option value="/pmwiki/pmwiki.php/WMG/RealTimeWithPause?action=edit">WMG</option>
+<option value="/pmwiki/pmwiki.php/YMMV/RealTimeWithPause?action=edit">YMMV</option>
+</select>
+</li>
+</ul>
+</nav>
+<div class="article-content retro-folders" id="main-article">
+<p>The vast majority of video games can be said to fall into one of two groups by the way they deal with the flow of time.
+</p><p>The first group is <em>turn-based</em> games, which play like <a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/Chess" title="/pmwiki/pmwiki.php/TabletopGame/Chess">chess</a> or <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/Monopoly" title="/pmwiki/pmwiki.php/TabletopGame/Monopoly">Monopoly</a></em>: The game is <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SlidingScaleOfTurnRealism" title="/pmwiki/pmwiki.php/Main/SlidingScaleOfTurnRealism">sliced into pieces</a> so that each player can make decisions, give commands, and watch those commands being executed without interference from the other player(s).
+</p><p>The second group is <em>Realtime</em> games, where time never stops for anyone: All players are interacting with the game simultaneously, and everything happens all at once. Quick thinking and quick fingers can, depending on the game and/or player, become a key advantage.
+</p><div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_1"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_1'); })</script></div></div><p>While games within each group can be very similar to one another in terms of style and design, <em>Realtime</em> and <em>Turn-Based</em> games tend to be very different from each other. Turn-Based games put an emphasis on thinking ahead and analyzing your best move from a wide array of choices, while Realtime games put an emphasis on quick-thinking and motor skills with a streamlined interface. As a result, these two groups often appeal to different kinds of players.
+</p><p>Over the course of the years, there have been many diverse and sometimes very successful attempts to combine aspects of both groups into a single game. The intended result is usually to keep the smooth pace of Realtime games, while allowing for more forethought and elaborate interfaces as in Turn-Based games. The hybrid is then said to belong to the category of <em>Realtime With Pause</em> games (RTWP, or <a class="twikilink" href="/pmwiki/pmwiki.php/Main/PausableRealtime" title="/pmwiki/pmwiki.php/Main/PausableRealtime">Pausable Realtime</a> [PRT]). In some cases, the hybridization simply makes a fast game more accessible to slower-fingered players.
+</p><div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_2"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_2'); })</script></div></div><p>Approaches to this issue are often unique or innovative, as there are many possible combinations to be tried. Games may have a different emphasis on action versus strategy, and interface design can make a huge difference too. Playing without the pause aspect can be a form of <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SelfImposedChallenge" title="/pmwiki/pmwiki.php/Main/SelfImposedChallenge">Self-Imposed Challenge</a>, assuming the option is even available at all and does not make the game unplayable.
+</p><p>RTWP games can generally be categorized into one of the following groups:
+</p><ul><li> Plain <strong>Realtime With Pause</strong>: The game runs in real time, which means that all characters and enemies are constantly active. Players can give commands whenever they wish, just as in regular "Realtime" games. However, when the game is paused, the player retains his/her ability to give orders, survey the playing field, and pretty much do anything that's possible when not paused. Any orders given by any player while the game is paused will be executed as soon as it is unpaused. The main goal of this design is to allow players to stay "on top" of the situation, reducing the need to frantically move the mouse or controller all over the screen to get their bearings. It also allows issuing complex orders to multiple characters and digging deep through complex menu systems, which would otherwise require very fast fingers.
+<ul><li> This type of gameplay is usually only available in games where one human player is facing off against one or more computer-controlled opponents. If the game also has multiplayer mode, the option to pause is normally disabled completely in that mode.
+</li><li> Since "Realtime With Pause" often relies heavily on some degree of automation between orders, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ArtificialStupidity" title="/pmwiki/pmwiki.php/Main/ArtificialStupidity">Artificial Stupidity</a> may become a problem, so the ability to issue some kind of simple conditional commands is common - sometimes amounting to a simplistic <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ProgrammingGame" title="/pmwiki/pmwiki.php/Main/ProgrammingGame">Programming Game</a>.
+</li></ul></li><li> <strong>Simultaneous Turn Resolution</strong>: This is an approach more similar to Turn-Based games. It involves two distinct phases: the Command Phase and the Execution Phase. In the "Command Phase", all players issue orders to their characters simultaneously, usually within a limited amount of time. Once everyone's done giving orders, the game goes into the Execution Phase where all of the orders are executed simultaneously, while the players can only sit back, watch, and hope they made the right choices. Rinse and repeat until one side has lost. Essentially, this can be seen as a "forced" pausing of the game at regular intervals, instead of simply allowing players to decide when to pause. Since pause is enforced (and its duration usually limited), this is a suitable design for both single-player and multi-player games.
+<ul><div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_3"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_3'); })</script></div></div><li> This style of gameplay attempts to circumvent one of the major grievances with traditional Turn-Based games, where one team moves or acts while the enemy characters can only stand around like dummies while waiting for their next turn to begin. Simultaneous Turn-Based games are especially advantageous for multiplayer, because the game takes the same amount of time to play no matter how many participants there are.
+</li><li> In single-player games where there's only one entity under human control, this is commonly used to brush unimportant NPC movements under the rug, such as in <a class="twikilink" href="/pmwiki/pmwiki.php/Main/RogueLike" title="/pmwiki/pmwiki.php/Main/RogueLike">Roguelikes</a> and non-combat mode in many RPGs.
+</li><li> When this method is used in strategy games, any combat erupting between two units during the Execution Phase is usually resolved entirely by the AI. This takes away the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ArtificialStupidity" title="/pmwiki/pmwiki.php/Main/ArtificialStupidity">advantage over AI</a> that human players usually have with tactical micromanagement (thanks to <a class="twikilink" href="/pmwiki/pmwiki.php/Main/EasyCommunication" title="/pmwiki/pmwiki.php/Main/EasyCommunication">Easy Communication</a>), which developers may see as not <a class="twikilink" href="/pmwiki/pmwiki.php/Main/JustifiedTrope" title="/pmwiki/pmwiki.php/Main/JustifiedTrope">justified</a> if your <a class="twikilink" href="/pmwiki/pmwiki.php/Main/NonEntityGeneral" title="/pmwiki/pmwiki.php/Main/NonEntityGeneral">Non-Entity General</a> is not supposed to be available on the battlefield. Since automatic resolution may make <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ArtificialStupidity" title="/pmwiki/pmwiki.php/Main/ArtificialStupidity">Artificial Stupidity</a> highly frustrating, some games allow rough control via standing orders for units or groups of units, such as generic behaviour (all-out attack / try to keep at the longest weapon range / run away) and/or target priorities (burn the fuel carriers first, to get 'em all stranded).
+</li></ul></li><li> <strong>Simultaneous Turn Resolution With Pause</strong>: As above, but combined with something like the ATB system from a <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/FinalFantasy" title="/pmwiki/pmwiki.php/Franchise/FinalFantasy">Final Fantasy</a></em> game. The game feels like a Realtime With Pause game, except in truth it is actually a well-disguised Simultaneous Turn Resolution game. In this design, the game appears to runs in real time: It runs by itself when unpaused, orders may be given and the game paused at any time for giving orders. However, all actions start and end in unison, any order given (whether in paused or un-paused mode) is only executed once the next turn begins, and actions can't be interrupted or cancelled before they finish.
+</li><li> <strong>Unintentional Realtime With Pause</strong>: This is a special case. The designers only added the ability to pause the game as a simple convenience (allowing the player to take a break from the action) - which is obvious since the screen goes grey and/or a big obtrusive box appears, saying "The game is paused". But while the designer intended the game to be <em>truly</em> paused while in this state, for some reason it is still possible to examine the playing-field and/or give orders to your units! This is distinct from other RTWP games because it's evident that <a class="twikilink" href="/pmwiki/pmwiki.php/Main/NotTheIntendedUse" title="/pmwiki/pmwiki.php/Main/NotTheIntendedUse">the designer didn't really intend</a> the pause feature to be <em>useful</em>... for anything other than taking a break. <a class="twikilink" href="/pmwiki/pmwiki.php/Main/HardCore" title="/pmwiki/pmwiki.php/Main/HardCore">Hard Core</a> players often consider its use <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Munchkin" title="/pmwiki/pmwiki.php/Main/Munchkin">cheating</a>.
+</li><li> <strong>Other designs</strong>: Since the number of combinations between Turn-Based and Realtime features is only up to the designer's imagination, it's not surprising that some games feature a combination that's never been done before.
+</li></ul><p>If the pause feature allows the player to execute some actions without having to unpause at all, that is called <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MenuTimeLockout" title="/pmwiki/pmwiki.php/Main/MenuTimeLockout">Menu Time Lockout</a> (a common feature in many RTWPs). Simultaneous Turn Based games may involve a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/VisualInitiativeQueue" title="/pmwiki/pmwiki.php/Main/VisualInitiativeQueue">Visual Initiative Queue</a>, even though part of the concept of STB is to avoid characters acting in strict order.
+</p><p>Contrast <a class="twikilink" href="/pmwiki/pmwiki.php/Main/RealTimeWeaponChange" title="/pmwiki/pmwiki.php/Main/RealTimeWeaponChange">Real-Time Weapon Change</a>.
+</p><p></p><hr/><h2>Examples of plain Realtime With Pause:</h2>
+<p></p><ul><li> Several Realtime Strategy games developed in the 2000's, including:
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/CompanyOfHeroes" title="/pmwiki/pmwiki.php/VideoGame/CompanyOfHeroes">Company of Heroes</a></em>
+</li><li> The <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/EmpireEarth" title="/pmwiki/pmwiki.php/VideoGame/EmpireEarth">Empire Earth</a></em> series
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Globulation" title="/pmwiki/pmwiki.php/VideoGame/Globulation">Globulation</a></em>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SupremeCommander" title="/pmwiki/pmwiki.php/VideoGame/SupremeCommander">Supreme Commander</a></em>
+</li><li> <em>Warrior Kings</em>
+</li><li> Note that the majority of RTS games, like the <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/CommandAndConquer" title="/pmwiki/pmwiki.php/VideoGame/CommandAndConquer">Command &amp; Conquer</a></em> and <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/WarCraft" title="/pmwiki/pmwiki.php/VideoGame/WarCraft">WarCraft</a></em> series, do not allow PRT gameplay, but do allow slowing game-speed to a crawl. This achieves roughly the same purpose, making the game more manageable for players with less manual dexerity.
+</li></ul></li><li> The <em><a class="urllink" href="http://www.giantbomb.com/first-queen/3025-2837/">First Queen<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a></em> series of <a class="twikilink" href="/pmwiki/pmwiki.php/Main/StrategyRPG" title="/pmwiki/pmwiki.php/Main/StrategyRPG">Strategy RPG</a> titles used a form of pausable real-time as early as 1988, making them <a class="twikilink" href="/pmwiki/pmwiki.php/Main/UrExample" title="/pmwiki/pmwiki.php/Main/UrExample">Ur Examples</a>.
+</li><li> The 1991 <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Hentai" title="/pmwiki/pmwiki.php/Main/Hentai">Hentai</a> game <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/KnightsOfXentar" title="/pmwiki/pmwiki.php/VideoGame/KnightsOfXentar">Knights of Xentar</a></em> uses a form of pausable real-time combat. Its 1991 release also makes it an <a class="twikilink" href="/pmwiki/pmwiki.php/Main/UrExample" title="/pmwiki/pmwiki.php/Main/UrExample">Ur-Example</a>.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Achron" title="/pmwiki/pmwiki.php/VideoGame/Achron">Achron</a></em> is a rare <strong>multiplayer</strong> version of this kind of game. Since it's a time-travel strategy game, it can accomplish this by allowing the players to pause time but not pause meta-time. Even if you do freeze a moment to give your units complex orders, you better be quick because your opponent is still somewhen out there mucking with the timeline.
+</li><li> Nearly all <a class="twikilink" href="/pmwiki/pmwiki.php/Creator/BioWare" title="/pmwiki/pmwiki.php/Creator/BioWare">BioWare</a> and (to a lesser extent) <a class="twikilink" href="/pmwiki/pmwiki.php/Creator/BlackIsleStudios" title="/pmwiki/pmwiki.php/Creator/BlackIsleStudios">Black Isle</a>/<a class="twikilink" href="/pmwiki/pmwiki.php/Creator/ObsidianEntertainment" title="/pmwiki/pmwiki.php/Creator/ObsidianEntertainment">Obsidian</a> titles, as well as games made using engines licensed from them:
+<ul><li> The <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/BaldursGate" title="/pmwiki/pmwiki.php/VideoGame/BaldursGate">Baldur's Gate</a></em> series
+<ul><li> With one (intentional) aversion in the original's single-player mode, where the entire game and all its menus respect the game's pausing...except for the inventory screen, which causes the game to unpause in the background, while you can't see anything. However, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GoodBadBugs" title="/pmwiki/pmwiki.php/Main/GoodBadBugs">starting a single-player game as a multiplayer one bypasses it</a>.
+</li></ul></li><li> The <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/IcewindDale" title="/pmwiki/pmwiki.php/VideoGame/IcewindDale">Icewind Dale</a></em> series
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/PlanescapeTorment" title="/pmwiki/pmwiki.php/VideoGame/PlanescapeTorment">Planescape: Torment</a></em>
+</li><li> <a class="twikilink" href="/pmwiki/pmwiki.php/Creator/BlackIsleStudios" title="/pmwiki/pmwiki.php/Creator/BlackIsleStudios">Black Isle Studios</a>' <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ScrewedByTheNetwork" title="/pmwiki/pmwiki.php/Main/ScrewedByTheNetwork">cancelled</a> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FalloutVanBuren" title="/pmwiki/pmwiki.php/VideoGame/FalloutVanBuren">Fallout: Van Buren</a></em> was going to use an Infinity-style PRT system as well.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/NeverwinterNights" title="/pmwiki/pmwiki.php/VideoGame/NeverwinterNights">Neverwinter Nights</a></em> one and <a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/NeverwinterNights2" title="/pmwiki/pmwiki.php/VideoGame/NeverwinterNights2">two</a>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheWitcher" title="/pmwiki/pmwiki.php/VideoGame/TheWitcher">The Witcher</a></em>, built on the <em>NWN</em> engine, has the pause button but it's really only good for one thing—switching sword styles in the heat of battle.
+</li><li> The <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/KnightsOfTheOldRepublic" title="/pmwiki/pmwiki.php/VideoGame/KnightsOfTheOldRepublic">Knights of the Old Republic</a></em> series
+</li><li> The <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/MassEffect" title="/pmwiki/pmwiki.php/Franchise/MassEffect">Mass Effect</a></em> series
+<ul><li> The game is designed in a way that makes it much more difficult to play without any pausing. This is because, while paused, a menu slides open allowing all sorts of commands that aren't otherwise available, even with hotkeys.
+</li><li> Except while aiming the sights down for a sniper rifle, presumedly because constantly pausing to line up easy shots with them would just be unfair.
+</li></ul></li><li> The <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/DragonAge" title="/pmwiki/pmwiki.php/Franchise/DragonAge">Dragon Age</a></em> series: On any difficulty higher than Easy, it is absolutely necessary to pause in between actions to assess tactics and make decisions.
+</li><li> Obsidian's <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/PillarsOfEternity" title="/pmwiki/pmwiki.php/VideoGame/PillarsOfEternity">Pillars of Eternity</a></em> is no exception.
+</li><li> Being influenced by <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/NeverwinterNights" title="/pmwiki/pmwiki.php/VideoGame/NeverwinterNights">Neverwinter Nights</a></em>, <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SwordCoastLegends" title="/pmwiki/pmwiki.php/VideoGame/SwordCoastLegends">Sword Coast Legends</a></em> uses a similar system.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/KingArthurTheRoleplayingWargame" title="/pmwiki/pmwiki.php/VideoGame/KingArthurTheRoleplayingWargame">King Arthur The Roleplaying Wargame</a></em> even allows you to speed up the game during moments in battle where you will decisively win or nothing will happen for a while, slow the game down for tenser moments to better analyze and micromanage your troops as well as using skills, in addition to just pausing it.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SecretOfMana" title="/pmwiki/pmwiki.php/VideoGame/SecretOfMana">Secret of Mana</a></em> is an <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ActionRPG" title="/pmwiki/pmwiki.php/Main/ActionRPG">Action RPG</a> from 1993 that uses a form of pausable real-time combat.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/ParasiteEve" title="/pmwiki/pmwiki.php/VideoGame/ParasiteEve">Parasite Eve</a></em> from 1998 uses a form of pausable real-time combat.
+</li><li> Similar to <em><a class="twikilink" href="/pmwiki/pmwiki.php/Main/ParasiteEve" title="/pmwiki/pmwiki.php/Main/ParasiteEve">Parasite Eve</a></em> above, <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/VagrantStory" title="/pmwiki/pmwiki.php/VideoGame/VagrantStory">Vagrant Story</a></em> uses a system where the main character Ashley Riot, when not in battle, can run around, jump, move boxes and other objects, and solve puzzles. However, when attacking an enemy, the game freezes, and you can pick an enemy's body part to attack out of all in range. The game also stays frozen <em>while</em> you attack, but the same applies to enemies as well.
+</li><li> <em>Battle Bugs</em> is designed around this, and precision to a fraction of a second in the orders for several different units is needed to win many of the later mission.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Castles" title="/pmwiki/pmwiki.php/VideoGame/Castles">Castles</a> II: Siege &amp; Conquest</em>
+</li><li> Combat in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Darklands" title="/pmwiki/pmwiki.php/VideoGame/Darklands">Darklands</a></em> plays out this way
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DivineDivinity" title="/pmwiki/pmwiki.php/VideoGame/DivineDivinity">Divine Divinity</a></em>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DungeonOfTheEndless" title="/pmwiki/pmwiki.php/VideoGame/DungeonOfTheEndless">Dungeon of the Endless</a></em>. Interestingly, one of the ships (and achievements) is unlocked by <em>not</em> using this at all in a winning game.
+</li><li> The <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DungeonSiege" title="/pmwiki/pmwiki.php/VideoGame/DungeonSiege">Dungeon Siege</a></em> series
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DwarfFortress" title="/pmwiki/pmwiki.php/VideoGame/DwarfFortress">Dwarf Fortress</a></em> is a special case since you can't actually give orders while the game is <strong>not</strong> paused. Whenever you go into any menu to give orders, the game pauses. Good thing, too, otherwise <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SomeDexterityRequired" title="/pmwiki/pmwiki.php/Main/SomeDexterityRequired">the game would be nigh impossible</a>. In Adventure Mode it pauses every time your character is allowed an action like a traditional roguelike.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/PrisonArchitect" title="/pmwiki/pmwiki.php/VideoGame/PrisonArchitect">Prison Architect</a></em>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Rimworld" title="/pmwiki/pmwiki.php/VideoGame/Rimworld">Rimworld</a></em>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/OxygenNotIncluded" title="/pmwiki/pmwiki.php/VideoGame/OxygenNotIncluded">Oxygen Not Included</a></em>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FalloutTacticsBrotherhoodOfSteel" title="/pmwiki/pmwiki.php/VideoGame/FalloutTacticsBrotherhoodOfSteel">Fallout Tactics</a></em>. It also has the ability to switch freely between RTWP and a purely turn-based mode, whenever you like.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FreedomForce" title="/pmwiki/pmwiki.php/VideoGame/FreedomForce">Freedom Force</a></em>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FTLFasterThanLight" title="/pmwiki/pmwiki.php/VideoGame/FTLFasterThanLight">FTL: Faster Than Light</a></em>. Using and abusing the pause feature to manage crew members and weapon fire is essential to successful completion of the game.
+</li><li> The <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Gemcraft" title="/pmwiki/pmwiki.php/VideoGame/Gemcraft">Gemcraft</a></em> series expects you to do most construction and gem socketing/programming while the game's paused, with appropriate cooldowns introduced around the mechanic. As of <em>Chasing Shadows</em> this is definitively an in-universe skill wizards learn, as one of the game's nastier surprises is the introduction of a type of enemy which among its other powers "<strong>can move through frozen time</strong>". (It can't actually <em>finish you off</em> while the game's paused, but you can't hurt anything either, and unlike you its energies still focus and accumulate in that mode.)
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MGCM" title="/pmwiki/pmwiki.php/VideoGame/MGCM">MGCM</a></em>
+</li><li> The battle portion of <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TotalWar" title="/pmwiki/pmwiki.php/VideoGame/TotalWar">Total War</a></em> games - the strategy portion is purely turn-based. However it's subverted in the highest battle difficulty of the games throughout the series from the <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TotalWarShogun2" title="/pmwiki/pmwiki.php/VideoGame/TotalWarShogun2">Shogun 2</a></em> entry onward, as this difficulty will remove the option to select and command your units while paused, in addition to a large number of other handicaps in order to make the game more difficult (or just <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TheComputerIsACheatingBastard" title="/pmwiki/pmwiki.php/Main/TheComputerIsACheatingBastard">your enemies being suddenly much stronger than they should</a>).
+</li><li> City-Building and space-management games such as:
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Caesar" title="/pmwiki/pmwiki.php/VideoGame/Caesar">Caesar</a></em>
+</li><li> <em>Cultures</em>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Pharaoh" title="/pmwiki/pmwiki.php/VideoGame/Pharaoh">Pharaoh</a></em>/<em>Cleopatra</em>
+</li><li> <em>Zeus</em>/<em>Poseidon</em>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/EmperorRiseOfTheMiddleKingdom" title="/pmwiki/pmwiki.php/VideoGame/EmperorRiseOfTheMiddleKingdom">Emperor: Rise of the Middle Kingdom</a></em>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/ThemeHospital" title="/pmwiki/pmwiki.php/VideoGame/ThemeHospital">Theme Hospital</a></em>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TwoPointHospital" title="/pmwiki/pmwiki.php/VideoGame/TwoPointHospital">Two Point Hospital</a></em>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/EvilGenius" title="/pmwiki/pmwiki.php/VideoGame/EvilGenius">Evil Genius</a></em>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Startopia" title="/pmwiki/pmwiki.php/VideoGame/Startopia">Startopia</a></em>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/RailroadTycoon" title="/pmwiki/pmwiki.php/VideoGame/RailroadTycoon">Railroad Tycoon</a></em>, <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TransportTycoon" title="/pmwiki/pmwiki.php/VideoGame/TransportTycoon">Transport Tycoon</a></em>, and several other business-oriented games.
+</li><li> <em>Big Pharma</em>
+</li></ul></li><li> The <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/RollerCoasterTycoon" title="/pmwiki/pmwiki.php/VideoGame/RollerCoasterTycoon">RollerCoaster Tycoon</a></em> series is a strange example. In the first two games, anything can be done while the game is paused, except for construction of any kind (removing scenery, adding rides, adding paths, etc). Basically, everything useful. You can even pick up people and place them wherever you want to, and they will fall back to the ground when the game is unpaused (helpful when you "accidentally" put a lot of people into a body of water). The third game, however, allows full control of the game while paused.
+<ul><li> This is justified in that, for the first two games, your objectives are usually more based on time (I.E. 1000 guests by the end of year 3) so being able to do everything without time constraints is an unfair advantage. For the third game, the scenarios' objectives are almost always completable at any time, and for events that only occur on certain days, they will continue to occur until you complete the objective.
+</li></ul></li><li> <em>Strange Adventures</em> and its sequel <em>Weird Worlds</em>, during the battle sequences.
+</li><li> The <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Stronghold" title="/pmwiki/pmwiki.php/VideoGame/Stronghold">Stronghold</a></em> series
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheMovies" title="/pmwiki/pmwiki.php/VideoGame/TheMovies">The Movies</a></em>
+<ul><li> Unfortunately, paused mode only allows some commands, while others require the game to be unpaused - like picking people up or relocating/deleting scenery objects. Due to the fast-paced nature of the game, this renders paused mode useless for virtually anything except examining the situation (which is still very very important).
+</li></ul></li><li> <em>Nexus: The Jupiter Incident</em>
+</li><li> The <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Tropico" title="/pmwiki/pmwiki.php/VideoGame/Tropico">Tropico</a></em> series, although in some cases (such as commands to El Presidente), you won't see the nature of the most recent order until you unpause. The game will also autopause at some points, such as when using menus or laying down roads.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/VampireTheMasqueradeRedemption" title="/pmwiki/pmwiki.php/VideoGame/VampireTheMasqueradeRedemption">Vampire: The Masquerade  Redemption</a></em>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/XCOM" title="/pmwiki/pmwiki.php/VideoGame/XCOM">XCOM</a></em>'s <a class="twikilink" href="/pmwiki/pmwiki.php/Main/RiskStyleMap" title="/pmwiki/pmwiki.php/Main/RiskStyleMap">Geoscape</a>. The first two games had <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TurnBasedCombat" title="/pmwiki/pmwiki.php/Main/TurnBasedCombat">Turn-Based Combat</a> though.
+<ul><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/XComApocalypse" title="/pmwiki/pmwiki.php/VideoGame/XComApocalypse">X-COM: Apocalypse</a></em> you can choose between PRT and a pure turn-based mode for combat, but only before a battle starts. The cityscape portion of the game always uses PRT.
+</li><li> The series' <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SpiritualSequel" title="/pmwiki/pmwiki.php/Main/SpiritualSequel">Spiritual Sequel</a>, <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/UFOAfterBlank" title="/pmwiki/pmwiki.php/VideoGame/UFOAfterBlank">UFO After Blank</a></em> (<em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/UFOAftermath" title="/pmwiki/pmwiki.php/VideoGame/UFOAftermath">Aftermath</a></em>, <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/UFOAftershock" title="/pmwiki/pmwiki.php/VideoGame/UFOAftershock">Aftershock</a></em> and <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/UFOAfterlight" title="/pmwiki/pmwiki.php/VideoGame/UFOAfterlight">Afterlight</a></em>) had PRT throughout the entire game - both battles and world map.
+</li></ul></li><li> <em>7.62mm High Caliber</em> (or <em>7.62 High Calibre</em>), a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SpiritualSuccessor" title="/pmwiki/pmwiki.php/Main/SpiritualSuccessor">Spiritual Successor</a> to the <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/JaggedAlliance" title="/pmwiki/pmwiki.php/VideoGame/JaggedAlliance">Jagged Alliance</a></em> games, uses this system for combat, though the gameplay can be slowed down too; each character has an action queue with actions' time to complete measured in the hundredths of a second, such as taking a shot (such as snap, aimed or scoped), or weapon transitions, readying a grenade for throwing, the actual throw, and so on. Unfortunately since the orders themselves are not displayed, this can lead to some awkward or time-consuming moments, especially when rearranging gear in one's vests, pouches, holsters, slings or backpacks during combat. There's also the <em>extremely</em> annoying tendency for certain actions that, once started, cannot be cancelled, like reloading a weapon (which can take a very long time if you don't have a spare clip).
+<ul><li> While we're talking about <em>Jagged Alliance</em>, the series features the episodes <em>Back In Action</em> (remake of <em>Jagged Alliance 2</em>) and <em>Crossfire</em> (<em>Back In Action</em> stand-alone sequel), which both play in real time (each action requires a tiny amount of time) with a pause feature in which you can give a succesion of orders to your mercs.
+</li></ul></li><li> Most <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SimCity" title="/pmwiki/pmwiki.php/VideoGame/SimCity">SimCity</a></em> games have four speeds, including Pause. No control is lost in the paused state, allowing the mayor to change the entire city in the blink of an eye in their population's perspective. The only exception is during a disaster, wherein the player must resolve the crisis in realtime.
+</li><li> In the same vein, <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/CitiesSkylines" title="/pmwiki/pmwiki.php/VideoGame/CitiesSkylines">Cities: Skylines</a></em> also runs in real time except when paused. This time, however, you can also react to disasters while paused.
+</li><li> The "Pause" button on <a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/CaptainNTheGameMaster" title="/pmwiki/pmwiki.php/WesternAnimation/CaptainNTheGameMaster">Captain N's Controller</a> is like this... for his allies. Kevin is fully mobile during the pause effect and can relocate objects... but can't give his friends new orders.
+</li><li> <a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/GalaxyAngel" title="/pmwiki/pmwiki.php/VideoGame/GalaxyAngel">Galaxy Angel</a>, being closer to a real-time tactics than an RTS, allows for pause for you to input your commands at your leisure. However, you don't even need to do that, as time is temporarily paused while you enter commands anyway.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheSims" title="/pmwiki/pmwiki.php/VideoGame/TheSims">The Sims</a></em> and its sequels — though the game is deliberately designed to be easy even without the pause feature.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MiniMetro" title="/pmwiki/pmwiki.php/VideoGame/MiniMetro">Mini Metro</a></em> lets the player pause anytime they so choose in order to give them time to plan their metro lines optimally.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Reus" title="/pmwiki/pmwiki.php/VideoGame/Reus">Reus</a></em>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheLastFederation" title="/pmwiki/pmwiki.php/VideoGame/TheLastFederation">The Last Federation</a></em>, the strategic portion.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DoorKickers" title="/pmwiki/pmwiki.php/VideoGame/DoorKickers">Door Kickers</a></em>, a top-down SWAT simulator. The game awards achievements for playing a mission without pausing at all (planning the entire thing in advance, or using manual control of your officers to clear the level without pausing), but it is extremely difficult to win that way.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheLastStory" title="/pmwiki/pmwiki.php/VideoGame/TheLastStory">The Last Story</a></em>
+</li><li> Magic &amp; Mayhem, In addition to letting you give orders, you can still cast spells while paused as long as you have mana for it. When the game is unpaused all the spells execute at once. This can be incredibly exploitable as very few creatures can survive getting hit by hundreds of fireballs at once.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MechCommander" title="/pmwiki/pmwiki.php/VideoGame/MechCommander">MechCommander</a></em> and its sequels allowed you to do this; the option to give commands, set up movement waypoints, prioritize targets, and call down tactical support while paused was a definite advantage when your team spent the game so heavily outnumbered and outgunned.
+</li><li> <em>Crookz: The Big Heist</em> works like this, in a departure from its Spiritual Ancestor <em>The Sting</em> (see below).
+</li><li> <em>Stunts</em> is a rare racing game example of this. Pausing a racing game to think of your next move may not sound very useful, as you generally pause too late to do any good. That's why Stunts allows you to rewind and restart from any previous point in time. It crosses over in the unintentional category as the feature was intended to exist, but it wasn't intended to allow you to set official record times. Amongst the fan community racing with "replay handling" is now more popular than without, and it allows for some pretty crazy stunts using the bugs the game features.
+</li><li> The <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/CreeperWorld" title="/pmwiki/pmwiki.php/VideoGame/CreeperWorld">Creeper World</a></em> series allows you to issue commands, use upgrades, and queue moves while paused. This helps a lot when the micromanagement level reaches its peak.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FireEmblemWarriors" title="/pmwiki/pmwiki.php/VideoGame/FireEmblemWarriors">Fire Emblem Warriors</a></em> allows this, as you duck into the map screen to give quick orders to your other blue units while the game pauses in the background. It's useful for a quick breather as well.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/PathfinderKingmaker" title="/pmwiki/pmwiki.php/VideoGame/PathfinderKingmaker">Pathfinder: Kingmaker</a></em>, the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SpiritualSuccessor" title="/pmwiki/pmwiki.php/Main/SpiritualSuccessor">Spiritual Successor</a> to <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/BaldursGate" title="/pmwiki/pmwiki.php/VideoGame/BaldursGate">Baldur's Gate</a></em> also use that mechanic.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/KerbalSpaceProgram" title="/pmwiki/pmwiki.php/VideoGame/KerbalSpaceProgram">Kerbal Space Program</a></em> you can open part action windows while paused, this allows for things to happen simultaneously.
+</li><li> Newer versions of <em>Brick Rigs</em> allow to enter free camera mode while paused, to place vehicles (and especially trains on tracks, it was pretty tricky before) and interact with things.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SierraOps" title="/pmwiki/pmwiki.php/VideoGame/SierraOps">Sierra Ops</a></em> has a Command mode that lets you slow the game down during space battles, giving you more time to plan your next move.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/CryingSuns" title="/pmwiki/pmwiki.php/VideoGame/CryingSuns">Crying Suns</a></em>
+</li></ul><p></p><h2>Examples of Simultaneous Turn-based:</h2>
+<ul><li> A nonvideogame example: in <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/AmericanFootball" title="/pmwiki/pmwiki.php/UsefulNotes/AmericanFootball">American Football</a>, each turn (a "down") is divided into a 40-second command phase (a "huddle") and an execution phase (the "play").
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/BattleTech" title="/pmwiki/pmwiki.php/TabletopGame/BattleTech">BattleTech</a></em> the board game does this — the players move or fire one unit at a time alternating between them. In the case of weapons fire, all effects take place at the end of the phase.
+</li><li> While <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Civilization" title="/pmwiki/pmwiki.php/VideoGame/Civilization">Civilization</a></em> is more or less uniformly straight-up <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TurnBasedStrategy" title="/pmwiki/pmwiki.php/Main/TurnBasedStrategy">Turn-Based Strategy</a>, multiplayer games can be played with simultaneous execution. This is useful when there is a large number of players in later stages of the game: Turns in single-player games can easily take as much as half an hour, particularly if the player's empire is large and at war. Imagine, then, that you have four or five human-controlled large empires, all at war. Yeah, you'd like simultaneous execution, too.
+</li><li> Global Conquest on the PC version of <a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/CommandAndConquer" title="/pmwiki/pmwiki.php/VideoGame/CommandAndConquer">Kane's Wrath</a>, until a battle occurs for which the game switches to RTS.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/CriticalMass1995" title="/pmwiki/pmwiki.php/VideoGame/CriticalMass1995">Critical Mass</a></em> has a similar system, though on a much smaller time scale.
+</li><li> Another classic nonvideogame example is <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/Diplomacy" title="/pmwiki/pmwiki.php/TabletopGame/Diplomacy">Diplomacy</a></em> (from the same company as the above game, Avalon Hill). This combines—or perhaps conspires—with the totally deterministic battle system and various other features to make the game an excellent exercise in the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GambitPileup" title="/pmwiki/pmwiki.php/Main/GambitPileup">Gambit Pileup</a>.
+</li><li> The space strategy game <em>Flotilla</em> is basically exactly that. You usually only have 2 to 5 units and order every single one of them to move somewhere on the 3D grid, shoot at an enemy (or not) and turn, tilt and roll over during the execution phase. This precision is needed since they all have ridiculous armor on the front and the top and are <strong>very</strong> vulnerable at the back and the bottom.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FrozenSynapse" title="/pmwiki/pmwiki.php/VideoGame/FrozenSynapse">Frozen Synapse</a></em>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/InfinityWars" title="/pmwiki/pmwiki.php/VideoGame/InfinityWars">Infinity Wars</a></em> (which is still in Beta as of this edit).
+</li><li> <em>Laser Squad Nemesis</em>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MasterOfOrion" title="/pmwiki/pmwiki.php/VideoGame/MasterOfOrion">Master of Orion</a></em>. MoO 2 has Simultaneous Turn Resolution either interrupted with classic turn-based combat if its tactical mode set to manual, or AI (<a class="twikilink" href="/pmwiki/pmwiki.php/Main/ArtificialStupidity" title="/pmwiki/pmwiki.php/Main/ArtificialStupidity">not really smart</a>, nor indirectly controllable) resolved combat.
+<ul><li> The 2016 game has plain Realtime With Pause to replace the traditional turn-based combat of the series.
+</li></ul></li><li> Naval combat in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/PuzzlePirates" title="/pmwiki/pmwiki.php/VideoGame/PuzzlePirates">Puzzle Pirates</a></em> is simultaneous turn-based. In fact, it has one "command phase", and four consecutive "action phases". During the command phase, the ship's Battle Navigator has to input four actions, anticipating where the enemy ship will be in each of the four stages. Firing or moving in the wrong stage can lead to loss of ammo and/or unwanted collisions!
+<ul><li> This gets even more complicated when the Battle Navigator is trying to rig the sails or load the cannons at the same time (both are furious action-oriented puzzles requiring a lot of skill and concentration!). Some captains are so good at this, they can sail a ship with half a crew on-board, filling in themselves during intense battles.
+</li></ul></li><li> The board game <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/RoboRally" title="/pmwiki/pmwiki.php/TabletopGame/RoboRally">Robo Rally</a></em>.
+</li><li> All <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Roguelike" title="/pmwiki/pmwiki.php/Main/Roguelike">Roguelikes</a> are normally in Paused mode. Once the player inputs a command (only one) for their character, time will move forward exactly as long as required to perform the selected action. Then the game is paused again, waiting for the next command. If your character is heavily burdenned, this means you can be dogpiled while taking a single step, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GodStat" title="/pmwiki/pmwiki.php/Main/GodStat">or vice versa</a>.
+</li><li> By default, most of the entries in the <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SpaceEmpires" title="/pmwiki/pmwiki.php/VideoGame/SpaceEmpires">Space Empires</a></em> series are classic turn-based strategy, but several have the option to set the combat sequences (or even ENTIRE turns) to Simultaneous resolution; while it doesn't necessarily speed up play it significantly alters strategy from "What is the battlefield like now?" to "What will the battlefield be like once my ships stop moving?"
+</li><li> The <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SpaceRangers" title="/pmwiki/pmwiki.php/VideoGame/SpaceRangers">Space Rangers</a></em> series.
+<ul><li> During space battles, the game pauses at the beginning of each "day". You choose a direction to fly, as well as which weapons will fire at which target. Then unpause, and watch all spaceships in the battle duke it out simultaneously. Correctly anticipating where the enemies will end up at the beginning of the next day is crucial.
+</li></ul></li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheLastFederation" title="/pmwiki/pmwiki.php/VideoGame/TheLastFederation">The Last Federation</a></em>, the combat works like this.
+</li><li> The ragdoll fighting game <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Toribash" title="/pmwiki/pmwiki.php/VideoGame/Toribash">Toribash</a></em> has a unique way of using this system. Two players face off in one on one matches controlling all the major joints of their respective ragdoll. At the beginning of each turn players have a limited amount of time to manipulate the joints of the ragdoll in order to get it to move. After which the ragdolls move as predicted a small amount and the process repeats. Through careful planning and manipulation, the ragdolls can be made to do virtually anything.
+</li><li> Outside of combat in games like the <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Ultima" title="/pmwiki/pmwiki.php/VideoGame/Ultima">Ultima</a></em> or <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Exile" title="/pmwiki/pmwiki.php/VideoGame/Exile">Exile</a></em> series, the entire thing in others like <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MightAndMagic" title="/pmwiki/pmwiki.php/VideoGame/MightAndMagic">Might and Magic</a></em> or <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Cythera" title="/pmwiki/pmwiki.php/VideoGame/Cythera">Cythera</a></em>, where you can only control a single character at a time.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/VandalHearts" title="/pmwiki/pmwiki.php/VideoGame/VandalHearts">Vandal Hearts</a> 2</em> uses Dual-Turn Battles, which is this to a tee. In addition to deciding where your characters will move, you will also need to anticipate where your enemies will move and what they will try to do. This requires a combination of luck and planning ahead, even if the AI can be abused to allow unlimited turn treasure hunting.
+<ul><li> In the game, there even exists a spell called "Premonition" which tells you which enemy character will move. However, it will not tell you where it will move and what it will do. An experienced enough player can still make educated guesses based on the enemy's movement range, weapon range, skill and equipment list, etc.
+</li></ul></li><li> <em><a class="urllink" href="http://www.vgaplanets.com/">VGA Planets<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a></em> was one of the early <a class="twikilink" href="/pmwiki/pmwiki.php/Main/FourX" title="/pmwiki/pmwiki.php/Main/FourX">4X</a> games using Simultaneous Turn Resolution.
+</li><li> <em>Stars!</em>, as a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SpiritualSuccessor" title="/pmwiki/pmwiki.php/Main/SpiritualSuccessor">Spiritual Successor</a> of <em>VGA Planets</em>. Fleets have a "<a class="urllink" href="http://wiki.starsautohost.org/wiki/%22v2.5_Combat_Model%22_by_Galactic_Traveller_1996-08-17_v2.5#Battle_Plans_Dialog">Battle Plan<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a>" set for possible encounters, independent from the current mission and customizable, including priority targets and basic tactics.
+</li><li> Another nonvideogame example: the classic <a class="twikilink" href="/pmwiki/pmwiki.php/Main/WoodenShipsAndIronMen" title="/pmwiki/pmwiki.php/Main/WoodenShipsAndIronMen">Napoleonic naval battle war game</a> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Main/TropeNamer" title="/pmwiki/pmwiki.php/Main/TropeNamer">Wooden Ships &amp; Iron Men</a></em>.
+</li><li> <em>Tokyo Twilight: Ghost Hunters</em> requires you to predict where and how the ghosts will move, and move your characters and place your traps accordingly. Subduing a ghost requires a combination of planning and guess-work, because it's entirely possible for the ghost to move out of your intended attack range, and whiffing on an attack causes property damage that is subtracted from your reward at the end of each mission.
+</li><li> <em>Star Hammer</em>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FlashpointCampaigns" title="/pmwiki/pmwiki.php/VideoGame/FlashpointCampaigns">Flashpoint Campaigns</a></em>
+</li></ul><p></p><h2>Examples of Simultaneous Turn Resolution With Pause</h2>
+<ul><li> <em>The Dark Eye: Drakensang</em>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Summoner" title="/pmwiki/pmwiki.php/VideoGame/Summoner">Summoner</a></em>
+</li><li> The entire <a class="twikilink" href="/pmwiki/pmwiki.php/Creator/ParadoxInteractive" title="/pmwiki/pmwiki.php/Creator/ParadoxInteractive">Paradox Interactive</a> core lineup. Each day of game-time (hour, for <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/HeartsOfIron" title="/pmwiki/pmwiki.php/VideoGame/HeartsOfIron">Hearts of Iron</a></em>) is a single "turn", with all actions taking place simultaneously and instantaneously at the very start of the day. It is possible to speed up the game to a point where days flow by so fast that the game may appear to be real-time, but at the slowest speed setting the slices are very much visible.
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/EuropaUniversalis" title="/pmwiki/pmwiki.php/VideoGame/EuropaUniversalis">Europa Universalis</a></em>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/HeartsOfIron" title="/pmwiki/pmwiki.php/VideoGame/HeartsOfIron">Hearts of Iron</a></em>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/CrusaderKings" title="/pmwiki/pmwiki.php/VideoGame/CrusaderKings">Crusader Kings</a></em>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/VictoriaAnEmpireUnderTheSun" title="/pmwiki/pmwiki.php/VideoGame/VictoriaAnEmpireUnderTheSun">Victoria: An Empire Under the Sun</a></em>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Stellaris" title="/pmwiki/pmwiki.php/VideoGame/Stellaris">Stellaris</a></em>
+</li></ul></li></ul><p></p><h2>Examples of Unintentional Real Time With Pause:</h2>
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Main/StarWars" title="/pmwiki/pmwiki.php/Main/StarWars">Star Wars</a>: Empire At War</em> has a tiny, hard-to-reach pause button with no hot-key associated with it. It clearly was not intended (or at least badly designed) to pause the game often enough in mid-combat for it to be useful. There are third-party mods that add a hotkey, making it a viable feature. Considering the quick pace of battles in this game, it is not surprising that such mods were developed. Some players consider this cheating, however.
+</li><li> The first <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Homeworld" title="/pmwiki/pmwiki.php/VideoGame/Homeworld">Homeworld</a></em> game has a pause feature which actually makes the game more difficult to play because its behavior is very unpredictable. It may have been designed to allow examining the battlefield, but not to issue commands. Still, some players do manage to use it that way, making the zero-g RTS significantly easier.
+<ul><li> The stand-alone expansion pack <em>Homeworld: Cataclysm</em> is more conventional in that it allows players to give orders while paused. However, Build, Research, and System menus are inaccessible in that mode. It is, however, possible to slow the game down significantly while retaining access to those menus.
+</li></ul></li><li> This is very common in fast-action and arcade games across all platforms, if the pause feature allows the player to examine dangerous situations while they are frozen. Naturally, it only applies if examination of the danger confers a significant advantage to the player once the game is un-paused. Many players consider this cheating. Others simply say it's a way to play the game if you lack the twitch-reflexes normally required. Naturally, this does not apply in multi-player mode where pausing is almost always disabled anyway.
+<ul><li> One type of game that's especially prone to this are <a class="twikilink" href="/pmwiki/pmwiki.php/Main/FallingBlocks" title="/pmwiki/pmwiki.php/Main/FallingBlocks">Falling Blocks</a> games, which now usually cover up the board when pausing. A variation peculiar to <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Tetris" title="/pmwiki/pmwiki.php/VideoGame/Tetris">Tetris</a></em> since the 2001 standardization is infinite spin, in which a player spins a piece simply to stop it from locking into place.
+</li></ul></li><li> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/HiddenObjectGame" title="/pmwiki/pmwiki.php/Main/HiddenObjectGame">Hidden Object Games</a> are often timed - whether counting down (as a deadline) or counting up (for scoring purposes). Given the vast number of such games made in the past decade, you're absolutely bound to come across a timed game where the designers hadn't really considered this exploit. So when the game is paused, the scene remains quite visible (sometimes simply a little darkened) and you can actually keep looking for clues without wasting any precious time. This has recently been changed a little, due to many Hidden Object Games abandoning the time factor altogether.
+<ul><li> But it does persist in other casual games like the "connect 3" variety, especially since there are so many of them being made.
+</li></ul></li><li> <a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/PauseAhead" title="/pmwiki/pmwiki.php/VideoGame/PauseAhead">Pause Ahead</a> has intentional unintentional realtime with pause. Most of the game stops when paused. But the player velocity remains active.
+</li></ul><p></p><h2>Examples of other designs:</h2>
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Fallout3" title="/pmwiki/pmwiki.php/VideoGame/Fallout3">Fallout 3</a></em>, <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FalloutNewVegas" title="/pmwiki/pmwiki.php/VideoGame/FalloutNewVegas">New Vegas</a></em> and <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Fallout4" title="/pmwiki/pmwiki.php/VideoGame/Fallout4">4</a></em> have V.A.T.S. mode, where the game is paused mid-battle, and the player can target an enemy's bodyparts. This is unique in that once unpaused, the game goes into a slow-motion replay of the shooting sequence that was queued in V.A.T.S, temporarily taking away the player's control of his character. The game then proceeds right back into full realtime mode. It is pretty much essential by design to keep its AP-based combat roots: because if your gun skill isn't high (as in 75 and up) enough, the gunshots will wildly recoils around and it's pretty much difficult to desirably aim limbs or body parts without V.A.T.S.
+<ul><li> Averted in <em>Fallout 4</em>, V.A.T.S. was changed to merely slow down time instead of pausing the game completely, such that real time combat continues in slow motion around you, and you could potentially be wounded or killed while in V.A.T.S mode, and the gunplay is revamped so as it plays like a true FPS game.
+</li></ul></li><li> <em>The Clue</em> and <em>The Sting</em>. These games use a Simultaneous Turn Resolution design, except there's only one "turn" in each mission. You can spend up to an hour giving a long sequence of commands to your team members, and then watch the heist being performed in real time with no opportunity to intervene until it's done.
+<ul><li> Similarly, but more extreme, the <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Dominions" title="/pmwiki/pmwiki.php/VideoGame/Dominions">Dominions</a></em> series. You can only input general commands to units when you organize them, and must have faith in those orders working when combat occurs, whether because you initiated an assault or were attacked.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Gangsters" title="/pmwiki/pmwiki.php/VideoGame/Gangsters">Gangsters</a></em> also uses Simultaneous Turn Resolution with extremely-long turns. You have to plan each of your gangsters' actions before the week begins, and then you watch dozens if not hundreds of them (including enemy gangsters) carry out that entire week's worth of orders (over the span of a few minutes). You may intervene to make sudden changes, but only small ones.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheMatrixPathOfNeo" title="/pmwiki/pmwiki.php/VideoGame/TheMatrixPathOfNeo">The Matrix: Path of Neo</a></em>. The pause screen gives 'Neo' the 'see everything as <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MatrixRainingCode" title="/pmwiki/pmwiki.php/Main/MatrixRainingCode">vertical lines of numbers</a>' ability. Including seeing enemies hiding behind nearby walls.
+</li><li> Several adaptations of the board game <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/SpaceHulk" title="/pmwiki/pmwiki.php/TabletopGame/SpaceHulk">Space Hulk</a></em> use a restricted version of Real Time With Pause called "Freeze Time." During normal gameplay, you can control troopers directly or give them orders on a map screen. If you activate Freeze Time, the game will pause and go to the map screen, where you can continue to input orders that will be carried out once you go back to normal gameplay. The big difference is that the amount of time you can spend in Freeze Time is strictly limited, with a meter that ticks away and dumps you back into normal gameplay when it runs out, and only very slowly refills during normal gameplay. The overall effect was a use of Real Time With Pause that actually made the game <em>more</em> intense.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/JamesBond" title="/pmwiki/pmwiki.php/Franchise/JamesBond">James Bond</a>: <a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/EverythingOrNothing" title="/pmwiki/pmwiki.php/VideoGame/EverythingOrNothing">Everything or Nothing</a></em> has the "Bond Sense" mode, which allows the player to replicate Bonds expert markmanship by both giving them more time to examine the situation and select targets, and also highlights enemies and destroyable scenery. While it doesn't fully pause the game, it does slow the action to a crawl to give you more, but not unlimited time.
+</li><li> The <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/InazumaEleven" title="/pmwiki/pmwiki.php/VideoGame/InazumaEleven">Inazuma Eleven</a></em> series straddles the line between plain Real Time with Pause and Simultaneous Turn Resolution. They're primarily plain Real Time with Pause, with the caveat that the manual pause has a 10-second cooldown after resuming before it can be used again. However, some events will trigger an automatic pause (not subject to the 10-second cooldown); if the event in question requires the player to choose one of several actions (for example, an opportunity to steal the ball: regular tackle or sliding tackle?), it gets Simultaneous Turn Resolution.
+</li><li> In the <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Grandia" title="/pmwiki/pmwiki.php/VideoGame/Grandia">Grandia</a></em> games, it pauses for special attacks and when character actions are to be selected, but otherwise the battles move in real time.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/ResonanceOfFate" title="/pmwiki/pmwiki.php/VideoGame/ResonanceOfFate">Resonance of Fate</a></em> bills itself as being turn-based, but plays more like a blend of Realtime With Pause and Simultaneous Turn Resolution. At the start of PC's turn, you have as long as you like to switch weapons and targets, looks around, or change to other PCs with a turn pending. The moment you move an inch or change an attack, however, enemies start carrying out their turns, and continue to do so even if you stop performing actions that drain your action bar. Once the player ends their turn by taking a shot or emptying the action bar, any enemies with attacks readied get to launch them, then action moves to the next PC (enemies never get dedicated turns, but all of them attack every PC turn).
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MightAndMagic" title="/pmwiki/pmwiki.php/VideoGame/MightAndMagic">Might and Magic</a></em> VI to IX had the simple hybrid of having <em>both</em> real-time and turn-based options — the default mode is real-time, but at any time you can click enter and go turn-based. VI lacked certain basic functionality in turn-based mode (being able to <em>move</em>), but this was corrected for the sequels.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DragonQuestIX" title="/pmwiki/pmwiki.php/VideoGame/DragonQuestIX">Dragon Quest IX</a></em> has a particularly strange example, since enemies move on the field in real time. Enemies now appear on the field instead of simple <a class="twikilink" href="/pmwiki/pmwiki.php/Main/RandomEncounters" title="/pmwiki/pmwiki.php/Main/RandomEncounters">Random Encounters</a>, but while they can see (and flee/chase) you all the time, the battle won't actually start if you're in the menu when they run into you. Thus it's not enough to cast Vanish when trying to avoid combat, enemies can and will run into you and engage in battle unless you hit the menu in time. Similarly, some monsters can appear and disappear in the time it takes for you to finish an unskippable menu action (heal all, changing class, etc.).
+</li><li> Averted in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Desperados" title="/pmwiki/pmwiki.php/VideoGame/Desperados">Desperados</a>: Wanted Dead or Alive</em>. The pause screen greys everything out, preventing you from issuing orders. However, if you enter a certain cheat, this allows you to play this trope to the fullest.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/CrushCrumbleAndChomp" title="/pmwiki/pmwiki.php/VideoGame/CrushCrumbleAndChomp">Crush, Crumble, and Chomp!</a></em> had an early variation — though turn-based, the game only gave players a limited amount of time to press a command key, making it somewhat real-time. Also, longer commands may result in the computer-controlled units making a move before the player does.
+</li><li> <a class="twikilink" href="/pmwiki/pmwiki.php/Creator/Epyx" title="/pmwiki/pmwiki.php/Creator/Epyx">Epyx</a>'s "Dunjonquest" series of games, starting with <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TempleOfApshai" title="/pmwiki/pmwiki.php/VideoGame/TempleOfApshai">Temple of Apshai</a>,</em> featured a system like this. The games used a quasi-real time system; players press keys to perform actions, and monsters move and take turns on their own pace. If the player remains idle, the monsters keep advancing.
+</li><li> The <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MegaManBattleNetwork" title="/pmwiki/pmwiki.php/VideoGame/MegaManBattleNetwork">Mega Man Battle Network</a></em> series has a unique battle system where MegaMan moves, uses attacks, and dodges attacks in real time, and when the Custom Gauge fills up you can go to a battle setup screen to select a number of Battle Chips to use.
+</li></ul><hr/>
+</div>
+<div class="alt-titles section section-fact">
+<h3>
+<strong>Alternative Title(s):</strong>
+<span>Pausable Realtime</span>, <span>Simultaneous Turn Resolution</span> </h3>
+</div>
+<div class="square_ad footer-article-ad main_2" data-isolated="0"></div>
+<div class="section-links" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<div class="titles">
+<div><h3 class="text-center text-uppercase">Previous</h3></div>
+<div><h3 class="text-center text-uppercase">Index</h3></div>
+<div><h3 class="text-center text-uppercase">Next</h3></div>
+</div>
+<div class="links">
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/RealTimeWeaponChange">Real-Time Weapon Change</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/PagesNeedingExampleSorting">Pages Needing Example Sorting</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/RefiningResources">Refining Resources</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/RandomDrops">Random Drops</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/GameMechanics">Game Mechanics</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/ResourcesManagementGameplay">Resources Management Gameplay</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/RatchetScrolling">Ratchet Scrolling</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/VideoGameTropes">Video Game Tropes</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/RepeatableQuest">Repeatable Quest</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="outer_ads_by_salon_wrapper" id="exco_player_insert_div">
+</div>
+</article>
+<div id="main-content-sidebar"><div class="sidebar-item display-options">
+<ul class="sidebar display-toggles">
+<li>Show Spoilers <div class="display-toggle show-spoilers" id="sidebar-toggle-showspoilers"></div></li>
+<li>Night Vision <div class="display-toggle night-vision" id="sidebar-toggle-nightvision"></div></li>
+<li>Sticky Header <div class="display-toggle sticky-header" id="sidebar-toggle-stickyheader"></div></li>
+<li>Wide Load <div class="display-toggle wide-load" id="sidebar-toggle-wideload"></div></li>
+</ul>
+<script>updateDesktopPrefs();</script>
+</div>
+<div class="sidebar-item ad sb-ad-unit">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_2"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_2'); });</script> </div>
+</div></div>
+<div class="sidebar-item quick-links" itemtype="http://schema.org/SiteNavigationElement">
+<p class="sidebar-item-title" data-title="Important Links">Important Links</p>
+<div class="padded">
+<a href="/pmwiki/query.php?type=att">Ask The Tropers</a>
+<a href="/pmwiki/query.php?type=tf">Trope Finder</a>
+<a href="/pmwiki/query.php?type=ykts">You Know That Show...</a>
+<a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a>
+<a href="/pmwiki/review_activity.php">Reviews</a>
+<a data-modal-target="login" href="/pmwiki/lbs.php">Live Blogs</a>
+<a href="/pmwiki/ad-free-subscribe.php">Go Ad Free!</a> </div>
+</div>
+<div class="sidebar-item sb-ad-unit">
+<div class="sidebar-section">
+<div class="square_ad ad-size-300x600 ad-section text-center">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_3"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_3'); });</script> </div>
+</div> </div>
+</div>
+</div>
+<div class="sidebar-item">
+<p class="sidebar-item-title" data-title="Crucial Browsing">Crucial Browsing</p>
+<ul class="padded font-s" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><a data-click-toggle="active" href="javascript:void(0);">Genre</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/ActionAdventureTropes" title="Main/ActionAdventureTropes">Action Adventure</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ComedyTropes" title="Main/ComedyTropes">Comedy</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CommercialsTropes" title="Main/CommercialsTropes">Commercials</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CrimeAndPunishmentTropes" title="Main/CrimeAndPunishmentTropes">Crime &amp; Punishment</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DramaTropes" title="Main/DramaTropes">Drama</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/HorrorTropes" title="Main/HorrorTropes">Horror</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LoveTropes" title="Main/LoveTropes">Love</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NewsTropes" title="Main/NewsTropes">News</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ProfessionalWrestling" title="Main/ProfessionalWrestling">Professional Wrestling</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SpeculativeFictionTropes" title="Main/SpeculativeFictionTropes">Speculative Fiction</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SportsStoryTropes" title="Main/SportsStoryTropes">Sports Story</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/WarTropes" title="Main/WarTropes">War</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Media</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/Media" title="Main/Media">All Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/AnimationTropes" title="Main/AnimationTropes">Animation (Western)</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Anime" title="Main/Anime">Anime</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ComicBookTropes" title="Main/ComicBookTropes">Comic Book</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FanFic" title="FanFic/FanFics">Fan Fics</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Film" title="Main/Film">Film</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/GameTropes" title="Main/GameTropes">Game</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Literature" title="Main/Literature">Literature</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MusicAndSoundEffects" title="Main/MusicAndSoundEffects">Music And Sound Effects</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NewMediaTropes" title="Main/NewMediaTropes">New Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/PrintMediaTropes" title="Main/PrintMediaTropes">Print Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Radio" title="Main/Radio">Radio</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SequentialArt" title="Main/SequentialArt">Sequential Art</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TabletopGames" title="Main/TabletopGames">Tabletop Games</a></li>
+<li><a href="/pmwiki/pmwiki.php/UsefulNotes/Television" title="Main/Television">Television</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Theater" title="Main/Theater">Theater</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/VideogameTropes" title="Main/VideogameTropes">Videogame</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Webcomics" title="Main/Webcomics">Webcomics</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Narrative</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/UniversalTropes" title="Main/UniversalTropes">Universal</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/AppliedPhlebotinum" title="Main/AppliedPhlebotinum">Applied Phlebotinum</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CharacterizationTropes" title="Main/CharacterizationTropes">Characterization</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Characters" title="Main/Characters">Characters</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CharactersAsDevice" title="Main/CharactersAsDevice">Characters As Device</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Dialogue" title="Main/Dialogue">Dialogue</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Motifs" title="Main/Motifs">Motifs</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NarrativeDevices" title="Main/NarrativeDevices">Narrative Devices</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Paratext" title="Main/Paratext">Paratext</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Plots" title="Main/Plots">Plots</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Settings" title="Main/Settings">Settings</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Spectacle" title="Main/Spectacle">Spectacle</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Other Categories</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/BritishTellyTropes" title="Main/BritishTellyTropes">British Telly</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TheContributors" title="Main/TheContributors">The Contributors</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CreatorSpeak" title="Main/CreatorSpeak">Creator Speak</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Creators" title="Main/Creators">Creators</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DerivativeWorks" title="Main/DerivativeWorks">Derivative Works</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LanguageTropes" title="Main/LanguageTropes">Language</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LawsAndFormulas" title="Main/LawsAndFormulas">Laws And Formulas</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ShowBusiness" title="Main/ShowBusiness">Show Business</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SplitPersonalityTropes" title="Main/SplitPersonalityTropes">Split Personality</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/StockRoom" title="Main/StockRoom">Stock Room</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TropeTropes" title="Main/TropeTropes">Trope</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Tropes" title="Main/Tropes">Tropes</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TruthAndLies" title="Main/TruthAndLies">Truth And Lies</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TruthInTelevision" title="Main/TruthInTelevision">Truth In Television</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Topical Tropes</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/BetrayalTropes" title="Main/BetrayalTropes">Betrayal</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CensorshipTropes" title="Main/CensorshipTropes">Censorship</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CombatTropes" title="Main/CombatTropes">Combat</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DeathTropes" title="Main/DeathTropes">Death</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FamilyTropes" title="Main/FamilyTropes">Family</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FateAndProphecyTropes" title="Main/FateAndProphecyTropes">Fate And Prophecy</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FoodTropes" title="Main/FoodTropes">Food</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/HolidayTropes" title="Main/HolidayTropes">Holiday</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MemoryTropes" title="Main/MemoryTropes">Memory</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MoneyTropes" title="Main/MoneyTropes">Money</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MoralityTropes" title="Main/MoralityTropes">Morality</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/PoliticsTropes" title="Main/PoliticsTropes">Politics</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ReligionTropes" title="Main/ReligionTropes">Religion</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SchoolTropes" title="Main/SchoolTropes">School</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="sidebar-item showcase">
+<p class="sidebar-item-title" data-title="Community Showcase">Community Showcase <a class="bubble float-right hover-blue" href="/pmwiki/showcase.php">More</a></p>
+<p class="community-showcase">
+<a href="https://sharetv.com/shows/echo_chamber" onclick="trackOutboundLink('https://sharetv.com/shows/echo_chamber');" target="_blank">
+<img alt="" class="lazy-image" data-src="/images/communityShowcase-echochamber.jpg"/></a>
+<a href="/pmwiki/pmwiki.php/Webcomic/TwistedTropes">
+<img alt="" class="lazy-image" data-src="/img/howlandsc-side.jpg"/></a>
+</p>
+</div>
+<div class="sidebar-item sb-ad-unit" id="stick-cont">
+<div class="sidebar-section" id="stick-bar">
+<div class="square_ad ad-size-300x600 ad-section text-center">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_4"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_4'); });</script> </div>
+</div> </div>
+</div>
+</div>
+</div>
+</div>
+<div class="action-bar tablet-off" id="action-bar-bottom">
+<a class="scroll-to-top dead-button" href="#top-of-page" onclick="$('html, body').animate({scrollTop : 0},500);">Top</a>
+</div>
+</div>
+<div class="proper-ad-unit ad-sticky">
+<div id="proper-ad-tvtropes_sticky_ad"> <script>propertag.cmd.push(function() { proper_display('tvtropes_sticky_ad'); });</script> </div>
+</div>
+<footer id="main-footer">
+<div id="main-footer-inner">
+<div class="footer-left">
+<a class="img-link" href="/"><img alt="TV Tropes" class="lazy-image" data-src="/img/tvtropes-footer-logo.png" title="TV Tropes"/></a>
+<form action="index.html" class="navbar-form newsletter-signup validate modal-replies" data-ajax-get="/ajax/subscribe_email.php" id="cse-search-box-mobile" name="" role="">
+<button class="btn-submit newsletter-signup-submit-button" id="subscribe-btn" type="submit"><i class="fa fa-paper-plane"></i></button>
+<input class="form-control" id="subscription-email" name="q" placeholder="Subscribe" size="31" type="text" validate-type="email" value=""/>
+</form>
+<ul class="social-buttons">
+<li><a class="btn fb" href="https://www.facebook.com/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-facebook']);" target="_blank"><i class="fa fa-facebook"></i></a></li>
+<li><a class="btn tw" href="https://www.twitter.com/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-twitter']);" target="_blank"><i class="fa fa-twitter"></i></a> </li>
+<li><a class="btn rd" href="https://www.reddit.com/r/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-reddit']);" target="_blank"><i class="fa fa-reddit-alien"></i></a></li>
+</ul>
+</div>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">TVTropes</h4></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Administrivia">About TVTropes</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TheGoalsOfTVTropes">TVTropes Goals</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TheTropingCode">Troping Code</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TVTropesCustoms">TVTropes Customs</a></li>
+<li><a href="/pmwiki/pmwiki.php/JustForFun/TropesOfLegend">Tropes of Legend</a></li>
+<li><a href="/pmwiki/ad-free-subscribe.php">Go Ad-Free</a></li>
+</ul>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">Community</h4></li>
+<li><a href="/pmwiki/query.php?type=att">Ask The Tropers</a></li>
+<li><a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a></li>
+<li><a href="/pmwiki/query.php?type=tf">Trope Finder</a></li>
+<li><a href="/pmwiki/query.php?type=ykts">You Know That Show</a></li>
+<li><a data-modal-target="login" href="/pmwiki/lbs.php">Live Blogs</a></li>
+<li><a href="/pmwiki/review_activity.php">Reviews</a></li>
+<li><a href="/pmwiki/topics.php">Forum</a></li>
+</ul>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">Tropes HQ</h4></li>
+<li><a href="/pmwiki/about.php">About Us</a></li>
+<li><a href="/pmwiki/contact.php">Contact Us</a></li>
+<li><a href="/pmwiki/dmca.php">DMCA Notice</a></li>
+<li><a href="/pmwiki/privacypolicy.php">Privacy Policy</a></li>
+</ul>
+</div>
+<div class="text-center gutter-top gutter-bottom tablet-on" id="desktop-on-mobile-toggle">
+<a href="/pmwiki/switchDeviceCss.php?mobileVersion=1" rel="nofollow">Switch to <span class="txt-desktop">Desktop</span><span class="txt-mobile">Mobile</span> Version</a>
+</div>
+<div class="legal">
+<p>TVTropes is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License. <br/>Permissions beyond the scope of this license may be available from <a href="mailto:thestaff@tvtropes.org" rel="cc:morePermissions" xmlns:cc="http://creativecommons.org/ns#"> thestaff@tvtropes.org</a>.</p>
+<br/>
+<div class="privacy_wrapper">
+</div>
+</div>
+</footer>
+<style>
+      div.fc-ccpa-root {
+        position: absolute !important;
+        bottom: 93px !important;
+        margin: auto !important;
+        width: 100% !important;
+        z-index: 9999 !important;
+      }
+      .fc-ccpa-root .fc-dns-dialog .fc-dns-link p{
+        outline: none !important;
+        text-decoration: underline !important;
+        font-size: .7em !important;
+        font-family: sans-serif !important;
+      }
+      .fc-ccpa-root .fc-dns-dialog .fc-dns-link .fc-button-background {
+        background: none !important;
+      }
+    </style>
+<div class="full-screen" id="_pm_videoViewer">
+<a class="close" href="#close" id="_pm_videoViewer-close"></a>
+<div class="_pmvv-body">
+<div class="_pmvv-vidbox">
+<video class="video-js vjs-default-skin vjs-16-9" data-video-id="" id="overlay-video-player-box">
+</video>
+<div class="_pmvv-vidbox-desc">
+<h1 id="overlay-title"></h1>
+<p class="_pmvv-vidbox-descTxt" id="overlay-descrip">
+</p>
+<div class="rating-row" data-video-id="">
+<input name="is_logged_in" type="hidden" value="0"/>
+<p>How well does it match the trope?</p>
+<div id="star-rating-group">
+<div class="trope-rate">
+<input id="lamp5" name="rate" type="radio" value="5"/>
+<label for="lamp5" title="Absolutely"></label>
+<input id="lamp4" name="rate" type="radio" value="4"/>
+<label for="lamp4" title="Yes"></label>
+<input id="lamp3" name="rate" type="radio" value="3"/>
+<label for="lamp3" title="Kind of"></label>
+<input id="lamp2" name="rate" type="radio" value="2"/>
+<label for="lamp2" title="Not really"></label>
+<input id="lamp1" name="rate" type="radio" value="1"/>
+<label for="lamp1" title="No"></label>
+</div>
+<div id="star-rating-total">
+</div>
+</div>
+</div>
+<div class="example-media-row">
+<div class="example-overlay">
+<p>Example of:</p>
+<div id="overlay-trope"> / </div>
+</div>
+<div class="media-sources-overlay example-overlay">
+<p>Media sources:</p>
+<div id="overlay-media"> / </div>
+</div>
+</div>
+<p class="_pmvv-vidbox-stats text-right font-s" style="padding-top:8px; border-top: solid 1px rgba(255,255,255,0.2)">
+<a class="float-right" data-modal-target="login" href="#video-feedback">Report</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+        window.special_ops =  {
+            member : 'no',
+            isolated : 0,
+            tags : ['videogame']
+        };
+    </script>
+<script type="text/javascript">
+
+        var cleanCreativeEnabled = "";
+        var donation = "";
+        var live_ads = "1";
+        var img_domain = "https://static.tvtropes.org";
+        var snoozed = cookies.read('snoozedabm');
+        var snoozable = "";
+
+        if (adsRemovedWith) {
+            live_ads = 0;
+        }
+
+        var elem = document.createElement('script');
+        elem.async = true;
+
+        elem.src = '/design/assets/bundle.js?rev=c58d8df02f09262390bbd03db7921fc35c6af306';
+
+        elem.onload = function() {
+                                 }
+        document.getElementsByTagName('head')[0].appendChild(elem);
+
+    </script>
+<script type="text/javascript">
+      function send_analytics_event(user_type, donation){
+          // if(user_type == 'uncached' || user_type == 'cached'){
+          //   ga('send', 'event', 'caching', 'load', user_type, {'nonInteraction': 1});
+          //   return;
+          // }
+          var event_name = user_type;
+
+          if(donation == 'true'){
+              event_name += "_donation"
+          }else if(typeof(valid_user) == 'undefined'){
+              event_name += "_blocked"
+          }else if(valid_user == true){
+              event_name += "_unblocked";
+          }else{
+              event_name = "_unknown"
+          }
+          ga('send', 'event', 'ads', 'load', event_name, {'nonInteraction': 1});
+      }
+
+    
+    send_analytics_event("guest", "false");
+      </script>
+</body>
+</html>

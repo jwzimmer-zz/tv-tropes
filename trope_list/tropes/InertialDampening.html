@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Inertial Dampening - TV Tropes</title>
+<meta content='Inertial Dampening (or "Damping", if you prefer your inertia dry) is a piece of Applied Phlebotinum, designed to allow humans to accelerate and decelerate …' name="description"/>
+<link href="https://tvtropes.org/pmwiki/pmwiki.php/Main/InertialDampening" rel="canonical"/>
+<link href="/img/icons/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="@tvtropes" name="twitter:site"/>
+<meta content="@tvtropes" name="twitter:owner"/>
+<meta content="Inertial Dampening - TV Tropes" name="twitter:title"/>
+<meta content='Inertial Dampening (or "Damping", if you prefer your inertia dry) is a piece of Applied Phlebotinum, designed to allow humans to accelerate and decelerate …' name="twitter:description"/>
+<meta content="https://static.tvtropes.org/logo_blue_small.png" name="twitter:image:src"/>
+<meta content="TV Tropes" property="og:site_name"/>
+<meta content="en_US" property="og:locale"/>
+<meta content="https://www.facebook.com/tvtropes" property="article:publisher"/>
+<meta content="Inertial Dampening - TV Tropes" property="og:title"/>
+<meta content="website" property="og:type"/>
+<meta content="https://tvtropes.org/pmwiki/pmwiki.php/Main/InertialDampening" property="og:url"/>
+<meta content="https://static.tvtropes.org/logo_blue_small.png" property="og:image"/>
+<meta content='Inertial Dampening (or "Damping", if you prefer your inertia dry) is a piece of Applied Phlebotinum, designed to allow humans to accelerate and decelerate at high rates without becoming humorously colored paste on the walls. note  In Real …' property="og:description"/>
+<link href="/img/icons/apple-icon-57x57.png" rel="apple-touch-icon" sizes="57x57" type="image/png"/>
+<link href="/img/icons/apple-icon-60x60.png" rel="apple-touch-icon" sizes="60x60" type="image/png"/>
+<link href="/img/icons/apple-icon-72x72.png" rel="apple-touch-icon" sizes="72x72" type="image/png"/>
+<link href="/img/icons/apple-icon-76x76.png" rel="apple-touch-icon" sizes="76x76" type="image/png"/>
+<link href="/img/icons/apple-icon-114x114.png" rel="apple-touch-icon" sizes="114x114" type="image/png"/>
+<link href="/img/icons/apple-icon-120x120.png" rel="apple-touch-icon" sizes="120x120" type="image/png"/>
+<link href="/img/icons/apple-icon-144x144.png" rel="apple-touch-icon" sizes="144x144" type="image/png"/>
+<link href="/img/icons/apple-icon-152x152.png" rel="apple-touch-icon" sizes="152x152" type="image/png"/>
+<link href="/img/icons/apple-icon-180x180.png" rel="apple-touch-icon" sizes="180x180" type="image/png"/>
+<link href="/img/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/img/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/img/icons/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png"/>
+<link href="/img/icons/favicon-192x192.png" rel="icon" sizes="192x192" type="image/png"/>
+<meta content="width=device-width, initial-scale=1" id="viewport" name="viewport"/>
+<script>
+                var propertag = {};
+                propertag.cmd = [];
+            </script>
+<link href="/design/assets/bundle.css?rev=c58d8df02f09262390bbd03db7921fc35c6af306" rel="stylesheet"/>
+<script>
+                function object(objectId) {
+                    if (document.getElementById && document.getElementById(objectId)) {
+                        return document.getElementById(objectId);
+                    } else if (document.all && document.all(objectId)) {
+                        return document.all(objectId);
+                    } else if (document.layers && document.layers[objectId]) {
+                        return document.layers[objectId];
+                    } else {
+                        return false;
+                    }
+                }
+
+                // JAVASCRIPT COOKIES CODE: for getting and setting user viewing preferences
+                var cookies = {
+                    create: function (name, value, days2expire, path) {
+                        var date = new Date();
+                        date.setTime(date.getTime() + (days2expire * 24 * 60 * 60 * 1000));
+                        var expires = date.toUTCString();
+                        document.cookie = name + '=' + value + ';' + 'expires=' + expires + ';' + 'path=' + path + ';';
+                    },
+										createWithExpire: function(name, value, expires, path) {
+												document.cookie = name + '=' + value + ';' + 'expires=' + expires + ';' + 'path=' + path + ';';
+										},
+                    read: function (name) {
+                        var cookie_value = "",
+                            current_cookie = "",
+                            name_expr = name + "=",
+                            all_cookies = document.cookie.split(';'),
+                            n = all_cookies.length;
+
+                        for (var i = 0; i < n; i++) {
+                            current_cookie = all_cookies[i].trim();
+                            if (current_cookie.indexOf(name_expr) === 0) {
+                                cookie_value = current_cookie.substring(name_expr.length, current_cookie.length);
+                                break;
+                            }
+                        }
+                        return cookie_value;
+                    },
+                    update: function (name, val) {
+                        this.create(name, val, 300, "/");
+                    },
+                    remove: function (name) {
+                        document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
+                    }
+                };
+
+                function updateUserPrefs() {
+                    //GENERAL: detect and set browser, if not cookied (will be treated like a user-preference and added to the #user-pref element)
+                    if( !cookies.read('user-browser') ){
+                        var broswer = '';
+
+                        if(navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPod/i) ){
+                            browser = 'iOS';
+                        } else if (/Opera[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'opera';
+                        } else if (/MSIE (\d+\.\d+);/.test(navigator.userAgent)) {
+                            browser = 'MSIE';
+                        } else if (/Navigator[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'netscape';
+                        } else if (/Chrome[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'chrome';
+                        } else if (/Safari[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'safari';
+                            /Version[\/\s](\d+\.\d+)/.test(navigator.userAgent);
+                            browserVersion = new Number(RegExp.$1);
+                        } else if (/Firefox[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'firefox';
+                        } else {
+                            browser = 'internet_explorer';
+                        }
+                        cookies.create('user-browser',browser,1,'/');
+                        document.getElementById('user-prefs').classList.add('browser-' + browser);
+                    } else {
+                        document.getElementById('user-prefs').classList.add('browser-' + cookies.read('user-browser'));
+                    }
+
+                    //update user preference settings
+                    if (cookies.read('wide-load') !== '') document.getElementById('user-prefs').classList.add('wide-load');
+                    if (cookies.read('night-vision') !== '') document.getElementById('user-prefs').classList.add('night-vision');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('user-prefs').classList.add('sticky-header');
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('user-prefs').classList.add('show-spoilers');
+                    if (cookies.read('folders-open') !== '') document.getElementById('user-prefs').classList.add('folders-open');
+                    if (cookies.read('lefthand-sidebar') !== '') document.getElementById('user-prefs').classList.add('lefthand-sidebar');
+                    if (cookies.read('highlight-links') !== '') document.getElementById('user-prefs').classList.add('highlight-links');
+                    if (cookies.read('forum-gingerbread') !== '') document.getElementById('user-prefs').classList.add('forum-gingerbread');
+                    if (cookies.read('shared-avatars') !== '') document.getElementById('user-prefs').classList.add('shared-avatars');
+                    if (cookies.read('new-search') !== '') document.getElementById('user-prefs').classList.add('new-search');
+                    if (cookies.read('stop-auto-play-video') !== '') document.getElementById('user-prefs').classList.add('stop-auto-play-video');
+
+                    //desktop view on mobile
+                    if (cookies.read('desktop-on-mobile') !== ''){
+                        document.getElementById('user-prefs').classList.add('desktop-on-mobile');
+
+                        var viewport = document.querySelector("meta[name=viewport]");
+                        viewport.setAttribute('content', 'width=1000');
+                    }
+
+                }
+
+                function updateDesktopPrefs() {
+                    if (cookies.read('wide-load') !== '') document.getElementById('sidebar-toggle-wideload').classList.add('active');
+                    if (cookies.read('night-vision') !== '') document.getElementById('sidebar-toggle-nightvision').classList.add('active');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('sidebar-toggle-stickyheader').classList.add('active');
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('sidebar-toggle-showspoilers').classList.add('active');
+
+                }
+
+                function updateMobilePrefs() {
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('mobile-toggle-showspoilers').classList.add('active');
+                    if (cookies.read('night-vision') !== '') document.getElementById('mobile-toggle-nightvision').classList.add('active');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('mobile-toggle-stickyheader').classList.add('active');
+                    if (cookies.read('highlight-links') !== '') document.getElementById('mobile-toggle-highlightlinks').classList.add('active');
+
+                }
+
+
+                if (document.cookie.indexOf("scroll0=") < 0) {
+                    // do nothing
+                } else {
+                    console.log('ads removed by scroll.com');
+                    var adsRemovedWith = 'scroll';
+                    var style = document.createElement('style');
+                    style.innerHTML = '#header-ad, .proper-ad-unit, .square_ad, .sb-ad-unit { display: none !important; } ';
+                    document.head.appendChild(style);
+                }
+            </script>
+<script type="text/javascript">
+
+                var tvtropes_config = {
+                    astri_stream_enabled : "",
+                    is_logged_in         : "",
+                    handle               : "",
+                    get_astri_stream     : "",
+										revnum               : "c58d8df02f09262390bbd03db7921fc35c6af306",
+										img_domain           : "https://static.tvtropes.org",
+										adblock              : "1",
+										adblock_url          : "propermessage.io",
+										pause_editing        : "0",
+										pause_editing_msg    : "",
+										pause_site_changes   : ""
+                };
+            </script>
+<script type="text/javascript">
+						  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+						  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+						  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+						  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+						  ga('create', 'UA-3821842-1', 'auto');
+						  ga('send', 'pageview');
+
+						</script>
+</head>
+<body class="">
+<i id="user-prefs"></i>
+<script>updateUserPrefs();</script>
+<div id="fb-root"></div>
+<div id="modal-box"></div>
+<header class="headroom-element" id="main-header-bar">
+<div id="main-header-bar-inner">
+<span class="header-spacer" id="header-spacer-left"></span>
+<a class="mobile-menu-toggle-button tablet-on" href="#mobile-menu" id="main-mobile-toggle"><span></span><span></span><span></span></a>
+<a class="no-dev" href="/" id="main-header-logoButton"></a>
+<span class="header-spacer" id="header-spacer-right"></span>
+<nav class="tablet-off" id="main-header-nav">
+<a href="/pmwiki/pmwiki.php/Main/Tropes">Tropes</a>
+<a href="/pmwiki/pmwiki.php/Main/Media">Media</a>
+<a class="nav-browse" href="/pmwiki/browse.php">Browse</a>
+<a href="/pmwiki/index_report.php">Indexes</a>
+<a href="/pmwiki/topics.php">Forums</a>
+<a class="nav-browse" href="/pmwiki/recent_videos.php">Videos</a>
+</nav>
+<div id="main-header-bar-right">
+<div class="font-xs mobile-off" id="signup-login-box">
+<a class="hover-underline bold" data-modal-target="signup" href="/pmwiki/login.php">Join</a>
+<a class="hover-underline bold" data-modal-target="login" href="/pmwiki/login.php">Login</a>
+</div>
+<div class="mobile-on inline" id="signup-login-mobileToggle">
+<a data-modal-target="login" href="/pmwiki/login.php"><i class="fa fa-user"></i></a>
+</div>
+<div id="search-box">
+<form action="/pmwiki/search_result.php" class="search">
+<input class="search-box" name="q" placeholder="Search" required="" type="text" value=""/>
+<input class="submit-button" type="submit" value=""/>
+<input name="search_type" type="hidden" value="article"/>
+<input name="page_type" type="hidden" value="all"/>
+<input name="cx" type="hidden" value="partner-pub-6610802604051523:amzitfn8e7v"/>
+<input name="cof" type="hidden" value="FORID:10"/>
+<input name="ie" type="hidden" value="ISO-8859-1"/>
+<input name="siteurl" type="hidden" value=""/>
+<input name="ref" type="hidden" value=""/>
+<input name="ss" type="hidden" value=""/>
+</form>
+<a class="mobile-on mobile-search-toggle close-x" href="#close-search"><i class="fa fa-close"></i></a>
+</div>
+<div id="random-box">
+<a class="button-random-trope" href="/pmwiki/pmwiki.php/Main/DisabledLoveInterest" onclick="ga('send', 'event', 'button', 'click', 'random trope');" rel="nofollow"></a>
+<a class="button-random-media" href="/pmwiki/pmwiki.php/Franchise/SlyCooper" onclick="ga('send', 'event', 'button', 'click', 'random media');" rel="nofollow"></a>
+</div>
+</div>
+</div>
+<div class="tablet-on" id="mobile-menu"><div class="mobile-menu-options">
+<div class="nav-wrapper">
+<a class="xl" href="/pmwiki/pmwiki.php/Main/Tropes">Tropes</a>
+<a class="xl" href="/pmwiki/pmwiki.php/Main/Media">Media</a>
+<a class="xl" href="/pmwiki/browse.php">Browse</a>
+<a class="xl" href="/pmwiki/index_report.php">Indexes</a>
+<a class="xl" href="/pmwiki/topics.php">Forums</a>
+<a class="xl" href="/pmwiki/recent_videos.php">Videos</a>
+<a href="/pmwiki/query.php?type=att">Ask The Tropers</a>
+<a href="/pmwiki/query.php?type=tf">Trope Finder</a>
+<a href="/pmwiki/query.php?type=ykts">You Know That Show...</a>
+<a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a>
+<a data-click-toggle="active" href="#tools">Tools <i class="fa fa-chevron-down"></i></a>
+<div class="tools-dropdown mobile-dropdown-linkList">
+<a href="/pmwiki/cutlist.php">Cut List</a>
+<a href="/pmwiki/changes.php">New Edits</a>
+<a href="/pmwiki/recent_edit_reasons.php">Edit Reasons</a>
+<a href="/pmwiki/launches.php">Launches</a>
+<a href="/pmwiki/img_list.php">Images List</a>
+<a href="/pmwiki/crown_activity.php">Crowner Activity</a>
+<a href="/pmwiki/no_types.php">Un-typed Pages</a>
+<a href="/pmwiki/page_type_audit.php">Recent Page Type Changes</a>
+</div>
+<a data-click-toggle="active" href="#hq">Tropes HQ <i class="fa fa-chevron-down"></i></a>
+<div class="tools-dropdown mobile-dropdown-linkList">
+<a href="/pmwiki/about.php">About Us</a>
+<a href="/pmwiki/contact.php">Contact Us</a>
+<a href="mailto:advertising@proper.io">Advertise</a>
+<a href="/pmwiki/dmca.php">DMCA Notice</a>
+<a href="/pmwiki/privacypolicy.php">Privacy Policy</a>
+</div>
+<a href="/pmwiki/ad-free-subscribe.php">Go Ad-Free</a>
+<div class="toggle-switches">
+<ul class="mobile-menu display-toggles">
+<li>Show Spoilers <div class="display-toggle show-spoilers" id="mobile-toggle-showspoilers"></div></li>
+<li>Night Vision <div class="display-toggle night-vision" id="mobile-toggle-nightvision"></div></li>
+<li>Sticky Header <div class="display-toggle sticky-header" id="mobile-toggle-stickyheader"></div></li>
+<li>Highlight Links <div class="display-toggle highlight-links" id="mobile-toggle-highlightlinks"></div></li>
+</ul>
+<script>updateMobilePrefs();</script>
+</div>
+</div>
+</div>
+</div>
+</header>
+<div class="mobile-on" id="homepage-introBox-mobile">
+<a href="/"><img class="logo-small" src="/images/logo-white-big.png"/></a>
+<form action="/pmwiki/search_result.php" class="search" style="margin:10px -5px -6px -5px;">
+<input class="search-box" name="q" placeholder="Search" required="" type="text" value=""/>
+<input class="submit-button" type="submit" value=""/>
+<input name="search_type" type="hidden" value="article"/>
+<input name="page_type" type="hidden" value="all"/>
+<input name="cx" type="hidden" value="partner-pub-6610802604051523:amzitfn8e7v"/>
+<input name="cof" type="hidden" value="FORID:10"/>
+<input name="ie" type="hidden" value="ISO-8859-1"/>
+<input name="siteurl" type="hidden" value=""/>
+<input name="ref" type="hidden" value=""/>
+<input name="ss" type="hidden" value=""/>
+</form>
+</div>
+<div class="ad" id="header-ad-wrapper">
+<div id="header-ad">
+<div class="ad-size-970x90 atf_banner">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_1"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_1'); });</script> </div>
+</div> </div>
+</div>
+</div>
+<div id="main-container">
+<div class="action-bar mobile-off" id="action-bar-top">
+<div class="action-bar-right">
+<p>Follow TV Tropes</p>
+<a class="button-fb" href="https://www.facebook.com/TVTropes">
+<i class="fa fa-facebook"></i></a>
+<a class="button-tw" href="https://www.twitter.com/TVTropes">
+<i class="fa fa-twitter"></i></a>
+<a class="button-re" href="https://www.reddit.com/r/TVTropes">
+<i class="fa fa-reddit-alien"></i></a>
+</div>
+<nav class="actions-wrapper" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<ul class="page-actions" id="top_main_list">
+<li class="link-edit">
+<a class="article-edit-button" data-modal-target="login" href="/pmwiki/pmwiki.php/Main/InertialDampening?action=edit" rel="nofollow">
+<i class="fa fa-pencil"></i> Edit Page</a></li><li class="link-related"><a href="/pmwiki/relatedsearch.php?term=Main/InertialDampening">
+<i class="fa fa-share-alt"></i> Related</a></li><li class="link-history"><a href="/pmwiki/article_history.php?article=Main.InertialDampening">
+<i class="fa fa-history"></i> History</a></li><li class="link-discussion"><a href="/pmwiki/remarks.php?trope=Main.InertialDampening">
+<i class="fa fa-comment"></i> Discussion</a></li> </ul>
+<button class="nav__dropdown-toggle" id="top_more_button" onclick="toggle_more_menu('top');" type="button">More</button>
+<ul class="more_menu hidden_more_list" id="top_more_list">
+<li class="link-todo tuck-always more_list_item"><a data-modal-target="login" href="#todo"><i class="fa fa-check-circle"></i> To Do</a></li><li class="link-pageSource tuck-always more_list_item"><a data-modal-target="login" href="/pmwiki/pmwiki.php/Main/InertialDampening?action=source" rel="nofollow" target="_blank"><i class="fa fa-code"></i> Page Source</a></li> </ul>
+</nav>
+<div class="WikiWordModalStub"></div>
+<div class="ImgUploadModalStub" data-page-type="Article"></div>
+<div class="login-alert" style="display: none;">
+You need to <a href="/pmwiki/login.php" style="color:#21A0E8">login</a> to do this. <a href="/pmwiki/login.php?tab=register_account" style="color:#21A0E8">Get Known</a> if you don't have an account
+</div>
+</div>
+<div class="page-Article" id="main-content">
+<article class="with-sidebar" id="main-entry">
+<input id="groupname-hidden" type="hidden" value="Main"/>
+<input id="title-hidden" type="hidden" value="InertialDampening"/>
+<input id="article_id" type="hidden" value="3284"/>
+<input id="logged_in" type="hidden" value="false"/>
+<p class="hidden" id="current_url">http://tvtropes.org/pmwiki/pmwiki.php/Main/InertialDampening</p>
+<meta content="" itemprop="datePublished"/>
+<meta content="" itemprop="articleSection"/>
+<meta content="" itemprop="image"/>
+<a class="watch-button" data-modal-target="login" href="#watch">Follow<span>ing</span></a>
+<h1 class="entry-title" itemprop="headline">
+Inertial Dampening
+</h1>
+<script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+                "@type": "ListItem",
+                "position": 1,
+                "name": "tvtropes.org",
+                "item": "https://tvtropes.org"
+            },{
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Tropes",
+                "item": "https://tvtropes.org/pmwiki/pmwiki.php/Main/Tropes"
+            },{
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Inertial Dampening"            }]
+        }
+    </script>
+<a class="mobile-actionbar-toggle mobile-on" data-click-toggle="active" href="#mobile-actions-toggle" id="mobile-actionbar-toggle">
+<p class="tiny-off">Go To</p><span></span><span></span><span></span><i class="fa fa-pencil"></i></a>
+<nav class="mobile-actions-wrapper mobile-on" id="mobile-actions-bar"></nav>
+<div class="modal fade hidden-until-active" id="editLockModal">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button aria-label="Close" class="close" data-dismiss="modal" type="button"> <span aria-hidden="true">×</span></button>
+<h4 class="modal-title">Edit Locked</h4>
+</div>
+<div class="modal-body">
+<div class="row">
+<div class="body">
+<div class="danger troper_locked_message"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<nav class="body-options" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<ul class="subpage-links">
+<li>
+<a class="subpage-link curr-subpage" href="/pmwiki/pmwiki.php/Main/InertialDampening" title="The Main page">
+<span class="wrapper"><span class="spi main-page"></span>Main</span></a>
+</li>
+<li>
+<a class="subpage-link" href="/pmwiki/pmwiki.php/Laconic/InertialDampening" title="The Laconic page">
+<span class="wrapper"><span class="spi laconic-icon"></span>Laconic</span></a>
+</li>
+<li>
+<a class="subpage-link" href="/pmwiki/pmwiki.php/Quotes/InertialDampening" title="The Quotes page">
+<span class="wrapper"><span class="spi quotes"></span>Quotes</span></a>
+</li>
+<li class="create-subpage dropdown">
+<a aria-expanded="false" class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);" role="button">
+<span class="wrapper">Create New <i class="fa fa-plus-circle"></i></span>
+</a>
+<select onchange="this.options[this.selectedIndex].value &amp;&amp; (window.location = this.options[this.selectedIndex].value);">
+<option value="">- Create New -</option>
+<option value="/pmwiki/pmwiki.php/Analysis/InertialDampening?action=edit">Analysis</option>
+<option value="/pmwiki/pmwiki.php/Characters/InertialDampening?action=edit">Characters</option>
+<option value="/pmwiki/pmwiki.php/FanficRecs/InertialDampening?action=edit">FanficRecs</option>
+<option value="/pmwiki/pmwiki.php/FanWorks/InertialDampening?action=edit">FanWorks</option>
+<option value="/pmwiki/pmwiki.php/Fridge/InertialDampening?action=edit">Fridge</option>
+<option value="/pmwiki/pmwiki.php/Haiku/InertialDampening?action=edit">Haiku</option>
+<option value="/pmwiki/pmwiki.php/Headscratchers/InertialDampening?action=edit">Headscratchers</option>
+<option value="/pmwiki/pmwiki.php/ImageLinks/InertialDampening?action=edit">ImageLinks</option>
+<option value="/pmwiki/pmwiki.php/PlayingWith/InertialDampening?action=edit">PlayingWith</option>
+<option value="/pmwiki/pmwiki.php/Recap/InertialDampening?action=edit">Recap</option>
+<option value="/pmwiki/pmwiki.php/ReferencedBy/InertialDampening?action=edit">ReferencedBy</option>
+<option value="/pmwiki/pmwiki.php/Synopsis/InertialDampening?action=edit">Synopsis</option>
+<option value="/pmwiki/pmwiki.php/Timeline/InertialDampening?action=edit">Timeline</option>
+<option value="/pmwiki/pmwiki.php/Trivia/InertialDampening?action=edit">Trivia</option>
+<option value="/pmwiki/pmwiki.php/WMG/InertialDampening?action=edit">WMG</option>
+<option value="/pmwiki/pmwiki.php/YMMV/InertialDampening?action=edit">YMMV</option>
+</select>
+</li>
+</ul>
+</nav>
+<div class="article-content retro-folders" id="main-article">
+<p></p><div class="indent"><strong>Lt. Ford:</strong> It's strange not pulling any G-s. <br/><strong>Maj. Sheppard:</strong> Yeah... Kinda miss it. Although at this rate of acceleration, we'd be dead by now. <br/><strong>Lt. Ford:</strong> Yeah? <br/><strong>Maj. Sheppard:</strong> Oh yeah. Without inertial dampening, we'd be hit by so many G-s, our eyes would pop, the skin would pull away from our faces, our brains would squish up to the back of our skulls, and our internal organs would be crushed into these chairs. What about that sandwich?
+<div class="indent">— <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/StargateAtlantis" title="/pmwiki/pmwiki.php/Series/StargateAtlantis">Stargate Atlantis</a></em>
+</div></div><div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_1"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_1'); })</script></div></div><p>Inertial Dampening (or "Damping", if you prefer your inertia dry) is a piece of <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AppliedPhlebotinum" title="/pmwiki/pmwiki.php/Main/AppliedPhlebotinum">Applied Phlebotinum</a>, designed to allow humans to accelerate and decelerate at high rates without becoming humorously colored paste on the walls. <span class="notelabel" onclick="togglenote('note06out');"><sup>note </sup></span><span class="inlinefolder" id="note06out" isnote="true" onclick="togglenote('note06out');" style="cursor:pointer;font-size:smaller;display:none;"> In <a class="twikilink" href="/pmwiki/pmwiki.php/Main/RealLife" title="/pmwiki/pmwiki.php/Main/RealLife">Real Life</a>, "inertia dampers" refer only to devices or processes which remove the <em>effects</em> of inertia, not the inertia itself (seeing as how the latter is impossible according to the currently-understood laws of physics). Many of the examples on this page would thus be more correctly referred to as "inertial <em>negation</em>".</span>
+</p><p>Its intention is to "take away" inertial effects; i.e., when accelerating, you are not pressed back into your seat (or liquefied and wedged into your seat). For the most part, it's an invisible seatbelt substitute for crew and cargo.
+</p><p>Sometimes Inertial Dampening has a "lag", where a sharp turn or quick deceleration will momentarily cause a reaction (quick fall into the console or press back due to high accelerations).
+</p><div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_2"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_2'); })</script></div></div><p>Inertial Dampening is generally <em>not</em> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TimTaylorTechnology" title="/pmwiki/pmwiki.php/Main/TimTaylorTechnology">Tim Taylor Technology</a>. An overloading IDF [Inertial Dampening Field] has the opposite effect of most <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AppliedPhlebotinum" title="/pmwiki/pmwiki.php/Main/AppliedPhlebotinum">Applied Phlebotinum</a>, causing a greater inertial effect, usually culminating in a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/StarTrekShake" title="/pmwiki/pmwiki.php/Main/StarTrekShake">Star Trek Shake</a>. Generally, however, the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/StarTrekShake" title="/pmwiki/pmwiki.php/Main/StarTrekShake">Star Trek Shake</a> has no relation to the <em>direction</em> of inertia; i.e., the ship is traveling forward, but the crew feels a right-to-left effect. Though often left unmentioned, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/InertialDampening" title="/pmwiki/pmwiki.php/Main/InertialDampening">Inertial Dampening</a> is a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/RequiredSecondaryPowers" title="/pmwiki/pmwiki.php/Main/RequiredSecondaryPowers">requisite side-technology</a> to any spaceship that can turn or accelerate more quickly than a fighter jet. It's also the reason why <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TheBridge" title="/pmwiki/pmwiki.php/Main/TheBridge">The Bridge</a> has <a class="twikilink" href="/pmwiki/pmwiki.php/Main/NoSeatBelts" title="/pmwiki/pmwiki.php/Main/NoSeatBelts">No Seat Belts</a>. Note that the physical <a class="twikilink" href="/pmwiki/pmwiki.php/Main/HandWave" title="/pmwiki/pmwiki.php/Main/HandWave">Hand Wave</a> that accompanies many forms of <a class="twikilink" href="/pmwiki/pmwiki.php/Main/FasterThanLightTravel" title="/pmwiki/pmwiki.php/Main/FasterThanLightTravel">Faster-Than-Light Travel</a> dictate that the ship does not accelerate in the traditional Newtonian or, for that matter, Einsteinian fashion, and so the inertial dampener is mostly for maneuvering and orbit changes.
+</p><div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_3"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_3'); })</script></div></div><p>In <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MohsScaleOfScienceFictionHardness" title="/pmwiki/pmwiki.php/Main/MohsScaleOfScienceFictionHardness">hard</a> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SciFi" title="/pmwiki/pmwiki.php/Main/SciFi">Sci-Fi</a>, especially written but occasionally not, a more realistic method is used to cushion acceleration shock. Immersion in a fluid equal in density to the body would theoretically cause buoyancy forces to act counter to any accelerations; this is sometimes coupled with <a class="twikilink" href="/pmwiki/pmwiki.php/Main/HumanPopsicle" title="/pmwiki/pmwiki.php/Main/HumanPopsicle">cryonics</a>. Some method to allow the subject to continue to breathe in the fluid would be required, be it oxygenated liquids or a circulatory gas-exchange system. Since people riding around in bathtubs are not interesting on-screen (except from a voyeur's point-of-view) this has only rarely trickled down to the big and small screens; the exploration ship <em>Lewis and Clark</em> in <em><a class="twikilink" href="/pmwiki/pmwiki.php/Film/EventHorizon" title="/pmwiki/pmwiki.php/Film/EventHorizon">Event Horizon</a></em> and presumably the cryonics pods in the <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/Alien" title="/pmwiki/pmwiki.php/Franchise/Alien">Alien</a></em> series are the exceptions.
+</p><p>See also <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ArtificialGravity" title="/pmwiki/pmwiki.php/Main/ArtificialGravity">Artificial Gravity</a>.
+</p><p></p><hr/><h2>Examples:</h2>
+<div class="folderlabel" onclick="toggleAllFolders();">    open/close all folders  </div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder0');">    Anime &amp; Manga </div><div class="folder" id="folder0" isfolder="true" style="display:block;">
+<ul><li> Averted in <em><a class="twikilink" href="/pmwiki/pmwiki.php/LightNovel/StarshipOperators" title="/pmwiki/pmwiki.php/LightNovel/StarshipOperators">Starship Operators</a></em>. All the crews need to strap themselves in before acceleration, and acceleration ranges to at most around 10g for some ships. <span class="spoiler" title="you can set spoilers visible by default on your profile">Played a bit straight later when Amaterasu fights 5 Kingdom ships. Shinon devises a plan to quickly turn the ship to fire on enemies, and generate this effect by using its own warp drive to create gravity field that will protect its crew. It does protect its crew, but results in several decks wrecked, antimatter container being cracked, and several other massive damages on the ship. Quite a suicide tactic, actually</span>.
+</li><li> Barely addressed in <em><a class="twikilink" href="/pmwiki/pmwiki.php/Anime/CodeGeass" title="/pmwiki/pmwiki.php/Anime/CodeGeass">Code Geass</a></em>. The flying <a class="twikilink" href="/pmwiki/pmwiki.php/Main/HumongousMecha" title="/pmwiki/pmwiki.php/Main/HumongousMecha">Humongous Mechas</a> do sharp U-turns at velocities that would turn the pilot into paste all over the cockpit's walls (and probably dismantle the mechas themselves).
+</li><li> The Inertia Store Converter (ISC) in <em><a class="twikilink" href="/pmwiki/pmwiki.php/Anime/Macross" title="/pmwiki/pmwiki.php/Anime/Macross">Macross</a></em>, introduced in <em><a class="twikilink" href="/pmwiki/pmwiki.php/Anime/MacrossFrontier" title="/pmwiki/pmwiki.php/Anime/MacrossFrontier">Macross Frontier</a></em>, serves as this. Not only does it dampen inertia, it does so by temporarily converting it into storable energy that is slowly converted back into inertia over time. It isn't perfect though, and safety limiters are installed on the fighters to prevent them from pulling maneuvers that would kill the pilot, even ones the plane itself is fully capable of. Cyborg or computer-piloted craft don't have those limiters, since extreme G-forces are less of an issue for them.
+<ul><li> This trope is averted in the several series that take place before the invention of the ISC, with the lack of effective inertial dampening actually playing a key role in the finale of <em><a class="twikilink" href="/pmwiki/pmwiki.php/Anime/MacrossPlus" title="/pmwiki/pmwiki.php/Anime/MacrossPlus">Macross Plus</a></em>.
+</li></ul></li><li> Averted in <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/Gundam" title="/pmwiki/pmwiki.php/Franchise/Gundam">Gundam</a></em> all over the place. The <a class="twikilink" href="/pmwiki/pmwiki.php/Main/WorldBuilding" title="/pmwiki/pmwiki.php/Main/WorldBuilding">World Building</a> specifically comments that the facilities for sending people into space are slower than the ones used to transport objects because humans can't tolerate that level of Gs. In two separate series (<em><a class="twikilink" href="/pmwiki/pmwiki.php/Anime/MobileSuitGundamWing" title="/pmwiki/pmwiki.php/Anime/MobileSuitGundamWing">Gundam Wing</a></em> and <em><a class="twikilink" href="/pmwiki/pmwiki.php/Anime/MobileSuitGundam00" title="/pmwiki/pmwiki.php/Anime/MobileSuitGundam00">Gundam 00</a></em>), <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TheRival" title="/pmwiki/pmwiki.php/Main/TheRival">The Rival</a> uses a machine that is incredibly fast but has little to no safety features in order to keep up with the Gundams; both pilots end up exhibiting <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BloodFromTheMouth" title="/pmwiki/pmwiki.php/Main/BloodFromTheMouth">Blood from the Mouth</a>, and in <em>Wing</em>, we even see the Rival black out and suffer a heart attack from the stresses involved, despite being young and healthy. However in Gundam 00 lore it is stated that Union Flags do have a form of G-force dampener and GN Particles are used to reduce or increase the mass of objects which may affect inertia. <a class="twikilink" href="/pmwiki/pmwiki.php/Anime/MobileSuitGundamIronBloodedOrphans" title="/pmwiki/pmwiki.php/Anime/MobileSuitGundamIronBloodedOrphans">Gundam IBO</a> however makes things clear with Ahab Reactors that emit Ahab Particles that is outright stated to cancel the effects of inertia.
+</li><li> Averted in <em><a class="twikilink" href="/pmwiki/pmwiki.php/Manga/KnightsOfSidonia" title="/pmwiki/pmwiki.php/Manga/KnightsOfSidonia">Knights of Sidonia</a></em>. When the gigantic titular ship needs to make sudden evasive maneuvers, they precede it with an <a class="twikilink" href="/pmwiki/pmwiki.php/Main/EmergencyBroadcast" title="/pmwiki/pmwiki.php/Main/EmergencyBroadcast">Emergency Broadcast</a> first. Even with this warning giving them time to prepare, massive damage results and many die.
+</li><li> Mentioned in <em><a class="twikilink" href="/pmwiki/pmwiki.php/LightNovel/ACertainMagicalIndex" title="/pmwiki/pmwiki.php/LightNovel/ACertainMagicalIndex">A Certain Magical Index</a></em> as being necessary for Academy City's fighters and bombers: the aircraft are capable of absolutely <em>insane</em> maneuvers (their top speed is in excess of Mach 7), and the pilots are cryogenically frozen to protect their bodies. They're still conscious however, and controlling the planes mentally. <a class="twikilink" href="/pmwiki/pmwiki.php/Main/FridgeLogic" title="/pmwiki/pmwiki.php/Main/FridgeLogic">Which begs the question: if they don't physically control the airplanes, why are they even required to be inside?</a> Unless the enemy has extremely powerful jamming fields of course.
+</li><li> Averted in <em><a class="twikilink" href="/pmwiki/pmwiki.php/LightNovel/FateZero" title="/pmwiki/pmwiki.php/LightNovel/FateZero">Fate/Zero</a></em>, when Berserker uses his ability to hijack an F-15 mid-flight and turn it into his Noble Phantasm. While Berserker is controlling the jet from the outside, the hapless human pilot is left inside; thus, when Berserker is making extremely sharp turns and magically augmenting the plane's jet engines, the pilot is almost immediately reduced to a bloody paste. Berserker himself is unharmed by all this, but that's because he's a Servant and therefore extremely superhuman.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/Anime/DragonBallZ" title="/pmwiki/pmwiki.php/Anime/DragonBallZ">Dragon Ball Z</a></em>, Dr Briefs tells Goku that the Capsule Corporation spaceship's <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ArtificialGravity" title="/pmwiki/pmwiki.php/Main/ArtificialGravity">Artificial Gravity</a> machine is powered by the ship's momentum. Implying that some form of inertial dampening is in effect when the gravity machine is off. Vegeta is shown in a later version of the ship, training in high gravity while it's parked on Earth, throwing this concept out the window.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder1');">    Comic Books </div><div class="folder" id="folder1" isfolder="true" style="display:block;">
+<ul><li> Averted: In the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Tintin" title="/pmwiki/pmwiki.php/Main/Tintin">Tintin</a> adventures <em><a class="twikilink" href="/pmwiki/pmwiki.php/Recap/TintinDestinationMoon" title="/pmwiki/pmwiki.php/Recap/TintinDestinationMoon">Tintin: Destination Moon</a></em> and <em><a class="twikilink" href="/pmwiki/pmwiki.php/Recap/TintinExplorersOnTheMoon" title="/pmwiki/pmwiki.php/Recap/TintinExplorersOnTheMoon">Tintin: Explorers on the Moon</a></em>, the crew of the Moon-Rocket faints from the pressures caused by take-off and landing.
+</li><li> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DependingOnTheWriter" title="/pmwiki/pmwiki.php/Main/DependingOnTheWriter">Depending on the Writer</a>, this is often the reason why <a class="twikilink" href="/pmwiki/pmwiki.php/ComicBook/IronMan" title="/pmwiki/pmwiki.php/ComicBook/IronMan">Iron Man</a> can suddenly rocket off, take huge punches, fall from orbit and just crawl out of the crater. Other times it is simply <a class="twikilink" href="/pmwiki/pmwiki.php/Main/HandWave" title="/pmwiki/pmwiki.php/Main/HandWave">Hand Waved</a>.
+</li><li> One of <a class="twikilink" href="/pmwiki/pmwiki.php/Creator/DonRosa" title="/pmwiki/pmwiki.php/Creator/DonRosa">Don Rosa</a>'s <a class="twikilink" href="/pmwiki/pmwiki.php/ComicBook/DisneyDucksComicUniverse" title="/pmwiki/pmwiki.php/ComicBook/DisneyDucksComicUniverse">Scrooge McDuck</a> stories has the Beagle Boys get their hands on a raygun that "completely" removes inertia from objects (really having none at all would be a bizarre idea, but it is cut down to minimum so that anything short of air resistance would instantly stop the object's movement), as well as one that removes "all" friction. The results are interesting to say the least.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder2');">    Fan Works </div><div class="folder" id="folder2" isfolder="true" style="display:block;">
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Fanfic/RedFireRedPlanet" title="/pmwiki/pmwiki.php/Fanfic/RedFireRedPlanet">Red Fire, Red Planet</a></em>: Brokosh mentions keeping the dampers set a little low on the bridge of the IKS <em>mupwI'</em>, "just enough to let some g-forces through so Meromi could feel the ship, not enough to turn everyone into blood pie."
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Fanfic/TheHeadhunt" title="/pmwiki/pmwiki.php/Fanfic/TheHeadhunt">The Headhunt</a></em> shows the result of an inertial damper failure when the USS <em>Bajor</em> sends a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BoardingParty" title="/pmwiki/pmwiki.php/Main/BoardingParty">Boarding Party</a> over and discovers every surface on the bridge <a class="twikilink" href="/pmwiki/pmwiki.php/Main/LudicrousGibs" title="/pmwiki/pmwiki.php/Main/LudicrousGibs">covered in a lumpy, reddish goo</a>.
+<div class="indent"> <strong>Lieutenant Kate McMillan:</strong> Where the hell is the crew? And what the hell is <em>this</em> shit? <br/><strong>Nameless security guy:</strong> L.T., this shit <em>is</em> the crew. <br/><em>[McMillan <a class="twikilink" href="/pmwiki/pmwiki.php/Main/VomitingCop" title="/pmwiki/pmwiki.php/Main/VomitingCop">throws up all over a console</a>]</em>
+</div></li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder3');">    Films — Live-Action </div><div class="folder" id="folder3" isfolder="true" style="display:block;">
+<ul><li> The rescue ship <em>Lewis and Clark</em> in <em><a class="twikilink" href="/pmwiki/pmwiki.php/Film/EventHorizon" title="/pmwiki/pmwiki.php/Film/EventHorizon">Event Horizon</a></em> has an ion drive that produces 30 gees of acceleration, so the crew spends the trip sealed into fluid-filled pods to avoid becoming wall-gazpacho. This might also explain the interior of the <em>Event Horizon</em> when it returned.
+<div class="indent"><strong>D.J.:</strong> When the ion drive fires, you'll be taking about 30 Gs. Without a tank, the force would liquefy your skeleton. <br/><strong>Weir:</strong> I've seen the effect on mice.
+</div></li></ul><dl><dt></dt><dd> Somewhat marred because none of the items on the table in the pod room slid to the floor or were crushed during the journey. Also because it's been demonstrated <em>experimentally</em> that a human can withstand at least 46.2 g in the forward position, with adequate harnessing. (It's still not pretty.)
+</dd></dl><ul><li> The classic sci-fi movie <em><a class="twikilink" href="/pmwiki/pmwiki.php/Film/ForbiddenPlanet" title="/pmwiki/pmwiki.php/Film/ForbiddenPlanet">Forbidden Planet</a></em> offers one of the earliest examples of this trope. In the beginning, when the ship decelerates, we see the crew climb into strange booths which presumably neutralize their inertia.
+</li><li> Likewise <em><a class="twikilink" href="/pmwiki/pmwiki.php/Film/ThisIslandEarth" title="/pmwiki/pmwiki.php/Film/ThisIslandEarth">This Island Earth</a></em>, although it was explained as adjusting the body to differing air pressure.
+</li><li> Inertial dampening seems to be built into the protective bubble surrounding the makeshift spacecraft in <em><a class="twikilink" href="/pmwiki/pmwiki.php/Film/Explorers" title="/pmwiki/pmwiki.php/Film/Explorers">Explorers</a></em>. In small words, "you don't get squished."
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Film/Spaceballs" title="/pmwiki/pmwiki.php/Film/Spaceballs">Spaceballs</a></em>:
+<ul><li> Subverted when the Eagle 5 comes out of "hyperactive". We see that Vespa's luggage is strewn about all over the place (of course, a crash landing will also do that, but the hyperdrive probably helped). Of course, we've just been exposed to the reason why you should buckle up in Ludicrous Speed. Smoke if you got 'em!
+</li><li> Also subverted when coming out of Ludicrous Speed causes Dark Helmet to fly across the bridge and crash into the front of the ship.
+</li><li> And played straight, in that they were completely uninjured. Either that, or Ludicrous Speed is somewhat slower than cars normally move. Perhaps the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/InertialDampening" title="/pmwiki/pmwiki.php/Main/InertialDampening">Inertial Dampening</a> is only 99.999999% effective.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Film/StarTrek2009" title="/pmwiki/pmwiki.php/Film/StarTrek2009">Star Trek (2009)</a></em>: Sulu as helmsman forgetting to turn external <a class="twikilink" href="/pmwiki/pmwiki.php/Main/InertialDampening" title="/pmwiki/pmwiki.php/Main/InertialDampening">Inertial Dampening</a> (which keeps the ship from drifting when it's docked) off. It's <a class="twikilink" href="/pmwiki/pmwiki.php/Main/PlayedForLaughs" title="/pmwiki/pmwiki.php/Main/PlayedForLaughs">Played for Laughs</a> (Pike asks about the parking brake; Sulu realizes it's a joke but doesn't get the connection, and Spock asks if he disengaged the external inertial dampers). <span class="spoiler" title="you can set spoilers visible by default on your profile">And then you get a little <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MoodWhiplash" title="/pmwiki/pmwiki.php/Main/MoodWhiplash">Mood Whiplash</a>, because <em>Enterprise</em> being late to the party is the reason it isn't one of the destroyed Federation saucers you see floating around at the destination...</span>
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/Film/Alien" title="/pmwiki/pmwiki.php/Film/Alien">Alien</a></em>, as the Nostromo is landing, Dallas warns the crew that the inertial damping is switching off and they should be prepared for "a little jolt". Turns out to be not so little...
+</li><li> The <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TimeMachine" title="/pmwiki/pmwiki.php/Main/TimeMachine">Time Machine</a> in the <em><a class="twikilink" href="/pmwiki/pmwiki.php/Film/BillAndTed" title="/pmwiki/pmwiki.php/Film/BillAndTed">Bill &amp; Ted</a></em> franchise must have something like this as it materialises in the sky and slams into the ground without breaking the legs of its standing passengers.
+</li><li> Hans Zarkov in <em><a class="twikilink" href="/pmwiki/pmwiki.php/Film/FlashGordon1980" title="/pmwiki/pmwiki.php/Film/FlashGordon1980">Flash Gordon</a></em> needs a co-pilot to keep their foot on a pedal in his rocket or the g-forces would kill them.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder4');">    Literature </div><div class="folder" id="folder4" isfolder="true" style="display:block;">
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/ManiacMagee" title="/pmwiki/pmwiki.php/Literature/ManiacMagee">Maniac Magee</a></em> gives ups the "stopball," a secret pitch that somehow allows the pitcher to make the ball stop in midair just before going over the plate. While <a class="twikilink" href="/pmwiki/pmwiki.php/Main/UnreliableNarrator" title="/pmwiki/pmwiki.php/Main/UnreliableNarrator">no proof of this is ever provided</a>, Maniac does believe it without question.
+</li><li> In the <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/StarWarsLegends" title="/pmwiki/pmwiki.php/Franchise/StarWarsLegends">Star Wars Legends</a></em> novels, most notably the <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/XWingSeries" title="/pmwiki/pmwiki.php/Literature/XWingSeries">X-Wing Series</a></em>, fighter pilots often "dial down" their ships' inertial dampening fields in order to better feel the weight and pull of their machines. The official reason for Jek Porkins' dying when he did in <em><a class="twikilink" href="/pmwiki/pmwiki.php/Film/ANewHope" title="/pmwiki/pmwiki.php/Film/ANewHope">A New Hope</a></em> was that he liked keeping his dampener on full and literally couldn't feel that he wasn't holding. In Aaron Allston's X-Wing novels there's usually at least one scene per novel where the narration notes that a pilot is doing a maneuver so extreme that they can feel some of the effects even through the dampening field.
+<ul><li> In the <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/NewJediOrder" title="/pmwiki/pmwiki.php/Literature/NewJediOrder">New Jedi Order</a></em>, they use their dampers to counter the gravity manipulating dovin basals that the enemy was using as shields, propulsion, and to kill <em>their</em> shields, effectively making them shields for the shields.
+</li><li> Also from <em>Legends</em>, it is revealed that IG-88 always has his ship's dampeners off, since (being a robot) he doesn't need them. This allows him to perform maneuvers that would otherwise kill an organic being, often giving him the edge.
+</li></ul></li><li> In the novelization of <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/StarWars" title="/pmwiki/pmwiki.php/Franchise/StarWars">Star Wars</a></em>: <em><a class="twikilink" href="/pmwiki/pmwiki.php/Film/TheLastJedi" title="/pmwiki/pmwiki.php/Film/TheLastJedi">The Last Jedi</a></em>, it's mentioned that inertial dampeners helped keep the First Order flagship <em>Supremacy</em> together for a time after the Resistance flagship <em>Raddus</em> slammed into it coming out of hyperspace, though ultimately they couldn't prevent its catastrophic destruction.
+</li><li> Taken to the logical extreme in <a class="twikilink" href="/pmwiki/pmwiki.php/Creator/EEDocSmith" title="/pmwiki/pmwiki.php/Creator/EEDocSmith">E. E. Doc Smith</a>'s <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/Lensman" title="/pmwiki/pmwiki.php/Literature/Lensman">Lensman</a></em> novels, where entire spaceships, including their contents, are rendered inertialess. The consequences of this technology are explored in great detail.
+<ul><li> Perhaps the most interesting consequence is that the technology does not remove inertia, but rather suspends it. When the inertialess drive is shut down you have exactly the same inertia you had when you turned it on. If you neglect to shut off your inertialess drive and match velocities with your destination, heaven help you. Your restored inertia will either fling you into space at thousands of miles an hour, or fling you into the GROUND at thousands of miles an hour.
+</li><li> Moreover, inertialess drive technology allows Doc Smith to Justify using <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SpaceFriction" title="/pmwiki/pmwiki.php/Main/SpaceFriction">Space Friction</a>. If an inertialess ship collides with a particle of interstellar hydrogen it comes to a screeching halt because the hydrogen ion has inertia and the ship doesn't. Therefore, Doc Smith spacecraft must keep up continuous thrust to move while inertialess, and their speed is directly related to the power of their engines because the faster they go the more friction they encounter from interstellar dust and gas. Speeds eventually reach the point where the fastest ships have to be teardrop shaped for streamlining.
+</li><li> Reducing your space ship's inertial mass to 0 also means you no longer have to worry about it becoming infinite as you approach light speed. This is, in fact, how ships in the Lensmen universe accomplish <a class="twikilink" href="/pmwiki/pmwiki.php/Main/FasterThanLightTravel" title="/pmwiki/pmwiki.php/Main/FasterThanLightTravel">Faster-Than-Light Travel</a>.
+</li><li> Spoofed in <em>Backstage Lensmen</em>, a parody by <a class="twikilink" href="/pmwiki/pmwiki.php/Creator/RandallGarrett" title="/pmwiki/pmwiki.php/Creator/RandallGarrett">Randall Garrett</a>.
+<div class="indent">Unfortunately, the Bergenholm, while it could completely neutralize inertial mass, never quite knew what to do with gravitational mass, which seems to come and go as the circumstances require.
+</div></li><li> <em>Triplanetary</em> also features the immersion version; a covert agent uses an acceleration tank to enable his insertion by means of a cargo transport which accelerates too hard for an unprotected human to survive.
+</li></ul></li><li> In the <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/HonorHarrington" title="/pmwiki/pmwiki.php/Literature/HonorHarrington">Honor Harrington</a></em> stories (and others by David Weber), inertial sinks (called "inertial compensators" in the Honorverse) are required to deal with, by "absorbing" the inertia otherwise generated, the ridiculously high accelerations ships can generate. Failure of the system, either through combat or sabotage, is considered terrifying by crews as undergoing 300 or more Earth gravities of acceleration instantaneously turns people into chunky salsa.
+<ul><li> Weber makes a point of describing this effect at least once in any book which involves space combat or high system-stress situations (basically all of them). The best was "Turning the entire crew into something vaguely resembling tuna paste."
+</li><li> One actually does fail in "Honor Among Enemies". We don't actually get to see what it's like aboard, although when Honor sends a crew to salvage what they can from the ship in question, she tries not to think about their working conditions.
+</li><li> In the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BackStory" title="/pmwiki/pmwiki.php/Main/BackStory">Back Story</a>, one of Queen Elizabeth III's ancestors was killed when the inertial dampener on her ship failed. The circumstances behind the incident were... suspicious, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MakeItLookLikeAnAccident" title="/pmwiki/pmwiki.php/Main/MakeItLookLikeAnAccident">to say the least</a> - it was literally the first time in decades that an 'accident' of that nature had happened to <em>anybody</em> in Manticore, and a ship owned by the royal family would naturally be expected to be very carefully maintained.
+</li><li> In one battle, Honor's ragtag fleet is forced to maneuver and accelerate using inertial thrusters with their impellers shut off to prevent detection. This also means that the dampers are also inactive, so they have to keep the acceleration at survivable levels.
+</li><li> Ships that use spider drives instead of impellers also lack dampers. They instead use artificial gravity plating, which is less effective than a compensator, only partially canceling out acceleration.
+</li><li> It's worth noting that impeller drives are capable of acceleration far greater than the compensators can handle, so the limit on a vessel's acceleration is the compensator's ability to make it survivable for the crew. Missiles, which have weaker drives than warships, but have no need for inertial compensation as they are unmanned, can accelerate at up to 90,000 gravities. At one point Rafe Cardones wins a battle by evacuating a freighter, turning off the compensator, and then redlining the drive to turn the ship into a battering ram moving far too fast to dodge.
+</li></ul></li><li> The later books of the <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/RendezvousWithRama" title="/pmwiki/pmwiki.php/Literature/RendezvousWithRama">Rendezvous with Rama</a></em> series have the immersion version of this trope. In an interesting twist, the characters at first don't realize just what the hell the tanks are for and have to be herded into them at quite literally the last minute by the ship's robotic crew.
+</li><li> The novel <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/TheForeverWar" title="/pmwiki/pmwiki.php/Literature/TheForeverWar">The Forever War</a></em>, uses the immersion in a fluid method. Since the spaceships tend to change velocity at high speeds, support for internal organs is needed as well. This is accomplished by injecting the characters with special substances and placing them in special suits, wherein they are then surrounded by extremely high pressure fluid, equal to several kilometers underwater. The results of the pressure failing are not pleasant.
+</li><li> Adamist spacecraft in Peter F Hamilton's <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/NightsDawnTrilogy" title="/pmwiki/pmwiki.php/Literature/NightsDawnTrilogy">Night's Dawn Trilogy</a></em> do not have any sort of Inertial Damping system at all. The crew lie on acceleration couches, which help cushion their body from the g-forces produced by combat maneuvers. If the acceleration climbs too high, the crews have to put the the ship on autopilot go into stasis.
+<ul><li> Edenist ships with their fine control of gravity field generation can provide a sort of counter-acceleration force of up to a few gees, letting their crew perform better than Adamist ships at moderate acceleration but ultimately requiring the same sort of suspended animation devices to use excessive acceleration.
+</li></ul></li><li> Used better than most in <a class="twikilink" href="/pmwiki/pmwiki.php/Creator/AlastairReynolds" title="/pmwiki/pmwiki.php/Creator/AlastairReynolds">Alastair Reynolds</a>' <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/RevelationSpaceSeries" title="/pmwiki/pmwiki.php/Literature/RevelationSpaceSeries">Redemption Ark</a></em> as both a means of speeding up the usual slower-than-light starships (achieving this by accelerating at 1g for years at a time) and <span class="spoiler" title="you can set spoilers visible by default on your profile">attempting to travel faster than light</span>. Unfortunately for the crews, these inertial dampers effect <em>all</em> matter within the field - ship, crew, crew's blood - making it almost a requirement that ships either keep part of the ship outside the field for the crew to live in (under all 10 Gs worth of acceleration) or going the whole hog and putting everybody in cryostasis, though one character with full-body cybernetics is able to stay up and about. <span class="spoiler" title="you can set spoilers visible by default on your profile">The FTL, on the other hand, is even worse, being nigh-impossible to get working, and an accident can get you <em>edited out of existence</em>. This is implied to have happened to most of the species that tried to do it.</span>
+<ul><li> Not to mention the fact that while the dampers were being developed it had a nasty habit of negating technicians' inertia and flinging them against the wall at kilometres <em>per second</em>. Nothing was left but the proverbial (and in this case literal) thin red paste covering the wall.
+</li><li> Also averted a lot in the RS novels: Boris is killed when the ship's thrust is put into reverse and he goes flying into the ceiling at 10G. Likewise Morwenna is turned into red jelly when Quaiche's ship races off under extreme acceleration. Ultra suits fill up with 'gel-air' to protect their occupants from vicious accelerations.
+</li></ul></li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/Armada" title="/pmwiki/pmwiki.php/Literature/Armada">Armada</a></em>, all the EDA ships are outfitted with <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TechnoBabble" title="/pmwiki/pmwiki.php/Main/TechnoBabble">Tragheitslosigkeit Field Generators which create a small inertia-cancellation field around the ship by harnessing the aligned spin of gyromagnetic particles to alter the curvature of space-time</a>
+</li><li> The fluid immersion type of damping is used in Ben Bova's novel <em>Jupiter</em> to counteract the planet's high gravity.
+</li><li> In the <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/Halo" title="/pmwiki/pmwiki.php/Franchise/Halo">Halo</a></em> novel <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/HaloGhostsOfOnyx" title="/pmwiki/pmwiki.php/Literature/HaloGhostsOfOnyx">Halo: Ghosts of Onyx</a></em> this is actually a plot point at one point. Dr. Halsey takes an unconscious Kelly (a SPARTAN) and commandeers a ship for them. Unfortunately, Halsey does not have armor like Kelly and ends up nearly dying from the effects of their taking off since she didn't have time to reinstall the ship's inertia dampening system. Halsey is fine, but in rough shape for a while.
+</li><li> In <a class="twikilink" href="/pmwiki/pmwiki.php/Creator/MichaelCrichton" title="/pmwiki/pmwiki.php/Creator/MichaelCrichton">Michael Crichton</a>'s <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/Sphere" title="/pmwiki/pmwiki.php/Literature/Sphere">Sphere</a></em> (At least the book, possibly the movie too) the spaceship discovered at the bottom of the ocean features water-filled chair systems to help counteract high g-forces.
+</li><li> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/JustifiedTrope" title="/pmwiki/pmwiki.php/Main/JustifiedTrope">Justified</a> in <a class="twikilink" href="/pmwiki/pmwiki.php/Creator/AlanDeanFoster" title="/pmwiki/pmwiki.php/Creator/AlanDeanFoster">Alan Dean Foster</a>'s <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/HumanxCommonwealth" title="/pmwiki/pmwiki.php/Literature/HumanxCommonwealth">Humanx Commonwealth</a></em> series by the unique method of <a class="twikilink" href="/pmwiki/pmwiki.php/Main/FasterThanLightTravel" title="/pmwiki/pmwiki.php/Main/FasterThanLightTravel">FTL propulsion</a>. The ship generates an artificial gravity field ahead of it, to which the ship is then attracted. This motion pushes the field further in front of the ship, which pulls it forward, and so forth. (How this removes the problem of Newton's Third Law is <a class="twikilink" href="/pmwiki/pmwiki.php/Main/HandWave" title="/pmwiki/pmwiki.php/Main/HandWave">left unstated</a>.) Since this force acts equally on all parts of the ship, including the crew, there's no <em>differential</em> of acceleration and therefore no issue with G forces splattering everyone. A variant use of the drive provides the sensation of gravity so the crew can walk around, and combat vessels use a more sophisticated version of it to provide real <a class="twikilink" href="/pmwiki/pmwiki.php/Main/InertialDampening" title="/pmwiki/pmwiki.php/Main/InertialDampening">Inertial Dampening</a> for combat situations. When the drive is shut off or damaged, the ship and its crew are truly in free fall and normal rules of inertia apply.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/Endymion" title="/pmwiki/pmwiki.php/Literature/Endymion">Endymion</a></em> plays with this in the most <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Squick" title="/pmwiki/pmwiki.php/Main/Squick">Squicky</a> way possible. A ship is developed that can go at extreme speeds without the use of the, now lost, hyperspace gates. As a result the acceleration kills the pilot and copilot instantly then collects their liquefied remains in a little dish to be rebuilt later. <span class="spoiler" title="you can set spoilers visible by default on your profile">The whole thing is a lie, but knowledge of this trope is why people buy it</span>.
+</li><li> This is standard (and indeed essential) technology in the <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/PerryRhodan" title="/pmwiki/pmwiki.php/Literature/PerryRhodan">Perry Rhodan</a></em> universe, where starships routinely feature acceleration rates of hundreds of kilometers per second squared (or in other words, tens of thousands of Gs). A portable device is installed on the protagonists' original rocketship as early as their impending return to Earth from the moon, in order to protect the ill alien scientist that they're also taking along.
+</li><li> In <a class="twikilink" href="/pmwiki/pmwiki.php/Creator/SergeyLukyanenko" title="/pmwiki/pmwiki.php/Creator/SergeyLukyanenko">Sergey Lukyanenko</a>'s <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/ALordFromPlanetEarth" title="/pmwiki/pmwiki.php/Literature/ALordFromPlanetEarth">A Lord from Planet Earth</a></em> trilogy, all <a class="twikilink" href="/pmwiki/pmwiki.php/Main/HumanAliens" title="/pmwiki/pmwiki.php/Main/HumanAliens">Human Aliens</a> (there are no <a class="twikilink" href="/pmwiki/pmwiki.php/Main/StarfishAliens" title="/pmwiki/pmwiki.php/Main/StarfishAliens">Starfish Aliens</a> in that universe) use black spheres of <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AppliedPhlebotinum" title="/pmwiki/pmwiki.php/Main/AppliedPhlebotinum">Applied Phlebotinum</a> that absorb extra G-forces by increasing in density. The catch is the crew then has to spend weeks to months in higher-than-normal gravity, while the spheres "give back" the absorbed gravity (the "give back" is usually set to 1.5g). An alternative is to jettison the dense spheres. This is the last resort, as the spheres are expensive. Also, their gravity field can cause them to become a navigational hazard. A ship may have several dozen of these devices onboard.
+<ul><li> This is <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Precursors" title="/pmwiki/pmwiki.php/Main/Precursors">Seeder</a> technology, though, so nobody quite understands how it works. Of course, the Seeders are actually <span class="spoiler" title="you can set spoilers visible by default on your profile">22nd century humans who have seeded the galaxy with alien life using time-traveling probes in order to create an instant (from their viewpoint) army for an intergalactic war</span>.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/StarTrekFederation" title="/pmwiki/pmwiki.php/Literature/StarTrekFederation">Star Trek: Federation</a></em> (which was written well before <em><a class="twikilink" href="/pmwiki/pmwiki.php/Film/StarTrekFirstContact" title="/pmwiki/pmwiki.php/Film/StarTrekFirstContact">Star Trek: First Contact</a></em>) has Zefram Cochrane's first FTL trip taking the better part of a year, even though he only spent a few weeks actually going FTL, the rest of the time was used for accelerating and decelerating since inertial dampening hadn't been discovered yet. Upon returning to the solar system (specifically the moon Titan) he's told that the book's <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BigBad" title="/pmwiki/pmwiki.php/Main/BigBad">Big Bad</a> has recently left Earth headed to Titan, and he has only 2-3 days to escape, which confuses him since, as he states, even using fluid tubes to cushion the inertia no human could survive the acceleration needed to make the trip that fast. Turns out the guy had stolen a ship equipped with the first prototype of an inertial dampening system. On a later return to Earth, he rides in a hover limo with inertial dampeners, and later <a class="twikilink" href="/pmwiki/pmwiki.php/Main/CoolShip" title="/pmwiki/pmwiki.php/Main/CoolShip">travels on a sublight spacecraft whose only means of propulsion is inertial control</a>.
+<div class="indent"> "Inertial control!" Sir John boomed out delightedly, tapping his cane on the floor. "I still say it's impossible, but, by God, it's exceedingly useful."
+</div><ul><li> <em>Federation</em> also plays with the structural integrity field (see under Live Action TV) by having Picard come up with a tactic where they transfer all power to it, reinforcing the hull to the point where it slices straight through a Romulan ship like a hot knife through butter—<a class="twikilink" href="/pmwiki/pmwiki.php/Main/RammingAlwaysWorks" title="/pmwiki/pmwiki.php/Main/RammingAlwaysWorks">Ramming Always Works</a>, indeed. There are hasty justifications for the text as to why <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ItOnlyWorksOnce" title="/pmwiki/pmwiki.php/Main/ItOnlyWorksOnce">this would only work in this very specific scenario</a> and would normally cause the warp core to explode.
+</li></ul></li><li> Any <a class="twikilink" href="/pmwiki/pmwiki.php/Creator/IainBanks" title="/pmwiki/pmwiki.php/Creator/IainBanks">Iain Banks</a> Sci-Fi book the rules of physics are always played straight. In the cases where the characters are <a class="twikilink" href="/pmwiki/pmwiki.php/Literature/TheCulture" title="/pmwiki/pmwiki.php/Literature/TheCulture">Culture</a> and they're travelling in a Mind-operated starship, especially in GSVs where there are so many layers of forcefields and acceleration adjustments for upcoming ships trying to reach them at great velocities that they don't actually <em>have</em> a physical hull. In the case of <em>The Algebraist</em>, where the societies were more primitive and didn't yet have this technology, there were special measures taken to protect any creature travelling at any acceleration rate, with at one point the main character having to be restrained and insulated when the ship he was in was travelling at 20+ Gs. Military spacecraft crew battle stations are in gel-filled gimballed spheres to best allow them to remain conscious and functional under rapidly fluctuating acceleration vectors.
+<ul><li> Another example from <em>The Algebraist</em> is with the humanoid Divers who enter the inner layers of gas giants to converse with their denizens. They have to be completely encased and filled with a special gel-fluid within a specialised pod in order to survive the extreme gravity and environment changes.
+</li></ul></li><li> In <a class="twikilink" href="/pmwiki/pmwiki.php/Creator/HarryHarrison" title="/pmwiki/pmwiki.php/Creator/HarryHarrison">Harry Harrison</a>'s <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AlternateHistory" title="/pmwiki/pmwiki.php/Main/AlternateHistory">Alternate History</a> novel <em><a class="createlink" href="/pmwiki/pmwiki.php/Main/TunnelThroughTheDeeps" title="/pmwiki/pmwiki.php/Main/TunnelThroughTheDeeps">Tunnel Through The Deeps</a></em> (AKA <em>A Transatlantic Tunnel, Hurrah!</em>), Augustine Washington's helicopter is sabotaged, preventing him from getting from the Atlantic colony (US where the revolution failed) to the heart of the British Empire in time to meet the Queen. A man approaches him and offers to test a new method of rapid intercontinental travel. They submerge Washington (with a breathing apparatus) into a fluid-filled rocket that is launched in a ballistic trajectory, allowing him to safely get from America to Britain in a few hours. The best part is that all calculations were done using a <em>mechanical computer</em>.
+</li><li> Averted in <a class="twikilink" href="/pmwiki/pmwiki.php/Creator/CJCherryh" title="/pmwiki/pmwiki.php/Creator/CJCherryh">C. J. Cherryh</a>'s <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/AllianceUnion" title="/pmwiki/pmwiki.php/Literature/AllianceUnion">Alliance/Union</a></em> series. In addition to its primary purpose of traveling through hyperspace, a starship's FTL drive can be used to briefly dip into hyperspace in a way such that the ship's velocity is different when it comes back out. Since this involves no acceleration, a starship can quickly achieve relativistic velocities without having to worry about inertia.
+</li><li> For all its hardness, Poul Anderson's <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/TauZero" title="/pmwiki/pmwiki.php/Literature/TauZero">Tau Zero</a></em> does have inertial dampening technology. It only works when travelling very close to the speed of light, though, so the heroes' <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Ramscoop" title="/pmwiki/pmwiki.php/Main/Ramscoop">ramscoop</a> has to accelerate at a measly 1<em>g</em> for the first year of its journey.
+</li><li> The "balanced drive" in <a class="twikilink" href="/pmwiki/pmwiki.php/Creator/CharlesSheffield" title="/pmwiki/pmwiki.php/Creator/CharlesSheffield">Charles Sheffield</a>'s McAndrew stories uses a flat plate of superdense matter at the front of the ship, with the crew pod trailing behind at just the right distance so that acceleration g-forces in one direction and the plate's gravity in the other add up to a comfortable 1g. This form of inertial dampening works <em>without</em> bending any of the known laws of physics — it merely requires solutions to the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SarcasmMode" title="/pmwiki/pmwiki.php/Main/SarcasmMode">slight</a> engineering problems involved in making the superdense plate, keeping it compressed, and accelerating its immense mass.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/Lacuna" title="/pmwiki/pmwiki.php/Literature/Lacuna">Lacuna</a></em> plays this straight with their gravity generating drives, which are also used as inertial dampeners in the ship. Strong movements can still be felt however.
+</li><li> In <a class="twikilink" href="/pmwiki/pmwiki.php/Creator/LarryNiven" title="/pmwiki/pmwiki.php/Creator/LarryNiven">Larry Niven</a>'s <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/KnownSpace" title="/pmwiki/pmwiki.php/Literature/KnownSpace">Known Space</a></em> stories, it is often (correctly) pointed out that the crew of a starship only has to worry about inertia when they are accelerating or decelerating. For such times, the ships use artificial gravity to reduce the effects of high acceleration (massively high acceleration in some cases; for example, at one point in the short story "Flatlander", the starship ''Slower Than Infinity" is accelerating at nearly 200 gravities).
+<ul><li> Niven also used inertial dampers ... actually more like inertial sinks ... in his teleportation booth technology. If you're on the surface of a rotating planet and you teleport very far, your inertia is moving you in a considerably different direction than your destination is traveling, so you get slapped down hard, lifted off the ground, or jerked sideways depending on what direction you went. The teleport networks have big chunks of iron embedded in styrofoam floating in lakes, and they transfer momentum into these. In a large enough network, it works out to the damper mass not ever moving much at all due to all the vectors cancelling each other out, though there's one story where a particularly large load results in a noticeable movement.
+</li></ul></li><li> Averted in <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/StarCarrier" title="/pmwiki/pmwiki.php/Literature/StarCarrier">Star Carrier</a></em> but justified by the ubiquitous use of gravity projection drives that make inertial dampers unnecessary. Specifically, a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SpaceFighter" title="/pmwiki/pmwiki.php/Main/SpaceFighter">Space Fighter</a> accelerates and maneuvers by projecting a tiny singularity in the appropriate direction and allowing the craft to fall towards it, with the "bootstrap" system "winking out" and re-projecting the singularity further ahead multiple times a second (should the "bootstrap" fail, the fighter would be consumed by its own projected singularity). Since the gravity forces acting are the same on the entire ship, including the pilot, the pilot only experiences the feeling of free-fall. A StarHawk's singularity drive is capable of accelerating the fighter to 99% of the speed of light in about <em>10 minutes</em> without the pilot feeling it. Turning is done by projecting the singularity to the side and "whipping" around the warped space. Since the craft isn't "technically" turning, the pilot still doesn't feel any g-forces. Capital ships also use the same system but can't accelerate as fast due to all the extra mass. They do use the singularity drives to accelerate them to near-c speeds, allowing the relativistic mass to be used to engage the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AlcubierreDrive" title="/pmwiki/pmwiki.php/Main/AlcubierreDrive">Alcubierre Drives</a> for FTL travel. Interestingly, at the start of the first book, the author specifically states that large capital ships are unable to use singularity drives due to the size making the gravity forces affect different parts of it in varying degrees. This is later dropped when the author realized that this leaves the capital ships no way to accelerate or maneuver.
+</li><li> All ships in <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/TheLostFleet" title="/pmwiki/pmwiki.php/Literature/TheLostFleet">The Lost Fleet</a></em> use inertial dampers to accelerate and maneuver. Since ships in this 'verse maneuver like a cross between a naval warship and a jet fighter, inertial dampers are a must. Most maneuvering during battles is done at 10% of the speed of light. Any faster, and the ships' targetting systems would be unable to properly calculate the paths of their targets. The presence of inertial dampers and FTL travel are the only things keeping the setting from being a true hard sci-fi.
+</li><li> A number of these appear in <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/TheSpaceOdysseySeries" title="/pmwiki/pmwiki.php/Literature/TheSpaceOdysseySeries">3001: The Final Odyssey</a></em>. They also double as <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ArtificialGravity" title="/pmwiki/pmwiki.php/Main/ArtificialGravity">Artificial Gravity</a> and <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ReactionlessDrive" title="/pmwiki/pmwiki.php/Main/ReactionlessDrive">Reactionless Drive</a>.
+</li><li> In the <a class="twikilink" href="/pmwiki/pmwiki.php/Literature/KrisLongknife" title="/pmwiki/pmwiki.php/Literature/KrisLongknife">Kris Longknife</a> series when ships are accelerating at high G forces (3.5 being about the max), humans (and aliens) either function by sitting down, lying down, or immersing themselves in liquid to reduce the effect. In later books in the series, smart metal pods are developed that allow humans to move around and operate the ship as the metal encases and supports the entire body, making it easier to withstand the forces in question.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/FromTheEarthToTheMoon" title="/pmwiki/pmwiki.php/Literature/FromTheEarthToTheMoon">From the Earth to the Moon</a></em> by <a class="twikilink" href="/pmwiki/pmwiki.php/Creator/JulesVerne" title="/pmwiki/pmwiki.php/Creator/JulesVerne">Jules Verne</a>, the projectile of the Columbiad space gun has "thick lining of leather fastened on springs of best steel", together with some sort of hydraulic system, meant to absorb the shock, thus providing a rather elaborate (and <a class="twikilink" href="/pmwiki/pmwiki.php/JustForFun/Egregious" title="/pmwiki/pmwiki.php/JustForFun/Egregious">Egregious</a> - no matter what precautions were taken, the acceleration would squash the astronauts) <a class="twikilink" href="/pmwiki/pmwiki.php/Main/UrExample" title="/pmwiki/pmwiki.php/Main/UrExample">Ur-Example</a> of this trope <a class="twikilink" href="/pmwiki/pmwiki.php/Main/OlderThanRadio" title="/pmwiki/pmwiki.php/Main/OlderThanRadio">Older Than Radio</a>.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/ArtemisFowl" title="/pmwiki/pmwiki.php/Literature/ArtemisFowl">Artemis Fowl and The Opal Deception</a></em> a supersonic LEP shuttle that's filled with foam and it's crew have to wear spacesuits with controls inside them.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder5');">    Live-Action TV </div><div class="folder" id="folder5" isfolder="true" style="display:block;">
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/Andromeda" title="/pmwiki/pmwiki.php/Series/Andromeda">Andromeda</a></em> has "GFG Lenses" (Gravity Field Generator) that reduce the ship's <em>effective</em> mass down to about 1 kg. This helps to explain the quick flip-abouts that the rather large <em>Andromeda Ascendant</em> seems capable of. It's also used by the primary weapon of the universe: <a class="twikilink" href="/pmwiki/pmwiki.php/Main/KineticWeaponsAreJustBetter" title="/pmwiki/pmwiki.php/Main/KineticWeaponsAreJustBetter">Kinetic Missiles</a>. When launched, their mass is reduced so as to propel them to near the speed of light, then it's restored upon impact to put the full weight of the impact to bear.
+<ul><li> One episode has the <em>Eureka Maru</em> stuck in a mine shaft of sorts. They end up literally getting out and pushing the ship after reducing the ship's effective mass to almost nothing.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/BabylonFive" title="/pmwiki/pmwiki.php/Series/BabylonFive">Babylon 5</a></em>:
+<ul><li> Minbari and Centauri combine this with <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ReactionlessDrive" title="/pmwiki/pmwiki.php/Main/ReactionlessDrive">Reactionless Drives</a>. Their gravitic drives move ships around without thrusters and generate artificial gravity and Inertial dampening while they are at it. Some rare human ships use rotating ship sections which make ship quite cumbersome and provide weak point to shoot at, hence their use being restricted to civilian luxury liners, <em>Explorer</em>-class ships (that, being expected to stay away from their homeports for months or years at a time, <em>need</em> to simulate the gravity to preserve their crews' health), and the state-of-the-art <em>Omega</em>-class destroyers (built after human engineers figured out how to properly armor the rotating sections). On older human ships and all Narn vessels, on the other hand, the crew just strap themselves into their seats when going into action.
+</li><li> Centauri technology being inferior to the Minbaris', their fighters have either limited dampers or none at all. <em>The Fall on Night</em> mentions that Centauri pilots are willing to put their fighters on autopilot and risk blacking out from G-force if it gives them the optimum firing position, and their larger ships combine the artificial gravity with normal thrusters.
+</li><li> The key reason Earth Alliance agrees to join the new Interstellar Alliance is the promise of this technology. As a result, new human ships are now much faster and much more maneuverable. In fact, the new <em>Warlock</em>-class destroyers (which use <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ArtificialGravity" title="/pmwiki/pmwiki.php/Main/ArtificialGravity">Artificial Gravity</a> instead of rotating sections, among other technologies) are supposed to be a one-to-one match against the dreaded Minbari <em>Sharlin</em>-class warcruisers.
+</li></ul></li><li> In a rare non-spaceship example from <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/DoctorWho" title="/pmwiki/pmwiki.php/Series/DoctorWho">Doctor Who</a></em> the brakes on the Doctor's <a class="twikilink" href="/pmwiki/pmwiki.php/Main/CoolCar" title="/pmwiki/pmwiki.php/Main/CoolCar">Cool Car</a> Bessie apparently work by "absorbing inertia, even yours."
+</li><li> Averted in <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/TheExpanse" title="/pmwiki/pmwiki.php/Series/TheExpanse">The Expanse</a></em>, when ships initiate a burn the crew have to strap into crash couches that inject some sort of drugs into their necks. In one episode a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Lightworlder" title="/pmwiki/pmwiki.php/Main/Lightworlder">Belter</a> commits suicide by moving out of the way of the injectors while the ship is taking off from Earth.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/Firefly" title="/pmwiki/pmwiki.php/Series/Firefly">Firefly</a></em> offers a possibly non-canon explanation of its systems in the paper RPG sourcebook. Included is a unified generator system coupled directly to the reactor (back in the "bulb") that provides <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ArtificialGravity" title="/pmwiki/pmwiki.php/Main/ArtificialGravity">Artificial Gravity</a>, nullifies the ship's weight, and absorbs the inertia of the crew. Also, there's a mass-neutralizing drive that serves as a slower-than-light warp engine.
+</li><li> It's assumed by some that the "Passive Laser Restraint System" on <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/KnightRider" title="/pmwiki/pmwiki.php/Series/KnightRider">Knight Rider</a></em>'s KITT is some sort of system of this nature, but it remains unexplained.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/StargateSG1" title="/pmwiki/pmwiki.php/Series/StargateSG1">Stargate SG-1</a></em>:
+<ul><li> When Carter and O'Neil prepare to test the X-302 fighter, they run through a checklist. The following exchange takes place.
+<div class="indent"><strong>Carter:</strong> Inertial dampers? <br/><strong>O'Neil:</strong> Cool. And check. <br/><em>[shortly thereafter]</em> <br/><strong>O'Neil:</strong> Phasers? <br/><strong>Carter:</strong> Sorry, sir.
+</div></li><li> In the episode where O'Neill becomes a teenager (<a class="twikilink" href="/pmwiki/pmwiki.php/Main/ItMakesSenseInContext" title="/pmwiki/pmwiki.php/Main/ItMakesSenseInContext">It Makes Sense in Context</a>), he is scheduled to give Air Force pilots a presentation in dogfighting Goa'uld Death Gliders using F-302s. He points out that the inertial dampers only compensate about 90% of the acceleration during tight maneuvers, especially during a climb.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/StargateAtlantis" title="/pmwiki/pmwiki.php/Series/StargateAtlantis">Stargate Atlantis</a></em>:
+<ul><li> Shown when Sheppard is in a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/OldSchoolDogfight" title="/pmwiki/pmwiki.php/Main/OldSchoolDogfight">dogfight</a> <strong>IN SPACE</strong> with McKay onboard. After feeling the Gs from a few hard turns, he asks "I thought these things had inertial dampers on them?" Apparently they do, but considering how many sudden changes in acceleration are involved in dogfighting, it probably takes a bit to catch up. The Puddle Jumpers are also 10,000 years old. It's possible the inertial dampers aren't at peak operating condition, probably having missed a few state inspections.
+</li><li> There is also the time Sheppard intentionally accelerated an Ancient starship <em>without</em> the inertial dampers activated, because he is the only one who can fly the ship, but is being held hostage by Travelers, who want it for their own. He is sitting down, and being an Earth pilot is trained to take a few Gs. The Travelers, however, are standing up, and are all sent flying against walls.
+<div class="indent"><strong>Sheppard:</strong> ... you said, "Start by moving the ship forward", <a class="twikilink" href="/pmwiki/pmwiki.php/Main/LiteralGenie" title="/pmwiki/pmwiki.php/Main/LiteralGenie">when you should have said</a>, "Start by initializing the inertial dampers."
+</div></li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/StarTrek" title="/pmwiki/pmwiki.php/Franchise/StarTrek">Star Trek</a></em>:
+<ul><li> As usual, it is one of the few <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SciFi" title="/pmwiki/pmwiki.php/Main/SciFi">Sci-Fi</a> settings to provide even a weak explanation. The IDF is tied in to the gravity generators, and applies a G-force opposite what the crew would feel, cancelling it out. The system takes inputs from the engines, so forces from acceleration are accounted for in real-time, but external forces can't be predicted, thus the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/StarTrekShake" title="/pmwiki/pmwiki.php/Main/StarTrekShake">Star Trek Shake</a>. A similar system, the structural integrity field, is a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/HandWave" title="/pmwiki/pmwiki.php/Main/HandWave">Hand Wave</a> on how such wimpy-looking structures hold up to the incredible forces involved; the ship is held up mostly by forcefields. One of the technical manuals comments that if the ships didn't have inertial damping, the crew would be instantly turned into chunky salsa when the ship accelerates. Which is then demonstrated in an <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ExpandedUniverse" title="/pmwiki/pmwiki.php/Main/ExpandedUniverse">Expanded Universe</a> novel — a 22nd-century ship is hit with a massive force that blows the dampers and pulverizes the entire crew (and any object not welded solidly to the bulkheads) into an organic paste about 1 inch thick.
+</li><li> Also demonstrated in the <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/StarTrekDeepSpaceNine" title="/pmwiki/pmwiki.php/Series/StarTrekDeepSpaceNine">Star Trek: Deep Space Nine</a></em> episode "The Ship". The entire Jem'hadar crew of a Dominion ship is killed when a failing inertial damper causes every bone in their body to shatter during acceleration. <span class="spoiler" title="you can set spoilers visible by default on your profile">A changeling manages to survive temporarily due to lacking any organs that can be ruptured</span>.
+</li><li> The <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/StarTrekVoyager" title="/pmwiki/pmwiki.php/Series/StarTrekVoyager">Voyager</a></em> episode "Tattoo" lampshades the need for these devices in a conversation between Tom Paris and Harry Kim:
+<div class="indent"><strong>Kim:</strong> Can we go to low warp? <br/><strong>Paris:</strong> The ship might make it without inertial dampeners but we'll all be stains on the back wall.
+</div></li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/UFO" title="/pmwiki/pmwiki.php/Series/UFO">UFO</a></em>. The <a class="twikilink" href="/pmwiki/pmwiki.php/Main/LittleGreenMen" title="/pmwiki/pmwiki.php/Main/LittleGreenMen">Little Green Men</a> palor of the alien attackers is due to the green liquid filling their spacesuits, which cushions their bodies during months of faster-than-light travel.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/Space1999" title="/pmwiki/pmwiki.php/Series/Space1999">Space: 1999</a></em>: Moonbase Alpha and the Eagles have artificial gravity which doubles as inertial dampening. Sufficient acceleration can overpower the artificial gravity, but under normal circumstances an Eagle crew can walk around the ship while under thrust. When the Moon is blasted out of Earth orbit, the crew are at first flattened by the acceleration, but once the thrust eases it is explicitly stated that the Moon is still accelerating, but that gravity generators are compensating.
+</li><li> In the pilot episode of <em><a class="twikilink" href="/pmwiki/pmwiki.php/Series/DarkMatter" title="/pmwiki/pmwiki.php/Series/DarkMatter">Dark Matter</a></em> the spaceship has to dodge a couple of missiles, so does an emergency maneuver that overloads the ability of the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ArtificialGravity" title="/pmwiki/pmwiki.php/Main/ArtificialGravity">Artificial Gravity</a> and inertial dampeners to compensate. Cue everyone floating into the air, then getting slammed into the deck, except the woman who ordered the maneuver who manages a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ThreePointLanding" title="/pmwiki/pmwiki.php/Main/ThreePointLanding">Three-Point Landing</a>.
+</li></ul><p></p></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder6');">    Tabletop Games </div><div class="folder" id="folder6" isfolder="true" style="display:block;">
+<ul><li> Averted in the roleplaying game <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/JovianChronicles" title="/pmwiki/pmwiki.php/TabletopGame/JovianChronicles">Jovian Chronicles</a></em>. Most ships in the setting are actually built with their decks vertically arranged so that the g-force of acceleration (or deceleration for the second half of the trip) simulates gravity (not unlike <em><a class="twikilink" href="/pmwiki/pmwiki.php/Main/Tintin" title="/pmwiki/pmwiki.php/Main/Tintin">Tintin</a></em>'s rocket).
+</li><li> Necron ships in <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/Warhammer40000" title="/pmwiki/pmwiki.php/TabletopGame/Warhammer40000">Warhammer 40,000</a></em> use inertialess drives. How they work is never really explained but they allow their ships to reach superluminar speeds without the use of warpdrives, apparently by enabling them to instantly and massively accelerate. Apparently the technology needed to build such engines is incredibly advanced and far beyond the reach of any of the other factions. It also helps that Necrons are made of intelligent metal, which means they are much less likely to spontaneously turn into pink mush from excessive G-forces.
+</li><li> Gravitic Compensators in <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/GURPS" title="/pmwiki/pmwiki.php/TabletopGame/GURPS">GURPS</a>: Spaceships</em> negate 99% of the force of acceleration, which is good for empires with extremely powerful engines because <em>GURPS</em> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DevelopersForesight" title="/pmwiki/pmwiki.php/Main/DevelopersForesight">accounts for the effect of extreme changes in speed on characters</a>.
+</li><li> The standard Ion Drive engines in <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/Starfire" title="/pmwiki/pmwiki.php/TabletopGame/Starfire">Starfire</a></em> can bring a ship from a dead stop to 1/10 of light speed instantly, and stop the ship again just as quickly. Presumably, they suspend the ship's inertia in a manner similar to the Inertialess Drive of the <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/Lensman" title="/pmwiki/pmwiki.php/Literature/Lensman">Lensman</a></em> series, except that the ship and all aboard it still behave in an inertial manner while they're at speed.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder7');">    Video Games </div><div class="folder" id="folder7" isfolder="true" style="display:block;">
+<ul><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DeusEx" title="/pmwiki/pmwiki.php/VideoGame/DeusEx">Deus Ex</a></em>, a prototype weapon has these as a safety feature. They are called "kinetic bleeders"
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Portal" title="/pmwiki/pmwiki.php/VideoGame/Portal">Portal</a></em>'s heroine wears a pair of Long-fall Boots, as a justification for her being completely immune to <a class="twikilink" href="/pmwiki/pmwiki.php/Main/FallingDamage" title="/pmwiki/pmwiki.php/Main/FallingDamage">Falling Damage</a> (which would be quite a pain in such a game).
+<ul><li> They return in <a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Portal2" title="/pmwiki/pmwiki.php/VideoGame/Portal2">the sequel</a> where they are effective even in <span class="spoiler" title="you can set spoilers visible by default on your profile">a several-kilometer-deep mineshaft</span>.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MetalGearSolidPeaceWalker" title="/pmwiki/pmwiki.php/VideoGame/MetalGearSolidPeaceWalker">Metal Gear Solid: Peace Walker</a></em> has this for Metal Gear Zeke who's cockpit fills with water for this purpose.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Anachronox" title="/pmwiki/pmwiki.php/VideoGame/Anachronox">Anachronox</a></em>, you can read a bit of background that talks about the discovery of Anachronox and when a ship entered into an area that sped them up to faster than light speeds and when they stopped at a point far across the galaxy, they <em>would</em> have been amazed, except for the fact that intertial dampers hadn't yet been invented and so they ended up as messy spots on the wall. The next ship to enter <em>did</em> have inertial dampers and was just fine.
+</li><li> The reason the pilot capsules in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/EVEOnline" title="/pmwiki/pmwiki.php/VideoGame/EVEOnline">EVE Online</a></em> are filled with liquid is partly because it reduces inertia and partly because it allows the pilot to better mindlink with the ship (as the capsule is essentially a sensory deprivation tank).
+</li><li> One of many components in your fighter, in the <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/WingCommander" title="/pmwiki/pmwiki.php/VideoGame/WingCommander">Wing Commander</a></em> series, that can fail as you take damage, though the games don't model any actual effects of its loss other than <em>any</em> collision being fatal. In <a class="twikilink" href="/pmwiki/pmwiki.php/Literature/WingCommander" title="/pmwiki/pmwiki.php/Literature/WingCommander">the novels</a>, it's noted to be fast, but not instantaneous.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SwordOfTheStars" title="/pmwiki/pmwiki.php/VideoGame/SwordOfTheStars">Sword of the Stars</a></em>, the Liir use a specialized drive to prevent inertia — since their ships are filled with liquid and are a lot heavier than those of land-based species, they use a drive called 'stutterwarp' that performs millions of short-range (in the range of millimetre-long) teleportations per second, slowly driving their ships in a direction without causing inertia.
+<ul><li> Then again, they're already submerged, so it wouldn't affect them as much as it would the other races.
+</li><li> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/LizardFolk" title="/pmwiki/pmwiki.php/Main/LizardFolk">Tarka</a> ships, especially late in the game, are able to pull off high-G maneuvers thanks to adapting their hyperdrive technology for STL propulsion and maneuvering.
+</li><li> The Liir only use 'stutterwarp' to "move" (technically, at any given point, the ship is at rest relative to the surrounding space) forward. Turning still requries the use of thrusters. Additionally, if the 'stutterwarp' drive is destroyed, Liir ships can still use their thrusters for limited acceleration.
+</li></ul></li><li> Nintendo's <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/StarFox" title="/pmwiki/pmwiki.php/VideoGame/StarFox">Star Fox</a></em> and <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FZero" title="/pmwiki/pmwiki.php/VideoGame/FZero">F-Zero</a></em> have a system called G-Diffusion that dampens the effects of gravity and powers propulsion and shields.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/MassEffect" title="/pmwiki/pmwiki.php/Franchise/MassEffect">Mass Effect</a></em> avoids this trope handily. Using the eponymous technology (which operates in a similar manner to the theoretical <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AlcubierreDrive" title="/pmwiki/pmwiki.php/Main/AlcubierreDrive">Alcubierre Drive</a> listed below), ships engines form a field that changes the mass of everything within it, allowing travel at light speed, while everything within stays still because of its relative mass within the field. Of course, this doesn't change what happens when a ship is struck by projectiles.
+<ul><li> It should be pointed out that, in the case of dreadnoughts, the projectiles they fire have the kinetic force in the kiloton range (i.e. equivalent to a nuclear blast), while the people inside of the target ship, even if mass effect generators are off-line, get <em>slightly</em> buffeted to the side.
+</li><li> Brought up at one point in the Citadel DLC, where you can meet up with Cortez, your shuttle pilot. To show Shepard what it was like before mass effect fields, Cortez turns them off as he takes off in the shuttle, and Shepard can barely stand up straight from the shaking. Cortez then goes on to talk about <a class="urllink" href="http://en.wikipedia.org/wiki/G-suit">modern-day anti-g suits<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a> (which 22nd century fighter pilots still wear in case they need to transfer power from the dampers).
+</li></ul></li><li> Presumably, AMS Compatibility in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/ArmoredCore" title="/pmwiki/pmwiki.php/VideoGame/ArmoredCore">Armored Core</a> 4</em>/<em>For Answer</em> also directly influences tolerance to G-forces. That particular universe <em>is</em> filled with hyper-maneuverable <a class="twikilink" href="/pmwiki/pmwiki.php/Main/HumongousMecha" title="/pmwiki/pmwiki.php/Main/HumongousMecha">Humongous Mecha</a> that can hit upwards from 100 kph in an instant acceleration to any lateral direction, repeatedly.
+</li><li> Appears to be present in <em><a class="twikilink" href="/pmwiki/pmwiki.php/Videogame/StarRuler" title="/pmwiki/pmwiki.php/Videogame/StarRuler">Star Ruler</a></em> - otherwise your ships with squishy meatbag crews would suddenly lose the crew when they accelerate at the better part of a hundred Gs.
+</li><li> The Arilou fighters in the <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/StarControl" title="/pmwiki/pmwiki.php/VideoGame/StarControl">Star Control</a></em> series have inertia-less drives, granting them much better maneuverability than the other ships, as well as rendering them immune to outside sources of gravity, namely planets and the Chmmr fighters' tractor beams.
+</li><li> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AllThereInTheManual" title="/pmwiki/pmwiki.php/Main/AllThereInTheManual">According to the manual</a> for <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Syndicate" title="/pmwiki/pmwiki.php/VideoGame/Syndicate">Syndicate</a> Wars</em>, inertial dampening equipment is issued to agents to allow them to carry <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GatlingGood" title="/pmwiki/pmwiki.php/Main/GatlingGood">miniguns</a> as personal weapons.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder8');">    Web Comics </div><div class="folder" id="folder8" isfolder="true" style="display:block;">
+<ul><li> Averted (and <a class="urllink" href="http://freefall.purrsia.com/ff1000/fv00917.htm">played for laughs<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a>) in <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/Freefall" title="/pmwiki/pmwiki.php/Webcomic/Freefall">Freefall</a></em>.
+</li><li> Since <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ArtificialGravity" title="/pmwiki/pmwiki.php/Main/ArtificialGravity">Artificial Gravity</a> is used for propulsion in <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/SchlockMercenary" title="/pmwiki/pmwiki.php/Webcomic/SchlockMercenary">Schlock Mercenary</a></em> and ships routinely reach high fractions of <em>c</em>, it's <a class="urllink" href="http://www.schlockmercenary.com/2001-01-20">explicitly said<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a> that gravity-based <a class="urllink" href="http://www.schlockmercenary.com/2005-09-24">inertial dampening is its own field of engineering<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a>, "Inertiics", and that said engineers make a lot of money making sure that people aren't hurt or injured by unwanted acceleration. This field is so advanced that it is implemented in a limited form in powered armor (which compensate for an impact with a gravitational tug, as acceleration only kills you when applied unevenly). The narrator also notes at one point that, due to the staggering magnitude of the g-forces involved in ship movement, the last thing you ever want to hear your shipboard AI say is "brace for acceleration", as that is very likely to be the last thing you hear at all.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Webcomic/Outsider" title="/pmwiki/pmwiki.php/Webcomic/Outsider">Outsider</a></em>'s second chapter is largely set on the personal shuttle of a fleet commander, which <a class="twikilink" href="/pmwiki/pmwiki.php/Main/InvokedTrope" title="/pmwiki/pmwiki.php/Main/InvokedTrope">is specifically noted</a> as being large and powerful enough to be equipped with inertial dampeners.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder9');">    Web Original </div><div class="folder" id="folder9" isfolder="true" style="display:block;">
+<ul><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/Literature/Phaeton" title="/pmwiki/pmwiki.php/Literature/Phaeton">Phaeton</a></em> photon shells reduce G force so people aren't ripped apart by FTL travel, but at high enough speeds you can still be thrown against the back wall.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder10');">    Western Animation </div><div class="folder" id="folder10" isfolder="true" style="display:block;">
+<ul><li> The <a class="twikilink" href="/pmwiki/pmwiki.php/Main/EscapePod" title="/pmwiki/pmwiki.php/Main/EscapePod">Escape Pod</a> from <em><a class="twikilink" href="/pmwiki/pmwiki.php/WesternAnimation/StevenUniverse" title="/pmwiki/pmwiki.php/WesternAnimation/StevenUniverse">Steven Universe</a></em> fills with breathable liquid as a defense mechanism, likely for this purpose.
+<ul><li> When Steven and the Gems are <span class="spoiler" title="you can set spoilers visible by default on your profile">aboard the Roaming Eye using the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/FasterThanLightTravel" title="/pmwiki/pmwiki.php/Main/FasterThanLightTravel">gravity engine</a> to rescue Greg from the human zoo</span> this is <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DownplayedTrope" title="/pmwiki/pmwiki.php/Main/DownplayedTrope">downplayed</a> to great effect: Steven is <a class="twikilink" href="/pmwiki/pmwiki.php/Main/LudicrousSpeed" title="/pmwiki/pmwiki.php/Main/LudicrousSpeed">pushed very hard into his seat and the Gems feel the inertia so much</a> that their <a class="twikilink" href="/pmwiki/pmwiki.php/Main/HardLight" title="/pmwiki/pmwiki.php/Main/HardLight">bodies</a> <em>phase out of the ship and extend a <span class="spoiler" title="you can set spoilers visible by default on your profile">few thousthand years</span></em>! Alternatively, it could be just Steven's <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SuperStrength" title="/pmwiki/pmwiki.php/Main/SuperStrength">Super Strength</a> and <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SuperToughness" title="/pmwiki/pmwiki.php/Main/SuperToughness">Super Toughness</a>.
+</li></ul></li></ul></div>
+<div class="folderlabel" onclick="togglefolder('folder11');">    Real Life </div><div class="folder" id="folder11" isfolder="true" style="display:block;">
+<ul><li> <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/HighSpeedRail" title="/pmwiki/pmwiki.php/UsefulNotes/HighSpeedRail">High-speed trains</a> such as Pendolinos damp out the centrifugal effect on curved sections of track by tilting the car bodies, thereby ensuring that passengers don't suffer from nausea. However, as British Rail learned with its failed APT project, if the damping effect is <em>too</em> good passengers can still feel nauseated because their eyes tell them they should be feeling a force and their bodies don't.
+<ul><li> All fast corners on railways are banked (known as Cant in the UK or Superelevation elsewhere) to some extent for the same reason, and also to prevent rail and wheel wear from flange contact (the wheel profile is what steers a train, other than on very sharp corners the flanges should not touch the rails). The problem is as the banking is fixed, it must be a compromise so as not to discomfort passengers or cause inside flange contact on slow or stopped trains. The limit for normal lines is usually 6 inches, but dedicated high speed lines can be higher. The benefit of tilt is that it can vary with speed, and can allow up to 9 deg of additional banking at top speed.
+</li></ul></li><li> Beginning in the 1940s and 1950s, as aircraft performance improved, aircrew, especially fighter pilots, began to faint in the cockpit during particularly hard maneuvers. This is very bad, for obvious reasons. Aircrew were issued with special G-suits beginning in WWII; these take the form of trousers which inflate during hard maneuvers. This keeps blood in the upper body; that way, the pilots don't faint or lose too much peripheral vision. They still have to use special breathing techniques (including the energy-straining maneuver, a muscular clampdown best described as "straining on the toilet") and undergo centrifuge training to be able to stand it. Early G-suits were water-inflated; later models switched to air inflation. The recent, famous Libelle suit, from a German firm, uses "passive fluid bladders" to cushion and protect the pilot, and by all means works very well. The name means "dragonfly" in German; the dragonfly is designed in much the same way. Liquid immersion has been tried in real life; a Dr. R. Flanagan Gray took a ride in a water-filled centrifuge capsule at one point, safely sustaining 31 Gs for several seconds. Another man, a Colonel John Stapp, volunteered as a human guinea pig, experiencing extreme decelerations during rocket-sled tests. Later, a Captain Eli Bleeding sustained 83 g for a brief instant...well, negative g, anyway. The research had civilian applications; it went a long way towards improving automobile safety. John Stapp was present when the act mandating the inclusion of seatbelts in all new US vehicles was signed into law by President Johnson.
+<ul><li> The JU87 "Stuka" dive bombers when pulling out of a dive could produce high enough G force to cause the pilot to temporarily black out. For this reason, once the bomb was released, the pull out was automatic, the pilot regaining control once the plane was climbing on full throttle.
+<ul><li> Even so, accident rate on Stukas was high and the training required for the crew was strenuous and difficult, while the plane itself, being optimized for dive bombing, was lacking in performance. This was the problem for every other World War 2 dive bombers too, which is why pretty much every country got out of building specialized dive bombers (and gave up on high-angle dive bombing in general) by the time World War II was coming to close.
+</li></ul></li></ul></li><li> At its most basic, this is what seatbelts are for. Without them, the forces acting on the car won't transfer to the passengers, so they can be thrown forward in the event of a sudden stop, or slammed against the side of the car if the car is hit on the side. A seatbelt ensures that the passenger moves — or stops — with the vehicle, thereby mitigating one major potential source of injury. In a secondary example, seatbelts are also built with a small amount of give, to bleed off some of the inertia and reduce the injury potential that would come from concentrating all that inertia in one place.
+<ul><li> The airbag as well. However, it's <em>not</em> the inflation that saves you, it's the moment after inflation that saves you. Think about it: if you have to make a stop in less than a second, would you want someone punching you, or catching you? Hence it's recommended to stay as far away from any airbag launcher as comfortably as possible.
+</li><li> This is even more critical in aircraft, which are also subject to vertical forces; if the plane drops or plunges suddenly enough<span class="notelabel" onclick="togglenote('note1fuza');"><sup>note </sup></span><span class="inlinefolder" id="note1fuza" isnote="true" onclick="togglenote('note1fuza');" style="cursor:pointer;font-size:smaller;display:none;">see <a class="urllink" href="https://en.wikipedia.org/wiki/Qantas_Flight_72">Qantas 72<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a> for an extreme example</span>, a person who isn't strapped in won't keep up and can be actually pulled off the ground and into the ceiling, and will then crash back to the ground as the forces stabilize. This is the reason it's recommended to keep your seatbelt fastened whenever possible.
+</li></ul></li><li> Funnily enough, the hypothetical <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AlcubierreDrive" title="/pmwiki/pmwiki.php/Main/AlcubierreDrive">Alcubierre Drive</a>, which would get around the speed-of-light limit by essentially moving spacetime instead of the ship, sounds an awful lot like <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/StarTrek" title="/pmwiki/pmwiki.php/Franchise/StarTrek">Star Trek</a></em>'s warp drive, but wouldn't require any inertia compensation while in use: since the ship isn't moving locally, everyone and everything on board remains in free-fall.
+<ul><li> But you might want to damp the inertia of everything that your warp bubble has run into, or it will have quite a lot of momentum when you stop...
+</li></ul></li></ul></div>
+<hr/>
+</div>
+<div class="alt-titles section section-fact">
+<h3>
+<strong>Alternative Title(s):</strong>
+<span>Inertial Damping</span>, <span>Inertial Negation</span> </h3>
+</div>
+<div class="square_ad footer-article-ad main_2" data-isolated="0"></div>
+<div class="section-links" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<div class="titles">
+<div><h3 class="text-center text-uppercase">Previous</h3></div>
+<div><h3 class="text-center text-uppercase">Index</h3></div>
+<div><h3 class="text-center text-uppercase">Next</h3></div>
+</div>
+<div class="links">
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/IncrediblyObviousBug">Incredibly Obvious Bug</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Nl/ToegepastPhlebotinum">Nl/Toegepast Phlebotinum</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/InfiniteSupplies">Infinite Supplies</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/GravityIsAHarshMistress">Gravity Is a Harsh Mistress</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/DangerousHeights">Dangerous Heights</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/LadderPhysics">Ladder Physics</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/ImmortalityField">Immortality Field</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/FuturisticTechIndex">Futuristic Tech Index</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/InfiniteSupplies">Infinite Supplies</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/IncrediblyObviousBug">Incredibly Obvious Bug</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/AppliedPhlebotinum">Applied Phlebotinum</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/InfiniteSupplies">Infinite Supplies</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="outer_ads_by_salon_wrapper" id="exco_player_insert_div">
+</div>
+</article>
+<div id="main-content-sidebar"><div class="sidebar-item display-options">
+<ul class="sidebar display-toggles">
+<li>Show Spoilers <div class="display-toggle show-spoilers" id="sidebar-toggle-showspoilers"></div></li>
+<li>Night Vision <div class="display-toggle night-vision" id="sidebar-toggle-nightvision"></div></li>
+<li>Sticky Header <div class="display-toggle sticky-header" id="sidebar-toggle-stickyheader"></div></li>
+<li>Wide Load <div class="display-toggle wide-load" id="sidebar-toggle-wideload"></div></li>
+</ul>
+<script>updateDesktopPrefs();</script>
+</div>
+<div class="sidebar-item ad sb-ad-unit">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_2"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_2'); });</script> </div>
+</div></div>
+<div class="sidebar-item quick-links" itemtype="http://schema.org/SiteNavigationElement">
+<p class="sidebar-item-title" data-title="Important Links">Important Links</p>
+<div class="padded">
+<a href="/pmwiki/query.php?type=att">Ask The Tropers</a>
+<a href="/pmwiki/query.php?type=tf">Trope Finder</a>
+<a href="/pmwiki/query.php?type=ykts">You Know That Show...</a>
+<a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a>
+<a href="/pmwiki/review_activity.php">Reviews</a>
+<a data-modal-target="login" href="/pmwiki/lbs.php">Live Blogs</a>
+<a href="/pmwiki/ad-free-subscribe.php">Go Ad Free!</a> </div>
+</div>
+<div class="sidebar-item sb-ad-unit">
+<div class="sidebar-section">
+<div class="square_ad ad-size-300x600 ad-section text-center">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_3"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_3'); });</script> </div>
+</div> </div>
+</div>
+</div>
+<div class="sidebar-item">
+<p class="sidebar-item-title" data-title="Crucial Browsing">Crucial Browsing</p>
+<ul class="padded font-s" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><a data-click-toggle="active" href="javascript:void(0);">Genre</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/ActionAdventureTropes" title="Main/ActionAdventureTropes">Action Adventure</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ComedyTropes" title="Main/ComedyTropes">Comedy</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CommercialsTropes" title="Main/CommercialsTropes">Commercials</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CrimeAndPunishmentTropes" title="Main/CrimeAndPunishmentTropes">Crime &amp; Punishment</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DramaTropes" title="Main/DramaTropes">Drama</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/HorrorTropes" title="Main/HorrorTropes">Horror</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LoveTropes" title="Main/LoveTropes">Love</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NewsTropes" title="Main/NewsTropes">News</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ProfessionalWrestling" title="Main/ProfessionalWrestling">Professional Wrestling</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SpeculativeFictionTropes" title="Main/SpeculativeFictionTropes">Speculative Fiction</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SportsStoryTropes" title="Main/SportsStoryTropes">Sports Story</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/WarTropes" title="Main/WarTropes">War</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Media</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/Media" title="Main/Media">All Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/AnimationTropes" title="Main/AnimationTropes">Animation (Western)</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Anime" title="Main/Anime">Anime</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ComicBookTropes" title="Main/ComicBookTropes">Comic Book</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FanFic" title="FanFic/FanFics">Fan Fics</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Film" title="Main/Film">Film</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/GameTropes" title="Main/GameTropes">Game</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Literature" title="Main/Literature">Literature</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MusicAndSoundEffects" title="Main/MusicAndSoundEffects">Music And Sound Effects</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NewMediaTropes" title="Main/NewMediaTropes">New Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/PrintMediaTropes" title="Main/PrintMediaTropes">Print Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Radio" title="Main/Radio">Radio</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SequentialArt" title="Main/SequentialArt">Sequential Art</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TabletopGames" title="Main/TabletopGames">Tabletop Games</a></li>
+<li><a href="/pmwiki/pmwiki.php/UsefulNotes/Television" title="Main/Television">Television</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Theater" title="Main/Theater">Theater</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/VideogameTropes" title="Main/VideogameTropes">Videogame</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Webcomics" title="Main/Webcomics">Webcomics</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Narrative</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/UniversalTropes" title="Main/UniversalTropes">Universal</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/AppliedPhlebotinum" title="Main/AppliedPhlebotinum">Applied Phlebotinum</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CharacterizationTropes" title="Main/CharacterizationTropes">Characterization</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Characters" title="Main/Characters">Characters</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CharactersAsDevice" title="Main/CharactersAsDevice">Characters As Device</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Dialogue" title="Main/Dialogue">Dialogue</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Motifs" title="Main/Motifs">Motifs</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NarrativeDevices" title="Main/NarrativeDevices">Narrative Devices</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Paratext" title="Main/Paratext">Paratext</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Plots" title="Main/Plots">Plots</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Settings" title="Main/Settings">Settings</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Spectacle" title="Main/Spectacle">Spectacle</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Other Categories</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/BritishTellyTropes" title="Main/BritishTellyTropes">British Telly</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TheContributors" title="Main/TheContributors">The Contributors</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CreatorSpeak" title="Main/CreatorSpeak">Creator Speak</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Creators" title="Main/Creators">Creators</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DerivativeWorks" title="Main/DerivativeWorks">Derivative Works</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LanguageTropes" title="Main/LanguageTropes">Language</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LawsAndFormulas" title="Main/LawsAndFormulas">Laws And Formulas</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ShowBusiness" title="Main/ShowBusiness">Show Business</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SplitPersonalityTropes" title="Main/SplitPersonalityTropes">Split Personality</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/StockRoom" title="Main/StockRoom">Stock Room</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TropeTropes" title="Main/TropeTropes">Trope</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Tropes" title="Main/Tropes">Tropes</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TruthAndLies" title="Main/TruthAndLies">Truth And Lies</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TruthInTelevision" title="Main/TruthInTelevision">Truth In Television</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Topical Tropes</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/BetrayalTropes" title="Main/BetrayalTropes">Betrayal</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CensorshipTropes" title="Main/CensorshipTropes">Censorship</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CombatTropes" title="Main/CombatTropes">Combat</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DeathTropes" title="Main/DeathTropes">Death</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FamilyTropes" title="Main/FamilyTropes">Family</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FateAndProphecyTropes" title="Main/FateAndProphecyTropes">Fate And Prophecy</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FoodTropes" title="Main/FoodTropes">Food</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/HolidayTropes" title="Main/HolidayTropes">Holiday</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MemoryTropes" title="Main/MemoryTropes">Memory</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MoneyTropes" title="Main/MoneyTropes">Money</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MoralityTropes" title="Main/MoralityTropes">Morality</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/PoliticsTropes" title="Main/PoliticsTropes">Politics</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ReligionTropes" title="Main/ReligionTropes">Religion</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SchoolTropes" title="Main/SchoolTropes">School</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="sidebar-item showcase">
+<p class="sidebar-item-title" data-title="Community Showcase">Community Showcase <a class="bubble float-right hover-blue" href="/pmwiki/showcase.php">More</a></p>
+<p class="community-showcase">
+<a href="https://sharetv.com/shows/echo_chamber" onclick="trackOutboundLink('https://sharetv.com/shows/echo_chamber');" target="_blank">
+<img alt="" class="lazy-image" data-src="/images/communityShowcase-echochamber.jpg"/></a>
+<a href="/pmwiki/pmwiki.php/Webcomic/TwistedTropes">
+<img alt="" class="lazy-image" data-src="/img/howlandsc-side.jpg"/></a>
+</p>
+</div>
+<div class="sidebar-item sb-ad-unit" id="stick-cont">
+<div class="sidebar-section" id="stick-bar">
+<div class="square_ad ad-size-300x600 ad-section text-center">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_4"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_4'); });</script> </div>
+</div> </div>
+</div>
+</div>
+</div>
+</div>
+<div class="action-bar tablet-off" id="action-bar-bottom">
+<a class="scroll-to-top dead-button" href="#top-of-page" onclick="$('html, body').animate({scrollTop : 0},500);">Top</a>
+</div>
+</div>
+<div class="proper-ad-unit ad-sticky">
+<div id="proper-ad-tvtropes_sticky_ad"> <script>propertag.cmd.push(function() { proper_display('tvtropes_sticky_ad'); });</script> </div>
+</div>
+<footer id="main-footer">
+<div id="main-footer-inner">
+<div class="footer-left">
+<a class="img-link" href="/"><img alt="TV Tropes" class="lazy-image" data-src="/img/tvtropes-footer-logo.png" title="TV Tropes"/></a>
+<form action="index.html" class="navbar-form newsletter-signup validate modal-replies" data-ajax-get="/ajax/subscribe_email.php" id="cse-search-box-mobile" name="" role="">
+<button class="btn-submit newsletter-signup-submit-button" id="subscribe-btn" type="submit"><i class="fa fa-paper-plane"></i></button>
+<input class="form-control" id="subscription-email" name="q" placeholder="Subscribe" size="31" type="text" validate-type="email" value=""/>
+</form>
+<ul class="social-buttons">
+<li><a class="btn fb" href="https://www.facebook.com/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-facebook']);" target="_blank"><i class="fa fa-facebook"></i></a></li>
+<li><a class="btn tw" href="https://www.twitter.com/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-twitter']);" target="_blank"><i class="fa fa-twitter"></i></a> </li>
+<li><a class="btn rd" href="https://www.reddit.com/r/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-reddit']);" target="_blank"><i class="fa fa-reddit-alien"></i></a></li>
+</ul>
+</div>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">TVTropes</h4></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Administrivia">About TVTropes</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TheGoalsOfTVTropes">TVTropes Goals</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TheTropingCode">Troping Code</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TVTropesCustoms">TVTropes Customs</a></li>
+<li><a href="/pmwiki/pmwiki.php/JustForFun/TropesOfLegend">Tropes of Legend</a></li>
+<li><a href="/pmwiki/ad-free-subscribe.php">Go Ad-Free</a></li>
+</ul>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">Community</h4></li>
+<li><a href="/pmwiki/query.php?type=att">Ask The Tropers</a></li>
+<li><a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a></li>
+<li><a href="/pmwiki/query.php?type=tf">Trope Finder</a></li>
+<li><a href="/pmwiki/query.php?type=ykts">You Know That Show</a></li>
+<li><a data-modal-target="login" href="/pmwiki/lbs.php">Live Blogs</a></li>
+<li><a href="/pmwiki/review_activity.php">Reviews</a></li>
+<li><a href="/pmwiki/topics.php">Forum</a></li>
+</ul>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">Tropes HQ</h4></li>
+<li><a href="/pmwiki/about.php">About Us</a></li>
+<li><a href="/pmwiki/contact.php">Contact Us</a></li>
+<li><a href="/pmwiki/dmca.php">DMCA Notice</a></li>
+<li><a href="/pmwiki/privacypolicy.php">Privacy Policy</a></li>
+</ul>
+</div>
+<div class="text-center gutter-top gutter-bottom tablet-on" id="desktop-on-mobile-toggle">
+<a href="/pmwiki/switchDeviceCss.php?mobileVersion=1" rel="nofollow">Switch to <span class="txt-desktop">Desktop</span><span class="txt-mobile">Mobile</span> Version</a>
+</div>
+<div class="legal">
+<p>TVTropes is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License. <br/>Permissions beyond the scope of this license may be available from <a href="mailto:thestaff@tvtropes.org" rel="cc:morePermissions" xmlns:cc="http://creativecommons.org/ns#"> thestaff@tvtropes.org</a>.</p>
+<br/>
+<div class="privacy_wrapper">
+</div>
+</div>
+</footer>
+<style>
+      div.fc-ccpa-root {
+        position: absolute !important;
+        bottom: 93px !important;
+        margin: auto !important;
+        width: 100% !important;
+        z-index: 9999 !important;
+      }
+      .fc-ccpa-root .fc-dns-dialog .fc-dns-link p{
+        outline: none !important;
+        text-decoration: underline !important;
+        font-size: .7em !important;
+        font-family: sans-serif !important;
+      }
+      .fc-ccpa-root .fc-dns-dialog .fc-dns-link .fc-button-background {
+        background: none !important;
+      }
+    </style>
+<div class="full-screen" id="_pm_videoViewer">
+<a class="close" href="#close" id="_pm_videoViewer-close"></a>
+<div class="_pmvv-body">
+<div class="_pmvv-vidbox">
+<video class="video-js vjs-default-skin vjs-16-9" data-video-id="" id="overlay-video-player-box">
+</video>
+<div class="_pmvv-vidbox-desc">
+<h1 id="overlay-title"></h1>
+<p class="_pmvv-vidbox-descTxt" id="overlay-descrip">
+</p>
+<div class="rating-row" data-video-id="">
+<input name="is_logged_in" type="hidden" value="0"/>
+<p>How well does it match the trope?</p>
+<div id="star-rating-group">
+<div class="trope-rate">
+<input id="lamp5" name="rate" type="radio" value="5"/>
+<label for="lamp5" title="Absolutely"></label>
+<input id="lamp4" name="rate" type="radio" value="4"/>
+<label for="lamp4" title="Yes"></label>
+<input id="lamp3" name="rate" type="radio" value="3"/>
+<label for="lamp3" title="Kind of"></label>
+<input id="lamp2" name="rate" type="radio" value="2"/>
+<label for="lamp2" title="Not really"></label>
+<input id="lamp1" name="rate" type="radio" value="1"/>
+<label for="lamp1" title="No"></label>
+</div>
+<div id="star-rating-total">
+</div>
+</div>
+</div>
+<div class="example-media-row">
+<div class="example-overlay">
+<p>Example of:</p>
+<div id="overlay-trope"> / </div>
+</div>
+<div class="media-sources-overlay example-overlay">
+<p>Media sources:</p>
+<div id="overlay-media"> / </div>
+</div>
+</div>
+<p class="_pmvv-vidbox-stats text-right font-s" style="padding-top:8px; border-top: solid 1px rgba(255,255,255,0.2)">
+<a class="float-right" data-modal-target="login" href="#video-feedback">Report</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+        window.special_ops =  {
+            member : 'no',
+            isolated : 0,
+            tags : ['unknown']
+        };
+    </script>
+<script type="text/javascript">
+
+        var cleanCreativeEnabled = "";
+        var donation = "";
+        var live_ads = "1";
+        var img_domain = "https://static.tvtropes.org";
+        var snoozed = cookies.read('snoozedabm');
+        var snoozable = "";
+
+        if (adsRemovedWith) {
+            live_ads = 0;
+        }
+
+        var elem = document.createElement('script');
+        elem.async = true;
+
+        elem.src = '/design/assets/bundle.js?rev=c58d8df02f09262390bbd03db7921fc35c6af306';
+
+        elem.onload = function() {
+                                 }
+        document.getElementsByTagName('head')[0].appendChild(elem);
+
+    </script>
+<script type="text/javascript">
+      function send_analytics_event(user_type, donation){
+          // if(user_type == 'uncached' || user_type == 'cached'){
+          //   ga('send', 'event', 'caching', 'load', user_type, {'nonInteraction': 1});
+          //   return;
+          // }
+          var event_name = user_type;
+
+          if(donation == 'true'){
+              event_name += "_donation"
+          }else if(typeof(valid_user) == 'undefined'){
+              event_name += "_blocked"
+          }else if(valid_user == true){
+              event_name += "_unblocked";
+          }else{
+              event_name = "_unknown"
+          }
+          ga('send', 'event', 'ads', 'load', event_name, {'nonInteraction': 1});
+      }
+
+    
+    send_analytics_event("guest", "false");
+      </script>
+</body>
+</html>

@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Fog of War - TV Tropes</title>
+<meta content="The expression, not to be confused with the 2003 war documentary about Robert S. MacNamara, The Fog of War. A feature of many Strategy Games that keeps the …" name="description"/>
+<link href="https://tvtropes.org/pmwiki/pmwiki.php/Main/FogOfWar" rel="canonical"/>
+<link href="/img/icons/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="@tvtropes" name="twitter:site"/>
+<meta content="@tvtropes" name="twitter:owner"/>
+<meta content="Fog of War - TV Tropes" name="twitter:title"/>
+<meta content="The expression, not to be confused with the 2003 war documentary about Robert S. MacNamara, The Fog of War. A feature of many Strategy Games that keeps the …" name="twitter:description"/>
+<meta content="https://static.tvtropes.org/pmwiki/pub/images/civfogofwar.jpg" name="twitter:image:src"/>
+<meta content="TV Tropes" property="og:site_name"/>
+<meta content="en_US" property="og:locale"/>
+<meta content="https://www.facebook.com/tvtropes" property="article:publisher"/>
+<meta content="Fog of War - TV Tropes" property="og:title"/>
+<meta content="website" property="og:type"/>
+<meta content="https://tvtropes.org/pmwiki/pmwiki.php/Main/FogOfWar" property="og:url"/>
+<meta content="https://static.tvtropes.org/pmwiki/pub/images/civfogofwar.jpg" property="og:image"/>
+<meta content="The expression, not to be confused with the 2003 war documentary about Robert S. MacNamara, The Fog of War. A feature of many Strategy Games that keeps the player from seeing everything that happens on the game map by limiting their knowledge of …" property="og:description"/>
+<link href="/img/icons/apple-icon-57x57.png" rel="apple-touch-icon" sizes="57x57" type="image/png"/>
+<link href="/img/icons/apple-icon-60x60.png" rel="apple-touch-icon" sizes="60x60" type="image/png"/>
+<link href="/img/icons/apple-icon-72x72.png" rel="apple-touch-icon" sizes="72x72" type="image/png"/>
+<link href="/img/icons/apple-icon-76x76.png" rel="apple-touch-icon" sizes="76x76" type="image/png"/>
+<link href="/img/icons/apple-icon-114x114.png" rel="apple-touch-icon" sizes="114x114" type="image/png"/>
+<link href="/img/icons/apple-icon-120x120.png" rel="apple-touch-icon" sizes="120x120" type="image/png"/>
+<link href="/img/icons/apple-icon-144x144.png" rel="apple-touch-icon" sizes="144x144" type="image/png"/>
+<link href="/img/icons/apple-icon-152x152.png" rel="apple-touch-icon" sizes="152x152" type="image/png"/>
+<link href="/img/icons/apple-icon-180x180.png" rel="apple-touch-icon" sizes="180x180" type="image/png"/>
+<link href="/img/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/img/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/img/icons/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png"/>
+<link href="/img/icons/favicon-192x192.png" rel="icon" sizes="192x192" type="image/png"/>
+<meta content="width=device-width, initial-scale=1" id="viewport" name="viewport"/>
+<script>
+                var propertag = {};
+                propertag.cmd = [];
+            </script>
+<link href="/design/assets/bundle.css?rev=c58d8df02f09262390bbd03db7921fc35c6af306" rel="stylesheet"/>
+<script>
+                function object(objectId) {
+                    if (document.getElementById && document.getElementById(objectId)) {
+                        return document.getElementById(objectId);
+                    } else if (document.all && document.all(objectId)) {
+                        return document.all(objectId);
+                    } else if (document.layers && document.layers[objectId]) {
+                        return document.layers[objectId];
+                    } else {
+                        return false;
+                    }
+                }
+
+                // JAVASCRIPT COOKIES CODE: for getting and setting user viewing preferences
+                var cookies = {
+                    create: function (name, value, days2expire, path) {
+                        var date = new Date();
+                        date.setTime(date.getTime() + (days2expire * 24 * 60 * 60 * 1000));
+                        var expires = date.toUTCString();
+                        document.cookie = name + '=' + value + ';' + 'expires=' + expires + ';' + 'path=' + path + ';';
+                    },
+										createWithExpire: function(name, value, expires, path) {
+												document.cookie = name + '=' + value + ';' + 'expires=' + expires + ';' + 'path=' + path + ';';
+										},
+                    read: function (name) {
+                        var cookie_value = "",
+                            current_cookie = "",
+                            name_expr = name + "=",
+                            all_cookies = document.cookie.split(';'),
+                            n = all_cookies.length;
+
+                        for (var i = 0; i < n; i++) {
+                            current_cookie = all_cookies[i].trim();
+                            if (current_cookie.indexOf(name_expr) === 0) {
+                                cookie_value = current_cookie.substring(name_expr.length, current_cookie.length);
+                                break;
+                            }
+                        }
+                        return cookie_value;
+                    },
+                    update: function (name, val) {
+                        this.create(name, val, 300, "/");
+                    },
+                    remove: function (name) {
+                        document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
+                    }
+                };
+
+                function updateUserPrefs() {
+                    //GENERAL: detect and set browser, if not cookied (will be treated like a user-preference and added to the #user-pref element)
+                    if( !cookies.read('user-browser') ){
+                        var broswer = '';
+
+                        if(navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPod/i) ){
+                            browser = 'iOS';
+                        } else if (/Opera[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'opera';
+                        } else if (/MSIE (\d+\.\d+);/.test(navigator.userAgent)) {
+                            browser = 'MSIE';
+                        } else if (/Navigator[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'netscape';
+                        } else if (/Chrome[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'chrome';
+                        } else if (/Safari[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'safari';
+                            /Version[\/\s](\d+\.\d+)/.test(navigator.userAgent);
+                            browserVersion = new Number(RegExp.$1);
+                        } else if (/Firefox[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'firefox';
+                        } else {
+                            browser = 'internet_explorer';
+                        }
+                        cookies.create('user-browser',browser,1,'/');
+                        document.getElementById('user-prefs').classList.add('browser-' + browser);
+                    } else {
+                        document.getElementById('user-prefs').classList.add('browser-' + cookies.read('user-browser'));
+                    }
+
+                    //update user preference settings
+                    if (cookies.read('wide-load') !== '') document.getElementById('user-prefs').classList.add('wide-load');
+                    if (cookies.read('night-vision') !== '') document.getElementById('user-prefs').classList.add('night-vision');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('user-prefs').classList.add('sticky-header');
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('user-prefs').classList.add('show-spoilers');
+                    if (cookies.read('folders-open') !== '') document.getElementById('user-prefs').classList.add('folders-open');
+                    if (cookies.read('lefthand-sidebar') !== '') document.getElementById('user-prefs').classList.add('lefthand-sidebar');
+                    if (cookies.read('highlight-links') !== '') document.getElementById('user-prefs').classList.add('highlight-links');
+                    if (cookies.read('forum-gingerbread') !== '') document.getElementById('user-prefs').classList.add('forum-gingerbread');
+                    if (cookies.read('shared-avatars') !== '') document.getElementById('user-prefs').classList.add('shared-avatars');
+                    if (cookies.read('new-search') !== '') document.getElementById('user-prefs').classList.add('new-search');
+                    if (cookies.read('stop-auto-play-video') !== '') document.getElementById('user-prefs').classList.add('stop-auto-play-video');
+
+                    //desktop view on mobile
+                    if (cookies.read('desktop-on-mobile') !== ''){
+                        document.getElementById('user-prefs').classList.add('desktop-on-mobile');
+
+                        var viewport = document.querySelector("meta[name=viewport]");
+                        viewport.setAttribute('content', 'width=1000');
+                    }
+
+                }
+
+                function updateDesktopPrefs() {
+                    if (cookies.read('wide-load') !== '') document.getElementById('sidebar-toggle-wideload').classList.add('active');
+                    if (cookies.read('night-vision') !== '') document.getElementById('sidebar-toggle-nightvision').classList.add('active');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('sidebar-toggle-stickyheader').classList.add('active');
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('sidebar-toggle-showspoilers').classList.add('active');
+
+                }
+
+                function updateMobilePrefs() {
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('mobile-toggle-showspoilers').classList.add('active');
+                    if (cookies.read('night-vision') !== '') document.getElementById('mobile-toggle-nightvision').classList.add('active');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('mobile-toggle-stickyheader').classList.add('active');
+                    if (cookies.read('highlight-links') !== '') document.getElementById('mobile-toggle-highlightlinks').classList.add('active');
+
+                }
+
+
+                if (document.cookie.indexOf("scroll0=") < 0) {
+                    // do nothing
+                } else {
+                    console.log('ads removed by scroll.com');
+                    var adsRemovedWith = 'scroll';
+                    var style = document.createElement('style');
+                    style.innerHTML = '#header-ad, .proper-ad-unit, .square_ad, .sb-ad-unit { display: none !important; } ';
+                    document.head.appendChild(style);
+                }
+            </script>
+<script type="text/javascript">
+
+                var tvtropes_config = {
+                    astri_stream_enabled : "",
+                    is_logged_in         : "",
+                    handle               : "",
+                    get_astri_stream     : "",
+										revnum               : "c58d8df02f09262390bbd03db7921fc35c6af306",
+										img_domain           : "https://static.tvtropes.org",
+										adblock              : "1",
+										adblock_url          : "propermessage.io",
+										pause_editing        : "0",
+										pause_editing_msg    : "",
+										pause_site_changes   : ""
+                };
+            </script>
+<script type="text/javascript">
+						  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+						  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+						  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+						  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+						  ga('create', 'UA-3821842-1', 'auto');
+						  ga('send', 'pageview');
+
+						</script>
+</head>
+<body class="">
+<i id="user-prefs"></i>
+<script>updateUserPrefs();</script>
+<div id="fb-root"></div>
+<div id="modal-box"></div>
+<header class="headroom-element" id="main-header-bar">
+<div id="main-header-bar-inner">
+<span class="header-spacer" id="header-spacer-left"></span>
+<a class="mobile-menu-toggle-button tablet-on" href="#mobile-menu" id="main-mobile-toggle"><span></span><span></span><span></span></a>
+<a class="no-dev" href="/" id="main-header-logoButton"></a>
+<span class="header-spacer" id="header-spacer-right"></span>
+<nav class="tablet-off" id="main-header-nav">
+<a href="/pmwiki/pmwiki.php/Main/Tropes">Tropes</a>
+<a href="/pmwiki/pmwiki.php/Main/Media">Media</a>
+<a class="nav-browse" href="/pmwiki/browse.php">Browse</a>
+<a href="/pmwiki/index_report.php">Indexes</a>
+<a href="/pmwiki/topics.php">Forums</a>
+<a class="nav-browse" href="/pmwiki/recent_videos.php">Videos</a>
+</nav>
+<div id="main-header-bar-right">
+<div class="font-xs mobile-off" id="signup-login-box">
+<a class="hover-underline bold" data-modal-target="signup" href="/pmwiki/login.php">Join</a>
+<a class="hover-underline bold" data-modal-target="login" href="/pmwiki/login.php">Login</a>
+</div>
+<div class="mobile-on inline" id="signup-login-mobileToggle">
+<a data-modal-target="login" href="/pmwiki/login.php"><i class="fa fa-user"></i></a>
+</div>
+<div id="search-box">
+<form action="/pmwiki/search_result.php" class="search">
+<input class="search-box" name="q" placeholder="Search" required="" type="text" value=""/>
+<input class="submit-button" type="submit" value=""/>
+<input name="search_type" type="hidden" value="article"/>
+<input name="page_type" type="hidden" value="all"/>
+<input name="cx" type="hidden" value="partner-pub-6610802604051523:amzitfn8e7v"/>
+<input name="cof" type="hidden" value="FORID:10"/>
+<input name="ie" type="hidden" value="ISO-8859-1"/>
+<input name="siteurl" type="hidden" value=""/>
+<input name="ref" type="hidden" value=""/>
+<input name="ss" type="hidden" value=""/>
+</form>
+<a class="mobile-on mobile-search-toggle close-x" href="#close-search"><i class="fa fa-close"></i></a>
+</div>
+<div id="random-box">
+<a class="button-random-trope" href="/pmwiki/pmwiki.php/Main/TooSlow" onclick="ga('send', 'event', 'button', 'click', 'random trope');" rel="nofollow"></a>
+<a class="button-random-media" href="/pmwiki/pmwiki.php/VideoGame/CandyMountainMassacre" onclick="ga('send', 'event', 'button', 'click', 'random media');" rel="nofollow"></a>
+</div>
+</div>
+</div>
+<div class="tablet-on" id="mobile-menu"><div class="mobile-menu-options">
+<div class="nav-wrapper">
+<a class="xl" href="/pmwiki/pmwiki.php/Main/Tropes">Tropes</a>
+<a class="xl" href="/pmwiki/pmwiki.php/Main/Media">Media</a>
+<a class="xl" href="/pmwiki/browse.php">Browse</a>
+<a class="xl" href="/pmwiki/index_report.php">Indexes</a>
+<a class="xl" href="/pmwiki/topics.php">Forums</a>
+<a class="xl" href="/pmwiki/recent_videos.php">Videos</a>
+<a href="/pmwiki/query.php?type=att">Ask The Tropers</a>
+<a href="/pmwiki/query.php?type=tf">Trope Finder</a>
+<a href="/pmwiki/query.php?type=ykts">You Know That Show...</a>
+<a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a>
+<a data-click-toggle="active" href="#tools">Tools <i class="fa fa-chevron-down"></i></a>
+<div class="tools-dropdown mobile-dropdown-linkList">
+<a href="/pmwiki/cutlist.php">Cut List</a>
+<a href="/pmwiki/changes.php">New Edits</a>
+<a href="/pmwiki/recent_edit_reasons.php">Edit Reasons</a>
+<a href="/pmwiki/launches.php">Launches</a>
+<a href="/pmwiki/img_list.php">Images List</a>
+<a href="/pmwiki/crown_activity.php">Crowner Activity</a>
+<a href="/pmwiki/no_types.php">Un-typed Pages</a>
+<a href="/pmwiki/page_type_audit.php">Recent Page Type Changes</a>
+</div>
+<a data-click-toggle="active" href="#hq">Tropes HQ <i class="fa fa-chevron-down"></i></a>
+<div class="tools-dropdown mobile-dropdown-linkList">
+<a href="/pmwiki/about.php">About Us</a>
+<a href="/pmwiki/contact.php">Contact Us</a>
+<a href="mailto:advertising@proper.io">Advertise</a>
+<a href="/pmwiki/dmca.php">DMCA Notice</a>
+<a href="/pmwiki/privacypolicy.php">Privacy Policy</a>
+</div>
+<a href="/pmwiki/ad-free-subscribe.php">Go Ad-Free</a>
+<div class="toggle-switches">
+<ul class="mobile-menu display-toggles">
+<li>Show Spoilers <div class="display-toggle show-spoilers" id="mobile-toggle-showspoilers"></div></li>
+<li>Night Vision <div class="display-toggle night-vision" id="mobile-toggle-nightvision"></div></li>
+<li>Sticky Header <div class="display-toggle sticky-header" id="mobile-toggle-stickyheader"></div></li>
+<li>Highlight Links <div class="display-toggle highlight-links" id="mobile-toggle-highlightlinks"></div></li>
+</ul>
+<script>updateMobilePrefs();</script>
+</div>
+</div>
+</div>
+</div>
+</header>
+<div class="mobile-on" id="homepage-introBox-mobile">
+<a href="/"><img class="logo-small" src="/images/logo-white-big.png"/></a>
+<form action="/pmwiki/search_result.php" class="search" style="margin:10px -5px -6px -5px;">
+<input class="search-box" name="q" placeholder="Search" required="" type="text" value=""/>
+<input class="submit-button" type="submit" value=""/>
+<input name="search_type" type="hidden" value="article"/>
+<input name="page_type" type="hidden" value="all"/>
+<input name="cx" type="hidden" value="partner-pub-6610802604051523:amzitfn8e7v"/>
+<input name="cof" type="hidden" value="FORID:10"/>
+<input name="ie" type="hidden" value="ISO-8859-1"/>
+<input name="siteurl" type="hidden" value=""/>
+<input name="ref" type="hidden" value=""/>
+<input name="ss" type="hidden" value=""/>
+</form>
+</div>
+<div class="ad" id="header-ad-wrapper">
+<div id="header-ad">
+<div class="ad-size-970x90 atf_banner">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_1"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_1'); });</script> </div>
+</div> </div>
+</div>
+</div>
+<div id="main-container">
+<div class="action-bar mobile-off" id="action-bar-top">
+<div class="action-bar-right">
+<p>Follow TV Tropes</p>
+<a class="button-fb" href="https://www.facebook.com/TVTropes">
+<i class="fa fa-facebook"></i></a>
+<a class="button-tw" href="https://www.twitter.com/TVTropes">
+<i class="fa fa-twitter"></i></a>
+<a class="button-re" href="https://www.reddit.com/r/TVTropes">
+<i class="fa fa-reddit-alien"></i></a>
+</div>
+<nav class="actions-wrapper" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<ul class="page-actions" id="top_main_list">
+<li class="link-edit">
+<a class="article-edit-button" data-modal-target="login" href="/pmwiki/pmwiki.php/Main/FogOfWar?action=edit" rel="nofollow">
+<i class="fa fa-pencil"></i> Edit Page</a></li><li class="link-related"><a href="/pmwiki/relatedsearch.php?term=Main/FogOfWar">
+<i class="fa fa-share-alt"></i> Related</a></li><li class="link-history"><a href="/pmwiki/article_history.php?article=Main.FogOfWar">
+<i class="fa fa-history"></i> History</a></li><li class="link-discussion"><a href="/pmwiki/remarks.php?trope=Main.FogOfWar">
+<i class="fa fa-comment"></i> Discussion</a></li> </ul>
+<button class="nav__dropdown-toggle" id="top_more_button" onclick="toggle_more_menu('top');" type="button">More</button>
+<ul class="more_menu hidden_more_list" id="top_more_list">
+<li class="link-todo tuck-always more_list_item"><a data-modal-target="login" href="#todo"><i class="fa fa-check-circle"></i> To Do</a></li><li class="link-pageSource tuck-always more_list_item"><a data-modal-target="login" href="/pmwiki/pmwiki.php/Main/FogOfWar?action=source" rel="nofollow" target="_blank"><i class="fa fa-code"></i> Page Source</a></li> </ul>
+</nav>
+<div class="WikiWordModalStub"></div>
+<div class="ImgUploadModalStub" data-page-type="Article"></div>
+<div class="login-alert" style="display: none;">
+You need to <a href="/pmwiki/login.php" style="color:#21A0E8">login</a> to do this. <a href="/pmwiki/login.php?tab=register_account" style="color:#21A0E8">Get Known</a> if you don't have an account
+</div>
+</div>
+<div class="page-Article" id="main-content">
+<article class="with-sidebar" id="main-entry">
+<input id="groupname-hidden" type="hidden" value="Main"/>
+<input id="title-hidden" type="hidden" value="FogOfWar"/>
+<input id="article_id" type="hidden" value="2435"/>
+<input id="logged_in" type="hidden" value="false"/>
+<p class="hidden" id="current_url">http://tvtropes.org/pmwiki/pmwiki.php/Main/FogOfWar</p>
+<meta content="" itemprop="datePublished"/>
+<meta content="" itemprop="articleSection"/>
+<meta content="" itemprop="image"/>
+<a class="watch-button" data-modal-target="login" href="#watch">Follow<span>ing</span></a>
+<h1 class="entry-title" itemprop="headline">
+Fog of War
+</h1>
+<script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+                "@type": "ListItem",
+                "position": 1,
+                "name": "tvtropes.org",
+                "item": "https://tvtropes.org"
+            },{
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Tropes",
+                "item": "https://tvtropes.org/pmwiki/pmwiki.php/Main/Tropes"
+            },{
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Fog of War"            }]
+        }
+    </script>
+<a class="mobile-actionbar-toggle mobile-on" data-click-toggle="active" href="#mobile-actions-toggle" id="mobile-actionbar-toggle">
+<p class="tiny-off">Go To</p><span></span><span></span><span></span><i class="fa fa-pencil"></i></a>
+<nav class="mobile-actions-wrapper mobile-on" id="mobile-actions-bar"></nav>
+<div class="modal fade hidden-until-active" id="editLockModal">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button aria-label="Close" class="close" data-dismiss="modal" type="button"> <span aria-hidden="true">×</span></button>
+<h4 class="modal-title">Edit Locked</h4>
+</div>
+<div class="modal-body">
+<div class="row">
+<div class="body">
+<div class="danger troper_locked_message"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<nav class="body-options" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<ul class="subpage-links">
+<li>
+<a class="subpage-link curr-subpage" href="/pmwiki/pmwiki.php/Main/FogOfWar" title="The Main page">
+<span class="wrapper"><span class="spi main-page"></span>Main</span></a>
+</li>
+<li>
+<a class="subpage-link" href="/pmwiki/pmwiki.php/Laconic/FogOfWar" title="The Laconic page">
+<span class="wrapper"><span class="spi laconic-icon"></span>Laconic</span></a>
+</li>
+<li class="create-subpage dropdown">
+<a aria-expanded="false" class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);" role="button">
+<span class="wrapper">Create New <i class="fa fa-plus-circle"></i></span>
+</a>
+<select onchange="this.options[this.selectedIndex].value &amp;&amp; (window.location = this.options[this.selectedIndex].value);">
+<option value="">- Create New -</option>
+<option value="/pmwiki/pmwiki.php/Analysis/FogOfWar?action=edit">Analysis</option>
+<option value="/pmwiki/pmwiki.php/Characters/FogOfWar?action=edit">Characters</option>
+<option value="/pmwiki/pmwiki.php/FanficRecs/FogOfWar?action=edit">FanficRecs</option>
+<option value="/pmwiki/pmwiki.php/FanWorks/FogOfWar?action=edit">FanWorks</option>
+<option value="/pmwiki/pmwiki.php/Fridge/FogOfWar?action=edit">Fridge</option>
+<option value="/pmwiki/pmwiki.php/Haiku/FogOfWar?action=edit">Haiku</option>
+<option value="/pmwiki/pmwiki.php/Headscratchers/FogOfWar?action=edit">Headscratchers</option>
+<option value="/pmwiki/pmwiki.php/ImageLinks/FogOfWar?action=edit">ImageLinks</option>
+<option value="/pmwiki/pmwiki.php/PlayingWith/FogOfWar?action=edit">PlayingWith</option>
+<option value="/pmwiki/pmwiki.php/Quotes/FogOfWar?action=edit">Quotes</option>
+<option value="/pmwiki/pmwiki.php/Recap/FogOfWar?action=edit">Recap</option>
+<option value="/pmwiki/pmwiki.php/ReferencedBy/FogOfWar?action=edit">ReferencedBy</option>
+<option value="/pmwiki/pmwiki.php/Synopsis/FogOfWar?action=edit">Synopsis</option>
+<option value="/pmwiki/pmwiki.php/Timeline/FogOfWar?action=edit">Timeline</option>
+<option value="/pmwiki/pmwiki.php/Trivia/FogOfWar?action=edit">Trivia</option>
+<option value="/pmwiki/pmwiki.php/WMG/FogOfWar?action=edit">WMG</option>
+<option value="/pmwiki/pmwiki.php/YMMV/FogOfWar?action=edit">YMMV</option>
+</select>
+</li>
+</ul>
+</nav>
+<div class="article-content retro-folders" id="main-article">
+<p>
+</p><div class="quoteright" style="width:350px;"><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Civilization" title="/pmwiki/pmwiki.php/VideoGame/Civilization"><div class="lazy_load_img_box" style="padding-top:62.29%"><img alt="https://static.tvtropes.org/pmwiki/pub/images/civfogofwar.jpg" border="0" class="embeddedimage" height="218" src="https://static.tvtropes.org/pmwiki/pub/images/civfogofwar.jpg" width="350"/></div></a></div>
+<span class="font-s"><div class="acaptionright" style="width:350px;">I don't understand why it is always so overcast in this game.</div></span>
+<p></p><div class="indent"><em>You glance through the mist obscuring the battlefield (there always seems to be mist on a battlefield — some say it's to obscure the parts that haven't finished loading yet, but you don't know what that means).</em>
+<div class="indent">— <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/KingdomOfLoathing" title="/pmwiki/pmwiki.php/VideoGame/KingdomOfLoathing">Kingdom of Loathing</a></em>
+</div></div><div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_1"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_1'); })</script></div></div><p>The expression, not to be confused with the 2003 war documentary about Robert S. MacNamara, <em><a class="twikilink" href="/pmwiki/pmwiki.php/Film/TheFogOfWar" title="/pmwiki/pmwiki.php/Film/TheFogOfWar">The Fog of War</a></em>.
+</p><p>A feature of many <a class="twikilink" href="/pmwiki/pmwiki.php/Main/StrategyGame" title="/pmwiki/pmwiki.php/Main/StrategyGame">Strategy Games</a> that keeps the player from seeing everything that happens on the game map by limiting their knowledge of "enemy" units and movements to those areas where they have (or have recently had) units of their own. Some games enhance the effect by having a "partial" fog over areas that the player's explored at least once, but without any units in range at the time to observe.
+</p><p>While this is a realistic limitation, many players find it irritating and restrictive, often because the AI driving the other side <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TheComputerIsACheatingBastard" title="/pmwiki/pmwiki.php/Main/TheComputerIsACheatingBastard">is usually not likewise handicapped</a>. Turning off the fog of war is thus one of the more popular <a class="twikilink" href="/pmwiki/pmwiki.php/Main/CheatCode" title="/pmwiki/pmwiki.php/Main/CheatCode">Cheat Codes</a> a game could have, or for that matter it can easily be an option to turn it off without any kind of cheat code.
+</p><div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_2"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_2'); })</script></div></div><p>This exists in <a class="twikilink" href="/pmwiki/pmwiki.php/Main/RealLife" title="/pmwiki/pmwiki.php/Main/RealLife">Real Life</a>, in the sense that you need to have someone or some sensor observing the enemy in order to actually know their whereabouts. However, generally when someone talks about the fog of war they mean the sense of confusion created in one's mind when subjected to the chaos of combat. Usually they're talking about commanders making or trying to make decisions while sorting through the morass of time — late, conflicting, and rushed reports with limited time in which to act. The stress of getting shot at doesn't help. To quote an old saying: "Order, counter-order, disorder."
+</p><p>A <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SubTrope" title="/pmwiki/pmwiki.php/Main/SubTrope">Sub-Trope</a> of <a class="twikilink" href="/pmwiki/pmwiki.php/Main/WeatherOfWar" title="/pmwiki/pmwiki.php/Main/WeatherOfWar">Weather of War</a>, see also <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DefogOfWar" title="/pmwiki/pmwiki.php/Main/DefogOfWar">Defog of War</a> on abilities and items that help lessen this.
+</p><p></p><hr/><div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_3"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_3'); })</script></div></div><h2>Examples:</h2>
+<p></p><ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DeusExMankindDivided" title="/pmwiki/pmwiki.php/VideoGame/DeusExMankindDivided">Deus Ex: Mankind Divided</a></em>: The hacking mini-game features a fog of war. Unlike in <em>HR</em>, you cannot view the whole system at once. Areas have to be discovered.
+</li><li> Most turn-based tactical/squad games require your soldiers to be looking in the correct direction to spot enemies. So any piece of the battlefield that is NOT being watched, regardless of how close to your soldiers it really is, is considered to be "fogged".
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Achron" title="/pmwiki/pmwiki.php/VideoGame/Achron">Achron</a></em> has an interesting variation, because the fog only blocks vision of units. You can still hear units in the fog, and you can see crates and particle effects from weapons. This is explained that the units are actually camouflaged so they can only be seen at short distance.
+</li><li> The <a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/AgeOfEmpires" title="/pmwiki/pmwiki.php/VideoGame/AgeOfEmpires">Age of Empires</a> games have the standard Fog, and also include <em>Shroud</em>, representing that you have not explored an area and have no idea of the landscape. Unlike Fog, Shroud remains gone once the area is explored (as you now know the landscape), and will <em>not</em> come back.
+</li><li> Carr Software's <em><a class="urllink" href="http://www.carrsoft.com/ctf/capture_the_flag_game.html">Capture The Flag<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a></em> allowed for two levels of Fog-of-War. One let you see changes in any sector of the map you have previously seen. Two other only lets you see changes in sections of the map that your active players could see.
+</li><li> The most recently-added Veteran Reward in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/CityOfHeroes" title="/pmwiki/pmwiki.php/VideoGame/CityOfHeroes">City of Heroes</a></em> is a power that allows one to completely remove the Fog of War from any map. However, it has the drawbacks of taking a moment or two for the map to load in instanced missions, and the fact that the fog of war can acually be beneficial in telling which parts of a map have been explored and which haven't.
+</li><li> The turn-based <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Civilization" title="/pmwiki/pmwiki.php/VideoGame/Civilization">Civilization</a></em> games (including kissing cousin <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SidMeiersAlphaCentauri" title="/pmwiki/pmwiki.php/VideoGame/SidMeiersAlphaCentauri">Sid Meiers Alpha Centauri</a></em>) use a Fog of War; one of the diplomatic options available is trading your explored map knowledge with other cultures.
+<ul><li> One particularly realistic aspect of <em>Civilization IV</em>'s fog is that, though most of your units are removed from an enemy's territory when you declare war, submarines are not. This makes subs the best passive scouts in the game.
+<ul><li> That's not in the earlier games because <em>no</em> units were removed from enemy territory upon declaration of war. The rule was introduced in Civ IV in order to nerf abusive forms of surprise attack (eg. deploying an army next to the to-be-enemy's capital, declaring war, and immediately capturing the city before reinforcements have even a theoretical chance to arrive). Since you generally needed a "Right of Passage" agreement with the other civilization to be able to pull off this trick—crossing another civilization's territory without such an agreement would cause <em>them</em> to declare war on <em>you</em> before you got anywhere near the capital—this had the charming nickname "RoP Rape".<span class="notelabel" onclick="togglenote('note0lg1a');"><sup>note </sup></span><span class="inlinefolder" id="note0lg1a" isnote="true" onclick="togglenote('note0lg1a');" style="cursor:pointer;font-size:smaller;display:none;">On the other hand, if you <em>could</em> get your troops to the target civ's capital or other desired territory before they declared war on you without needing an RoP, engineering a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/PretextForWar" title="/pmwiki/pmwiki.php/Main/PretextForWar">Pretext for War</a> that the AI civs would be too dumb to realize was your fault not theirs was child's play, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/WoundedGazelleGambit" title="/pmwiki/pmwiki.php/Main/WoundedGazelleGambit">allowing you to be as aggressive as you liked without ever suffering a trustworthiness penalty</a>. This was especially deadly when you had a Mutual Defense treaty with the third civ: get mutual defense with your desired enemy's neighbor; "peacefully" violate "enemy" territory; wait for them to declare war; and have yourself a war with an enemy fighting on two fronts. And <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/WorldWarI" title="/pmwiki/pmwiki.php/UsefulNotes/WorldWarI">we all know what</a> <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/WorldWarII" title="/pmwiki/pmwiki.php/UsefulNotes/WorldWarII">happens when you fight on two fronts</a>...</span>
+</li><li> Then again, the description for subs states rather explicitly that they can explore rival territory and are hidden from most units. What else would you expect?
+</li></ul><div class="indent"> <strong>Opponent:</strong> Remove your submarines, whose whereabouts are unknown to me, from my territory!
+</div><div class="indent"> <strong>You:</strong> Er ... ok, done!
+</div></li><li> Also, in Civ-series games, launching your first satellite will remove the Fog of War once and for all. Spysats rule!
+<ul><li> In <em>Civ IV</em>, they only do this once (when you discover the Satellite technology), but not for all.
+</li></ul></li><li> Additionally, if you founded a religion and that religion is in a city, you can see that city and the immediate area, the same is true as you increase your spy points with a civ. You can even steal the location of all military units, though it is only good from that turn.
+<ul><li> This system was reworked for the <em>Beyond the Sword</em> expansion - owning the religion's holy city (where it was founded) no longer entitles you to automatic line of sight of a rival city with that religion. Rather, espionage now has its own points system (among them, accumulating a certain amount of points entitles you to look at known rival cities).
+</li></ul></li></ul></li><li> The <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/CommandAndConquer" title="/pmwiki/pmwiki.php/VideoGame/CommandAndConquer">Command &amp; Conquer</a></em> games (And their <a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DuneII" title="/pmwiki/pmwiki.php/VideoGame/DuneII">Dune-based predecessors</a>) include a common building, the <em>Outpost</em> (or "Command Center") which allows one to see the radar screen, which views everything not in the (unexplored) shroud. <a class="twikilink" href="/pmwiki/pmwiki.php/Main/YouRequireMoreVespeneGas" title="/pmwiki/pmwiki.php/Main/YouRequireMoreVespeneGas">Power requirements</a> must be met to keep the outpost working. But this means the fog of war is lifted in all explored areas of the battlefield.
+<ul><li> In C&amp;C <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/CommandAndConquerGenerals" title="/pmwiki/pmwiki.php/VideoGame/CommandAndConquerGenerals">Generals</a></em>, the radar screen only sees enemies in the line of sight of units on the field. It's built into the USA and China command centers and still requires power. The GLA have a special vehicle (and don't contend with power at all).
+</li><li> Also some of the C&amp;C games give players access to units and structures that can <em>create</em> fog of war through either radar jamming or large-scale cloaking fields.
+<ul><li> Which have the unfortunate tendency to backfire by creating conspicuous areas on the map that <em>look</em> like fog of war but <em>move</em> like enemy units.
+</li><li> Not to mention there is always some sort of equipment that reveals part of or the entire map. If your opponent tried to reveal only a portion of your base, and it gets recovered, he just found out where your base is. If he revealed the entire map (and the <a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/CommandAndConquerRedAlertSeries" title="/pmwiki/pmwiki.php/VideoGame/CommandAndConquerRedAlertSeries">Allies</a> usually had both the Gap Generator <em>and</em> the Outpost that revealed the entire map), now he has a giant black dot on his screen broadcasting where he should aim that nuke. To top it off, savvy players can easily pinpoint where the generator is by finding the center of said dot, and aiming in the general area usually means you hit <em>something</em> important.
+</li><li> Allied players however, tend to also place Gap Generators in completely random and pointless locations, leading to wasted nukes.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/CommandAndConquerRedAlert" title="/pmwiki/pmwiki.php/VideoGame/CommandAndConquerRedAlert">Red Alert</a></em> the Allies also had a Radar Jammer, which would temporarily stop the opponent's Radar Dome from working if it got within range. Unsurprisingly its range is pathetically short.
+</li></ul></li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/CommandAndConquerTiberianSun" title="/pmwiki/pmwiki.php/VideoGame/CommandAndConquerTiberianSun">Tiberian Sun</a></em> and its sequel <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/CommandAndConquerTiberiumWars" title="/pmwiki/pmwiki.php/VideoGame/CommandAndConquerTiberiumWars">Tiberium Wars</a></em>, Nod can build stealth generators which are actually usable, since you can effectively hide your units and bases while still letting your opponent explore the area. It's hilariously useless in a game with AI, as the AI will gladly build walls and pavement around it (which are NOT cloaked) and can see invisible units. When you're wandering around a suspiciously well-kept concrete fort, you know where to aim that nuke.
+<ul><li> Swings back again to pitifully useless in Tiberium Wars, as the generators themselves do not cloak and cannot be cloaked in any way whatsoever. Since everything else is cloaked, the enemy easily knows what to shoot now.
+</li><li> That's to <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MindScrew" title="/pmwiki/pmwiki.php/Main/MindScrew">mess with the heads</a> of human opponents; make them think there are bases in places where they aren't.
+</li></ul></li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Commandos" title="/pmwiki/pmwiki.php/VideoGame/Commandos">Commandos</a></em> plays the trope in reverse — only the enemy is affected by fog of war, as they cannot see your commandos unless specifically looking at their direction, while you (the player) can pretty much see the entire map and every enemy in it from the very start of the mission. The whole point is to plan your assault in advance, based on the enemy's repetitive scouting routes.
+</li><li> <em>Conquest Earth</em> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SlidingScaleOfGameplayAndStoryIntegration" title="/pmwiki/pmwiki.php/Main/SlidingScaleOfGameplayAndStoryIntegration">integrates</a> the fog of war with the story and game play, as special units must manually clear the atmosphere on each map.
+</li><li> Original <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DawnOfWar" title="/pmwiki/pmwiki.php/VideoGame/DawnOfWar">Dawn of War</a></em> made heavy use of the this, even detailing it by this name in the tutorial.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DarkReign" title="/pmwiki/pmwiki.php/VideoGame/DarkReign">Dark Reign</a></em> was one of the first games to use complex fog of war, making it possible to set ambushes by hiding below cliffs, in depressions in the ground, behind hills, etc.
+</li><li> PC example: <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DEFCON" title="/pmwiki/pmwiki.php/VideoGame/DEFCON">DEFCON</a>: Everybody Dies</em> only allows you to see enemy units that enter within range of your and your allies' radar. You cannot tell where the enemy's defensive units are unless you send some offensive units within radar range — which allows both sides to see each other.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/Disgaea" title="/pmwiki/pmwiki.php/Franchise/Disgaea">Disgaea</a></em>'s multiplayer mode has this as an option because at higher levels, attacks tend to become <a class="twikilink" href="/pmwiki/pmwiki.php/Main/OneHitKill" title="/pmwiki/pmwiki.php/Main/OneHitKill">One Hit Kills</a>. Without a fog, players would likely just hang around just outside the enemy's range until the opponent makes a mistake or they start throwing each other around.
+</li><li> Even <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DwarfFortress" title="/pmwiki/pmwiki.php/VideoGame/DwarfFortress">Dwarf Fortress</a></em> has a fog of war of sorts. Unlike most examples, it's underground.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Fallout2" title="/pmwiki/pmwiki.php/VideoGame/Fallout2">Fallout 2</a></em>, your character can moan about the fog-like effect your PipBoy demonstrates when you haven't explored an area.
+</li><li> The <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FireEmblem" title="/pmwiki/pmwiki.php/VideoGame/FireEmblem">Fire Emblem</a></em> series, starting with <em>Thracia 776</em>, has maps with fog. It can be literal fog, nighttime darkness, or in some cases other weather effects (up to blizzards and sandstorms), but it functions with the same fog-of-war rules as <em>Advance Wars</em>, sans units being able to hide on certain terrain. In some of the games, Thieves and classes coming from them (like Assassins and Rogues) get to see much farther in the fog, and sometimes you can get Torches and Torch staves to temporarily dissipate the fog/darkness. (<a class="twikilink" href="/pmwiki/pmwiki.php/Main/MyRulesAreNotYourRules" title="/pmwiki/pmwiki.php/Main/MyRulesAreNotYourRules">Enemies will have no trouble hunting you down in that darkness, though.</a>) Every single one of these is <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ThatOneLevel" title="/pmwiki/pmwiki.php/Main/ThatOneLevel">met with groans of disgust</a> by the disgruntled fans.
+<ul><li> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/EarlyInstallmentWeirdness" title="/pmwiki/pmwiki.php/Main/EarlyInstallmentWeirdness">Even though it introduces Fog of War</a>, Thracia has some oddity like making the fog <strong>literally</strong> pitch black, covering both units and the map, meaning that you cannot navigate the map and what it looks like. Unlike other maps, they are usually relegated to side chapters save for one. Also, thieves do not provide any vision bonus unlike other games.
+</li><li> As if lampshading this, <a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FireEmblemElibe" title="/pmwiki/pmwiki.php/VideoGame/FireEmblemElibe">Fire Emblem: Blazing Sword</a> gives fog of war levels <em>their own <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Leitmotif" title="/pmwiki/pmwiki.php/Main/Leitmotif">Leitmotif</a></em> - a dreary dirge, <a class="urllink" href="https://www.youtube.com/watch?v=bMGQFF34ZZQ">"Shadow Approaches"<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a>.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FootballManager" title="/pmwiki/pmwiki.php/VideoGame/FootballManager">Football Manager</a></em> is a non-wargame example. Players you or your scouts do not know about have no visible attributes, and need to be scouted a couple of times to reveal how good they are. After a period of time, the fog descends again and attributes gradually become hidden. Famous players and frequent opponents are always fully visible.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/GadgetTrial" title="/pmwiki/pmwiki.php/VideoGame/GadgetTrial">Gadget Trial</a></em>, all missions have fog of war engaged, and there's no option to disable it. The enemy also is completely unaffected by it. This is compensated for by the fact that the enemy is <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ArtificialStupidity" title="/pmwiki/pmwiki.php/Main/ArtificialStupidity">really, really stupid</a>.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/GalacticCivilizations" title="/pmwiki/pmwiki.php/VideoGame/GalacticCivilizations">Galactic Civilizations</a></em>: you can see systems on the map but not precisely where they are until you send a ship there, plus if you don't have a ship in or near a system you'll only be able to see enemy ships that are in orbit around a planet. There's even a tech tree for expanding how far you can see through the interstellar void. Luckily, it also affects the enemy, and one fun tactic is to keep fast-moving troop transports out of a soon-to-be enemy's line of sight, then launch a smash and grab with a massive battlefleet carving through their defenses to open a space for the troopship.
+</li><li> Night battles in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/GirlsFrontline" title="/pmwiki/pmwiki.php/VideoGame/GirlsFrontline">Girls Frontline</a></em> restrict your ability to see enemy units on the map, and prevent you from deploying units on helipads that are out of sight. Echelons with at least one <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SupportPartyMember" title="/pmwiki/pmwiki.php/Main/SupportPartyMember">Handgun unit</a> can see adjacent nodes, the Illumination Fairy can grant up to two extra nodes of vision when sufficiently leveled, and capturing a radar node lets you see two nodes away from it.
+</li><li> You can only see what your units see in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/GrimGrimoire" title="/pmwiki/pmwiki.php/VideoGame/GrimGrimoire">GrimGrimoire</a></em>, though you eventually gain a spell called Clairvoyance that allows you to (temporarily) lift the fog of war.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Harpoon" title="/pmwiki/pmwiki.php/VideoGame/Harpoon">Harpoon</a></em>, has realistic fog of war, which is to say knowledge of (for example) <a class="urllink" href="http://en.wikipedia.org/wiki/Brevity_code#B">bandits (or bogeys)<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a> is limited by how they are detected; a contact ping on radar may just give distance, bearing and heading. A visual sighting might be necessary to determine its nationality and intent. <span class="notelabel" onclick="togglenote('note0y4a3');"><sup>more... </sup></span><span class="inlinefolder" id="note0y4a3" isnote="true" onclick="togglenote('note0y4a3');" style="cursor:pointer;font-size:smaller;display:none;">Being a tactical naval simulator, <em>Harpoon</em> borrows a lot of features from traditional simulations (like the <a class="urllink" href="http://en.wikipedia.org/wiki/Silent_Hunter">Silent Hunter<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a> series of submarine games), including 1:1 time scale, and handling each sensor contact individually.</span>
+</li><li> The <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Homeworld" title="/pmwiki/pmwiki.php/VideoGame/Homeworld">Homeworld</a></em> series features three dimensional fog of war, with special units such as Recon ships and Sensor Arrays that extend the range your ships can detect, or even lift the fog of war for your side completely. These units are a prime target for human opponents.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/JaggedAlliance" title="/pmwiki/pmwiki.php/VideoGame/JaggedAlliance">Jagged Alliance</a> 2</em> has a partial fog of war. After exploring a sector on the map, any enemy movement through that sector is quite visible. However, you will not know the strength or size of the enemy group until it comes within range of your militia (or attacks you). This is changed somewhat with much later mods, where enemies may be completely invisible on the map until spotted by a militia unit.
+</li><li> The definitive feature of the Japan only Game Boy Color game <em>Kakurenbo Battle Monster Tactics</em>, which is expected when you realize that the term "kakurenbo" means "hide and seek." Only the first battle DOESN'T use fog.
+</li><li> This is province based in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/KnightsOfHonor" title="/pmwiki/pmwiki.php/VideoGame/KnightsOfHonor">Knights of Honor</a></em>, you can see what's happening in the entire province once your marshall crosses the border. Also applies to your spies in enemy courts, depending on what they are employed as.
+<ul><li> If employed as a marshal the same rules apply as for your own marshals.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/KingdomHeartsII" title="/pmwiki/pmwiki.php/VideoGame/KingdomHeartsII">Kingdom Hearts II</a></em> has a Heartless called the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/IronicName" title="/pmwiki/pmwiki.php/Main/IronicName">Illuminator</a> whose only ability is to create this. The problem? You're fighting <a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/PiratesOfTheCaribbean" title="/pmwiki/pmwiki.php/Franchise/PiratesOfTheCaribbean">Barbossa</a>. He's invincible until you take down the Illuminator, which can respawn.
+</li><li> In <em>Master of Orion II</em> the planetary systems on the map are all visible from the beginning, but the actual planets in each system cannot be seen until explored. Likewise, ships of other races cannot be seen if they are outside scanner range. The right leader or racial ability will reveal planets and their ownership. Curiously, the color of the stars tell the player what kinds of planets they're likely to have.
+</li><li> Certain levels in the strategy-card game <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MetalGearAcid" title="/pmwiki/pmwiki.php/VideoGame/MetalGearAcid">Metal Gear Ac!d</a></em> and its sequel were in 'Search Mode', which allowed you to see terrain and items but not enemies — until you were standing very close to them. Thankfully, there are multiple cards which extend your range of eyesight. Not so thankfully, getting hit by an enemy in Search Mode renders you completely blind for some reason we can only guess at. While the effect wears off in a set number of turns, you have few ways of fighting back and no idea where to run from to hide, turning you into a sitting duck. The good news is that it completely subverts <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TheComputerIsACheatingBastard" title="/pmwiki/pmwiki.php/Main/TheComputerIsACheatingBastard">The Computer Is a Cheating Bastard</a>-type AI; you play in fog of war mode for only a handful of levels. The computer plays in it <em>all the time</em>.
+</li><li> <em><a class="createlink" href="/pmwiki/pmwiki.php/VideoGames/NeptunesPride" title="/pmwiki/pmwiki.php/VideoGames/NeptunesPride">Neptunes Pride</a></em> has Fog of War turned off by default, but it can be enabled by turning on Dark Galaxy mode in the game creation options.
+</li><li> <a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/NintendoWars" title="/pmwiki/pmwiki.php/VideoGame/NintendoWars">Nintendo Wars</a> has had it since <em>Game Boy Wars</em>, but only on certain maps or settings. This fog actually affects AI, since it will ignore units that are hidden in forests, reefs, or just plain not in their vision radius by the fog (<a class="twikilink" href="/pmwiki/pmwiki.php/Main/TheComputerIsACheatingBastard" title="/pmwiki/pmwiki.php/Main/TheComputerIsACheatingBastard">except in the first two games for the last part</a>). Recon units have extra vision radius, infantry and mechs get an extra three squares if <a class="twikilink" href="/pmwiki/pmwiki.php/Main/IHaveTheHighGround" title="/pmwiki/pmwiki.php/Main/IHaveTheHighGround">they're on mountains</a>, and in every game she appears in, Sonja gives all her units extra vision in Fog.
+<ul><li> The games also have (optional) weather conditions. Rain usually limits the vision further and even adds temporary fog if not present on the battlefield.
+</li><li> In a slight twist, the characters talk about it like a physical object and think it's perfectly natural for you to see the entire map one battle and have fog of war the next.
+</li><li> Completely <a class="twikilink" href="/pmwiki/pmwiki.php/Main/JustifiedTrope" title="/pmwiki/pmwiki.php/Main/JustifiedTrope">justified</a> in <em>Days of Ruin</em>, where it is present as dust kicked up from the meteoric impact which destroyed most of civilization.
+</li><li> The AI actually handles fog of war differently in each game:
+<ul><li> In the GBA Advance Wars titles, the AI had full knowledge of your units, and could attack unhindered; the only way to protect yourself is to hide in forests and reefs, where the AI cannot fire unless they have an adjacent unit (or if Sonja has her COP active).
+</li><li> In AW:DS, the AI will maneuver as if omniscient, but has to station a unit to reveal yours before attacking.
+</li><li> In Days of Ruin/Dark Conflict, the AI behaves as though fully affected by Fog of War.
+</li></ul></li><li> There's a cheap trick in Advance Wars where you could scout out the map by moving your unit but canceling their order in order to reveal the map. Though risky as they could collide with a hiding unit, it's a way to navigate the fog. However, the developers were aware of this so the unit will still spend their fuel upon moving through fog of war even if the turn wasn't finalized. Days of Ruin/Dark Conflict doesn't used this trick because the unit moves <em>after</em> their order is confirmed.
+</li></ul></li><li> Done partially in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/OgreBattle" title="/pmwiki/pmwiki.php/VideoGame/OgreBattle">Ogre Battle</a></em>, where you can't see enemies unless they're close to you. How close depends on the angle.
+</li><li> <em>Outpost 2</em>, which was more of a city-builder with RTS elements and predates a lot of the early examples, didn't have it at all. The player's view was real-time from space, so any activity at the enemy base was totally in-view. The only things that were hidden were enemy units moving at night with their lights off; they were visible, but they wouldn't show up on the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/MiniMap" title="/pmwiki/pmwiki.php/Main/MiniMap">Mini Map</a>.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/ParaWorld" title="/pmwiki/pmwiki.php/VideoGame/ParaWorld">Para World</a></em> quite literally has a fog of war - the areas that aren't within sight range of your units are covered in fog, obscuring enemy units and leaving only wild animals and enemy buildings visible. This has the unfortunate effect of slowing the game down, so it's usually more desirable to turn it off.
+</li><li> The PC game <em>People's General</em> includes a sort of fog of war, where you can see the whole map, but no units except those within sight of your own. Depending on how well you can see them, you will either fully identify a unit, or simply see that there is an enemy unit there but not what type. Since running into an unseen unit leads to devastating ambushes, and since Recon units can help conceal other units, making sure you know where the enemy is is a major part of your strategy.
+<ul><li> This is also the case in the <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/PanzerGeneral" title="/pmwiki/pmwiki.php/VideoGame/PanzerGeneral">Panzer General</a></em> games, which are part of the same franchise.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Philophobia" title="/pmwiki/pmwiki.php/VideoGame/Philophobia">Philophobia</a></em> interestingly implements a fog of war system in a 2D Platformer, blacking out any part of the map that is not in the player character's line of sight.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/PlantsVsZombies" title="/pmwiki/pmwiki.php/VideoGame/PlantsVsZombies">Plants vs. Zombies</a></em>, you have to deal with it throughout all of World 4, with the fog getting worse with each level. In 4-10, they go all-out and just replace the fog with a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BlackoutBasement" title="/pmwiki/pmwiki.php/Main/BlackoutBasement">Blackout Basement</a> level.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/ProjectZomboid" title="/pmwiki/pmwiki.php/VideoGame/ProjectZomboid">Project Zomboid</a></em> uses a bird's-eye <a class="twikilink" href="/pmwiki/pmwiki.php/Main/IsometricProjection" title="/pmwiki/pmwiki.php/Main/IsometricProjection">Isometric Projection</a>, but the fog of war is reintroduced by way of a sophisticated "lighting" system. The light level of each map tile is constantly recalculated based on light sources, the player's sightline, and any perception impairments (e.g., panic). The same system shows or hides nearby zombies, while map tiles that have never been viewed are completely black. This can make exploring a building with narrow corridors, many rooms, and closed doors quite tense, while navigating a dense forest at night can be absolutely terrifying.
+</li><li> The naval warfare simulator <em>PT-boats: Knights of the Sea</em> has this on two levels, first there's the range at which ships can detect (and usually engage) enemy units, as shown in the map screen, but in addition there's also literal fog limitting visual contact in the first and third person views available.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SinsOfASolarEmpire" title="/pmwiki/pmwiki.php/VideoGame/SinsOfASolarEmpire">Sins of a Solar Empire</a></em>: Planets and the legal phase jumps between them have to be explored. A ship or building provides intel for the entire gravity well, but planets without a presence will only show your most recent intel. <strike>The TEC faction</strike> any factions can also research the ability to detect incoming ships from one or two phase jumps away. Vasari's 8th level tech (super tech) can detect jumps from anywhere in the map.
+<ul><li> The Advent also have Fog-of-War-reducing Culture abilities.
+</li><li> You can share intel about ships and planets with enemy factions. It goes both ways.
+</li><li> It's interesting to know what's going on from scout frigates and can be incredibly useful in the early game, but after a certain point any planet's defensive emplacements would rip a scout apart if you weren't microing that sucker. But by that time, you tend to not need much intel, and what you <em>do</em> need, you can get by pushing into his systems with fleets instead of scouts.
+</li></ul></li><li> In the various <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SpaceEmpires" title="/pmwiki/pmwiki.php/VideoGame/SpaceEmpires">Space Empires</a></em> games, viewing a star system's map only lets you see stars and planets and other stellar bodies. You can't see enemy or neutral units or colonies unless you have a unit or ship of your own in the system.
+</li><li> Its inclusion in Force Commander, a <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/StarWars" title="/pmwiki/pmwiki.php/Franchise/StarWars">Star Wars</a></em> RTS, was a big sticking point — among many. Since all units are landed from orbit, it is hard to believe no one thought to take even a single satellite photo of at least the terrain.
+<ul><li> Cloudy weather.
+</li></ul></li><li> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/JustifiedTrope" title="/pmwiki/pmwiki.php/Main/JustifiedTrope">Justified</a> in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/StarWarsEmpireAtWar" title="/pmwiki/pmwiki.php/VideoGame/StarWarsEmpireAtWar">Star Wars: Empire At War</a></em> with infantry sight ranges and vehicle sensor (or whatever) ranges, as not having it in effect at all would make it easy for any faction to simply abuse bombing runs, orbital bombardments or planetary defense cannons without directly engaging the enemy. The partial version of this trope is in effect even at the start of battles, meaning you know what the map itself looks like, but you won't know exactly what your enemy is up to. On some ground maps, specific <a class="twikilink" href="/pmwiki/pmwiki.php/Main/WeatherOfWar" title="/pmwiki/pmwiki.php/Main/WeatherOfWar">weather effects</a> can drastically reduce sight range (specifically falling volcanic ash and snowstorms). However, there are various ways to reduce the Fog of War, such as building Sensor Nodes (passively removes the fog within a large radius of the node), claiming abandoned Sensor Arrays/Satellites (lifts the Fog across the whole map as long as it is controlled), and spotter units' "Sensor Ping" ability. Only near the end of the battle (and when it's in your favor) does the Fog lift on its own, saving you the trouble of searching for stragglers.
+</li><li> While this is not the default case in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TelepathTactics" title="/pmwiki/pmwiki.php/VideoGame/TelepathTactics">Telepath Tactics</a></em>, it is a possible setting for maps. In the campaign, the maps for assassinating Gulch and exploring the ruins both use this feature.
+</li><li> In the RTS <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TotalAnnihilation" title="/pmwiki/pmwiki.php/VideoGame/TotalAnnihilation">Total Annihilation</a></em>, most of the fixed base defenses and artillery units can't even see as far as they can fire, so in order for them to operate effectively, you have to set out patrols of scout units around the perimeter to keep the Fog cleared. Fortunately, the game's excellent command interface makes this a piece of cake, no matter how large or convoluted the perimeter.
+</li><li> Also, in the spiritual successor <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SupremeCommander" title="/pmwiki/pmwiki.php/VideoGame/SupremeCommander">Supreme Commander</a></em>, this can be taken to extremes — the maps being so much bigger, and many of the weapons having realistic range (one experimental unit has a range of over 100 kilometers), it's possible to bombard positions that are right on the other side of the biggest maps, although the best accuracy is achieved when using either radar or spy planes to provide visual targeting information.
+</li><li> The <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TotalWar" title="/pmwiki/pmwiki.php/VideoGame/TotalWar">Total War</a></em> games suffer from having a fog of war that makes it difficult to learn about major historical events. Apparently Rome would have taken years to find out if Carthage had conquered Egypt, and the English king may have been kept waiting for decades before he found out that the Turks had taken Constantinople and Vienna.
+<ul><li> You are informed about rather more general events however, like which country in the world that you've never encountered in any form has the largest income or army in the world. Even though you don't know where they are.
+</li><li> Thus the reason for having diplomats. Trading maps helps to keep you up on who has conquered who. Also keeping track of whose at war helps.
+</li><li> The game also has <em>literal</em> fog of war, because if your battle takes place in rain or early in the morning, there can be fog that makes it difficult to see your enemy.
+</li></ul></li><li> The various <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Warcraft" title="/pmwiki/pmwiki.php/VideoGame/Warcraft">Warcraft</a></em> games and their relatives, like <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Starcraft" title="/pmwiki/pmwiki.php/VideoGame/Starcraft">Starcraft</a></em>, except the original <em>Warcraft.</em>
+<ul><li> The first <em>Warcraft</em> had shroud, but no fog while the second had a simple option to turn it off; Starcraft was the first to consider disabling it cheating.
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/WarcraftIII" title="/pmwiki/pmwiki.php/VideoGame/WarcraftIII">Warcraft III</a></em>, however, has an option to make the whole map visible from the start. There's still a cheat code to lift it though (<a class="twikilink" href="/pmwiki/pmwiki.php/Main/TheSixthSense" title="/pmwiki/pmwiki.php/Main/TheSixthSense">iseedeadpeople</a>).
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/StarcraftII" title="/pmwiki/pmwiki.php/VideoGame/StarcraftII">Starcraft II</a></em> gave the Terrans the Sensor Tower, which causes enemy units to show up as blips in the fog of war, without revealing what they are. It shows up as a honking big circle on everyone's minimap though.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/WargameEuropeanEscalation" title="/pmwiki/pmwiki.php/VideoGame/WargameEuropeanEscalation">Wargame: European Escalation</a></em> and its sequels handle this in probably the most realistic way possible; the entire map is visible from the start, but there is no way to see enemy units unless you have one of your units in a position to observe them. And if your observer doesn't have the right sensors or the competence (represented by an "optics" score), or the enemy is particularly good at hiding (represented by a "stealth" score), you may not even be able to get a good idea of what the unit is, just that it happens to be there. As one might imagine, good recon units are some of the most valuable units available, and a large part of every battle revolves around trying to get your own scouts into good positions while killing every enemy recon unit you can find as soon as possible.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/XCOM" title="/pmwiki/pmwiki.php/VideoGame/XCOM">XCOM</a></em> reveals the terrain as it's explored, but doesn't show which parts are not visible at the moment, while aliens are only visible if they're within your troops' line of sight. After you've explored the entire map, it becomes frustrating trying to find that last alien when you're not even sure where to look. This problem is averted in the <a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/XCOMEnemyUnknown" title="/pmwiki/pmwiki.php/VideoGame/XCOMEnemyUnknown">reboot</a>, where after a certain number of turns the enemy will come to you.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Stars" title="/pmwiki/pmwiki.php/VideoGame/Stars">Stars!</a></em> only provides current information for areas you are currently scanning, but old information is available for previously scanned areas. Much of the early game maneuvering is deploying scout ships to determine the environments of the planets around you so as to decide where to settle.
+</li></ul><p></p><h2>Non <a class="twikilink" href="/pmwiki/pmwiki.php/Main/VideoGame" title="/pmwiki/pmwiki.php/Main/VideoGame">Video Game</a> applications of this trope include:</h2>
+<ul><li> A <a class="twikilink" href="/pmwiki/pmwiki.php/Main/RealLife" title="/pmwiki/pmwiki.php/Main/RealLife">Real Life</a> example and possible <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TropeNamer" title="/pmwiki/pmwiki.php/Main/TropeNamer">Trope Namer</a>: <a class="urllink" href="http://en.wikipedia.org/wiki/Carl_von_Clausewitz">Carl von Clausewitz<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a>, wrote in <em>On War</em> "The great uncertainty of all data in war is a peculiar difficulty, because all action must, to a certain extent, be planned in a mere twilight, which in addition not infrequently ? like the effect of a fog or moonshine — gives to things exaggerated dimensions and unnatural appearance."
+<ul><li> Clausewitz was referring to both a proverbial and literal fog, the first due to the complex logistics of processing and gathering intelligence, which takes enough time to spoil the freshness of the data, and the second being the amount of dust kicked up by artillery, moving thousand-troop battalions and barrages of black-powder firearms. Contemporary technology has vastly reduced the proverbial fog and plays with (sometimes even invokes) the literal one.
+</li></ul></li><li> In real life, large crowds create huge clouds of dust, especially with horses or vehicles, unless the field is muddy — in which case armored cavalry will die up when placed against pikes and arrows.
+<ul><li> In addition to dust and fog obscuring vision it is still very difficult to get an accurate assessment of a battlefield even with satellites, radios and observational aircraft due to countermeasures and the inherent chaos of the situation.
+</li></ul></li><li> Anime illustration: In an episode of <em><a class="twikilink" href="/pmwiki/pmwiki.php/LightNovel/HaruhiSuzumiya" title="/pmwiki/pmwiki.php/LightNovel/HaruhiSuzumiya">The Melancholy Of Haruhi Suzumiya</a></em>, the SOS-dan was challenged to a computer game with this limitation. Yuki quickly figures out that the opposing side has cheated by removing the Fog Of War on their side, hacks the system, and levels the playing field.
+</li><li> Strangely enough, <em><a class="twikilink" href="/pmwiki/pmwiki.php/Manga/OnePiece" title="/pmwiki/pmwiki.php/Manga/OnePiece">One Piece</a></em> had begun a war in which mist was constantly seen sneaking on to the screen from no one knows where.
+</li><li> Played straight in the 1992 film of <em><a class="twikilink" href="/pmwiki/pmwiki.php/Film/LastOfTheMohicans" title="/pmwiki/pmwiki.php/Film/LastOfTheMohicans">Last of the Mohicans</a></em>. Musket fire apparently creates clouds of smoke thick enough to blanket the adjoining lake, and the heroes literally escape through the resulting fog.
+<ul><li> Similarly, in <a class="twikilink" href="/pmwiki/pmwiki.php/Main/RealLife" title="/pmwiki/pmwiki.php/Main/RealLife">Real Life</a>, Scots mercenaries would fire off a round from their muskets, then drop their muskets and charge with their big-ass swords through the ensuing cloud of smoke.
+</li></ul></li><li> Bizarrely averted in <em><a class="twikilink" href="/pmwiki/pmwiki.php/Film/TheLordOfTheRingsTheReturnOfTheKing" title="/pmwiki/pmwiki.php/Film/TheLordOfTheRingsTheReturnOfTheKing">The Lord of the Rings: The Return of the King</a></em>, where the lack of dust on the battlefield makes the CGI armies look fake — a flaw compared to other films around the same time that used CGI doubling to create huge armies.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/AdvancedSquadLeader" title="/pmwiki/pmwiki.php/TabletopGame/AdvancedSquadLeader">Advanced Squad Leader</a></em> has a mechanic called Concealment. Units can be marked with a "?" marker at the start of the game, which means the opponent is not allowed to look at them. The other counters under this "?" can be good units, bad units or even dummies.
+</li><li> Provided by the cards in <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/TwilightStruggle" title="/pmwiki/pmwiki.php/TabletopGame/TwilightStruggle">Twilight Struggle</a></em> - you can see everything on the map with perfect information, but you don't know what historical event your opponent may be about to set in motion.
+</li><li> At least two <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/Chess" title="/pmwiki/pmwiki.php/TabletopGame/Chess">chess</a></em> variants, with sub-variants:
+<ul><li> Kriegsspiel: you dont see your opponents pieces at all.
+</li><li> Dark chess: you only see those pieces you can attack.
+</li></ul></li><li> Mostly averted in <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/VictoryInThePacific" title="/pmwiki/pmwiki.php/TabletopGame/VictoryInThePacific">Victory In The Pacific</a></em>, as both players can see the whole map and the locations of all enemy forces, as is befitting the large-scale strategic view, as both sides would be aware of the approximate region of ocean enemy ships were assigned to (finding them tactically was another matter). This wasn't always true of Japan since the USA had broken their code - so the Japanese player has to commit his forces in each segment before the Allied player does.
+</li><li> The entire challenge of the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/BoardGames" title="/pmwiki/pmwiki.php/Main/BoardGames">Board Game</a> <em><a class="twikilink" href="/pmwiki/pmwiki.php/TabletopGame/Battleship" title="/pmwiki/pmwiki.php/TabletopGame/Battleship">Battleship</a></em>. Neither of you can see your opponent's units, and your opponent is only allowed to inform you, after each shot, whether it hit or missed.
+</li></ul><p></p><hr/>
+</div>
+<div class="square_ad footer-article-ad main_2" data-isolated="0"></div>
+<div class="section-links" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<div class="titles">
+<div><h3 class="text-center text-uppercase">Previous</h3></div>
+<div><h3 class="text-center text-uppercase">Index</h3></div>
+<div><h3 class="text-center text-uppercase">Next</h3></div>
+</div>
+<div class="links">
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/FirewoodResources">Firewood Resources</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/StrategyGameTropes">Strategy Game Tropes</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/GarrisonableStructures">Garrisonable Structures</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/FlipScreenScrolling">Flip-Screen Scrolling</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/PagesNeedingExampleSorting">Pages Needing Example Sorting</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/GameMaker">Game Maker</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/FogOfDoom">Fog of Doom</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/WeatherAndEnvironment">Weather and Environment</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/PartlyCloudyWithAChanceOfDeath">Partly Cloudy with a Chance of Death</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/VideoGame/Civilization">Civilization</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/ImageSource/VideoGamesAToL">ImageSource/Video Games (A to L)</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/RecliningReigner">Reclining Reigner</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="outer_ads_by_salon_wrapper" id="exco_player_insert_div">
+</div>
+</article>
+<div id="main-content-sidebar"><div class="sidebar-item display-options">
+<ul class="sidebar display-toggles">
+<li>Show Spoilers <div class="display-toggle show-spoilers" id="sidebar-toggle-showspoilers"></div></li>
+<li>Night Vision <div class="display-toggle night-vision" id="sidebar-toggle-nightvision"></div></li>
+<li>Sticky Header <div class="display-toggle sticky-header" id="sidebar-toggle-stickyheader"></div></li>
+<li>Wide Load <div class="display-toggle wide-load" id="sidebar-toggle-wideload"></div></li>
+</ul>
+<script>updateDesktopPrefs();</script>
+</div>
+<div class="sidebar-item ad sb-ad-unit">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_2"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_2'); });</script> </div>
+</div></div>
+<div class="sidebar-item quick-links" itemtype="http://schema.org/SiteNavigationElement">
+<p class="sidebar-item-title" data-title="Important Links">Important Links</p>
+<div class="padded">
+<a href="/pmwiki/query.php?type=att">Ask The Tropers</a>
+<a href="/pmwiki/query.php?type=tf">Trope Finder</a>
+<a href="/pmwiki/query.php?type=ykts">You Know That Show...</a>
+<a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a>
+<a href="/pmwiki/review_activity.php">Reviews</a>
+<a data-modal-target="login" href="/pmwiki/lbs.php">Live Blogs</a>
+<a href="/pmwiki/ad-free-subscribe.php">Go Ad Free!</a> </div>
+</div>
+<div class="sidebar-item sb-ad-unit">
+<div class="sidebar-section">
+<div class="square_ad ad-size-300x600 ad-section text-center">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_3"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_3'); });</script> </div>
+</div> </div>
+</div>
+</div>
+<div class="sidebar-item">
+<p class="sidebar-item-title" data-title="Crucial Browsing">Crucial Browsing</p>
+<ul class="padded font-s" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><a data-click-toggle="active" href="javascript:void(0);">Genre</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/ActionAdventureTropes" title="Main/ActionAdventureTropes">Action Adventure</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ComedyTropes" title="Main/ComedyTropes">Comedy</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CommercialsTropes" title="Main/CommercialsTropes">Commercials</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CrimeAndPunishmentTropes" title="Main/CrimeAndPunishmentTropes">Crime &amp; Punishment</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DramaTropes" title="Main/DramaTropes">Drama</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/HorrorTropes" title="Main/HorrorTropes">Horror</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LoveTropes" title="Main/LoveTropes">Love</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NewsTropes" title="Main/NewsTropes">News</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ProfessionalWrestling" title="Main/ProfessionalWrestling">Professional Wrestling</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SpeculativeFictionTropes" title="Main/SpeculativeFictionTropes">Speculative Fiction</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SportsStoryTropes" title="Main/SportsStoryTropes">Sports Story</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/WarTropes" title="Main/WarTropes">War</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Media</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/Media" title="Main/Media">All Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/AnimationTropes" title="Main/AnimationTropes">Animation (Western)</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Anime" title="Main/Anime">Anime</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ComicBookTropes" title="Main/ComicBookTropes">Comic Book</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FanFic" title="FanFic/FanFics">Fan Fics</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Film" title="Main/Film">Film</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/GameTropes" title="Main/GameTropes">Game</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Literature" title="Main/Literature">Literature</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MusicAndSoundEffects" title="Main/MusicAndSoundEffects">Music And Sound Effects</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NewMediaTropes" title="Main/NewMediaTropes">New Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/PrintMediaTropes" title="Main/PrintMediaTropes">Print Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Radio" title="Main/Radio">Radio</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SequentialArt" title="Main/SequentialArt">Sequential Art</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TabletopGames" title="Main/TabletopGames">Tabletop Games</a></li>
+<li><a href="/pmwiki/pmwiki.php/UsefulNotes/Television" title="Main/Television">Television</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Theater" title="Main/Theater">Theater</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/VideogameTropes" title="Main/VideogameTropes">Videogame</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Webcomics" title="Main/Webcomics">Webcomics</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Narrative</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/UniversalTropes" title="Main/UniversalTropes">Universal</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/AppliedPhlebotinum" title="Main/AppliedPhlebotinum">Applied Phlebotinum</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CharacterizationTropes" title="Main/CharacterizationTropes">Characterization</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Characters" title="Main/Characters">Characters</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CharactersAsDevice" title="Main/CharactersAsDevice">Characters As Device</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Dialogue" title="Main/Dialogue">Dialogue</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Motifs" title="Main/Motifs">Motifs</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NarrativeDevices" title="Main/NarrativeDevices">Narrative Devices</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Paratext" title="Main/Paratext">Paratext</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Plots" title="Main/Plots">Plots</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Settings" title="Main/Settings">Settings</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Spectacle" title="Main/Spectacle">Spectacle</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Other Categories</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/BritishTellyTropes" title="Main/BritishTellyTropes">British Telly</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TheContributors" title="Main/TheContributors">The Contributors</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CreatorSpeak" title="Main/CreatorSpeak">Creator Speak</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Creators" title="Main/Creators">Creators</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DerivativeWorks" title="Main/DerivativeWorks">Derivative Works</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LanguageTropes" title="Main/LanguageTropes">Language</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LawsAndFormulas" title="Main/LawsAndFormulas">Laws And Formulas</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ShowBusiness" title="Main/ShowBusiness">Show Business</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SplitPersonalityTropes" title="Main/SplitPersonalityTropes">Split Personality</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/StockRoom" title="Main/StockRoom">Stock Room</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TropeTropes" title="Main/TropeTropes">Trope</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Tropes" title="Main/Tropes">Tropes</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TruthAndLies" title="Main/TruthAndLies">Truth And Lies</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TruthInTelevision" title="Main/TruthInTelevision">Truth In Television</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Topical Tropes</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/BetrayalTropes" title="Main/BetrayalTropes">Betrayal</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CensorshipTropes" title="Main/CensorshipTropes">Censorship</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CombatTropes" title="Main/CombatTropes">Combat</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DeathTropes" title="Main/DeathTropes">Death</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FamilyTropes" title="Main/FamilyTropes">Family</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FateAndProphecyTropes" title="Main/FateAndProphecyTropes">Fate And Prophecy</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FoodTropes" title="Main/FoodTropes">Food</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/HolidayTropes" title="Main/HolidayTropes">Holiday</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MemoryTropes" title="Main/MemoryTropes">Memory</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MoneyTropes" title="Main/MoneyTropes">Money</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MoralityTropes" title="Main/MoralityTropes">Morality</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/PoliticsTropes" title="Main/PoliticsTropes">Politics</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ReligionTropes" title="Main/ReligionTropes">Religion</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SchoolTropes" title="Main/SchoolTropes">School</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="sidebar-item showcase">
+<p class="sidebar-item-title" data-title="Community Showcase">Community Showcase <a class="bubble float-right hover-blue" href="/pmwiki/showcase.php">More</a></p>
+<p class="community-showcase">
+<a href="https://sharetv.com/shows/echo_chamber" onclick="trackOutboundLink('https://sharetv.com/shows/echo_chamber');" target="_blank">
+<img alt="" class="lazy-image" data-src="/images/communityShowcase-echochamber.jpg"/></a>
+<a href="/pmwiki/pmwiki.php/Webcomic/TwistedTropes">
+<img alt="" class="lazy-image" data-src="/img/howlandsc-side.jpg"/></a>
+</p>
+</div>
+<div class="sidebar-item sb-ad-unit" id="stick-cont">
+<div class="sidebar-section" id="stick-bar">
+<div class="square_ad ad-size-300x600 ad-section text-center">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_4"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_4'); });</script> </div>
+</div> </div>
+</div>
+</div>
+</div>
+</div>
+<div class="action-bar tablet-off" id="action-bar-bottom">
+<a class="scroll-to-top dead-button" href="#top-of-page" onclick="$('html, body').animate({scrollTop : 0},500);">Top</a>
+</div>
+</div>
+<div class="proper-ad-unit ad-sticky">
+<div id="proper-ad-tvtropes_sticky_ad"> <script>propertag.cmd.push(function() { proper_display('tvtropes_sticky_ad'); });</script> </div>
+</div>
+<footer id="main-footer">
+<div id="main-footer-inner">
+<div class="footer-left">
+<a class="img-link" href="/"><img alt="TV Tropes" class="lazy-image" data-src="/img/tvtropes-footer-logo.png" title="TV Tropes"/></a>
+<form action="index.html" class="navbar-form newsletter-signup validate modal-replies" data-ajax-get="/ajax/subscribe_email.php" id="cse-search-box-mobile" name="" role="">
+<button class="btn-submit newsletter-signup-submit-button" id="subscribe-btn" type="submit"><i class="fa fa-paper-plane"></i></button>
+<input class="form-control" id="subscription-email" name="q" placeholder="Subscribe" size="31" type="text" validate-type="email" value=""/>
+</form>
+<ul class="social-buttons">
+<li><a class="btn fb" href="https://www.facebook.com/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-facebook']);" target="_blank"><i class="fa fa-facebook"></i></a></li>
+<li><a class="btn tw" href="https://www.twitter.com/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-twitter']);" target="_blank"><i class="fa fa-twitter"></i></a> </li>
+<li><a class="btn rd" href="https://www.reddit.com/r/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-reddit']);" target="_blank"><i class="fa fa-reddit-alien"></i></a></li>
+</ul>
+</div>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">TVTropes</h4></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Administrivia">About TVTropes</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TheGoalsOfTVTropes">TVTropes Goals</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TheTropingCode">Troping Code</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TVTropesCustoms">TVTropes Customs</a></li>
+<li><a href="/pmwiki/pmwiki.php/JustForFun/TropesOfLegend">Tropes of Legend</a></li>
+<li><a href="/pmwiki/ad-free-subscribe.php">Go Ad-Free</a></li>
+</ul>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">Community</h4></li>
+<li><a href="/pmwiki/query.php?type=att">Ask The Tropers</a></li>
+<li><a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a></li>
+<li><a href="/pmwiki/query.php?type=tf">Trope Finder</a></li>
+<li><a href="/pmwiki/query.php?type=ykts">You Know That Show</a></li>
+<li><a data-modal-target="login" href="/pmwiki/lbs.php">Live Blogs</a></li>
+<li><a href="/pmwiki/review_activity.php">Reviews</a></li>
+<li><a href="/pmwiki/topics.php">Forum</a></li>
+</ul>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">Tropes HQ</h4></li>
+<li><a href="/pmwiki/about.php">About Us</a></li>
+<li><a href="/pmwiki/contact.php">Contact Us</a></li>
+<li><a href="/pmwiki/dmca.php">DMCA Notice</a></li>
+<li><a href="/pmwiki/privacypolicy.php">Privacy Policy</a></li>
+</ul>
+</div>
+<div class="text-center gutter-top gutter-bottom tablet-on" id="desktop-on-mobile-toggle">
+<a href="/pmwiki/switchDeviceCss.php?mobileVersion=1" rel="nofollow">Switch to <span class="txt-desktop">Desktop</span><span class="txt-mobile">Mobile</span> Version</a>
+</div>
+<div class="legal">
+<p>TVTropes is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License. <br/>Permissions beyond the scope of this license may be available from <a href="mailto:thestaff@tvtropes.org" rel="cc:morePermissions" xmlns:cc="http://creativecommons.org/ns#"> thestaff@tvtropes.org</a>.</p>
+<br/>
+<div class="privacy_wrapper">
+</div>
+</div>
+</footer>
+<style>
+      div.fc-ccpa-root {
+        position: absolute !important;
+        bottom: 93px !important;
+        margin: auto !important;
+        width: 100% !important;
+        z-index: 9999 !important;
+      }
+      .fc-ccpa-root .fc-dns-dialog .fc-dns-link p{
+        outline: none !important;
+        text-decoration: underline !important;
+        font-size: .7em !important;
+        font-family: sans-serif !important;
+      }
+      .fc-ccpa-root .fc-dns-dialog .fc-dns-link .fc-button-background {
+        background: none !important;
+      }
+    </style>
+<div class="full-screen" id="_pm_videoViewer">
+<a class="close" href="#close" id="_pm_videoViewer-close"></a>
+<div class="_pmvv-body">
+<div class="_pmvv-vidbox">
+<video class="video-js vjs-default-skin vjs-16-9" data-video-id="" id="overlay-video-player-box">
+</video>
+<div class="_pmvv-vidbox-desc">
+<h1 id="overlay-title"></h1>
+<p class="_pmvv-vidbox-descTxt" id="overlay-descrip">
+</p>
+<div class="rating-row" data-video-id="">
+<input name="is_logged_in" type="hidden" value="0"/>
+<p>How well does it match the trope?</p>
+<div id="star-rating-group">
+<div class="trope-rate">
+<input id="lamp5" name="rate" type="radio" value="5"/>
+<label for="lamp5" title="Absolutely"></label>
+<input id="lamp4" name="rate" type="radio" value="4"/>
+<label for="lamp4" title="Yes"></label>
+<input id="lamp3" name="rate" type="radio" value="3"/>
+<label for="lamp3" title="Kind of"></label>
+<input id="lamp2" name="rate" type="radio" value="2"/>
+<label for="lamp2" title="Not really"></label>
+<input id="lamp1" name="rate" type="radio" value="1"/>
+<label for="lamp1" title="No"></label>
+</div>
+<div id="star-rating-total">
+</div>
+</div>
+</div>
+<div class="example-media-row">
+<div class="example-overlay">
+<p>Example of:</p>
+<div id="overlay-trope"> / </div>
+</div>
+<div class="media-sources-overlay example-overlay">
+<p>Media sources:</p>
+<div id="overlay-media"> / </div>
+</div>
+</div>
+<p class="_pmvv-vidbox-stats text-right font-s" style="padding-top:8px; border-top: solid 1px rgba(255,255,255,0.2)">
+<a class="float-right" data-modal-target="login" href="#video-feedback">Report</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+        window.special_ops =  {
+            member : 'no',
+            isolated : 0,
+            tags : ['unknown']
+        };
+    </script>
+<script type="text/javascript">
+
+        var cleanCreativeEnabled = "";
+        var donation = "";
+        var live_ads = "1";
+        var img_domain = "https://static.tvtropes.org";
+        var snoozed = cookies.read('snoozedabm');
+        var snoozable = "";
+
+        if (adsRemovedWith) {
+            live_ads = 0;
+        }
+
+        var elem = document.createElement('script');
+        elem.async = true;
+
+        elem.src = '/design/assets/bundle.js?rev=c58d8df02f09262390bbd03db7921fc35c6af306';
+
+        elem.onload = function() {
+                                 }
+        document.getElementsByTagName('head')[0].appendChild(elem);
+
+    </script>
+<script type="text/javascript">
+      function send_analytics_event(user_type, donation){
+          // if(user_type == 'uncached' || user_type == 'cached'){
+          //   ga('send', 'event', 'caching', 'load', user_type, {'nonInteraction': 1});
+          //   return;
+          // }
+          var event_name = user_type;
+
+          if(donation == 'true'){
+              event_name += "_donation"
+          }else if(typeof(valid_user) == 'undefined'){
+              event_name += "_blocked"
+          }else if(valid_user == true){
+              event_name += "_unblocked";
+          }else{
+              event_name = "_unknown"
+          }
+          ga('send', 'event', 'ads', 'load', event_name, {'nonInteraction': 1});
+      }
+
+    
+    send_analytics_event("guest", "false");
+      </script>
+</body>
+</html>

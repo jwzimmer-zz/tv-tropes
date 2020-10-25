@@ -1,0 +1,1076 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Level Editor - TV Tropes</title>
+<meta content="The Level Editor trope as used in popular culture. Have you ever played a video game that you really like, so much that you started to daydream about making …" name="description"/>
+<link href="https://tvtropes.org/pmwiki/pmwiki.php/Main/LevelEditor" rel="canonical"/>
+<link href="/img/icons/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="@tvtropes" name="twitter:site"/>
+<meta content="@tvtropes" name="twitter:owner"/>
+<meta content="Level Editor - TV Tropes" name="twitter:title"/>
+<meta content="The Level Editor trope as used in popular culture. Have you ever played a video game that you really like, so much that you started to daydream about making …" name="twitter:description"/>
+<meta content="https://static.tvtropes.org/logo_blue_small.png" name="twitter:image:src"/>
+<meta content="TV Tropes" property="og:site_name"/>
+<meta content="en_US" property="og:locale"/>
+<meta content="https://www.facebook.com/tvtropes" property="article:publisher"/>
+<meta content="Level Editor - TV Tropes" property="og:title"/>
+<meta content="website" property="og:type"/>
+<meta content="https://tvtropes.org/pmwiki/pmwiki.php/Main/LevelEditor" property="og:url"/>
+<meta content="https://static.tvtropes.org/logo_blue_small.png" property="og:image"/>
+<meta content="Have you ever played a video game that you really like, so much that you started to daydream about making your own levels for it and playing your own creations? Some game companies are nice enough to help players achieve that dream, by adding a …" property="og:description"/>
+<link href="/img/icons/apple-icon-57x57.png" rel="apple-touch-icon" sizes="57x57" type="image/png"/>
+<link href="/img/icons/apple-icon-60x60.png" rel="apple-touch-icon" sizes="60x60" type="image/png"/>
+<link href="/img/icons/apple-icon-72x72.png" rel="apple-touch-icon" sizes="72x72" type="image/png"/>
+<link href="/img/icons/apple-icon-76x76.png" rel="apple-touch-icon" sizes="76x76" type="image/png"/>
+<link href="/img/icons/apple-icon-114x114.png" rel="apple-touch-icon" sizes="114x114" type="image/png"/>
+<link href="/img/icons/apple-icon-120x120.png" rel="apple-touch-icon" sizes="120x120" type="image/png"/>
+<link href="/img/icons/apple-icon-144x144.png" rel="apple-touch-icon" sizes="144x144" type="image/png"/>
+<link href="/img/icons/apple-icon-152x152.png" rel="apple-touch-icon" sizes="152x152" type="image/png"/>
+<link href="/img/icons/apple-icon-180x180.png" rel="apple-touch-icon" sizes="180x180" type="image/png"/>
+<link href="/img/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/img/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/img/icons/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png"/>
+<link href="/img/icons/favicon-192x192.png" rel="icon" sizes="192x192" type="image/png"/>
+<meta content="width=device-width, initial-scale=1" id="viewport" name="viewport"/>
+<script>
+                var propertag = {};
+                propertag.cmd = [];
+            </script>
+<link href="/design/assets/bundle.css?rev=c58d8df02f09262390bbd03db7921fc35c6af306" rel="stylesheet"/>
+<script>
+                function object(objectId) {
+                    if (document.getElementById && document.getElementById(objectId)) {
+                        return document.getElementById(objectId);
+                    } else if (document.all && document.all(objectId)) {
+                        return document.all(objectId);
+                    } else if (document.layers && document.layers[objectId]) {
+                        return document.layers[objectId];
+                    } else {
+                        return false;
+                    }
+                }
+
+                // JAVASCRIPT COOKIES CODE: for getting and setting user viewing preferences
+                var cookies = {
+                    create: function (name, value, days2expire, path) {
+                        var date = new Date();
+                        date.setTime(date.getTime() + (days2expire * 24 * 60 * 60 * 1000));
+                        var expires = date.toUTCString();
+                        document.cookie = name + '=' + value + ';' + 'expires=' + expires + ';' + 'path=' + path + ';';
+                    },
+										createWithExpire: function(name, value, expires, path) {
+												document.cookie = name + '=' + value + ';' + 'expires=' + expires + ';' + 'path=' + path + ';';
+										},
+                    read: function (name) {
+                        var cookie_value = "",
+                            current_cookie = "",
+                            name_expr = name + "=",
+                            all_cookies = document.cookie.split(';'),
+                            n = all_cookies.length;
+
+                        for (var i = 0; i < n; i++) {
+                            current_cookie = all_cookies[i].trim();
+                            if (current_cookie.indexOf(name_expr) === 0) {
+                                cookie_value = current_cookie.substring(name_expr.length, current_cookie.length);
+                                break;
+                            }
+                        }
+                        return cookie_value;
+                    },
+                    update: function (name, val) {
+                        this.create(name, val, 300, "/");
+                    },
+                    remove: function (name) {
+                        document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
+                    }
+                };
+
+                function updateUserPrefs() {
+                    //GENERAL: detect and set browser, if not cookied (will be treated like a user-preference and added to the #user-pref element)
+                    if( !cookies.read('user-browser') ){
+                        var broswer = '';
+
+                        if(navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPod/i) ){
+                            browser = 'iOS';
+                        } else if (/Opera[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'opera';
+                        } else if (/MSIE (\d+\.\d+);/.test(navigator.userAgent)) {
+                            browser = 'MSIE';
+                        } else if (/Navigator[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'netscape';
+                        } else if (/Chrome[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'chrome';
+                        } else if (/Safari[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'safari';
+                            /Version[\/\s](\d+\.\d+)/.test(navigator.userAgent);
+                            browserVersion = new Number(RegExp.$1);
+                        } else if (/Firefox[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'firefox';
+                        } else {
+                            browser = 'internet_explorer';
+                        }
+                        cookies.create('user-browser',browser,1,'/');
+                        document.getElementById('user-prefs').classList.add('browser-' + browser);
+                    } else {
+                        document.getElementById('user-prefs').classList.add('browser-' + cookies.read('user-browser'));
+                    }
+
+                    //update user preference settings
+                    if (cookies.read('wide-load') !== '') document.getElementById('user-prefs').classList.add('wide-load');
+                    if (cookies.read('night-vision') !== '') document.getElementById('user-prefs').classList.add('night-vision');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('user-prefs').classList.add('sticky-header');
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('user-prefs').classList.add('show-spoilers');
+                    if (cookies.read('folders-open') !== '') document.getElementById('user-prefs').classList.add('folders-open');
+                    if (cookies.read('lefthand-sidebar') !== '') document.getElementById('user-prefs').classList.add('lefthand-sidebar');
+                    if (cookies.read('highlight-links') !== '') document.getElementById('user-prefs').classList.add('highlight-links');
+                    if (cookies.read('forum-gingerbread') !== '') document.getElementById('user-prefs').classList.add('forum-gingerbread');
+                    if (cookies.read('shared-avatars') !== '') document.getElementById('user-prefs').classList.add('shared-avatars');
+                    if (cookies.read('new-search') !== '') document.getElementById('user-prefs').classList.add('new-search');
+                    if (cookies.read('stop-auto-play-video') !== '') document.getElementById('user-prefs').classList.add('stop-auto-play-video');
+
+                    //desktop view on mobile
+                    if (cookies.read('desktop-on-mobile') !== ''){
+                        document.getElementById('user-prefs').classList.add('desktop-on-mobile');
+
+                        var viewport = document.querySelector("meta[name=viewport]");
+                        viewport.setAttribute('content', 'width=1000');
+                    }
+
+                }
+
+                function updateDesktopPrefs() {
+                    if (cookies.read('wide-load') !== '') document.getElementById('sidebar-toggle-wideload').classList.add('active');
+                    if (cookies.read('night-vision') !== '') document.getElementById('sidebar-toggle-nightvision').classList.add('active');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('sidebar-toggle-stickyheader').classList.add('active');
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('sidebar-toggle-showspoilers').classList.add('active');
+
+                }
+
+                function updateMobilePrefs() {
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('mobile-toggle-showspoilers').classList.add('active');
+                    if (cookies.read('night-vision') !== '') document.getElementById('mobile-toggle-nightvision').classList.add('active');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('mobile-toggle-stickyheader').classList.add('active');
+                    if (cookies.read('highlight-links') !== '') document.getElementById('mobile-toggle-highlightlinks').classList.add('active');
+
+                }
+
+
+                if (document.cookie.indexOf("scroll0=") < 0) {
+                    // do nothing
+                } else {
+                    console.log('ads removed by scroll.com');
+                    var adsRemovedWith = 'scroll';
+                    var style = document.createElement('style');
+                    style.innerHTML = '#header-ad, .proper-ad-unit, .square_ad, .sb-ad-unit { display: none !important; } ';
+                    document.head.appendChild(style);
+                }
+            </script>
+<script type="text/javascript">
+
+                var tvtropes_config = {
+                    astri_stream_enabled : "",
+                    is_logged_in         : "",
+                    handle               : "",
+                    get_astri_stream     : "",
+										revnum               : "c58d8df02f09262390bbd03db7921fc35c6af306",
+										img_domain           : "https://static.tvtropes.org",
+										adblock              : "1",
+										adblock_url          : "propermessage.io",
+										pause_editing        : "0",
+										pause_editing_msg    : "",
+										pause_site_changes   : ""
+                };
+            </script>
+<script type="text/javascript">
+						  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+						  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+						  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+						  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+						  ga('create', 'UA-3821842-1', 'auto');
+						  ga('send', 'pageview');
+
+						</script>
+</head>
+<body class="">
+<i id="user-prefs"></i>
+<script>updateUserPrefs();</script>
+<div id="fb-root"></div>
+<div id="modal-box"></div>
+<header class="headroom-element" id="main-header-bar">
+<div id="main-header-bar-inner">
+<span class="header-spacer" id="header-spacer-left"></span>
+<a class="mobile-menu-toggle-button tablet-on" href="#mobile-menu" id="main-mobile-toggle"><span></span><span></span><span></span></a>
+<a class="no-dev" href="/" id="main-header-logoButton"></a>
+<span class="header-spacer" id="header-spacer-right"></span>
+<nav class="tablet-off" id="main-header-nav">
+<a href="/pmwiki/pmwiki.php/Main/Tropes">Tropes</a>
+<a href="/pmwiki/pmwiki.php/Main/Media">Media</a>
+<a class="nav-browse" href="/pmwiki/browse.php">Browse</a>
+<a href="/pmwiki/index_report.php">Indexes</a>
+<a href="/pmwiki/topics.php">Forums</a>
+<a class="nav-browse" href="/pmwiki/recent_videos.php">Videos</a>
+</nav>
+<div id="main-header-bar-right">
+<div class="font-xs mobile-off" id="signup-login-box">
+<a class="hover-underline bold" data-modal-target="signup" href="/pmwiki/login.php">Join</a>
+<a class="hover-underline bold" data-modal-target="login" href="/pmwiki/login.php">Login</a>
+</div>
+<div class="mobile-on inline" id="signup-login-mobileToggle">
+<a data-modal-target="login" href="/pmwiki/login.php"><i class="fa fa-user"></i></a>
+</div>
+<div id="search-box">
+<form action="/pmwiki/search_result.php" class="search">
+<input class="search-box" name="q" placeholder="Search" required="" type="text" value=""/>
+<input class="submit-button" type="submit" value=""/>
+<input name="search_type" type="hidden" value="article"/>
+<input name="page_type" type="hidden" value="all"/>
+<input name="cx" type="hidden" value="partner-pub-6610802604051523:amzitfn8e7v"/>
+<input name="cof" type="hidden" value="FORID:10"/>
+<input name="ie" type="hidden" value="ISO-8859-1"/>
+<input name="siteurl" type="hidden" value=""/>
+<input name="ref" type="hidden" value=""/>
+<input name="ss" type="hidden" value=""/>
+</form>
+<a class="mobile-on mobile-search-toggle close-x" href="#close-search"><i class="fa fa-close"></i></a>
+</div>
+<div id="random-box">
+<a class="button-random-trope" href="/pmwiki/pmwiki.php/Main/CharlieBrownBaldness" onclick="ga('send', 'event', 'button', 'click', 'random trope');" rel="nofollow"></a>
+<a class="button-random-media" href="/pmwiki/pmwiki.php/Creator/RickDWasserman" onclick="ga('send', 'event', 'button', 'click', 'random media');" rel="nofollow"></a>
+</div>
+</div>
+</div>
+<div class="tablet-on" id="mobile-menu"><div class="mobile-menu-options">
+<div class="nav-wrapper">
+<a class="xl" href="/pmwiki/pmwiki.php/Main/Tropes">Tropes</a>
+<a class="xl" href="/pmwiki/pmwiki.php/Main/Media">Media</a>
+<a class="xl" href="/pmwiki/browse.php">Browse</a>
+<a class="xl" href="/pmwiki/index_report.php">Indexes</a>
+<a class="xl" href="/pmwiki/topics.php">Forums</a>
+<a class="xl" href="/pmwiki/recent_videos.php">Videos</a>
+<a href="/pmwiki/query.php?type=att">Ask The Tropers</a>
+<a href="/pmwiki/query.php?type=tf">Trope Finder</a>
+<a href="/pmwiki/query.php?type=ykts">You Know That Show...</a>
+<a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a>
+<a data-click-toggle="active" href="#tools">Tools <i class="fa fa-chevron-down"></i></a>
+<div class="tools-dropdown mobile-dropdown-linkList">
+<a href="/pmwiki/cutlist.php">Cut List</a>
+<a href="/pmwiki/changes.php">New Edits</a>
+<a href="/pmwiki/recent_edit_reasons.php">Edit Reasons</a>
+<a href="/pmwiki/launches.php">Launches</a>
+<a href="/pmwiki/img_list.php">Images List</a>
+<a href="/pmwiki/crown_activity.php">Crowner Activity</a>
+<a href="/pmwiki/no_types.php">Un-typed Pages</a>
+<a href="/pmwiki/page_type_audit.php">Recent Page Type Changes</a>
+</div>
+<a data-click-toggle="active" href="#hq">Tropes HQ <i class="fa fa-chevron-down"></i></a>
+<div class="tools-dropdown mobile-dropdown-linkList">
+<a href="/pmwiki/about.php">About Us</a>
+<a href="/pmwiki/contact.php">Contact Us</a>
+<a href="mailto:advertising@proper.io">Advertise</a>
+<a href="/pmwiki/dmca.php">DMCA Notice</a>
+<a href="/pmwiki/privacypolicy.php">Privacy Policy</a>
+</div>
+<a href="/pmwiki/ad-free-subscribe.php">Go Ad-Free</a>
+<div class="toggle-switches">
+<ul class="mobile-menu display-toggles">
+<li>Show Spoilers <div class="display-toggle show-spoilers" id="mobile-toggle-showspoilers"></div></li>
+<li>Night Vision <div class="display-toggle night-vision" id="mobile-toggle-nightvision"></div></li>
+<li>Sticky Header <div class="display-toggle sticky-header" id="mobile-toggle-stickyheader"></div></li>
+<li>Highlight Links <div class="display-toggle highlight-links" id="mobile-toggle-highlightlinks"></div></li>
+</ul>
+<script>updateMobilePrefs();</script>
+</div>
+</div>
+</div>
+</div>
+</header>
+<div class="mobile-on" id="homepage-introBox-mobile">
+<a href="/"><img class="logo-small" src="/images/logo-white-big.png"/></a>
+<form action="/pmwiki/search_result.php" class="search" style="margin:10px -5px -6px -5px;">
+<input class="search-box" name="q" placeholder="Search" required="" type="text" value=""/>
+<input class="submit-button" type="submit" value=""/>
+<input name="search_type" type="hidden" value="article"/>
+<input name="page_type" type="hidden" value="all"/>
+<input name="cx" type="hidden" value="partner-pub-6610802604051523:amzitfn8e7v"/>
+<input name="cof" type="hidden" value="FORID:10"/>
+<input name="ie" type="hidden" value="ISO-8859-1"/>
+<input name="siteurl" type="hidden" value=""/>
+<input name="ref" type="hidden" value=""/>
+<input name="ss" type="hidden" value=""/>
+</form>
+</div>
+<div class="ad" id="header-ad-wrapper">
+<div id="header-ad">
+<div class="ad-size-970x90 atf_banner">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_1"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_1'); });</script> </div>
+</div> </div>
+</div>
+</div>
+<div id="main-container">
+<div class="action-bar mobile-off" id="action-bar-top">
+<div class="action-bar-right">
+<p>Follow TV Tropes</p>
+<a class="button-fb" href="https://www.facebook.com/TVTropes">
+<i class="fa fa-facebook"></i></a>
+<a class="button-tw" href="https://www.twitter.com/TVTropes">
+<i class="fa fa-twitter"></i></a>
+<a class="button-re" href="https://www.reddit.com/r/TVTropes">
+<i class="fa fa-reddit-alien"></i></a>
+</div>
+<nav class="actions-wrapper" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<ul class="page-actions" id="top_main_list">
+<li class="link-edit">
+<a class="article-edit-button" data-modal-target="login" href="/pmwiki/pmwiki.php/Main/LevelEditor?action=edit" rel="nofollow">
+<i class="fa fa-pencil"></i> Edit Page</a></li><li class="link-related"><a href="/pmwiki/relatedsearch.php?term=Main/LevelEditor">
+<i class="fa fa-share-alt"></i> Related</a></li><li class="link-history"><a href="/pmwiki/article_history.php?article=Main.LevelEditor">
+<i class="fa fa-history"></i> History</a></li><li class="link-discussion"><a href="/pmwiki/remarks.php?trope=Main.LevelEditor">
+<i class="fa fa-comment"></i> Discussion</a></li> </ul>
+<button class="nav__dropdown-toggle" id="top_more_button" onclick="toggle_more_menu('top');" type="button">More</button>
+<ul class="more_menu hidden_more_list" id="top_more_list">
+<li class="link-todo tuck-always more_list_item"><a data-modal-target="login" href="#todo"><i class="fa fa-check-circle"></i> To Do</a></li><li class="link-pageSource tuck-always more_list_item"><a data-modal-target="login" href="/pmwiki/pmwiki.php/Main/LevelEditor?action=source" rel="nofollow" target="_blank"><i class="fa fa-code"></i> Page Source</a></li> </ul>
+</nav>
+<div class="WikiWordModalStub"></div>
+<div class="ImgUploadModalStub" data-page-type="Article"></div>
+<div class="login-alert" style="display: none;">
+You need to <a href="/pmwiki/login.php" style="color:#21A0E8">login</a> to do this. <a href="/pmwiki/login.php?tab=register_account" style="color:#21A0E8">Get Known</a> if you don't have an account
+</div>
+</div>
+<div class="page-Article" id="main-content">
+<article class="with-sidebar" id="main-entry">
+<input id="groupname-hidden" type="hidden" value="Main"/>
+<input id="title-hidden" type="hidden" value="LevelEditor"/>
+<input id="article_id" type="hidden" value="26636"/>
+<input id="logged_in" type="hidden" value="false"/>
+<p class="hidden" id="current_url">http://tvtropes.org/pmwiki/pmwiki.php/Main/LevelEditor</p>
+<meta content="" itemprop="datePublished"/>
+<meta content="" itemprop="articleSection"/>
+<meta content="" itemprop="image"/>
+<a class="watch-button" data-modal-target="login" href="#watch">Follow<span>ing</span></a>
+<h1 class="entry-title" itemprop="headline">
+Level Editor
+</h1>
+<script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+                "@type": "ListItem",
+                "position": 1,
+                "name": "tvtropes.org",
+                "item": "https://tvtropes.org"
+            },{
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Tropes",
+                "item": "https://tvtropes.org/pmwiki/pmwiki.php/Main/Tropes"
+            },{
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Level Editor"            }]
+        }
+    </script>
+<a class="mobile-actionbar-toggle mobile-on" data-click-toggle="active" href="#mobile-actions-toggle" id="mobile-actionbar-toggle">
+<p class="tiny-off">Go To</p><span></span><span></span><span></span><i class="fa fa-pencil"></i></a>
+<nav class="mobile-actions-wrapper mobile-on" id="mobile-actions-bar"></nav>
+<div class="modal fade hidden-until-active" id="editLockModal">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button aria-label="Close" class="close" data-dismiss="modal" type="button"> <span aria-hidden="true">×</span></button>
+<h4 class="modal-title">Edit Locked</h4>
+</div>
+<div class="modal-body">
+<div class="row">
+<div class="body">
+<div class="danger troper_locked_message"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<nav class="body-options" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<ul class="subpage-links">
+<li>
+<a class="subpage-link curr-subpage" href="/pmwiki/pmwiki.php/Main/LevelEditor" title="The Main page">
+<span class="wrapper"><span class="spi main-page"></span>Main</span></a>
+</li>
+<li>
+<a class="subpage-link" href="/pmwiki/pmwiki.php/Laconic/LevelEditor" title="The Laconic page">
+<span class="wrapper"><span class="spi laconic-icon"></span>Laconic</span></a>
+</li>
+<li>
+<a class="subpage-link video-examples-tab" href="/pmwiki/pmwiki.php/VideoExamples/LevelEditor" title="Video Examples">
+<img alt="play" class="" src="/images/play-button-logo.png"/>
+<span class="wrapper">VideoExamples</span>
+</a>
+</li>
+<li class="create-subpage dropdown">
+<a aria-expanded="false" class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);" role="button">
+<span class="wrapper">Create New <i class="fa fa-plus-circle"></i></span>
+</a>
+<select onchange="this.options[this.selectedIndex].value &amp;&amp; (window.location = this.options[this.selectedIndex].value);">
+<option value="">- Create New -</option>
+<option value="/pmwiki/pmwiki.php/Analysis/LevelEditor?action=edit">Analysis</option>
+<option value="/pmwiki/pmwiki.php/Characters/LevelEditor?action=edit">Characters</option>
+<option value="/pmwiki/pmwiki.php/FanficRecs/LevelEditor?action=edit">FanficRecs</option>
+<option value="/pmwiki/pmwiki.php/FanWorks/LevelEditor?action=edit">FanWorks</option>
+<option value="/pmwiki/pmwiki.php/Fridge/LevelEditor?action=edit">Fridge</option>
+<option value="/pmwiki/pmwiki.php/Haiku/LevelEditor?action=edit">Haiku</option>
+<option value="/pmwiki/pmwiki.php/Headscratchers/LevelEditor?action=edit">Headscratchers</option>
+<option value="/pmwiki/pmwiki.php/ImageLinks/LevelEditor?action=edit">ImageLinks</option>
+<option value="/pmwiki/pmwiki.php/PlayingWith/LevelEditor?action=edit">PlayingWith</option>
+<option value="/pmwiki/pmwiki.php/Quotes/LevelEditor?action=edit">Quotes</option>
+<option value="/pmwiki/pmwiki.php/Recap/LevelEditor?action=edit">Recap</option>
+<option value="/pmwiki/pmwiki.php/ReferencedBy/LevelEditor?action=edit">ReferencedBy</option>
+<option value="/pmwiki/pmwiki.php/Synopsis/LevelEditor?action=edit">Synopsis</option>
+<option value="/pmwiki/pmwiki.php/Timeline/LevelEditor?action=edit">Timeline</option>
+<option value="/pmwiki/pmwiki.php/Trivia/LevelEditor?action=edit">Trivia</option>
+<option value="/pmwiki/pmwiki.php/WMG/LevelEditor?action=edit">WMG</option>
+<option value="/pmwiki/pmwiki.php/YMMV/LevelEditor?action=edit">YMMV</option>
+</select>
+</li>
+</ul>
+</nav>
+<div class="article-content retro-folders" id="main-article">
+<p></p><div class="quoteright" style="width:240px;"><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/NintendoWars" title="/pmwiki/pmwiki.php/VideoGame/NintendoWars"><div class="lazy_load_img_box" style="padding-top:66.67%"><img alt="https://static.tvtropes.org/pmwiki/pub/images/aw2le_9353.png" border="0" class="embeddedimage" height="160" src="https://static.tvtropes.org/pmwiki/pub/images/aw2le_9353.png" width="240"/></div></a></div>
+Have you ever played a video game that you really like, so much that you started to daydream about making your own levels for it and playing your own creations? Some game companies are nice enough to help players achieve that dream, by adding a level editor to their games.
+<div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_1"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_1'); })</script></div></div><p>A level editor is a program, or feature built into a game, that allows players to make their own worlds, or in some cases, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ExactlyWhatItSaysOnTheTin" title="/pmwiki/pmwiki.php/Main/ExactlyWhatItSaysOnTheTin">edit the ones built into the game itself</a>. It has the potential to add a ton of replay value to an existing game, and can sometimes serve as a big selling point. Ironically, in some cases, the best levels tend to come from players rather than the less imaginative company that actually made the game.
+</p><p>Of course, this is all good as long as the editor is easy to use. When it's complicated and frustrating, the result is that a tiny minority of players actually bother to make their own levels, while others download and play them (if such a feature is available, and if enough players know how to use that feature).
+</p><p>Other games don't come with level editors, but editors may be unofficially created for them by fans.
+</p><div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_2"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_2'); })</script></div></div><p>Compare <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GameMod" title="/pmwiki/pmwiki.php/Main/GameMod">Game Mod</a> and <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GameMaker" title="/pmwiki/pmwiki.php/Main/GameMaker">Game Maker</a>.
+</p><hr/><h2>Examples of games that come with their own editor:</h2>
+<p></p><div class="folderlabel" onclick="toggleAllFolders();">    open/close all folders  </div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder0');">    Action Game </div><div class="folder" id="folder0" isfolder="true" style="display:block;">
+<ul><li> The NES tank battle game, <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/BattleCity" title="/pmwiki/pmwiki.php/VideoGame/BattleCity">Battle City</a></em>, was one of the first NES games to feature a level editor, though you couldn't save them.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/WreckingCrew" title="/pmwiki/pmwiki.php/VideoGame/WreckingCrew">Wrecking Crew</a></em> also featured one, but like <em>Excitebike</em>, this required special hardware to save that was released only for the Famicom and not the NES.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/TombRaider" title="/pmwiki/pmwiki.php/Franchise/TombRaider">Tomb Raider</a></em> has had a thriving community based around its level editor for the fourth game in the series for <a class="twikilink" href="/pmwiki/pmwiki.php/Main/LongRunners" title="/pmwiki/pmwiki.php/Main/LongRunners">over ten years</a>. The <a class="twikilink" href="/pmwiki/pmwiki.php/Main/InvisibleGrid" title="/pmwiki/pmwiki.php/Main/InvisibleGrid">Invisible Grid</a> engine makes it fast and easy to build levels, but the expectations of what makes a good level have become <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SeriousBusiness" title="/pmwiki/pmwiki.php/Main/SeriousBusiness">higher and higher</a>. There is also <a class="twikilink" href="/pmwiki/pmwiki.php/Main/WordSaladTitle" title="/pmwiki/pmwiki.php/Main/WordSaladTitle">Dxtre3D</a> which allows modding of <em>Tomb Raider</em>s 1 to 5; <em>Tomb Raider Engine Patcher</em> (TREP), which expands the limits of the engine and allows for more level features, and <em>Next Generation Tomb Raider</em>, which isn't really next generation at all, but it includes a few features from TREP and some new ones. TREP and NGLE are not compatible with each other, which causes some debate over which is the better editor.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/LEGOAdaptationGame" title="/pmwiki/pmwiki.php/VideoGame/LEGOAdaptationGame">LEGO Indiana Jones 2: The Adventure Continues &amp; LEGO Harry Potter: Years 1-4</a></em> featured a level editor, which allowed players to create levels using preset bricks, plates, structures, and entities. Travellers' Tales promised one in both <em>LEGO Star Wars 3</em> and <em>LEGO Harry Potter: Years 5-7</em>, but the level editor didn't make an appearance.
+</li><li> <em>S. O. S.</em> on the <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/ZXSpectrum" title="/pmwiki/pmwiki.php/UsefulNotes/ZXSpectrum">ZX Spectrum</a> has cheat mode that includes a level editor. The victory screen tells you how to access it.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/HotlineMiami2WrongNumber" title="/pmwiki/pmwiki.php/VideoGame/HotlineMiami2WrongNumber">Hotline Miami 2: Wrong Number</a></em> had a level editor added in a later update. Not only does it allow the players to create and populate their own levels, but it also allows for the creation of entire campaigns, complete with cutscenes.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder1');">    Adventure Game </div><div class="folder" id="folder1" isfolder="true" style="display:block;">
+<ul><li> The PC adventure game <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Darkstone" title="/pmwiki/pmwiki.php/VideoGame/Darkstone">Darkstone</a></em> didn't come with a level editor, but players can download an official one from the makers of the game.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder2');">    Arcade Game </div><div class="folder" id="folder2" isfolder="true" style="display:block;">
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Glider" title="/pmwiki/pmwiki.php/VideoGame/Glider">Glider</a> 4.0</em> (where the Room Editor was a separate application) and <em>Glider PRO</em> (where it wasn't).
+</li></ul></div>
+<div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_3"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_3'); })</script></div></div><p></p><div class="folderlabel" onclick="togglefolder('folder3');">    Fighting Games </div><div class="folder" id="folder3" isfolder="true" style="display:block;">
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SuperSmashBrosBrawl" title="/pmwiki/pmwiki.php/VideoGame/SuperSmashBrosBrawl">Super Smash Bros. Brawl</a></em> comes with a rather simplified, grid-based editor called the Stage Editor that doesn't allow the player to do even 1/10 of what the game designers themselves did. Even so, it's the first game in the series to include an editor, which provided a lot of fun for players who had specific ideas in mind of types of arenas they wanted to make.
+<ul><li> The Wii U version of <a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SuperSmashBrosForNintendo3DSAndWiiU" title="/pmwiki/pmwiki.php/VideoGame/SuperSmashBrosForNintendo3DSAndWiiU">the fourth game</a> expands the functionality by allowing players to draw the shape of the stages via the GamePad touchscreen, instead of placing blocks, although also is limited in what kind of features they have with 2 variations of each of the 4 given features (Springs, cannons, moving platforms and lava).
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SuperSmashBrosUltimate" title="/pmwiki/pmwiki.php/VideoGame/SuperSmashBrosUltimate">Ultimate</a></em> initially didn't launch with an editor, but it was added in the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DownloadableContent" title="/pmwiki/pmwiki.php/Main/DownloadableContent">Version 3.0 Update</a>. The major addition to the editor is the the stages now have three layers that can be edited, the background, the battlegrounds, and the foreground.
+</li></ul></li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder4');">    First-Person Shooter </div><div class="folder" id="folder4" isfolder="true" style="display:block;">
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FarCry2" title="/pmwiki/pmwiki.php/VideoGame/FarCry2">Far Cry 2</a></em> has a very detailed multiplayer map editor that allows item/vehicle/building placement, terrain shaping, vegetation, etc.
+</li><li> Of course, the Build editor. <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DukeNukem3D" title="/pmwiki/pmwiki.php/VideoGame/DukeNukem3D">Duke Nukem 3D</a></em>, <em><a class="twikilink" href="/pmwiki/pmwiki.php/Main/ShadowWarrior" title="/pmwiki/pmwiki.php/Main/ShadowWarrior">Shadow Warrior</a></em>, <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Blood" title="/pmwiki/pmwiki.php/VideoGame/Blood">Blood</a></em>, <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/RedneckRampage" title="/pmwiki/pmwiki.php/VideoGame/RedneckRampage">Redneck Rampage</a></em>... Every game that used the Build engine had a version of the Build editor.
+</li><li> Every game in the <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Unreal" title="/pmwiki/pmwiki.php/VideoGame/Unreal">Unreal</a></em> franchise, sans the console-exclusive games such as <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/UnrealChampionship2TheLiandriConflict" title="/pmwiki/pmwiki.php/VideoGame/UnrealChampionship2TheLiandriConflict">Unreal Championship 2: The Liandri Conflict</a></em> for obvious reasons, comes with whatever version of the editor was used to make it. Some even include tutorials.
+<ul><li> The <em>Unreal Developer's Kit</em> (engine, editor, script tools, SpeedTree, and a few other nice goodies) is now free to download and use, although you don't get many premade resources to go with it, and you'll want the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/CrackIsCheaper" title="/pmwiki/pmwiki.php/Main/CrackIsCheaper">Mastering Unreal Technology</a> book series if you're inexperienced.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Cube" title="/pmwiki/pmwiki.php/VideoGame/Cube">Cube</a></em> is perhaps most famous for its level editor: due to the way maps work, they can be edited in-game, in realtime. Many other first-person shooter engines require external utilities to be run on a map before it can be used in-game. Cube also allows <em>multiplayer</em> level editing.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Marathon" title="/pmwiki/pmwiki.php/VideoGame/Marathon">Marathon</a> Infinity</em> was named for its inclusion of editing tools.
+</li><li> All three <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TimeSplitters" title="/pmwiki/pmwiki.php/VideoGame/TimeSplitters">TimeSplitters</a></em> games have level editors, the <a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TimeSplitters" title="/pmwiki/pmwiki.php/VideoGame/TimeSplitters">first</a> for multiplayer levels and the <a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TimeSplitters2" title="/pmwiki/pmwiki.php/VideoGame/TimeSplitters2">second</a> and <a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TimeSplittersFuturePerfect" title="/pmwiki/pmwiki.php/VideoGame/TimeSplittersFuturePerfect">third</a> for multiplayer and single player levels. It goes beyond typical object placement and weapon placement; the player is allowed to place enemies, edit their health (in 3), determine how many will spawn, place objects, keys, doors, edit what doors need keys and which don't, place objectives, make objectives for multiplayer (in 3), place weapons, edit the look of the stage, choose if it's outdoor or indoor (in 3), place spawn points, change the lighting, place autoguns, place cameras and vehicles (3), and even a remote control cat. The best part: you make the map layout from scratch entirely, no preset map, and work your stage up from there with a large variety of map tiles and multiple floors.
+</li><li> The Source engine development tools are technically not tied to any one game, but Source games such as <em>Half-Life 2</em> do include their raw materials to work with. In fact, several <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TeamFortress2" title="/pmwiki/pmwiki.php/VideoGame/TeamFortress2">Team Fortress 2</a></em> maps created by the fan community have been released publicly in content patches. Both <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Left4Dead" title="/pmwiki/pmwiki.php/VideoGame/Left4Dead">Left 4 Dead</a></em> games, <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TeamFortress2" title="/pmwiki/pmwiki.php/VideoGame/TeamFortress2">Team Fortress 2</a></em>, <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/HalfLife2" title="/pmwiki/pmwiki.php/VideoGame/HalfLife2">Half-Life 2</a></em>, <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Portal" title="/pmwiki/pmwiki.php/VideoGame/Portal">Portal</a></em>, and other Source engine games have the Hammer Editor program, which allows players to create maps, custom events, and other things. Valve has started to take community maps and host servers for them. <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Portal2" title="/pmwiki/pmwiki.php/VideoGame/Portal2">Portal 2</a></em> features a simplified in-game editor, added in May 2012 for the Perpetual Testing Initiative.
+</li><li> <em><a class="createlink" href="/pmwiki/pmwiki.php/VideoGame/Eradicator" title="/pmwiki/pmwiki.php/VideoGame/Eradicator">Eradicator</a></em> shipped with two editors, a basic offline level editor, and the in-game "ROPE" editor which, as the game's documentation stated, gave you enough to hang yourself. However, much of the interactive parts of the game required specific DLLs to be compiled and added to the maps.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Halo3" title="/pmwiki/pmwiki.php/VideoGame/Halo3">Halo 3</a></em> introduced Forge Mode, which has been refined and expanded in virtually every <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/Halo" title="/pmwiki/pmwiki.php/Franchise/Halo">Halo</a></em> game since (including <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/HaloReach" title="/pmwiki/pmwiki.php/VideoGame/HaloReach">Halo: Reach</a></em> and <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Halo4" title="/pmwiki/pmwiki.php/VideoGame/Halo4">Halo 4</a></em>). It has a rather extensive community.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Videogame/Crysis" title="/pmwiki/pmwiki.php/Videogame/Crysis">Crysis</a></em> comes with the Sandbox Editor, a simple to use but difficult to master real-time level editor. The vanilla game has no way to share levels bar downloading it from a website, whereas the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ExpansionPack" title="/pmwiki/pmwiki.php/Main/ExpansionPack">Expansion Pack</a> enables in-game downloading.
+<ul><li> The <em><a class="twikilink" href="/pmwiki/pmwiki.php/Videogame/MechWarrior" title="/pmwiki/pmwiki.php/Videogame/MechWarrior">MechWarrior Living Legends</a></em> total conversion <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GameMod" title="/pmwiki/pmwiki.php/Main/GameMod">Game Mod</a> made great use of the level editor to make up for the relatively small number of official maps; many popular custom maps <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AscendedFanon" title="/pmwiki/pmwiki.php/Main/AscendedFanon">were later made official and polished up</a>. There was a number of unofficial gimmick levels such as the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/WackyRacing" title="/pmwiki/pmwiki.php/Main/WackyRacing">racing levels</a> TSA_RACE_Kaido and TSA_Mariokart
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Videogame/Tribes" title="/pmwiki/pmwiki.php/Videogame/Tribes">Tribes 2</a></em> and all the games running on its Torque <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/GameEngine" title="/pmwiki/pmwiki.php/UsefulNotes/GameEngine">Game Engine</a> feature a robust in-game real-time level editor accessed with a keystroke in singleplayer or via super-admin privileges on online servers. The editor allows players to modify the terrain, skybox, water, and so on, and place/rotate/resize pre-made and custom objects (buildings, turrets, sounds, etc). If the level designer stuck to vanilla pre-made objects, the map could also be played by anyone joining the server without requiring a separate download.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Doom2016" title="/pmwiki/pmwiki.php/VideoGame/Doom2016">DOOM (2016)</a></em> includes the SnapMap editor. It's not as advanced as dedicated modding tools for classic <em>Doom</em> games are, though (the fact that it was designed with multiplayer in mind shows this). It has since become much more elaborate in updates, with texture options for player blocking volumes to make custom geometry more viable in addition to single player and story options. It's even gained the ability to direct players to other maps in succession to create pseudo episodes.
+</li><li> Maps can be created for games based in each of the first three <a class="twikilink" href="/pmwiki/pmwiki.php/Creator/IdSoftware" title="/pmwiki/pmwiki.php/Creator/IdSoftware">idTech</a> engines such as <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/QuakeI" title="/pmwiki/pmwiki.php/VideoGame/QuakeI">Quake</a></em>, <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/QuakeII" title="/pmwiki/pmwiki.php/VideoGame/QuakeII">Quake II</a></em> and <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/QuakeIIIArena" title="/pmwiki/pmwiki.php/VideoGame/QuakeIIIArena">Quake III: Arena</a></em> (not to mention the tons of <a class="twikilink" href="/pmwiki/pmwiki.php/Main/FreewareGames" title="/pmwiki/pmwiki.php/Main/FreewareGames">freeware</a> and FOSS games such as <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/OpenArena" title="/pmwiki/pmwiki.php/VideoGame/OpenArena">OpenArena</a></em>, <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Nexuiz" title="/pmwiki/pmwiki.php/VideoGame/Nexuiz">Nexuiz</a></em>, <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Xonotic" title="/pmwiki/pmwiki.php/VideoGame/Xonotic">Xonotic</a></em>, and <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/UrbanTerror" title="/pmwiki/pmwiki.php/VideoGame/UrbanTerror">Urban Terror</a></em>) with the swiss-army editor line <a class="urllink" href="http://www.qeradiant.com">Radiant<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a> (<a class="urllink" href="http://www.icculus.org/gtkradiant/">GTKRadiant<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a> and <a class="createlink" href="/pmwiki/pmwiki.php/Creator/AlientrapGames" title="/pmwiki/pmwiki.php/Creator/AlientrapGames">Alientrap Games</a> <a class="urllink" href="http://ingar.satgnu.net/gtkradiant/">NetRadiant<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a>) and <a class="urllink" href="http://quark.sourceforge.net">QuArK<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a> (Quake Army Knife).
+</li><li> The first two <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SeriousSam" title="/pmwiki/pmwiki.php/VideoGame/SeriousSam">Serious Sam</a></em> games come with level editors.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder5');">    Minigame Games </div><div class="folder" id="folder5" isfolder="true" style="display:block;">
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/WarioWare" title="/pmwiki/pmwiki.php/VideoGame/WarioWare">WarioWare</a> DIY</em> lets you make whole Microgames from scratch and share them.
+<ul><li> And thanks to a certain hack, you can make boss games as well.
+</li></ul></li><li> At least several combat flight simulators (such as <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/IL2Sturmovik" title="/pmwiki/pmwiki.php/VideoGame/IL2Sturmovik">IL-2 Sturmovik</a></em>) are famous for their inbuilt "mission builders." One can find numerous missions and even campaigns built by players that are offered up for download on some parts of the Internet.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Website/Neopets" title="/pmwiki/pmwiki.php/Website/Neopets">Neopets</a></em> has a multitude of games with level editors, along with Featured Level of the Week for most of those. Most of the games are simple variations of other games, but a few are original content. The most popular of the games with a level maker, Hannah and the Pirate Caves, have several guilds dedicated to making levels for it, and has even sparked an off-site community dedicated to it.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder6');">    MMORPG </div><div class="folder" id="folder6" isfolder="true" style="display:block;">
+<ul><li> The added Architect feature in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/CityOfHeroes" title="/pmwiki/pmwiki.php/VideoGame/CityOfHeroes">City of Heroes</a></em> does this for the game. Since it's an MMO, players can play one another's missions and even fight enemy groups created from the ground up (or a chimera of usual bad guys given a new purpose.).
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/StarTrekOnline" title="/pmwiki/pmwiki.php/VideoGame/StarTrekOnline">Star Trek Online</a></em> has the released Foundry Toolset, which allows players to craft their own missions in a large variety of ways. Quite a few have created broad story arcs, and it has quickly become a major facet of STO. Cryptic has duplicated the Foundry for <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Neverwinter" title="/pmwiki/pmwiki.php/VideoGame/Neverwinter">Neverwinter</a></em>.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder7');">    Pinball </div><div class="folder" id="folder7" isfolder="true" style="display:block;">
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MileHighPinball" title="/pmwiki/pmwiki.php/VideoGame/MileHighPinball">Mile High Pinball</a></em> for the Nokia <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/NGage" title="/pmwiki/pmwiki.php/UsefulNotes/NGage">N-Gage</a> has a variation — you couldn't edit the game's tables, but you could rearrange them to an easier (or harder) sequence, then post them online for other players to try.
+</li><li> In the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GameMaker" title="/pmwiki/pmwiki.php/Main/GameMaker">Game Maker</a> category, <a class="twikilink" href="/pmwiki/pmwiki.php/Creator/ElectronicArts" title="/pmwiki/pmwiki.php/Creator/ElectronicArts">Electronic Arts</a>' <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/PinballConstructionSet" title="/pmwiki/pmwiki.php/VideoGame/PinballConstructionSet">Pinball Construction Set</a></em> (by Bill Budge) was all about letting players make and play their own pinball tables. It was later updated and released as <em>Virtual Pinball</em> for the <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/SegaGenesis" title="/pmwiki/pmwiki.php/UsefulNotes/SegaGenesis">Sega Genesis</a>.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder8');">    Platformer </div><div class="folder" id="folder8" isfolder="true" style="display:block;">
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/LittleBigPlanet" title="/pmwiki/pmwiki.php/VideoGame/LittleBigPlanet">LittleBigPlanet</a></em> uses this as a major selling point. Players can make levels and share them online. And share them they do: there are tons and tons of levels online, including ones that are themed after other games, or various movies. As of February 2017, the game has <em>ten million</em> user-created levels. The possibilities were expanded when <em>LittleBigPlanet 2</em> added the Controllinator, which lets you change rules and play control, allowing you to essentially create your own <em>game</em>.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MegaManPoweredUp" title="/pmwiki/pmwiki.php/VideoGame/MegaManPoweredUp">Mega Man Powered Up</a></em> also featured one, though to unlock the more complex material and diverse enemy groupings, you had to find them in the main game.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MegaManX1" title="/pmwiki/pmwiki.php/VideoGame/MegaManX1">Mega Man X1</a></em> has one... kind of. What's that? Can't find it? It's a secret, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DummiedOut" title="/pmwiki/pmwiki.php/Main/DummiedOut">Dummied Out</a> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/LevelEditor" title="/pmwiki/pmwiki.php/Main/LevelEditor">Level Editor</a>, as documented <a class="urllink" href="http://tcrf.net/Mega_Man_X#Map_Editor_Mode">here<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a>.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/JazzJackrabbit" title="/pmwiki/pmwiki.php/VideoGame/JazzJackrabbit">Jazz Jackrabbit</a> II</em> has one. It's the only reason there are still people playing this game online.
+</li><li> <em>Dewy's Adventure</em> allows you to make your own levels. They actually have a different format from the normal levels  they focus on collecting stars, and are ideally supposed to be more obstacle-based.
+</li><li> The first two <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Jumper" title="/pmwiki/pmwiki.php/VideoGame/Jumper">Jumper</a></em> games came with stand-alone programs for creating own stages. <em>Jumper Two Editor</em> allows for creating entire <em>sectors</em>, also with <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ScoringPoints" title="/pmwiki/pmwiki.php/Main/ScoringPoints">Scoring Points</a>.
+</li><li> When <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TowerOfHeaven" title="/pmwiki/pmwiki.php/VideoGame/TowerOfHeaven">Tower Of Heaven</a></em> was ported to <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/AdobeFlash" title="/pmwiki/pmwiki.php/UsefulNotes/AdobeFlash">Flash</a>, a level creator (entitled "<a class="twikilink" href="/pmwiki/pmwiki.php/Main/AwesomeMcCoolname" title="/pmwiki/pmwiki.php/Main/AwesomeMcCoolname">Pillars of Creation</a>") was added; it is unlocked by beating the game once, and you have to beat the level you create in order to share it with others.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SpeedyEggbert" title="/pmwiki/pmwiki.php/VideoGame/SpeedyEggbert">Speedy Eggbert</a></em> (also known as Speedy Blupi), a Mario-style game created for Windows 98, came with a very easy-to-use level builder, allowing players to create levels entirely from scratch. Players could also modify the pre-existing levels.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/NutsAndMilk" title="/pmwiki/pmwiki.php/VideoGame/NutsAndMilk">Nuts &amp; Milk</a></em> has a level editor in the NES version (which wasn't even officially released outside Japan); the very different computer version came with a level editor too.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/NewSuperMarioBrosU" title="/pmwiki/pmwiki.php/VideoGame/NewSuperMarioBrosU">New Super Mario Bros. U</a></em>, there is a "Coin Editor" feature that lets a player edit a level by choosing to place coins in it for players to fight over in Coin Battle mode.
+<ul><li> The Coin Editor, however, acts as a precursor for a long-overdue <em>actual, hacking-free level editor</em> that <a class="twikilink" href="/pmwiki/pmwiki.php/Main/WordOfGod" title="/pmwiki/pmwiki.php/Main/WordOfGod">Word of God</a> seemingly promised to <a class="urllink" href="http://www.nintendolife.com/news/2012/12/user_created_mario_stages_are_a_possibility_in_the_future">eventually become a reality in the future.<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a> The fruit of their efforts came to be known as <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SuperMarioMaker" title="/pmwiki/pmwiki.php/VideoGame/SuperMarioMaker">Super Mario Maker</a></em>, which proved popular enough to <a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SuperMarioMaker2" title="/pmwiki/pmwiki.php/VideoGame/SuperMarioMaker2">merit a sequel</a>.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/OffspringFling" title="/pmwiki/pmwiki.php/VideoGame/OffspringFling">Offspring Fling!</a>!</em> has its own, though it must be downloaded separately from the game. Community-created levels can be played straight from the main game.
+</li><li> Beginning with <em><a class="twikilink" href="/pmwiki/pmwiki.php/Main/UpdatedRerelease" title="/pmwiki/pmwiki.php/Main/UpdatedRerelease">Rayman Gold</a></em>, most PC releases of <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Rayman" title="/pmwiki/pmwiki.php/VideoGame/Rayman">Rayman</a></em> include a level editor. However, for reasons not explicitly stated but presumably having something to do with pacing, custom levels use slightly different mechanics than original ones (though new official ones usually use custom stage mechanics too).
+</li><li> This is one of the main features of the fan game <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SuperMario63" title="/pmwiki/pmwiki.php/VideoGame/SuperMario63">Super Mario 63</a></em>.
+<ul><li> Its <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SpiritualSuccessor" title="/pmwiki/pmwiki.php/Main/SpiritualSuccessor">Spiritual Successor</a>, <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/LastLegacy" title="/pmwiki/pmwiki.php/VideoGame/LastLegacy">Last Legacy</a></em>, greatly expands on the level designer, to the point that every level in the main story mode can be created in it.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Abuse" title="/pmwiki/pmwiki.php/VideoGame/Abuse">Abuse</a></em> has one that can be accessed by using the <span class="font-s">ABUSE.EXE -edit</span> command in DOS, and you can create your own levels with the game's level editor.
+</li><li> The premise of <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/EverybodyEdits" title="/pmwiki/pmwiki.php/VideoGame/EverybodyEdits">Everybody Edits</a></em> is to <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ExactlyWhatItSaysOnTheTin" title="/pmwiki/pmwiki.php/Main/ExactlyWhatItSaysOnTheTin">edit worlds</a> and have others play them. Though most levels require a password to edit, there are still a few, albeit much less open worlds that can be edited by anybody, although typically open world edits are limited in what blocks you can place.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Dustforce" title="/pmwiki/pmwiki.php/VideoGame/Dustforce">Dustforce</a></em> has an editor that offers all of the tools used to make the default levels, including lighting/fog, music, ambiance, and camera triggers. User-made levels are published to <a class="urllink" href="http://atlas.dustforce.com/">the Atlas.<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/CopyKitty" title="/pmwiki/pmwiki.php/VideoGame/CopyKitty">CopyKitty</a></em>, even in the free version, has one available from the start, with most stuff used to make the built-in levels, including a smorgasbord of visual options and Hard Mode options, plus the ability to export. <a class="twikilink" href="/pmwiki/pmwiki.php/Main/WordOfGod" title="/pmwiki/pmwiki.php/Main/WordOfGod">Word of God</a> says there will even be more features at some point.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/UltimateChickenHorse" title="/pmwiki/pmwiki.php/VideoGame/UltimateChickenHorse">Ultimate Chicken Horse</a></em> is all about this:
+<ul><li> Level editing is a major feature even mid-game. Many levels are impossible to clear at the start, but each round, each player gets to place one object to make the level easier (or harder). Even if the level is possible to complete, you don't get any points for it unless one player died, so players also need to add hazards and avoid them.
+</li><li> There is a regular level editor also available. You can either create your own level from scratch or add more blocks and obstacles to pre-existing levels, and then save it for use in future games.
+</li></ul></li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder9');">    Puzzle Games </div><div class="folder" id="folder9" isfolder="true" style="display:block;">
+<ul><li> The 3DS download <em><a class="createlink" href="/pmwiki/pmwiki.php/VideoGame/BlockFactory" title="/pmwiki/pmwiki.php/VideoGame/BlockFactory">Block Factory</a></em> is a heavily disappointing game based on this idea. For example: ever dreamed of playing an endless version of <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Tetris" title="/pmwiki/pmwiki.php/VideoGame/Tetris">Tetris</a></em> with gravity enabled? Too bad, enable gravity and the blocks always <em>completely</em> fall apart, ergo, no holes will ever be made, and thus, no cascading, strategy, or challenge. You can't even finish the name of the game, given that you can only input 5 letters.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/BoomBlox" title="/pmwiki/pmwiki.php/VideoGame/BoomBlox">Boom Blox</a></em> came with a basic level editor that let you place blox (In-game blocks) and set basic rules, while the sequel, Boom Blox Bash Party's level editor pretty much gave you access to all the tools the game developers used.
+</li><li> <em><a class="createlink" href="/pmwiki/pmwiki.php/VideoGame/CubicNinja" title="/pmwiki/pmwiki.php/VideoGame/CubicNinja">Cubic Ninja</a></em> has a level editor, which allows levels to be created and shared as QR codes. By far the most common use of this feature, however, is not to share levels, but rather to <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GoodBadBugs" title="/pmwiki/pmwiki.php/Main/GoodBadBugs">exploit a bug</a> in the QR code reader to enable the 3DS to run homebrew software. In fact, since the game was never really popular or successful until this exploit came out, this is pretty much the only thing the game is known for at all.
+</li><li> Every one of <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheIncredibleMachine" title="/pmwiki/pmwiki.php/VideoGame/TheIncredibleMachine">The Incredible Machine</a></em> games come with an editor that lets you create your own <a class="twikilink" href="/pmwiki/pmwiki.php/Main/RubeGoldbergDevice" title="/pmwiki/pmwiki.php/Main/RubeGoldbergDevice">Rube Goldberg Device</a>!
+<ul><li> In addition, its <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SpiritualSuccessor" title="/pmwiki/pmwiki.php/Main/SpiritualSuccessor">spiritual successors</a>, like <em>Contraption Maker</em> and <em>Crazy Machines</em>, also have this feature.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/LodeRunner" title="/pmwiki/pmwiki.php/VideoGame/LodeRunner">Lode Runner</a></em> was one of the earliest games with a level editor, having been released on the <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/AppleII" title="/pmwiki/pmwiki.php/UsefulNotes/AppleII">Apple ][</a> in 1983. This was a key feature of every port since (though, sd with the other NES games, one could only save his creations on the NES port in the Japanese version of the game).
+</li><li> The PSP remake of <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Lemmings" title="/pmwiki/pmwiki.php/VideoGame/Lemmings">Lemmings</a></em> includes a level editor, for the first time ever. The closest thing available before it was a built-from-scratch clone of the Lemmings engine that was eventually <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ScrewedByTheLawyers" title="/pmwiki/pmwiki.php/Main/ScrewedByTheLawyers">cease-and-desist-ed</a>.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Repton" title="/pmwiki/pmwiki.php/VideoGame/Repton">Repton</a> 3</em> included both level and graphics editors. The next instalment, <em>Repton Infinity</em>, allowed you to create your own puzzle objects with a built-in miniature programming language.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/BoulderDash" title="/pmwiki/pmwiki.php/VideoGame/BoulderDash">Boulder Dash</a></em> had a separate level editor titled <em>Boulder Dash Construction Kit</em> released for most 1980s computers.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Shift" title="/pmwiki/pmwiki.php/VideoGame/Shift">Shift</a></em> introduced this in the second game.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/ZZT" title="/pmwiki/pmwiki.php/VideoGame/ZZT">ZZT</a></em> had a level editor as the focus of the game. It also had 4 worlds built-in to the game (though only one of them, Town of ZZT, was in the shareware version).
+<ul><li> Its spiritual sequel, <em>Megazeux</em>, was closer to a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GameMaker" title="/pmwiki/pmwiki.php/Main/GameMaker">Game Maker</a>.
+</li></ul></li><li> Since <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/CrystalQuest" title="/pmwiki/pmwiki.php/VideoGame/CrystalQuest">Crystal Quest</a></em> levels are largely down to which creatures are spawned in which ratio, its content creation tool was called the Critter Editor.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Scribblenauts" title="/pmwiki/pmwiki.php/VideoGame/Scribblenauts">Scribblenauts</a></em> has a fairly simple level editor, though you can really only use it to create "obstacle courses." They sadly can't be as big or as complex as the real levels. <em>Super Scribblenauts,</em> however, has a much more complex one, complete with simple coding abilities and a selection of level types.
+</li><li> The <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MarbleMadness" title="/pmwiki/pmwiki.php/VideoGame/MarbleMadness">Marble Madness</a> Construction Set</em>, released for the <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/AmstradCPC" title="/pmwiki/pmwiki.php/UsefulNotes/AmstradCPC">Amstrad CPC</a> and <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/ZXSpectrum" title="/pmwiki/pmwiki.php/UsefulNotes/ZXSpectrum">ZX Spectrum</a> versions.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Sokoban" title="/pmwiki/pmwiki.php/VideoGame/Sokoban">Sokoban</a></em> has had a level editor since some of its earliest versions.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Pushmo" title="/pmwiki/pmwiki.php/VideoGame/Pushmo">Pushmo</a></em> and the later games in its franchise all feature level editors, with various ways to share the created stages.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/HoshizoraBlock" title="/pmwiki/pmwiki.php/VideoGame/HoshizoraBlock">Hoshizora Block</a></em> has an editor limited to 60 stages, which is the exact length of the main game itself. Interestingly, stage 4 of the main game is included in the editor as stage 4 in the editor, serving an example of how to use the bomb scripts.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/HelterSkelter" title="/pmwiki/pmwiki.php/VideoGame/HelterSkelter">Helter Skelter</a></em> has one. Level numbers from 81 to 128 are reserved for user-designed levels.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Portal2" title="/pmwiki/pmwiki.php/VideoGame/Portal2">Portal 2</a></em>, in addition to the more advanced Hammer editor common to all games that use the Source engine (see entry in First-Person Shooters above) has another level editor built into the game which, while not nearly as powerful or flexible as Hammer, is a <em>lot</em> easier to learn, and can be used to make reasonably good-looking maps much faster. There's also an unofficial <a class="urllink" href="https://github.com/BEEmod/BEE2.4">program<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a> that lets you customize the editor's object palette and add additional items.
+</li><li> Both <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Jardinains" title="/pmwiki/pmwiki.php/VideoGame/Jardinains">Jardinains!</a></em> and its sequel <em>Jardinains 2!</em> have fully functional level editors that one can access by pressing [E] at the main menu. Note that <em>2!</em>'s is available only in the full version of the game.
+</li><li> Many games in the <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MarioVsDonkeyKong" title="/pmwiki/pmwiki.php/VideoGame/MarioVsDonkeyKong">Mario vs. Donkey Kong</a></em> series include level editors. <em>Tipping Stars</em> even makes it one of the focuses of the marketing, with the title itself referring to the means of giving feedback for custom levels.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/BabaIsYou" title="/pmwiki/pmwiki.php/VideoGame/BabaIsYou">Baba Is You</a></em> has a rudimentary one for its prototype version, with a more refined one for the full version in development (to be released in 2020). At the moment, the latter is <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DummiedOut" title="/pmwiki/pmwiki.php/Main/DummiedOut">Dummied Out</a> due to being incomplete, but Steam users can still access it rather easily by tweaking certain files in the game's directory.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder10');">    Racing Games </div><div class="folder" id="folder10" isfolder="true" style="display:block;">
+<ul><li> The original <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Excitebike" title="/pmwiki/pmwiki.php/VideoGame/Excitebike">Excitebike</a></em> on the NES was marketed partially on the fact that it had a built-in level editor. Unfortunately, that turned out to be useless for most of the world, because saving a level required a hardware expansion that was <a class="twikilink" href="/pmwiki/pmwiki.php/Main/NoExportForYou" title="/pmwiki/pmwiki.php/Main/NoExportForYou">never released outside Japan</a>.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MachRider" title="/pmwiki/pmwiki.php/VideoGame/MachRider">Mach Rider</a></em> on the NES also has a track editor that could also be only saved in japan, only this one doesn't have very good controls in the track designing department
+</li><li> <a class="twikilink" href="/pmwiki/pmwiki.php/Creator/ElectronicArts" title="/pmwiki/pmwiki.php/Creator/ElectronicArts">Electronic Arts</a>' early effort, <em>Racing Destruction Set</em> included a track editor.
+</li><li> A major selling point of <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Trials" title="/pmwiki/pmwiki.php/VideoGame/Trials">Trials</a> HD</em> and subsequent games is that all the in-game levels were made with the editors. Some people have managed to really stretch what it can do, to the point of making games that have nothing to do at all with biking, such as first-person shooters and 2D platformers.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/RidgeRacer" title="/pmwiki/pmwiki.php/VideoGame/RidgeRacer">Ridge Racer</a> Unbounded</em> is similar to Trials in that all the tracks were also made with the level editor.
+</li><li> <em><a class="createlink" href="/pmwiki/pmwiki.php/VideoGame/MotoRacer" title="/pmwiki/pmwiki.php/VideoGame/MotoRacer">Moto Racer</a> 2</em> has a level editor where you can not only amend the track's shape by controlling points, but are given options to select the environment (there are four in the final product) and class (motocross or superbike) you want for it. Unfortunately, you don't get to make courses with roads crossing one another, sharp curves, and very steep hills possibly because of collision detection.
+</li><li> One of <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TrackMania" title="/pmwiki/pmwiki.php/VideoGame/TrackMania">TrackMania</a></em>'s biggest draws is its incredibly robust track editor. The only real requirements for fan-made tracks is that they have a start, a finish, and a means to get from one to the other. The editor is also fairly intuitive and easy to use, resulting in <em>lots</em> of fan-made tracks, all available for download. You can find numerous tracks on <a class="urllink" href="https://united.tm-exchange.com/">TMX<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a> if you're playing TM United or Nations Forever and <a class="urllink" href="https://tm.mania-exchange.com/">Mania Exchange<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a> if you're playing <a class="createlink" href="/pmwiki/pmwiki.php/Main/TM2" title="/pmwiki/pmwiki.php/Main/TM2">TM 2</a>.
+<ul><li> That was the main draw of its <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SpiritualSuccessor" title="/pmwiki/pmwiki.php/Main/SpiritualSuccessor">Spiritual Predecessor</a> too (<em>4D Sports: Driving</em>, aka <em>Stunts</em>).
+</li></ul></li><li> The randomized X-Cup in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FZero" title="/pmwiki/pmwiki.php/VideoGame/FZero">F-Zero</a> X</em> was actually what was left after the level editor had to be cut when Nintendo refused to release <a class="twikilink" href="/pmwiki/pmwiki.php/Main/VaporWare" title="/pmwiki/pmwiki.php/Main/VaporWare">the 64DD</a>, and the game had to be sold as a normal cartridge title. Later, when the 64DD was shipped in Japan, the editor was sold as <em>F-Zero X-Pansion Kit</em>, which could work in unison with the original game to make new tracks and vehicles.
+<ul><li> <em>F-Zero Climax</em> also has a track editor with a password feature to send your custom tracks to your friends. Unfortunately it <a class="twikilink" href="/pmwiki/pmwiki.php/Main/NoExportForYou" title="/pmwiki/pmwiki.php/Main/NoExportForYou">never made it outside of Japan either</a>.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/ModNationRacers" title="/pmwiki/pmwiki.php/VideoGame/ModNationRacers">ModNation Racers</a></em> has a track editor that even auto-generates scenery and power-up locations to go along with your finished track (Though to be honest, it's not recommended). To put the cherry on the top, it comes with very robust kart and character editors, which deserve a great deal of mention.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DiddyKongRacing" title="/pmwiki/pmwiki.php/VideoGame/DiddyKongRacing">Diddy Kong Racing</a> DS</em> has a fairly simple track maker — you draw a course, decide how bumpy or flat it is, and race. That's about all, sadly.
+</li><li> The game, GRID, for the Nintendo DS, has a track maker of its own that allows you to place down sections of tracks to complete a circuit as well as some limited decorative pieces.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/GranTurismo" title="/pmwiki/pmwiki.php/VideoGame/GranTurismo">Gran Turismo</a> 5</em> has one which lets you make your own racetracks. Well, it's CALLED an editor, but it's more of a random course generator: you change the length of the course and the complexity of the corners along with other features.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/ReVolt" title="/pmwiki/pmwiki.php/VideoGame/ReVolt">Re-Volt</a></em> has a built-in track editor, though tracks created with it are pretty similar to each other.
+</li><li> The Toy-Con Motorbike included in the <a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/NintendoLabo" title="/pmwiki/pmwiki.php/VideoGame/NintendoLabo">Nintendo Labo variety kit</a> for the <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/NintendoSwitch" title="/pmwiki/pmwiki.php/UsefulNotes/NintendoSwitch">Nintendo Switch</a> has a feature where you're able to modify the terrain in the stadium and create your own tracks with the Toy-Con Scanner and Toy-Con Mini-bike respectively. You can even change things like the road width, time of day and where dash items are placed!
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder11');">    Rhythm Games </div><div class="folder" id="folder11" isfolder="true" style="display:block;">
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DanceDanceRevolution" title="/pmwiki/pmwiki.php/VideoGame/DanceDanceRevolution">Dance Dance Revolution</a></em> console games allow you to map your own steps to a song, play them in the main game, or share them with others.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/InTheGroove" title="/pmwiki/pmwiki.php/VideoGame/InTheGroove">In the Groove</a></em> for the PC/Mac has it built-in. Those that only have access to the Arcade or PS2 version can just use <a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/StepMania" title="/pmwiki/pmwiki.php/VideoGame/StepMania">StepMania</a> instead.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TadpoleTreble" title="/pmwiki/pmwiki.php/VideoGame/TadpoleTreble">Tadpole Treble</a></em> comes with a <a class="urllink" href="https://www.youtube.com/watch?v=aeNJKVnRMxk">composition mode,<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a> since, by the game's conceit, all of the levels take place on music staves and the majority of the obstacles are notes of the levels' music.
+</li><li> Pretty much any music-themed game that allows you to input your own songs.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder12');">    Roguelike </div><div class="folder" id="folder12" isfolder="true" style="display:block;">
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Spelunky" title="/pmwiki/pmwiki.php/VideoGame/Spelunky">Spelunky</a></em>, in addition to its <a class="twikilink" href="/pmwiki/pmwiki.php/Main/RandomlyGeneratedLevel" title="/pmwiki/pmwiki.php/Main/RandomlyGeneratedLevel">randomly generated levels</a>, also comes with an editor.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder13');">    Role-Playing Games </div><div class="folder" id="folder13" isfolder="true" style="display:block;">
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/TheElderScrolls" title="/pmwiki/pmwiki.php/Franchise/TheElderScrolls">The Elder Scrolls</a></em> games since <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheElderScrollsIIIMorrowind" title="/pmwiki/pmwiki.php/VideoGame/TheElderScrollsIIIMorrowind">Morrowind</a></em> have included the "Construction Set", the very same editing program the games themselves are created with. This makes modding the game with the editor incredibly easy, leading to the series having one of the largest modding communities in the gaming world. (In fact, the official "<a class="twikilink" href="/pmwiki/pmwiki.php/Main/ExpansionPack" title="/pmwiki/pmwiki.php/Main/ExpansionPack">Expansion Packs</a>" for both <em>Morrowind</em> and <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheElderScrollsIVOblivion" title="/pmwiki/pmwiki.php/VideoGame/TheElderScrollsIVOblivion">Oblivion</a></em> are essentially "mods" of the respective original games made with the same level editor by the development team.)
+</li><li> The level editor for <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DungeonSiege" title="/pmwiki/pmwiki.php/VideoGame/DungeonSiege">Dungeon Siege</a></em> is extremely powerful, and surprisingly easy to use.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Disgaea4APromiseUnforgotten" title="/pmwiki/pmwiki.php/VideoGame/Disgaea4APromiseUnforgotten">Disgaea 4: A Promise Unforgotten</a></em> has a level editor that also works as a base editor, considering you can use your own level for your base if you are so inclined. Sadly, the International version is going to wind up neutered a bit, and JP maps will not be usable in US and EU versions. Look at the <em>LittleBigPlanet</em> games and ask yourself "Did the userbase need to flood the game with penises?"
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DragonAgeOrigins" title="/pmwiki/pmwiki.php/VideoGame/DragonAgeOrigins">Dragon Age: Origins</a></em> has an editor. It's very powerful (it's the same tools the game devs used, for the most part) but has a steep learning curve.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheWitcher" title="/pmwiki/pmwiki.php/VideoGame/TheWitcher">The Witcher</a></em> has one.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/NeverwinterNights" title="/pmwiki/pmwiki.php/VideoGame/NeverwinterNights">Neverwinter Nights</a></em>, for which the campaign creation tools were arguably the very reason a lot of people bought the game in the first place. <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/NeverwinterNights2" title="/pmwiki/pmwiki.php/VideoGame/NeverwinterNights2">Neverwinter Nights 2</a></em> has a toolset as much more in depth as the game.
+</li><li> <em><a class="createlink" href="/pmwiki/pmwiki.php/VideoGame/FightTheDragon" title="/pmwiki/pmwiki.php/VideoGame/FightTheDragon">Fight The Dragon</a></em>'s main selling point is the ACK, or Adventure Construction Kit, which allows users to make their own levels. Options include the ability to place floors, walls, props, weather effects, enemies, traps, puzzle elements, treasure chests, and NPCs with dialogue.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder14');">    Shoot Em Up </div><div class="folder" id="folder14" isfolder="true" style="display:block;">
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/BangaiO" title="/pmwiki/pmwiki.php/VideoGame/BangaiO">Bangai-O</a> Spirits</em> has an editor integrated right into the game itself. Which is to say, if you activate the appropriate cheat (press Select), you can edit any official level <em>while you are playing it!</em> Something else that's worth mentioning is <em>Spirits</em>'s "Sound Load" function: individual levels can be encoded into a <a class="urllink" href="http://l.j-factor.com/bangai-o/soundload.wav">sound file<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a>, which can be transmitted between DSes via their microphones, or recorded to a PC, uploaded to the Internet, and read by other DSes worldwide.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Fraxy" title="/pmwiki/pmwiki.php/VideoGame/Fraxy">Fraxy</a></em> is a famous example of this. Brace yourself for super-tough bosses - all fan made, fan tested, and fan fought.
+</li><li> <em><a class="createlink" href="/pmwiki/pmwiki.php/VideoGame/ZetaFlow" title="/pmwiki/pmwiki.php/VideoGame/ZetaFlow">Zeta Flow</a></em>, a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/WebGame" title="/pmwiki/pmwiki.php/Main/WebGame">Web Game</a> that's available <a class="urllink" href="http://zetaflow.skylogic.ca/">here<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a>, is basically a level editor, with a little game added on for those who don't bother. 99.8% of the game is fan made!
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder15');">    Simulation Game </div><div class="folder" id="folder15" isfolder="true" style="display:block;">
+<ul><li> Both <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FreeSpace" title="/pmwiki/pmwiki.php/VideoGame/FreeSpace">Descent: FreeSpace</a></em> and <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FreeSpace2" title="/pmwiki/pmwiki.php/VideoGame/FreeSpace2">FreeSpace 2</a></em> came bundled with the very same level creator that the designers used to create the main campaigns. It's so powerful and easy to use, people are still making campaigns (and even expanding the functionality) today, despite the game originally being released nearly <em>twenty years ago</em>.
+</li><li> <em>Sim Copter</em> and <em>Streets of Sim City</em> can load cities made in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SimCity" title="/pmwiki/pmwiki.php/VideoGame/SimCity">SimCity</a> 2000</em>, technically making it a level editor for those two games.
+<ul><li> The <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SimCity" title="/pmwiki/pmwiki.php/VideoGame/SimCity">SimCity</a></em> games themselves were created as a result of a level editor; <a class="twikilink" href="/pmwiki/pmwiki.php/Creator/WillWright" title="/pmwiki/pmwiki.php/Creator/WillWright">Will Wright</a> was designing levels for the game <em>Raid On Bungeling Bay</em> (an overhead helicopter-based <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ShootEmUp" title="/pmwiki/pmwiki.php/Main/ShootEmUp">Shoot 'em Up</a>), and found that he was having more fun designing the levels than playing the game itself.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/VectorThrust" title="/pmwiki/pmwiki.php/VideoGame/VectorThrust">Vector Thrust</a></em> boasts a Map Editor, Mission Editor and a Campaign Editor, keeping with the creator's focus on moddability.
+</li><li> The <em><a class="twikilink" href="/pmwiki/pmwiki.php/Videogame/X" title="/pmwiki/pmwiki.php/Videogame/X">X-Universe</a></em> series has the Galaxy Editor, an in-engine editor to modify sectors (planets, skybox, asteroids, etc). It's a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SomeDexterityRequired" title="/pmwiki/pmwiki.php/Main/SomeDexterityRequired">bit awkward to use</a>, so many users instead edit raw XML files after memorizing the appearance of every planet/skybox/whatever. There's also the far more powerful Script Editor, a coding engine which can modify the behavior of commands, ships and entire races; the Galaxy Editor edits the appearance, while the Script Editor modifies the gameplay.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/AirfixDogfighter" title="/pmwiki/pmwiki.php/VideoGame/AirfixDogfighter">Airfix Dogfighter</a></em>, you are given the ability to edit the existing rooms by putting various objects and items in there.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Petz" title="/pmwiki/pmwiki.php/VideoGame/Petz">Petz</a> 4</em> and <em>5</em> have the option to create custom playscenes using pictures on your computer, along with the game's own library of background sounds and various other options, just in case you want to play with your virtual dog or cat in a noisy rainforest, or on the moon. The files for these playscenes can be then copied from the game's folder and made available to other people who have the game.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder16');">    Sports Games </div><div class="folder" id="folder16" isfolder="true" style="display:block;">
+<ul><li> The <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TonyHawksProSkater" title="/pmwiki/pmwiki.php/VideoGame/TonyHawksProSkater">Tony Hawk's Pro Skater</a></em> series had one since the second game. Originally it was just grid based, with basic items, but as the series progressed onto the sixth generation consoles, a fully free form Rail Tool was added, allowing rails to be put anywhere at any height, making the editor much more useful and allowing skate lines to be better set up.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder17');">    Strategy Game </div><div class="folder" id="folder17" isfolder="true" style="display:block;">
+<ul><li> Level editors in general are considered almost a required feature, especially for RTSs, such that reviewers are known to complain if the game doesn't have one included (see <a class="urllink" href="http://www.gamespot.com/warhammer-40-000-dawn-of-war/reviews/warhammer-40000-dawn-of-war-review-6108038/">the Gamespot review<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a> for the first <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DawnOfWar" title="/pmwiki/pmwiki.php/VideoGame/DawnOfWar">Dawn of War</a></em>, whose editor is a separate download).
+</li><li> In every <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/NintendoWars" title="/pmwiki/pmwiki.php/VideoGame/NintendoWars">Advance Wars</a></em> game, players could create maps and, starting with <em>Days of Ruin</em>, share some of them over Wi-fi.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/GadgetTrial" title="/pmwiki/pmwiki.php/VideoGame/GadgetTrial">Gadget Trial</a></em> has its own level editor similar to <em>Advance Wars</em> above.
+</li><li> The <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/AgeOfEmpires" title="/pmwiki/pmwiki.php/VideoGame/AgeOfEmpires">Age of Empires</a></em> games all have editors.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/StarCraft" title="/pmwiki/pmwiki.php/VideoGame/StarCraft">StarCraft</a></em> and the second and third <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Warcraft" title="/pmwiki/pmwiki.php/VideoGame/Warcraft">Warcraft</a></em> games have editors. The later games have editors that allow for creating scripts and changing rules, essentially allowing players to create totally different ways to play.
+<ul><li> The ever-popular <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DefenseOfTheAncients" title="/pmwiki/pmwiki.php/VideoGame/DefenseOfTheAncients">Defense of the Ancients: All-Stars</a></em> is a user-created map.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/HeroesOfTheStorm" title="/pmwiki/pmwiki.php/VideoGame/HeroesOfTheStorm">Heroes of the Storm</a></em> took it to <a class="twikilink" href="/pmwiki/pmwiki.php/Main/UpToEleven" title="/pmwiki/pmwiki.php/Main/UpToEleven">another level</a> by creating an entire <em>game</em> out of what was once technically a demonstration of <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/StarCraftII" title="/pmwiki/pmwiki.php/VideoGame/StarCraftII">StarCraft II</a></em>'s map editor. Eventually, it outgrew the Galaxy Editor and now runs on its own custom version of the StarCraft II engine.
+</li><li> Custom maps are incredibly diverse and often bear little resemblance to the original game. <em>Warcraft III</em> gave everything from custom campaigns (set in Warcraft III or not, with some people even recreating tie-in novels or Warcraft 1 and 2 as campaigns), hero arenas, Sheep Tag (where you play as sheep, or as wolves trying to eat the sheep), to Pest control, where you play as an infestation of insects trying to wipe out the human tenants. <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/StarCraftII" title="/pmwiki/pmwiki.php/VideoGame/StarCraftII">StarCraft II</a></em> seems to have taken this to a new level, as genres as varied as shmups, beat-em-ups, to outlandish things like kinetic novels are all possible. People have even used <em>SCII's</em> to do such things as a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/FanRemake" title="/pmwiki/pmwiki.php/Main/FanRemake">Fan Remake</a> of <em>SCI</em> <a class="urllink" href="http://www.teamliquid.net/forum/viewmessage.php?topic_id=303166">[1]<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a>, and a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/FanSequel" title="/pmwiki/pmwiki.php/Main/FanSequel">Fan Sequel</a> to <em>Warcraft III</em> <a class="urllink" href="http://www.moddb.com/mods/warcraft-a-new-dawn">[2]<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a>.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/WorldInConflict" title="/pmwiki/pmwiki.php/VideoGame/WorldInConflict">World in Conflict</a></em> saw a map editor codenamed "WiCEd" released by the developers, which allows creation of both single and multiplayer levels. The notion proved so popular that the developers haven't released a single "official" map in about a year, instead endorsing fanmade ones and offering them for download at the official website.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/BattleForWesnoth" title="/pmwiki/pmwiki.php/VideoGame/BattleForWesnoth">Battle for Wesnoth</a></em>: As an open-source game, the vast majority of its content is user-generated. The level editor isn't exactly user-friendly, but it still has a large and active community of people creating everything from maps to factions to entire campaigns.
+</li><li> The <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/HeroesOfMightAndMagic" title="/pmwiki/pmwiki.php/VideoGame/HeroesOfMightAndMagic">Heroes of Might and Magic</a></em> series came with map editors. Since player-created maps contribute a lot to the games' longevity, the fifth game raised a significant outcry for not being released with a map editor immediately. It was added later with a patch.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Sacrifice" title="/pmwiki/pmwiki.php/VideoGame/Sacrifice">Sacrifice</a></em> had Scapex. Notably, it even allowed you to edit the game's campaign map.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/JaggedAlliance" title="/pmwiki/pmwiki.php/VideoGame/JaggedAlliance">Jagged Alliance</a> 2</em> received several editors along with its Unfinished Business expansion. Together with hacking some data files, this culminated in a load of completely new fan-made campaigns, one of which (Wildfire) was eventually bought by the publisher and sold on the shelf.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Warlight" title="/pmwiki/pmwiki.php/VideoGame/Warlight">Warlight</a></em>, a mostly free Indie Risk-like, allows you to create and upload your own maps, and also (if you are high level enough or cash in) to create customized scenarios on existing maps.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder18');">    Stealth-based Game </div><div class="folder" id="folder18" isfolder="true" style="display:block;">
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Hitman2016" title="/pmwiki/pmwiki.php/VideoGame/Hitman2016">HITMAN (2016)</a></em> has introduced Contracts Mode, where you can select any level, walk through and select several of the hundreds of characters, and play through how they are assassinated and whether or not you are spotted or used a disguise. Players are automatically locked out of an impossible scenario because to upload it you have to be able to do it yourself using the equipment you have unlocked or bought, before writing up a title and briefing.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder19');">    Survival Horror </div><div class="folder" id="folder19" isfolder="true" style="display:block;">
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FiveNightsAtFreddys" title="/pmwiki/pmwiki.php/VideoGame/FiveNightsAtFreddys">Five Nights at Freddy's</a></em> (and its sequels except for <em>Five Nights At Freddys 3</em>) has a rather unique take on this. Instead of creating your own <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SuckECheeses" title="/pmwiki/pmwiki.php/Main/SuckECheeses">Suck E. Cheese's</a> map, it allows you to adjust how aggressive each animatronic is, from 0 to 20 (1 to 20 in the original). Setting all the animatronics' AI to 20 is the game's version of <a class="twikilink" href="/pmwiki/pmwiki.php/Main/HarderThanHard" title="/pmwiki/pmwiki.php/Main/HarderThanHard">Harder Than Hard</a>.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder20');">    Third-Person Shooter </div><div class="folder" id="folder20" isfolder="true" style="display:block;">
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Voxatron" title="/pmwiki/pmwiki.php/VideoGame/Voxatron">Voxatron</a></em> has this as one of its most advertised features. Players may create their own levels with custom objects, monsters (including API and such), and items. The levels may then be shared with other players.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder21');">    Tower Defense </div><div class="folder" id="folder21" isfolder="true" style="display:block;">
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Infinitode" title="/pmwiki/pmwiki.php/VideoGame/Infinitode">Infinitode</a></em>: You can create new maps with tiles you get from beating levels in the Map Editor.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder22');">    Wide Open Sandbox </div><div class="folder" id="folder22" isfolder="true" style="display:block;">
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Dreams" title="/pmwiki/pmwiki.php/VideoGame/Dreams">Dreams</a></em>. The whole idea is taking <a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/LittleBigPlanet" title="/pmwiki/pmwiki.php/VideoGame/LittleBigPlanet">LittleBigPlanet</a>'s "Play, Create, Share" (it's made by <a class="twikilink" href="/pmwiki/pmwiki.php/Creator/MediaMolecule" title="/pmwiki/pmwiki.php/Creator/MediaMolecule">the same company</a>) and mashing them together.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/InFAMOUS2" title="/pmwiki/pmwiki.php/VideoGame/InFAMOUS2">inFAMOUS 2</a></em> includes a mission editor. It's fairly extensive, allowing for a wide range of mission types.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Roblox" title="/pmwiki/pmwiki.php/VideoGame/Roblox">Roblox</a></em> does this very well. With the basic blocks and a few scripts, you can pretty much make whatever you want. You can also publish these "Models" so other players can use them.
+</li><li> The Adventure Creator in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Spore" title="/pmwiki/pmwiki.php/VideoGame/Spore">Spore</a> Galactic Adventures</em>.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/AnimalCrossingNewHorizons" title="/pmwiki/pmwiki.php/VideoGame/AnimalCrossingNewHorizons">Animal Crossing: New Horizons</a></em> gives players an unprecidented level of customization options to their village, from where villagers' homes and shops are located (with the ability to relocate almost any building for a nominal fee) to late-game terrain manipulation.
+</li></ul></div>
+<p></p><h2>Examples of games in which the community ended up creating an editor of their own:</h2>
+<p></p><div class="folderlabel" onclick="togglefolder('folder23');">    Action Game </div><div class="folder" id="folder23" isfolder="true" style="display:block;">
+<ul><li> Apogee Software had bad luck with fanmade editors:
+<ul><li> For <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DukeNukem" title="/pmwiki/pmwiki.php/VideoGame/DukeNukem">Duke Nukem</a> 1</em>, they threatened the creator of the first editor with legal action, and the editor was only released under the condition that he modified it to work only with the full game, not the shareware version.
+</li><li> For <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Wolfenstein3D" title="/pmwiki/pmwiki.php/VideoGame/Wolfenstein3D">Wolfenstein 3D</a></em>, there were two contests planned: a secret item which told you to call Apogee and tell them the codeword, and a final score verification code so they could award the best player and confirm they weren't cheating. Then several fans started releasing level editors/viewers, and they realized neither would work and they had to call the contests off.
+</li></ul></li><li> <em>Chaos Engine</em> for the <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/Amiga" title="/pmwiki/pmwiki.php/UsefulNotes/Amiga">Amiga</a> now has one too, <a class="urllink" href="http://eab.abime.net/showthread.php?t=53449">Chaos Construct<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a>.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder24');">    Action Adventure </div><div class="folder" id="folder24" isfolder="true" style="display:block;">
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/ZeldaClassic" title="/pmwiki/pmwiki.php/VideoGame/ZeldaClassic">Zelda Classic</a></em>: Why stop at ROM hacking? Why not just <a class="urllink" href="https://www.zeldaclassic.com/">recreate an entire game from scratch just so you can edit it to your whims?<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a>
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder25');">    Fighting Games </div><div class="folder" id="folder25" isfolder="true" style="display:block;">
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SuperSmashBros" title="/pmwiki/pmwiki.php/VideoGame/SuperSmashBros">Super Smash Bros.</a> Brawl</em> has its own built-in editor, but that didn't stop people from making their own.
+<ul><li> This was mainly because the editor in the game has limitations such as how close certain blocks can be placed, and only so many are allowed to be placed, whereas the editor on the computer removes both these limitations, and you can even stack multiple objects onto each other. You can even edit the stage thumbnail with any picture you want from your hard drive. All of these stages will play but, be warned, placing more objects than usual may slow down gameplay big time, and there are chances you can cause a stage to be <a class="twikilink" href="/pmwiki/pmwiki.php/Main/UnwinnableByMistake" title="/pmwiki/pmwiki.php/Main/UnwinnableByMistake">Unwinnable by Mistake</a>, unless you <a class="twikilink" href="/pmwiki/pmwiki.php/Main/UnwinnableByDesign" title="/pmwiki/pmwiki.php/Main/UnwinnableByDesign">did that on purpose.</a>
+</li></ul></li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder26');">    First-Person Shooter </div><div class="folder" id="folder26" isfolder="true" style="display:block;">
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Doom" title="/pmwiki/pmwiki.php/VideoGame/Doom">Doom</a></em> was so popular in its time that tons of editors were created for it, numerous competing level editors among them. Levels could even come with built-in music, sounds, and graphics to change the experience even further. Currently, one of the most popular editors is Doom Builder.
+<ul><li> Ditto for <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Quake" title="/pmwiki/pmwiki.php/VideoGame/Quake">Quake</a></em>, which is essentially the spiritual successor to the <em>Doom</em> series.
+</li></ul></li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder27');">    Platformer </div><div class="folder" id="folder27" isfolder="true" style="display:block;">
+<ul><li> Various Nintendo games of consoles past, in the form of <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GameMod" title="/pmwiki/pmwiki.php/Main/GameMod">ROM hacking</a>. Popular level editors include SMB Utility (<em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SuperMarioBros" title="/pmwiki/pmwiki.php/VideoGame/SuperMarioBros">Super Mario Bros.</a></em>), Lunar Magic (<em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SuperMarioWorld" title="/pmwiki/pmwiki.php/VideoGame/SuperMarioWorld">Super Mario World</a></em>), and Hyrule Magic (<em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheLegendOfZeldaALinkToThePast" title="/pmwiki/pmwiki.php/VideoGame/TheLegendOfZeldaALinkToThePast">The Legend of Zelda: A Link to the Past</a></em>).
+<ul><li> People have already made two, including <a class="urllink" href="http://gbatemp.net/index.php?showtopic=191279">this<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a>, in literally a <em>week</em> for <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/NewSuperMarioBrosWii" title="/pmwiki/pmwiki.php/VideoGame/NewSuperMarioBrosWii">New Super Mario Bros. Wii</a></em>.
+</li><li> In addition, <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/YoshisIsland" title="/pmwiki/pmwiki.php/VideoGame/YoshisIsland">Yoshi's Island</a></em> has a fairly primitive (it renders objects and sprites as simple blocks) one called Eggvine, and another called Golden Egg, a much more user-friendly editor in the vein of Lunar Magic.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/JazzJackrabbit" title="/pmwiki/pmwiki.php/VideoGame/JazzJackrabbit">Jazz Jackrabbit</a> 1</em> had its own editor produced to match the official for the sequel.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/CommanderKeen" title="/pmwiki/pmwiki.php/VideoGame/CommanderKeen">Commander Keen</a></em> has almost a dozen editors for the various series produced by its community over the years.
+</li><li> Numerous editors have been written for <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/JetSetWilly" title="/pmwiki/pmwiki.php/VideoGame/JetSetWilly">Jet Set Willy</a></em>.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SuperMarioBrosX" title="/pmwiki/pmwiki.php/VideoGame/SuperMarioBrosX">Super Mario Bros. X</a></em> comes with an extensive level editor that enables users to create levels with numerous <a class="twikilink" href="/pmwiki/pmwiki.php/Main/NonPlayerCharacter" title="/pmwiki/pmwiki.php/Main/NonPlayerCharacter">NPCs</a>, items, and mechanics of the early two-dimensional Mario games.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/MegaMan" title="/pmwiki/pmwiki.php/Franchise/MegaMan">Mega Man</a></em> has a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GameMod" title="/pmwiki/pmwiki.php/Main/GameMod">ROM hacking</a> community as well. In addition, a recent fangame that's essentially a level builder for the classic series came out in the form of <a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MegaMaker" title="/pmwiki/pmwiki.php/VideoGame/MegaMaker">Mega Man Maker</a> (formerly Mega Maker) in <a class="urllink" href="https://www.youtube.com/watch?v=BpCarkGGoxIits">first trailer posted on July 8, 2017<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a> and the game releasing on July 15. Its website can be visited <a class="urllink" href="https://megamanmaker.com/">here<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a> and its Discord channel can be found <a class="urllink" href="https://discord.gg/5nYtEEP">here<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a>.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder28');">    Puzzle Games </div><div class="folder" id="folder28" isfolder="true" style="display:block;">
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/ChipsChallenge" title="/pmwiki/pmwiki.php/VideoGame/ChipsChallenge">Chip's Challenge</a></em> had several: ChipEdit, CCEdit, Chip's Workshop...
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/WorldOfGoo" title="/pmwiki/pmwiki.php/VideoGame/WorldOfGoo">World of Goo</a></em> ended up with an editor, simply titled <a class="urllink" href="http://goofans.com/developers/world-of-goo-level-editor">World of Goo Level Editor<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a> (or "Woo GLE" for short), that way.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder29');">    Racing Games </div><div class="folder" id="folder29" isfolder="true" style="display:block;">
+<ul><li> Because the aforementioned track editor for <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FZero" title="/pmwiki/pmwiki.php/VideoGame/FZero">F-Zero</a> X</em> was so rare, a member of the community who goes by BGNG created one for ROMS called <em>Execution Project</em>, which contains all of the features from the original track editor.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MarioKart" title="/pmwiki/pmwiki.php/VideoGame/MarioKart">Mario Kart</a> Wii</em> has a fairly active modding community that has lots of custom tracks and other features people can play with.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder30');">    Rhythm Games </div><div class="folder" id="folder30" isfolder="true" style="display:block;">
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/PumpItUp" title="/pmwiki/pmwiki.php/VideoGame/PumpItUp">Pump It Up Pro</a></em> and its sequel have the Edit Creator on <a class="urllink" href="http://www.pumpproedits.com">Pump Pro Edits<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a> available.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder31');">    Strategy Game </div><div class="folder" id="folder31" isfolder="true" style="display:block;">
+<ul><li> While <em>LEGO <a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/RockRaiders" title="/pmwiki/pmwiki.php/VideoGame/RockRaiders">Rock Raiders</a></em> didn't technically have one on release. Modders discovered that one had been created but <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DummiedOut" title="/pmwiki/pmwiki.php/Main/DummiedOut">Dummied Out</a> and are using it to create new levels.
+</li></ul></div>
+<hr/><h2>Other examples:</h2>
+<p><span class="asscaps">Web Video</span>
+</p><ul><li> <a class="twikilink" href="/pmwiki/pmwiki.php/WebVideo/Akfamilyhome" title="/pmwiki/pmwiki.php/WebVideo/Akfamilyhome">Akfamilyhome</a>: In "Old Mario Flash Games", he mentions that he used to have a lot of fun making custom levels in the <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/SuperMarioBros" title="/pmwiki/pmwiki.php/Franchise/SuperMarioBros">Mario</a></em> fangame <em><a class="createlink" href="/pmwiki/pmwiki.php/VideoGame/SuperMarioFlash" title="/pmwiki/pmwiki.php/VideoGame/SuperMarioFlash">Super Mario Flash</a></em>. Some of the levels he made were titled "Maths Lesson", "Pipe And Die", and <a class="twikilink" href="/pmwiki/pmwiki.php/Main/NostalgiaLevel" title="/pmwiki/pmwiki.php/Main/NostalgiaLevel">"Original World 1-1"</a>.
+</li></ul><hr/>
+</div>
+<div class="lazy-video-script">
+<a id="VideoExamples"></a>
+<div> </div>
+<div class="video-examples has-thumbnails">
+<div class="video-examples-header">
+<a class="font-s float-right text-blue" data-modal-target="login" href="#feedback">Feedback</a>
+<h3 class="bold">Video Example(s):</h3>
+</div>
+<div class="video-examples-featured">
+<a class="video-launch-link video-overlay-link featured-widget-vid" data-video-approval="APPROVED" data-video-average-rating="5.00" data-video-descrip="Sequel to the much-beloved Super Mario Maker, this one adds new features, biomes, and styles." data-video-id="1ljb7g" data-video-media-sources="VideoGame/SuperMarioMaker2" data-video-rating-count="9" data-video-thumbnail="https://i.vimeocdn.com/video/821286712_640x360.jpg?r=pad" data-video-title="Super Mario Maker 2" data-video-trope="Main/LevelEditor" data-video-tropename="Level Editor" data-video-troper-rating="" data-video-url="https://player.vimeo.com/external/365520023.sd.mp4?s=9417ddb175de4a451333e3df55d8d70334fbacb7&amp;profile_id=165&amp;oauth2_token_id=1043337761" href="#video-link">
+<div class="featured-widget-vid-iframe">
+<video class="video-js vjs-default-skin vjs-16-9" controls="" data-setup='{"ga": {"eventsToTrack": ["error"]}}' id="featured-video-player">
+</video>
+</div>
+</a>
+<h2 class="bold font-l">Super Mario Maker 2</h2>
+<p class="_pmvv-vidbox-descTxt">
+Sequel to the much-beloved Super Mario Maker, this one adds new features, biomes, and styles. </p>
+</div>
+</div>
+</div>
+<div class="square_ad footer-article-ad main_2" data-isolated="0"></div>
+<div class="section-links" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<div class="titles">
+<div><h3 class="text-center text-uppercase">Previous</h3></div>
+<div><h3 class="text-center text-uppercase">Index</h3></div>
+<div><h3 class="text-center text-uppercase">Next</h3></div>
+</div>
+<div class="links">
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/LastLousyPoint">Last Lousy Point</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/OlderThanTheNES">Older Than the NES</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/LevelGoal">Level Goal</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/LastChanceHitPoint">Last Chance Hit Point</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/VideoGameTropes">Video Game Tropes</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/LevelGoal">Level Goal</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/VideoGame/NintendoWars">Nintendo Wars</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/ImageSource/VideoGamesMToZ">ImageSource/Video Games (M to Z)</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/WarHasNeverBeenSoMuchFun">War Has Never Been So Much Fun</a>
+</li>
+</ul>
+</div>
+</div>
+</article>
+<div id="main-content-sidebar"><div class="sidebar-item display-options">
+<ul class="sidebar display-toggles">
+<li>Show Spoilers <div class="display-toggle show-spoilers" id="sidebar-toggle-showspoilers"></div></li>
+<li>Night Vision <div class="display-toggle night-vision" id="sidebar-toggle-nightvision"></div></li>
+<li>Sticky Header <div class="display-toggle sticky-header" id="sidebar-toggle-stickyheader"></div></li>
+<li>Wide Load <div class="display-toggle wide-load" id="sidebar-toggle-wideload"></div></li>
+</ul>
+<script>updateDesktopPrefs();</script>
+</div>
+<div class="sidebar-item ad sb-ad-unit">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_2"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_2'); });</script> </div>
+</div></div>
+<div class="sidebar-item quick-links" itemtype="http://schema.org/SiteNavigationElement">
+<p class="sidebar-item-title" data-title="Important Links">Important Links</p>
+<div class="padded">
+<a href="/pmwiki/query.php?type=att">Ask The Tropers</a>
+<a href="/pmwiki/query.php?type=tf">Trope Finder</a>
+<a href="/pmwiki/query.php?type=ykts">You Know That Show...</a>
+<a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a>
+<a href="/pmwiki/review_activity.php">Reviews</a>
+<a data-modal-target="login" href="/pmwiki/lbs.php">Live Blogs</a>
+<a href="/pmwiki/ad-free-subscribe.php">Go Ad Free!</a> </div>
+</div>
+<div class="sidebar-item sb-ad-unit">
+<div class="sidebar-section">
+<div class="square_ad ad-size-300x600 ad-section text-center">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_3"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_3'); });</script> </div>
+</div> </div>
+</div>
+</div>
+<div class="sidebar-item">
+<p class="sidebar-item-title" data-title="Crucial Browsing">Crucial Browsing</p>
+<ul class="padded font-s" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><a data-click-toggle="active" href="javascript:void(0);">Genre</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/ActionAdventureTropes" title="Main/ActionAdventureTropes">Action Adventure</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ComedyTropes" title="Main/ComedyTropes">Comedy</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CommercialsTropes" title="Main/CommercialsTropes">Commercials</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CrimeAndPunishmentTropes" title="Main/CrimeAndPunishmentTropes">Crime &amp; Punishment</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DramaTropes" title="Main/DramaTropes">Drama</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/HorrorTropes" title="Main/HorrorTropes">Horror</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LoveTropes" title="Main/LoveTropes">Love</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NewsTropes" title="Main/NewsTropes">News</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ProfessionalWrestling" title="Main/ProfessionalWrestling">Professional Wrestling</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SpeculativeFictionTropes" title="Main/SpeculativeFictionTropes">Speculative Fiction</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SportsStoryTropes" title="Main/SportsStoryTropes">Sports Story</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/WarTropes" title="Main/WarTropes">War</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Media</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/Media" title="Main/Media">All Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/AnimationTropes" title="Main/AnimationTropes">Animation (Western)</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Anime" title="Main/Anime">Anime</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ComicBookTropes" title="Main/ComicBookTropes">Comic Book</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FanFic" title="FanFic/FanFics">Fan Fics</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Film" title="Main/Film">Film</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/GameTropes" title="Main/GameTropes">Game</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Literature" title="Main/Literature">Literature</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MusicAndSoundEffects" title="Main/MusicAndSoundEffects">Music And Sound Effects</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NewMediaTropes" title="Main/NewMediaTropes">New Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/PrintMediaTropes" title="Main/PrintMediaTropes">Print Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Radio" title="Main/Radio">Radio</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SequentialArt" title="Main/SequentialArt">Sequential Art</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TabletopGames" title="Main/TabletopGames">Tabletop Games</a></li>
+<li><a href="/pmwiki/pmwiki.php/UsefulNotes/Television" title="Main/Television">Television</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Theater" title="Main/Theater">Theater</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/VideogameTropes" title="Main/VideogameTropes">Videogame</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Webcomics" title="Main/Webcomics">Webcomics</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Narrative</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/UniversalTropes" title="Main/UniversalTropes">Universal</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/AppliedPhlebotinum" title="Main/AppliedPhlebotinum">Applied Phlebotinum</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CharacterizationTropes" title="Main/CharacterizationTropes">Characterization</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Characters" title="Main/Characters">Characters</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CharactersAsDevice" title="Main/CharactersAsDevice">Characters As Device</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Dialogue" title="Main/Dialogue">Dialogue</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Motifs" title="Main/Motifs">Motifs</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NarrativeDevices" title="Main/NarrativeDevices">Narrative Devices</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Paratext" title="Main/Paratext">Paratext</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Plots" title="Main/Plots">Plots</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Settings" title="Main/Settings">Settings</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Spectacle" title="Main/Spectacle">Spectacle</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Other Categories</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/BritishTellyTropes" title="Main/BritishTellyTropes">British Telly</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TheContributors" title="Main/TheContributors">The Contributors</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CreatorSpeak" title="Main/CreatorSpeak">Creator Speak</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Creators" title="Main/Creators">Creators</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DerivativeWorks" title="Main/DerivativeWorks">Derivative Works</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LanguageTropes" title="Main/LanguageTropes">Language</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LawsAndFormulas" title="Main/LawsAndFormulas">Laws And Formulas</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ShowBusiness" title="Main/ShowBusiness">Show Business</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SplitPersonalityTropes" title="Main/SplitPersonalityTropes">Split Personality</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/StockRoom" title="Main/StockRoom">Stock Room</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TropeTropes" title="Main/TropeTropes">Trope</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Tropes" title="Main/Tropes">Tropes</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TruthAndLies" title="Main/TruthAndLies">Truth And Lies</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TruthInTelevision" title="Main/TruthInTelevision">Truth In Television</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Topical Tropes</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/BetrayalTropes" title="Main/BetrayalTropes">Betrayal</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CensorshipTropes" title="Main/CensorshipTropes">Censorship</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CombatTropes" title="Main/CombatTropes">Combat</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DeathTropes" title="Main/DeathTropes">Death</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FamilyTropes" title="Main/FamilyTropes">Family</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FateAndProphecyTropes" title="Main/FateAndProphecyTropes">Fate And Prophecy</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FoodTropes" title="Main/FoodTropes">Food</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/HolidayTropes" title="Main/HolidayTropes">Holiday</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MemoryTropes" title="Main/MemoryTropes">Memory</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MoneyTropes" title="Main/MoneyTropes">Money</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MoralityTropes" title="Main/MoralityTropes">Morality</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/PoliticsTropes" title="Main/PoliticsTropes">Politics</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ReligionTropes" title="Main/ReligionTropes">Religion</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SchoolTropes" title="Main/SchoolTropes">School</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="sidebar-item showcase">
+<p class="sidebar-item-title" data-title="Community Showcase">Community Showcase <a class="bubble float-right hover-blue" href="/pmwiki/showcase.php">More</a></p>
+<p class="community-showcase">
+<a href="https://sharetv.com/shows/echo_chamber" onclick="trackOutboundLink('https://sharetv.com/shows/echo_chamber');" target="_blank">
+<img alt="" class="lazy-image" data-src="/images/communityShowcase-echochamber.jpg"/></a>
+<a href="/pmwiki/pmwiki.php/Webcomic/TwistedTropes">
+<img alt="" class="lazy-image" data-src="/img/howlandsc-side.jpg"/></a>
+</p>
+</div>
+<div class="sidebar-item sb-ad-unit" id="stick-cont">
+<div class="sidebar-section" id="stick-bar">
+<div class="square_ad ad-size-300x600 ad-section text-center">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_4"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_4'); });</script> </div>
+</div> </div>
+</div>
+</div>
+</div>
+</div>
+<div class="action-bar tablet-off" id="action-bar-bottom">
+<a class="scroll-to-top dead-button" href="#top-of-page" onclick="$('html, body').animate({scrollTop : 0},500);">Top</a>
+</div>
+</div>
+<div class="proper-ad-unit ad-sticky">
+<div id="proper-ad-tvtropes_sticky_ad"> <script>propertag.cmd.push(function() { proper_display('tvtropes_sticky_ad'); });</script> </div>
+</div>
+<footer id="main-footer">
+<div id="main-footer-inner">
+<div class="footer-left">
+<a class="img-link" href="/"><img alt="TV Tropes" class="lazy-image" data-src="/img/tvtropes-footer-logo.png" title="TV Tropes"/></a>
+<form action="index.html" class="navbar-form newsletter-signup validate modal-replies" data-ajax-get="/ajax/subscribe_email.php" id="cse-search-box-mobile" name="" role="">
+<button class="btn-submit newsletter-signup-submit-button" id="subscribe-btn" type="submit"><i class="fa fa-paper-plane"></i></button>
+<input class="form-control" id="subscription-email" name="q" placeholder="Subscribe" size="31" type="text" validate-type="email" value=""/>
+</form>
+<ul class="social-buttons">
+<li><a class="btn fb" href="https://www.facebook.com/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-facebook']);" target="_blank"><i class="fa fa-facebook"></i></a></li>
+<li><a class="btn tw" href="https://www.twitter.com/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-twitter']);" target="_blank"><i class="fa fa-twitter"></i></a> </li>
+<li><a class="btn rd" href="https://www.reddit.com/r/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-reddit']);" target="_blank"><i class="fa fa-reddit-alien"></i></a></li>
+</ul>
+</div>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">TVTropes</h4></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Administrivia">About TVTropes</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TheGoalsOfTVTropes">TVTropes Goals</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TheTropingCode">Troping Code</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TVTropesCustoms">TVTropes Customs</a></li>
+<li><a href="/pmwiki/pmwiki.php/JustForFun/TropesOfLegend">Tropes of Legend</a></li>
+<li><a href="/pmwiki/ad-free-subscribe.php">Go Ad-Free</a></li>
+</ul>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">Community</h4></li>
+<li><a href="/pmwiki/query.php?type=att">Ask The Tropers</a></li>
+<li><a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a></li>
+<li><a href="/pmwiki/query.php?type=tf">Trope Finder</a></li>
+<li><a href="/pmwiki/query.php?type=ykts">You Know That Show</a></li>
+<li><a data-modal-target="login" href="/pmwiki/lbs.php">Live Blogs</a></li>
+<li><a href="/pmwiki/review_activity.php">Reviews</a></li>
+<li><a href="/pmwiki/topics.php">Forum</a></li>
+</ul>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">Tropes HQ</h4></li>
+<li><a href="/pmwiki/about.php">About Us</a></li>
+<li><a href="/pmwiki/contact.php">Contact Us</a></li>
+<li><a href="/pmwiki/dmca.php">DMCA Notice</a></li>
+<li><a href="/pmwiki/privacypolicy.php">Privacy Policy</a></li>
+</ul>
+</div>
+<div class="text-center gutter-top gutter-bottom tablet-on" id="desktop-on-mobile-toggle">
+<a href="/pmwiki/switchDeviceCss.php?mobileVersion=1" rel="nofollow">Switch to <span class="txt-desktop">Desktop</span><span class="txt-mobile">Mobile</span> Version</a>
+</div>
+<div class="legal">
+<p>TVTropes is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License. <br/>Permissions beyond the scope of this license may be available from <a href="mailto:thestaff@tvtropes.org" rel="cc:morePermissions" xmlns:cc="http://creativecommons.org/ns#"> thestaff@tvtropes.org</a>.</p>
+<br/>
+<div class="privacy_wrapper">
+</div>
+</div>
+</footer>
+<style>
+      div.fc-ccpa-root {
+        position: absolute !important;
+        bottom: 93px !important;
+        margin: auto !important;
+        width: 100% !important;
+        z-index: 9999 !important;
+      }
+      .fc-ccpa-root .fc-dns-dialog .fc-dns-link p{
+        outline: none !important;
+        text-decoration: underline !important;
+        font-size: .7em !important;
+        font-family: sans-serif !important;
+      }
+      .fc-ccpa-root .fc-dns-dialog .fc-dns-link .fc-button-background {
+        background: none !important;
+      }
+    </style>
+<div class="full-screen" id="_pm_videoViewer">
+<a class="close" href="#close" id="_pm_videoViewer-close"></a>
+<div class="_pmvv-body">
+<div class="_pmvv-vidbox">
+<video class="video-js vjs-default-skin vjs-16-9" data-video-id="1ljb7g" id="overlay-video-player-box">
+</video>
+<div class="_pmvv-vidbox-desc">
+<h1 id="overlay-title">Super Mario Maker 2</h1>
+<p class="_pmvv-vidbox-descTxt" id="overlay-descrip">
+Sequel to the much-beloved Super Mario Maker, this one adds new features, biomes, and styles.	</p>
+<div class="rating-row" data-video-id="1ljb7g">
+<input name="is_logged_in" type="hidden" value="0"/>
+<p>How well does it match the trope?</p>
+<div id="star-rating-group">
+<div class="trope-rate">
+<input id="lamp5" name="rate" type="radio" value="5"/>
+<label for="lamp5" title="Absolutely"></label>
+<input id="lamp4" name="rate" type="radio" value="4"/>
+<label for="lamp4" title="Yes"></label>
+<input id="lamp3" name="rate" type="radio" value="3"/>
+<label for="lamp3" title="Kind of"></label>
+<input id="lamp2" name="rate" type="radio" value="2"/>
+<label for="lamp2" title="Not really"></label>
+<input id="lamp1" name="rate" type="radio" value="1"/>
+<label for="lamp1" title="No"></label>
+</div>
+<div id="star-rating-total">
+5 (9 votes)
+</div>
+</div>
+</div>
+<div class="example-media-row">
+<div class="example-overlay">
+<p>Example of:</p>
+<div id="overlay-trope">Main / LevelEditor</div>
+</div>
+<div class="media-sources-overlay example-overlay">
+<p>Media sources:</p>
+<div id="overlay-media">Main / LevelEditor</div>
+</div>
+</div>
+<p class="_pmvv-vidbox-stats text-right font-s" style="padding-top:8px; border-top: solid 1px rgba(255,255,255,0.2)">
+<a class="float-right" data-modal-target="login" href="#video-feedback">Report</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+        window.special_ops =  {
+            member : 'no',
+            isolated : 0,
+            tags : ['videogame']
+        };
+    </script>
+<script type="text/javascript">
+
+        var cleanCreativeEnabled = "";
+        var donation = "";
+        var live_ads = "1";
+        var img_domain = "https://static.tvtropes.org";
+        var snoozed = cookies.read('snoozedabm');
+        var snoozable = "";
+
+        if (adsRemovedWith) {
+            live_ads = 0;
+        }
+
+        var elem = document.createElement('script');
+        elem.async = true;
+
+        elem.src = '/design/assets/bundle.js?rev=c58d8df02f09262390bbd03db7921fc35c6af306';
+
+        elem.onload = function() {
+                                 }
+        document.getElementsByTagName('head')[0].appendChild(elem);
+
+    </script>
+<script type="text/javascript">
+      function send_analytics_event(user_type, donation){
+          // if(user_type == 'uncached' || user_type == 'cached'){
+          //   ga('send', 'event', 'caching', 'load', user_type, {'nonInteraction': 1});
+          //   return;
+          // }
+          var event_name = user_type;
+
+          if(donation == 'true'){
+              event_name += "_donation"
+          }else if(typeof(valid_user) == 'undefined'){
+              event_name += "_blocked"
+          }else if(valid_user == true){
+              event_name += "_unblocked";
+          }else{
+              event_name = "_unknown"
+          }
+          ga('send', 'event', 'ads', 'load', event_name, {'nonInteraction': 1});
+      }
+
+    
+    send_analytics_event("guest", "false");
+      </script>
+</body>
+</html>

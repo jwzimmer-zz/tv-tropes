@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Auto-Save - TV Tropes</title>
+<meta content="The Auto-Save trope as used in popular culture. A feature in Video Games, where the game automatically saves data without the player's input, usually with a …" name="description"/>
+<link href="https://tvtropes.org/pmwiki/pmwiki.php/Main/Autosave" rel="canonical"/>
+<link href="/img/icons/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="@tvtropes" name="twitter:site"/>
+<meta content="@tvtropes" name="twitter:owner"/>
+<meta content="Auto-Save - TV Tropes" name="twitter:title"/>
+<meta content="The Auto-Save trope as used in popular culture. A feature in Video Games, where the game automatically saves data without the player's input, usually with a …" name="twitter:description"/>
+<meta content="https://static.tvtropes.org/logo_blue_small.png" name="twitter:image:src"/>
+<meta content="TV Tropes" property="og:site_name"/>
+<meta content="en_US" property="og:locale"/>
+<meta content="https://www.facebook.com/tvtropes" property="article:publisher"/>
+<meta content="Auto-Save - TV Tropes" property="og:title"/>
+<meta content="website" property="og:type"/>
+<meta content="https://tvtropes.org/pmwiki/pmwiki.php/Main/Autosave" property="og:url"/>
+<meta content="https://static.tvtropes.org/logo_blue_small.png" property="og:image"/>
+<meta content="A feature in Video Games, where the game automatically saves data without the player's input, usually with a small notification. The game will save at certain points, such as when the player enters a new location or wins a certain battle. An Auto …" property="og:description"/>
+<link href="/img/icons/apple-icon-57x57.png" rel="apple-touch-icon" sizes="57x57" type="image/png"/>
+<link href="/img/icons/apple-icon-60x60.png" rel="apple-touch-icon" sizes="60x60" type="image/png"/>
+<link href="/img/icons/apple-icon-72x72.png" rel="apple-touch-icon" sizes="72x72" type="image/png"/>
+<link href="/img/icons/apple-icon-76x76.png" rel="apple-touch-icon" sizes="76x76" type="image/png"/>
+<link href="/img/icons/apple-icon-114x114.png" rel="apple-touch-icon" sizes="114x114" type="image/png"/>
+<link href="/img/icons/apple-icon-120x120.png" rel="apple-touch-icon" sizes="120x120" type="image/png"/>
+<link href="/img/icons/apple-icon-144x144.png" rel="apple-touch-icon" sizes="144x144" type="image/png"/>
+<link href="/img/icons/apple-icon-152x152.png" rel="apple-touch-icon" sizes="152x152" type="image/png"/>
+<link href="/img/icons/apple-icon-180x180.png" rel="apple-touch-icon" sizes="180x180" type="image/png"/>
+<link href="/img/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/img/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/img/icons/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png"/>
+<link href="/img/icons/favicon-192x192.png" rel="icon" sizes="192x192" type="image/png"/>
+<meta content="width=device-width, initial-scale=1" id="viewport" name="viewport"/>
+<script>
+                var propertag = {};
+                propertag.cmd = [];
+            </script>
+<link href="/design/assets/bundle.css?rev=c58d8df02f09262390bbd03db7921fc35c6af306" rel="stylesheet"/>
+<script>
+                function object(objectId) {
+                    if (document.getElementById && document.getElementById(objectId)) {
+                        return document.getElementById(objectId);
+                    } else if (document.all && document.all(objectId)) {
+                        return document.all(objectId);
+                    } else if (document.layers && document.layers[objectId]) {
+                        return document.layers[objectId];
+                    } else {
+                        return false;
+                    }
+                }
+
+                // JAVASCRIPT COOKIES CODE: for getting and setting user viewing preferences
+                var cookies = {
+                    create: function (name, value, days2expire, path) {
+                        var date = new Date();
+                        date.setTime(date.getTime() + (days2expire * 24 * 60 * 60 * 1000));
+                        var expires = date.toUTCString();
+                        document.cookie = name + '=' + value + ';' + 'expires=' + expires + ';' + 'path=' + path + ';';
+                    },
+										createWithExpire: function(name, value, expires, path) {
+												document.cookie = name + '=' + value + ';' + 'expires=' + expires + ';' + 'path=' + path + ';';
+										},
+                    read: function (name) {
+                        var cookie_value = "",
+                            current_cookie = "",
+                            name_expr = name + "=",
+                            all_cookies = document.cookie.split(';'),
+                            n = all_cookies.length;
+
+                        for (var i = 0; i < n; i++) {
+                            current_cookie = all_cookies[i].trim();
+                            if (current_cookie.indexOf(name_expr) === 0) {
+                                cookie_value = current_cookie.substring(name_expr.length, current_cookie.length);
+                                break;
+                            }
+                        }
+                        return cookie_value;
+                    },
+                    update: function (name, val) {
+                        this.create(name, val, 300, "/");
+                    },
+                    remove: function (name) {
+                        document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
+                    }
+                };
+
+                function updateUserPrefs() {
+                    //GENERAL: detect and set browser, if not cookied (will be treated like a user-preference and added to the #user-pref element)
+                    if( !cookies.read('user-browser') ){
+                        var broswer = '';
+
+                        if(navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPod/i) ){
+                            browser = 'iOS';
+                        } else if (/Opera[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'opera';
+                        } else if (/MSIE (\d+\.\d+);/.test(navigator.userAgent)) {
+                            browser = 'MSIE';
+                        } else if (/Navigator[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'netscape';
+                        } else if (/Chrome[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'chrome';
+                        } else if (/Safari[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'safari';
+                            /Version[\/\s](\d+\.\d+)/.test(navigator.userAgent);
+                            browserVersion = new Number(RegExp.$1);
+                        } else if (/Firefox[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'firefox';
+                        } else {
+                            browser = 'internet_explorer';
+                        }
+                        cookies.create('user-browser',browser,1,'/');
+                        document.getElementById('user-prefs').classList.add('browser-' + browser);
+                    } else {
+                        document.getElementById('user-prefs').classList.add('browser-' + cookies.read('user-browser'));
+                    }
+
+                    //update user preference settings
+                    if (cookies.read('wide-load') !== '') document.getElementById('user-prefs').classList.add('wide-load');
+                    if (cookies.read('night-vision') !== '') document.getElementById('user-prefs').classList.add('night-vision');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('user-prefs').classList.add('sticky-header');
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('user-prefs').classList.add('show-spoilers');
+                    if (cookies.read('folders-open') !== '') document.getElementById('user-prefs').classList.add('folders-open');
+                    if (cookies.read('lefthand-sidebar') !== '') document.getElementById('user-prefs').classList.add('lefthand-sidebar');
+                    if (cookies.read('highlight-links') !== '') document.getElementById('user-prefs').classList.add('highlight-links');
+                    if (cookies.read('forum-gingerbread') !== '') document.getElementById('user-prefs').classList.add('forum-gingerbread');
+                    if (cookies.read('shared-avatars') !== '') document.getElementById('user-prefs').classList.add('shared-avatars');
+                    if (cookies.read('new-search') !== '') document.getElementById('user-prefs').classList.add('new-search');
+                    if (cookies.read('stop-auto-play-video') !== '') document.getElementById('user-prefs').classList.add('stop-auto-play-video');
+
+                    //desktop view on mobile
+                    if (cookies.read('desktop-on-mobile') !== ''){
+                        document.getElementById('user-prefs').classList.add('desktop-on-mobile');
+
+                        var viewport = document.querySelector("meta[name=viewport]");
+                        viewport.setAttribute('content', 'width=1000');
+                    }
+
+                }
+
+                function updateDesktopPrefs() {
+                    if (cookies.read('wide-load') !== '') document.getElementById('sidebar-toggle-wideload').classList.add('active');
+                    if (cookies.read('night-vision') !== '') document.getElementById('sidebar-toggle-nightvision').classList.add('active');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('sidebar-toggle-stickyheader').classList.add('active');
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('sidebar-toggle-showspoilers').classList.add('active');
+
+                }
+
+                function updateMobilePrefs() {
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('mobile-toggle-showspoilers').classList.add('active');
+                    if (cookies.read('night-vision') !== '') document.getElementById('mobile-toggle-nightvision').classList.add('active');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('mobile-toggle-stickyheader').classList.add('active');
+                    if (cookies.read('highlight-links') !== '') document.getElementById('mobile-toggle-highlightlinks').classList.add('active');
+
+                }
+
+
+                if (document.cookie.indexOf("scroll0=") < 0) {
+                    // do nothing
+                } else {
+                    console.log('ads removed by scroll.com');
+                    var adsRemovedWith = 'scroll';
+                    var style = document.createElement('style');
+                    style.innerHTML = '#header-ad, .proper-ad-unit, .square_ad, .sb-ad-unit { display: none !important; } ';
+                    document.head.appendChild(style);
+                }
+            </script>
+<script type="text/javascript">
+
+                var tvtropes_config = {
+                    astri_stream_enabled : "",
+                    is_logged_in         : "",
+                    handle               : "",
+                    get_astri_stream     : "",
+										revnum               : "c58d8df02f09262390bbd03db7921fc35c6af306",
+										img_domain           : "https://static.tvtropes.org",
+										adblock              : "1",
+										adblock_url          : "propermessage.io",
+										pause_editing        : "0",
+										pause_editing_msg    : "",
+										pause_site_changes   : ""
+                };
+            </script>
+<script type="text/javascript">
+						  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+						  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+						  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+						  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+						  ga('create', 'UA-3821842-1', 'auto');
+						  ga('send', 'pageview');
+
+						</script>
+</head>
+<body class="">
+<i id="user-prefs"></i>
+<script>updateUserPrefs();</script>
+<div id="fb-root"></div>
+<div id="modal-box"></div>
+<header class="headroom-element" id="main-header-bar">
+<div id="main-header-bar-inner">
+<span class="header-spacer" id="header-spacer-left"></span>
+<a class="mobile-menu-toggle-button tablet-on" href="#mobile-menu" id="main-mobile-toggle"><span></span><span></span><span></span></a>
+<a class="no-dev" href="/" id="main-header-logoButton"></a>
+<span class="header-spacer" id="header-spacer-right"></span>
+<nav class="tablet-off" id="main-header-nav">
+<a href="/pmwiki/pmwiki.php/Main/Tropes">Tropes</a>
+<a href="/pmwiki/pmwiki.php/Main/Media">Media</a>
+<a class="nav-browse" href="/pmwiki/browse.php">Browse</a>
+<a href="/pmwiki/index_report.php">Indexes</a>
+<a href="/pmwiki/topics.php">Forums</a>
+<a class="nav-browse" href="/pmwiki/recent_videos.php">Videos</a>
+</nav>
+<div id="main-header-bar-right">
+<div class="font-xs mobile-off" id="signup-login-box">
+<a class="hover-underline bold" data-modal-target="signup" href="/pmwiki/login.php">Join</a>
+<a class="hover-underline bold" data-modal-target="login" href="/pmwiki/login.php">Login</a>
+</div>
+<div class="mobile-on inline" id="signup-login-mobileToggle">
+<a data-modal-target="login" href="/pmwiki/login.php"><i class="fa fa-user"></i></a>
+</div>
+<div id="search-box">
+<form action="/pmwiki/search_result.php" class="search">
+<input class="search-box" name="q" placeholder="Search" required="" type="text" value=""/>
+<input class="submit-button" type="submit" value=""/>
+<input name="search_type" type="hidden" value="article"/>
+<input name="page_type" type="hidden" value="all"/>
+<input name="cx" type="hidden" value="partner-pub-6610802604051523:amzitfn8e7v"/>
+<input name="cof" type="hidden" value="FORID:10"/>
+<input name="ie" type="hidden" value="ISO-8859-1"/>
+<input name="siteurl" type="hidden" value=""/>
+<input name="ref" type="hidden" value=""/>
+<input name="ss" type="hidden" value=""/>
+</form>
+<a class="mobile-on mobile-search-toggle close-x" href="#close-search"><i class="fa fa-close"></i></a>
+</div>
+<div id="random-box">
+<a class="button-random-trope" href="/pmwiki/pmwiki.php/Main/DoomedHurtGuy" onclick="ga('send', 'event', 'button', 'click', 'random trope');" rel="nofollow"></a>
+<a class="button-random-media" href="/pmwiki/pmwiki.php/Music/M83" onclick="ga('send', 'event', 'button', 'click', 'random media');" rel="nofollow"></a>
+</div>
+</div>
+</div>
+<div class="tablet-on" id="mobile-menu"><div class="mobile-menu-options">
+<div class="nav-wrapper">
+<a class="xl" href="/pmwiki/pmwiki.php/Main/Tropes">Tropes</a>
+<a class="xl" href="/pmwiki/pmwiki.php/Main/Media">Media</a>
+<a class="xl" href="/pmwiki/browse.php">Browse</a>
+<a class="xl" href="/pmwiki/index_report.php">Indexes</a>
+<a class="xl" href="/pmwiki/topics.php">Forums</a>
+<a class="xl" href="/pmwiki/recent_videos.php">Videos</a>
+<a href="/pmwiki/query.php?type=att">Ask The Tropers</a>
+<a href="/pmwiki/query.php?type=tf">Trope Finder</a>
+<a href="/pmwiki/query.php?type=ykts">You Know That Show...</a>
+<a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a>
+<a data-click-toggle="active" href="#tools">Tools <i class="fa fa-chevron-down"></i></a>
+<div class="tools-dropdown mobile-dropdown-linkList">
+<a href="/pmwiki/cutlist.php">Cut List</a>
+<a href="/pmwiki/changes.php">New Edits</a>
+<a href="/pmwiki/recent_edit_reasons.php">Edit Reasons</a>
+<a href="/pmwiki/launches.php">Launches</a>
+<a href="/pmwiki/img_list.php">Images List</a>
+<a href="/pmwiki/crown_activity.php">Crowner Activity</a>
+<a href="/pmwiki/no_types.php">Un-typed Pages</a>
+<a href="/pmwiki/page_type_audit.php">Recent Page Type Changes</a>
+</div>
+<a data-click-toggle="active" href="#hq">Tropes HQ <i class="fa fa-chevron-down"></i></a>
+<div class="tools-dropdown mobile-dropdown-linkList">
+<a href="/pmwiki/about.php">About Us</a>
+<a href="/pmwiki/contact.php">Contact Us</a>
+<a href="mailto:advertising@proper.io">Advertise</a>
+<a href="/pmwiki/dmca.php">DMCA Notice</a>
+<a href="/pmwiki/privacypolicy.php">Privacy Policy</a>
+</div>
+<a href="/pmwiki/ad-free-subscribe.php">Go Ad-Free</a>
+<div class="toggle-switches">
+<ul class="mobile-menu display-toggles">
+<li>Show Spoilers <div class="display-toggle show-spoilers" id="mobile-toggle-showspoilers"></div></li>
+<li>Night Vision <div class="display-toggle night-vision" id="mobile-toggle-nightvision"></div></li>
+<li>Sticky Header <div class="display-toggle sticky-header" id="mobile-toggle-stickyheader"></div></li>
+<li>Highlight Links <div class="display-toggle highlight-links" id="mobile-toggle-highlightlinks"></div></li>
+</ul>
+<script>updateMobilePrefs();</script>
+</div>
+</div>
+</div>
+</div>
+</header>
+<div class="mobile-on" id="homepage-introBox-mobile">
+<a href="/"><img class="logo-small" src="/images/logo-white-big.png"/></a>
+<form action="/pmwiki/search_result.php" class="search" style="margin:10px -5px -6px -5px;">
+<input class="search-box" name="q" placeholder="Search" required="" type="text" value=""/>
+<input class="submit-button" type="submit" value=""/>
+<input name="search_type" type="hidden" value="article"/>
+<input name="page_type" type="hidden" value="all"/>
+<input name="cx" type="hidden" value="partner-pub-6610802604051523:amzitfn8e7v"/>
+<input name="cof" type="hidden" value="FORID:10"/>
+<input name="ie" type="hidden" value="ISO-8859-1"/>
+<input name="siteurl" type="hidden" value=""/>
+<input name="ref" type="hidden" value=""/>
+<input name="ss" type="hidden" value=""/>
+</form>
+</div>
+<div class="ad" id="header-ad-wrapper">
+<div id="header-ad">
+<div class="ad-size-970x90 atf_banner">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_1"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_1'); });</script> </div>
+</div> </div>
+</div>
+</div>
+<div id="main-container">
+<div class="action-bar mobile-off" id="action-bar-top">
+<div class="action-bar-right">
+<p>Follow TV Tropes</p>
+<a class="button-fb" href="https://www.facebook.com/TVTropes">
+<i class="fa fa-facebook"></i></a>
+<a class="button-tw" href="https://www.twitter.com/TVTropes">
+<i class="fa fa-twitter"></i></a>
+<a class="button-re" href="https://www.reddit.com/r/TVTropes">
+<i class="fa fa-reddit-alien"></i></a>
+</div>
+<nav class="actions-wrapper" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<ul class="page-actions" id="top_main_list">
+<li class="link-edit">
+<a class="article-edit-button" data-modal-target="login" href="/pmwiki/pmwiki.php/Main/Autosave?action=edit" rel="nofollow">
+<i class="fa fa-pencil"></i> Edit Page</a></li><li class="link-related"><a href="/pmwiki/relatedsearch.php?term=Main/Autosave">
+<i class="fa fa-share-alt"></i> Related</a></li><li class="link-history"><a href="/pmwiki/article_history.php?article=Main.Autosave">
+<i class="fa fa-history"></i> History</a></li><li class="link-discussion"><a href="/pmwiki/remarks.php?trope=Main.Autosave">
+<i class="fa fa-comment"></i> Discussion</a></li> </ul>
+<button class="nav__dropdown-toggle" id="top_more_button" onclick="toggle_more_menu('top');" type="button">More</button>
+<ul class="more_menu hidden_more_list" id="top_more_list">
+<li class="link-todo tuck-always more_list_item"><a data-modal-target="login" href="#todo"><i class="fa fa-check-circle"></i> To Do</a></li><li class="link-pageSource tuck-always more_list_item"><a data-modal-target="login" href="/pmwiki/pmwiki.php/Main/Autosave?action=source" rel="nofollow" target="_blank"><i class="fa fa-code"></i> Page Source</a></li> </ul>
+</nav>
+<div class="WikiWordModalStub"></div>
+<div class="ImgUploadModalStub" data-page-type="Article"></div>
+<div class="login-alert" style="display: none;">
+You need to <a href="/pmwiki/login.php" style="color:#21A0E8">login</a> to do this. <a href="/pmwiki/login.php?tab=register_account" style="color:#21A0E8">Get Known</a> if you don't have an account
+</div>
+</div>
+<div class="page-Article" id="main-content">
+<article class="with-sidebar" id="main-entry">
+<input id="groupname-hidden" type="hidden" value="Main"/>
+<input id="title-hidden" type="hidden" value="Autosave"/>
+<input id="article_id" type="hidden" value="431122"/>
+<input id="logged_in" type="hidden" value="false"/>
+<p class="hidden" id="current_url">http://tvtropes.org/pmwiki/pmwiki.php/Main/Autosave</p>
+<meta content="" itemprop="datePublished"/>
+<meta content="" itemprop="articleSection"/>
+<meta content="" itemprop="image"/>
+<a class="watch-button" data-modal-target="login" href="#watch">Follow<span>ing</span></a>
+<h1 class="entry-title" itemprop="headline">
+Auto-Save
+</h1>
+<script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+                "@type": "ListItem",
+                "position": 1,
+                "name": "tvtropes.org",
+                "item": "https://tvtropes.org"
+            },{
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Tropes",
+                "item": "https://tvtropes.org/pmwiki/pmwiki.php/Main/Tropes"
+            },{
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Auto-Save"            }]
+        }
+    </script>
+<a class="mobile-actionbar-toggle mobile-on" data-click-toggle="active" href="#mobile-actions-toggle" id="mobile-actionbar-toggle">
+<p class="tiny-off">Go To</p><span></span><span></span><span></span><i class="fa fa-pencil"></i></a>
+<nav class="mobile-actions-wrapper mobile-on" id="mobile-actions-bar"></nav>
+<div class="modal fade hidden-until-active" id="editLockModal">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button aria-label="Close" class="close" data-dismiss="modal" type="button"> <span aria-hidden="true">×</span></button>
+<h4 class="modal-title">Edit Locked</h4>
+</div>
+<div class="modal-body">
+<div class="row">
+<div class="body">
+<div class="danger troper_locked_message"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<nav class="body-options" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<ul class="subpage-links">
+<li>
+<a class="subpage-link curr-subpage" href="/pmwiki/pmwiki.php/Main/Autosave" title="The Main page">
+<span class="wrapper"><span class="spi main-page"></span>Main</span></a>
+</li>
+<li>
+<a class="subpage-link" href="/pmwiki/pmwiki.php/Laconic/Autosave" title="The Laconic page">
+<span class="wrapper"><span class="spi laconic-icon"></span>Laconic</span></a>
+</li>
+<li class="create-subpage dropdown">
+<a aria-expanded="false" class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);" role="button">
+<span class="wrapper">Create New <i class="fa fa-plus-circle"></i></span>
+</a>
+<select onchange="this.options[this.selectedIndex].value &amp;&amp; (window.location = this.options[this.selectedIndex].value);">
+<option value="">- Create New -</option>
+<option value="/pmwiki/pmwiki.php/Analysis/Autosave?action=edit">Analysis</option>
+<option value="/pmwiki/pmwiki.php/Characters/Autosave?action=edit">Characters</option>
+<option value="/pmwiki/pmwiki.php/FanficRecs/Autosave?action=edit">FanficRecs</option>
+<option value="/pmwiki/pmwiki.php/FanWorks/Autosave?action=edit">FanWorks</option>
+<option value="/pmwiki/pmwiki.php/Fridge/Autosave?action=edit">Fridge</option>
+<option value="/pmwiki/pmwiki.php/Haiku/Autosave?action=edit">Haiku</option>
+<option value="/pmwiki/pmwiki.php/Headscratchers/Autosave?action=edit">Headscratchers</option>
+<option value="/pmwiki/pmwiki.php/ImageLinks/Autosave?action=edit">ImageLinks</option>
+<option value="/pmwiki/pmwiki.php/PlayingWith/Autosave?action=edit">PlayingWith</option>
+<option value="/pmwiki/pmwiki.php/Quotes/Autosave?action=edit">Quotes</option>
+<option value="/pmwiki/pmwiki.php/Recap/Autosave?action=edit">Recap</option>
+<option value="/pmwiki/pmwiki.php/ReferencedBy/Autosave?action=edit">ReferencedBy</option>
+<option value="/pmwiki/pmwiki.php/Synopsis/Autosave?action=edit">Synopsis</option>
+<option value="/pmwiki/pmwiki.php/Timeline/Autosave?action=edit">Timeline</option>
+<option value="/pmwiki/pmwiki.php/Trivia/Autosave?action=edit">Trivia</option>
+<option value="/pmwiki/pmwiki.php/WMG/Autosave?action=edit">WMG</option>
+<option value="/pmwiki/pmwiki.php/YMMV/Autosave?action=edit">YMMV</option>
+</select>
+</li>
+</ul>
+</nav>
+<div class="article-content retro-folders" id="main-article">
+<p>A feature in <a class="twikilink" href="/pmwiki/pmwiki.php/Main/VideoGames" title="/pmwiki/pmwiki.php/Main/VideoGames">Video Games</a>, where the game automatically saves data without the player's input, usually with a small notification. The game will save at certain points, such as when the player enters a new location or wins a certain battle. An Auto-Save will always overwrite the previous file in the system. The option to save manually may also be present, in which case the Auto-Save system may rotate through multiple (usually <a class="twikilink" href="/pmwiki/pmwiki.php/Main/RuleOfThree" title="/pmwiki/pmwiki.php/Main/RuleOfThree">three</a>) save slots.
+</p><div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_1"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_1'); })</script></div></div><p>Although autosaving is usually meant to be just a convenience for the player, developers sometimes use it to prevent <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SaveScumming" title="/pmwiki/pmwiki.php/Main/SaveScumming">Save Scumming</a>, which some <a class="twikilink" href="/pmwiki/pmwiki.php/Main/NoFairCheating" title="/pmwiki/pmwiki.php/Main/NoFairCheating">feel is a form of cheating</a>. While it used to be relatively uncommon in certain types of genres, such as <a class="twikilink" href="/pmwiki/pmwiki.php/Main/EasternRPG" title="/pmwiki/pmwiki.php/Main/EasternRPG">Eastern RPGs</a>, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/PlatformGame" title="/pmwiki/pmwiki.php/Main/PlatformGame">platform games</a> and <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ActionGame" title="/pmwiki/pmwiki.php/Main/ActionGame">action games</a>, today it's usually an expected feature in modern games.
+</p><p>One downside to auto-saving is that the player might turn off their system or close the game in the middle of a save without knowing it (usually due to the "Now Saving..." indicator being easy to miss), potentially <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GameBreakingBug" title="/pmwiki/pmwiki.php/Main/GameBreakingBug">corrupting their save file</a> in the process. However, many modern games with auto-save are on systems with <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/UserOperationProhibitFlag" title="/pmwiki/pmwiki.php/UsefulNotes/UserOperationProhibitFlag">User Operation Prohibit Flags</a>, one of the few kinds of cases where such flags are seen as a <em><a class="twikilink" href="/pmwiki/pmwiki.php/Main/AntiFrustrationFeatures" title="/pmwiki/pmwiki.php/Main/AntiFrustrationFeatures">good</a></em> thing.
+</p><p>Compare and contrast <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Checkpoint" title="/pmwiki/pmwiki.php/Main/Checkpoint">Checkpoint</a>, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SavePoint" title="/pmwiki/pmwiki.php/Main/SavePoint">Save Point</a> and <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SaveGameLimits" title="/pmwiki/pmwiki.php/Main/SaveGameLimits">Save-Game Limits</a>.
+</p><div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_2"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_2'); })</script></div></div><p></p><hr/><h2>Examples:</h2>
+<p></p><div class="folderlabel" onclick="toggleAllFolders();">    open/close all folders  </div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder0');">    Action </div><div class="folder" id="folder0" isfolder="true" style="display:block;">
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheMatrixPathOfNeo" title="/pmwiki/pmwiki.php/VideoGame/TheMatrixPathOfNeo">The Matrix: Path of Neo</a></em> has this show up as a little green memory card at the beginning of the levels, so that if you die, you don't have to start from the last level.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder1');">    Action-Adventure Games </div><div class="folder" id="folder1" isfolder="true" style="display:block;">
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/BatmanArkhamAsylum" title="/pmwiki/pmwiki.php/VideoGame/BatmanArkhamAsylum">Batman: Arkham Asylum</a></em> and <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/BatmanArkhamCity" title="/pmwiki/pmwiki.php/VideoGame/BatmanArkhamCity">Batman: Arkham City</a></em> both autosave when entering or exiting a building.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/BlossomTalesTheSleepingKing" title="/pmwiki/pmwiki.php/VideoGame/BlossomTalesTheSleepingKing">Blossom Tales: The Sleeping King</a></em> does this to the point of going a bit overboard. In the Overworld, you save every time you enter a new section of the map. When in the dungeons, however, you save every time you <em>enter a new room.</em>
+</li><li> Every one of the <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/LegoAdaptationGame" title="/pmwiki/pmwiki.php/VideoGame/LegoAdaptationGame">Lego Adaptation Games</a></em> does this.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/LuigisMansionDarkMoon" title="/pmwiki/pmwiki.php/VideoGame/LuigisMansionDarkMoon">Luigi's Mansion: Dark Moon</a></em> saves when you complete a mission or ScareScraper game, unlike the original title and its manual save points.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheLegendOfZeldaBreathOfTheWild" title="/pmwiki/pmwiki.php/VideoGame/TheLegendOfZeldaBreathOfTheWild">The Legend of Zelda: Breath of the Wild</a></em> moves the series away from <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SavePoint" title="/pmwiki/pmwiki.php/Main/SavePoint">Save Points</a> and introduces autosaving, which occurs whenever entering a new area or performing something significant, as well as generally every couple of minutes or so. <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SaveScumming" title="/pmwiki/pmwiki.php/Main/SaveScumming">Save Scumming</a> is allowed and tacitly encouraged by the ability to load any of the six most recent saves at any time (a feature removed in the DLC Master Mode). Manual saving is also possible.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder2');">    Adventure Games </div><div class="folder" id="folder2" isfolder="true" style="display:block;">
+<ul><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Code7" title="/pmwiki/pmwiki.php/VideoGame/Code7">Code 7</a></em>, your game is saved pretty often; at the start of every cutscene, whenever you move to another location, and often even when you move to another computer through the network while gathering information. Because of this, there is no way to save manually. Every autosave overwrites the previous one, so <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SaveScumming" title="/pmwiki/pmwiki.php/Main/SaveScumming">Save Scumming</a> isn't exactly encouraged, but it isn't prevented either, since the save files are pretty easy to find, copy and replace.
+</li></ul></div>
+<div class="proper-ad-unit mobile-ad square_ad"><h6 class="ad-caption">Advertisement:</h6><div id="proper-ad-tvtropes_mobile_ad_3"><script>propertag.cmd.push(function() { proper_display('tvtropes_mobile_ad_3'); })</script></div></div><p></p><div class="folderlabel" onclick="togglefolder('folder3');">    Audio Games </div><div class="folder" id="folder3" isfolder="true" style="display:block;">
+<ul><li> <em><a class="createlink" href="/pmwiki/pmwiki.php/AudioGame/TheGate" title="/pmwiki/pmwiki.php/AudioGame/TheGate">The Gate</a></em> has these scattered throughout its various levels. When a player encounters them, the game simply says, "Checkpoint."
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder4');">    Eastern RPG </div><div class="folder" id="folder4" isfolder="true" style="display:block;">
+<ul><li> The <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DarkSouls" title="/pmwiki/pmwiki.php/VideoGame/DarkSouls">Dark Souls</a></em> games and <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Bloodborne" title="/pmwiki/pmwiki.php/VideoGame/Bloodborne">Bloodborne</a></em> autosave almost constantly. While this is nice in that if the game gets unexpectedly shut off or crashes you'll only lose a couple of minutes of progress at most, it also means that everything that happens in the game will stick, whether it be killing a boss or an important friendly NPC. You cannot force a do-over by reloading an old save file: the consequences of your actions are permanent.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DragonQuestIX" title="/pmwiki/pmwiki.php/VideoGame/DragonQuestIX">Dragon Quest IX</a></em> only has autosave when calculating the odds of an alchemiracle, to prevent <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SaveScumming" title="/pmwiki/pmwiki.php/Main/SaveScumming">Save Scumming</a> until you get the ultimate weapon/armor.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FinalFantasyXIII" title="/pmwiki/pmwiki.php/VideoGame/FinalFantasyXIII">Final Fantasy XIII</a></em> autosaves before every battle. If you die, you get the choice of Retry or Quit. Retry returns you to just before the battle, allowing you to fiddle with your strategy or just run away. Quit returns you to your last manual save.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FinalFantasyXIII2" title="/pmwiki/pmwiki.php/VideoGame/FinalFantasyXIII2">Final Fantasy XIII-2</a></em> autosaves before key events like bosses.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/GenshinImpact" title="/pmwiki/pmwiki.php/VideoGame/GenshinImpact">Genshin Impact</a>:</em> Auto Save is the only save. There is no manual save/load menu: you can only quit the game when you have finished a session, and continue when you log on again. The game doesn't even tell you when it is auto saving.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/AKnightsQuestForMilk" title="/pmwiki/pmwiki.php/VideoGame/AKnightsQuestForMilk">A Knight's Quest for Milk</a></em> autosaves every time you get a new objective or clear an old one.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheLastStory" title="/pmwiki/pmwiki.php/VideoGame/TheLastStory">The Last Story</a></em>, the game's autosave is referred to as a "Checkpoint Save", and it's made any time you're about to go into a battle. The game notes that it only keeps <em>one</em> Checkpoint Save at a time, though you can have as many save files (using the traditional <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SavePoint" title="/pmwiki/pmwiki.php/Main/SavePoint">Save Point</a>) as you want.
+</li><li> In <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MegaManBattleNetwork" title="/pmwiki/pmwiki.php/VideoGame/MegaManBattleNetwork">Mega Man Battle Network</a></em>, getting a new chip from the chip trader machine will cause the game to auto-save in any game after the first. This is to prevent <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SaveScumming" title="/pmwiki/pmwiki.php/Main/SaveScumming">Save Scumming</a> for the desired chip.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/CitizensOfEarth" title="/pmwiki/pmwiki.php/VideoGame/CitizensOfEarth"> Citizens of Earth</a></em> has an auto-save slot which is automatically updated each time you go through a loading screen. It's convenient given the large amount of <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GameBreakingBug" title="/pmwiki/pmwiki.php/Main/GameBreakingBug">game breaking bugs</a>, but if you happen to be doing a quest which takes place on a single large map and the game crashes or you get stuck somewhere because the game didn't load the character that lets you leave, you're out of luck unless you saved manually.
+</li><li> The <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/KingdomHearts" title="/pmwiki/pmwiki.php/Franchise/KingdomHearts">Kingdom Hearts</a></em> games mark a checkpoint whenever you enter a new room, which you can return to if you are killed. <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/KingdomHearts02BirthBySleepAFragmentaryPassage" title="/pmwiki/pmwiki.php/VideoGame/KingdomHearts02BirthBySleepAFragmentaryPassage">0.2</a></em> and <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/KingdomHeartsIII" title="/pmwiki/pmwiki.php/VideoGame/KingdomHeartsIII">III</a></em> upgrade these to full-fledged, loadable save files.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/GreatGreed" title="/pmwiki/pmwiki.php/VideoGame/GreatGreed">Great Greed</a></em> featured autosave back in 1992 for the Game Boy, alongside three traditional save files.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder5');">    First-Person Shooter </div><div class="folder" id="folder5" isfolder="true" style="display:block;">
+<ul><li> The <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Borderlands" title="/pmwiki/pmwiki.php/VideoGame/Borderlands">Borderlands</a></em> series: Autosave both when a player changes areas and when they enter the proximity of a New-U station.
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Borderlands1" title="/pmwiki/pmwiki.php/VideoGame/Borderlands1">Borderlands 1</a></em>
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Borderlands2" title="/pmwiki/pmwiki.php/VideoGame/Borderlands2">Borderlands 2</a></em>
+</li></ul></li><li> Most <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/CallOfDuty" title="/pmwiki/pmwiki.php/VideoGame/CallOfDuty">Call of Duty</a></em> games save between levels, and some save at checkpoints.
+</li><li> All games in the <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FirstEncounterAssaultRecon" title="/pmwiki/pmwiki.php/VideoGame/FirstEncounterAssaultRecon">FEAR</a></em> series autosave after reaching a certain place and sometimes before or after a especially hard fight. The first game also has an option to save manually.
+</li><li> Both <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Goldeneye1997" title="/pmwiki/pmwiki.php/VideoGame/Goldeneye1997">Goldeneye 1997</a></em> and <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/GoldeneyeWii" title="/pmwiki/pmwiki.php/VideoGame/GoldeneyeWii">Goldeneye Wii</a></em> use auto save.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FarCry" title="/pmwiki/pmwiki.php/VideoGame/FarCry">Far Cry</a></em> used auto-save checkpoints. It was also possible to enable an option to make manual saves.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MetroExodus" title="/pmwiki/pmwiki.php/VideoGame/MetroExodus">Metro Exodus</a></em> has three auto save slots and one quick save. The auto saves are triggered by location, and are sometimes close to each other.
+</li><li> Done in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/QuakeII" title="/pmwiki/pmwiki.php/VideoGame/QuakeII">Quake II</a></em>. The game auto-saves into the first save slot whenever the player enters a new area, without notifying the player, but also allows the player to save in a different save slot manually whenever the player wishes.
+</li><li> Valve games such as <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/HalfLife" title="/pmwiki/pmwiki.php/VideoGame/HalfLife">Half-Life</a></em> and <em><a class="twikilink" href="/pmwiki/pmwiki.php/Videogame/Portal" title="/pmwiki/pmwiki.php/Videogame/Portal">Portal</a></em> autosave in certain places or intervals. If you want to to back before an autosave, you can always load the previous save file.
+</li><li> Many <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Doom" title="/pmwiki/pmwiki.php/VideoGame/Doom">Doom</a></em> source ports, such as <a class="urllink" href="http://www.zdoom.org">ZDoom<img height="12" src="https://static.tvtropes.org/pmwiki/pub/external_link.gif" style="border:none;" width="12"/></a>, autosave whenever the player enters a new level, whilst also having the option of manual saves. In ZDoom at least, this differs from the Quake II example above, in that ZDoom has four autosave slots (new saves overwrite the oldest one) which are separate from the standard save slots.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/BioshockInfinite" title="/pmwiki/pmwiki.php/VideoGame/BioshockInfinite">Bioshock Infinite</a></em> has <em>only</em> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SavePoint" title="/pmwiki/pmwiki.php/Main/SavePoint">Save Point</a>-based autosaves.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder6');">    Platform Games </div><div class="folder" id="folder6" isfolder="true" style="display:block;">
+<ul><li> The <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Jumper" title="/pmwiki/pmwiki.php/VideoGame/Jumper">Jumper</a></em> games automatically save progress at a moment that varies between games. Then again, being able to undo death-count wouldn't be rather fair.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Kirby" title="/pmwiki/pmwiki.php/VideoGame/Kirby">Kirby</a></em> games always save like this. The sole exception is "The Great Cave Offensive" game in <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/KirbySuperStar" title="/pmwiki/pmwiki.php/VideoGame/KirbySuperStar">Kirby Super Star</a></em>, which has a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Metroidvania" title="/pmwiki/pmwiki.php/Main/Metroidvania">Metroidvania-like</a> design including <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SavePoint" title="/pmwiki/pmwiki.php/Main/SavePoint">Save Points</a>.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Purple" title="/pmwiki/pmwiki.php/VideoGame/Purple">Purple</a></em> saves progress automatically when you beat a boss, but level high-scores and item collections are saved instantly when you complete a level.
+</li><li> The <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/RatchetAndClank" title="/pmwiki/pmwiki.php/Franchise/RatchetAndClank">Ratchet &amp; Clank</a></em> games save in between levels.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SpyroYearOfTheDragon" title="/pmwiki/pmwiki.php/VideoGame/SpyroYearOfTheDragon">Spyro: Year of the Dragon</a></em> autosaves whenever you're entering a level or the hub.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/SuperMarioBros" title="/pmwiki/pmwiki.php/Franchise/SuperMarioBros">Super Mario Bros.</a></em>:
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/WarioLand" title="/pmwiki/pmwiki.php/VideoGame/WarioLand">Wario Land</a></em> automatically saves when you beat a level or boss (in pretty much every game in the series).
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/YoshisIsland" title="/pmwiki/pmwiki.php/VideoGame/YoshisIsland">Yoshi's Island</a></em> saves after every level. As does its DS sequel.
+</li><li> Where previous 3D <em>Mario</em> games left it to you to save, or gave you the option after finding a <a class="twikilink" href="/pmwiki/pmwiki.php/Main/PlotCoupon" title="/pmwiki/pmwiki.php/Main/PlotCoupon">Plot Coupon</a>, <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SuperMarioGalaxy2" title="/pmwiki/pmwiki.php/VideoGame/SuperMarioGalaxy2">Super Mario Galaxy 2</a></em> just does it for you. You can also save at any time on the <a class="twikilink" href="/pmwiki/pmwiki.php/Main/Faceship" title="/pmwiki/pmwiki.php/Main/Faceship">Faceship</a>.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DonkeyKongCountryReturns" title="/pmwiki/pmwiki.php/VideoGame/DonkeyKongCountryReturns">Donkey Kong Country Returns</a></em> saves even if you leave a level, which is helpful if you just want to look for Diddy in the level, but KONG letter and puzzle pieces are programmed to only be counted when you reach the exit.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/CrashBandicootNSaneTrilogy" title="/pmwiki/pmwiki.php/VideoGame/CrashBandicootNSaneTrilogy">Crash Bandicoot N. Sane Trilogy</a></em> has autosaving as one of its several <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AntiFrustrationFeatures" title="/pmwiki/pmwiki.php/Main/AntiFrustrationFeatures">Anti-Frustration Features</a>. It is enabled by default, with three other spare save slots for manual saves, but autosaving can also be deactivated at will for players who prefer to save completely manually.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder7');">    Puzzle Games </div><div class="folder" id="folder7" isfolder="true" style="display:block;">
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/AngryBirds" title="/pmwiki/pmwiki.php/VideoGame/AngryBirds">Angry Birds</a></em> and all its sequels automatically save your progress every time you complete a level.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SpellingJungle" title="/pmwiki/pmwiki.php/VideoGame/SpellingJungle">Spelling Jungle</a></em>: The player's progress is automatically saved once they've beaten a level, including the Spelldown challenge afterward.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder8');">    Racing Games </div><div class="folder" id="folder8" isfolder="true" style="display:block;">
+<ul><li> The <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Forza" title="/pmwiki/pmwiki.php/VideoGame/Forza">Forza</a></em> series has always featured only auto saves without allowing manual saves, and has always done so in a sensible manner. The fourth installment of the <em>Motorsport</em> series, however, took the amount of auto saving that occurs to new extremes. Apparently in order to prevent any form of cheating (because all the cars and upgrades you unlock in the career mode can be used in competitive online modes as well), the game saves after practically anything you do — even if you didn't actually do anything at all! Enter any in-game menu like a car dealer or a tuning shop, exit again right away, and another auto save is being made. What's really annoying, though, is that you can't do anything while the game saves. You're forced to wait the two seconds it takes for the auto save to be written to the Xbox's storage media before the game reacts to your input again, and having to wait two seconds every single time you do anything at all quickly exhausts one's patience.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder9');">    Rhythm Games </div><div class="folder" id="folder9" isfolder="true" style="display:block;">
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DanceDanceRevolution" title="/pmwiki/pmwiki.php/VideoGame/DanceDanceRevolution">Dance Dance Revolution</a></em> games save if there is any important changes.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder10');">    Simulation Games </div><div class="folder" id="folder10" isfolder="true" style="display:block;">
+<ul><li> <em>Publisher Dream</em>, a downloadable game for the <a class="twikilink" href="/pmwiki/pmwiki.php/UsefulNotes/Nintendo3DS" title="/pmwiki/pmwiki.php/UsefulNotes/Nintendo3DS">Nintendo 3DS</a>, autosaves at the end of every work week.
+</li><li> The later games in the <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/X" title="/pmwiki/pmwiki.php/VideoGame/X">X-Universe</a></em> series autosave when you dock at a space station. <em><a class="twikilink" href="/pmwiki/pmwiki.php/Videogame/XRebirth" title="/pmwiki/pmwiki.php/Videogame/XRebirth">X Rebirth</a></em> shipped without an autosave, making the plethora of <a class="twikilink" href="/pmwiki/pmwiki.php/Main/GameBreakingBug" title="/pmwiki/pmwiki.php/Main/GameBreakingBug">Game Breaking Bugs</a> <a class="twikilink" href="/pmwiki/pmwiki.php/Main/ObviousBeta" title="/pmwiki/pmwiki.php/Main/ObviousBeta">at release</a> that much more painful; the game now saves periodically and at every station.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/KerbalSpaceProgram" title="/pmwiki/pmwiki.php/VideoGame/KerbalSpaceProgram">Kerbal Space Program</a></em> always autosaves whenever you exit to the main menu, and periodically does so in flight as well. However, autosaving is disabled while flying in an atmosphere or moving across the surface of a body, as otherwise (since physics take a few seconds to kick in when loading a save) you could potentially end up, say, passing through the ground before the game notices where you are. This effectively makes it impossible to exit the game while flying in an atmosphere or driving over the surface without throwing away everything since the last autosave, but this can be circumvented by creating a quicksave named "persistent" (the filename KSP uses for its autosaves).
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder11');">    Survival Horror </div><div class="folder" id="folder11" isfolder="true" style="display:block;">
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FatalFrameVMaidenOfBlackWater" title="/pmwiki/pmwiki.php/VideoGame/FatalFrameVMaidenOfBlackWater">Fatal Frame V: Maiden of Black Water</a></em> has autosave occur at various checkpoints during chapters and once after a chapter is successfully completed. There is no manual save option.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/ResidentEvilRevelations2" title="/pmwiki/pmwiki.php/VideoGame/ResidentEvilRevelations2">Resident Evil: Revelations 2</a></em> has one autosave file and no manual saves.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder12');">    Stealth-Based Games </div><div class="folder" id="folder12" isfolder="true" style="display:block;">
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/CastleWolfenstein" title="/pmwiki/pmwiki.php/VideoGame/CastleWolfenstein">Castle Wolfenstein</a></em>. In the original 1981 version the game saved your situation every time you entered a room or died. If you died you could prevent this by opening the disk drive's door, then re-booting. The game would start up again right where you entered the room.
+</li><li> The <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/AssassinsCreed" title="/pmwiki/pmwiki.php/VideoGame/AssassinsCreed">Assassin's Creed</a></em> series autosaves whenever you change cities, finish combat, collect a collectible, or otherwise make any progress worth saving.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Hitman2016" title="/pmwiki/pmwiki.php/VideoGame/Hitman2016">HITMAN (2016)</a></em> and <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Hitman2" title="/pmwiki/pmwiki.php/VideoGame/Hitman2">HITMAN 2</a></em> use identical autosave systems. The games have eight separate slots that update one after another in a timeline fashion.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder13');">    Third-Person Shooter </div><div class="folder" id="folder13" isfolder="true" style="display:block;">
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/KidIcarusUprising" title="/pmwiki/pmwiki.php/VideoGame/KidIcarusUprising">Kid Icarus: Uprising</a></em> will autosave frequently during menus, particularly after accessing screens where you perform actions that alter your save file (e.g. buying weapons, doing Idol Toss, etc.). The game also automatically saves when you use the "Close Software" function in the 3DS menu.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SniperElite4" title="/pmwiki/pmwiki.php/VideoGame/SniperElite4">Sniper Elite 4</a></em> has three autosave slots, and saves every one or two minutes. If things go wrong, don't hang around too long to see if you can sort them out.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder14');">    Tower Defense </div><div class="folder" id="folder14" isfolder="true" style="display:block;">
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/PlantsVsZombies" title="/pmwiki/pmwiki.php/VideoGame/PlantsVsZombies">Plants vs. Zombies</a></em> saves your progress every time you complete an action - be it completing a level, buying something from the store, or watering your garden.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder15');">    Turn-Based Strategy </div><div class="folder" id="folder15" isfolder="true" style="display:block;">
+<ul><li> The GBA <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/FireEmblem" title="/pmwiki/pmwiki.php/VideoGame/FireEmblem">Fire Emblem</a></em> titles all have a continuous autosave, though it's for keeping track of unit death counts to show on the ending screen instead of keeping your progress.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/VictoriaAnEmpireUnderTheSun" title="/pmwiki/pmwiki.php/VideoGame/VictoriaAnEmpireUnderTheSun">Victoria: An Empire Under the Sun</a></em> autosaves periodically, at intervals that can be set by the player (e.g. every 3 months in game time, 6 months, etc.). The player can also save manually at any point in the game.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/ShadowrunReturns" title="/pmwiki/pmwiki.php/VideoGame/ShadowrunReturns">Shadowrun Returns</a></em> was criticized for only having autosaves (which were done whenever a new area loaded), as the engine didn't support manual saves until the release of <em>Dragonfall</em>.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/XcomEnemyUnknown" title="/pmwiki/pmwiki.php/VideoGame/XcomEnemyUnknown">XCOM: Enemy Unknown</a></em> and <a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/XCOM2" title="/pmwiki/pmwiki.php/VideoGame/XCOM2">its sequel</a> has this as an option where it saves after a certain number of days and after every mission, but the Iron Man difficulty setting <a class="twikilink" href="/pmwiki/pmwiki.php/Main/UpToEleven" title="/pmwiki/pmwiki.php/Main/UpToEleven">ramps this up</a> - it will save after every out of battle decision made and every turn to prevent save scumming.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/PhantomDoctrine" title="/pmwiki/pmwiki.php/VideoGame/PhantomDoctrine">Phantom Doctrine</a>:</em> The game is generous with auto saves.
+<ul><li> It keeps auto saves of the last three combat turns, for your <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SaveScumming" title="/pmwiki/pmwiki.php/Main/SaveScumming">Save Scumming</a> pleasure.
+</li><li> It also keeps auto saves of the last three game days on the world map.
+</li></ul></li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder16');">    Western RPG </div><div class="folder" id="folder16" isfolder="true" style="display:block;">
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/ChildOfLight" title="/pmwiki/pmwiki.php/VideoGame/ChildOfLight">Child of Light</a>:</em> Auto Save is the only save. There are no manual save slots, but you can trigger an auto save by examining old shrines (if you're near one) or by using items in the main menu (if you have some to spare).
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DeusExHumanRevolution" title="/pmwiki/pmwiki.php/VideoGame/DeusExHumanRevolution">Deus Ex: Human Revolution</a></em> has autosaving, generally when moving between room sets and whenever significant conversations occur.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DiabloII" title="/pmwiki/pmwiki.php/VideoGame/DiabloII">Diablo II</a></em> and <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DiabloIII" title="/pmwiki/pmwiki.php/VideoGame/DiabloIII">Diablo III</a></em>. The second game seems to autosave after some time has passed, as well as when leaving the game. The third game autosaves when entering a certain place.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DragonAgeOrigins" title="/pmwiki/pmwiki.php/VideoGame/DragonAgeOrigins">Dragon Age: Origins</a></em> has the game autosave at certain predefined locations (often <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SuspiciousVideoGameGenerosity" title="/pmwiki/pmwiki.php/Main/SuspiciousVideoGameGenerosity">immediately before a battle</a>) while <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/DragonAgeII" title="/pmwiki/pmwiki.php/VideoGame/DragonAgeII">Dragon Age II</a></em> pretty much saves automatically each time the player enters a new area. Both have up to four autosave slots.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Franchise/TheElderScrolls" title="/pmwiki/pmwiki.php/Franchise/TheElderScrolls">The Elder Scrolls</a></em>:
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheElderScrollsIIIMorrowind" title="/pmwiki/pmwiki.php/VideoGame/TheElderScrollsIIIMorrowind">Morrowind</a></em> brings it into the series, autosaving every time you rest. It can also be turned off in the settings menu.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheElderScrollsIVOblivion" title="/pmwiki/pmwiki.php/VideoGame/TheElderScrollsIVOblivion">Oblivion</a></em> expands it to automatically save your progress each time you enter a new location, with a small "Autosaving" notification on the upper left of the screen.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/TheElderScrollsVSkyrim" title="/pmwiki/pmwiki.php/VideoGame/TheElderScrollsVSkyrim">Skyrim</a></em> expands it even further, with semi-regular autosaves when you open the menu with a 15 minute cooldown. In the PC version, you can change the length of time after autosaves will trigger.
+</li></ul></li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MassEffect1" title="/pmwiki/pmwiki.php/VideoGame/MassEffect1">Mass Effect</a></em> has autosaves roughly at the beginnings, midpoints, and ends of missions. However, <em>Mass Effect</em>'s missions are <em>long</em>. You can easily lose an hour or more of progress if you die without using manual saves. <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MassEffect2" title="/pmwiki/pmwiki.php/VideoGame/MassEffect2">Mass Effect 2</a></em> and <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/MassEffect3" title="/pmwiki/pmwiki.php/VideoGame/MassEffect3">Mass Effect 3</a></em> greatly increase the frequency of autosaves, making this less of a problem.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Undertale" title="/pmwiki/pmwiki.php/VideoGame/Undertale">Undertale</a></em> makes use of this to <a class="twikilink" href="/pmwiki/pmwiki.php/Main/TheFourthWallWillNotProtectYou" title="/pmwiki/pmwiki.php/Main/TheFourthWallWillNotProtectYou">screw with the player's head</a>. While not telling the player that it's happening, the game automatically saves after the player makes moral choices, most notably sparing or killing the bosses. These saves also persist across the player's save files, and certain NPC's will "remember" what happened in previous saves. For instance, if the player kills the first boss, reloads the game and spares the boss, <a class="twikilink" href="/pmwiki/pmwiki.php/Main/EldritchAbomination" title="/pmwiki/pmwiki.php/Main/EldritchAbomination">Flowey the Flower</a> will call the player out on it.
+</li></ul></div>
+<p></p><div class="folderlabel" onclick="togglefolder('folder17');">    Wide Open Sandbox </div><div class="folder" id="folder17" isfolder="true" style="display:block;">
+<ul><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Videogame/DragonsDogma" title="/pmwiki/pmwiki.php/Videogame/DragonsDogma">Dragon's Dogma</a></em> has autosaving, though it doesn't seem to pop up often enough to be effective, especially considering the singular save file.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/Videogame/GrandTheftAutoIV" title="/pmwiki/pmwiki.php/Videogame/GrandTheftAutoIV">Grand Theft Auto IV</a></em>, aside from the manual saving that is allowed at <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SavePoint" title="/pmwiki/pmwiki.php/Main/SavePoint">Save Points</a>, autosaves after completing missions. The manual saving at <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SavePoint" title="/pmwiki/pmwiki.php/Main/SavePoint">Save Points</a> allows several savegames, the autosave uses only one file that is replaced each time.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SaintsRow2" title="/pmwiki/pmwiki.php/VideoGame/SaintsRow2">Saints Row 2</a></em> and <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/SaintsRowTheThird" title="/pmwiki/pmwiki.php/VideoGame/SaintsRowTheThird">Saints Row: The Third</a></em> also have autosave.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/Minecraft" title="/pmwiki/pmwiki.php/VideoGame/Minecraft">Minecraft</a></em> uses a single save state that overwrites itself persistently and upon quitting. Not even the game crashing will prevent it.
+</li><li> <em><a class="twikilink" href="/pmwiki/pmwiki.php/VideoGame/AnimalCrossingNewHorizons" title="/pmwiki/pmwiki.php/VideoGame/AnimalCrossingNewHorizons">Animal Crossing: New Horizons</a></em> introduces periodic Autosaves to the series. This has the side effect of Mr. Resetti being <a class="twikilink" href="/pmwiki/pmwiki.php/Main/DemotedToExtra" title="/pmwiki/pmwiki.php/Main/DemotedToExtra">Demoted to Extra</a>, as this makes <a class="twikilink" href="/pmwiki/pmwiki.php/Main/SaveScumming" title="/pmwiki/pmwiki.php/Main/SaveScumming">Save Scumming</a> (which he called you out for in older games) less doable anyway.
+</li></ul></div>
+<hr/>
+</div>
+<div class="square_ad footer-article-ad main_2" data-isolated="0"></div>
+<div class="section-links" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<div class="titles">
+<div><h3 class="text-center text-uppercase">Previous</h3></div>
+<div><h3 class="text-center text-uppercase">Index</h3></div>
+<div><h3 class="text-center text-uppercase">Next</h3></div>
+</div>
+<div class="links">
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/AutomatedAutomobiles">Automated Automobiles</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/WeAreNotAlone/TropesZeroToD">WeAreNotAlone/Tropes 0 to D</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/AutoTune">Auto-Tune</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/AutomaticNewGame">Automatic New Game</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/VideoGameTropes">Video Game Tropes</a>
+</li>
+<li>
+<a href="/pmwiki/pmwiki.php/Main/BackThatLightUp">Back That Light Up</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="outer_ads_by_salon_wrapper" id="exco_player_insert_div">
+</div>
+</article>
+<div id="main-content-sidebar"><div class="sidebar-item display-options">
+<ul class="sidebar display-toggles">
+<li>Show Spoilers <div class="display-toggle show-spoilers" id="sidebar-toggle-showspoilers"></div></li>
+<li>Night Vision <div class="display-toggle night-vision" id="sidebar-toggle-nightvision"></div></li>
+<li>Sticky Header <div class="display-toggle sticky-header" id="sidebar-toggle-stickyheader"></div></li>
+<li>Wide Load <div class="display-toggle wide-load" id="sidebar-toggle-wideload"></div></li>
+</ul>
+<script>updateDesktopPrefs();</script>
+</div>
+<div class="sidebar-item ad sb-ad-unit">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_2"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_2'); });</script> </div>
+</div></div>
+<div class="sidebar-item quick-links" itemtype="http://schema.org/SiteNavigationElement">
+<p class="sidebar-item-title" data-title="Important Links">Important Links</p>
+<div class="padded">
+<a href="/pmwiki/query.php?type=att">Ask The Tropers</a>
+<a href="/pmwiki/query.php?type=tf">Trope Finder</a>
+<a href="/pmwiki/query.php?type=ykts">You Know That Show...</a>
+<a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a>
+<a href="/pmwiki/review_activity.php">Reviews</a>
+<a data-modal-target="login" href="/pmwiki/lbs.php">Live Blogs</a>
+<a href="/pmwiki/ad-free-subscribe.php">Go Ad Free!</a> </div>
+</div>
+<div class="sidebar-item sb-ad-unit">
+<div class="sidebar-section">
+<div class="square_ad ad-size-300x600 ad-section text-center">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_3"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_3'); });</script> </div>
+</div> </div>
+</div>
+</div>
+<div class="sidebar-item">
+<p class="sidebar-item-title" data-title="Crucial Browsing">Crucial Browsing</p>
+<ul class="padded font-s" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><a data-click-toggle="active" href="javascript:void(0);">Genre</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/ActionAdventureTropes" title="Main/ActionAdventureTropes">Action Adventure</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ComedyTropes" title="Main/ComedyTropes">Comedy</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CommercialsTropes" title="Main/CommercialsTropes">Commercials</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CrimeAndPunishmentTropes" title="Main/CrimeAndPunishmentTropes">Crime &amp; Punishment</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DramaTropes" title="Main/DramaTropes">Drama</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/HorrorTropes" title="Main/HorrorTropes">Horror</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LoveTropes" title="Main/LoveTropes">Love</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NewsTropes" title="Main/NewsTropes">News</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ProfessionalWrestling" title="Main/ProfessionalWrestling">Professional Wrestling</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SpeculativeFictionTropes" title="Main/SpeculativeFictionTropes">Speculative Fiction</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SportsStoryTropes" title="Main/SportsStoryTropes">Sports Story</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/WarTropes" title="Main/WarTropes">War</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Media</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/Media" title="Main/Media">All Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/AnimationTropes" title="Main/AnimationTropes">Animation (Western)</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Anime" title="Main/Anime">Anime</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ComicBookTropes" title="Main/ComicBookTropes">Comic Book</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FanFic" title="FanFic/FanFics">Fan Fics</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Film" title="Main/Film">Film</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/GameTropes" title="Main/GameTropes">Game</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Literature" title="Main/Literature">Literature</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MusicAndSoundEffects" title="Main/MusicAndSoundEffects">Music And Sound Effects</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NewMediaTropes" title="Main/NewMediaTropes">New Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/PrintMediaTropes" title="Main/PrintMediaTropes">Print Media</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Radio" title="Main/Radio">Radio</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SequentialArt" title="Main/SequentialArt">Sequential Art</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TabletopGames" title="Main/TabletopGames">Tabletop Games</a></li>
+<li><a href="/pmwiki/pmwiki.php/UsefulNotes/Television" title="Main/Television">Television</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Theater" title="Main/Theater">Theater</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/VideogameTropes" title="Main/VideogameTropes">Videogame</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Webcomics" title="Main/Webcomics">Webcomics</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Narrative</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/UniversalTropes" title="Main/UniversalTropes">Universal</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/AppliedPhlebotinum" title="Main/AppliedPhlebotinum">Applied Phlebotinum</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CharacterizationTropes" title="Main/CharacterizationTropes">Characterization</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Characters" title="Main/Characters">Characters</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CharactersAsDevice" title="Main/CharactersAsDevice">Characters As Device</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Dialogue" title="Main/Dialogue">Dialogue</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Motifs" title="Main/Motifs">Motifs</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/NarrativeDevices" title="Main/NarrativeDevices">Narrative Devices</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Paratext" title="Main/Paratext">Paratext</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Plots" title="Main/Plots">Plots</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Settings" title="Main/Settings">Settings</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Spectacle" title="Main/Spectacle">Spectacle</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Other Categories</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/BritishTellyTropes" title="Main/BritishTellyTropes">British Telly</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TheContributors" title="Main/TheContributors">The Contributors</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CreatorSpeak" title="Main/CreatorSpeak">Creator Speak</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Creators" title="Main/Creators">Creators</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DerivativeWorks" title="Main/DerivativeWorks">Derivative Works</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LanguageTropes" title="Main/LanguageTropes">Language</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/LawsAndFormulas" title="Main/LawsAndFormulas">Laws And Formulas</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ShowBusiness" title="Main/ShowBusiness">Show Business</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SplitPersonalityTropes" title="Main/SplitPersonalityTropes">Split Personality</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/StockRoom" title="Main/StockRoom">Stock Room</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TropeTropes" title="Main/TropeTropes">Trope</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Tropes" title="Main/Tropes">Tropes</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TruthAndLies" title="Main/TruthAndLies">Truth And Lies</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/TruthInTelevision" title="Main/TruthInTelevision">Truth In Television</a></li>
+</ul>
+</li>
+<li><a data-click-toggle="active" href="javascript:void(0);">Topical Tropes</a>
+<ul>
+<li><a href="/pmwiki/pmwiki.php/Main/BetrayalTropes" title="Main/BetrayalTropes">Betrayal</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CensorshipTropes" title="Main/CensorshipTropes">Censorship</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/CombatTropes" title="Main/CombatTropes">Combat</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/DeathTropes" title="Main/DeathTropes">Death</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FamilyTropes" title="Main/FamilyTropes">Family</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FateAndProphecyTropes" title="Main/FateAndProphecyTropes">Fate And Prophecy</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/FoodTropes" title="Main/FoodTropes">Food</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/HolidayTropes" title="Main/HolidayTropes">Holiday</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MemoryTropes" title="Main/MemoryTropes">Memory</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MoneyTropes" title="Main/MoneyTropes">Money</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/MoralityTropes" title="Main/MoralityTropes">Morality</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/PoliticsTropes" title="Main/PoliticsTropes">Politics</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/ReligionTropes" title="Main/ReligionTropes">Religion</a></li>
+<li><a href="/pmwiki/pmwiki.php/Main/SchoolTropes" title="Main/SchoolTropes">School</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="sidebar-item showcase">
+<p class="sidebar-item-title" data-title="Community Showcase">Community Showcase <a class="bubble float-right hover-blue" href="/pmwiki/showcase.php">More</a></p>
+<p class="community-showcase">
+<a href="https://sharetv.com/shows/echo_chamber" onclick="trackOutboundLink('https://sharetv.com/shows/echo_chamber');" target="_blank">
+<img alt="" class="lazy-image" data-src="/images/communityShowcase-echochamber.jpg"/></a>
+<a href="/pmwiki/pmwiki.php/Webcomic/TwistedTropes">
+<img alt="" class="lazy-image" data-src="/img/howlandsc-side.jpg"/></a>
+</p>
+</div>
+<div class="sidebar-item sb-ad-unit" id="stick-cont">
+<div class="sidebar-section" id="stick-bar">
+<div class="square_ad ad-size-300x600 ad-section text-center">
+<div class="proper-ad-unit">
+<div id="proper-ad-tvtropes_ad_4"> <script>propertag.cmd.push(function() { proper_display('tvtropes_ad_4'); });</script> </div>
+</div> </div>
+</div>
+</div>
+</div>
+</div>
+<div class="action-bar tablet-off" id="action-bar-bottom">
+<a class="scroll-to-top dead-button" href="#top-of-page" onclick="$('html, body').animate({scrollTop : 0},500);">Top</a>
+</div>
+</div>
+<div class="proper-ad-unit ad-sticky">
+<div id="proper-ad-tvtropes_sticky_ad"> <script>propertag.cmd.push(function() { proper_display('tvtropes_sticky_ad'); });</script> </div>
+</div>
+<footer id="main-footer">
+<div id="main-footer-inner">
+<div class="footer-left">
+<a class="img-link" href="/"><img alt="TV Tropes" class="lazy-image" data-src="/img/tvtropes-footer-logo.png" title="TV Tropes"/></a>
+<form action="index.html" class="navbar-form newsletter-signup validate modal-replies" data-ajax-get="/ajax/subscribe_email.php" id="cse-search-box-mobile" name="" role="">
+<button class="btn-submit newsletter-signup-submit-button" id="subscribe-btn" type="submit"><i class="fa fa-paper-plane"></i></button>
+<input class="form-control" id="subscription-email" name="q" placeholder="Subscribe" size="31" type="text" validate-type="email" value=""/>
+</form>
+<ul class="social-buttons">
+<li><a class="btn fb" href="https://www.facebook.com/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-facebook']);" target="_blank"><i class="fa fa-facebook"></i></a></li>
+<li><a class="btn tw" href="https://www.twitter.com/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-twitter']);" target="_blank"><i class="fa fa-twitter"></i></a> </li>
+<li><a class="btn rd" href="https://www.reddit.com/r/tvtropes" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-reddit']);" target="_blank"><i class="fa fa-reddit-alien"></i></a></li>
+</ul>
+</div>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">TVTropes</h4></li>
+<li><a href="/pmwiki/pmwiki.php/Main/Administrivia">About TVTropes</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TheGoalsOfTVTropes">TVTropes Goals</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TheTropingCode">Troping Code</a></li>
+<li><a href="/pmwiki/pmwiki.php/Administrivia/TVTropesCustoms">TVTropes Customs</a></li>
+<li><a href="/pmwiki/pmwiki.php/JustForFun/TropesOfLegend">Tropes of Legend</a></li>
+<li><a href="/pmwiki/ad-free-subscribe.php">Go Ad-Free</a></li>
+</ul>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">Community</h4></li>
+<li><a href="/pmwiki/query.php?type=att">Ask The Tropers</a></li>
+<li><a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a></li>
+<li><a href="/pmwiki/query.php?type=tf">Trope Finder</a></li>
+<li><a href="/pmwiki/query.php?type=ykts">You Know That Show</a></li>
+<li><a data-modal-target="login" href="/pmwiki/lbs.php">Live Blogs</a></li>
+<li><a href="/pmwiki/review_activity.php">Reviews</a></li>
+<li><a href="/pmwiki/topics.php">Forum</a></li>
+</ul>
+<hr/>
+<ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<li><h4 class="footer-menu-header">Tropes HQ</h4></li>
+<li><a href="/pmwiki/about.php">About Us</a></li>
+<li><a href="/pmwiki/contact.php">Contact Us</a></li>
+<li><a href="/pmwiki/dmca.php">DMCA Notice</a></li>
+<li><a href="/pmwiki/privacypolicy.php">Privacy Policy</a></li>
+</ul>
+</div>
+<div class="text-center gutter-top gutter-bottom tablet-on" id="desktop-on-mobile-toggle">
+<a href="/pmwiki/switchDeviceCss.php?mobileVersion=1" rel="nofollow">Switch to <span class="txt-desktop">Desktop</span><span class="txt-mobile">Mobile</span> Version</a>
+</div>
+<div class="legal">
+<p>TVTropes is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License. <br/>Permissions beyond the scope of this license may be available from <a href="mailto:thestaff@tvtropes.org" rel="cc:morePermissions" xmlns:cc="http://creativecommons.org/ns#"> thestaff@tvtropes.org</a>.</p>
+<br/>
+<div class="privacy_wrapper">
+</div>
+</div>
+</footer>
+<style>
+      div.fc-ccpa-root {
+        position: absolute !important;
+        bottom: 93px !important;
+        margin: auto !important;
+        width: 100% !important;
+        z-index: 9999 !important;
+      }
+      .fc-ccpa-root .fc-dns-dialog .fc-dns-link p{
+        outline: none !important;
+        text-decoration: underline !important;
+        font-size: .7em !important;
+        font-family: sans-serif !important;
+      }
+      .fc-ccpa-root .fc-dns-dialog .fc-dns-link .fc-button-background {
+        background: none !important;
+      }
+    </style>
+<div class="full-screen" id="_pm_videoViewer">
+<a class="close" href="#close" id="_pm_videoViewer-close"></a>
+<div class="_pmvv-body">
+<div class="_pmvv-vidbox">
+<video class="video-js vjs-default-skin vjs-16-9" data-video-id="" id="overlay-video-player-box">
+</video>
+<div class="_pmvv-vidbox-desc">
+<h1 id="overlay-title"></h1>
+<p class="_pmvv-vidbox-descTxt" id="overlay-descrip">
+</p>
+<div class="rating-row" data-video-id="">
+<input name="is_logged_in" type="hidden" value="0"/>
+<p>How well does it match the trope?</p>
+<div id="star-rating-group">
+<div class="trope-rate">
+<input id="lamp5" name="rate" type="radio" value="5"/>
+<label for="lamp5" title="Absolutely"></label>
+<input id="lamp4" name="rate" type="radio" value="4"/>
+<label for="lamp4" title="Yes"></label>
+<input id="lamp3" name="rate" type="radio" value="3"/>
+<label for="lamp3" title="Kind of"></label>
+<input id="lamp2" name="rate" type="radio" value="2"/>
+<label for="lamp2" title="Not really"></label>
+<input id="lamp1" name="rate" type="radio" value="1"/>
+<label for="lamp1" title="No"></label>
+</div>
+<div id="star-rating-total">
+</div>
+</div>
+</div>
+<div class="example-media-row">
+<div class="example-overlay">
+<p>Example of:</p>
+<div id="overlay-trope"> / </div>
+</div>
+<div class="media-sources-overlay example-overlay">
+<p>Media sources:</p>
+<div id="overlay-media"> / </div>
+</div>
+</div>
+<p class="_pmvv-vidbox-stats text-right font-s" style="padding-top:8px; border-top: solid 1px rgba(255,255,255,0.2)">
+<a class="float-right" data-modal-target="login" href="#video-feedback">Report</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+        window.special_ops =  {
+            member : 'no',
+            isolated : 0,
+            tags : ['videogame']
+        };
+    </script>
+<script type="text/javascript">
+
+        var cleanCreativeEnabled = "";
+        var donation = "";
+        var live_ads = "1";
+        var img_domain = "https://static.tvtropes.org";
+        var snoozed = cookies.read('snoozedabm');
+        var snoozable = "";
+
+        if (adsRemovedWith) {
+            live_ads = 0;
+        }
+
+        var elem = document.createElement('script');
+        elem.async = true;
+
+        elem.src = '/design/assets/bundle.js?rev=c58d8df02f09262390bbd03db7921fc35c6af306';
+
+        elem.onload = function() {
+                                 }
+        document.getElementsByTagName('head')[0].appendChild(elem);
+
+    </script>
+<script type="text/javascript">
+      function send_analytics_event(user_type, donation){
+          // if(user_type == 'uncached' || user_type == 'cached'){
+          //   ga('send', 'event', 'caching', 'load', user_type, {'nonInteraction': 1});
+          //   return;
+          // }
+          var event_name = user_type;
+
+          if(donation == 'true'){
+              event_name += "_donation"
+          }else if(typeof(valid_user) == 'undefined'){
+              event_name += "_blocked"
+          }else if(valid_user == true){
+              event_name += "_unblocked";
+          }else{
+              event_name = "_unknown"
+          }
+          ga('send', 'event', 'ads', 'load', event_name, {'nonInteraction': 1});
+      }
+
+    
+    send_analytics_event("guest", "false");
+      </script>
+</body>
+</html>
