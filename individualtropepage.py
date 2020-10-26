@@ -64,14 +64,17 @@ class TropePage():
         i = 0
         while i < maxn:
             for entry in os.scandir(foldername):
+                
                 if entry.path.endswith(".html") and i < maxn:
-                    dict1 = self.get_lists_tropes(entry)
-                    #print(dict1)
-                    self.write_dict_as_string(dict1)
+                    if entry.path.split("/")[-1].startswith("Z"):
+                        print(entry.path)
+                        dict1 = self.get_lists_tropes(entry)
+                        #print(dict1)
+                        self.write_dict_as_string(dict1)
                     i+=1
                 else: return None
         return None
     
 it = TropePage()
-it.go_thru_list_pages("trope_list/tropes", 100000)
+it.go_thru_list_pages("trope_list/tropes", 30000)
     
