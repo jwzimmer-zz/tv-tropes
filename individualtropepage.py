@@ -66,7 +66,7 @@ class TropePage():
             for entry in os.scandir(foldername):
                 
                 if entry.path.endswith(".html") and i < maxn:
-                    if entry.path.split("/")[-1].startswith("Z"):
+                    if entry.path.split("/")[-1].startswith("A"):
                         print(entry.path)
                         dict1 = self.get_lists_tropes(entry)
                         #print(dict1)
