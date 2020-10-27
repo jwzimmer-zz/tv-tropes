@@ -42,7 +42,7 @@ class TropePage():
                     for link in alllinks:
                         try:
                             href = link["href"]
-                            if "Main" in href:
+                            if "Main" in href or "UsefulNotes" in href:
                                 linkedtropes.append(href.split("/")[-1])
                             else:
                                 #print(href)
@@ -82,6 +82,6 @@ class TropePage():
         return None
     
 it = TropePage()
-it.get_lists_tropes("trope_list/tropes/Eagleland.html")
+it.get_lists_tropes("trope_list/tropes/AKA47.html")
 #it.go_thru_list_pages("trope_list/tropes", 500)
     
