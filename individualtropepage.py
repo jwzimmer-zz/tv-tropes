@@ -15,7 +15,7 @@ import json
 
 class TropePage():
     def __init__(self):
-        pass
+        self.count = 0
         self.filename = ''
         self.urdict = {}
     def get_lists_tropes(self, filename):
@@ -23,13 +23,13 @@ class TropePage():
         # they are similar to each other - i did not check that for all pages this works for,
         # the structure is actually the same as the example page (Indices/Genre Tropes - TV Tropes.htm)
         
-        self.filename = filename
+        self.filename = filename.split("/")[-1]
         soup = BeautifulSoup(open(filename,encoding="ISO-8859-1"),features="lxml")
         structure_dict = {}
         linkedtropes = []
         mydivs = soup.find_all("div", class_="article-content retro-folders")
         if len(mydivs) == 0:
-            print("different structure: ",filename)
+            print("different structure: ",self.filename)
             #structure_dict = self.handle(filename)
         else:
             for div in mydivs:
@@ -44,7 +44,7 @@ class TropePage():
                             #print(href)
                             pass
                 #print(filename)
-            self.newname = filename.name.split(".")[0]
+            self.newname = self.filename.split(".")[0]
             structure_dict[self.newname] = linkedtropes
         #print(soup.prettify)
         #print(structure_dict)
@@ -62,19 +62,18 @@ class TropePage():
             
     def go_thru_list_pages(self,foldername, maxn):
         i = 0
-        while i < maxn:
-            for entry in os.scandir(foldername):
-                
-                if entry.path.endswith(".html") and i < maxn:
-                    if entry.path.split("/")[-1].startswith("A"):
-                        print(entry.path)
-                        dict1 = self.get_lists_tropes(entry)
-                        #print(dict1)
-                        self.write_dict_as_string(dict1)
-                    i+=1
-                else: return None
+        self.alltropes = os.listdir(foldername)
+        for filename in self.alltropes[self.count:self.count+maxn]:
+            print(filename)
+            if i < maxn:
+                print(self.count, i)
+                dict1 = self.get_lists_tropes(foldername+"/"+filename)
+                self.write_dict_as_string(dict1)
+                i+=1
+                self.count+=1
+            else: return None
         return None
     
 it = TropePage()
-it.go_thru_list_pages("trope_list/tropes", 30000)
+it.go_thru_list_pages("trope_list/tropes", 500)
     
