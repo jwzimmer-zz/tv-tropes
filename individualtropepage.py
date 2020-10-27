@@ -35,7 +35,8 @@ class TropePage():
         else:
             for div in mydivs:
                 allps = div.find_all("p")
-                #print(allps)
+                uls = div.find_all("ul")
+                #print(uls)
                 for p in allps:
                     alllinks = p.find_all("a")
                     #print(alllinks)
@@ -50,6 +51,19 @@ class TropePage():
                         except:
                             idtag = link["id"]
                             linkedtropes.append(idtag)
+                for ul in uls:
+                    allullinks = ul.find_all("a")
+                    for link2 in allullinks:
+                        try:
+                            href2 = link2["href"]
+                            if "Main" in href2 or "UsefulNotes" in href2:
+                                linkedtropes.append(href2.split("/")[-1])
+                            else:
+                                #print(href)
+                                pass
+                        except:
+                            idtag2 = link2["id"]
+                            linkedtropes.append(idtag2)
                 #print(filename)
             self.newname = self.filename.split(".")[0]
             structure_dict[self.newname] = linkedtropes
@@ -82,6 +96,6 @@ class TropePage():
         return None
     
 it = TropePage()
-it.get_lists_tropes("trope_list/tropes/AKA47.html")
+it.get_lists_tropes("trope_list/tropes/AbsentAliens.html")
 #it.go_thru_list_pages("trope_list/tropes", 500)
     
