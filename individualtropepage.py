@@ -28,26 +28,33 @@ class TropePage():
         structure_dict = {}
         linkedtropes = []
         mydivs = soup.find_all("div", class_="article-content retro-folders")
+        #print(soup.prettify)
         if len(mydivs) == 0:
             print("different structure: ",self.filename)
             #structure_dict = self.handle(filename)
         else:
             for div in mydivs:
                 allps = div.find_all("p")
+                #print(allps)
                 for p in allps:
                     alllinks = p.find_all("a")
+                    #print(alllinks)
                     for link in alllinks:
-                        href = link["href"]
-                        if "Main" in href:
-                            linkedtropes.append(href.split("/")[-1])
-                        else:
-                            #print(href)
-                            pass
+                        try:
+                            href = link["href"]
+                            if "Main" in href:
+                                linkedtropes.append(href.split("/")[-1])
+                            else:
+                                #print(href)
+                                pass
+                        except:
+                            idtag = link["id"]
+                            linkedtropes.append(idtag)
                 #print(filename)
             self.newname = self.filename.split(".")[0]
             structure_dict[self.newname] = linkedtropes
-        #print(soup.prettify)
-        #print(structure_dict)
+
+        self.write_dict_as_string(structure_dict)
         self.urdict = structure_dict
         return structure_dict
     
@@ -75,5 +82,6 @@ class TropePage():
         return None
     
 it = TropePage()
-it.go_thru_list_pages("trope_list/tropes", 500)
+it.get_lists_tropes("trope_list/tropes/Eagleland.html")
+#it.go_thru_list_pages("trope_list/tropes", 500)
     
