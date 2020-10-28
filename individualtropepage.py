@@ -97,6 +97,8 @@ class TropePage():
 it = TropePage()
 #it.get_lists_tropes("trope_list/tropes/AbsentAliens.html")
 
-for i in range(10):
-    it.go_thru_list_pages("trope_list/tropes", 500)
+#for i in range(10):
+    #it.go_thru_list_pages("trope_list/tropes", 500)
+
+#up to AreWeGettingThis.html, self.count=4999
     
