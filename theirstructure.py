@@ -22,13 +22,13 @@ class TropeLists():
         self.newname = self.filename.split(".")[0]
         return self.newname 
     
-    def write_result_as_graph(self, result):
+    def write_result_as_graph(self, result, outname):
         G = nx.Graph()
         for sisterlist in result:
             combo = combinations(sisterlist,2)
             for c in combo:
                 G.add_edge(c[0],c[1])
-        nx.write_gml(G, "sistertropes.gml")
+        nx.write_gml(G, outname+".gml")
         return None
           
     def get_masterlist(self):
@@ -59,9 +59,10 @@ class TropeLists():
                             for a in a_s:
                                 href = a["href"]
                                 tropename = href.split("/")[-1]
-                                li_links.append(tropename)
+                                if tropename in masterlist:
+                                    li_links.append(tropename)
                             sistertrope_examples.append(set(li_links))
-        print(sistertrope_examples)        
+        #print(sistertrope_examples)        
         return sistertrope_examples
     
     
@@ -75,7 +76,7 @@ class TropeLists():
                 name  = filename.name
                 if i < maxn:
                     sistertrope_examples = self.get_structure_sistertropes("their_structure/" + name, name, self.masterlist)
-                    self.write_result_as_graph(sistertrope_examples)
+                    self.write_result_as_graph(sistertrope_examples, "sistertropes_inmasterlist")
                     i+=1
                     self.count+=1
                 else: return None
