@@ -73,7 +73,7 @@ class TropePage():
         return structure_dict
     
     def write_dict_as_string(self, dict1):
-        with open("linked_trope_dict_from_"+self.newname+".json","w") as outfile:
+        with open("linked_article_tropes/linked_trope_dict_from_"+self.newname+".json","w") as outfile:
             json.dump(dict1, outfile)
         return None
         
@@ -85,9 +85,8 @@ class TropePage():
         i = 0
         self.alltropes = os.listdir(foldername)
         for filename in self.alltropes[self.count:self.count+maxn]:
-            print(filename)
+            print(filename, self.count, i)
             if i < maxn:
-                print(self.count, i)
                 dict1 = self.get_lists_tropes(foldername+"/"+filename)
                 self.write_dict_as_string(dict1)
                 i+=1
@@ -96,6 +95,8 @@ class TropePage():
         return None
     
 it = TropePage()
-it.get_lists_tropes("trope_list/tropes/AbsentAliens.html")
-#it.go_thru_list_pages("trope_list/tropes", 500)
+#it.get_lists_tropes("trope_list/tropes/AbsentAliens.html")
+
+for i in range(10):
+    it.go_thru_list_pages("trope_list/tropes", 500)
     
