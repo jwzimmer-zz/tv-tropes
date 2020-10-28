@@ -32,8 +32,16 @@ class TropeLists():
             json.dump(self.namesonly, outfile)
         return None
     
+    def go_thru_Main_folder_pages(self,foldername):
+        self.allmain = os.listdir(foldername)
+        self.mainnamesonly = [self.get_trope_name(entry) for entry in self.allmain]
+        with open("in_pmwiki_Main.json","w") as outfile:
+            json.dump(self.mainnamesonly, outfile)
+        return None
+    
 it = TropeLists()
 #it.get_lists_tropes("trope_list/tropes/AbsentAliens.html")
 
-it.go_thru_masterlist_folder_pages("trope_list/tropes")
+#it.go_thru_masterlist_folder_pages("trope_list/tropes")
+it.go_thru_Main_folder_pages("tvtropes.org/pmwiki/pmwiki.php/Main")
     
