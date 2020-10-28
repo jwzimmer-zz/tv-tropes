@@ -43,7 +43,7 @@ class TropePage():
                     for link in alllinks:
                         try:
                             href = link["href"]
-                            if "Main" in href or "UsefulNotes" in href:
+                            if "Main" in href:
                                 linkedtropes.append(href.split("/")[-1])
                             else:
                                 #print(href)
@@ -56,7 +56,7 @@ class TropePage():
                     for link2 in allullinks:
                         try:
                             href2 = link2["href"]
-                            if "Main" in href2 or "UsefulNotes" in href2:
+                            if "Main" in href2:
                                 linkedtropes.append(href2.split("/")[-1])
                             else:
                                 #print(href)
