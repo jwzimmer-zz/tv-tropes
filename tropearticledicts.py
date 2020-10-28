@@ -65,12 +65,12 @@ class TropeLists():
                         try:
                             href = link["href"]
                             name1 = href.split("/")[-1]
-                            #if ("Main" in href) or (name1 in masterlist):
-                            if (name1 in masterlist):
+                            if ("Main" in href) or (name1 in masterlist):
+                            #if (name1 in masterlist):
                                 if name1 != name:
                                     linkedtropes.append(name1)
                                 else:
-                                    #print("Skipping duplicates ",name1,name)
+                                    #print("Skipping selflinks ",name1,name)
                                     pass
                             else:
                                 #print("Skipping href ",href)
@@ -84,12 +84,12 @@ class TropeLists():
                         try:
                             href2 = link2["href"]
                             name2 = href2.split("/")[-1]
-                            #if ("Main" in href2) or (name2 in masterlist):
-                            if (name2 in masterlist):
+                            if ("Main" in href2) or (name2 in masterlist):
+                            #if (name2 in masterlist):
                                 if name2 != name:
-                                    linkedtropes.append(href2.split("/")[-1])
+                                    linkedtropes.append(name2)
                                 else:
-                                    #print("Skipping duplicates ",name2,name)
+                                    #print("Skipping selflinks ",name2,name)
                                     pass
                             else:
                                 #print("Not including: ",href2)
@@ -110,7 +110,7 @@ class TropeLists():
         self.alltropes = os.listdir("trope_list/tropes")
         self.mainnamesonly = self.go_thru_Main_folder_pages("tvtropes.org/pmwiki/pmwiki.php/Main")
         self.namesonly = self.go_thru_masterlist_folder_pages("trope_list/tropes")
-        self.masterlist = self.mainnamesonly + self.namesonly
+        self.masterlist = self.namesonly
         
         for filename in self.alltropes[self.count:self.count+maxn]:
             #print(filename, self.count, i)
@@ -127,8 +127,8 @@ class TropeLists():
         return None
     
 it = TropeLists()
-for i in range(10):
-    it.go_thru_list_pages(20)
+for i in range(200):
+    it.go_thru_list_pages(500)
 
 
     
