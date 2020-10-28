@@ -49,7 +49,9 @@ class TropeLists():
         structure_dict = {}
         linkedtropes = []
         mydivs = soup.find_all("div", class_="article-content retro-folders")
-        #print(soup.prettify)
+        print("Here")
+        print(soup)
+        print(soup.prettify)
         if len(mydivs) == 0:
             print("different structure: ",self.filename)
             #structure_dict = self.handle(filename)
@@ -127,8 +129,9 @@ class TropeLists():
         return None
     
 it = TropeLists()
-for i in range(200):
-    it.go_thru_list_pages(500)
+it.go_thru_list_pages(1)
+# for i in range(200):
+#     it.go_thru_list_pages(500)
 
 
     
