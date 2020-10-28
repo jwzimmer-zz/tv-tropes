@@ -65,7 +65,8 @@ class TropeLists():
                         try:
                             href = link["href"]
                             name1 = href.split("/")[-1]
-                            if ("Main" in href) or (name1 in masterlist):
+                            #if ("Main" in href) or (name1 in masterlist):
+                            if (name1 in masterlist):
                                 if name1 != name:
                                     linkedtropes.append(name1)
                                 else:
@@ -83,7 +84,8 @@ class TropeLists():
                         try:
                             href2 = link2["href"]
                             name2 = href2.split("/")[-1]
-                            if ("Main" in href2) or (name2 in masterlist):
+                            #if ("Main" in href2) or (name2 in masterlist):
+                            if (name2 in masterlist):
                                 if name2 != name:
                                     linkedtropes.append(href2.split("/")[-1])
                                 else:
@@ -111,7 +113,7 @@ class TropeLists():
         self.masterlist = self.mainnamesonly + self.namesonly
         
         for filename in self.alltropes[self.count:self.count+maxn]:
-            print(filename, self.count, i)
+            #print(filename, self.count, i)
             name  = self.get_trope_name(filename)
             if self.namesonly[self.count] == name:
                 if i < maxn:
