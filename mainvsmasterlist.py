@@ -28,20 +28,44 @@ class TropeLists():
     def go_thru_masterlist_folder_pages(self,foldername):
         self.alltropes = os.listdir(foldername)
         self.namesonly = [self.get_trope_name(entry) for entry in self.alltropes]
-        with open("in_Masterlist.json","w") as outfile:
-            json.dump(self.namesonly, outfile)
-        return None
+        # with open("in_Masterlist.json","w") as outfile:
+        #     json.dump(self.namesonly, outfile)
+        return self.namesonly
     
     def go_thru_Main_folder_pages(self,foldername):
         self.allmain = os.listdir(foldername)
         self.mainnamesonly = [self.get_trope_name(entry) for entry in self.allmain]
-        with open("in_pmwiki_Main.json","w") as outfile:
-            json.dump(self.mainnamesonly, outfile)
+        # with open("in_pmwiki_Main.json","w") as outfile:
+        #     json.dump(self.mainnamesonly, outfile)
+        return self.mainnamesonly
+    
+    def compare_lists(self):
+        self.mainnamesonly = self.go_thru_Main_folder_pages("tvtropes.org/pmwiki/pmwiki.php/Main")
+        self.namesonly = self.go_thru_masterlist_folder_pages("trope_list/tropes")
+        
+        self.inMainNotMaster = []
+        self.inMasterNotMain = []
+        
+        newlist = self.mainnamesonly + self.namesonly
+        #print(newlist)
+        
+        for trope in newlist:
+            if trope not in self.mainnamesonly:
+                self.inMasterNotMain.append(trope)
+            if trope not in self.namesonly:
+                self.inMainNotMaster.append(trope)
+        nodupemain = list(set(self.inMainNotMaster))
+        nodupemaster = list(set(self.inMasterNotMain))
+        
+        with open("in_Main_not_in_Masterlist.json","w") as outfile:
+            json.dump(nodupemain, outfile)
+        with open("in_Masterlist_not_in_Main.json","w") as outfile:
+            json.dump(nodupemaster, outfile)
         return None
     
 it = TropeLists()
 #it.get_lists_tropes("trope_list/tropes/AbsentAliens.html")
 
 #it.go_thru_masterlist_folder_pages("trope_list/tropes")
-it.go_thru_Main_folder_pages("tvtropes.org/pmwiki/pmwiki.php/Main")
+it.compare_lists()
     
