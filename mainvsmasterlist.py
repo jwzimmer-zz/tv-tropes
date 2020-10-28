@@ -57,6 +57,9 @@ class TropeLists():
         nodupemain = list(set(self.inMainNotMaster))
         nodupemaster = list(set(self.inMasterNotMain))
         
+        print("Pages in Main but not in masterlist ",len(nodupemain))
+        print("Pages in masterlist but not in Main ",len(nodupemaster))
+        
         with open("in_Main_not_in_Masterlist.json","w") as outfile:
             json.dump(nodupemain, outfile)
         with open("in_Masterlist_not_in_Main.json","w") as outfile:
