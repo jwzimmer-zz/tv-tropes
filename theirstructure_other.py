@@ -63,12 +63,13 @@ class TropeLists():
         
         for filename in os.scandir("their_structure"):
             if filename.name.endswith("htm"):
-                #print(filename, self.count, i)
+                print(filename, self.count, i)
                 name  = filename.name
                 if i < maxn:
                     trope_tropes = self.get_structure_tropetropes("their_structure/" + name, name, self.masterlist)
                     if len(trope_tropes) > 1:
-                        self.write_cluster_result_as_graph(trope_tropes, "tropetropes")
+                        #self.write_cluster_result_as_graph(trope_tropes, "tropetropes")
+                        pass
                     i+=1
                     self.count+=1
                 else: return None

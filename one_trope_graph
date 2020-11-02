@@ -1,0 +1,93 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Tue Oct 26 2020
+
+@author: jzimmer1, philnguyen
+"""
+
+from bs4 import BeautifulSoup
+import os
+import json
+import networkx as nx
+from itertools import combinations
+
+class TropeGraph():
+    def __init__(self):
+        self.count = 0
+        self.filename = ''
+        self.urdict = {}
+    def get_trope_name(self, filename):
+        self.filename = filename.split("/")[-1]
+        self.newname = self.filename.split(".")[0]
+        return self.newname 
+    
+    def write_result_as_graph(self, result, outname):
+        G = nx.Graph()
+        for slist in result:
+            combo = combinations(slist,2)
+            for c in combo:
+                G.add_edge(c[0],c[1])
+        nx.write_gml(G, outname+".gml")
+        return None
+    
+    def write_cluster_result_as_graph(self,result):
+        G = nx.Graph()
+        edgelist = []
+        category = list(result.keys())[0]
+        print(category)
+        for res in result[category]:
+            G.add_edge(category,res)
+            edgelist.append((category,res))
+        nx.write_gml(G, category+".gml")
+        print(list(set(edgelist)))
+        return edgelist
+          
+    def get_json(self, filename):
+        with open(filename) as f:
+            jsonobj = json.load(f)
+        return jsonobj
+    
+    def go_thru_tropes(self, maxn):
+        i = 0
+        self.masterlist = self.get_json('in_Masterlist.json')
+        #print(self.masterlist[:10])
+        
+        for filename in os.scandir("linked_article_tropes"):
+            if filename.name.endswith("json"):
+                #print(filename, self.count, i)
+                name  = filename.name
+                if i < maxn:
+                    tropelinks = self.get_json("linked_article_tropes/" + name)
+                    self.write_cluster_result_as_graph(tropelinks)
+                    #print(tropelinks)
+                    i+=1
+                    self.count+=1
+                else: return None
+        return None
+    
+    def get_random_tropes(self, maxn):
+        i = 0
+        self.masterlist = self.get_json('in_Masterlist.json')
+        #print(self.masterlist[:10])
+        
+        for filename in os.scandir("linked_article_tropes"):
+            if filename.name.endswith("json"):
+                #print(filename, self.count, i)
+                name  = filename.name
+                if i < maxn:
+                    tropelinks = self.get_json("linked_article_tropes/" + name)
+                    self.write_cluster_result_as_graph(tropelinks)
+                    #print(tropelinks)
+                    i+=1
+                    self.count+=1
+                else: return None
+        return None
+    
+it = TropeGraph()
+it.go_thru_tropes(1)
+# for i in range(200):
+#     it.go_thru_list_pages(500)
+
+
+    
