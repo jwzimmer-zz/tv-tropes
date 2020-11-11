@@ -35,13 +35,16 @@ class TropeGraph():
         G = nx.Graph()
         edgelist = []
         category = list(result.keys())[0]
-        print(category)
+        #print(category)
         for res in result[category]:
             G.add_edge(category,res)
             edgelist.append((category,res))
-        nx.write_gml(G, category+".gml")
-        print(list(set(edgelist)))
-        return edgelist
+        edgelist = list(set(edgelist))
+        return edgelist, G
+    
+    def write_gml(self,G,name):
+        nx.write_gml(G, name+".gml")
+        return None
           
     def get_json(self, filename):
         with open(filename) as f:
