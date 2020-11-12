@@ -52,6 +52,8 @@ class IndexGraph():
     
     def go_thru_indices_threshold(self):
         i = 0
+        sharedtropeslist = []
+        avgsharedtropes = 76.06801850713087 #average number of tropes in common between indices: 76.06801850713087
         avgnumberlinks = 93.82385016595543 #only looking at indices with above the average number of links still yields a graph with 26747 nodes
         for index in self.masterlist:
             indexlinks = set(self.masterlist[index])
@@ -60,11 +62,13 @@ class IndexGraph():
             for idy, node2 in enumerate(self.G.nodes()):
                 if idx != idy:
                     scoreval = len(list(self.G.nodes[node]["tropes"].intersection(self.G.nodes[node]["tropes"])))
-                    self.G.add_edge(node, node2, score=scoreval)
-        for idx,node in enumerate(self.G.nodes()):
-            del self.G.nodes[node]["tropes"]
-        self.write_gml(self.G,"indices_common_trope_score")
-        return self.G
+                    #self.G.add_edge(node, node2, score=scoreval)
+                    sharedtropeslist.append(scoreval)
+        # for idx,node in enumerate(self.G.nodes()):
+        #     del self.G.nodes[node]["tropes"]   
+        with open("sharedtropesscores.json","w") as f:
+            json.dump(sharedtropeslist,f)
+        return sharedtropeslist
     
     def basic_analysis(self, k):
         girvannewman = nx.algorithms.community.centrality.girvan_newman(self.G)
