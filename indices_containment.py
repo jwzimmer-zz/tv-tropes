@@ -58,27 +58,30 @@ class IndexGraph():
     def remove_set_attributes(self,attr):
         #need to do this in order to write the graph to gml (since the sets are not string type)
         for idx,node in enumerate(self.G.nodes()):
-            del self.G.nodes[node][attr]
+            try:
+                del self.G.nodes[node][attr]
+            except:
+                pass
         return None
 
     def go_thru_indices_sets(self):
         for idx, node in enumerate(self.G.nodes()):
+            firstsetoftropes = self.G.nodes[node]["tropes"]
+            self.G.nodes[node]["unique-tropes"] = firstsetoftropes
             for idy, node2 in enumerate(self.G.nodes()):
                 if idx != idy:
-                    firstsetoftropes = self.G.nodes[node]["tropes"]
                     secondsetoftropes = self.G.nodes[node2]["tropes"]
-                    if firstsetoftropes.issuperset(secondsetoftropes):
-                        self.G.add_edge(node, node2) #add an edge between indices when one completely contains the other
-                    self.G.nodes[node]["unique-tropes"] = firstsetoftropes.difference(secondsetoftropes) #reduce to only the unique tropes to that index
-        # for idx, node in enumerate(self.G.nodes()):
-        #     setoftropes = self.G.nodes[node]["unique-tropes"]
-        #     for trope in setoftropes:
-        #         self.G.add_edge(node, trope)
+                    self.G.nodes[node]["unique-tropes"] = self.G.nodes[node]["unique-tropes"].difference(secondsetoftropes) #reduce to only the unique tropes to that index
+        nodelist = [x for x in self.G.nodes]
+        for n in nodelist:
+            setoftropes = self.G.nodes[n]["unique-tropes"]
+            for trope in setoftropes:
+                self.G.add_edge(n, trope)
         self.remove_set_attributes("tropes")
         self.remove_set_attributes("unique-tropes")
         self.rG = self.G
         print(len(self.G.nodes),len(self.G.edges))
-        self.write_gml(self.G, "containment_uniquesets")
+        self.write_gml(self.G, "uniquetropes")
         return self.rG
 
 i = IndexGraph()
