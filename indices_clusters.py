@@ -7,13 +7,17 @@ Created on Tue Oct 26 2020
 """
 import os
 import json
+from networkx import algorithms
+from networkx import community
+from networkx import centrality
 import networkx as nx
-from itertools import combinations
+import itertools
 
 class IndexGraph():
     def __init__(self):
         self.G = nx.Graph()
         self.masterlist = self.get_json('index-list/index-list.json')
+        self.go_thru_indices(5000)
     
     def write_gml(self,G,name):
         nx.write_gml(G, name+".gml")
@@ -43,9 +47,19 @@ class IndexGraph():
                     #self.show_graph()
                 i+=1
             else: return None
-        self.write_gml(self.G,"indices")
+        #self.write_gml(self.G,"indices")
         return self.G
+    
+    def basic_analysis(self, k):
+        girvannewman = nx.algorithms.community.centrality.girvan_newman(self.G)
+        limited = itertools.takewhile(lambda c: len(c) <= k, girvannewman)
+        for comm in limited:
+            self.gn6 = comm
+        with open('girvannewman6_indices_all.json', 'w') as f:
+            json.dump(self.gn6, f)
+        return None
 
 i = IndexGraph()
-i.go_thru_indices(5000)
+i.basic_analysis(6)
+
     
