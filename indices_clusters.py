@@ -12,6 +12,7 @@ from networkx import community
 from networkx import centrality
 import networkx as nx
 import itertools
+import matplotlib.pyplot as plt
 
 class IndexGraph():
     def __init__(self):
@@ -63,11 +64,17 @@ class IndexGraph():
                 if idx != idy:
                     scoreval = len(list(self.G.nodes[node]["tropes"].intersection(self.G.nodes[node]["tropes"])))
                     #self.G.add_edge(node, node2, score=scoreval)
-                    sharedtropeslist.append(scoreval)
+                    if scoreval < avgsharedtropes:
+                        sharedtropeslist.append(scoreval)
         # for idx,node in enumerate(self.G.nodes()):
         #     del self.G.nodes[node]["tropes"]   
-        with open("sharedtropesscores.json","w") as f:
+        with open("sharedtropesscores_above50_belowavg.json","w") as f:
             json.dump(sharedtropeslist,f)
+        #sharedtropeslist.order()
+        fig, axs = plt.subplots(1, 2, sharey=True, tight_layout=True)
+        axs[0].hist(sharedtropeslist, bins=100)
+        #axs[1].hist(y, bins=n_bins)
+        plt.show()
         return sharedtropeslist
     
     def basic_analysis(self, k):
