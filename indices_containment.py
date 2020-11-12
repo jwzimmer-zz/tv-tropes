@@ -18,6 +18,8 @@ class IndexGraph():
     def __init__(self):
         self.G = nx.Graph()
         self.masterlist = self.get_json('index-list/index-list.json')
+        self.indices = [x for x in self.masterlist.keys()]
+        self.masterlist = {self.indices[i]:self.masterlist[self.indices[i]] for i in range(1000)}
         self.add_sets()
         self.go_thru_indices_sets()
     
@@ -48,10 +50,10 @@ class IndexGraph():
             self.G.add_node(index,tropes=indexlinks)
         return None
     
-    def histogram_plot(self, data):
+    def histogram_plot(self, datax, datay):
         fig, axs = plt.subplots(1, 2, sharey=True, tight_layout=True)
-        axs[0].hist(data, bins=100)
-        axs[1].hist(data, bins=100)
+        axs[0].hist(datax, bins=100)
+        axs[1].hist(datay, bins=100)
         plt.show()
         return None
     
@@ -66,22 +68,33 @@ class IndexGraph():
 
     def go_thru_indices_sets(self):
         for idx, node in enumerate(self.G.nodes()):
-            firstsetoftropes = self.G.nodes[node]["tropes"]
-            self.G.nodes[node]["unique-tropes"] = firstsetoftropes
+            firstsetoftropes = self.G.nodes[node]['tropes']
+            self.G.nodes[node]["shared-tropes"] = 0
             for idy, node2 in enumerate(self.G.nodes()):
                 if idx != idy:
                     secondsetoftropes = self.G.nodes[node2]["tropes"]
-                    self.G.nodes[node]["unique-tropes"] = self.G.nodes[node]["unique-tropes"].difference(secondsetoftropes) #reduce to only the unique tropes to that index
+                    if len(list(firstsetoftropes))+len(list(secondsetoftropes)) == 0:
+                        # print(node,node2)
+                        # print(firstsetoftropes,secondsetoftropes)
+                        # print(" ")
+                        pass
+                    else:
+                        # print(node,node2)
+                        # print(firstsetoftropes, secondsetoftropes)
+                        # print(" ")
+                        self.G.nodes[node]["shared-tropes"] += len(list(firstsetoftropes.intersection(secondsetoftropes)))/(len(list(firstsetoftropes))+len(list(secondsetoftropes)))
         nodelist = [x for x in self.G.nodes]
         for n in nodelist:
-            setoftropes = self.G.nodes[n]["unique-tropes"]
-            for trope in setoftropes:
-                self.G.add_edge(n, trope)
+            try:
+                self.G.nodes[n]["shared-tropes"] = self.G.nodes[n]["shared-tropes"]/len(nodelist)
+            except:
+                pass
         self.remove_set_attributes("tropes")
-        self.remove_set_attributes("unique-tropes")
         self.rG = self.G
         print(len(self.G.nodes),len(self.G.edges))
-        self.write_gml(self.G, "uniquetropes")
+        #self.write_gml(self.G, "howsimilar")
+        self.scores = nx.get_node_attributes(self.G, "shared-tropes")
+        self.histogram_plot(self.scores.keys(),self.scores.values())
         return self.rG
 
 i = IndexGraph()
