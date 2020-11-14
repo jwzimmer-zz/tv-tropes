@@ -21,7 +21,7 @@ class IndexGraph():
         self.indices = [x for x in self.masterlist.keys()]
         #truncated list for testing things quickly or on a subset of indices
         self.masterlist = {self.indices[i]:self.masterlist[self.indices[i]] for i in range(len(self.masterlist)) if self.indices[i] in ("NarrativeDevices","NarrativeTropes","NarratorTropes")}
-        self.centraltropes = self.get_most_central_tropes("top_100_central.json")
+        self.centraltropes = self.get_most_central_tropes("top_1000_central.json")
         self.add_trope_nodes()
         self.go_thru_indices_sets()
     
@@ -55,7 +55,7 @@ class IndexGraph():
         for x in centraltropes.values():
             for trope in x:
                 tropelist.append(trope)
-        print(len(tropelist))
+        #print(len(tropelist))
         return set(tropelist)
     
     def add_sets(self):
@@ -65,7 +65,7 @@ class IndexGraph():
         return None
     
     def add_trope_nodes(self):
-        supercat = "Narrative-relatedIndicesCentral100Tropes"
+        supercat = "Narrative-relatedIndicesCentral1000Tropes"
         self.G.add_node(supercat,label=supercat)
         print(len(self.centraltropes))
         for index in self.masterlist: #add all linked tropes as nodes
