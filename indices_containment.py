@@ -84,11 +84,11 @@ class IndexGraph():
                         # print(" ")
                         self.G.nodes[node]["shared-tropes"] += len(list(firstsetoftropes.intersection(secondsetoftropes)))/(len(list(firstsetoftropes))+len(list(secondsetoftropes)))
         nodelist = [x for x in self.G.nodes]
-        for n in nodelist:
-            try:
-                self.G.nodes[n]["shared-tropes"] = self.G.nodes[n]["shared-tropes"]/len(nodelist)
-            except:
-                pass
+        # for n in nodelist:
+        #     try:
+        #         self.G.nodes[n]["shared-tropes"] = self.G.nodes[n]["shared-tropes"]/len(nodelist)
+        #     except:
+        #         pass
         self.remove_set_attributes("tropes")
         self.rG = self.G
         print(len(self.G.nodes),len(self.G.edges))
