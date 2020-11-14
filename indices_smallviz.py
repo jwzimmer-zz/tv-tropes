@@ -20,8 +20,7 @@ class IndexGraph():
         self.masterlist = self.get_json('index-list/index-list.json')
         self.indices = [x for x in self.masterlist.keys()]
         #truncated list for testing things quickly or on a subset of indices
-        #self.masterlist = {self.indices[i]:self.masterlist[self.indices[i]] for i in range(len(self.masterlist)) if self.indices[i] in ("Media","MediaAdaptationTropes","MediaTropes","MediaWatchdog")}
-        self.masterlist = {self.indices[i]:self.masterlist[self.indices[i]] for i in range(len(self.masterlist)) if self.indices[i] in ("Media")}
+        self.masterlist = {self.indices[i]:self.masterlist[self.indices[i]] for i in range(len(self.masterlist)) if self.indices[i] in ("Media","MediaAdaptationTropes","MediaTropes","MediaWatchdog")}
         self.add_trope_nodes()
         self.go_thru_indices_sets()
     
@@ -54,13 +53,16 @@ class IndexGraph():
         return None
     
     def add_trope_nodes(self):
+        supercat = "Media-relatedIndices"
+        self.G.add_node(supercat,label=supercat)
         for index in self.masterlist: #add all linked tropes as nodes
             indexlinks = set(self.masterlist[index])
             self.G.add_node(index,label=index)
+            self.G.add_edge(supercat,index)
             for trope in indexlinks:
                 self.G.add_node(trope,label=trope)
                 self.G.add_edge(index,trope)
-            self.write_gml(self.G, index)
+        self.write_gml(self.G, supercat)
         return None
     
     def histogram_plot(self, datax, datay):
