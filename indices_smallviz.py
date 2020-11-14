@@ -21,6 +21,7 @@ class IndexGraph():
         self.indices = [x for x in self.masterlist.keys()]
         #truncated list for testing things quickly or on a subset of indices
         self.masterlist = {self.indices[i]:self.masterlist[self.indices[i]] for i in range(len(self.masterlist)) if self.indices[i] in ("NarrativeDevices","NarrativeTropes","NarratorTropes")}
+        self.centraltropes = self.get_most_central_tropes("top_1000_central.json")
         self.add_trope_nodes()
         self.go_thru_indices_sets()
     
@@ -31,6 +32,7 @@ class IndexGraph():
     def get_json(self, filename):
         with open(filename) as f:
             jsonobj = json.load(f)
+            #print(jsonobj)
         return jsonobj
     
     def write_json(self, data, filename):
@@ -42,9 +44,19 @@ class IndexGraph():
         pos = nx.spring_layout(self.G)
         nx.draw(self.G, pos)
         node_labels = nx.get_node_attributes(self.G,'label')
-        print(node_labels)
+        #print(node_labels)
         nx.draw_networkx_labels(self.G, pos, labels=node_labels)
         return None
+    
+    def get_most_central_tropes(self, filename):
+        centraltropes = self.get_json(filename)
+        #print(centraltropes)
+        tropelist = []
+        for x in centraltropes.values():
+            for trope in x:
+                tropelist.append(trope)
+        #print(len(tropelist))
+        return set(tropelist)
     
     def add_sets(self):
         for index in self.masterlist: #add all linked tropes as a set
@@ -53,10 +65,11 @@ class IndexGraph():
         return None
     
     def add_trope_nodes(self):
-        supercat = "Narrative-relatedIndices"
+        supercat = "Narrative-relatedIndicesCentral1000Tropes"
         self.G.add_node(supercat,label=supercat)
+        print(len(self.centraltropes))
         for index in self.masterlist: #add all linked tropes as nodes
-            indexlinks = set(self.masterlist[index])
+            indexlinks = set([x for x in self.masterlist[index] if x in self.centraltropes])
             self.G.add_node(index,label=index)
             self.G.add_edge(supercat,index)
             for trope in indexlinks:
