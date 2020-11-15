@@ -72,14 +72,8 @@ class IndexGraph():
         print(len(tropelist))
         return set(tropelist)
     
-    def add_sets(self):
-        for index in self.masterlist: #add all linked tropes as a set
-            indexlinks = set(self.masterlist[index])
-            self.G.add_node(index,tropes=indexlinks)
-        return None
-    
     def add_trope_nodes(self):
-        supercat = "BigFour_tropes"
+        supercat = "BigFour_tropes_all"
         self.G.add_node(supercat,label=supercat)
         #print(len(self.centraltropes))
         data = {}
@@ -87,24 +81,10 @@ class IndexGraph():
             indexlinks = []
             for x in self.masterlist[index]:
                 indexlinks.append(x)
-                if len(indexlinks) > 50:
-                    break
-            self.G.add_node(index,label=index)
-            self.G.add_edge(supercat,index)
             data[index] = {x:{} for x in indexlinks}
             for trope in indexlinks:
-                self.G.add_node(trope,label=trope)
-                self.G.add_edge(index,trope)
                 tropetropelinks = self.masterlisttropes[trope]
-                print(len(tropetropelinks))
                 data[index][trope] = tropetropelinks
-                tropetropenodes = []
-                for tropelink in tropetropelinks:
-                    tropetropenodes.append(tropelink)
-                for tr in tropetropenodes:
-                    self.G.add_node(tr,label=tr)
-                    self.G.add_edge(trope, tr)
-        self.write_gml(self.G, supercat)
         self.write_json(data, supercat+".json")
         return None
     
