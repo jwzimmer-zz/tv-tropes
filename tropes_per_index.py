@@ -73,7 +73,7 @@ class IndexGraph():
         return set(tropelist)
     
     def add_trope_nodes(self):
-        supercat = "BigFour_tropes_all"
+        supercat = "BigFour_tropes_all4_top10000"
         self.G.add_node(supercat,label=supercat)
         #print(len(self.centraltropes))
         data = {}
@@ -81,10 +81,11 @@ class IndexGraph():
             indexlinks = []
             for x in self.masterlist[index]:
                 indexlinks.append(x)
-            data[index] = {x:{} for x in indexlinks}
+            data[index] = {x:{} for x in indexlinks if x in self.centraltropes}
             for trope in indexlinks:
                 tropetropelinks = self.masterlisttropes[trope]
-                data[index][trope] = tropetropelinks
+                if trope in self.centraltropes:
+                    data[index][trope] = [x for x in tropetropelinks if x in self.centraltropes]
         self.write_json(data, supercat+".json")
         return None
     
