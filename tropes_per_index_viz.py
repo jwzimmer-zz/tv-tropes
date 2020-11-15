@@ -73,7 +73,7 @@ class IndexGraph():
         return set(tropelist)
     
     def add_trope_nodes(self):
-        supercat = "BigFour_tropes_all4_top10000"
+        supercat = "BigFour_tropes_all4_top10000_top50_top20"
         self.G.add_node(supercat,label=supercat)
         for index in self.masterlist: #add all linked tropes as nodes
             indexlinks = []
@@ -92,9 +92,9 @@ class IndexGraph():
                 print(len(tropetropelinks))
                 tropetropenodes = []
                 for tropelink in tropetropelinks:
-                    if tropelink in self.centraltropes and tropelink not in tropetropenodes and tropelink not in self.G.nodes:
+                    if tropelink in self.centraltropes and tropelink not in tropetropenodes:
                         tropetropenodes.append(tropelink)
-                    if len(tropetropenodes) > 50:
+                    if len(tropetropenodes) > 20:
                         break
                 for tr in tropetropenodes:
                     self.G.add_node(tr,label=tr)
