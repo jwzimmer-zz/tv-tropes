@@ -20,8 +20,8 @@ class IndexGraph():
         self.masterlist = self.get_json('index-list/index-list.json')
         self.indices = [x for x in self.masterlist.keys()]
         #truncated list for testing things quickly or on a subset of indices
-        self.masterlist = {self.indices[i]:self.masterlist[self.indices[i]] for i in range(len(self.masterlist)) if self.indices[i] in ("NarrativeDevices","NarrativeTropes","NarratorTropes")}
-        self.centraltropes = self.get_most_central_tropes("top_1000_central.json")
+        self.masterlist = {self.indices[i]:self.masterlist[self.indices[i]] for i in range(len(self.masterlist)) if self.indices[i] in ("MediaTropes","NarrativeTropes","TopicalTropes","GenreTropes")}
+        self.centraltropes = self.get_most_central_tropes("top_10000_central.json")
         self.add_trope_nodes()
         self.go_thru_indices_sets()
     
@@ -65,11 +65,16 @@ class IndexGraph():
         return None
     
     def add_trope_nodes(self):
-        supercat = "Narrative-relatedIndicesCentral1000Tropes"
+        supercat = "BigFourCentral10000Top25Tropes"
         self.G.add_node(supercat,label=supercat)
-        print(len(self.centraltropes))
+        #print(len(self.centraltropes))
         for index in self.masterlist: #add all linked tropes as nodes
-            indexlinks = set([x for x in self.masterlist[index] if x in self.centraltropes])
+            indexlinks = []
+            for x in self.masterlist[index]:
+                if x in self.centraltropes and x not in indexlinks:
+                    indexlinks.append(x)
+                if len(indexlinks) > 25:
+                    break
             self.G.add_node(index,label=index)
             self.G.add_edge(supercat,index)
             for trope in indexlinks:
