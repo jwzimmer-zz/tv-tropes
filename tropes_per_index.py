@@ -105,7 +105,7 @@ class IndexGraph():
                     self.G.add_node(tr,label=tr)
                     self.G.add_edge(trope, tr)
         self.write_gml(self.G, supercat)
-        self.write_json(data, supercat)
+        self.write_json(data, supercat+".json")
         return None
     
     def histogram_plot(self, datax, datay):
