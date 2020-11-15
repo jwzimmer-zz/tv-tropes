@@ -22,7 +22,7 @@ class IndexGraph():
         self.indices = [x for x in self.masterlist.keys()]
         #truncated list for testing things quickly or on a subset of indices
         self.masterlist = {self.indices[i]:self.masterlist[self.indices[i]] for i in range(len(self.masterlist)) if self.indices[i] in ("MediaTropes","NarrativeTropes","TopicalTropes","GenreTropes")}
-        self.centraltropes = self.get_most_central_tropes_by_all_4_metrics("top_10000_central.json")
+        self.centraltropes = self.get_most_central_tropes_by_all_4_metrics("top_1000_central.json")
         self.masterlisttropes = self.get_json('all-tropes-with-links.json')
         self.add_trope_nodes()
         self.go_thru_indices_sets()
@@ -73,7 +73,7 @@ class IndexGraph():
         return set(tropelist)
     
     def add_trope_nodes(self):
-        supercat = "BigFour_tropes_all4_top10000"
+        supercat = "BigFour_tropes_all4_top1000"
         self.G.add_node(supercat,label=supercat)
         #print(len(self.centraltropes))
         data = {}
