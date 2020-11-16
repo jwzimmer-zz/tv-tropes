@@ -24,9 +24,9 @@ class IndexGraph():
         self.indices = [x for x in self.masterlistallindices.keys()]
         #truncated list for testing things quickly or on a subset of indices
         self.masterlist = {self.indices[i]:self.masterlistallindices[self.indices[i]] for i in range(len(self.masterlistallindices)) if self.indices[i] in ("MediaTropes","NarrativeTropes","TopicalTropes","GenreTropes")}
-        self.centraltropes = self.get_most_central_tropes_by_all_4_metrics("top_100_central.json")
+        self.centraltropes = self.get_most_central_tropes_by_all_4_metrics("top_1000_central.json")
         self.masterlisttropes = self.get_json('all-tropes-with-links.json')
-        self.supercat = "BigFour_subindices_and_tropes_top100_media"
+        self.supercat = "BigFour_subindices_and_tropes_top1000_media"
         self.bigfourdict = self.get_json("main4_subindices_dict.json")
         self.add_trope_nodes()
         #self.basic_analysis(6, "girvan_newman")
