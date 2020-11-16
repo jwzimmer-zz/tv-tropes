@@ -25,7 +25,7 @@ class IndexGraph():
         self.masterlist = {self.indices[i]:self.masterlist[self.indices[i]] for i in range(len(self.masterlist)) if self.indices[i] in ("MediaTropes","NarrativeTropes","TopicalTropes","GenreTropes")}
         self.centraltropes = self.get_most_central_tropes_by_all_4_metrics("top_10000_central.json")
         self.masterlisttropes = self.get_json('all-tropes-with-links.json')
-        self.supercat = "BigFour_tropes_all4_top10000_noaddednode"
+        self.supercat = "BigFour_tropes_all4_noaddednode"
         self.add_trope_nodes()
         #self.go_thru_graph()
         #self.basic_analysis(6, "girvan_newman")
@@ -81,9 +81,7 @@ class IndexGraph():
         for index in self.masterlist: #add all linked tropes as nodes
             indexlinks = []
             for x in self.masterlist[index]:
-                #if x not in indexlinks:
-                if x in self.centraltropes:
-                    indexlinks.append(x)
+                indexlinks.append(x)
             self.G.add_node(index,label=index)
             for trope in indexlinks:
                 if trope in self.G.nodes:
@@ -92,7 +90,7 @@ class IndexGraph():
                     self.G.add_node(trope,label=trope)
                     self.G.add_edge(index,trope)
                 for linkedtrope in self.masterlisttropes[trope]:
-                    if linkedtrope in self.G.nodes and linkedtrope in self.centraltropes:
+                    if linkedtrope in self.G.nodes:
                         self.G.add_edge(trope, linkedtrope)
         self.write_gml(self.G, supercat)
         return None
