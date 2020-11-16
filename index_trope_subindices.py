@@ -26,7 +26,7 @@ class IndexGraph():
         self.masterlist = {self.indices[i]:self.masterlistallindices[self.indices[i]] for i in range(len(self.masterlistallindices)) if self.indices[i] in ("MediaTropes","NarrativeTropes","TopicalTropes","GenreTropes")}
         self.centraltropes = self.get_most_central_tropes_by_all_4_metrics("top_100_central.json")
         self.masterlisttropes = self.get_json('all-tropes-with-links.json')
-        self.supercat = "BigFour_subindices_and_tropes_top100_genre"
+        self.supercat = "BigFour_subindices_and_tropes_top100_topical"
         self.bigfourdict = self.get_json("main4_subindices_dict.json")
         self.add_trope_nodes()
         #self.basic_analysis(6, "girvan_newman")
@@ -80,7 +80,7 @@ class IndexGraph():
         supercat = self.supercat
         #self.G.add_node(supercat,label=supercat)
         for index in self.bigfourdict: #add all linked tropes as nodes
-            if index == "GenreTropes": #splitting network into each index because too many edges (~11000)
+            if index =="TopicalTropes": #splitting network into each index because too many edges (~11000)
                 bigfourtropes = self.masterlist[index]
                 self.G.add_node(index,label=index)
                 for subindex in self.bigfourdict[index]: #subindices and tropes (?)
@@ -106,7 +106,7 @@ class IndexGraph():
             else:
                 pass
         print(len(self.G.nodes), len(self.G.edges)) #23543 - too many nodes! too slow; reduce by looking in self.centraltropes
-        self.write_gml(self.G, supercat+"genre")
+        self.write_gml(self.G, supercat+"topical")
         return None
     
     def histogram_plot(self, datax, datay):
