@@ -28,7 +28,7 @@ class IndexGraph():
         self.supercat = "BigFour_tropes_all4_top10000_top50_top20"
         #self.add_trope_nodes()
         #self.go_thru_graph()
-        self.basic_analysis(6, "girvan_newman")
+        self.basic_analysis(12, "girvan_newman")
     
     def write_gml(self,G,name):
         nx.write_gml(G, name+".gml")
@@ -129,6 +129,7 @@ class IndexGraph():
             self.gn6 = comm
         with open(self.supercat+str(algorithm)+str(k)+'.json', 'w') as f:
             for setitem in self.gn6:
+                print(setitem)
                 json.dump(list(setitem), f)
         return None
 
