@@ -25,7 +25,7 @@ class IndexGraph():
         self.masterlist = {self.indices[i]:self.masterlist[self.indices[i]] for i in range(len(self.masterlist)) if self.indices[i] in ("MediaTropes","NarrativeTropes","TopicalTropes","GenreTropes")}
         self.centraltropes = self.get_most_central_tropes_by_all_4_metrics("top_10000_central.json")
         self.masterlisttropes = self.get_json('all-tropes-with-links.json')
-        self.supercat = "BigFour_tropes_all4_top10000_top50_edges_noaddednode"
+        self.supercat = "BigFour_tropes_all4_top10000_noaddednode"
         self.add_trope_nodes()
         #self.go_thru_graph()
         #self.basic_analysis(6, "girvan_newman")
@@ -84,24 +84,16 @@ class IndexGraph():
                 #if x not in indexlinks:
                 if x in self.centraltropes:
                     indexlinks.append(x)
-                if len(indexlinks) > 50:
-                    break
             self.G.add_node(index,label=index)
-            for y in indexlinks:
-                if y in self.G.nodes:
-                    self.G.add_edge(index,y)
-            #self.G.add_edge(supercat,index)
             for trope in indexlinks:
-                self.G.add_node(trope,label=trope)
-                self.G.add_edge(index,trope)
-                tropetropelinks = [x for x in self.masterlisttropes[trope] if x in self.centraltropes]
-                for tr in tropetropelinks:
-                    #self.G.add_node(tr,label=tr)
-                    self.G.add_edge(trope, tr)
-                    trlinks = self.masterlisttropes[tr]
-                    for trl in trlinks:
-                        if trl in self.G.nodes:
-                            self.G.add_edge(tr, trl)
+                if trope in self.G.nodes:
+                    self.G.add_edge(index,trope)
+                else:
+                    self.G.add_node(trope,label=trope)
+                    self.G.add_edge(index,trope)
+                for linkedtrope in self.masterlisttropes[trope]:
+                    if linkedtrope in self.G.nodes and linkedtrope in self.centraltropes:
+                        self.G.add_edge(trope, linkedtrope)
         self.write_gml(self.G, supercat)
         return None
     
