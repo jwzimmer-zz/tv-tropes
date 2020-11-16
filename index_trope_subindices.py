@@ -24,9 +24,9 @@ class IndexGraph():
         self.indices = [x for x in self.masterlistallindices.keys()]
         #truncated list for testing things quickly or on a subset of indices
         self.masterlist = {self.indices[i]:self.masterlistallindices[self.indices[i]] for i in range(len(self.masterlistallindices)) if self.indices[i] in ("MediaTropes","NarrativeTropes","TopicalTropes","GenreTropes")}
-        self.centraltropes = self.get_most_central_tropes_by_all_4_metrics("top_10_central.json")
+        self.centraltropes = self.get_most_central_tropes_by_all_4_metrics("top_100_central.json")
         self.masterlisttropes = self.get_json('all-tropes-with-links.json')
-        self.supercat = "BigFour_subindices_and_tropes_top10_topical"
+        self.supercat = "BigFour_subindices_and_tropes_top100_topical"
         self.bigfourdict = self.get_json("main4_subindices_dict.json")
         self.add_trope_nodes()
         #self.basic_analysis(6, "girvan_newman")
@@ -84,15 +84,17 @@ class IndexGraph():
                 bigfourtropes = self.masterlist[index]
                 self.G.add_node(index,label=index)
                 for subindex in self.bigfourdict[index]: #subindices and tropes (?)
-                    if subindex in self.G.nodes:
-                        self.G.add_edge(index,subindex)
-                    else:
-                        self.G.add_node(subindex,label=subindex)
-                        self.G.add_edge(index,subindex)
+                    # if subindex in self.G.nodes:
+                    #     self.G.add_edge(index,subindex)
+                    # else:
+                    #     self.G.add_node(subindex,label=subindex)
+                    #     self.G.add_edge(index,subindex)
                     for trope in [x for x in self.bigfourdict[index][subindex] if x in self.centraltropes]: #reduce trope nodes by only looking at top central ones
                         if trope in self.G.nodes:
+                            self.G.add_node(subindex,label=subindex)
                             self.G.add_edge(subindex,trope)
                         else:
+                            self.G.add_node(subindex,label=subindex)
                             self.G.add_node(trope,label=trope)
                             self.G.add_edge(subindex,trope)
                 for tr in bigfourtropes:
