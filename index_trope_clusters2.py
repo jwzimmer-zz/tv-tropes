@@ -18,17 +18,17 @@ import collections
 class IndexGraph():
     def __init__(self):
         #self.G = nx.Graph()
-        self.G = nx.read_gml("BigFour_tropes_all4_top10000_top50_top20_theirtropes.gml") #read in a saved graph from gml
+        self.G = nx.read_gml("BigFour_tropes_all4_top10000_top50_top20.gml") #read in a saved graph from gml
         self.masterlist = self.get_json('index-list/index-list.json')
         self.indices = [x for x in self.masterlist.keys()]
         #truncated list for testing things quickly or on a subset of indices
         self.masterlist = {self.indices[i]:self.masterlist[self.indices[i]] for i in range(len(self.masterlist)) if self.indices[i] in ("MediaTropes","NarrativeTropes","TopicalTropes","GenreTropes")}
         self.centraltropes = self.get_most_central_tropes_by_all_4_metrics("top_10000_central.json")
         self.masterlisttropes = self.get_json('all-tropes-with-links.json')
-        self.supercat = "BigFour_tropes_all4_top10000_top50_top20_theirtropes"
+        self.supercat = "BigFour_tropes_all4_top10000_top50_top20"
         #self.add_trope_nodes()
         #self.go_thru_graph()
-        self.basic_analysis(12, "girvan_newman")
+        self.basic_analysis(6, "girvan_newman")
     
     def write_gml(self,G,name):
         nx.write_gml(G, name+".gml")
