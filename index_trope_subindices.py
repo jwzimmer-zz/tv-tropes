@@ -26,7 +26,7 @@ class IndexGraph():
         self.masterlist = {self.indices[i]:self.masterlistallindices[self.indices[i]] for i in range(len(self.masterlistallindices)) if self.indices[i] in ("MediaTropes","NarrativeTropes","TopicalTropes","GenreTropes")}
         self.centraltropes = self.get_most_central_tropes_by_all_4_metrics("top_100_central.json")
         self.masterlisttropes = self.get_json('all-tropes-with-links.json')
-        self.supercat = "BigFour_subindices_and_tropes_top100"
+        self.supercat = "BigFour_subindices_and_tropes_top100_narrative"
         self.bigfourdict = self.get_json("main4_subindices_dict.json")
         self.add_trope_nodes()
         #self.basic_analysis(6, "girvan_newman")
@@ -80,33 +80,33 @@ class IndexGraph():
         supercat = self.supercat
         #self.G.add_node(supercat,label=supercat)
         for index in self.bigfourdict: #add all linked tropes as nodes
-            #if index == "NarrativeTropes": #splitting network into each index because too many edges (~11000)
-            bigfourtropes = self.masterlist[index]
-            self.G.add_node(index,label=index)
-            for subindex in self.bigfourdict[index]: #subindices and tropes (?)
-                if subindex in self.G.nodes:
-                    self.G.add_edge(index,subindex)
-                else:
-                    self.G.add_node(subindex,label=subindex)
-                    self.G.add_edge(index,subindex)
-                for trope in [x for x in self.bigfourdict[index][subindex] if x in self.centraltropes]: #reduce trope nodes by only looking at top central ones
-                    if trope in self.G.nodes:
-                        self.G.add_edge(subindex,trope)
+            if index == "NarrativeTropes": #splitting network into each index because too many edges (~11000)
+                bigfourtropes = self.masterlist[index]
+                self.G.add_node(index,label=index)
+                for subindex in self.bigfourdict[index]: #subindices and tropes (?)
+                    if subindex in self.G.nodes:
+                        self.G.add_edge(index,subindex)
                     else:
-                        self.G.add_node(trope,label=trope)
-                        self.G.add_edge(subindex,trope)
-            for tr in bigfourtropes:
-                if tr in self.G.nodes:
-                    pass
-                else:
-                    if tr in self.centraltropes:
-                        self.G.add_edge(index,tr)
-                    else:
+                        self.G.add_node(subindex,label=subindex)
+                        self.G.add_edge(index,subindex)
+                    for trope in [x for x in self.bigfourdict[index][subindex] if x in self.centraltropes]: #reduce trope nodes by only looking at top central ones
+                        if trope in self.G.nodes:
+                            self.G.add_edge(subindex,trope)
+                        else:
+                            self.G.add_node(trope,label=trope)
+                            self.G.add_edge(subindex,trope)
+                for tr in bigfourtropes:
+                    if tr in self.G.nodes:
                         pass
-            # else:
-            #     pass
+                    else:
+                        if tr in self.centraltropes:
+                            self.G.add_edge(index,tr)
+                        else:
+                            pass
+            else:
+                pass
         print(len(self.G.nodes), len(self.G.edges)) #23543 - too many nodes! too slow; reduce by looking in self.centraltropes
-        self.write_gml(self.G, supercat)
+        self.write_gml(self.G, supercat+"narrative")
         return None
     
     def histogram_plot(self, datax, datay):
