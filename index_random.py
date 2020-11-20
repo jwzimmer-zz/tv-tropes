@@ -15,23 +15,11 @@ import itertools
 import matplotlib.pyplot as plt
 import collections
 import random
+import pandas as pd
 
-class IndexGraph():
+class IndexGraph_Random():
     def __init__(self):
-        self.G = nx.Graph()
-        #self.G = nx.read_gml("BigFour_tropes_all4_top10000_top50_top20.gml") #read in a saved graph from gml
-        self.masterlistallindices = self.get_json('index-list/index-list.json')
-        self.indices = [x for x in self.masterlistallindices.keys()]
-        #truncated list for testing things quickly or on a subset of indices
-        self.randomindices = random.sample(self.indices, 4)
-        self.masterlist = {self.indices[i]:self.masterlistallindices[self.indices[i]] for i 
-                            in range(len(self.masterlistallindices)) if self.indices[i] in self.randomindices}
-        self.centraltropes = self.get_most_central_tropes_by_all_4_metrics("top_10000_central.json")
-        self.masterlisttropes = self.get_json('all-tropes-with-links.json')
-        self.supercat = "indices_4random_43"
-        self.bigfourdict = self.get_json("main4_subindices_dict.json")
-        self.add_trope_nodes()
-        #self.basic_analysis(6, "girvan_newman")
+        self.graphlist, self.df = self.get_random_gmls(100, 'Random-4-Indices')
     
     def write_gml(self,G,name):
         nx.write_gml(G, name+".gml")
@@ -48,51 +36,40 @@ class IndexGraph():
             json.dump(data,f)
         return None
     
-    def show_graph(self):
-        pos = nx.spring_layout(self.G)
-        nx.draw(self.G, pos)
-        node_labels = nx.get_node_attributes(self.G,'label')
-        #print(node_labels)
-        nx.draw_networkx_labels(self.G, pos, labels=node_labels)
-        return None
+    def analysis(self, G):
+        df = {}
+        df["NumberNodes"]=len(G.nodes)
+        df["NumberEdges"]=len(G.edges)
+        df["NumberIsolates"] = nx.algorithms.number_of_isolates(G)
+        df["IsEulerian"] = nx.algorithms.is_eulerian(G)
+        df["GlobalEfficiency"] = nx.algorithms.global_efficiency(G)
+        
+        try:
+            df["Diameter"] = nx.algorithms.diameter(G)
+            df["Radius"] = nx.algorithms.radius(G)
+            df["NodeConnectivity"] = nx.algorithms.node_connectivity(G)
+        except:
+            pass
+        
+        return pd.Series(df)
+        
     
-    def get_most_central_tropes_by_all_4_metrics(self, filename):
-        centraltropes = self.get_json(filename)
-        #print(centraltropes)
-        tropelist = []
-        for x in centraltropes.values():
-            for trope in x:
-                tropelist.append(trope)
-        trope_centrality_counts = collections.Counter(tropelist)
-        tropelist = [x for x in trope_centrality_counts if trope_centrality_counts[x] == 4]
-        #print(len(tropelist))
-        return set(tropelist)
-    
-    def add_trope_nodes(self):
-        supercat = self.supercat
-        #self.G.add_node(supercat,label=supercat)
-        for index in self.masterlist:
-            self.G.add_node(index,label=index)
-            for itr in self.masterlist[index]:
-                if itr in self.centraltropes:
-                    self.G.add_node(itr,label=itr)
-                    self.G.add_edge(index, itr)
-        for trope in self.G.nodes:
-            if trope in self.centraltropes:
-                for iitr in self.masterlisttropes[trope]:
-                    if iitr in self.G.nodes:
-                        self.G.add_edge(trope,iitr)
-                
-            
-        print(len(self.G.nodes), len(self.G.edges))
-        self.write_gml(self.G, supercat)
-        data = [x for x in self.G.edges]
-        #print(data)
-        self.write_json(data, supercat+"edgelist.json")
-        return None
-    
+    def get_random_gmls(self,k,folder):
+        graphlist = []
+        df = pd.DataFrame()
+        i = 0
+        while i <= k:
+            for entry in os.scandir(folder):
+                if entry.name.endswith(".gml"):
+                    G = nx.read_gml(folder+"/"+entry.name)
+                    graphlist.append(G)
+                    name = entry.name[:-4]
+                    df[name] = self.analysis(G)
+                if i > k:
+                    break
+                i += 1
+        df.to_csv("4RandomIndVsBgFour.csv")
+        return graphlist, df
 
-i = IndexGraph()
-i.show_graph()
-
-    
+i = IndexGraph_Random()
+print(i.df)
