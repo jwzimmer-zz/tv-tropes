@@ -84,7 +84,9 @@ class IndexGraph():
                 
             
         print(len(self.G.nodes), len(self.G.edges))
-        self.write_gml(self.G, supercat)
+        #self.write_gml(self.G, supercat)
+        data = [x for x in nx.get_node_attributes(self.G, 'label')]
+        self.write_json(data, supercat+".json")
         return None
     
 
