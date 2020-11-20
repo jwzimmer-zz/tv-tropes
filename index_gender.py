@@ -24,25 +24,10 @@ class IndexGraph():
         self.indices = [x for x in self.masterlistallindices.keys()]
         #truncated list for testing things quickly or on a subset of indices
         self.masterlist = {self.indices[i]:self.masterlistallindices[self.indices[i]] for i 
-                            in range(len(self.masterlistallindices)) if self.indices[i] in ("ACupAngst",
-                                                                                            "ADateWithRosiePalms",
-                                                                                            "AFatherToHisMen",
-                                                                                            "APrettyBoyIndex",
-                                                                                            "ASlaveToTheIndex",
-                                                                                            "GenderAndSexualityTropes",
-                                                                                            "AbandonShipping",
-                                                                                            "AbhorrentAdmirer",
-                                                                                            "AcceptableFeminineGoalsAndTraits",
-                                                                                            "AccidentalInnuendo",
-                                                                                            "ActionDad",
-                                                                                            "ActionGirl",
-                                                                                            "AdamAndEvePlot",
-                                                                                            "AdaptationalAttractiveness",
-                                                                                            "AdaptationalJerkass",
-                                                                                            "Adorkable")}
+                            in range(len(self.masterlistallindices)) if self.indices[i] in ("GenderAndSexualityTropes")}
         self.centraltropes = self.get_most_central_tropes_by_all_4_metrics("top_10000_central.json")
         self.masterlisttropes = self.get_json('all-tropes-with-links.json')
-        self.supercat = "indices_gender_some"
+        self.supercat = "indices_genderAndSexualityTropes"
         self.bigfourdict = self.get_json("main4_subindices_dict.json")
         self.add_trope_nodes()
         #self.basic_analysis(6, "girvan_newman")
