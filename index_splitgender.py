@@ -27,9 +27,9 @@ class IndexGraph():
         # self.masterlist = {self.indices[i]:self.masterlistallindices[self.indices[i]] for i 
         #                     in range(len(self.masterlistallindices))}
         self.masterlist = self.masterlistallindices
-        self.centraltropes = self.get_most_central_tropes_by_all_4_metrics("top_10000_central.json")
+        self.centraltropes = self.get_most_central_tropes_by_all_4_metrics("top_100_central.json")
         self.masterlisttropes = self.get_json('all-tropes-with-links.json')
-        self.supercat = "indices_split_anygenderword_10000"
+        self.supercat = "anygenderword_100_theirconnections"
         self.genderlist = ["man","woman","father","mother","boy","girl","uncle","aunt","husband","wife",
                            "boyfriend","girlfriend","actor","actress","prince","princess","king","queen","male","female","men","women"]
         self.malelist = [self.genderlist[i] for i in range(len(self.genderlist)) if i%2 == 0]
@@ -92,9 +92,6 @@ class IndexGraph():
                 gendertitles.append(index)
                 self.G.add_node(index,label=index)
                 for itr in self.masterlist[index]:
-                    if itr in self.centraltropes:
-                        self.G.add_node(itr,label=itr)
-                        self.G.add_edge(index, itr)
                     subwordslist = re.findall('[A-Z][^A-Z]*', itr)
                     subwordslist = [x.lower() for x in subwordslist]
                     subscore = 0
@@ -103,20 +100,25 @@ class IndexGraph():
                             subscore += 1
                     if subscore != 0:
                         gendertitles.append(itr)
-            else:
-                pass
+                        if itr in self.centraltropes:
+                            self.G.add_node(itr,label=itr)
+                            self.G.add_edge(index, itr)
         for trope in self.G.nodes:
-            if trope in self.centraltropes:
+            if trope in self.masterlisttropes:
                 for iitr in self.masterlisttropes[trope]:
                     if iitr in self.G.nodes:
                         self.G.add_edge(trope,iitr)
+            if trope in self.masterlist:
+                for inde in self.masterlist[trope]:
+                    if inde in self.G.nodes:
+                        self.G.add_edge(trope, inde)
                 
             
         print(len(self.G.nodes), len(self.G.edges))
-        #self.write_gml(self.G, supercat)
+        self.write_gml(self.G, supercat)
         
         #print(data)
-        self.write_json(gendertitles, supercat+"genderlist.json")
+        #self.write_json(gendertitles, supercat+"genderlist.json")
         return None
     
 
