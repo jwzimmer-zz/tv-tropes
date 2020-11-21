@@ -27,9 +27,9 @@ class IndexGraph():
         # self.masterlist = {self.indices[i]:self.masterlistallindices[self.indices[i]] for i 
         #                     in range(len(self.masterlistallindices))}
         self.masterlist = self.masterlistallindices
-        self.centraltropes = self.get_most_central_tropes_by_all_4_metrics("top_1000_central.json")
+        self.centraltropes = self.get_most_central_tropes_by_all_4_metrics("top_100_central.json")
         self.masterlisttropes = self.get_json('all-tropes-with-links.json')
-        self.supercat = "indices_split_anygenderword_1000"
+        self.supercat = "indices_split_anygenderword_100"
         self.genderlist = ["man","woman","father","mother","boy","girl","uncle","aunt","husband","wife",
                            "boyfriend","girlfriend","actor","actress","prince","princess","king","queen","male","female","men","women"]
         self.malelist = [self.genderlist[i] for i in range(len(self.genderlist)) if i%2 == 0]
