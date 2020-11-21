@@ -27,9 +27,9 @@ class IndexGraph():
         # self.masterlist = {self.indices[i]:self.masterlistallindices[self.indices[i]] for i 
         #                     in range(len(self.masterlistallindices))}
         self.masterlist = self.masterlistallindices
-        self.centraltropes = self.get_most_central_tropes_by_all_4_metrics("top_100_central.json")
+        self.centraltropes = self.get_most_central_tropes_by_all_4_metrics("top_10000_central.json")
         self.masterlisttropes = self.get_json('all-tropes-with-links.json')
-        self.supercat = "indices_split_anygenderword_100"
+        self.supercat = "indices_split_anygenderword_10000"
         self.genderlist = ["man","woman","father","mother","boy","girl","uncle","aunt","husband","wife",
                            "boyfriend","girlfriend","actor","actress","prince","princess","king","queen","male","female","men","women"]
         self.malelist = [self.genderlist[i] for i in range(len(self.genderlist)) if i%2 == 0]
@@ -79,6 +79,7 @@ class IndexGraph():
     def add_trope_nodes(self):
         supercat = self.supercat
         #self.G.add_node(supercat,label=supercat)
+        gendertitles = []
         for index in self.masterlist:
             score = 0
             wordslist = re.findall('[A-Z][^A-Z]*', index)
@@ -88,11 +89,20 @@ class IndexGraph():
                 if word in self.genderlist:
                     score += 1
             if score != 0:
+                gendertitles.append(index)
                 self.G.add_node(index,label=index)
                 for itr in self.masterlist[index]:
                     if itr in self.centraltropes:
                         self.G.add_node(itr,label=itr)
                         self.G.add_edge(index, itr)
+                    subwordslist = re.findall('[A-Z][^A-Z]*', itr)
+                    subwordslist = [x.lower() for x in subwordslist]
+                    subscore = 0
+                    for subword in subwordslist:
+                        if subword in self.genderlist:
+                            subscore += 1
+                    if subscore != 0:
+                        gendertitles.append(itr)
             else:
                 pass
         for trope in self.G.nodes:
@@ -103,10 +113,10 @@ class IndexGraph():
                 
             
         print(len(self.G.nodes), len(self.G.edges))
-        self.write_gml(self.G, supercat)
-        data = [x for x in self.G.edges]
+        #self.write_gml(self.G, supercat)
+        
         #print(data)
-        self.write_json(data, supercat+"edgelist.json")
+        self.write_json(gendertitles, supercat+"genderlist.json")
         return None
     
 
