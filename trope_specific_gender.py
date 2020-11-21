@@ -22,7 +22,7 @@ class TropeGraph():
         self.G = nx.Graph()
         self.centraltropes = self.get_most_central_tropes_by_all_4_metrics("top_10000_central.json")
         self.masterlist = self.get_json('all-tropes-with-links.json')
-        self.supercat = "gender_alwaysfemale"
+        self.supercat = "gender_MenActWomenAre"
         self.genderlist = ["man","woman","father","mother","boy","girl","uncle","aunt","husband","wife",
                            "boyfriend","girlfriend","prince","princess","king","queen","male","female","men","women"]
         self.malelist = [self.genderlist[i] for i in range(len(self.genderlist)) if i%2 == 0]
@@ -71,7 +71,7 @@ class TropeGraph():
         #self.G.add_node(supercat,label=supercat)
         gendertitles = ["AlwaysMale","AlwaysFemale"]
         male=gendertitles[0]
-        female="AlwaysFemale"
+        female="MenActWomenAre"
         
         # for trope in self.masterlist[male]:
         #     #if trope in self.centraltropes:
